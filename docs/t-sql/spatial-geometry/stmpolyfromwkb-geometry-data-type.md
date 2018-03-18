@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromWKB (тип данных geometry) | Документы Microsoft"
+title: "STMPolyFromWKB (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geometryMultiPolygon** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geometryMultiPolygon** из WKB-представления открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_multipolygon*  
- WKB-представление **geometryMultiPolygon** экземпляр, который необходимо вернуть. *WKB_multipolygon* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **geometryMultiPolygon**. *WKB_multipolygon* — это выражение **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometryMultiPolygon** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometryMultiPolygon**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
  Тип OGC: **MultiPolygon**  
   
@@ -68,7 +68,7 @@ SET @g = geometry::STMPolyFromWKB(0x01060000000200000001030000000100000004000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

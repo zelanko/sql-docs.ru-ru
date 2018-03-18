@@ -1,5 +1,5 @@
 ---
-title: "ELSE (IF... ELSE) (Transact-SQL) | Документы Microsoft"
+title: "ELSE (IF...ELSE) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Задает условия для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[tsql](../../includes/tsql-md.md)] Инструкции (*sql_statement*) следующие *Boolean_expression*выполняется, если *Boolean_expression* имеет значение TRUE. Необязательное ключевое слово ELSE позволяет указать альтернативную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, которая выполняется при *Boolean_expression* равно FALSE или NULL.  
+  Задает условия для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*), следующая за выражением *Boolean_expression*, выполняется, если выражение *Boolean_expression* имеет значение TRUE. Необязательное ключевое слово ELSE позволяет указать альтернативную инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)], выполняемую в случае, если значение выражения *Boolean_expression* равно FALSE или NULL.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>Аргументы  
  *Boolean_expression*  
- Выражение, возвращающее значение TRUE или FALSE. Если *Boolean_expression* содержит инструкцию SELECT, инструкция SELECT должна быть заключена в скобки.  
+ Выражение, возвращающее значение TRUE или FALSE. Если логическое выражение *Boolean_expression* содержит инструкцию SELECT, инструкция SELECT должна быть заключена в скобки.  
   
  { *sql_statement* | *statement_block* }  
- Любая допустимая инструкция или группа инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], определенных блоком инструкций. Чтобы определить блок инструкций (пакет), используются ключевые слова BEGIN и END языка управления выполнением. Несмотря на то что все [!INCLUDE[tsql](../../includes/tsql-md.md)] операторы допустимы в пределах блока BEGIN... ОКОНЧАНИЯ блокировки, определенные [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции не должны быть сгруппированы вместе в пределах одного пакета (блока инструкций).  
+ Любая допустимая инструкция или группа инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], определенных блоком инструкций. Чтобы определить блок инструкций (пакет), используются ключевые слова BEGIN и END языка управления выполнением. Хотя все инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] допустимы в пределах блока BEGIN...END, некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не следует группировать вместе в пределах одного пакета (блока инструкций).  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>Г. Использованием вложенных инструкций IF...ELSE  
- В следующем примере показано, как IF... Оператор ELSE могут быть вложенными в другой. Задайте значения переменной `@Number` равными `5`, `50` и `500`, чтобы проверить каждую инструкцию.  
+ Следующий пример иллюстрирует порядок вставки одной инструкции IF…ELSE в другую. Задайте значения переменной `@Number` равными `5`, `50` и `500`, чтобы проверить каждую инструкцию.  
   
 ```  
 DECLARE @Number int;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>Д. Использование запроса как часть логического выражения  
- В следующем примере используется `IF…ELSE` определите, какой из двух ответов для представления пользователю, на основе веса элемента в `DimProduct` таблицы.  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>Д. Использование запроса как части логического выражения  
+ В следующем примере используется `IF…ELSE` для определения того, какой из двух ответов показать пользователю, на основе веса элемента в таблице `DimProduct`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -157,9 +157,9 @@ ELSE
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "SET NOEXEC (Transact-SQL) | Документы Microsoft"
+title: "SET NOEXEC (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если выполняется инструкция SET NOEXEC ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует каждый пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], но не выполняет их. Если выполняется инструкция SET NOEXEC OFF, то все пакеты выполняются после компиляции.  
   
  Выполнение инструкций в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] происходит в два этапа: компиляция и собственно выполнение. Этот параметр полезен для проверки синтаксиса и имен объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в исходном коде языка [!INCLUDE[tsql](../../includes/tsql-md.md)] при выполнении. Он также полезен для инструкций отладки, которые, как правило, являются частью более крупного пакета инструкций.  
   
  Параметр SET NOEXEC устанавливается на этапе выполнения или запуска, но не на этапе синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -117,7 +117,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [Инструкция SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT (Transact-SQL)](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

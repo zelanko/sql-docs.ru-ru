@@ -1,5 +1,5 @@
 ---
-title: "&lt;= (Меньше или равно) (Transact-SQL) | Документы Microsoft"
+title: "&lt;= (меньше или равно) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (Меньше или равно) (Transact-SQL)
+# <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (меньше или равно) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Сравнивает два выражения (оператор сравнения). Результат сравнения двух ненулевых выражений имеет значение TRUE, если значение левого операнда меньше или равно значению правого операнда; в остальных случаях результат сравнения имеет значение FALSE.  
@@ -53,14 +53,14 @@ expression <= expression
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Оба выражения должны иметь типы данных, допускающие неявное преобразование. Преобразование зависит от правил [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). Оба выражения должны иметь типы данных, допускающие неявное преобразование. Преобразование зависит от правил [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using--in-a-simple-query"></a>A. С помощью < = в простом запросе  
+### <a name="a-using--in-a-simple-query"></a>A. Использование <= в простом запросе  
  В следующем примере возвращаются все строки из таблицы `HumanResources.Department`, содержащие в столбце `DepartmentID` значение, которое меньше или равно 3.  
   
 ```  
@@ -86,8 +86,8 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

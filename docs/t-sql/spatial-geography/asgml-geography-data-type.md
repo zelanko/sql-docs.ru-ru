@@ -1,5 +1,5 @@
 ---
-title: "AsGml (тип данных geography) | Документы Microsoft"
+title: "AsGml (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-#  <a name="asgml---geography-data-type"></a>AsGml - тип данных geography
+#  <a name="asgml---geography-data-type"></a>AsGml (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает представление языка разметки Geography (GML) **geography** экземпляра.  
+  Возвращает представление экземпляра **geography** на языке GML.  
   
- Дополнительные сведения о языке GML см. в спецификации консорциума Ogc: [спецификации OGC, географический язык разметки.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, язык GML.](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **xml**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **xml**  
   
- Возвращаемый тип CLR: **SqlXml**  
+ Тип возвращаемых данных CLR: **SqlXml**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -69,7 +69,7 @@ SELECT @g.AsGml();
 <LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

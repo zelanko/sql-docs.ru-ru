@@ -1,5 +1,5 @@
 ---
-title: "NULL (тип данных geometry) | Документы Microsoft"
+title: "Null (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Свойство только для чтения, указав значение null экземпляр **geometry** типа.
+Свойство только для чтения, которое возвращает экземпляр типа **geometry**, имеющий значение NULL.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +45,7 @@ Null
 ## <a name="arguments"></a>Аргументы  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **геометрии**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Тип CLR: **SqlGeometry**  
   
@@ -60,7 +60,7 @@ SET @g = geometry::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

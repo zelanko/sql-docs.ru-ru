@@ -1,5 +1,5 @@
 ---
-title: "Функция ISNUMERIC (Transact-SQL) | Документы Microsoft"
+title: "ISNUMERIC (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ISNUMERIC ( expression )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) для оценки.  
+ Выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md), которое необходимо вычислить.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция ISNUMERIC возвращает 1, если при оценке входного выражения получается допустимый числовой тип данных. В противном случае возвращается 0. Ниже приведены допустимые числовые типы данных:  
   
 |||  
@@ -68,7 +68,7 @@ ISNUMERIC ( expression )
 |**decimal**|**real**|  
   
 > [!NOTE]  
->     ISNUMERIC возвращает «1» для некоторых символов, которые не являются числами (например, плюс (+), минус (-) и такие символы валют, как знак доллара ($)). Полный список символов валют см. в разделе [money и smallmoney &#40; Transact-SQL &#41; ](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>     ISNUMERIC возвращает «1» для некоторых символов, которые не являются числами (например, плюс (+), минус (-) и такие символы валют, как знак доллара ($)). Полный список символов валют см. в статье [Типы money и smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует функцию `ISNUMERIC` для возврата всех почтовых индексов, не являющихся числовыми значениями.  
@@ -82,7 +82,7 @@ WHERE ISNUMERIC(PostalCode)<> 1;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Следующий пример использует функцию `ISNUMERIC` для возврата всех почтовых индексов, не являющихся числовыми значениями.  
   
 ```  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   

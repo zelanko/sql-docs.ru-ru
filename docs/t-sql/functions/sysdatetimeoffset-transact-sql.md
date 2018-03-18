@@ -1,5 +1,5 @@
 ---
-title: "SYSDATETIMEOFFSET (Transact-SQL) | Документы Microsoft"
+title: "SYSDATETIMEOFFSET (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,9 +46,9 @@ ms.lasthandoff: 12/16/2017
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает **datetimeoffset(7)** значение, содержащее дату и время компьютера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена. Смещение часового пояса включается.  
+  Возвращает значение типа **datetimeoffset(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Смещение часового пояса включается.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,12 +62,12 @@ SYSDATETIMEOFFSET ( )
  **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкции могут ссылаться на функцию SYSDATETIMEOFFSET в любом месте, они могут ссылаться на **datetimeoffset** выражение.  
+ Функция SYSDATETIMEOFFSET может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetimeoffset**.  
   
  Функция SYSDATETIMEOFFSET недетерминированная. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Получает значения даты и времени с помощью GetSystemTimeAsFileTime() Windows API. Точность зависит от физического оборудования и версии Windows, в которой запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точность возвращаемых значений этого API-интерфейса задана равной 100 нс. Точность может быть определена с помощью GetSystemTimeAdjustment() Windows API.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает значения даты и времени с помощью функции GetSystemTimeAsFileTime() Windows API. Точность зависит от физического оборудования и версии Windows, в которой запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точность возвращаемых значений этого API-интерфейса задана равной 100 нс. Точность может быть определена с помощью метода GetSystemTimeAdjustment() интерфейса API Windows.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит возврат даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
@@ -142,8 +142,8 @@ GETUTCDATE()       20:18:45.3470000
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

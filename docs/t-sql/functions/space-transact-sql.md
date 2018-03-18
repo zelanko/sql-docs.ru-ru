@@ -1,5 +1,5 @@
 ---
-title: "ПРОБЕЛ (Transact-SQL) | Документы Microsoft"
+title: "SPACE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *integer_expression*  
- Положительное целое число, определяющее количество пробелов в строке. Если *integer_expression* имеет отрицательное значение, возвращается пустая строка.  
+ Положительное целое число, определяющее количество пробелов в строке. Если аргумент *integer_expression* отрицателен, то возвращается пустая строка.  
   
- Дополнительные сведения см. в разделе [выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы включить в строку пробелы в формате Юникод или возвратить более 8000 пробелов, используйте вместо функции SPACE функцию REPLICATE.  
   
 ## <a name="examples"></a>Примеры  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Следующий пример исключает пробелы из фамилий людей, указанных в таблице `DimCustomer` базы данных `AdventureWorksPDW2012`, и дополняет их фамилии запятой, двумя пробелами и именами.  
   
 ```  
@@ -83,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [REPLICATE &#40; Transact-SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [REPLICATE (Transact-SQL)](../../t-sql/functions/replicate-transact-sql.md)   
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

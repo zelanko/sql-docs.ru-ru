@@ -1,5 +1,5 @@
 ---
-title: "Тип удаления (Transact-SQL) | Документы Microsoft"
+title: "DROP TYPE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно Удаляет тип только в том случае, если он уже существует.  
+ Условное удаление таблицы только в том случае, если она уже существует.  
   
  *schema_name*  
- Имя схемы, к которой относится тип псевдонима или пользовательский тип.  
+ Имя схемы, к которой относится тип псевдонима или определяемый пользователем тип.  
   
- *Функция TYPE_NAME*  
+ *type_name*  
  Имя псевдонима типа данных или пользовательского типа, который необходимо удалить.  
   
-## <a name="remarks"></a>Замечания  
- Инструкция DROP TYPE не будет выполняться, если что-либо из перечисленного ниже справедливо.  
+## <a name="remarks"></a>Примечания  
+ Инструкция DROP TYPE не будет выполняться, если справедливо что-либо из перечисленного ниже.  
   
--   В базе данных есть таблицы, содержащие столбцы с псевдонимом типа данных или определяемым пользователем типом данных. Сведения о псевдоним или столбцов определяемого пользователем типа можно получить с помощью запроса [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) или [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) представления каталога.  
+-   В базе данных есть таблицы, содержащие столбцы с псевдонимом типа данных или определяемым пользователем типом данных. Сведения о столбцах с псевдонимом типа данных или пользовательским типом данных можно получить с помощью запроса к представлению каталога [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) или [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md).  
   
--   На псевдоним типа данных или пользовательский тип данных ссылаются определения вычисляемых столбцов, ограничений CHECK, привязанных к схеме представлений и функций. Сведения о данных ссылках можно получить с помощью запроса [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) представления каталога.  
+-   На псевдоним типа данных или пользовательский тип данных ссылаются определения вычисляемых столбцов, ограничений CHECK, привязанных к схеме представлений и функций. Сведения о данных ссылках можно получить с помощью запроса к представлению каталога [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md).  
   
--   В базе данных созданы функции, хранимые процедуры или триггеры, и эти процедуры используют переменные и параметры с псевдонимом типа данных или пользовательским типом данных. Сведения о псевдоним или параметры определяемого пользователем типа можно получить с помощью запроса [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) или [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) представления каталога.  
+-   В базе данных созданы функции, хранимые процедуры или триггеры, и эти процедуры используют переменные и параметры с псевдонимом типа данных или пользовательским типом данных. Сведения о параметрах псевдонима типа данных или определяемого пользователем типа данных можно получить с помощью запроса к представлению каталога [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) или [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Требует либо разрешения CONTROL на *type_name* или разрешение ALTER для *schema_name*.  
+## <a name="permissions"></a>Разрешения  
+ Требует либо разрешения CONTROL на *type_name*, либо разрешения ALTER на *schema_name*.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется тип данных с названием `ssn`, уже созданный в текущей базе данных.  
@@ -78,7 +78,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 DROP TYPE ssn ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

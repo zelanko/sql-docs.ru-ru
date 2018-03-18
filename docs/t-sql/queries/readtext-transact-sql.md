@@ -1,5 +1,5 @@
 ---
-title: "READTEXT (Transact-SQL) | Документы Microsoft"
+title: "READTEXT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Считывает **текст**, **ntext**, или **изображения** значения из **текст**, **ntext**, или **изображения**  столбца, начиная с указанной позиции и чтение заданного числа байтов.  
+  Считывает значения **text**, **ntext** или **image** из столбцов типа **text**, **ntext** или **image**, начиная с указанной позиции; считывается указанное число байтов.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [ПОДСТРОКИ](../../t-sql/functions/substring-transact-sql.md) вместо этого функцию.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого функцию [SUBSTRING](../../t-sql/functions/substring-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Таблица* **.** *column*  
- Имя таблицы и столбца, откуда должны быть считаны данные. Имена таблиц и столбцов должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). Указание имен таблицы и столбца обязательно; однако указание имени базы данных и имен владельца является необязательным.  
+ *table* **.** *column*  
+ Имя таблицы и столбца, откуда должны быть считаны данные. Имена таблиц и столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имен таблицы и столбца обязательно; однако указание имени базы данных и имен владельца является необязательным.  
   
  *text_ptr*  
- Действительный текстовый указатель. *text_ptr* должно быть **binary(16)**.  
+ Действительный текстовый указатель. Значение *text_ptr* должно иметь тип **binary(16)**.  
   
  *offset*  
- Число байтов (при **текст** или **изображения** используются типы данных) или знаков (при **ntext** используется тип данных) следует пропустить прежде чем приступить к чтению **текст**, **изображения**, или **ntext** данных.  
+ Число байтов (если используется тип данных **text** или **image**) или символов (если используется тип данных **ntext**), которые следует пропустить прежде, чем приступить к чтению данных **text**, **image** или **ntext**.  
   
  *size*  
- Число байтов (при **текст** или **изображения** используются типы данных) или знаков (при **ntext** используется тип данных) данных для чтения. Если *размер* равно 0, считывается 4 КБ данных.  
+ Число байтов (если используется тип данных **text** или **image**) или символов (если используется тип данных **ntext**), которое следует считать. Если для аргумента *size* указано значение 0, считывается 4 КБ данных.  
   
  HOLDLOCK  
  Вызывает блокировку считывания для текстового значения до окончания транзакции. Другие пользователи могут считывать значение, но не могут изменять его.  
   
 ## <a name="remarks"></a>Remarks  
- Используйте [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) функции для получения допустимого *text_ptr* значение. TEXTPTR возвращает указатель на **текст**, **ntext**, или **изображения** столбца в указанной строке или в **текст**, **ntext** , или **изображения** столбца в последней строке, возвращенные запросом, если возвращается более одной строки. Поскольку TEXTPTR возвращает 16-байтовую двоичную строку, рекомендуется объявить локальную переменную для хранения текстового указателя, а затем использовать эту переменную с READTEXT. Дополнительные сведения об объявлении локальной переменной см. в разделе [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+ Используйте функцию [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md), чтобы получить действительное значение аргумента *text_ptr*. TEXTPTR возвращает указатель на столбец **text**, **ntext** или **image** в указанной строке или на столбец **text**, **ntext** или **image** в последней строке, возвращаемой запросом, если возвращается более одной строки. Поскольку TEXTPTR возвращает 16-байтовую двоичную строку, рекомендуется объявить локальную переменную для хранения текстового указателя, а затем использовать эту переменную с READTEXT. Дополнительные сведения об объявлении локальной переменной см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутристрочные текстовые указатели могут существовать, но при этом быть недействительными. Дополнительные сведения о **текст в строке** см. в разделе [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Дополнительные сведения о допустимости указателей текста см. в разделе [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутристрочные текстовые указатели могут существовать, но при этом быть недействительными. Дополнительные сведения о параметре **text in row** см. в статье [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Дополнительные сведения о допустимости текстовых указателей см. в статье [sp_invalidate_textptr (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- Значение @@TEXTSIZE функция заменяет размер, указанный для READTEXT, если оно меньше размера, указанного для READTEXT. @@TEXTSIZE Функция указывает предельное число байтов данных, возвращаемых инструкцией SET TEXTSIZE набора. Дополнительные сведения о том, как определить настройку сеанса для TEXTSIZE см. в разделе [SET TEXTSIZE &#40; Transact-SQL &#41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
+ Значение функции @@TEXTSIZE переопределяет размер, указанный для READTEXT, если оно меньше размера, указанного для READTEXT. Функция @@TEXTSIZE указывает предельное число байтов данных, которые должны быть возвращены, как установлено инструкцией SET TEXTSIZE. Дополнительные сведения о том, как задать значение TEXTSIZE для сеанса, см. в статье [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения READTEXT по умолчанию принадлежат пользователям, имеющим разрешения SELECT для указанной таблицы. Разрешения могут быть переданы при передаче разрешений SELECT.  
@@ -80,7 +80,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
  В нижеследующем примере считываются знаки со второго по двадцать шестой в столбце `pr_info` таблицы `pub_info`.  
   
 > [!NOTE]  
->  Чтобы выполнить этот пример, необходимо установить **pubs** образца базы данных.  
+>  Для выполнения этого примера необходимо установить образец базы данных **pubs**.  
   
 ```  
 USE pubs;  
@@ -94,7 +94,7 @@ READTEXT pub_info.pr_info @ptrval 1 25;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
  [UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  

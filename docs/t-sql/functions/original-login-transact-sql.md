@@ -1,5 +1,5 @@
 ---
-title: "Функция ORIGINAL_LOGIN (Transact-SQL) | Документы Microsoft"
+title: "ORIGINAL_LOGIN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **sysname**  
   
-## <a name="remarks"></a>Замечания  
- Эта функция может быть полезной для аудита идентификатора исходного контекста подключения. Тогда как функции, такие как [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) и [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) возвращают текущий исполняющий контекст, ORIGINAL_LOGIN возвращает идентификатор входа, первым подключившегося к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в этом сеансе.  
+## <a name="remarks"></a>Remarks  
+ Эта функция может быть полезной для аудита идентификатора исходного контекста подключения. Так как остальные функции, такие как [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) и [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md), возвращают текущий исполняющий контекст, ORIGINAL_LOGIN возвращает идентификатор имени входа, которое первым подключилось к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в данном сеансе.  
   
- Возвращает значение NULL, если на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Возвращает значение NULL для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример переключает исполняющий контекст текущего сеанса от того, кто вызвал данные инструкции, на `login1`. Функции `SUSER_SNAME` и `ORIGINAL_LOGIN` используются для возврата пользователя текущего сеанса (пользователя, на которого переключается контекст) и исходной учетной записи имени входа.  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ВЫПОЛНЕНИЕ AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [ВОССТАНОВИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+ [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT (Transact-SQL)](../../t-sql/statements/revert-transact-sql.md)  
   
   

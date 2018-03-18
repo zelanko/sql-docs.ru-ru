@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (тип данных geometry) | Документы Microsoft"
+title: "STSymDifference (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает объект, представляющий все точки, в какой-либо **geometry** экземпляр или другой **geometry** экземпляра, но не лежащие одновременно в обоих экземплярах.  
+  Возвращает объект, представляющий все точки, принадлежащие одному из экземпляров **geometry** или **geometry**, но не лежащие одновременно в обоих экземплярах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр в дополнение к экземпляром, в котором `STSymDistance()` вызывается.  
+ Другой экземпляр **geometry** в дополнение к экземпляру, для которого вызван метод `STSymDistance()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают. Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID). Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -86,7 +86,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @h.STSymDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

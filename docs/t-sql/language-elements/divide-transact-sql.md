@@ -1,5 +1,5 @@
 ---
-title: "(Деление) (Transact-SQL) | Документы Microsoft"
+title: "(деление) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-division-transact-sql"></a>/ (Деление) (Transact-SQL)
+# <a name="-division-transact-sql"></a>/ (деление) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Выполняет деление одного числа на другое (арифметический оператор деления).  
@@ -48,15 +48,15 @@ dividend / divisor
   
 ## <a name="arguments"></a>Аргументы  
  *dividend*  
- Делимое числовое выражение. *делимое* может быть любым допустимым [выражение](../../t-sql/language-elements/expressions-transact-sql.md) одного из типов данных числового типа данных, за исключением **datetime** и **smalldatetime** типы данных.  
+ Делимое числовое выражение. *dividend* может быть любым допустимым выражением [expression](../../t-sql/language-elements/expressions-transact-sql.md) любого из типов категории числовых типов данных, кроме типов данных **datetime** и **smalldatetime**.  
   
  *divisor*  
- Числовое выражение, на которое делится делимое. *делитель* может быть любое допустимое выражение любого из типов данных категории числовых типов данных, за исключением **datetime** и **smalldatetime** типов данных.  
+ Числовое выражение, на которое делится делимое. *divisor* может быть любым допустимым выражением любого из типов категории числовых типов данных, кроме типов данных **datetime** и **smalldatetime**.  
   
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
- Если целое число *делимое* делится на целое число *делитель*, результатом является целочисленная дробная часть усечена.  
+ Если целочисленный аргумент *dividend* делится на целочисленный аргумент *divisor*, то результатом будет целое число, а дробная часть будет усечена.  
   
 ## <a name="remarks"></a>Remarks  
  Фактическое значение, возвращаемое оператором /, представляет собой частное от деления первого выражения на второе.  
@@ -88,8 +88,8 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере арифметический оператор деления используется для вычисления доли простой о количестве часов отпуска для часов отсутствия по болезни каждого сотрудника.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере арифметический оператор деления служит для вычисления отношения часов отпуска к часам отсутствия по болезни для каждого сотрудника.  
   
 ```  
 -- Uses AdventureWorks  
@@ -99,14 +99,14 @@ FROM DimEmployee;
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [/ = &#40; присваивание деления &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [/= (присваивание деления) (Transact-SQL)](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

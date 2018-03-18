@@ -1,5 +1,5 @@
 ---
-title: "CLOSE MASTER KEY (Transact-SQL) | Документы Microsoft"
+title: "CLOSE MASTER KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>Аргументы  
  Нет аргументов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта инструкция выполняет операцию, обратную инструкции OPEN MASTER KEY. Выполнение инструкции CLOSE MASTER KEY завершается успешно, только если главный ключ базы данных был открыт в текущем сеансе с помощью инструкции OPEN MASTER KEY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения не требуются.  
   
 ## <a name="examples"></a>Примеры  
@@ -65,7 +65,7 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```  
 USE master;  
@@ -77,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
- [ОТКРЫТЬ ГЛАВНЫЙ ключ &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

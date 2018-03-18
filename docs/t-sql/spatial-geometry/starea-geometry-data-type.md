@@ -1,5 +1,5 @@
 ---
-title: "STArea (тип данных geometry) | Документы Microsoft"
+title: "STArea (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает общую площадь поверхности **geometry** экземпляра.  
+  Возвращает общую площадь поверхности экземпляра **geometry**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **число с плавающей запятой**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Возвращаемый тип CLR: **SqlDouble**  
+ Тип возвращаемых данных CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- `STArea()`Возвращает 0, если **geometry** экземпляр содержит только 0 и 1-размерности, или если она пуста. `STArea()`Возвращает **NULL** Если **geometry** экземпляр не инициализирован.  
+ Метод `STArea()` возвращает значение 0, если экземпляр **geometry** содержит только объекты размерности 0 и 1 либо является пустым. Метод `STArea()` возвращает значение **NULL**, если экземпляр **geometry** не инициализирован.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Вычисление площади экземпляра объекта Polygon  
- В следующем примере создается `Polygon``geometry` и вычисляется площадь многоугольника.  
+ В следующем примере создается экземпляр `Polygon``geometry` и вычисляется площадь многоугольника.  
   
 ```  
 DECLARE @g geometry;  
@@ -71,7 +71,7 @@ SELECT @g.STArea();
  SELECT @g.STArea() AS Area;
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

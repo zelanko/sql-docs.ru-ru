@@ -1,5 +1,5 @@
 ---
-title: "ИМЕЕТ значение NULL (Transact-SQL) | Документы Microsoft"
+title: "IS NULL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="is-null-transact-sql"></a>ИМЕЕТ значение NULL (Transact-SQL)
+# <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет, может ли указанное выражение быть NULL.  
@@ -60,7 +60,7 @@ expression IS [ NOT ] NULL
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  NOT  
  Задает отрицание логического результата. Предикат меняет возвращаемые выражением значения на обратные, возвращая TRUE, если значение не равно NULL и FALSE, если значение равно NULL.  
@@ -69,9 +69,9 @@ expression IS [ NOT ] NULL
  **Логическое значение**  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Если значение *выражение* является NULL, IS NULL возвращает значение TRUE; в противном случае возвращается значение FALSE.  
+ Если значение *expression* равно NULL, IS NULL возвращает TRUE; в противном случае возвращается значение FALSE.  
   
- Если значение *выражение* является NULL, IS NOT NULL возвращает FALSE; в противном случае он возвращает значение TRUE.  
+ Если значение *expression* равно NULL, IS NOT NULL возвращает FALSE; в противном случае возвращается значение TRUE.  
   
 ## <a name="remarks"></a>Remarks  
  Для определения, имеет ли выражение значение NULL, используйте IS NULL или IS NOT NULL вместо сравнения операторов (например = или !=). Сравнение операторов возвращает UNKNOWN, если хотя бы один аргумент или они оба равны NULL.  
@@ -89,8 +89,8 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере возвращается полных имен всех сотрудников среднего инициалы.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В следующем примере возвращаются полные имена всех сотрудников с инициалами отчества.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,20 +101,20 @@ WHERE MiddleName IS NOT NULL
 ORDER BY LastName DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Логические операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Логические операторы (Transact-SQL)](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

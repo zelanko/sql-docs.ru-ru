@@ -1,5 +1,5 @@
 ---
-title: "AsBinaryZM (тип данных geometry) | Документы Microsoft"
+title: "AsBinaryZM (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает представление Open Geospatial Consortium (OGC) Well-Known Binary (WKB) **geometry** экземпляр дополненного **Z** (высота) и **M** (Мера) значения, сопровождающих экземпляр.
+Возвращает представление в формате WKB открытого геопространственного консорциума (OGC) для экземпляра **geometry**, дополненное всеми значениями **Z** (высота) и **M** (мера), находящимися в экземпляре.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **varbinary(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Возвращаемый тип CLR: **SqlBytes**  
+ Тип возвращаемых данных CLR: **SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -59,10 +59,10 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [М &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Я &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [M (тип данных geometry)](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z (тип данных geometry)](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "СОЗДАТЬ СХЕМУ СЕКЦИОНИРОВАНИЯ (Transact-SQL) | Документы Microsoft"
+title: "CREATE PARTITION SCHEME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -45,10 +45,10 @@ ms.lasthandoff: 12/07/2017
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Создает схему в текущей базе данных, которая сопоставляет секции секционированной таблицы или индекса с файловыми группами. Количество и домен секций секционированной таблицы или индекса определяются в функции секционирования. Функции секционирования, сначала должна быть создана в [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) инструкцию перед созданием схемы секционирования.  
+  Создает схему в текущей базе данных, которая сопоставляет секции секционированной таблицы или индекса с файловыми группами. Количество и домен секций секционированной таблицы или индекса определяются в функции секционирования. Прежде чем создавать схему секционирования, сначала в инструкции [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) следует создать функцию секционирования.  
 
 >[!NOTE]
->В базе данных SQL Azure, поддерживаются только первичную файловую группу.  
+>В базе данных SQL Azure поддерживаются только первичные файловые группы.  
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,29 +63,29 @@ AS PARTITION partition_function_name
   
 ## <a name="arguments"></a>Аргументы  
  *partition_scheme_name*  
- Имя схемы секционирования. Имена схемы секционирования должны быть уникальными в пределах базы данных и соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
+ Имя схемы секционирования. Имена схемы секционирования должны быть уникальными в пределах базы данных и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
  *partition_function_name*  
- Имя функции секционирования, использующей схему секционирования. Секции, созданные функцией секционирования, сопоставляются с файловыми группами, заданными в схеме секционирования. *partition_function_name* уже должен существовать в базе данных. Одна секция не может одновременно содержать файловые группы файлового потока и другие файловые группы.  
+ Имя функции секционирования, использующей схему секционирования. Секции, созданные функцией секционирования, сопоставляются с файловыми группами, заданными в схеме секционирования. Аргумент *partition_function_name* уже должен существовать в базе данных. Одна секция не может одновременно содержать файловые группы файлового потока и другие файловые группы.  
   
  ALL  
- Указывает, что все секции сопоставляются с файловой группой в *file_group_name*, или в первичной файловой группе Если **[**ОСНОВНОЙ**]** указано. Если указан параметр ALL, то только одна *file_group_name* можно указать.  
+ Указывает, что все секции сопоставляются с файловой группой, определяемой аргументом *file_group_name*, или с первичной файловой группой, если указывается **[**PRIMARY**]**. Если указывается ALL, то может быть указано только одно значение аргумента *file_group_name*.  
   
- *file_group_name* | **[** ОСНОВНОЙ **]** [ **,***.. .n*]  
- Указывает имена файловых групп, содержащих секции, указываемые аргументом *partition_function_name*. *file_group_name* уже должен существовать в базе данных.  
+ *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ Указывает имена файловых групп, содержащих секции, указываемые аргументом *partition_function_name*. Аргумент *file_group_name* уже должен существовать в базе данных.  
   
- Если **[**ОСНОВНОЙ**]** задано, секция сохраняется в первичной файловой группы. Если указан параметр ALL, то только одна *file_group_name* можно указать. Секции назначаются файловым группам, начиная с секции 1, в порядке, в котором файловые группы перечисляются в [**,***.. .n*]. Соответствует *file_group_name* можно указать более одного раза в [**,***.. .n*]. Если  *n*  недостаточен для хранения числа секций, указанных в *partition_function_name*, CREATE PARTITION SCHEME завершается с ошибкой.  
+ Если указывается **[**PRIMARY**]**, секция сохраняется в первичной файловой группе. Если указывается ALL, то может быть указано только одно значение аргумента *file_group_name*. Секции назначаются файловым группам, начиная с секции 1, в том порядке, в котором файловые группы перечисляются в [**,***...n*]. Одно и то же имя *file_group_name* может быть указано в [**,***...n*] несколько раз. Если значение *n* недостаточно для количества секций, указываемого в аргументе *partition_function_name*, CREATE PARTITION SCHEME завершается с ошибкой.  
   
- Если *partition_function_name* формирует меньше секций, чем файловых групп, первая неназначенная файловая группа помечена как NEXT USED и информационное сообщение выводит наименование файловой группы NEXT USED. Если указан параметр ALL, то единственный *file_group_name* сохраняет свое свойство NEXT USED для данного *partition_function_name*. Файловая группа NEXT USED получит дополнительную секцию, если такая секция будет создана инструкцией ALTER PARTITION FUNCTION. Чтобы создать дополнительные неназначенные файловые группы, которые должны содержать новые секции, используйте инструкцию ALTER PARTITION SCHEME.  
+ Если аргумент *partition_function_name* формирует меньше секций, чем количество файловых групп, первая неназначенная файловая группа отмечается как NEXT USED и информационное сообщение выводит наименование файловой группы NEXT USED. Если указывается параметр ALL, единственный аргумент *file_group_name* сохраняет свое свойство NEXT USED для аргумента *partition_function_name*. Файловая группа NEXT USED получит дополнительную секцию, если такая секция будет создана инструкцией ALTER PARTITION FUNCTION. Чтобы создать дополнительные неназначенные файловые группы, которые должны содержать новые секции, используйте инструкцию ALTER PARTITION SCHEME.  
   
- При указании первичной файловой группы в *file_group_name* [1**,***.. .n*], PRIMARY должен отделяться, как и в **[**ОСНОВНОЙ**]** , так как он является ключевым словом.  
+ Когда первичная файловая группа указывается в *file_group_name* [ 1**,***...n*], аргумент PRIMARY должен отделяться так же, как в **[**PRIMARY**]**, так как это ключевое слово.  
   
- Только PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. См. пример ниже E. 
+ Только PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. См. пример Д далее. 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения CREATE PARTITION SCHEME могут использоваться следующие разрешения.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
   
 -   Разрешения CONTROL или ALTER на базу данных, в которой создается схема секционирования.  
   
@@ -105,13 +105,13 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- Секции таблицы, использующей функцию секционирования `myRangePF1` на столбце секционирования **col1** будет назначаться, как показано в следующей таблице.  
+ Секции таблицы, использующей функцию секционирования `myRangePF1` в столбце секционирования **col1**, будут назначены так, как показано в следующей таблице.  
   
 ||||||  
 |-|-|-|-|-|  
 |**Файловая группа**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**Секции**|1|2|3|4|  
-|**Значения**|**Col1** <= `1`|**Col1**  >  `1` AND **col1** <= `100`|**Col1**  >  `100` AND **col1** <= `1000`|**Col1** > `1000`|  
+|**Секция**|1|2|3|4|  
+|**Значения**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>Б. Создание схемы секционирования, которая сопоставляет несколько секций с одной файловой группой  
  Если все секции сопоставляются с одной и той же файловой группой, используйте ключевое слово ALL. Но если сопоставление нескольких секций, но не всех, выполняется к одной файловой группе, то имя файловой группы должно быть повторено, как показано в следующем примере.  
@@ -125,13 +125,13 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- Секции таблицы, использующей функцию секционирования `myRangePF2` на столбце секционирования **col1** будет назначаться, как показано в следующей таблице.  
+ Секции таблицы, использующей функцию секционирования `myRangePF2` в столбце секционирования **col1**, будут назначены так, как показано в следующей таблице.  
   
 ||||||  
 |-|-|-|-|-|  
 |**Файловая группа**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**Секции**|1|2|3|4|  
-|**Значения**|**Col1** <= `1`|**Col1** > 1 AND **col1** <= `100`|**Col1**  >  `100` AND **col1** <= `1000`|**Col1** > `1000`|  
+|**Секция**|1|2|3|4|  
+|**Значения**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>В. Создание схемы секционирования, сопоставляющей все секции с одной файловой группой  
  В следующем примере создается такая же функция секционирования, что и в предыдущих примерах, и далее создается схема секционирования, которая сопоставляет все секции с одной и той же файловой группой.  
@@ -145,7 +145,7 @@ AS PARTITION myRangePF3
 ALL TO ( test1fg );  
 ```  
   
-### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>Г. Создание схемы секционирования, указывающей файловую группу «NEXT USED»  
+### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>Г. Создание схемы секционирования, указывающей файловую группу "NEXT USED"  
  В следующем примере создается такая же функция секционирования, что и в предыдущих примерах, и далее создается схема секционирования, в которой указывается большее количество файловых групп, чем количество секций, созданных соответствующей функцией секционирования.  
   
 ```  
@@ -159,14 +159,14 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  При выполнении инструкции выводится следующее сообщение.  
   
-Схема секционирования «myRangePS4» успешно создан. Группа «test5fg» помечена как следующая используемая файловая группа в схеме секционирования «myRangePS4».  
+Схема секционирования "myRangePS4" успешно создана. "test5fg" помечена как следующая используемая файловая группа в схеме секционирования "myRangePS4".  
   
   
  Если функция секционирования `myRangePF4` изменяется для добавления секции, файловая группа `test5fg` получает вновь созданную секцию.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>Д. Создание схемы секционирования только на ОСНОВНОЙ — только ОСНОВНОЙ поддерживается для[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>Д. Создание схемы секционирования только в группе PRIMARY — только группа PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
- В следующем примере создается функция секционирования для разделения таблицы или индекса на четыре секции. Затем создается схема секционирования, указывающее, что все секции создаются в ПЕРВИЧНОЙ файловой группы.  
+ В следующем примере создается функция секционирования для разделения таблицы или индекса на четыре секции. Затем создается схема секционирования, указывающая, что все секции создаются в файловой группе PRIMARY.  
   
 ```  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
@@ -177,16 +177,16 @@ AS PARTITION myRangePF1
 ALL TO ( [PRIMARY] );  
 ```
    
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Создание секционированных таблиц и индексов](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
- [sys.partition_schemes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [sys.data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

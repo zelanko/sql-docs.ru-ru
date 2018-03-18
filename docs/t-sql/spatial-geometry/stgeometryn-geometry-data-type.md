@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (тип данных geometry) | Документы Microsoft"
+title: "STGeometryN (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает указанную геометрию в **коллекцию геометрических объектов**.
+Возвращает указанную геометрию в коллекцию **geometrycollection**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — **Int** выражение между 1 и число **geometry** экземпляров в **geometrycollection**.  
+ Выражение типа **int** со значением от 1 до количества экземпляров **geometry** в коллекции **geometrycollection**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает **null** Если параметр больше, чем результат `STNumGeometries()` и вызывает **ArgumentOutOfRangeException** Если *выражение* аргумент принимает значение меньше 1.  
+ Данный метод возвращает значение **NULL**, если параметр больше, чем результат `STNumGeometries()`, и вызывает исключение **ArgumentOutOfRangeException**, если параметр *expression* меньше, чем 1.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `MultiPoint``geometry collection` и использует `STGeometryN()` для поиска второго `geometry` экземпляр коллекции.  
+ В следующем примере создается экземпляр `MultiPoint``geometry collection` и используется метод `STGeometryN()` для поиска второго экземпляра `geometry` этой коллекции.  
   
 ```  
 DECLARE @g geometry;  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

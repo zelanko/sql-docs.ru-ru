@@ -1,5 +1,5 @@
 ---
-title: "DBCC HELP (Transact-SQL) | Документы Microsoft"
+title: "DBCC HELP (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -81,7 +81,7 @@ DBCC HELP ('?');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

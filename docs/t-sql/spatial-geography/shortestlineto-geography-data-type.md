@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (тип данных geography) | Документы Microsoft"
+title: "ShortestLineTo (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает **LineString** экземпляра с двумя точками, представляющий кратчайшее расстояние между двумя **geography** экземпляров. Длина **LineString** возвращаемый экземпляр — это расстояние между двумя **geography** экземпляров.  
+  Возвращает экземпляр **LineString** с двумя точками, представляющий кратчайшее расстояние между двумя экземплярами **geography**. Длина возвращаемого экземпляра **LineString** равна расстоянию между двумя экземплярами **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *geography_other*  
- Указывает второй **geography** экземпляр, вызывающий **geography** пытается определить кратчайшее расстояние до экземпляра.  
+ Указывает второй экземпляр **geography**, кратчайшее расстояние до которого пытается определить вызывающий экземпляр **geography**.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+## <a name="return-types"></a>Типы возвращаемых данных  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- Метод возвращает **LineString** экземпляр с конечными точками, лежащими на границах двух непересекающиеся **geography** сравниваемых экземпляров. Длина **LineString** возвращаемый равна кратчайшему расстоянию между двумя **geography** экземпляров. Пустой **LineString** экземпляр возвращается, когда два **geography** пересекаются друг с другом.  
+## <a name="remarks"></a>Примечания  
+ Этот метод возвращает экземпляр **LineString** с двумя конечными точками, лежащими на границах двух сравниваемых непересекающихся экземпляров **geography**. Длина возвращаемого экземпляра **LineString** равна кратчайшему расстоянию между двумя экземплярами **geography**. Пустой экземпляр **LineString** возвращается, когда два экземпляра **geography** пересекаются друг с другом.  
   
 ## <a name="examples"></a>Примеры  
   

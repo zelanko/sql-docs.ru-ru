@@ -1,5 +1,5 @@
 ---
-title: "HOST_ID (Transact-SQL) | Документы Microsoft"
+title: "HOST_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ HOST_ID ()
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **char(10)**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметр системной функции является необязательным, то предполагаются текущие база данных, главный компьютер, пользователь сервера или пользователь базы данных. За встроенными функциями всегда должны следовать круглые скобки.  
   
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений.  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

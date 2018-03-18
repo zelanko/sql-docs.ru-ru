@@ -1,5 +1,5 @@
 ---
-title: "ReorientObject (тип данных geography) | Документы Microsoft"
+title: "ReorientObject (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает **geography** экземпляр со взаимозаменяемыми внутренними и внешними областями.  
+  Возвращает экземпляр **geography** со взаимозаменяемыми внутренними и внешними областями.  
   
- Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.  
+ Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *geography*  
- Другой **geography** экземпляр, на котором `ReorientObject()` вызывается.  
+ Другой экземпляр **geography**, для которого вызван метод `ReorientObject()`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- Этот метод изменяет ориентацию кольца для всех **многоугольников** в **GeometryCollection** , но не удалить или изменить какие-либо **точки** или **Linestrings** в заданной коллекции.  
+## <a name="remarks"></a>Примечания  
+ Этот метод изменяет ориентацию кольца для всех **Polygons** в коллекции **GeometryCollection**, но не удаляет и не изменяет **Points** или **Linestrings** в данной коллекции.  
   
- Если **GeometryCollection** передается этому методу, каждый экземпляр в коллекции будет изменена ориентация, но коллекции целиком ориентация не меняется.  
+ Если коллекция **GeometryCollection** будет передана этому методу, то для каждого экземпляра в коллекции будет изменена ориентация, однако для коллекции целиком ориентация не меняется.  
   
 ## <a name="examples"></a>Примеры  
   

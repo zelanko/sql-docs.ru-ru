@@ -1,5 +1,5 @@
 ---
-title: "ToString (тип данных geometry) | Документы Microsoft"
+title: "ToString (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Возвращаемый тип CLR: **SqlString**  
+ Тип возвращаемых данных CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает строку «Null», если он вызван для неопределенного экземпляра.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  Вызов этого метода по отношению к определенным экземплярам эквивалентен использованию метода `AsTextZM().`  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `LineString` и с помощью `ToString()` для выборки текстового описания экземпляра.  
+ В приведенном ниже примере создается экземпляр `LineString` и используется метод `ToString()` для выборки текстового описания экземпляра.  
   
 ```  
 DECLARE @g geometry;  
@@ -61,8 +61,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
- [STAsText &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+## <a name="see-also"></a>См. также:  
+ [STAsText (тип данных geometry)](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

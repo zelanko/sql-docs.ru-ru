@@ -1,5 +1,5 @@
 ---
-title: "Предикаты | Документы Microsoft"
+title: "Предикаты | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,22 +38,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="predicates"></a>Предикаты
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Любое выражение, результатом которого являются значения TRUE, FALSE или UNKNOWN. Предикаты используются в условиях поиска [ГДЕ](../../t-sql/queries/where-transact-sql.md) предложений и [HAVING](../../t-sql/queries/select-having-transact-sql.md) предложений, в условиях соединения [FROM](../../t-sql/queries/from-transact-sql.md) предложений и других конструкциях, где — логическое значение Обязательно.  
+  Любое выражение, результатом которого являются значения TRUE, FALSE или UNKNOWN. Предикаты используются в условиях поиска предложений [WHERE](../../t-sql/queries/where-transact-sql.md) и [HAVING](../../t-sql/queries/select-having-transact-sql.md), в условиях соединения предложений [FROM](../../t-sql/queries/from-transact-sql.md) и других конструкциях, где требуется логическое значение.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие предикаты.  
   
 ||  
 |-|  
 |[CONTAINS](../../t-sql/queries/contains-transact-sql.md)|  
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
-|[— &#91; НЕ &#93; ЗНАЧЕНИЕ NULL](../../t-sql/queries/is-null-transact-sql.md)|  
+|[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также  
- [МЕЖДУ &#40; Transact-SQL &#41;](../../t-sql/language-elements/between-transact-sql.md)   
- [СУЩЕСТВУЕТ &#40; Transact-SQL &#41;](../../t-sql/language-elements/exists-transact-sql.md)   
- [ИН &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)   
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Условие поиска &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [BETWEEN (Transact-SQL)](../../t-sql/language-elements/between-transact-sql.md)   
+ [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md)   
+ [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

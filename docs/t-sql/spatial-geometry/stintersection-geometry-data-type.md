@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (тип данных geometry) | Документы Microsoft"
+title: "STIntersection (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geometry-data-type"></a>STIntersection (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает объект, представляющий точки, где **geometry** экземпляр пересекается с другим **geometry** экземпляра.
+Возвращает объект, представляющий точки, в которых экземпляр **geometry** пересекается с другим экземпляром **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр для сравнения с экземпляром, в котором `STIntersection()` вызывается, чтобы определить место их пересечения.  
+ Другой экземпляр **geometry**, сравниваемый с экземпляром, для которого вызван метод `STIntersection()`, чтобы определить место их пересечения.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STIntersection()`всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают. Результат может содержать сегменты дуги только в том случае, если они содержатся во входном экземпляре.  
+ Метод `STIntersection()` всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geometry** не совпадают. Результат может содержать сегменты дуги только в том случае, если они содержатся во входном экземпляре.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -77,7 +77,7 @@ SELECT @g.STIntersection(@h).ToString();
  SELECT @h.STIntersection(@g).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

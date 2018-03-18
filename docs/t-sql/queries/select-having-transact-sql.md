@@ -1,5 +1,5 @@
 ---
-title: "НАЛИЧИЕ (Transact-SQL) | Документы Microsoft"
+title: "HAVING (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---having-transact-sql"></a>SELECT — НАЛИЧИЕ (Transact-SQL)
+# <a name="select---having-transact-sql"></a>SELECT — HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Определяет условие поиска для группы или статистического выражения. Предложение HAVING можно использовать только в инструкции SELECT. HAVING обычно используется с предложением GROUP BY. Когда GROUP BY не используется, есть неявные единый, агрегированных группа.   
+  Определяет условие поиска для группы или статистического выражения. Предложение HAVING можно использовать только в инструкции SELECT. HAVING обычно используется с предложением GROUP BY. Если предложение GROUP BY не используется, имеется одна неявная агрегированная группа.   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-\<search_condition > указывает один или несколько предикатов для группы или статистические выражения в соответствии с. Дополнительные сведения об условиях поиска и предикатах см. в разделе [условие поиска &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition> задает один или несколько предикатов, которые должны выполняться для групп или агрегатов. Дополнительные сведения об условиях поиска и предикатах см. в статье [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md).  
   
- **Текст**, **изображения**, и **ntext** типы данных не может использоваться в предложении HAVING.  
+ Типы данных **text**, **image** и **ntext** нельзя использовать в предложении HAVING.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере, который использует простое предложение `HAVING`, из таблицы `SalesOrderID` извлекается сумма всех полей `SalesOrderDetail`, значение которых превышает `$100000.00`.  
@@ -65,8 +65,8 @@ HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере используется `HAVING` предложений, чтобы получить итог для каждого `SalesAmount` из `FactInternetSales` таблицу при `OrderDateKey` год 2004 г. или более поздней версии.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере предложение `HAVING` используется с целью получения суммы для каждого `SalesAmount` в таблице `FactInternetSales`, для которого `OrderDateKey` относится к 2004 или более позднему году.  
   
 ```  
 -- Uses AdventureWorks  
@@ -78,9 +78,9 @@ HAVING SUM(SalesAmount) > 80000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Предложение GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [GROUP BY (Transact-SQL)](../../t-sql/queries/select-group-by-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

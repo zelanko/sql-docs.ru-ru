@@ -1,5 +1,5 @@
 ---
-title: "ROWCOUNT_BIG (Transact-SQL) | Документы Microsoft"
+title: "ROWCOUNT_BIG (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает число строк, затронутых при выполнении последней инструкции. Эта функция работает подобно [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), за исключением того, что возвращаемый тип является **bigint**.  
+  Возвращает число строк, затронутых при выполнении последней инструкции. Эта функция работает подобно [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md) за исключением того, что она возвращает значение типа **bigint**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ROWCOUNT_BIG ( )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании после инструкции SELECT данная функция возвращает число строк, возвращенных инструкцией SELECT.  
   
  При использовании после инструкции INSERT UPDATE или DELETE данная функция возвращает число строк, затронутых инструкцией изменения данных.  
@@ -60,7 +60,7 @@ ROWCOUNT_BIG ( )
  При использовании после инструкций, не возвращающих ни одной строки (например, инструкции IF), возвращает 0.  
   
 ## <a name="see-also"></a>См. также:  
- [Функция COUNT_BIG &#40; Transact-SQL &#41;](../../t-sql/functions/count-big-transact-sql.md)   
+ [COUNT_BIG (Transact-SQL)](../../t-sql/functions/count-big-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

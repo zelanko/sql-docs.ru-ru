@@ -1,5 +1,5 @@
 ---
-title: "В ЧАСОВОМ ПОЯСЕ (Transact-SQL) | Документы Microsoft"
+title: "AT TIME ZONE (Transact-SQL) | Документы Майкрософт"
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -29,12 +29,12 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>В ЧАСОВОМ ПОЯСЕ (Transact-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Преобразует *inputdate* к соответствующим *datetimeoffset* значение в целевой часовой пояс. Если *inputdate* предоставляется без сведения о смещении, функция применяется смещение часового пояса, при условии, что *inputdate* значение указано в целевой часовой пояс. Если *inputdate* предоставляется как *datetimeoffset* значение, чем **AT TIME ZONE** предложение преобразует его в целевой часовой пояс с помощью правил преобразования часового пояса.  
+  Преобразует аргумент *inputdate* в соответствующее значение *datetimeoffset* в целевом часовом поясе. Если аргумент *inputdate* предоставляется без сведений о смещении, функция применяет смещение часового пояса при условии, что в целевом часовом поясе указано значение *inputdate*. Если аргумент *inputdate* предоставляется как значение *datetimeoffset*, предложение **AT TIME ZONE** преобразует его в целевой часовой пояс с помощью правил преобразования часовых поясов.  
   
- **В ЧАСОВОМ ПОЯСЕ** реализация зависит от Windows механизм для преобразования **datetime** значения в разных часовых поясах.  
+ При преобразовании значений **datetime** в разных часовых поясах реализация функции **AT TIME ZON** зависит от механизма Windows.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>Аргументы  
  *inputdate*  
- Выражение, которое разрешается к **smalldatetime**, **datetime**, **datetime2**, или **datetimeoffset** значение.  
+ Выражение, которое можно привести к значению **smalldatetime**, **datetime**, **datetime2** или **datetimeoffset**.  
   
  *timezone*  
- Имя часового пояса назначения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]зависит от часовых поясов, которые хранятся в реестре Windows. Все часовые пояса, установленных на компьютере, хранятся в следующих куст реестра: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time зоны**. Список установленных часовые пояса также предоставляются через [sys.time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) представления.  
+ Имя целевого часового пояса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от часовых поясов, которые хранятся в реестре Windows. Все часовые пояса, установленные на компьютере, хранятся в следующем кусте реестра: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Список установленных часовых поясов также отображается в представлении [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тип данных **datetimeoffset**  
+ Возвращает тип данных **datetimeoffset**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Datetimeoffset** значение в целевой часовой пояс.  
+ Значение **datetimeoffset** в целевом часовом поясе.  
   
 ## <a name="remarks"></a>Remarks  
- **В ЧАСОВОМ ПОЯСЕ** применяет специальные правила для преобразования входных значений в **smalldatetime**, **datetime** и **datetime2** типы данных, которые попадают в интервал, затрагиваемых изменением летнего времени:  
+ **AT TIME ZONE** применяет специальные правила для преобразования входных значений в типы данных **smalldatetime**, **datetime** и **datetime2**, которые входят в интервал, затрагиваемый при переходе на летнее время.  
   
--   Если часы имеет значение заранее, то имеется разрыв в формате местного времени, длительность которого зависит от времени взаимных часов (обычно 1 час, но он может быть 30-45 минут, в зависимости от часового пояса). В этом случае при преобразовании моменты времени, принадлежащих пропуска смещение *после* перехода на летнее.  
+-   Если время переводится вперед, возникает разница с местным временем, длительность которой зависит от настройки часов (обычно 1 час, но в зависимости от часового пояса значение может составлять 30–45 минут). В этом случае точки во времени в диапазоне этой разницы преобразуются со смещением *после* перехода на летнее время.  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- Если снова установить часы 2 часа местного времени перекрываются на один час.  В этом случае выводится моменты времени, принадлежащих перекрывающихся интервал смещения *перед* внесения изменений:  
+- Если время переводится назад, 2 часа местного времени перекрываются на один час.  В этом случае точки во времени, входящие в перекрывающийся интервал, представляются со смещением *после* изменения времени.  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-Так как некоторые сведения (такие как правила часового пояса) хранятся вне [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и подлежат случайные изменения **AT TIME ZONE** классифицированы как недетерминированные функции. 
+Так как некоторые сведения (например, правила часовых поясов) хранятся вне [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и могут иногда меняться, функция **AT TIME ZONE** классифицируется как недетерминированная. 
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Добавить смещение часового пояса целевого даты и времени без смещения информации  
- Используйте **AT TIME ZONE** добавить смещение, на основании правил часового пояса, если известно, что исходный **datetime** значения приведены в том же часовом поясе:  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Добавление смещения часового пояса к datetime без сведений о смещении  
+ Используйте функцию **AT TIME ZONE**, чтобы добавить смещение на основании правил для часовых поясов, если известно, что исходные значения **datetime** указаны в том же часовом поясе:  
   
 ```  
 USE AdventureWorks2016;  
@@ -139,8 +139,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>Б. Преобразовывать значения из разных часовых поясах  
- В следующем примере преобразование значений между различными часовыми поясами:  
+### <a name="b-convert-values-between-different-time-zones"></a>Б. Преобразование значений между разными часовыми поясами  
+ В следующем примере показано преобразование значений между разными часовыми поясами:  
   
 ```  
 USE AdventureWorks2016;  
@@ -153,8 +153,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>В. Запрос Темпоральных таблиц с использованием местного часового пояса  
- В приведенном ниже примере выбирает данные из временной таблицы.  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>В. Запрос темпоральных таблиц с использованием местного часового пояса  
+ В приведенном ниже примере показан выбор данных из темпоральной таблицы.  
   
 ```  
 USE AdventureWorks2016;  
@@ -172,8 +172,8 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы даты и времени](../../t-sql/data-types/date-and-time-types.md)   
- [Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

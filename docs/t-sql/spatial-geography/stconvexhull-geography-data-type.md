@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (тип данных geography) | Документы Microsoft"
+title: "STConvexHull (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает объект, представляющий выпуклую оболочку **geography** экземпляра.  
+  Возвращает объект, представляющий выпуклую оболочку экземпляра **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Возвращает `FullGlobe` для объекта **geography** экземпляр, который угол конверта которого больше 90 градусов.  
+ Возвращает объект `FullGlobe` для экземпляра **geography**, угол конверта которого больше 90 градусов.  
   
- Возвращает пустую коллекцию **geography** коллекции для пустого **geography** экземпляра.  
+ Возвращает пустую коллекцию **geography** для пустого экземпляра **geography**.  
   
- Возвращает **null** для неинициализированного **geography** экземпляра.  
+ Возвращает значение **null** для неинициализированного экземпляра **geography**.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Использование функции STConvexHull() в неинициализированном экземпляре географического объекта  
- В следующем примере используется `STConvexHull()` в неинициализированном **geography** экземпляра.  
+ В приведенном ниже примере используется `STConvexHull()` для неинициализированного экземпляра **geography**.  
   
 ```
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>Г. Обнаружение выпуклой оболочки экземпляра географического объекта с углом пакета больше 90 градусов  
- В следующем примере используется `STConvexHull()` на **geography** экземпляра с углом пакета больше 90 градусов.  
+ В приведенном ниже примере `STConvexHull()` используется для экземпляра **geography**, угол конверта которого больше 90 градусов.  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

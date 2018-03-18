@@ -1,5 +1,5 @@
 ---
-title: "Тип данных приоритет (Transact-SQL) | Документы Microsoft"
+title: "Приоритет типов данных (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>Очередности типов данных (Transact-SQL)
+# <a name="data-type-precedence-transact-sql"></a>Приоритет типов данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Если оператор связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка. Если оба операнда выражения имеют одинаковый тип данных, результат операции будет иметь тот же тип данных.
@@ -68,9 +68,9 @@ ms.lasthandoff: 11/21/2017
 1. **varchar** (включая **varchar(max)** )  
 1. **char**  
 1. **varbinary** (включая **varbinary(max)** )  
-1. **двоичный** (низший приоритет)  
+1. **binary** (низший приоритет)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: "STBoundary (тип данных geometry) | Документы Microsoft"
+title: "STBoundary (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает границы **geometry** экземпляра.  
+  Задает границу экземпляра **geometry**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STBoundary()`Возвращает пустую коллекцию **GeometryCollection** при конечные точки для **LineString**, **CircularString**, или **CompoundCurve** экземпляра одинаковы.  
+ `STBoundary()` возвращает пустую коллекцию **GeometryCollection**, когда конечные точки для экземпляра **LineString**, **CircularString** или **CompoundCurve** совпадают.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Использование STBoundary() в экземпляре LineString с разными конечными точками  
- В следующем примере создается `LineString``geometry` экземпляра. `STBoundary()`Возвращает границы `LineString`.  
+ В следующем примере создается экземпляр `LineString``geometry`. `STBoundary()` возвращает границы `LineString`.  
   
 ```  
 DECLARE @g geometry;  
@@ -80,7 +80,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

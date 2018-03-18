@@ -1,5 +1,5 @@
 ---
-title: "LEFT (Transact-SQL) | Документы Microsoft"
+title: "LEFT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -49,20 +49,20 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. *character_expression* может иметь любой тип данных, кроме **текст** или **ntext**, который может быть неявно преобразован в **varchar** или  **nvarchar**. В противном случае используйте [ПРИВЕДЕНИЯ](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. *character_expression* может иметь любой тип данных, который может быть неявно преобразован в **varchar** или **nvarchar**, кроме **text** или **ntext**. В противном случае используйте функцию [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования типа аргумента *character_expression*.  
   
  *integer_expression*  
- Положительное целое число, указывающее, сколько символов *character_expression* будут возвращены. Если *integer_expression* имеет отрицательное значение, возвращается сообщение об ошибке. Если *integer_expression* — тип **bigint** и содержит большое значение *character_expression* должен быть типа больших объемов данных, например **varchar(max)**.  
+ Положительное целое число, указывающее количество символов выражения *character_expression*, которое будет возвращено. Если аргумент *integer_expression* отрицателен, возвращается ошибка. Если аргумент *integer_expression* имеет тип **bigint** и содержит большое значение, аргумент *character_expression* должен иметь длинный тип данных, например **varchar(max)**.  
   
- *Integer_expression* параметр подсчитывает символов-заместителей UTF-16 как один символ.  
+ Параметр *integer_expression* обрабатывает суррогатный символ UTF-16 как один символ.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает **varchar** при *character_expression* имеет символьный тип данных не в Юникоде.  
+ Возвращает значение типа **varchar**, если *character_expression* имеет символьный тип данных, отличный от Юникода.  
   
- Возвращает **nvarchar** при *character_expression* имеет символьный тип данных Юникода.  
+ Возвращает значение типа **nvarchar**, если *character_expression* имеет символьный тип данных Юникода.  
   
 ## <a name="remarks"></a>Remarks  
- При использовании параметров сортировки SC *integer_expression* параметр подсчитывает суррогатную пару UTF-16 как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ При использовании параметров сортировки SC в параметре *integer_expression* суррогатная пара UTF-16 рассматривается как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -93,7 +93,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-left-with-a-column"></a>В. Применение функции LEFT со столбцом  
  В следующем примере возвращаются пять первых символов от каждого из названий продуктов.  
@@ -122,16 +122,16 @@ SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;
 ab  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40; Transact-SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [ПОДСТРОКА &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
- [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

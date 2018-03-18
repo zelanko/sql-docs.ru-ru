@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGml (тип данных geometry) | Документы Microsoft"
+title: "GeomFromGml (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGML (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Создать **geometry** экземпляр заданному представлению на используемом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подмножество языка разметки Geography (GML).
+Постройте экземпляр **geometry** по заданному представлению в используемом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подмножестве языка GML.
   
 Дополнительные сведения о языке GML см. в следующих документах консорциума OGC:
   
-[Спецификации OGC, географический язык разметки](http://go.microsoft.com/fwlink/?LinkId=93629)
+[Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,15 +52,15 @@ GeomFromGml ( GML_input, SRID )
  Входные XML-данные, из которых GML-код получит возвращаемое значение.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometry** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод вызывает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `GeomFromGml()` применяется для создания экземпляра `geometry`.  
@@ -73,7 +73,7 @@ SET @g = geometry::GeomFromGml(@x, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

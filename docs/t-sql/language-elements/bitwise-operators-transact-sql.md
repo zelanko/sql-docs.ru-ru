@@ -1,5 +1,5 @@
 ---
-title: "Побитовые операторы (Transact-SQL) | Документы Microsoft"
+title: "Побитовые операторы (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/07/2017
 ms.prod: sql-non-specified
@@ -34,39 +34,39 @@ ms.lasthandoff: 01/25/2018
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Побитовые операторы выполняют побитовые действия над двумя выражениями с любым типом данных, относящимся к категории типа данных integer.  
-  Побитовые операторы преобразовать двух целочисленных значений в двоичных разрядов, выполнить и OR, или операцию не для каждого бита, формирование результата. Результат затем преобразуется в целое число.  
+  Побитовые операторы преобразуют два целочисленных значения в двоичные разряды, выполняют операцию И, ИЛИ или НЕ с каждым разрядом и предоставляют результат. Затем результат преобразуется в целое число.  
   
-  Например 170 целое число преобразуется в двоичное 1010 1010.
-75 целое число преобразуется в двоичное 0100 1011.
+  Например, целое число 170 преобразуется в двоичное число 1010 1010.
+Целое число 75 преобразуется в двоичное число 0100 1011.
 
-|оператор|Побитовое math|
+|оператор|побитовая операция|
 |---- |---- |
-|и <br> Если бит в любом месте равны 1, результат равен 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|или <br> Если в любом месте любой из битов равен 1, результат равен 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
-|NOT  <br> Меняет значение бит в любом месте бит. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
+|и <br> Если оба бита в определенной позиции равны 1, результат равен 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
+|или <br> Если хотя бы один бит в определенной позиции равен 1, результат равен 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|NOT  <br> Меняет значение бита в каждой позиции на противоположное. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
-В следующих разделах:   
-* [& &#40; Побитовое и &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = &#40; Присваивание побитового и &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124; &#40; Побитовый оператор или &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = &#40; Побитовый оператор или назначения &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ &#40; Побитовое исключающее или &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = &#40; Побитовое исключающее или назначения &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ &#40; Побитовый оператор не &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+См. следующие статьи:   
+* [& (побитовое И)](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [&= (присваивание побитового И)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124; (побитовое ИЛИ)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124;= (присваивание побитового ИЛИ)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ (побитовое исключающее ИЛИ)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^= (присваивание побитового исключающего ИЛИ)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ (побитовое НЕ)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- Операнды побитовых операторов могут быть любым типом данных integer или двоичная строка категории типов данных (за исключением **изображения** тип данных), за исключением того, что оба операнда не может быть любым типом данных двоичной строки категории типов данных. Следующая таблица показывает поддерживаемые типы данных операндов.  
+ Операнды побитовых операторов могут принадлежать к любому из целочисленных типов данных или к категории типов данных "двоичная строка" (кроме типа данных **image**), однако оба операнда не могут относиться к типам данных из категории "двоичная строка". Следующая таблица показывает поддерживаемые типы данных операндов.  
   
 |Левый операнд|Правый операнд|  
 |------------------|-------------------|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint**, или **tinyint**|  
-|[бит](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint**, или **бит**|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **двоичных**, или **varbinary**|  
-|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **двоичных**, или **varbinary**|  
-|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **двоичных**, или **varbinary**|  
-|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint**, или **tinyint**|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** или **tinyint**|  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** или **bit**|  
+|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** или **varbinary**|  
+|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** или **varbinary**|  
+|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** или **varbinary**|  
+|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** или **tinyint**|  
   
-## <a name="see-also"></a>См. также  
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

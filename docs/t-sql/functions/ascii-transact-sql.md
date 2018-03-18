@@ -1,5 +1,5 @@
 ---
-title: "ASCII (Transact-SQL) | Документы Microsoft"
+title: "ASCII (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *character_expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **char** или **varchar**.
+Выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md) типа **char** или **varchar**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
  **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII-это сокращение для американский стандартный код для обмена сведения. Это кодировка — это стандарт, используемый компьютерами. Список символов ASCII, в разделе **печатаемые символы** раздел [ASCII](https://www.wikipedia.org/wiki/ASCII).
+ASCII — это сокращение от American Standard Code for Information Interchange (американский стандартный код для обмена информацией). Это стандарт кодировки символов, используемый на компьютерах. Список символов ASCII см. в разделе **Печатаемые символы** спецификации [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ## <a name="examples"></a>Примеры  
-В следующем примере предполагается набор символов ASCII и возвращает `ASCII` значение 6 символов.
+В приведенном ниже примере принимается кодировка ASCII и возвращается значение `ASCII` для 6 символов.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -74,11 +74,11 @@ A           B           a           b           1           2
 65          66          97          98          49          50  
 ```  
   
-## <a name="see-also"></a>См. также:
- [ДИА &#40; Transact-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
- [Юникод &#40; Transact-SQL &#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+ [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE (Transact-SQL)](../../t-sql/functions/unicode-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "Обратная косая черта (продолжение строки) (Transact-SQL) | Документы Microsoft"
+title: "Обратная косая черта (продолжение строки) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="backslash-line-continuation-transact-sql"></a>Обратная косая черта (продолжение строки) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-`\`Разбивает длинные строковую константу, символ или двоичные данные, на две или несколько строк для удобства чтения.  
+`\` разбивает длинную строковую константу, символ или двоичные данные на две или более строк для удобства чтения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,20 +59,20 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \<Первая секция строки >  
+ \<first section of string>  
  Начало строки.  
   
- \<Продолжение части строки >  
+ \<continued section of string>  
  Продолжение строки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта команда возвращает первую и последующие секции строки как одну строку без символов обратной косой черты.  
 
 ## <a name="examples"></a>Примеры  
 
 ### <a name="a-splitting-a-character-string"></a>A. Разделение строки символов  
 
-В следующем примере обратную косую черту и символ возврата каретки для разбиения строки символов двух строк.  
+В следующем примере использованы обратная косая черта и возврат каретки для разбиения строки символов на две строчки.  
   
 ```  
 SELECT 'abc\  
@@ -88,9 +88,9 @@ def' AS [ColumnResult];
  abcdef
  ```    
 
-### <a name="b-splitting-a-binary-string"></a>Б. Разделение двоичная строка  
+### <a name="b-splitting-a-binary-string"></a>Б. Разделение двоичной строки  
 
-В следующем примере обратную косую черту и символ возврата каретки для разбиения двоичную строку на две строки.  
+В следующем примере использованы обратная косая черта и возврат каретки для разбиения двоичной строки на две строчки.  
 
 ```  
 SELECT 0xabc\  
@@ -109,9 +109,9 @@ def AS [ColumnResult];
 ## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [&#40; деления &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; присваивание деления &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [(Деление) (Transact-SQL)](../../t-sql/language-elements/divide-transact-sql.md)   
+ [(Присваивание деления) (Transact-SQL)](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

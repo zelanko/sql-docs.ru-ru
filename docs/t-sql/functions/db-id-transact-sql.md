@@ -1,5 +1,5 @@
 ---
-title: "DB_ID (Transact-SQL) | Документы Microsoft"
+title: "DB_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ DB_ID ( [ 'database_name' ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-"*имя_базы_данных*"  
-Имя базы данных, используемое для возврата соответствующего идентификатора базы данных. *database_name* — **sysname**. Если *имя_базы_данных* будет пропущен, возвращается идентификатор текущей базы данных.
+'*database_name*'  
+Имя базы данных, используемое для возврата соответствующего идентификатора базы данных. Аргумент *database_name* имеет тип **sysname**. Если аргумент *database_name* не указан, возвращается идентификатор текущей базы данных.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **int**
   
-## <a name="permissions"></a>Permissions  
-Если код, вызывающий **DB_ID** не является владельцем базы данных и база данных не **master** или **tempdb**, являются минимальными разрешениями, необходимыми для просмотра соответствующей строки Разрешение уровня сервера ALTER ANY DATABASE или VIEW ANY DATABASE или разрешение CREATE DATABASE в **master** базы данных. Узнать базу данных, к которой подключен участник, можно в представлении каталога **sys.databases**.
+## <a name="permissions"></a>Разрешения  
+Если участник, вызывающий **DB_ID**, не является владельцем базы данных, а база данных не является базой данных **master** или **tempdb**, минимально необходимыми разрешениями для просмотра соответствующей строки являются разрешения уровня сервера ALTER ANY DATABASE или VIEW ANY DATABASE либо разрешение CREATE DATABASE для базы данных **master**. Узнать базу данных, к которой подключен участник, можно в представлении каталога **sys.databases**.
   
 > [!IMPORTANT]  
->  По умолчанию роли public имеет разрешение VIEW ANY DATABASE, что все имена входа просмотреть сведения о базе данных. Чтобы заблокировать вход с возможность обнаружения базы данных, ОТМЕНИТЬ разрешение VIEW ANY DATABASE с общедоступной или запретить разрешение VIEW ANY DATABASE для отдельных имен входа.  
+>  По умолчанию общедоступная роль имеет разрешение VIEW ANY DATABASE, что позволяет всем именам для входа просматривать информацию в базе данных. Чтобы лишить имя для входа возможности обнаруживать базу данных, отзовите общедоступное разрешение VIEW ANY DATABASE с помощью инструкции REVOKE или отмените разрешение VIEW ANY DATABASE для отдельных имен для входа с помощью инструкции DENY.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>Б. Возвращение идентификатора указанной базы данных  
-В следующем примере возвращается идентификатор базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных.
+В приведенном ниже примере возвращается идентификатор базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование DB_ID для указания значения параметра системной функции  
-В следующем примере используется `DB_ID` для возврата идентификатора [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных в системной функции `sys.dm_db_index_operational_stats`. Эта функция принимает идентификатор базы данных в качестве первого параметра.
+В приведенном ниже примере `DB_ID` используется для получения идентификатора базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в системной функции `sys.dm_db_index_operational_stats`. Эта функция принимает идентификатор базы данных в качестве первого параметра.
   
 ```sql
 DECLARE @db_id int;  
@@ -103,25 +103,25 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-return-the-id-of-the-current-database"></a>Г. Возвращает идентификатор текущей базы данных  
+### <a name="d-return-the-id-of-the-current-database"></a>Г. Получение идентификатора текущей базы данных  
 Следующий пример демонстрирует возврат идентификатора текущей базы данных.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
-### <a name="e-return-the-id-of-a-named-database"></a>Д. Возвращает идентификатор указанной базы данных.  
-Следующий пример возвращает идентификатор базы данных из базы данных AdventureWorksDW2012.
+### <a name="e-return-the-id-of-a-named-database"></a>Д. Получение идентификатора именованной базы данных  
+В приведенном ниже примере возвращается идентификатор базы данных AdventureWorksDW2012.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Db_name &#40; Transact-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
-[Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[DB_NAME (Transact-SQL)](../../t-sql/functions/db-name-transact-sql.md)  
+[Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
   

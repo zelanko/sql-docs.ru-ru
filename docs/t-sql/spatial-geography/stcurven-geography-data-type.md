@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (тип данных geography) | Документы Microsoft"
+title: "STCurveN (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geography-data-type"></a>STCurveN (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает кривую, указанную в **geography** экземпляра, то есть **LineString**, **CircularString**, или **CompoundCurve**.  
+  Возвращает кривую, указанную в экземпляре **geography** типа **LineString**, **CircularString** или **CompoundCurve**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,31 +45,31 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- — **Int** выражение от 1 до числа кривых в **geography** экземпляра.  
+ Выражение типа **int** со значением в диапазоне от 1 до числа кривых в экземпляре **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
- Если n < 1 то **ArgumentOutOfRangeException** возникает исключение.  
+ Если n < 1, возникает исключение **ArgumentOutOfRangeException**.  
   
 ## <a name="remarks"></a>Remarks  
- **Значение NULL** возвращается при возникновении следующих условий.  
+ Значение **NULL** возвращается при возникновении указанных ниже условий.  
   
--   **Geography** экземпляр объявлен, но не создан  
+-   Экземпляр **geography** объявлен, но не создан.  
   
--   **Geography** экземпляр пуст  
+-   Экземпляр **geography** пуст.  
   
--   n превышает число кривых в **geography** экземпляра (в разделе [STNumCurves &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
+-   n превышает число кривых в экземпляре **geography** (см. статью [STNumCurves (тип данных geography)](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
   
--   Измерение для **geography** экземпляр не равен (см. [STDimension &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
+-   Неравенство измерения для экземпляра **geography** (см. статью [STDimension (тип данных geography)](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. Применение метода STCurveN() к объекту CircularString  
- Следующий пример возвращает вторую кривую в **CircularString** экземпляр:  
+ В приведенном ниже примере возвращается вторая кривая в экземпляре **CircularString**.  
   
 ```
  DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>Б. Применение метода STCurveN() к объекту CompoundCurve  
- Следующий пример возвращает вторую кривую в **CompoundCurve** экземпляр:  
+ В приведенном ниже примере возвращается вторая кривая в экземпляре **CompoundCurve**.  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>В. Применение метода STCurveN() к объекту CompoundCurve, содержащему три объекта CircularString  
- В следующем примере используется **CompoundCurve** экземпляр, который сочетает три отдельных **CircularString** экземпляров в один последовательности кривых, как в предыдущем примере:  
+ В приведенном ниже примере используется экземпляр **CompoundCurve**, в котором три отдельных экземпляра **CircularString** объединяются в одной последовательности кривых, как в предыдущем примере.  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
  `STCurveN()` возвращает одинаковые результаты независимо от используемого формата Well-Known Text (WKT).  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>Г. Проверка допустимости перед вызовом метода STCurve()  
- В следующем примере показано, как убедиться, что  *n*  является допустимым, перед вызовом метода STCurveN():  
+ В приведенном ниже примере показано, как проверить допустимость *n* перед вызовом метода STCurveN().  
   
 ```
  DECLARE @g geography;  
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/25/2018
  END
   ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

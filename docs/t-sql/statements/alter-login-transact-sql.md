@@ -1,5 +1,5 @@
 ---
-title: "Разрешение ALTER LOGIN (Transact-SQL) | Документы Microsoft"
+title: "ALTER LOGIN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -133,14 +133,14 @@ ALTER LOGIN login_name
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое необходимо изменить. Имена входа домена необходимо заключать в квадратные скобки в формате [домен\пользователь].  
   
  ENABLE | DISABLE  
- Включает или отключает данное имя входа. Отключение входа не влияет на поведение имен входа, которые уже подключены. (Используйте `KILL` инструкции для завершения существующих подключений.) Отключенные имена входа сохраняют свои разрешения и все еще могут быть олицетворены.  
+ Включает или отключает данное имя входа. Отключение входа не влияет на поведение имен входа, которые уже подключены. (Чтобы завершить существующие подключения, используйте инструкцию `KILL`.) Отключенные имена входа сохраняют свои разрешения и все еще могут быть олицетворены.  
   
- ПАРОЛЬ **= "***пароль***"**  
+ PASSWORD **='***password***'**  
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает пароль для имени входа, которое необходимо изменить. В паролях учитывается регистр символов.  
   
- Постоянно активных подключений к базе данных SQL требуется повторная авторизация (выполняется компонентом Database Engine) каждые 10 часов. Компонент Database Engine пытается повторная авторизация с использованием пароля изначально отправлено и вмешательство пользователя не требуется. Для повышения производительности при сбросе пароля в базе данных SQL, соединение не будет повторно пройти проверку подлинности, даже если сброс подключения из-за пулов соединений. Это отличается от поведения в локальной среде SQL Server. Если пароль был изменен с момента подключения изначально был авторизован, необходимо завершить соединения и установить новое соединение с помощью нового пароля. Пользователь с разрешением KILL DATABASE CONNECTION можно явно разрыва подключения к базе данных SQL с помощью команды KILL. Дополнительные сведения см. в разделе [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Для поддержания подключений к базе данных SQL в активном состоянии требуется повторная авторизация (выполняемая ядром СУБД) по крайней мере каждые 10 часов. Ядро СУБД пытается выполнить повторную авторизацию с использованием первоначального пароля. Пользователю не нужно вводить никаких данных. В целях повышения производительности при сбросе пароля в базе данных SQL повторная проверка подлинности подключения не проводится, даже если подключение сбрасывается из-за создания пула подключений. В локальном развертывании SQL Server поведение иное. Если пароль изменился с момента первоначальной авторизации подключения, подключение должно быть завершено и должно быть установлено новое подключение с использованием нового пароля. Пользователь с разрешением KILL DATABASE CONNECTION может явным образом завершить подключение к базе данных SQL с помощью команды KILL. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).  
   
- ПАРОЛЬ  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа.  
@@ -154,7 +154,7 @@ ALTER LOGIN login_name
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что пароль, введенный после аргумента PASSWORD, уже хэширован. Если этот параметр не выбран, то пароль хэшируется перед сохранением в базе данных. Этот параметр следует использовать только для синхронизации имен входа между двумя серверами. Не используйте параметр HASHED для плановой смены паролей.  
   
- OLD_PASSWORD **= "***старый_пароль***"**  
+ OLD_PASSWORD **='***oldpassword***'**  
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Текущий пароль имени входа, которому будет присвоен новый пароль. В паролях учитывается регистр символов.  
   
  MUST_CHANGE  
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если данный параметр включен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребует ввести новый пароль при первом использовании измененного имени входа.  
   
- DEFAULT_DATABASE  **=**  *базы данных*  
+ DEFAULT_DATABASE **=***database*  
 **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает базу данных по умолчанию, назначенную имени входа.  
   
- DEFAULT_LANGUAGE  **=**  *языка*  
+ DEFAULT_LANGUAGE **=***language*  
  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Указывает язык по умолчанию, присвоенный имени входа. Язык по умолчанию для всех имен входа базы данных SQL является английский и не может быть изменено. Язык по умолчанию `sa` входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux, английский, но его можно изменить.  
+ Указывает язык по умолчанию, присвоенный имени входа. Языком по умолчанию для всех имен входа базы данных SQL является английский, и его нельзя изменить. Языком по умолчанию для имени входа `sa` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux является английский, но его можно изменить.  
   
- ИМЯ = *login_name*  
- Указывает новое имя для имени входа, которое необходимо переименовать. Если оно является именем входа Windows, то идентификатор безопасности участника Windows, соответствующий новому имени, должен совпадать с идентификатором безопасности, относящимся к имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новое имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа не может содержать символ обратной косой черты (\\).  
+ NAME = *login_name*  
+ Указывает новое имя для имени входа, которое необходимо переименовать. Если оно является именем входа Windows, то идентификатор безопасности участника Windows, соответствующий новому имени, должен совпадать с идентификатором безопасности, относящимся к имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может содержать обратную косую черту (\\).  
   
- CHECK_EXPIRATION = {ON | **OFF** }  
+ CHECK_EXPIRATION = { ON | **OFF** }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, должна ли политика истечения срока действия паролей принудительно применяться к этому имени входа. Значение по умолчанию — OFF.  
   
- CHECK_POLICY  **=**  { **ON** | {OFF}  
+ CHECK_POLICY **=** { **ON** | OFF }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что политики паролей Windows компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны принудительно применяться к этому имени входа. Значение по умолчанию — ON.  
   
- Учетные данные = *credential_name*  
+ CREDENTIAL = *credential_name*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Имя учетных данных для сопоставления с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетные данные уже должны существовать на сервере. Дополнительные сведения см. [учетные данные &#40; компонент Database Engine &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Учетные данные, не может быть сопоставлен имени входа sa.  
+ Имя учетных данных для сопоставления с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетные данные уже должны существовать на сервере. Дополнительные сведения см. в статье [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md). Учетные данные не могут быть сопоставлены с именем входа sa.  
   
  NO CREDENTIAL  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Удаляет любые существующие сопоставления имени входа с учетными данными сервера. Дополнительные сведения см. [учетные данные &#40; компонент Database Engine &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Удаляет любые существующие сопоставления имени входа с учетными данными сервера. Дополнительные сведения см. в статье [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -204,12 +204,12 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Добавляет к имени входа учетные данные поставщика расширенного управления ключами. Дополнительные сведения см. в разделе [расширенного управления ключами &#40; Расширенное управление Ключами &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Добавляет к имени входа учетные данные поставщика расширенного управления ключами. Дополнительные сведения см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Удаляет учетные данные поставщика расширенного управления ключами (EKM) из имени входа. Дополнительные сведения см. [расширенного управления ключами &#40; Расширенное управление Ключами &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+Удаляет из имени входа учетные данные поставщика расширенного управления ключами. Дополнительные сведения см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Remarks  
  Если параметр CHECK_POLICY имеет значение ON, аргумент HASHED использовать нельзя.  
@@ -230,22 +230,22 @@ ALTER LOGIN login_name
   
 Если значение параметра CHECK_POLICY установлено равным OFF, то параметр CHECK_EXPIRATION не может иметь значения ON. Выполнение инструкции ALTER LOGIN с таким сочетанием параметров завершится ошибкой.  
   
-Нельзя использовать параметр ALTER_LOGIN с аргументом DISABLE для запрещения доступа группе Windows. Например, параметр ALTER_LOGIN [*домен\группа*] DISABLE вернет следующее сообщение об ошибке:  
+Нельзя использовать параметр ALTER_LOGIN с аргументом DISABLE для запрещения доступа группе Windows. Например, инструкция ALTER_LOGIN [*domain\group*] DISABLE вернет следующее сообщение об ошибке:  
   
  «Сообщение 15151, уровень 16, состояние 1, строка 1.  
   
- «Не удается изменить имя входа "*домен\группа*", так как он не существует или отсутствует разрешение.»  
+ "Невозможно изменить имя для входа *Domain\Group*, потому что оно не существует или у вас нет разрешения."  
   
  Это сделано намеренно.  
   
-В [!INCLUDE[ssSDS](../../includes/sssds-md.md)], требуются данные входа для проверки подлинности подключения и правила брандмауэра уровня сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедитесь в том, что база данных имеет последнюю версию таблицы, имена входа, выполните [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] данные имени входа необходимы для проверки подлинности подключения, и правила брандмауэра на уровне сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедиться в том, что база данных имеет последнюю версию таблицы имен входа, выполните инструкцию [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY LOGIN.  
   
  Если используется параметр CREDENTIAL, то также требуется разрешение ALTER ANY CREDENTIAL.  
   
- Если изменяемое имя входа является членом **sysadmin** предопределенной роли сервера или участник, разрешение CONTROL SERVER, также требуется разрешение CONTROL SERVER при вносит следующие изменения:  
+ Если изменяемое имя входа является членом предопределенной роли сервера **sysadmin** или имеет разрешение CONTROL SERVER, ему также требуется разрешение CONTROL SERVER для внесения следующих изменений.  
   
 -   Сброс пароля без указания старого.  
   
@@ -333,9 +333,9 @@ GO
  
   
 ## <a name="see-also"></a>См. также:  
- [Учетные данные &#40; компонент Database Engine &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

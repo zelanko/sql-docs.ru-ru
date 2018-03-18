@@ -1,5 +1,5 @@
 ---
-title: "DROP КОНТРАКТА (Transact-SQL) | Документы Microsoft"
+title: "DROP CONTRACT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,12 +70,12 @@ DROP CONTRACT
     [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкция ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [Создание КОНТРАКТА &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [Удаление службы &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
+ [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)   
+ [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

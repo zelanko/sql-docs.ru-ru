@@ -1,5 +1,5 @@
 ---
-title: "Инструкция ALTER INDEX (Селективные XML-индексы) | Документы Microsoft"
+title: "ALTER INDEX (селективные XML-индексы) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Параметры индекса (предложение WITH).  
   
- Нельзя изменить вторичные селективные XML-индексы. Дополнительные сведения см. в разделе [Create, Alter и Drop вторичного селективного XML-индексы](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+ Нельзя изменить вторичные селективные XML-индексы. Дополнительные сведения см. в разделе [Создание, изменение и удаление вторичных селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  Имя существующего индекса, который требуется изменить.  
   
- *\<table_object >*  
+ *\<table_object>*  
  Таблица, которая содержит индексируемый XML-столбец. Используйте один из следующих форматов:  
   
 -   `database_name.schema_name.table_name`  
@@ -131,25 +131,25 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- Список пространств имен, используемых индексируемыми путями. Сведения о синтаксисе предложения WITH XMLNAMESPACES см. в разделе [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ Список пространств имен, используемых индексируемыми путями. Сведения о синтаксисе предложения WITH XMLNAMESPACES см. в разделе [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md).  
   
- ДЛЯ **(** \<promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  Список индексированных путей, который необходимо добавить или удалить.  
   
--   **ДОБАВЬТЕ путь.** Кода вы добавляете путь через ADD, вы используете такой же синтаксис, который использовался для создания путей посредством выражения CREATE SELECTIVE XML INDEX. Сведения о путях, указанных в инструкции CREATE или ALTER см. в разделе [укажите путь и указания по оптимизации для селективного XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+-   **Добавление пути через ADD.** Кода вы добавляете путь через ADD, вы используете такой же синтаксис, который использовался для создания путей посредством выражения CREATE SELECTIVE XML INDEX. Дополнительные сведения о путях, которые вы можете указывать в инструкции CREATE или ALTER, см. в разделе [Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
--   **Удаление контура.** Когда вы удаляете путь через REMOVE, вы предоставляете имя, которое было дано пути при его создании.  
+-   **Удаление пути через REMOVE.** Когда вы удаляете путь через REMOVE, вы предоставляете имя, которое было дано пути при его создании.  
   
- [С **(** \<index_options > **)**]  
- Можно указать только \<index_options > при использовании инструкции ALTER INDEX без предложения FOR. Если для добавления или удаления пути в индексе используется ALTER INDEX, то параметры индекса являются недопустимыми аргументами. Сведения о параметрах индекса см. в разделе [CREATE XML INDEX &#40; Выборочные XML-индексы &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ Задавать параметры \<index_options> можно только при использовании инструкции ALTER INDEX без предложения FOR. Если для добавления или удаления пути в индексе используется ALTER INDEX, то параметры индекса являются недопустимыми аргументами. Дополнительные сведения о параметрах индекса см. в статье [CREATE XML INDEX (селективные XML-индексы)](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]  
 >  При выполнении инструкции ALTER INDEX селективный XML-индекс всегда перестраивается. Необходимо учитывать влияние этого процесса на ресурсы сервера.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Для использования ALTER INDEX требуется разрешение ALTER для таблицы или представления.  
@@ -175,9 +175,9 @@ ON Tbl
 PAD_INDEX = ON;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Создание, изменение и удаление селективного XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+## <a name="see-also"></a>См. также  
+ [Селективные XML-индексы (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
+ [Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

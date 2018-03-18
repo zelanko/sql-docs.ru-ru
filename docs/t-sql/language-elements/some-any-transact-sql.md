@@ -1,5 +1,5 @@
 ---
-title: "НЕКОТОРЫЕ | ВСЕ (Transact-SQL) | Документы Microsoft"
+title: "SOME | ANY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>Аргументы  
  *scalar_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Любой допустимый оператор сравнения.  
@@ -64,16 +64,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Указывает на необходимость сравнения.  
   
  *subquery*  
- Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Тип данных возвращаемого столбца должен быть тот же тип данных, как *scalar_expression*.  
+ Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Тип данных возвращаемого столбца должен совпадать с типом данных аргумента *scalar_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="result-value"></a>Значение результата  
- SOME или ANY возвращает **TRUE** Если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*) где *x* в значении набор одного столбца; в противном случае возвращает **FALSE**.  
+ При использовании ключевого слово SOME или ANY значение **TRUE** возвращается, если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*), где *x* является одним из значений набора из одного столбца; иначе возвращается значение **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
- SOME необходим *scalar_expression* для сравнения по крайней мере одного значения, возвращаемого вложенным запросом. Для инструкций, которые требуют *scalar_expression* сравнения каждого значения, возвращаемого вложенным запросом, перечислены в разделе [все &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = SOME (вложенными запросами) будет возвращаться TRUE для *scalar_express* 2. Если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = ALL (вложенными запросами) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
+ Для ключевого слова SOME необходим аргумент *scalar_expression*, чтобы провести непосредственное сравнение по крайней мере одного значения, возвращенного вложенным запросом. Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, то при значении *scalar_expression* = SOME (subquery) для выражения *scalar_express*, равного 2, будет возвращаться TRUE. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -109,7 +109,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>Б. Выполнение практического примера  
- В следующем примере создается хранимая процедура, которая определяет, является ли все компоненты указанного `SalesOrderID` в `AdventureWorks2012` базы данных может быть изготовлено за указанное число дней. В этом примере для создания списка количества значений `DaysToManufacture` для всех компонентов `SalesOrderID` используется вложенный запрос, а затем проводится проверка того, превышают ли все значения, возвращаемые вложенным запросом, указанное количество дней. Если каждое возвращаемое значение `DaysToManufacture` меньше заданного значения, то условие равно TRUE и печатается первое сообщение.  
+ В приведенном ниже примере показано создание хранимой процедуры, определяющей, могут ли в течение заданного количества дней быть выполнены все части заказа с указанным идентификатором `SalesOrderID` из базы данных `AdventureWorks2012`. В этом примере для создания списка количества значений `DaysToManufacture` для всех компонентов `SalesOrderID` используется вложенный запрос, а затем проводится проверка того, превышают ли все значения, возвращаемые вложенным запросом, указанное количество дней. Если каждое возвращаемое значение `DaysToManufacture` меньше заданного значения, то условие равно TRUE и печатается первое сообщение.  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +131,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- Для проверки этой процедуры выполните ее с помощью `SalesOrderID``49080`, имеющий один заказ, требующий `2` дня и два заказа, требующие немедленного. Первая инструкция отвечает этим критериям. Второй запрос этим критериям не отвечает.  
+ Для проверки этой процедуры выполните ее, используя `SalesOrderID``49080`, имеющий один компонент, требующий на выполнение `2` дня, и два компонента, требующих немедленного выполнения. Первая инструкция отвечает этим критериям. Второй запрос этим критериям не отвечает.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -149,13 +149,13 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>См. также  
- [ВСЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [ИН &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
   
   

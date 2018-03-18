@@ -1,5 +1,5 @@
 ---
-title: "STIsValid (тип данных geometry) | Документы Microsoft"
+title: "STIsValid (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает значение true, если **geometry** экземпляр имеет правильный формат, в соответствии с типом Open Geospatial Consortium (OGC). Возвращает значение false, если **geometry** экземпляр не является правильным.
+Возвращает значение true, если экземпляр **geometry** является экземпляром правильного формата на основе соответствующего типа OGC. Возвращает значение false, если экземпляр **geometry** является экземпляром недопустимого формата.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geometry** экземпляра можно определить путем вызова [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
+ Тип OGC экземпляра **geometry** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]формирует только допустимые **geometry** экземпляров, но обеспечивает для хранения и получать недопустимые экземпляры. Допустимый экземпляр, представляющий тот же набор точек, что и любой недопустимый экземпляр, может быть получен с помощью метода `MakeValid()`.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует только допустимые экземпляры **geometry**, однако позволяет хранить и получать недопустимые экземпляры. Допустимый экземпляр, представляющий тот же набор точек, что и любой недопустимый экземпляр, может быть получен с помощью метода `MakeValid()`.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `geometry` и используется метод `STIsValid()`, чтобы проверить, допустим ли экземпляр.  
@@ -62,8 +62,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="see-also"></a>См. также  
- [STGeometryType &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+## <a name="see-also"></a>См. также:  
+ [STGeometryType (тип данных geometry)](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [MakeValid (тип данных geometry)](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

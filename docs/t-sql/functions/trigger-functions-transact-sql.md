@@ -1,5 +1,5 @@
 ---
-title: "Активировать функции (Transact-SQL) | Документы Microsoft"
+title: "Функции триггера (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 
   Следующие скалярные функции можно использовать в определении триггера для проверки на наличие изменений в значениях данных или для возвращения других данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md)  
   
  [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)  

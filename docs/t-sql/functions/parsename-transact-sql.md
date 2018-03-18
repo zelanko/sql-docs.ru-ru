@@ -1,5 +1,5 @@
 ---
-title: "PARSENAME (Transact-SQL) | Документы Microsoft"
+title: "PARSENAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ PARSENAME ( 'object_name' , object_piece )
   
 ## <a name="arguments"></a>Аргументы  
  '*object_name*'  
- Имя объекта, из которого будет извлекаться указанная часть. *object_name* — **sysname**. Данный параметр представляет имя объекта, которое необязательно задано полностью. Если указываются все части имени объекта, то это имя может состоять из четырех частей: имени сервера, имени базы данных, имени владельца и имени объекта.  
+ Имя объекта, из которого будет извлекаться указанная часть. Аргумент *object_name* имеет тип **sysname**. Данный параметр представляет имя объекта, которое необязательно задано полностью. Если указываются все части имени объекта, то это имя может состоять из четырех частей: имени сервера, имени базы данных, имени владельца и имени объекта.  
   
  *object_piece*  
- Часть объекта, которую необходимо вернуть. *object_piece* относится к типу **int**и может принимать следующие значения:  
+ Часть объекта, которую необходимо вернуть. Аргумент *object_piece* имеет тип **int** и может принимать следующие значения:  
   
  1 = имя объекта  
   
@@ -72,11 +72,11 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="remarks"></a>Remarks  
  Функция PARSENAME возвращает значение NULL, если выполняется одно из условий:  
   
--   Либо *object_name* или *object_piece* имеет значение NULL.  
+-   Либо аргумент *object_name*, либо аргумент *object_piece* имеет значение NULL.  
   
 -   Синтаксическая ошибка.  
   
- Часть запрошенный объект имеет длину 0 и не является допустимым [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор. Нулевая длина имени объекта делает недействительным полное имя объекта.  
+ Длина запрошенной части имени равна 0 и не является допустимым идентификатором [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Нулевая длина имени объекта делает недействительным полное имя объекта.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример демонстрирует использование `PARSENAME` для получения информации о таблице `Person` в базе данных `AdventureWorks2012`.  
@@ -118,11 +118,11 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>См. также  
- [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

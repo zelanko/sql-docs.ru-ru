@@ -1,5 +1,5 @@
 ---
-title: "PUBLISHINGSERVERNAME (Transact-SQL) | Документы Microsoft"
+title: "PUBLISHINGSERVERNAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="replication-functions---publishingservername"></a>Функции репликации - PUBLISHINGSERVERNAME
+# <a name="replication-functions---publishingservername"></a>Функции репликации — PUBLISHINGSERVERNAME
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает имя исходного издателя для опубликованной базы данных, участвующей в сеансе зеркального отображения базы данных. Эта функция выполняется на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который является издателем для базы данных публикации. Она используется для определения первоначального издателя опубликованной базы данных.  
@@ -49,7 +49,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция PUBLISHINGSERVERNAME используется во всех типах репликации.  
   
  Функция PUBLISHINGSERVERNAME используется в том случае, если в базе данных публикации между издателем и экземпляром участника зеркального отображения существует сеанс зеркального отображения.  
@@ -58,6 +58,6 @@ PUBLISHINGSERVERNAME()
   
 ## <a name="see-also"></a>См. также:  
  [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [Функции репликации &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
+ [Функции репликации (Transact-SQL)](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Предоставление доступа к объекту базы данных | Документы Microsoft"
+title: "Предоставление доступа к объекту базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Занятие 2-4-Предоставление доступа к объекту базы данных
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Администратор может выполнять инструкцию SELECT из **продуктов** таблицы и **vw_Names** , а также выполнять **pr_Names** процедуры; однако Mary невозможно. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Урок 2–4. Предоставление доступа к объекту базы данных
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names**, а также выполнять процедуру **pr_Names**; однако Мэри всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
   
 ### <a name="procedure-title"></a>Описание процедуры  
   

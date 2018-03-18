@@ -1,5 +1,5 @@
 ---
-title: "ISNULL (Transact-SQL) | Документы Microsoft"
+title: "ISNULL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,19 +50,19 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="arguments"></a>Аргументы  
  *check_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) для проверки NULL. *check_expression* может быть любого типа.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), которое необходимо проверить на равенство значению NULL. Аргумент *check_expression* может быть любого типа.  
   
  *replacement_value*  
- Выражение, которое должно быть возвращено, если *check_expression* имеет значение NULL. *replacement_value* должен иметь тип, который неявно преобразуется в тип *check_expresssion*.  
+ Выражение, возвращаемое, если *check_expression* имеет значение NULL. Аргумент *replacement_value* должен иметь тип, который может быть неявно преобразован в тип *check_expression*.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тот же тип как *check_expression*. Если литерал NULL указывается как *check_expression*, возвращает тип данных *replacement_value*. Если литерал NULL указывается как *check_expression* и не *replacement_value* предоставлен, возвращает **int**.  
+ Возвращает тип, совпадающий с типом выражения *check_expression*. Если в аргументе *check_expression* предоставлено литеральное значение NULL, возвращает тип данных *replacement_value*. Если в аргументе *check_expression* предоставлено литеральное значение NULL, а аргумент *replacement_value* не задан, возвращает **int**.  
   
-## <a name="remarks"></a>Замечания  
- Значение *check_expression* возвращается, если она не NULL, в противном случае — *replacement_value* возвращается после неявно преобразуется в тип *check_expression*, если типы различны. *replacement_value* может быть усечена, если *replacement_value* длиннее, чем *check_expression*.  
+## <a name="remarks"></a>Remarks  
+ Возвращается значение *check_expression*, если это выражение не равно NULL. В противном случае возвращается значение *replacement_value*. Если типы являются разными, то тип replacement_value неявно преобразуется в тип *check_expression*. Значение *replacement_value* может усекаться, если значение *replacement_value* длиннее, чем *check_expression*.  
   
 > [!NOTE]  
->  Используйте [COALESCE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/coalesce-transact-sql.md) для возврата первое значение отличное от null.  
+>  Для возврата первого значения, отличного от NULL, используйте функцию [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -102,21 +102,21 @@ GO
 |  Description       |  DiscountPct    |   MinQty    |   Максимальное количество       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  Без скидки       |  0,00           |   0         |   0                  |
-|  Оптовая скидка   |  0.02           |   11        |   14                 |
+|  Оптовая скидка   |  0,02           |   11        |   14                 |
 |  Оптовая скидка   |  0,05           |   15        |   4                  |
-|  Оптовая скидка   |  0.10           |   25        |   0                  |
+|  Оптовая скидка   |  0,10           |   25        |   0                  |
 |  Оптовая скидка   |  0,15           |   41        |   0                  |
-|  Оптовая скидка   |  0.20           |   61        |   0                  |
-|  Mountain-100 Cl   |  0.35           |   0         |   0                  |
-|  Спорт Helmet Di   |  0.10           |   0         |   0                  |
-|  Road-650 Overst   |  0.30           |   0         |   0                  |
+|  Оптовая скидка   |  0,20           |   61        |   0                  |
+|  Mountain-100 Cl   |  0,35           |   0         |   0                  |
+|  Sport Helmet Di   |  0,10           |   0         |   0                  |
+|  Road-650 Overst   |  0,30           |   0         |   0                  |
 |  Mountain Tire S   |  0,50           |   0         |   0                  |
-|  Спорт Helmet Di   |  0,15           |   0         |   0                  |
-|  LL Road Frame S   |  0.35           |   0         |   0                  |
-|  Обр Touring-3000   |  0,15           |   0         |   0                  |
-|  Touring-1000 Pr   |  0.20           |   0         |   0                  |
+|  Sport Helmet Di   |  0,15           |   0         |   0                  |
+|  LL Road Frame S   |  0,35           |   0         |   0                  |
+|  Touring-3000 Pr   |  0,15           |   0         |   0                  |
+|  Touring-1000 Pr   |  0,20           |   0         |   0                  |
 |  Half-Price Peda   |  0,50           |   0         |   0                  |
-|  Mountain-500 Si   |  0.40           |   0         |   0                  |
+|  Mountain-500 Si   |  0,40           |   0         |   0                  |
 
  `(16 row(s) affected)`  
   
@@ -132,10 +132,10 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>Г. Использование функции ISNULL с функцией AVG  
- В следующем примере вычисляется среднее значение веса всех продуктов в образец таблицы. Все записи со значением NULL в столбце `50` таблицы `Weight` заменяются значением `Product`.  
+ В приведенном ниже примере рассчитывается среднее значение веса всех продуктов в образце таблицы. Все записи со значением NULL в столбце `50` таблицы `Weight` заменяются значением `Product`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ```  
   
 ### <a name="e-using-isnull"></a>Д. Использование функции ISNULL  
- В следующем примере используется функция ISNULL для проверки наличия значений NULL в столбце `MinPaymentAmount` и отобразить значение `0.00` для этих строк.  
+ В приведенном ниже примере функция ISNULL используется для поиска значений NULL в столбце `MinPaymentAmount` и отображения значения `0.00` для соответствующих строк.  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,15 +168,15 @@ ORDER BY ResellerName;
   
 |  ResellerName                |  MinimumPayment    |
 |  -------------------------   |  --------------    |
-|  Ассоциация велосипеда       |     0.0000         |
-|  Bike Store                |     0.0000         |
-|  Производственного цикла                |     0.0000         |
-|  Компания велосипед нормально     |     0.0000         |
-|  Это типичный велосипеда магазин         |   200.0000         |
-|  Допустимые продажи и службы  |     0.0000         |
+|  A Bicycle Association       |     0,0000         |
+|  A Bike Store                |     0,0000         |
+|  A Cycle Shop                |     0,0000         |
+|  A Great Bicycle Company     |     0,0000         |
+|  A Typical Bike Shop         |   200,0000         |
+|  Acceptable Sales & Service  |     0,0000         |
   
-### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>Е. Использование IS NULL для проверки на значения NULL в предложении WHERE  
- Следующий пример находит все продукты, которые имеют `NULL` в `Weight` столбца. Заметьте, что между словами `IS` и `NULL` стоит пробел.  
+### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>Е. Использование функции IS NULL для проверки на значение NULL в предложении WHERE  
+ В приведенном ниже примере выполняется поиск всех продуктов, имеющих значение `NULL` в столбце `Weight`. Заметьте, что между словами `IS` и `NULL` стоит пробел.  
   
 ```  
 -- Uses AdventureWorks  
@@ -187,11 +187,11 @@ WHERE Weight IS NULL;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [РАВЕН NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [IS NULL (Transact-SQL)](../../t-sql/queries/is-null-transact-sql.md)   
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [ОБЪЕДИНЕННЫЙ &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
 

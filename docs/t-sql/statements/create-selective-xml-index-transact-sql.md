@@ -1,5 +1,5 @@
 ---
-title: "Создание СЕЛЕКТИВНОГО XML-ИНДЕКСА (Transact-SQL) | Документы Microsoft"
+title: "CREATE SELECTIVE XML INDEX (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Создает новый селективный XML-индекс для указанной таблицы и XML-столбца. Селективные XML-индексы повышают производительность индексирования и выполнения XML-запросов, индексируя только подмножества узлов, к которым обычно выполняются запросы. Кроме того, вы можете создавать вторичные селективные XML-индексы. Сведения см. в разделе [Create, Alter и Drop вторичного селективного XML-индексы](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+  Создает новый селективный XML-индекс для указанной таблицы и XML-столбца. Селективные XML-индексы повышают производительность индексирования и выполнения XML-запросов, индексируя только подмножества узлов, к которым обычно выполняются запросы. Кроме того, вы можете создавать вторичные селективные XML-индексы. Дополнительные сведения см. в разделе [Создание, изменение и удаление вторичных селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -103,9 +103,9 @@ identifier
   
 ##  <a name="Arguments"></a> Аргументы  
  *index_name*  
- Имя создаваемого нового индекса. Имена индексов должны быть уникальными в пределах таблицы, но не обязательно должны быть уникальными в пределах базы данных. Имена индексов должны соответствовать правилам [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
+ Имя создаваемого нового индекса. Имена индексов должны быть уникальными в пределах таблицы, но не обязательно должны быть уникальными в пределах базы данных. Имена индексов должны удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- *\<table_object >* таблица, которая содержит XML-столбец для индекса. Используйте один из следующих форматов:  
+ *\<table_object>* Таблица, которая содержит индексируемый XML-столбец. Используйте один из следующих форматов:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -118,11 +118,11 @@ identifier
  *xml_column_name*  
  Имя XML-столбца, содержащего индексируемые пути.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list >**)**] — список пространств имен, используемых пути для индексирования. Сведения о синтаксисе предложения WITH XMLNAMESPACES см. в разделе [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] Список пространств имен, используемых индексируемыми путями. Сведения о синтаксисе предложения WITH XMLNAMESPACES см. в разделе [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md).  
   
- ДЛЯ **(**\<promoted_node_path_list >**)** список пути для индексирования с указаниями по оптимизации. Сведения о пути и указания по оптимизации, которые можно указать в инструкции CREATE или ALTER см. в разделе [укажите путь и указания по оптимизации для селективного XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(**\<promoted_node_path_list>**)** Список путей, которые нужно индексировать, с необязательными указаниями по оптимизации. Дополнительные сведения о путях и указаниях по оптимизации, которые вы можете указывать в инструкции CREATE или ALTER, см. в разделе [Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
- С  *\<index_options >* сведения о параметрах индекса см. в разделе [CREATE XML INDEX &#40; Выборочные XML-индексы &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH *\<index_options>* Дополнительные сведения о параметрах индекса см. в статье [CREATE XML INDEX (селективные XML-индексы)](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="best-practices"></a>Рекомендации  
  Создание селективного XML-индекса вместо обычного XML-индекса в большинстве случаев приводит к повышению производительности и более эффективному использованию хранилища. Однако селективный XML-индекс не рекомендуется использовать при наличии следующих условий.  
@@ -132,12 +132,12 @@ identifier
 -   Необходимо поддерживать запросы на неизвестные элементы или элементы в неизвестных расположениях.  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
- Сведения об ограничениях см. в разделе [выборочные XML-индексы &#40; SXI &#41; ](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
+ Дополнительные сведения об ограничениях см. в разделе [Селективные XML-индексы (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показан синтаксис для создания селективного XML-индекса. Он также содержит несколько вариантов синтаксиса для описания индексируемых путей с указаниями по оптимизации.  
@@ -163,10 +163,10 @@ WITH XMLNAMESPACES ('http://www.tempuri.org/' as myns)
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Создание, изменение и удаление селективного XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
- [Задайте путь и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
+ [Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "DROP INDEX (Селективные XML-индексы) | Документы Microsoft"
+title: "DROP INDEX (селективные XML-индексы) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Имя существующего индекса, который требуется удалить.  
   
- *\<Объект >* таблица, которая содержит индексированный XML-столбец. Используйте один из следующих форматов:  
+ *\< object>* Таблица, которая содержит индексированный XML-столбец. Используйте один из следующих форматов:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,7 +68,7 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option >* сведения о параметрах удаления индекса см. в разделе [DROP INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* Сведения о параметрах удаления индекса см. в разделе [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md).  
   
 ## <a name="security"></a>безопасность  
   
@@ -82,7 +82,7 @@ DROP INDEX index_name ON <object>
 DROP INDEX sxi_index ON tbl;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_TEST (Transact-SQL) | Документы Microsoft"
+title: "APPLOCK_TEST (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,35 +49,35 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-**"** *database_principal* **"**  
-Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Вызывающий эту функцию участник должен быть членом *database_principal*, **dbo**, или **db_owner** предопределенной роли базы данных для успешного вызова этой функции.
+**'** *database_principal* **'**  
+Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Вызывающий эту функцию участник должен быть членом предопределенной роли базы данных *database_principal*, **dbo** или **db_owner**, чтобы успешно выполнить вызов этой функции.
   
-**"** *resource_name* **"**  
-Имя ресурса блокировки, указанное клиентским приложением. Приложение должно убедиться в уникальности ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*— **nvarchar(255)** без значения по умолчанию. *resource_name* сравнивается с учетом регистра, независимо от параметров сортировки текущей базы данных.
+**'** *resource_name* **'**  
+Имя ресурса блокировки, указанное клиентским приложением. Приложение должно убедиться в уникальности ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *resource_name* имеет тип **nvarchar(255)** и не имеет значения по умолчанию. Аргумент *resource_name* сравнивается в двоичном режиме с учетом регистра символов независимо от параметров сортировки текущей базы данных.
   
-**"** *lock_mode* **"**  
-Надо ли получить режим блокировки для указанного ресурса. *lock_mode* — **nvarchar(32)** и нет значения по умолчанию. Значение может быть одним из следующих: **Shared**, **обновление**, **IntentShared**, **IntentExclusive**, **монопольного** .
+**'** *lock_mode* **'**  
+Надо ли получить режим блокировки для указанного ресурса. Аргумент *lock_mode* имеет тип **nvarchar(32)** и не имеет значения по умолчанию. Возможно одно из следующих значений: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
-**"** *lock_owner* **"**  
-Владелец данной блокировки, который является *lock_owner* значение при запросе блокировки. *lock_owner* — **nvarchar(32)**. Значение может быть **транзакции** (по умолчанию) или **сеанса**. Если по умолчанию или **транзакции** явно не указан, APPLOCK_TEST должно выполняться в рамках транзакции.
+**'** *lock_owner* **'**  
+Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если явно указано значение по умолчанию или **Transaction**, APPLOCK_TEST должно выполняться из транзакции.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **smallint**
   
 ## <a name="return-value"></a>Возвращаемое значение
 Возвращает 0, когда блокировка не может быть предоставлена указанному владельцу, и возвращает 1, если блокировка может быть предоставлена.
   
 ## <a name="function-properties"></a>Свойства функции
-**Недетерминированные**
+**Nondeterministic**
   
 **Nonindexable**
   
 **Nonparallelizable**
   
 ## <a name="examples"></a>Примеры  
-В следующем примере два пользователя (**пользователь A** и **пользователь Б**) с отдельными сеансами запускают следующую последовательность [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.
+В приведенном ниже примере два пользователя (**Пользователь A** и **Пользователь B**) с отдельными сеансами выполняют следующую последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]:
   
-**Пользователь А** выполняется:
+**Пользователь А** выполняет следующее:
   
 ```sql
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-**Пользователь Б** запускает:
+Затем **пользователь Б** выполняет следующее:
   
 ```sql
 Use AdventureWorks2012;  
@@ -110,14 +110,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**Пользователь А** запускает:
+Затем **пользователь А** выполняет следующее:
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-**Пользователь Б** запускает:
+Затем **пользователь Б** выполняет следующее:
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -125,16 +125,16 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**Пользователь А** и **пользователь Б** , а затем запустите оба:
+Затем оба пользователя (**А** и **Б**) выполняют следующее:
   
 ```sql
 COMMIT TRAN;  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
-[APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
-[процедура sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[APPLOCK_MODE (Transact-SQL)](../../t-sql/functions/applock-mode-transact-sql.md)  
+[sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

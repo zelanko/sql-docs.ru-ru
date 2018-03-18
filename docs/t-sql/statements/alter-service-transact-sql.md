@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVICE (Transact-SQL) | Документы Microsoft"
+title: "ALTER SERVICE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,25 +55,25 @@ ALTER SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Параметры SERVICE_NAME*  
+ *service_name*  
  Имя службы, которую необходимо изменить. Не могут быть указаны имена сервера, базы данных и схемы.  
   
- ОЧЕРЕДЬ ON [ *имя_схемы***.** ] *имя_очереди*  
- Указывает новую очередь для этой службы. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещает все сообщения этой службы из текущей очереди в новую очередь.  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
+ Указывает новую очередь для этой службы. [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещает все сообщения этой службы из текущей очереди в новую очередь.  
   
- Добавить КОНТРАКТ *contract_name*  
+ ADD CONTRACT *contract_name*  
  Указывает контракт, добавляемый к набору контрактов, предоставляемому этой службой.  
   
  DROP CONTRACT *contract_name*  
- Указывает контракт, удаляемый из набора контрактов, предоставляемых этой службе. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет сообщение об ошибке всем существующим диалогам с этой службой, использующим этот контракт.  
+ Указывает контракт, удаляемый из набора контрактов, предоставляемых этой службе. [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет сообщение об ошибке всем существующим диалогам с этой службой, использующим этот контракт.  
   
-## <a name="remarks"></a>Замечания  
- Когда инструкция ALTER SERVICE удаляет контракт из службы, служба перестает быть возможной целью диалогов, использующих этот контракт. Поэтому компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не допускает начала новых диалогов с этой службой по данному контракту. На уже существующие диалоги, использующие этот контракт, изменение не влияет.  
+## <a name="remarks"></a>Примечания  
+ Когда инструкция ALTER SERVICE удаляет контракт из службы, служба перестает быть возможной целью диалогов, использующих этот контракт. Поэтому компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не допускает начало новых диалогов с этой службой по данному контракту. На уже существующие диалоги, использующие этот контракт, изменение не влияет.  
   
  Чтобы изменить свойство AUTHORIZATION для службы, используйте инструкцию ALTER AUTHORIZATION.  
   
-## <a name="permissions"></a>Permissions  
- Разрешение на изменение службы по умолчанию имеет владелец службы, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin** Предопределенная роль сервера.  
+## <a name="permissions"></a>Разрешения  
+ По умолчанию разрешения на изменение службы имеют владелец службы, члены предопределенных ролей базы данных **db_ddladmin** и **db_owner** и члены предопределенной роли сервера **sysadmin**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -102,9 +102,9 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [Удаление службы &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

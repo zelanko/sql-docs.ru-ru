@@ -1,5 +1,5 @@
 ---
-title: "COL_LENGTH (Transact-SQL) | Документы Microsoft"
+title: "COL_LENGTH (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-**"** *таблицы* **"**  
-Имя таблицы, для которой необходимо получить сведения о длине столбца. *Таблица* является выражением типа **nvarchar**.
+**'** *table* **'**  
+Имя таблицы, для которой необходимо получить сведения о длине столбца. *table* — это выражение типа **nvarchar**.
   
-**"** *столбца* **"**  
-Имя столбца, для которого необходимо определить длину. *столбец* является выражением типа **nvarchar**.
+**'** *column* **'**  
+Имя столбца, для которого необходимо определить длину. *column* — это выражение типа **nvarchar**.
   
 ## <a name="return-type"></a>Возвращаемый тип
 **smallint**
@@ -62,8 +62,8 @@ COL_LENGTH ( 'table' , 'column' )
   
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как COL_LENGTH, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Замечания  
-Для столбцов типа **varchar** объявлены с **max** описатель (**varchar(max)**), функция COL_LENGTH возвращает значение -1.
+## <a name="remarks"></a>Remarks  
+Для столбцов типа **varchar**, объявленных с описателем **max** (**varchar(max)**), функция COL_LENGTH возвращает значение –1.
   
 ## <a name="examples"></a>Примеры  
 В следующем примере демонстрируются возвращаемые значения для столбца типа `varchar(40)` и для столбца типа `nvarchar(40)`.
@@ -86,10 +86,10 @@ VarChar     NVarChar
 40          80  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME (Transact-SQL)](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ВЫБЕРИТЕ примеры (Transact-SQL) | Документы Microsoft"
+title: "Примеры использования инструкции SELECT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>Примеры использования инструкции SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  В этом разделе приведены примеры использования [ВЫБЕРИТЕ](../../t-sql/queries/select-transact-sql.md) инструкции.  
+  В этом разделе приведены примеры применения инструкции [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Использование SELECT для получения строк и столбцов  
  В следующем примере приведены три примера кода. В ходе выполнения первого примера кода возвращаются все строки (предложение WHERE не указано), а также все столбцы (используется звездочка, `*`) таблицы `Product` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -204,19 +204,19 @@ GO
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [ОБЪЕДИНЕНИЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [EXCEPT и INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [UNION (Transact-SQL)](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
+ [EXCEPT и INTERSECT (Transact-SQL)](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [Путь к &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [В предложении &#40; Transact-SQL &#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [PathName (Transact-SQL)](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [Предложение INTO (Transact-SQL)](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

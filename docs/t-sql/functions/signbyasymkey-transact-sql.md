@@ -1,5 +1,5 @@
 ---
-title: "SIGNBYASYMKEY (Transact-SQL) | Документы Microsoft"
+title: "SIGNBYASYMKEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,18 +53,18 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
   
 ## <a name="arguments"></a>Аргументы  
  *Asym_Key_ID*  
- Идентификатор асимметричного ключа в текущей базе данных. *Asym_Key_ID* —**int**.  
+ Идентификатор асимметричного ключа в текущей базе данных. Аргумент *Asym_Key_ID* имеет тип **int**.  
   
  **@plaintext**  
- Переменная типа **nvarchar**, **char**, **varchar**, или **nchar** с данными, которые будут подписаны с помощью асимметричного ключа.  
+ Переменная типа **nvarchar**, **char**, **varchar** или **nchar**, содержащая данные, которые будут подписаны асимметричным ключом.  
   
- *пароль*  
- Пароль, которым защищен закрытый ключ. *пароль* — **nvarchar(128)**.  
+ *password*  
+ Пароль, которым защищен закрытый ключ. Аргумент *password* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Требуется разрешение CONTROL на асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
@@ -87,8 +87,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ASYMKEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

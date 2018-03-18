@@ -1,5 +1,5 @@
 ---
-title: "DBCC TRACEOFF (Transact-SQL) | Документы Microsoft"
+title: "DBCC TRACEOFF (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*Trace #*  
+*trace#*  
 Номер флага трассировки для отключения.  
   
 **-1**  
@@ -93,10 +93,10 @@ DBCC TRACEOFF (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
-[Инструкция DBCC TRACESTATUS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

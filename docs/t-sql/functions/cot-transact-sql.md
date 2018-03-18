@@ -1,5 +1,5 @@
 ---
-title: "COT (Transact-SQL) | Документы Microsoft"
+title: "COT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Математическая функция, которая возвращает тригонометрический котангенс указанного угла в радианах в указанном **float** выражение.
+Математическая функция, возвращающая тригонометрический котангенс указанного угла в радианах в заданном выражении **float**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,9 +47,9 @@ COT ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *float_expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md)типа **float** или типа, который может быть неявно преобразован в **float**.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип **float**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **float**
   
 ## <a name="examples"></a>Примеры  
@@ -70,8 +70,8 @@ The COT of the angle is: -0.040312
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

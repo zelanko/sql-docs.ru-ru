@@ -1,5 +1,5 @@
 ---
-title: "Создание КОЛЛЕКЦИИ XML-СХЕМ (Transact-SQL) | Документы Microsoft"
+title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -61,12 +61,12 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  Идентификатор SQL для коллекции XML-схем.  
   
  *Выражение*  
- Строковая константа или скалярная переменная. — **Varchar**, **varbinary**, **nvarchar**, или **xml** типа.  
+ Строковая константа или скалярная переменная. Имеет тип **varchar**, **varbinary**, **nvarchar** или **xml**.  
   
 ## <a name="remarks"></a>Remarks  
- Можно также добавлять новые пространства имен к коллекции или добавлять новые компоненты к существующим пространствам имен в коллекции с помощью [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+ С помощью инструкции [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) можно добавлять новые пространства имен к коллекции или новые компоненты к существующим пространствам имен в коллекции.  
   
- Чтобы удалить коллекции, используйте [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Чтобы удалить коллекции, используйте [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Для создания коллекции XML SCHEMA COLLECTION требуется, по крайней мере, один из следующих наборов разрешений:  
@@ -165,20 +165,20 @@ Set @MySchemaCollection  = N' copy the schema collection here'
 CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection   
 ```  
   
- Переменная в примере принадлежит к типу `nvarchar(max)`. Переменная также может быть **xml** тип данных, в этом случае она неявно преобразуется в строку.  
+ Переменная в примере принадлежит к типу `nvarchar(max)`. Переменная также может принадлежать к типу данных **xml**, и в таком случае она неявно преобразуется в строку.  
   
  Дополнительные сведения см. в разделе [Просмотр хранимой коллекции схем XML](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- Можно хранить коллекции схем в **xml** тип столбца. В этом случае для создания коллекции XML-схем необходимо выполнить следующее:  
+ Коллекции схем можно хранить в столбце типа **xml**. В этом случае для создания коллекции XML-схем необходимо выполнить следующее:  
   
-1.  Получить коллекцию схем из столбца с помощью инструкции SELECT и присвоить его переменной **xml** типа, или **varchar** типа.  
+1.  Получите коллекцию схем из столбца с помощью инструкции SELECT и свяжите ее с переменной типа **xml** или **varchar**.  
   
 2.  Укажите имя переменной в инструкции CREATE XML SCHEMA COLLECTION.  
   
  Инструкция CREATE XML SCHEMA COLLECTION сохраняет только такие компоненты схемы, которые понятны для SQL Server; все остальные элементы XML-схемы в базе данных не сохраняются. Таким образом, если нужно получить коллекцию XML-схем в том виде, в котором она была предоставлена, рекомендуется сохранять XML-схемы в столбце базы данных или в другой папке компьютера.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>Б. Указание нескольких пространств имен схем в коллекции схем  
- Можно указать несколько XML-схем при создании коллекции XML-схем. Например:  
+ Можно указать несколько XML-схем при создании коллекции XML-схем. Пример:  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
@@ -236,7 +236,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>В. Импорт схемы, не указывающей целевое пространство имен  
- Если схема, не содержит **targetNamespace** импортируется в коллекцию, ее компоненты связываются с целевым пространством имен пустую строку, как показано в следующем примере. Обратите внимание на то, что отсутствие связывания одной или нескольких схем, импортированных в коллекцию, приводит к тому, что некоторые компоненты схемы (потенциально несвязанные) будут связаны с целевым пространством имен по умолчанию в виде пустой строки.  
+ Если схема, не содержащая атрибут **targetNamespace**, импортируется в коллекцию, ее компоненты связываются с пустой строкой в качестве целевого пространства имен, как показано в следующем примере. Обратите внимание на то, что отсутствие связывания одной или нескольких схем, импортированных в коллекцию, приводит к тому, что некоторые компоненты схемы (потенциально несвязанные) будут связаны с целевым пространством имен по умолчанию в виде пустой строки.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -269,12 +269,12 @@ CREATE TABLE T (Col1 xml (mySC));
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

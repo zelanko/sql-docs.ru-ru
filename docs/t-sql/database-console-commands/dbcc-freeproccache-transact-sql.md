@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC FREEPROCCACHE (Transact-SQL) | Документы Microsoft"
+title: "DBCC FREEPROCCACHE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 Удаляет все элементы из кэша планов, удаляет заданный план из кэша планов с помощью указания дескриптора плана или дескриптора SQL либо удаляет все записи кэша, связанные с указанным пулом ресурсов.
 
 >[!NOTE]
->DBCC FREEPROCCACHE не очищает статистику выполнения для хранимых процедур, скомпилированных в собственном коде. Кэш процедур не содержит сведения о хранимых процедурах, скомпилированных в собственном коде. Все статистические данные выполнения, собранные при выполнении процедуры будут отображаться в статистику выполнения динамических административных представлений: [sys.dm_exec_procedure_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) и [sys.dm_exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>DBCC FREEPROCCACHE не очищает статистику выполнения для хранимых процедур, скомпилированных в собственном коде. Кэш процедур не содержит сведения о хранимых процедурах, скомпилированных в собственном коде. Все статистические данные выполнения, полученные при выполнении процедур, появятся в динамических административных представлениях (DMV) статистики выполнения: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) и [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Синтаксис для хранилища данных Azure SQL и параллельные хранилища данных:
+Синтаксис для хранилища данных SQL Azure и Parallel Data Warehouse:
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
@@ -64,40 +64,40 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ({ *plan_handle* | *sql_handle* | *pool_name* })  
-*plan_handle* уникальным образом определяет план запроса для пакета, который был выполнен и план которого хранится в кэше планов. *plan_handle* — **varbinary(64)** и может быть получен из следующих объектов DMO:  
+ ( { *plan_handle* | *sql_handle* | *pool_name* } )  
+*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* дескриптор SQL очищаемого пакета. *sql_handle* — **varbinary(64)** и может быть получен из следующих объектов DMO:  
+*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*pool_name* имя пула ресурсов регулятора ресурсов. *pool_name* — **sysname** и может быть получен с помощью запроса к [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) динамическое административное представление.  
- Чтобы связать группу рабочей нагрузки регулятора ресурсов с пулом ресурсов, запросите [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) динамическое административное представление. Сведения о группе рабочей нагрузки для сеанса, запросите [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) динамическое административное представление.  
+*pool_name* представляет имя пула ресурсов Resource Governor. Аргумент *pool_name* имеет тип **sysname** и может быть получен с помощью запроса к динамическому административному представлению [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ Чтобы связать группу рабочей нагрузки Resource Governor с пулом ресурсов, запросите динамическое административное представление [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md). Чтобы получить сведения о группе рабочей нагрузки для сеанса, запросите динамическое административное представление [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).  
 
   
  WITH NO_INFOMSGS  
  Подавляет вывод всех информационных сообщений.  
   
  COMPUTE  
- Очистка кэша планов запросов из каждого вычислительного узла. Это значение по умолчанию.  
+ Очистка кэша планов запросов в каждом вычислительном узле. Это значение по умолчанию.  
   
  ALL  
- Очистка кэша планов запросов из каждый вычислительный узел и узел элемента управления.  
+ Очистка кэша планов запросов в каждом вычислительном узле и в управляющем узле.  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` очистить кэш процедур (план) для базы данных в области.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], для очистки кэша процедур (планов) для базы данных в области действия служит инструкция `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`.
 
 ## <a name="remarks"></a>Remarks  
-Инструкция DBCC FREEPROCCACHE используется для аккуратной очистки кэша планов. Удаление процедуры (план) кэша приводит все планы вытеснения и входящих запросов выполнений компилируется новый план, вместо повторного использования любой ранее кэшированного плана. 
+Инструкция DBCC FREEPROCCACHE используется для аккуратной очистки кэша планов. Очистка кэша процедур (планов) приводит к исключению всех планов. В результате при выполнении входящих запросов будет компилироваться новый план, а не использоваться существующий план из кэша. 
 
-Это может привести к непредвиденному временному снижению производительности запросов как новый компиляций увеличения числа. Для каждого очищенного хранилища кэша в кэше планов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал ошибок содержит следующее информационное сообщение: «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша «%s» (части кэша планов) из-за "DBCC FREEPROCCACHE' или 'DBCC FREESYSTEMCACHE' операции.» Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+Это может стать причиной внезапного временного снижения производительности обработки запросов из-за увеличения числа компиляций. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 Следующие операции по перенастройке также очищают кэш процедур:  
 -   доступ к счетчику контейнеров проверки кэша  
@@ -118,33 +118,33 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>Результирующие наборы  
-Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: «выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
+Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: "Выполнение DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
 ## <a name="permissions"></a>Разрешения  
-Применяется к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+Применимо к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Требует разрешения ALTER SERVER STATE на сервере.  
 
-Область применения:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
-- Требуется членство в фиксированной серверной роли DB_OWNER.  
+Применимо к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+- Необходимо членство в предопределенной роли сервера DB_OWNER.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Общие замечания для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Одновременно может выполняться несколько команд DBCC FREEPROCCACHE.
-В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], очистка кэша планов может вызвать временное снижение производительности запросов, входящие запросы компиляцией нового плана, вместо повторного использования все ранее кэшированные плана. 
+## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Общие замечания касательно [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Несколько команд DBCC FREEPROCCACHE могут выполняться одновременно.
+В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] очистка кэша планов может приводить к временному снижению производительности обработки запросов, так как для входящих запросов компилируется новый план, а не используется существующий план из кэша. 
 
-DBCC FREEPROCCACHE (вычислительные ресурсы) только вызывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на перекомпиляцию запросов, когда они запускаются на вычислительных узлах. Это не вызывает [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] необходимость в повторной компиляции плана параллельного запроса, создаваемого на узел элемента управления.
-Инструкция DBCC FREEPROCCACHE может быть отменено во время выполнения.
+Команда DBCC FREEPROCCACHE (COMPUTE) приводит к перекомпиляции запросов сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только в том случае, если они выполняются в вычислительных узлах. Она не приводит к тому, что [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] перекомпилируют план параллельных запросов, созданный в управляющем узле.
+Команду DBCC FREEPROCCACHE можно отменить во время выполнения.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Инструкция DBCC FREEPROCCACHE не может выполняться в транзакции.
-DBCC FREEPROCCAHCE не поддерживается в инструкции ОПИСАНИЯ.
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Команда DBCC FREEPROCCACHE не может выполняться в рамках транзакции.
+Команда DBCC FREEPROCCAHCE не поддерживается в инструкции EXPLAIN.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Метаданные для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Новая строка добавляется в системном представлении sys.pdw_exec_requests при выполнении инструкции DBCC FREEPROCCACHE.
+## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Метаданные для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+При выполнении команды DBCC FREEPROCCACHE в системное представление sys.pdw_exec_requests добавляется новая строка.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Примеры:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Примеры: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Очистка плана запроса из кэша планов  
-В следующем примере план запроса очищается из кэша планов путем указания дескриптора плана запроса. Чтобы обеспечить наличие запроса-образца в кэше планов, сначала выполните следующий запрос. `sys.dm_exec_cached_plans` И `sys.dm_exec_sql_text` динамические административные представления запрашиваются для возврата дескриптора плана запроса. 
+В следующем примере план запроса очищается из кэша планов путем указания дескриптора плана запроса. Чтобы обеспечить наличие запроса-образца в кэше планов, сначала выполните следующий запрос. Динамические административные представления `sys.dm_exec_cached_plans` и `sys.dm_exec_sql_text` запрашиваются для возврата дескриптора плана соответствующего запроса. 
 
 Затем значение дескриптора плана из результирующего набора вставляется в инструкцию `DBCC FREEPROCACHE` для удаления из кэша планов именно этого плана.
   
@@ -177,14 +177,14 @@ GO
 ```  
   
 ### <a name="b-clearing-all-plans-from-the-plan-cache"></a>Б. Очистка всех планов из кэша планов  
-В следующем примере из кэша планов удаляются все элементы. WITH `NO_INFOMSGS` указано предложение, чтобы избежать отображения информационного сообщения.
+В следующем примере из кэша планов удаляются все элементы. Предложение WITH `NO_INFOMSGS` указывается, чтобы избежать отображения информационного сообщения.
   
 ```sql  
 DBCC FREEPROCCACHE WITH NO_INFOMSGS;  
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>В. Очистка всех записей кэша, связанных с пулом ресурсов  
-В следующем примере очищаются все записи кэша, связанные с указанным пулом ресурсов. `sys.dm_resource_governor_resource_pools` Сначала запрашивается представление для получения значения для *pool_name*.
+В следующем примере очищаются все записи кэша, связанные с указанным пулом ресурсов. Сначала запрашивается представление `sys.dm_resource_governor_resource_pools` для получения значения аргумента *pool_name*.
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  
@@ -193,36 +193,36 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>Г. Примеры базовый синтаксис инструкции DBCC FREEPROCCACHE  
-В следующем примере удаляется всех кэшей существующий план запроса от вычислительных узлов. Несмотря на то, что контекст имеет значение UserDbSales, кэши вычислений запрос узла плана для всех баз данных будет будут удалены. Предложение WITH NO_INFOMSGS запрещает информационные сообщения в результатах.  
+### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>Г. Примеры базового синтаксиса DBCC FREEPROCCACHE  
+В приведенном ниже примере в вычислительных узлах удаляются все существующие кэши планов запросов. Хотя задан контекст UserDbSales, кэши планов запросов в вычислительных узлах будут удалены для всех баз данных. Предложение WITH NO_INFOMSGS блокирует появление информационных сообщений в результатах.  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
- Следующий пример содержит те же результаты, что и предыдущий пример, за исключением того, информационные сообщения будут отображаться в результатах.  
+ В следующем примере результаты будут теми же, что и в предыдущем, за исключением того, что в них будут приводиться информационные сообщения.  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE);  
 ```  
   
-Запрашиваются информационных сообщений и выполнения проходит успешно, результаты запроса после одной строке на вычислительном узле.
+Если информационные сообщения запрошены и выполнение завершилось успешно, результаты запроса будут содержать одну строку для каждого вычислительного узла.
   
-### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>Д. Предоставление разрешения на запуск инструкции DBCC FREEPROCCACHE  
-Следующий пример предоставляет Дэвид разрешение для запуска DBCC FREEPROCCACHE.  
+### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>Д. Предоставление разрешения на выполнение DBCC FREEPROCCACHE  
+В приведенном ниже примере имени для входа David предоставляется разрешение на выполнение DBCC FREEPROCCACHE.  
   
 ```sql
 GRANT ALTER SERVER STATE TO David; 
 GO
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
+[Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   

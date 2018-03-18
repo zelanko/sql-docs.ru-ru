@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (тип данных geometry) | Документы Microsoft"
+title: "MakeValid (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Преобразует недопустимый **geometry** экземпляра в **geometry** экземпляра с допустимым типом Open Geospatial Consortium (OGC).
+Преобразует недопустимый экземпляр **geometry** в экземпляр **geometry** с допустимым типом открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод может вызвать изменение в типе **geometry** экземпляра, а также привести к точкам **geometry** экземпляра к небольшому сдвигу.  
+ Применение этого метода может вызвать изменение типа экземпляра **geometry**, а также привести к небольшому сдвигу точек в экземпляре **geometry**.  
   
 ## <a name="examples"></a>Примеры  
  В первом примере создается недопустимый экземпляр `LineString`, который перекрывает сам себя, и используется метод `STIsValid()`, чтобы подтвердить, что этот экземпляр является недопустимым. Функция `STIsValid()` возвращает значение 0 для недопустимого экземпляра.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 0);
 SELECT @g.STIsValid();  
 ```  
   
- Во втором примере, чтобы преобразовать экземпляр в допустимый и проверить, что этот экземпляр действительно допустим, используется метод `MakeValid()`. `STIsValid()`Возвращает значение 1 для допустимого экземпляра.  
+ Во втором примере, чтобы преобразовать экземпляр в допустимый и проверить, что этот экземпляр действительно допустим, используется метод `MakeValid()`. Функция `STIsValid()` возвращает значение 1 для недопустимого экземпляра.  
   
 ```  
 SET @g = @g.MakeValid();  
@@ -86,7 +86,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STIsValid (тип данных geometry)](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "DBCC FREESESSIONCACHE (Transact-SQL) | Документы Microsoft"
+title: "DBCC FREESESSIONCACHE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -65,7 +65,7 @@ DBCC FREESESSIONCACHE WITH NO_INFOMSGS;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

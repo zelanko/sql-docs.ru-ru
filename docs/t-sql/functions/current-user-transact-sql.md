@@ -1,5 +1,5 @@
 ---
-title: "Функция CURRENT_USER (Transact-SQL) | Документы Microsoft"
+title: "CURRENT_USER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/21/2017
 CURRENT_USER  
 ```  
 
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **sysname**
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Функция CURRENT_USER возвращает имя текущего контекста безопасности. Если CURRENT_USER выполняется после вызова EXECUTE AS для переключения контекста, функция CURRENT_USER возвращает имя олицетворенного контекста. Если участник Windows обратился к базе данных в качестве участника группы, вместо имени группы возвращается имя участника Windows.
   
-Чтобы возвратить имя входа текущего пользователя, см. [SUSER_NAME &#40; Transact-SQL &#41; ](../../t-sql/functions/suser-name-transact-sql.md) и [SYSTEM_USER &#40; Transact-SQL &#41; ](../../t-sql/functions/system-user-transact-sql.md).
+Сведения о получении имени входа текущего пользователя см. в статьях [SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) и [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
   
@@ -139,13 +139,13 @@ Arnalfo
 Wanida
 ```
   
-## <a name="see-also"></a>См. также:
-[Имя_пользователя &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[Функция SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
-[Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "SET CONTEXT_INFO (Transact-SQL) | Документы Microsoft"
+title: "SET CONTEXT_INFO (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="arguments"></a>Аргументы  
  *binary_str*  
- — **Двоичных** константой или константа, которая неявно преобразуется в **двоичных**, связываемый с текущим сеансом или соединением.  
+ Константа типа **binary** или константа, которая неявно преобразуется к типу **binary**, для связи с текущим сеансом или соединением.  
   
- **@***binary_var*  
- — **Varbinary** или **двоичных** переменной, удерживающие значение контекста для связи с текущим сеансом или соединением.  
+ **@** *binary_var*  
+ Переменные типа **varbinary** или **binary**, удерживающие значение контекста для связи с текущим сеансом или соединением.  
   
-## <a name="remarks"></a>Замечания  
- Предпочтительным способом для получения контекстных данных по текущему сеансу является использование функции CONTEXT_INFO. Сведения о контексте сеанса также сохраняются в **context_info** столбцов в следующих системных представлений:  
+## <a name="remarks"></a>Remarks  
+ Предпочтительным способом для получения контекстных данных по текущему сеансу является использование функции CONTEXT_INFO. Контекстные данные по сеансу также хранятся в столбцах **context_info** следующих системных представлений:  
   
 -   **sys.dm_exec_requests**  
   
@@ -65,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  SET CONTEXT_INFO не может быть задан в определенной пользователем функции. Нельзя применить значение NULL к SET CONTEXT_INFO, так как представления, хранящие значения, не допускают значения NULL.  
   
- SET CONTEXT_INFO не принимает другие выражения, нежели имена констант и переменных. Чтобы задать сведения о контексте результатом вызова функции, необходимо сначала назначить результат вызова функции в **двоичных** или **varbinary** переменной.  
+ SET CONTEXT_INFO не принимает другие выражения, нежели имена констант и переменных. Чтобы задать сведения о контексте результатом вызываемой функции, необходимо сначала назначить результат вызова функции в переменную типа **binary** или **varbinary**.  
   
  Если SET CONTEXT_INFO вызывается в сохраненной процедуре или триггере, то в отличие от других инструкций SET, для контекстных данных установится новое значение, сохраненное после завершения хранимой процедуры или триггера.  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-setting-context-information-by-using-a-function"></a>Б. Задание контекстных данных с помощью функции  
- В следующем примере показано задание контекстного значения, где значение от функции необходимо поместить в, используя вывод функции **двоичных** переменной.  
+ Следующий пример демонстрирует задание контекстного значения с использованием вывода функции, где значение от функции должно быть сначала помещено в переменную **binary**.  
   
 ```  
 DECLARE @BinVar varbinary(128);  
@@ -97,8 +97,8 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ERROR_MESSAGE (Transact-SQL) | Документы Microsoft"
+title: "ERROR_MESSAGE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_MESSAGE ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция ERROR_MESSAGE может быть вызвана в любом месте области блока CATCH.  
   
- Функция ERROR_MESSAGE возвращает сообщение об ошибке независимо от количества ее появлений или от ее конкретного месторасположения внутри блока CATCH. Этим она отличается от таких функций, как @@ERROR, которой только возвращает номер ошибки в инструкции сразу после того, который вызывает ошибку, или в первой инструкции CATCH блока.  
+ Функция ERROR_MESSAGE возвращает сообщение об ошибке независимо от количества ее появлений или от ее конкретного месторасположения внутри блока CATCH. В этом и заключается отличие от таких функций, как @@ERROR, которые возвращают номер ошибки в инструкции только сразу после ее обнаружения или в первой инструкции блока CATCH.  
   
  Во вложенных блоках CATCH функция ERROR_MESSAGE возвращает сообщение об ошибке, соответствующее области блока CATCH, в котором она возникла. Например, блок CATCH внешней конструкции TRY...CATCH может содержать вложенную конструкцию TRY...CATCH. Внутри вложенного блока CATCH функция ERROR_MESSAGE возвращает сообщение об ошибке, вызвавшей вложенный блок CATCH. Если функция ERROR_MESSAGE выполняется во внешнем блоке CATCH, она возвращает сообщение об ошибке, вызвавшей этот блок CATCH.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_MESSAGE в блоке CATCH с другими средствами обработки ошибок  
  В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с сообщением об ошибке возвращаются сведения, имеющие отношение к ней.  

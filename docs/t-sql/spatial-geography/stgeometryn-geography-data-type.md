@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (тип данных geography) | Документы Microsoft"
+title: "STGeometryN (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает заданное **geography** элемент в **GeometryCollection** или один из его подтипов. При использовании применительно к подтипу STGeometryN() **GeometryCollection**, такие как **MultiPoint** или **MultiLineString**, этот метод возвращает **geography**  экземпляра при вызове с N = 1.  
+  Возвращает указанный элемент **geography** в коллекции **GeometryCollection** или одном из ее подтипов. При использовании STGeometryN() для подтипа коллекции **GeometryCollection**, например **MultiPoint** или **MultiLineString**, этот метод возвращает экземпляр **geography**, если вызывается с помощью N=1.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — **Int** выражение между 1 и число **geography** экземпляров в **GeometryCollection**.  
+ Выражение типа **int** со значением от 1 до количества экземпляров **geography** в коллекции **GeometryCollection**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает значение null, если параметр больше, чем результат [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) и вызывает **ArgumentOutOfRangeException** Если *выражение* аргумент принимает значение меньше 1.  
+ Данный метод возвращает значение NULL, если параметр больше, чем результат [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md), и вызывает исключение **ArgumentOutOfRangeException**, если параметр *expression* меньше, чем 1.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `MultiPoint``geography` и с помощью `STGeometryN()` для поиска второго `geography` экземпляр **GeometryCollection**.  
+ В следующем примере создается экземпляр `MultiPoint``geography` и с помощью метода `STGeometryN()` выполняется поиск второго экземпляра `geography` в коллекции **GeometryCollection**.  
   
 ```  
 DECLARE @g geography;  
@@ -63,7 +63,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

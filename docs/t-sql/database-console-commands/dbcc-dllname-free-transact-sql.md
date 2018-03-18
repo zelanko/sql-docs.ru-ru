@@ -1,5 +1,5 @@
 ---
-title: "Имя DLL-библиотеки DBCC (FREE) (Transact-SQL) | Документы Microsoft"
+title: "DBCC dllname (FREE) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Выгружает указанный расширенной хранимой процедуры DLL из памяти.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Выгружает из памяти указанную библиотеку DLL расширенных хранимых процедур.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,10 +58,10 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  Подавляет вывод всех информационных сообщений.  
   
 ## <a name="remarks"></a>Remarks
-При выполнении расширенной хранимой процедуры DLL-библиотека остается загруженной экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до момента отключения сервера. Эта инструкция позволяет выгружать библиотеку DLL из памяти без отключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для отображения DLL-файлов, загруженных в данный момент с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполнение **sp_helpextendedproc**
+При выполнении расширенной хранимой процедуры DLL-библиотека остается загруженной экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до момента отключения сервера. Эта инструкция позволяет выгружать библиотеку DLL из памяти без отключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для отображения DLL-файлов, загруженных в настоящее время средствами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните процедуру **sp_helpextendedproc**.
   
 ## <a name="result-sets"></a>Результирующие наборы  
-При указании допустимой DLL-Библиотеки, DBCC *dllname* (FREE) возвращает:
+При указании допустимой библиотеки DLL команда DBCC *dllname* (FREE) возвращает:
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
@@ -71,18 +71,18 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
 ## <a name="examples"></a>Примеры  
-В следующем примере предполагается, что `xp_sample` реализована как xp_sample.dll и была выполнена. DBCC \< *dllname*> (FREE) выгружает файл xp_sample.dll связанные с `xp_sample` расширенной процедуры.
+В приведенном ниже примере предполагается, что расширенная процедура `xp_sample` реализована как xp_sample.dll и была выполнена. DBCC \<*dllname*> (FREE) выгружает файл xp_sample.dll, связанный с расширенной процедурой `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Характеристики выполнения расширенных хранимых процедур](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-[sp_addextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
-[sp_dropextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
-[sp_helpextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
+[sp_addextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
+[sp_dropextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
+[sp_helpextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
 [Выгрузка DLL-библиотеки расширенной хранимой процедуры](../../relational-databases/extended-stored-procedures-programming/unloading-an-extended-stored-procedure-dll.md)
   
   

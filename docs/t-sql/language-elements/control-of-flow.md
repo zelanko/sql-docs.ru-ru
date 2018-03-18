@@ -1,5 +1,5 @@
 ---
-title: "Поток управления | Документы Microsoft"
+title: "Управление выполнением | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -42,13 +42,13 @@ ms.lasthandoff: 01/25/2018
 |[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также  
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Косая черта-звездочка &#40; Блок комментариев &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
- [--&#40; Комментарий &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [Косая черта-звездочка (блок комментариев) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [-- (комментарий) (Transact-SQL)](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
- [Инструкция RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

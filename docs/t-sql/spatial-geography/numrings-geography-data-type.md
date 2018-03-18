@@ -1,5 +1,5 @@
 ---
-title: "NumRings (тип данных geography) | Документы Microsoft"
+title: "NumRings (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="numrings-geography-data-type"></a>NumRings (geography Data Type)
+# <a name="numrings-geography-data-type"></a>NumRings (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает общее количество колец в **многоугольника** экземпляра. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** введите, внешние и внутренние кольца неразличимы, поскольку любое кольцо может считать внешнего кольца.  
+  Возвращает общее количество колец в экземпляре **Polygon**. В экземпляре типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** внешние и внутренние кольца неразличимы, поскольку любое кольцо может рассматриваться как внешнее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
- Этот метод вернет значение NULL, если это не **многоугольника** экземпляр и возвращает 0, если экземпляр пуст. Этот метод является точным.  
+## <a name="remarks"></a>Примечания  
+ Данный метод возвращает значение NULL, если переданный ему параметр — не экземпляр **Polygon**, и возвращает 0, если экземпляр пуст. Этот метод является точным.  
   
 ## <a name="examples"></a>Примеры  
  В этом примере создается экземпляр `Polygon` с двумя кольцами и выполняется проверка для подтверждения того, что он имеет два кольца.  

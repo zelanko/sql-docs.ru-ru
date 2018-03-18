@@ -1,5 +1,5 @@
 ---
-title: "Функции работы с курсорами (Transact-SQL) | Документы Microsoft"
+title: "Функции работы с курсорами (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-Все функции работы с курсорами являются недетерминированными. Это означает, что данные функции не всегда возвращают одинаковые значения при каждом вызове, даже при одинаковых наборах входных значений. Дополнительные сведения о детерминизме функций см. в разделе [функций](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Все функции работы с курсорами являются недетерминированными. Это означает, что данные функции не всегда возвращают одинаковые значения при каждом вызове, даже при одинаковых наборах входных значений. Дополнительные сведения о детерминированности функций см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)
   
   

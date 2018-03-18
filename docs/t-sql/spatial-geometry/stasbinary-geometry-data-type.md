@@ -1,5 +1,5 @@
 ---
-title: "STAsBinary (тип данных geometry) | Документы Microsoft"
+title: "STAsBinary (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **varbinary(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Возвращаемый тип CLR: **SqlBytes**  
+ Тип возвращаемых данных CLR: **SqlBytes**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр geometry `LineString` с (0,0) по (2,3) из текста. Функция `STAsBinary()` возвращает результат в формате WKB.  
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsBinary();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

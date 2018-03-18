@@ -1,5 +1,5 @@
 ---
-title: "ОТОЗВАТЬ разрешения на коллекции схем XML (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений на коллекцию XML-схем (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -60,11 +60,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Указывает разрешение, которое может быть отменено для коллекции XML-схем. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- Указывает коллекцию XML-схем, для которой отменяется разрешение. Требуется квалификатор области (::). Если *schema_name* не указан, используется схема по умолчанию. Если *schema_name* указано, требуется квалификатор области схемы (.).  
+ Указывает коллекцию XML-схем, для которой отменяется разрешение. Квалификатор области (::) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
  GRANT OPTION  
  Показывает, что отменяется право на предоставление указанного разрешения другим участникам. Само разрешение отменено не будет.  
@@ -78,10 +78,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  Каскадная отмена разрешения, предоставленного с помощью параметра WITH GRANT OPTION, приведет к отмене разрешений GRANT и DENY для этого разрешения.  
   
- {ДЛЯ | FROM} \< *database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  Задает участника, у которого отменяется разрешение.  
   
- AS \<database_principal > Указывает участника, от которого участник, выполняющий данный запрос, наследует право отмены разрешения.  
+ AS \<database_principal> Указывает субъекта, от которого субъект, выполняющий данный запрос, наследует право на отмену разрешения.  
   
  *Database_user*  
  Указывает пользователя базы данных.  
@@ -108,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
 ## <a name="remarks"></a>Remarks  
- Сведения о коллекции XML-схем можно увидеть в [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) представления каталога.  
+ Сведения о коллекциях XML-схем доступны в представлении каталога [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Инструкция завершится ошибкой, если при отзыве разрешения у участника, которому было предоставлено данное разрешение с аргументом GRANT OPTION, не задан аргумент CASCADE.  
   
@@ -135,11 +135,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>См. также  
- [ПРЕДОСТАВЬТЕ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [Запрет разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [Создание КОЛЛЕКЦИИ XML-СХЕМ &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [GRANT, предоставление разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [sys.xml_schema_collections (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

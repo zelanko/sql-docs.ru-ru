@@ -1,5 +1,5 @@
 ---
-title: "DENY, разрешения объекта (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на объект (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -61,40 +61,40 @@ DENY <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Обозначает разрешение, которое можно запретить для содержащегося в схеме объекта. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Обозначает разрешение, которое можно запретить для содержащегося в схеме объекта. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ALL  
  Запрет разрешения ALL не запрещает все возможные разрешения. Запрет ALL эквивалентен запрету всех разрешений ANSI-92, применимых к данному объекту. Значение ALL различается для разных типов объектов  
   
- - Разрешения на скалярные функции: выполнение, ссылается на.  
- - Табличная функция разрешения: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - Разрешения на хранимые процедуры: выполнение.  
- - Таблица разрешения: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - Просмотр разрешений: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Разрешения на скалярные функции: EXECUTE, REFERENCES.  
+ - Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Разрешения на хранимые процедуры: EXECUTE.  
+ - Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  Включено для совместимости с ANSI-92. Не изменяет работу ALL.  
   
-*столбец*  
- Указывает имя столбца в таблице, представлении или функции с табличным значением, для которых запрещается разрешение. Круглые скобки **()** являются обязательными. Для столбца можно запрещать только разрешения SELECT, REFERENCES и UPDATE. *столбец* может быть указан в предложении permissions или после имени защищаемого объекта.  
+*column*  
+ Указывает имя столбца в таблице, представлении или функции с табличным значением, для которых запрещается разрешение. Указание круглых скобок **( )** обязательно. Для столбца можно запрещать только разрешения SELECT, REFERENCES и UPDATE. Аргумент *column* может быть указан в предложении PERMISSIONS или после имени защищаемого объекта.  
   
 > [!CAUTION]  
 >  Запрет (DENY) уровня таблицы имеет меньший приоритет, чем разрешение (GRANT) уровня столбца. Такая несогласованность в иерархии разрешений сохранена в целях обратной совместимости.  
   
- ON [объект **::** ] [ *имя_схемы* ] **.** *object_name*  
- Указывает объект, для которого запрещается разрешение. Фраза OBJECT необязательна Если *schema_name* указано. Если ЖЕ она указана, указание квалификатора области (**::**) является обязательным. Если *schema_name* не указан, используется схема по умолчанию. Если *имя_схемы* указана, указание квалификатора области схемы (**.**) является обязательным.  
+ ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
+ Указывает объект, для которого запрещается разрешение. Фраза OBJECT необязательна, если указан аргумент *schema_name*. Если же она указана, указание квалификатора области (**::**) обязательно. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (**.**).  
   
- Чтобы \<database_principal >  
+ TO \<database_principal>  
  Задает участника, для которого запрещается разрешение, —  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
@@ -118,8 +118,8 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
- Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [представления каталога объектов &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Объект является защищаемым на уровне схемы. Он содержится в схеме, которая является его родителем в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно запретить для объекта, перечислены в следующей таблице вместе с общими разрешениями, неявно содержащими их.  
   
@@ -127,8 +127,8 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
-|Выполните|CONTROL|Выполните|  
+|Delete|CONTROL|Delete|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -138,7 +138,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL для данного объекта.  
   
  При использовании предложения AS указанный участник должен быть владельцем объекта, разрешения на который запрещаются для этого участника.  
@@ -147,7 +147,7 @@ PRIVILEGES
 В следующих примерах используется база данных AdventureWorks.
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. Запрет разрешения SELECT на таблицу  
- В следующем примере запрещается `SELECT` разрешение пользователю `RosaQdM` в таблице `Person.Address`.  
+ В следующем примере запрещается разрешение `SELECT` для пользователя `RosaQdM` на таблицу `Person.Address`.  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
@@ -174,13 +174,13 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
- [ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   

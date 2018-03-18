@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromWKB (тип данных geography) | Документы Microsoft"
+title: "STMPolyFromWKB (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geographyMultiPolygon** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geographyMultiPolygon** из WKB-представления OGC.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_multipolygon*  
- WKB-представление **geographyMultiPolygon** экземпляр, который необходимо вернуть. *WKB_multipolygon* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **geographyMultiPolygon**. *WKB_multipolygon* — это выражение **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geographyMultiPolygon** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyMultiPolygon**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
  Тип OGC: **MultiPolygon**  
   
@@ -66,7 +66,7 @@ SET @g = geography::STMPolyFromWKB(0x0106000000020000000103000000010000000400000
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

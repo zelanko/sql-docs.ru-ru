@@ -1,5 +1,5 @@
 ---
-title: "Удаление ПРИВЯЗКИ УДАЛЕННОЙ службы (Transact-SQL) | Документы Microsoft"
+title: "DROP REMOTE SERVICE BINDING (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,8 +54,8 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Имя привязки удаленной службы, которую планируется удалить. Не могут быть указаны имена сервера, базы данных и схемы.  
   
-## <a name="permissions"></a>Permissions  
- По умолчанию разрешением на удаление привязки удаленной службы принадлежит владельцу привязки удаленной службы, члены предопределенной роли базы данных db_owner и члены фиксированной серверной роли sysadmin.  
+## <a name="permissions"></a>Разрешения  
+ По умолчанию разрешение на удаление привязки удаленной службы принадлежит владельцу привязки удаленной службы, членам предопределенной роли db_owner базы данных и членам предопределенной роли сервера sysadmin.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере выполняется удаление привязки удаленной службы `APBinding` из базы данных.  
@@ -64,9 +64,9 @@ DROP REMOTE SERVICE BINDING binding_name
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [ALTER ПРИВЯЗКИ УДАЛЕННОЙ службы &#40; Transact-SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [ALTER REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

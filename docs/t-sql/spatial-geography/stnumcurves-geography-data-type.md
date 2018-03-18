@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (тип данных geography) | Документы Microsoft"
+title: "STNumCurves (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает число кривых в одномерном массиве **geography** экземпляра.  
+  Возвращает количество кривых в одномерном экземпляре **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- К типам одномерных пространственных данных относятся **LineString**, **CircularString**, и **CompoundCurve**. Пустой одномерный **geography** экземпляр возвращает 0.  
+ К одномерным пространственным типам данных относятся **LineString**, **CircularString** и **CompoundCurve**. Пустой одномерный экземпляр **geography** возвращает значение 0.  
   
- `STNumCurves`() поддерживает только простые типы; не работает с **geography** коллекций, например **MultiLineString**. **Значение NULL** возвращается, когда **geography** экземпляр не является одномерным типом данных.  
+ Функция `STNumCurves`() поддерживает только простые типы; она не поддерживает коллекции **geography**, такие как **MultiLineString**. Возвращается значение **NULL**, если экземпляр **geography** не является одномерным типом данных.  
   
- **Значение NULL** возвращается для неинициализированных **geography** экземпляров.  
+ Возвращает **NULL** для неинициализированных экземпляров **geography**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

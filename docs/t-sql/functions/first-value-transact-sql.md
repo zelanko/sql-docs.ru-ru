@@ -1,5 +1,5 @@
 ---
-title: "FIRST_VALUE (Transact-SQL) | Документы Microsoft"
+title: "FIRST_VALUE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>Аргументы  
  *scalar_expression*  
- Возвращаемое значение. *scalar_expression* может быть столбцом, вложенным запросом или других произвольных выражением, результатом вычисления в одно значение. Другие аналитические функции использовать нельзя.  
+ Возвращаемое значение. *scalar_expression* может быть столбцом, вложенным запросом или другим произвольным выражением, результатом вычисления которого является единичное значение. Другие аналитические функции использовать нельзя.  
   
- НАД **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* , определяет логический порядок, в котором выполняется операция. *order_by_clause* является обязательным. *rows_range_clause* еще больше ограничивает строки внутри секции путем указания начальной и конечной точек. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Аргумент *order_by_clause* является обязательным. *rows_range_clause* еще больше ограничивает строки в пределах секции, задавая начальную и конечную точки. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- К тому же типу, как *scalar_expression*.  
+ Тот же тип, что и *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Функция FIRST_VALUE не детерминирована. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -128,6 +128,6 @@ Accounts Receivable Specialist      Walton                    62            Poe
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ЧЕРЕЗ предложение &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

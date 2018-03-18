@@ -1,5 +1,5 @@
 ---
-title: "STUFF (Transact-SQL) | Документы Microsoft"
+title: "STUFF (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных. Аргумент *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
  *start*  
- Целочисленное значение, определяющее место начала удаления и вставки. Если *запустить* является отрицательным, или ноль, возвращается пустая строка. Если *запустить* длиннее, чем первый *character_expression*, возвращается пустая строка. *Запуск* может иметь тип **bigint**.  
+ Целочисленное значение, определяющее место начала удаления и вставки. Если аргумент *start* отрицателен или равен нулю, то возвращается пустая строка. Если значение аргумента *start* превышает длину первого аргумента *character_expression*, возвращается значение NULL. *start* может иметь тип **bigint**.  
   
- *длина*  
- Целочисленное выражение, которое определяет, какое количество символов следует удалить. Если *длина* имеет отрицательное значение, возвращается пустая строка. Если *длина* длиннее, чем первый *character_expression*, удаление выполняется до до последнего символа в последнем *character_expression*.  Если *длина* равен нулю, вставка не производится до первого символа в строке. *Длина* может иметь тип **bigint**.
+ *length*  
+ Целочисленное выражение, которое определяет, какое количество символов следует удалить. Если аргумент *length* отрицателен, то возвращается пустая строка. Если значение аргумента *length* превышает длину первого аргумента *character_expression*, удаляются все символы вплоть до последнего в последнем аргументе *character_expression*.  Если аргумент *length* равен нулю, вставка производится перед первым символом в строке. *length* может иметь тип **bigint**.
 
  *replaceWith_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных. Это выражение заменяет *длина* символов *character_expression* начиная *запустить*. Предоставление `NULL` как *replaceWith_expression*, удаляет знаки без вставки ничего.   
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных. Аргумент *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных. Это выражение заменяет *length* символов выражения *character_expression*, начиная с позиции *start*. Если указать `NULL` в качестве значения *replaceWith_expression*, символы удаляются, причем вставка не производится.   
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает символьные данные, если *character_expression* является одним из поддерживаемых символьных типов данных. Возвращает двоичные данные, если *character_expression* является одним из поддерживаемых двоичных типов данных.  
+ Возвращает символьные данные, если *character_expression* имеет один из поддерживаемых символьных типов данных. Возвращает двоичные данные, если аргумент *character_expression* имеет один из поддерживаемых двоичных типов данных.  
   
 ## <a name="remarks"></a>Remarks  
  Если начальная позиция или число удаляемых символов отрицательны или если начальная позиция превышает длину первой строки, возвращается пустая строка. Если начальная позиция равна 0, то возвращается значение NULL. Если число удаляемых символов превышает длину первой строки, удаление выполняется до первого символа первой строки.  
@@ -72,7 +72,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 Ошибка, которая возникает, если результат больше, чем максимальное значение, поддерживаемое типом возвращаемого параметра.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
- При использовании параметров сортировки SC, оба *character_expression* и *replaceWith_expression* могут содержать суррогатные пары. Параметр длины подсчитывает каждый суррогат *character_expression* как один символ.  
+ При использовании параметров сортировки SC как выражение *character_expression*, так и выражение *replaceWith_expression* могут содержать суррогатные пары. Параметр длины будет рассматривать каждый суррогат в *character_expression* как один символ.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример иллюстрирует создание строки `abcdef` после удаления из нее трех символов, начиная с позиции `2`, с символа `b` и вставки второй строки в место удаления.  
@@ -91,15 +91,15 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  

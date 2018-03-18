@@ -1,5 +1,5 @@
 ---
-title: "ЗНАК (Transact-SQL) | Документы Microsoft"
+title: "SIGN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) точных числовых или приблизительных числовых типа данных, за исключением **бит** тип данных.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
   
 |Заданное выражение|Возвращаемый тип|  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
-|**int, smallint и tinyint**|**int**|  
-|**Money и smallmoney**|**money**|  
-|**числовых и десятичных чисел**|**числовых и десятичных чисел**|  
+|**int/smallint/tinyint**|**int**|  
+|**money/smallmoney**|**money**|  
+|**numeric/decimal**|**numeric/decimal**|  
 |**Другие типы**|**float**|  
   
 ## <a name="examples"></a>Примеры  
@@ -103,8 +103,8 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующий пример возвращает знак значения трех чисел.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В следующем примере возвращаются значения SIGN для трех чисел.  
   
 ```  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
@@ -118,7 +118,7 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

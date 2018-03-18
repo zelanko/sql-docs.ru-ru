@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC OPENTRAN (Transact-SQL) | Документы Microsoft"
+title: "DBCC OPENTRAN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 Инструкция DBCC OPENTRAN помогает определить активные транзакции, которые могут препятствовать усечению журнала. Инструкция DBCC OPENTRAN отображает сведения о самой старой активной транзакции и о самых старых реплицированных транзакциях, распределенных и нераспределенных, если таковые имеются в журнале транзакций указанной базы данных. Результаты отображаются только при наличии активной транзакции, которая приведена в журнале, или в случае, если в базе данных имеются сведения о репликации. Если в журнале нет активных транзакций, отображается информационное сообщение.
   
 > [!NOTE]  
->  Инструкция DBCC OPENTRAN не поддерживается для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
+>  DBCC OPENTRAN не поддерживается для издателей, отличных от издателей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Аргументы  
  *database_name* | *database_id*| 0  
- Имя или идентификатор базы данных, для которой необходимо отобразить сведения о самой давней транзакции. Если значение не указано или указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
+ Имя или идентификатор базы данных, для которой необходимо отобразить сведения о самой давней транзакции. Если значение не указано или указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
  Указывает, что результаты должны выводиться в табличном формате, чтобы их можно было загрузить в таблицу. Используйте этот параметр для создания таблицы результатов, которые могут быть вставлены в таблицу для сравнений. Если этот аргумент не указан, результаты форматируются так, чтобы они были более удобочитаемыми.  
@@ -137,11 +137,11 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[ФИКСАЦИИ ТРАНЗАКЦИИ &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[Инструкция ROLLBACK TRANSACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md)  
+[ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   

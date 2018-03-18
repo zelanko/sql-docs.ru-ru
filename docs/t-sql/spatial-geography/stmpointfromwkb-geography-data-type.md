@@ -1,5 +1,5 @@
 ---
-title: "STMPointFromWKB (тип данных geography) | Документы Microsoft"
+title: "STMPointFromWKB (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geographyMultiPoint** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geographyMultiPoint** из WKB-представления открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_multipoint*  
- WKB-представление **geographyMultiPoint** экземпляр, который необходимо вернуть. *WKB_multipoint* — **varbinary(max)** выражение.  
+ WKB-представление возвращаемого экземпляра **geographyMultiPoint**. *WKB_multipoint* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geographyMultiPoint** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyMultiPoint**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
  Тип OGC: **MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод создает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STMPointFromWKB()` применяется для создания экземпляра `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STMPointFromWKB(0x0104000000020000000101000000D7A3703D0A975E
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ToString (тип данных geography) | Документы Microsoft"
+title: "ToString (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="tostring-geography-data-type"></a>ToString (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает представление Open Geospatial Consortium (OGC) Well-Known Text (WKT) **geography** экземпляра, дополненное всеми значениями Z (уровень) и значения M (Мера), сопровождающими экземпляр.  
+  Возвращает представление WKT открытого геопространственного консорциума (OGC) для экземпляра **geography**, дополненное всеми значениями Z (высота) и M (мера) этого экземпляра.  
   
- Это geography, тип данных поддерживает метод **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.  
+ Этот метод типа данных geography поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Возвращаемый тип CLR: **SqlString**  
+ Тип возвращаемых данных CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
- Метод возвращает строку NULL при вызове на экземплярах NULL. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], набор возможных результатов на сервере была расширена для **FullGlobe** экземпляров. Этот метод возвратит такое же значение, что и функция `AsTextZM()`.  
+ Метод возвращает строку NULL при вызове на экземплярах NULL. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] набор возможных результатов на сервере был пополнен экземплярами **FullGlobe**. Этот метод возвратит такое же значение, что и функция `AsTextZM()`.  
   
  Этот метод не является точным.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `LineString` и с помощью `ToString()` возвращается текстовое описание экземпляра.  
+ В приведенном ниже примере создается экземпляр `LineString` и используется метод `ToString()` для возврата текстового описания экземпляра.  
   
 ```  
 DECLARE @g geography;  
@@ -63,8 +63,8 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [AsTextZM (тип данных geography)](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

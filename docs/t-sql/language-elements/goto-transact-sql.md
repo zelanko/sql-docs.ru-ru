@@ -1,5 +1,5 @@
 ---
-title: "Оператор GOTO (Transact-SQL) | Документы Microsoft"
+title: "GOTO (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ GOTO label
   
 ## <a name="arguments"></a>Аргументы  
  *label*  
- Точка, с которой начинается обработка инструкций после перехода на текущую метку с помощью инструкции GOTO. Метки должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). Метка может применяться без инструкции GOTO как метод комментирования.  
+ Точка, с которой начинается обработка инструкций после перехода на текущую метку с помощью инструкции GOTO. Метки должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Метка может применяться без инструкции GOTO как метод комментирования.  
   
 ## <a name="remarks"></a>Remarks  
  Инструкция GOTO может существовать внутри условных инструкций, управляющих потоком, блоков инструкций или процедур, однако не может ссылаться на метку, расположенную вне этого пакета. Инструкция GOTO может ссылаться на метку, расположенную как до нее, так и после.  
@@ -84,13 +84,13 @@ Branch_Three:
     SELECT 'Jumping To Branch Three.';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [BEGIN... КОНЕЦ &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [РАЗРЫВ &#40; Transact-SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [ПРОДОЛЖИТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
- [IF... ELSE &#40; Transact-SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [Инструкция WAITFOR &#40; Transact-SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BREAK (Transact-SQL)](../../t-sql/language-elements/break-transact-sql.md)   
+ [CONTINUE (Transact-SQL)](../../t-sql/language-elements/continue-transact-sql.md)   
+ [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   

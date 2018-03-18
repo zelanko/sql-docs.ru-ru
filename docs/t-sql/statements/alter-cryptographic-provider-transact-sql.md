@@ -1,5 +1,5 @@
 ---
-title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Документы Microsoft"
+title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Включает или отключает поставщик.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если поставщик изменяет DLL-файл, используемый для реализации расширенного управления ключами в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно использовать инструкцию ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Если путь к DLL-файлу обновляется инструкцией ALTER CRYPTOGRAPHIC PROVIDER, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет следующие действия.  
@@ -67,7 +67,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 -   Обновляет версию DLL-библиотеки в каталоге.  
   
 
-Если для поставщика расширенного управления ключами установлено значение DISABLE, то любые попытки использовать этот поставщик с инструкциями шифрования для новых соединений завершатся ошибкой.  
+Если для поставщика расширенного управления ключами установлено значение DISABLE, то любые попытки использовать этот поставщик с инструкциями шифрования для новых соединений завершается ошибкой.  
   
 Перед отключением поставщика необходимо закрыть все сеансы, использующие его.  
   
@@ -79,20 +79,20 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL для поставщика служб шифрования.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере изменяется поставщика служб шифрования, вызывается `SecurityProvider` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], до более новой версии DLL-файл. Эта новая версия имеет имя `c:\SecurityProvider\SecurityProvider_v2.dll` и установлен на сервере. Сначала необходимо установить на сервере сертификат поставщика.  
+ В следующем примере происходит замена DLL-библиотеки на более новую версию для поставщика служб шифрования `SecurityProvider` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта новая версия имеет имя `c:\SecurityProvider\SecurityProvider_v2.dll` и установлена на сервере. Сначала необходимо установить на сервере сертификат поставщика.  
   
-1. Отключите поставщик для выполнения обновления. Это нарушит все открытые сеансы служб шифрования.  
+1. Отключите поставщик для выполнения обновления. Будут завершены все открытые сеансы шифрования.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. Обновление поставщика DLL-файл. Идентификатор GUID должно быть таким же, как предыдущая, но версия может отличаться.  
+2. Обновите DLL-файл поставщика. Идентификатор GUID должен быть тем же, что и в предыдущей версии, но версия может отличаться.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
@@ -106,11 +106,11 @@ ENABLE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
+ [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   

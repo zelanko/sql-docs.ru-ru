@@ -1,5 +1,5 @@
 ---
-title: "STDimension (тип данных geometry) | Документы Microsoft"
+title: "STDimension (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geometry-data-type"></a>STDimension (тип данных geometry, метод)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает максимальное измерение **geometry** экземпляра.
+Возвращает максимальную размерность экземпляра **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- `STDimension()`Возвращает значение -1, если **geometry** экземпляр пуст.  
+ Метод `STDimension()` возвращает значение –1, если экземпляр **geometry** является пустым.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается табличная переменная для хранения **geometry** экземпляры и вставляет `Point`, `LineString`и `Polygon`.  Затем он использует `STDimension()` возвращает измерения каждого **geometry** экземпляра.  
+ В следующем примере создается табличная переменная для хранения экземпляров **geometry**, а также вставляется `Point`, `LineString` и `Polygon`.  Затем функция `STDimension()` возвращает измерения каждого экземпляра **geometry**.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geometry);  
@@ -65,13 +65,13 @@ FROM @temp;
   
  Затем в примере возвращаются измерения каждого из экземпляров `geometry`.  
   
-|имя|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Точка|0|  
 |LineString|1|  
-|Многоугольник|2|  
+|Polygon|2|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

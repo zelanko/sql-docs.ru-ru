@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGML (тип данных geography) | Документы Microsoft"
+title: "GeomFromGML (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Создает **geography** экземпляр заданному представлению на используемом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подмножество языка разметки Geography (GML).
+Создает экземпляр **geography** по заданному представлению в используемом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подмножестве языка GML.
   
-Дополнительные сведения о языке GML см. в разделе следующей спецификации консорциума Ogc: [спецификации OGC, географический язык разметки](http://go.microsoft.com/fwlink/?LinkId=93629)
+Дополнительные сведения о языке GML см. в следующих документах открытого геопространственного консорциума (OGC): [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)
   
-Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.
+Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,17 +53,17 @@ GeomFromGml ( GML_input, SRID )
  Входные XML-данные, из которых GML-код получит возвращаемое значение.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geography** возвращаемого экземпляра.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод создает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
- Этот метод вызывает исключение **ArgumentException** Если вход содержит противоположную границу.  
+ Этот метод вызывает исключение **ArgumentException**, если входные данные содержат противоположную границу.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `GeomFromGml()` применяется для создания экземпляра `geography`.  
@@ -86,7 +86,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

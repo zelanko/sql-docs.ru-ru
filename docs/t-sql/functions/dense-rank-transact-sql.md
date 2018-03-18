@@ -1,5 +1,5 @@
 ---
-title: "DENSE_RANK (Transact-SQL) | Документы Microsoft"
+title: "DENSE_RANK (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \<partition_by_clause >  
- Делит результирующий набор, полученный по [FROM](../../t-sql/queries/from-transact-sql.md) на секции, к которым применяется функция DENSE_RANK. Синтаксис PARTITION BY см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Делит результирующий набор, полученный с помощью предложения [FROM](../../t-sql/queries/from-transact-sql.md), на секции, к которым применяется функция DENSE_RANK. Синтаксис PARTITION BY см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  Определяет порядок, в котором функция DENSE_RANK применяется к строкам секции.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если две или более строк одной секции равны при ранжировании, каждой такой строке присваивается один и тот же ранг. Например, если двум лучшим продавцам соответствует одинаковое значение SalesYTD, им обоим присваивается ранг 1. Менеджеру по продажам со следующим по величине значением SalesYTD назначается ранг 2. Это на единицу больше, чем число разных рангов строк, расположенных перед этой строкой. Таким образом, между номерами, возвращаемыми функцией DENSE_RANK, нет промежутков, и они всегда имеют последовательные значения ранга.  
   
  Порядок сортировки строк в результате определяется порядком сортировки результата всего запроса. Из этого следует, что строка с рангом 1 не всегда является первой строкой в секции.  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
-## <a name="c-four-ranking-functions-used-in-the-same-query"></a>В. Четырех ранжирующих функций в одном запросе  
+## <a name="c-four-ranking-functions-used-in-the-same-query"></a>В. Использование четырех ранжирующих функций в одном запросе  
  В следующем примере показано использование четырех ранжирующих функций в одном запросе. Конкретные примеры по каждой ранжирующей функции см. в соответствующих функциях.  
   
 ```  
@@ -156,25 +156,25 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
-|Shu|Ito|6|6|2|2|3018725.4858|98055|  
-|Josй|Saraiva|7|6|2|2|3189356.2465|98055|  
-|David|Campbell|8|6|2|3|3587378.4257|98055|  
-|Tete|Mensa-Annan|9|6|2|3|1931620.1835|98055|  
-|Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
-|Rachel|Valdez|11|6|2|4|2241204.0424|98055|  
-|Jae|Pak|12|6|2|4|5015682.3752|98055|  
-|Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
+|Michael|Blythe|1|1|1|1|4557045,0459|98027|  
+|Linda|Mitchell|2|1|1|1|5200475,2313|98027|  
+|Jillian|Carson|3|1|1|1|3857163,6332|98027|  
+|Garrett|Vargas|4|1|1|1|1764938,9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2811012,7151|98027|  
+|Shu|Ito|6|6|2|2|3018725,4858|98055|  
+|Josй|Saraiva|7|6|2|2|3189356,2465|98055|  
+|David|Campbell|8|6|2|3|3587378,4257|98055|  
+|Tete|Mensa-Annan|9|6|2|3|1931620,1835|98055|  
+|Lynn|Tsoflias|10|6|2|3|1758385,926|98055|  
+|Rachel|Valdez|11|6|2|4|2241204,0424|98055|  
+|Jae|Pak|12|6|2|4|5015682,3752|98055|  
+|Ranjit|Varkey Chudukatil|13|6|2|4|3827950,238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D: ранжирование строк внутри секции  
- Следующий пример ранжирует коммерческих представителей в каждой территории продаж в соответствии с общего объема продаж. Набор строк секционируется по столбцу `SalesTerritoryGroup` и сортируется по столбцу `SalesAmountQuota`.  
+### <a name="d-ranking-rows-within-a-partition"></a>Г. Ранжирование строк внутри секции  
+ В приведенном ниже примере торговые представители на каждой территории продаж ранжируются в соответствии с общим объемом продаж. Набор строк секционируется по столбцу `SalesTerritoryGroup` и сортируется по столбцу `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -210,10 +210,10 @@ Tsoflias           1687000.0000  Pacific              1
 ```  
 
 ## <a name="see-also"></a>См. также:  
- [Ранг &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Ранжирующие функции &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK (Transact-SQL)](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER (Transact-SQL)](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE (Transact-SQL)](../../t-sql/functions/ntile-transact-sql.md)   
+ [Ранжирующие функции (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Функции](../../t-sql/functions/functions.md)  
   
   

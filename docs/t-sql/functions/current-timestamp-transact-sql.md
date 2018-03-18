@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_TIMESTAMP (Transact-SQL) | Документы Microsoft"
+title: "CURRENT_TIMESTAMP (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает текущую отметку времени базы данных системы как **datetime** значение без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 > [!NOTE]  
 >  SYSDATETIME и SYSUTCDATE имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. Функции SYSDATETIME, SYSUTCDATETIME и SYSDATETIMEOFFSET могут быть присвоены переменным любого типа даты и времени.  
   
-Эта функция представляет ANSI SQL эквивалентна [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
+Эта функция ANSI SQL эквивалентна функции [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [и функций даты и времени типов данных](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,8 +70,8 @@ CURRENT_TIMESTAMP
 ## <a name="return-type"></a>Тип возвращаемых данных  
 **datetime**
   
-## <a name="remarks"></a>Замечания  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]операторы CURRENT_TIMESTAMP может использоваться в любом месте, они могут ссылаться на **datetime** выражение.
+## <a name="remarks"></a>Remarks  
+Функция CURRENT_TIMESTAMP может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражений **datetime**.
   
 Функция CURRENT_TIMESTAMP недетерминированная. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
   
@@ -136,13 +136,13 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

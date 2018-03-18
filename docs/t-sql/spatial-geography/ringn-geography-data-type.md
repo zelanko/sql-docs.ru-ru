@@ -1,5 +1,5 @@
 ---
-title: "RingN (тип данных geography) | Документы Microsoft"
+title: "RingN (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает указанное кольцо **geography** экземпляр: `1 ≤ n ≤ NumRings()`.  
+  Возвращает указанное кольцо экземпляра **geography**: `1 ≤ n ≤ NumRings()`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — **Int** выражение от 1 до количества колец в **многоугольника** экземпляра.  
+ Выражение типа **int** со значением от 1 до количества колец в экземпляре **polygon**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- Если значение индекса кольца  **n**  меньше 1, этот метод создает исключение **ArgumentOutOfRangeException.** Значение индекса кольца должно быть больше или равно 1 и должно быть меньше или равно значению, возвращенному методом `NumRings()`.  
+## <a name="remarks"></a>Примечания  
+ Если значение индекса кольца **n**меньше 1, этот метод создает исключение **ArgumentOutOfRangeException.** Значение индекса кольца должно быть больше или равно 1 и меньше или равно значению, возвращенному методом `NumRings()`.  
   
 ## <a name="examples"></a>Примеры  
  В этом примере создается экземпляр `Polygon` с двумя кольцами и возвращается второе кольцо.  
@@ -65,7 +65,7 @@ SELECT @g.RingN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings (тип данных geography)](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

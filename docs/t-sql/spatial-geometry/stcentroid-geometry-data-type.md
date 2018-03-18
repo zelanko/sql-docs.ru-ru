@@ -1,5 +1,5 @@
 ---
-title: "STCentroid (тип данных geometry) | Документы Microsoft"
+title: "STCentroid (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает геометрический центр **geometry** экземпляр, который состоит из одного или нескольких многоугольников.
+Возвращает геометрический центр экземпляра **geometry**, состоящего из одного или нескольких многоугольников.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Открытый тип Geospatial Consortium (OGC): **точки**  
+ Тип открытого геопространственного консорциума (OGC): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- `STCentroid()`Возвращает значение null, если **geometry** экземпляр не **Polygon, CurvePolygon**, или **MultiPolygon** типа.  
+ `STCentroid()` возвращает значение NULL, если экземпляр **geometry** не относится к типу **Polygon, CurvePolygon** или **MultiPolygon**.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Вычисление центроида экземпляра объекта Polygon  
- В следующем примере используется `STCentroid()` для вычисления центроида экземпляра `polygon``geometry` экземпляр:  
+ В приведенном ниже примере метод `STCentroid()` используется для вычисления центроида экземпляра `polygon``geometry`.  
   
 ```  
 DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

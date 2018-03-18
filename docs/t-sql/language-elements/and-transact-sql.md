@@ -1,5 +1,5 @@
 ---
-title: "(Transact-SQL) и | Документы Microsoft"
+title: "AND (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Объединяет два логических выражения и возвращает **TRUE** Если оба выражения имеют **TRUE**. Если в инструкции используется более одного логического оператора **AND** операторы вычисляются первыми. Можно изменить порядок вычисления с помощью скобок.  
+  Объединяет два логических выражения и возвращает значение **TRUE**, если оба выражения имеют значение **TRUE**. Если в инструкции используется более одного логического оператора, то операторы **AND** вычисляются первыми. Можно изменить порядок вычисления с помощью скобок.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Аргументы  
  *boolean_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , возвращает значение типа Boolean: **TRUE**, **FALSE**, или **Неизвестный**.  
+ Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), результатом которого являются логические значения **TRUE**, **FALSE** или **UNKNOWN**.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
@@ -63,8 +63,8 @@ boolean_expression AND boolean_expression
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**ЗНАЧЕНИЕ TRUE**|TRUE|FALSE|UNKNOWN|  
-|**ЗНАЧЕНИЕ FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|UNKNOWN|  
+|**FALSE**|FALSE|FALSE|FALSE|  
 |**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
@@ -82,7 +82,7 @@ AND VacationHours > 41 ;
 ```  
   
 ### <a name="b-using-the-and-operator-in-an-if-statement"></a>Б. Использование оператора AND в инструкции IF  
- В следующих примерах демонстрируется использование оператора AND в инструкции IF. В первой инструкции условия `1 = 1` и `2 = 2` имеют значение true, отсюда итоговый результат true. Во втором примере, аргумент `2 = 17` имеет значение false, поэтому результат имеет значение false.  
+ В следующих примерах демонстрируется использование оператора AND в инструкции IF. В первой инструкции условия `1 = 1` и `2 = 2` имеют значение true, отсюда итоговый результат true. Во втором примере аргумент `2 = 17` имеет значение false, поэтому результатом будет false.  
   
 ```  
 IF 1 = 1 AND 2 = 2  
@@ -100,10 +100,10 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   

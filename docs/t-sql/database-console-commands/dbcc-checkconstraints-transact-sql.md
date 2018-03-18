@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Документы Microsoft"
+title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>Аргументы  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- Проверяемая таблица или ограничение. Когда *table_name* или *table_id* будет указан, проверяются все включенные ограничения на данной таблице. Когда *constraint_name* или *constraint_id* будет указан, проверяется только ограничение. Если не указаны ни идентификатор таблицы, ни идентификатор ограничения, проверяются все включенные ограничения всех таблиц в текущей базе данных.  
+ Проверяемая таблица или ограничение. Если указан аргумент *table_name* или *table_id*, проверяются все включенные ограничения в данной таблице. Если указан аргумент *constraint_name* или *constraint_id*, проверяется только это ограничение. Если не указаны ни идентификатор таблицы, ни идентификатор ограничения, проверяются все включенные ограничения всех таблиц в текущей базе данных.  
  Имя ограничения однозначно определяет таблицу, к которой оно принадлежит. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  на  
@@ -93,26 +93,26 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 Данные запроса хранятся во временной таблице. После того, как все указанные таблицы или ограничения были проверены, возвращается результирующий набор.
-DBCC CHECKCONSTRAINTS проверяет целостность ограничений FOREIGN KEY и CHECK, но не проверяет целостность дисковых структур данных таблицы. Проверки этих структур данных, которые могут выполняться с помощью [инструкции DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+DBCC CHECKCONSTRAINTS проверяет целостность ограничений FOREIGN KEY и CHECK, но не проверяет целостность дисковых структур данных таблицы. Проверки этих структур данных могут быть произведены с помощью команд [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Если *table_name* или *table_id* указан и включена для системы управления версиями, DBCC CHECKCONSTRAINTS также выполняет проверку согласованности темпоральных данных для указанной таблицы. Когда *NO_INFOMSGS* не указан, эта команда возвращает каждое нарушение согласованности в выходных данных в отдельной строке. Формат вывода будет ([pkcol1] [pkcol2]..) = (\<pkcol1_value >, \<pkcol2_value >...) И \<неверные записи временная таблица >.
+Если указан аргумент *table_name* или *table_id* и для соответствующей таблицы включено системное управление версиями, DBCC CHECKCONSTRAINTS также проводит для нее проверки согласованности темпоральных данных. Если параметр *NO_INFOMSGS* не указан, эта команда возвращает сведения о всех нарушениях согласованности в отдельной строке выходных данных. Выходные данные имеют следующий формат: ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<проблема с записью темпоральной таблицы>.
   
-|Проверить|Дополнительные сведения в выходных данных, если не удалось выполнить проверку|  
+|Проверить|Дополнительные сведения в выходных данных в случае неудачного завершения проверки|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (текущая)|[sys_end] = «{0}» и MAX(DATETIME2) = "9999-12-31 23:59:59.99999"|  
-|PeriodEndColumn ≥ PeriodStartColumn (текущее, журнал)|[sys_start] = «{0}» и [sys_end] = «{1}»|  
-|PeriodStartColumn < current_utc_time (текущая)|[sys_start] = «{0}» и SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (журнал)|[sys_end] = «{0}» и SYSUTCTIME|  
-|Оператор OVERLAPS|(sys_start1 sys_end1), (sys_start2 sys_end2) для двух перекрывающихся записей.<br /><br /> При наличии более чем 2 перекрывающихся записей, выходные данные будут иметь несколько строк, каждый из которых показывает пару перекрытий.|  
+|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|Перекрытия|(sys_start1, sys_end1) , (sys_start2, sys_end2) для двух перекрывающихся записей.<br /><br /> Если перекрывающихся записей больше двух, в выходных данных будет несколько строк, в каждой из которых содержится одна пара перекрытий.|  
   
-Нет возможности указать constraint_name или constraint_id для выполнения проверок только темпоральной согласованности.
+Невозможно указать constraint_name или constraint_id для выполнения только проверок согласованности темпоральных данных.
   
 ## <a name="result-sets"></a>Результирующие наборы  
 DBCC CHECKCONSTRAINTS возвращает набор строк со следующими столбцами.
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |Имя таблицы|**varchar**|Имя таблицы.|  
 |Constraint Name|**varchar**|Имя нарушенного ограничения.|  
@@ -157,7 +157,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)

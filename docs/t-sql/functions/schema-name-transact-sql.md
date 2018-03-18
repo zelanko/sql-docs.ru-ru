@@ -1,5 +1,5 @@
 ---
-title: "Schema_name (Transact-SQL) | Документы Microsoft"
+title: "SCHEMA_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |Термин|Определение|  
 |----------|----------------|  
-|*SCHEMA_ID*|Идентификатор схемы. *SCHEMA_ID* — **int**. Если *schema_id* — не определен, SCHEMA_NAME возвратит имя принимаемой по умолчанию схемы вызывающей стороны.|  
+|*schema_id*|Идентификатор схемы. Аргумент *schema_id* имеет тип **int**. Если аргумент *schema_id* не определен, SCHEMA_NAME возвратит имя схемы по умолчанию вызывающей стороны.|  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **sysname**  
   
- Возвращает значение NULL, если *schema_id* не является допустимым идентификатором.  
+ Возвращает значение NULL, когда аргумент *schema_id* не является допустимым идентификатором.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SCHEMA_NAME возвращает имена системных схем и пользовательских схем. SCHEMA_NAME можно вызывать в списке выбора, в предложении WHERE и в любом месте, где разрешается выражение.  
   
 ## <a name="examples"></a>Примеры  
@@ -74,12 +74,12 @@ SELECT SCHEMA_NAME(1);
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [SCHEMA_ID &#40; Transact-SQL &#41;](../../t-sql/functions/schema-id-transact-sql.md)   
- [sys.schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SCHEMA_ID (Transact-SQL)](../../t-sql/functions/schema-id-transact-sql.md)   
+ [sys.schemas (Transact-SQL)](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

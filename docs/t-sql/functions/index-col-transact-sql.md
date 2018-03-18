@@ -1,5 +1,5 @@
 ---
-title: "INDEX_COL (Transact-SQL) | Документы Microsoft"
+title: "INDEX_COL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,14 +57,14 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  *schema_name*  
  Имя схемы, которой принадлежит индекс.  
   
- *представления table_or_view_name*  
- Имя таблицы или индексированного представления. *представления table_or_view_name* должны быть заключены в одинарные кавычки и может быть полностью квалифицирован именем базы данных и имя схемы.  
+ *table_or_view_name*  
+ Имя таблицы или индексированного представления. Аргумент *table_or_view_name* должен быть отделен одинарными кавычками и может полностью определяться именем базы данных и именем схемы.  
   
  *index_id*  
- Идентификатор индекса. *index_ID* — **int**.  
+ Идентификатор индекса. Аргумент *index_ID* имеет тип **int**.  
   
- *Идентификатор key_ID*  
- Позиция ключевого столбца индекса. *key_ID* — **int**.  
+ *key_id*  
+ Позиция ключевого столбца индекса. Аргумент *key_ID* имеет тип **int**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar (128** **)**  
@@ -100,8 +100,8 @@ SalesOrderID        SalesOrderDetailID
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

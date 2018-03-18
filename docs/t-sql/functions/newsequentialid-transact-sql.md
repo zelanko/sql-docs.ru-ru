@@ -1,5 +1,5 @@
 ---
-title: "NEWSEQUENTIALID (Transact-SQL) | Документы Microsoft"
+title: "NEWSEQUENTIALID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  Если важна конфиденциальность, то не следует применять эту функцию. Значение следующего формируемого идентификатора GUID можно предугадать и, следовательно, получить доступ к данным, связанным с этим идентификатором GUID.  
   
- NEWSEQUENTIALID является оболочкой для Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) функции с некоторыми [байтов перестановка применения](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID является оболочкой для функции Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) с применением [случайной перестановки байт](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
->  Функция UuidCreateSequential имеет зависимости оборудования. На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно разработать кластеры последовательные значения, при перемещении баз данных (например, автономные базы данных) на другие компьютеры. При использовании Always On и на [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], может образоваться кластеры последовательные значения, если база данных переходит на другой компьютер.  
+>  У функции UuidCreateSequential есть аппаратные зависимости. На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно разработать кластеры последовательных значений при перемещении баз данных (например, автономных баз данных) на другие компьютеры. При использовании AlwaysOn и на [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] кластеры последовательных значений можно разработать при отработке отказа базы данных на другой компьютер.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Замечания  
- Функцию NEWSEQUENTIALID() можно использовать только с ограничениями по умолчанию для столбцов таблицы типа **uniqueidentifier**. Например:  
+## <a name="remarks"></a>Remarks  
+ Функция NEWSEQUENTIALID() может быть использована только для ограничений DEFAULT для столбцов таблицы типа **uniqueidentifier**. Пример:  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
@@ -79,7 +79,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
  Каждый идентификатор GUID, сформированный с помощью функции NEWSEQUENTIALID, является уникальным на данном компьютере. Идентификаторы GUID, сформированные с помощью функции NEWSEQUENTIALID, становятся уникальными для нескольких компьютеров, только если в компьютере-источнике имеется сетевая плата.  
   
 ## <a name="see-also"></a>См. также:  
- [NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)   
- [Операторы сравнения &#40; Transact-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md)   
+ [Операторы сравнения (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

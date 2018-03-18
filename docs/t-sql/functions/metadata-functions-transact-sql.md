@@ -1,5 +1,5 @@
 ---
-title: "Функции метаданных (Transact-SQL) | Документы Microsoft"
+title: "Функции метаданных (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified

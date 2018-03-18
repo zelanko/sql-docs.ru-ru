@@ -1,5 +1,5 @@
 ---
-title: "РОЛЬ DROP (Transact-SQL) | Документы Microsoft"
+title: "DROP ROLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
+ *IF EXISTS*  
  **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно Удаляет роль только в том случае, если он уже существует.  
+ Условное удаление роли только в том случае, если она уже существует.  
   
  *role_name*  
  Определяет роль, которую следует удалить из базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Роли, владеющие объектами защиты, не могут быть удалены из базы данных. Чтобы удалить из базы данных роль, владеющую объектами защиты, необходимо сначала передать эти объекты другому владельцу или удалить их из базы данных. Роли, владеющие объектами защиты, не могут быть удалены из базы данных. Чтобы удалить роль, имеющую члены, необходимо сначала удалить эти члены из данной роли.  
   
- Чтобы удалить членов из роли базы данных, используйте [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md).  
+ Чтобы удалить члены из роли базы данных, используйте инструкцию [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md).  
   
  Удаление предопределенной роли базы данных не может быть осуществлено с помощью инструкции DROP ROLE.  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- Чтобы удалить роль сервера, используйте [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ Чтобы удалить роль сервера, используйте инструкцию [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Требуется **ALTER ANY ROLE** разрешения в базе данных или **УПРАВЛЕНИЯ** разрешений на роль или членство в **db_securityadmin**.  
+## <a name="permissions"></a>Разрешения  
+ Требуется разрешение **ALTER ANY ROLE** на базу данных, разрешение **CONTROL** на роль или членство в роли **db_securityadmin**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляется роль базы данных `purchasing` из `AdventureWorks2012` базы данных.  
+ В следующем примере роль базы данных `purchasing` удаляется из базы данных `AdventureWorks2012`.  
   
 ```  
 DROP ROLE purchasing;  
@@ -93,8 +93,8 @@ GO
   
   
 ## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ИЗМЕНИТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

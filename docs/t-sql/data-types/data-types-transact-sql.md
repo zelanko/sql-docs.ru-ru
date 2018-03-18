@@ -1,5 +1,5 @@
 ---
-title: "Типы данных (Transact-SQL) | Документы Microsoft"
+title: "Типы данных (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 9/13/2017
 ms.prod: sql-non-specified
@@ -34,17 +34,17 @@ ms.lasthandoff: 11/21/2017
 
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] у каждого столбца, локальной переменной, выражения и параметра есть определенный тип данных. Тип данных — атрибут, определяющий, какого рода данные могут храниться в объекте: целые числа, символы, данные денежного типа, метки времени и даты, двоичные строки и так далее.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет набор системных типов данных, определяющих все типы данных, которые можно использовать с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно также определить собственные типы данных в [!INCLUDE[tsql](../../includes/tsql-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Псевдонимы типов данных основываются на системных типах. Дополнительные сведения о псевдонимах типов данных см. в разделе [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md). Определяемые пользователем типы данных обладают свойствами, зависящими от методов и операторов класса, который создается для них на одном из языков программирования, которые поддерживаются [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор системных типов данных, определяющих все типы данных, которые могут использоваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[tsql](../../includes/tsql-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно также определять собственные типы данных. Псевдонимы типов данных основываются на системных типах. Дополнительные сведения о псевдонимах типов данных см. в статье [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md). Определяемые пользователем типы данных обладают свойствами, зависящими от методов и операторов класса, который создается для них на одном из языков программирования, которые поддерживаются [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].
   
 При объединении одним оператором двух выражений с разными типами данных, параметрами сортировки, точностями, масштабами или длинами, результат определяется следующим образом.
 -   Тип данных результата определяется применением правил очередности типов данных к входным выражениям. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
--   Параметры сортировки результата определяются правилами очередности параметров сортировки при тип данных результата относится **char**, **varchar**, **текст**, **nchar**, **nvarchar**, или **ntext**. Дополнительные сведения см. в разделе [очередность параметров сортировки &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).  
+-   Параметры сортировки результата определяются правилами очередности параметров сортировки, если тип данных результата — **char**, **varchar**, **text**, **nchar**, **nvarchar** или **ntext**. Дополнительные сведения см. в статье [Очередность параметров сортировки (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   Точность, масштаб и длина результата зависят от точности, масштаба и длины входных выражений. Дополнительные сведения см. в разделе [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет синонимы типов данных для совместимости со стандартом ISO. Дополнительные сведения см. в разделе [синонимы типов данных &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет синонимы типов данных для совместимости со стандартом ISO. Дополнительные сведения см. в статье [Синонимы типов данных (Transact-SQL)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
 ## <a name="data-type-categories"></a>Категории типов данных
-Типы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] организованы в следующие категории:
+Типы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединены в следующие категории:
   
 |||  
 |-|-|  
@@ -54,11 +54,11 @@ ms.lasthandoff: 11/21/2017
 |Символьные строки||  
   
 В зависимости от параметров хранения, некоторые типы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] относятся к следующим группам:
--   Типы данных больших значений: **varchar(max)**, и **nvarchar(max)**  
--   Типы данных больших объектов: **текст**, **ntext**, **изображения**, **varbinary(max)**, и **xml**  
+-   Типы данных больших значений: **varchar(max)** и **nvarchar(max)**  
+-   Типы данных больших объектов: **text**, **ntext**, **image**, **varbinary(max)** и **xml**  
   
     > [!NOTE]  
-    >  sp_help возвращает -1 в качестве длины для большого объема и **xml** типов данных.  
+    >  Хранимая процедура sp_help возвращает -1 в качестве значения длины для типов данных большого объема и **xml**.  
   
 ### <a name="exact-numerics"></a>Точные числа
   
@@ -112,19 +112,19 @@ ms.lasthandoff: 11/21/2017
 |[курсор](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[Геометрических пространственных типов](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Географические Пространственные типы](../../t-sql/spatial-geography/spatial-types-geography.md)|  
+|[Типы пространственной геометрии](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Типы пространственной географии](../../t-sql/spatial-geography/spatial-types-geography.md)|  
 |[table](../../t-sql/data-types/table-transact-sql.md) | |
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
-[ОБЪЯВИТЕ @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
- [EXECUTE &#40; Transact-SQL &#41;](../../t-sql/language-elements/execute-transact-sql.md)  
+[DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)  
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Функции &#40; Transact-SQL &#41;](../../t-sql/functions/functions.md)  
-[КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)  
-[Хранимая процедура sp_droptype &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)  
-[sp_help &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)  
-[процедура sp_rename &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[Функции (Transact-SQL)](../../t-sql/functions/functions.md)  
+[LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)  
+[sp_droptype (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)  
+[sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)  
+[sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Имя параметров сортировки SQL Server (Transact-SQL) | Документы Microsoft"
+title: "Имя параметров сортировки SQL Server (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 
   Строка, указывающая имя параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также поддерживает ограниченное число параметров сортировки (<80), которые называются параметрами сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и были разработаны до появления параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по-прежнему поддерживаются для обеспечения обратной совместимости, но их не следует использовать при разработке новых программ. Дополнительные сведения о параметрах сортировки Windows см. в разделе [имя параметров сортировки Windows &#40; Transact-SQL &#41; ](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также поддерживает ограниченное число параметров сортировки (<80), которые называются параметрами сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и были разработаны до появления параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по-прежнему поддерживаются для обеспечения обратной совместимости, но их не следует использовать при разработке новых программ. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,18 +57,18 @@ _CaseSensitivity_AccentSensitivity | _BIN
  Определяет настройки верхнего регистра. Даже если сравнение является нечувствительным, версия верхнего регистра буквы сортирует до версии нижнего регистра, когда нет другого отличия.  
   
  *Codepage*  
- Определяет число из одной-четырех цифр, которое идентифицирует кодовую страницу, используемую параметрами сортировки. **CP1** определяет кодовую страницу 1252, задается для всех остальных кодовых страниц номер страницы полный код. Например **CP1251** определяет кодовую страницу 1251 и **CP850** определяет кодовую страницу 850.  
+ Определяет число из одной-четырех цифр, которое идентифицирует кодовую страницу, используемую параметрами сортировки. **CP1** определяет кодовую страницу 1252; для всех остальных кодовых страниц необходимо указывать их полный номер. Например, **CP1251** определяет кодовую страницу 1251, а **CP850** определяет кодовую страницу 850.  
   
  *CaseSensitivity*  
- **CI** определяет нечувствительность к регистру, **CS** задает регистр.  
+ **CI** указывает, что регистр символов не учитывается, **CS** определяет учет регистра.  
   
  *AccentSensitivity*  
- **AI** указывает диакритических знаков, **AS** указывает диакритических знаков.  
+ **AI** означает, что диакритические знаки пропускаются, **AS** показывает, что они учитываются.  
   
  **BIN**  
  Определяет двоичный порядок сортировки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы сформировать список параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые поддерживает сервер, выполните следующий запрос.  
   
 ```  
@@ -77,15 +77,15 @@ WHERE name LIKE 'SQL%';
 ```  
 
 >  [!NOTE]  
->  Для идентификатора порядка сортировки 80 используйте любой из параметров сортировки Windows с кодовой страницей 1250 и двоичный порядок. Например: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
+>  Для идентификатора порядка сортировки 80 используйте любые из параметров сортировки Windows с кодовой страницей 1250 и двоичный порядок. Примеры: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
   
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [Константы &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Константы (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Таблица &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

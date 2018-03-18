@@ -1,5 +1,5 @@
 ---
-title: "SQRT (Transact-SQL) | Документы Microsoft"
+title: "SQRT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SQRT ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *float_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип float.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип float.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **float**  
@@ -89,8 +89,8 @@ GO
 3.0  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующий пример возвращает квадратный корень чисел `1.00` и `10.00`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере возвращается квадратный корень чисел `1.00` и `10.00`.  
   
 ```  
 SELECT SQRT(1.00), SQRT(10.00);  
@@ -104,7 +104,7 @@ SELECT SQRT(1.00), SQRT(10.00);
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

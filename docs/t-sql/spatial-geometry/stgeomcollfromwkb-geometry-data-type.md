@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromWKB (тип данных geometry) | Документы Microsoft"
+title: "STGeomCollFromWKB (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geometrycollection** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geometrycollection** из WKB-представления консорциума OGC.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,23 +45,23 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geometrycollection*  
- WKB-представление **geometrycollection** экземпляр, который необходимо вернуть. *WKB_geometrycollection* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **geometrycollection**. *WKB_geometrycollection* — это выражение **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometry** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geometry** экземпляр, возвращаемый `STGeomCollFromWKB()` равно **GeomCollection**, **MultiPolygon**, **MultiLineString**, или **MulitPoint**, в зависимости от соответствующих входных данных WKB.  
+ В зависимости от соответствующих входных данных WKB типу OGC экземпляра **geometry**, возвращаемого `STGeomCollFromWKB()`, задается значение **GeomCollection**, **MultiPolygon**, **MultiLineString** или **MulitPoint**.  
   
  Этот метод вызывает исключение FormatException, если входные данные представлены в неверном формате.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STGeomCollFromWKB()` для создания **geometry** экземпляра.  
+ В приведенном ниже примере используется метод `STGeomCollFromWKB()`, чтобы создать экземпляр **geometry**.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromWKB(0x01070000000200000001030000000100000004000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

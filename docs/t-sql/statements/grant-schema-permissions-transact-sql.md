@@ -1,5 +1,5 @@
 ---
-title: "GRANT разрешения схемы (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставления разрешения на схему (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -48,10 +48,10 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Разрешение на работу со схемой, которое может быть предоставлено. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
   
- ON SCHEMA **::** схемы*_name*  
+ ON SCHEMA **::** schema*_name*  
  Схема, на работу с которой предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -81,10 +81,10 @@ AS *granting_principal*
 -   пользователь базы данных, сопоставленный асимметричному ключу;  
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Например: пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
+>  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример. Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
   
  Схема является защищаемым объектом уровня базы данных, содержащимся в базе данных, которая является материнской по отношению к нему в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, из которых они вытекают), которые могут быть предоставлены для схемы.  
   
@@ -93,8 +93,8 @@ AS *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
-|Выполните|CONTROL|Выполните|  
+|Delete|CONTROL|Delete|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
@@ -116,7 +116,7 @@ AS *granting_principal*
   
  Дополнительные сведения см. в статье базы знаний Майкрософт номер 914847.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
   
  Если используется параметр AS, налагаются следующие дополнительные требования.  
@@ -151,17 +151,17 @@ GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Запрет разрешения схемы &#40; Transact-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [REVOKE разрешения схемы &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на схему (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на схему (Transact-SQL)](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

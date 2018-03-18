@@ -1,5 +1,5 @@
 ---
-title: "[] (Шаблон — символ(ы) для сопоставления) (Transact-SQL) | Документы Microsoft"
+title: "[ ] (символы-шаблоны для сопоставления) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -34,14 +34,14 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Подстановочный знак — знаков для совпадения) (Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (символы-шаблоны для сопоставления) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Соответствует любому одиночному символу в пределах указанного диапазона или набора, указывается в квадратных скобках `[ ]`. Эти символы-шаблоны можно использовать при сравнении строк, которые задействуют соответствие шаблону, таких как `LIKE` и `PATINDEX`.  
+  Соответствуют какому-либо одиночному символу в пределах указанного диапазона или набора, заданного в квадратных скобках `[ ]`. Эти символы-шаблоны могут использоваться в тех операциях сравнения строк, которые задействуют соответствие шаблону, например `LIKE` или `PATINDEX`.  
   
 ## <a name="examples"></a>Примеры  
-### <a name="a-simple-example"></a>А. простой пример   
-Следующий пример возвращает имена, начинающиеся с буквы `m`. `[n-z]`Указывает, что вторая буква должен быть где-нибудь в диапазоне от `n` для `z`. Шаблон процента `%` позволяет ни один не символов, начиная с 3. `model` И `msdb` базы данных соответствуют этому критерию. `master` База данных не поддерживает и исключается из результирующего набора.
+### <a name="a-simple-example"></a>A. Простой пример   
+В следующем примере возвращаются имена, начинающиеся с буквы `m`. `[n-z]` указывает, что вторая буква должна находиться в диапазоне от `n` до `z`. Символ-шаблон процента `%` разрешает любые символы, начинающиеся с символа 3, или не разрешает ни одного. Этому условию удовлетворяют базы данных `model` и `msdb`. База данных `master` не соответствует условию и исключается из результирующего набора.
  
 ```sql
 SELECT name FROM sys.databases
@@ -55,10 +55,10 @@ name
 model
 msdb
 ```   
- Вы можете иметь дополнительные соответствующие базы данных установлен.
+ У вас могут быть установлены дополнительные соответствующие базы данных.
 
 
-### <a name="b-more-complex-example"></a>Б. более сложный пример   
+### <a name="b-more-complex-example"></a>Б. Более сложный пример   
  В следующем примере оператор [] используется для поиска идентификаторов и имен всех сотрудников из базы данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], имеющих адреса с четырехзначным почтовым индексом.  
   
 ```sql  
@@ -83,11 +83,11 @@ EmployeeID      FirstName      LastName      PostalCode
 
 
   
-## <a name="see-also"></a>См. также  
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% &#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; &#40; Подстановочный знак — символ &#40; s &#41; Не для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [\_&#40; Шаблон — совпадение одного символа &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
+  [% (символ-шаблон для сопоставления) (Transact-SQL)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; (символ-шаблон — совпадение не найдено) (Transact-SQL)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_ (символ-шаблон — совпадение одного символа) (Transact-SQL)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

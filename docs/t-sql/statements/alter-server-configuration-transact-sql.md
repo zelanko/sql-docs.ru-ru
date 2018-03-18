@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Документы Microsoft"
+title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -109,33 +109,33 @@ SET <optionspec>
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **\<process_affinity >:: =**  
+ **\<process_affinity> ::=**  
   
  PROCESS AFFINITY  
  Включает связывание потоков оборудования с процессорами.  
   
- ЦП = {АВТОМАТИЧЕСКИ | \<CPU_range_spec >}  
+ CPU = { AUTO | \<CPU_range_spec> }  
  Распределяет рабочие потоки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на каждый ЦП в заданном диапазоне. Для процессоров вне заданного диапазона не назначены потоки.  
   
  AUTO  
  Указывает, что для потока не назначен ЦП. Разрешено свободное перемещение потоков операционной системой между процессорами в зависимости от рабочей нагрузки сервера. Это значение по умолчанию, которое рекомендуется использовать.  
   
- \<CPU_range_spec >:: =  
+ \<CPU_range_spec> ::=  
  Указывает ЦП или диапазон процессоров, которым будут назначаться потоки.  
   
  { CPU_ID | CPU_ID  TO  CPU_ID } [ ,...n ]  
- Список из одного или нескольких процессоров. Идентификаторы ЦП начинаются с 0 и имеют **целое** значения.  
+ Список из одного или нескольких процессоров. Идентификаторы ЦП начинаются с 0 и имеют тип **integer**.  
   
- NUMANODE = \<NUMA_node_range_spec >  
+ NUMANODE = \<NUMA_node_range_spec>  
  Назначает потоки всем процессорам, принадлежащим заданному узлу NUMA или диапазону узлов.  
   
- \<NUMA_node_range_spec >:: =  
+ \<NUMA_node_range_spec> ::=  
  Указывает номер узла NUMA или диапазон узлов NUMA.  
   
  { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
- Это список из одного или нескольких узлов NUMA. Идентификаторы узлов NUMA начинаются с 0 и имеют **целое** значения.  
+ Это список из одного или нескольких узлов NUMA. Идентификаторы NUMA начинаются с 0 и имеют тип **integer**.  
   
- **\<diagnostic_log >:: =**  
+ **\<diagnostic_log> ::=**  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -149,7 +149,7 @@ SET <optionspec>
  Прекращает запись в журнал диагностических данных.  
   
  PATH = { 'os_file_path' | DEFAULT }  
- Путь, определяющий расположение журналов диагностики. Расположение по умолчанию — \<\MSSQL\Log > в папке установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра отказоустойчивого кластера.  
+ Путь, определяющий расположение журналов диагностики. Расположение по умолчанию — \<\MSSQL\Log> в папке установки экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
  Максимальный размер каждого из журналов диагностики в мегабайтах. Значение по умолчанию равно 100 МБ.  
@@ -157,7 +157,7 @@ SET <optionspec>
  MAX_FILES = { 'max_file_count' | DEFAULT }  
  Максимальное число файлов журналов диагностики, которое может храниться на компьютере, прежде чем существующие файлы будут очищены и использованы для новых журналов диагностики.  
   
- **\<failover_cluster_property >:: =**  
+ **\<failover_cluster_property> ::=**  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -174,13 +174,13 @@ SET <optionspec>
 -   2 — ошибки и предупреждения  
   
 SQLDUMPEREDUMPFLAGS  
- Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Дополнительные сведения см. в разделе [статьи базы знаний программа сборщика данных SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- Место, где служебная программа SQLDumper сохраняет файлы дампов. Дополнительные сведения см. в разделе [статьи базы знаний программа сборщика данных SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Место, где служебная программа SQLDumper сохраняет файлы дампов. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Дополнительные сведения см. в разделе [статьи базы знаний программа сборщика данных SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  Условия, при которых должно произойти переключение при сбое или перезапуск экземпляра отказоустойчивого кластера SQL Server. Значение по умолчанию, равное 3, означает, что ресурс SQL Server будет переключаться на резервный ресурс или перезапускаться в случае критической ошибки сервера. Дополнительные сведения об этом и других уровнях условий ошибки см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
@@ -188,12 +188,12 @@ SQLDUMPEREDUMPFLAGS
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  Время, в течение которого библиотека ресурсов компонента SQL Server Database Engine будет ждать сведений о состоянии сервера, прежде чем сервер переводится в категорию неотвечающих. Время ожидания указывается в миллисекундах. Значение по умолчанию равно 60 000 миллисекунд (60 секунд).  
   
- **\<hadr_cluster_context >:: =**  
+ **\<hadr_cluster_context> ::=**  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- КОНТЕКСТ КЛАСТЕРА HADR  **=**  { **"***remote_windows_cluster***"** | ЛОКАЛЬНЫЙ}  
- Переключает контекст кластера HADR экземпляра сервера (WSFC) до указанного кластера WSFC. *Контекст кластера HADR* определяет, какие кластера сервера отказоустойчивой кластеризации Windows (WSFC), который управляет метаданными для реплик доступности, размещенных на экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
+ HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ Переключает контекст кластера HADR экземпляра сервера (WSFC) до указанного кластера WSFC. *Контекст кластера HADR* определяет кластер Windows Server Failover Clustering (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
   
  Переключать контекст кластера HADR можно только с локального кластера WSFC на удаленный и обратно с удаленного кластера на локальный. Контекст кластера HADR можно переключить на удаленный кластер, только если на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не размещено ни одной реплики доступности.  
   
@@ -207,20 +207,20 @@ SQLDUMPEREDUMPFLAGS
  LOCAL  
  Локальный кластер WSFC.  
   
- Дополнительные сведения см. в разделе [изменить контекст кластера HADR для сервера экземпляр &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
+ Дополнительные сведения см. в разделе [Смена контекста кластера HADR экземпляра сервера (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
   
- **\<buffer_pool_extension >:: =**  
+ **\<buffer_pool_extension>::=**  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула с помощью энергонезависимого хранилища, например твердотельных накопителей (SSD), для сохранения чистых страниц, данных в пуле. Дополнительные сведения об этой функции см. в разделе [расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула доступен не во всех выпусках SQL Server. Дополнительные сведения см. в разделе [выпуски и поддерживаемые функции для SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула с помощью энергонезависимого хранилища, например твердотельных накопителей (SSD), для сохранения чистых страниц, данных в пуле. Дополнительные сведения об этой возможности см. в разделе [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула не поддерживается ни в одном из выпусков SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
  Определяет путь к каталогу и имя файла кэша расширения буферного пула. Файл должен иметь расширение BPE. Необходимо отключить BUFFER POOL EXTENSION, чтобы изменить FILENAME.  
   
- РАЗМЕР = *размер* [ **КБ** | МБ | ГБ]  
- Определяет размер кэша. Указание размера по умолчанию — KB. Минимальный размер — значение параметра Max Server Memory. Максимальный размер в 32 раза больше значения параметра Max Server Memory. Дополнительные сведения о Max Server Memory см. в разделе [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ SIZE = *size* [ **KB** | MB | GB ]  
+ Определяет размер кэша. Указание размера по умолчанию — KB. Минимальный размер — значение параметра Max Server Memory. Максимальный размер в 32 раза больше значения параметра Max Server Memory. Дополнительные сведения о параметре Max Server Memory см. в разделе [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Необходимо отключить BUFFER POOL EXTENSION, чтобы изменить размер файла. Для указания размера меньше текущего нужно перезапустить экземпляр SQL Server для освобождения памяти. В противном случае заданный размер должен совпадать с текущим размером или превышать его.  
   
@@ -230,37 +230,37 @@ SQLDUMPEREDUMPFLAGS
 > [!WARNING]  
 >  Отключение расширения буферного пула может отрицательно сказаться на производительности сервера, поскольку размер буферного пула значительно сократится.  
   
- **\<архитектуры soft-NUMA >**  
+ **\<soft_numa>**  
 
 **Область применения**: начиная с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Включает автоматическое создание разделов для разбиения на более мелкие узлов NUMA больших узлами оборудования NUMA. Изменение текущего значения, потребуется перезапустить ядро базы данных.  
+ Включает автоматическое секционирование для разбиения крупных аппаратных узлов NUMA на более мелкие узлы NUMA. При изменении текущего значения потребуется перезапустить ядро СУБД.  
   
  OFF  
- Отключает автоматическое секционирование больших аппаратные узлы NUMA в небольших узлы NUMA. Изменение текущего значения, потребуется перезапустить ядро базы данных.  
+ Отключает автоматическое секционирование для разбиения крупных аппаратных узлов NUMA на более мелкие узлы NUMA. При изменении текущего значения потребуется перезапустить ядро СУБД.  
 
 > [!WARNING]  
-> Существуют известные проблемы с поведением инструкции ALTER SERVER CONFIGURATION с параметром ПРОГРАММНАЯ архитектура NUMA и агента SQL Server.  Ниже приведен рекомендуемый последовательность операций.  
+> Существуют известные проблемы с работой инструкции ALTER SERVER CONFIGURATION с параметром SOFT NUMA и агентом SQL Server.  Ниже приведена рекомендуемая последовательность операций.  
 > 1) Остановите экземпляр агента SQL Server.  
-> 2) Выполнение команды ALTER SERVER конфигурации ПРОГРАММНАЯ архитектура NUMA.  
+> 2) Выполнение инструкции ALTER SERVER CONFGURATION с параметром SOFT NUMA.  
 > 3) Повторно запустите экземпляр SQL Server.  
 > 4) Запустите экземпляр агента SQL Server.  
   
-**Дополнительные сведения:** в случае изменения конфигурации сервера с помощью команды SET SOFTNUMA выполнения до перезапуска службы SQL Server, затем при остановке службы агента SQL Server, он будет выполняться T-SQL RECONFIGURE команду, которая будет возвращена Параметры SOFTNUMA обратно, чтобы они были перед ALTER SERVER CONFIGURATION. 
+**Дополнительные сведения.** Если инструкция ALTER SERVER CONFIGURATION с параметром SOFTNUMA выполняется до перезапуска службы SQL Server, то при остановке службы агента SQL Server будет выполнена команда T-SQL RECONFIGURE, которая вернет для параметра SOFTNUMA значение, заданное до выполнения ALTER SERVER CONFIGURATION. 
   
 ## <a name="general-remarks"></a>Общие замечания  
- Эта инструкция не требует перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если явно не указано обратное. Для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуск ресурса кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
+ Для этой инструкции не требуется перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если явно не указано обратное. Для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуск ресурса кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Эта инструкция не поддерживает триггеры DDL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешений ALTER SETTINGS для параметра PROCESS AFFINITY. Разрешения ALTER SETTINGS и VIEW SERVER STATE для параметров свойств журнала диагностики и отказоустойчивого кластера и разрешение CONTROL SERVER для параметра контекста кластера HADR.  
   
  Необходимо разрешение ALTER SERVER STATE для параметра расширения буферного пула.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ресурсов DLL запускается под учетной записью Local System. Таким образом, у учетной записи Local System должен быть доступ на чтение и запись к пути, указанному в параметре журнала диагностики.  
+ Библиотека DLL ресурсов компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] запускается от имени учетной записи Local System. Таким образом, у учетной записи Local System должен быть доступ на чтение и запись к пути, указанному в параметре журнала диагностики.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -269,16 +269,16 @@ SQLDUMPEREDUMPFLAGS
 |[Установка соответствия процессов](#Affinity)|CPU • NUMANODE • AUTO|  
 |[Настройка параметров журнала диагностики](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Установка свойств отказоустойчивого кластера](#Failover)|HealthCheckTimeout|  
-|[Изменение контекста кластера реплики доступности](#ChangeClusterContextExample)|**"** *windows_cluster* **"**|  
-|[Настройка расширения буферного пула](#BufferPoolExtension)|РАСШИРЕНИЕ БУФЕРНОГО ПУЛА|  
+|[Изменение контекста кластера для реплики доступности](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
+|[Установка расширения буферного пула](#BufferPoolExtension)|РАСШИРЕНИЕ БУФЕРНОГО ПУЛА|  
   
-###  <a name="Affinity"></a>Установка соответствия процессов  
+###  <a name="Affinity"></a> Установка соответствия процессов  
  В примерах этого раздела показано соответствие процессов центральным процессорам (ЦП) и узлам NUMA. Сервер в этих примерах состоит из 256 процессоров, организованных в четыре группы по 16 узлов NUMA в каждой. Потоки не назначаются какому-либо узлу NUMA или ЦП.  
   
--   Группы 0: Узлы NUMA 0-3, 0 до 63 ЦП  
--   Группа 1: Узлы NUMA 4 по 7, ЦП 64 до 127  
--   Группа 2: Узлы NUMA от 8 до 12, процессоры от 128 до 191  
--   Группа 3: Узлы NUMA от 13 до 16, процессоры от 192 до 255  
+-   Группа 0: узлы NUMA от 0 до 3, процессоры от 0 до 63  
+-   Группа 1: узлы NUMA от 4 до 7, процессоры от 64 до 127  
+-   Группа 2: узлы NUMA от 8 до 12, процессоры от 128 до 191  
+-   Группа 3: узлы NUMA от 13 до 16, процессоры от 192 до 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Задание привязки для всех процессоров в группах 0 и 2  
  В следующем примере задается соответствие для всех процессоров в группах 0 и 2.  
@@ -355,7 +355,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a>Установка свойств отказоустойчивого кластера  
+###  <a name="Failover"></a> Установка свойств отказоустойчивого кластера  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -409,11 +409,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Программная архитектура NUMA &#40; SQL Server &#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
- [Изменение контекста кластера HADR экземпляра сервера &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
- [sys.DM_OS_SCHEDULERS &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
- [sys.dm_os_memory_nodes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
+ [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)   
+ [Смена контекста кластера HADR экземпляра сервера (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
+ [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
+ [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
  [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

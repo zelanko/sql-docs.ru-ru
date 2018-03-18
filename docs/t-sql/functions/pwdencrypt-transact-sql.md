@@ -1,5 +1,5 @@
 ---
-title: "PWDENCRYPT (Transact-SQL) | Документы Microsoft"
+title: "PWDENCRYPT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   Возвращает хэш пароля [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для входного значения, использующего текущую версию алгоритма хэширования пароля.  
   
- PWDENCRYPT — это устаревшая функция, которая может не поддерживаться в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md) вместо него. HASHBYTES предоставляет больше алгоритмов хэширования.  
+ PWDENCRYPT — это устаревшая функция, которая может не поддерживаться в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте вместо нее [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md). HASHBYTES предоставляет больше алгоритмов хэширования.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,17 +48,17 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *пароль*  
- Подлежит ли пароль шифрованию. *пароль* — **sysname**.  
+ *password*  
+ Подлежит ли пароль шифрованию. Аргумент *password* имеет тип **sysname**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varbinary(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Функция PWDENCRYPT общедоступна.  
   
 ## <a name="see-also"></a>См. также:  
  [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40; Transact-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE (Transact-SQL)](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

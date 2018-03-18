@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (тип данных geometry) | Документы Microsoft"
+title: "STCurveN (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geometry-data-type"></a>STCurveN (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает кривую, указанную в **geometry** экземпляра, то есть **LineString**, **CircularString**, **CompoundCurve**, или  **MultiLineString**.
+Возвращает кривую, указанную в экземпляре **geometry** типа **LineString**, **CircularString**, **CompoundCurve** или **MultiLineString**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,26 +42,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *curve_index*  
- — **Int** выражение от 1 до числа кривых в **geometry** экземпляра.  
+ Выражение типа **int** от 1 до количества кривых в экземпляре **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Исключения  
- Если *curve_index* < 1 то `ArgumentOutOfRangeException` возникает исключение.  
+ Если *curve_index* < 1, вызывается исключение `ArgumentOutOfRangeException`.  
   
 ## <a name="remarks"></a>Remarks  
- **Значение NULL** возвращается, если возникает какое-либо из следующих действий:  
+ Значение **NULL** возвращается при выполнении любого из указанных ниже условий.  
   
--   **geometry** экземпляра объявлен, но не создается  
+-   Экземпляр **geometry** объявлен, но не создан.  
   
--   **geometry** экземпляр пуст  
+-   Экземпляр **geometry** является пустым.  
   
--   *curve_index* превышает число кривых в **geometry** экземпляра  
+-   *curve_index* превышает число кривых в экземпляре **geometry**.  
   
--   **geometry** экземпляр **точки**, **MultiPoint**, **многоугольника**, **CurvePolygon**, или  **MultiPolygon**  
+-   Экземпляр **geometry** относится к типу **Point**, **MultiPoint**, **Polygon**, **CurvePolygon** или **MultiPolygon**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  Обратите внимание, что результаты во всех трех предыдущих примерах совпадают. Какой бы формат WKT (Well-known Text) ни использовался для ввода одной и той же последовательности кривой, результаты, возвращаемые `STCurveN()` при использовании экземпляра `CompoundCurve`, будут совпадать.  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>Г. Проверка параметра перед вызовом STCurveN()  
- В следующем примере показано, как убедитесь, что `@n` является допустимым, перед вызовом метода `STCurveN()`метод:  
+ В приведенном ниже примере показано, как проверить допустимость `@n` перед вызовом метода `STCurveN()`.  
   
 ```
  DECLARE @g geometry;  
@@ -117,8 +117,8 @@ ms.lasthandoff: 01/25/2018
  END
  ```  
   
-## <a name="see-also"></a>См. также  
- [STNumCurves &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+## <a name="see-also"></a>См. также:  
+ [STNumCurves (тип данных geometry)](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

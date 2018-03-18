@@ -1,5 +1,5 @@
 ---
-title: "BEGIN... END (Transact-SQL) | Документы Microsoft"
+title: "BEGIN...END (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -84,8 +84,8 @@ Rolled back the transaction.
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере `BEGIN` и `END` определите ряд [!INCLUDE[DWsql](../../includes/dwsql-md.md)] инструкций, запускаемых одновременно. Если `BEGIN...END` блок не включаются, приведенный ниже будет непрерывно.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере ключевые слова `BEGIN` и `END` определяют ряд инструкций языка [!INCLUDE[DWsql](../../includes/dwsql-md.md)], которые выполняются вместе. Если не включить блок `BEGIN...END`, в приведенном ниже примере образуется непрерывный цикл.  
   
 ```  
 -- Uses AdventureWorks  
@@ -100,11 +100,11 @@ END;
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
- [КОНЕЦ &#40; BEGIN... КОНЕЦ &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
+ [END (BEGIN...END) (Transact-SQL)](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   
   
 

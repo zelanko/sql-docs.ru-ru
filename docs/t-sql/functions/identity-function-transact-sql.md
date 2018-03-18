@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY (функция) (Transact-SQL) | Документы Microsoft"
+title: "IDENTITY (функция) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY (функция) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Используется только в инструкции SELECT с INTO *таблицы* предложение для вставки столбца идентификаторов в новую таблицу. Хотя они похожи, функция IDENTITY не является свойством IDENTITY, которое используется с инструкциями CREATE TABLE и ALTER TABLE.  
+  Используется только в инструкции SELECT с предложением INTO *table* для вставки столбца идентификаторов в новую таблицу. Хотя они похожи, функция IDENTITY не является свойством IDENTITY, которое используется с инструкциями CREATE TABLE и ALTER TABLE.  
   
 > [!NOTE]  
 >  Сведения о том, как создать автоматически увеличивающееся числовое значение, которое может использоваться в нескольких таблицах или вызываться из приложений без ссылки на какие-либо таблицы, см. в разделе [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
@@ -53,22 +53,22 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Тип данных*  
- Тип данных столбца идентификаторов. Допустимые типы данных для столбца идентификаторов: типы данных из категории целочисленных типов данных, за исключением **бит** тип данных или **десятичное** тип данных.  
+ *data_type*  
+ Тип данных столбца идентификаторов. Для столбца идентификаторов допустимы любые целочисленные типы данных, за исключением типов **bit** и **decimal**.  
   
- *Начальное значение*  
- Целочисленное значение, присваиваемое первой строке таблицы. Каждой последующей строке назначается следующее значение идентификатора, который равен последнее значение идентификатора, а также *приращения* значение. Если ни одна из *начальное значение* , ни *приращения* указано, по умолчанию как 1.  
+ *seed*  
+ Целочисленное значение, присваиваемое первой строке таблицы. Каждой последующей строке присваивается следующее значение идентификатора, равное последнему значению IDENTITY, увеличенному на значение *increment*. Если не указан ни аргумент *seed*, ни аргумент *increment*, то значения по умолчанию обоих равны 1.  
   
- *приращение*  
- Целочисленное значение, чтобы добавить *начальное значение* для каждой последующей строки в таблице.  
+ *increment*  
+ Целочисленное значение, добавляемое к значению *seed* для каждой последующей строки таблицы.  
   
  *column_name*  
  Имя столбца, который вставляется в новую таблицу.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тот же *data_type*.  
+ Возвращает тот же тип, что и аргумент *data_type*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Так как данная функция создает столбец в таблице, имя столбца должно быть указано в списке выбора одним из следующих способов:  
   
 ```  
@@ -112,8 +112,8 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [Свойство IDENTITY (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [ВЫБЕРИТЕ @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable (Transact-SQL)](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

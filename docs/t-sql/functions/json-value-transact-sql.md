@@ -1,5 +1,5 @@
 ---
-title: "JSON_VALUE (Transact-SQL) | Документы Microsoft"
+title: "JSON_VALUE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/28/2017
 
   Извлекает скалярное значение из строки JSON.  
   
- Чтобы извлечь объект или массив из строки JSON вместо скалярного значения, в разделе [JSON_QUERY &#40; Transact-SQL &#41; ](../../t-sql/functions/json-query-transact-sql.md). Сведения о различиях между **JSON_VALUE** и **JSON_QUERY**, в разделе [сравнение JSON_VALUE и JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
+ Чтобы извлечь объект или массив, а не скалярное значение из строки JSON, см. статью [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md). Сведения о различиях между **JSON_VALUE** и **JSON_QUERY** см. в разделе [Сравнение JSON_VALUE и JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,31 +50,31 @@ JSON_VALUE ( expression , path )
  *expression*  
  Выражение. Обычно имя переменной или столбца, содержащего текст JSON.  
  
- Если **JSON_VALUE** находит JSON, который не является допустимым в *выражение* поиск значение определяется *путь*, функция возвращает ошибку. Если **JSON_VALUE* не находит значение определяется *путь*, он просматривает весь текст, и возвращает ошибку, если он найдет JSON является недопустимым в любом месте *выражение*.
+ Если функция **JSON_VALUE** находит код JSON, который не является допустимым в *expression* перед тем, как она найдет значение, определяемое аргументом *path*, функция возвращает ошибку. Если функция **JSON_VALUE* не находит значение, определяемое аргументом *path*, она просматривает весь текст и возвращает ошибку, если найдет недопустимый код JSON в любом месте аргумента *expression*.
   
  *путь*  
- Путь JSON, который определяет свойство для извлечения. Дополнительные сведения см. в разделе [выражения пути JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ Путь JSON, указывающий на извлекаемое свойство. Дополнительные сведения см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
  
-В [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], можно ввести в качестве значения переменной *путь*.
+В [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] можно указать переменную в качестве значения *пути*.
   
- Если формат *путь* является недопустимой, **JSON_VALUE** возвращает сообщение об ошибке.  
+ Если аргумент *путь* имеет недопустимый формат, **JSON_VALUE** возвращает ошибку.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает тип nvarchar(4000) одно текстовое значение. Параметры сортировки для возвращаемого значения является совпадают с параметрами сортировки входного выражения.  
+ Возвращает одно текстовое значение типа nvarchar(4000). Параметры сортировки для возвращаемого значения совпадают с параметрами сортировки входного выражения.  
   
- Если значение превышает 4000 символов:  
+ Если длина значения превышает 4000 символов:  
   
--   В режиме нестрогой **JSON_VALUE** возвращает значение null.  
+-   в нестрогом режиме **JSON_VALUE** возвращает значение NULL;  
   
--   В строгом режиме **JSON_VALUE** возвращает сообщение об ошибке.  
+-   в строгом режиме **JSON_VALUE** возвращает сообщение об ошибке.  
   
- Если для возврата скалярных значений больше, чем 4 000 символов, используйте **OPENJSON** вместо **JSON_VALUE**. Дополнительные сведения см. в разделе [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).  
+ Если необходимо возвращать скалярные значения длиной более 4000 символов, используйте функцию **OPENJSON** вместо **JSON_VALUE**. Дополнительные сведения см. в разделе [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
-### <a name="lax-mode-and-strict-mode"></a>Нестрогая и строгий режим
+### <a name="lax-mode-and-strict-mode"></a>Нестрогий и строгий режимы
 
- Рассмотрим следующий текст JSON.  
+ Рассмотрим следующий текст JSON:  
   
 ```json  
 DECLARE @jsonInfo NVARCHAR(MAX)
@@ -93,25 +93,25 @@ SET @jsonInfo=N'{
  }'  
 ```  
   
- В следующей таблице сравниваются поведение **JSON_VALUE** в нестрогой режиме и в строгом режиме. Дополнительные сведения о спецификации режим дополнительный путь (значениями lax или strict) см. в разделе [выражения пути JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ В приведенной ниже таблице сравнивается поведение **JSON_VALUE** в нестрогом и в строгом режимах. Дополнительные сведения о необязательном режиме пути (строгий или нестрогий) см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Путь|Возвращаемое значение в режиме нестрогой|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
+|Путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|Ошибка|Скалярное значение.<br /><br /> Используйте **JSON_QUERY** вместо него.|  
-|$. info.type|N '1'|N '1'|Недоступно|  
-|$. info.address.town|N'Bristol "|N'Bristol "|Недоступно|  
-|$.info.» адрес»|NULL|Ошибка|Скалярное значение.<br /><br /> Используйте **JSON_QUERY** вместо него.|  
-|$. info.tags|NULL|Ошибка|Скалярное значение.<br /><br /> Используйте **JSON_QUERY** вместо него.|  
-|$. info.type[0]|NULL|Ошибка|Не массив.|  
-|$. info.none|NULL|Ошибка|Свойство не существует.|  
+|$|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.type|N'1'|N'1'|Недоступно|  
+|$.info.address.town|N'Bristol'|N'Bristol'|Недоступно|  
+|$.info."address"|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.tags|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.type[0]|NULL|Ошибка|Не является массивом.|  
+|$.info.none|NULL|Ошибка|Свойство не существует.|  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="example-1"></a>Пример 1  
- В следующем примере значения свойств JSON `town` и `state` в результатах запроса. Поскольку **JSON_VALUE** сохраняет параметры сортировки источника, порядок сортировки результатов зависит от параметров сортировки `jsonInfo` столбца. 
+ В приведенном ниже примере в результатах запроса используются значения свойств JSON `town` и `state`. Так как функция **JSON_VALUE** сохраняет параметры сортировки источника, порядок сортировки результатов зависит от параметров сортировки столбца `jsonInfo`. 
 
 > [!NOTE]
-> (В этом примере предполагается, что имя таблицы `Person.Person` содержит `jsonInfo` столбец текста JSON, а этот столбец имеет структуру, показанному ранее в обсуждение нестрогой и строгий режим. В образце базы данных AdventureWorks `Person` таблица на самом деле не содержать `jsonInfo` столбца.)
+> (В этом примере предполагается, что таблица с именем `Person.Person` содержит столбец `jsonInfo` с текстом JSON и что этот столбец имеет структуру, представленную ранее в разделе, посвященном нестрогому и строгому режимам. В образце базы данных AdventureWorks таблица `Person` не содержит столбец `jsonInfo`.)
   
 ```sql  
 SELECT FirstName, LastName,
@@ -122,7 +122,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
 ### <a name="example-2"></a>Пример 2  
- Следующий пример извлекает значение свойства JSON `town` в локальную переменную.  
+ В приведенном ниже примере извлекается значение свойства JSON `town` в локальную переменную.  
   
 ```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
@@ -134,7 +134,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
 ```  
   
 ### <a name="example-3"></a>Пример 3  
- В следующем примере создается на основе значений свойств JSON вычисляемых столбцов.  
+ В приведенном ниже примере создаются вычисляемые столбцы на основе значений свойств JSON.  
   
 ```sql  
 CREATE TABLE dbo.Store
@@ -148,7 +148,7 @@ CREATE TABLE dbo.Store
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения пути JSON &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Данные JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "GetReparentedValue (компонент Database Engine) | Документы Microsoft"
+title: "GetReparentedValue (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает узел, чей путь из корня является путем к *newRoot*, сопровождаемый путем из *oldRoot* для *это*.
+Возвращает узел, путь к которому от корневого элемента состоит из пути к *newRoot* и пути от *oldRoot* к узлу *this*.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,23 +50,23 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
   
 ## <a name="arguments"></a>Аргументы  
 *oldRoot*  
-Объект **hierarchyid** — узел, представляющий уровень иерархии, которую требуется изменить.
+**hierarchyid** узла, представляющего уровень иерархии, который подлежит изменению.
   
 *newRoot*  
-Объект **hierarchyid** представляет узел, который будет заменен *oldRoot* раздел, чтобы переместить узел текущего узла.
+Идентификатор **hierarchyid**, представляющий узел, которым будет заменен раздел *oldRoot* текущего узла при перемещении узла.
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
-**Возвращаемый тип SQL Server: hierarchyid**
+**Возвращаемый тип SQL Server:hierarchyid**
   
-**Возвращаемый тип CLR: SqlHierarchyId**
+**Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Замечания  
-Можно использовать для изменения дерева путем перемещения узлов из *oldRoot* для *newRoot*. Метод GetReparentedValue может быть использован для перемещения узла иерархии в новое местоположение в иерархии. **Hierarchyid** представляет тип данных, но не обеспечивает иерархическую структуру. Пользователям необходимо убедиться в том, что структура идентификатора иерархии пригодна для нового местоположения. Уникальный индекс для **hierarchyid** тип данных помогает избежать повторения записей. Пример перемещения поддерева целиком см. в разделе [иерархических данных &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Remarks  
+Может использоваться для изменения дерева путем перемещения узлов из *oldRoot* в *newRoot*. Метод GetReparentedValue может быть использован для перемещения узла иерархии в новое местоположение в иерархии. Тип данных **hierarchyid** представляет, но не обеспечивает соблюдение иерархической структуры. Пользователям необходимо убедиться в том, что структура идентификатора иерархии пригодна для нового местоположения. Уникальный индекс с типом данных **hierarchyid** позволяет избежать повторения записей. Пример перемещения поддерева целиком см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Сравнение двух местоположений узла  
-В следующем примере показан текущий идентификатор иерархии для узла. Здесь также показано, что **hierarchyid** узла бы при перемещении данный узел станет потомком  **@NewParent**  узла. В примере используется метод `ToString()` для демонстрации иерархических связей.
+В следующем примере показан текущий идентификатор иерархии для узла. В нем также демонстрируется, как будет выглядеть **hierarchyid** узла, если при перемещении этот узел станет потомком узла **@NewParent**. В примере используется метод `ToString()` для демонстрации иерархических связей.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -116,7 +116,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 this. GetReparentedValue(oldParent, newParent)  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

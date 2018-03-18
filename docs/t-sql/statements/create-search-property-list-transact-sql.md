@@ -1,5 +1,5 @@
 ---
-title: "Создание СПИСКА СВОЙСТВ поиска (Transact-SQL) | Документы Microsoft"
+title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -55,46 +55,46 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="arguments"></a>Аргументы  
  *new_list_name*  
- Имя нового списка свойств поиска. *new_list_name* представляет собой идентификатор с не более 128 символов. *new_list_name* должно быть уникальным среди всех списков свойств в текущей базе данных и соответствовать правилам для идентификаторов. *new_list_name* будет использоваться при создании полнотекстового индекса.  
+ Имя нового списка свойств поиска. Аргумент *new_list_name* — это идентификатор с максимальной длиной в 128 символов. Аргумент *new_list_name* должен быть уникальным в списках свойств текущей базы данных и соответствовать правилам для идентификаторов. Аргумент *new_list_name* будет использоваться при создании полнотекстового индекса.  
   
  *database_name*  
- Имя базы данных, где указанный список свойств *source_list_name* находится. Если не указан, *имя_базы_данных* значения по умолчанию для текущей базы данных.  
+ Имя базы данных, в которой находится список свойств, указанный параметром *source_list_name*. Если не указано, в качестве *database_name* по умолчанию выбирается текущая база данных.  
   
- *database_name* необходимо указать имя существующей базы данных. Имя входа для текущего соединения должны быть связаны с Идентификатором пользователя, существующего в базы данных, указанной *имя_базы_данных*. Необходимо также иметь необходимые [разрешений](#Permissions) в базе данных.  
+ Параметр *database_name* должен указывать имя существующей базы данных. Имя входа для текущего соединения должно быть связано с идентификатором пользователя, существующим в базе данных, которая указана аргументом *database_name*. Кроме того, требуются необходимые [разрешения](#Permissions) для базы данных.  
   
  *source_list_name*  
- Указывает, что новый список свойств создается путем копирования существующего списка свойств из *имя_базы_данных*. Если *source_list_name* не существует, СОЗДАЙТЕ SEARCH PROPERTY LIST завершится с ошибкой. Свойства поиска в *source_list_name* наследуются *new_list_name*.  
+ Указывает, что новый список свойств создается путем копирования существующего списка свойств из *database_name*. Если *source_list_name* не существует, то инструкция CREATE SEARCH PROPERTY LIST завершится ошибкой. Свойства поиска в *source_list_name* наследуются *new_list_name*.  
   
- АВТОРИЗАЦИЯ *owner_name*  
- Указывает имя пользователя или роли-владельца списка свойств. *owner_name* должен быть именем роли, которой является текущий пользователь членом, либо текущий пользователь должен иметь разрешение IMPERSONATE *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
-  
-> [!NOTE]  
->  Владелец может быть изменен с помощью [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.  
-  
-## <a name="remarks"></a>Замечания  
+ AUTHORIZATION *owner_name*  
+ Указывает имя пользователя или роли-владельца списка свойств. Аргумент *owner_name* должен быть именем роли, членом которой является текущий пользователь, или текущий пользователь должен иметь разрешение IMPERSONATE для *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
   
 > [!NOTE]  
->  Сведения о свойстве списки в целом. в разделе [поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+>  Владельца можно изменить с помощью инструкции [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  
+## <a name="remarks"></a>Remarks  
+  
+> [!NOTE]  
+>  Общие сведения о списках свойств см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  По умолчанию новый список свойств, которые можно искать, пуст. В него необходимо вручную добавить одно или несколько свойств. В качестве альтернативы можно скопировать существующий список свойств поиска. В этом случае новый список наследует поисковые свойства своего источника, но его можно изменить, добавив или удалив определенные свойства. При следующем полном заполнении все свойства, приведенные в списке свойств поиска, заносятся в полнотекстовый индекс.  
   
  Инструкция CREATE SEARCH PROPERTY LIST завершится неуспехом при выполнении любого из следующих условий.  
   
--   Если база данных, указанная *имя_базы_данных* не существует.  
+-   Если база данных, указанная параметром *database_name*, не существует.  
   
--   Если список, указанный параметром *source_list_name* не существует.  
+-   Если список, указанный параметром *source_list_name*, не существует.  
   
 -   Если отсутствуют нужные разрешения.  
   
- **Чтобы добавить или удалить свойства из списка**  
+ **Добавление и удаление свойств в списке**  
   
 -   [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)  
   
--   **Чтобы удалить список свойств**  
+-   **Удаление списка свойств**  
   
 -   [DROP SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Необходимы разрешения CREATE FULLTEXT CATALOG в текущей базе данных и разрешение REFERENCES для любой базы данных, из которой копируется исходный список свойств.  
   
 > [!NOTE]  
@@ -103,10 +103,10 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Создание пустого списка свойств и связывание его с индексом  
- В следующем примере создается новый список свойств поиска с именем `DocumentPropertyList`. Затем в примере используется [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) связывает новый список свойств с полнотекстовый индекс `Production.Document` в таблицу `AdventureWorks` базы данных, без запуска заполнения.  
+ В следующем примере создается новый список свойств поиска с именем `DocumentPropertyList`. Затем инструкция [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) связывает новый список свойств с полнотекстовым индексом таблицы `Production.Document` из базы данных `AdventureWorks` без запуска заполнения.  
   
 > [!NOTE]  
->  Пример, который добавляет несколько стандартных, известных поиска свойств этого списка свойств поиска см. в разделе [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-search-property-list-transact-sql.md). После добавления свойств поиска в список администратору базы данных необходимо будет использовать другую инструкцию ALTER FULLTEXT INDEX с предложением START FULL POPULATION.  
+>  Пример, в котором в этот список свойств поиска добавляются несколько стандартных, известных свойств поиска, приведен в разделе [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md). После добавления свойств поиска в список администратору базы данных необходимо будет использовать другую инструкцию ALTER FULLTEXT INDEX с предложением START FULL POPULATION.  
   
 ```  
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
@@ -132,11 +132,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [Удаление СПИСКА СВОЙСТВ поиска &#40; Transact-SQL &#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [sys.registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [DROP SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
+ [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   

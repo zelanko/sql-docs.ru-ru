@@ -1,5 +1,5 @@
 ---
-title: "STDisjoint (тип данных geometry) | Документы Microsoft"
+title: "STDisjoint (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает 1, если **geometry** перекрытие из другого **geometry** экземпляра. В противном случае возвращается значение 0.  
+  Возвращает 1, если экземпляр **geometry** не имеет пространственного перекрытия с другим экземпляром **geometry**. В противном случае возвращается значение 0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр для сравнения с экземпляром, в котором `STDisjoint()` вызывается.  
+ Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STDisjoint()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Два **geometry** экземпляров раздельных, если пересечение их наборов точек является пустым.  
+ Два экземпляра **geometry** не имеют пространственного перекрытия, если пересечение их наборов точек является пустым.  
   
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STDisjoint()` Чтобы протестировать два **geometry** экземпляров для пространственных раздельных.  
+ В приведенном ниже примере используется метод `STDisjoint()`, чтобы протестировать два экземпляра **geometry** на отсутствие пространственного перекрытия между ними.  
   
 ```  
 DECLARE @g geometry;  
@@ -68,7 +68,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

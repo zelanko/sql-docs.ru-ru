@@ -1,5 +1,5 @@
 ---
-title: "курсор (Transact-SQL) | Документы Microsoft"
+title: "cursor (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -33,26 +33,26 @@ ms.lasthandoff: 11/21/2017
 
 Тип данных для переменных или выходных параметров хранимых процедур, которые содержат ссылку на курсор.
   
-## <a name="remarks"></a>Замечания  
-Операции, которые могут ссылаться на переменные и параметрами, имеющими **курсор** , тип данных:
--   DECLARE  *@local_variable*  , а  *@local_variable*  инструкции.  
+## <a name="remarks"></a>Remarks  
+Операции, которые могут выполняться с переменными и параметрами, имеющими тип данных **cursor**:
+-   Инструкции DECLARE *@local_variable* и SET *@local_variable*.  
 -   Инструкции над курсором OPEN, FETCH, CLOSE и DEALLOCATE.  
 -   Выходные параметры хранимой процедуры.  
 -   Функция CURSOR_STATUS.  
--   **Sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables**, и **sp_describe_cursor_columns** системные хранимые процедуры.  
+-   Системные хранимые процедуры **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables** и **sp_describe_cursor_columns**.  
   
-**Cursor_name** выходной столбец **sp_cursor_list** и **sp_describe_cursor** возвращает имя переменной курсора.
+Выходной столбец **cursor_name** хранимых процедур **sp_cursor_list** и **sp_describe_cursor** возвращает имя переменной курсора.
   
-Любая переменная, созданная с **курсор** тип данных допускает значения NULL.
+Любая переменная, созданная с типом данных **cursor**, может принимать значение NULL.
   
-**Курсор** тип данных не может использоваться для столбца в инструкции CREATE TABLE.
+Тип данных **cursor** не может использоваться для столбца в операторе CREATE TABLE.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
-[Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[CURSOR_STATUS (Transact-SQL)](../../t-sql/functions/cursor-status-transact-sql.md)  
+[Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[DECLARE CURSOR &#40; Transact-SQL &#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+[DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
   

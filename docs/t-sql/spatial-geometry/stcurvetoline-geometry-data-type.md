@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (тип данных geometry) | Документы Microsoft"
+title: "STCurveToLine (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает приближение из многоугольников **geometry** экземпляра, содержащего сегменты дуги.
+Возвращает приближение из многоугольников для экземпляра **geometry**, содержащего сегменты дуги.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,27 +41,27 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Возвращает пустую коллекцию **GeometryCollection**экземпляра для пустых **geometry** экземпляра переменных и возвращает **NULL** для неинициализированных **geometry** переменных.  
+ Возвращает пустой экземпляр **GeometryCollection** для пустых переменных экземпляра **geometry** и возвращает значение **NULL** для неинициализированных переменных **geometry**.  
   
- Приближение из многоугольников, метод возвращает зависит от **geometry** экземпляра, используемого для вызова метода:  
+ Приближение из многоугольников, возвращаемое методом, зависит от экземпляра **geometry**, с помощью которого был вызван метод:  
   
--   Возвращает **LineString** экземпляра для **CircularString** или **CompoundCurve** экземпляра.  
+-   Возвращает экземпляр **LineString** для экземпляра **CircularString** или **CompoundCurve**.  
   
--   Возвращает **многоугольника** экземпляра для **CurvePolygon** экземпляра.  
+-   Возвращает экземпляр **Polygon** для экземпляра **CurvePolygon**.  
   
--   Возвращает копию **geometry** экземпляра, если этот экземпляр не является **CircularString**, **CompoundCurve**, или **CurvePolygon** экземпляра . Например `STCurveToLine` возвращает **точки** экземпляра для **geometry** экземпляра, то есть **точки** экземпляра.  
+-   Возвращает копию экземпляра **geometry**, если экземпляр не является экземпляром **CircularString**, **CompoundCurve** или **CurvePolygon**. Например, метод `STCurveToLine` возвращает экземпляр **Point** для экземпляра **geometry**, который является экземпляром **Point**.  
   
- В отличие от спецификации SQL/MM `STCurveToLine` метод не использует значения по оси z для расчета аппроксимации. Этот метод игнорирует любые значения по оси z, имеющиеся в вызывающем **geometry** экземпляра.  
+ В отличие от спецификации SQL/MM, метод `STCurveToLine` не использует значения координат z для расчета аппроксимации из многоугольников. Любое значение координаты z, представленное в вызываемом экземпляре **geometry**, игнорируется.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Использование неинициализированной переменной геометрии и пустого экземпляра  
- В следующем примере первый **ВЫБЕРИТЕ** инструкция использует неинициализированный **geometry** экземпляра для вызова `STCurveToLine` метода, а вторая **ВЫБЕРИТЕ** Инструкция использует пустой **geometry** экземпляра. Таким образом, метод возвращает **NULL** в первой инструкции и **GeometryCollection** сбора для второй инструкции.  
+ В приведенном ниже примере первая инструкция **SELECT** вызывает метод `STCurveToLine` с помощью неинициализированного экземпляра **geometry**, а вторая инструкция **SELECT** использует пустой экземпляр **geometry**. Таким образом, метод возвращает значение **NULL** для первой инструкции и коллекцию **GeometryCollection** для второй инструкции.  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>Б. Использование экземпляра объекта LineString  
- **ВЫБЕРИТЕ** инструкции в следующем примере используется **LineString** экземпляра для вызова метода STCurveToLine. Таким образом, метод возвращает **LineString** экземпляра.  
+ Инструкция **SELECT** в приведенном ниже примере использует экземпляр **LineString** для вызова метода STCurveToLine. Таким образом, этот метод возвращает экземпляр **LineString**.  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>В. Использование экземпляра объекта CircularString  
- Первый **ВЫБЕРИТЕ** инструкции в следующем примере используется **CircularString** экземпляра для вызова метода STCurveToLine. Таким образом, метод возвращает **LineString** экземпляра. Это **ВЫБЕРИТЕ** инструкции также сравнивает длину двух экземпляров, которые являются приблизительно.  Наконец, вторая **ВЫБЕРИТЕ** инструкция возвращает число точек для каждого экземпляра.  Он возвращает только 5 точек для **CircularString** экземпляр, но 65 точек для **LineString**экземпляра.  
+ Инструкция **SELECT** в приведенном ниже примере использует экземпляр **CircularString** для вызова метода STCurveToLine. Таким образом, этот метод возвращает экземпляр **LineString**. Эта инструкция **SELECT** также сравнивает длину двух экземпляров, которые приблизительно одинаковы.  Наконец, вторая инструкция **SELECT** возвращает число точек для каждого экземпляра.  Она возвращает только 5 точек для экземпляра **CircularString**, но 65 точек для экземпляра **LineString**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>Г. Использование экземпляра объекта CurvePolygon  
- **ВЫБЕРИТЕ** инструкции в следующем примере используется **CurvePolygon** экземпляра для вызова метода STCurveToLine. Таким образом, метод возвращает **многоугольника** экземпляра.  
+ Инструкция **SELECT** в приведенном ниже примере использует экземпляр **CurvePolygon** для вызова метода STCurveToLine. Таким образом, этот метод возвращает экземпляр **Polygon**.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength (тип данных geometry)](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints (тип данных geometry)](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

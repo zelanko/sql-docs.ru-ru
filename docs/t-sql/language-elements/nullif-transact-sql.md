@@ -1,5 +1,5 @@
 ---
-title: "Функция NULLIF (Transact-SQL) | Документы Microsoft"
+title: "NULLIF (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>Функция NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает значение NULL, если два указанных выражения равны. Например `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` возвращает значение NULL для первого столбца (4 и 4), поскольку аналогичны двух входных значений. Во втором столбце возвращает первое значение (5), так как входные значения не совпадают. 
+  Возвращает значение NULL, если два указанных выражения равны. Например, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` возвращает значение NULL для первого столбца (4 и 4), так как два входных значения одинаковы. Для второго столбца возвращается первое значение (5), так как два входных значения различаются. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,14 +52,14 @@ NULLIF ( expression , expression )
  Любое допустимое скалярное [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тот же тип, что и первый *выражение*.  
+ Возвращает значение того же типа, что и у первого выражения *expression*.  
   
- Функция NULLIF возвращает первое *выражение* Если два выражения не равны. Если выражения равны, функция NULLIF возвращает значение null тип первого *выражение*.  
+ Если выражения не равны, функция NULLIF возвращает первое выражение *expression*. Если они равны, функция NULLIF возвращает значение NULL с типом, соответствующим типу первого выражения *expression*.  
   
 ## <a name="remarks"></a>Remarks  
  Функция NULLIF аналогична поисковому выражению CASE, в котором два выражения равны, а результирующее выражение равно NULL.  
   
- В функции NULLIF не рекомендуется использовать такие зависимые от времени функции, как RAND(). Это может вызвать функцию вычисляемое дважды и возвращать разные результаты из вызовов.  
+ В функции NULLIF не рекомендуется использовать такие зависимые от времени функции, как RAND(). Это может приводить к тому, что функция будет вычисляться дважды с возвратом различных результатов для каждого из вызовов.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: возвращение сумм бюджета, которые не содержат данных  
- В следующем примере создается `budgets` таблицы, загружает данные и использует `NULLIF` , чтобы вернуть значение null, если ни одна из `current_year` , ни `previous_year` содержит данные.  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>В. Возвращение сумм бюджета, не содержащих данных  
+ В приведенном ниже примере создается таблица `budgets`, загружаются данные, а затем с помощью `NULLIF` возвращается значение NULL, если ни в `current_year`, ни в `previous_year` нет данных.  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -150,10 +150,10 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>См. также  
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Decimal и numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

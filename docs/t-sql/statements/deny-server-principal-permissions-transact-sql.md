@@ -1,5 +1,5 @@
 ---
-title: "Запрет разрешения участника на уровне сервера (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений субъекта на уровне сервера (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -63,19 +63,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Определяет разрешение, т.е. доступ, который запрещается для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Определяет разрешение, т.е. доступ, который запрещается для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- Имя входа **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого разрешение запрещается. Квалификатор области (**::**) является обязательным.  
   
- РОЛЬ сервера **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Указывает роль сервера, для которой запрещается разрешение. Квалификатор области (**::**) является обязательным.  
   
- Чтобы \<server_principal >  
+ TO \<server_principal>  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или роль сервера, которой представляется разрешение.  
   
- Чтобы *SQL_Server_login*  
+ TO *SQL_Server_login*  
  Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрещается разрешение.  
   
  *SQL_Server_login*  
@@ -97,14 +97,14 @@ DENY permission [ ,...n ] }
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
  AS *SQL_Server_login*  
- Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, от которого участник, выполняющий этот запрос получает право на запрет разрешения.  
+ Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], по которому субъект, выполняющий этот запрос, получает право запретить разрешение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Разрешения в области сервера могут запрещаться только в том случае, если текущей базой данных является master.  
   
- Сведения о разрешениях сервера доступен в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога. Сведения об участниках сервера можно найти в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Данные о разрешениях сервера отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Данные о серверах-субъектах отображаются в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Инструкция DENY завершается ошибкой, если не задан аргумент CASCADE, если разрешение запрещается участнику, который предоставлял это разрешение с аргументом GRANT OPTION.  
+ Инструкция DENY завершается ошибкой, если разрешение запрещается субъекту, который ранее предоставил его через GRANT OPTION, и при этом не указано предложение CASCADE.  
   
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и роли сервера являются защищаемыми объектами уровня сервера. Наиболее специфичные и ограниченные разрешения, которые могут быть запрещены для имени входа или роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перечислены в следующей таблице вместе с общими разрешениями, неявно содержащими их.  
   
@@ -115,7 +115,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для имен входа требуется разрешение CONTROL на имя входа или разрешение ALTER ANY LOGIN на сервер.  
   
  Для ролей сервера требуется разрешение CONTROL на роль сервера или разрешение ALTER ANY SERVER ROLE на сервер.  
@@ -123,7 +123,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Запрещение разрешения IMPERSONATE на имя входа  
- В следующем примере запрещается `IMPERSONATE` разрешение на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа `WanidaBenshoof` для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, созданного из пользователя Windows `AdvWorks\YoonM`.  
+ В следующем примере производится запрет разрешения `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

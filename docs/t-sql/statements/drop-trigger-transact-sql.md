@@ -1,5 +1,5 @@
 ---
-title: "DROP TRIGGER (Transact-SQL) | Документы Microsoft"
+title: "DROP TRIGGER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -66,16 +66,16 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
- **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Условно Удаляет триггер только в том случае, если он уже существует.  
+ Условное удаление триггера только в том случае, если он уже существует.  
   
  *schema_name*  
- Имя схемы, которой принадлежит триггер DML. Действие триггеров DML ограничивается областью схемы таблицы или представления, для которых они созданы. *schema_name* не может быть указан для триггеров DDL или входа.  
+ Имя схемы, которой принадлежит триггер DML. Действие триггеров DML ограничивается областью схемы таблицы или представления, для которых они созданы. Аргумент *schema_name* не может указываться для триггеров DDL или триггеров входа.  
   
- *имя_триггера*  
- Имя удаляемого триггера. Чтобы просмотреть список созданных триггеров, используйте [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) или [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ *trigger_name*  
+ Имя удаляемого триггера. Чтобы просмотреть список только что созданных триггеров, см. [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) или [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
  DATABASE  
  Обозначает область действия триггера DDL в текущей базе данных. Если при создании или изменении триггера был указан аргумент DATABASE, то он должен указываться и далее.  
@@ -88,22 +88,22 @@ ON ALL SERVER
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Триггер DML может быть удален напрямую или в результате удаления таблицы триггера. При удалении таблицы удаляются все связанные с ней триггеры.  
   
- При удалении триггера, сведения о триггере удаляется из **sys.objects**, **sys.triggers** и **sys.sql_modules** представления каталога.  
+ При удалении триггера соответствующие данные в представлениях каталогов **sys.objects**, **sys.triggers** и **sys.sql_modules** также удаляются.  
   
  С помощью инструкции DROP TRIGGER сразу несколько триггеров DDL можно удалить только в том случае, если при их создании были использованы одинаковые предложения ON.  
   
  Чтобы переименовать триггер, используйте инструкции DROP TRIGGER и CREATE TRIGGER. Чтобы изменить определение триггера, используйте инструкцию ALTER TRIGGER.  
   
- Дополнительные сведения об определении зависимостей для конкретных триггеров см. в разделе [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md), и [sys.dm_sql_referencing_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+ Дополнительные сведения об определении зависимостей для конкретных триггеров см. в разделах [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) и [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- Дополнительные сведения о просмотре текста триггеров см. в разделе [sp_helptext &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) и [sys.sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ Дополнительные сведения о просмотре текста триггеров см. в разделах [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) и [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Дополнительные сведения о просмотре списка уже созданных триггеров см. в разделе [sys.triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) и [sys.server_triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Дополнительные сведения о просмотре списка существующих триггеров см. в разделах [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) и [sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы удалить триггер DML, необходимо разрешение ALTER для таблицы или представления, в которых определен данный триггер.  
   
  Чтобы удалить триггер входа или триггер DDL, определенный в области сервера (ON ALL SERVER), для этого сервера требуется разрешение CONTROL SERVER. Чтобы удалить триггер DDL, определенный в области базы данных (ON DATABASE), необходимо разрешение ALTER ANY DATABASE DDL TRIGGER для текущей базы данных.  
@@ -122,7 +122,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  В ходе выполнения следующего примера происходит удаление триггера DDL `safety`.  
   
 > [!IMPORTANT]  
->  Так как триггеры DDL не ограничены областью схемы и поэтому не отображаются в **sys.objects** представление каталога функция OBJECT_ID не может использоваться для выяснения факта существования базы данных. Запросы на объекты, не относящиеся к области схемы, должны выполняться при помощи соответствующих представлений каталогов. Триггеры DDL, используйте **sys.triggers**.  
+>  Функция OBJECT_ID не может быть использована для выяснения факта существования в базе данных триггеров DDL, так как они не относятся к области схемы и данные о них не заносятся в каталог **sys.objects**. Запросы на объекты, не относящиеся к области схемы, должны выполняться при помощи соответствующих представлений каталогов. Для триггеров DDL используйте **sys.triggers**.  
   
 ```  
 DROP TRIGGER safety  

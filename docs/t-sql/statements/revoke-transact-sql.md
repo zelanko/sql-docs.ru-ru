@@ -1,5 +1,5 @@
 ---
-title: "REVOKE (Transact-SQL) | Документы Microsoft"
+title: "REVOKE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -98,7 +98,7 @@ REVOKE
 >  Если участник обладает указанным разрешением без параметра GRANT, будет отменено само разрешение.  
   
  ALL  
-**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Этот параметр не отменяет все возможные разрешения. Указание аргумента ALL при отзыве отменяет следующие разрешения.  
   
@@ -120,20 +120,20 @@ REVOKE
  PRIVILEGES  
  Включено для обеспечения совместимости с требованиями ISO. Не изменяет работу ALL.  
   
- *разрешение*  
- Имя разрешения. Допустимые сопоставления разрешений защищаемых объектов описаны в разделах, перечисленных в [синтаксис защищаемыми](#securable) далее в этом разделе.  
+ *permission*  
+ Имя разрешения. Допустимые сопоставления разрешений с защищаемыми объектами описаны в разделах, перечисленных ниже в подразделе [Синтаксис инструкций при работе с различными защищаемыми объектами](#securable) данного раздела.  
   
- *столбец*  
+ *column*  
  Указывает имя столбца таблицы, для которого производится отмена разрешений. Необходимо поставить скобки.  
   
- *класс*  
+ *class*  
  Указывает класс защищаемого объекта, для которого производится отмена разрешения. Квалификатор области **::** является обязательным.  
   
- *защищаемый объект*  
+ *securable*  
  Указывает защищаемый объект, для которого проводится отмена разрешения.  
   
- ЧТОБЫ | ИЗ *участника*  
- Имя участника. Участники, у которых может быть отменено разрешение на доступ к защищаемому объекту, различны. Дополнительные сведения о допустимых сочетаниях см. в разделах, перечисленных в [синтаксис защищаемыми](#securable) далее в этом разделе.  
+ TO | FROM *principal*  
+ Имя участника. Участники, у которых может быть отменено разрешение на доступ к защищаемому объекту, различны. Дополнительные сведения о допустимых сочетаниях см. в разделе [Синтаксис инструкций при работе с различными защищаемыми объектами](#securable), приведенном ниже.  
   
  CASCADE  
  Указывает, что разрешение также отменяется и у участников, получивших доступ через текущего участника. Аргумент CASCADE необходимо использовать совместно с аргументом GRANT OPTION FOR.  
@@ -141,13 +141,13 @@ REVOKE
 > [!CAUTION]  
 >  Каскадная отмена разрешения, предоставленного с помощью параметра WITH GRANT OPTION, приведет к отмене разрешений GRANT и DENY для этого разрешения.  
   
- AS *участника*  
- Используйте предложение AS участника для указания, что удаленный доступ, в которой были предоставлены участником, отличных. Предположим, что пользователь Mary является principal_id 12, и пользователь Raul является основной 15. Мария и Raul предоставить пользователю с именем Стивен те же разрешения. В таблице sys.database_permissions указать разрешения, дважды, но они будут вычислять разные grantor_prinicpal_id значение. Мария может отменить разрешение с помощью `AS RAUL` предложений, чтобы удалить Raul на предоставление разрешения.
+ AS *principal*  
+ Используйте предложение AS участника для указания того, что вы отменяете разрешение, которое было предоставлено участником, отличным от вас. Предположим, что пользователь Мария — это участник 12, пользователь Павел — участник 15. Мария и Павел предоставляют пользователю Степану то же разрешение. В таблице sys.database_permissions разрешения будут указаны дважды, но у каждого из них будет разное значение grantor_prinicpal_id. Мария может отменить разрешение с помощью предложения `AS RAUL`, чтобы удалить право Павла на предоставление разрешения.
  
-Использование этой инструкции не предусматривает возможность олицетворять другого пользователя.  
+AS в данной инструкции не дает возможность олицетворять другого пользователя.  
   
-## <a name="remarks"></a>Замечания  
- Полный синтаксис инструкции REVOKE является сложным. Предыдущая диаграмма синтаксиса была упрощена, чтобы продемонстрировать ее структуру. Полный синтаксис процедуры отмены разрешений на конкретные защищаемые объекты описан в разделах, перечисленных в [синтаксис защищаемыми](#securable) далее в этом разделе.  
+## <a name="remarks"></a>Примечания  
+ Полный синтаксис инструкции REVOKE является сложным. Предыдущая диаграмма синтаксиса была упрощена, чтобы продемонстрировать ее структуру. Полный синтаксис процедуры отмены разрешений для различных защищаемых объектов описывается в разделах, перечисленных ниже в подразделе [Синтаксис инструкций при работе с различными защищаемыми объектами](#securable) данного раздела.  
   
  Инструкция REVOKE может использоваться для удаления уже выданных прав доступа, а инструкция DENY может использоваться, чтобы предотвратить получение участником определенного разрешения посредством инструкции GRANT.  
   
@@ -160,58 +160,58 @@ REVOKE
   
  Если при отзыве разрешения участником, получившем его с помощью аргумента GRANT OPTION, не был задан аргумент CASCADE, выполнение инструкции REVOKE завершается сбоем.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Участники, обладающие разрешениями CONTROL для защищаемых объектов, могут предоставлять разрешения на доступ к ним. Владельцы объектов могут отменить разрешения на доступ к ним.  
   
  Участники, управляющие выдачей разрешений CONTROL SERVER, например члены предопределенной роли сервера sysadmin, имеют право отзывать любое разрешение на доступ к любому защищаемому объекту сервера. Участники, заведующие выдачей разрешений CONTROL, например члены предопределенной роли базы данных db_owner, имеют право отзывать любое разрешение на доступ к любому защищаемому объекту базы данных. Участники, заведующие выдачей разрешений CONTROL в схеме, имеют право отменять любое разрешение на доступ к любому объекту внутри схемы.  
   
-##  <a name="securable"></a>Синтаксис  
+##  <a name="securable"></a> Синтаксис инструкций при работе с различными защищаемыми объектами  
  В следующей таблице перечислены защищаемые объекты и разделы, в которых описывается синтаксис инструкций по работе с ними.  
   
 |Защищаемый объект|Раздел|  
 |---------------|-----------|  
-|Роль приложения|[ОТОЗВАТЬ разрешения участника базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Сборка|[ОТОЗВАТЬ разрешения для сборки &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
-|Асимметричный ключ|[ОТОЗВАТЬ разрешения на асимметричный ключ &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
-|Группа доступности|[Группа доступности REVOKE разрешения &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
-|Сертификат|[ОТОЗВАТЬ сертификат разрешения &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
-|Контракт|[ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|База данных|[ОТОЗВАТЬ разрешения базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
-|Конечная точка|[ОТОЗВАТЬ разрешения конечной точки &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
-|Учетные данные области базы данных|[В области базы данных REVOKE учетных данных (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
-|Полнотекстовый каталог|[ОТОЗВАТЬ разрешения Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|Полнотекстовый список стоп-слов|[ОТОЗВАТЬ разрешения Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|Функция|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Имя входа|[ОТОЗВАТЬ разрешения участника на уровне сервера &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
-|Тип сообщений|[ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Объект|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Очередь|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Привязка удаленной службы|[ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Роль|[ОТОЗВАТЬ разрешения участника базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Маршрут|[ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|схема|[REVOKE разрешения схемы &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
-|Список свойств поиска|[ОТОЗВАТЬ разрешения Search Property List &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|Server|[ОТОЗВАТЬ разрешения Server &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
-|Служба|[ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Хранимая процедура|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Симметричный ключ|[ОТОЗВАТЬ разрешения на симметричный ключ &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
-|Синоним|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Системные объекты|[ОТОЗВАТЬ разрешения на системный объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
-|Таблица|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Тип|[Разрешения типа REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
-|Пользователь|[ОТОЗВАТЬ разрешения участника базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Просмотр|[ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Коллекция схем XML|[ОТОЗВАТЬ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
+|Роль приложения|[REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Сборка|[REVOKE, отмена разрешений на сборку (Transact-SQL)](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
+|Асимметричный ключ|[REVOKE, отмена разрешений на асимметричный ключ (Transact-SQL)](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
+|Группа доступности|[REVOKE, отмена разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
+|Сертификат|[REVOKE, отмена разрешений на сертификат (Transact-SQL)](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
+|Контракт|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|База данных|[REVOKE, отмена разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
+|Конечная точка|[REVOKE, отмена разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)|  
+|Учетные данные для базы данных|[REVOKE, отмена учетных данных для базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
+|Полнотекстовый каталог|[REVOKE, отмена разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
+|Полнотекстовый список стоп-слов|[REVOKE, отмена разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
+|Компонент|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Имя входа|[REVOKE, отмена разрешений участника на уровне сервера (Transact-SQL)](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Тип сообщений|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Объект|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Очередь|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Привязка удаленной службы|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Роль|[REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Маршрут|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Схема|[REVOKE, отмена разрешений на схему (Transact-SQL)](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
+|Список свойств поиска|[REVOKE, отмена разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
+|Сервер|[REVOKE, отмена разрешений на сервер (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|Служба|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Хранимая процедура|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Симметричный ключ|[REVOKE, отмена разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
+|Синоним|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Системные объекты|[REVOKE, отмена разрешений на системный объект (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
+|Таблица|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Тип|[REVOKE, отмена разрешений на тип (Transact-SQL)](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|Пользователь|[REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Представление|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Коллекция схем XML|[REVOKE, отмена разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

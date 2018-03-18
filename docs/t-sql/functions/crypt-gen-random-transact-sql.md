@@ -1,5 +1,5 @@
 ---
-title: "CRYPT_GEN_RANDOM (Transact-SQL) | Документы Microsoft"
+title: "CRYPT_GEN_RANDOM (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,15 +46,15 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>Аргументы  
 *length*  
-Длина создаваемого числа. Максимально — 8000. *Длина* — тип **int**.
+Длина создаваемого числа. Максимально — 8000. Аргумент *length* имеет тип **int**.
   
-*Начальное значение*  
-Необязательные данные для начального значения.  Должен существовать по крайней мере *длина* байт данных. *Начальное значение* — **varbinary(8000)**.
+*seed*  
+Необязательные данные для начального значения.  Необходимо по крайней мере *length* байт данных. Аргумент *seed* имеет тип **varbinary(8000)**.
   
 ## <a name="returned-types"></a>Возвращаемые типы  
 **varbinary(8000)**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Эта функция является открытой, поэтому не требует специальных разрешений.
   
 ## <a name="examples"></a>Примеры  
@@ -72,7 +72,7 @@ SELECT CRYPT_GEN_RANDOM(50) ;
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Функция RAND &#40; Transact-SQL &#41;](../../t-sql/functions/rand-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[RAND (Transact-SQL)](../../t-sql/functions/rand-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CONCAT_WS (Transact-SQL) | Документы Microsoft"
+title: "CONCAT_WS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Сцепляет переменное число аргументов с помощью разделителей, установленных в 1-й аргумент. (`CONCAT_WS` указывает *сцепить с разделителем*.)
+Сцепляет переменное число аргументов с помощью разделителя, указанного в первом аргументе. (Название функции `CONCAT_WS` означает *сцепить с разделителем*.)
 
 ##  <a name="syntax"></a>Синтаксис   
 ```sql
@@ -42,34 +42,34 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 ```
 
 ## <a name="arguments"></a>Аргументы   
-разделитель  
-Выражение любого типа (`nvarchar`, `varchar`, `nchar`, или `char`).
+separator  
+Выражение любого символьного типа (`nvarchar`, `varchar`, `nchar` или `char`).
 
-аргумент1, аргумент2, аргумент*N*  
-— Это выражение любого типа.
+argument1, argument2, argument*N*  
+Выражение любого типа.
 
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 Строка. Длина и тип зависят от входных данных.
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS`принимает переменное число аргументов и объединяет их в одну строку, используя первый аргумент в качестве разделителя. Требуется разделитель, а также как минимум из двух аргументов; в противном случае возникает ошибка. Все аргументы неявно преобразуются в строковые типы, а затем объединяются. 
+`CONCAT_WS` принимает переменное количество аргументов и сцепляет их в одну строку, используя первый аргумент как разделитель. Для этого требуется разделитель и не менее двух аргументов. В противном случае возникает ошибка. Все аргументы неявно преобразуются в строковые типы и затем сцепляются. 
 
-Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
+Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразовании типов данных см. в статье [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
 
 ### <a name="treatment-of-null-values"></a>Обработка значений NULL
 
-`CONCAT_WS`игнорирует `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}` параметр.
+`CONCAT_WS` игнорирует параметр `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}`.
 
-Если все аргументы имеют значение null, возвращается пустая строка типа `varchar(1)` возвращается. 
+Если все аргументы имеют значение NULL, то возвращается пустая строка типа `varchar(1)`. 
 
-Значения NULL учитываются во время объединения и не добавляет разделитель. Это облегчает распространенный сценарий объединение строк, которые часто имеют пустые значения, например второе поле адрес. См. пример б.
+Значения NULL пропускаются во время объединения, и разделитель не добавляется. Это упрощает распространенную ситуацию объединения строк, среди которых часто встречаются пустые значения, например поле второго адреса. См. пример Б.
 
-Если сценарий требует значения null для включения разделитель, см. пример C помощью `ISNULL` функции.
+Если значения NULL должны включаться с разделителем, см. пример В использования функции `ISNULL`.
 
 ## <a name="examples"></a>Примеры   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  Объединение значений с разделителем
-Следующий пример Сцепляет три столбца в таблице sys.databases, разделяя значения с `- `.   
+В приведенном ниже примере сцепляются три столбца из таблицы sys.databases, причем значения разделяются символами `- `.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -80,14 +80,14 @@ FROM sys.databases;
 
 |DatabaseInfo |  
 |---------|
-|1 — ПРОСТОЙ - НЕТ |
-|2 - SIMPLE - НЕТ |
-|3 — ПОЛНЫЙ - НЕТ |
-|4 - SIMPLE - НЕТ |
+|1 - SIMPLE - NONE |
+|2 - SIMPLE - NONE |
+|3 - FULL - NONE |
+|4 - SIMPLE - NONE |
 
 
 ### <a name="b--skipping-null-values"></a>Б.  Пропуск значений NULL
-Следующий пример не учитывает `NULL` значения в списке аргументов.
+В приведенном ниже примере значения `NULL` в списке аргументов пропускаются.
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -101,8 +101,8 @@ Address
 1 Microsoft Way,Redmond,WA,98052
 ```
 
-### <a name="c--generating-csv-file-from-table"></a>В.  Создание CSV-файла из таблицы
-Следующий пример использует в качестве разделителя запятую и добавляет символ возврата каретки в результате формат отдельных значений столбца.
+### <a name="c--generating-csv-file-from-table"></a>В.  Создание CSV-файла на основе таблицы
+В приведенном ниже примере используется запятая в качестве разделителя, и к результату в формате списка значений с разделителями-запятыми добавляется символ возврата каретки.
 
 ```sql
 SELECT 
@@ -121,7 +121,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS игнорирует значения NULL в столбцах. Если некоторые столбцы, допускающие значение NULL, заключите их в оболочку с `ISNULL` функцией и указать значение по умолчанию как в следующем примере:
+Функция CONCAT_WS пропускает значения NULL в столбцах. Если некоторые столбцы могут принимать значения NULL, обработайте их функцией `ISNULL` и предоставьте значение по умолчанию, как в следующем примере:
 
 ```sql
 SELECT 
@@ -129,15 +129,15 @@ STRING_AGG(CONCAT_WS( ',', database_id, ISNULL(recovery_model_desc,''), ISNULL(c
 FROM sys.databases;
 ```
 
-## <a name="see-also"></a>См. также:
- [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 

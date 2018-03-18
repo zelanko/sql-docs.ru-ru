@@ -1,5 +1,5 @@
 ---
-title: "DEALLOCATE (Transact-SQL) | Документы Microsoft"
+title: "DEALLOCATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Удаляет ссылку курсора. Когда освобождается последняя ссылка курсора, структуры данных, составляющие курсор снимаются по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Удаляет ссылку курсора. Когда удаляется последняя ссылка курсора, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] освобождает структуры данных, составляющие курсор.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>Аргументы  
  *cursor_name*  
- Имя объявленного курсора. Если существуют общий и локальный курсор с *cursor_name* , имя *cursor_name* ссылается на глобальный курсор, если GLOBAL задан и локальный курсор, если GLOBAL не задано.  
+ Имя объявленного курсора. Когда имеется как глобальный, так и локальный курсор с именем *cursor_name*, то *cursor_name* ссылается на глобальный курсор, если задано GLOBAL, и на локальный, если GLOBAL не задано.  
   
  @*cursor_variable_name*  
- Имя **курсор** переменной. @*cursor_variable_name* должен иметь тип **курсор**.  
+ Имя переменной **курсора**.Переменная  @*cursor_variable_name* должна иметь тип **cursor**.  
   
 ## <a name="remarks"></a>Remarks  
  Инструкции, обрабатывающие курсоры, используют для ссылки имя курсора или имя переменной курсора. Инструкция DEALLOCATE удаляет связь между курсором и его именем или переменной. Если это последнее имя или переменная, ссылающаяся на курсор, сам курсор удаляется и освобождаются все используемые им ресурсы. DEALLOCATE освобождает все блокировки прокрутки, которые используются для защиты изоляции выборки. Блокировки транзакций, которые используются для защиты обновлений, включая позиционные обновления в курсоре, удерживаются до завершения транзакции.  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- DEALLOCATE @*cursor_variable_name* инструкция удаляет только ссылку именованной переменной на курсор. Эта переменная не освобождается, пока не выходит за область действия в конце пакета, хранимой процедуры или триггера. После DEALLOCATE @*cursor_variable_name* инструкции, переменная может быть связан с другим курсором, используя инструкцию SET.  
+ Инструкция DEALLOCATE @*cursor_variable_name* удаляет только ссылку именованной переменной на курсор. Эта переменная не освобождается, пока не выходит за область действия в конце пакета, хранимой процедуры или триггера. После выполнения инструкции DEALLOCATE @*cursor_variable_name* эту переменную можно связать с другим курсором, используя инструкцию SET.  
   
 ```  
 USE AdventureWorks2012;  
@@ -147,11 +147,11 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ЗАКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)   
  [Курсоры](../../relational-databases/cursors.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [FETCH &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [ОТКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)  
   
   

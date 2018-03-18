@@ -1,5 +1,5 @@
 ---
-title: "Создание РОЛИ сервера (Transact-SQL) | Документы Microsoft"
+title: "CREATE SERVER ROLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  *role_name*  
  Имя создаваемой роли сервера.  
   
- АВТОРИЗАЦИЯ *server_principal*  
+ AUTHORIZATION *server_principal*  
  Является именем входа, которому будет принадлежать новая роль сервера. Если имя входа не указано, владельцем роли сервера станет имя входа, выполнившее инструкцию CREATE SERVER ROLE.  
   
 ## <a name="remarks"></a>Remarks  
- Роли сервера являются защищаемыми объектами уровня сервера. После создания роли сервера необходимо настроить для нее разрешения уровня сервера при помощи инструкций GRANT, DENY и REVOKE. Для добавления или удаления имен входа из роли сервера, используйте [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Чтобы удалить роль сервера, используйте [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Дополнительные сведения см. в разделе [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Роли сервера являются защищаемыми объектами уровня сервера. После создания роли сервера необходимо настроить для нее разрешения уровня сервера при помощи инструкций GRANT, DENY и REVOKE. Для добавления или удаления имен входа из роли сервера используется инструкция [ALTER SERVER ROLE (Transact-SQL)](../../t-sql/statements/alter-server-role-transact-sql.md). Чтобы удалить роль сервера, используйте инструкцию [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md). Дополнительные сведения см. в разделе [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Для просмотра ролей сервера можно запросить [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) и [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Для просмотра ролей сервера выполните запрос к представлениям каталога [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) и [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Ролям сервера нельзя предоставить разрешение на защищаемые объекты уровня базы данных. Сведения о создании ролей базы данных см. в статье [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md).  
   
@@ -72,7 +72,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  Также требует разрешения IMPERSONATE на *server_principal* для имен входа, разрешения ALTER для ролей сервера, которые используются в качестве *server_principal*, или членства в группе Windows, которая используется в качестве server_principal.  
   
- Это сработает событий Audit Server Principal Management с типом объекта для роли сервера и тип события для добавления.  
+ Это вызовет событие Audit Server Principal Management с типом объекта, установленным как роль сервера, и типом добавляемого события.  
   
  Если для назначения владельца роли сервера указывается параметр AUTHORIZATION, необходимы также следующие разрешения.  
   
@@ -100,8 +100,8 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [УДАЛИТЬ РОЛЬ сервера &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "@@REMSERVER (Transact-SQL) | Документы Microsoft"
+title: "@@REMSERVER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Замечания  
- @@REMSERVER включает хранимую процедуру для проверки имени сервера базы данных, с которой выполняется процедура.  
+## <a name="remarks"></a>Remarks  
+ @@REMSERVER включает хранимую процедуру для проверки имени сервера базы данных, с которого была запущена процедура.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример создает процедуру `usp_CheckServer`, которая возвращает имя удаленного сервера.  

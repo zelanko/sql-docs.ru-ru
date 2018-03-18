@@ -1,5 +1,5 @@
 ---
-title: "DENY, запрет разрешений на сборку (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на сборки (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Указывает разрешение на сборку, которое запрещается. Перечислены ниже.  
   
- В СБОРКЕ **::***assembly_name*  
+ ON ASSEMBLY **::***assembly_name*  
  Указывает сборку, на которую запрещается разрешение. Необходим квалификатор области «::».  
   
  *database_principal*  
@@ -97,7 +97,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сборка — это защищаемый объект уровня базы данных, который содержится в базе данных, являющейся его родителем в иерархии разрешений. Ряд основных разрешений на сборку, которые могут быть запрещены, перечислены ниже, вместе с более общими разрешениями, которые их подразумевают.  
   
 |Разрешение сборки|Содержится в разрешении сборки|Содержится в разрешении базы данных|  
@@ -108,7 +108,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL на сборку. Если используется параметр AS, указанный участник должен быть владельцем сборки.  
   
 ## <a name="see-also"></a>См. также:  
@@ -117,8 +117,8 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [СОЗДАТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

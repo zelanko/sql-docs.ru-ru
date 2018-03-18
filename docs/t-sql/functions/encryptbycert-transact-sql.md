@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYCERT (Transact-SQL) | Документы Microsoft"
+title: "ENCRYPTBYCERT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,19 +48,19 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *идентификатор_сертификата*  
+ *certificate_ID*  
  Идентификатор сертификата в базе данных. **int**.  
   
- *открытый текст*  
+ *cleartext*  
  Строка, содержимое которой будет зашифровано с помощью сертификата.  
   
  **@cleartext**  
- Переменная типа **nvarchar**, **char**, **varchar**, **двоичных**, **varbinary**, или **nchar** с данными, которые будут зашифрованы с помощью открытого ключа сертификата.  
+ Переменная типа **nvarchar**, **char**, **varchar**, **binary**, **varbinary** или **nchar**, данные которой будут зашифрованы с помощью открытого ключа сертификата.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция шифрует данные при помощи открытого ключа сертификата. Код может быть расшифрован только с помощью соответствующего закрытого ключа. Ассиметричные преобразования гораздо более накладны, чем шифрование и дешифрование с использованием симметричного ключа. Поэтому использование ассиметричного шифрования не рекомендуется при работе с большими объемами данных, например таблицами пользовательских данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -74,10 +74,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DECRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
+ [DECRYPTBYCERT (Transact-SQL)](../../t-sql/functions/decryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [УДАЛИТЬ СЕРТИФИКАТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

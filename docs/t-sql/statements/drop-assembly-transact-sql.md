@@ -1,5 +1,5 @@
 ---
-title: "DROP сборки (Transact-SQL) | Документы Microsoft"
+title: "DROP ASSEMBLY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет сборку и все связанные с ней файлы из текущей базы данных. Сборки создаются с помощью [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) и изменяются с помощью [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
+  Удаляет сборку и все связанные с ней файлы из текущей базы данных. Сборки создаются с помощью инструкции [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) и изменяются с помощью инструкции [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,20 +53,20 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
 ## <a name="arguments"></a>Аргументы  
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляет сборку только в том случае, если он уже существует.  
+ Условное удаление сборки только в том случае, если она уже существует.  
   
  *assembly_name*  
  Имя сборки, которую нужно удалить.  
   
  WITH NO DEPENDENTS  
- Если указано, удаляется только *assembly_name* и ни один из зависимых сборок, на которые ссылается сборка. Если не указан, инструкция DROP ASSEMBLY удаляет *assembly_name* и все зависимые сборки.  
+ Если указано, удаляется только сборка *assembly_name*, и ни одна из зависимых сборок, ссылки на которые в ней содержатся, не удаляется. Если не указано, инструкция DROP ASSEMBLY удаляет *assembly_name* и все зависимые сборки.  
   
 ## <a name="remarks"></a>Remarks  
  При удалении сборки из базы данных удаляются и все связанные с ней файлы, такие как исходный код и файлы отладки.  
   
- Если WITH NO DEPENDENTS не указано, инструкция DROP ASSEMBLY удаляет *assembly_name* и все зависимые сборки. Если попытка удалить какую-либо зависимую сборку не удается, инструкция DROP ASSEMBLY возвращает ошибку.  
+ Если ключевое слово WITH NO DEPENDENTS не указано, инструкция DROP ASSEMBLY удаляет *assembly_name* и все зависимые сборки. Если попытка удалить какую-либо зависимую сборку не удается, инструкция DROP ASSEMBLY возвращает ошибку.  
   
  Инструкция DROP ASSEMBLY возвращает ошибку, если на сборку ссылается другая существующая в базе данных сборка или если она используется функциями, процедурами, триггерами, пользовательскими типами или статистическими функциями среды CLR в данной базе данных.  
   
@@ -82,9 +82,9 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 DROP ASSEMBLY Helloworld ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [СОЗДАТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [Инструкцию ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Получение сведений о сборках](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

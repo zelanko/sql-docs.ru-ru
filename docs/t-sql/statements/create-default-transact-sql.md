@@ -1,5 +1,5 @@
 ---
-title: "CREATE DEFAULT (Transact-SQL) | Документы Microsoft"
+title: "CREATE DEFAULT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  Имя схемы, которой принадлежит значение по умолчанию.  
   
  *default_name*  
- Имя значения по умолчанию. По умолчанию имена должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). Указывать имя владельца по умолчанию не обязательно.  
+ Имя значения по умолчанию. Имена значений по умолчанию должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указывать имя владельца по умолчанию не обязательно.  
   
  *constant_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) , содержащее только постоянные значения (не может включать имена столбцов или других объектов базы данных). Можно использовать любые константы, встроенные функции или математические выражения, за исключением тех, которые содержат типы данных псевдонимов. Нельзя использовать пользовательские функции. Заключите константы символьного типа и даты в одинарные кавычки (**"**); денежных данных, целое число со знаком, а констант с плавающей запятой не требуют кавычек. Двоичные данные должны сопровождаться знаком 0x, а денежные данные — знаком доллара ($). Тип значения по умолчанию должен соответствовать типу данных столбца.  
+ Выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md), содержащее только постоянные значения (не может включать имена столбцов или других объектов баз данных). Можно использовать любые константы, встроенные функции или математические выражения, за исключением тех, которые содержат типы данных псевдонимов. Нельзя использовать пользовательские функции. Константы символьного типа и даты необходимо заключать в одинарные кавычки (**'**); константы, имеющие тип денежных данных, а также целочисленные и с плавающей точкой в кавычки не заключаются. Двоичные данные должны сопровождаться знаком 0x, а денежные данные — знаком доллара ($). Тип значения по умолчанию должен соответствовать типу данных столбца.  
   
 ## <a name="remarks"></a>Remarks  
- Имя по умолчанию может быть создано только в текущей базе данных. Внутри базы данных имена по умолчанию должны быть уникальны в схеме. Когда создается значение по умолчанию, используйте **sp_bindefault** Чтобы привязать его к столбцу или псевдониму типа данных.  
+ Имя по умолчанию может быть создано только в текущей базе данных. Внутри базы данных имена по умолчанию должны быть уникальны в схеме. Чтобы созданное значение по умолчанию привязать к типу данных столбца или псевдонима, используйте **sp_bindefault**.  
   
- Если значение по умолчанию не совместимо со столбцом, к которому оно привязывается, то при попытке его вставки в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует сообщение об ошибке. Например, н/д не может использоваться как значение по умолчанию для **числовое** столбца.  
+ Если значение по умолчанию не совместимо со столбцом, к которому оно привязывается, то при попытке его вставки в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует сообщение об ошибке. Например, значение N/A не может быть использовано по умолчанию для столбца, содержащего **числовые** данные.  
   
  Если значение является слишком длинным для столбца, к которому оно привязывается, то происходит его усечение.  
   
  Инструкции CREATE DEFAULT не могут использоваться в одном пакете с другими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Значение по умолчанию должен быть удален перед созданием нового с тем же именем, и привязка по умолчанию, выполнив **sp_unbindefault** перед его удалением.  
+ Перед созданием нового значения по умолчанию необходимо удалить старое значение с таким же именем, предварительно удалив все его связи с помощью **sp_unbindefault**.  
   
  Каждому столбцу соответствуют значение по умолчанию и связанное с ним правило, причем значение по умолчанию должно соответствовать правилу. Значение по умолчанию, не удовлетворяющее правилу, не будет вставлено, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет выдавать ошибку при каждой попытке подобной вставки.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|значение по умолчанию|NULL|NULL|  
 |**NOT NULL**|Ошибка|значение по умолчанию|ошибка|ошибка|  
   
- Чтобы переименовать значение по умолчанию, используйте **sp_rename**. Для отчета, на значение по умолчанию, используется **sp_help**.  
+ Чтобы переименовать значение по умолчанию, используйте **sp_rename**. Чтобы получить отчет о значении по умолчанию, используйте **sp_help**.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы вызвать команду CREATE DEFAULT, пользователь должен обладать разрешением CREATE DEFAULT в текущей базе данных и разрешением ALTER на схему, в которой создается значение по умолчанию.  
@@ -120,14 +120,14 @@ sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [Удалить &#40; по умолчанию Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [УДАЛИТЬ правило &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Хранимая процедура sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

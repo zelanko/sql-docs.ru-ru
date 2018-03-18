@@ -1,5 +1,5 @@
 ---
-title: "STInteriorRingN (тип данных geometry) | Документы Microsoft"
+title: "STInteriorRingN (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает указанное внутреннее кольцо **Polygongeometry** экземпляра.
+Возвращает указанное внутреннее кольцо экземпляра **Polygongeometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — **Int** выражение от 1 до количества внутренних колец в **geometry** экземпляра.  
+ Выражение типа **int** от 1 до количества внутренних колец в экземпляре **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Открытый тип Geospatial Consortium (OGC): **LineString**  
+ Тип открытого геопространственного консорциума (OGC): **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает **null** Если **geometry** экземпляр не многоугольника. Этот метод также вызывает **ArgumentOutOfRangeException** Если выражения больше количества колец. Количество колец можно получить с помощью метода `STNumInteriorRing``()`.  
+ Этот метод возвращает значение **NULL**, если экземпляр **geometry** не является многоугольником. Этот метод также вызывает исключение **ArgumentOutOfRangeException**, если значение выражения больше количества колец. Количество колец можно получить с помощью метода `STNumInteriorRing``()`.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `Polygon` и с помощью `STInteriorRingN()` для возврата внутреннее кольцо многоугольника как **LineString**.  
+ В приведенном ниже примере создается экземпляр `Polygon` и используется метод `STInteriorRingN()` для возврата внутреннего кольца многоугольника в виде **LineString**.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STInteriorRingN(1).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

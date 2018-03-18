@@ -1,5 +1,5 @@
 ---
-title: "DROP ОЧЕРЕДИ (Transact-SQL) | Документы Microsoft"
+title: "DROP QUEUE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,10 +58,10 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>Аргументы  
  *database_name*  
- Имя базы данных, содержащей удаляемую очередь. Если аргумент *имя_базы_данных* предоставляется значения по умолчанию для текущей базы данных.  
+ Имя базы данных, содержащей удаляемую очередь. Если аргумент *database_name* не указан, по умолчанию используется текущая база данных.  
   
  *schema_name (object)*  
- Имя схемы, которой принадлежит удаляемая очередь. Если аргумент *schema_name* указано, по умолчанию используется схема по умолчанию для текущего пользователя.  
+ Имя схемы, которой принадлежит удаляемая очередь. Если аргумент *schema_name* не указан, по умолчанию используется схема по умолчанию текущего пользователя.  
   
  *queue_name*  
  Имя удаляемой очереди.  
@@ -70,19 +70,19 @@ DROP QUEUE <object>
  Нельзя удалить очередь, если на нее ссылаются какие-либо службы.  
   
 ## <a name="permissions"></a>Разрешения  
- Удаление очереди разрешение по умолчанию имеет владелец очереди, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin** исправлена роль сервера.  
+ По умолчанию разрешения на очистку очереди предоставляются владельцу очереди, членам предопределенных ролей **db_ddladmin** или **db_owner** базы данных и членам предопределенной роли сервера **sysadmin**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляется **ExpenseQueue** очередь из текущей базы данных.  
+ В следующем примере демонстрируется удаление очереди **ExpenseQueue** из текущей базы данных.  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

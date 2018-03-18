@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEY (Transact-SQL) | Документы Microsoft"
+title: "DECRYPTBYKEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,31 +50,31 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *зашифрованный текст*  
- Данные, зашифрованные с помощью ключа. *зашифрованный текст* — **varbinary**.  
+ *ciphertext*  
+ Данные, зашифрованные с помощью ключа. Аргумент *ciphertext* имеет тип **varbinary**.  
   
  **@ciphertext**  
- Переменная типа **varbinary** , содержащий данные, которые были зашифрованы с помощью ключа.  
+ Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью ключа.  
   
  *add_authenticator*  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Должно быть равно значению, переданному функции EncryptByKey при шифровании данных. *add_authenticator* — **int**.  
+ Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Должно быть равно значению, переданному функции EncryptByKey при шифровании данных. Аргумент *add_authenticator* имеет тип **int**.  
   
- *Средство проверки подлинности*  
- Данные, для которых формируется средство проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. *Средство проверки подлинности* — **sysname**.  
+ *authenticator*  
+ Данные, для которых формируется средство проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. Аргумент *authenticator* имеет тип **sysname**.  
   
  **@authenticator**  
  Переменная, содержащая сведения, из которых формируются данные для проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В функции DecryptByKey используется симметричный ключ. Этот симметричный ключ должен быть открыт уже в базе данных. Одновременно могут быть открыты несколько ключей. Открывать ключ непосредственно перед раскодированием необязательно.  
   
  Симметричное кодирование и декодирование осуществляется относительно быстро и подходит для работы с большими объемами данных.  
   
-## <a name="permissions"></a>Permissions  
- Необходимо, чтобы симметричный ключ был открыт в текущем сеансе. Дополнительные сведения см. в разделе [OPEN SYMMETRIC KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>Разрешения  
+ Необходимо, чтобы симметричный ключ был открыт в текущем сеансе. Дополнительные сведения см. в статье [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

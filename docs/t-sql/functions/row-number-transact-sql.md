@@ -1,5 +1,5 @@
 ---
-title: "ROW_NUMBER (Transact-SQL) | Документы Microsoft"
+title: "ROW_NUMBER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.lasthandoff: 01/02/2018
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Номера выходного результирующего набора. В частности возвращает порядковый номер строки в секции результирующего набора, начиная с 1 для первой строки в каждой секции. 
+  Нумерует выходные данные результирующего набора. В частности, возвращает последовательный номер строки в секции результирующего набора, 1 соответствует первой строке в каждой из секций. 
   
-`ROW_NUMBER`и `RANK` похожи. `ROW_NUMBER`все номера строк последовательно (например 1, 2, 3, 4, 5). `RANK`предоставляет значение все же наличие связей (например 1, 2, 2, 4, 5).   
+Функции `ROW_NUMBER` и `RANK` похожи. `ROW_NUMBER` нумерует все строки по порядку (например, 1, 2, 3, 4, 5). `RANK` назначает одинаковое числовое значение строкам, претендующим на один ранг (например, 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> `ROW_NUMBER`временное значение рассчитывается при запуске запроса. Для хранения чисел в таблице, в разделе [свойство IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) и [ПОСЛЕДОВАТЕЛЬНОСТИ](../../t-sql/statements/create-sequence-transact-sql.md). 
+> `ROW_NUMBER` — это временное значение, вычисляемое во время выполнения запроса. Сведения о хранении номеров в таблице см. в разделах [Свойство IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) и [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -56,30 +56,30 @@ ROW_NUMBER ( )
   
 ## <a name="arguments"></a>Аргументы  
  PARTITION BY *value_expression*  
- Делит результирующий набор, полученный по [FROM](../../t-sql/queries/from-transact-sql.md) на секции, к которым применяется функция ROW_NUMBER. *value_expression* указывает столбец, по которому секционируется результирующий набор. Если `PARTITION BY` не указан, функция обрабатывает все строки результирующего набора запроса как одну группу. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Делит результирующий набор, полученный от предложения [FROM](../../t-sql/queries/from-transact-sql.md), на секции, к которым применяется функция ROW_NUMBER. *value_expression* определяет столбец, по которому секционируется результирующий набор. Если параметр `PARTITION BY` не указан, функция обрабатывает все строки результирующего набора запроса как одну группу. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
- `ORDER BY` Предложение определяет последовательность, в которой строкам назначаются уникальному `ROW_NUMBER` в пределах указанной секции. Оно должно указываться обязательно. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Предложение `ORDER BY` определяет последовательность, в которой строкам назначаются уникальные номера с помощью функции `ROW_NUMBER` в пределах указанной секции. Оно должно указываться обязательно. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint**  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Нет никакой гарантии, что строки возвращаются с помощью запроса `ROW_NUMBER()` будут упорядочены так же при каждом выполнении, если выполняются следующие условия.  
+ Нет гарантии того, что строки, возвращенные запросом, использующим `ROW_NUMBER()`, будут расставлены в одинаковом порядке после каждого выполнения, если не соблюдены указанные ниже условия.  
   
 1.  Все значения в секционированном столбце являются уникальными.  
   
-2.  Значения `ORDER BY` столбцы являются уникальными.  
+2.  Все значения в столбцах `ORDER BY` являются уникальными.  
   
-3.  Сочетания значений столбца секционирования и `ORDER BY` столбцов являются уникальными.  
+3.  Сочетания значений из столбца секционирования и столбцов `ORDER BY` являются уникальными.  
   
- `ROW_NUMBER()`является недетерминированным. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Функция `ROW_NUMBER()` не детерминирована. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-simple-examples"></a>A. Простые примеры 
 
-Следующий запрос возвращает четыре системных таблиц в алфавитном порядке.
+Приведенный ниже запрос возвращает четыре системные таблицы в алфавитном порядке.
 
 ```sql
 SELECT 
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-Чтобы добавить столбец с номерами строк перед каждой строки, добавьте столбец с `ROW_NUMBER` функции, при этом с именем `Row#`. Необходимо переместить `ORDER BY` предложение до `OVER` предложения.
+Чтобы добавить столбец с номерами строк перед каждой строкой, добавьте столбец с помощью функции `ROW_NUMBER`, в данном случае с именем `Row#`. Предложение `ORDER BY` необходимо переместить к предложению `OVER`.
 
 ```sql
 SELECT 
@@ -117,7 +117,7 @@ WHERE database_id < 5;
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-Добавление `PARTITION BY` предложение на `recovery_model_desc` столбец будет нумерацию при `recovery_model_desc` изменении значения. 
+Добавление предложения `PARTITION BY` для столбца `recovery_model_desc` приведет к тому, что нумерация начнется заново при изменении значения `recovery_model_desc`. 
  
 ```sql
 SELECT 
@@ -224,10 +224,10 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>Д. Возврат номера строки для salespeople  
- В следующем примере возвращается `ROW_NUMBER` для торговых представителей, в зависимости от их установленной квоты продаж.  
+ В приведенном ниже примере возвращается `ROW_NUMBER` для торговых представителей в зависимости от установленной для них квоты продаж.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ```
 
 ### <a name="f-using-rownumber-with-partition"></a>Е. Использование ROW_NUMBER() с PARTITION  
- Следующий пример демонстрирует использование функции `ROW_NUMBER` с аргументом `PARTITION BY`. В результате `ROW_NUMBER` функции для нумерации строк в каждой секции.  
+ Следующий пример демонстрирует использование функции `ROW_NUMBER` с аргументом `PARTITION BY`. В результате функция `ROW_NUMBER` нумерует строки в каждой секции.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -288,9 +288,9 @@ RowNumber  LastName            Territory  SalesQuota
 ```
   
 ## <a name="see-also"></a>См. также:  
- [Ранг &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
+ [RANK (Transact-SQL)](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK (Transact-SQL)](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [NTILE (Transact-SQL)](../../t-sql/functions/ntile-transact-sql.md)  
   
   
 

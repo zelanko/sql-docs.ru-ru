@@ -1,5 +1,5 @@
 ---
-title: "ROLLBACK WORK (Transact-SQL) | Документы Microsoft"
+title: "ROLLBACK WORK (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,16 +55,16 @@ ROLLBACK [ WORK ]
 ## <a name="remarks"></a>Remarks  
  Эта инструкция действует так же, как и инструкция ROLLBACK TRANSACTION, с тем лишь отличием, что ROLLBACK TRANSACTION допускает применение определяемых пользователем имен транзакций. Вне зависимости от того, используется ли дополнительное ключевое слово WORK, синтаксис ROLLBACK совместим со стандартом ISO.  
   
- При вложении транзакций инструкция ROLLBACK WORK всегда откатывается до внешней инструкции BEGIN TRANSACTION и уменьшает значение @@TRANCOUNT системная функция 0.  
+ При вложении транзакций инструкция ROLLBACK WORK всегда откатывается до самой удаленной инструкции BEGIN TRANSACTION и уменьшает на единицу системную функцию @@TRANCOUNT до достижения последней значения 0.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию инструкцию ROLLBACK WORK разрешено выполнять любым пользователям.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [ФИКСАЦИЯ РАБОЧЕГО &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   

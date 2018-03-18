@@ -1,5 +1,5 @@
 ---
-title: "% (Модуль) (Transact-SQL) | Документы Microsoft"
+title: "% (остаток от деления) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>% (Модуль) (Transact-SQL)
+# <a name="-modulus-transact-sql"></a>% (остаток от деления) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает остаток от деления одного числа на другое.  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>Аргументы  
  *dividend*  
- Делимое числовое выражение. *делимое* должен быть допустимым [выражение](../../t-sql/language-elements/expressions-transact-sql.md) одного из типов данных в категорий целых или денежных типов, или **числовое** тип данных.  
+ Делимое числовое выражение. Аргумент *dividend* должен быть допустимым [выражением](../../t-sql/language-elements/expressions-transact-sql.md) любого типа из категорий целочисленных или денежных типов данных или типа **numeric**.  
   
  *divisor*  
- Числовое выражение, на которое делится делимое. *делитель* должен быть любое допустимое выражение любого из типов данных в категорий целых или денежных типов, или **числовое** тип данных.  
+ Числовое выражение, на которое делится делимое. Аргумент *divisor* должен быть допустимым выражением любого типа из категорий целочисленных или денежных типов данных или типа **numeric**.  
   
 ## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов.  
   
 ## <a name="remarks"></a>Remarks  
- Можно использовать модулю в списке выбора инструкции SELECT с любым сочетанием имен столбцов, числовых констант или любым допустимым выражением целых или денежных данных введите категории или **числовое** данных тип.  
+ Оператор взятия остатка от деления можно использовать в списке выбора инструкции SELECT с любым сочетанием имен столбцов, числовых констант или любым допустимым выражением из категории целочисленных или денежных типов, а также типа **numeric**.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-simple-example"></a>A. Простой пример  
- В следующем примере выполняется деление числа 38 на 5. Это приводит к 7 как целой части результата и показано, как остаток от деления возвращается число 3.  
+ В следующем примере выполняется деление числа 38 на 5. Это приводит к получению числа 7, являющегося целой частью результата, и показывает, что в качестве остатка от деления возвращается число 3.  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: простой пример  
- В следующем примере показано результаты для `%` оператора, если деления 3 на 2.  
+### <a name="c-simple-example"></a>В. Простой пример  
+ В приведенном ниже примере показаны результаты применения оператора `%` при делении 3 на 2.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,13 +104,13 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 1         
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [% = &#40; Назначение модуля &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%= (присваивание остатка от деления) (Transact-SQL)](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

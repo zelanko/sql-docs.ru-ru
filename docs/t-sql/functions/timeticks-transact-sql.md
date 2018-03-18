@@ -1,5 +1,5 @@
 ---
-title: "@@TIMETICKS (Transact-SQL) | Документы Microsoft"
+title: "@@TIMETICKS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Длительность такта определяется компьютером. Такт операционной системы имеет длительность 31,25 миллисекунды или одну тридцатую секунды.  
   
 ## <a name="examples"></a>Примеры  
@@ -62,6 +62,6 @@ SELECT @@TIMETICKS AS 'Time Ticks';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Системные статистические функции &#40;Transact-SQL&#41;#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

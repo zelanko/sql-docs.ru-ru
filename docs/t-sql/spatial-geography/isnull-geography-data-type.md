@@ -1,5 +1,5 @@
 ---
-title: "IsNull (тип данных geography) | Документы Microsoft"
+title: "IsNull (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geography-data-type"></a>IsNull (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Свойство, которое указывает, если **geography** экземпляр имеет значение null. Возвращает TRUE, если экземпляр — NULL; возвращает 0, если экземпляр отличен от NULL.  
+  Свойство, которое показывает, имеет ли экземпляр **geography** значение NULL. Возвращает TRUE, если экземпляр — NULL; возвращает 0, если экземпляр отличен от NULL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **бит**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Тип CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `IsNull`можно использовать для тестирования ли **geography** экземпляр имеет значение null. Это может привести к неочевидному результату, так как, если экземпляр имеет значение, отличное от NULL, возвращается значение 0, а если экземпляр имеет значение NULL, возвращается значение NULL.  
+ Метод `IsNull` позволяет проверить, имеет ли экземпляр **geography** значение NULL. Это может привести к неочевидному результату, так как, если экземпляр имеет значение, отличное от NULL, возвращается значение 0, а если экземпляр имеет значение NULL, возвращается значение NULL.  
   
- Этот метод в основном используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инфраструктуре; рекомендуется использовать предикат T-SQL IS NULL, чтобы проверить ли **geography** экземпляр имеет значение null. Дополнительные сведения о T-SQL, предикат IS NULL см. в разделе [IS NULL &#40; Transact-SQL &#41; ](../../t-sql/queries/is-null-transact-sql.md).  
+ Этот метод в основном используется инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для проверки, имеет ли экземпляр **geography** значение NULL, рекомендуется использовать предикат T-SQL IS NULL. Дополнительные сведения о предикате T-SQL IS NULL см. в статье [IS NULL (Transact-SQL)](../../t-sql/queries/is-null-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

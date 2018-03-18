@@ -1,5 +1,5 @@
 ---
-title: "Функция NEWID (Transact-SQL) | Документы Microsoft"
+title: "NEWID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `NEWID()` соответствует стандарту RFC4122.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. Использование функции NEWID с переменной  
- В следующем примере используется `NEWID()` присвоить значение переменной, объявленной как **uniqueidentifier** тип данных. Значение **uniqueidentifier** переменной типа данных выводится перед проверкой его значения.  
+ В приведенном ниже примере функция `NEWID()` используется для присвоения значения переменной с типом данных **uniqueidentifier**. Значение переменной типа данных **uniqueidentifier** выводится перед его проверкой.  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>Б. Использование функции NEWID в инструкции CREATE TABLE  
   
-**Применяется к**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- В следующем примере создается `cust` в таблице **uniqueidentifier** тип данных и использует NEWID для заполнения таблицы со значением по умолчанию. При присвоении значения функции `NEWID()` по умолчанию каждая новая и уже существующая строка будет иметь уникальное значение для столбца `CustomerID`.  
+ В приведенном ниже примере создается таблица `cust` с типом данных **uniqueidentifier** и заполняется значением по умолчанию с помощью функции NEWID. При присвоении значения функции `NEWID()` по умолчанию каждая новая и уже существующая строка будет иметь уникальное значение для столбца `CustomerID`.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>В. Использование типа uniqueidentifier и присвоение значения переменной  
- В следующем примере объявляется локальную переменную с именем `@myid` как переменная **uniqueidentifier** тип данных. Затем переменной присваивается значение с помощью оператора `SET`.  
+ В приведенном ниже примере объявляется локальная переменная типа данных **uniqueidentifier** с именем `@myid`. Затем переменной присваивается значение с помощью оператора `SET`.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -125,13 +125,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+ [NEWSEQUENTIALID (Transact-SQL)](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier (Transact-SQL)](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

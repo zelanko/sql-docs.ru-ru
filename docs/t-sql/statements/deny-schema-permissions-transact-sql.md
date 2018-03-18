@@ -1,5 +1,5 @@
 ---
-title: "DENY, разрешения схемы (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на схему (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,40 +49,40 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть запрещено на схему. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть запрещено на схему. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON SCHEMA **::** схемы*_name*  
+ ON SCHEMA **::** schema*_name*  
  Указывает схему, на которую запрещается разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
- Задает участника, для которого запрещается разрешение, — *database_principal* может принимать одно из следующих действий:  
+ Задает участника, для которого запрещается разрешение. *database_principal* может быть одним из следующих:  
   
--   Пользователь базы данных  
--   Роль базы данных  
--   Роль приложения  
--   Пользователь базы данных, сопоставленный имени входа Windows  
--   Пользователь базы данных, сопоставленный группе Windows  
--   Пользователь базы данных, сопоставленный сертификату  
--   Пользователь базы данных, сопоставленный асимметричному ключу  
--   Пользователь базы данных, не сопоставленный серверу-участнику  
+-   пользователь базы данных;  
+-   роль базы данных;  
+-   роль приложения;  
+-   пользователь базы данных, сопоставленный с именем входа Windows;  
+-   пользователь базы данных, сопоставленный с группой Windows;  
+-   пользователь базы данных, сопоставленный с сертификатом;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с сервером-участником.  
   
 CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
 *denying_principal*  
- Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения. *denying_principal* может принимать одно из следующих действий:  
+ Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения. *denying_principal* может быть одним из следующих:  
   
--   Пользователь базы данных  
--   Роль базы данных  
--   Роль приложения  
--   Пользователь базы данных, сопоставленный имени входа Windows  
--   Пользователь базы данных, сопоставленный группе Windows  
--   Пользователь базы данных, сопоставленный сертификату  
--   Пользователь базы данных, сопоставленный асимметричному ключу  
--   Пользователь базы данных, не сопоставленный серверу-участнику  
+-   пользователь базы данных;  
+-   роль базы данных;  
+-   роль приложения;  
+-   пользователь базы данных, сопоставленный с именем входа Windows;  
+-   пользователь базы данных, сопоставленный с группой Windows;  
+-   пользователь базы данных, сопоставленный с сертификатом;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с сервером-участником.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Схема — это защищаемая сущность уровня базы данных, содержащаяся в базе данных, которая является для нее родительской в иерархии разрешений. Наиболее специфичные и ограниченные разрешения на работу со схемой, которые можно запрещать, приведены в следующей таблице вместе с общими разрешениями, неявно их включающими.  
   
 |Разрешение схемы|Содержится в разрешении схемы|Содержится в разрешении базы данных|  
@@ -91,7 +91,7 @@ CASCADE
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
 |DELETE|CONTROL|DELETE|  
-|Выполните|CONTROL|Выполните|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
@@ -100,16 +100,16 @@ CASCADE
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL для схемы. Если указан параметр AS, указанный участник должен быть владельцем схемы.  
   
-## <a name="see-also"></a>См. также:  
- [Создание СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

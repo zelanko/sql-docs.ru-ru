@@ -1,5 +1,5 @@
 ---
-title: "Криптографические функции (Transact-SQL) | Документы Microsoft"
+title: "Криптографические функции (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,14 +53,14 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |[ENCRYPTBYASYMKEY](../../t-sql/functions/encryptbyasymkey-transact-sql.md)|[DECRYPTBYASYMKEY](../../t-sql/functions/decryptbyasymkey-transact-sql.md)|  
-|[Функция ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
+|[ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
 |[ASYMKEYPROPERTY](../../t-sql/functions/asymkeyproperty-transact-sql.md)|[ASYMKEY_ID](../../t-sql/functions/asymkey-id-transact-sql.md)|  
   
-## <a name="signing-and-signature-verification"></a>Подписывание и проверка подписи
+## <a name="signing-and-signature-verification"></a>Процесс подписывания и проверка подписи
   
 |||  
 |-|-|  
-|[SIGNBYASYMKEY](../../t-sql/functions/signbyasymkey-transact-sql.md)|[ИНСТРУКЦИЯ VERIFYSIGNEDBYASMKEY](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)|  
+|[SIGNBYASYMKEY](../../t-sql/functions/signbyasymkey-transact-sql.md)|[VERIFYSIGNEDBYASMKEY](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)|  
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
@@ -80,10 +80,10 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции](../../t-sql/functions/functions.md)  
 [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
 [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

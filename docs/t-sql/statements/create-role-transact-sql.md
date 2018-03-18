@@ -1,5 +1,5 @@
 ---
-title: "Создание РОЛИ (Transact-SQL) | Документы Microsoft"
+title: "CREATE ROLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  *role_name*  
  Имя создаваемой роли.  
   
- АВТОРИЗАЦИЯ *owner_name*  
+ AUTHORIZATION *owner_name*  
  Пользователь (или роль) базы данных, который станет владельцем новой роли. Если пользователь не указан, владельцем роли станет пользователь, выполнивший инструкцию CREATE ROLE.  
   
-## <a name="remarks"></a>Замечания  
- Роли — это сущности, защищаемые на уровне базы данных. После создания роли необходимо настроить для нее разрешения уровня базы данных при помощи инструкций GRANT, DENY и REVOKE. Чтобы добавить членов роли базы данных, используйте [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Дополнительные сведения см. в разделе [роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  
+## <a name="remarks"></a>Remarks  
+ Роли — это сущности, защищаемые на уровне базы данных. После создания роли необходимо настроить для нее разрешения уровня базы данных при помощи инструкций GRANT, DENY и REVOKE. Для добавления членов в роль базы данных следует использовать инструкцию [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md). Дополнительные сведения см. в статье [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Роли базы данных видны в представлениях каталога sys.database_role_members и sys.database_principals.  
   
@@ -70,8 +70,8 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
- Требуется **CREATE ROLE** разрешений в базе данных или членство в группе **db_securityadmin** предопределенной роли базы данных. При использовании **АВТОРИЗАЦИИ** параметр, необходимы следующие разрешения также:  
+## <a name="permissions"></a>Разрешения  
+ Требуется разрешение **CREATE ROLE** для базы данных или членство в предопределенной роли базы данных **db_securityadmin**. Если указывается параметр **AUTHORIZATION**, необходимы также следующие разрешения:  
   
 -   Для передачи роли во владение другому пользователю необходимо связанное с этим пользователем разрешение IMPERSONATE.  
   
@@ -80,7 +80,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   Для передачи роли во владение роли приложения необходимо связанное с прикладной ролью разрешение ALTER.  
   
 ## <a name="examples"></a>Примеры  
-Всех последующих примерах используется база данных AdventureWorks.   
+Во всех приведенных ниже примерах используется база данных AdventureWorks.   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Создание роли базы данных, принадлежащей пользователю базы данных  
  Следующий пример создает роль базы данных `buyers`, принадлежащую пользователю `BenMiller`.  
@@ -100,8 +100,8 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ИЗМЕНИТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [УДАЛИТЬ РОЛЬ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromText (тип данных geography) | Документы Microsoft"
+title: "STGeomCollFromText (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geography** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT), дополненное всеми значениями Z (уровень) и значения M (Мера), сопровождающими экземпляр.
+Возвращает экземпляр **geography** из WKT-представления открытого геопространственного консорциума (OGC) вместе со значениями Z (высота) и M (мера), сопровождающими экземпляр.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *geometrycollection_tagged_text*  
- Является WKT-представление **geography** экземпляр, который необходимо вернуть. *geometrycollection_tagged_text* — **nvarchar(max)** выражение.  
+ WKT-представление возвращаемого экземпляра **geography**. *geometrycollection_tagged_text* является выражением типа **nvarchar(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geography** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geography** экземпляр, возвращаемый STGeomCollFromText() равно соответствующих входных данных WKT.  
+ Тип OGC экземпляра **geography**, возвращаемый методом STGeomCollFromText(), получает значение в зависимости от соответствующих входных данных WKT.  
   
- Этот метод создает исключение **ArgumentException** Если входные данные не являются допустимыми.  
+ Этот метод вызывает исключение **ArgumentException**, если ввод недопустим.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STGeomCollFromText()` применяется для создания экземпляра `geography`.  
@@ -70,7 +70,7 @@ SET @g = geography::STGeomCollFromText('GEOMETRYCOLLECTION ( POINT(-122.34900 47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "XML (Transact-SQL) | Документы Microsoft"
+title: "xml (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Тип данных, в котором хранятся XML-данные. Можно хранить **xml** экземпляров в столбце или переменной **xml** типа.  
+  Тип данных, в котором хранятся XML-данные. Можно хранить экземпляры **xml** в столбце либо в переменной типа **xml**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,20 +47,20 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>Аргументы  
  CONTENT  
- Ограничивает **xml** экземпляр должен иметь правильный формат XML-фрагмент. XML-данные могут содержать несколько (0 или больше) элементов верхнего уровня. Текстовые узлы разрешены на верхнем уровне.  
+ Экземпляр **xml** должен быть XML-фрагментом правильного формата. XML-данные могут содержать несколько (0 или больше) элементов верхнего уровня. Текстовые узлы разрешены на верхнем уровне.  
   
  Это поведение по умолчанию.  
   
  DOCUMENT  
- Ограничивает **xml** экземпляр должен иметь правильный формат XML-документа. XML-данные должны содержать только один корневой элемент. Текстовые узлы на верхнем уровне запрещены.  
+ Экземпляр **xml** должен быть XML-документом правильного формата. XML-данные должны содержать только один корневой элемент. Текстовые узлы на верхнем уровне запрещены.  
   
  *xml_schema_collection*  
- Имя коллекции XML-схем. Чтобы создать типизированный **xml** столбца или переменной, при необходимости можно указать имя коллекции схем XML. Дополнительные сведения о типизированном и нетипизированном XML, см. в разделе [сравнение типизированного XML нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Имя коллекции XML-схем. Чтобы создать типизированный столбец или переменную **xml**, можно дополнительно указать имя коллекции XML-схем. Дополнительные сведения о типизированном и нетипизированном XML см. в разделе [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="remarks"></a>Remarks  
- Размер хранимого представления **xml** экземпляры типа данных не может превышать 2 гигабайт (ГБ).  
+ Размер хранимого представления экземпляров типа данных **xml** не может превышать 2 ГБ.  
   
- Аспекты CONTENT и DOCUMENT применяются только к типизованным XML. Дополнительные сведения см. [сравнение типизированного XML нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Аспекты CONTENT и DOCUMENT применяются только к типизованным XML. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -73,8 +73,8 @@ SELECT @y;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+## <a name="see-also"></a>См. также:  
+ [Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Статические географические методы OGC | Документы Microsoft"
+title: "Статические географические методы OGC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
   
  Дополнительные сведения о спецификациях консорциума OGC см. в одном из следующих источников:  
   
- [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](http://go.microsoft.com/fwlink/?LinkId=93627)  
+ [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](http://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
+ [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -72,8 +72,8 @@ ms.lasthandoff: 01/25/2018
 -   [STMPolyFromWKB](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
 ## <a name="see-also"></a>См. также  
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

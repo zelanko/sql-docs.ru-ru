@@ -1,5 +1,5 @@
 ---
-title: "GO (Transact-SQL) | Документы Microsoft"
+title: "GO (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server - GO
+# <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server — GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет команды, которые не являются [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, но распознаются **sqlcmd** и **osql** служебных программ и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора кода. Эти команды используются для повышения удобочитаемости и упрощения выполнения пакетов и скриптов.  
+  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляются команды, которые не являются инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)], но распознаются программами **sqlcmd** и **osql**, а также редактором кода в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Эти команды используются для повышения удобочитаемости и упрощения выполнения пакетов и скриптов.  
   
-  GO обозначает конец пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебных программ.  
+  GO информирует программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об окончании пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ GO [count]
  Целое положительное число. Пакет, предшествующий команде GO, будет выполняться заданное количество раз.  
   
 ## <a name="remarks"></a>Remarks  
- Ключевое слово GO является не [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции; оно команду распознается **sqlcmd** и **osql** служебные программы и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактор кода.  
+ GO — это не инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)]; это команда, распознаваемая программами **sqlcmd** и **osql**, а также редактором кода среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретируют команду GO как сигнал о том, что им следует отправить текущий пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Текущий пакет инструкций состоит из всех инструкций, введенных за время, прошедшее с момента обработки последней команды GO, или, если данная команда GO является первой, с момента начала нерегламентированного сеанса или скрипта.  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создаются два пакета. Первый содержит только `USE``AdventureWorks2012` инструкции, чтобы задать контекст базы данных. Остальные инструкции выполняют те или иные операции над локальной переменной и должны быть сгруппированы в один пакет. Поэтому следующая команда `GO` указывается только после последней инструкции, в которой используется переменная.  
+ В следующем примере создаются два пакета. Первый содержит только инструкцию `USE``AdventureWorks2012`, которая задает контекст базы данных. Остальные инструкции выполняют те или иные операции над локальной переменной и должны быть сгруппированы в один пакет. Поэтому следующая команда `GO` указывается только после последней инструкции, в которой используется переменная.  
   
 ```  
 USE AdventureWorks2012;  

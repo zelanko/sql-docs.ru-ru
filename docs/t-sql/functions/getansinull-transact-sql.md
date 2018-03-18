@@ -1,5 +1,5 @@
 ---
-title: "Функция GETANSINULL (Transact-SQL) | Документы Microsoft"
+title: "GETANSINULL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- "*базы данных*"  
- Имя базы данных, для которой возвращается информация о допустимости значений NULL. *База данных*либо **char** или **nchar**. Если **char**, *базы данных* неявно преобразуется в **nchar**.  
+ '*database*'  
+ Имя базы данных, для которой возвращается информация о допустимости значений NULL. Аргумент *database* имеет тип **char** или **nchar**. Если аргумент *database* имеет тип **char**, он неявно преобразуется в **nchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если значения NULL в указанной базе данных допустимы, а допустимость значений NULL для столбцов или типов не определена явно, функция GETANSINULL возвращает 1. Это значение по умолчанию для ANSI NULL.  
   
  Чтобы включить поведение по умолчанию для ANSI NULL, необходимо задать одно следующих условий.  
   
--   ALTER DATABASE *имя_базы_данных* SET ANSI_NULL_DEFAULT в состоянии ON  
+-   ALTER DATABASE *имя_базы_данных* SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   
@@ -86,6 +86,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>См. также:  
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

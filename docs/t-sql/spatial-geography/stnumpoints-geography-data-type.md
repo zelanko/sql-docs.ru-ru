@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (тип данных geography) | Документы Microsoft"
+title: "STNumPoints (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает общее число точек в каждой из фигур в **geography** экземпляра.  
+  Возвращает общее количество точек в каждой из фигур в экземпляре **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод подсчитывает число точек в описании **geography** экземпляра. Повторяющиеся точки учитываются, однако соединение точек между сегментами учитывается только один раз. Если экземпляр является коллекцией, этот метод возвращает общее количество точек в каждом из элементов коллекции.  
+ Этот метод подсчитывает число точек в описании экземпляра **geography**. Повторяющиеся точки учитываются, однако соединение точек между сегментами учитывается только один раз. Если экземпляр является коллекцией, этот метод возвращает общее количество точек в каждом из элементов коллекции.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -79,7 +79,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

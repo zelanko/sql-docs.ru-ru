@@ -1,5 +1,5 @@
 ---
-title: "STStartPoint (тип данных geometry) | Документы Microsoft"
+title: "STStartPoint (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает начальную точку **geometry** экземпляра.
+Возвращает начальную точку экземпляра **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Открытый тип Geospatial Consortium (OGC): **точки**  
+ Тип открытого геопространственного консорциума (OGC): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- `STStartPoint()`является эквивалентом [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
+ Метод `STStartPoint()` является эквивалентом метода [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `LineString` и при помощи метода `STStartPoint()` производится получение его начальной точки.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0;
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STPointN (тип данных geometry)](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

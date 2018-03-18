@@ -1,5 +1,5 @@
 ---
-title: "COMPRESS (Transact-SQL) | Документы Microsoft"
+title: "COMPRESS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Сжимает входное выражение с применением алгоритма GZIP. Результат сжатия — массив байтов типа **varbinary(max)**.
+Сжимает входное выражение с использованием алгоритма GZIP. Результатом сжатия является массив байтов типа **varbinary(max)**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,20 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Аргументы  
 *expression*  
-— **Nvarchar (***n***)**, **nvarchar(max)**, **varchar (**  *n*  **)**, **varchar(max)**, **varbinary (**  *n*  **)**, **varbinary(max)**, **char (***n***)**, **nchar ()**   *n*  **)**, или **двоичный (***n***)** выражение. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
+Выражение типа **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)** или **binary(***n***)**. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
   
-## <a name="return-types"></a>Возвращаемые типы
-Возвращает тип данных **varbinary(max)** , представляющий сжатое содержимое входных данных.
+## <a name="return-types"></a>Типы возвращаемых данных
+Возвращает сжатое содержимое входного выражения, которое имеет тип данных **varbinary(max)**.
   
-## <a name="remarks"></a>Замечания  
-Невозможно индексировать сжатых данных.
+## <a name="remarks"></a>Remarks  
+Сжатые данные невозможно индексировать.
   
-Этой функции COMPRESS сжимает данные, предоставленные в качестве входного выражения и должен быть вызван для каждого раздела данных будет сжат. Автоматическое сжатие на уровне строк или страниц во время хранения в разделе [сжатие данных](../../relational-databases/data-compression/data-compression.md).
+Функция COMPRESS сжимает данные, предоставленные во входном выражении, и должна вызываться для каждого раздела сжимаемых данных. Сведения об автоматическом сжатии хранимых данных на уровне строк или страниц см. в статье [Сжатие данных](../../relational-databases/data-compression/data-compression.md).
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Сжатие данных во время вставки таблицы  
-В следующем примере показано, как для сжатия данных, вставляемых в таблицу:
+### <a name="a-compress-data-during-the-table-insert"></a>A. Сжатие данных во время вставки в таблицу  
+В приведенном ниже примере показано, как сжать данные, вставляемые в таблицу.
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -68,8 +68,8 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>Б. Сжатая версия архив удаленных строк  
-Следующая инструкция удаляет старые записи проигрывателя из `player` таблицы и сохраняет записи в `inactivePlayer` таблицы в сжатом формате для экономии места.
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>Б. Архивация сжатой версии удаленных строк  
+Приведенная ниже инструкция удаляет старые записи игроков из таблицы `player` и сохраняет их в таблице `inactivePlayer` в сжатой форме для экономии места.
   
 ```sql
 DELETE player  
@@ -78,8 +78,8 @@ OUTPUT id, name, surname datemodifier, COMPRESS(info)
 INTO dbo.inactivePlayers ;  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[РАСПАКОВКА &#40; Transact-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS (Transact-SQL)](../../t-sql/functions/decompress-transact-sql.md)
   
   

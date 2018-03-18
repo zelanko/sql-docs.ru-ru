@@ -1,5 +1,5 @@
 ---
-title: "DROP BROKER PRIORITY (Transact-SQL) | Документы Microsoft"
+title: "DROP BROKER PRIORITY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -64,9 +64,9 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкция ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [СОЗДАТЬ ПРИОРИТЕТ БРОКЕРА &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

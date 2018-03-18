@@ -1,5 +1,5 @@
 ---
-title: "DROP PROCEDURE (Transact-SQL) | Документы Microsoft"
+title: "DROP PROCEDURE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -60,27 +60,27 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
+ *IF EXISTS*  
  **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляет процедуру только в том случае, если он уже существует.  
+ Условное удаление процедуры только в том случае, если она уже существует.  
   
  *schema_name*  
  Имя схемы, которой принадлежит процедура. Имя сервера или базы данных задавать нельзя.  
   
- *процедура*  
+ *procedure*  
  Имя удаляемой хранимой процедуры или группы хранимых процедур. Нельзя удалить отдельные процедуры из группы пронумерованных процедур. Группа процедур удаляется полностью.  
   
 ## <a name="best-practices"></a>Рекомендации  
- Перед удалением хранимой процедуры проверьте зависимые объекты и измените эти объекты соответствующим образом. Удаление хранимой процедуры может вызвать сбой зависимых процедур и скриптов, если эти объекты не обновлены. Дополнительные сведения см. в разделе [Просмотр зависимостей хранимой процедуры](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
+ Перед удалением хранимой процедуры проверьте зависимые объекты и измените эти объекты соответствующим образом. Удаление хранимой процедуры может вызвать сбой зависимых процедур и скриптов, если эти объекты не обновлены. Дополнительные сведения см. в статье [Просмотр зависимостей хранимой процедуры](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ## <a name="metadata"></a>Метаданные  
- Для отображения списка существующих процедур, запросов **sys.objects** представления каталога. Чтобы просмотреть определения процедуры, запрос **sys.sql_modules** представления каталога.  
+ Для отображения списка существующих процедур запросите представление каталога **sys.objects**. Для отображения определения процедуры выполните запрос к представлению каталога **sys.sql_modules**.  
   
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется **УПРАВЛЕНИЯ** разрешение на выполнение процедуры или **ALTER** разрешений на схему, которой принадлежит процедура, либо членство в **db_ddladmin** предопределенной роли сервера .  
+ Необходимо разрешение **CONTROL** для процедуры, разрешение **ALTER** для схемы, которой принадлежит процедура, либо членство в предопределенной роли сервера **db_ddladmin**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере хранимая процедура `dbo.uspMyProc` удаляется из текущей базы данных.  
@@ -96,7 +96,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- В следующем примере удаляется `dbo.uspMyProc` хранимой процедуры, если он существует, но не приводят к ошибке, если процедура не существует. Этот синтаксис является новым в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ В приведенном ниже примере удаляется хранимая процедура `dbo.uspMyProc`, если она существует, но если она не существует, ошибка не возникает. Этот синтаксис является новым в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
@@ -107,7 +107,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
- [sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Удаление хранимой процедуры](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "ГДЕ (Transact-SQL) | Документы Microsoft"
+title: "WHERE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-\<*search_condition* > определяет условия, которые должны быть выполнены для возвращаемых строк. Количество предикатов, которое может содержать условие поиска, не ограничено. Дополнительные сведения об условиях поиска и предикатах см. в разделе [условие поиска &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > Определяет условия, которые должны быть выполнены для всех возвращаемых строк. Количество предикатов, которое может содержать условие поиска, не ограничено. Дополнительные сведения об условиях поиска и предикатах см. в статье [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показывается, как можно использовать в предложении `WHERE` различные распространенные условия поиска.  
@@ -124,10 +124,10 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [Предикаты &#40; Transact-SQL &#41;](~/t-sql/queries/predicates.md)   
- [Условие поиска &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [Предикаты (Transact-SQL)](~/t-sql/queries/predicates.md)   
+ [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)  

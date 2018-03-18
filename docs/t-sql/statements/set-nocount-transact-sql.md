@@ -1,5 +1,5 @@
 ---
-title: "SET NOCOUNT (Transact-SQL) | Документы Microsoft"
+title: "SET NOCOUNT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если значение инструкции SET NOCOUNT равно ON, то количество строк не возвращается. Если значение инструкции SET NOCOUNT равно OFF, то количество строк возвращается.  
   
- @@ROWCOUNT Функция обновляется даже в том случае, если инструкция SET NOCOUNT равно ON.  
+ Функция @@ROWCOUNT обновляется, даже если значение SET NOCOUNT равно ON.  
   
  Инструкция SET NOCOUNT ON запрещает всем инструкциям хранимой процедуры отправлять клиенту сообщения DONE_IN_PROC. Для хранимых процедур с несколькими инструкциями, не возвращающих большое количество фактических данных, или для процедур, содержащих циклы [!INCLUDE[tsql](../../includes/tsql-md.md)], установка в инструкции SET NOCOUNT параметра ON может значительно повысить производительность за счет существенного снижения объема сетевого трафика.  
   
  Инструкция SET NOCOUNT устанавливается во время выполнения, а не на этапе синтаксического анализа.  
   
- Чтобы просмотреть текущее значение параметра для этого параметра, выполните следующий запрос.  
+ Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
   
 ```  
 DECLARE @NOCOUNT VARCHAR(3) = 'OFF';  
@@ -69,8 +69,8 @@ SELECT @NOCOUNT AS NOCOUNT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере запрещается вывод сообщения о количестве измененных строк.  
@@ -97,8 +97,8 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

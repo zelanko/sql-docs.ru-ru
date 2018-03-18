@@ -17,11 +17,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cda61336badec20e15cf0d0142e592ef63431254
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 682ab8eb2e55909d78e871c8624c82e8fd5c70c3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Управление сертификатами для SQL Server Integration Services Scale Out
 
@@ -139,7 +139,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### <a name="4-update-the-scale-out-worker-service-configuration-file"></a>4. Обновление файла конфигурации для службы рабочей роли Scale Out
 Обновите файл конфигурации для службы рабочей роли Scale Out (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) в узле рабочей роли. Обновите **WorkerHttpsCertThumbprint**, используя отпечаток нового сертификата.
 
-#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-worker-node"></a>5. Установка сертификата клиента в корневое хранилище локального компьютера в узле рабочей роли
+#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-master-node"></a>5. Установка сертификата клиента в корневое хранилище локального компьютера в узле Master
 
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Перезапуск службы рабочей роли Scale Out
 

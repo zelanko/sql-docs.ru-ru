@@ -1,5 +1,5 @@
 ---
-title: "STY (тип данных geometry) | Документы Microsoft"
+title: "STY (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sty-geometry-data-type"></a>STY (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Координата Y свойство **точки** экземпляра.
+Свойство координаты Y экземпляра **Point**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Значение этого свойства будет иметь значение null при **geometry** экземпляр — это точка. Это свойство предназначено только для чтения.  
+ Это свойство будет иметь значение NULL, если экземпляр **geometry** является точкой. Это свойство доступно только для чтения.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Point` и используется метод `STY`, чтобы получить координату экземпляра по оси Y.  
@@ -60,9 +60,9 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STX (тип данных geometry)](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
- [STSrid &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid (тип данных geometry)](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

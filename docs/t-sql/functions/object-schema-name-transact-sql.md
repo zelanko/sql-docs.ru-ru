@@ -1,5 +1,5 @@
 ---
-title: "OBJECT_SCHEMA_NAME (Transact-SQL) | Документы Microsoft"
+title: "OBJECT_SCHEMA_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает имя схемы базы данных в области действия схемы. Список объектов области схемы см. в разделе [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+  Возвращает имя схемы базы данных в области действия схемы. Список объектов области схемы см. в статье [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>Аргументы  
  *object_id*  
- Идентификатор объекта, который будет использован. *object_id* — **int** и считается объект области схемы указанной базы данных или в контексте текущей базы данных.  
+ Идентификатор объекта, который будет использован. Аргумент *object_id* имеет тип **int**. Предполагается, что это объект в области схемы указанной базы данных или в контексте текущей базы данных.  
   
  *database_id*  
- Идентификатор базы данных, где будет выполняться поиск объекта. *database_id* — **int**.  
+ Идентификатор базы данных, где будет выполняться поиск объекта. Аргумент *database_id* имеет тип **int**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **sysname**  
@@ -64,15 +64,15 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  Пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые пользователю были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как OBJECT_SCHEMA_NAME могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ANY на данный объект. Чтобы указать идентификатор базы данных, также требуется разрешение CONNECT на базу данных или необходимо включить гостевую учетную запись.  
   
-## <a name="remarks"></a>Замечания  
- Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделе [выражений](../../t-sql/language-elements/expressions-transact-sql.md) и [ГДЕ](../../t-sql/queries/where-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделах [Выражения](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Результирующий набор, возвращенный системной функцией, использует порядок сортировки текущей базы данных.  
   
- Если *database_id* не указан, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] предполагается, что *object_id* находится в контексте текущей базы данных. Запрос, который ссылается на *object_id* в другой базе данных возвращает значение NULL или неправильные результаты. Например, в следующем запросе текущий контекст базы данных — база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытается возвратить имя схемы объекта для заданного идентификатора объекта в этой базе данных, а не в базе данных, указанной в предложении FROM запроса. Поэтому возвращаются неверные сведения.  
+ Если аргумент *database_id* не указан, то в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] предполагается, что аргумент *object_id* находится в контексте текущей базы данных. Запрос, ссылающийся на *object_id* в другой базе данных, возвращает значение NULL или неправильные результаты. Например, в следующем запросе текущий контекст базы данных — база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытается возвратить имя схемы объекта для заданного идентификатора объекта в этой базе данных, а не в базе данных, указанной в предложении FROM запроса. Поэтому возвращаются неверные сведения.  
   
 ```  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
@@ -119,10 +119,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)   
  [Защищаемые объекты](../../relational-databases/security/securables.md)  
   
   

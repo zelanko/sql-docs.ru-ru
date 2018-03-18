@@ -1,5 +1,5 @@
 ---
-title: "Операторы (Transact-SQL) | Документы Microsoft"
+title: "Операторы (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 |[Операторы сравнения](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Оператор объединения строк](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[Составные операторы](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Унарные операторы](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a>См. также  
- [Приоритет операторов &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Приоритет операторов (Transact-SQL)](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STSrid (тип данных geometry) | Документы Microsoft"
+title: "STSrid (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** представляет собой целое число, представляющее идентификатор пространственной ссылки экземпляра.  
+  **STSrid** является целым числом, представляющим собой идентификатор пространственной ссылки экземпляра.  
   
 Это свойство можно изменять.
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **int**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Тип CLR: **SqlInt32**  
   
 ## <a name="examples"></a>Примеры  
- В первом примере создается **geometry** экземпляра со значением SRID, 13 и использует `STSrid` для подтверждения SRID.  
+ В первом примере создается экземпляр **geometry** со значением SRID, равным 13, и используется метод `STSrid` для подтверждения SRID.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STX (тип данных geometry)](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY (тип данных geometry)](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

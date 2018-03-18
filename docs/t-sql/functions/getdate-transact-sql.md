@@ -1,5 +1,5 @@
 ---
-title: "GETDATE (Transact-SQL) | Документы Microsoft"
+title: "GETDATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,12 +46,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает текущую отметку времени базы данных системы как **datetime** значение без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  SYSDATETIME и SYSUTCDATETIME имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. SYSDATETIME, SYSUTCDATETIME и SYSDATETIMEOFFSET можно присваивать переменным любого типа даты и времени.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,12 +64,12 @@ GETDATE ( )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **datetime**  
   
-## <a name="remarks"></a>Замечания  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкции могут ссылаться на функцию GETDATE в любом месте, они могут ссылаться на **datetime** выражение.  
+## <a name="remarks"></a>Remarks  
+ Функция GETDATE может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.  
   
  GETDATE является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.  
   
- Использование SWITCHOFFSET с функцией GETDATE() может вызвать замедление выполнения запроса, поскольку оптимизатор запросов не может получить точные оценки количества элементов для значения GETDATE. Рекомендуется заранее вычислить значение GETDATE, а затем указать это значение в запросе, как показано в следующем примере. Кроме того используйте указание запроса OPTION (RECOMPILE), чтобы заставить оптимизатор запросов перекомпилировать план запроса при очередном такой же запрос выполняется. В этом случае оптимизатор будет иметь точные оценки количества элементов для GETDATE(), что позволит ему сформировать более эффективный план запроса.  
+ Использование SWITCHOFFSET с функцией GETDATE() может вызвать замедление выполнения запроса, поскольку оптимизатор запросов не может получить точные оценки количества элементов для значения GETDATE. Рекомендуется заранее вычислить значение GETDATE, а затем указать это значение в запросе, как показано в следующем примере. Кроме того, с помощью указания запроса OPTION (RECOMPILE) можно вынудить оптимизатор запросов повторно компилировать план запроса при каждом выполнении одного и того же запроса. В этом случае оптимизатор будет иметь точные оценки количества элементов для GETDATE(), что позволит ему сформировать более эффективный план запроса.  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -149,8 +149,8 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000  
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующих примерах используется три [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системные функции, которые возвращают текущую дату и время для возврата даты и времени. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенных ниже примерах с помощью трех системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит получение даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
   
 ### <a name="d-getting-the-current-system-date-and-time"></a>Г. Получение текущей системной даты и времени  
   

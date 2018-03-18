@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (тип данных geometry) | Документы Microsoft"
+title: "STOverlaps (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает 1, если **geometry** экземпляр перекрывается другим **geometry** экземпляра. В противном случае возвращается значение 0.
+Возвращает значение 1, если экземпляр **geometry** перекрывает другой экземпляр **geometry**. В противном случае возвращается значение 0.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,22 +45,22 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр для сравнения с экземпляром, в котором `STOverlaps()` вызывается.  
+ Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STOverlaps()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Два **geometry** экземпляров перекрываются, если область, представляющая их пересечение, имеет того же измерения, что и экземпляры и область не равна либо экземпляра.  
+ Два экземпляра **geometry** перекрываются, если область, представляющая их пересечение, имеет ту же размерность, что и экземпляры, а область не равна ни одному из экземпляров.  
   
- `STOverlaps()`всегда возвращает 0, если точки где **geometry** пересекаются не одно измерение.  
+ Метод `STOverlaps()` всегда возвращает 0, если точки, в которых пересекаются экземпляры **geometry**, не имеют одну и те же размерность.  
   
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STOverlaps()` Чтобы протестировать два **geometry** экземпляров перекрываются.  
+ В приведенном ниже примере с помощью метода `STOverlaps()` выполняется проверка того, перекрываются ли два экземпляра **geometry**.  
   
 ```  
 DECLARE @g geometry;  
@@ -70,7 +70,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

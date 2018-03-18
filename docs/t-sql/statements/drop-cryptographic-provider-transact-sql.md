@@ -1,5 +1,5 @@
 ---
-title: "Удаление ПОСТАВЩИКА служб ШИФРОВАНИЯ (Transact-SQL) | Документы Microsoft"
+title: "DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  Имя поставщика расширенного управления ключами.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Чтобы удалить поставщик расширенного управления ключами, необходимо остановить все сеансы, в которых используется этот поставщик.  
   
  Поставщик расширенного управления ключами может быть удален только при условии отсутствия сопоставленных с ним учетных данных.  
   
  Если на момент удаления поставщика расширенного управления ключами существуют сопоставленные с ним ключи, идентификаторы GUID для этих ключей сохраняются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если впоследствии будет создан поставщик с теми же идентификаторами GUID для ключей, ключи могут быть использованы повторно.  
   
-## <a name="permissions"></a>Permissions  
- Требует разрешение CONTROL в симметричном ключе.  
+## <a name="permissions"></a>Разрешения  
+ Требует разрешение CONTROL на симметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется поставщик служб шифрования с именем `SecurityProvider`.  
@@ -73,10 +73,10 @@ DROP CRYPTOGRAPHIC PROVIDER SecurityProvider;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
+ [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   

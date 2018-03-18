@@ -1,5 +1,5 @@
 ---
-title: "KEY_GUID (Transact-SQL) | Документы Microsoft"
+title: "KEY_GUID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ Key_GUID( 'Key_Name' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *Key_Name* **"**  
+ **'** *Key_Name* **'**  
  Имя симметричного ключа в базе данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если значение идентификатора было указано при создании ключа, его идентификатор GUID — это MD5-хэш этого значения идентификатора. Если значение идентификатора не было указано, то идентификатор GUID был сформирован сервером.  
   
  Если ключ является временным, имя ключа должно начинаться с символа #.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Так как временные ключи доступны только во время сеанса, в котором они были созданы, никаких разрешений для доступа к ним не требуется. Чтобы получить доступ к ключу, не являющемуся временным, вызывающей программе необходимо соответствующее разрешение для ключа, и она не должна была получить запрет разрешения VIEW для ключа.  
   
 ## <a name="examples"></a>Примеры  
@@ -71,7 +71,7 @@ SELECT Key_GUID('ABerglundKey1');
   
 ## <a name="see-also"></a>См. также:  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [sys.key_encryptions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromWKB (тип данных geography) | Документы Microsoft"
+title: "STGeomCollFromWKB (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **GeometryCollection**экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **GeometryCollection** из WKB-представления открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geometrycollection*  
- WKB-представление **GeometryCollection** экземпляр, который необходимо вернуть. *WKB_geometrycollection* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **GeometryCollection**. *WKB_geometrycollection* — это выражение **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **GeometryCollection** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **GeometryCollection**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geography** присвоено экземпляр, возвращаемый STGeomCollFromWKB() **GeometryCollection**, **MultiPolygon**, **MultiLineString**, или **MultiPoint**, в зависимости от соответствующих входных данных WKB.  
+ В зависимости от соответствующих входных данных WKB в качестве типа OGC экземпляра **geography**, возвращаемого STGeomCollFromWKB(), задается **GeometryCollection**, **MultiPolygon**, **MultiLineString** или **MultiPoint**.  
   
- Этот метод создает исключение **FormatException** исключение, если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STGeomCollFromWKB()` применяется для создания экземпляра `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STGeomCollFromWKB(0x0107000000020000000101000000759318045696
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

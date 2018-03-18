@@ -1,5 +1,5 @@
 ---
-title: "AsGml (тип данных geometry) | Документы Microsoft"
+title: "AsGml (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает представление языка разметки Geography (GML) **geometry** экземпляра.
+Возвращает представление экземпляра **geometry** на языке GML.
   
-Дополнительные сведения о языке GML см. в разделе следующей спецификации консорциума Ogc:[спецификации OGC, географический язык разметки.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Дополнительные сведения о языке GML см. в следующей спецификации открытого геопространственного консорциума (OGC): [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **xml**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **xml**  
   
- Возвращаемый тип CLR: **SqlXml**  
+ Тип возвращаемых данных CLR: **SqlXml**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -70,7 +70,7 @@ SELECT @g.AsGml();
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "@@SERVICENAME (Transact-SQL) | Документы Microsoft"
+title: "@@SERVICENAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает имя раздела реестра, согласно которому запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. @@SERVICENAME возвращает «MSSQLSERVER», если текущий экземпляр является экземпляром по умолчанию, то функция возвращает имя экземпляра, если текущий экземпляр является именованным экземпляром.  
+  Возвращает имя раздела реестра, согласно которому запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если текущий экземпляр является экземпляром по умолчанию, функция @@SERVICENAME возвращает "MSSQLSERVER". Если же текущий экземпляр является именованным экземпляром, эта функция возвращает его имя.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в качестве службы с именем MSSQLServer.  
   
 ## <a name="examples"></a>Примеры  

@@ -1,5 +1,5 @@
 ---
-title: "Отмена разрешений сервера (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений сервера (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Определяет разрешение, которое может быть предоставлено на сервер. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Определяет разрешение, которое может быть предоставлено на сервер. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- {ДЛЯ | FROM} \<grantee_principal > Указывает участника, от которого отменяется разрешение.  
+ { TO | FROM } \<grantee_principal> Задает субъекта, у которого отменяется разрешение.  
   
- AS \<grantor_principal > Указывает участника, от которого участник, выполняющий данный запрос, наследует право отмены разрешения.  
+ AS \<grantor_principal> Указывает субъекта, от которого субъект, выполняющий данный запрос, наследует право на отмену разрешения.  
   
  GRANT OPTION FOR  
  Показывает, что отменяется право на предоставление указанного разрешения другим участникам. Само разрешение отменено не будет.  
@@ -99,14 +99,14 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Указывает определяемую пользователем роль сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Разрешения в области сервера могут быть отменены только в том случае, если текущей базой данных является master.  
   
  REVOKE удаляет как разрешение GRANT, так и разрешение DENY.  
   
  REVOKE GRANT OPTION FOR используется для отзыва права повторно предоставлять указанное разрешение. Если участник имеет право предоставлять данное разрешение, право предоставления будет отозвано, но само разрешение не отменяется. Однако если участник имеет указанное разрешение без аргумента GRANT, то будет отменено и само разрешение.  
   
- Сведения о разрешениях сервера можно просмотреть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога, а также сведения об участниках сервера можно просмотреть в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога. Сведения о членстве ролей сервера можно просмотреть в [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) представления каталога.  
+ Сведения о разрешениях для сервера можно просмотреть в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), а сведения о субъектах на уровне сервера — в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Сведения о членстве ролей сервера можно просмотреть в представлении каталога [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
  Сервер является наивысшим уровнем в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно отменять на сервере, перечислены в следующей таблице.  
   
@@ -133,7 +133,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|Создание группы доступности<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
 |CREATE SERVER ROLE<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
@@ -147,7 +147,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL SERVER или членства в предопределенной роли сервера sysadmin.  
   
 ## <a name="examples"></a>Примеры  
@@ -175,11 +175,11 @@ GO
 ## <a name="see-also"></a>См. также:  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [Запрет разрешения Server &#40; Transact-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [Отмена разрешений сервера (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY, запрет разрешения на сервере (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений сервера (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

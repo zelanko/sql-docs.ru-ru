@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAggregate (тип данных geography) | Документы Microsoft"
+title: "EnvelopeAggregate (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает ограничивающий объект для заданного набора **geography** объектов. Итоговый **geography** объект содержит несколько сегментов дуги.
+Возвращает ограничивающий объект для заданного набора объектов **geography**. Итоговый объект **geography** содержит несколько сегментов дуги.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,23 +45,23 @@ EnvelopeAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Аргументы  
  *geography_operand*  
- — **Geography** столбец таблицы типа, который содержит набор из **geography** объектов, для которого следует выполнить конверт статистические операции.  
+ Столбец таблицы типа **geography**, в котором содержится набор объектов **geography**, используемых при выполнении операции Envelope Aggregate.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 ## <a name="remarks"></a>Remarks  
- Объект **FullGlobe** возвращается, если итоговый ограничивающий объект больше полушария. Этот метод не является точным.  
+ Если итоговый ограничивающий объект больше полушария, то возвращается объект **FullGlobe**. Этот метод не является точным.  
   
- Метод возвращает **null** Если входные данные с различными идентификаторами SRID. В разделе [идентификаторы пространственных ссылок &#40; SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+ Метод возвращает значение **NULL**, если во входных данных содержатся различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Метод игнорирует **null** входных данных.  
+ Метод не обрабатывает входные значения **NULL**.  
   
 > [!NOTE]  
->  Метод возвращает **null** при входе присутствуют только значения **null**.  
+>  Метод возвращает значение **NULL**, если входными являются значения **NULL**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере выполняется `EnvelopeAggregate` на наборе **geography** расположение точек в границах города.  
+ В следующем примере выполняется операция `EnvelopeAggregate` в наборе различных географических точек **geography** в границах города.  
   
  ```
  USE AdventureWorks2012  
@@ -73,7 +73,7 @@ EnvelopeAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STATS_DATE (Transact-SQL) | Документы Microsoft"
+title: "STATS_DATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 
   Возвращает дату последнего обновления статистики для таблицы или индексированного представления.  
   
- Дополнительные сведения об обновлении статистики см. в разделе [статистики](../../relational-databases/statistics/statistics.md).  
+ Дополнительные сведения об обновлении статистики см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,14 +58,14 @@ STATS_DATE ( object_id , stats_id )
  Идентификатор объекта статистики.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает **datetime** в случае успешного выполнения. Возвращает **NULL** если большой двоичный объект статистики не был создан.  
+ Возвращает **datetime** в случае успешного выполнения. Возвращает **NULL**, если большой двоичный объект статистики не был создан.  
   
 ## <a name="remarks"></a>Remarks  
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где может быть использовано выражение.  
  
- Дата обновления статистики хранится в [большой двоичный объект статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммы](../../relational-databases/statistics/statistics.md#histogram) и [вектор плотностей](../../relational-databases/statistics/statistics.md#density), а не в метаданных. При чтении нет данных для создания статистических данных, статистические данные большого двоичного объекта не создается, а дата недоступна. Это происходит для отфильтрованной статистики, для которого предикат не возвращает ни одной строки или новые пустые таблицы.
+ Дата обновления статистики хранится в [большом двоичном объекте статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммой](../../relational-databases/statistics/statistics.md#histogram) и [вектором плотности](../../relational-databases/statistics/statistics.md#density), а не в метаданных. Если нет данных для создания статистических данных, большой двоичный объект статистики не создается и дата недоступна. Это происходит с отфильтрованной статистикой, для которой предикат не возвращает ни одной строки, или с новыми пустыми таблицами.
  
- Если статистика соответствует индексу, *stats_id* значение в [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) представление каталога совпадает со значением *index_id* значение в [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.
+ Если статистика соответствует индексу, то значение *stats_id* в представлении каталога [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) совпадает со значением *index_id* в представлении каталога [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner или разрешение на просмотр метаданных для таблицы или индексированного представления.  
@@ -85,7 +85,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- Если статистика соответствует индексу, *stats_id* значение в [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) представление каталога совпадает со значением *index_id* значение в [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представление каталога, следующий запрос возвращает те же результаты, что и предыдущий запрос. Если статистика не соответствует индексу, то она будет содержаться в результатах sys.stats, но не в результатах sys.indexes.  
+ Если статистика соответствует индексу, то значение *stats_id* в представлении каталога [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) совпадает со значением *index_id* в представлении каталога [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) и следующий запрос возвращает те же результаты, что и предшествующий. Если статистика не соответствует индексу, то она будет содержаться в результатах sys.stats, но не в результатах sys.indexes.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,10 +97,10 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>Б. Дополнительные сведения, время последнего обновления статистики именованный  
- В следующем примере создается статистика по столбцу «Фамилия» в таблице DimCustomer. Затем выполняется запрос для отображения даты статистики. Затем он обновлений статистики и выполняет запрос еще раз, чтобы показать обновленными.  
+### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>Б. Определение времени последнего обновления именованной статистики  
+ В приведенном ниже примере создается статистика по столбцу LastName таблицы DimCustomer. Затем выполняется запрос для отображения даты статистики. После этого статистика обновляется, и запрос выполняется еще раз для отображения обновленной даты.  
   
 ```sql
 --First, create a statistics object  
@@ -134,8 +134,8 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer')
 GO    
 ```  
   
-### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>В. Просмотр даты последнего обновления всей статистики для таблицы  
- Этот пример возвращает дату, время последнего обновления каждый объект статистики в таблице DimCustomer.  
+### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>В. Просмотр даты последнего обновления для всех объектов статистики по таблице  
+ В этом примере возвращается дата последнего обновления для каждого объекта статистики в таблице DimCustomer.  
   
 ```sql  
 --Return the dates all statistics on the table were last updated.  
@@ -146,7 +146,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- Если статистика соответствует индексу, *stats_id* значение в [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) представление каталога совпадает со значением *index_id* значение в [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представление каталога, следующий запрос возвращает те же результаты, что и предыдущий запрос. Если статистика не соответствует индексу, то она будет содержаться в результатах sys.stats, но не в результатах sys.indexes.  
+ Если статистика соответствует индексу, то значение *stats_id* в представлении каталога [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) совпадает со значением *index_id* в представлении каталога [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) и следующий запрос возвращает те же результаты, что и предшествующий. Если статистика не соответствует индексу, то она будет содержаться в результатах sys.stats, но не в результатах sys.indexes.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -161,7 +161,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [Статистика](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   

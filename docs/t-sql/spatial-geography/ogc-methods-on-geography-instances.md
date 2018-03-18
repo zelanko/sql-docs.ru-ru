@@ -1,5 +1,5 @@
 ---
-title: "Методы OGC в экземплярах географических объектов | Документы Microsoft"
+title: "Методы OGC в экземплярах Geography | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geography-instances"></a>Методы OGC, применяемые к географическим объектам
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает методы Open Geospatial Consortium (OGC) для **geography** экземпляров.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает методы открытого геопространственного консорциума (OGC) для экземпляров **geography**.  
   
  Дополнительные сведения о спецификациях консорциума OGC см. в одном из следующих источников:  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
  [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [STArea](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STBuffer](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
   
--   [STCurveN &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
+-   [STCurveN (тип данных geography)](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
   
--   [STCurveToLine &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
+-   [STCurveToLine (тип данных geography)](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
@@ -95,8 +95,8 @@ ms.lasthandoff: 01/25/2018
   
 -   [STUnion](../../t-sql/spatial-geography/stunion-geography-data-type.md)  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   

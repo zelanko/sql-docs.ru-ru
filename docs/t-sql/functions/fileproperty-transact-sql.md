@@ -1,5 +1,5 @@
 ---
-title: "FILEPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "FILEPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,11 +51,11 @@ FILEPROPERTY ( file_name , property )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_файла*  
- Выражение, которое содержит имя файла, связанного с текущей базой данных, для которого нужно возвратить сведения о свойстве. *имя_файла* — **nchar(128)**.  
+ *file_name*  
+ Выражение, которое содержит имя файла, связанного с текущей базой данных, для которого нужно возвратить сведения о свойстве. Аргумент *file_name* имеет тип **nchar(128)**.  
   
- *Свойство*  
- Выражение, которое содержит имя свойства файла, которое нужно возвратить. *Свойство* — **varchar(128)**, и может принимать одно из следующих значений.  
+ *property*  
+ Выражение, которое содержит имя свойства файла, которое нужно возвратить. Аргумент *property* имеет тип **varchar(128)** и может принимать одно из перечисленных ниже значений.  
   
 |Значение|Description|Возвращенное значение|  
 |-----------|-----------------|--------------------|  
@@ -67,8 +67,8 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
- *имя_файла* соответствует **имя** столбца в **sys.master_files** или **sys.database_files** представления каталога.  
+## <a name="remarks"></a>Remarks  
+ Аргумент *file_name* соответствует столбцу **name** в представлении каталога **sys.master_files** или **sys.database_files**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается параметр для свойства `IsPrimaryFile` имени файла `AdventureWorks_Data` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -89,8 +89,8 @@ Primary File
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [FILEGROUPPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUPPROPERTY (Transact-SQL)](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

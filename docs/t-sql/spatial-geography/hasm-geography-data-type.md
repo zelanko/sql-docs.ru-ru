@@ -1,5 +1,5 @@
 ---
-title: "HasM (тип данных geography) | Документы Microsoft"
+title: "HasM (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **Boolean**  
+ Тип возвращаемых данных CLR: **Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -58,8 +58,8 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [М &#40; тип данных geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M (тип данных geography)](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "HasZ (тип данных geometry) | Документы Microsoft"
+title: "HasZ (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **Boolean**  
+ Тип возвращаемых данных CLR: **Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -55,8 +55,8 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Я &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [Z (тип данных geometry)](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   

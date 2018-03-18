@@ -1,5 +1,5 @@
 ---
-title: "Занятие 3: Удаление объектов базы данных | Документы Microsoft"
+title: "Урок 3. Удаление объектов базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>Урок 3. Удаление объектов базы данных
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Этом коротком занятии рассматривается удаление объектов создан на занятии 1 и 2, а затем удаление базы данных.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] На этом коротком занятии рассматривается удаление объектов, созданных на занятиях 1 и 2, а затем удаление базы данных.  
   
 Это занятие содержит один раздел:  
   

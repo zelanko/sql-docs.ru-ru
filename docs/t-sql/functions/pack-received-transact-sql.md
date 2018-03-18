@@ -1,5 +1,5 @@
 ---
-title: "@@PACK_RECEIVED (Transact-SQL) | Документы Microsoft"
+title: "@@PACK_RECEIVED (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,8 +49,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
- Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистику, включая пакетов, отправляемых и получаемых, запустите **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Для отображения отчета, содержащего статистику по нескольким экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая перечень полученных и переданных пакетов, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показано использование функции `@@PACK_RECEIVED`.  

@@ -1,5 +1,5 @@
 ---
-title: "Функция PATINDEX (Transact-SQL) | Документы Microsoft"
+title: "PATINDEX (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Аргументы  
  *pattern*  
- Символьное выражение, содержащее последовательность символов, которую надо найти. Можно использовать подстановочные знаки; Тем не менее, необходимо следовать после и выполнить знак % *шаблон* (за исключением того, когда производится поиск первых или последних символов). *шаблон* выражение относится к символьному типу данных. *шаблон* ограничен 8000 символов.  
+ Символьное выражение, содержащее последовательность символов, которую надо найти. Можно использовать подстановочные знаки. При этом символ "%" должен указываться до и после аргумента *pattern* (за исключением случаев, когда производится поиск первых или последних символов). *pattern* представляет собой выражение из категории типа данных "символьная строка". Максимальная длина *pattern* — 8000 символов.  
   
  *expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), обычно столбец, в котором производится поиск по указанному шаблону. *выражение* относится к символьному типу данных.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), обычно столбец, в котором производится поиск по указанному шаблону. *expression* представляет собой выражение из категории типа данных "символьная строка".  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **bigint** Если *выражение* имеет **varchar(max)** или **nvarchar(max)** типов данных; в противном случае **int**.  
+ **bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)**; в противном случае **int**.  
   
 ## <a name="remarks"></a>Remarks  
- Если параметр *шаблон* или *выражение* имеет значение NULL, функция PATINDEX возвращает NULL.  
+ Если аргумент *pattern* или *expression* имеет значение NULL, функция PATINDEX возвращает значение NULL.  
   
  Функция PATINDEX выполняет сравнение с учетом параметров сортировки входных значений. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией COLLATE, чтобы явно указать параметры сортировки для входных данных.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
- При использовании параметров сортировки SC возвращаемое значение рассматривает любые суррогатные пары UTF-16 *выражение* параметра в виде одного символа. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ При использовании параметров сортировки SC возвращаемое значение рассматривает любые суррогатные пары UTF-16 в параметре *expression* как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0x0000 (**char(0)**) имеет неопределенный символ в параметрах сортировки Windows и его нельзя включать в PATINDEX.  
+ Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-simple-patindex-example"></a>A. Простой пример PATINDEX  
- В следующем примере проверяется ограниченной последовательности знаков (`interesting data`) для начального расположения символов `ter`.  
+### <a name="a-simple-patindex-example"></a>A. Простой пример использования функции PATINDEX  
+ В приведенном ниже примере в короткой строке символов (`interesting data`) проверяется начальная позиция символов `ter`.  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>Д. Использование переменной для указания шаблона  
- В следующем примере используется переменная для передачи значения для *шаблон* параметра. В этом примере используется [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных.  
+ В приведенном ниже примере значение передается в параметр *pattern* с помощью переменной. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -148,15 +148,15 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>См. также  
- [Функция CHARINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
- [Функция LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [CHARINDEX (Transact-SQL)](../../t-sql/functions/charindex-transact-sql.md)  
+ [LEN (Transact-SQL)](../../t-sql/functions/len-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40; Подстановочный знак — символ &#40; s &#41; Не для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40; Шаблон — совпадение одного символа &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [Символ процента &#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [(символ-шаблон для сопоставления) (Transact-SQL)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [(символ-шаблон — совпадение не найдено) (Transact-SQL)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_ (символ-шаблон — совпадение одного символа) (Transact-SQL)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [Символ процента (символ-шаблон для сопоставления) (Transact-SQL)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

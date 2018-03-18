@@ -1,5 +1,5 @@
 ---
-title: "Ранг (Transact-SQL) | Документы Microsoft"
+title: "RANK (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   Возвращает ранг каждой строки в секции результирующего набора. Ранг строки вычисляется как единица плюс количество рангов, находящихся до этой строки.  
 
-  ROW_NUMBER и ранг похожи. ROW_NUMBER номеров всех строк последовательно (например 1, 2, 3, 4, 5). Ранг предоставляет то же значение для связей (например 1, 2, 2, 4, 5).   
+  Функции ROW_NUMBER и RANK похожи. ROW_NUMBER нумерует все строки по порядку (например, 1, 2, 3, 4, 5). RANK назначает одинаковое числовое значение строкам, претендующим на один ранг (например, 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> Ранг является временное значение рассчитывается при запуске запроса. Для хранения чисел в таблице, в разделе [свойство IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) и [ПОСЛЕДОВАТЕЛЬНОСТИ](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK — это временное значение, вычисляемое во время выполнения запроса. Сведения о хранении номеров в таблице см. в разделах [Свойство IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) и [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- НАД **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет порядок данных перед применением функции. *Order_by_clause* является обязательным. \<Строки или предложение диапазона > из более ЧЕМ для функция RANK не может быть указано предложение. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет порядок данных перед применением функции. Аргумент *order_by_clause* является обязательным. В функции RANK нельзя указывать \<предложение ROWS или RANGE> предложения OVER. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если две и более строки претендуют на один ранг, то все они получат одинаковый ранг. Например, если двум лучшим продавцам соответствует одинаковое значение SalesYTD, им обоим присваивается ранг 1. Менеджер по продажам со следующим по величине значением SalesYTD получит ранг номер три, так как перед ним находятся две строки с более высоким рангом. Поэтому функция RANK не всегда возвращает последовательные целые числа.  
   
  Порядок сортировки, используемый для всего запроса, определяет порядок, в котором строки будут появляться в результирующем наборе.  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C: ранжирование строк внутри секции  
- Следующий пример ранжирует коммерческих представителей в каждой территории продаж в соответствии с общего объема продаж. Набор строк секционируется по столбцу `SalesTerritoryGroup` и сортируется по столбцу `SalesAmountQuota`.  
+### <a name="c-ranking-rows-within-a-partition"></a>В. Ранжирование строк внутри секции  
+ В приведенном ниже примере торговые представители на каждой территории продаж ранжируются в соответствии с общим объемом продаж. Набор строк секционируется по столбцу `SalesTerritoryGroup` и сортируется по столбцу `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -174,10 +174,10 @@ Pak               10514000.0000  United Kingdom       1
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Ранжирующие функции &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [DENSE_RANK (Transact-SQL)](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER (Transact-SQL)](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE (Transact-SQL)](../../t-sql/functions/ntile-transact-sql.md)   
+ [Ранжирующие функции (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

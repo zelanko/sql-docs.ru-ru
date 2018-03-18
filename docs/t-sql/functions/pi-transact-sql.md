@@ -1,5 +1,5 @@
 ---
-title: "PI (Transact-SQL) | Документы Microsoft"
+title: "PI (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -66,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

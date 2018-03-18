@@ -1,5 +1,5 @@
 ---
-title: "ПЕРЕВОД (Transact-SQL) | Документы Microsoft"
+title: "TRANSLATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="translate-transact-sql"></a>ПЕРЕВОД (Transact-SQL)
+# <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Возвращает строку, предоставленных в качестве первого аргумента, после некоторых символов, указанных во втором аргументе преобразуются в целевой набор символов.
+Возвращает строку, предоставленную в качестве первого аргумента, после преобразования символов, указанных во втором аргументе, в конечный набор символов.
 
 ## <a name="syntax"></a>Синтаксис   
 ```
@@ -42,29 +42,29 @@ TRANSLATE ( inputString, characters, translations)
 ## <a name="arguments"></a>Аргументы   
 
 inputString   
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (nvarchar, varchar, nchar, char).
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (nvarchar, varchar, nchar, char).
 
-Символы   
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа, содержащих символы, которые должны быть заменены.
+characters   
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа, содержащее символы, которые следует заменить.
 
 переводы   
-Символом [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , соответствующий второй аргумент, тип и длину.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) того же типа и длины, что и второй аргумент.
 
 ## <a name="return-types"></a>Типы возвращаемых значений   
-Возвращает символьное выражение того же типа, что `inputString` где символов из второй аргумент заменяются сопоставления символов из третьего аргумента.
+Возвращает символьное выражение того же типа, что и `inputString`, в котором символы из второго аргумента заменены соответствующими символами из третьего аргумента.
 
 ## <a name="remarks"></a>Remarks   
 
-`TRANSLATE`функция возвращает ошибку, если имеют разные длины, символы и переводы. `TRANSLATE`функция должна возвращать входных данных без изменений, если значения null, представлены в виде символов или замены аргументов. Поведение `TRANSLATE` функции должен быть идентичен [заменить](../../t-sql/functions/replace-transact-sql.md) функции.   
+Функция `TRANSLATE` возвращает ошибку, если символы и их замены имеют разную длину. Функция `TRANSLATE` должна возвращать входную строку без изменений, если в качестве символов или замен предоставлены значения NULL. Поведение функции `TRANSLATE` должно быть идентично поведению функции [REPLACE](../../t-sql/functions/replace-transact-sql.md).   
 
-Поведение `TRANSLATE` функция эквивалентна использования нескольких `REPLACE` функции.
+Поведение функции `TRANSLATE` эквивалентно использованию нескольких функций `REPLACE`.
 
-`TRANSLATE`учитывает всегда параметрами сортировки SC.
+`TRANSLATE` всегда учитывает параметры сортировки SC.
 
 ## <a name="examples"></a>Примеры   
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Замените квадратные и фигурные скобки регулярного фигурные скобки    
-Следующий запрос заменяет квадратные и фигурные скобки во входной строке круглые скобки:
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Замена квадратных и фигурных скобок обычными    
+Следующий запрос заменяет квадратные и фигурные скобки во входной строке на круглые:
 ```
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
@@ -74,11 +74,11 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
 
 >  [!NOTE]
->  `TRANSLATE` Функция в этом примере эквивалентно, но значительно упрощенной чем следующие инструкции, использующей `REPLACE`:`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+>  Функция `TRANSLATE` в этом примере эквивалентна следующей инструкции, в которой используется `REPLACE`, но гораздо проще ее: `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
 
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразовать GeoJSON точки в формате WKT    
-GeoJSON — это формат для кодирования с различными структурами географические данные. С `TRANSLATE` функции, разработчики можно легко преобразовать GeoJSON точки в формате WKT и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входном файле регулярного фигурные скобки:   
+###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразование точек GeoJSON в WKT    
+GeoJSON — это формат для кодирования различных структур географических данных. С помощью функции `TRANSLATE` разработчики могут легко преобразовывать точки GeoJSON в формат WKT, и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входной строке на обычные:   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -89,18 +89,18 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 |Точка  |Координаты |  
 ---------|--------- |
-(137.4  72.3) |[137.4,72.3] |
+(137.4 72.3) |[137.4,72.3] |
 
 
-## <a name="see-also"></a>См. также
- [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+## <a name="see-also"></a>См. также:
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
  [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

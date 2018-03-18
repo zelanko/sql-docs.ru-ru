@@ -1,5 +1,5 @@
 ---
-title: "Агрегатные функции (Transact-SQL) | Документы Microsoft"
+title: "Агрегатные функции (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 Агрегатные функции выполняют вычисление на наборе значений и возвращают одиночное значение. Агрегатные функции, за исключением COUNT, не учитывают значения NULL. Агрегатные функции часто используются в выражении GROUP BY инструкции SELECT.
   
-Все агрегатные функции являются детерминированными. Это означает, что агрегатные функции возвращают одну и ту же величину при каждом их вызове на одном и том же наборе входных значений. Дополнительные сведения о детерминизме функций см. в разделе [функций](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). [Предложение OVER](../../t-sql/queries/select-over-clause-transact-sql.md) может следовать за всеми агрегатными функциями, кроме GROUPING или GROUPING_ID.
+Все агрегатные функции являются детерминированными. Это означает, что агрегатные функции возвращают одну и ту же величину при каждом их вызове на одном и том же наборе входных значений. Дополнительные сведения о детерминированности функций см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). [Предложение OVER](../../t-sql/queries/select-over-clause-transact-sql.md) может следовать за всеми агрегатными функциями, кроме GROUPING или GROUPING_ID.
   
 Агрегатные функции могут быть использованы в качестве выражений только в следующих случаях.
 -   Список выбора инструкции SELECT (вложенный или внешний запрос).  
@@ -54,8 +54,8 @@ ms.lasthandoff: 01/18/2018
 |[GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)|[VAR](../../t-sql/functions/var-transact-sql.md)|  
 |[MAX](../../t-sql/functions/max-transact-sql.md)|[VARP](../../t-sql/functions/varp-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Встроенные функции (Transact-SQL)](../../t-sql/functions/functions.md)  
-[ЧЕРЕЗ предложение &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

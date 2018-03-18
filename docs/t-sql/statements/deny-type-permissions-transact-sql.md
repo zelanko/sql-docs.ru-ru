@@ -1,5 +1,5 @@
 ---
-title: "ЗАПРЕТ разрешений на тип (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на тип (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -58,22 +58,22 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Обозначает разрешение, которое можно запретить для типа.  Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Обозначает разрешение, которое можно запретить для типа.  Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- В ТИПЕ **::** [ *имя_схемы***.** ] *type_name*  
- Задает тип, для которого запрещается разрешение. Квалификатор области (**::**) является обязательным. Если *schema_name* не указан, используется схема по умолчанию. Если *имя_схемы* указана, указание квалификатора области схемы (**.**) является обязательным.  
+ ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ Задает тип, для которого запрещается разрешение. Квалификатор области (**::**) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (**.**).  
   
- Чтобы \<database_principal >  
+ TO \<database_principal>  
  Задает участника, для которого запрещается разрешение, —  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
@@ -102,23 +102,23 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Тип — это защищаемый объект уровня схемы; он содержится в схеме, являющейся его родителем в иерархии разрешений.  
   
 > [!IMPORTANT]  
->  **Предоставление**, **DENY,** и **ОТОЗВАТЬ** разрешения не применяются к системным типам. Определяемым пользователем типам можно предоставлять разрешения. Дополнительные сведения об определяемых пользователем типах см. в разделе [работа с определяемые пользователем типы в SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
+>  Разрешения **GRANT**, **DENY** и **REVOKE** не применяются к системным типам. Определяемым пользователем типам можно предоставлять разрешения. Дополнительные сведения об определяемых пользователем типах см. в разделе [Работа с определяемыми пользователем типами в SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
   
  Наиболее специфичные и ограниченные разрешения, которые можно запретить для типа, перечислены в следующей таблице вместе с общими разрешениями, неявно содержащими их.  
   
 |Разрешение типа|Содержится в разрешении типа данных|Содержится в разрешении схемы|  
 |---------------------|--------------------------------|----------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
-|Выполните|CONTROL|Выполните|  
+|EXECUTE|CONTROL|EXECUTE|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для данного типа требуется разрешение CONTROL. При использовании предложения AS указанный участник должен быть владельцем типа запрещаемого разрешения.  
   
 ## <a name="examples"></a>Примеры  
@@ -131,8 +131,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разрешения типа GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [Разрешения типа REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
+ [GRANT, предоставление разрешений на тип (Transact-SQL)](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на тип (Transact-SQL)](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   

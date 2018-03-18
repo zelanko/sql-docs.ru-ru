@@ -1,5 +1,5 @@
 ---
-title: "РЕГИСТР (Transact-SQL) | Документы Microsoft"
+title: "CASE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -79,48 +79,48 @@ END
   
 ## <a name="arguments"></a>Аргументы  
  *input_expression*  
- Выражение, полученное при использовании простого формата функции CASE. *input_expression* может быть любым допустимым [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Выражение, полученное при использовании простого формата функции CASE. *input_expression* — это любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- КОГДА *when_expression*  
- Простое выражение, к которому *input_expression* сравнивается при использовании простого формата функции CASE. *when_expression* любое допустимое выражение. Типы данных *input_expression* и каждого *when_expression* должны быть одинаковыми или должны быть неявное преобразование.  
+ WHEN *when_expression*  
+ Простое выражение, с которым сравнивается *input_expression* при использовании простого формата CASE. *when_expression* — это любое допустимое выражение. Типы данных аргумента *input_expression* и каждого из выражений *when_expression* должны быть одинаковыми или неявно приводимыми друг к другу.  
   
- ЗАТЕМ *результирующее_выражение*  
- Это выражение, возвращаемое при *input_expression* равняется *when_expression* имеет значение TRUE, или *Boolean_expression* имеет значение TRUE. *результирующих выражений* может быть любым допустимым [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
+ THEN *result_expression*  
+ Выражение, возвращаемое, когда равенство *input_expression* и *when_expression* имеет значение TRUE или *Boolean_expression* имеет значение TRUE. *result expression* — это любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  ELSE *else_result_expression*  
- Это выражение, возвращаемое, если ни одна из операций сравнения не дает в результате TRUE. Если этот аргумент опущен и ни одна из операций сравнения не дает в результате TRUE, функция CASE возвращает NULL. *результирующее_выражение_для_противоположного_случая* — любое допустимое выражение. Типы данных *результирующее_выражение_для_противоположного_случая* , а также *результирующее_выражение* должны быть одинаковыми или должны быть неявное преобразование.  
+ Это выражение, возвращаемое, если ни одна из операций сравнения не дает в результате TRUE. Если этот аргумент опущен и ни одна из операций сравнения не дает в результате TRUE, функция CASE возвращает NULL. *else_result_expression* — это любое допустимое выражение. Типы данных аргумента *else_result_expression* и каждого из выражений *result_expression* должны быть одинаковыми или неявно приводимыми друг к другу.  
   
- КОГДА *Boolean_expression*  
- Логическое выражение, полученное при использовании поискового формата функции CASE. *Boolean_expression* любое допустимое логическое выражение.  
+ WHEN *Boolean_expression*  
+ Логическое выражение, полученное при использовании поискового формата функции CASE. *Boolean_expression* — это любое допустимое логическое выражение.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тип с наивысшим приоритетом из набора типов в *result_expressions* и необязательный *результирующее_выражение_для_противоположного_случая*. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Возвращает тип с наивысшим приоритетом из набора типов в выражении *result_expressions* и необязательном выражении *else_result_expression*. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### <a name="return-values"></a>Возвращаемые значения  
- **Простое выражение CASE:**  
+ **Простое выражение CASE**  
   
  Простое выражение CASE сравнивает первое выражение с выражением в каждом предложении WHEN. Если эти выражения эквивалентны, то возвращается выражение в предложении THEN.  
   
 -   Допускается только проверка равенства.  
   
--   В указанном порядке вычисляет input_expression = when_expression для каждого предложения WHEN.  
+-   В указанном порядке сравнивает значения выражений input_expression и when_expression для каждого предложения WHEN.  
   
--   Возвращает *результирующее_выражение* первого *input_expression* = *when_expression* , имеющего значение TRUE.  
+-   Возвращает выражение *result_expression*, соответствующее первой операции *input_expression* = *when_expression*, равной TRUE.  
   
--   Если не *input_expression* = *when_expression* имеет значение TRUE, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает *результирующее_выражение_для_противоположного_случая* Если УКАЗАНО предложение else указано, или значение NULL, если предложение ELSE не указано.  
+-   Если ни одна из операций *input_expression* = *when_expression* не дает значения TRUE, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает выражение *else_result_expression*, если указано предложение ELSE, или значение NULL, если предложение ELSE не указано.  
   
- **Поисковое выражение CASE:**  
+ **Поисковое выражение CASE**  
   
--   Вычисляет в указанном порядке *Boolean_expression* для каждого предложения WHEN.  
+-   Вычисляет в указанном порядке выражения *Boolean_expression* для каждого предложения WHEN.  
   
--   Возвращает *результирующее_выражение* первого *Boolean_expression* , имеющего значение TRUE.  
+-   Возвращает выражение *result_expression*, соответствующее первому выражению *Boolean_expression*, которое имеет значение TRUE.  
   
--   Если не *Boolean_expression* имеет значение TRUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает *результирующее_выражение_для_противоположного_случая* Если указано предложение ELSE, или значение NULL, если предложение ELSE не указано.  
+-   Если ни одно выражение *Boolean_expression* не равно TRUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает выражение *else_result_expression*, если указано предложение ELSE, или значение NULL, если предложение ELSE не указано.  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] допускает применение в выражениях CASE не более 10 уровней вложенности.  
   
- Выражение CASE нельзя использовать для управления потоком выполнения инструкций Transact-SQL, блоков инструкций, определяемых пользователем функций и хранимых процедур. Список методов управления потоком, в разделе [языка управления потоком &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+ Выражение CASE нельзя использовать для управления потоком выполнения инструкций Transact-SQL, блоков инструкций, определяемых пользователем функций и хранимых процедур. Список методов управления потоком см. в статье [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md).  
   
  Инструкция CASE последовательно оценивает свои условия и останавливается, когда находит первое условие, удовлетворяющее ей. В некоторых ситуациях выражение оценивается то того, как инструкция CASE получает результаты выражения в качестве входных данных. При оценке этих выражений возможны ошибки. Агрегатные выражения в аргументах WHEN инструкции CASE вначале оцениваются, после чего передаются инструкции CASE. Например в следующем запросе создается ошибка деления на ноль при вычислении значения агрегата MAX. Это происходит до оценки выражения CASE.  
   
@@ -225,7 +225,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>Д. Использование выражения CASE в инструкции SET  
- В следующем примере выражение CASE используется в инструкции SET для функции `dbo.GetContactInfo` с табличным значением. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] все данные, связанные с людьми, хранятся в таблице `Person.Person`. Например человек может быть сотрудником, представителем поставщика или клиента. Функция возвращает имя первого и последнего заданного `BusinessEntityID` и тип контакта для этого пользователя. Выражение CASE в инструкции SET определяет отображаемое значение для столбца `ContactType` зависимости от существования `BusinessEntityID` столбца в `Employee`, `Vendor`, или `Customer` таблицы.  
+ В следующем примере выражение CASE используется в инструкции SET для функции `dbo.GetContactInfo` с табличным значением. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] все данные, связанные с людьми, хранятся в таблице `Person.Person`. Например, человек может быть сотрудником, представителем поставщика или заказчиком. Функция возвращает имя и фамилию человека с заданным `BusinessEntityID` и соответствующий тип контакта для этого пользователя. Выражение CASE в инструкции SET определяет отображаемое значение для столбца `ContactType` в зависимости от наличия столбца `BusinessEntityID` в таблицах `Employee`, `Vendor` или `Customer`.  
   
 ```  
   
@@ -299,7 +299,7 @@ FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>Е. Использование выражения CASE в предложении HAVING  
- В следующем примере выражение CASE используется в предложении HAVING, чтобы ограничить строки, возвращаемые инструкцией SELECT. Инструкция возвращает максимальное почасовая ставка для каждого названия должности в `HumanResources.Employee` таблицы. Предложение HAVING ограничивает должности, оставляя только те, которые заняты мужчинами с максимальной почасовой ставкой более 40 долларов или женщинами с максимальной почасовой ставкой более 42 долларов.  
+ В следующем примере выражение CASE используется в предложении HAVING, чтобы ограничить строки, возвращаемые инструкцией SELECT. Инструкция возвращает максимальную почасовую ставку для каждой должности в таблице `HumanResources.Employee`. Предложение HAVING ограничивает должности, оставляя только те, которые заняты мужчинами с максимальной почасовой ставкой более 40 долларов или женщинами с максимальной почасовой ставкой более 42 долларов.  
   
 ```  
 USE AdventureWorks2012;  
@@ -318,10 +318,10 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>Ж. Использование инструкции SELECT с выражением CASE  
- В инструкции SELECT выражение CASE позволяет значений должно быть заменено в результирующем наборе на основе сравнения значений. В следующем примере выражение CASE используется для изменения порядка отображения категорий линейки продуктов с целью сделать их более понятными. Если значение не существует, текст «не для продажи "отображается.  
+ При использовании в инструкции SELECT выражение CASE позволяет заменять значения в результирующем наборе в зависимости от результатов сравнения. В приведенном ниже примере выражение CASE используется для изменения способа отображения категорий линейки продуктов с целью сделать их более понятными. Если значение отсутствует, выводится текст "Not for sale".  
   
 ```  
 -- Uses AdventureWorks  
@@ -356,12 +356,12 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ОБЪЕДИНЕННЫЙ &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [ВЫБЕРИТЕ &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF (Transact-SQL)](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE (Transact-SQL)](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "Инструкция SET FORCEPLAN (Transact-SQL) | Документы Microsoft"
+title: "SET FORCEPLAN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция SET FORCEPLAN, в сущности, переопределяет логику, используемую в оптимизаторе запросов для обработки инструкции SELECT языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные, возвращаемые инструкцией SELECT, не зависят от этого параметра. Единственное различие — способ обработки таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], применяемый для выполнения запроса.  
   
  Подсказки оптимизатора запросов могут быть использованы в запросах для изменения способа обработки инструкции SELECT в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Инструкция SET FORCEPLAN применяется на этапе выполнения или запуска, но не на этапе синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения SET FORCEPLAN по умолчанию имеют все пользователи.  
   
 ## <a name="examples"></a>Примеры  
@@ -110,7 +110,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [Инструкция SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT (Transact-SQL)](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SET LOCK_TIMEOUT (Transact-SQL) | Документы Microsoft"
+title: "SET LOCK_TIMEOUT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>Аргументы  
  *timeout_period*  
- Количество миллисекунд до того, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет ошибку блокировки. Значение -1 (по умолчанию) указывает на отсутствие времени ожидания (то есть инструкция будет ждать всегда).  
+ Количество миллисекунд до того, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет ошибку блокировки. Значение -1 (по умолчанию) указывает на отсутствие времени ожидания (то есть инструкция будет ждать всегда).  
   
  Когда ожидание блокировки превышает значение времени ожидания, возвращается ошибка. Значение «0» означает, что ожидание отсутствует, а сообщение возвращается, как только встречается блокировка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В начале соединения этот параметр имеет значение -1. После изменения новое значение остается в силе в течение работы соединения.  
   
  Настройка SET LOCK_TIMEOUT установлена на запуск во время выполнения, но не во время синтаксического анализа.  
@@ -66,12 +66,12 @@ SET LOCK_TIMEOUT timeout_period
   
  Инструкции CREATE DATABASE, ALTER DATABASE и DROP DATABASE не поддерживают настройки SET LOCK_TIMEOUT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>Ответ задать время ожидания блокировки равным 1 800 миллисекундам  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>А. Установка времени ожидания блокировки равным 1800 миллисекундам  
  В следующем примере время ожидания блокировки устанавливается на `1800` миллисекунд.  
   
 ```sql  
@@ -79,16 +79,16 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>Б. Задайте время ожидания блокировки бесконечно ожидать снятия блокировки.  
- В следующем примере задается ждать бесконечно и никогда не истекает время ожидания блокировки. Это поведение по умолчанию, которая задана в начале каждого подключения.  
+### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>Б. Установка для времени ожидания бесконечного ожидания снятия блокировки.  
+ В следующем примере для времени ожидания блокировки задается бесконечное ожидание и неограниченная длительность. Это поведение по умолчанию, которое уже задано в начале каждого подключения.  
   
 ```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
- В следующем примере время ожидания блокировки устанавливается на `1800` миллисекунд. В этом выпуске [!INCLUDE[ssDW](../../includes/ssdw-md.md)] будет успешно, выполнить синтаксический анализ инструкции, но будет игнорировать значение 1800 и продолжать использовать поведение по умолчанию.  
+ В следующем примере время ожидания блокировки устанавливается на `1800` миллисекунд. В этом выпуске [!INCLUDE[ssDW](../../includes/ssdw-md.md)] начнет успешно анализировать инструкцию, но будет игнорировать значение 1800 и продолжать использовать поведение по умолчанию.  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  

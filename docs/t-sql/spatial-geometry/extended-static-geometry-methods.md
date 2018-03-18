@@ -1,5 +1,5 @@
 ---
-title: "Расширенные статические геометрические методы | Документы Microsoft"
+title: "Расширенные статические геометрические методы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/25/2018
   
  [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [Спецификации OGC, географический язык разметки](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [GeomFromGML](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
--   [Значение NULL](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
+-   [Null](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
   
 -   [Синтаксический анализ](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [Точка](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические агрегатные геометрические методы](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

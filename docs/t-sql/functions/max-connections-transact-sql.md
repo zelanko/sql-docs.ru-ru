@@ -1,5 +1,5 @@
 ---
-title: "@@MAX_CONNECTIONS (Transact-SQL) | Документы Microsoft"
+title: "@@MAX_CONNECTIONS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Фактическое допустимое количество пользовательских соединений также зависит от установленной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и от ограничений, налагаемых приложениями и оборудованием.  
   
- Чтобы перенастроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меньшее количество соединений, используйте **sp_configure**.  
+ Чтобы настроить меньшее количество соединений в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте процедуру **sp_configure**.  
   
 ## <a name="examples"></a>Примеры  
  В ходе выполнения следующего примера возвращается максимально допустимое количество одновременных соединений пользователей с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Предполагается, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не настраивался для уменьшения количества соединений.  
@@ -73,7 +73,7 @@ Max Connections
   
 ## <a name="see-also"></a>См. также:  
  [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Функции конфигурации](../../t-sql/functions/configuration-functions-transact-sql.md)   
+ [Функции настройки](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Настройка параметра конфигурации сервера user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
   
   

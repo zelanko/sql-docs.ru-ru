@@ -1,5 +1,5 @@
 ---
-title: "Символ процента (шаблон — символ(ы) для сопоставления) (Transact-SQL) | Документы Microsoft"
+title: "Символ процента (символы-шаблоны совпадения) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ WHERE FirstName LIKE 'Dan%';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
- [&#91; &#93; (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; ^ &#93; (Шаблон — символ(ы) должны совпасть)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [[ ] (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+  [&#91;^&#93; (подстановочный знак — символы не для сопоставления)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
  [_ (Подстановочный знак — совпадение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

@@ -1,5 +1,5 @@
 ---
-title: "LOGINPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "LOGINPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,19 +64,19 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *login_name*  
  Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого будет возвращено состояние свойства входа в систему.  
   
- *PropertyName*  
- Выражение, содержащее сведения о свойстве, возвращаемые для имени входа. *PropertyName* может принимать одно из следующих значений.  
+ *propertyname*  
+ Выражение, содержащее сведения о свойстве, возвращаемые для имени входа. *propertyname* может иметь одно из указанных ниже значений.  
   
 |Значение|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Возвращает число последовательных попыток входа в систему с неверным паролем.|  
 |**BadPasswordTime**|Возвращает время последней попытки входа в систему с неверным паролем.|  
 |**DaysUntilExpiration**|Возвращает число дней до завершения срока действия пароля.|  
-|**DefaultDatabase**|Возвращает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа база данных по умолчанию хранится в метаданных или **master** Если база данных не указан. Возвращает значение NULL для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подготовить пользователей (например, прошедшего проверку подлинности Windows).|  
-|**DefaultLanguage**|Возвращает язык имени входа по умолчанию в соответствии со сведениями, сохраненными в метаданных. Возвращает значение NULL для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подготовленные пользователи, например, Windows, прошедших проверку пользователей.|  
+|**DefaultDatabase**|Возвращает базу данных по умолчанию для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в соответствии со сведениями, сохраненными в метаданных, или базу данных **master**, если база данных не указана. Возвращает значение NULL для пользователей, прошедших проверку не в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, для пользователей, прошедших проверку подлинности Windows).|  
+|**DefaultLanguage**|Возвращает язык имени входа по умолчанию в соответствии со сведениями, сохраненными в метаданных. Возвращает значение NULL для пользователей, прошедших проверку не в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например для пользователей, прошедших проверку подлинности Windows.|  
 |**HistoryLength**|Возвращает количество паролей, найденных для имени входа с помощью механизма принудительного применения политики паролей. Возвращает 0, если политика паролей не применяется принудительно. При значении 1 перезапускается возобновление принудительного применения политики паролей.|  
 |**IsExpired**|Указывает, истек ли срок действия имени входа.|  
-|**Блокирована**|Указывает, заблокировано ли имя входа.|  
+|**IsLocked**|Указывает, заблокировано ли имя входа.|  
 |**IsMustChange**|Указывает, необходимо ли менять пароль для имени входа при следующем его подключении.|  
 |**LockoutTime**|Возвращает дату блокировки имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за превышения разрешенного числа неудачных попыток входа в систему.|  
 |**PasswordHash**|Возвращает хэш пароля.|  
@@ -86,21 +86,21 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>Возвращает  
  Тип данных зависит от запрошенного значения.  
   
- **IsLocked**, **IsExpired**, и **IsMustChange** имеют тип **int**.  
+ Аргументы **IsLocked**, **IsExpired** и **IsMustChange** имеют тип **int**.  
   
 -   1, если имя входа находится в указанном состоянии.  
   
 -   0, если имя входа не находится в указанном состоянии.  
   
- **BadPasswordCount** и **HistoryLength** имеют тип **int**.  
+ Аргументы **BadPasswordCount** и **HistoryLength** имеют тип **int**.  
   
- **BadPasswordTime**, **LockoutTime**, **PasswordLastSetTime** имеют тип **datetime**.  
+ Аргументы **BadPasswordTime**, **LockoutTime**, **PasswordLastSetTime** имеют тип **datetime**.  
   
- **PasswordHash** относится к типу **varbinary**.  
+ Аргумент **PasswordHash** имеет тип **varbinary**.  
   
  NULL, если имя входа не является допустимым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **DaysUntilExpiration** относится к типу **int**.  
+ Аргумент **DaysUntilExpiration** имеет тип **int**.  
   
 -   0, если срок действия имени входа истек или истечет в день запроса.  
   
@@ -108,26 +108,26 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL, если параметр CHECK_POLICY или CHECK_EXPIRATION имеет значение OFF для имени входа либо если операционная система не поддерживает политику паролей.  
   
- **PasswordHashAlgorithm** имеет тип int.  
+ Аргумент **PasswordHashAlgorithm** имеет тип int.  
   
 -   0, если это хэш SQL7.0  
   
--   1, если хэш SHA-1  
+-   1, если это хэш SHA-1  
   
 -   2, если хэширование по SHA-2  
   
 -   NULL, если имя входа не является допустимым именем входа SQL Server.  
   
-## <a name="remarks"></a>Замечания  
- Эта встроенная функция возвращает сведения о настройках политики паролей для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имена свойств не учитывают регистр, поэтому имена свойства, такие как **BadPasswordCount** и **badpasswordcount** эквивалентны. Значения **PasswordHash, PasswordHashAlgorithm**, и **PasswordLastSetTime** свойства доступны во всех поддерживаемых конфигурациях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но другие свойства являются только доступна при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] и CHECK_POLICY и CHECK_EXPIRATION. Дополнительные сведения см. в разделе [Password Policy](../../relational-databases/security/password-policy.md).  
+## <a name="remarks"></a>Remarks  
+ Эта встроенная функция возвращает сведения о настройках политики паролей для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В именах свойств регистр не учитывается, поэтому имена **BadPasswordCount** и **badpasswordcount** эквивалентны. Значения свойств **PasswordHash, PasswordHashAlgorithm** и **PasswordLastSetTime** доступны во всех поддерживаемых конфигурациях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но другие свойства доступны, только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает под управлением [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] при включенных параметрах CHECK_POLICY и CHECK_EXPIRATION. Дополнительные сведения см. в разделе [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW на имя входа. При запросе хэша пароля также требует разрешения CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Проверка необходимости изменения пароля для имени входа  
- В следующем примере проверяется ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа `John3` изменения пароля при очередном подключении к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В приведенном ниже примере выполняется проверка необходимости изменения пароля для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `John3` при следующем подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  

@@ -1,5 +1,5 @@
 ---
-title: "LTRIM (Transact-SQL) | Документы Microsoft"
+title: "LTRIM (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ LTRIM ( character_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. *character_expression* должен иметь тип данных, за исключением **текст**, **ntext**, и **изображения**, в котором могут быть неявно преобразованы **varchar** . В противном случае используйте [ПРИВЕДЕНИЯ](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. Аргумент *character_expression* должен иметь тип данных, который может быть неявно преобразован в тип **varchar**, кроме типов **text**, **ntext** и **image**. В противном случае используйте [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **varchar** или **nvarchar**  
@@ -60,7 +60,7 @@ LTRIM ( character_expression )
 
 ### <a name="a-simple-example"></a>A. Простой пример   
 
- В следующем примере функция LTRIM используется для удаления начальных пробелов в символьное выражение.  
+ В приведенном ниже примере функция LTRIM используется для удаления начальных пробелов из символьного выражения.  
   
 ```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
@@ -73,7 +73,7 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   Five spaces are at the beginning of this string.
   ```  
 
-### <a name="b-example-using-a-variable"></a>Б. пример использования переменной   
+### <a name="b-example-using-a-variable"></a>Б. Пример использования переменной   
   
  Следующий пример использует `LTRIM` для удаления начальных пробелов из символьной переменной.  
   
@@ -94,15 +94,15 @@ Original string Without spaces
      5 spaces are at the beginning of this string.  5 spaces are at the beginning of this string.
 ```  
   
-## <a name="see-also"></a>См. также  
- [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
- [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40; Transact-SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [ПОДСТРОКА &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
- [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

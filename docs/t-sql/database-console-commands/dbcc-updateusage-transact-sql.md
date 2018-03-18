@@ -1,5 +1,5 @@
 ---
-title: "DBCC UPDATEUSAGE (Transact-SQL) | Документы Microsoft"
+title: "DBCC UPDATEUSAGE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Аргументы  
 *database_name* | *database_id* | 0  
-Имя или идентификатор базы данных, для которой нужно составить отчет и исправить статистику использования дискового пространства. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
+Имя или идентификатор базы данных, для которой нужно составить отчет и исправить статистику использования дискового пространства. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 Имя или идентификатор таблицы или индексированного представления, для которой нужно составить отчет и исправить статистику использования дискового пространства. Имена таблиц и представлений должны соответствовать требованиям, предъявляемым к идентификаторам.  
@@ -89,7 +89,7 @@ COUNT_ROWS
 Инструкция DBCC CHECKDB была улучшена для обнаружения неправильных результатов подсчета страниц и строк. При их обнаружении выходные данные инструкции DBCC CHECKDB будут содержать предупреждение и рекомендацию выполнить инструкцию DBCC UPDATEUSAGE, чтобы решить эту проблему.
   
 ## <a name="best-practices"></a>Рекомендации  
-Рекомендуется следующее:
+Примите во внимание приведенные ниже рекомендации.
 -   Не следует регулярно выполнять инструкцию DBCC UPDATEUSAGE. Поскольку выполнение инструкции DBCC UPDATEUSAGE для больших таблиц или баз данных занимает много времени, ее следует запускать, только если есть подозрения, что хранимая процедура sp_spaceused возвращает неверные значения.
 -   Регулярно (например, еженедельно) инструкцию DBCC UPDATEUSAGE стоит выполнять, только если в базе данных часто производятся изменения на языке описания данных DDL, например выполняются инструкции CREATE, ALTER или DROP.  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>В. Обновление результатов подсчета страниц, строк или того и другого одновременно в таблице Employee  
-В следующем примере выдаются обновленные страниц или строк сведений о счетчика для `Employee` в таблицу [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных.
+В приведенном ниже примере выдаются обновленные сведения о подсчете страниц или строк для таблицы `Employee` в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -135,9 +135,9 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
   
   

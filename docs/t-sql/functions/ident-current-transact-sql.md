@@ -1,5 +1,5 @@
 ---
-title: "Функция IDENT_CURRENT (Transact-SQL) | Документы Microsoft"
+title: "IDENT_CURRENT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>Аргументы  
  *имя_таблицы*  
- Имя таблицы, что значение идентификатора возвращается. *имя_таблицы* — **varchar**, не имеет значения по умолчанию.  
+ Имя таблицы, что значение идентификатора возвращается. Аргумент *table_name* имеет тип **varchar** и не имеет значения по умолчанию.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **numeric(38,0)**  
@@ -60,12 +60,12 @@ IDENT_CURRENT( 'table_name' )
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как IDENT_CURRENT, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Замечания  
- Функция IDENT_CURRENT аналогична [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] удостоверение функции SCOPE_IDENTITY и @@IDENTITY. Все три функции возвращают созданными последними значения идентификаторов. Тем не менее области и сеанс, в котором *последний* определен в каждой из этих функций отличаются:  
+## <a name="remarks"></a>Remarks  
+ Функция IDENT_CURRENT аналогична функциям идентификаторов [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SCOPE_IDENTITY и @@IDENTITY. Все три функции возвращают созданными последними значения идентификаторов. Однако эти функции различаются областью действия и сеансом, в соответствии с которыми определяется термин *last*.  
   
 -   IDENT_CURRENT возвращает последнее значение идентифицирующего столбца, созданное для конкретной таблицы в любом сеансе и области поиска.  
   
--   @@IDENTITY возвращает последнее значение идентификатора, созданное для любой таблицы в текущем сеансе по всем областям поиска.  
+-   @@IDENTITY возвращает последнее значение идентификатора, созданное для любой таблицы в текущем сеансе по всем областям.  
   
 -   SCOPE_IDENTITY возвращает последнее значение идентификатора, созданное для любой таблицы в текущем сеансе по текущей области поиска.  
   
@@ -87,7 +87,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>Б. Сравнение значений идентификатора возвращаемых IDENT_CURRENT, @@IDENTITY и SCOPE_IDENTITY  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>Б. Сравнение значений идентификатора, возвращаемых функциями IDENT_CURRENT, @@IDENTITY и SCOPE_IDENTITY  
  В следующем примере показаны различные идентификаторы, возвращаемые функциями `IDENT_CURRENT`, `@@IDENTITY` и `SCOPE_IDENTITY`.  
   
 ```  
@@ -146,10 +146,10 @@ SELECT IDENT_CURRENT('t7');
   
 ## <a name="see-also"></a>См. также:  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [SCOPE_IDENTITY (Transact-SQL)](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

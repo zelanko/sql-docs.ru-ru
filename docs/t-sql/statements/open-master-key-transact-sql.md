@@ -1,5 +1,5 @@
 ---
-title: "OPEN MASTER KEY (Transact-SQL) | Документы Microsoft"
+title: "OPEN MASTER KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,11 +56,11 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- "*пароль*"  
+ '*password*'  
  Пароль, которым был зашифрован главный ключ базы данных.  
   
-## <a name="remarks"></a>Замечания  
- Если главный ключ базы данных был зашифрован с помощью главного ключа службы, то он автоматически будет открываться при необходимости расшифровать или зашифровать ключ. В этом случае необязательно использовать **OPEN MASTER KEY** инструкции.  
+## <a name="remarks"></a>Remarks  
+ Если главный ключ базы данных был зашифрован с помощью главного ключа службы, то он автоматически будет открываться при необходимости расшифровать или зашифровать ключ. В этом случае инструкцию **OPEN MASTER KEY** использовать не нужно.  
   
  При первом присоединении базы данных к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или ее восстановлении копия главного ключа базы данных (зашифрованная главным ключом службы) еще не хранится на сервере. Необходимо расшифровать главный ключ базы данных с помощью инструкции **OPEN MASTER KEY** . Как только главный ключ базы данных будет расшифрован, появится возможность разрешить автоматическую расшифровку в будущем с помощью инструкции **ALTER MASTER KEY REGENERATE** , чтобы оставить на сервере копию главного ключа базы данных, зашифрованного с помощью главного ключа службы. После обновления базы данных с переходом от более ранней версии главный ключ базы данных должен быть создан повторно для использования нового алгоритма шифрования AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). Время, необходимое для повторного создания главного ключа базы данных с обновлением до алгоритма шифрования AES, зависит от числа объектов, защищаемых главным ключом базы данных. Повторное создание главного ключа базы данных с обновлением до алгоритма шифрования AES необходимо произвести только один раз. Это никак не повлияет на последующие операции повторного создания, выполняемые в соответствии со стратегией смены ключей.  
   
@@ -68,7 +68,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
   
  При откате транзакции, в которой главный ключ базы данных был явно открыт, этот ключ останется открытым.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -80,8 +80,8 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере открывается образце базы данных был зашифрован с паролем.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном далее примере открывается база данных master, зашифрованная с помощью пароля.  
   
 ```  
 USE master;  
@@ -93,11 +93,11 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [ВОССТАНОВЛЕНИЕ главного ключа &#40; Transact-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY (Transact-SQL)](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY (Transact-SQL)](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY (Transact-SQL)](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [DROP MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

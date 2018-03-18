@@ -1,5 +1,5 @@
 ---
-title: "SET ARITHABORT (Transact-SQL) | Документы Microsoft"
+title: "SET ARITHABORT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Замечания  
- В сеансах входа в систему всегда необходимо устанавливать параметр ARITHABORT в значение ON. Значение параметра ARITHABORT УСТАНОВЛЕНО значение OFF, это может отрицательно повлиять на оптимизацию запросов вызывающие проблемы производительности.  
+## <a name="remarks"></a>Remarks  
+ В сеансах входа в систему всегда необходимо устанавливать параметр ARITHABORT в значение ON. Если для параметра ARITHABORT установлено значение OFF, это может отрицательно повлиять на оптимизацию запросов и привести к проблемам с производительностью.  
   
 > [!WARNING]  
 >  Настройка по умолчанию ARITHABORT для [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — ON. Клиентские приложения с параметром ARITHABORT, установленным в значение OFF, могут получать разные планы запроса, что осложняет диагностику плохо выполняемых запросов. Иными словами, один и тот же запрос может выполняться быстро в среде Management Studio, но медленно в приложении. При диагностике запросов с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] всегда сопоставляйте параметр ARITHABORT клиента.  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  Если один из параметров SET ARITHABORT или SET ARITHIGNORE установлен в значение OFF, а параметр SET ANSI_WARNINGS — в значение ON, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке при обнаружении ошибок деления на ноль или переполнения.  
   
- Если параметр SET ARITHABORT установлен в OFF и возникает ошибка прерывания во время вычисления логических условий в инструкции IF, выполняется ветвь FALSE.
+ Если параметр SET ARITHABORT установлен в значение OFF и возникают аварийные ошибки во время вычисления логических условий в инструкции IF, то исполняется ветвь FALSE.
   
  Значение параметра SET ARITHABORT должно быть ON, если создаются или изменяются индексы на вычисляемых столбцах или индексированных представлениях. Если значение параметра SET ARITHABORT установлено в OFF, то действия инструкций CREATE, UPDATE, INSERT и DELETE на таблицах с индексами на вычисляемых столбцах или на индексированных представлениях будут завершаться ошибкой.
   
  Установка параметра SET ARITHABORT означает установку при запуске или во время выполнения, но не во время синтаксического анализа.  
   
- Чтобы просмотреть текущую настройку этого параметра, выполните следующий запрос:
+ Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -97,7 +97,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
@@ -198,7 +198,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE (Transact-SQL)](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

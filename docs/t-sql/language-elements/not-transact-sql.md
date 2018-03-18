@@ -1,5 +1,5 @@
 ---
-title: "НЕ (Transact-SQL) | Документы Microsoft"
+title: "NOT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -52,20 +52,20 @@ ms.lasthandoff: 01/25/2018
  Любое допустимое логическое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- **Логическое значение**  
+ **Boolean**  
   
 ## <a name="result-value"></a>Значение результата  
  Оператор NOT изменяет значение любого логического выражения на противоположное.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Использование оператора NOT инвертирует выражение.  
   
  В следующей таблице показаны результаты сравнения значений TRUE и FALSE при использовании оператора NOT.  
   
 ||NOT|  
 |------|---------|  
-|**ЗНАЧЕНИЕ TRUE**|FALSE|  
-|**ЗНАЧЕНИЕ FALSE**|TRUE|  
+|**TRUE**|FALSE|  
+|**FALSE**|TRUE|  
 |**UNKNOWN**|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
@@ -93,8 +93,8 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующий пример ограничивает результаты для `SalesOrderNumber` значения, начиная с `SO6` и `ProductKeys` больше или равен 400.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Следующий пример ограничивает результаты для `SalesOrderNumber` значениями, начиная с `SO6`, и `ProductKeys`, больше или равными 400.  
   
 ```  
 -- Uses AdventureWorks  
@@ -105,11 +105,11 @@ WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

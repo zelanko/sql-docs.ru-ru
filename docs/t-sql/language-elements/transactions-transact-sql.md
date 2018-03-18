@@ -1,5 +1,5 @@
 ---
-title: "Транзакции (Transact-SQL) | Документы Microsoft"
+title: "Транзакции (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 
   Транзакция является единственной единицей работы. Если транзакция выполнена успешно, все модификации данных, сделанные в течение транзакции, принимаются и становятся постоянной частью базы данных. Если в результате выполнения транзакции происходят ошибки и должна быть произведена отмена или выполнен откат, все модификации данных будут отменены.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]работает в следующих режимах транзакций.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в перечисленных ниже режимах транзакций.  
   
  Автоматическое принятие транзакций  
  Каждая отдельная инструкция является транзакцией.  
@@ -54,10 +54,10 @@ ms.lasthandoff: 01/25/2018
  Будучи применимой только к множественным активным результирующим наборам (режим MARS), явная или неявная транзакция [!INCLUDE[tsql](../../includes/tsql-md.md)], которая запускается в сеансе режима MARS, становится транзакцией контекста пакета. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически выполняет откат транзакции контекста пакета, если эта транзакция не зафиксирована или выполнен ее откат при завершении пакета.  
 
 > [!NOTE] 
-> Особые замечания, относящиеся к продуктам хранилища данных, в разделе [транзакции (хранилище данных SQL)](transactions-sql-data-warehouse.md).   
+> Особые замечания, касающиеся хранилища данных, см. в статье [Транзакции (хранилище данных SQL)](transactions-sql-data-warehouse.md).   
 
-## <a name="in-this-section"></a>В этом разделе  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет следующие инструкции транзакций:  
+## <a name="in-this-section"></a>в этом разделе  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет перечисленные ниже инструкции транзакций.  
   
 |||  
 |-|-|  
@@ -66,8 +66,8 @@ ms.lasthandoff: 01/25/2018
 |[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также  
- [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   

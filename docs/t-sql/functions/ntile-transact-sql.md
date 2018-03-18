@@ -1,5 +1,5 @@
 ---
-title: "NTILE (Transact-SQL) | Документы Microsoft"
+title: "NTILE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>Аргументы  
  *integer_expression*  
- Положительное целое выражение-константа, указывающее количество групп, на которые необходимо разделить каждую секцию. *integer_expression* может иметь тип **int**, или **bigint**.  
+ Положительное целое выражение-константа, указывающее количество групп, на которые необходимо разделить каждую секцию. *integer_expression* может иметь тип **int** или **bigint**.  
   
- \<partition_by_clause >  
- Делит результирующий набор, полученный по [FROM](../../t-sql/queries/from-transact-sql.md) на секции, к которым применяется функция. Синтаксис PARTITION BY см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Делит результирующий набор, полученный с помощью предложения [FROM](../../t-sql/queries/from-transact-sql.md), на секции, к которым применяется функция. Синтаксис PARTITION BY см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
- Определяет порядок назначения значений функции NTILE строкам секции. Целое число не может представлять столбец при \<order_by_clause > используется в ранжирующей функции.  
+ \<order_by_clause>  
+ Определяет порядок назначения значений функции NTILE строкам секции. Целое значение не может представлять столбец при использовании \<order_by_clause> в ранжирующей функции.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если количество строк в секции не делится на *integer_expression*, формируются группы двух размеров, отличающихся на единицу. В порядке, заданном предложением OVER, группы большего размера следуют перед группами меньшего размера. Например, если общее число строк равно 53, а число групп равно пяти, первые три группы будут состоять из 11 строк, а оставшиеся две — из 10. С другой стороны, если общее число строк делится на число групп, строки распределяются равномерно по всем группам. Например, если общее число строк равно 50 и задано пять групп, каждый контейнер будет состоять из 10 строк.  
   
  Функция NTILE не детерминирована. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>Б. Разделение результирующего набора с помощью ключевого слова PARTITION BY  
- В следующем примере к коду из примера A добавляется аргумент `PARTITION BY`. Строки вначале разделяются по столбцу `PostalCode`, а затем разделяются на четыре группы для каждого значения `PostalCode`. В примере также объявляется переменная `@NTILE_Var` , которая используется для указания значения для *integer_expression* параметра.  
+ В следующем примере к коду из примера A добавляется аргумент `PARTITION BY`. Строки вначале разделяются по столбцу `PostalCode`, а затем разделяются на четыре группы для каждого значения `PostalCode`. В этом примере также объявляется переменная `@NTILE_Var`, которая используется для указания значения параметра *integer_expression*.  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>В. Разделение строк на группы  
- В следующем примере функция NTILE разделить набор менеджеров по продажам на четыре группы на основании назначенных квоты продаж за 2003 год. Так как общее число строк не делится на количество групп, первая группа пять строк, а остальные иметь четыре строки.  
+ В приведенном ниже примере функция NTILE используется для разделения множества продавцов на четыре группы в соответствии с назначенными им квотами на продажу в 2003 году. Так как общее число строк не делится на количество групп, первая группа будет состоять из пяти строк, а остальные — из четырех.  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>Г. Разделение результирующего набора с помощью ключевого слова PARTITION BY  
- В следующем примере добавляется аргумент PARTITION BY код в примере а. Сначала строки секционируются по `SalesTerritoryCountry` и затем разделяются на две группы внутри каждого `SalesTerritoryCountry`. Обратите внимание, что предложение ORDER BY в предложении OVER упорядочивает NTILE ORDER BY инструкции SELECT упорядочивает результирующий набор.  
+ В приведенном ниже примере к коду из примера A добавляется аргумент PARTITION BY. Строки сначала разделяются по столбцу `SalesTerritoryCountry`, а затем разделяются на две группы для каждого значения `SalesTerritoryCountry`. Обратите внимание на то, что ORDER BY в предложении OVER упорядочивает NTILE, а ORDER BY в инструкции SELECT упорядочивает результирующий набор.  
   
 ```  
 -- Uses AdventureWorks  
@@ -242,10 +242,10 @@ Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Ранг &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [Ранжирующие функции &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK (Transact-SQL)](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK (Transact-SQL)](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER (Transact-SQL)](../../t-sql/functions/row-number-transact-sql.md)   
+ [Ранжирующие функции (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Вложенные запросы (хранилище данных Azure SQL, параллельное хранилище данных) | Документы Microsoft"
+title: "Вложенные запросы (хранилище данных SQL Azure или Parallel Data Warehouse) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -24,31 +24,31 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Вложенные запросы (хранилище данных Azure SQL, параллельное хранилище данных)
+# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Вложенные запросы (хранилище данных SQL Azure или Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  В этом разделе приведены примеры использования вложенные запросы в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  В этой статье приведены примеры использования вложенных запросов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- Инструкция SELECT, в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41;](../../t-sql/queries/select-transact-sql.md)  
+ Сведения об инструкции SELECT см. в статье [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="contents"></a>Содержание  
   
--   [Basics](#Basics)  
+-   [Основы](#Basics)  
   
--   [Примеры: Хранилище данных SQL и параллельные хранилища данных](#Examples)  
+-   [Примеры: хранилище данных SQL и Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a>Основы  
+##  <a name="Basics"></a> Основы  
  Вложенный запрос  
- Вложенным запросом называется запрос, помещаемый в инструкцию SELECT, INSERT, UPDATE или DELETE или в другой вложенный запрос. Это также называется внутренним запросом или внутренней операцией выбора.  
+ Вложенным запросом называется запрос, помещаемый в инструкцию SELECT, INSERT, UPDATE или DELETE или в другой вложенный запрос. Он также называется внутренним запросом или внутренней выборкой.  
   
  Внешний запрос  
- Инструкция, которая содержит вложенный запрос. Это также называется внешней операции выбора.  
+ Инструкция, содержащая вложенный запрос. Также называется внешней выборкой.  
   
- Коррелированные вложенные запросы  
- Вложенный запрос, который ссылается на таблицу во внешнем запросе.  
+ Связанный вложенный запрос  
+ Вложенный запрос, который обращается к таблице во внешнем запросе.  
   
-##  <a name="Examples"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В этом разделе приведены примеры вложенных запросов, поддерживаемые в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+##  <a name="Examples"></a> Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В этом разделе приводятся примеры вложенных запросов, поддерживаемых в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP и ORDER BY во вложенном запросе  
   
@@ -59,7 +59,7 @@ WHERE col1 IN
   
 ```  
   
-### <a name="b-having-clause-with-a-correlated-subquery"></a>Б. HAVING предложения с коррелированные вложенные запросы  
+### <a name="b-having-clause-with-a-correlated-subquery"></a>Б. Предложение HAVING со связанным вложенным запросом  
   
 ```  
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -73,7 +73,7 @@ ORDER BY EmployeeKey;
   
 ```  
   
-### <a name="c-correlated-subqueries-with-analytics"></a>В. Коррелированные вложенные запросы с помощью аналитики  
+### <a name="c-correlated-subqueries-with-analytics"></a>В. Связанные вложенные запросы с аналитикой  
   
 ```  
 SELECT * FROM ReplA AS A   
@@ -81,7 +81,7 @@ WHERE A.ID IN
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
 ```  
   
-### <a name="d-correlated-union-statements-in-a-subquery"></a>Г. Коррелированные инструкции union во вложенном запросе  
+### <a name="d-correlated-union-statements-in-a-subquery"></a>Г. Связанные инструкции объединения во вложенном запросе  
   
 ```  
 SELECT * FROM RA   
@@ -90,14 +90,14 @@ WHERE EXISTS
      UNION ALL SELECT 1 FROM RC);  
 ```  
   
-### <a name="e-join-predicates-in-a-subquery"></a>Д. Предикаты соединения во вложенных запросах  
+### <a name="e-join-predicates-in-a-subquery"></a>Д. Предикаты соединения во вложенном запросе  
   
 ```  
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
-### <a name="f-correlated-join-predicates-in-a-subquery"></a>Е. Коррелированные предикаты во вложенном запросе  
+### <a name="f-correlated-join-predicates-in-a-subquery"></a>Е. Связанные предикаты соединения во вложенном запросе  
   
 ```  
 SELECT * FROM RA   
@@ -105,7 +105,7 @@ SELECT * FROM RA
     (SELECT 1 FROM RB INNER JOIN RC ON RA.a1=RB.b1+RC.c1);  
 ```  
   
-### <a name="g-correlated-subselects-as-data-sources"></a>Ж. Коррелированные подзапросы выборки в качестве источников данных  
+### <a name="g-correlated-subselects-as-data-sources"></a>Ж. Связанные вложенные выборки в качестве источников данных  
   
 ```  
 SELECT * FROM RA   
@@ -113,14 +113,14 @@ SELECT * FROM RA
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
 ```  
   
-### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>З. Коррелированные вложенные запросы в значения данных, используемые с статистическими функциями  
+### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>З. Связанные вложенные запросы в значениях данных, используемые с агрегатами  
   
 ```  
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
-### <a name="i-using-in-with-a-correlated-subquery"></a>И. С помощью вход с помощью коррелированные вложенные запросы  
- В следующем примере в коррелированном или повторяющемся вложенном запросе используется кодовое слово `IN`. Это запрос, зависящий от результатов выполнения другого запроса. Внутренний запрос выполняется неоднократно, один раз для каждой строки, которые могут быть выбраны внешним запросом. Этот запрос извлекает один экземпляр `EmployeeKey` , а также имя и фамилия каждого сотрудника, для которого `OrderQuantity` в `FactResellerSales` таблица является `5` и для которого совпадают идентификационные номера сотрудника в `DimEmployee` и `FactResellerSales` таблиц.  
+### <a name="i-using-in-with-a-correlated-subquery"></a>И. Использование IN со связанным вложенным запросом  
+ В следующем примере в коррелированном или повторяющемся вложенном запросе используется кодовое слово `IN`. Это запрос, зависящий от результатов выполнения другого запроса. Внутренний запрос повторно выполняется для каждой строки, которая может быть выбрана с помощью внешнего запроса. Этот запрос получает один экземпляр `EmployeeKey`, а также имя и фамилию каждого сотрудника, для которого значение `OrderQuantity` в таблице `FactResellerSales` составляет `5`, а соответствующие идентификационные номера в таблицах `DimEmployee` и `FactResellerSales` совпадают.  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -132,8 +132,8 @@ WHERE 5 IN
 ORDER BY EmployeeKey;  
 ```  
   
-### <a name="j-using-exists-versus-in-with-a-subquery"></a>К. Использование ключевого слова EXISTS и in с вложенным запросом  
- В следующем примере показано запросы, которые семантически эквивалентны проиллюстрировать различие между использованием `EXISTS` ключевое слово и `IN` ключевое слово. Оба являются примерами вложенный запрос, извлекающие по одному экземпляру продукции каждого наименования, для которой является «Подкатегория продукта» `Road Bikes`. `ProductSubcategoryKey`соответствует между `DimProduct` и `DimProductSubcategory` таблицы.  
+### <a name="j-using-exists-versus-in-with-a-subquery"></a>К. Использование EXISTS или IN с вложенным запросом  
+ В приведенном ниже примере представлены семантически эквивалентные запросы для демонстрации различий в использовании ключевых слов `EXISTS` и `IN`. Вложенный запрос в каждом из примеров получает один экземпляр каждого названия продукта, подкатегория которого — `Road Bikes`. Значения `ProductSubcategoryKey` совпадают в таблицах `DimProduct` и `DimProductSubcategory`.  
   
 ```  
 SELECT DISTINCT EnglishProductName  
@@ -146,7 +146,7 @@ WHERE EXISTS
 ORDER BY EnglishProductName;  
 ```  
   
- Или  
+ либо  
   
 ```  
 SELECT DISTINCT EnglishProductName  
@@ -158,7 +158,7 @@ WHERE dp.ProductSubcategoryKey IN
 ORDER BY EnglishProductName;  
 ```  
   
-### <a name="k-using-multiple-correlated-subqueries"></a>Л. С помощью нескольких коррелированные вложенные запросы  
+### <a name="k-using-multiple-correlated-subqueries"></a>Л. Использование нескольких связанных вложенных запросов  
  В данном примере с помощью двух коррелированных запросов осуществляется поиск сотрудников, продавших определенную продукцию.  
   
 ```  

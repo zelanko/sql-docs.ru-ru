@@ -1,5 +1,5 @@
 ---
-title: "МЕЖДУ (Transact-SQL) | Документы Microsoft"
+title: "BETWEEN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/28/2017
 ms.prod: sql-non-specified
@@ -51,27 +51,27 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>Аргументы  
  *test_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) для проверки в диапазоне, определяемом *begin_expression*и *end_expression*. *test_expression* должен быть один и тот же тип данных, как *begin_expression* и *end_expression*.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) для проверки на принадлежность диапазону в пределах от *begin_expression* до *end_expression*. Выражение *test_expression* должно иметь тот же тип данных, что и *begin_expression* и *end_expression*.  
   
  NOT  
  Указывает, что результат предиката должен быть инвертирован.  
   
  *begin_expression*  
- Любое допустимое выражение. *begin_expression* должен быть один и тот же тип данных, как *test_expression* и *end_expression*.  
+ Любое допустимое выражение. Выражение *begin_expression* должно иметь тот же тип данных, что и *test_expression* и *end_expression*.  
   
  *end_expression*  
- Любое допустимое выражение. *end_expression* должен быть один и тот же тип данных, как *test_expression*и *begin_expression*.  
+ Любое допустимое выражение. Выражение *end_expression* должно иметь тот же тип данных, что и *test_expression* и *begin_expression*.  
   
  и  
- Действует как заполнитель, указывающий *test_expression* должно находиться в пределах заданных значений аргументов *begin_expression* и *end_expression*.  
+ Служит заполнителем, который указывает на то, что значение *test_expression* должно находиться в диапазоне от *begin_expression* до *end_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="result-value"></a>Значение результата  
- BETWEEN возвращает **TRUE** Если значение *test_expression* больше или равно значению *begin_expression* и меньше или равно значению *end_expression*.  
+ Оператор BETWEEN возвращает значение **TRUE**, если значение аргумента *test_expression* больше значения аргумента *begin_expression* или равно ему и меньше значения аргумента *end_expression* или равно ему.  
   
- NOT BETWEEN возвращает **TRUE** Если значение *test_expression* меньше, чем значение *begin_expression* или больше, чем значение *end_expression* .  
+ Оператор NOT BETWEEN возвращает значение **TRUE**, если значение аргумента *test_expression* меньше значения аргумента *begin_expression* или больше значения аргумента *end_expression*.  
   
 ## <a name="remarks"></a>Remarks  
  Для задания исключающего диапазона используйте операторы «больше» (>) и «меньше» (<). Если любой параметр предиката BETWEEN или NOT BETWEEN имеет значение NULL, результат не определен (UNKNOWN).  
@@ -79,7 +79,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-between"></a>A. Использование оператора BETWEEN  
- Следующий пример возвращает сведения о ролях баз данных в базе данных. Первый запрос возвращает все роли. Во втором примере `BETWEEN` предложение для ограничения ролей в указанном `database_id` значения.  
+ В приведенном ниже примере возвращаются сведения о ролях базы данных. Первый запрос возвращает все роли. Во втором примере с помощью предложения `BETWEEN` роли ограничиваются указанными значениями `database_id`.  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>Г. Использование оператора BETWEEN со значениями типа datetime  
- Следующий пример извлекает строки, в которой **datetime** значения — от `'20011212'` и `'20020105'`включительно.  
+ В приведенном ниже примере возвращаются строки, в которых значения типа **datetime** находятся между `'20011212'` и `'20020105'` включительно.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,17 +184,17 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- Запрос извлекает ожидаемые строки, так как значения даты в запросе и **datetime** значения, хранящиеся в `RateChangeDate` были заданы без указания времени даты. Если время не указано, по умолчанию оно принимается равным 0:00. Обратите внимание, что строка, время в которой позднее 12:00. 05.01.2002, не будет возвращена данным запросом, так как она находится за пределами диапазона.  
+ Запрос извлекает ожидаемые строки, так как значения даты в запросе и значения типа **datetime**, хранящиеся в столбце `RateChangeDate`, были заданы без указания времени. Если время не указано, по умолчанию оно принимается равным 0:00. Обратите внимание, что строка, время в которой позднее 12:00. 05.01.2002, не будет возвращена данным запросом, так как она находится за пределами диапазона.  
   
   
-## <a name="see-also"></a>См. также  
- [&#62; &#40; Больше &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [&#60; &#40; Меньше, чем &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [> (больше) (Transact-SQL)](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60; (меньше) (Transact-SQL)](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

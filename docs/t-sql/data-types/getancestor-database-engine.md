@@ -1,5 +1,5 @@
 ---
-title: "GetAncestor (компонент Database Engine) | Документы Microsoft"
+title: "GetAncestor (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **hierarchyid** представляющий  *n* предка *это*.
+Возвращает идентификатор **hierarchyid**, представляющий *n*-й предок *this*.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>Аргументы  
 *n*  
-**Int**, представляющее число уровней для перемещения вверх по иерархии.
+Значение типа **int**, представляющее число уровней для перемещения вверх по иерархии.
   
-## <a name="return-types"></a>Возвращаемые типы
-**Возвращаемый тип SQL Server: hierarchyid**
+## <a name="return-types"></a>Типы возвращаемых данных
+**Возвращаемый тип SQL Server:hierarchyid**
   
-**Возвращаемый тип CLR: SqlHierarchyId**
+**Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Используется, чтобы проверить, является ли текущий узел предком для каждого из узлов в выходных данных на указанном уровне.
   
-Если число больше [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) будет передан, возвращается значение NULL.
+Если передается число больше значения [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), возвращается значение NULL.
   
 При передаче отрицательного числа возникает исключение.
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>В. Возвращение текущей строки  
-Для возврата текущего узла с помощью `GetAncestor(0)`, выполните следующий код.
+Чтобы вернуть текущий узел с помощью функции `GetAncestor(0)`, выполните приведенный ниже код.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -123,8 +123,8 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>См. также:
-[IsDescendantOf &#40; компонент Database Engine &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+## <a name="see-also"></a>См. также раздел
+[IsDescendantOf (ядро СУБД)](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

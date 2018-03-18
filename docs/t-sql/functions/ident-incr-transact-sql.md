@@ -1,5 +1,5 @@
 ---
-title: "IDENT_INCR (Transact-SQL) | Документы Microsoft"
+title: "IDENT_INCR (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает значение приращения (возвращаются в виде **числовое** (**@@**MAXPRECISION, 0)) указан во время создания столбца идентификаторов в таблицу или представление, имеющее столбец идентификаторов.  
+  Возвращает значение инкремента (тип **numeric** (**@@**MAXPRECISION,0)), указанное во время создания столбца идентификаторов в таблице или представлении, которые содержат столбец идентификаторов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ IDENT_INCR ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *таблица_или_представление* **"**  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) , указывающее таблицу или представление, чтобы проверить значение приращения допустимое удостоверение. *таблица_или_представление* может быть строковой константой, заключенной в кавычки, переменной, функции или имени столбца. *таблица_или_представление* — **char**, **nchar**, **varchar**, или **nvarchar**.  
+ **'** *table_or_view* **'**  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), указывающее таблицу или представление для проверки на наличие допустимого значения шага приращения идентификатора. Аргумент *table_or_view* может быть строковой константой, заключенной в кавычки, переменной, функцией или именем столбца. Аргумент *table_or_view* имеет тип **char**, **nchar**, **varchar** или **nvarchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **numeric**  
@@ -99,11 +99,11 @@ Production          BillOfMaterials                    1
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

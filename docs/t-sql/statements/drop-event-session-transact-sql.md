@@ -1,5 +1,5 @@
 ---
-title: "DROP EVENT SESSION (Transact-SQL) | Документы Microsoft"
+title: "DROP EVENT SESSION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ON SERVER
  *event_session_name*  
  Имя существующего сеанса событий.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  При удалении сеанса событий полностью удаляются все сведения о конфигурации, такие как цели и параметры сеанса.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY EVENT SESSION.  
   
 ## <a name="examples"></a>Примеры  
@@ -65,7 +65,7 @@ DROP EVENT SESSION evt_spin_lock_diagnosis
 ON SERVER;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  

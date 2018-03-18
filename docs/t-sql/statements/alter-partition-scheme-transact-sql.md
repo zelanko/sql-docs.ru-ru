@@ -1,5 +1,5 @@
 ---
-title: "ALTER PARTITION SCHEME (Transact-SQL) | Документы Microsoft"
+title: "ALTER PARTITION SCHEME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 12/07/2017
   Добавляет файловую группу в схему секционирования или изменяет обозначение файловой группы NEXT USED для данной схемы секционирования. 
 
 >[!NOTE]
->В базе данных SQL Azure, поддерживаются только первичную файловую группу.  
+>В базе данных SQL Azure поддерживаются только первичные файловые группы.  
   
- ![Значок ссылки на статьи](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на статьи") [синтаксические обозначения Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,21 +59,21 @@ NEXT USED [ filegroup_name ] [ ; ]
  Имя изменяемой схемы секционирования.  
   
  *filegroup_name*  
- Указывает файловую группу, которую требуется пометить для схемы секционирования как NEXT USED. Это означает, что файловая группа примет новое секционирование, создается с помощью [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) инструкции.  
+ Указывает файловую группу, которую требуется пометить для схемы секционирования как NEXT USED. Это означает, что файловая группа примет новое секционирование, созданное с помощью инструкции [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md).  
   
- В схеме секционирования только одна файловая группа может быть отмечена как NEXT USED. Можно указать пустую файловую группу. Если *имя_файловой_группы* указан и в настоящее время имеется файловая группа не отмечена как NEXT USED, *filegroup_name* отмечена как NEXT USED. Если *имя_файловой_группы* указано и файловая группа с пометкой NEXT USED уже существует, передает свойство NEXT USED с существующие файловую группу для *filegroup_name*.  
+ В схеме секционирования только одна файловая группа может быть отмечена как NEXT USED. Можно указать пустую файловую группу. Если указан аргумент *filegroup_name* и ни одна файловая группа не является в данный момент NEXT USED, то группа *filegroup_name* помечается как NEXT USED. Если указан аргумент *filegroup_name* и файловая группа с пометкой NEXT USED уже существует, то свойство NEXT USED переносится от текущей файловой группы к группе *filegroup_name*.  
   
- Если *имя_файловой_группы* не указан и файловая группа с пометкой NEXT USED уже существует, эту файловую группу теряет состояние NEXT USED, чтобы не NEXT USED файловых групп в *partition_scheme_name*.  
+ Если аргумент *filegroup_name* не указан и файловая группа с пометкой NEXT USED уже существует, эта файловая группа теряет состояние NEXT USED, чтобы в схеме секционирования *partition_scheme_name* не осталось файловой группы NEXT USED.  
   
- Если *filegroup_name* не указан, а не отмечена как NEXT USED, инструкция ALTER PARTITION SCHEME возвращает предупреждение.  
+ Если аргумент *filegroup_name* не указан и ни одна файловая группа не отмечена как NEXT USED, инструкция ALTER PARTITION SCHEME возвращает предупреждение.  
   
-## <a name="remarks"></a>Замечания  
- Все файловые группы, на которые действует инструкция ALTER PARTITION SCHEME, должны быть в режиме «в сети».  
+## <a name="remarks"></a>Примечания  
+ Все файловые группы, на которые действует инструкция ALTER PARTITION SCHEME, должны быть в режиме "в сети".  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции ALTER PARTITION SCHEME необходимы следующие разрешения.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
   
 -   Разрешение CONTROL или ALTER на базу данных, в которой была создана схема секционирования.  
   
@@ -89,19 +89,19 @@ NEXT USED test5fg;
   
  Файловая группа `test5fg` получает любые дополнительные секции из секционированной таблицы или индекс как результат выполнения инструкции ALTER PARTITION FUNCTION.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.partition_schemes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [sys.data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

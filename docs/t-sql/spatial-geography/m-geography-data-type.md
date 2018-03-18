@@ -1,5 +1,5 @@
 ---
-title: "M (тип данных geography) | Документы Microsoft"
+title: "M (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geography-data-type"></a>M (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **M** (Мера) значение **geography** экземпляра. Семантика значения измерения определяется пользователем, но в основном описывает расстояние вдоль объекта типа linestring. Например, значение меры может использоваться для отсчета километровых столбов вдоль дороги.  
+  Возвращает значение **M** (мера) для экземпляра **geography**. Семантика значения измерения определяется пользователем, но в основном описывает расстояние вдоль объекта типа linestring. Например, значение меры может использоваться для отсчета километровых столбов вдоль дороги.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Значение этого свойства равно null при **geography** экземпляр не **точки**, а также для любого **точки** экземпляра, для которой не установлено.  
+ Значение этого свойства равно NULL, если экземпляр **geography** не имеет тип **Point**, а также для любого экземпляра **Point**, для которого он не установлен.  
   
- Это свойство предназначено только для чтения.  
+ Это свойство доступно только для чтения.  
   
- Значения M не используются ни в каких вычислениях, выполненных библиотекой и не будет выполнена через какие библиотечные изменения.  
+ Значения M не используются в библиотечных вычислениях и поэтому не будут передаваться в библиотеку.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Point` со значениями Z (уровень) и M (мера) и используется метод `M`, чтобы получить значение `M` экземпляра.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Я &#40; тип данных geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Z (тип данных geography)](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

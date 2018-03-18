@@ -1,5 +1,5 @@
 ---
-title: "ОТЗЫВ разрешений на асимметричный ключ (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешения на асимметричный ключ (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!IMPORTANT]  
 >  Если участник обладает указанным разрешением без параметра GRANT, будет отменено само разрешение.  
   
- *разрешение*  
+ *permission*  
  Указывает разрешение, которое может быть отменено на сборку. Перечислены ниже.  
   
- НА АСИММЕТРИЧНЫЙ ключ **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  Задает асимметричный ключ, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   Пользователь базы данных, не сопоставленный серверу-участнику  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Асимметричный ключ — защищаемое на уровне базы данных содержимое базы данных, являющейся его родителем в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть отменены для ассиметричного ключа.  
   
 |Разрешение асимметричного ключа|Содержится в разрешении асимметричного ключа|Содержится в разрешении базы данных|  
@@ -116,7 +116,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL на асимметричный ключ.  
   
 ## <a name="see-also"></a>См. также:  
@@ -125,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

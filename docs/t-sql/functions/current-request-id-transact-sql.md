@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_REQUEST_ID (Transact-SQL) | Документы Microsoft"
+title: "CURRENT_REQUEST_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -44,13 +44,13 @@ ms.lasthandoff: 11/21/2017
 CURRENT_REQUEST_ID()  
 ```  
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **smallint**
   
-## <a name="remarks"></a>Замечания  
-Чтобы получить точные сведения о текущем сеансе и текущем требовании, используйте@SPID и CURRENT_REQUEST_ID(), соответственно.
+## <a name="remarks"></a>Remarks  
+Чтобы получить точные сведения о текущем сеансе и текущем запросе, используйте @@SPID и CURRENT_REQUEST_ID() соответственно.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)
   
   

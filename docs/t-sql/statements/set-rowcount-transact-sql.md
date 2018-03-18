@@ -1,5 +1,5 @@
 ---
-title: "SET ROWCOUNT (Transact-SQL) | Документы Microsoft"
+title: "SET ROWCOUNT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *номер* | @*number_var*  
+ *number* | @*number_var*  
  Количество строк, выраженное целым числом, которое необходимо обработать, перед завершением запроса.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Использование инструкции SET ROWCOUNT не будет оказывать влияния на инструкции DELETE, INSERT и UPDATE в последующей версии SQL Server. При программировании избегайте использования инструкции SET ROWCOUNT с инструкциями DELETE, INSERT и UPDATE и постарайтесь внести изменения в приложения, которые используют ее в настоящее время. Для аналогичного поведения используйте синтаксис TOP. Дополнительные сведения см. в разделе [в начало &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  Использование инструкции SET ROWCOUNT не будет оказывать влияния на инструкции DELETE, INSERT и UPDATE в последующей версии SQL Server. При программировании избегайте использования инструкции SET ROWCOUNT с инструкциями DELETE, INSERT и UPDATE и постарайтесь внести изменения в приложения, которые используют ее в настоящее время. Для аналогичного поведения используйте синтаксис TOP. Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
   
  Для выключения этого параметра и возвращения всех строк, укажите SET ROWCOUNT 0.  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
   
  Значение параметра ROWCOUNT устанавливается во время выполнения, а не во время синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Инструкция SET ROWCOUNT завершает обработку после указанного числа строк. В следующем примере обратите внимание на то, что более чем 20 строк отвечают критериям этого `AccountType = 'Assets'`. Однако после применения SET ROWCOUNT возвращаются не все строки.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Инструкция SET ROWCOUNT завершает обработку после указанного числа строк. Обратите внимание, что в следующем примере больше 20 строк удовлетворяют условию `AccountType = 'Assets'`. Однако после применения SET ROWCOUNT возвращаются не все строки.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- Чтобы вернуть все строки, set ROWCOUNT 0.  
+ Чтобы вернуть все строки, установите для параметра ROWCOUNT значение 0.  
   
 ```  
 -- Uses AdventureWorks  

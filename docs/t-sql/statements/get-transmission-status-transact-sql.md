@@ -1,5 +1,5 @@
 ---
-title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Документы Microsoft"
+title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
  *conversation_id*  
  Дескриптор диалога для диалога. Этот параметр имеет тип **uniqueidentifier**.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **nchar**  
   
-## <a name="remarks"></a>Замечания  
- Возвращает строку, описывающую состояние последней попытки передачи, для конкретного диалога. Возвращает пустую строку, если последняя попытка передачи завершилась успешно, если было предпринято ни одной попытки передачи или *conversation_handle* не существует.  
+## <a name="remarks"></a>Примечания  
+ Возвращает строку, описывающую состояние последней попытки передачи, для конкретного диалога. Возвращает пустую строку, если последняя попытка передачи завершилась успешно, если не было предпринято ни одной попытки передачи или если аргумент *conversation_handle* не существует.  
   
  Данные, возвращаемые этой функцией, совпадают с данными, отображаемыми в столбце last_transmission_error представления управления sys.transmission_queue. Однако эта функция может быть использована для нахождения состояния передачи диалогов, у которых на данный момент нет сообщений в очереди передачи.  
   
@@ -84,10 +84,10 @@ SELECT Status =
  The Service Broker protocol transport is disabled or not configured.
  ```  
   
- В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не настроен для поддержки [!INCLUDE[ssSB](../../includes/sssb-md.md)] для обмена данными по сети.  
+ В этом случае компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не был настроен для разрешения [!INCLUDE[ssSB](../../includes/sssb-md.md)] обмениваться данными по сети.  
   
-## <a name="see-also"></a>См. также:  
- [sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

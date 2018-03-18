@@ -1,5 +1,5 @@
 ---
-title: "Учебник: Составление инструкций Transact-SQL | Документы Microsoft"
+title: "Учебник. Составление инструкций Transact-SQL | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Учебник. Составление инструкций Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Добро пожаловать в записи [!INCLUDE[tsql](../includes/tsql-md.md)] инструкций учебника. Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] -реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)] . Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Учебник. Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)]. Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] -реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)] . Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
   
 >**ПРИМЕЧАНИЕ** . Если вы новичок, то, возможно, вам будет проще использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , а не создавать инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   

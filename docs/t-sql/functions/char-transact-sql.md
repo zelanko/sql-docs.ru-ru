@@ -1,5 +1,5 @@
 ---
-title: "CHAR (Transact-SQL) | Документы Microsoft"
+title: "CHAR (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Преобразует **int** код ASCII в символ.
+Преобразует код ASCII **int** в символ.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +55,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *integer_expression*  
-Целое число от 0 до 255. `NULL`возвращается, если целочисленное выражение находится не в этом диапазоне.
+Целое число от 0 до 255. Значение `NULL` возвращается в случае, если целочисленное выражение находится вне этой области значений.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-`CHAR`может использоваться для вставки управляющих символов в символьные строки. В следующей таблице показаны некоторые часто используемые управляющие символы.
+Функция `CHAR` может использоваться для вставки управляющих символов в символьные строки. В следующей таблице показаны некоторые часто используемые управляющие символы.
   
 |Управляющий символ|Значение|  
 |---|---|
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>В. Использование ASCII и CHAR для отображения значений ASCII из строки  
-В следующем примере предполагается символ в кодировке ASCII набор и возвращает значение символа для 6 числа символов ASCII.
+В приведенном ниже примере принимается кодировка ASCII и возвращается значение символа для 6 номеров символов ASCII.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>Г. Использование функции CHAR для вставки управляющего символа  
-В следующем примере используется `CHAR(13)` для возврата сведений о базах данных в отдельных строках, когда результаты возвращаются в тексте.
+В приведенном ниже примере используется `CHAR(13)` для получения сведений о базах данных в отдельных строках, когда результаты возвращаются в виде текста.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -173,12 +173,12 @@ AdventureWorksPDW2012    was created on  2014-05-07 09:05:07.083
 AdventureWorksPDW2012    is currently  ONLINE  
 ```
   
-## <a name="see-also"></a>См. также:
- [ASCII &#40; Transact-SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
- [Юникод &#40; Transact-SQL &#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40; Объединение строк &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+ [ASCII (Transact-SQL)](../../t-sql/functions/ascii-transact-sql.md)  
+ [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE (Transact-SQL)](../../t-sql/functions/unicode-transact-sql.md)  
+ [+ (объединение строк) (Transact-SQL)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

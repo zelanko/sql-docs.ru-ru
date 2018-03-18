@@ -1,5 +1,5 @@
 ---
-title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Документы Microsoft"
+title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Изменяет защиту закрытого ключа.  
   
- ENCRYPTION BY PASSWORD **= "***stongPassword***"**  
- Указывает новый пароль для защиты закрытого ключа. *пароль* должен соответствовать требованиям политики паролей Windows компьютера, на котором выполняется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот аргумент не указан, закрытый ключ будет зашифрован с помощью главного ключа базы данных.  
+ ENCRYPTION BY PASSWORD **='***stongPassword***'**  
+ Указывает новый пароль для защиты закрытого ключа. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот аргумент не указан, закрытый ключ будет зашифрован с помощью главного ключа базы данных.  
   
- ПАРОЛЬ дешифрования УКАЗЫВАТЬ **= "***Старый_пароль***"**  
+ DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Указывает старый пароль, которым в данный момент защищен закрытый ключ. Этот аргумент не требуется, если закрытый ключ защищается главным ключом базы данных.  
   
-## <a name="remarks"></a>Замечания  
- Если главного ключа базы данных не существует, необходимо указать параметр ENCRYPTION BY PASSWORD, а если пароль не указан, операция завершится неуспешно. Сведения о том, как создать главный ключ базы данных см. в разделе [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ Если главного ключа базы данных не существует, необходимо указать параметр ENCRYPTION BY PASSWORD, а если пароль не указан, операция завершится неуспешно. Дополнительные сведения о создании главного ключа базы данных см. в разделе [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Инструкция ALTER ASYMMETRIC KEY позволяет изменить защиту закрытого ключа с помощью параметров PRIVATE KEY так, как показано в следующей таблице.  
   
 |Тип изменения защиты|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|Изменение старого пароля на новый|Обязательно|Обязательное|  
-|Изменение защиты паролем на защиту главным ключом|Пропустить|Обязательное|  
-|Изменение защиты главным ключом на защиту паролем|Обязательное|Пропустить|  
+|Изменение старого пароля на новый|Обязательно|Обязательно|  
+|Изменение защиты паролем на защиту главным ключом|Пропустить|Обязательно|  
+|Изменение защиты главным ключом на защиту паролем|Обязательно|Пропустить|  
   
- Чтобы главный ключ базы данных мог использоваться для защиты закрытого ключа, он сначала должен быть открыт. Дополнительные сведения см. в разделе [OPEN MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-master-key-transact-sql.md).  
+ Чтобы главный ключ базы данных мог использоваться для защиты закрытого ключа, он сначала должен быть открыт. Дополнительные сведения см. в разделе [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md).  
   
- Для изменения владельца асимметричного ключа, используйте [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Для изменения владельца асимметричного ключа служит инструкция [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  При удалении закрытого ключа необходимо иметь разрешение CONTROL на асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
@@ -108,7 +108,7 @@ GO
 ```  
   
 ### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>Б. Удаление закрытого ключа из асимметричного ключа  
- В следующем примере закрытый ключ удаляется из ассиметричного ключа `PacificSales19`, в котором остается только открытый ключ.  
+ В следующем примере закрытый ключ удаляется из асимметричного ключа `PacificSales19`, в котором остается только открытый ключ.  
   
 ```  
 ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;  
@@ -125,13 +125,13 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Ключи шифрования базы данных и SQL Server (ядро СУБД)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
- [ОТКРЫТЬ ГЛАВНЫЙ ключ &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
+ [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

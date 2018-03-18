@@ -1,5 +1,5 @@
 ---
-title: "УДАЛИТЬ ключ ШИФРОВАНИЯ базы данных (Transact-SQL) | Документы Microsoft"
+title: "DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Удаляет ключ шифрования базы данных, используемый при прозрачном шифровании базы данных. Дополнительные сведения о прозрачном шифровании базы данных см. в разделе [прозрачное шифрование данных &#40; Прозрачное шифрование данных &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  Удаляет ключ шифрования базы данных, используемый при прозрачном шифровании базы данных. Дополнительные сведения о прозрачном шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 > [!IMPORTANT]  
 >  Необходимо сохранить резервную копию сертификата, защищенную ключом шифрования базы данных, даже если она больше не включена в базе данных. Даже если база данных больше не зашифрована, части журнала транзакций могут по-прежнему оставаться защищенными, а для некоторых операций будет требоваться сертификат до выполнения полного резервного копирования базы данных.  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Если база данных зашифрована, необходимо сначала удалить шифрование базы данных с помощью инструкции ALTER DATABASE. Дождитесь завершения расшифровки, прежде чем удалять ключ шифрования базы данных. Дополнительные сведения об инструкции ALTER DATABASE см. в разделе [параметры ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Чтобы просмотреть состояние базы данных, используйте [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) динамическое административное представление.  
+## <a name="remarks"></a>Remarks  
+ Если база данных зашифрована, необходимо сначала удалить шифрование базы данных с помощью инструкции ALTER DATABASE. Дождитесь завершения расшифровки, прежде чем удалять ключ шифрования базы данных. Дополнительные сведения об инструкции ALTER DATABASE см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md). Состояние базы данных можно просмотреть с помощью динамического административного представления [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -72,8 +72,8 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующий пример удаляет Прозрачного шифрования данных, а затем удаляет ключ шифрования базы данных.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В следующем примере удаляется шифрование TDE, а затем удаляется ключ шифрования базы данных.  
   
 ```  
 ALTER DATABASE AdventureWorksPDW2012  
@@ -110,8 +110,8 @@ GO
  [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [СОЗДАТЬ ключ ШИФРОВАНИЯ базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ИЗМЕНИТЬ ключ ШИФРОВАНИЯ базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

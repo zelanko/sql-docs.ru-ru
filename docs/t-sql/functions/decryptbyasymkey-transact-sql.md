@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYASYMKEY (Transact-SQL) | Документы Microsoft"
+title: "DECRYPTBYASYMKEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,24 +50,24 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Аргументы  
  *Asym_Key_ID*  
- Идентификатор асимметричного ключа в базе данных. *Asym_Key_ID* — **int**.  
+ Идентификатор асимметричного ключа в базе данных. Аргумент *Asym_Key_ID* имеет тип **int**.  
   
- *зашифрованный текст*  
+ *ciphertext*  
  Строка данных, которая была зашифрована асимметричным ключом.  
   
  @ciphertext  
- Переменная типа **varbinary** , содержащий данные, которые были зашифрованы с помощью асимметричного ключа.  
+ Переменная типа **varbinary**, содержащая данные, которые были зашифрованы с помощью асимметричного ключа.  
   
  *Asym_Key_Password*  
  Пароль, который был использован при шифровке асимметричного ключа в базе данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Шифрование и дешифрование асимметричным ключом являются очень дорогостоящими по сравнению с шифрованием и дешифрованием симметричным ключом. Рекомендуется использовать асимметричный ключ при работе с большими наборами данных, например с данными пользователей в таблицах.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL на асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ENCRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+ [ENCRYPTBYASYMKEY (Transact-SQL)](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

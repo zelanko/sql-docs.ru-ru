@@ -1,5 +1,5 @@
 ---
-title: "Разрешения GRANT группы доступности (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений на группу доступности (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT (предоставление) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Предоставление разрешений для группы доступности Always On.  
+  Предоставляет разрешения на группу доступности AlwaysOn.  
   
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть предоставлено для группы доступности. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть предоставлено для группы доступности. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- В ГРУППЕ ДОСТУПНОСТИ **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
  Указывает группу доступности, для которой предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
   
- Чтобы \<server_principal >  
+ TO \<server_principal>  
  Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа, которому будут представлены разрешения.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с использованием которого участник, выполняющий этот запрос, осуществляет свое право на предоставление разрешений.  
   
-## <a name="remarks"></a>Замечания  
- Разрешения в области сервера могут предоставляться только в том случае, когда текущая база данных **master**.  
+## <a name="remarks"></a>Remarks  
+ Разрешения в области сервера предоставляются только в том случае, если текущей базой данных является **master**.  
   
- Сведения о группах доступности можно увидеть в [sys.availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) представления каталога. Сведения о разрешениях сервера можно увидеть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога и сведения об участниках сервера отобразится в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Сведения о группах доступности отображаются в представлении каталога [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Сведения о серверных разрешениях отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), а сведения о серверах-участниках — в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Группа доступности защищается на уровне сервера. В следующей таблице указаны конкретные, ограниченные разрешения, которые могут быть предоставлены для группы доступности, а также более общие разрешения, неявно включающие первую категорию разрешений.  
   
@@ -97,9 +97,9 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- Для диаграмм всех [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешения, см. [афише разрешений ядра базы данных](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Схему всех разрешений [!INCLUDE[ssDE](../../includes/ssde-md.md)] см. в [афише разрешений компонента Database Engine](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для группы доступности или разрешения ALTER ANY AVAILABILTIY GROUP для сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -124,7 +124,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>В. Предоставление разрешения CONTROL для группы доступности  
- Следующий код предоставляет разрешение  `CONTROL` в группе доступности `MyAg` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователю `PKomosinski`. Разрешение CONTROL дает пользователю полный контроль над группой доступности, даже если он не является владельцем группы доступности. Для изменения владельца, в разделе [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Следующий код предоставляет разрешение  `CONTROL` в группе доступности `MyAg` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователю `PKomosinski`. Разрешение CONTROL дает пользователю полный контроль над группой доступности, даже если он не является владельцем группы доступности. Инструкции по изменению владельца базы данных см. в статье [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ```  
 USE master;  
@@ -133,11 +133,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Группа доступности REVOKE разрешения &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
- [ЗАПРЕТ разрешений группы доступности &#40; Transact-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+ [REVOKE, отзыв разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys.availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [Представления каталога &#40; групп доступности AlwaysOn Transact-SQL &#41; ](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [Разрешения &#40; компонент Database Engine &#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [Представления каталога групп доступности AlwaysOn (Transact-SQL) ](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

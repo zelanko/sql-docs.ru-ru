@@ -1,5 +1,5 @@
 ---
-title: "= (Оператор присваивания) (Transact-SQL) | Документы Microsoft"
+title: "= (оператор присваивания) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-assignment-operator-transact-sql"></a>= (Оператор присваивания) (Transact-SQL)
+# <a name="-assignment-operator-transact-sql"></a>= (оператор присваивания) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Знак равенства (=) является единственным оператором присваивания в языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. В следующем примере создается переменная `@MyCounter`, а затем оператор присваивания устанавливает `@MyCounter` в значение выражения.  
@@ -53,9 +53,9 @@ FROM Production.Product;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

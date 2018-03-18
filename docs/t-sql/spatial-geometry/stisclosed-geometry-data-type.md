@@ -1,5 +1,5 @@
 ---
-title: "STIsClosed (тип данных geometry) | Документы Microsoft"
+title: "STIsClosed (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает 1, если начальную и конечную точки заданного **geometry** экземпляра одинаковы. Возвращает значение 1 для **geometrycollection** типов, если каждый содержащийся **geometry** экземпляр закрыт. Возвращает значение 0, если экземпляр является незамкнутым.
+Возвращает значение 1, если начальная и конечная точки заданного экземпляра **geometry** совпадают. Возвращает значение 1 для типов коллекции **geometrycollection**, если каждый содержащийся в ней экземпляр **geometry** является замкнутым. Возвращает значение 0, если экземпляр является незамкнутым.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает 0, если все фигуры **geometry** экземпляра являются точки, или если экземпляр пуст.  
+ Этот метод возвращает значение 0, если среди фигур экземпляра **geometry** есть точки или экземпляр является пустым.  
   
- Все **многоугольника** считаются замкнутыми.  
+ Все экземпляры **Polygon** считаются замкнутыми.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `LineString` и вызывается метод `STIsClosed()`, который определяет, является ли экземпляр `LineString` замкнутым.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "&amp;= (Побитовое и назначение) (Transact-SQL) | Документы Microsoft"
+title: "&amp;= (побитовое присваивание И) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (Побитовое и назначение) (Transact-SQL)
+# <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (побитовое присваивание И) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 
@@ -50,18 +50,18 @@ expression &= expression
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) какой-либо один из данных типов в числовой категории, кроме **бит** тип данных.  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md) одного из типов данных числовой категории, кроме типа данных **bit**.  
   
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Дополнительные сведения см. в разделе [& &#40; Побитовое и &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
+ Дополнительные сведения см. в статье [& (побитовая операция И) (Transact-SQL)](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Побитовые операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Побитовые операторы (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "- (Вычитание) (Transact-SQL) | Документы Microsoft"
+title: "- (вычитание) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-transact-sql"></a>-(Вычитание) (Transact-SQL)
+# <a name="--subtraction-transact-sql"></a>– (вычитание) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Вычитает одно число из другого (оператор арифметического вычитания). Также можно вычесть из даты определенное число дней.  
@@ -50,7 +50,7 @@ expression - expression
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) одного из типов данных числового типа данных, за исключением **бит** тип данных. Нельзя использовать с **даты**, **время**, **datetime2**, или **datetimeoffset** типов данных.  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md) любого числового типа данных, кроме **bit**. Нельзя использовать с типами данных **date**, **time**, **datetime2** или **datetimeoffset**.  
   
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -60,7 +60,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. Использование вычитания в инструкции SELECT  
  Следующий пример вычисляет разницу налоговых ставок между штатом или провинцией с наибольшей налоговой ставкой и штатом или провинцией с наименьшей налоговой ставкой.  
   
- **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -76,7 +76,7 @@ GO
 ### <a name="b-using-date-subtraction"></a>Б. Использование вычитания из даты  
  Следующий пример вычитает указанное число дней из даты `datetime`.  
   
- Применяется к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ Применимо к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -96,10 +96,10 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C: Использование вычитания в инструкции SELECT  
- Следующий пример вычисляет разность базовой ставки сотрудника с наивысшим базовой ставки и сотрудника с наименьшей налоговой ставкой из `dimEmployee` таблицы.  
+### <a name="c-using-subtraction-in-a-select-statement"></a>В. Использование вычитания в инструкции SELECT  
+ В следующем примере вычисляется разница базовых окладов между сотрудником с наибольшим базовым окладом и сотрудником с наименьшей налоговой ставкой из таблицы `dimEmployee`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -108,13 +108,13 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [-= &#40; Присваивание вычитания &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
- [Арифметические операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
- [-&#40; Отрицательное &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/unary-operators-negative.md)   
+## <a name="see-also"></a>См. также:  
+ [–= (присваивание вычитания) (Transact-SQL)](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Арифметические операторы (Transact-SQL)](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+ [– (отрицательное значение) (Transact-SQL)](../../t-sql/language-elements/unary-operators-negative.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
   

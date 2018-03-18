@@ -1,5 +1,5 @@
 ---
-title: "= (Равно) (Transact-SQL) | Документы Microsoft"
+title: "= (равно) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -49,21 +49,21 @@ expression = expression
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Если выражения не того же типа данных, необходимо неявно преобразовываться в тип данных другого типа данных одного выражения. Преобразование основано на правилах [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). Если выражения имеют разные типы данных, должна быть возможность неявно преобразовать тип данных одного выражения в тип данных другого выражения. Преобразование основано на правилах [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- Boolean  
+ Логическое значение  
   
 ## <a name="remarks"></a>Remarks  
- При сравнении двух выражений со значениями NULL результат зависит от `ANSI_NULLS` параметр:  
+ При сравнении двух выражений со значениями NULL результат зависит от параметра `ANSI_NULLS`.  
   
--   Если `ANSI_NULLS` имеет значение ON, результатом является значение NULL, в соответствии со стандартом ANSI NULL (или неизвестное) значение не равно другому значению NULL или unknown.  
+-   Если параметр `ANSI_NULLS` равен ON, то результат будет равен NULL в соответствии со стандартом ANSI, когда NULL (или неизвестное) значение не равно NULL или другому неизвестному значению.  
   
--   Если `ANSI_NULLS` имеет значение OFF, результат NULL, по сравнению с NULL имеет значение TRUE.  
+-   Если параметр `ANSI_NULLS` равен OFF, то результат сравнения двух значений NULL равен TRUE.  
 
 Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Каких-либо сравнения значения NULL (unknown), отличное от NULL значение всегда дает результат FALSE.  
+ Результатом сравнения значения NULL (неизвестного значения) со значением, отличным от NULL, всегда является значение FALSE.  
   
   
 ## <a name="examples"></a>Примеры  
@@ -94,7 +94,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>Б. Сравнение значений NULL и значений, отличных от NULL  
- Следующий пример иллюстрирует использование операторов «равно» (`=`) и «не равно» (`<>`) для сравнения со значениями `NULL` и не NULL в таблице. В примере также показано, `IS NULL` не подвержены `SET ANSI_NULLS` параметр.  
+ Следующий пример иллюстрирует использование операторов «равно» (`=`) и «не равно» (`<>`) для сравнения со значениями `NULL` и не NULL в таблице. Этот пример также демонстрирует, что использование конструкции `IS NULL` не зависит от значения параметра `SET ANSI_NULLS`.  
   
 ```  
 -- Create table t1 and insert 3 rows.  
@@ -226,9 +226,9 @@ NULL
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

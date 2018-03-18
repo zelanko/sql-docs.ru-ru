@@ -1,5 +1,5 @@
 ---
-title: "Object_id (Transact-SQL) | Документы Microsoft"
+title: "OBJECT_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   Возвращает идентификационный номер объекта базы данных для объекта области схемы.  
   
 > [!IMPORTANT]  
->  Запросы на объекты, не относящиеся к области схемы, например триггеры DDL, не могут выполняться с использованием OBJECT_ID. Для объектов, которые не представлены в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления каталога, следует получить идентификационные номера объектов с помощью запроса соответствующих представлений каталогов. Например, чтобы вернуть идентификационный номер триггера DDL, используйте `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
+>  Запросы на объекты, не относящиеся к области схемы, например триггеры DDL, не могут выполняться с использованием OBJECT_ID. Для объектов, не найденных в представлении каталога [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md), идентификационный номер проставляется с помощью запроса к соответствующему представлению каталога. Например, чтобы получить идентификационный номер триггера DDL, используйте инструкцию `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *object_name* **"**  
- Объект, который должен использоваться. *object_name* либо **varchar** или **nvarchar**. Если *object_name* — **varchar**, оно неявно преобразуется в **nvarchar**. Не обязательно указывать имена базы данных и схемы.  
+ **'** *object_name* **'**  
+ Объект, который должен использоваться. Аргумент *object_name* имеет тип **varchar** или **nvarchar**. Если значение *object_name* имеет тип **varchar**, оно неявно преобразовывается в тип **nvarchar**. Не обязательно указывать имена базы данных и схемы.  
   
- **"** *object_type* **"**  
- Объект области схемы. *object_type* либо **varchar** или **nvarchar**. Если *object_type* — **varchar**, оно неявно преобразуется в **nvarchar**. Список типов объектов см. в разделе **тип** столбца в [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ **'** *object_type* **'**  
+ Объект области схемы. Аргумент *object_type* имеет тип **varchar** или **nvarchar**. Если значение *object_type* имеет тип **varchar**, оно неявно преобразовывается в тип **nvarchar**. Список типов объектов см. в столбце **type** представления [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
@@ -76,9 +76,9 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="remarks"></a>Remarks  
  Если параметр системной функции является необязательным, то предполагаются текущие база данных, главный компьютер, пользователь сервера или пользователь базы данных. За встроенными функциями всегда должны следовать круглые скобки.  
   
- Если указано имя временной таблицы, имя базы данных должно идти перед именем временной таблицы, если текущая база данных **tempdb**. Например, `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
+ Если указано имя временной таблицы, то имя базы данных должно стоять перед именем временной таблицы, если только текущей не является база данных **tempdb**. Например, `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
   
- Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделе [выражения &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) и [ГДЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
+ Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в статьях [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -104,10 +104,10 @@ GO
 ```  
   
 ### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование функции OBJECT_ID для указания параметра системной функции  
- Следующий пример возвращает сведения для всех индексов и секций `Person.Address` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных с помощью [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) функции.  
+ В приведенном ниже примере возвращаются сведения для всех индексов и секций таблицы `Person.Address` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью функции [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
 > [!IMPORTANT]  
->  При использовании для возврата значений параметров функций DB_ID и OBJECT_ID языка [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо убедиться в допустимости возвращаемого идентификатора. Если имя базы данных или объекта не может быть найдено, например если база данных или объект не существуют или неправильно записаны, то обе функции возвратят значение NULL. **Sys.dm_db_index_operational_stats** функция интерпретирует NULL как значение шаблона, указывающего все базы данных или всех объектов. Так как эта операция может быть непреднамеренной, примеры в этом разделе демонстрируют безопасный способ определения идентификаторов базы данных и объекта.  
+>  При использовании для возврата значений параметров функций DB_ID и OBJECT_ID языка [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо убедиться в допустимости возвращаемого идентификатора. Если имя базы данных или объекта не может быть найдено, например если база данных или объект не существуют или неправильно записаны, то обе функции возвратят значение NULL. Функция **sys.dm_db_index_operational_stats** интерпретирует значение NULL как значение шаблона, соответствующее всем базам данных или все объектам. Так как эта операция может быть непреднамеренной, примеры в этом разделе демонстрируют безопасный способ определения идентификаторов базы данных и объекта.  
   
 ```  
 DECLARE @db_id int;  
@@ -129,9 +129,9 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D: идентификатор объекта для заданного объекта, возвращая  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>Г. Получение идентификатора указанного объекта  
  Следующий пример возвращает идентификатор объекта для таблицы `FactFinance` в базе данных [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
@@ -139,11 +139,11 @@ SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)  
+ [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)  
   
   
 

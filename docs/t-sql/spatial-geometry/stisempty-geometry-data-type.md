@@ -1,5 +1,5 @@
 ---
-title: "STIsEmpty (тип данных geometry) | Документы Microsoft"
+title: "STIsEmpty (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает 1, если **geometry** экземпляр пуст. Возвращает 0, если **geometry** не является пустым.
+Возвращает значение –1, если экземпляр **geometry** является пустым. Возвращает значение 0, если экземпляр **geometry** не является пустым.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается пустой экземпляр `geometry` и используется метод `STIsEmpty()`, чтобы проверить, что экземпляр является пустым.  
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

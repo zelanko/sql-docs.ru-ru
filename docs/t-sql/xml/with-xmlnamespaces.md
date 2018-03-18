@@ -1,5 +1,5 @@
 ---
-title: "Использование предложения WITH XMLNAMESPACES (Transact-SQL) | Документы Microsoft"
+title: "WITH XMLNAMESPACES (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -73,7 +73,7 @@ DEFAULT <xml_namespace_uri>
  Универсальный идентификатор ресурса (Uniform Resource Identifier, URI), определяющий объявляемое пространство имен XML. *xml_namespace_uri* является строкой SQL.  
   
  *xml_namespace_prefix*  
- Задает префикс, сопоставляемый и связываемый со значением URI пространства имен, указанным в *xml_namespace_uri*. *xml_namespace_prefix* должно быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор.  
+ Указывает префикс, сопоставляемый и связываемый со значением URI пространства имен, указанным при помощи аргумента *xml_namespace_uri*. Аргумент *xml_namespace_prefix* должен быть идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Remarks  
  При использовании предложения WITH XMLNAMESPACES в инструкции, включающей также обобщенное табличное выражение, предложение WITH XMLNAMESPACES должно предшествовать этому выражению.  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Строковые значения URI кодируются в соответствии с кодовой страницей параметров сортировки текущей базы данных и преобразуются внутри SQL Server в Юникод.  
   
--   Пространство имен XML, URI будет пробела соответствии пробелы XSD свернуть правила, используемые для **xs: anyURI**. Имейте в виду, что преобразование символов значений URI пространств имен XML в аналогичные последовательности символов и обратно не выполняется.  
+-   Неотображаемые символы удаляются из URI пространства имен XML в соответствии с правилами XSD, принятыми для типа **xs:anyURI**. Имейте в виду, что преобразование символов значений URI пространств имен XML в аналогичные последовательности символов и обратно не выполняется.  
   
 -   При обработке URI пространства имен XML проверяется наличие недопустимых символов для XML 1.0; при обнаружении такого символа (например, U+0007) формируется ошибка.  
   
@@ -105,9 +105,9 @@ DEFAULT <xml_namespace_uri>
 -   В контексте предложения WITH ключевое слово XMLNAMESPACES является зарезервированным.  
   
 ## <a name="examples"></a>Примеры  
- Примеры см. в разделе [добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Примеры см. в разделе [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
   
   

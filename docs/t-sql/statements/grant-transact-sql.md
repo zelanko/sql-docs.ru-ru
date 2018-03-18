@@ -1,5 +1,5 @@
 ---
-title: "GRANT (Transact-SQL) | Документы Microsoft"
+title: "GRANT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grant-transact-sql"></a>Инструкция GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Предоставляет разрешения на защищаемый объект участнику.  Общий подход заключается в том, чтобы ПРЕДОСТАВИТЬ \<некоторые разрешения > ON \<некоторый объект > TO \<некоторые пользователя, имя входа или группы >. Общее описание разрешений см. в разделе [разрешения &#40; компонент Database Engine &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Предоставляет разрешения на защищаемый объект участнику.  Общий подход заключается в том, чтобы предоставить \<некоторые разрешения> на \<некоторый объект> \<некоторому пользователю, имени входа или группе> (GRANT…ON…TO). Общее описание разрешений см. в разделе [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,32 +100,32 @@ GRANT
 PRIVILEGES  
  Включено для обеспечения совместимости с требованиями ISO. Не изменяет работу ALL.  
   
-*разрешение*  
+*permission*  
  Имя разрешения. Допустимые сопоставления разрешений защищаемых объектов описаны в разделах, перечисленных ниже.  
   
-*столбец*  
+*column*  
  Указывает имя столбца таблицы, на который предоставляется разрешение. Необходимы скобки ().  
   
-*класс*  
+*class*  
  Указывает класс защищаемого объекта, для которого предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
-*защищаемый объект*  
+*securable*  
  Указывает защищаемый объект, на который предоставляется разрешение.  
   
-Чтобы *участника*  
+TO *principal*  
  Имя участника. Состав участников, которым можно предоставлять разрешения, меняется в зависимости от защищаемого объекта. Допустимые сочетания описаны в разделах, перечисленных ниже.  
   
 GRANT OPTION  
  Показывает, что получающему разрешению будет также дана возможность предоставлять указанное разрешение другим участникам.  
   
-AS *участника*  
- Используйте основной AS, чтобы указать, что участника записываются как предоставил разрешение должно быть участником, отличных от пользователя, выполняющего инструкцию. Предположим, что пользователь Mary является principal_id 12, и пользователь Raul является основной 15. Мария выполняет `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` теперь в таблице sys.database_permissions покажет, что grantor_prinicpal_id было 15 (Raul), несмотря на то, что инструкция была фактически выполнена пользователем 13 (Mary).
+AS *principal*  
+ Используйте предложение AS principal, чтобы указать, что участник, записанный как предоставляющий разрешение, должен быть участником, отличным от пользователя, выполняющего инструкцию. Предположим, что пользователь Мария — это участник 12, пользователь Павел — участник 15. Мария выполняет `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. В таблице sys.database_permissions для параметра grantor_prinicpal_id будет указано значение 15 (Павел), хотя инструкция была выполнена пользователем 12 (Мария).
 
-С помощью предложения AS обычно не рекомендуется, если вам нужно явно определять цепочки разрешение. Дополнительные сведения см. в разделе **Сводка по алгоритму проверки разрешений** раздел [разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md).
+Использовать предложение AS обычно не рекомендуется, за исключением необходимости явного определения цепочки разрешения. Дополнительные сведения см. в подразделе **Сводка по алгоритму проверки разрешений** раздела [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md).
 
-Использование этой инструкции не предусматривает возможность олицетворять другого пользователя. 
+AS в данной инструкции не дает возможность олицетворять другого пользователя. 
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Полное описание синтаксиса инструкции GRANT сложно. Предыдущая диаграмма синтаксиса была упрощена, чтобы продемонстрировать ее структуру. Полное описание синтаксиса предоставления разрешений на конкретные защищаемые объекты приведено в разделах, перечисленных ниже.  
   
  Инструкция REVOKE может использоваться для удаления уже выданных прав доступа, а инструкция DENY может использоваться, чтобы предотвратить получение участником определенного разрешения посредством инструкции GRANT.  
@@ -140,7 +140,7 @@ AS *участника*
  Системная хранимая процедура sp_helprotect сообщает о разрешениях на доступ к защищаемым объектам уровня базы данных.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** ... **С параметром GRANT OPTION** указывает, что получающему разрешение субъекту безопасности предоставлена возможность предоставлять указанное разрешение другим учетным записям безопасности. Если участник, получивший данное разрешение роли или группы Windows, **AS** предложения необходимо использовать, когда требуется разрешение объекта для последующего предоставления пользователям, которые не являются членами группы или роли. Поскольку может выполнять только пользователь, а не группа или роль, **GRANT** необходимо использовать инструкцию, членом определенной группы или роли **AS** предложение для явного вызова членства роли или группы при предоставлении разрешение. В следующем примере показан способ **WITH GRANT OPTION** используется при предоставлении роли или группе Windows.  
+ **GRANT** … **WITH GRANT OPTION**  указывает, что получающему разрешение участнику безопасности дана возможность предоставления определенных разрешений другим учетным записям безопасности. Если участник, получивший данное разрешение, является ролью или группой Windows, то для последующего предоставления разрешения объекта пользователям, которые не являются членами этой группы или роли, необходимо использовать предложение **AS**. Поскольку именно пользователь, а не группа или роль, может исполнить инструкцию **GRANT**, при предоставлении разрешения определенный член группы или роли должен использовать предложение **AS** для явного вызова членства в роли или группе. В следующем примере рассматривается порядок использования разрешения **WITH GRANT OPTION**, предоставленного роли или группе Windows.  
   
 ```  
 -- Execute the following as a database owner  
@@ -156,7 +156,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
  Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое. Если используется параметр AS, налагаются дополнительные ограничения. Дополнительные сведения см. в разделах, посвященных конкретным защищаемым объектам.  
   
  Владельцы объектов могут предоставлять разрешения на объекты, которыми они владеют. Участники, имеющие разрешение CONTROL на защищаемый объект, могут предоставлять разрешение на этот защищаемый объект.  
@@ -168,47 +168,47 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
   
 |||  
 |-|-|  
-|Роль приложения|[Предоставление разрешений участникам базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Сборка|[ПРЕДОСТАВЬТЕ разрешения для сборки &#40; Transact-SQL &#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
-|Асимметричный ключ|[Предоставление разрешений на асимметричный ключ &#40; Transact-SQL &#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
-|Группа доступности|[Группа доступности ПРЕДОСТАВЬТЕ разрешения &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
-|Сертификат|[Разрешения GRANT сертификатов &#40; Transact-SQL &#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
-|Контракт|[Разрешения GRANT службы Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|База данных|[ПРЕДОСТАВИТЬ разрешения базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
-|Учетные данные области базы данных|[В области базы данных GRANT учетных данных (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
-|Конечная точка|[Предоставление разрешений на конечные точки &#40; Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
-|Полнотекстовый каталог|[Разрешения GRANT Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|Полнотекстовый список стоп-слов|[Разрешения GRANT Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|Функция|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Имя входа|[Предоставление разрешений участникам Server &#40; Transact-SQL &#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
-|Тип сообщений|[Разрешения GRANT службы Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Объект|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Очередь|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Привязка удаленной службы|[Разрешения GRANT службы Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Роль|[Предоставление разрешений участникам базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Маршрут|[Разрешения GRANT службы Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|схема|[GRANT разрешения схемы &#40; Transact-SQL &#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
-|Список свойств поиска|[Разрешения списка свойств поиска GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
-|Server|[GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
-|Служба|[Разрешения GRANT службы Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Хранимая процедура|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Симметричный ключ|[ПРЕДОСТАВЬТЕ разрешения на симметричный ключ &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
-|Синоним|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Роль приложения|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Сборка|[GRANT, предоставление разрешений на сборку (Transact-SQL)](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
+|Асимметричный ключ|[GRANT, предоставление разрешений на асимметричный ключ (Transact-SQL)](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
+|Группа доступности|[GRANT, предоставление разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
+|Сертификат|[GRANT, предоставление разрешений на сертификат (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
+|Контракт|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|база данных|[GRANT, предоставление разрешений на базу данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
+|Учетные данные для базы данных|[GRANT, предоставление разрешений на учетные данные для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
+|Конечная точка|[GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
+|Полнотекстовый каталог|[GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|Полнотекстовый список стоп-слов|[GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|Компонент|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Имя входа|[GRANT, предоставление разрешений участникам на уровне сервера (Transact-SQL)](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|Тип сообщений|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Object|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Очередь|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Привязка удаленной службы|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Role|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Маршрут|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|схема|[GRANT, предоставление разрешений на схему (Transact-SQL)](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|Список свойств поиска|[GRANT, предоставление разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
+|Сервер|[GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
+|Служба|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Хранимая процедура|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Симметричный ключ|[GRANT, предоставление разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
+|Синоним|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Системные объекты|[GRANT, предоставление разрешения на системный объект (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
-|Таблица|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Тип|[Разрешения типа GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
-|Пользователь|[Предоставление разрешений участникам базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Просмотр|[Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Коллекция схем XML|[ПРЕДОСТАВЬТЕ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
+|Table|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Тип|[GRANT, предоставление разрешений на тип (Transact-SQL)](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
+|Пользователь|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Просмотр|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Коллекция схем XML|[GRANT, предоставление разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

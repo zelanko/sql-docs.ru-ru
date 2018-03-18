@@ -1,5 +1,5 @@
 ---
-title: "Parse (тип данных geography) | Документы Microsoft"
+title: "Parse (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -32,9 +32,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geography-data-type"></a>Parse (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geography** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT). Эквивалентно Parse() [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), за исключением того, что предполагается идентификатор пространственной ссылки (SRID) 4326 как параметр. Входные данные могут дополнительно содержать значения Z (высота) и M (мера).
+Возвращает экземпляр **geography** из WKT-представления консорциума OGC. Функция Parse() эквивалентна функции [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), за исключением того, что ожидает в качестве параметра идентификатор пространственной ссылки (SRID) значение 4326. Входные данные могут дополнительно содержать значения Z (высота) и M (мера).
   
-Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.
+Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,19 +45,19 @@ Parse ( 'geography_tagged_text' )
   
 ## <a name="arguments"></a>Аргументы  
  *geography_tagged_text*  
- Является WKT-представление **geography** возвращаемого экземпляра. *geography_tagged_text* — **nvarchar** выражение.  
+ WKT-представление возвращаемого экземпляра **geography**. *geography_tagged_text* является выражением типа **nvarchar**.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+## <a name="return-types"></a>Типы возвращаемых данных  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
- Тип OGC **geography** экземпляр, возвращаемый `Parse()` равно соответствующих входных данных WKT.  
+## <a name="remarks"></a>Примечания  
+ Тип OGC экземпляра **geography**, возвращаемый методом `Parse()`, получает значение в зависимости от соответствующих входных данных WKT.  
   
- Строка «Null» будет интерпретироваться как строку null **geography** экземпляра.  
+ Строка "Null" будет интерпретирована как экземпляр **geography** со значением NULL.  
   
- Этот метод вызывает исключение **ArgumentException** Если вход содержит противоположную границу.  
+ Этот метод вызывает исключение **ArgumentException**, если входные данные содержат противоположную границу.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `Parse()` применяется для создания экземпляра `geography`.  

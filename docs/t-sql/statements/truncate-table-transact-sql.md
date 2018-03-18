@@ -1,5 +1,5 @@
 ---
-title: "После УСЕЧЕНИЯ таблицы (Transact-SQL) | Документы Microsoft"
+title: "TRUNCATE TABLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Удаляет все строки из таблицы или указанные секции таблицы, не записывая в журнал удаление отдельных строк. Инструкция TRUNCATE TABLE похожа на инструкцию DELETE без предложения WHERE, однако TRUNCATE TABLE выполняется быстрее и требует меньших ресурсов системы и журналов транзакций.  
+  Удаляет все строки в таблице или указанные секции таблицы, не записывая в журнал удаление отдельных строк. Инструкция TRUNCATE TABLE похожа на инструкцию DELETE без предложения WHERE, однако TRUNCATE TABLE выполняется быстрее и требует меньших ресурсов системы и журналов транзакций.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,24 +76,24 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  Имя схемы, которой принадлежит таблица.  
   
  *имя_таблицы*  
- Имя таблицы, которая должна быть усечена, или таблицы, из которой удаляются все строки. *имя_таблицы* должно быть литералом. *имя_таблицы* не может быть **OBJECT_ID()** функции или переменной.  
+ Имя таблицы, которая должна быть усечена, или таблицы, из которой удаляются все строки. *table_name* должно быть литералом. *table_name* не может быть функцией **OBJECT_ID()** или переменной.  
   
- С помощью (СЕКЦИИ ({ \< *выражение_номера_секции*> | \< *диапазон*>} [,.. .n]))  
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Указывает секции для усечения или секции, из которых удаляются все строки. Если таблица не секционирована, **СЕКЦИЙ с** аргумент выдаст ошибку. Если **СЕКЦИЙ с** не указано предложение, вся таблица будет усечено.  
+ Указывает секции для усечения или секции, из которых удаляются все строки. Если таблица не секционирована, аргумент **WITH PARTITIONS** приведет к ошибке. Если предложение **WITH PARTITIONS** не указано, будет усечена вся таблица.  
   
- *\<выражение_номера_секции >* можно задать следующими способами: 
+ *\<partition_number_expression>* можно указать одним из следующих способов: 
   
--   Указав номер секции, например:`WITH (PARTITIONS (2))`  
+-   Указав номер секции, например `WITH (PARTITIONS (2))`  
   
--   Указав номера нескольких секций, разделенных запятыми, например:`WITH (PARTITIONS (1, 5))`  
+-   Указав номера нескольких секций, разделив их запятыми, например `WITH (PARTITIONS (1, 5))`  
   
--   Укажите диапазоны и отдельные секции, например:`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   Указав диапазоны секций и отдельные секции, например `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<диапазон >* можно указать как номера секций, разделенные словом **TO**, например:`WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* можно указать номерами секций, разделенными ключевым словом **TO**, например `WITH (PARTITIONS (6 TO 8))`  
   
- Для усечения секционированной таблицы, таблицы и индексы должны быть выровнены (секционировать на ту же функцию секционирования).  
+ Для усечения секционированной таблицы таблицы и индексы должны быть выровнены (секционированы одной функцией секционирования).  
   
 ## <a name="remarks"></a>Remarks  
  Инструкция TRUNCATE TABLE обладает следующими преимуществами по сравнению с инструкцией DELETE:  
@@ -129,15 +129,15 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  
  В [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
-- Инструкция TRUNCATE TABLE нельзя использовать в инструкции ОПИСАНИЯ.
+- Инструкцию TRUNCATE TABLE нельзя использовать в инструкции EXPLAIN.
 
-- Инструкция TRUNCATE TABLE не выполнена внутри транзакции.
+- Инструкцию TRUNCATE TABLE невозможно выполнить внутри транзакции.
   
 ## <a name="truncating-large-tables"></a>Усечение больших таблиц  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность удалять или усекать таблицы, имеющие более чем 128 экстентов, без удержания одновременной блокировки всех кластеров страниц, необходимых для удаления.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существует возможность удалять или усекать таблицы, которые имеют больше 128 экстентов, не удерживая одновременные блокировки для всех экстентов, предназначенных для удаления.  
   
 ## <a name="permissions"></a>Разрешения  
- Минимально необходимым разрешением является ALTER на *table_name*. Разрешения по умолчанию для инструкции TRUNCATE TABLE распространяются на владельца таблицы, членов предопределенной роли сервера sysadmin, а также предопределенных ролей базы данных db_owner и db_ddladmin. Эти разрешения не передаются. Тем не менее инструкцию TRUNCATE TABLE можно встроить в модуль, например в хранимую процедуру, и предоставить соответствующие разрешения этому модулю с помощью предложения EXECUTE AS.  
+ Минимально необходимым разрешением является ALTER для *table_name*. Разрешения по умолчанию для инструкции TRUNCATE TABLE распространяются на владельца таблицы, членов предопределенной роли сервера sysadmin, а также предопределенных ролей базы данных db_owner и db_ddladmin. Эти разрешения не передаются. Тем не менее инструкцию TRUNCATE TABLE можно встроить в модуль, например в хранимую процедуру, и предоставить соответствующие разрешения этому модулю с помощью предложения EXECUTE AS.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -159,7 +159,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>Б. Усечение секций таблицы  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  В следующем примере выполняется усечение указанных секций секционированной таблицы. Синтаксис `WITH (PARTITIONS (2, 4, 6 TO 8))` задает усечение секций с номерами 2, 4, 6, 7 и 8.  
   
@@ -171,7 +171,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
  [Свойство IDENTITY (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "KILL STATS JOB (Transact-SQL) | Документы Microsoft"
+title: "KILL STATS JOB (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -63,17 +63,17 @@ KILL STATS JOB job_id
  Разрешения KILL STATS JOB присваиваются по умолчанию членам предопределенных ролей баз данных sysadmin и processadmin и не могут передаваться.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример показывает, как остановить обновление статистики, связанное с заданием, где *job_id* = `53`.  
+ В следующем примере показано, как остановить обновление статистики, связанное с заданием, где *job_id* = `53`.  
   
 ```  
 KILL STATS JOB 53;  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [KILL &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
- [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [sys.dm_exec_background_job_queue (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
  [Статистика](../../relational-databases/statistics/statistics.md)  
   
   

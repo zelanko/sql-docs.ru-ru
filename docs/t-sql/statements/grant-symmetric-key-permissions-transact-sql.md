@@ -1,5 +1,5 @@
 ---
-title: "Предоставление разрешения на симметричный ключ (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений на симметричный ключ (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,21 +61,21 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть предоставлено на симметричный ключ. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть предоставлено на симметричный ключ. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- СИММЕТРИЧНЫЙ ключ ON::*asymmetric_key_name*  
- Указывает симметричный ключ, на который предоставляется разрешение. Требуется квалификатор области (::).  
+ ON SYMMETRIC KEY ::*asymmetric_key_name*  
+ Указывает симметричный ключ, на который предоставляется разрешение. Квалификатор области (::) является обязательным.  
   
- Чтобы \< *database_principal*>  
+ TO \<*database_principal*>  
  Участник, которому предоставляется разрешение.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal > Указывает участника, от которого участник, выполняющий данный запрос, наследует право предоставления разрешения.  
+ AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
@@ -99,8 +99,8 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
- Сведения о симметричных ключах можно увидеть в [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) представления каталога.  
+## <a name="remarks"></a>Remarks  
+ Сведения о симметричных ключах доступны в представлении каталога [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Симметричный ключ — это такой защищаемый объект уровня базы данных, который находится в базе данных, являющейся его родителем в иерархии разрешений. Наиболее специальные и ограниченные разрешения, которые могут быть предоставлены на симметричном ключе, перечислены в следующей таблице вместе с более общими разрешениями, содержащими их по включению.  
   
@@ -112,7 +112,7 @@ GRANT permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
   
  При использовании параметра AS налагаются следующие дополнительные требования.  
@@ -142,9 +142,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [Запрет разрешения на симметричный ключ &#40; Transact-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения на симметричный ключ &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [DENY, запрет разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   

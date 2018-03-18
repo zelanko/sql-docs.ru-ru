@@ -1,5 +1,5 @@
 ---
-title: "Операторы | Документы Microsoft"
+title: "Инструкции | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,36 +29,36 @@ ms.lasthandoff: 11/21/2017
 # <a name="transact-sql-statements"></a>Инструкции Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-В этом справочном разделе перечислены категории операторов для использования с помощью Transact-SQL (T-SQL). Можно найти все операторы, перечисленные на левой панели навигации.
+В этом справочном разделе перечислены категории инструкций для использования с Transact-SQL (T-SQL). Полный список инструкций приводится слева.
 
 ## <a name="backup-and-restore"></a>Резервное копирование и восстановление
-Инструкции backup и restore могут использоваться для создания резервных копий и восстановление из резервных копий.  Дополнительные сведения см. в разделе [Обзор резервного копирования и восстановления](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
+Инструкции резервного копирования и восстановления позволяют создавать резервные копии и восстанавливать данные из резервных копий.  Дополнительные сведения см. в разделе [Общие сведения о резервном копировании и восстановлении](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
 ## <a name="data-definition-language"></a>Язык описания данных DDL
-Инструкции определения языка DDL данных определяет структуры данных. Эти инструкции используются для создания, изменения или удаления структуры данных в базе данных.
+Инструкции языка описания данных DDL определяют структуры данных. Эти инструкции используются для создания, изменения и удаления структур данных в базе данных.
 - ALTER
 - Параметры сортировки
 - CREATE
 - DROP
-- ОТКЛЮЧЕНИЕ ТРИГГЕРА
+- DISABLE TRIGGER
 - ENABLE TRIGGER
-- ПЕРЕИМЕНОВАНИЕ
+- RENAME
 - UPDATE STATISTICS
 
-## <a name="data-manipulation-language"></a>Язык обработки данных
+## <a name="data-manipulation-language"></a>Язык обработки данных DML
 Язык обработки данных (DML) влияет на информацию, хранящуюся в базе данных. Эти инструкции используются для вставки, обновления и изменение строк в базе данных.
 
 - BULK INSERT
-- DELETE
+- Delete
 - INSERT
 - MERGE
 - TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>Инструкции разрешений
-Инструкции разрешений определяют пользователей и имена входа можно получить доступ к данным и выполнения операций. Дополнительные сведения о проверке подлинности и доступа см. в разделе [центра обеспечения безопасности](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+Инструкции разрешений определяют пользователей и имена входа, которые имеют доступ к данным и могут выполнять операции. Дополнительные сведения о проверке подлинности и доступе см. в разделе [Центра безопасности](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="service-broker-statements"></a>Инструкции компонента Service Broker
-Компонент Service Broker — это компонент, обеспечивает встроенную поддержку приложений обмена сообщениями и очередей. Дополнительные сведения см. в разделе [компонента Service Broker](../../relational-databases/service-broker/event-notifications.md).
+Service Broker — это компонент, который обеспечивает собственную поддержку приложений обмена сообщениями и приложений с очередями. Дополнительные сведения см. в разделе [Service Broker](../../relational-databases/service-broker/event-notifications.md).
 
 ## <a name="session-settings"></a>Параметры сеанса
-Инструкции SET определяют, как параметры времени запуска дескрипторы в текущем сеансе. Общие сведения см. в разделе [инструкций SET](set-statements-transact-sql.md).
+Инструкции SET определяют, как текущий сеанс управляет параметрами времени выполнения. Общие сведения см. в разделе [Инструкций SET](set-statements-transact-sql.md).

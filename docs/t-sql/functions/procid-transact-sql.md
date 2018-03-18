@@ -1,5 +1,5 @@
 ---
-title: "@@PROCID (Transact-SQL) | Документы Microsoft"
+title: "@@PROCID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает идентификатор объекта (ID) текущего модуля [!INCLUDE[tsql](../../includes/tsql-md.md)]. Модуль [!INCLUDE[tsql](../../includes/tsql-md.md)] может быть хранимой процедурой, определяемой пользователем функцией или триггером. @@PROCID нельзя указывать модулей среды CLR или данных в процессе доступа поставщика.  
+  Возвращает идентификатор объекта (ID) текущего модуля [!INCLUDE[tsql](../../includes/tsql-md.md)]. Модуль [!INCLUDE[tsql](../../includes/tsql-md.md)] может быть хранимой процедурой, определяемой пользователем функцией или триггером. Функция @@PROCID не может быть вызвана из модулей среды CLR или внутрипроцессного поставщика доступа к данным.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,9 +83,9 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [Инструкция RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

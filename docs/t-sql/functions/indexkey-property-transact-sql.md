@@ -1,5 +1,5 @@
 ---
-title: "INDEXKEY_PROPERTY (Transact-SQL) | Документы Microsoft"
+title: "INDEXKEY_PROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   Возвращает сведения о ключах индекса, Возвращает NULL для XML-индексов.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [sys.index_columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,21 +53,21 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *object_id*  
- Идентификатор таблицы или индексированного представления. *object_id* — **int**.  
+ *object_ID*  
+ Идентификатор таблицы или индексированного представления. Аргумент *object_ID* имеет тип **int**.  
   
  *index_ID*  
- Идентификатор индекса. *index_ID* — **int**.  
+ Идентификатор индекса. Аргумент *index_ID* имеет тип **int**.  
   
- *Идентификатор key_ID*  
- Позиция ключевого столбца индекса. *key_ID* — **int**.  
+ *key_ID*  
+ Позиция ключевого столбца индекса. Аргумент *key_ID* имеет тип **int**.  
   
- *Свойство*  
- Имя свойства, для которого будут возвращены сведения. *Свойство* представляет собой строку символов и может принимать одно из следующих значений.  
+ *property*  
+ Имя свойства, для которого будут возвращены сведения. *property* представляет собой строку символов и может иметь одно из перечисленных ниже значений.  
   
 |Значение|Description|  
 |-----------|-----------------|  
-|**ColumnId**|Идентификатор столбца в *key_ID* позиции индекса.|  
+|**ColumnId**|Идентификатор столбца в положении *key_ID* индекса.|  
 |**IsDescending**|Порядок, в котором хранится индексированный столбец:<br /><br /> 1 = по убыванию; 0 = по возрастанию.|  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -102,9 +102,9 @@ Column ID   Asc or Desc order
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [INDEX_COL &#40; Transact-SQL &#41;](../../t-sql/functions/index-col-transact-sql.md)   
+ [INDEX_COL (Transact-SQL)](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

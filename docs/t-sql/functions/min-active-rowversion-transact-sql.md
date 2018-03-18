@@ -1,5 +1,5 @@
 ---
-title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Документы Microsoft"
+title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает наименьшее активное значение **rowversion** в текущей базе данных. Значение **rowversion** является активным, если оно используется в незафиксированной транзакции. Дополнительные сведения см. в разделе [rowversion &#40; Transact-SQL &#41; ](../../t-sql/data-types/rowversion-transact-sql.md).  
+  Возвращает наименьшее активное значение **rowversion** в текущей базе данных. Значение **rowversion** является активным, если оно используется в незафиксированной транзакции. Дополнительные сведения см. в статье [rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
->  **Rowversion** тип данных, также называемая **timestamp**.  
+>  Тип данных **rowversion** также известен как **timestamp**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает **binary(8)** значение.  
+ Возвращает значение **binary(8)**.  
   
-## <a name="remarks"></a>Замечания  
- MIN_ACTIVE_ROWVERSION является является недетерминированной функцией, которая возвращает наименьшее активное **rowversion** значение в текущей базе данных. Новое значение **rowversion** обычно формируется, когда в таблице, содержащей столбец с типом **rowversion**, производится операция вставки или обновления. Если отсутствуют активные значения в базе данных, то функция MIN_ACTIVE_ROWVERSION возвращает то же значение, что и @@DBTS + 1.  
+## <a name="remarks"></a>Remarks  
+ MIN_ACTIVE_ROWVERSION — это недетерминированная функция, возвращающая наименьшее активное значение **rowversion** в текущей базе данных. Новое значение **rowversion** обычно формируется, когда в таблице, содержащей столбец с типом **rowversion**, производится операция вставки или обновления. Если в базе данных не существует активных значений, то функция MIN_ACTIVE_ROWVERSION возвращает то же значение, что и @@DBTS + 1.  
   
- Функция MIN_ACTIVE_ROWVERSION полезна для сценариев, например синхронизацию данных, использующих **rowversion** значения для группирования наборов изменений. Если приложение использует@DBTS а не MIN_ACTIVE_ROWVERSION, существует возможность пропуска изменения, которые активны во время синхронизации.  
+ Функция MIN_ACTIVE_ROWVERSION полезна, например, когда при синхронизации данных значения **rowversion** используются для группирования наборов изменений. Если приложение использует функцию @@DBTS, а не MIN_ACTIVE_ROWVERSION, могут быть пропущены изменения, произведенные во время синхронизации.  
   
  Функция MIN_ACTIVE_ROWVERSION не затрагивается изменениями на уровнях изоляции транзакции.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается **rowversion** значения с помощью `MIN_ACTIVE_ROWVERSION` и `@@DBTS`. Обратите внимание, что при отсутствии в базе данных активных транзакций эти значения будут другими.  
+ В приведенном ниже примере значения **rowversion** возвращаются с помощью функций `MIN_ACTIVE_ROWVERSION` и `@@DBTS`. Обратите внимание, что при отсутствии в базе данных активных транзакций эти значения будут другими.  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

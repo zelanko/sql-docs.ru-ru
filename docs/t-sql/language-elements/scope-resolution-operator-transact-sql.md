@@ -1,5 +1,5 @@
 ---
-title: ":: (Разрешение области действия) (Transact-SQL) | Документы Microsoft"
+title: ":: (разрешение области) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (Разрешение области действия) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (разрешение области) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Оператор разрешения области **::** предоставляет доступ к статическим элементам составного типа данных. Составной тип данных является версией, которая содержит несколько простых типов данных и методов, таких как встроенные типы среды CLR и пользовательские SQLCLR User-Defined типы (UDT).  
+  Оператор разрешения области **::** обеспечивает доступ к статическим элементам составного типа данных. Составной тип данных содержит несколько простых типов данных и методов, таких как встроенные типы CLR и настраиваемые определяемые пользователем типы SQLCLR.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показано, как применять оператор разрешения области для доступа к элементу `GetRoot()` типа данных `hierarchyid`.  
@@ -46,7 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>См. также  
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

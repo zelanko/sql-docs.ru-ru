@@ -1,5 +1,5 @@
 ---
-title: "REVOKE, Отмена разрешения (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешения (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,32 +63,32 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть отменено для содержащегося в схеме объекта. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть отменено для содержащегося в схеме объекта. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ALL  
  Отмена ALL не отменяет все возможные разрешения. Отмена ALL эквивалентна отмене всех разрешений [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92, применимых к указанному объекту. Значение ALL различается для разных типов объектов  
   
- Разрешения на скалярные функции: выполнение, ссылается на.  
+ Разрешения на скалярные функции: EXECUTE, REFERENCES.  
   
- Табличная функция разрешения: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Разрешения на хранимые процедуры: выполнение.  
+ Разрешения на хранимые процедуры: EXECUTE.  
   
- Таблица разрешения: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Просмотр разрешений: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
  PRIVILEGES  
  Включено для обеспечения совместимости с [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Не изменяет работу ALL.  
   
- *столбец*  
- Указывает имя столбца в таблице, представлении или функции с табличным значением, для которого отменяется разрешение. Круглые скобки не требуются. Для столбца можно запрещать только разрешения SELECT, REFERENCES и UPDATE. *столбец* может быть указан в предложении permissions или после имени защищаемого объекта.  
+ *column*  
+ Указывает имя столбца в таблице, представлении или функции с табличным значением, для которого отменяется разрешение. Указание круглых скобок ( ) обязательно. Для столбца можно запрещать только разрешения SELECT, REFERENCES и UPDATE. Аргумент *column* может быть указан в предложении PERMISSIONS или после имени защищаемого объекта.  
   
- ON [ОБЪЕКТА::] [ *schema_name* ]. *object_name*  
- Указывает объект, для которого отменяется разрешение. Фраза OBJECT необязательна Если *schema_name* указано. Если ЖЕ она указана, требуется квалификатор области (::). Если *schema_name* не указан, используется схема по умолчанию. Если *schema_name* указано, требуется квалификатор области схемы (.).  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Указывает объект, для которого отменяется разрешение. Фраза OBJECT необязательна, если указан аргумент *schema_name*. Если же она указана, указание квалификатора области (::) обязательно. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
- {ИЗ | К} \<database_principal > Указывает участника, от которого отменяется разрешение.  
+ { FROM | TO } \<database_principal> Задает субъекта, у которого отменяется разрешение.  
   
  GRANT OPTION  
  Показывает, что отменяется право на предоставление указанного разрешения другим участникам. Само разрешение отменено не будет.  
@@ -102,9 +102,9 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  Каскадная отмена разрешения, предоставленного с помощью параметра WITH GRANT OPTION, приведет к отмене разрешений GRANT и DENY для этого разрешения.  
   
- AS \<database_principal > Указывает участника, от которого участник, выполняющий данный запрос, наследует право отмены разрешения.  
+ AS \<database_principal> Указывает субъекта, от которого субъект, выполняющий данный запрос, наследует право на отмену разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
@@ -128,8 +128,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
- Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [представления каталога объектов &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Объект является защищаемым на уровне схемы. Он содержится в схеме, которая является его родителем в иерархии разрешений. Наиболее специфичные и ограниченные разрешения объекта, которые можно отменить, перечислены в следующей таблице вместе с более общими разрешениями, неявно их содержащими.  
   
@@ -137,8 +137,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
-|Выполните|CONTROL|Выполните|  
+|Delete|CONTROL|Delete|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -148,7 +148,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL для данного объекта.  
   
  При использовании предложения AS указанный участник должен быть владельцем объекта, разрешения на который отменяются.  
@@ -187,13 +187,13 @@ GO
 ## <a name="see-also"></a>См. также:  
  [GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [DENY, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

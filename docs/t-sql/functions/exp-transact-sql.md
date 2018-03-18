@@ -1,5 +1,5 @@
 ---
-title: "EXP (Transact-SQL) | Документы Microsoft"
+title: "EXP (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает значение экспоненты заданного **float** выражение.  
+  Возвращает значение экспоненты заданного выражения типа **float**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *float_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в **float**.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип **float**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **float**  
   
-## <a name="remarks"></a>Замечания  
- Константа **e** (2,718281...) является основанием натуральных логарифмов.  
+## <a name="remarks"></a>Remarks  
+ Константа **e** (2,718281…) является основанием натурального логарифма.  
   
- Экспонента числа является константой **e** степени числа. Например, EXP(1,0) = e^1,0 = 2,71828182845905, а EXP(10) = e^10 = 22026,4657948067.  
+ Значение экспоненты числа вычисляется путем возведения числа **e** в степень, определяемую указанным числом. Например, EXP(1,0) = e^1,0 = 2,71828182845905, а EXP(10) = e^10 = 22026,4657948067.  
   
- Экспонента натурального логарифма числа — это номер сам: EXP (ЖУРНАЛА (*n*)) =  *n* . Натуральный логарифм экспоненты числа также является числом сам: ЖУРНАЛА (EXP (*n*)) =  *n* .  
+ Экспонента, взятая от натурального логарифма числа, равна самому этому числу: EXP (LOG (*n*)) = *n*. Натуральный логарифм, взятый от экспоненты числа, равен самому этому числу: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -96,10 +96,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>В. Вычисление экспонента числа  
- В следующем примере возвращается значение экспоненты заданного значения (`10`).  
+ В приведенном ниже примере возвращается значение экспоненты указанного значения (`10`).  
   
 ```  
 SELECT EXP(10);  
@@ -112,7 +112,7 @@ SELECT EXP(10);
 22026.4657948067  
 ```  
   
-### <a name="d-finding-exponential-values-and-natural-logarithms"></a>Г. Нахождение экспоненциального значения и натуральных логарифмов  
+### <a name="d-finding-exponential-values-and-natural-logarithms"></a>Г. Нахождение значений экспоненты и натуральных логарифмов  
  Представленный ниже пример возвращает значение экспоненты, взятой от натурального логарифма `20`, а также значение натурального логарифма, взятого от экспоненты `20`. Так как указанные функции являются обратными друг для друга, то в обоих случаях возвращается значение `20`.  
   
 ```  
@@ -127,9 +127,9 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [ЖУРНАЛ &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [LOG (Transact-SQL)](../../t-sql/functions/log-transact-sql.md)   
+ [LOG10 (Transact-SQL)](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

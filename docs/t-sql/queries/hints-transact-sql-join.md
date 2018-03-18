@@ -1,5 +1,5 @@
 ---
-title: "Указания (Transact-SQL) в соединении | Документы Microsoft"
+title: "Указания в соединении (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>Указания (Transact-SQL) - соединения
+# <a name="hints-transact-sql---join"></a>Указания (Transact-SQL) — соединение
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Подсказки в соединении указывают оптимизатору запросов на выбор определенной стратегии соединения двух таблиц в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Общие сведения о соединениях и синтаксисе соединения см. в разделе [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  Подсказки в соединении указывают оптимизатору запросов на выбор определенной стратегии соединения двух таблиц в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Общие сведения о соединениях и синтаксисе соединения см. в статье [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизатор запросов обычно выбирает наилучший план выполнения для запроса, мы рекомендуем, подсказки, включая \<join_hint >, используется только в качестве последнего средства опытным разработчикам и администраторам баз данных.
+>  Оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно выбирает наилучший план выполнения запроса. Поэтому указания, в том числе \<указание_в_соединении>, рекомендуется использовать только опытным разработчикам и администраторам баз данных в случае крайней необходимости.
   
  **Область применения:**  
   
@@ -114,7 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)  
   
   

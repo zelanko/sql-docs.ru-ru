@@ -1,5 +1,5 @@
 ---
-title: "CREATE SYNONYM (Transact-SQL) | Документы Microsoft"
+title: "CREATE SYNONYM (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>Аргументы  
  *schema_name_1*  
- Указывает схему, в которой создается новый синоним. Если *схемы* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует схему по умолчанию текущего пользователя.  
+ Указывает схему, в которой создается новый синоним. Если *schema* не указана, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует применяемую по умолчанию схему текущего пользователя.  
   
  *synonym_name*  
  Имя нового синонима.  
   
- *имя_сервера*  
+ *server_name*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя сервера, на котором расположен базовый объект.  
   
  *database_name*  
- Имя базы данных, в которой расположен базовый объект. Если *имя_базы_данных* не указан, используется имя текущей базы данных.  
+ Имя базы данных, в которой расположен базовый объект. Если не задано *database_name*, используется имя текущей базы данных.  
   
  *schema_name_2*  
- Имя схемы базового объекта. Если *schema_name* не указано, используется схема по умолчанию текущего пользователя.  
+ Имя схемы базового объекта. Если не задан аргумент *schema_name*, используется схема по умолчанию текущего пользователя.  
   
  *object_name*  
  Имя базового объекта, на который ссылается синоним.  
   
  База данных SQL Windows Azure поддерживает формат трехкомпонентного имени database_name.[schema_name].object_name, если database_name — это текущая база данных или database_name — это tempdb и object_name начинается с символа «#».  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Базовый объект может не существовать в момент создания синонима. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяется наличие базового объекта во время выполнения.  
   
  Синонимы могут создаваться для следующих типов объектов:  
@@ -111,7 +111,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Синонимы можно создавать, удалять и ссылаться на них в динамическом SQL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для создания синонима в заданной схеме пользователь должен иметь разрешение CREATE SYNONYM и, либо владеть схемой, либо иметь разрешение ALTER SCHEMA.  
   
  Разрешение на выполнение CREATE SYNONYM можно предоставлять.  
@@ -200,7 +200,7 @@ SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DROP SYNONYM &#40; Transact-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+ [DROP SYNONYM (Transact-SQL)](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

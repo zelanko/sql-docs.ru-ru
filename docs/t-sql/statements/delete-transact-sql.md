@@ -1,5 +1,5 @@
 ---
-title: "DELETE (Transact-SQL) | Документы Microsoft"
+title: "DELETE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -95,24 +95,24 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- С \<общее_табличное_выражение >  
+ WITH \<common_table_expression>  
  Задает временный именованный результирующий набор, также называемый обобщенным табличным выражением, который определяется в области действия инструкции DELETE. Результирующий набор получается из инструкции SELECT.  
   
- Обобщенные табличные выражения также можно использовать в инструкциях SELECT, INSERT, UPDATE и CREATE VIEW. Дополнительные сведения см. в разделе [с общее_табличное_выражение &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Обобщенные табличные выражения также можно использовать в инструкциях SELECT, INSERT, UPDATE и CREATE VIEW. Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- Начало **(***выражение***)** [%]  
- Задает количество или процент удаляемых случайных строк. *expression* может быть либо числом, либо процентом от числа строк. Строки, на которые ссылается выражение TOP, используемое с инструкциями INSERT, UPDATE и DELETE, не упорядочиваются. Дополнительные сведения см. в разделе [в начало &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ TOP **(***expression***)** [ PERCENT ]  
+ Задает количество или процент удаляемых случайных строк. *expression* может быть либо числом, либо процентом от числа строк. Строки, на которые ссылается выражение TOP, используемое с инструкциями INSERT, UPDATE и DELETE, не упорядочиваются. Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
- Необязательное ключевое слово, которое можно использовать между ключевым словом DELETE и целевым *table_or_view_name*, или *rowset_function_limited*.  
+ Необязательное ключевое слово, которое можно использовать между ключевым словом DELETE и целевым аргументом *table_or_view_name* или *rowset_function_limited*.  
   
  *table_alias*  
- Псевдоним, заданный в предложении *table_source* предложение, представляющем таблицу или представление, из которого должны быть удалены строки.  
+ Псевдоним, заданный в предложении FROM *table_source* и представляющий таблицу или представление, строки которых будут удалены.  
   
- *имя_сервера*  
+ *server_name*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Имя сервера (с использованием имени связанного сервера или [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) работать в качестве имени сервера) на котором расположена таблица или представление. Если *имя_сервера* указано, *имя_базы_данных* и *schema_name* являются обязательными.  
+ Имя сервера (с использованием имени связанного сервера или функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) в качестве имени сервера), на котором расположена таблица или представление. Если указано *server_name*, необходимо указать *database_name* и *schema_name*.  
   
  *database_name*  
  Имя базы данных.  
@@ -125,21 +125,21 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Табличную переменную в пределах ее области действия также можно использовать в качестве источника таблицы в инструкции DELETE.  
   
- Представление ссылается *table_or_view_name* должно быть обновляемым и ссылаться ровно одну базовую таблицу в предложении FROM определения представления. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Представление, на которое ссылается аргумент *table_or_view_name*, должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM определения представления. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Либо [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) функции, в зависимости от возможностей поставщика.  
+ Функция [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) в зависимости от возможностей поставщика.  
   
- С **(** \<table_hint_limited > [... *n*] **)**  
- Задает одно или несколько табличных указаний, разрешенных для целевой таблицы. Ключевое слово WITH и круглые скобки обязательны. Использование ключевых слов NOLOCK и READUNCOMMITTED запрещено. Дополнительные сведения о табличных подсказках см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
+ Задает одно или несколько табличных указаний, разрешенных для целевой таблицы. Ключевое слово WITH и круглые скобки обязательны. Использование ключевых слов NOLOCK и READUNCOMMITTED запрещено. Дополнительные сведения о табличных указаниях см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
- \<OUTPUT_Clause >  
- Возвращает удаленные строки или выражения, основанные на них, как часть операции DELETE. Предложение OUTPUT не поддерживается ни в каких инструкциях DML, направленных на представления и удаленные таблицы. Дополнительные сведения см. в разделе [предложение OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ \<OUTPUT_Clause>  
+ Возвращает удаленные строки или выражения, основанные на них, как часть операции DELETE. Предложение OUTPUT не поддерживается ни в каких инструкциях DML, направленных на представления и удаленные таблицы. Дополнительные сведения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
- ИЗ *table_source*  
- Задает дополнительное предложение FROM. Это [!INCLUDE[tsql](../../includes/tsql-md.md)] расширение DELETE позволяет задавать данные из \<table_source > и удалять соответствующие строки из таблицы в первом предложении.  
+ FROM *table_source*  
+ Задает дополнительное предложение FROM. Это расширение языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для инструкции DELETE позволяет задавать данные из \<table_source> и удалять соответствующие строки из таблицы в первом предложении FROM.  
   
  Это расширение, в котором задается соединение, может быть использовано вместо вложенного запроса в предложении WHERE для указания удаляемых строк.  
   
@@ -150,32 +150,32 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Предусмотрено два вида операций удаления в соответствии с тем, что указывается в предложении WHERE.  
   
--   Операции удаления с поиском указывают условие поиска для уточнения строк, которые будут удалены. Например, ГДЕ *column_name* = *значение*.  
+-   Операции удаления с поиском указывают условие поиска для уточнения строк, которые будут удалены. Например, WHERE *column_name* = *value*.  
   
--   Операции удаления по позиции используют предложение CURRENT OF для указания курсора. Удаление осуществляется в текущей позиции курсора. Это может быть более точной, чем инструкция DELETE по найденному, использующая предложение WHERE *search_condition* предложение для определения удаляемых строк. Инструкция DELETE по найденному удаляет несколько строк, если условие поиска не определяет уникально одну строку.  
+-   Операции удаления по позиции используют предложение CURRENT OF для указания курсора. Удаление осуществляется в текущей позиции курсора. Эта операция может быть более точной, чем инструкция DELETE по найденному, которая использует предложение WHERE *search_condition* для указания удаляемых строк. Инструкция DELETE по найденному удаляет несколько строк, если условие поиска не определяет уникально одну строку.  
   
-\<search_condition >  
- Указывает ограничивающие условия для удаляемых строк. Количество предикатов, которое может содержать условие поиска, не ограничено. Дополнительные сведения см. в разделе [условие поиска &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+ Указывает ограничивающие условия для удаляемых строк. Количество предикатов, которое может содержать условие поиска, не ограничено. Дополнительные сведения см. в разделе [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CURRENT OF  
  Указывает выполнение инструкции DELETE в текущей позиции указанного курсора.  
   
  GLOBAL  
- Указывает, что *cursor_name* ссылается на глобальный курсор.  
+ Указывает, что аргумент *cursor_name* ссылается на глобальный курсор.  
   
  *cursor_name*  
- Имя открытого курсора, из которого производится выборка. Если как глобальный, так и локальный курсор с именем *cursor_name* существует, этот аргумент ссылается на глобальный курсор, если GLOBAL указанного; в противном случае, он ссылается на локальный курсор. Курсор должен позволять производить обновления.  
+ Имя открытого курсора, из которого производится выборка. Если существует как глобальный, так и локальный курсор с именем *cursor_name*, этот аргумент ссылается на глобальный курсор, если указан аргумент GLOBAL, в противном случае он ссылается на локальный курсор. Курсор должен позволять производить обновления.  
   
  *cursor_variable_name*  
  Имя переменной курсора. Переменная курсора должна содержать ссылку на курсор, обновления которого разрешены.  
   
- ПАРАМЕТР **(** \<query_hint > [ **,**... *n*] **)**  
- Ключевые слова, указывающие, какие указания оптимизатора применяются при настройке способа [!INCLUDE[ssDE](../../includes/ssde-md.md)] обработки инструкции. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
+ OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ Ключевые слова, которые указывают, что указания оптимизатора применяются при настройке способа обработки инструкции компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Рекомендации  
- Для удаления всех строк в таблице воспользуйтесь инструкцией TRUNCATE TABLE. Инструкция TRUNCATE TABLE выполняется быстрее, чем инструкция DELETE, и использует меньше системных ресурсов и ресурсов журнала транзакций. Инструкция TRUNCATE TABLE имеет ограничения, например, таблица не может участвовать в репликации. Дополнительные сведения см. в разделе [TRUNCATE TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
+ Для удаления всех строк в таблице воспользуйтесь инструкцией TRUNCATE TABLE. Инструкция TRUNCATE TABLE выполняется быстрее, чем инструкция DELETE, и использует меньше системных ресурсов и ресурсов журнала транзакций. Инструкция TRUNCATE TABLE имеет ограничения, например, таблица не может участвовать в репликации. Дополнительные сведения см. в разделе [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)  
   
- Используйте @@ROWCOUNT функцию для возврата количества удаленных строк в клиентское приложение. Дополнительные сведения см. в разделе [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).  
+ Для возврата в клиентское приложение количества удаленных строк используйте функцию @@ROWCOUNT. Дополнительные сведения см. в статье [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Обработка ошибок  
  Для инструкции DELETE можно реализовать обработку ошибок, заключив ее в конструкцию TRY…CATCH.  
@@ -187,9 +187,9 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="interoperability"></a>Совместимость  
  Инструкцию DELETE можно использовать в тексте определяемой пользователем функции, если изменяемым объектом является табличная переменная.  
   
- При удалении строки, содержащей столбец FILESTREAM, также удаляются и связанные с ней файлы файловой системы. Базовые файлы удаляются сборщиком мусора FILESTREAM. Дополнительные сведения см. в разделе [доступ к данным FILESTREAM с помощью Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
+ При удалении строки, содержащей столбец FILESTREAM, также удаляются и связанные с ней файлы файловой системы. Базовые файлы удаляются сборщиком мусора FILESTREAM. Дополнительные сведения см. в разделе [Доступ к данным FILESTREAM с помощью Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
   
- Предложение FROM нельзя указывать в инструкции DELETE, ссылающейся (прямо или косвенно) на представление, в котором указан триггер INSTEAD OF. Дополнительные сведения о триггеры INSTEAD OF см. в разделе [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Предложение FROM нельзя указывать в инструкции DELETE, ссылающейся (прямо или косвенно) на представление, в котором указан триггер INSTEAD OF. Дополнительные сведения о триггерах INSTEAD OF см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  При использовании выражения TOP в инструкции DELETE строки, на которые имеются ссылки, не упорядочиваются, а предложение ORDER BY не может быть прямо указано в этой инструкции. Если необходимо с помощью предложения TOP удалять строки в значимом хронологическом порядке, то вместе с ним в инструкции вложенного запроса выборки следует использовать ORDER BY. См. подраздел «Примеры» далее в этом разделе.  
@@ -203,35 +203,35 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Чтобы удалить из кучи строки и освободить страницы, воспользуйтесь одним из следующих методов.  
   
--   Задайте указания TABLOCK в инструкции DELETE. Использование TABLOCK приведет к тому, что при выполнении операции удаления будет установлена монопольная блокировка таблицы, а не блокировка строки или страницы, что позволит освободить страницы. Дополнительные сведения о подсказке TABLOCK см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Задайте указания TABLOCK в инструкции DELETE. Использование TABLOCK приведет к тому, что при выполнении операции удаления будет установлена монопольная блокировка таблицы, а не блокировка строки или страницы, что позволит освободить страницы. Дополнительные сведения об указании TABLOCK см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   Если из таблицы удаляются все строки, пользуйтесь инструкцией TRUNCATE TABLE.  
   
 -   Перед удалением строк создайте в куче кластеризованный индекс. Потом его можно будет удалить. Этот метод потребует больше времени и потребляет больше временных ресурсов.  
   
 > [!NOTE]  
->  Пустые страницы можно удалить из кучи в любое время с помощью `ALTER TABLE <table_name> REBUILD` инструкции.  
+>  Пустые страницы можно удалить из кучи в любое время с помощью инструкции `ALTER TABLE <table_name> REBUILD`.  
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
  Инструкция DELETE всегда полностью регистрируется в журнале.  
   
 ## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Разрешения DELETE необходимы для целевой таблицы. Разрешения SELECT также необходимы, если инструкция содержит предложение WHERE.  
   
- УДАЛЕНИЕ разрешений по умолчанию предоставляются членам **sysadmin** предопределенной роли сервера **db_owner** и **db_datawriter** фиксированной роли базы данных, а также владельцу таблицы. Члены **sysadmin**, **db_owner**и **db_securityadmin** ролей, а также владелец таблицы могут передавать разрешения другим пользователям.  
+ Разрешения DELETE назначаются по умолчанию членам предопределенной роли сервера **sysadmin**, предопределенных ролей базы данных **db_owner** и **db_datawriter**, а также владельцу таблицы. Члены ролей **sysadmin**, **db_owner** и **db_securityadmin**, а также владелец таблицы могут передавать разрешения другим пользователям.  
   
 ## <a name="examples"></a>Примеры  
   
 |Категория|Используемые элементы синтаксиса|  
 |--------------|------------------------------|  
-|[Базовый синтаксис](#BasicSyntax)|DELETE|  
+|[Основной синтаксис](#BasicSyntax)|Delete|  
 |[Ограничение удаляемых строк](#LimitRows)|WHERE • FROM • курсор •|  
 |[Удаление строк из удаленной таблицы](#RemoteTables)|Связанный сервер • OPENQUERY, функция набора строк • OPENDATASOURCE, функция набора строк|  
-|[Сбор результатов инструкции DELETE](#CaptureResults)|OUTPUT, предложение|  
+|[Сбор результатов для инструкции DELETE](#CaptureResults)|OUTPUT, предложение|  
   
-###  <a name="BasicSyntax"></a>Базовый синтаксис  
+###  <a name="BasicSyntax"></a> Базовый синтаксис  
  В примерах в этом разделе описывается базовая функциональность инструкции DELETE с помощью минимального необходимого синтаксиса.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>А. Использование инструкции DELETE без предложения WHERE  
@@ -242,11 +242,11 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a>Ограничение удаляемых строк  
+###  <a name="LimitRows"></a> Ограничение удаляемых строк  
  В примерах в этом разделе описываются способы ограничения количества удаляемых строк.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>Б. Использование предложения WHERE для удаления набора строк  
- Следующий пример удаляет все строки из `ProductCostHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных, в котором значения в `StandardCost` столбец является более `1000.00`.  
+ Следующий пример удаляет все строки таблицы `ProductCostHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], у которых значение в столбце `StandardCost` больше `1000.00`.  
   
 ```    
 DELETE FROM Production.ProductCostHistory  
@@ -254,7 +254,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В примере также выводится значение из **@@ROWCOUNT**  функцию для возврата количества удаленных строк.  
+ В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В данном примере также выводится значение из функции **@@ROWCOUNT**, которое показывает количество удаленных строк.  
   
 ```  
 DELETE Production.ProductCostHistory  
@@ -264,7 +264,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>В. Использование курсора для определения удаляемой строки  
- Следующий пример удаляет одну строку из `EmployeePayHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных с помощью курсора `my_cursor`. Операция удаления затрагивает только одну строку, выбранную в данный момент курсором.  
+ Следующий пример удаляет одну строку из таблицы `EmployeePayHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью курсора `my_cursor`. Операция удаления затрагивает только одну строку, выбранную в данный момент курсором.  
   
 ```  
 DECLARE complex_cursor CURSOR FOR  
@@ -284,7 +284,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>Г. Использование операторов объединения и вложенных запросов к данным в одной таблице для удаления строк в другой таблице  
- В следующих примерах показано два способа удаления строк в одной таблице на основании данных в другой таблице. В обоих примерах строк от `SalesPersonQuotaHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] удалить базу данных на основе продаж с начала года, хранящиеся в `SalesPerson` таблицы. Первый `DELETE` инструкции показано решение ISO-совместимой вложенный запрос, а второй `DELETE` показывает инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] из расширения для соединения двух таблиц.  
+ В следующих примерах показано два способа удаления строк в одной таблице на основании данных в другой таблице. В обоих примерах из таблицы `SalesPersonQuotaHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] будут удалены строки на основании сведений о продажах за текущий год, хранящихся в таблице `SalesPerson`. В первой инструкции `DELETE` показано основанное на вложенных запросах и совместимое с ISO решение, а во второй инструкции `DELETE` используется оператор FROM языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для объединения двух таблиц.  
   
 ```  
 -- SQL-2003 Standard subquery  
@@ -320,7 +320,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>Д. Ограничение числа удаляемых строк с помощью ключевого слова TOP  
- Когда TOP (*n*) DELETE применяется предложение, операция удаления производится над произвольным подмножеством  *n*  строк. В следующем примере удаляется `20` случайных строк из `PurchaseOrderDetail` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных, имеющих дату ранее 1 июля 2006 г.  
+ Если с инструкцией DELETE применяется предложение TOP (*n*), то операция удаления производится над *n* случайно выбранных строк. Следующий пример удаляет `20` случайных строк из таблицы `PurchaseOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], имеющих дату ранее 1 июля 2006 г.  
   
 ```  
 DELETE TOP (20)   
@@ -340,13 +340,13 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a>Удаление строк из удаленной таблицы  
- Примеры в этом разделе демонстрируют, как удаление строк из удаленной таблицы с помощью [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функцию набора строк](../../t-sql/functions/rowset-functions-transact-sql.md) для ссылки на удаленную таблицу. Удаленная таблица существует на другом сервере или экземпляре SQL Server.  
+###  <a name="RemoteTables"></a> Удаление строк из удаленной таблицы  
+ В примерах в этом разделе описаны способы удаления строк из удаленной таблицы с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md). Удаленная таблица существует на другом сервере или экземпляре SQL Server.  
   
 **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>Е. Удаление данных из удаленной таблицы с помощью связанного сервера  
- В следующем примере будет удалена строка из удаленной таблицы. Пример начинается с создания ссылки на удаленный источник данных с помощью [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, задается в качестве части имени объекта, состоящее из четырех частей в форме *сервер.каталог.схема.объект*.  
+ В следующем примере будет удалена строка из удаленной таблицы. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object*.  
   
 ```  
 USE master;  
@@ -372,7 +372,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>Ж. Удаление данных из удаленной таблицы с помощью функции OPENQUERY  
- Следующий пример удаляет строки из удаленной таблицы, указав [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) функцию набора строк. В этом примере используется имя связанного сервера, созданного в предыдущем примере.  
+ В следующем примере выполняется удаление строк из удаленной таблицы с помощью вызова функции [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), возвращающей набор строк. В этом примере используется имя связанного сервера, созданного в предыдущем примере.  
   
 ```  
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -382,7 +382,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>З. Удаление данных из удаленной таблицы с помощью функции OPENDATASOURCE  
- Следующий пример удаляет строки из удаленной таблицы, указав [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) функцию набора строк. Укажите допустимое имя сервера для источника данных, используя формат *имя_сервера* или *имя_сервера\имя_экземпляра*.  
+ В следующем примере выполняется удаление строк из удаленной таблицы с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*.  
   
 ```  
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
@@ -391,10 +391,10 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a>Сбор результатов инструкции DELETE  
+###  <a name="CaptureResults"></a> Сбор результатов для инструкции DELETE  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>И. Использование инструкции DELETE с предложением OUTPUT  
- В следующем примере показано, как сохранить результаты `DELETE` инструкции в табличную переменную в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных.  
+ Следующий пример демонстрирует способы сохранения результатов инструкции `DELETE` в табличную переменную в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DELETE Sales.ShoppingCartItem  
@@ -409,7 +409,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>К. Использование предложения OUTPUT с аргументом <from_table_name> в инструкции DELETE  
- Следующий пример удаляет строки в `ProductProductPhoto` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных на основе критерия поиска определенных в `FROM` предложения `DELETE` инструкции. Предложение `OUTPUT` возвращает столбцы из таблицы, в которой проводится удаление, `DELETED.ProductID`, `DELETED.ProductPhotoID`и столбцы из таблицы `Product` . Оно используется в предложении `FROM` для указания удаляемых строк.  
+ Следующий пример удаляет строки в таблице `ProductProductPhoto` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] на основе критерия поиска, указанного в предложении `FROM` инструкции `DELETE`. Предложение `OUTPUT` возвращает столбцы из таблицы, в которой проводится удаление, `DELETED.ProductID`, `DELETED.ProductPhotoID`и столбцы из таблицы `Product` . Оно используется в предложении `FROM` для указания удаляемых строк.  
   
 ```  
 DECLARE @MyTableVar table (  
@@ -436,25 +436,25 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="k-delete-all-rows-from-a-table"></a>Л. Удалите все строки из таблицы  
+### <a name="k-delete-all-rows-from-a-table"></a>Л. Удаление всех строк из таблицы  
  Следующий пример удаляет все строки из таблицы `Table1`, поскольку не указано предложение WHERE, ограничивающее количество удаляемых строк.  
   
 ```  
 DELETE FROM Table1;  
 ```  
   
-### <a name="l-delete-a-set-of-rows-from-a-table"></a>М. Удаление набора строк из таблицы  
- Следующий пример удаляет все строки из `Table1` таблицы, которая имеет значение больше 1000,00 в `StandardCost` столбца.  
+### <a name="l-delete-a-set-of-rows-from-a-table"></a>М. Инструкция DELETE для удаления набора строк из таблицы  
+ Следующий пример удаляет все строки таблицы `Table1`, у которых значение в столбце `StandardCost` больше 1000,00.  
   
 ```  
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>Н. С помощью МЕТКИ с инструкцией DELETE  
- В следующем примере метку с помощью инструкции DELETE.  
+### <a name="m-using-label-with-a-delete-statement"></a>Н. Использование предложения LABEL с инструкцией DELETE  
+ В следующем примере используется метка с инструкцией DELETE.  
   
 ```  
 DELETE FROM Table1  
@@ -462,8 +462,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>О. С помощью метки и подсказки в запросе с помощью инструкции DELETE  
- Этот запрос показан основной синтаксис для использования подсказки в запросе соединения с помощью инструкции DELETE. Дополнительные сведения о указания соединения и как использовать предложение OPTION. в разделе [параметр (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>О. Использование метки и указания запроса с инструкцией DELETE  
+ Этот запрос показывает базовый синтаксис для использования указания на соединение с запросом с инструкцией INSERT. Дополнительные сведения об указаниях по соединению и использованию предложения OPTION см. в разделе [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  
 -- Uses AdventureWorks  
@@ -481,9 +481,9 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [После УСЕЧЕНИЯ таблицы &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [С общее_табличное_выражение &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   

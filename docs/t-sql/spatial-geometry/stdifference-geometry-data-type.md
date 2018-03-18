@@ -1,5 +1,5 @@
 ---
-title: "STDifference (тип данных geometry) | Документы Microsoft"
+title: "STDifference (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geometry-data-type"></a>STDifference (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает объект, представляющий набор точек одного **geometry** экземпляр, который не находится внутри другой **geometry** экземпляра.
+Возвращает объект, представляющий набор точек одного экземпляра **geometry**, которые не расположены в пределах другого экземпляра **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** , позволяющее определить, какие точки нужно удалить из экземпляра, на котором экземпляр `STDifference()` вызывается.  
+ Другой экземпляр **geometry**, который показывает, какие точки нужно удалить из экземпляра, для которого вызван метод `STDifference()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают.   Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).   Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -78,7 +78,7 @@ SELECT @g.STDifference(@h).ToString();
  SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

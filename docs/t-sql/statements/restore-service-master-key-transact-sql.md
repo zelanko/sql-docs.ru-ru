@@ -1,5 +1,5 @@
 ---
-title: "RESTORE SERVICE MASTER KEY (Transact-SQL) | Документы Microsoft"
+title: "RESTORE SERVICE MASTER KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ФАЙЛ **= "***путь_к_файлу***"**  
- Задает полный путь, включающий в себя имя файла, к сохраненному главному ключу службы. *путь_к_файлу* может быть локальным путем или UNC-путь в сетевую папку.  
+ FILE **='***path_to_file***'**  
+ Задает полный путь, включающий в себя имя файла, к сохраненному главному ключу службы. *path_to_file* может быть локальным путем или UNC-путем к расположению в сети.  
   
- ПАРОЛЬ **= "***пароль***"**  
+ PASSWORD **='***password***'**  
  Задает пароль, необходимый для расшифровки главного ключа службы, импортирующегося из файла.  
   
  FORCE  
  Принудительно заменяет главный ключ службы, несмотря на риск потери данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При восстановлении главного ключа службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расшифровывает все ключи и секретные коды, зашифрованные вместе с текущим главным ключом службы, а затем зашифровывает их вместе с восстановленным ключом из файла резервной копии.  
   
  Если во время расшифровки любого объекта произойдет ошибка, восстановление будет прервано. Чтобы пропускать ошибки, можно использовать параметр FORCE, но это приведет к потере всех данных, которые не удается расшифровать.  
@@ -72,7 +72,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  Повторное формирование иерархии шифрования — ресурсоемкая операция. Ее нужно назначить на период низкой нагрузки на сервер.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER на сервер.  
   
 ## <a name="examples"></a>Примеры  
@@ -87,8 +87,8 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Главный ключ службы](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [Резервная копия главного ключа службы &#40; Transact-SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "IsNull (тип данных geometry) | Документы Microsoft"
+title: "IsNull (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geometry-data-type"></a>IsNull (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Тип **geometry** экземпляр имеет значение null. Возвращает значение 0, если экземпляр отличен от NULL.
+Тип экземпляра **geometry** — NULL. Возвращает значение 0, если экземпляр отличен от NULL.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,17 +42,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **бит**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Тип CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `IsNull`можно использовать для тестирования ли **geometry** экземпляр имеет значение null. Это может привести к неочевидному результату, так как, если экземпляр имеет значение, отличное от NULL, возвращается значение 0, а если экземпляр имеет значение NULL, возвращается значение NULL.  
+ Метод `IsNull` позволяет проверить, имеет ли экземпляр **geometry** значение NULL. Это может привести к неочевидному результату, так как, если экземпляр имеет значение, отличное от NULL, возвращается значение 0, а если экземпляр имеет значение NULL, возвращается значение NULL.  
   
  Этот метод в основном используется инфраструктурой SQL Server; не рекомендуется использовать `IsNull` для проверки, имеет ли экземпляр значение NULL.  
   
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

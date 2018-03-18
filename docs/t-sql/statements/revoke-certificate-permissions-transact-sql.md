@@ -1,5 +1,5 @@
 ---
-title: "Отмена разрешений на сертификат (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений на сертификат (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Если участник обладает указанным разрешением без параметра GRANT, будет отменено само разрешение.  
   
- *разрешение*  
+ *permission*  
  Обозначает разрешение, которое может быть отменено для сертификата. Перечислены ниже.  
   
- СЕРТИФИКАТ ON **::***имя_сертификата*  
+ ON CERTIFICATE **::***certificate_name*  
  Указывает сертификат, для которого отменяется разрешение. Необходим квалификатор области «::».  
   
  *database_principal*  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сертификат является защищаемым объектом уровня базы данных, содержащимся в базе данных, являющейся его родительским элементом в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть отменены для сертификата.  
   
 |Разрешение сертификата|Содержится в разрешении сертификата|Содержится в разрешении базы данных|  
@@ -116,7 +116,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для сертификата.  
   
 ## <a name="see-also"></a>См. также:  
@@ -125,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

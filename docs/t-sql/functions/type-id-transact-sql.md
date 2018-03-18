@@ -1,5 +1,5 @@
 ---
-title: "Type_id (Transact-SQL) | Документы Microsoft"
+title: "TYPE_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,8 +48,8 @@ TYPE_ID ( [ schema_name ] type_name )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Функция TYPE_NAME*  
- Имя типа данных. *Функция TYPE_NAME* относится к типу **nvarchar**. *Функция TYPE_NAME* может быть системный или определяемый пользователем тип.  
+ *type_name*  
+ Имя типа данных. Аргумент *type_name* имеет тип **nvarchar**. Аргумент *type_name* может иметь системный или определяемый пользователем тип данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
@@ -59,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как TYPE_ID могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция TYPE_ID возвращает NULL, если имя типа неверно или если вызывающий не имеет необходимых разрешений на использование этого типа.  
   
 ## <a name="examples"></a>Примеры  
@@ -90,9 +90,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: поиске функции TYPE ID для системного типа данных  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>В. Поиск значения функции TYPE ID для системного типа данных  
  В следующем примере возвращается значение `TYPE ID` для системного типа данных `datetime`.  
   
 ```  
@@ -101,10 +101,10 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_NAME (Transact-SQL)](../../t-sql/functions/type-name-transact-sql.md)   
+ [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

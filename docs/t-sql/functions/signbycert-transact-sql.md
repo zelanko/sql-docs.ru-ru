@@ -1,5 +1,5 @@
 ---
-title: "SIGNBYCERT (Transact-SQL) | Документы Microsoft"
+title: "SIGNBYCERT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,23 +52,23 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *идентификатор_сертификата*  
- Идентификатор сертификата в текущей базе данных. *идентификатор_сертификата* — **int**.  
+ *certificate_ID*  
+ Идентификатор сертификата в текущей базе данных. Аргумент *certificate_ID* имеет тип **int**.  
   
  *@cleartext*  
- Переменная типа **nvarchar**, **char**, **varchar**, или **nchar** , содержащий данные, которые будут подписаны.  
+ Переменная типа **nvarchar**, **char**, **varchar** или **nchar**, содержащая данные, которые будут подписаны.  
   
- **"** *пароль* **"**  
- Пароль, при помощи которого был зашифрован закрытый ключ сертификата. *пароль* — **nvarchar(128)**.  
+ **'** *password* **'**  
+ Пароль, при помощи которого был зашифрован закрытый ключ сертификата. Аргумент *password* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Требует разрешения CONTROL для сертификата.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример подписывает текст `@SensitiveData` сертификатом `ABerglundCert07`, после расшифровки сертификата с помощью пароля «pGFD4bb925DGvbd2439587y». Затем открытый текст и подпись вставляются в таблицу `SignedData04`.  
+ В приведенном ниже примере текст переменной `@SensitiveData` подписывается сертификатом `ABerglundCert07` после расшифровки сертификата с помощью пароля "pGFD4bb925DGvbd2439587y". Затем открытый текст и подпись вставляются в таблицу `SignedData04`.  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -82,11 +82,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [VERIFYSIGNEDBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [VERIFYSIGNEDBYCERT (Transact-SQL)](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [УДАЛИТЬ СЕРТИФИКАТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

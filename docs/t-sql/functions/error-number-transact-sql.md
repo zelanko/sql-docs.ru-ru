@@ -1,5 +1,5 @@
 ---
-title: "ERROR_NUMBER (Transact-SQL) | Документы Microsoft"
+title: "ERROR_NUMBER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_NUMBER ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция может быть вызвана в любом месте в пределах блока CATCH.  
   
- ERROR_NUMBER возвращает номер ошибки вне зависимости от числа запусков и места запуска в пределах блока CATCH. Это отличается от@ERROR, которая только возвращает номер ошибки в инструкции сразу после того, который вызывает ошибку, или в первой инструкции CATCH блока.  
+ ERROR_NUMBER возвращает номер ошибки вне зависимости от числа запусков и места запуска в пределах блока CATCH. Этим данная функция отличается от функции @@ERROR, которая только возвращает номер ошибки в инструкции сразу после ее возникновения либо в первой инструкции блока CATCH.  
   
  Во вложенных блоках CATCH функция ERROR_NUMBER возвращает номер ошибки, связанной с тем блоком CATCH, в котором она была вызвана. Например, блок CATCH внешней конструкции TRY...CATCH может содержать вложенную конструкцию TRY...CATCH. Внутри вложенного блока CATCH функция ERROR_NUMBER возвращает номер ошибки, вызвавшей вложенный блок CATCH. Если функция ERROR_NUMBER запущена во внешнем блоке CATCH, она возвращает номер ошибки, вызвавшей этот блок CATCH.  
   
@@ -100,7 +100,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_NUMBER в блоке CATCH с другими средствами обработки ошибок  
  В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с номером ошибки возвращаются сведения, касающиеся этой ошибки.  
@@ -129,7 +129,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

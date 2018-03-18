@@ -1,5 +1,5 @@
 ---
-title: "@@NESTLEVEL (Transact-SQL) | Документы Microsoft"
+title: "@@NESTLEVEL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;Процедуры my_proc_a равно (Transact-SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает уровень вложенности выполняющейся в данный момент хранимой процедуры (изначально равен 0).  
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Каждый раз, когда хранимая процедура вызывает другую хранимую процедуру или выполняет управляемый код путем обращения к подпрограмме, типу или статистическому выражению среды CLR, уровень вложенности возрастает. При достижении максимального уровня 32 транзакция прекращается.  
   
- Если @@NESTLEVEL выполняется в рамках [!INCLUDE[tsql](../../includes/tsql-md.md)] строки, возвращаемое значение 1 + текущий уровень вложенности. Если @@NESTLEVEL выполняется динамически с помощью процедуры sp_executesql возвращаемое значение 2 + текущий уровень вложенности.  
+ Если функция @@NESTLEVEL выполняется внутри строки на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращается значение 1 + текущий уровень вложенности. Если функция @@NESTLEVEL выполняется динамически с помощью процедуры sp_executesql, возвращается значение 2 + текущий уровень вложенности.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. С помощью@NESTLEVEL в процедуре  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. Использование @@NESTLEVEL в процедуре  
  В следующем примере создаются две процедуры: первая вызывает вторую, а вторая отображает параметр `@@NESTLEVEL` каждой из процедур.  
   
 ```  
@@ -92,7 +92,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>Б. Вызов @@NESTLEVEL  
- В следующем примере показано различие в значения, возвращаемые методом `SELECT`, `EXEC`, и `sp_executesql` при их вызове `@@NESTLEVEL`.  
+ В приведенном ниже примере показана разница значений, возвращаемых инструкциями `SELECT`, `EXEC` и хранимой процедурой `sp_executesql`, когда каждая из них вызывает функцию `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

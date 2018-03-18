@@ -1,5 +1,5 @@
 ---
-title: "Точка (тип данных geometry) | Документы Microsoft"
+title: "Point (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geometry-data-type"></a>Point (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Создает **geometry** представляет экземпляр **точки** экземпляра по значениям X и Y и SRID.
+Создает экземпляр **geometry**, который представляет экземпляр **Point**, на основе его значений X и Y и идентификатора SRID.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,18 +45,18 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *X*  
- — **Float** выражение, представляющее координату по оси X **точки** создается.  
+ Выражение **float**, представляющее координату по оси X создаваемого экземпляра **Point**.  
   
  *да*  
- — **Float** выражение, представляющее координату Y элемента **точки** создается.  
+ Выражение типа **float**, представляющее координату по оси Y создаваемого экземпляра **Point**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometry** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -69,7 +69,7 @@ SET @g = geometry::Point(1, 10, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

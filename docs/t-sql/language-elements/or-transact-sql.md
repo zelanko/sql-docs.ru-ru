@@ -1,5 +1,5 @@
 ---
-title: "ИЛИ (Transact-SQL) | Документы Microsoft"
+title: "OR (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>Аргументы  
  *boolean_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , возвращающий значение TRUE, FALSE или UNKNOWN.  
+ Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), результатом которого являются значения TRUE, FALSE или UNKNOWN.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
@@ -61,8 +61,8 @@ boolean_expression OR boolean_expression
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**ЗНАЧЕНИЕ TRUE**|TRUE|TRUE|TRUE|  
-|**ЗНАЧЕНИЕ FALSE**|TRUE|FALSE|UNKNOWN|  
+|**TRUE**|TRUE|TRUE|TRUE|  
+|**FALSE**|TRUE|FALSE|UNKNOWN|  
 |**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере извлекаются имена сотрудников, которые либо заработать `BaseRate` меньше 20 или иметь `HireDate` 1 января 2001 года или более поздней версии.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере извлекаются имена сотрудников со значением `BaseRate` меньше 20 или значением `HireDate` не раньше 1 января 2001 г.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,12 +97,12 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

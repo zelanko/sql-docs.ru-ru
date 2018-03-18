@@ -1,5 +1,5 @@
 ---
-title: "STGeometryType (тип данных geography) | Документы Microsoft"
+title: "STGeometryType (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает имя типа Open Geospatial Consortium (OGC), представленный **geography** экземпляра.  
+  Возвращает имя типа открытого геопространственного консорциума (OGC), представленного экземпляром **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(4000)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(4000)**  
   
- Возвращаемый тип CLR: **SqlString**  
+ Тип возвращаемых данных CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
- Имена типов OGC, которые могут быть возвращены `STGeometryType()` , **точки**, **LineString**, **CircularString**, **CompoundCurve**, **Многоугольника**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, и **MultiPolygon**.  
+ Имена типов OGC, которые могут быть возвращены `STGeometryType()`: **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString** и **MultiPolygon**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Polygon` и используется метод `STGeometryType()`, чтобы проверить, является ли этот экземпляр многоугольником.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -1
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

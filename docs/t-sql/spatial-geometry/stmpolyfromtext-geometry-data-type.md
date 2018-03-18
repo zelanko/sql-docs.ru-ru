@@ -1,5 +1,5 @@
 ---
-title: "STMPolyFromText (тип данных geometry) | Документы Microsoft"
+title: "STMPolyFromText (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geometry** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT) с Z (высота) и значения M (Мера), сопровождающими экземпляр.
+Возвращает экземпляр **geometry** из WKT-представления открытого геопространственного консорциума (OGC) вместе со значениями Z (высота) и M (мера), сопровождающими экземпляр.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *multipolygon_tagged_text*  
- Является WKT-представление **geometryMultiPolygon** экземпляр, который необходимо вернуть. *multipolygon_tagged_text* — **nvarchar(max)** выражение.  
+ Представление в формате WKT возвращаемого экземпляра **geometryMultiPolygon**. *multipolygon_tagged_text* является выражением типа **nvarchar(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometryMultiPolygon** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometryMultiPolygon**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **Sql Geometry**  
+ Тип возвращаемых данных CLR: **Sql Geometry**  
   
  Тип OGC: **MultiPolygon**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод вызывает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STMPolyFromText()` применяется для создания экземпляра `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((1
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

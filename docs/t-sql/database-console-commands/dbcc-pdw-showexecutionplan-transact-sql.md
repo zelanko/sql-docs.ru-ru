@@ -1,5 +1,5 @@
 ---
-title: ": DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Документы Microsoft"
+title: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
@@ -25,14 +25,14 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Отображает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] план выполнения для запросов, выполняемых на определенном [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] вычислительный узел или узел элемента управления. Используется для устранения неполадок проблем производительности запросов при выполнении запросов на вычислительные узлы и узел элемента управления.
+Отображает план выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запроса, выполняющегося в определенном вычислительном либо управляющем узле [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Позволяет устранять проблемы с производительностью запросов, выполняющихся в вычислительных узлах или управляющем узле.
   
-Если проблемы с производительностью запросов, применимые для SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросы, выполняемые на вычислительных узлах, существует несколько способов для повышения производительности. Создание статистики по нескольким столбцам, создание некластеризованных индексов или с помощью подсказки в запросе, следующими способами для повышения производительности запросов на вычислительных узлах.
+После определения проблем с производительностью запросов SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющихся в вычислительных узлах, повысить производительность можно несколькими способами. Возможные способы оптимизации производительности запросов в вычислительных узлах включают в себя создание статистики по нескольким столбцам, создание некластеризованных индексов или использование указаний запросов.
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
 Синтаксис для SQL Server:
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
 [;]  
 ```  
-Синтаксис Azure параллельного хранилища данных:
+Синтаксис для Azure Parallel Data Warehouse:
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
@@ -50,23 +50,23 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="arguments"></a>Аргументы  
  *distribution_id*  
- Идентификатор для распределения, на котором выполняется план запроса. Это должно быть целым числом и не может иметь значение NULL. Использовать при разработке для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Идентификатор распределения, в котором выполняется план запроса. Это целое число; не может быть равно NULL. Используется при разработке для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
  *pdw_node_id*  
- Идентификатор для узла, на котором выполняется план запроса. Это должно быть целым числом и не может иметь значение NULL. Используется при нацеливании на устройстве.  
+ Идентификатор узла, в котором выполняется план запроса. Это целое число; не может быть равно NULL. Используется для устройства.  
   
  *spid*  
- Идентификатор для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанса, на котором выполняется план запроса. Это должно быть целым числом и не может иметь значение NULL.  
+ Идентификатор сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в котором выполняется план запроса. Это целое число; не может быть равно NULL.  
   
 ## <a name="permissions"></a>Разрешения  
- Требует разрешения CONTROL на [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Требуется разрешение CONTROL для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-Необходимо разрешение VIEW SERVER STATE на устройстве.
+Требуется разрешение VIEW-SERVER-STATE для устройства.
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>Примеры:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. Базовый синтаксис: DBCC PDW_SHOWEXECUTIONPLAN  
- При работе на [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] изменить приведенный выше запрос, чтобы выделить и distribution_id, экземпляр.  
+### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWEXECUTIONPLAN  
+ При выполнении в экземпляре [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] измените приведенный выше запрос так, чтобы также выбирался идентификатор distribution_id.  
   
 ```sql
 SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start_time], [end_time], [status], [distribution_id]  
@@ -75,17 +75,17 @@ WHERE [status] <> 'StepComplete' and [status] <> 'StepError'
 order by request_id, [dms_step_index];  
 ```  
   
-Возвращает идентификатор spid для каждого работающих распространения. Если вам интересно, перешли какие распространения 1 был запущен в рамках сеанса 375, то будет запустить следующую команду.
+В результате будет возвращаться идентификатор SPID для каждого активного распределения. Чтобы узнать, что выполнялось в рамках распределения 1 в сеансе 375, следует выполнить приведенную ниже команду.
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>Б. Базовый синтаксис: DBCC PDW_SHOWEXECUTIONPLAN  
- Запрос, выполняется слишком много времени, либо запустить DMS запрос операция плана или операции план запроса SQL.  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>Б. Базовый синтаксис DBCC PDW_SHOWEXECUTIONPLAN  
+ Если запрос выполняется слишком долго, значит, он производит операцию плана запроса DMS или операцию плана запроса SQL.  
   
-Если запрос выполняется операция DMS план запроса, можно использовать следующий запрос для получения списка идентификаторов узла и идентификаторы сеанса для действия, которые не являются полными.
+Если запрос выполняет операцию плана запроса DMS, с помощью приведенного ниже запроса можно получить список идентификаторов узлов и сеансов для незавершенных этапов.
   
 ```sql
 SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start_time], [end_time], [status]   
@@ -95,12 +95,12 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-На основании результатов предыдущего запроса использования sql_spid и pdw_node_id в качестве параметров DBCC PDW_SHOWEXEUCTIONPLAN. Например следующая команда показывает план выполнения для pdw_node_id 201001 и sql_spid 375.
+Полученные в результате предыдущего запроса значения sql_spid и pdw_node_id можно использовать как параметры инструкции DBCC PDW_SHOWEXEUCTIONPLAN. Например, приведенная ниже команда отображает план выполнения для pdw_node_id 201001 и sql_spid 375.
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  
 ```  
 
-## <a name="see-also"></a>См. также:
-[DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)](dbcc-pdw-showpartitionstats-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: "Статические агрегатные географические методы | Документы Microsoft"
+title: "Статические агрегатные географические методы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,22 +42,22 @@ ms.lasthandoff: 01/25/2018
   
  [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [Спецификации OGC, географический язык разметки](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [CollectionAggregate &#40; тип данных geography &#41;](../../t-sql/spatial-geography/collectionaggregate-geography-data-type.md)  
+-   [CollectionAggregate (тип данных geography Data Type)](../../t-sql/spatial-geography/collectionaggregate-geography-data-type.md)  
   
--   [ConvexHullAggregate &#40; тип данных geography &#41;](../../t-sql/spatial-geography/convexhullaggregate-geography-data-type.md)  
+-   [ConvexHullAggregate (тип данных geography Data Type)](../../t-sql/spatial-geography/convexhullaggregate-geography-data-type.md)  
   
--   [EnvelopeAggregate &#40; тип данных geography &#41;](../../t-sql/spatial-geography/envelopeaggregate-geography-data-type.md)  
+-   [EnvelopeAggregate (тип данных geography Data Type)](../../t-sql/spatial-geography/envelopeaggregate-geography-data-type.md)  
   
--   [UnionAggregate &#40; тип данных geography &#41;](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
+-   [UnionAggregate (тип данных geography Data Type)](../../t-sql/spatial-geography/unionaggregate-geography-data-type.md)  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

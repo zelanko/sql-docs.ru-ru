@@ -1,5 +1,5 @@
 ---
-title: "AsTextZM (тип данных geography) | Документы Microsoft"
+title: "AsTextZM (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geography-data-type"></a>AsTextZM (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает представление Open Geospatial Consortium (OGC) Well-Known Text (WKT) **geography** экземпляр дополненного **Z** (высота) и **M** (Мера) значения, сопровождающих экземпляр.  
+  Возвращает представление WKT открытого геопространственного консорциума (OGC) для экземпляра **geography**, дополненное всеми значениями **Z** (высота) и **M** (мера) этого экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Возвращаемый тип CLR: **SqlChars**  
+ Тип возвращаемых данных CLR: **SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `Point` экземпляру, содержащему **Z** (высота) и **M** значений (мер). `STAsText()`Выбирает значения WKT (– 122,34900 47,65100); `AsTextZM()` выбирает те же значения WKT, а также возвращает значения для **Z** и **M**, давая в результате (– 122,34900 47,65100 10,3 12).  
+ В приведенном ниже примере создается экземпляр `Point`, содержащий значения **Z** (высота) и **M** (мера). Метод `STAsText()` выбирает значения WKT (–122.34900 47.65100); метод `AsTextZM()` выбирает те же самые значения WKT, а также возвращает значения для **Z** и **M** (–122.34900 47.65100 10.3 12).  
   
 ```  
 DECLARE @g geography;  
@@ -62,9 +62,9 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [М &#40; тип данных geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Я &#40; тип данных geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M (тип данных geography)](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z (тип данных geography)](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

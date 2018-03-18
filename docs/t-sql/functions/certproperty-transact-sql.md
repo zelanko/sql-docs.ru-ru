@@ -1,5 +1,5 @@
 ---
-title: "CERTPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "CERTPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Аргументы  
 *Cert_ID*  
-Идентификатор сертификата. *Cert_ID* имеет тип int.
+Идентификатор сертификата. Аргумент *Cert_ID* имеет тип int.
   
 *Expiry_Date*  
 Дата истечения срока действия сертификата.
@@ -69,24 +69,24 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 *Тема*  
 Предмет сертификата.
   
- *ИД БЕЗОПАСНОСТИ*  
+ *SID*  
 Идентификатор защиты (SID) сертификата. А также это SID любого имени входа или пользователя, сопоставленного этому сертификату.
   
 *String_SID*  
 Идентификатор защиты (SID) сертификата в виде символьной строки. А также это SID любого имени входа или пользователя, сопоставленного этому сертификату.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 Задание свойства должно заключаться в одинарные кавычки.
   
 Возвращаемый тип зависит от свойства, указанного при вызове функции. Все возвращаемые значения упаковываются в возвращаемый тип **sql_variant**.
--   *Expiry_Date* и *Start_Date* возвращают **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *субъекта*, и *String_SID* возвращают **nvarchar**.  
--   *SID* возвращает **varbinary**.  
+-   *Expiry_Date* и *Start_Date* возвращают значения типа **datetime**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *Subject* и *String_SID* возвращают значения типа **nvarchar**.  
+-   *SID* возвращает значение типа **varbinary**.  
   
-## <a name="remarks"></a>Замечания  
-Сведения о сертификатах можно увидеть в [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) представления каталога.
+## <a name="remarks"></a>Remarks  
+Сведения о сертификатах можно увидеть в представлении каталога [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Требуется ряд разрешений на сертификат, кроме того у участника не должно быть запрещено разрешение VIEW DEFINITION на этот сертификат.
   
 ## <a name="examples"></a>Примеры  
@@ -108,12 +108,12 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) 
- [Иерархии шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[sys.certificates &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
- [Представления каталога безопасности &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)
+[Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)
+[sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   

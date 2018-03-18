@@ -1,7 +1,7 @@
 ---
-title: "ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL) | Документы Microsoft"
+title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,26 +14,28 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: ALTER EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="alter-external-library-transact-sql"></a>ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)  
+# <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Изменяет содержимое существующего пакета, внешние библиотеки.
+Изменяет содержимое существующей внешней библиотеки пакетов.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```text
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -59,85 +61,88 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Указывает имя существующей библиотеки пакета. Библиотеки областью действия пользователя. То есть имена библиотек, считаются уникальными в контексте определенного пользователя или владелец.
+Указывает имя существующей библиотеки пакетов. Область действия библиотек ограничивается пользователем. То есть имена библиотек считаются уникальными в контексте определенного пользователя или владельца.
+
+Имя библиотеки не может назначаться произвольным образом. То есть необходимо использовать имя, которое ожидает вызывающая среда выполнения при загрузке пакета.
 
 **owner_name**
 
-Указывает имя пользователя или роли, которой принадлежит внешней библиотеки.
+Указывает имя пользователя или роли, которой принадлежит внешняя библиотека.
 
 **file_spec**
 
-Указывает содержимое пакета для конкретной платформы. Поддерживается только один файл артефакта каждой платформы.
+Указывает содержимое пакета для конкретной платформы. Поддерживается только один файл артефакта на платформу.
 
-Файл можно указать в виде локальной или сетевой путь. Если указан параметр источника данных, имя файла может быть относительным по отношению к контейнеру, на которые ссылается `EXTERNAL DATA SOURCE`.
+Файл можно указать в виде локального или сетевого пути. Если указан параметр источника данных, имя файла может быть относительным путем по отношению к контейнеру, на который ссылается `EXTERNAL DATA SOURCE`.
 
-При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешена артефакта только один файл или содержимое.
+При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешен только один артефакт файла или содержимое.
 
 **DATA_SOURCE = external_data_source_name**
 
-Задает имя внешнего источника данных, содержащий местоположение файла библиотеки. Это расположение должно указывать путь к хранилищу BLOB-объектов Azure. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
+Указывает имя внешнего источника данных, содержащего расположение файла библиотеки. Это расположение должно указывать путь к хранилищу больших двоичных объектов Azure. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
 > [!IMPORTANT] 
-> В настоящее время больших двоичных объектов не поддерживаются как источник данных в выпуске 2017 г. SQL Server.
+> В настоящее время большие двоичные объекты не поддерживаются как источник данных в выпуске SQL Server 2017.
 
 **library_bits**
 
-Задает содержимое пакета как Шестнадцатеричный литерал, аналогично сборки. Этот параметр позволяет пользователям создавать библиотеки для изменения библиотеки, если они имеют необходимое разрешение, но не имеют доступ к пути файла в папку, для которой у сервера есть доступ.
+Задает содержимое пакета как шестнадцатеричный литерал, аналогично сборкам. 
 
-**ПЛАТФОРМА = WINDOWS**
+Этот параметр можно использовать, если у вас есть необходимое разрешение на изменение библиотеки, но доступ к файлам на сервере ограничен и не удается сохранить содержимое в пути, к которому у сервера есть доступ.
 
-Указывает платформу для библиотеки содержимого. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформе. Windows является единственным поддерживаемой платформы.
+Вместо этого можно передать содержимое пакета в качестве переменной в двоичном формате.
+
+**PLATFORM = WINDOWS**
+
+Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. Поддерживается только платформа Windows.
 
 ## <a name="remarks"></a>Remarks
 
-Для языка R, пакеты необходимо подготовить в виде файлов ZIP-архив. ПОЧТОВЫЙ модуль для Windows. В настоящее время поддерживается только на платформу Windows.  
+В языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В настоящее время поддерживается только платформа Windows.  
 
-`ALTER EXTERNAL LIBRARY` Инструкции только отправляет биты библиотеки в базе данных. Изменения библиотеки фактически не устанавливается, пока пользователь запускает внешнего скрипта после него, выполнив [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Инструкция `ALTER EXTERNAL LIBRARY` только загружает биты библиотеки в базу данных. Измененная библиотека устанавливается при выполнении кода в [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), который вызывает библиотеку.
 
 ## <a name="permissions"></a>Разрешения
 
-Требуется `ALTER ANY EXTERNAL LIBRARY` разрешение. Пользователей, создавших внешней библиотеки, можно изменить, внешние библиотеки.
+Требуется разрешение `ALTER ANY EXTERNAL LIBRARY`. Пользователи, создавшие внешнюю библиотеку, могут изменять эту библиотеку.
 
 ## <a name="examples"></a>Примеры
 
-Следующие примеры изменяет вызывается customPackage внешней библиотеки.
+В следующем примере изменяется внешняя библиотека `customPackage`.
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Замените содержимое библиотеки с помощью файла
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Замена содержимого библиотеки с помощью файла
 
-В следующем примере изменяется внешней библиотеки вызывается customPackage, с помощью ZIP-файл, содержащий обновленные bits.
+В следующем примере изменяется внешняя библиотека `customPackage` с помощью сжатого ZIP-файла, содержащего обновленные биты.
 
 ```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
-```  
+```
 
 Чтобы установить обновленную библиотеку, выполните хранимую процедуру `sp_execute_external_script`.
 
-```sql   
+```sql
 EXEC sp_execute_external_script 
 @language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-# call customPackageFunc
-OutputDataSet <- customPackageFunc()
-'
-WITH RESULT SETS (([result] int));
+@script=N'library(customPackage)'
+;
 ```
 
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>Б. Изменить существующую библиотеку с помощью байтового потока
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>Б. Изменение существующей библиотеки с помощью байтового потока
 
-В следующем примере изменяется существующую библиотеку, передавая новых битов как шестнадцатеричная литерала.
+В следующем примере существующая библиотека изменяется путем передачи новых битов в виде шестнадцатеричного литерала.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-## <a name="see-also"></a>См. также:  
+В этом примере кода содержимое переменных усекается для удобства чтения.
 
-[Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](create-external-library-transact-sql.md)
-[DROP ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](drop-external-library-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

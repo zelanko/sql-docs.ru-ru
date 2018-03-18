@@ -1,5 +1,5 @@
 ---
-title: "DROP EXTERNAL TABLE (Transact-SQL) | Документы Microsoft"
+title: "DROP EXTERNAL TABLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Удаляет из внешней таблицы PolyBase. Это не приводит к удалению внешних данных.  
+  Удаляет формат внешнего файла PolyBase. Это не приводит к удалению внешних данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,18 +43,18 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
 
 ## <a name="arguments"></a>Аргументы  
  [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
- Имя внешней таблицы для удаления одной - трех частей. При необходимости может включать имя таблицы, схемы или базы данных и схемы.  
+ Состоящее из не более трех частей имя внешней таблицы для удаления. При необходимости имя таблицы может включать схему или базу данных и схему.  
   
 ## <a name="permissions"></a>Разрешения  
   
--   Требуется **ALTER** разрешения на схему, которой принадлежит таблица.  
+-   Требуется разрешение **ALTER** на схему, которой принадлежит таблица.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- При удалении внешней таблицы удаляются все метаданные, относящиеся к таблице. Он не удаляет внешних данных.  
+ При удалении внешней таблицы удаляются все метаданные, относящиеся к таблице. Это не приводит к удалению внешних данных.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-basic-syntax"></a>A. С помощью базовый синтаксис  
+### <a name="a-using-basic-syntax"></a>A. Использование основного синтаксиса  
   
 ```  
 DROP EXTERNAL TABLE SalesPerson;  
@@ -63,7 +63,7 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ```  
   
 ### <a name="b-dropping-an-external-table-from-the-current-database"></a>Б. Удаление внешней таблицы из текущей базы данных  
- В следующем примере удаляется `ProductVendor1` таблицы, данные, индексы и все зависимые представления из текущей базы данных.  
+ В следующем примере из текущей базы данных удаляется таблица `ProductVendor1`, ее данные, индексы и зависимые представления.  
   
 ```  
 DROP EXTERNAL TABLE ProductVendor1;  
@@ -76,7 +76,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

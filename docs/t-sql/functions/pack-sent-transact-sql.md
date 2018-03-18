@@ -1,5 +1,5 @@
 ---
-title: "@@PACK_SENT (Transact-SQL) | Документы Microsoft"
+title: "@@PACK_SENT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
- Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистику, включая пакетов, отправляемых и получаемых, запустите **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Для отображения отчета, содержащего статистику по нескольким экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая перечень полученных и переданных пакетов, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показано использование функции `@@PACK_SENT`.  
@@ -72,7 +72,7 @@ Pack Sent
   
 ## <a name="see-also"></a>См. также:  
  [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Системные статистические функции &#40;Transact-SQL&#41;#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

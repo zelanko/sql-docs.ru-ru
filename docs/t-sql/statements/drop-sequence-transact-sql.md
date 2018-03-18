@@ -1,5 +1,5 @@
 ---
-title: "DROP ПОСЛЕДОВАТЕЛЬНОСТИ (Transact-SQL) | Документы Microsoft"
+title: "DROP SEQUENCE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляет последовательность только в том случае, если он уже существует.  
+ Условное удаление последовательности только в том случае, если она уже существует.  
   
  *database_name*  
  Имя базы данных, в которой создан объект последовательности.  
@@ -59,9 +59,9 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  Имя схемы, которой принадлежит объект последовательности.  
   
  *sequence_name*  
- Имя последовательности, которую нужно удалить. Тип — **sysname**.  
+ Имя последовательности, которую нужно удалить. Тип **sysname**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  После создания числа объект последовательности не имеет постоянной связи с созданным им числом, так что объект последовательности можно удалить, несмотря на то, что созданное число еще используется.  
   
  Объект последовательности можно удалить, даже если на него ссылается хранимая процедура или триггер, поскольку он не привязан к схеме. Объект последовательности нельзя удалить, если на него есть ссылка как на значение по умолчанию в таблице. В сообщении об ошибке будет указан объект, который ссылается на последовательность.  
@@ -76,13 +76,13 @@ SELECT sch.name + '.' + seq.name AS [Sequence schema and name]
 GO  
 ```  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется разрешение ALTER или CONTROL для схемы.  
   
 ### <a name="audit"></a>Аудит  
- Для аудита **DROP SEQUENCE**, монитор **SCHEMA_OBJECT_CHANGE_GROUP**.  
+ Для аудита функции **DROP SEQUENCE** отслеживайте **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере объект последовательности с именем `CountBy1` удаляется из текущей базы данных.  
@@ -92,10 +92,10 @@ DROP SEQUENCE CountBy1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [ALTER ПОСЛЕДОВАТЕЛЬНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [Создание ПОСЛЕДОВАТЕЛЬНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [СЛЕДУЮЩЕЕ значение для &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [NEXT VALUE FOR (Transact-SQL)](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

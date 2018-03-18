@@ -1,5 +1,5 @@
 ---
-title: "Создание FULLTEXT STOPLIST (Transact-SQL) | Документы Microsoft"
+title: "CREATE FULLTEXT STOPLIST (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
   Создает новый полнотекстовый список стоп-слов в текущей базе данных.  
   
- Стоп-слов в базах данных управляются с помощью объектов, называемых *списки стоп-слов*. Списки стоп-слов взаимосвязаны с полнотекстовыми индексами и применяются при полнотекстовых запросах по этим индексам. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ Стоп-словами в базе данных можно управлять с помощью объектов, называемых *списками стоп-слов*. Списки стоп-слов взаимосвязаны с полнотекстовыми индексами и применяются при полнотекстовых запросах по этим индексам. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 > [!IMPORTANT]  
 >  Инструкции CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST и DROP FULLTEXT STOPLIST поддерживаются только в условиях применения уровня совместимости 100. При использовании уровней совместимости 80 и 90 эти инструкции не поддерживаются. Тем не менее при любом уровне совместимости системный список стоп-слов автоматически связывается с новыми полнотекстовыми индексами.  
@@ -63,26 +63,26 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>Аргументы  
  *stoplist_name*  
- Имя списка стоп-слов. *stoplist_name* не может превышать 128 символов. *stoplist_name* должно быть уникальным среди всех списков стоп-слов в текущей базе данных и соответствовать правилам для идентификаторов.  
+ Имя списка стоп-слов. Длина *stoplist_name* не может превышать 128 символов. Аргумент *stoplist_name* должен быть уникальным среди всех списков стоп-слов текущей базы данных и соответствовать правилам для идентификаторов.  
   
- *stoplist_name* будет использоваться при создании полнотекстового индекса.  
+ Аргумент *stoplist_name* будет использоваться при создании полнотекстового индекса.  
   
  *database_name*  
- Имя базы данных, где указанный список стоп-слов *source_stoplist_name* находится. Если не указан, *имя_базы_данных* значения по умолчанию для текущей базы данных.  
+ Имя базы данных, в которой находится список стоп-слов, указанный аргументом *source_stoplist_name*. Если не указано, в качестве *database_name* по умолчанию выбирается текущая база данных.  
   
  *source_stoplist_name*  
- Указывает, что новый список стоп-слов создается копированием существующего списка стоп-слов. Если *source_stoplist_name* не существует, или пользователь базы данных не имеет необходимых разрешений, инструкция CREATE FULLTEXT STOPLIST завершается с ошибкой. Если в текущей базе данных не зарегистрирован любой язык стоп-слов из исходного списка стоп-слов, инструкция CREATE FULLTEXT STOPLIST завершается успешно, но с предупреждениями, а соответствующие стоп-слова не добавляются.  
+ Указывает, что новый список стоп-слов создается копированием существующего списка стоп-слов. Если *source_stoplist_name* не существует или пользователь базы данных не обладает необходимыми разрешениями, инструкция CREATE FULLTEXT STOPLIST завершается с ошибкой. Если в текущей базе данных не зарегистрирован любой язык стоп-слов из исходного списка стоп-слов, инструкция CREATE FULLTEXT STOPLIST завершается успешно, но с предупреждениями, а соответствующие стоп-слова не добавляются.  
   
  SYSTEM STOPLIST  
- Указывает, что новый список стоп-слов создается из списка стоп-слов, что существует по умолчанию в [базы данных Resource](../../relational-databases/databases/resource-database.md).  
+ Указывает, что новый список стоп-слов создается из списка, существующего в [базе данных ресурсов](../../relational-databases/databases/resource-database.md) по умолчанию.  
   
- АВТОРИЗАЦИЯ *owner_name*  
- Указывает имя участника базы данных, являющейся владельцем списка стоп-слов. *owner_name* должны быть имя участника, в которой текущий пользователь является членом, либо текущий пользователь должен иметь разрешение IMPERSONATE *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
+ AUTHORIZATION *owner_name*  
+ Указывает имя участника базы данных, являющейся владельцем списка стоп-слов. Аргумент *owner_name* должен быть именем участника базы данных, членом которого является текущий пользователь, или текущий пользователь должен иметь разрешение IMPERSONATE для *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Создателем списка стоп-слов является его владелец.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для создания списка стоп-слов необходимы разрешения CREATE FULLTEXT CATALOG. Владелец списка стоп-слов может явно предоставить разрешение CONTROL для списка стоп-слов, что позволит пользователям добавлять и удалять стоп-слова, а также удалять список стоп-слов.  
   
 > [!NOTE]  
@@ -115,11 +115,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [ALTER FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

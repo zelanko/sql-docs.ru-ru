@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromWKB (тип данных geography) | Документы Microsoft"
+title: "STGeomFromWKB (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geography** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geography** из WKB-представления открытого геопространственного консорциума (OGC).
   
-Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.
+Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,22 +47,22 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geography*  
- WKB-представление **geography** возвращаемого экземпляра. *WKB_geography* — **varbinary(max)** выражение.  
+ WKB-представление возвращаемого экземпляра **geography**. *WKB_geography* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geography** возвращаемого экземпляра.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geography** экземпляр, возвращаемый `STGeomFromText()` равно соответствующих входных данных WKB.  
+ Тип OGC экземпляра **geography**, возвращаемого методом `STGeomFromText()`, задается в зависимости от соответствующих входных данных WKB.  
   
- Этот метод создает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
- Этот метод вызывает исключение **ArgumentException** Если вход содержит противоположную границу.  
+ Этот метод вызывает исключение **ArgumentException**, если входные данные содержат противоположную границу.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STGeomFromWKB()` применяется для создания экземпляра `geography`.  
@@ -73,7 +73,7 @@ SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

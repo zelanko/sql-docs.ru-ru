@@ -1,5 +1,5 @@
 ---
-title: "Указания (Transact-SQL) | Документы Microsoft"
+title: "Указания (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Подсказки являются параметрами или стратегиями, указанными для обеспечения выполнения инструкций SELECT, INSERT, UPDATE или DELETE обработчиком запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указания имеют преимущество над любым планом выполнения, который может быть выбран оптимизатором запросов для запроса.  
   
 > [!CAUTION]  
->  Поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизатор запросов обычно выбирает наилучший план выполнения для запроса, рекомендуется \<join_hint >, \<query_hint >, и \<table_hint > будет использоваться только в качестве последнего средства опытным Разработчики и Администраторы баз данных.
+>  Так как оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно выбирает наилучший план выполнения для запроса, рекомендуется использовать указания \<join_hint>, \<query_hint> и \<table_hint> в последнюю очередь и только опытным разработчикам и администраторам баз данных.
   
  В этом разделе описаны следующие указания:  
   
@@ -48,6 +48,6 @@ ms.lasthandoff: 01/25/2018
   
 -   [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)  
   
--   [Табличная подсказка](../../t-sql/queries/hints-transact-sql-table.md)  
+-   [Табличное указание](../../t-sql/queries/hints-transact-sql-table.md)  
   
   

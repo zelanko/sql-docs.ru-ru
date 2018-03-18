@@ -1,5 +1,5 @@
 ---
-title: "СОХРАНИТЕ ТРАНЗАКЦИИ (Transact-SQL) | Документы Microsoft"
+title: "SAVE TRANSACTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -56,13 +56,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Аргументы  
  *savepoint_name*  
- Имя, назначенное точке сохранения. Имена точек сохранения должны соответствовать правилам для идентификаторов, но ограничены 32 символами. *savepoint_name* — всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывается.  
+ Имя, назначенное точке сохранения. Имена точек сохранения должны соответствовать правилам для идентификаторов, но ограничены 32 символами. Аргумент *savepoint_name* всегда учитывает регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывает.  
   
  @*savepoint_variable*  
- Имя пользовательской переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных. В переменную может быть передано более 32 символов, но будут использованы только 32 первых символа.  
+ Имя определяемой пользователем переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с типом данных **char**, **varchar**, **nchar** или **nvarchar**. В переменную может быть передано более 32 символов, но будут использованы только 32 первых символа.  
   
-## <a name="remarks"></a>Remarks  
- Пользователь может установить точку сохранения или маркер, внутри транзакции. Точка сохранения определяет место, к которому может возвратиться транзакция, если часть транзакции условно отменена. Если транзакция откатывается к точке сохранения, то ее выполнение должно быть продолжено до завершения с обработкой дополнительных инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], если необходимо, и инструкции COMMIT TRANSACTION, либо транзакция должна быть полностью отменена откатом к началу. Для отмены всей транзакции, используйте инструкцию ROLLBACK TRANSACTION *transaction_name*. Отменяются все инструкции или процедуры транзакции.  
+## <a name="remarks"></a>Примечания  
+ Пользователь может установить точку сохранения или маркер внутри транзакции. Точка сохранения определяет место, к которому может возвратиться транзакция, если часть транзакции условно отменена. Если транзакция откатывается к точке сохранения, то ее выполнение должно быть продолжено до завершения с обработкой дополнительных инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], если необходимо, и инструкции COMMIT TRANSACTION, либо транзакция должна быть полностью отменена откатом к началу. Для отмены всей транзакции используйте инструкцию ROLLBACK TRANSACTION *transaction_name*. Отменяются все инструкции или процедуры транзакции.  
   
  В транзакции разрешены дублирующие имена точек сохранения, но инструкция ROLLBACK TRANSACTION, содержащая имя точки сохранения, откатывает транзакцию к точке сохранения последней инструкции SAVE TRANSACTION, использовавшей это имя.  
   
@@ -170,17 +170,17 @@ GO
 ## <a name="see-also"></a>См. также  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [ФИКСАЦИЯ РАБОЧЕГО &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [Функция XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)  
+ [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md)  
   
   

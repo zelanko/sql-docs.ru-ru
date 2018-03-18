@@ -1,5 +1,5 @@
 ---
-title: "Создание таблицы (учебник) | Документы Microsoft"
+title: "Создание таблицы (учебник) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>Занятие 1-2-Создание таблицы
+# <a name="lesson-1-2---creating-a-table"></a>Урок 1–2. Создание таблицы
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Чтобы создать таблицу, нужно указать имя таблицы, имена и типы данных для каждого столбца таблицы. Также рекомендуется указывать, допускаются ли значения NULL для каждого из столбцов. Для создания таблицы необходимо иметь разрешение `CREATE TABLE` и разрешение `ALTER SCHEMA` для схемы, которая будет содержать таблицу. Предопределенная роль базы данных `db_ddladmin` имеет эти разрешения.  

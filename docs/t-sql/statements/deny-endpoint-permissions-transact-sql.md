@@ -1,5 +1,5 @@
 ---
-title: "ЗАПРЕТ разрешений на конечные точки (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на конечную точку (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Разрешение на выполнение операций над конечной точкой, которое может быть запрещено. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Разрешение на выполнение операций над конечной точкой, которое может быть запрещено. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- В конечной ТОЧКЕ **::***endpoint_name*  
+ ON ENDPOINT **::***endpoint_name*  
  Конечная точка, разрешение на работу с которой блокируется. Квалификатор области (**::**) является обязательным.  
   
- Чтобы \<server_principal >  
+ TO \<server_principal>  
  Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрещается разрешение.  
   
  *SQL_Server_login*  
@@ -80,12 +80,12 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
  AS *SQL_Server_login*  
- Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, от которого участник, выполняющий этот запрос получает право на запрет разрешения.  
+ Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], по которому субъект, выполняющий этот запрос, получает право запретить разрешение.  
   
-## <a name="remarks"></a>Замечания  
- Разрешения на уровне сервера может быть отклонен, только в том случае, если текущая база данных **master**.  
+## <a name="remarks"></a>Remarks  
+ Разрешения на уровне сервера можно запрещать только в том случае, если текущей базой данных является **master**.  
   
- Сведения о конечных точках видны в [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) представления каталога. Сведения о разрешениях сервера можно увидеть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога и сведения об участниках сервера отобразится в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Сведения о конечных точках отображаются в представлении каталога [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Сведения о серверных разрешениях отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), а сведения о серверах-участниках — в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Конечная точка — это защищаемый объект на уровне сервера. Самые специфичные и ограниченные разрешения на работу с конечной точкой, в которые можно запрещать, приведены в следующей таблице вместе с общими разрешениями, неявно их охватывающими.  
   
@@ -97,13 +97,13 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL в конечной точке или разрешения ALTER ANY ENDPOINT на сервере.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Запрет разрешения VIEW DEFINITION на конечной точке  
- В следующем примере запрещается `VIEW DEFINITION` разрешений на конечную точку `Mirror7` для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа `ZArifin`.  
+ Следующий код запрещает разрешение `VIEW DEFINITION`, связанное с конечной точкой `Mirror7`, для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `ZArifin`.  
   
 ```  
 USE master;  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>Б. Запрет разрешения TAKE OWNERSHIP с аргументом CASCADE  
- В следующем примере запрещается `TAKE OWNERSHIP` разрешений на конечную точку `Shipping83` для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя `PKomosinski` и для участников, которым `PKomosinski` предоставлены `TAKE OWNERSHIP`.  
+ Следующий код запрещает разрешение `TAKE OWNERSHIP`, связанное с конечной точкой `Shipping83`, для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` и всех участников, которым `PKomosinski` предоставил разрешение `TAKE OWNERSHIP`.  
   
 ```  
 USE master;  
@@ -123,10 +123,10 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [GRANT, предоставление разрешений конечной точке (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения конечной точки &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Представления каталога конечных точек &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys.Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

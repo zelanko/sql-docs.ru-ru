@@ -1,5 +1,5 @@
 ---
-title: "STAsText (тип данных geography) | Документы Microsoft"
+title: "STAsText (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geography-data-type"></a>STAsText (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает представление Open Geospatial Consortium (OGC) Well-Known Text (WKT) **geography** экземпляра. Этот текст не будет содержать значений Z (высота) и M (мера), сопровождающих экземпляр.  
+  Возвращает WKT-представление OGC для экземпляра **geography**. Этот текст не будет содержать значений Z (высота) и M (мера), сопровождающих экземпляр.  
   
- Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.  
+ Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
 .STAsText ( )  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(max)**  
+## <a name="return-types"></a>Типы возвращаемых данных  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Возвращаемый тип CLR: **SqlChars**  
+ Тип возвращаемых данных CLR: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
- Тип OGC **geography** экземпляра можно определить путем вызова [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+## <a name="remarks"></a>Примечания  
+ Тип OGC экземпляра **geography** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
- В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], набор возможных результатов, возвращаемый на сервер была расширена для **FullGlobe** экземпляров.  
+ В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] набор возможных результатов, возвращаемый на сервер, был пополнен экземплярами **FullGlobe**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STAsText()` для создания `LineString``geography` из обработчика (– 122,360, 47,656) для (– 122,343, 47,656) из текста. Затем возвращается результат в текстовом формате.  
+ В следующем примере метод `STAsText()` формирует экземпляр `LineString``geography` на основе текстовых данных от (–122,360; 47,656) до (–122,343; 47,656). Затем возвращается результат в текстовом формате.  
   
 ```  
 DECLARE @g geography;  

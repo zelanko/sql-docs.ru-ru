@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC INPUTBUFFER (Transact-SQL) | Документы Microsoft"
+title: "DBCC INPUTBUFFER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Отображает последнюю инструкцию, отправляемые с клиента на экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Отображает последнюю инструкцию, отправленную клиентом экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,7 +58,7 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *request_id*  
 Строгий (пакетный) запрос для поиска в текущем сеансе.  
 
-Следующий запрос возвращает *request_id*:  
+Аргумент *request_id* возвращается с помощью следующего запроса:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -73,11 +73,11 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 DBCC INPUTBUFFER возвращает набор строк со следующими столбцами.
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**Тип события**|**nvarchar(30)**|Тип события. Это может быть **RPC Event** или **события языка**. Выходные данные будут **No Event** при нет последние события не обнаружены.|  
-|**Параметры**|**smallint**|0 = Текст<br /><br /> 1 -  *n*  = параметры|  
-|**EventInfo**|**nvarchar(4000)**|Для **EventType** из RPC, **EventInfo** содержит только имя процедуры. Для **EventType** языка, отображаются только первые 4000 символов события.|  
+|**EventType**|**nvarchar(30)**|Тип события. Может быть **RPC Event** или **Language Event**. Если последние события не обнаружены, на выходе будет **No Event**.|  
+|**Параметры**|**smallint**|0 = Текст<br /><br /> 1- *n* = параметры|  
+|**EventInfo**|**nvarchar(4000)**|Если столбец **EventType** имеет значение RPC, столбец **EventInfo** содержит лишь имя процедуры. Для значения Language столбца **EventType** выводятся только первые 4000 символов события.|  
   
 Например, в случае, когда последним событием в буфере было DBCC INPUTBUFFER(11), инструкция DBCC INPUTBUFFER возвращает следующий результирующий набор.
   
@@ -92,19 +92,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, используйте [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) для возвращения сведений об инструкциях, отправленных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления  2 (SP2) используйте процедуру [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) для возврата сведений об инструкциях, переданных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="permissions"></a>Разрешения  
-На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется один из следующих:
--   Пользователь должен быть членом **sysadmin** предопределенной роли сервера.  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется выполнение одного из следующих условий:
+-   пользователь должен быть членом предопределенной роли сервера **sysadmin**;  
 -   у пользователя должно быть разрешение VIEW SERVER STATE;  
--   *session_id* должен совпадать с Идентификатором сеанса, в которой выполняется команда. Для определения идентификатора сеанса выполните следующий запрос:  
+-   идентификатор сеанса (*session_id*) должен быть равным идентификатору сеанса, с которым выполняется команда. Для определения идентификатора сеанса выполните следующий запрос:  
   
 ```sql
 SELECT @@spid;  
 ```
   
-На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.
+В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней Standard и Basic требуется учетная запись администратора [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
 ## <a name="examples"></a>Примеры  
 В следующем примере инструкция `DBCC INPUTBUFFER` выполняется по второму соединению, в то время как по ранее установленному соединению выполняется длинная транзакция.
@@ -125,9 +125,9 @@ COMMIT TRAN;
 DBCC INPUTBUFFER (52);  
 ```  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

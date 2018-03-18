@@ -1,5 +1,5 @@
 ---
-title: "DATEFROMPARTS (Transact-SQL) | Документы Microsoft"
+title: "DATEFROMPARTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Возвращает **даты** значение для заданного года, месяца и дня.
+Возвращает значение **date**, соответствующее указанному числу, месяцу и году.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*год*  
+*year*  
 Целочисленное выражение, задающее год.
   
-*месяц*  
+*month*  
 Целочисленное выражение от 1 до 12, задающее месяц.
   
-*день*  
+*day*  
 Целочисленное выражение, задающее день.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **date**
   
-## <a name="remarks"></a>Замечания  
-**DATEFROMPARTS** возвращает **даты** значение с присвоено указанный год, месяц и день часть даты и части времени по умолчанию. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.
+## <a name="remarks"></a>Remarks  
+**DATEFROMPARTS** возвращает значение **date**, в котором часть даты установлена в указанные число, месяц и год, а часть времени установлена в значение по умолчанию. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.
   
 Для серверов [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше данная функция может быть удаленной. Данная функция не может быть удаленной для серверов с версией ниже [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## <a name="examples"></a>Примеры  
-В следующем примере демонстрируется **DATEFROMPARTS** функции.
+В приведенном ниже примере показано использование функции **DATEFROMPARTS**.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
@@ -79,7 +79,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)
   
   

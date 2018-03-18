@@ -1,5 +1,5 @@
 ---
-title: "СУЩЕСТВУЕТ (Transact-SQL) | Документы Microsoft"
+title: "EXISTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>Аргументы  
  *subquery*  
- Ограниченная инструкция SELECT. Ключевое слово INTO не допускается. Дополнительные сведения см. в разделе о вложенных запросах в [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Ограниченная инструкция SELECT. Ключевое слово INTO не допускается. Дополнительные сведения о вложенных запросах см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- **Логическое значение**  
+ **Boolean**  
   
 ## <a name="result-values"></a>Результирующие значения  
  Возвращает значение TRUE, если вложенный запрос содержит хотя бы одну строку.  
@@ -76,7 +76,7 @@ ORDER BY Name ASC ;
 ```  
   
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>Б. Сравнение запросов с помощью ключевых слов EXISTS и IN  
- В следующем примере сравниваются два семантически эквивалентных запроса. В первом запросе используется ключевое слово `EXISTS`, а во втором — ключевое слово `IN`.  
+ В следующем примере сравниваются два семантически эквивалентных запроса. В первом запросе используется ключевое слово `EXISTS`, а во втором — ключевое слово `IN`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>В. Сравнение запросов с помощью ключевых слов EXISTS и = ANY  
- В следующем примере показаны два запроса для поиска магазинов, названия которых совпадают с названием поставщика. В первом запросе используется `EXISTS` и во втором методе используется `=``ANY`.  
+ В следующем примере показаны два запроса для поиска магазинов, названия которых совпадают с названием поставщика. В первом запросе используется ключевое слово `EXISTS`, а во втором — ключевое слово `=``ANY`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>Е. Использование ключевого слова EXISTS  
- Следующий пример определяет, могут ли строки в `ProspectiveBuyer` таблицы может быть соответствует строкам в `DimCustomer` таблицы. Запрос будет возвращать строки только если как `LastName` и `BirthDate` значения в двух таблицах совпадают.  
+ В следующем примере определяется, могут ли строки в таблице `ProspectiveBuyer` соответствовать строкам в таблице `DimCustomer`. Запрос будет возвращать строки, только при совпадении значений `LastName` и `BirthDate` в двух таблицах.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>Ж. Использование ключевого слова NOT EXISTS  
- Оператор NOT EXISTS работает как EXISTS противоположно. Предложение WHERE в ключевом слове NOT EXISTS удовлетворяется, если вложенный запрос не возвратил никаких строк. В следующем примере вычисляется строк в `DimCustomer` таблицу, куда `LastName` и `BirthDate` не найдено ни одной записи в `ProspectiveBuyers` таблицы.  
+ Работа ключевого слова NOT EXISTS противоположна работе ключевого слова EXISTS. Предложение WHERE в ключевом слове NOT EXISTS удовлетворяется, если вложенный запрос не возвратил никаких строк. В следующем примере показан поиск всех строк в таблице `DimCustomer`, где `LastName` и `BirthDate` не соответствуют записям в таблице `ProspectiveBuyers`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -333,9 +333,9 @@ WHERE NOT EXISTS
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "Системные функции (Transact-SQL) | Документы Microsoft"
+title: "Системные функции (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 |[@@PACK_RECEIVED](../../t-sql/functions/pack-received-transact-sql.md)|[FORMATMESSAGE](../../t-sql/functions/formatmessage-transact-sql.md)|  
 |[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)|[GET_FILESTREAM_TRANSACTION_CONTEXT](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)|  
 |[@@TRANCOUNT](../../t-sql/functions/trancount-transact-sql.md)|[GETANSINULL](../../t-sql/functions/getansinull-transact-sql.md)|  
-|[ФУНКЦИЯ BINARY_CHECKSUM](../../t-sql/functions/binary-checksum-transact-sql.md)|[HOST_ID](../../t-sql/functions/host-id-transact-sql.md)|  
+|[BINARY_CHECKSUM](../../t-sql/functions/binary-checksum-transact-sql.md)|[HOST_ID](../../t-sql/functions/host-id-transact-sql.md)|  
 |[CHECKSUM](../../t-sql/functions/checksum-transact-sql.md)|[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)|  
 |[COMPRESS](../../t-sql/functions/compress-transact-sql.md)|[ISNULL](../../t-sql/functions/isnull-transact-sql.md)|  
 |[CONNECTIONPROPERTY](../../t-sql/functions/connectionproperty-transact-sql.md)|[ISNUMERIC](../../t-sql/functions/isnumeric-transact-sql.md)|  

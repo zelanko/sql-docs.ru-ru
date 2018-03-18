@@ -1,5 +1,5 @@
 ---
-title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Microsoft"
+title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
   
 ## <a name="arguments"></a>Аргументы  
  *key_name*  
- — Это имя, по которому ключа шифрования столбца для удаления из базы данных.  
+ Имя, под которым ключ шифрования столбца будет удален из базы данных.  
   
-## <a name="remarks"></a>Замечания  
- Ключ шифрования столбца невозможно удалить, если он используется для шифрования любого столбца в базе данных. Сначала следует удалить все столбцы с помощью ключа шифрования столбца.  
+## <a name="remarks"></a>Примечания  
+ Ключ шифрования столбца невозможно удалить, если он используется для шифрования любого столбца в базе данных. Сначала следует удалить все столбцы, использующие ключ шифрования столбца.  
   
-## <a name="permissions"></a>Permissions  
- Требуется **ALTER ANY COLUMN ENCRYPTION KEY** разрешения в базе данных.  
+## <a name="permissions"></a>Разрешения  
+ Необходимо разрешение **ALTER ANY SYMMETRIC KEY** для базы данных.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-dropping-a-column-encryption-key"></a>A. Удаление ключа шифрования столбца  
- В следующем примере удаляется ключ шифрования столбца с именем `MyCEK`.  
+ В следующем примере показано удаление ключа шифрования столбца с именем `MyCEK`.  
   
 ```  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+## <a name="see-also"></a>См. также  
+ [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)  
   
   

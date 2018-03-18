@@ -1,5 +1,5 @@
 ---
-title: "RETURN (Transact-SQL) | Документы Microsoft"
+title: "RETURN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ RETURN [ integer_expression ]
  Возвращаемое целочисленное значение. Хранимые процедуры могут возвращать целочисленное значение вызывающей их процедуре или приложению.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- При необходимости возвращает **int**.  
+ Может возвращать тип **int**.  
   
 > [!NOTE]  
 >  Если в документации ничего не указано, все хранимые системные процедуры возвращают значение 0. Это указывает на успех, а ненулевое значение — на ошибку.  
@@ -65,7 +65,7 @@ RETURN [ integer_expression ]
 ## <a name="remarks"></a>Remarks  
  При использовании в хранимой процедуре инструкция RETURN не может возвращать значение NULL. Если процедура пытается вернуть значение NULL (например, с помощью инструкции RETURN @status, если @status равен NULL), формируется предупредительное сообщение и возвращается значение 0.  
   
- Возвращаемое значение состояния может быть включено в последующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций пакета или процедуры, выполняющей текущую процедуру, но должно вводиться в следующем формате: `EXECUTE @return_status = <procedure_name>`.  
+ Возвращаемое значение состояния может быть включено в последующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета или процедуры, выполняющей текущую процедуру, но должно вводиться в следующем формате: `EXECUTE @return_status = <procedure_name>`.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -159,7 +159,7 @@ GO
  2
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

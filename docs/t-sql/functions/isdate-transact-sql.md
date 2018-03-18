@@ -1,5 +1,5 @@
 ---
-title: "Функция ISDATE (Transact-SQL) | Документы Microsoft"
+title: "ISDATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает 1, если *выражение* является допустимым **даты**, **время**, или **datetime** значение; в противном случае — 0.  
+  Возвращает значение 1, если аргумент *expression* имеет допустимое значение типа **date**, **time** или **datetime**; в противном случае возвращает значение 0.  
   
- Функция ISDATE возвращает 0, если *выражение* — **datetime2** значение.  
+ Функция ISDATE возвращает значение 0, если аргумент *expression* имеет значение типа **datetime2**.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Обратите внимание на то, что диапазоном для данных типа datetime являются значения от 1753-01-01 до 9999-12-31, в то время как диапазоном для данных даты являются значения от 0001-01-01 до 9999-12-31.  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Обратите внимание на то, что диапазоном для данных типа datetime являются значения от 1753-01-01 до 9999-12-31, в то время как диапазоном для данных даты являются значения от 0001-01-01 до 9999-12-31.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,33 +63,33 @@ ISDATE ( expression )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Символьная строка или [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , можно преобразовать в символьную строку. Выражение должно включать не более 4 000 символов. Типы данных даты и времени (за исключением типа datetime и smalldatetime), не разрешены к использованию в качестве аргумента функции ISDATE.  
+ Символьная строка или [выражение](../../t-sql/language-elements/expressions-transact-sql.md), которое можно преобразовать в символьную строку. Выражение должно включать не более 4 000 символов. Типы данных даты и времени (за исключением типа datetime и smalldatetime), не разрешены к использованию в качестве аргумента функции ISDATE.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **int**  
   
-## <a name="remarks"></a>Замечания  
- Функция ISDATE детерминирована, только в том случае, если используется совместно с [преобразовать](../../t-sql/functions/cast-and-convert-transact-sql.md) работать, если параметр стиля CONVERT задан и стиль не равен 0, 100, 9 или 109.  
+## <a name="remarks"></a>Remarks  
+ Функция ISDATE детерминирована, только если используется совместно с функцией [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) и если заданный параметр стиля CONVERT не равен 0, 100, 9 или 109.  
   
- Возвращаемое значение ISDATE зависит от параметров, заданные [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) и [Настройка параметра конфигурации сервера язык по умолчанию](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
+ Возвращаемое функцией ISDATE значение зависит от настроек, установленных инструкциями [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) и [параметром конфигурации сервера "язык по умолчанию"](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
   
 ## <a name="isdate-expression-formats"></a>Форматы выражения ISDATE  
- Примеры допустимых форматов, для которых функция ISDATE возвращает 1, см. в разделе «Поддерживаемые форматы строковых литералов для типа данных datetime» [datetime](../../t-sql/data-types/datetime-transact-sql.md) и [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) разделы. Дополнительные примеры см. также входной или выходной столбец «Аргументы» раздела [CAST и CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ Примеры допустимых форматов, для которых функция ISDATE возвращает 1, см. в разделе "Поддерживаемые форматы строковых литералов для типа данных datetime" в статьях, посвященных типам данных [datetime](../../t-sql/data-types/datetime-transact-sql.md) и [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md). Дополнительные примеры см. также в столбце "Ввод/Вывод" раздела "Аргументы" функций [CAST и CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  В следующей таблице приводятся недопустимые форматы входных выражений, для которых возвращается 0 или ошибка.  
   
 |ISDATE, выражение|Возвращенное значение ISDATE|  
 |-----------------------|-------------------------|  
 |NULL|0|  
-|Значения типов данных, перечисленных в [типы данных](../../t-sql/data-types/data-types-transact-sql.md) в любой категории типов данных, кроме символьных строк, символьные строки в Юникоде, или дата и время.|0|  
-|Значения **текст**, **ntext**, или **изображение** типов данных.|0|  
-|Любое значение, имеющее более трех позиций долей секунды (от 0,0000 до 0,0000000...n) Функция ISDATE возвращает 0, если *выражение* — **datetime2** значение, но возвращает 1, если *выражение* является допустимым **datetime** значение.|0|  
+|Значения типов данных, приведенные в списке [Типы данных](../../t-sql/data-types/data-types-transact-sql.md), в любой категории типов данных, кроме символьных строк, символьных строк в Юникоде и даты и времени.|0|  
+|Значения типов данных **text**, **ntext** и **image**.|0|  
+|Любое значение, имеющее более трех позиций долей секунды (от 0,0000 до 0,0000000...n) Функция ISDATE возвращает значение 0, если аргумент *expression* имеет значение типа **datetime2**, но возвращает значение 1, если *expression* имеет допустимое значение типа **datetime**.|0|  
 |Любое значение, сочетающее допустимую дату с недопустимым значением, например 1995-10-1a.|0|  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Использование функции ISDATE для проверки допустимого выражения datetime  
- Следующий пример показывает, как использовать `ISDATE` Чтобы проверить, является ли символьная строка допустимым **datetime**.  
+ В приведенном ниже примере показано, как с помощью функции `ISDATE` проверить, является ли символьная строка допустимым значением **datetime**.  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -146,10 +146,10 @@ SET LANGUAGE us_english;
 SET DATEFORMAT mdy;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>В. Использование функции ISDATE для проверки допустимого выражения datetime  
- Следующий пример показывает, как использовать `ISDATE` Чтобы проверить, является ли символьная строка допустимым **datetime**.  
+ В приведенном ниже примере показано, как с помощью функции `ISDATE` проверить, является ли символьная строка допустимым значением **datetime**.  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  

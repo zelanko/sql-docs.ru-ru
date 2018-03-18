@@ -1,5 +1,5 @@
 ---
-title: "STRelate (тип данных geometry) | Документы Microsoft"
+title: "STRelate (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает 1, если **geometry** экземпляра связан с другим **geometry** экземпляра, где связь определяется значением шаблона матрицы многомерно расширенных 9 модель пересечения (DE-9IM); в противном случае , возвращает значение 0.  
+  Возвращает значение 1, если экземпляр **geometry** связан с другим экземпляром **geometry**, где связь определяется значением шаблона матрицы DE-9IM; в противном случае возвращается 0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр для сравнения с экземпляром, в котором `STRelate()` вызывается.  
+ Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STRelate()`.  
   
  *intersection_pattern_matrix*  
- Строка типа **nchar(9)** кодирует приемлемые значения для устройства шаблона матрицы DE-9IM между двумя **geometry** экземпляров.  
+ Строка типа **nchar(9)** кодирует приемлемые значения для устройства шаблона матрицы DE-9IM между двумя экземплярами **geometry**.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают. Этот метод вызывает исключение **ArgumentException** Если матрица не является правильным.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID). Этот метод вызывает исключение **ArgumentException**, если формат матрицы неправильный.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STRelate()` Чтобы протестировать два **geometry** экземпляров пространственных раздельных использования явное шаблона DE-9IM.  
+ В приведенном ниже примере используется `STRelate()`, чтобы проверить отсутствие пространственного перекрытия двух экземпляров **geometry** с использованием явного шаблона DE-9IM.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

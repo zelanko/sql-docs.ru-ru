@@ -1,5 +1,5 @@
 ---
-title: "ОТОЗВАТЬ разрешения на системный объект (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений на системные объекты (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -44,19 +44,19 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**sys.** ] .  
- **Sys** квалификатор требуется только при обращении к представлениям каталогов и динамические административные представления.  
+ [**sys.**] .  
+ Квалификатор **sys** требуется только тогда, когда имеется ссылка на представления каталога и динамические административные представления.  
   
  *system_object*  
  Задает объект, для которого отменяется разрешение.  
   
- *Участник*  
+ *principal*  
  Задает участника, у которого отменяется разрешение.  
   
-## <a name="remarks"></a>Замечания  
- Эта инструкция предназначена для отмены разрешений на хранимые процедуры, расширенные хранимые процедуры, функции с табличным значением и скалярные функции, представления, представления каталога, представления совместимости, представления INFORMATION_SCHEMA, динамические административные представления и системные таблицы, которые устанавливаются в составе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый из этих системных объектов существует в виде уникальной записи в базе данных ресурсов (**mssqlsystemresource**). которая доступна только для чтения. Ссылка на объект представлена как запись в **sys** каждой базы данных.  
+## <a name="remarks"></a>Remarks  
+ Эта инструкция предназначена для отмены разрешений на хранимые процедуры, расширенные хранимые процедуры, функции с табличным значением и скалярные функции, представления, представления каталога, представления совместимости, представления INFORMATION_SCHEMA, динамические административные представления и системные таблицы, которые устанавливаются в составе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый из этих системных объектов существует в виде уникальной записи в базе данных ресурсов (**mssqlsystemresource**). которая доступна только для чтения. Ссылка на объект представлена в виде записи в схеме **sys** каждой базы данных.  
   
- Разрешение имен по умолчанию устраняет проблему неправомочных имен процедур в базе данных ресурсов. Таким образом **sys.** Квалификатор требуется только при указании представлений каталога и динамические административные представления.  
+ Разрешение имен по умолчанию устраняет проблему неправомочных имен процедур в базе данных ресурсов. Таким образом, квалификатор **sys.** требуется только при указании представлений каталога или динамических административных представлений.  
   
 > [!CAUTION]  
 >  Вызов разрешений в системных объектах вызовет ошибки в зависящих от них приложениях. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] используются представления каталогов, и нормальная работа может быть нарушена, если изменить разрешения по умолчанию для представлений каталогов.  
@@ -67,7 +67,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
   
  Системные объекты отображаются в представлении каталога [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
@@ -79,9 +79,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.system_objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [ПРЕДОСТАВЬТЕ разрешения на системный объект &#40; Transact-SQL &#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [ЗАПРЕТ разрешений на системные объекты &#40; Transact-SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+ [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [GRANT, предоставление разрешения на системный объект (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на системный объект (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

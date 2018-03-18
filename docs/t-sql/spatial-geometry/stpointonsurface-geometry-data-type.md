@@ -1,5 +1,5 @@
 ---
-title: "STPointOnSurface (тип данных geometry) | Документы Microsoft"
+title: "STPointOnSurface (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает произвольную точку, расположенными в пределах внутренней части **geometry** экземпляра.
+Возвращает произвольную точку, которая находится внутри экземпляра **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Открытый тип Geospatial Consortium (OGC): **точки**  
+ Тип открытого геопространственного консорциума (OGC): **Point**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение NULL, если экземпляр пуст.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STPointOnSurface().ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Предоставление разрешений участникам базы данных (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений на субъекта базы данных (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
@@ -71,38 +71,38 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть предоставлено участнику базы данных. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть предоставлено участнику базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ПОЛЬЗОВАТЕЛЬ::*пользователь_базы_данных*  
- Указывает класс и имя пользователя, которому предоставляется разрешение. Требуется квалификатор области (::).  
+ USER ::*database_user*  
+ Указывает класс и имя пользователя, которому предоставляется разрешение. Квалификатор области (::) является обязательным.  
   
- РОЛЬ::*database_role*  
- Указывает класс и имя роли, которой предоставляется разрешение. Требуется квалификатор области (::).  
+ ROLE ::*database_role*  
+ Указывает класс и имя роли, которой предоставляется разрешение. Квалификатор области (::) является обязательным.  
   
- РОЛЬ приложения::*application_role*  
+ APPLICATION ROLE ::*application_role*  
    
- Указывает класс и имя роли приложения, которой предоставляется разрешение. Требуется квалификатор области (::).  
+ Указывает класс и имя роли приложения, которой предоставляется разрешение. Квалификатор области (::) является обязательным.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
  Указывает роль базы данных.  
   
  *Application_role*  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает роль приложения.  
   
  *Database_user_mapped_to_Windows_User*  
- Задает имя базы данных пользователя, сопоставленного с пользователем Windows.  
+ Указывает пользователя базы данных, сопоставленного с пользователем Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
   
@@ -119,8 +119,8 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
- Сведения об участниках базы данных можно увидеть в [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) представления каталога. Сведения о разрешениях уровня базы данных можно увидеть в [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) представления каталога.  
+## <a name="remarks"></a>Remarks  
+ Данные о субъектах базы данных отображаются в представлении каталога [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Данные о разрешениях уровня базы данных отображаются в представлении каталога [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Разрешения пользователя базы данных  
  Пользователь базы данных — это защищаемый объект уровня базы данных, содержащийся в базе данных, являющейся родительским элементом в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно предоставлять пользователю базы данных, перечислены в следующей таблице вместе с более общими разрешениями, неявно их содержащими.  
@@ -151,7 +151,7 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
   
  При использовании параметра AS налагаются следующие дополнительные требования.  
@@ -162,9 +162,9 @@ GRANT permission [ ,...n ]
 |Пользователь базы данных сопоставлен с пользователем Windows|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
 |Пользователь базы данных, сопоставленный группе Windows|Членство в группе Windows, членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
 |Пользователь базы данных, сопоставленный сертификату|Членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
-|Пользователь базы данных, сопоставленный асимметричному ключу|Членство в роли базы данных db_securityadminfixed db_owner членом фиксированной роли базы данных или членство в фиксированной серверной роли sysadmin.|  
+|Пользователь базы данных, сопоставленный асимметричному ключу|Членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
 |Пользователь базы данных, не сопоставленный ни с одним участником на уровне сервера|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
-|Роль базы данных|Разрешение ALTER на роль, членство в роли базы данных db_securityadminfixed, членство в роли базы данных db_owner или членство в фиксированной серверной роли sysadmin.|  
+|Роль базы данных|Разрешение ALTER на роль, членство в предопределенной роли базы данных db_securityadmin, предопределенной роли базы данных db_owner или предопределенной роли сервера sysadmin.|  
 |Роль приложения|Разрешение ALTER на роль, членство в предопределенной роли базы данных db_securityadmin, предопределенной роли базы данных db_owner или предопределенной роли сервера sysadmin.|  
   
  Участники, имеющие разрешение CONTROL на защищаемый объект, могут предоставлять разрешение на этот защищаемый объект.  
@@ -193,7 +193,7 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>В. Предоставление роли приложения разрешения IMPERSONATE на пользователя  
  В следующем примере показано предоставление разрешения `IMPERSONATE` пользователю `HamithaL` на роль приложения `AdventureWorks2012` `AccountsPayable17`.  
   
-**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
@@ -201,13 +201,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Запрет разрешения участника базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения участника базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [СОЗДАТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  

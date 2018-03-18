@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (тип данных geometry) | Документы Microsoft"
+title: "STNumGeometries (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает количество геометрических объектов, которые составляют **geometry** экземпляра.
+Возвращает количество геометрических объектов, составляющих экземпляр **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает 1, если **geometry** экземпляр не **MultiPoint**, **MultiLineString**, **MultiPolygon**, или  **GeometryCollection** экземпляра и 0, если **geometry** экземпляр пуст.  
+ Этот метод возвращает значение 1, если экземпляр **geometry** не является экземпляром **MultiPoint**, **MultiLineString**, **MultiPolygon** или **GeometryCollection**, либо значение 0, если экземпляр **geometry** пуст.  
   
 > [!NOTE]  
->  Если **GeometryCollection** есть пустые вложенные элементы, `STNumGeometries()` не вернет 0. Если бы элементы в **GeometryCollection** экземпляр пусты, сам экземпляр не является пустой набор.  
+>  Если в коллекции **GeometryCollection** есть пустые вложенные элементы, то функция `STNumGeometries()` не возвратит значение 0. Несмотря на то, что элементы из экземпляра **GeometryCollection** пусты, сам экземпляр не является пустым набором.  
   
   
 

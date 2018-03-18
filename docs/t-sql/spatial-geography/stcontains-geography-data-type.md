@@ -1,5 +1,5 @@
 ---
-title: "STContains (тип данных geography) | Документы Microsoft"
+title: "STContains (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcontains--geography-data-type"></a>STContains (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Указывает ли вызывающий **geography** пространственно содержит экземпляр **geography** экземпляр передается в метод.  
+  Указывает, содержит ли пространство вызывающего экземпляра **geography** экземпляр **geography**, переданный в метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geography*  
- Другой **geography** экземпляр для сравнения с экземпляром, в котором `STContains()` вызывается.  
+ Другой экземпляр **geography** для сравнения с экземпляром, для которого вызван метод `STContains()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Возвращает 1, если вызывающий **geography** пространственно содержит экземпляр **geography** экземпляр передается в метод и возвращает 0, если это не так. Возвращает **null** Если SRID двух **geography** экземпляров не совпадают.  
+ Возвращает значение 1, если пространство вызывающего экземпляра **geography** содержит экземпляр **geography**, переданный в метод. В противном случае возвращает значение 0. Возвращает **null**, если идентификаторы пространственных ссылок (SRID) двух экземпляров **geography** не совпадают.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется метод `STContains()`, чтобы проверить два экземпляра `geography` и выяснить, заключается ли второй экземпляр внутри первого.  

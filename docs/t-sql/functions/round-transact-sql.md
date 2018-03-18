@@ -1,5 +1,5 @@
 ---
-title: "ROUND (Transact-SQL) | Документы Microsoft"
+title: "ROUND (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) точных числовых или приблизительных числовых типа данных, за исключением **бит** тип данных.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.  
   
  *length*  
- Точность, до которой *numeric_expression* должно быть округлено. *Длина* должен быть выражением типа **tinyint**, **smallint**, или **int**. Когда *длина* является положительным числом *numeric_expression* округляется до числа десятичных разрядов, заданные *длина*. Когда *длина* является отрицательным числом, *numeric_expression* округляется слева от десятичной запятой, в соответствии с *длина*.  
+ Точность, с которой должно быть округлено значение *numeric_expression*. Аргумент *length* должен быть выражением типа **tinyint**, **smallint** или **int**. Если аргумент *length* является положительным числом, значение *numeric_expression* округляется до числа десятичных разрядов, указанных в аргументе *length*. Если аргумент *length* является отрицательным числом, значение *numeric_expression* округляется слева от десятичной запятой, как указано в аргументе *length*.  
   
  *function*  
- Тип выполняемой операции. *функция* должно быть **tinyint**, **smallint**, или **int**. Когда *функция* опущен или имеет значение 0 (по умолчанию), *numeric_expression* округляется. Если значение, отличное от указано значение 0, *numeric_expression* усекается.  
+ Тип выполняемой операции. Аргумент *function* должен иметь тип **tinyint**, **smallint** или **int**. Если аргумент *function* не указан или имеет значение 0 (по умолчанию), значение *numeric_expression* округляется. Когда указывается значение, не равное 0, значение *numeric_expression* усекается.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  Возвращает следующие типы данных.  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**десятичное число** и **числовое** категории (p, s)|**Decimal (p, s)**|  
-|**Money** и **smallmoney** категории|**money**|  
-|**число с плавающей запятой** и **реальные** категории|**float**|  
+|Категория **decimal** и **numeric** (p, s)|**decimal(p, s)**|  
+|Категории **money** и **smallmoney**|**money**|  
+|Категории **float** и **real**|**float**|  
   
 ## <a name="remarks"></a>Remarks  
- Функция ROUND всегда возвращает значение. Если *длина* является отрицательным или больше, чем количество цифр перед десятичной запятой, ROUND возвращает 0.  
+ Функция ROUND всегда возвращает значение. Если аргумент *length* имеет отрицательное значение и больше числа знаков перед десятичной запятой, ROUND возвращает 0.  
   
 |Пример|Результат|  
 |-------------|------------|  
-|ROUND (748,58, -4)|0|  
+|ROUND(748,58, -4)|0|  
   
- ROUND возвращает округленное *numeric_expression*, независимо от типа данных, когда *длина* является отрицательным числом.  
+ Функция ROUND возвращает округленное значение выражения *numeric_expression* независимо от типа данных, когда *length* является отрицательным числом.  
   
 |Примеры|Результат|  
 |--------------|------------|  
-|ROUND (748,58, -1)|750.00|  
-|ROUND (748,58, -2)|700.00|  
+|ROUND(748,58, -1)|750,00|  
+|ROUND(748,58, -2)|700,00|  
 |ROUND(748.58, -3)|В результате возникает арифметическое переполнение, так как для значения 748,58 по умолчанию используется тип decimal (5,2), который не позволяет вернуть значение 1000.|  
 |Чтобы округлить результат до четырех цифр, измените тип данных на входе. Пример:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -141,8 +141,8 @@ GO
 ```
   
 ## <a name="see-also"></a>См. также:  
- [Функция CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
+ [CEILING (Transact-SQL)](../../t-sql/functions/ceiling-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Функция FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR (Transact-SQL)](../../t-sql/functions/floor-transact-sql.md)   
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)

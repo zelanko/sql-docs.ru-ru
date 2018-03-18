@@ -1,5 +1,5 @@
 ---
-title: "ОБЪЯСНЯЕТСЯ (Transact-SQL) | Документы Microsoft"
+title: "EXPLAIN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>ОБЪЯСНЯЕТСЯ (Transact-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Возвращает план запроса для [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] инструкцию без выполнения инструкции. Используйте **объяснение** Предварительный просмотр операции, которые потребуется перемещение данных и просматривать предполагаемых затрат операций запроса.  
+  Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте **EXPLAIN**, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса.  
   
- Дополнительные сведения о планах запросов см. в разделе «Основные сведения о планов запросов» в [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
+ Дополнительные сведения о планах запросов см. в разделе "Основные сведения о планах запросов" в [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,15 +41,15 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>Аргументы  
  *SQL_statement*  
- [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Инструкции, на котором **объяснение** будет выполняться. *SQL_statement* может иметь любое из следующих команд: **ВЫБЕРИТЕ**, **вставить**, **обновление**, **удаление**,  **CREATE TABLE AS SELECT**, **создать УДАЛЕННУЮ ТАБЛИЦУ**.  
+ Инструкция [!INCLUDE[DWsql](../../includes/dwsql-md.md)], в которой будет выполняться команда **EXPLAIN**. Аргумент *SQL_statement* может быть любой из следующих команд: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **SHOWPLAN** разрешение и разрешение на выполнение *SQL_statement*. В разделе [разрешения: GRANT, DENY, REVOKE &#40; Хранилище данных Azure SQL, параллельное хранилище данных &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ Требуется разрешение **SHOWPLAN** на выполнение *SQL_statement*. См. раздел [Разрешения: GRANT, DENY, REVOKE (хранилище данных SQL Azure, Parallel Data Warehouse)](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение **объяснение** команда является XML-документа со структурой, показано ниже. Этот XML-документ перечислены все операции в плане запроса для данного запроса, заключенных в каждом `<dsql_operation>` тег. Возвращаемое значение имеет тип **nvarchar(max)**.  
+ Возвращаемым значением выполнения команды **EXPLAIN** является XML-документ со структурой, показанной ниже. В этом XML-документе перечислены все операции в плане запроса для данного запроса. Каждая операция заключена в тег `<dsql_operation>`. Возвращаемое значение имеет тип **nvarchar(max)**.  
   
- План запроса, возвращаемый описывается последовательные инструкции SQL; При выполнении запроса может содержать Параллелизованный операции некоторые показано последовательные инструкции могут выполняться одновременно.  
+ Возвращенный план запроса показывает последовательные инструкции SQL. Выполняемый запрос может сопровождаться параллелизованными операциями, поэтому некоторые приведенные последовательные инструкции могут выполняться одновременно.  
   
 ```  
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -65,37 +65,37 @@ EXPLAIN SQL_statement
 </dsql_query>  
 ```  
   
- XML-теги, содержащие эти сведения:  
+ XML-теги содержат приведенные ниже сведения.  
   
 |XML-тег|Сводка, атрибуты и содержимое|  
 |-------------|--------------------------------------|  
 |\<dsql_query>|Элемент верхнего уровня или документа.|
-|\<sql>|Эха *SQL_statement*.|  
-|\<params >|Этот тег в настоящее время не используется.|  
-|\<dsql_operations>|Обобщает и содержит действия запроса и включает сведения о стоимости для запроса. Также содержит все `<dsql_operation>` блоков. Этот тег содержит сведения о подсчете для всего запроса.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* общее предполагаемое время для запроса в мс.<br /><br /> *total_number_operations* — общее количество операций запроса. Операция, которая будет обработан параллельно и выполняются на нескольких узлах считается за одну операцию.|  
-|\<dsql_operation>|Описывает одной операции в плане запроса. \<Dsql_operation > тег содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* является одним из значений, найденных в [запрос данных (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Содержимое в `\<dsql_operation>` блока зависит от типа операции.<br /><br /> См. в следующей таблице.|  
+|\<sql>|Отображает *SQL_statement*.|  
+|\<params>|Этот тег в настоящее время не используется.|  
+|\<dsql_operations>|Обобщает и содержит действия запроса, а также включает сведения о стоимости запроса. Также содержит все блоки `<dsql_operation>`. Этот тег содержит сведения о количестве для всего запроса.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* — общее предполагаемое время выполнения запроса (в мс).<br /><br /> *total_number_operations* — общее количество операций запроса. Операция, которая будет обрабатываться параллельно и выполняться на нескольких узлах, считается одной операцией.|  
+|\<dsql_operation>|Описывает одну операцию в плане запроса. Тег \<dsql_operation> содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* является одним из значений в [запросе данных (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Содержимое в блоке `\<dsql_operation>` зависит от типа операции.<br /><br /> См. таблицу ниже.|  
   
 |Тип операции|Содержимое|Пример|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE и TRIM_MOVE|`<operation_cost>`элемент с этими атрибутами. Значения отражают только локальной операции:<br /><br /> -   *стоимость* стоимость локальный оператор и отображает предполагаемое время для запуска в миллисекундах операции.<br />-   *accumulative_cost* представляет сумму всех операций, которые видят в плане, включая суммарные значения для параллельных операций в мс.<br />-   *average_rowsize* имеет предполагаемый Средний размер строки (в байтах) строк извлекается и передается во время операции.<br />-   *output_rows* элементов выходных данных (узел) и отображает число выходных строк.<br /><br /> `<location>`: Узлов или распределения, в которых будет выполняться операция. Параметры являются: «Элемент управления», «ComputeNode», «AllComputeNodes», «AllDistributions», «SubsetDistributions», «Распространение» и «SubsetNodes».<br /><br /> `<source_statement>`: Переместить исходные данные для смещения.<br /><br /> `<destination_table>`: Внутренняя временной таблицы данные переносятся в.<br /><br /> `<shuffle_columns>`: (Применимо только к операциям SHUFFLE_MOVE). Один или несколько столбцов, которые будут использоваться в качестве столбцов распределения для временной таблицы.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: Просмотреть `<operation_cost>` выше.<br /><br /> `<DestinationCatalog>`: Целевой узел или узлы.<br /><br /> `<DestinationSchema>`: Схеме назначения в DestinationCatalog.<br /><br /> `<DestinationTableName>`: Имя целевой таблицы или «TableName».<br /><br /> `<DestinationDatasource>`: Имя или подключения сведения для источника данных назначения.<br /><br /> `<Username>`и `<Password>`: эти поля указывают, что имя пользователя и пароль для назначения может потребоваться.<br /><br /> `<BatchSize>`: Размер пакета для операции копирования.<br /><br /> `<SelectStatement>`: Инструкция select используется для выполнения копирования.<br /><br /> `<distribution>`: Распределение, где выполняется копирование.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
-|MetaDataCreate_Operation|`<source_table>`: Исходная таблица для операции.<br /><br /> `<destionation_table>`: Целевая таблица для операции.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: Просмотреть `<location>` выше.<br /><br /> `<sql_operation>`: Идентифицирует команду SQL, который будет выполняться на узле.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: Конечный каталог.<br /><br /> `<DestinationSchema>`: Схеме назначения в DestinationCatalog.<br /><br /> `<DestinationTableName>`: Имя целевой таблицы или «TableName».<br /><br /> `<DestinationDatasource>`: Имя источника данных назначения.<br /><br /> `<Username>`и `<Password>`: эти поля указывают, что имя пользователя и пароль для назначения может потребоваться.<br /><br /> `<CreateStatement>`: Инструкции создания таблицы для целевой базы данных.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
-|RETURN|`<resultset>`: Идентификатор для результирующего набора.|`<resultset>RS_19</resultset>`|  
-|RND_ID|`<identifier>`: Идентификатор созданного объекта.|`<identifier>TEMP_ID_260</identifier>`|  
+|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE и TRIM_MOVE|Элемент `<operation_cost>` с этими атрибутами. Значения отражают только локальную операцию:<br /><br /> -   *cost* — стоимость локального оператора и отображение предполагаемого времени выполнения операции (в мс).<br />-   *accumulative_cost* — сумма всех операций в плане, включая суммарные значения для параллельных операций (в мс).<br />-   *average_rowsize* — предполагаемый средний размер строки (в байтах) строк, извлекаемых и передаваемых во время операции.<br />-   *output_rows* — количество выходных элементов (узлов) с отображением числа выходных строк.<br /><br /> `<location>`: узлы или распределения, в которых будет выполняться операция. Возможные варианты: Control, ComputeNode, AllComputeNodes, AllDistributions, SubsetDistributions, Distribution и SubsetNodes.<br /><br /> `<source_statement>`: исходные данные для перемещения в случайном порядке.<br /><br /> `<destination_table>`: внутренняя временная таблица, в которую будут перемещены данные.<br /><br /> `<shuffle_columns>`: (применимо только к операциям SHUFFLE_MOVE). Один или несколько столбцов, которые будут использоваться в качестве столбцов распределения для временной таблицы.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`: см. `<operation_cost>` выше.<br /><br /> `<DestinationCatalog>`: целевой узел или узлы.<br /><br /> `<DestinationSchema>`: схема назначения в DestinationCatalog.<br /><br /> `<DestinationTableName>`: имя целевой таблицы или TableName.<br /><br /> `<DestinationDatasource>`: имя или сведения о подключении для целевого источника данных.<br /><br /> `<Username>` и `<Password>`: эти поля указывают, что для места назначения могут потребоваться имя пользователя и пароль.<br /><br /> `<BatchSize>`: размер пакета для операции копирования.<br /><br /> `<SelectStatement>`: инструкция Select, используемая для копирования.<br /><br /> `<distribution>`: распределение, где выполняется копирование.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|MetaDataCreate_Operation|`<source_table>`: исходная таблица для копирования.<br /><br /> `<destionation_table>`: целевая таблица для копирования.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
+|ON|`<location>`: см. `<location>` выше.<br /><br /> `<sql_operation>`: определяет команду SQL, которая будет выполняться на узле.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: каталог назначения.<br /><br /> `<DestinationSchema>`: схема назначения в DestinationCatalog.<br /><br /> `<DestinationTableName>`: имя целевой таблицы или TableName.<br /><br /> `<DestinationDatasource>`: имя целевого источника данных.<br /><br /> `<Username>` и `<Password>`: эти поля указывают, что для места назначения могут потребоваться имя пользователя и пароль.<br /><br /> `<CreateStatement>`: инструкция создания таблицы для целевой базы данных.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|RETURN|`<resultset>`: идентификатор для результирующего набора.|`<resultset>RS_19</resultset>`|  
+|RND_ID|`<identifier>`: идентификатор для создаваемого объекта.|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
- **ОБЪЯСНЯЕТСЯ** может применяться к *оптимизируемые* только запросы, которые являются запросы, которые может быть улучшена или изменено на основе результатов **ОБЪЯСНИТЬ** команды. Поддерживаемые **объяснение** перечисленных выше команд. Попытка использовать **объяснение** с запросом неподдерживаемый тип будут возвращать ошибку или эхо-запрос.  
+ **EXPLAIN** можно применять только к *оптимизируемым* запросам, которые представляют собой импортируемые или изменяемые запросы на основе результатов выполнения команды **EXPLAIN**. Поддерживаемые команды **EXPLAIN** приведены выше. При попытке использовать **EXPLAIN** с неподдерживаемым типом запроса возвращается ошибка или сам запрос.  
   
- **ОБЪЯСНЯЕТСЯ** не поддерживается в пользовательской транзакции.  
+ **EXPLAIN** не поддерживается в пользовательской транзакции.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показан **объяснение** команду **ВЫБЕРИТЕ** инструкцию и результаты в формате XML.  
+ В следующем примере показано выполнение команды **EXPLAIN** в инструкции **SELECT** и выведен результат в формате XML.  
   
- **Отправка инструкции ОПИСАНИЯ**  
+ **Отправка инструкции EXPLAIN**  
   
- В этом примере отправленной команда имеет вид:  
+ В этом примере отправленная команда имеет вид:  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,21 +118,21 @@ EXPLAIN
 GO  
 ```  
   
- После выполнения инструкции с помощью **объяснение** режим, вкладка «сообщение» содержит одну строку под названием **объяснить**и начинается с XML-текст `\<?xml version="1.0" encoding="utf-8"?>` щелкните XML, чтобы открыть весь текст в Окно «XML». Чтобы лучше понять следующими комментариями, необходимо включить отображение номеров строк в SSDT.  
+ После выполнения инструкции с параметром **EXPLAIN** на вкладке сообщений находится одна строка с названием **explain**, которая начинается с XML-текста `\<?xml version="1.0" encoding="utf-8"?>`. Щелкните XML, чтобы полностью открыть текст в окне XML. Чтобы лучше понять следующие комментарии, необходимо включить отображение номеров строк в SSDT.  
   
-#### <a name="to-turn-on-line-numbers"></a>Чтобы включить номера строк  
+#### <a name="to-turn-on-line-numbers"></a>Включение номеров строк  
   
-1.  С выводимая в **объяснить** вкладке SSDT на **средства** последовательно выберите пункты **параметры**.  
+1.  Пока на вкладке **explain** в вкладке SSDT отображаются выходные данные, выберите в меню **Сервис** пункт **Параметры**.  
   
-2.  Разверните **текстовый редактор** разверните **XML**, а затем нажмите кнопку **Общие**.  
+2.  Разверните раздел **Текстовый редактор**, разверните **XML**, а затем щелкните **Общие**.  
   
-3.  В **отображения** область проверки **номера строк**.  
+3.  В области **Отображение** щелкните **Номера строк**.  
   
 4.  Нажмите кнопку **ОК**.  
   
- **Пример выходных данных ОПИСАНИЯ**  
+ **Пример выходных данных EXPLAIN**  
   
- Результат XML **объяснение** команда с номерами строк включен:  
+ Отображается следующий XML-результат выполнения команды **EXPLAIN** с включенными номерами строк:  
   
 ```  
 1  \<?xml version="1.0" encoding="utf-8"?>  
@@ -282,31 +282,31 @@ GO
   
 ```  
   
- **Значение ОПИСАНИЯ выходных данных**  
+ **Значение выходных данных EXPLAIN**  
   
- Приведенном выше примере содержит 144 пронумерованных строк. Выходные данные из этого запроса может немного отличаться. В следующем списке описываются значительные разделов.  
+ В приведенных выше выходных данных содержатся 144 пронумерованные строки. Ваши выходные данные этого запроса могут немного отличаться. Далее приводится описание важных разделов.  
   
--   Строки 3 – 16 введите описание запроса, который анализируется.  
+-   Строки 3–16 содержат описание анализируемого запроса.  
   
--   Строка 17, указывает, что общее число операций будет 9. Начало каждой операции можно найти путем поиска по ключевым словам **dsql_operation**.  
+-   Строка 17 указывает, что общее число операций будет равно 9. Начало каждой операции можно найти, выполнив поиск слов **dsql_operation**.  
   
--   Строки 18 запускает операцию 1. Указать, что строки 18 и 19 **RND_ID** операция создаст случайных Идентификационный номер, который будет использоваться для описания объекта. Объект, описанные в приведенном выше примере **TEMP_ID_16893**. Ваш номер будет отличаться.  
+-   Строка 18 запускает операцию 1. Строки 18 и 19 указывают, что операция **RND_ID** создаст случайный идентификационный номер, который будет использоваться для описания объекта. В примере выходных данных выше описывается объект **TEMP_ID_16893**. Ваш номер будет другим.  
   
--   Строка 20 запускает операцию 2. Строки 21 до 25: на всех вычислительных узлов, создайте временную таблицу с именем **TEMP_ID_16893**.  
+-   Строка 20 запускает операцию 2. Строки 21–25: на всех вычислительных узлах создать временную таблицу с именем **TEMP_ID_16893**.  
   
--   Строки 26 запускает операцию 3. 27 через 37 строк: переместить данные **TEMP_ID_16893** с помощью широковещательного перемещения. Предоставляется запроса, отправленного на каждом вычислительном узле. Указывает строки 37 целевая таблица **TEMP_ID_16893**.  
+-   Строка 26 запускает операцию 3. Строки 27–37: переместить данные в объект **TEMP_ID_16893** с помощью широковещательного перемещения. Указывается запрос, отправляемый на каждый вычислительный узел. Строка 37 указывает, что целевой таблицей является **TEMP_ID_16893**.  
   
--   Строке 38 запускает операцию 4. Строки 39 до 40: создать случайный идентификатор таблицы. **TEMP_ID_16894** — номер идентификатора в предыдущем примере. Ваш номер будет отличаться.  
+-   Строка 38 запускает операцию 4. Строки 39–40: создать случайный идентификатор таблицы. **TEMP_ID_16894** — номер идентификатора в предыдущем примере. Ваш номер будет другим.  
   
--   Строки 41 запускает операцию 5. Строки 42 через 46: на всех узлах создайте временную таблицу с именем **TEMP_ID_16894**.  
+-   Строка 41 запускает операцию 5. Строки 42–46: на всех узлах создать временную таблицу с именем **TEMP_ID_16894**.  
   
--   Строки 47 запускает операцию 6. Строки 48 до 91: перемещение данных из различных таблиц (включая **TEMP_ID_16893**) в таблицу **TEMP_ID_16894**, с помощью смещения операции перемещения. Предоставляется запроса, отправленного на каждом вычислительном узле. Строка 90 определяет целевую таблицу как **TEMP_ID_16894**. 91 строка указывает столбцы.  
+-   Строка 47 запускает операцию 6. Строки 48–91: переместить данные из различных таблиц (включая **TEMP_ID_16893**) в таблицу **TEMP_ID_16894** с помощью операции перемещения в случайном порядке. Указывается запрос, отправляемый на каждый вычислительный узел. Строка 90 указывает, что целевой таблицей является **TEMP_ID_16894**. Строка 91 указывает столбцы.  
   
--   Строки 92 запускает операцию 7. 93 строки через 97: на всех вычислительных узлов, удалить временную таблицу **TEMP_ID_16893**.  
+-   Строка 92 запускает операцию 7. Строки 93–97: на всех вычислительных узлах удалить временную таблицу **TEMP_ID_16893**.  
   
--   Строки 98 запускает операцию 8. 99 строки через 135: возвращать результаты клиенту. Используется запрос для получения результатов.  
+-   Строка 98 запускает операцию 8. Строки 99–135: возвратить результаты клиенту. Использует указанный запрос для получения результатов.  
   
--   Строки 136 запускает операцию 9. Строки 137 по 140: на всех узлах удалить временную таблицу **TEMP_ID_16894**.  
+-   Строка 136 запускает операцию 9. Строки 137–140: на всех узлах удалить временную таблицу **TEMP_ID_16894**.  
   
   
 

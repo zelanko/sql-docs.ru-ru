@@ -1,5 +1,5 @@
 ---
-title: "SELECT (SQL граф) | Документы Microsoft"
+title: "SELECT (SQL Graph) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -50,5 +50,5 @@ SELECT
 
 ## <a name="examples"></a>Примеры  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 

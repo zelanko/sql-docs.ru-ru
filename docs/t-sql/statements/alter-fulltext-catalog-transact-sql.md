@@ -1,5 +1,5 @@
 ---
-title: "ALTER FULLTEXT CATALOG (Transact-SQL) | Документы Microsoft"
+title: "ALTER FULLTEXT CATALOG (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,8 +55,8 @@ ALTER FULLTEXT CATALOG catalog_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_каталога*  
- Задает имя изменяемого каталога. Если каталог с указанным именем не существует, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку и не выполняет операцию ALTER.  
+ *catalog_name*  
+ Задает имя изменяемого каталога. Если каталог с заданным именем не существует, [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку и не выполняет операцию ALTER.  
   
  REBUILD  
  Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестроить весь каталог. Во время перестроения каталога существующий каталог удаляется, а на его месте создается новый каталог. Все таблицы, содержащие ссылки полнотекстового индексирования, сопоставляются с новым каталогом. Перестроение сбрасывает полнотекстовые метаданные в системных таблицах базы данных.  
@@ -64,12 +64,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  Указывает, будет ли изменяемый каталог учитывать диакритические знаки при полнотекстовом индексировании и выполнении запросов.  
   
- Чтобы определить текущую настройку свойства учета диакритических знаков полнотекстового каталога, используйте функцию FULLTEXTCATALOGPROPERTY со **accentsensitivity** значение свойства от *имя_каталога*. Если функция возвращает «1», полнотекстовый каталог учитывает диакритические знаки; если функция возвращает «0», каталог не учитывает диакритические знаки.  
+ Для определения текущего значения учета диакритических знаков для полнотекстового каталога используйте функцию FULLTEXTCATALOGPROPERTY со значением свойства **accentsensitivity** применительно к *catalog_name*. Если функция возвращает «1», полнотекстовый каталог учитывает диакритические знаки; если функция возвращает «0», каталог не учитывает диакритические знаки.  
   
  По умолчанию учет диакритических знаков у каталога и у базы данных одинаков.  
   
  REORGANIZE  
- Сообщает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения *слияние в единый файл*, который включает в себя объединение небольших индексов, созданных в процессе индексирования, в один большой индекс. Слияние фрагментов полнотекстового индекса может повысить производительность и освободить ресурсы дисков и памяти. Если в полнотекстовом каталоге происходят частые изменения, следует периодически использовать эту команду для реорганизации каталога.  
+ Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начать *слияние в единый файл*, в ходе которого небольшие индексы, созданные в процессе индексирования, объединяются в один большой индекс. Слияние фрагментов полнотекстового индекса может повысить производительность и освободить ресурсы дисков и памяти. Если в полнотекстовом каталоге происходят частые изменения, следует периодически использовать эту команду для реорганизации каталога.  
   
  REORGANIZE также оптимизирует внутренние структуры индексов и каталогов.  
   
@@ -78,8 +78,8 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  Указывает, что этот каталог является каталогом по умолчанию. При создании полнотекстовых индексов без указания конкретного каталога используется каталог по умолчанию. Если существует полнотекстовый каталог по умолчанию, то указание этого каталога AS DEFAULT переопределит существующее значение по умолчанию.  
   
-## <a name="permissions"></a>Permissions  
- Пользователь должен иметь разрешение ALTER для полнотекстового каталога или быть членом **db_owner**, **db_ddladmin** предопределенной роли базы данных или фиксированной серверной роли sysadmin.  
+## <a name="permissions"></a>Разрешения  
+ Пользователь должен иметь разрешение ALTER для полнотекстового каталога или быть членом предопределенных ролей базы данных **db_owner**, **db_ddladmin** или роли сервера sysadmin.  
   
 > [!NOTE]  
 >  Для использования ALTER FULLTEXT CATALOG AS DEFAULT пользователь должен иметь разрешение ALTER для полнотекстового каталога и разрешение CREATE FULLTEXT CATALOG для базы данных.  
@@ -101,9 +101,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [CREATE FULLTEXT CATALOG #40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Полнотекстовый поиск](../../relational-databases/search/full-text-search.md)  
   
   

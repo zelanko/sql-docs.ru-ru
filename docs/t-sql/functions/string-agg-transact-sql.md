@@ -1,5 +1,5 @@
 ---
-title: "STRING_AGG (Transact-SQL) | Документы Microsoft"
+title: "STRING_AGG (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Объединяет значения строковых выражений и помещает значения разделителя между ними. Разделитель не добавляется в конце строки.
+Сцепляет значения строковых выражений, помещая между ними значения-разделители. В конце строки разделитель не добавляется.
  
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,51 +47,51 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>Аргументы 
 
-*разделитель*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) из `NVARCHAR` или `VARCHAR` тип, используемый в качестве разделителя для объединения строк. Это может быть литералом или переменной. 
+*separator*  
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа `NVARCHAR` или `VARCHAR`, которое используется в качестве разделителя сцепляемых строк. Может быть литералом или переменной. 
 
 *expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа. Выражения преобразуются в `NVARCHAR` или `VARCHAR` типов во время объединения. Типы строк не преобразуются в `NVARCHAR` типа.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных. Во время объединения выражения преобразуются в тип `NVARCHAR` или `VARCHAR`. Нестроковые типы преобразуются в тип `NVARCHAR`.
 
 
 <order_clause>   
-При необходимости укажите порядок объединенных результатов, с помощью `WITHIN GROUP` предложения:
+При необходимости укажите очередность сцепляемых результатов с помощью предложения `WITHIN GROUP`:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
  
-  Список неконстантное [выражений](../../t-sql/language-elements/expressions-transact-sql.md) может использоваться для сортировки результатов. Только один `order_by_expression` допускается для каждого запроса. По умолчанию задан порядок сортировки по возрастанию.   
+  Список неконстантных [выражений](../../t-sql/language-elements/expressions-transact-sql.md), который можно использовать для сортировки результатов. В запросе допускается только один аргумент `order_by_expression`. По умолчанию задан порядок сортировки по возрастанию.   
   
 
 ## <a name="return-types"></a>Типы возвращаемых значений 
 
-Тип возвращаемого значения зависит от первый аргумент (expression). Если входной аргумент имеет тип string (`NVARCHAR`, `VARCHAR`), тип результат будет такой же, как тип входных данных. В следующей таблице перечислены автоматические преобразования:  
+Тип возвращаемого значения зависит от первого аргумента (expression). Если входной аргумент имеет строковый тип (`NVARCHAR`, `VARCHAR`), результат будет иметь тот же тип. В приведенной ниже таблице перечислены автоматические преобразования.  
 
-|Тип входного выражения. |Результат | 
+|Тип входного выражения |Результат | 
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1... 4000) |NVARCHAR(4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
 |VARCHAR(1…8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, числовых, float, real, бит, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
+|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>Remarks  
  
-`STRING_AGG`является агрегатной функцией, которая принимает все выражения из строк и объединяет их в одну строку. Выражение значения являются неявно преобразуются в строковые типы и затем объединяются. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG` — это агрегатная функция, которая принимает все выражения из строк и сцепляет их в одну строку. Значения выражений неявно преобразуются в строковые типы и затем сцепляются. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразовании типов данных см. в статье [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
-Если входное выражение имеет тип `VARCHAR`, разделитель не может быть типом `NVARCHAR`. 
+Если входное выражение имеет тип `VARCHAR`, разделитель не может иметь тип `NVARCHAR`. 
 
-Значения NULL учитываются и соответствующий разделитель не добавляется. Чтобы вернуть заполнителя для значений null, используйте `ISNULL` работать так, как показано в примере б.
+Значения NULL пропускаются, и соответствующий разделитель не добавляется. Чтобы вернуть заполнитель для значений NULL, используйте функцию `ISNULL`, как показано в примере Б.
 
-`STRING_AGG`доступна на любом уровне совместимости.
+Функция `STRING_AGG` доступна на любом уровне совместимости.
 
 
 ## <a name="examples"></a>Примеры 
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Создать список имен, разделенных в новых строк 
-В следующем примере создается список имен в ячейке одного результата, разделенные символы возврата каретки.
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Формирование списка имен, разделенного по строкам 
+В приведенном ниже примере формируется список имен в одной результирующей ячейке, разделенный символами возврата каретки.
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
@@ -102,13 +102,13 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`NULL`Обнаружены значения в `name` ячеек не возвращаются в результатах.   
+Значения `NULL`, найденные в ячейках `name`, не возвращаются в результатах.   
 > [!NOTE]  
->  Если с помощью редактора запросов Management Studio **результаты в таблицу** параметр не может реализовать символ возврата каретки. Переключитесь в **в виде текста** для просмотра результатов в набор должным образом.   
+>  Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.   
 
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>Б. Создать список имен, разделенных точкой с запятой без значений NULL   
-В следующем примере заменяет значения null «Н/д» и возвращает имена, разделенные запятыми в одной ячейке.  
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>Б. Формирование списка имен, разделенного запятыми, без значений NULL   
+В приведенном ниже примере значения NULL заменяются на "N/A" и имена, разделенные запятыми, возвращаются в одной результирующей ячейке.  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
@@ -117,12 +117,12 @@ FROM Person.Person;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
  
 
-|CSV | 
+|Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
-### <a name="c-generate-comma-separated-values"></a>В. Создать значения с разделителями запятыми 
+### <a name="c-generate-comma-separated-values"></a>В. Формирование списка значений с разделителями-запятыми 
 
 ```sql   
 SELECT 
@@ -134,15 +134,15 @@ FROM Person.Person;
 
 |имена | 
 |--- |
-|Алексей Санчес (8 2003 фев 12:00 AM) <br />Terri Даффи (24 2002 фев 12:00 AM) <br />Roberto Tamburello (дек 5 2001 12:00 AM) <br />Rob Walters (дек 29 2001 12:00 AM) <br />... |
+|Ken Sánchez (Feb 8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec 5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  Если с помощью редактора запросов Management Studio **результаты в таблицу** параметр не может реализовать символ возврата каретки. Переключитесь в **в виде текста** для просмотра результатов в набор должным образом.   
+>  Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.   
  
 
-### <a name="d-return-news-articles-with-related-tags"></a>Г. Возвращать с тегами связанные статьи 
+### <a name="d-return-news-articles-with-related-tags"></a>Г. Получение новых статей со связанными тегами 
 
-Статьи и их тегов разделяются в различные таблицы. Разработчику необходимо возвращать одну строку для каждой статьи с все связанные с ними теги. С помощью следующего запроса: 
+Статьи и их теги разнесены по разным таблицам. Разработчику необходимо получить одну строку для каждой статьи со всеми связанными тегами. Используется следующий запрос: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
@@ -153,15 +153,15 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|ИД статьи |title |tags |
+|articleId |title |tags |
 |--- |--- |--- |
-|172 |Опрашивает указывают результатов закрыть выборов |политика, опросы, Город совета | 
-|176 |Новый канал, ожидаемого для уменьшения перегрузки |NULL |
-|177 |Собаки продолжают работать с более популярным, чем cats |опрашивает животных| 
+|172 |Опросы предвещают напряженную борьбу на выборах |политика,опросы,муниципалитет | 
+|176 |Новая автострада разгрузит транспортные потоки |NULL |
+|177 |Собаки по-прежнему популярнее кошек |опросы,животные| 
 
-### <a name="e-generate-list-of-emails-per-towns"></a>Д. Создать список адресов электронной почты в городах
+### <a name="e-generate-list-of-emails-per-towns"></a>Д. Формирование списка адресов электронной почты по городам
 
-Следующий запрос находит адреса электронной почты сотрудников и группирует их по городах: 
+Следующий запрос находит адреса электронной почты сотрудников и группирует их по городам: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
@@ -170,16 +170,16 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Город |сообщения электронной почты |
+|town |emails |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
 |LA |sam1@adventure-works.com;hazem0@adventure-works.com |
 
-Сообщения электронной почты, возвращается в сообщениях электронной почты, столбец может использоваться непосредственно для отправки сообщений электронной почты в некоторых городах определенной рабочей группы. 
+Адреса, возвращенные в столбце emails, можно использовать для рассылки сообщений группе людей, работающих в определенном городе. 
 
-### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>Е. Сформировать отсортированный список адресов электронной почты в городах   
+### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>Е. Формирование отсортированного списка адресов электронной почты по городам   
    
-Аналогично предыдущему примеру, следующий запрос находит адреса электронной почты сотрудников, группирует их по городу и сортировка сообщения электронной почты:   
+Так же как в предыдущем примере, следующий запрос находит адреса электронной почты сотрудников, группирует их по городам и сортирует по алфавиту:   
 ```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
@@ -189,22 +189,22 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Город |сообщения электронной почты |
+|town |emails |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>См. также  
- [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 

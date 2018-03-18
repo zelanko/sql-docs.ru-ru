@@ -1,5 +1,5 @@
 ---
-title: "SYSUTCDATETIME (Transact-SQL) | Документы Microsoft"
+title: "SYSUTCDATETIME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/01/2015
 ms.prod: sql-non-specified
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает **datetime2** значение, содержащее дату и время компьютера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена. Дата и время возвращаются в формате UTC (время по Гринвичу). Точность дробной части значения секунд может быть задана в диапазоне от 1 до 7 цифр. Точность по умолчанию составляет 7 цифр.  
+  Возвращает значение типа **datetime2**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемые дата и время отображаются в формате UTC. Точность дробной части значения секунд может быть задана в диапазоне от 1 до 7 цифр. Точность по умолчанию составляет 7 цифр.  
   
 > [!NOTE]  
 >  SYSDATETIME и SYSUTCDATE имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. Функции SYSDATETIME, SYSUTCDATE и SYSDATETIMEOFFSET могут быть присвоены переменным любого типа даты и времени.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [и функций даты и времени типов данных](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,13 +58,13 @@ SYSUTCDATETIME ( )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **datetime2**  
   
-## <a name="remarks"></a>Замечания  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]операторы SYSUTCDATETIME может использоваться в любом месте, они могут ссылаться на **datetime2** выражение.  
+## <a name="remarks"></a>Remarks  
+ Функция SYSUTCDATETIME может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражений **datetime2**.  
   
  Тип SYSUTCDATETIME является недетерминированным. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Получает значения даты и времени с помощью GetSystemTimeAsFileTime() Windows API. Точность зависит от физического оборудования и версии Windows, в которой запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точность возвращаемых значений этого API-интерфейса задана равной 100 нс. Точность может быть определена с помощью GetSystemTimeAdjustment() Windows API.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает значения даты и времени с помощью функции GetSystemTimeAsFileTime() Windows API. Точность зависит от физического оборудования и версии Windows, в которой запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точность возвращаемых значений этого API-интерфейса задана равной 100 нс. Точность может быть определена с помощью метода GetSystemTimeAdjustment() интерфейса API Windows.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит возврат даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
@@ -133,9 +133,9 @@ Time             Date Time
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [В ЧАСОВОМ ПОЯСЕ &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

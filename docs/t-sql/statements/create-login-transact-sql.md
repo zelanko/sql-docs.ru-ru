@@ -1,5 +1,5 @@
 ---
-title: "СОЗДАЙТЕ имя входа (Transact-SQL) | Документы Microsoft"
+title: "CREATE LOGIN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
@@ -103,14 +103,14 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## <a name="arguments"></a>Аргументы  
  *login_name*  
- Указывает имя пользователя для создаваемого имени входа. Существует четыре типа имен входа: имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имена входа Windows, имена входа, сопоставленные с помощью сертификата, а также имена входа, сопоставленные с помощью асимметричного ключа. При создании имен входа, сопоставленных с учетной записью домена Windows, необходимо использовать имя входа пред-Windows 2000 пользователя в формате [\<domainName >\\< login_name >]. Нельзя использовать UPN в формате login_name@DomainName. См. приведенный ниже пример Г. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имена входа являются типом **sysname** и должны соответствовать правилам для [идентификаторы](http://msdn.microsoft.com/library/ms175874.aspx) и не может содержать "**\\**". Имена входа Windows могут содержать символы «**\\**». Имена входа, основанный на количестве пользователей Active Directory ограничены имена менее 21 символов.  
+ Указывает имя пользователя для создаваемого имени входа. Существует четыре типа имен входа: имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имена входа Windows, имена входа, сопоставленные с помощью сертификата, а также имена входа, сопоставленные с помощью асимметричного ключа. При создании имен входа, сопоставленных с учетной записью домена Windows, необходимо использовать имя входа версии, более ранней, чем Windows 2000, с форматом [\<domainName>\\<login_name>]. Нельзя использовать имя участника-пользователя в формате login_name@DomainName. См. приведенный ниже пример Г. Имена входа проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют тип **sysname**, они должны соответствовать правилам для [идентификаторов](http://msdn.microsoft.com/library/ms175874.aspx) и не могут содержать символ "**\\**". Имена входа Windows могут содержать символы «**\\**». Имена входа, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину.  
   
- ПАРОЛЬ **= "***пароль***"**  
- Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. [Strong Passwords](../../relational-databases/security/strong-passwords.md) и [политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]сохраненные сведения о пароле вычисляется с помощью SHA-512 криптографического пароля.  
+ PASSWORD **='***password***'**  
+ Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в разделах [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля.  
   
- В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов.  Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одинарные кавычки или *login_name*.  
+ В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов.  Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*.  
   
- ПАРОЛЬ  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа.  
@@ -125,34 +125,34 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот параметр задан, то при первом использовании нового имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивается новый пароль.  
   
- Учетные данные  **=**  *credential_name*  
+ CREDENTIAL **=***credential_name*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Имя учетных данных для сопоставления с новым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетные данные уже должны существовать на сервере. В настоящее время этот параметр только связывает учетные данные с именем входа. Учетные данные, не может быть сопоставлен имени входа системного администратора (sa).  
+ Имя учетных данных для сопоставления с новым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетные данные уже должны существовать на сервере. В настоящее время этот параметр только связывает учетные данные с именем входа. Учетные данные не могут быть сопоставлены с именем входа системного администратора (sa).  
   
  SID = *sid*  
- Используется для повторного создания имени входа. Применяется к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только имена входа, не имена входа проверки подлинности Windows. Указывает идентификатор SID нового [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа для проверки подлинности. Если этот параметр не используется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически назначает идентификатор SID. Структура идентификатора безопасности зависит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии.  
+ Используется для повторного создания имени входа. Применяется только к именам входа проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не относится к именам входа проверки подлинности Windows. Указывает идентификатор SID нового имени входа проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот параметр не используется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]идентификатор SID имени входа: 16-байтовое (**binary(16)**) литеральное значение, основанное на GUID. Например, `SID = 0x14585E90117152449347750164BA00A7`.  
+-   Идентификатор SID имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 16-байтовое (**binary(16)**) литеральное значение, основанное на GUID. Например, `SID = 0x14585E90117152449347750164BA00A7`.  
   
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]идентификатор SID имени входа: структура SID, допустимая для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Как правило, это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
+-   Идентификатор SID имени входа [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: структура SID, допустимая для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Как правило, это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
-DEFAULT_DATABASE  **=**  *базы данных*  
+DEFAULT_DATABASE **=***database*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  База данных по умолчанию, связываемая с именем входа. Если этот параметр не задан, то базой данных по умолчанию становится master.  
   
-DEFAULT_LANGUAGE  **=**  *языка*  
+DEFAULT_LANGUAGE **=***language*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Язык по умолчанию, назначаемый имени входа. Если этот параметр не задан, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для сервера. При смене языка по умолчанию для сервера язык по умолчанию имени входа не меняется.  
   
-CHECK_EXPIRATION  **=**  {ON | **OFF** }  
+CHECK_EXPIRATION **=** { ON | **OFF** }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, должна ли политика истечения срока действия паролей принудительно применяться к этому имени входа. Значение по умолчанию — OFF.  
   
-CHECK_POLICY  **=**  { **ON** | {OFF}  
+CHECK_POLICY **=** { **ON** | OFF }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что политики паролей Windows компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны принудительно применяться к этому имени входа. Значение по умолчанию — ON.  
@@ -169,12 +169,12 @@ WINDOWS
   
  Имя входа сопоставлено с именем входа Windows.  
   
-СЕРТИФИКАТ *certname*  
+CERTIFICATE *certname*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя сертификата, связываемого с данным именем входа. Этот сертификат должен уже существовать в базе данных master.  
   
-АСИММЕТРИЧНЫЙ ключ *asym_key_name*  
+ASYMMETRIC KEY *asym_key_name*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя асимметричного ключа, связываемого с данным именем входа. Этот ключ должен уже существовать в базе данных master.  
@@ -188,7 +188,7 @@ WINDOWS
   
  Сочетание CHECK_POLICY = OFF и CHECK_EXPIRATION = ON не поддерживается.  
   
- Если значение CHECK_POLICY равно OFF, *lockout_time* сбрасывается и CHECK_EXPIRATION имеет значение OFF.  
+ Если значение CHECK_POLICY равно OFF, то *lockout_time* сбрасывается и параметру CHECK_EXPIRATION также присваивается значение OFF.  
   
 > [!IMPORTANT]  
 >  Параметры CHECK_EXPIRATION и CHECK_POLICY будут принудительно применяться только в [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] или более поздних версиях. Дополнительные сведения см. в разделе [Password Policy](../../relational-databases/security/password-policy.md).  
@@ -199,40 +199,40 @@ WINDOWS
   
  При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера.  
  
- Сервер [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) должны совпадать тип имени входа, чтобы разрешить доступ.
+ Для разрешения доступа [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) сервера должен соответствовать типу имени входа.
   
  Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] имена входа  
- В [!INCLUDE[ssSDS](../../includes/sssds-md.md)], **CREATE LOGIN** инструкция должна быть единственной инструкцией в пакете.  
+## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>Имена входа [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+ В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] инструкция **CREATE LOGIN** должна быть единственной инструкцией в пакете.  
   
- В некоторых методах подключения к [!INCLUDE[ssSDS](../../includes/sssds-md.md)], такие как **sqlcmd**, необходимо добавить [!INCLUDE[ssSDS](../../includes/sssds-md.md)] имя сервера, чтобы имя входа в строке подключения с помощью  *\<входа >* @  *\<server >* нотации. Например, если имя входа — `login1` и полное имя [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервер `servername.database.windows.net`, *username* параметр строки подключения должен быть `login1@servername`. Так как общая длина *username* параметра составляет 128 символов *login_name* ограничено до 127 символов минус длина имени сервера. В примере `login_name` может иметь длину не более 117 символов, поскольку `servername` имеет длину 10 символов.  
+ В некоторых методах подключения к [!INCLUDE[ssSDS](../../includes/sssds-md.md)], например **sqlcmd**, необходимо добавить имя сервера [!INCLUDE[ssSDS](../../includes/sssds-md.md)] к имени входа в строке подключения с помощью нотации *\<login>*@*\<server>*. Например, если имя входа — `login1`, а полное имя сервера служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)] — `servername.database.windows.net`, то параметр *username* в строке подключения должен иметь вид `login1@servername`. Так как общая длина параметра *username* составляет 128 символов, длина имени *login_name* ограничена до 127 символов минус длина имени сервера. В примере `login_name` может иметь длину не более 117 символов, поскольку `servername` имеет длину 10 символов.  
   
- В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] необходимо подключиться к базе данных master, чтобы создать имя входа.  
+ В службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] для создания имени входа необходимо подключение к базе данных master.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]правила позволяют создать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа проверки подлинности в формате \<loginname > @\<имя_сервера >. Если ваш [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервер **myazureserver** и вход выполнен  **myemail@live.com** , то необходимо указать имя входа в виде  **myemail@live.com @myazureserver**  .  
+ Правила [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяют создать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имя входа для проверки подлинности в формате \<loginname>@\<servername>. Если сервер [!INCLUDE[ssSDS](../../includes/sssds-md.md)] — **myazureserver**, а имя входа —**myemail@live.com**, то необходимо указать имя входа в виде **myemail@live.com@myazureserver**.  
   
- В [!INCLUDE[ssSDS](../../includes/sssds-md.md)], требуются данные входа для проверки подлинности подключения и правила брандмауэра уровня сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедитесь в том, что база данных имеет последнюю версию таблицы, имена входа, выполните [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] данные имени входа необходимы для проверки подлинности подключения, и правила брандмауэра на уровне сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедиться в том, что база данных имеет последнюю версию таблицы имен входа, выполните инструкцию [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
- Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] имена входа, в разделе [Управление базами данных и именами входа в базе данных SQL Windows Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
+ Дополнительные сведения об именах входа служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в разделе [Управление базами данных и именами входа в базу данных SQL Windows Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
 ## <a name="permissions"></a>Разрешения  
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], требуется **ALTER ANY LOGIN** разрешение на сервер или членство в **securityadmin** предопределенной роли сервера.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера **securityadmin**.  
   
  В службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)] создавать новые имена входа могут только имя входа участника уровня сервера (созданного процессом провизионирования) или члены роли `loginmanager` базы данных в базе данных master.  
   
  Если используется параметр **CREDENTIAL** , также необходимо разрешение **ALTER ANY CREDENTIAL** на сервере.  
   
 ## <a name="next-steps"></a>Next Steps  
- После создания имени входа, имя входа подключается к [!INCLUDE[ssDE](../../includes/ssde-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , но только разрешения, предоставленные **открытый** роли. Попробуйте выполнить некоторые из приведенных ниже действий.  
+ После создания имя входа подключается к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)], но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий.  
   
 -   Чтобы подключиться к базе данных, создайте пользователя базы данных для имени входа. Дополнительные сведения см. в разделе [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md).  
   
--   Создание роли сервера, определяемого пользователем с помощью [CREATE SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-role-transact-sql.md). Воспользуйтесь инструкциями **ALTER SERVER ROLE** … **Добавить ЧЛЕНА** для добавления нового имени входа к роли сервера, определяемой пользователем. Дополнительные сведения см. в разделе [CREATE SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-role-transact-sql.md) и [ALTER РОЛИ сервера &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+-   Создание определяемой пользователем роли сервера с помощью [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md). Воспользуйтесь инструкциями **ALTER SERVER ROLE** … **ADD MEMBER** для добавления нового имени входа к определяемой пользователем роли сервера. Дополнительные сведения см. в разделе [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md) и [ALTER SERVER ROLE (Transact-SQL)](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
--   Используйте **sp_addsrvrolemember** Добавление имени входа к предопределенной роли сервера. Дополнительные сведения см. в разделе [роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md) и [sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+-   Воспользуйтесь процедурой **sp_addsrvrolemember** для добавления имени входа к предопределенной роли сервера. Дополнительные сведения см. в разделе [Роли на уровне сервера](../../relational-databases/security/authentication-access/server-level-roles.md) и [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   Используйте **GRANT** инструкции для предоставления разрешений уровня сервера с новым именем входа или роли, содержащей имя входа. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
+-   Воспользуйтесь инструкцией **GRANT**, чтобы предоставить разрешения уровня сервера новому имени входа или роли, содержащей это имя входа. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -291,7 +291,7 @@ GO
 ```  
   
 ### <a name="f-creating-a-login-from-a-sid"></a>Е. Создание имени входа на основе SID  
- В следующем примере сначала создается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа для проверки подлинности и определяет его SID имени входа.  
+ В следующем примере создается имя входа с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и определяется его SID.  
   
 ```  
 CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
@@ -300,7 +300,7 @@ SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
- Наш запрос возвращает 0x241C11948AEEB749B0D22646DB1A19F2 в качестве SID. Ваш запрос вернет другое значение. Следующие выражения удаляют имя входа, а затем повторно создают имя входа. Используйте SID из предыдущего запроса.  
+ Наш запрос возвращает идентификатор SID 0x241C11948AEEB749B0D22646DB1A19F2. Ваш запрос вернет другое значение. Следующие выражения удаляют имя входа, а затем повторно создают имя входа. Используйте SID из предыдущего запроса.  
   
 ```  
 DROP LOGIN TestLogin;  
@@ -313,7 +313,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>Ж. Создание имени входа для проверки подлинности SQL Server с паролем  
  В следующем примере создается имя входа `Mary7` с паролем `A2c3456`.  
@@ -322,8 +322,8 @@ GO
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
-### <a name="h-using-options"></a>З. С помощью параметров  
- В следующем примере создается имя входа `Mary8` с помощью пароля, а также ряд необязательных аргументов.  
+### <a name="h-using-options"></a>З. Использование параметров  
+ В следующем примере создается имя входа `Mary8` с паролем и дополнительными аргументами.  
   
 ```  
 CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  
@@ -332,7 +332,7 @@ CHECK_POLICY = ON;
 ```  
   
 ### <a name="i-creating-a-login-from-a-windows-domain-account"></a>И. Создание имени входа на основе учетной записи домена Windows  
- В следующем примере создается имя входа с учетной записью домена Windows с именем `Mary` в `Contoso` домена.  
+ В следующем примере имя входа создается на основе учетной записи домена Windows `Mary` в домене `Contoso`.  
   
 ```  
 CREATE LOGIN [Contoso\Mary] FROM WINDOWS;  
@@ -344,7 +344,7 @@ GO
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Политика паролей](../../relational-databases/security/password-policy.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   

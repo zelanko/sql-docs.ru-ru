@@ -1,5 +1,5 @@
 ---
-title: "Разрешения на коллекции схем GRANT XML (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений на коллекцию XML-схем (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,18 +61,18 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Указывает разрешение, которое может быть выдано на коллекцию XML-схем. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- КОЛЛЕКЦИИ СХЕМ XML ON:: [ *schema_name*. ] *XML_schema_collection_name*  
- Указывает коллекцию XML-схем, на которую предоставляется разрешение. Требуется квалификатор области (::). Если *schema_name* не указан, используется схема по умолчанию. Если *schema_name* указано, требуется квалификатор области схемы (.).  
+ ON XML SCHEMA COLLECTION :: [ *имя_схемы*. ] *имя_коллекции_схемы_XML*  
+ Указывает коллекцию XML-схем, на которую предоставляется разрешение. Квалификатор области (::) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
- \<database_principal > Указывает участника, к которому предоставляется разрешение.  
+ TO \<субъект_получателя> указывает субъект, которому предоставляется разрешение.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal > Указывает участника, от которого участник, выполняющий данный запрос, наследует право предоставления разрешения.  
+ AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
  *Database_user*  
  Указывает пользователя базы данных.  
@@ -99,7 +99,7 @@ GRANT permission  [ ,...n ] ON
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
 ## <a name="remarks"></a>Remarks  
- Сведения о коллекции XML-схем можно увидеть в [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) представления каталога.  
+ Сведения о коллекциях XML-схем доступны в представлении каталога [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Коллекция XML-схем представляет собой защищаемую сущность уровня схемы, содержащуюся в родительской схеме иерархии разрешений. Наиболее специфичные и ограниченные разрешения, предоставляемые коллекции XML-схем, а также более общие разрешения, неявно их содержащие, приведены в следующей таблице.  
   
@@ -137,11 +137,11 @@ GRANT permission  [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>См. также  
- [Запрет разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [Создание КОЛЛЕКЦИИ XML-СХЕМ &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [DENY, запрет разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+ [sys.xml_schema_collections (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

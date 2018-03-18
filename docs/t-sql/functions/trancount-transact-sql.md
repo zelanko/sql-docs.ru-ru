@@ -1,5 +1,5 @@
 ---
-title: "@@TRANCOUNT (Transact-SQL) | Документы Microsoft"
+title: "@@TRANCOUNT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;Значение TRANCOUNT (Transact-SQL)
+# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает число инструкций BEGIN TRANSACTION, выполненных в текущем соединении.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
- Инструкция BEGIN TRANSACTION увеличивает значение@TRANCOUNT на 1. Инструкция ROLLBACK TRANSACTION уменьшает @@TRANCOUNT 0, за исключением ROLLBACK TRANSACTION *savepoint_name*, которая не влияет на@TRANCOUNT. Инструкция COMMIT TRANSACTION или COMMIT WORK уменьшают@TRANCOUNT на 1.  
+## <a name="remarks"></a>Remarks  
+ Инструкция BEGIN TRANSACTION увеличивает значение @@TRANCOUNT на 1. Инструкция ROLLBACK TRANSACTION уменьшает значение @@TRANCOUNT до 0 (исключение — инструкция ROLLBACK TRANSACTION *savepoint_name*, которая не влияет на значение @@TRANCOUNT). Инструкции COMMIT TRANSACTION и COMMIT WORK уменьшают значение @@TRANCOUNT на 1.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -105,6 +105,6 @@ PRINT @@TRANCOUNT
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

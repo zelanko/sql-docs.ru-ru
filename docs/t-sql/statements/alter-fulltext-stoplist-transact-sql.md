@@ -1,5 +1,5 @@
 ---
-title: "ALTER FULLTEXT STOPLIST (Transact-SQL) | Документы Microsoft"
+title: "ALTER FULLTEXT STOPLIST (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -60,59 +60,59 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>Аргументы  
  *stoplist_name*  
- Имя изменяемого списка стоп-слов. *stoplist_name* не может превышать 128 символов.  
+ Имя изменяемого списка стоп-слов. Длина *stoplist_name* не может превышать 128 символов.  
   
- **"** *стоп-слово* **"**  
- Строка, которая может быть словом с лингвистическим значением в определенном языке или токеном, не имеющим лингвистического значения. *Стоп-слово* ограничено до максимальной длины токена (64 символов). Стоп-слово можно указать в виде строки в Юникоде.  
+ **'** *stopword* **'**  
+ Строка, которая может быть словом с лингвистическим значением в определенном языке или токеном, не имеющим лингвистического значения. Длина *stopword* ограничена максимальной длиной токена (64 символами). Стоп-слово можно указать в виде строки в Юникоде.  
   
- Язык *language_term*  
- Указывает язык, связанный с *стоп-слово* добавляемым или удаляемым.  
+ LANGUAGE *language_term*  
+ Указывает язык, связанный с добавляемым или удаляемым *stopword*.  
   
- *language_term* может быть указан как строковое, целочисленное или шестнадцатеричное значение, соответствующее коду локали (LCID) языка, как показано ниже:  
+ Аргумент *language_term* может быть указан как строка, целое или шестнадцатеричное значение, соответствующее коду локали (LCID) следующим образом.  
   
-|Формат|Description|  
+|Формат|Описание|  
 |------------|-----------------|  
-|Строковые значения|*language_term* соответствует **псевдоним** значение столбца в [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) Просмотр в режиме совместимости. Строка должна быть заключена в одинарные кавычки, как и в **"***language_term***"**.|  
-|Целочисленный|*language_term* является код языка.|  
-|Шестнадцатеричный|*language_term* 0 x следуют шестнадцатеричное значение кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули. Если значение указано в формате двухбайтовой кодировки (DBCS), SQL Server преобразует его в Юникод.|  
+|Строковый|Аргумент *language_term* соответствует значению столбца **alias** в представлении совместимости [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Строка должна быть заключена в одиночные кавычки: **'***language_term***'**.|  
+|Целочисленный|Аргумент *language_term* представляет собой код языка.|  
+|Шестнадцатеричный|Аргумент *language_term* состоит из 0x со следующим шестнадцатеричным значением кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули. Если значение указано в формате двухбайтовой кодировки (DBCS), SQL Server преобразует его в Юникод.|  
   
- Добавить **"***стоп-слово***"** языка *language_term*  
+ ADD **'***stopword***'** LANGUAGE *language_term*  
  Добавляет стоп-слово в список стоп-слов для языка, указанного в аргументе LANGUAGE *language_term*.  
   
  Если указанное сочетание ключевого слова и значения кода языка в рамках данного списка стоп-слов не уникальны, возвращается ошибка.  Если значение кода языка не соответствует зарегистрированному языку, формируется ошибка.  
   
- DROP { **"***стоп-слово***"** язык *language_term* | ВСЕ ЯЗЫКОВЫЕ *language_term* | ALL}  
+ DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Удаляет стоп-слово из списка стоп-слов.  
   
- **"** *стоп-слово* **"** языка *language_term*  
+ **'** *stopword* **'** LANGUAGE *language_term*  
  Удаляет указанное стоп-слово для языка, указанного аргументом *language_term*.  
   
- ВСЕ ЯЗЫКОВЫЕ *language_term*  
- Удаляет все Стоп-слова для языка, указанного аргументом *language_term*.  
+ ALL LANGUAGE *language_term*  
+ Удаляет все стоп-слова для языка, указанного аргументом *language_term*.  
   
  ALL  
  Удаляет все стоп-слова из списка стоп-слов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Инструкция CREATE FULLTEXT STOPLIST поддерживается только для уровня совместимости 100 и выше. Для уровней совместимости 80 и 90 системный список стоп-слов всегда назначается базе данных.  
   
-## <a name="permissions"></a>Permissions  
- Чтобы назначить список стоп-слов в качестве используемого по умолчанию списка стоп-слов базы данных, необходимо разрешение ALTER DATABASE. Чтобы изменить список стоп-слов, необходимо быть владельцем или членом **db_owner** или **db_ddladmin** предопределенных ролей базы данных.  
+## <a name="permissions"></a>Разрешения  
+ Чтобы назначить список стоп-слов в качестве используемого по умолчанию списка стоп-слов базы данных, необходимо разрешение ALTER DATABASE. Чтобы изменить список стоп-слов другим образом, необходимо быть его владельцем или членом предопределенных ролей базы данных **db_owner** или **db_ddladmin**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере демонстрируется изменение списка стоп-слов `CombinedFunctionWordList` путем добавления слова «en» для испанского и затем французского языков.  
+ В следующем примере демонстрируется изменение списка стоп-слов `CombinedFunctionWordList` путем добавления слова "en" для испанского и затем французского языков.  
   
 ```  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ ПОЛНОТЕКСТОВЫЙ список стоп-СЛОВ &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [sys.fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

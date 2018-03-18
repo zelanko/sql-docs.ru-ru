@@ -1,5 +1,5 @@
 ---
-title: "ОТЗОВИТЕ разрешения участника на уровне сервера (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений субъекта на уровне сервера (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,16 +61,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть отменено для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть отменено для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- Имя входа **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для которой отменяются разрешения. Квалификатор области (**::**) является обязательным.  
   
- РОЛЬ сервера **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Указывает роль сервера, для которой отменяется разрешение. Квалификатор области (**::**) является обязательным.  
   
- {ИЗ | К} \<server_principal > указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или роль сервера, у которой отменяется разрешение.  
+ { FROM | TO } \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или роль сервера, у которой отменяется разрешение.  
   
  *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], от которого участник, выполняющий этот запрос, получает право отмены разрешения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и роли сервера являются защищаемыми объектами уровня сервера. Наиболее специфичные и ограниченные разрешения, которые могут быть отменены для имени входа или роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перечислены в следующей таблице вместе с общими разрешениями, неявно содержащими их.  
   
 |Разрешение для имени входа SQL Server или роли сервера|Содержится в разрешении для имени входа SQL Server или роли сервера|Подразумевается в разрешении сервера|  
@@ -112,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для имен входа требуется разрешение CONTROL на имя входа или разрешение ALTER ANY LOGIN на сервер.  
   
  Для ролей сервера требуется разрешение CONTROL на роль сервера или разрешение ALTER ANY SERVER ROLE на сервер.  
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Отмена разрешения IMPERSONATE на имя входа  
- В следующем примере отменяется `IMPERSONATE` разрешение на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа `WanidaBenshoof` из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, созданного из пользователя Windows `AdvWorks\YoonM`.  
+ Следующий пример отменяет разрешение `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

@@ -1,5 +1,5 @@
 ---
-title: "Geometry (Transact-SQL) | Документы Microsoft"
+title: "geometry (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,22 +31,22 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geometry-transact-sql"></a>Пространственные типы - geometry (Transact-SQL)
+# <a name="spatial-types---geometry-transact-sql"></a>Пространственные типы — geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Плоские Пространственные данные типа, **geometry**, реализован как тип среды CLR (CLR) данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот тип представляет данные в евклидовом пространстве (плоской системе координат).  
+  Плоский пространственный тип данных **geometry** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализуется как тип данных среды CLR. Этот тип представляет данные в евклидовом пространстве (плоской системе координат).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает набор методов для **geometry** пространственный тип данных. Сюда входят методы на **geometry** , определенных стандартом Open Geospatial Consortium (OGC) и набор [!INCLUDE[msCoName](../../includes/msconame-md.md)] расширения для этого стандарта.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает набор методов для пространственного типа данных **geometry**. К этим методам относятся методы **geometry**, определенные стандартом OGC, и набор расширений [!INCLUDE[msCoName](../../includes/msconame-md.md)] для этого стандарта.  
  
- Погрешность геометрические методы может достигать 1.0e-7 * экстентов. Экстенты ссылаться на приблизительное максимальное расстояние между точками **geometry**объекта.
+ Допустимая погрешность методов geometry может составлять до 1.0e-7 * экстентов. Экстенты ссылаются на приблизительное максимальное расстояние между точками объекта **geometry**.
   
 ## <a name="registering-the-geometry-type"></a>Регистрация типа geometry  
  Тип **geometry** является стандартным и доступен в каждой базе данных. В таблице можно создать столбцы типа **geometry** и обращаться с данными **geometry** так же, как и с данными других типов среды CLR. Может использоваться в материализованных и нематериализованных вычисляемых столбцах.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Показан способ добавления и запроса геометрических данных  
- В следующих двух примерах иллюстрируется добавление и запрос геометрических данных. В первом примере создается таблица со столбцом идентификаторов и столбцом `geometry` типа `GeomCol1`. Третий столбец обрабатывает столбец `geometry` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geometry`, а другая — объект `Polygon` .  
+### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Отображение добавления и запроса данных типа geometry  
+ В следующих двух примерах иллюстрируется добавление и запрос данных типа geometry. В первом примере создается таблица со столбцом идентификаторов и столбцом `geometry` типа `GeomCol1`. Третий столбец обрабатывает столбец `geometry` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()`. Затем вставляются две строки: одна строка содержит экземпляр `LineString` типа `geometry`, а другая — экземпляр `Polygon`.  
   
 ```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -67,8 +67,8 @@ VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 
 GO  
 ```  
   
-### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>Б. Возвращается пересечение двух экземпляров геометрических объектов  
- Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленные ранее объекта `geometry` .  
+### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>Б. Возвращение пересечения двух экземпляров geometry  
+ Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленных ранее экземпляра `geometry`.  
   
 ```sql  
 DECLARE @geom1 geometry;  
@@ -82,7 +82,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geometry-in-a-computed-column"></a>В. Использование типа geometry в вычисляемом столбце  
- В следующем примере создается таблица с материализованным вычисляемым столбцом с помощью **geometry** типа.  
+ В следующем примере создается таблица с материализованным вычисляемым столбцом типа **geometry**.  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

@@ -1,5 +1,5 @@
 ---
-title: "IS_MEMBER (Transact-SQL) | Документы Microsoft"
+title: "IS_MEMBER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -55,36 +55,36 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *группы* **"**  
-**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **'** *group* **'**  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Имя группы Windows, которая проверяется; должно быть в формате *домена*\\*группы*. *Группа* — **sysname**.  
+ Имя группы Windows, которая проверяется; должно иметь формат *Домен*\\*Группа*. Аргумент *group* имеет тип **sysname**.  
   
- **"** *роли* **"**  
- Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] роль, проверяемой в данный момент. *роль* — **sysname** и может включать предопределенных ролей или определяемые пользователем роли, но не роли сервера базы данных.  
+ **'** *role* **'**  
+ Имя проверяемой роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *role* имеет тип **sysname** и может содержать предопределенные роли базы данных или пользовательские роли, но не роли сервера.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция IS_MEMBER возвращает следующие значения.  
   
 |Возвращаемое значение|Description|  
 |------------------|-----------------|  
-|0|Текущий пользователь не является членом *группы* или *роли*.|  
-|1|Текущий пользователь является членом *группы* или *роли*.|  
-|NULL|Либо *группы* или *роли* является недопустимым. В случае запроса от имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или имени, использующего роль приложения, возвращает NULL для группы Windows.|  
+|0|Текущий пользователь не является членом группы *group* или роли *role*.|  
+|1|Текущий пользователь является членом группы *group* или роли *role*.|  
+|NULL|Недопустимое значение *group* или *role*. В случае запроса от имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или имени, использующего роль приложения, возвращает NULL для группы Windows.|  
   
  Функция IS_MEMBER определяет членство в группе Windows, проверяя токен доступа, созданный Windows. Токен доступа не отражает изменения членства в группе, внесенные после подключения пользователя к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Членство группы Windows не может запрашиваться именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или ролью приложения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Для добавления и удаления членов из роли базы данных, используйте [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Для добавления и удаления членов из роли сервера, используйте [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Для добавления членов в роль базы данных и удаления членов из нее используйте инструкцию [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md). Для добавления членов в роль сервера и удаления членов из нее используйте инструкцию [ALTER SERVER ROLE (Transact-SQL)](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Эта функция вычисляет членство в роли, а не базовое разрешение. Например **db_owner** предопределенной роли базы данных имеет **базы данных системы УПРАВЛЕНИЯ** разрешение. Если у пользователя есть **базы данных системы УПРАВЛЕНИЯ** разрешение но он не является членом роли, эта функция неправильно сообщает, что пользователь не является членом **db_owner** роли, даже если пользователь имеет те же разрешения.  
+ Эта функция вычисляет членство в роли, а не базовое разрешение. Например, предопределенная роль базы данных **db_owner** имеет разрешение **CONTROL DATABASE**. Если у пользователя есть разрешение **CONTROL DATABASE**, но он не является членом этой роли, то эта функция справедливо сообщает, что пользователь не является членом роли **db_owner**, даже несмотря на то, что имеет те же разрешения.  
   
- Члены **sysadmin** предопределенной роли сервера введите каждой базы данных как **dbo** пользователя. Проверка разрешений для элемента **sysadmin** предопределенной роли сервера, проверяет разрешения для **dbo**, не первоначального имени входа. Поскольку **dbo** нельзя добавить к роли базы данных или не существует в группах Windows **dbo** всегда возвращает 0 (или значение NULL, если эта роль не существует).  
+ Члены предопределенной роли сервера **sysadmin** входят в каждую базу данных как пользователь **dbo**. При проверке разрешения для члена предопределенной роли сервера **sysadmin** проверяются разрешения для пользователя **dbo**, а не исходного имени для входа. Так как пользователя **dbo** невозможно добавить в роль базы данных и он отсутствует в группах Windows, для **dbo** всегда возвращается значение 0 (или NULL, если роль не существует).  
   
 ## <a name="related-functions"></a>Связанные функции  
- Чтобы определить, является ли другое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа является членом роли базы данных, используйте [IS_ROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-rolemember-transact-sql.md). Чтобы определить, является ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа является членом роли сервера, используйте [IS_SRVROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ Чтобы определить, является ли другое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом роли базы данных, воспользуйтесь функцией [IS_ROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-rolemember-transact-sql.md). Чтобы определить, является ли имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом роли сервера, воспользуйтесь функцией [IS_SRVROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере проверяется, является ли текущий пользователь членом роли базы данных или группы домена Windows.  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция IS_SRVROLEMEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
+ [Функция IS_SRVROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

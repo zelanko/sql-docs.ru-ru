@@ -1,5 +1,5 @@
 ---
-title: "RTRIM (Transact-SQL) | Документы Microsoft"
+title: "RTRIM (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает символьную строку, удаляя все завершающие пробелы.  
+  Возвращает строку символов, из которой удалены все завершающие пробелы.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ RTRIM ( character_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных. Аргумент *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
- *character_expression* должен иметь тип данных, который неявно преобразуется в **varchar**. В противном случае используйте [ПРИВЕДЕНИЯ](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
+ Аргумент *character_expression* должен иметь тип данных, который может быть неявно преобразован в тип **varchar**. В противном случае используйте [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar** или **nvarchar**  
@@ -69,8 +69,8 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>Б. простой пример  
- В следующем примере демонстрируется использование `RTRIM` для удаления конечных пробелов. Существует в настоящее время является другой строкой, объединенные в конец первой строки для отображения удалены пробелы.  
+### <a name="b-simple-example"></a>Б. Простой пример  
+ Приведенный ниже пример демонстрирует, как использовать `RTRIM` для удаления конечных пробелов. На этот раз с первой строкой сцепляется другая строка, чтобы показать, что пробелы удалены.  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
@@ -107,16 +107,16 @@ GO
   
 
   
-## <a name="see-also"></a>См. также  
- [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
- [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [STRING_SPLIT &#40; Transact-SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [ПОДСТРОКА &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
- [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "Функция HAS_DBACCESS (Transact-SQL) | Документы Microsoft"
+title: "HAS_DBACCESS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -52,20 +52,20 @@ HAS_DBACCESS ( 'database_name' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- "*имя_базы_данных*"  
- Имя базы данных, для которой пользователю необходимо получить сведения о доступе. *database_name* — **sysname**.  
+ '*database_name*'  
+ Имя базы данных, для которой пользователю необходимо получить сведения о доступе. Аргумент *database_name* имеет тип **sysname**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  HAS_DBACCESS возвращает 1, если пользователь имеет доступ к базе данных; 0, если пользователь не имеет доступа к базе данных; и NULL, если введено неправильное имя базы данных.  
   
  Функция HAS_DBACCESS возвращает значение 0, если база данных находится в автономном режиме или является подозрительной.  
   
  Функция HAS_DBACCESS возвращает значение 0, если база данных находится в однопользовательском режиме и используется другим пользователем.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -76,7 +76,7 @@ SELECT HAS_DBACCESS('AdventureWorks2012');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере проверяется, имеет ли текущий пользователь доступ к базе данных `AdventureWorksPDW2012`.  
   
 ```  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+ [IS_MEMBER (Transact-SQL)](../../t-sql/functions/is-member-transact-sql.md)   
  [Функция IS_SRVROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
   
   

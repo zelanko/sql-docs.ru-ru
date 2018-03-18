@@ -1,5 +1,5 @@
 ---
-title: "LAST_VALUE (Transact-SQL) | Документы Microsoft"
+title: "LAST_VALUE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ LAST_VALUE ( [scalar_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *scalar_expression*  
- Возвращаемое значение. *scalar_expression* может быть столбцом, вложенным запросом или другим выражением, результатом вычисления в одно значение. Другие аналитические функции использовать нельзя.  
+ Возвращаемое значение. *scalar_expression* может быть столбцом, вложенным запросом или другим выражением, результатом вычисления которого является единичное значение. Другие аналитические функции использовать нельзя.  
   
- НАД **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы.  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы.  
   
- *order_by_clause* определяет порядок данных перед применением функции. *Order_by_clause* является обязательным. *rows_range_clause* еще больше ограничивает строки внутри секции путем указания начальной и конечной точек. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *order_by_clause* определяет порядок данных перед применением функции. Аргумент *order_by_clause* является обязательным. *rows_range_clause* еще больше ограничивает строки в пределах секции, задавая начальную и конечную точки. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- К тому же типу, как *scalar_expression*.  
+ Тот же тип, что и *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Функция LAST_VALUE не детерминирована. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -108,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>Б. Использование функций FIRST_VALUE и LAST_VALUE в вычисляемом выражении  
  В следующем примере с помощью функций FIRST_VALUE и LAST_VALUE, указанных в вычисляемых выражениях, показывается разница между значением квоты продаж для текущего квартала и для первого и последнего квартала года соответственно для данного числа сотрудников. Функция FIRST_VALUE возвращает значение квоты продаж за первый квартал года, затем вычитает его из значения квоты продаж за текущий квартал. Итог возвращается в производном столбце с именем DifferenceFromFirstQuarter. За первый квартал года значение столбца DifferenceFromFirstQuarter составляет 0. Функция LAST_VALUE возвращает значение квоты продаж за последний квартал года, затем вычитает его из значения квоты продаж за текущий квартал. Итог возвращается в производном столбце с именем DifferenceFromLastQuarter. За последний квартал года значение столбца DifferenceFromLastQuarter составляет 0.  
   
- Предложение RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING необходимо в этом примере для ненулевых значений, возвращаемых в столбце DifferenceFromLastQuarter, как показано ниже. Диапазоном по умолчанию является RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW. В этом примере результатом использования указанного диапазона по умолчанию (если не включать диапазон, будет использоваться диапазон по умолчанию) будет возврат нулей в столбце DifferenceFromLastQuarter. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Предложение RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING необходимо в этом примере для ненулевых значений, возвращаемых в столбце DifferenceFromLastQuarter, как показано ниже. Диапазоном по умолчанию является RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW. В этом примере результатом использования указанного диапазона по умолчанию (если не включать диапазон, будет использоваться диапазон по умолчанию) будет возврат нулей в столбце DifferenceFromLastQuarter. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

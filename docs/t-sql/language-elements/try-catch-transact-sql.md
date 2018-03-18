@@ -1,5 +1,5 @@
 ---
-title: "КОНСТРУКЦИЯ TRY... CATCH (Transact-SQL) | Документы Microsoft"
+title: "TRY...CATCH (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -96,17 +96,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>Получение информации об ошибке  
  В области блока CATCH для получения сведений об ошибке, приведшей к выполнению данного блока CATCH, можно использовать следующие системные функции:  
   
--   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) возвращает номер ошибки.  
+-   функция [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) возвращает номер ошибки;  
   
--   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) возвращает серьезность.  
+-   функция [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) возвращает степень серьезности ошибки;  
   
--   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) возвращает код состояния ошибки.  
+-   функция [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) возвращает код состояния ошибки;  
   
--   [Функция ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) возвращает имя хранимой процедуры или триггера, в которой произошла ошибка.  
+-   функция [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) возвращает имя хранимой процедуры или триггера, в котором произошла ошибка;  
   
--   [Функция ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) возвращает номер строки в подпрограмму, которая вызвала ошибку.  
+-   функция [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) возвращает номер строки, которая вызвала ошибку, внутри подпрограммы;  
   
--   [Функция ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) возвращает полный текст сообщения об ошибке. Текст содержит значения подставляемых параметров, таких как длина, имена объектов или время.  
+-   функция [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) возвращает полный текст сообщения об ошибке. Текст содержит значения подставляемых параметров, таких как длина, имена объектов или время.  
   
  Эти функции возвращают значение NULL, если их вызов происходит вне области блока CATCH. С помощью этих функций сведения об ошибке могут быть получены из любого места внутри блока CATCH. Например, следующий скрипт демонстрирует хранимую процедуру, которая содержит функции обработки ошибок. В блоке `CATCH` конструкции `TRY…CATCH` вызывается хранимая процедура и возвращаются сведения об ошибке.  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- Ошибка\_ \* функции также работают в `CATCH` блок [скомпилированные в собственном коде хранимой процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Функции ERROR\_\* также работают в блоке `CATCH` внутри [хранимой процедуры, скомпилированной в собственном коде](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Ошибки, не обрабатываемые конструкцией TRY…CATCH  
  Конструкции TRY…CATCH не обрабатывают следующие условия.  
@@ -206,7 +206,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>Нефиксируемые транзакции и XACT_STATE  
  Если ошибка, возникшая в блоке TRY, приведет к неправильному состоянию транзакции, то транзакция будет классифицироваться как нефиксированная транзакция. Ошибка, которая обычно останавливает выполнение транзакции за пределами блока TRY, приводит к тому, что транзакция входит в нефиксируемое состояние, когда ошибка возникает внутри блока TRY. Нефиксированные транзакции могут только выполнять операции чтения или ROLLBACK TRANSACTION. Транзакция не может выполнить инструкцию на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], которая будет выполнять операции записи для COMMIT TRANSACTION. Функция XACT_STATE возвращает значение -1, если транзакция была классифицирована как нефиксированная транзакция. Когда выполнение пакета заканчивается, компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], будет выполнен откат любых активных нефиксируемых транзакций. Если при переходе транзакции в нефиксируемое состояние не было отправлено сообщение об ошибке, после завершения выполнения пакета сообщение об ошибке будет отправлено клиентскому приложению. Это указывает на то, что была обнаружена нефиксируемая транзакция и выполнен ее откат.  
   
- Дополнительные сведения о нефиксированных транзакциях и функциях XACT_STATE см. в разделе [XACT_STATE &#40; Transact-SQL &#41; ](../../t-sql/functions/xact-state-transact-sql.md).  
+ Дополнительные сведения о нефиксированных транзакциях и функции XACT_STATE см. в разделе [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -326,7 +326,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>Г. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
@@ -347,21 +347,21 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [THROW &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Уровни серьезности ошибок ядра базы данных](../../relational-databases/errors-events/database-engine-error-severities.md)   
+## <a name="see-also"></a>См. также:  
+ [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
+ [Степени серьезности ошибок ядра СУБД](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
- [Перейти к &#40; Transact-SQL &#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN... КОНЕЦ &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [Функция XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [Инструкция SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

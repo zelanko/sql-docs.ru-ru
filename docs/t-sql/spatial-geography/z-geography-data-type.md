@@ -1,5 +1,5 @@
 ---
-title: "Z (тип данных geography) | Документы Microsoft"
+title: "Z (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Значение этого свойства равно null при **geography** экземпляр не является точкой, а также для любого **точки** экземпляра, для которой не установлено.  
+ Значение этого свойства равно NULL, если экземпляр **geography** не имеет тип Point, а также для любого экземпляра **Point**, для которого оно не задано.  
   
- Это свойство предназначено только для чтения.  
+ Это свойство доступно только для чтения.  
   
  Координаты по оси Z не используются ни в каких вычислениях, выполненных библиотекой, и не проходят ни через какие библиотечные изменения.  
   
@@ -64,9 +64,9 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [М &#40; тип данных geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M (тип данных geography)](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM (тип данных geography)](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

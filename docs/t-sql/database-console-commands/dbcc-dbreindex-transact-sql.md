@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC DBREINDEX (Transact-SQL) | Документы Microsoft"
+title: "DBCC DBREINDEX (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Перестраивает один или несколько индексов для таблицы в указанной базе данных.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Перестраивает один или более индексов для таблицы в указанной базе данных.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Используйте [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого инструкцию [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,15 +59,15 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>Аргументы  
  *имя_таблицы*  
- Имя таблицы, содержащей указанный индекс или индексы для перестроения. Имена таблиц должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md)*.*  
+ Имя таблицы, содержащей указанный индекс или индексы для перестроения. Имена таблиц должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md)*.*  
   
  *index_name*  
- Имя перестраиваемого индекса. Имена индексов должны соответствовать правилам для идентификаторов. Если *index_name* указано, *table_name* должен быть указан. Если *index_name* не задано или равно "«, перестраиваются все индексы для таблицы.  
+ Имя перестраиваемого индекса. Имена индексов должны соответствовать правилам для идентификаторов. Если аргумент *index_name* задан, также должен быть указан аргумент *table_name*. Если аргумент *index_name* не задан или имеет значение " ", перестраиваются все индексы таблицы.  
   
  *fillfactor*  
- Процентная доля пространства на каждой странице индексов при создании или перестроении индекса. *значение коэффициента заполнения* заменяет коэффициент заполнения при создании индекса, становится новое значение по умолчанию для данного индекса и любых других некластеризованных индексов, перестраиваемых из-за перестроения кластеризованного индекса.  
- Когда *fillfactor* равно 0, инструкция DBCC DBREINDEX используется значение коэффициента заполнения для индекса последнего заданного. Это значение хранится в **sys.indexes** представления каталога.   
- Если *fillfactor* указано, *table_name* и *index_name* должен быть указан. Если *fillfactor* не указан, используется по умолчанию коэффициент заполнения, 100,. Дополнительные сведения см. в статье [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
+ Процентная доля пространства на каждой странице индексов при создании или перестроении индекса. Аргумент *fillfactor* заменяет коэффициент заполнения, указанный при создании индекса, и становится новым значением по умолчанию для данного индекса и любых других некластеризованных индексов, перестраиваемых из-за перестроения кластеризованного индекса.  
+ Если значение аргумента *fillfactor* равно 0, в инструкции DBCC DBREINDEX используется последнее указанное значение коэффициента заполнения для индекса. Это значение хранится в представлении каталога **sys.indexes**.   
+ Если аргумент *fillfactor* задан, также должны быть указаны аргументы *table_name* и *index_name*. Если аргумент *fillfactor* не задан, используется установленный по умолчанию коэффициент заполнения 100. Дополнительные сведения см. в статье [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
  WITH NO_INFOMSGS  
  Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
@@ -79,7 +79,7 @@ DBCC DBREINDEX
 
 В отличие от инструкций DBCC INDEXDEFRAG или от ALTER INDEX с параметром REORGANIZE, DBCC DBREINDEX является операцией вне сети. Если перестраивается некластеризованный индекс, для запрашиваемой таблицы в течение операции удерживается совместная блокировка. Это предотвращает изменения в таблице. Если перестраивается кластеризованный индекс, удерживается монопольная блокировка таблицы. Это предотвращает какой-либо доступ к таблице, делая ее вне сети. Для оперативного перестроения индекса используется инструкция ALTER INDEX REBUILD с параметром ONLINE; она также используется для управления степенью параллелизма в течение операции перестроения индекса.
 
-Дополнительные сведения о выборе метода перестроения или реорганизации индекса см. в разделе [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md) .
+Дополнительные сведения о выборе метода перестроения или реорганизации индекса см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
   
 ## <a name="restrictions"></a>Ограничения  
 Использование инструкции DBCC DBREINDEX не поддерживается для следующих объектов:
@@ -95,7 +95,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Разрешения  
-Вызывающий объект должен быть владельцем таблицы или быть членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных.
+Вызывающий должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_ddladmin**.
   
 ## <a name="examples"></a>Примеры  
 ### <a name="a-rebuilding-an-index"></a>A. Перестроение индекса  
@@ -118,12 +118,12 @@ DBCC DBREINDEX ('HumanResources.Employee', ' ', 70);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
-[sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
   

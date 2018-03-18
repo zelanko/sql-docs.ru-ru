@@ -1,5 +1,5 @@
 ---
-title: "ConvexHullAggregate (тип данных geography) | Документы Microsoft"
+title: "ConvexHullAggregate (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает выпуклую оболочку для заданного набора **geography** объектов.
+Возвращает выпуклую оболочку для заданного набора объектов **geography**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,24 +45,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Аргументы  
  *geography_operand*  
- — **Geography** столбец таблицы типа, представляющий набор **geography** объектов.  
+ Столбец таблицы типа **geography**, представляющий набор объектов **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 ## <a name="exception"></a>Исключение  
- Вызывает исключение `FormatException` при наличии недопустимых входных значений. В разделе [STIsValid &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ Вызывает исключение `FormatException` при наличии недопустимых входных значений. См. раздел [STIsValid (тип данных geography)](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 ## <a name="remarks"></a>Remarks  
- Метод возвращает **null** при входных данных пуст или содержит различными идентификаторами SRID. В разделе [идентификаторы пространственных ссылок &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ Метод возвращает значение **NULL**, если входные данные пусты или содержат различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Метод игнорирует **null** входных данных.  
+ Метод не обрабатывает входные значения **NULL**.  
   
 > [!NOTE]  
->  Метод возвращает **null** при входе присутствуют только значения **null**.  
+>  Метод возвращает значение **NULL**, если входными являются значения **NULL**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается выпуклая оболочка набора **geography** объектов.  
+ В следующем примере возвращается выпуклая оболочка набора объектов **geography**.  
   
  ```
  USE AdventureWorks2012  
@@ -72,7 +72,7 @@ ConvexHullAggregate ( geography_operand )
  WHERE City LIKE ('Bothell')
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

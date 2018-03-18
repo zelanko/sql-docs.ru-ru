@@ -1,5 +1,5 @@
 ---
-title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Документы Microsoft"
+title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Задает режим BEGIN TRANSACTION *неявное*, для соединения.  
+  Устанавливает *неявный* режим BEGIN TRANSACTION для подключения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Если, система находится в *неявное* режим транзакции. Это означает, что если @@TRANCOUNT = 0, любой из следующих инструкций Transact-SQL начинает новую транзакцию. Это эквивалентно невидимым BEGIN TRANSACTION, выполняемая сначала:  
+ Если установлено значение ON, система находится в *неявном* режиме транзакции. Это означает, что если @@TRANCOUNT = 0, любая из следующих инструкций Transact-SQL начинает новую транзакцию. Это эквивалентно выполнению невидимой инструкции BEGIN TRANSACTION:  
   
 ||||  
 |-|-|-|  
@@ -61,21 +61,21 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |Delete|OPEN|UPDATE|  
 |DROP|, и делает это по-другому.|, и делает это по-другому.|  
   
- При задано значение OFF, каждый из предыдущей инструкции T-SQL связывает невидимым BEGIN TRANSACTION и невидимых инструкции COMMIT TRANSACTION. Если указан аргумент OFF, мы говорим режим транзакции — *autocommit*. Если ваш код T-SQL выдает наглядно BEGIN TRANSACTION, мы говорим режим транзакции — *явных*.  
+ Если задано значение OFF, каждая из предыдущих инструкций T-SQL ограничена невидимыми инструкциями BEGIN TRANSACTION и COMMIT TRANSACTION. При значении OFF транзакция выполняется в режиме *автофиксации*. Если ваш код T-SQL выдает видимую инструкцию BEGIN TRANSACTION, транзакция выполняется в *явном* режиме.  
   
- Существует несколько clarifying точки для понимания.  
+ Необходимо понять несколько важных моментов:  
   
--   Когда режим транзакции является неявным, не видны BEGIN TRANSACTION выдается if @@trancount > 0 уже. Тем не менее, все явные инструкции BEGIN TRANSACTION по-прежнему приращения @@TRANCOUNT.  
+-   Когда транзакция выполняется в неявном режиме, невидимая инструкция BEGIN TRANSACTION не выдается, если @@trancount уже > 0. Тем не менее все явные инструкции BEGIN TRANSACTION по-прежнему имеют шаг приращения @@TRANCOUNT.  
   
--   После завершения вашего инструкций INSERT и все остальное в единицу работы, необходимо выполнить инструкции COMMIT TRANSACTION до @@TRANCOUNT уменьшается до 0. Или можно выполнить один ROLLBACK TRANSACTION.  
+-   После завершения инструкции INSERT и остальных единиц работы необходимо выполнить инструкции COMMIT TRANSACTION, пока @@TRANCOUNT не вернется к значению 0. Или выполнить одну инструкцию ROLLBACK TRANSACTION.  
   
 -   Инструкции SELECT, которые не производят выборку из таблицы, не запускают неявные транзакции. Например, `SELECT GETDATE();` или `SELECT 1, 'ABC';` не требуют транзакций.  
   
--   Неявные транзакции могут неожиданно включаться ON из-за значения по умолчанию ANSI. Дополнительные сведения см. [SET ANSI_DEFAULTS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
+-   Неявные транзакции могут неожиданно получить значение ON в связи со значениями по умолчанию ANSI. Дополнительные сведения см. в разделе [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md).  
   
-     SET IMPLICIT_TRANSACTIONS ON применяется редко. В большинстве случаев, где IMPLICIT_TRANSACTIONS задано как ON это так, как был сделан выбор SET ANSI_DEFAULTS ON.  
+     Инструкция IMPLICIT_TRANSACTIONS ON не пользуется популярностью. В большинстве случаев значение ON для параметра IMPLICIT_TRANSACTIONS возникает из-за выбора SET ANSI_DEFAULTS ON.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственного клиента OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента IMPLICIT_TRANSACTIONS значение OFF при соединении автоматически устанавливают. Инструкция SET IMPLICIT_TRANSACTIONS по умолчанию используется значение OFF для соединений с помощью управляемого поставщика SQLClient, а также для SOAP-запросов, получаемых через конечные точки HTTP.  
+-   Поставщик OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при соединении автоматически устанавливают для параметра IMPLICIT_TRANSACTIONS значение OFF. SET IMPLICIT_TRANSACTIONS по умолчанию устанавливается в значение OFF для соединений с управляемым поставщиком SQLClient и SOAP-запросов, получаемых через конечные точки протокола HTTP.  
   
  Чтобы просмотреть текущее значение параметра для IMPLICIT_TRANSACTIONS, выполните следующий запрос.  
   
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ```  
   
 ## <a name="examples"></a>Примеры  
- Следующий сценарий Transact-SQL выполняется несколько разных тестовых случаев. Текстовые выходные данные также предоставляется, который показывает, каким образом подробные и полученный в результате каждого тестового случая.  
+ Следующий сценарий Transact-SQL запускает несколько разных тестовых случаев. Также предоставляются текстовые выходные данные, подробно описывающие поведение и результаты в каждом тестовом случае.  
   
 ```sql  
 -- Transact-SQL.  
@@ -169,7 +169,7 @@ DROP TABLE dbo.t1;
 go  
 ```  
   
- Далее следует текстовые выходные данные из предыдущего сценария Transact-SQL.  
+ Далее приводятся текстовые выходные данные из предыдущего сценария Transact-SQL.  
   
 ```sql  
 -- Text output from Transact-SQL:  
@@ -207,17 +207,17 @@ go
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [FETCH &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
+ [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [ОТКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)   
+ [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
- [После УСЕЧЕНИЯ таблицы &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  
   
   

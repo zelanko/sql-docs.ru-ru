@@ -1,5 +1,5 @@
 ---
-title: "DROP FULLTEXT INDEX (Transact-SQL) | Документы Microsoft"
+title: "DROP FULLTEXT INDEX (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP FULLTEXT INDEX ON table_name
  *имя_таблицы*  
  Имя таблицы или индексированного представления, содержащих удаляемый полнотекстовый индекс.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Перед использованием команды DROP FULLTEXT INDEX необязательно удалять из полнотекстового индекса все столбцы.  
   
-## <a name="permissions"></a>Permissions  
- Пользователь должен обладать разрешением ALTER для таблицы или индексированного представления или быть членом **sysadmin** предопределенной роли сервера или **db_owner** или **db_ddladmin** предопределенных ролей базы данных.  
+## <a name="permissions"></a>Разрешения  
+ Необходимо разрешение ALTER на доступ к таблице или представлению либо членство в предопределенной роли сервера **sysadmin** или предопределенных ролях базы данных **db_owner** или **db_ddladmin**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется полнотекстовый индекс в таблице `JobCandidate`.  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.fulltext_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Полнотекстовый поиск](../../relational-databases/search/full-text-search.md)  

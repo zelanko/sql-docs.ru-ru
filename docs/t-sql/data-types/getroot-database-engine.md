@@ -1,5 +1,5 @@
 ---
-title: "GetRoot (компонент Database Engine) | Документы Microsoft"
+title: "GetRoot (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getroot-database-engine"></a>GetRoot (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает корневой элемент дерева иерархии. GetRoot() является статическим методом.
+Возвращает корневой элемент дерева иерархии. GetRoot() — статический метод.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
-**Возвращаемый тип SQL Server: hierarchyid**
+**Возвращаемый тип SQL Server:hierarchyid**
   
-**Возвращаемый тип CLR: SqlHierarchyId**
+**Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Используется для определения корневого узла в иерархическом дереве.
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +74,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 SqlHierarchyId.GetRoot()  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

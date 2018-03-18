@@ -1,5 +1,5 @@
 ---
-title: "@@ROWCOUNT (Transact-SQL) | Документы Microsoft"
+title: "@@ROWCOUNT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;Количество СТРОК (Transact-SQL)
+# <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает число строк, затронутых при выполнении последней инструкции. Если число строк превышает 2 миллиарда, используйте [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
+  Возвращает число строк, затронутых при выполнении последней инструкции. Если число строк превышает 2 миллиарда, используйте инструкцию [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,28 +51,28 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]операторы, можно задать значение в @@ROWCOUNT одним из следующих способов:  
+## <a name="remarks"></a>Remarks  
+ Инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] могут устанавливать значение в @@ROWCOUNT указанными ниже способами.  
   
--   Значение@ROWCOUNT на число строк, задействованных или считанных. Строки могут быть отосланы или не отосланы клиенту.  
+-   Установка значения @@ROWCOUNT в число считанных или измененных строк. Строки могут быть отосланы или не отосланы клиенту.  
   
--   Сохранить@ROWCOUNT из предыдущего выполнения инструкции.  
+-   Сохранение значения @@ROWCOUNT из предыдущего выполнения инструкции.  
   
--   Сброс@ROWCOUNT 0, но не возвращать значение клиенту.  
+-   Сброс значения @@ROWCOUNT в 0 без возврата значения клиенту.  
   
- Инструкции, которые создают простые назначения, всегда устанавливают @@ROWCOUNT значение 1. Строки не отправляются клиенту. Примерами таких инструкций являются: значение*local_variable*, RETURN, READTEXT и выберите без запроса инструкции, такие как SELECT GETDATE() или SELECT **"***общего текстового* **'**.  
+ Инструкции, которые выполняют простые присваивания, всегда устанавливают значение @@ROWCOUNT равным 1. Строки не отправляются клиенту. Примерами таких инструкций являются SET @*local_variable*, RETURN, READTEXT и инструкции SELECT без запроса, такие как SELECT GETDATE() или SELECT **'***Generic Text***'**.  
   
- Инструкции, которые осуществляют присвоение в запросе или используют RETURN в наборе запроса @@ROWCOUNT значение, число строк, задействованных или считанных запросом, например: ВЫБЕРИТЕ*local_variable* = c1 FROM t1.  
+ Инструкции, которые осуществляют присвоение в запросе или используют RETURN, устанавливают значение @@ROWCOUNT равным числу строк, задействованных или считанных запросом, например SELECT @*local_variable* = c1 FROM t1.  
   
- Набор инструкций языка DML обработки данных @@ROWCOUNT значение, количество строк, затронутых запросом и возвращают это значение клиенту. DML-инструкции могут не отправлять строки клиенту.  
+ Инструкции языка обработки данных DML задают значение @@ROWCOUNT равным числу строк, задействованных в запросе, и возвращают это значение клиенту. DML-инструкции могут не отправлять строки клиенту.  
   
- Инструкции DECLARE CURSOR и FETCH значение @@ROWCOUNT значение 1.  
+ Инструкции DECLARE CURSOR и FETCH задают значение @@ROWCOUNT равным 1.  
   
- Инструкции EXECUTE сохраняют предыдущих @@ROWCOUNT.  
+ Инструкции EXECUTE сохраняют предыдущее значение @@ROWCOUNT.  
   
- Операторы, такие как использование, ЗАДАЙТЕ \<параметр >, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION или COMMIT TRANSACTION присваивают параметру ROWCOUNT значение 0.  
+ Такие инструкции, как USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION или COMMIT TRANSACTION, сбрасывают значение ROWCOUNT в 0.  
   
- Скомпилированных в собственном коде хранимые процедуры сохраняют предыдущих @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкции в хранимых процедурах, скомпилированных в собственном коде, не устанавливайте@ROWCOUNT. Дополнительные сведения см. в разделе [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Скомпилированные в собственном коде хранимые процедуры сохраняют предыдущее значение @@ROWCOUNT. Инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], находящиеся внутри скомпилированных в собственном коде хранимых процедур, не устанавливают значение @@ROWCOUNT. Дополнительные сведения см. в статье [Хранимые процедуры, скомпилированные в собственном коде](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример выполняет инструкцию `UPDATE` и использует `@@ROWCOUNT` для определения того, были ли изменены строки.  
@@ -90,6 +90,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SET ROWCOUNT &#40; Transact-SQL &#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
+ [SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

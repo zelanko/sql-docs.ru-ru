@@ -1,5 +1,5 @@
 ---
-title: "DBCC SQLPERF (Transact-SQL) | Документы Microsoft"
+title: "DBCC SQLPERF (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Выдает статистику использования места, занятого журналом транзакций на диске, для всех баз данных. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также может использоваться для сброса статистики кратковременных блокировок и ожидания.
+Выдает статистику использования места, занятого журналом транзакций на диске, для всех баз данных. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это может применяться для сброса статистики кратковременных блокировок и ожидания.
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ DBCC SQLPERF
   
 ## <a name="arguments"></a>Аргументы  
 LOGSPACE  
-Возвращает текущий размер журнала транзакций и процент пространства журнала, используемого для каждой базы данных. Эти сведения можно используйте для мониторинга объема пространства, используемого в журнале транзакций.
+Возвращает текущий размер журнала транзакций и процент пространства журнала, используемого для каждой базы данных. С помощью этих данных можно контролировать используемое пространство в журнале транзакций.
 
 > [!IMPORTANT]
-> Дополнительные сведения о об использовании пространства для журнала транзакций, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], посвящены [примечания](#Remarks) в этой статье.
+> Дополнительные сведения об использовании пространства для журнала транзакций начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] см. в разделе [Примечания](#Remarks) в этой статье.
   
 **"sys.dm_os_latch_stats"**, CLEAR  
-Сбрасывает статистику кратковременных блокировок. Дополнительные сведения см. в разделе [sys.dm_os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Этот параметр не доступен в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Сбрасывает статистику кратковременных блокировок. Дополнительные сведения см. в разделе [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Этот параметр не доступен в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 **"sys.dm_os_wait_stats"**, CLEAR  
 Сбрасывает статистику ожидания. Дополнительные сведения см. в разделе [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Этот параметр не доступен в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -78,20 +78,20 @@ WITH NO_INFOMSGS
   
 |Имя столбца|Определение|  
 |---|---|
-|**Имя базы данных**|Имя базы данных, которой соответствует отображаемая статистика журнала.|  
-|**Размер журнала (МБ)**|Текущий размер, выделенный для журнала. Этот значение всегда меньше объема, исходно выделенного для журнала, так как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] резервирует небольшую часть места на диске для внутренних данных заголовка.|  
-|**Использовано журнала (%)**|Процент файла журнала, используемого для хранения данных журнала транзакций.|  
-|**Состояние**|Состояние файла журнала. Значение всегда равно 0.|  
+|**Database Name**|Имя базы данных, которой соответствует отображаемая статистика журнала.|  
+|**Log Size (MB)**|Текущий размер, выделенный для журнала. Этот значение всегда меньше объема, исходно выделенного для журнала, так как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] резервирует небольшую часть места на диске для внутренних данных заголовка.|  
+|**Log Space Used (%)**|Доля (в процентах) файла журнала, используемого для хранения сведений журнала транзакций.|  
+|**Состояние**|Состояние файла журнала. Всегда равно 0.|  
   
 ## <a name="Remarks"></a> Замечания  
-Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], используйте [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) динамического административного Представления вместо `DBCC SQLPERF(LOGSPACE)`, чтобы вернуть сведения об использовании пространства для журнала транзакций каждой базы данных.    
+Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] используйте динамическое административное представление [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) `DBCC SQLPERF(LOGSPACE)` для просмотра сведений об использовании пространства для журнала транзакций в каждой базе данных.    
  
-В журнале транзакций записывается каждая транзакция, выполненная в базе данных. Дополнительные сведения см. [резервная копия журнала транзакций &#40; SQL Server &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md) и [архитектура журнала транзакций SQL Server и руководство по управлению](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
+В журнале транзакций записывается каждая транзакция, выполненная в базе данных. Дополнительные сведения см. в разделах [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) и [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Разрешения  
-На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запуска `DBCC SQLPERF(LOGSPACE)` требуется `VIEW SERVER STATE` разрешение на сервере. Для сброса статистики кратковременных блокировок и ожидания необходимо `ALTER SERVER STATE` разрешение на сервере.
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запуска `DBCC SQLPERF(LOGSPACE)` требуется разрешение `VIEW SERVER STATE` на сервер. Для сброса статистики кратковременных блокировок и ожидания необходимо разрешение `ALTER SERVER STATE` на сервер.
   
-На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора. Сброс статистики кратковременных блокировок и ожидания не поддерживаются.
+В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней Premium необходимо разрешение `VIEW DATABASE STATE` в базе данных. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней Standard и Basic требуется учетная запись администратора [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Сброс статистики кратковременных блокировок и ожидания не поддерживаются.
   
 ## <a name="examples"></a>Примеры  
   
@@ -122,12 +122,12 @@ AdventureWorks 19.554688    17.748701          0
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
-[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
-[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
 [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
+[sys.dm_db_log_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

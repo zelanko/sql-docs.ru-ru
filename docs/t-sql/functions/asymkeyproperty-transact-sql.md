@@ -1,5 +1,5 @@
 ---
-title: "ASYMKEYPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "ASYMKEYPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -45,22 +45,22 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*Идентификатор Key_ID*  
-Идентификатор Key_ID асимметричного ключа в базе данных. Чтобы найти значение Key_ID, если известно только имя ключа, используйте функцию ASYMKEY_ID. *Key_ID* имеет тип данных **int**.
+*Key_ID*  
+Идентификатор Key_ID асимметричного ключа в базе данных. Чтобы найти значение Key_ID, если известно только имя ключа, используйте функцию ASYMKEY_ID. Аргумент *Key_ID* имеет тип данных **int**.
   
-**"**algorithm_desc**"**  
+**'**algorithm_desc**'**  
 Указывает, что в выходных данных возвращается описание алгоритма асимметричного ключа. Доступно только для асимметричных ключей, созданных с помощью модуля расширенного управления ключами.
   
-**"**string_sid**"**  
-Указывает, что в выходных данных возвращается идентификатор безопасности асимметричного ключа в **nvarchar()** формат.
+**'**string_sid**'**  
+Указывает, что в выходных данных возвращается идентификатор безопасности асимметричного ключа в формате **nvarchar()**.
   
-**"**sid**"**  
+**'**sid**'**  
 Указывает, что в выходных данных возвращается идентификатор безопасности асимметричного ключа в двоичном формате.
   
-## <a name="return-types"></a>Возвращаемые типы  
+## <a name="return-types"></a>Типы возвращаемых данных  
 **sql_variant**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Требует некоторых разрешений асимметричного ключа, а также подтверждения разрешения вызывающей стороны на VIEW с этим асимметричным ключом.
   
 ## <a name="examples"></a>Примеры  
@@ -74,16 +74,16 @@ ASYMKEYPROPERTY(256, 'sid') AS SID ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [Представления каталога безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
+[ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)  
+[SYMKEYPROPERTY (Transact-SQL)](../../t-sql/functions/symkeyproperty-transact-sql.md)
   
   

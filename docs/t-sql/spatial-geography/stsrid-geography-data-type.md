@@ -1,5 +1,5 @@
 ---
-title: "STSrid (тип данных geography) | Документы Microsoft"
+title: "STSrid (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** представляет собой целое число, представляющее идентификатор пространственной ссылки (SRID) экземпляра.  
+  **STSrid** является целым числом, представляющим собой идентификатор пространственной ссылки (SRID) экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **int**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Тип CLR: **SqlInt32**  
   
@@ -67,8 +67,8 @@ SET @g.STSrid = 4267;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Идентификаторы пространственных ссылок &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="see-also"></a>См. также:  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Идентификаторы пространственных ссылок (SRIDs)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

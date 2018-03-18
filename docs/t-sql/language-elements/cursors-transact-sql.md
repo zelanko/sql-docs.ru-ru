@@ -1,5 +1,5 @@
 ---
-title: "Курсоры (Transact-SQL) | Документы Microsoft"
+title: "Курсоры (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>Курсоры (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] операторы создают полный результирующий набор, но есть время, когда результаты удобнее обрабатывать построчно одновременно. Открытие курсора на результирующем наборе делает возможной его построчную обработку. Можно назначить курсору переменную или параметр с **курсор** тип данных.  
+  Инструкции [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создают полный результирующий набор, но бывают случаи, когда результаты удобнее обрабатывать построчно. Открытие курсора на результирующем наборе делает возможной его построчную обработку. Можно присвоить курсор переменной или параметру с типом данных **cursor**.  
   
  Операции с курсором поддерживаются в таких инструкциях:  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Курсоры](../../relational-databases/cursors.md)  
   
   

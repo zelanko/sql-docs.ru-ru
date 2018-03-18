@@ -1,5 +1,5 @@
 ---
-title: "Удаление ТИПА сообщений (Transact-SQL) | Документы Microsoft"
+title: "DROP MESSAGE TYPE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -67,9 +67,9 @@ DROP MESSAGE TYPE message_type_name
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER MESSAGE TYPE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [Создание ТИПА сообщений &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

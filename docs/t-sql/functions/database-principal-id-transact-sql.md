@@ -1,5 +1,5 @@
 ---
-title: "DATABASE_PRINCIPAL_ID (Transact-SQL) | Документы Microsoft"
+title: "DATABASE_PRINCIPAL_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает идентификационный номер участника в текущей базе данных. Дополнительные сведения об участниках см. в разделе [участников &#40; компонент Database Engine &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Возвращает идентификационный номер участника в текущей базе данных. Дополнительные сведения о субъектах см. в статье [Субъекты (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,14 +49,14 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>Аргументы  
 *principal_name*  
-Является выражением типа **sysname** , представляющее участника.  
-Когда *principal_name* — этот параметр опущен, возвращается идентификатор текущего пользователя. Необходимо поставить скобки.
+Выражение типа **sysname**, представляющее субъект.  
+Если аргумент *principal_name* не задан, возвращается идентификатор текущего пользователя. Необходимо поставить скобки.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **int**  
 Значение NULL, когда участник базы данных не существует
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Функция DATABASE_PRINCIPAL_ID может использоваться в списке выборки, в предложении WHERE и в любом месте, где разрешено выражение. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
@@ -77,7 +77,7 @@ SELECT DATABASE_PRINCIPAL_ID('db_owner');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
 [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

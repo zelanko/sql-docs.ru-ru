@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Документы Microsoft"
+title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,17 +51,17 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Парольная фраза*  
+ *passphrase*  
  Парольная фраза, из которой создается симметричный ключ.  
   
  @passphrase  
- Переменная типа **nvarchar**, **char**, **varchar**, **двоичных**, **varbinary**, или **nchar** содержащая парольную фразу, из которой создается симметричный ключ.  
+ Переменная типа **nvarchar**, **char**, **varchar**, **binary**, **varbinary** или **nchar**, содержащая парольную фразу, по которой создается симметричный ключ.  
   
- *открытый текст*  
+ *cleartext*  
  Открытый текст для шифрования.  
   
  @cleartext  
- Переменная типа **nvarchar**, **char**, **varchar**, **двоичных**, **varbinary**, или **nchar** содержащая открытый текст. Максимальный размер 8 000 байт.  
+ Переменная типа **nvarchar**, **char**, **varchar**, **binary**, **varbinary** или **nchar**, содержащая открытый текст. Максимальный размер 8 000 байт.  
   
  *add_authenticator*  
  Указывает, будут ли вместе с аргументом cleartext зашифрована структура проверки подлинности. Значение 1, если структура проверки подлинности будет добавлено. **int**.  
@@ -69,16 +69,16 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Показывает, будет ли зашифрован хэш вместе с открытым текстом.  
   
- *Средство проверки подлинности*  
+ *authenticator*  
  Данные, из которых формируется структура проверки подлинности. **sysname**.  
   
  @authenticator  
  Переменная, содержащая данные, из которых формируется структура проверки подлинности.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Парольная фраза представляет собой пароль, содержащий пробелы. Преимущество использования парольной фразы состоит в том, что смысловая фраза или предложение легче для запоминания, чем длинная строка символов.  
   
  Данная функция не проверяет сложность пароля.  
@@ -108,7 +108,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DECRYPTBYPASSPHRASE &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+ [DECRYPTBYPASSPHRASE (Transact-SQL)](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

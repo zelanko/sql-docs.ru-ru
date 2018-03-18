@@ -1,5 +1,5 @@
 ---
-title: "Создание ПОСТАВЩИКА служб ШИФРОВАНИЯ (Transact-SQL) | Документы Microsoft"
+title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Имя поставщика расширенного управления ключами.  
   
  *path_of_DLL*  
- Путь к DLL-библиотеке, реализующей интерфейс расширенного управления ключами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При использовании **соединитель SQL Server для хранилища ключей Microsoft Azure** расположение по умолчанию — **"C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll '**.  
+ Путь к DLL-библиотеке, реализующей интерфейс расширенного управления ключами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При использовании **соединителя SQL Server для Microsoft Azure Key Vault** расположением по умолчанию является **C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Все ключи, созданные поставщиком, ссылаются на поставщик по его идентификатору GUID. Идентификатор GUID сохраняются во всех версиях DLL-библиотеки.  
   
- Библиотека, реализующая интерфейс SQLEKM, должна быть подписана цифровой подписью с использованием любого сертификата. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнит проверку подписи. Сюда входят цепочка сертификатов, который должен иметь установлен в корень **доверенных корневых сертификатов центров** расположение в системе Windows. Если подпись не проверяется правильно, инструкции CREATE CRYPTOGRAPHIC PROVIDER завершится ошибкой. Дополнительные сведения о сертификатах и цепочках сертификатов см. в разделе [SQL Server сертификаты и асимметричные ключи](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ Библиотека, реализующая интерфейс SQLEKM, должна быть подписана цифровой подписью с использованием любого сертификата. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнит проверку подписи. При этом проверяется цепочка сертификатов, корень которой должен быть установлен в расположение **Trusted Root Cert Authorities** системной папки Windows. Если проверка подписи не выполнена должным образом, выполнение инструкции CREATE CRYPTOGRAPHIC PROVIDER оканчивается неудачей. Дополнительные сведения о сертификатах и цепочках сертификатов см. в разделе [Сертификаты SQL Server и асимметричные ключи](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Когда поставщик EKM DLL-библиотек реализует не все необходимые методы, то инструкция CREATE CRYPTOGRAPHIC PROVIDER может вернуть ошибку 33085:  
   
@@ -74,11 +74,11 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
- Требуется разрешение CONTROL SERVER или членство в **sysadmin** предопределенной роли сервера.  
+## <a name="permissions"></a>Разрешения  
+ Требует разрешения CONTROL SERVER или членства в предопределенной роли сервера **sysadmin**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается поставщик служб шифрования вызывается `SecurityProvider` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из DLL-файла. DLL-файл называется `c:\SecurityProvider\SecurityProvider_v1.dll` и устанавливается на сервере. Сначала необходимо установить на сервере сертификат поставщика.  
+ В следующем примере из DLL-файла в `SecurityProvider` создается поставщик служб шифрования с именем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот DLL-файл имеет имя `c:\SecurityProvider\SecurityProvider_v1.dll` и установлен на сервере. Сначала необходимо установить на сервере сертификат поставщика.  
   
 ```  
 -- Install the provider  

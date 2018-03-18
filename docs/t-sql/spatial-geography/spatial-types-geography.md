@@ -1,5 +1,5 @@
 ---
-title: "Geography (Transact-SQL) | Документы Microsoft"
+title: "geography (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>Пространственные типы - geography
+# <a name="spatial-types---geography"></a>Пространственные типы — geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Тип пространственных данных **geography**, реализуется в виде .NET тип среды CLR (CLR) данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот тип представляет данные в системе координат круглой земли. Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** хранит данные эллипсоидальной (сферической) Земли, такие как координаты широты и долготы GPS.  
+  Географический пространственный тип данных **geography** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализуется как тип данных среды CLR .NET. Этот тип представляет данные в системе координат круглой земли. Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** хранит данные эллипсоидальной (сферической) Земли, такие как координаты широты и долготы GPS.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает набор методов для **geography** пространственный тип данных. Это включает методы для **geography** , определенных стандартом Open Geospatial Consortium (OGC) и набор [!INCLUDE[msCoName](../../includes/msconame-md.md)] расширения для этого стандарта.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает набор методов для пространственного типа данных **geography**. К ним относятся методы для работы с типом **geography**, как они определены в спецификации открытого геопространственного консорциума (OGC), а также набор расширений [!INCLUDE[msCoName](../../includes/msconame-md.md)] для этого стандарта.  
  
- Погрешность **geography** методы могут быть размером до 1.0e-7 * экстентов. Экстенты ссылаться на приблизительное максимальное расстояние между точками **geography**объекта.
+ Допустимая погрешность методов **geography** может составлять до 1,0e-7 * экстентов. Экстенты ссылаются на приблизительное максимальное расстояние между точками объекта **geography**.
   
 
 ## <a name="registering-the-geography-type"></a>Регистрация типа geography  
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>В. Использование типа geography в вычисляемом столбце  
- В следующем примере создается таблица с материализованным вычисляемым столбцом с помощью **geography** типа.  
+ В приведенном ниже примере создается таблица с материализованным вычисляемым столбцом типа **geography**.  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -98,7 +98,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)   
 
   

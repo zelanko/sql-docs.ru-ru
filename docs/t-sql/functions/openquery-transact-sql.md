@@ -1,5 +1,5 @@
 ---
-title: "OPENQUERY (Transact-SQL) | Документы Microsoft"
+title: "OPENQUERY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ OPENQUERY ( linked_server ,'query' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *связанный_сервер*  
+ *linked_server*  
  Идентификатор, представляющий имя связанного сервера.  
   
- **"** *запроса* **"**  
+ **'** *query* **'**  
  Строка запроса, выполненного в связанном сервере. Максимальная длина строки 8 КБ.  
   
 ## <a name="remarks"></a>Remarks  
@@ -96,7 +96,7 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>Г. Выполнение передаваемого запроса SELECT  
- В следующем примере используется передаваемый `SELECT` запрос, чтобы выбрать строки, созданной в примере в.  
+ В приведенном ниже примере используется передаваемый запрос `SELECT` для выбора строки, вставленной в примере В.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
@@ -108,11 +108,11 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [Функции наборов строк &#40; Transact-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Функции наборов строк (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   

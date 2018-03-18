@@ -1,5 +1,5 @@
 ---
-title: "APP_NAME (Transact-SQL) | Документы Microsoft"
+title: "APP_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ APP_NAME  ( )
 ## <a name="return-types"></a>Типы возвращаемых значений  
 **nvarchar(128)**
   
-## <a name="remarks"></a>Замечания  
-Используйте **APP_NAME** при необходимости выполнять различные действия для различных приложений. Например, разное форматирование даты для разных приложений или возвращение информационного сообщения в определенные приложения.
+## <a name="remarks"></a>Remarks  
+Используйте **APP_NAME**, если необходимо выполнить разные действия для разных приложений. Например, разное форматирование даты для разных приложений или возвращение информационного сообщения в определенные приложения.
   
-Чтобы задать имя приложения в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в **подключиться к компоненту Database Engine** диалоговое окно, нажмите кнопку **параметры**. На **Дополнительные параметры соединения** укажите **приложения** атрибута в формате`;app='application_name'`
+Чтобы задать имя приложения в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], в диалоговом окне **Подключение к ядру СУБД** щелкните элемент **Параметры**. На вкладке **Дополнительные параметры подключения** укажите атрибут **app** в формате `;app='application_name'`.
   
 ## <a name="examples"></a>Примеры  
 В следующем примере проверяется, является ли клиентское приложение, инициировавшее процесс, сеансом `SQL Server Management Studio` и предоставляет ли оно дату в формате US или ANSI.
@@ -73,8 +73,8 @@ PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT (
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Функции](../../t-sql/functions/functions.md)
   
   

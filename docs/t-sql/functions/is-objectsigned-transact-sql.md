@@ -1,5 +1,5 @@
 ---
-title: "IS_OBJECTSIGNED (Transact-SQL) | Документы Microsoft"
+title: "IS_OBJECTSIGNED (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/10/2016
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ IS_OBJECTSIGNED (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **«ОБЪЕКТ»**  
+ **'OBJECT'**  
  Тип защищаемого класса.  
   
  *@object_id*  
- Идентификатор object_id проверяемого объекта. *@object_id*Тип **int**.  
+ Идентификатор object_id проверяемого объекта. *@object_id* имеет тип **int**.  
   
  *@class*  
  Класс объекта:  
@@ -61,30 +61,30 @@ IS_OBJECTSIGNED (
   
 -   'asymmetric key'  
   
- *@class*— **sysname**.  
+ *@class* имеет тип **sysname**.  
   
  *@thumbprint*  
- SHA-отпечаток объекта. *@thumbprint*Тип **varbinary(32)**.  
+ SHA-отпечаток объекта. *@thumbprint* имеет тип **varbinary(32)**.  
   
 ## <a name="returned-types"></a>Возвращаемые типы  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция IS_OBJECTSIGNED возвращает следующие значения.  
   
 |Возвращаемое значение|Description|  
 |------------------|-----------------|  
-|NULL|Объект не подписан, или объект не является допустимым.|  
-|0|Объект подписан, но подпись не является допустимым.|  
+|NULL|Объект не подписан или недопустим.|  
+|0|Объект подписан, но подпись недействительна.|  
 |1|Объект подписан.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DEFINITION на сертификат или асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. Отображение расширенных свойств базы данных  
- В следующем примере проверяется, подписана ли таблица spt_fallback_db в **master** подписан сертификатом подписания схемы базы данных.  
+ В приведенном ниже примере проверяется, подписана ли таблица spt_fallback_db в базе данных **master** с помощью сертификата подписания схемы.  
   
 ```  
 USE master;  
@@ -108,6 +108,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.fn_check_object_signatures &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ [sys.fn_check_object_signatures (Transact-SQL)](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ALTER PARTITION FUNCTION (Transact-SQL) | Документы Microsoft"
+title: "ALTER PARTITION FUNCTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -65,20 +65,20 @@ ALTER PARTITION FUNCTION partition_function_name()
  Это имя функции секционирования, которую необходимо изменить.  
   
  SPLIT RANGE ( *boundary_value* )  
- Добавляет одну секцию к функции секционирования. *boundary_value* определяет диапазон новой секции, который должен отличаться от существующих пограничных значений функции секционирования. На основе *boundary_value*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] разбивает один существующий диапазон на два. Эти два том, в котором новый *boundary_value* находится считается новой секции.  
+ Добавляет одну секцию к функции секционирования. Аргумент *boundary_value* определяет диапазон новой секции, который должен отличаться от существующих пограничных значений функции секционирования. На основе аргумента *boundary_value* [!INCLUDE[ssDE](../../includes/ssde-md.md)] разбивает один существующий диапазон на два. Один из них, содержащий новый аргумент *boundary_value*, является новой секцией.  
   
  Файловая группа должна существовать в режиме в сети и быть помеченной схемой секционирования, использующей функцию секционирования, как NEXT USED для сохранения новой секции. В инструкции CREATE PARTITION SCHEME для файловых групп выделяются секции. Если инструкция CREATE PARTITION SCHEME размещает больше файловых групп, чем необходимо (в этой инструкции создано меньше секций, чем файловых групп для их хранения), то появляются неназначенные файловые группы, и одна из них отмечается схемой секционирования как NEXT USED. Данная файловая группа будет содержать новую секцию. Если нет ни одной файловой группы, отмеченной схемой секционирования как NEXT USED, то для хранения новой секции необходимо добавить файловую группу или назначить уже существующую при помощи инструкции ALTER PARTITION SCHEME. Файловая группа, которая уже содержит секции, может быть назначена для содержания дополнительных секций. Так как функция секционирования может использоваться в нескольких схемах секционирования, то все схемы с такой функцией, к которым добавляются секции, должны иметь файловую группу NEXT USED. Иначе ALTER PARTITION FUNCTION дает сбой, и выдает ошибку, в которой показаны схема или схемы секционирования с отсутствующей файловой группой NEXT USED.  
   
  Если все секции создаются в одной файловой группе, то данная группа первоначально автоматически назначается как NEXT USED. Однако после выполнения операции разбиения назначенная файловая группа NEXT USED будет отсутствовать. Необходимо явным образом назначить файловую группу NEXT USED с помощью ALTER PARITION SCHEME, в противном случае следующая операция разбиения завершится ошибкой.  
   
 > [!NOTE]  
->  Ограничения с индексом columnstore: только пустые секции могут быть разбиты, если в таблице существует индекс columnstore. Будет необходимо удалить или отключить индекс columnstore перед выполнением этой операции  
+>  Ограничения для индекса columnstore: если для таблицы имеется индекс columnstore, разделять можно только пустые секции. Перед выполнением этой операции необходимо удалить или отключить индекс columnstore  
   
- ОБЪЕДИНЕНИЕ [ДИАПАЗОНА ( *boundary_value*)]  
- Удаляет секцию и объединяет все значения, существующие в секции, в одну из оставшихся. ДИАПАЗОН (*boundary_value*) должен быть существующим пограничным значением, в которое объединяются значения из удаленной секции. Файловая группа, изначально содержащая *boundary_value* удаляется из схемы секционирования, если она используется оставшейся секцией или помечается свойство NEXT USED. Объединенная секция находится в файловой группе, которая изначально не содержит *boundary_value*. *boundary_value* — это константное выражение, которое может ссылаться на переменные (включая определяемый пользователем тип переменных) или функции (включая определяемые пользователем функции). Не может ссылаться на выражение [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* должны либо соответствовать или неявно преобразовываться в тип данных соответствующего столбца секционирования и не может быть усечен во время неявного преобразования таким образом, размер и масштаб значения не совпадали с его соответствующий *input_parameter_type*.  
+ MERGE [ RANGE ( *boundary_value*) ]  
+ Удаляет секцию и объединяет все значения, существующие в секции, в одну из оставшихся. Аргумент RANGE (*boundary_value*) должен быть существующим пограничным значением, в которое объединяются значения из удаленной секции. Файловая группа, изначально содержащая аргумент *boundary_value*, удаляется из схемы секционирования, если она не используется оставшейся секцией или не помечена свойством NEXT USED. Объединенная секция находится в файловой группе, которая изначально не содержала *boundary_value*. *boundary_value* является константным выражением, которое может ссылаться на переменные (включая переменные определяемых пользователем типов) или функции (включая определяемые пользователем). Не может ссылаться на выражение [!INCLUDE[tsql](../../includes/tsql-md.md)]. Аргумент *boundary_value* должен либо совпадать с типом данных соответствующего столбца секционирования, либо иметь возможность неявного преобразования в этот тип. В процессе неявного преобразования он не может быть усечен таким образом, чтобы размер и диапазон его значения не совпадали с соответствующим ему аргументом *input_parameter_type*.  
   
 > [!NOTE]  
->  Ограничения с индексом columnstore: не удалось выполнить слияние двух непустых секций, содержащих индекс columnstore. Будет необходимо удалить или отключить индекс columnstore перед выполнением этой операции  
+>  Ограничения для индекса columnstore: выполнить объединение двух непустых секций, содержащих индекс columnstore, невозможно. Перед выполнением этой операции необходимо удалить или отключить индекс columnstore  
   
 ## <a name="best-practices"></a>Рекомендации  
  Всегда оставляйте пустые секции в начале и в конце диапазона секций, чтобы гарантировать отсутствие любого перемещения данных при разбиении секций (до загрузки новых данных) и их объединении (после выгрузки старых данных). Избегайте разбиения или слияния заполненных секций. Это может привести к существенному снижению производительности, поскольку может увеличить время формирования журнала в четыре раза, а также вызвать блокировку.  
@@ -155,17 +155,17 @@ MERGE RANGE (100);
 ## <a name="see-also"></a>См. также:  
  [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [sys.partition_functions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys.partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

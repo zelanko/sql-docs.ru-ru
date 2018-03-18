@@ -1,5 +1,5 @@
 ---
-title: "SET PARSEONLY (Transact-SQL) | Документы Microsoft"
+title: "SET PARSEONLY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если для SET PARSEONLY установлено значение ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только осуществляет синтаксический анализ инструкции. Если для SET PARSEONLY установлено значение OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует и выполняет инструкцию.  
   
  Установка значения SET PARSEONLY осуществляется перед синтаксическим анализом, а не во время выполнения или запуска.  
   
  Не используйте PARSEONLY в хранимой процедуре или триггере. Инструкция SET PARSEONLY возвращает смещение, если параметру OFFSETS присвоено значение ON, и ошибки не возникают.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [ЗНАЧЕНИЕ СМЕЩЕНИЯ &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS (Transact-SQL)](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

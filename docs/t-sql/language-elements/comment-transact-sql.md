@@ -1,5 +1,5 @@
 ---
-title: "--(Комментарий) (Transact-SQL) | Документы Microsoft"
+title: "-- (комментарий) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -56,14 +56,14 @@ ms.lasthandoff: 01/25/2018
 ## <a name="remarks"></a>Remarks  
  Используйте два дефиса (--) для однострочных или вложенных комментариев. Комментарии, вставленные с использованием --, заканчиваются символом новой строки. Длина комментариев не ограничена. В следующей таблице перечислены сочетания клавиш, используемые для комментирования и раскомментирования текста.  
   
-|Действие|Standard Edition|  
+|Действие|Standard|  
 |------------|--------------|  
 |Преобразование выделенного текста в комментарий|CTRL + K, CTRL + C|  
 |Снять комментарий с выделенного текста|CTRL + K, CTRL + U|  
   
- Дополнительные сведения о сочетаниях клавиш см. в разделе [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Дополнительные сведения о сочетаниях клавиш см. в статье [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Для многострочных комментариях см. в разделе [косой черты звезда &#40; Блок комментариев &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Сведения о многострочных комментариях см. в статье [Косая черта-звездочка (блок комментариев) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используются символы комментария --.  
@@ -80,7 +80,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>См. также:  
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Совмещение имен (хранилище данных Azure SQL, параллельное хранилище данных) | Документы Microsoft"
+title: "Присвоение псевдонима (хранилище данных SQL Azure или Parallel Data Warehouse) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Совмещение имен (хранилище данных Azure SQL, параллельное хранилище данных)
+# <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Присвоение псевдонима (хранилище данных SQL Azure или Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  За счет присвоения псевдонима временные подстановки коротких и легко запомнить строки вместо имени таблицы или столбца в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] запросов. Псевдонимы таблиц часто используются в запросах с СОЕДИНЕНИЯМИ, так как синтаксис JOIN требуются полные имена объектов, при ссылке на столбцы.  
+  За счет присвоения псевдонима можно временно подставлять короткие и легко запоминающиеся строки вместо имени таблицы или столбца в запросах [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Псевдонимы таблиц часто используются в запросах JOIN, так как при ссылках на столбцы для синтаксиса JOIN требуются полные имена объектов.  
   
- Псевдонимы должны быть соответствующие правила именования объектов отдельные слова. Дополнительные сведения см. в разделе «Правила именования объектов» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Псевдонимы не могут содержать пробелы и не может быть заключено в одинарные или двойные кавычки.  
+ Псевдонимы должны быть отдельными словами, соответствующими правилам именования объектов. Дополнительные сведения см. в разделе "Правила именования объектов" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Псевдонимы не могут содержать пробелы и не могут заключаться в одинарные или двойные кавычки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,17 +42,17 @@ object_source [ AS ] alias
  Имя исходной таблицы или столбца.  
   
  AS  
- Необязательный псевдоним местоимением. При работе с псевдонимами переменной диапазона, ключевое слово AS запрещен.  
+ Необязательная препозиция псевдонима. При работе с псевдонимами переменных диапазона ключевое слово AS запрещено использовать.  
   
  *alias*  
- Имя нужного временную ссылку для таблицы или столбца. Можно использовать любое допустимое имя объекта. Дополнительные сведения см. в разделе «Правила именования объектов» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Нужное временное ссылочное имя для таблицы или столбца. Можно использовать любое допустимое имя объекта. Дополнительные сведения см. в разделе "Правила именования объектов" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере показано запроса, имеющего несколько соединений. В этом примере демонстрируются Совмещение имен таблиц и столбцов.  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В следующем примере показан запрос с несколькими соединениями. В этом примере демонстрируется присвоение псевдонимов для таблиц и столбцов.  
   
--   Псевдонимы столбцов: Оба столбца и выражения, включающие столбцы в списке select используются псевдонимы в этом примере. `SalesTerritoryRegion AS SalesTR`демонстрируется простой псевдоним. `Sum(SalesAmountQuota) AS TotalSales`Демонстрирует  
+-   Присвоение псевдонимов столбцам: в этом примере используются столбцы и выражения, включающие столбцы, в списке. `SalesTerritoryRegion AS SalesTR` демонстрирует простой псевдоним столбца. `Sum(SalesAmountQuota) AS TotalSales` демонстрирует  
   
--   Таблица псевдонимов: `dbo.DimSalesTerritory AS st` показывает создание `st` псевдоним для `dbo.DimSalesTerritory` таблицы.  
+-   задание табличных псевдонимов: `dbo.DimSalesTerritory AS st`показывает создание псевдонима `st`для `dbo.DimSalesTerritory` таблицы.  
   
 ```  
 -- Uses AdventureWorks  
@@ -67,7 +67,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ```  
   
- Ключевое слово, можно исключить, как показано ниже, но часто включен для удобства чтения.  
+ Ключевое слово можно исключить, как показано ниже, но для удобства чтения оно часто остается.  
   
 ```  
 -- Uses AdventureWorks  
@@ -81,7 +81,7 @@ WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'
 GROUP BY LastName, SalesTerritoryRegion;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  

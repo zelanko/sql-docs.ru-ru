@@ -1,5 +1,5 @@
 ---
-title: "Создание XML-ИНДЕКСА (Выборочный XML-индексы) | Документы Microsoft"
+title: "CREATE XML INDEX (селективные XML-индексы) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (селективные XML-индексы)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Создает новый вторичный селективный XML-индекс по одному пути, который уже проиндексирован существующим селективным XML-индексом. Кроме того, вы можете создавать первичные селективные XML-индексы. Сведения см. в разделе [Create, Alter и Drop выборочные XML-индексы](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
+  Создает новый вторичный селективный XML-индекс по одному пути, который уже проиндексирован существующим селективным XML-индексом. Кроме того, вы можете создавать первичные селективные XML-индексы. Дополнительные сведения см. в разделе [Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,9 +74,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
 ##  <a name="Arguments"></a> Аргументы  
  *index_name*  
- Имя создаваемого нового индекса. Имена индексов должны быть уникальными в пределах таблицы, но не обязательно должны быть уникальными в пределах базы данных. Имена индексов должны соответствовать правилам [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
+ Имя создаваемого нового индекса. Имена индексов должны быть уникальными в пределах таблицы, но не обязательно должны быть уникальными в пределах базы данных. Имена индексов должны удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- ON  *\<table_object >* таблица, которая содержит XML-столбец для индекса. Вы можете использовать следующие форматы.  
+ ON *\<table_object>* Таблица, которая содержит индексируемый XML-столбец. Вы можете использовать следующие форматы.  
   
 -   `database_name.schema_name.table_name`  
   
@@ -87,12 +87,12 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *xml_column_name*  
  Имя таблицы, которая содержит XML-столбец, содержащий индексируемый путь.  
   
- С помощью XML-ИНДЕКСА *sxi_index_name*  
+ USING XML INDEX *sxi_index_name*  
  Имя существующего селективного XML-индекса.  
   
- ДЛЯ **(** \<xquery_or_sql_values_path > **)** имя индексированного пути, для которого создается вторичный Селективный XML-индекс. Путь для индексирования является присвоенным именем из инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ FOR **(** \<xquery_or_sql_values_path> **)** Имя индексируемого пути, по которому создается вторичный селективный XML-индекс. Путь для индексирования является присвоенным именем из инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
- С \<index_options > сведения о параметрах индекса см. в разделе [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH \<index_options> Сведения о параметрах индекса см. в статье [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Remarks  
  Может быть несколько вторичных селективных XML-индексов в каждом XML-столбце базовой таблицы.  
@@ -103,10 +103,10 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается вторичный селективный XML-индекс с путем `pathabc`. Путь для индексирования является присвоенным именем из [CREATE SELECTIVE XML INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ В следующем примере создается вторичный селективный XML-индекс с путем `pathabc`. Путь для индексирования является присвоенным именем из инструкции [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
 ```  
 CREATE XML INDEX filt_sxi_index_c  
@@ -115,7 +115,7 @@ USING XML INDEX sxi_index
 FOR ( pathabc );  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Создание, изменение и удаление вторичных селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)  
   

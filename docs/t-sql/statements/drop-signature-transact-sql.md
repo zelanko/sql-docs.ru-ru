@@ -1,5 +1,5 @@
 ---
-title: "ПОДПИСЬ DROP (Transact-SQL) | Документы Microsoft"
+title: "DROP SIGNATURE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,19 +56,19 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_модуля*  
+ *module_name*  
  Имя хранимой процедуры, функции, сборки или триггера.  
   
- СЕРТИФИКАТ *cert_name*  
+ CERTIFICATE *cert_name*  
  Имя сертификата, с помощью которого подписана хранимая процедура, функция, сборка или триггер.  
   
- АСИММЕТРИЧНЫЙ ключ *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  Имя асимметричного ключа, с помощью которого подписана хранимая процедура, функция, сборка или триггер.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сведения о подписях содержатся в представлении каталога sys.crypt_properties.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения ALTER на объект и разрешение CONTROL на сертификат или асимметричный ключ. Если соответствующий закрытый ключ защищен паролем, то у пользователя также должен быть этот пароль.  
   
 ## <a name="examples"></a>Примеры  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Добавить подпись &#40; Transact-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+ [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE (Transact-SQL)](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

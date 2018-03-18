@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (тип данных geometry) | Документы Microsoft"
+title: "ShortestLineTo (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает **LineString** экземпляра с двумя точками, представляющий кратчайшее расстояние между двумя **geometry** экземпляров. Длина **LineString** возвращаемый экземпляр — это расстояние между двумя **geometry** экземпляров.
+Возвращает экземпляр **LineString** с двумя точками, представляющий кратчайшее расстояние между двумя экземплярами **geometry**. Длина возвращаемого экземпляра **LineString** равна расстоянию между двумя экземплярами **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *geometry_other*  
- Второй **geometry** экземпляр, вызывающий **geometry** пытается определить кратчайшее расстояние до экземпляра.  
+ Второй экземпляр **geometry**, кратчайшее расстояние до которого пытается определить вызывающий экземпляр **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Метод возвращает **LineString** экземпляр с конечными точками, лежащими на границах двух непересекающиеся **geometry** сравниваемых экземпляров. Длина **LineString** возвращаемый равна кратчайшему расстоянию между двумя **geometry** экземпляров. Пустой **LineString** экземпляр возвращается, когда два **geometry** пересекаются друг с другом.  
+ Этот метод возвращает экземпляр **LineString** с двумя конечными точками, лежащими на границах двух сравниваемых непересекающихся экземпляров **geometry**. Длина возвращаемого экземпляра **LineString** равна кратчайшему расстоянию между двумя экземплярами **geometry**. Пустой экземпляр **LineString** возвращается, когда два экземпляра **geometry** пересекаются друг с другом.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -72,8 +72,8 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
- [ShortestLineTo &#40; тип данных geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [ShortestLineTo (тип данных geography)](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

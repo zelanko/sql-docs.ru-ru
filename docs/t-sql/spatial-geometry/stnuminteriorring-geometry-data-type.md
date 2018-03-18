@@ -1,5 +1,5 @@
 ---
-title: "STNumInteriorRing (тип данных geometry) | Документы Microsoft"
+title: "STNumInteriorRing (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает количество внутренних колец экземпляра **Polygongeometry** экземпляра.
+Возвращает количество внутренних колец экземпляра **Polygongeometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает значение null, если **geometry** экземпляр не многоугольника.  
+ Этот метод возвращает значение NULL, если экземпляр **geometry** не является многоугольником.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Polygon` и с помощью метода `STNumInteriorRing()` определяется количество внутренних колец в этом экземпляре.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

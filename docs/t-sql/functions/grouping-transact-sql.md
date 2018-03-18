@@ -1,5 +1,5 @@
 ---
-title: "ГРУППИРОВАНИЕ (Transact-SQL) | Документы Microsoft"
+title: "GROUPING (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Указывает, является ли указанное выражение столбца в списке GROUP BY статистическим или нет. В результирующем наборе функция GROUPING возвращает 1 (статистическое выражение) или ноль (нестатистическое выражение). ГРУППИРОВАНИЕ может использоваться только в инструкции SELECT \<выберите > список, HAVING и ORDER BY предложения, если указан GROUP BY.  
+  Указывает, является ли указанное выражение столбца в списке GROUP BY статистическим или нет. В результирующем наборе функция GROUPING возвращает 1 (статистическое выражение) или ноль (нестатистическое выражение). Функция GROUPING может использоваться только в предложениях SELECT \<select>, HAVING и ORDER BY, если указано предложение GROUP BY.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GROUPING ( <column_expression> )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \<column_expression >  
- Столбец или выражение, которое содержит столбец в [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) предложения.  
+ \<column_expression>  
+ Столбец или выражение, которое содержит столбец в предложении [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **tinyint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  GROUPING используется, чтобы различать значения NULL, возвращаемые операторами ROLLUP, CUBE или GROUPING SETS, и стандартные значения NULL. Возвращение NULL в качестве результата операции ROLLUP, CUBE или GROUPING SETS является особым случаем использования NULL. Значение служит заполнителем столбца в результирующем наборе и означает «все».  
   
 ## <a name="examples"></a>Примеры  
@@ -70,7 +70,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- В результирующем наборе показаны два значения NULL в `SalesQuota`. Первый `NULL` представляет группу значений NULL из этого столбца в таблице. Второй `NULL` находится в строке итогов, добавленной операцией ROLLUP. Строка итогов показывает `TotalSalesYTD` сумм для всех `SalesQuota` групп и обозначается `1` в `Grouping` столбца.  
+ В результирующем наборе показаны два значения NULL в `SalesQuota`. Первый `NULL` представляет группу значений NULL из этого столбца в таблице. Второй `NULL` находится в строке итогов, добавленной операцией ROLLUP. Строка итогов содержит суммы `TotalSalesYTD` для всех групп `SalesQuota` и обозначается с помощью `1` в столбце `Grouping`.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -86,7 +86,7 @@ NULL           44294026.1344         1
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [GROUPING_ID &#40; Transact-SQL &#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
- [Предложение GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+ [GROUPING_ID (Transact-SQL)](../../t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUP BY (Transact-SQL)](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

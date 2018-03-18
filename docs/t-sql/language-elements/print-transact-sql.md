@@ -1,5 +1,5 @@
 ---
-title: "PRINT (Transact-SQL) | Документы Microsoft"
+title: "PRINT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="arguments"></a>Аргументы  
  *msg_str*  
- Символьная строка или строковая константа Юникода. Дополнительные сведения см. в разделе [константы &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
+ Символьная строка или строковая константа Юникода. Дополнительные сведения см. в статье [Константы (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- Переменная любого допустимого символьного типа данных. **@*** local_variable* должно быть **char**, **nchar**, **varchar**, или **nvarchar**, или он должен иметь возможность быть неявно преобразуется в этих типов данных.  
+ **@** *local_variable*  
+ Переменная любого допустимого символьного типа данных.Аргумент  **@***local_variable* должен иметь тип **char**, **nchar**, **varchar** или **nvarchar** либо должен неявно преобразовываться в эти типы данных.  
   
  *string_expr*  
  Выражение, возвращающее строку. Может содержать объединенные буквенные значения, функции и переменные. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Строка сообщения может иметь длину до 8 000 символов для строки, отличной от Юникода, и 4 000 символов для строки в Юникоде. Более длинные строки усекаются. **Varchar(max)** и **nvarchar(max)** типы данных усекаются до типов данных, которые не превышают **varchar(8000)** и **nvarchar(4000)**.  
+ Строка сообщения может иметь длину до 8 000 символов для строки, отличной от Юникода, и 4 000 символов для строки в Юникоде. Более длинные строки усекаются. Типы данных **varchar(max)** и **nvarchar(max)** усекаются до типов данных, которые не длиннее **varchar(8000)** и **nvarchar(4000)**.  
   
  Для возвращения сообщений можно также использовать функцию RAISERROR. Преимущества функции RAISERROR перед функцией PRINT:  
   
@@ -104,7 +104,7 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-conditionally-executing-print"></a>В. Печать, выполняемая по условию  
  В следующем примере инструкция `PRINT` применяется для возвращения сообщения по условию.  
@@ -117,10 +117,10 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Инструкция RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
 

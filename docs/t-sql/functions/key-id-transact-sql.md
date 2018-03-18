@@ -1,5 +1,5 @@
 ---
-title: "KEY_ID (Transact-SQL) | Документы Microsoft"
+title: "KEY_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ Key_ID ( 'Key_Name' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *Key_Name* **"**  
+ **'** *Key_Name* **'**  
  Имя симметричного ключа в базе данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имя временного ключа должно начинаться с символа (#).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Так как временные ключи доступны только во время сеанса, в котором они были созданы, никаких разрешений для доступа к ним не требуется. Для получения доступа к ключу, который не является временным, у вызывающего должны быть разрешения на ключ и не должно быть запрещено разрешение VIEW для ключа.  
   
 ## <a name="examples"></a>Примеры  
@@ -78,9 +78,9 @@ SELECT KEY_ID('#ABerglundKey2');
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [KEY_GUID &#40; Transact-SQL &#41;](../../t-sql/functions/key-guid-transact-sql.md)   
+ [KEY_GUID (Transact-SQL)](../../t-sql/functions/key-guid-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.key_encryptions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

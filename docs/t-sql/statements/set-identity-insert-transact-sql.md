@@ -1,5 +1,5 @@
 ---
-title: "SET IDENTITY_INSERT (Transact-SQL) | Документы Microsoft"
+title: "SET IDENTITY_INSERT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  Имя таблицы со столбцом идентификаторов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В каждый момент времени только для одной таблицы в сеансе свойство IDENTITY_INSERT может принимать значение ON. Если у какой-то таблицы это свойство уже имеет значение ON и инструкция SET IDENTITY_INSERT ON адресована другой таблице, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет сообщение об ошибке, в котором будет сказано, что свойство SET IDENTITY_INSERT уже приняло значение ON, и приведено имя соответствующей таблицы.  
   
  Если вставляемое значение больше текущего значения идентификатора в данной таблице, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически будет использовать вставленное значение в качестве текущего.  
   
  Задание параметра SET IDENTITY_INSERT происходит во время выполнения или запуска инструкций, а не их синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен быть владельцем таблицы или иметь разрешение ALTER на таблицу.  
   
 ## <a name="examples"></a>Примеры  
@@ -122,7 +122,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [Свойство IDENTITY (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [SCOPE_IDENTITY (Transact-SQL)](../../t-sql/functions/scope-identity-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "CurveToLineWithTolerance (тип данных geography) | Документы Microsoft"
+title: "CurveToLineWithTolerance (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает приближение из многоугольников **geography** экземпляра, содержащего сегменты дуги.  
+  Возвращает приближение из многоугольников для экземпляра **geography**, содержащего сегменты дуги.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,29 +44,29 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *отказоустойчивость*  
- — **Двойные** выражение, определяющее максимальную ошибку между исходным сегментом дуги и его линейной аппроксимацией.  
+ *tolerance*  
+ Выражение типа **double**, которое определяет максимальную ошибку между исходным сегментом дуги и его линейной аппроксимацией.  
   
  *relative*  
- — **Bool** выражение, указывающее, следует ли использовать относительный максимум для отклонения. Когда для относительного параметра задается значение false (0), для абсолютного максимума устанавливается значение, равное возможному отклонению линейной аппроксимации.  Если для относительного параметра задано значение true, то вычисляется погрешность, равная произведению параметра tolerance на диаметр ограничивающего прямоугольника для пространственного объекта.  
+ Представляет собой выражение типа **bool**, указывающее, следует ли использовать относительный максимум для отклонения. Когда для относительного параметра задается значение false (0), для абсолютного максимума устанавливается значение, равное возможному отклонению линейной аппроксимации.  Если для относительного параметра задано значение true, то вычисляется погрешность, равная произведению параметра tolerance на диаметр ограничивающего прямоугольника для пространственного объекта.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
- Задании tolerance < = 0 возникает исключение **ArgumentOutOfRange** исключение.  
+ Если установить погрешность <= 0, возникнет исключение **ArgumentOutOfRange**.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод позволяет указывать для результирующего допустимое количество ошибок **LineString**.  
+ Этот метод позволяет указывать допустимое количество ошибок для результирующего объекта **LineString**.  
   
- **CurveToLineWithTolerance** метод будет возвращать **LineString** экземпляра для **CircularString** или **CompoundCurve** экземпляра и **Многоугольника** экземпляра для **CurvePolygon** экземпляра.  
+ Метод **CurveToLineWithTolerance** вернет экземпляр **LineString** для экземпляра **CircularString** или **CompoundCurve** и экземпляр **Polygon** для экземпляра **CurvePolygon**.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Использование различных значений погрешности в экземпляре CircularString  
- В следующем примере показано, каким образом задание погрешности влияет на `LineString`экземпляр, возвращаемый из `CircularString` экземпляр:  
+ В следующем примере показано, каким образом задание погрешности влияет на экземпляр `LineString`, возвращаемый из экземпляра `CircularString`:  
   
  ```
  DECLARE @g geography;  
@@ -93,14 +93,14 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>Г. Установка параметра relative в значение true для вызова экземпляра CurvePolygon  
- В следующем примере используется `CurvePolygon` экземпляра для вызова `CurveToLineWithTolerance()` с *относительный* задано значение true:  
+ В следующем примере используется экземпляр `CurvePolygon` для вызова `CurveToLineWithTolerance()` с параметром *relative*, имеющим значение true:  
   
  ```
  DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
  SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

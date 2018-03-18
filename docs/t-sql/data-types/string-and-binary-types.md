@@ -1,5 +1,5 @@
 ---
-title: "Строковые и двоичные типы | Документы Microsoft"
+title: "Строковые и двоичные типы | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие двоичные и строковые типы.
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [binary и varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
 [char и varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
 [nchar и nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
-[ntext, text и изображение &#40; Transact-SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+[Типы данных ntext, text и image (Transact-SQL)](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
   
   

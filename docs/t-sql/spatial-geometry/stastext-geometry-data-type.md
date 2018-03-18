@@ -1,5 +1,5 @@
 ---
-title: "STAsText (тип данных geometry) | Документы Microsoft"
+title: "STAsText (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geometry-data-type"></a>STAsText (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает представление Open Geospatial Consortium (OGC) Well-Known Text (WKT) **geometry** экземпляра. Этот текст не будет содержать значений Z (высота) и M (мера), сопровождающих экземпляр.
+Возвращает WKT-представление OGC для экземпляра **geometry**. Этот текст не будет содержать значений Z (высота) и M (мера), сопровождающих экземпляр.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Возвращаемый тип CLR: **SqlChars**  
+ Тип возвращаемых данных CLR: **SqlChars**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр geometry `LineString` с (0,0) по (2,3) из текста. Метод `STAsText()` возвращает результат в текстовом формате.  
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

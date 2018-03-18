@@ -1,5 +1,5 @@
 ---
-title: "STRING_SPLIT (Transact-SQL) | Документы Microsoft"
+title: "STRING_SPLIT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Разделяет символьное выражение, используя заданный разделитель.  
+  Разделяет символьное выражение с использованием указанного разделителя.  
   
 > [!NOTE]  
->  **STRING_SPLIT** функция доступна только при уровне совместимости 130. Если уровень совместимости базы данных ниже 130, SQL Server не будет иметь возможность поиска и выполнения **STRING_SPLIT** функции. Изменить уровень совместимости базы данных можно с помощью следующей команды:  
+>  Функция **STRING_SPLIT** доступна только при уровне совместимости 130. Если уровень совместимости базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **STRING_SPLIT**. Изменить уровень совместимости базы данных можно с помощью следующей команды:  
 > ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  
 >   
->  Обратите внимание, что уровень совместимости 120 может по умолчанию даже в новых базах данных SQL Azure.  
+>  Имейте в виду, что уровень совместимости 120 может использоваться по умолчанию даже в новых базах данных SQL Azure.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,33 +52,33 @@ STRING_SPLIT ( string , separator )
   
 ## <a name="arguments"></a>Аргументы  
  *строка*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (т. е. **nvarchar**, **varchar**, **nchar** или **char**).  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (**nvarchar**, **varchar**, **nchar** или **char**).  
   
- *разделитель*  
- — Это отдельный символ [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например **nvarchar(1)**, **varchar(1)**, **nchar(1)** или  **char(1)**), используемый в качестве разделителя для сцепленные строки.  
+ *separator*  
+ Отдельное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (**nvarchar(1)**, **varchar(1)**, **nchar(1)** или **char(1)**), которое используется в качестве разделителя сцепленных строк.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает один столбец таблицы с помощью фрагментов. Имя столбца — **значение**. Возвращает **nvarchar** Если какой-либо из входных аргументов **nvarchar** или **nchar**. В противном случае возвращает **varchar**. Длина возвращаемого типа является таким же, как длина строковый аргумент.  
+ Возвращает состоящую из одного столбца таблицу с фрагментами. Имя столбца — **value**. Возвращает значение типа **nvarchar**, если любой из входных аргументов имеет тип **nvarchar** или **nchar**. В противном случае возвращает значение типа **varchar**. Длина типа возвращаемого значения равна длине аргумента string.  
   
 ## <a name="remarks"></a>Remarks  
- **STRING_SPLIT** принимает строку, которая должна быть разделена и разделитель, который будет использоваться для разделения строки. Он возвращает один столбец таблицы с подстроками. Например, следующая инструкция `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` с помощью символа пробела в качестве разделителя, возвращаются следующие таблицы результатов:  
+ Функция **STRING_SPLIT** принимает строку, которую следует разделить, и разделитель, с помощью которого строка будет разделена. Она возвращает состоящую из одного столбца таблицу с подстроками. Например, приведенная ниже инструкция `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');`, в которой в качестве разделителя используется символ пробела, возвращает следующую результирующую таблицу:  
   
 |value|  
 |-----------|  
 |Lorem|  
-|Ipsum|  
+|ipsum|  
 |dolor|  
-|SIT|  
-|Amet.|  
+|sit|  
+|amet.|  
   
- Если входная строка **NULL**, **STRING_SPLIT** табличная функция возвращает пустую таблицу.  
+ Если входная строка равна **NULL**, функция **STRING_SPLIT** с табличным значением возвращает пустую таблицу.  
   
- **STRING_SPLIT** требуется по крайней мере режим совместимости 130.  
+ Для функции **STRING_SPLIT** требуется режим совместимости не ниже 130.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-split-comma-separated-value-string"></a>A. Разделить запятыми строковое значение  
- Синтаксический анализ разделенный запятыми список значений и возвращают все маркеры пустым:  
+### <a name="a-split-comma-separated-value-string"></a>A. Разделение строки значений с разделителями-запятыми  
+ Следующая инструкция анализирует разделенный запятыми список значений и возвращает все непустые токены:  
   
 ```  
   
@@ -90,18 +90,18 @@ WHERE RTRIM(value) <> '';
   
 ```  
   
- STRING_SPLIT возвращает пустую строку, если нет ничего между разделителем. Условие RTRIM(value) <> '' приведет к удалению пустой маркеры.  
+ Функция STRING_SPLIT вернет пустую строку, если между разделителями ничего нет. Condition RTRIM(value) <> '' удаляет пустые токены.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>Б. Разделить запятыми строковое значение в столбце  
- Таблица Product содержит столбец с разделителями отдельные список тегов, показано в следующем примере:  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>Б. Разделение строки значений с разделителями-запятыми в столбце  
+ Таблица Product содержит столбец с разделенным запятыми списком тегов, как показано в следующем примере:  
   
-|productId|Название|Теги|  
+|ProductId|Имя|Теги|  
 |---------------|----------|----------|  
-|1|Full пальцем перчатки|одежда, дорожный, туристического велосипеда|  
-|2|Головные LL|велосипеда|  
-|3|HL Mountain Frame|велосипед, mountain|  
+|1|Full-Finger Gloves|clothing,road,touring,bike|  
+|2|LL Headset|bike|  
+|3|HL Mountain Frame|bike,mountain|  
   
- Следующий запрос преобразует каждый список тегов и объединяет их с исходной строки:  
+ Следующий запрос преобразовывает каждый список тегов и соединяет его с исходной строкой:  
   
 ```  
 SELECT ProductId, Name, value  
@@ -111,18 +111,18 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|Название|value|  
+|ProductId|Имя|value|  
 |---------------|----------|-----------|  
-|1|Full пальцем перчатки|одежда|  
-|1|Full пальцем перчатки|дорога|  
-|1|Full пальцем перчатки|Туристический|  
-|1|Full пальцем перчатки|велосипеда|  
-|2|Головные LL|велосипеда|  
-|3|HL Mountain Frame|велосипеда|  
-|3|HL Mountain Frame|Mountain|  
+|1|Full-Finger Gloves|clothing|  
+|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|touring|  
+|1|Full-Finger Gloves|bike|  
+|2|LL Headset|bike|  
+|3|HL Mountain Frame|bike|  
+|3|HL Mountain Frame|mountain|  
   
-### <a name="c-aggregation-by-values"></a>В. Агрегат по значениям  
- Пользователям необходимо создать отчет, показывающий количество продуктов на каждого тега, отсортированный по номеру продуктов и фильтрации только теги с более чем двумя продуктами.  
+### <a name="c-aggregation-by-values"></a>В. Объединение по значениям  
+ Пользователю необходимо создать отчет, в котором приводится число продуктов по каждому тегу, причем теги упорядочены по числу продуктов и отфильтрованы теги с более чем двумя продуктами.  
   
 ```  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
@@ -134,9 +134,9 @@ ORDER BY COUNT(*) DESC;
 ```  
   
 ### <a name="d-search-by-tag-value"></a>Г. Поиск по значению тега  
- Разработчики должны создавать запросов на поиск статей по ключевым словам. Они могут использовать следующие запросы:  
+ Разработчикам необходимо создать запросы для поиска статей по ключевым словам. Они могут использовать представленные ниже запросы.  
   
- Для поиска продуктов с помощью одного тега (одежды):  
+ Поиск продуктов с одним тегом (clothing):  
   
 ```  
 SELECT ProductId, Name, Tags  
@@ -144,7 +144,7 @@ FROM Product
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
 ```  
   
- Найти продукты с два указанного тега (одежды и пути):  
+ Поиск продуктов с двумя тегами (clothing и road):  
   
 ```  
   
@@ -156,7 +156,7 @@ WHERE EXISTS (SELECT *
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>Д. Поиск строк по списку значений  
- Разработчикам необходимо создать запрос на поиск статей по список идентификаторов. Их можно использовать следующий запрос:  
+ Разработчикам необходимо создать запрос, который находит статьи по списку идентификаторов. Они могут использовать следующий запрос:  
   
 ```  
 SELECT ProductId, Name, Tags  
@@ -165,7 +165,7 @@ JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
   
- Это замена для общих антишаблон, например для создания динамической строке SQL на уровне приложения или [!INCLUDE[tsql](../../includes/tsql-md.md)], или используя оператор LIKE:  
+ Это альтернатива распространенному антишаблону, заключающемуся в создании динамической строки SQL на прикладном уровне или в [!INCLUDE[tsql](../../includes/tsql-md.md)] либо использовании оператора LIKE:  
   
 ```  
 SELECT ProductId, Name, Tags  
@@ -173,13 +173,13 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
- [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [ПОДСТРОКА &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
- [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

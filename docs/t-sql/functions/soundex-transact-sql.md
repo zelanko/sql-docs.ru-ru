@@ -1,5 +1,5 @@
 ---
-title: "Функция SOUNDEX (Transact-SQL) | Документы Microsoft"
+title: "SOUNDEX (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- Алфавитно-цифровое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом.  
+ Буквенно-цифровое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar**  
   
-## <a name="remarks"></a>Замечания  
- Функция SOUNDEX преобразует алфавитно-цифровую строку в 4-символьный код, чье значение зависит от способа звучания строки при произношении. Первый символ кода является первым символом *character_expression*, преобразованным в верхний регистр. Второй, третий и четвертый символы кода являются числами, которые обозначают буквы в выражении. Буквы A, E, I, O, U, H, W и Y игнорируются, если только не являются первой буквой строки. Нули добавляются в конце при необходимости производить четырехсимвольный код. Дополнительные сведения о коде SOUNDEX см. в разделе [система индексирования Soundex](https://www.archives.gov/research/census/soundex.html).  
+## <a name="remarks"></a>Remarks  
+ Функция SOUNDEX преобразует алфавитно-цифровую строку в 4-символьный код, чье значение зависит от способа звучания строки при произношении. Первый символ кода является первым символом *character_expression*, преобразованным в верхний регистр. Второй, третий и четвертый символы кода являются числами, которые обозначают буквы в выражении. Буквы A, E, I, O, U, H, W и Y игнорируются, если только не являются первой буквой строки. Нули добавляются в конце при необходимости производить четырехсимвольный код. Дополнительные сведения о коде SOUNDEX см. в статье [Система индексирования Soundex](https://www.archives.gov/research/census/soundex.html).  
   
  Коды SOUNDEX из разных строк можно сравнивать, чтобы узнать, насколько похоже звучат строки при произношении. Функция DIFFERENCE выполняет SOUNDEX по двум строкам и возвращает целое число, представляющее сходство кодов SOUNDEX для этих строк.  
   
@@ -65,7 +65,7 @@ SOUNDEX ( character_expression )
 ## <a name="soundex-compatibility"></a>Совместимость SOUNDEX  
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в функции SOUNDEX использовалось подмножество правил SOUNDEX. При уровне совместимости базы данных, равном 110 или выше, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет более полный набор правил.  
   
- После обновления до уровня совместимости 110 или выше, может потребоваться перестроить индексы, кучи или ограничения CHECK, которые используется функция SOUNDEX.  
+ После обновления до уровня совместимости 110 или более высокого, возможно, придется перестроить индексы, кучи или ограничения CHECK, в которых используется функция SOUNDEX.  
   
 -   Кучу, которая содержит материализованный вычисляемый столбец, определенный функцией SOUNDEX, нельзя запрашивать, пока она не будет перестроена с помощью инструкции `ALTER TABLE <table> REBUILD`.  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Допустимо для параметров сортировки Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Допустимо для параметров сортировки Latin1_General.  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Допустимо для параметров сортировки Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Допустимо для параметров сортировки Latin1_General.  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Допустимо для параметров сортировки Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Допустимо для параметров сортировки Latin1_General.  
   
 ```  
 -----------   
@@ -125,8 +125,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разница &#40; Transact-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [DIFFERENCE (Transact-SQL)](../../t-sql/functions/difference-transact-sql.md)   
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

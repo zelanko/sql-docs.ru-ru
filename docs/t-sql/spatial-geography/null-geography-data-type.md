@@ -1,5 +1,5 @@
 ---
-title: "NULL (тип данных geography) | Документы Microsoft"
+title: "Null (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Свойство только для чтения, указав значение null экземпляр **geography** типа.
+Свойство только для чтения, которое возвращает экземпляр типа **geography**, имеющий значение NULL.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ Null
 ## <a name="arguments"></a>Аргументы  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **geography**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Тип CLR: **SqlGeography**  
   
@@ -61,7 +61,7 @@ SET @g = geography::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (тип данных geography) | Документы Microsoft"
+title: "MinDbCompatibilityLevel (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает минимальное базы данных уровень совместимости, распознает **geography** тип данных.  
+  Возвращает минимальный уровень совместимости базы данных, при котором поддерживается тип данных **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **int**  
+ Тип возвращаемых данных CLR: **int**  
   
 ## <a name="remarks"></a>Remarks  
- Используйте `MinDbCompatibilityLevel()` для проверки пространственного объекта на совместимость, прежде чем менять уровень совместимости базы данных. Недопустимый **geography** введите возвращается значение 110.  
+ Используйте `MinDbCompatibilityLevel()` для проверки пространственного объекта на совместимость, прежде чем менять уровень совместимости базы данных. В случае недопустимого типа **geography** возвращается значение 110.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -96,8 +96,8 @@ END
   
  Первая инструкция SELECT возвращает 110, а вторая инструкция SELECT возвращает 100.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Обратная совместимость SQL Server Database Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [Обратная совместимость компонента ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

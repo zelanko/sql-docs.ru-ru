@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (тип данных geometry) | Документы Microsoft"
+title: "UnionAggregate (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -42,24 +42,24 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Аргументы  
  *geometry_operand*  
- — **Geometry** столбец таблицы типа, который содержит набор из **geometry** объектов для выполнения операции union.  
+ Столбец таблицы типа **geometry**, в котором содержится набор объектов **geometry**, с которыми выполняется операция объединения.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exceptions"></a>Исключения  
- Вызывает исключение `FormatException` при наличии недопустимых входных значений. В разделе [STIsValid &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Вызывает исключение `FormatException` при наличии недопустимых входных значений. См. раздел [STIsValid (тип данных geometry)](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md).  
   
 ## <a name="remarks"></a>Remarks  
- Метод возвращает **null** при входных данных пуст или содержит различными идентификаторами SRID. В разделе [идентификаторы пространственных ссылок &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ Метод возвращает значение **NULL**, если входные данные пусты или содержат различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Метод игнорирует **null** входных данных.  
+ Метод не обрабатывает входные значения **NULL**.  
   
 > [!NOTE]  
->  Метод возвращает **null** при входе присутствуют только значения **null**.  
+>  Метод возвращает значение **NULL**, если входными являются значения **NULL**.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает объединение набор **geometry** объекты в табличной переменной.  
+ Следующий пример возвращает объединение для набора объектов **geometry** в табличных переменных.  
  ```
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 
@@ -75,7 +75,7 @@ UnionAggregate ( geometry_operand )
  FROM @Geom;
 ``` 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

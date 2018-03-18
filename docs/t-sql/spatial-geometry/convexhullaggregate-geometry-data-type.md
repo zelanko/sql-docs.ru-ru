@@ -1,5 +1,5 @@
 ---
-title: "ConvexHullAggregate (тип данных geometry) | Документы Microsoft"
+title: "ConvexHullAggregate (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает выпуклую оболочку для заданного набора **geometry** объектов.
+Возвращает выпуклую оболочку для заданного набора объектов **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,21 +42,21 @@ ConvexHullAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Аргументы  
  *geometry_operand*  
- — **Geometry** столбец таблицы типа, представляющий набор геометрических объектов.  
+ Столбец таблицы типа **geometry**, представляющий набор геометрических объектов.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exception"></a>Исключение  
- Вызывает исключение `FormatException` при наличии недопустимых входных значений. В разделе [STIsValid &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Вызывает исключение `FormatException` при наличии недопустимых входных значений. См. раздел [STIsValid (тип данных geometry)](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md).  
   
 ## <a name="remarks"></a>Remarks  
- Метод возвращает **null** при входных данных пуст или содержит различными идентификаторами SRID. В разделе [идентификаторы пространственных ссылок &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ Метод возвращает значение **NULL**, если входные данные пусты или содержат различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Метод игнорирует **null** входных данных.  
+ Метод не обрабатывает входные значения **NULL**.  
   
 > [!NOTE]  
->  Метод возвращает **null** при входе присутствуют только значения **null**.  
+>  Метод возвращает значение **NULL**, если входными являются значения **NULL**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает выпуклую оболочку набора геометрических объектов в столбце табличных переменных.  
@@ -75,7 +75,7 @@ ConvexHullAggregate ( geometry_operand )
  FROM @Geom;
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

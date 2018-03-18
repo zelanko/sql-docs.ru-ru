@@ -1,5 +1,5 @@
 ---
-title: "ASYMKEY_ID (Transact-SQL) | Документы Microsoft"
+title: "ASYMKEY_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 *Asym_Key_Name*  
 Имя асимметричного ключа в базе данных.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
  **int**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Требует некоторых разрешений асимметричного ключа, а также подтверждения разрешения вызывающей стороны на VIEW с этим асимметричным ключом.
   
 ## <a name="examples"></a>Примеры  
@@ -67,16 +67,16 @@ SELECT ASYMKEY_ID('ABerglundKey11');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [Представления каталога безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
-[KEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)
+[ASYMKEYPROPERTY (Transact-SQL)](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+[KEY_ID (Transact-SQL)](../../t-sql/functions/key-id-transact-sql.md)
   
   

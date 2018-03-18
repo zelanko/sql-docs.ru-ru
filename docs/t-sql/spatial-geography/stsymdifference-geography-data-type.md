@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (тип данных geography) | Документы Microsoft"
+title: "STSymDifference (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает объект, представляющий все точки, в какой-либо **geography** экземпляр или другой **geography** экземпляра, но не лежащие одновременно в обоих экземплярах.  
+  Возвращает объект, представляющий все точки, принадлежащие одному из экземпляров **geography**, но не лежащие одновременно в обоих экземплярах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geography*  
- Другой **geography** экземпляр в дополнение к экземпляру, для которого вызывается STSymDistance().  
+ Другой экземпляр **geography** в дополнение к экземпляру, для которого вызван метод STSymDistance().  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geography** экземпляров не совпадают.  
+ Этот метод всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geography** не совпадают.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], набор возможных результатов на сервере была расширена для **FullGlobe** экземпляров.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор возможных результатов на сервере был пополнен экземплярами **FullGlobe**.  
   
  Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
   
@@ -80,7 +80,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @g.STSymDifference('FULLGLOBE').ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

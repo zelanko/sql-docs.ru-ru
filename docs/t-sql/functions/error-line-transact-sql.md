@@ -1,5 +1,5 @@
 ---
-title: "Функция ERROR_LINE (Transact-SQL) | Документы Microsoft"
+title: "ERROR_LINE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -62,10 +62,10 @@ ERROR_LINE ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция может быть вызвана в любом месте в пределах блока CATCH.  
   
- Функция ERROR_LINE возвращает номер строки, в которой возникла ошибка, независимо от того, сколько раз или в какой области блока CATCH она была вызвана. Это отличается от таких функций, таких как@ERROR, который возвращают номер ошибки в инструкции сразу после того, который вызывает ошибку, или в первой инструкции блока CATCH.  
+ Функция ERROR_LINE возвращает номер строки, в которой возникла ошибка, независимо от того, сколько раз или в какой области блока CATCH она была вызвана. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку, или же в первой инструкции блока CATCH.  
   
  Во вложенных блоках CATCH функция ERROR_LINE возвращает номер строки ошибки, связанной с тем блоком CATCH, в котором она была вызвана. Например, блок CATCH конструкции TRY…CATCH может содержать вложенную конструкцию TRY…CATCH. Внутри вложенного блока CATCH функция ERROR_LINE возвращает номер строки ошибки, вызвавшей вложенный блок CATCH. Если функция ERROR_LINE запущена во внешнем блоке CATCH, она возвращает номер строки ошибки, вызвавшей этот блок CATCH.  
   
@@ -138,7 +138,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

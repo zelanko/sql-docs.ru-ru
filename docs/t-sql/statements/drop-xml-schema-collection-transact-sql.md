@@ -1,5 +1,5 @@
 ---
-title: "Удаление КОЛЛЕКЦИИ XML-СХЕМ (Transact-SQL) | Документы Microsoft"
+title: "DROP XML SCHEMA COLLECTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
   
  Нельзя удалить коллекцию XML-схем, если она используется. Это означает, что удаляемая коллекция не может быть:  
   
--   Связанные с любым **xml** типа параметра или столбца.  
+-   ассоциированной с любым параметром типа **xml** или столбцом;  
   
 -   указанной в ограничениях любой из таблиц;  
   
@@ -91,11 +91,11 @@ DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание КОЛЛЕКЦИИ XML-СХЕМ &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

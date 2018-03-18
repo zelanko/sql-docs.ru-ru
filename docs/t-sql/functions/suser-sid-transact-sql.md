@@ -1,5 +1,5 @@
 ---
-title: "SUSER_SID (Transact-SQL) | Документы Microsoft"
+title: "SUSER_SID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -53,25 +53,25 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *входа* **"**  
-**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **'** *login* **'**  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Имя входа пользователя. *Имя входа* — **sysname**. *Имя входа*, необязателен и может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или [!INCLUDE[msCoName](../../includes/msconame-md.md)] пользователя или группы Windows. Если *входа* — не указано, возвращаются сведения о текущем контексте безопасности. Если параметр содержит слово NULL, то возвращается NULL.  
+ Имя входа пользователя. Аргумент *login* имеет тип **sysname**. Аргумент *login* необязателен и может представлять собой имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо имя пользователя или группы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Если аргумент *login* не задан, возвращаются сведения о текущем контексте безопасности. Если параметр содержит слово NULL, то возвращается NULL.  
   
  *Param2*  
-**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Указывает, проверено ли имя входа. *Param2* относится к типу **int** и является необязательным. Когда *Param2* равно 0, то имя входа является недопустимым. Когда *Param2* не равен 0, имя входа Windows проверяется быть в точности совпадает с именем входа, хранящиеся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Указывает, проверено ли имя входа. Аргумент *Param2* имеет тип **int** и является необязательным. Если параметр *Param2* равен 0, то имя для входа не проверяется. Если параметр*Param2* не равен 0, то имя для входа Windows проверяется на обязательное соответствие имени для входа, сохраненному в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция SUSER_SID может использоваться в качестве ограничения DEFAULT в инструкциях ALTER TABLE и CREATE TABLE. Функцию SUSER_SID можно использовать в списке выбора, в предложении WHERE, а также в любом месте, где разрешено использование выражений. После функции SUSER_SID всегда должны следовать скобки, даже если не задано ни одного параметра.  
   
  Если функция SUSER_SID вызывается без аргументов, она возвращает идентификатор SID текущего контекста безопасности. Если функция SUSER_SID вызывается без аргументов в пакете, в котором был переключен контекст с помощью инструкции EXECUTE AS, функция возвращает идентификатор SID олицетворенного контекста. При вызове из олицетворенного контекста функция SUSER_SID(ORIGINAL_LOGIN()) возвращает SID оригинального контекста.  
   
- Если параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows не совпадают, функция SUSER_SID может завершиться, если имя входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows хранятся в разных форматах. Например, если на компьютере Windows «TestComputer» есть пользователь «User», а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это имя входа хранится как «TESTCOMPUTER\User», то при разрешении имя входа «TestComputer\User» может быть не обнаружено. Чтобы пропустить данную проверку имени входа, используйте *Param2*. Разные параметры сортировки часто вызывают ошибку 15401 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Если параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows не совпадают, функция SUSER_SID может завершиться, если имя входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows хранятся в разных форматах. Например, если на компьютере Windows «TestComputer» есть пользователь «User», а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это имя входа хранится как «TESTCOMPUTER\User», то при разрешении имя входа «TestComputer\User» может быть не обнаружено. Чтобы отключить проверку имени для входа, используйте параметр *Param2*. Разные параметры сортировки часто вызывают ошибку 15401 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
@@ -85,9 +85,9 @@ SELECT SUSER_SID('sa');
 ```  
   
 ### <a name="b-using-susersid-with-a-specific-login"></a>Б. Использование SUSER_SID с определенным именем входа  
- В следующем примере возвращается идентификационный номер безопасности для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` входа.  
+ В приведенном ниже примере возвращается идентификатор безопасности для имени для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
-**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -97,7 +97,7 @@ GO
 ### <a name="c-using-susersid-with-a-windows-user-name"></a>В. Использование SUSER_SID с именем пользователя Windows  
  В следующем примере возвращается идентификационный номер безопасности для пользователя Windows `London\Workstation1`.  
   
-**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -123,18 +123,18 @@ GO
 ```  
   
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>Д. Сравнение имени входа Windows с именем входа, сохраненным в SQL Server  
- В следующем примере показано, как использовать *Param2* получить SID из Windows и использует в качестве входных данных для этого идентификатора `SUSER_SNAME` функции. В этом примере имя входа указывается в формате, в котором оно хранится в Windows (`TestComputer\User`), а возвращается в формате, в котором оно хранится в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
+ В приведенном ниже примере показано, как с помощью параметра *Param2* получить SID из Windows и передать его в функцию `SUSER_SNAME`. В этом примере имя входа указывается в формате, в котором оно хранится в Windows (`TestComputer\User`), а возвращается в формате, в котором оно хранится в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
-**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция ORIGINAL_LOGIN &#40; Transact-SQL &#41;](../../t-sql/functions/original-login-transact-sql.md)   
+ [ORIGINAL_LOGIN (Transact-SQL)](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [Binary и varbinary &#40; Transact-SQL &#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [binary и varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

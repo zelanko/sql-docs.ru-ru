@@ -1,5 +1,5 @@
 ---
-title: "STPointFromWKB (тип данных geometry) | Документы Microsoft"
+title: "STPointFromWKB (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geometryPoint** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geometryPoint** из WKB-представления OGC.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_point*  
- WKB-представление **geometryPoint** экземпляр, который необходимо вернуть. *WKB_point* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **geometryPoint**. *WKB_point* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometryPoint** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometryPoint**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Тип OGC: **точки**  
+ Тип OGC: **Point**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод вызывает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STPointFromWKB()` применяется для создания экземпляра `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

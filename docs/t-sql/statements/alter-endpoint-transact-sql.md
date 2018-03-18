@@ -1,5 +1,5 @@
 ---
-title: "ALTER ENDPOINT (Transact-SQL) | Документы Microsoft"
+title: "ALTER ENDPOINT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -45,9 +45,9 @@ ms.lasthandoff: 01/25/2018
 -   Путем изменения свойств конечной точки.  
   
 > [!NOTE]  
->  В этом подразделе описаны синтаксис и аргументы, характерные для инструкции ALTER ENDPOINT. Описание аргументов, которые являются общими для CREATE ENDPOINT и ALTER ENDPOINT см. в разделе [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  В этом подразделе описаны синтаксис и аргументы, характерные для инструкции ALTER ENDPOINT. Описание аргументов, общих для инструкций CREATE ENDPOINT и ALTER ENDPOINT, см. в разделе [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
- Собственные XML-веб-службы (конечные точки SOAP/HTTP) удалены, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
+ Собственные XML-веб-службы (конечные точки SOAP/HTTP) удалены, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,38 +106,38 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>Аргументы  
   
 > [!NOTE]  
->  Следующие аргументы являются характерными для инструкции ALTER ENDPOINT. Описания остальных аргументов см. в разделе [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  Следующие аргументы являются характерными для инструкции ALTER ENDPOINT. Описания остальных аргументов см. в разделе [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  **AS** { **TCP** }  
- Нельзя изменить протокол транспорта с **ALTER ENDPOINT**.  
+ Транспортный протокол нельзя изменить с помощью инструкции **ALTER ENDPOINT**.  
   
- **АВТОРИЗАЦИЯ** *входа*  
- **АВТОРИЗАЦИИ** параметр недоступен в **ALTER ENDPOINT**. Владельца можно назначать только в момент создания конечной точки.  
+ **AUTHORIZATION** *login*  
+ Параметр **AUTHORIZATION** недоступен в инструкции **ALTER ENDPOINT**. Владельца можно назначать только в момент создания конечной точки.  
   
- **ДЛЯ** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
- Невозможно изменить тип полезных данных с **ALTER ENDPOINT**.  
+ **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
+ Тип полезных данных нельзя изменить с помощью инструкции **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При использовании ALTER ENDPOINT укажите только те параметры, которые необходимо обновить. При отсутствии явного изменения все свойства существующей конечной точки остаются прежними.  
   
  Инструкции ENDPOINT DDL внутри пользовательской транзакции выполняться не могут.  
   
- Сведения о выборе алгоритма шифрования для использования с конечной точкой см. в разделе [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
+ Дополнительные сведения о выборе алгоритма шифрования для использования с конечной точкой см. в разделе [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
 > [!NOTE]  
 >  Алгоритм RC4 поддерживается только в целях обратной совместимости. Когда база данных имеет уровень совместимости 90 или 100, новые материалы могут шифроваться только с помощью алгоритмов RC4 или RC4_128. (Не рекомендуется.) Используйте вместо этого более новые алгоритмы, например AES. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях материалы, зашифрованные с помощью алгоритмов RC4 или RC4_128, могут быть расшифрованы на любом уровне совместимости.  
 >   
->  RC4 — относительно слабый алгоритм, а AES — относительно сильный. Однако AES заметно медленнее RC4. Если приоритет защиты выше скорости, рекомендуется использовать алгоритм AES.  
+>  RC4 — относительно слабый алгоритм, а AES — относительно сильный. Однако AES заметно медленнее RC4. Если приоритет защиты выше скорости, рекомендуется использовать алгоритм AES.  
   
 ## <a name="permissions"></a>Разрешения  
- Пользователь должен быть членом **sysadmin** предопределенной роли сервера, владельцем конечной точки, или разрешение ALTER ANY ENDPOINT.  
+ Необходимо, чтобы пользователь был членом предопределенной роли сервера **sysadmin**, владельцем конечной точки или имел разрешение ALTER ANY ENDPOINT.  
   
- Чтобы изменить принадлежность существующей конечной точки, необходимо применить инструкцию ALTER AUTHORIZATION. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Чтобы изменить принадлежность существующей конечной точки, необходимо применить инструкцию ALTER AUTHORIZATION. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Дополнительные сведения см. в разделе [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также  
- [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DB_NAME (Transact-SQL) | Документы Microsoft"
+title: "DB_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>Аргументы  
 *database_id*  
-Идентификатор возвращаемой базы данных. *database_id* — **int**, не имеет значения по умолчанию. Если идентификационный номер не указан, возвращается имя текущей базы данных.
+Идентификатор возвращаемой базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Если идентификационный номер не указан, возвращается имя текущей базы данных.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **nvarchar(128)**
   
-## <a name="permissions"></a>Permissions  
-Если код, вызывающий **DB_NAME** не является владельцем базы данных и база данных не **master** или **tempdb**, являются минимальными разрешениями, необходимыми для просмотра соответствующей строки Разрешение уровня сервера ALTER ANY DATABASE или VIEW ANY DATABASE или разрешение CREATE DATABASE в **master** базы данных. Узнать базу данных, к которой подключен участник, можно в представлении каталога **sys.databases**.
+## <a name="permissions"></a>Разрешения  
+Если участник, вызывающий **DB_NAME**, не является владельцем базы данных, а база данных не является базой данных **master** или **tempdb**, минимально необходимыми разрешениями для просмотра соответствующей строки являются разрешения уровня сервера ALTER ANY DATABASE или VIEW ANY DATABASE либо разрешение CREATE DATABASE для базы данных **master**. Узнать базу данных, к которой подключен участник, можно в представлении каталога **sys.databases**.
   
 > [!IMPORTANT]  
->  По умолчанию роли public имеет разрешение VIEW ANY DATABASE, что все имена входа просмотреть сведения о базе данных. Чтобы заблокировать вход с возможность обнаружения базы данных, ОТМЕНИТЬ разрешение VIEW ANY DATABASE с общедоступной или запретить разрешение VIEW ANY DATABASE для отдельных имен входа.  
+>  По умолчанию общедоступная роль имеет разрешение VIEW ANY DATABASE, что позволяет всем именам для входа просматривать информацию в базе данных. Чтобы лишить имя для входа возможности обнаруживать базу данных, отзовите общедоступное разрешение VIEW ANY DATABASE с помощью инструкции REVOKE или отмените разрешение VIEW ANY DATABASE для отдельных имен для входа с помощью инструкции DENY.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -81,25 +81,25 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-return-the-current-database-name"></a>В. Возвращает имя текущей базы данных  
+### <a name="c-return-the-current-database-name"></a>В. Получение имени текущей базы данных  
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>Г. Возвращает имя базы данных, используя идентификатор базы данных  
-Следующий пример возвращает имя базы данных и database_id для каждой базы данных.
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>Г. Получение имени базы данных по ее идентификатору  
+В приведенном ниже примере возвращается имя и идентификатор каждой базы данных.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
 FROM sys.databases;  
 ```  
   
-## <a name="see-also"></a>См. также:
-[DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md)  
+[Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

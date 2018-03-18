@@ -1,5 +1,5 @@
 ---
-title: "COLLATIONPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "COLLATIONPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---collationproperty-transact-sql"></a>Параметры сортировки функций - COLLATIONPROPERTY (Transact-SQL)
+# <a name="collation-functions---collationproperty-transact-sql"></a>Функции параметров сортировки — COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Возвращает свойство указанных параметров сортировки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
@@ -47,19 +47,19 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Аргументы  
 *collation_name*  
-Имя сортировки. *collation_name* — **nvarchar(128)**, и нет значения по умолчанию.
+Имя сортировки. Аргумент *collation_name* имеет тип **nvarchar(128)** и не имеет значения по умолчанию.
   
-*Свойство*  
-Свойство сортировки. *Свойство* — **varchar(128)**, и может принимать одно из следующих значений:
+*property*  
+Свойство сортировки. Аргумент *property* имеет тип **varchar(128)** и может принимать одно из перечисленных ниже значений.
   
 |Имя свойства|Description|  
 |---|---|
-|**CodePage**|Кодовая страница параметров сортировки не в Юникоде. См. в разделе [сопоставление таблиц в приложении G DBCS и Юникода](https://msdn.microsoft.com/en-us/library/cc194886.aspx) и [кодовых страниц в приложении H](https://msdn.microsoft.com/en-us/library/cc195051.aspx) Чтобы преобразовать эти значения и увидеть их сопоставления символов.|  
-|**КОД ЯЗЫКА**|Код языка в Windows для параметров сортировки. См. в разделе [структуры LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) для преобразования этих значений (будет необходимо преобразовать в **varbinary** первой).|  
-|**ComparisonStyle**|Стиль сравнения Windows для параметров сортировки. Возвращает значение 0 для всех двоичных параметров сортировки, как (\_BIN) и (\_BIN2), а также когда чувствительны к все свойства. Значения битовой маски:<br /><br /> Не учитывать регистр: 1<br /><br /> Без учета диакритических знаков: 2<br /><br /> Не учитывать кану: 65536<br /><br /> Игнорировать ширину: 131072<br /><br /> Примечание: Даже если она влияет на способ сравнения вариантов выбора зависящие от (\_VSS) параметр не представлен в это значение.|  
-|**Версия**|Версия параметров сортировки, производная от значения поля версии идентификатора параметров сортировки. Возвращает целочисленное значение от 0 до 3.<br /><br /> Параметры сортировки с «140» в имени возвращает значение 3.<br /><br /> Параметры сортировки с именем «100», возвращают значение 2.<br /><br /> Параметры сортировки с именем «90», возвращают значение 1.<br /><br /> Все остальные параметры сортировки возвращают 0.|  
+|**CodePage**|Кодовая страница параметров сортировки не в Юникоде. Сведения о преобразовании этих значений и сопоставлении символов см. в разделах [Приложение Ж. Таблицы сопоставления DBCS и Юникода](https://msdn.microsoft.com/en-us/library/cc194886.aspx) и [Приложение З. Кодовые страницы](https://msdn.microsoft.com/en-us/library/cc195051.aspx).|  
+|**LCID**|Код языка в Windows для параметров сортировки. Сведения о преобразовании этих значений см. в статье [Структура кода языка](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (сначала их необходимо преобразовать в тип **varbinary**).|  
+|**ComparisonStyle**|Стиль сравнения Windows для параметров сортировки. Возвращает значение 0 для всех двоичных параметров сортировки (как (\_BIN), так и (\_BIN2)), а также если учитываются все свойства. Значения битовой маски:<br /><br /> Не учитывать регистр: 1<br /><br /> Не учитывать диакритические знаки: 2<br /><br /> Не учитывать тип японской азбуки: 65536<br /><br /> Не учитывать ширину: 131072<br /><br /> Примечание. Хотя параметр variation-selector-sensitive (\_VSS) влияет на то, как производится сравнение, он не представлен в этом значении.|  
+|**Версия**|Версия параметров сортировки, производная от значения поля версии идентификатора параметров сортировки. Возвращает целое число от 0 до 3.<br /><br /> Параметры сортировки, имя которых содержит "140", возвращают значение 3.<br /><br /> Параметры сортировки, имя которых содержит "100", возвращают значение 2.<br /><br /> Параметры сортировки, имя которых содержит "90", возвращают значение 1.<br /><br /> Все остальные параметры сортировки возвращают 0.|  
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **sql_variant**
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +74,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage');
 1252   
 ```  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')  
@@ -86,7 +86,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 1252   
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
   

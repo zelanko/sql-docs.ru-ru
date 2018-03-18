@@ -1,5 +1,5 @@
 ---
-title: "STLineFromWKB (тип данных geography) | Документы Microsoft"
+title: "STLineFromWKB (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **географического объекта LineString** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **LineString geography** из WKB-представления открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,23 +45,23 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_linestring*  
- WKB-представление **географического объекта LineString** экземпляр, который необходимо вернуть. *WKB_linestring* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **LineString geography**. *WKB_linestring* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **географического объекта LineString** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **LineString geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
  Тип OGC: **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод создает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STLineFromWKB()` для создания `geography`экземпляра.  
+ В приведенном ниже примере метод `STLineFromWKB()` применяется для создания экземпляра `geography`.  
   
 ```  
 DECLARE @g geography;  
@@ -69,7 +69,7 @@ SET @g = geography::STLineFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

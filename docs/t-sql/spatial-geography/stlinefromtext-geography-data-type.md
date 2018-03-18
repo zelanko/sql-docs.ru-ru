@@ -1,5 +1,5 @@
 ---
-title: "STLineFromText (тип данных geography) | Документы Microsoft"
+title: "STLineFromText (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geography** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT), дополненное всеми значениями Z (уровень) и значения M (Мера), сопровождающими экземпляр.
+Возвращает экземпляр **geography** из WKT-представления открытого геопространственного консорциума (OGC) вместе со значениями Z (высота) и M (мера), сопровождающими экземпляр.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *linestring_tagged_text*  
- Является WKT-представление **geographyLineString** экземпляр, который необходимо вернуть. *linestring_tagged_text* — **nvarchar(max)** выражение.  
+ WKT-представление возвращаемого экземпляра **geographyLineString**. *linestring_tagged_text* является выражением типа **nvarchar(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geographyLineString** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyLineString**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
  Тип OGC: **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод создает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STLineFromText()` применяется для создания экземпляра `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STLineFromText('LINESTRING(-122.360 47.656, -122.343 47.656 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

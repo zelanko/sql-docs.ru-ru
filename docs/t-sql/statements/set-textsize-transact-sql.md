@@ -1,5 +1,5 @@
 ---
-title: "SET TEXTSIZE (Transact-SQL) | Документы Microsoft"
+title: "SET TEXTSIZE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/12/2016
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Указывает размер **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **текст**, **ntext** , и **изображения** данные, возвращаемые инструкцией SELECT.  
+  Указывает размер данных типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** и **image**, возвращаемых инструкцией SELECT.  
   
 > [!IMPORTANT]  
->  **ntext**, **текст**, и **изображения** типов данных будет удалена в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных **nvarchar(max)**, **varchar(max)**и **varbinary(max)** .  
+>  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных **nvarchar(max)**, **varchar(max)**и **varbinary(max)** .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,18 +55,18 @@ SET TEXTSIZE { number }
   
 ## <a name="arguments"></a>Аргументы  
  *number*  
- Длина **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **текст**, **ntext**, или **изображения** данных в байтах. *номер* имеет тип integer и максимальное значение 2147483647 (2 ГБ).  Значение-1 означает Неограниченный размер. Значение 0 устанавливает размер в 4 КБ значение по умолчанию.  
+ Размер данных типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** или **image** в байтах. *number* должно быть целым числом не более 2 147 483 647 (2 ГБ).  Значение –1 означает неограниченный размер. Значение 0 устанавливает размер в 4 КБ, принятый по умолчанию.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 и более поздние версии) и драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматического указания `-1` (без ограничений) при подключении.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 и выше ) и драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически указывают `-1` (неограниченно) при подключении.  
   
- **Драйверы, которые старше [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB (версии 9) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при соединении автоматически устанавливают TEXTSIZE 2147483647.  
+ **Драйверы до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для Native Client и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для Native Client (версия 9) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически устанавливают для параметра TEXTSIZE значение 2147483647 при подключении.  
   
-## <a name="remarks"></a>Замечания  
- Параметр SET TEXTSIZE затрагивает @@TEXTSIZE функции.  
+## <a name="remarks"></a>Remarks  
+ Установка SET TEXTSIZE влияет на работу функции @@TEXTSIZE.  
   
  Значение TEXTSIZE устанавливается во время выполнения, а не во время синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="see-also"></a>См. также:  

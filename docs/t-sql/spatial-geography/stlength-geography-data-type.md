@@ -1,5 +1,5 @@
 ---
-title: "STLength (тип данных geography) | Документы Microsoft"
+title: "STLength (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geography-data-type"></a>STLength (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает общую длину элементов в **geography** экземпляра или **geography** экземпляров в **GeometryCollection**.  
+  Возвращает общую длину элементов в экземпляре **geography** или в экземплярах **geography** в коллекции **GeometryCollection**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **число с плавающей запятой**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Возвращаемый тип CLR: **SqlDouble**  
+ Тип возвращаемых данных CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Если **geography** экземпляр закрыт, его длина вычисляется как общая длина вокруг экземпляра; длина любого многоугольника есть его периметр и длина точки — 0. Длина **GeometryCollection** находится путем вычисления суммы длин всех **geography** экземпляров, содержащихся в коллекции.  
+ Если экземпляр **geography** замкнут, его длина вычисляется как общая длина пути обхода экземпляра; длина любого многоугольника есть его периметр, а длина точки — 0. Длина коллекции **GeometryCollection** находится путем вычисления суммы длин всех экземпляров **geography**, содержащихся в коллекции.  
   
  STLength() работает и с допустимыми и с недопустимыми объектами LineString. Обычно LineString является недопустимым вследствие перекрывающихся сегментов, которые могут быть вызваны аномалиями, например неточными трассировками GPS. STLength() не удаляет перекрывающиеся или недопустимые сегменты. Он включает перекрывающиеся и недопустимые сегменты в возвращаемое значение длины. Метод MakeValid() может удалять перекрывающиеся сегменты из LineString.  
   
@@ -62,7 +62,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "@@DBTS (Transact-SQL) | Документы Microsoft"
+title: "@@DBTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -45,16 +45,16 @@ ms.lasthandoff: 11/21/2017
 @@DBTS  
 ```  
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **varbinary**
   
-## <a name="remarks"></a>Замечания  
-@@DBTS возвращает значение отметки времени последнего использованного текущей базы данных. Новое значение отметки времени формируется при вставке или обновлении строки со столбцом **timestamp** .
+## <a name="remarks"></a>Remarks  
+@@DBTS возвращает последнее использованное значение отметки времени для текущей базы данных. Новое значение отметки времени формируется при вставке или обновлении строки со столбцом **timestamp** .
   
-@@DBTS Функция не затрагивается изменениями на уровнях изоляции транзакции.
+Функция @@DBTS не затрагивается изменениями на уровнях изоляции транзакции.
   
 ## <a name="examples"></a>Примеры  
-В следующем примере возвращается текущий **timestamp** из [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных.
+В приведенном ниже примере возвращается текущее значение **timestamp** из базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 USE AdventureWorks2012;  
@@ -62,10 +62,10 @@ GO
 SELECT @@DBTS;  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Функции конфигурации &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[Параллелизм курсоров &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+## <a name="see-also"></a>См. также раздел
+[Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[Параллелизм курсоров (ODBC)](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION (Transact-SQL)](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

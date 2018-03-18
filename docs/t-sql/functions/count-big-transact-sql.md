@@ -1,5 +1,5 @@
 ---
-title: "Функция COUNT_BIG (Transact-SQL) | Документы Microsoft"
+title: "COUNT_BIG (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/22/2017
 ---
-# <a name="countbig--sql"></a>ФУНКЦИЯ COUNT_BIG (-SQL)
+# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает количество элементов в группе. Функция COUNT_BIG работает подобно функции COUNT. Единственное различие между двумя функциями — возвращаемые значения. Функция COUNT_BIG всегда возвращает **bigint** значение типа данных. Функция COUNT всегда возвращает **int** значение типа данных.
+Возвращает количество элементов в группе. Функция COUNT_BIG работает подобно функции COUNT. Единственное различие между двумя функциями — возвращаемые значения. Функция COUNT_BIG всегда возвращает значение типа данных **bigint**. Функция COUNT всегда возвращает значение типа данных **int**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -69,10 +69,10 @@ DISTINCT
 Указывает, что функция COUNT_BIG возвращает количество уникальных значений, не равных NULL.
   
 *expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа. Агрегатные функции и вложенные запросы не допускаются.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных. Агрегатные функции и вложенные запросы не допускаются.
   
 *\**  
-Указывает, что все строки должны быть подсчитаны для возврата общего числа строк в таблице. Функция COUNT_BIG (*\**) не принимает никаких параметров и не может использоваться с ключевым словом DISTINCT. Функция COUNT_BIG (*\**) не требует *выражение* параметр так, как по определению не использует сведения о любого столбца. Функция COUNT_BIG (*\**) возвращает количество строк в указанной таблице, не отбрасывая дубликаты. Она подсчитывает каждую строку отдельно. При этом учитываются и строки, содержащие значения NULL.
+Указывает, что все строки должны быть подсчитаны для возврата общего числа строк в таблице. Функция COUNT_BIG(*\**) не имеет параметров и не может использоваться с аргументом DISTINCT. Функция COUNT_BIG(*\**) не требует параметра *expression*, так как по определению она не использует сведения о конкретном столбце. Функция COUNT_BIG(*\**) возвращает количество строк в заданной таблице, не отбрасывая дубликаты. Она подсчитывает каждую строку отдельно. При этом учитываются и строки, содержащие значения NULL.
   
 ALL  
 Применяет агрегатную функцию ко всем значениям. ALL является параметром по умолчанию.
@@ -81,30 +81,30 @@ DISTINCT
 Указывает на то, что функция AVG будет выполнена только для одного экземпляра каждого уникального значения, независимо от того, сколько раз встречается это значение.
   
 *expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) точных числовых или приблизительных числовых типа данных, за исключением **бит** тип данных. Агрегатные функции и вложенные запросы не допускаются.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**. Агрегатные функции и вложенные запросы не допускаются.
   
-НАД **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
-*partition_by_clause* Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* , определяет логический порядок, в котором выполняется операция. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
+*partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **bigint**
   
 ## <a name="remarks"></a>Remarks  
 Функция COUNT_BIG(*) возвращает количество элементов в группе. Сюда входят значения NULL и повторяющиеся значения.
   
-Функция COUNT_BIG (все *выражение*) вычисляет *выражение* для каждой строки в группе и возвращает количество значений, отличных от NULL.
+Функция COUNT_BIG (ALL *expression*) вычисляет *expression* для каждой строки в группе и возвращает количество значений, не равных NULL.
   
-Функция COUNT_BIG (DISTINCT *выражение*) вычисляет *выражение* для каждой строки в группе и возвращает количество уникальных ненулевых значений,.
+Функция COUNT_BIG (DISTINCT *expression*) вычисляет *expression* для каждой строки в группе и возвращает количество уникальных значений, не равных NULL.
   
 COUNT_BIG — это детерминированная функция, если она используется без предложений OVER и ORDER BY. Она не детерминирована при использовании с предложениями OVER и ORDER BY. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Примеры  
-Примеры см. в разделе [число &#40; Transact-SQL &#41; ](../../t-sql/functions/count-transact-sql.md).
+Примеры см. в статье [COUNT (Transact-SQL)](../../t-sql/functions/count-transact-sql.md).
   
 ## <a name="see-also"></a>См. также раздел
-[Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[Число &#40; Transact-SQL &#41;](../../t-sql/functions/count-transact-sql.md)  
-[int, bigint, smallint и tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[ЧЕРЕЗ предложение &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT (Transact-SQL)](../../t-sql/functions/count-transact-sql.md)  
+[int, bigint, smallint и tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

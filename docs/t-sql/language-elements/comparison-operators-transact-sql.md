@@ -1,5 +1,5 @@
 ---
-title: "Операторы сравнения (Transact-SQL) | Документы Microsoft"
+title: "Операторы сравнения (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="comparison-operators-transact-sql"></a>Операторы сравнения (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Операторы сравнения позволяют проверить, одинаковы ли два выражения. Операторы сравнения можно использовать для всех выражений, за исключением выражений типов **текст**, **ntext**, или **изображение** типов данных. Операторы сравнения [!INCLUDE[tsql](../../includes/tsql-md.md)] приведены в следующей таблице:  
+  Операторы сравнения позволяют проверить, одинаковы ли два выражения. Операторы сравнения можно применять ко всем выражениям, за исключением выражений типов **text**, **ntext** и **image**. Операторы сравнения [!INCLUDE[tsql](../../includes/tsql-md.md)] приведены в следующей таблице:  
   
 |Оператор|Значение|  
 |--------------|-------------|  
@@ -47,18 +47,18 @@ ms.lasthandoff: 01/25/2018
 |[>= (больше или равно)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Больше или равно|  
 |[<= (меньше или равно)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Меньше или равно|  
 |[<> (не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|Не равно|  
-|[\!= (Не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Не равно (не определено стандартом ISO)|  
-|[\!< (Не меньше чем)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Не меньше (не определено стандартом ISO)|  
-|[\!> (Не больше чем)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Не больше (не определено стандартом ISO)|  
+|[!= (не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Не равно (не определено стандартом ISO)|  
+|[!< (не меньше)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Не меньше (не определено стандартом ISO)|  
+|[!> (не больше чем)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Не больше (не определено стандартом ISO)|  
   
 ## <a name="boolean-data-type"></a>Тип данных Boolean  
- Результат выполнения оператора сравнения имеет **логическое** тип данных. Это имеет три значения: TRUE, FALSE и UNKNOWN. Выражения, возвращающие **логическое** тип данных, называются логических выражений.  
+ Результат выполнения оператора сравнения имеет тип данных **Boolean**. Он имеет три значения: TRUE, FALSE и UNKNOWN. Выражения, возвращающие значения типа **Boolean**, называются логическими.  
   
- В отличие от других [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных **логическое** тип данных не может быть указан как тип данных столбца или переменной и не может быть возвращен в результирующем наборе.  
+ В отличие от других типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип **Boolean** не может быть типом столбца таблицы или переменной и не может быть возвращен в результирующем наборе.  
   
  Если параметр SET ANSI_NULLS имеет значение ON, оператор, в число операндов которого входит хотя бы одно выражение NULL, возвращает UNKNOWN. Когда параметр SET ANSI_NULLS имеет значение OFF, действуют те же правила, однако если оба выражения равны NULL, то оператор равенства (=) возвращает TRUE. Например, если параметр SET ANSI_NULLS имеет значение OFF, при обработке выражения NULL = NULL будет возвращено TRUE.  
   
- Выражения с **логическое** типы данных используются в предложении WHERE для фильтрации строк, удовлетворяющих условиям поиска и в инструкциях языка управления потоком таких как IF и WHILE, например:  
+ Выражения со значениями типа **Boolean** используются в предложении WHERE для фильтрации строк, удовлетворяющих условиям поиска, и в инструкциях языка управления потоком, таких как IF и WHILE, например:  
   
 ```  
 -- Uses AdventureWorks  
@@ -71,8 +71,8 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

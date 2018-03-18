@@ -1,5 +1,5 @@
 ---
-title: "LOG10 (Transact-SQL) | Документы Microsoft"
+title: "LOG10 (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает десятичный логарифм указанного **float** выражение.  
+  Возвращает десятичный логарифм указанного выражения типа **float**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *float_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в **float**.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип **float**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **float**  
   
-## <a name="remarks"></a>Замечания  
- Функции LOG10 и POWER находятся в обратной зависимости друг от друга. Например, 10 ^ LOG10 (*n*) =  *n* .  
+## <a name="remarks"></a>Remarks  
+ Функции LOG10 и POWER находятся в обратной зависимости друг от друга. Пример: 10 ^ LOG10(*n*) = *n*.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -93,10 +93,10 @@ SELECT POWER (10, LOG10(5));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: Вычисление логарифма для значения.  
- В следующем примере вычисляется `LOG10` указанного значения.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>В. Расчет десятичного логарифма для значения  
+ В приведенном ниже примере производится расчет `LOG10` для указанного значения.  
   
 ```  
 SELECT LOG10(145.175642);  
@@ -110,9 +110,9 @@ SELECT LOG10(145.175642);
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [POWER &#40; Transact-SQL &#41;](../../t-sql/functions/power-transact-sql.md)   
- [ЖУРНАЛ &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [POWER (Transact-SQL)](../../t-sql/functions/power-transact-sql.md)   
+ [LOG (Transact-SQL)](../../t-sql/functions/log-transact-sql.md)  
   
   
 

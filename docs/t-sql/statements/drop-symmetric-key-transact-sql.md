@@ -1,5 +1,5 @@
 ---
-title: "УДАЛЯТЬ СИММЕТРИЧНЫЙ ключ (Transact-SQL) | Документы Microsoft"
+title: "DROP SYMMETRIC KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,14 +56,14 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Имя удаляемого симметричного ключа.  
   
  REMOVE PROVIDER KEY  
- Удаляет ключ расширенного управления ключами с устройства расширенного управления ключами. Дополнительные сведения о расширенном управлении ключами см. в разделе [расширенного управления ключами &#40; Расширенное управление Ключами &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Удаляет ключ расширенного управления ключами с устройства расширенного управления ключами. Дополнительные сведения о расширенном управлении ключами см. в разделе [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если ключ является открытым в текущем сеансе, то инструкция завершится с ошибками.  
   
- Если асимметричный ключ, который сопоставляется с ключом расширенного управления Ключами на устройстве расширенного управления Ключами и **REMOVE PROVIDER KEY** параметр не указан, ключ будет удален из базы данных, но не с устройства и будет выдано предупреждение.  
+ Если асимметричный ключ был сопоставлен с ключом расширенного управления ключами на устройстве расширенного управления ключами, а параметр **REMOVE PROVIDER KEY** не был указан, то ключ будет удален из базы данных, но не с устройства; также будет выдано предупреждение.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешение CONTROL в симметричном ключе.  
   
 ## <a name="examples"></a>Примеры  
@@ -80,7 +80,7 @@ GO
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

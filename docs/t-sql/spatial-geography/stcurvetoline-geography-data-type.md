@@ -1,5 +1,5 @@
 ---
-title: "STCurveToLine (тип данных geography) | Документы Microsoft"
+title: "STCurveToLine (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает приближение из многоугольников **geography** экземпляра, содержащего сегменты дуги.  
+  Возвращает приближение из многоугольников для экземпляра **geography**, содержащего сегменты дуги.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- Возвращает **LineString** экземпляра для **CircularString** или **CompoundCurve** экземпляра.  
+ Возвращает экземпляр **LineString** для экземпляра **CircularString** или **CompoundCurve**.  
   
- Возвращает **многоугольника** экземпляра для **CurvePolygon** экземпляра.  
+ Возвращает экземпляр **Polygon** для экземпляра **CurvePolygon**.  
   
- Возврат копии **geography** экземпляры, которые не содержат **CircularString**, **CompoundCurve**, или **CurvePolygon** экземпляров.  
+ Возвращает копии экземпляров **geography**, которые не содержат экземпляры **CircularString**, **CompoundCurve** или **CurvePolygon**.  
   
- В отличие от спецификации SQL MM этот метод не использует значения по оси z в расчета аппроксимации. Все значения по оси z представленные в названном **geography** экземпляра учитываются.  
+ В отличие от спецификации SQL MM, данный метод не использует значения координаты z для расчета аппроксимации из многоугольников. Любое значение координаты z, представленное в вызываемом экземпляре **geography**, игнорируется.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается экземпляр `LineString`, который представляет собой аппроксимацию из многоугольников для экземпляра `CircularString`:  
@@ -67,9 +67,9 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
  ```  
   
-## <a name="see-also"></a>См. также  
- [STLength &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+## <a name="see-also"></a>См. также:  
+ [STLength (тип данных geography)](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints (тип данных geography)](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Сводка: Настройка разрешений на объекты базы данных | Документы Microsoft"
+title: "Сводка. Настройка разрешений для объектов базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,13 +28,13 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>Занятие 2 – 5 - Сводка — Настройка разрешений на объекты базы данных
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Учетные записи дают пользователям разрешения для подключения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Пользователями являются учетные записи, имеющие доступ к определенной базе данных. С помощью инструкции GRANT пользователям можно разрешить доступ к данным для чтения или изменения данных.  
+# <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>Урок 2–5. Сводка: настройка разрешений для объектов базы данных
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Учетные записи дают пользователям разрешения на подключение к серверу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Пользователями являются учетные записи, имеющие доступ к определенной базе данных. С помощью инструкции GRANT пользователям можно разрешить доступ к данным для чтения или изменения данных.  
   
 Представлением является отдельная инструкция SELECT, отображаемая для пользователей в виде таблицы. Хранимой процедурой называется одна или несколько инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] , выполняемых в пакете.  
   
 ## <a name="next-lesson-in-tutorial"></a>Следующее занятие учебника  
-[Урок 3. Удаление объектов базы данных](../t-sql/lesson-3-deleting-database-objects.md)  
+[Урок 3. Удаление объектов базы данных](../t-sql/lesson-3-deleting-database-objects.md)  
   
   
   

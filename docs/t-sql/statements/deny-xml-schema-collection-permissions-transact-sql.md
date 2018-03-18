@@ -1,5 +1,5 @@
 ---
-title: "Запрет разрешения на коллекции схем XML (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на коллекцию XML-схем (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -64,19 +64,19 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Определяет разрешение, которое можно запретить для коллекции XML-схем. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- Определяет коллекцию XML-схем, на которую будет запрещено разрешение. Требуется квалификатор области (::). Если *schema_name* не указан, используется схема по умолчанию. Если *schema_name* указано, требуется квалификатор области схемы (.).  
+ Определяет коллекцию XML-схем, на которую будет запрещено разрешение. Квалификатор области (::) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
- Чтобы \<database_principal >  
+ TO \<database_principal>  
  Задает участника, для которого запрещается разрешение, —  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения.  
   
  *Database_user*  
@@ -104,7 +104,7 @@ DENY permission  [ ,...n ] ON
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
 ## <a name="remarks"></a>Remarks  
- Сведения о коллекции XML-схем можно увидеть в [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) представления каталога.  
+ Сведения о коллекциях XML-схем доступны в представлении каталога [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Коллекция XML-схем представляет собой защищаемую сущность уровня схемы, содержащуюся в родительской схеме иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно запретить для коллекции XML-схем, перечислены в следующей таблице вместе с более общими разрешениями, неявно содержащими их.  
   
@@ -129,11 +129,11 @@ DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ПРЕДОСТАВЬТЕ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
- [Создание КОЛЛЕКЦИИ XML-СХЕМ &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [GRANT, предоставление разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+ [sys.xml_schema_collections (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

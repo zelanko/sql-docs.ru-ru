@@ -1,5 +1,5 @@
 ---
-title: "DROP ROUTE (Transact-SQL) | Документы Microsoft"
+title: "DROP ROUTE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DROP ROUTE route_name
  Имя удаляемого маршрута. Не могут быть указаны имена сервера, базы данных и схемы.  
   
 ## <a name="remarks"></a>Remarks  
- Таблица маршрутизации, хранящая маршруты представляет таблицу метаданных, которую можно просмотреть в представлении каталога **sys.routes**. Таблица маршрутизации может быть обновлена только с помощью инструкций CREATE ROUTE, ALTER ROUTE и DROP ROUTE.  
+ Таблица маршрутизации, где хранится таблица метаданных, данные из которой могут быть получены с помощью представления каталога **sys.routes**. Таблица маршрутизации может быть обновлена только с помощью инструкций CREATE ROUTE, ALTER ROUTE и DROP ROUTE.  
   
  Можно удалить маршрут независимо от того, используют ли его какие-либо диалоги. Однако если не существует другого маршрута к удаленной службе, сообщения для этих диалогов останутся в очереди передачи до тех пор, пока не будет создан маршрут к удаленной службе или время ожидания диалога истечет.  
   
@@ -69,10 +69,10 @@ DROP ROUTE route_name
 DROP ROUTE ExpenseRoute ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER ROUTE (Transact-SQL)](../../t-sql/statements/alter-route-transact-sql.md)   
  [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.routes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
+ [sys.routes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
   
   

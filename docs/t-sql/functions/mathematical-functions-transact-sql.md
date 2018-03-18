@@ -1,5 +1,5 @@
 ---
-title: "Математические функции (Transact-SQL) | Документы Microsoft"
+title: "Математические функции (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  Арифметические функции, такие как ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS и SIGN, возвращают значение того же типа, что и входное значение. Тригонометрические и другие функции, включая EXP, LOG, LOG10, КВАДРАТНЫЕ и SQRT, привести свои входные значения **float** и возвращают **float** значение.  
+>  Арифметические функции, такие как ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS и SIGN, возвращают значение того же типа, что и входное значение. Тригонометрические и другие функции, включая EXP, LOG, LOG10, SQUARE и SQRT, преобразуют входные значения в тип **float** и возвращают значение типа **float**.  
   
- Все математические функции, кроме RAND, являются детерминированными. Это значит, что они возвращают одни и те же результаты каждый раз, когда вызываются с одними и теми же входными значениями. Функция RAND является детерминированной только в том случае, если задан параметр начального значения. Дополнительные сведения о детерминизме функций см. в разделе [функций](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Все математические функции, кроме RAND, являются детерминированными. Это значит, что они возвращают одни и те же результаты каждый раз, когда вызываются с одними и теми же входными значениями. Функция RAND является детерминированной только в том случае, если задан параметр начального значения. Дополнительные сведения о детерминированности функций см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="see-also"></a>См. также:  
-  [Арифметические операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+  [Арифметические операторы (Transact-SQL)](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STDimension (тип данных geography) | Документы Microsoft"
+title: "STDimension (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>Метод STDimension (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает максимальное измерение **geography** экземпляра.  
+  Возвращает максимальную размерность экземпляра **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- STDimension() возвращает -1, если **geography** экземпляр пуст.  
+ STDimension() возвращает значение –1, если экземпляр **geography** пуст.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STDimension()` для создания табличной переменной для хранения `geography` экземпляры и вставляет `Point`, `LineString`и `Polygon`.  
+ В приведенном ниже примере метод `STDimension()` используется для создания табличной переменой, в которой хранятся экземпляры `geography`, и вставляются объекты `Point`, `LineString` и `Polygon`.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,15 +65,15 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- Затем в примере возвращаются измерения каждого `geography`экземпляр.  
+ Затем в примере возвращаются измерения каждого из экземпляров `geography`.  
   
-|имя|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Точка|0|  
 |LineString|1|  
-|Многоугольник|2|  
+|Polygon|2|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "+ (Сложение) (Transact-SQL) | Документы Microsoft"
+title: "+ (сложение) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-transact-sql"></a>+ (Сложение) (Transact-SQL)
+# <a name="-addition-transact-sql"></a>+ (сложение) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   складывает два числа. С помощью этого арифметического оператора сложения можно также прибавлять число дней к дате.  
@@ -52,7 +52,7 @@ expression + expression
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) какой-либо один из данных типов в числовой категории, кроме **бит** тип данных. Нельзя использовать с **даты**, **время**, **datetime2**, или **datetimeoffset** типов данных.  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md) одного из типов данных числовой категории, кроме типа данных **bit**. Нельзя использовать с типами данных **date**, **time**, **datetime2** или **datetimeoffset**.  
   
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -60,7 +60,7 @@ expression + expression
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Использование оператора сложения для вычисления общего числа часов отсутствия на рабочем месте для каждого сотрудника.  
- В этом примере вычисляется общее число часов отсутствия на рабочем месте для каждого сотрудника, добавив количество часов отпуска и количество часов отсутствия по болезни.  
+ В этом примере приведен расчет общего времени отсутствия на рабочем месте (в часах) для каждого сотрудника путем сложения отпускных часов и часов отсутствия по болезни.  
   
 ```  
 -- Uses AdventureWorks  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>Б. Использование оператора сложения для добавления дней к значениям даты и часа  
- Этот пример добавляет число дней для `datetime` даты.  
+ В этом примере число дней прибавляется к дате типа `datetime`.  
   
 ```  
   
@@ -98,7 +98,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>В. Сложение данных символьного и целочисленного типов  
- В следующем примере добавляется **int** типа данных значение и символьное значение можно преобразовать в символьный тип данных для **int**. Если имеется символ, который не является допустимым в **char** строку, [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращает сообщение об ошибке.  
+ В приведенном ниже примере складываются значения типа **int** и символьного типа путем преобразования данных символьного типа в тип **int**. Если в строке типа **char** есть недопустимый символ, то [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращает ошибку.  
   
 ```  
 DECLARE @addvalue int;  
@@ -115,10 +115,10 @@ SELECT '125127' + @addvalue;
 (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>Использование оператора сложения для вычисления общее количество часов отсутствия на работе, для каждого сотрудника D:  
- В следующем примере вычисляется общее число часов отсутствия на рабочем месте для каждого сотрудника, добавив количество часов отпуска и количество часов отсутствия по болезни и сортирует результаты по возрастанию.  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>Г. Использование оператора сложения для вычисления общего числа часов отсутствия на рабочем месте для каждого сотрудника  
+ В приведенном ниже примере приведен расчет общего времени отсутствия на рабочем месте (в часах) для каждого сотрудника путем сложения отпускных часов и часов отсутствия по болезни, причем результаты сортируются по возрастанию.  
   
 ```  
 -- Uses AdventureWorks  
@@ -129,12 +129,12 @@ FROM DimEmployee
 ORDER BY TotalHoursAway ASC;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [+= &#40; Присваивание сложения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+## <a name="see-also"></a>См. также:  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [+= (присваивание сложения) (Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  

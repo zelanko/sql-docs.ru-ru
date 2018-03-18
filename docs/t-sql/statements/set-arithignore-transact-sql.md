@@ -1,5 +1,5 @@
 ---
-title: "SET ARITHIGNORE (Transact-SQL) | Документы Microsoft"
+title: "SET ARITHIGNORE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  От параметра SET ARITHIGNORE зависит только то, будет ли возвращаться сообщение об ошибке. При возникновении переполнения или при попытке деления на ноль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение NULL вне зависимости от данной настройки. Настройка SET ARITHABORT может использоваться для определения прекращения выполнения запроса. Эта настройка не влияет на ошибки, возникающие во время выполнения инструкций INSERT, UPDATE, и DELETE.  
   
  Если один из параметров SET ARITHABORT или SET ARITHIGNORE установлен в значение OFF, а параметр SET ANSI_WARNINGS — в значение ON, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке при обнаружении ошибок деления на ноль или переполнения.  
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере показано деление на ноль и переполнения ошибки. В этом примере не возвращает сообщение об ошибке для этих ошибок, поскольку ARITHIGNORE имеет значение OFF.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Следующий пример демонстрирует ошибки деления на ноль и переполнения. В этом примере не возвращается сообщение об этих ошибках, поскольку параметр ARITHIGNORE имеет значение OFF.  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -118,7 +118,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

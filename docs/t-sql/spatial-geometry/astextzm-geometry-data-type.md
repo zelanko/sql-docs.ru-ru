@@ -1,5 +1,5 @@
 ---
-title: "AsTextZM (тип данных geometry) | Документы Microsoft"
+title: "AsTextZM (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает представление Open Geospatial Consortium (OGC) Well-Known Text (WKT) экземпляра геометрического объекта, дополненного **Z** (высота) и **M** значения (Мера), сопровождающими экземпляр.
+Возвращает представление WKT консорциума OGC экземпляра geometry, дополненного всеми значениями **Z** (высота) и **M** (мера) этого экземпляра.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **nvarchar(max)**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Возвращаемый тип CLR: **SqlChars**  
+ Тип возвращаемых данных CLR: **SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `Point` экземпляру, содержащему **Z** (высота) и **M** значений (мер). `STAsText()`Выбирает значения WKT (1, 2); `AsTextZM()` выбирает те же значения WKT, а также возвращает значения для **Z** и **M**, возвращая (1 2 3 4).  
+ В приведенном ниже примере создается экземпляр `Point`, содержащий значения **Z** (высота) и **M** (мера). Метод `STAsText()` выбирает значения WKT (1 2); метод `AsTextZM()` выбирает те же самые значения WKT, а также возвращает значения для **Z** и **M** (1 2 3 4).  
   
 ```  
 DECLARE @g geometry;  
@@ -62,10 +62,10 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [М &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Я &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [M (тип данных geometry)](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z (тип данных geometry)](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "УСТАНОВИТЬ язык (Transact-SQL) | Документы Microsoft"
+title: "SET LANGUAGE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/05/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Устанавливает языковое окружение сеанса. Язык сеанса определяет **datetime** системных сообщений и форматов.  
+  Устанавливает языковое окружение сеанса. Язык сеанса определяет форматы **datetime** и системные сообщения.  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,15 +51,15 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**N**]**"***язык***"**  |   **@**   *language_var*  
- Это имя языка, хранящиеся в [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Этот аргумент может быть указан либо в кодировке Юникод, либо в двухбайтовой кодировке (DBCS), преобразуемой в Юникод. Чтобы указать язык в Юникоде, используйте **N'***язык***"**. Если указано как переменная, переменная должна быть **sysname**.  
+ [**N**]**'***language***'** | **@***language_var*  
+ Имя языка, хранящееся в [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Этот аргумент может быть указан либо в кодировке Юникод, либо в двухбайтовой кодировке (DBCS), преобразуемой в Юникод. Чтобы указать язык в Юникоде, воспользуйтесь параметром **N'***language***'**. Если указана переменная, то она должна иметь тип **sysname**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Установка SET LANGUAGE может производиться на этапе запуска или выполнения, но не на этапе синтаксического анализа.  
   
  SET LANGUAGE неявно задает параметр [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
@@ -80,7 +80,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
+ [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

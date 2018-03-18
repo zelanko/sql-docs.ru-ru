@@ -1,5 +1,5 @@
 ---
-title: "ОТМЕНИТЕ разрешения конечной точки (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений на конечные точки (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Определяет разрешения, на конечную точку, которые могут быть предоставлены. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Определяет разрешения, на конечную точку, которые могут быть предоставлены. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- В конечной ТОЧКЕ **::***endpoint_name*  
+ ON ENDPOINT **::***endpoint_name*  
  Указывает конечную точку, на которую предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
   
- {ИЗ | К} \<server_principal > указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, у которой отменяется разрешение.  
+ { FROM | TO } \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], у которого отменяется разрешение.  
   
  *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,10 +90,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], от которого участник, выполняющий этот запрос, получает право отмены разрешения.  
   
-## <a name="remarks"></a>Замечания  
- Разрешения в области сервера могут быть отменены только в том случае, если текущая база данных **master**.  
+## <a name="remarks"></a>Remarks  
+ Разрешения на уровне сервера могут быть отозваны, только если текущей базой данных является **master**.  
   
- Сведения о конечных точках видны в [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) представления каталога. Сведения о разрешениях сервера можно увидеть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога и сведения об участниках сервера отобразится в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Сведения о конечных точках отображаются в представлении каталога [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Сведения о серверных разрешениях отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), а сведения о серверах-участниках — в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Конечная точка — это защищаемый объект на уровне сервера. Наиболее точные и ограниченные разрешения, которые можно отменять в оконечной точке, перечислены в следующей таблице вместе с общими разрешениями, неявно содержащими их.  
   
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL в конечной точке или разрешения ALTER ANY ENDPOINT на сервере.  
   
 ## <a name="examples"></a>Примеры  
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>Б. Отмена разрешения TAKE OWNERSHIP с параметром CASCADE  
- В следующем примере отменяется `TAKE OWNERSHIP` разрешений на конечную точку `Shipping83` из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя `PKomosinski` и из всех участников, которым `PKomosinski` предоставлены `TAKE OWNERSHIP` на `Shipping83`.  
+ В следующем примере отменяется разрешение `TAKE OWNERSHIP` в конечной точке `Shipping83` из пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` и из всех участников, которым пользователь `PKomosinski` предоставил разрешение `TAKE OWNERSHIP` для `Shipping83`.  
   
 ```  
 USE master;  
@@ -131,10 +131,10 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [GRANT, предоставление разрешений конечной точке (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [ЗАПРЕТ разрешений на конечные точки &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Представления каталога конечных точек &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys.Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

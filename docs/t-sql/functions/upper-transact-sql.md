@@ -1,5 +1,5 @@
 ---
-title: "Верхний (Transact-SQL) | Документы Microsoft"
+title: "UPPER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных. Аргумент *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
- *character_expression* должен иметь тип данных, который неявно преобразуется в **varchar**. В противном случае используйте [ПРИВЕДЕНИЯ](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
+ Аргумент *character_expression* должен иметь тип данных, который может быть неявно преобразован в тип **varchar**. В противном случае используйте [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar** или **nvarchar**  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `UPPER` и `RTRIM` функций, возвращающих фамилий всех людей в `dbo.DimEmployee` таблицы, чтобы он находится в верхнем регистре, усеченную и сцепленные со строкой имени.  
+ В приведенном ниже примере функции `UPPER` и `RTRIM` используются для получения из таблицы `dbo.DimEmployee` фамилий всех людей, при этом все символы фамилии преобразуются в верхний регистр, соответствующая символьная строка обрезается и производится ее сцепление со строкой имени.  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,10 +79,10 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [НИЖНЕГО &#40; Transact-SQL &#41;](../../t-sql/functions/lower-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [LOWER (Transact-SQL)](../../t-sql/functions/lower-transact-sql.md)  
   
   
 

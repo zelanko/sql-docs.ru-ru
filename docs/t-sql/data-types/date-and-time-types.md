@@ -1,5 +1,5 @@
 ---
-title: "Типы даты и времени | Документы Microsoft"
+title: "Типы даты и времени | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -33,14 +33,14 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>В этом разделе
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40; Transact-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[раз &#40; Transact-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)
   
-## <a name="see-also"></a>См. также:
-[Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[В ЧАСОВОМ ПОЯСЕ &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

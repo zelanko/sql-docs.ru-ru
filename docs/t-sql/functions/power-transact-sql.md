@@ -1,5 +1,5 @@
 ---
-title: "POWER (Transact-SQL) | Документы Microsoft"
+title: "POWER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>Аргументы  
  *float_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в **float**.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип **float**.  
   
  *y*  
- Степень, в которую возводится *float_expression*. *y* может быть выражением категории типа точных числовых или приблизительных числовых данных, за исключением **бит** тип данных.  
+ Степень, в которую возводится аргумент *float_expression*. *y* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тот же тип, что был отправлен в *float_expression*. Например если **десятичное**(2.0) отправлено как *float_expression*, возвращается **десятичное**(2.0).  
+ Возвращает тот же тип, что был передан во *float_expression*. Например, если во *float_expression* был передан тип **decimal**(2,0), возвращается результат типа **decimal**(2,0).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -78,7 +78,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>Б. Использование функции POWER для вывода результатов преобразования типов данных  
- В следующем примере показан способ *float_expression* сохраняет тип данных, который может возвращать непредвиденные результаты.  
+ В приведенном ниже примере показано, как *float_expression* сохраняет тип данных, который может возвращать непредвиденные результаты.  
   
 ```  
 SELECT   
@@ -141,10 +141,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: использование функции POWER для возврата куба числа  
- В следующем примере показан возврат `POWER` результаты для `2.0` до 3-й степени.  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>Г. Использование функции POWER для возврата куба числа  
+ В приведенном ниже примере показано, как функция `POWER` возвращает значение `2.0`, возведенное в третью степень.  
   
 ```  
 SELECT POWER(2.0, 3);  
@@ -158,11 +158,11 @@ SELECT POWER(2.0, 3);
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Decimal и numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [&#40; float и real Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int, bigint, smallint и tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Money и smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int, bigint, smallint и tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [Типы money и smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "- (Отрицательное значение) (Transact-SQL) | Документы Microsoft"
+title: "- (отрицание) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>Унарные операторы - отрицательный результат
+# <a name="unary-operators---negative"></a>Унарные операторы — отрицание
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает отрицательное значение числового выражения (унарный оператор). Унарные операторы выполняют операцию только на одном выражении любого типа данных из категории числовых типов данных.   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любым из типов данных категории числовых типов данных, за исключением даты и времени категории.  
+ Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа из категории числовых типов данных, за исключением категории даты и времени.  
   
 ## <a name="result-types"></a>Типы результата  
- Возвращает тип данных *numeric_expression*, за исключением того, что неподписанный **tinyint** выражение со знаком для **smallint** результат.  
+ Возвращает тип данных аргумента *numeric_expression* с единственным исключением: выражение типа **tinyint** без знака преобразуется в результат типа **smallint** со знаком.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -109,10 +109,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>В. Возвращает отрицательное положительное константы  
- В следующем примере возвращается отрицательное положительное константы.  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>В. Получение отрицательного значения положительной константы  
+ В приведенном ниже примере возвращается отрицательное значение положительной константы.  
   
 ```  
 USE ssawPDW;  
@@ -126,8 +126,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>Г. Возвращает положительное отрицательная константа  
- В следующем примере возвращается положительное отрицательная константа.  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>Г. Получение положительного значения отрицательной константы  
+ В приведенном ниже примере возвращается положительное значение отрицательной константы.  
   
 ```  
 USE ssawPDW;  
@@ -141,8 +141,8 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>Д. Возвращение отрицательного значения столбца  
- В следующем примере возвращается отрицательное `BaseRate` значение для каждого сотрудника в `dimEmployee` таблицы.  
+### <a name="e-returning-the-negative-of-a-column"></a>Д. Получение отрицательных значений столбца  
+ В приведенном ниже примере возвращается отрицательное значение `BaseRate` для каждого сотрудника в таблице `dimEmployee`.  
   
 ```  
 USE ssawPDW;  
@@ -150,10 +150,10 @@ USE ssawPDW;
 SELECT - BaseRate FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

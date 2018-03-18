@@ -1,5 +1,5 @@
 ---
-title: "Изменение КОЛЛЕКЦИИ XML-СХЕМ (Transact-SQL) | Документы Microsoft"
+title: "ALTER XML SCHEMA COLLECTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -63,13 +63,13 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  Идентификатор SQL для коллекции XML-схем.  
   
- **"** *Компонент схемы* **"**  
+ **'** *Компонент схем* **'**  
  Компонент схемы для вставки.  
   
 ## <a name="remarks"></a>Remarks  
  Чтобы добавить новые XML-схемы с пространствами имен, которые еще не присутствуют в коллекции XML-схем, или добавить новые компоненты к существующим пространствам имен в коллекции, используйте инструкцию ALTER XML SCHEMA COLLECTION.  
   
- В следующем примере добавляется новый \<элемент > к существующему пространству имен `http://MySchema/test_xml_schema` в коллекции `MyColl`.  
+ В следующем примере добавляется новый \<элемент> к существующему пространству имен `http://MySchema/test_xml_schema` в коллекции `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  
@@ -91,9 +91,9 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Обратите внимание на то, что если некоторые компоненты, добавляемые в коллекцию, ссылаются на уже существующие в данной коллекции компоненты, необходимо использовать команду `<import namespace="referenced_component_namespace" />`.  Однако в команде `<xsd:import>` не допускается использование пространств имен текущей схемы и, следовательно, компонентов из одного и того же целевого пространства имен, поскольку пространство имен текущей схемы импортируется автоматически.  
   
- Чтобы удалить коллекции, используйте [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Чтобы удалить коллекции, используйте [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
- Если коллекция схем уже содержит шаблон нестрогой проверки или элемент типа **xs: anyType**, Добавление нового глобального элемента, типа или объявлении атрибута в коллекции схем приведет к повторной проверке всех сохраненного данные, который ограничен коллекцией схем.  
+ Если коллекция схем уже содержит шаблон нестрогой проверки или элемент типа **xs:anyType**, добавление объявления нового глобального элемента, типа или атрибута к коллекции схем приведет к повторной проверке всех сохраненных данных, ограниченной коллекцией схемы.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы изменить коллекцию XML SCHEMA COLLECTION, необходимо разрешение ALTER для коллекции.  
@@ -181,20 +181,20 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- Переменная в примере принадлежит к типу `nvarchar(max)`. Переменная также может быть **xml** тип данных, в этом случае она неявно преобразуется в строку.  
+ Переменная в примере принадлежит к типу `nvarchar(max)`. Переменная также может принадлежать к типу данных **xml**, и в таком случае она неявно преобразуется в строку.  
   
  Дополнительные сведения см. в разделе [Просмотр хранимой коллекции схем XML](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- Можно хранить коллекции схем в **xml** тип столбца. В этом случае, чтобы создать коллекцию XML-схем, выполните следующие действия.  
+ Коллекции схем можно хранить в столбце типа **xml**. В этом случае, чтобы создать коллекцию XML-схем, выполните следующие действия.  
   
-1.  Получить коллекцию схем из столбца с помощью инструкции SELECT и присвоить его переменной **xml** типа, или **varchar** типа.  
+1.  Получите коллекцию схем из столбца с помощью инструкции SELECT и свяжите ее с переменной типа **xml** или **varchar**.  
   
 2.  Укажите имя переменной в инструкции CREATE XML SCHEMA COLLECTION.  
   
  Инструкция CREATE XML SCHEMA COLLECTION сохраняет только компоненты схем, которые понятны для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не все компоненты XML-схемы хранятся в базе данных. Таким образом, если нужно получить коллекцию XML-схем в том виде, в котором она была предоставлена, рекомендуется сохранять XML-схемы в столбце базы данных или в другой папке компьютера.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>Б. Указание нескольких пространств имен схем в коллекции схем  
- Можно указать несколько XML-схем при создании коллекции XML-схем. Например:  
+ Можно указать несколько XML-схем при создании коллекции XML-схем. Пример:  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  
@@ -249,7 +249,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>В. Импорт схемы, не указывающей целевое пространство имен  
- Если схема, не содержит **targetNamespace** импортируется в коллекцию, ее компоненты связываются с целевым пространством имен пустую строку, как показано в следующем примере. Обратите внимание на то, что сопоставление одной или нескольких схем, импортированных в коллекцию, приводит к сопоставлению нескольких компонентов схемы (потенциально не связанных) с пустым строковым пространством имен по умолчанию.  
+ Если схема, не содержащая атрибут **targetNamespace**, импортируется в коллекцию, ее компоненты связываются с пустой строкой в качестве целевого пространства имен, как показано в следующем примере. Обратите внимание на то, что сопоставление одной или нескольких схем, импортированных в коллекцию, приводит к сопоставлению нескольких компонентов схемы (потенциально не связанных) с пустым строковым пространством имен по умолчанию.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -268,11 +268,11 @@ ON     sys.xml_schema_collections.xml_collection_id =
 WHERE  sys.xml_schema_namespaces.name='';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание КОЛЛЕКЦИИ XML-СХЕМ &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

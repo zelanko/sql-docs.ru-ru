@@ -1,5 +1,5 @@
 ---
-title: "DROP ФОРМАТА ВНЕШНЕГО файла (Transact-SQL) | Документы Microsoft"
+title: "DROP EXTERNAL FILE FORMAT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-file-format-transact-sql"></a>DROP ФОРМАТА ВНЕШНЕГО файла (Transact-SQL)
+# <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Удаляет PolyBase формата внешнего файла.  
+  Удаляет формат внешнего файла PolyBase.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,33 +43,33 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>Аргументы  
  *external_file_format_name*  
- Имя формата внешнего файла для удаления.  
+ Имя удаляемого формата внешнего файла.  
   
 ## <a name="metadata"></a>Метаданные  
- Чтобы просмотреть список, используйте форматы внешнего файла [sys.external_file_formats &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) системного представления.  
+ Список форматов внешних файлов см. в системном представлении [sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо изменить любой ФОРМАТ ВНЕШНЕГО файла.  
+ Требуется разрешение ALTER ANY EXTERNAL FILE FORMAT.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Удаление формата внешних файлов не удаляет внешних данных.  
+ Удаление формата внешних файлов не уничтожает внешние данные.  
   
 ## <a name="locking"></a>Блокировка  
- Принимает совмещаемой блокировки на объект формата внешнего файла.  
+ Принимает совмещаемую блокировку на объекте EXTERNAL FILE FORMAT.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-basic-syntax"></a>A. С помощью базовый синтаксис  
+### <a name="a-using-basic-syntax"></a>A. Использование основного синтаксиса  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

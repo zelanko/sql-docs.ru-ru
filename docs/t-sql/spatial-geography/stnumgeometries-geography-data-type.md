@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (тип данных geography) | Документы Microsoft"
+title: "STNumGeometries (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает число **геометрических объектов** , составляющих **geography** экземпляра.  
+  Возвращает количество **геометрических объектов**, составляющих экземпляр **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает 1, если **geography** экземпляр не **MultiPoint**, **MultiLineString**, **MultiPolygon**, или **GeometryCollection** экземпляра или 0, если **geography** экземпляр пуст.  
+ Этот метод возвращает значение 1, если экземпляр **geography** не является экземпляром **MultiPoint**, **MultiLineString**, **MultiPolygon** или **GeometryCollection**, либо значение 0, если экземпляр **geography** пуст.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается `MultiPoint` и с помощью `STNumGeometries()` чтобы узнать, как много **геометрических объектов** экземпляр содержит.  
+ В приведенном ниже примере создается экземпляр `MultiPoint` и с помощью метода `STNumGeometries()` определяется количество объектов **geometry**, содержащихся в экземпляре.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

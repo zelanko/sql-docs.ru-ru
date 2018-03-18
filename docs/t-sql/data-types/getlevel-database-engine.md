@@ -1,5 +1,5 @@
 ---
-title: "GetLevel (компонент Database Engine) | Документы Microsoft"
+title: "GetLevel (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getlevel-database-engine"></a>GetLevel (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает целое число, представляющее глубину узла *это* в дереве.
+Возвращает целое число, представляющее глубину узла *this* в дереве.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,19 +49,19 @@ SqlInt16 GetLevel ( )
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
-**Возвращаемый тип SQL Server: smallint**
+**Возвращаемый тип SQL Server:smallint**
   
-**Возвращаемый тип CLR: SqlInt16**
+**Возвращаемый тип CLR:SqlInt16**
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Используется, чтобы определить уровень одного или нескольких узлов или сопоставить узлы элементам определенного уровня. Корень иерархии — уровень 0.
   
-GetLevel очень полезен для индексов поиска преимущественно. Дополнительные сведения см. в разделе [иерархических данных &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+Метод GetLevel очень полезен для индексов поиска преимущественно в ширину. Дополнительные сведения см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. Возвращение уровня иерархии как столбца  
-В следующем примере возвращается текстовое представление **hierarchyid**, а затем уровень иерархии как **EmpLevel** столбец для всех строк в таблице:
+В приведенном ниже примере возвращается текстовое представление **hierarchyid**, а затем уровень иерархии возвращается как столбец **EmpLevel** для всех строк в таблице.
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -96,7 +96,7 @@ WHERE OrgNode.GetLevel() = 0;
 this.GetLevel()  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

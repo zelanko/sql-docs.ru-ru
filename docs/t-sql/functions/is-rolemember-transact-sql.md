@@ -1,5 +1,5 @@
 ---
-title: "IS_ROLEMEMBER (Transact-SQL) | Документы Microsoft"
+title: "IS_ROLEMEMBER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,44 +48,44 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *роли* **"**  
- Имя роли базы данных, проверяемой в данный момент. *роль* — **sysname**.  
+ **'** *role* **'**  
+ Имя роли базы данных, проверяемой в данный момент. Аргумент *role* имеет тип **sysname**.  
   
- **"** *database_principal* **"**  
- Имя пользователя базы данных, роли базы данных или роли приложения для проверки. *database_principal* — **sysname**, значение по умолчанию NULL. Если значение не указано, то результат основан на текущем контексте выполнения. Если параметр содержит слово NULL, то возвращается NULL.  
+ **'** *database_principal* **'**  
+ Имя пользователя базы данных, роли базы данных или роли приложения для проверки. Аргумент *database_principal* имеет тип **sysname** и значение по умолчанию NULL. Если значение не указано, то результат основан на текущем контексте выполнения. Если параметр содержит слово NULL, то возвращается NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
 |Возвращаемое значение|Description|  
 |------------------|-----------------|  
-|0|*database_principal* не является членом *роли*.|  
-|1|*database_principal* является членом *роли*.|  
-|NULL|*database_principal* или *роли* является недопустимым, или у вас нет разрешения на просмотр членства в роли.|  
+|0|*database_principal* не является членом роли *role*.|  
+|1|*database_principal* является членом роли *role*.|  
+|NULL|Аргумент *database_principal* или *role* недопустим, либо у вас нет разрешения на просмотр членства в роли.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы определить, может ли текущий пользователь выполнить действие, требующее разрешений роли базы данных, воспользуйтесь функцией IS_ROLEMEMBER.  
   
- Если *database_principal* основан на имени входа Windows, например Contoso\Mary5, IS_ROLEMEMBER возвращает значение NULL, если не *database_principal* разрешен или запрещен прямой доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Если аргумент *database_principal* основан на имени входа Windows, например Contoso\Mary5, то функция IS_ROLEMEMBER возвращает значение NULL, если только участнику *database_principal* не предоставлен или не запрещен прямой доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Если необязательный *database_principal* — параметр не указан, а *database_principal* основано на имени входа домена Windows, может быть членом роли базы данных посредством членства в группе Windows . Чтобы решить проблему косвенного членства, функция IS_ROLEMEMBER запрашивает у контроллера домена сведения о членстве в группах Windows. Если контроллер домена недоступен или не отвечает, то функция IS_ROLEMEMBER возвращает сведения о членстве в роли, принимая во внимание только учетную запись пользователя и локальные группы. Если указанный пользователь не является текущим, то значение, возвращаемое функцией IS_ROLEMEMBER, может отличаться от значения в структуре проверки подлинности (например, Active Directory), полученного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при последнем обновлении данных.  
+ Если необязательный параметр *database_principal* не указан, а участник *database_principal* создан на основе имени входа домена Windows, то он может быть членом роли базы данных через членство в группе Windows. Чтобы решить проблему косвенного членства, функция IS_ROLEMEMBER запрашивает у контроллера домена сведения о членстве в группах Windows. Если контроллер домена недоступен или не отвечает, то функция IS_ROLEMEMBER возвращает сведения о членстве в роли, принимая во внимание только учетную запись пользователя и локальные группы. Если указанный пользователь не является текущим, то значение, возвращаемое функцией IS_ROLEMEMBER, может отличаться от значения в структуре проверки подлинности (например, Active Directory), полученного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при последнем обновлении данных.  
   
- Если необязательный *database_principal* параметр указан, участник базы данных, в которой выполняется запрос должен присутствовать в sys.database_principals или IS_ROLEMEMBER возвратит значение NULL. Это означает, что *database_principal* не допускается в этой базе данных.  
+ Если необязательный параметр *database_principal* указан, то участник базы данных, для которого выполняется запрос, должен присутствовать в таблице sys.database_principals. В противном случае функция IS_ROLEMEMBER возвратит значение NULL. Это означает, что *database_principal* является недопустимым в этой базе данных.  
   
- Когда *database_principal* параметра является на основе имени входа домена или группе Windows и контроллер домена недоступен, вызовы функции IS_ROLEMEMBER завершится ошибкой и могут вернуть неверные или неполные данные.  
+ Если параметр *database_principal* основан на имени входа домена или на группе Windows и контроллер домена недоступен, то вызовы функции IS_ROLEMEMBER завершатся ошибкой и могут вернуть неверные или неполные данные.  
   
  Если контроллер домена недоступен, то вызов функции IS_ROLEMEMBER вернет правильные данные при условии, что проверку подлинности участника Windows можно выполнить локально (например, для локальной учетной записи Windows или имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
- **IS_ROLEMEMBER** всегда возвращает 0, если группа Windows используется как основной аргумент базы данных, и эта группа Windows является членом другой группы Windows, который, в свою очередь, является членом роли указанной базы данных.  
+ **IS_ROLEMEMBER** всегда возвращает значение 0, если группа Windows используется как аргумент участника базы данных, а сама группа при этом является членом другой группы Windows, которая, в свою очередь, является членом указанной роли базы данных.  
   
- Найти элемент управления учетных записей пользователей (UAC) в [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] и Windows Server 2008 также может возвращать разные результаты. Это зависит от того, обращался ли пользователь к серверу в качестве члена группы Windows или как определенный пользователь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Контроль учетных записей в [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] и Windows Server 2008 также может приводить к разным результатам. Это зависит от того, обращался ли пользователь к серверу в качестве члена группы Windows или как определенный пользователь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Эта функция вычисляет членство в роли, а не базовое разрешение. Например **db_owner** предопределенной роли базы данных имеет **базы данных системы УПРАВЛЕНИЯ** разрешение. Если у пользователя есть **базы данных системы УПРАВЛЕНИЯ** разрешение но он не является членом роли, эта функция неправильно сообщает, что пользователь не является членом **db_owner** роли, даже если пользователь имеет те же разрешения.  
+ Эта функция вычисляет членство в роли, а не базовое разрешение. Например, предопределенная роль базы данных **db_owner** имеет разрешение **CONTROL DATABASE**. Если у пользователя есть разрешение **CONTROL DATABASE**, но он не является членом этой роли, то эта функция справедливо сообщает, что пользователь не является членом роли **db_owner**, даже несмотря на то, что имеет те же разрешения.  
   
 ## <a name="related-functions"></a>Связанные функции  
- Чтобы определить, является ли текущий пользователь членом указанной группы Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] роли базы данных, используйте [IS_MEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-member-transact-sql.md). Чтобы определить, является ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа является членом роли сервера, используйте [IS_SRVROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ Чтобы определить, является ли текущий пользователь членом указанной группы Windows или роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], воспользуйтесь функцией [IS_MEMBER (Transact-SQL)](../../t-sql/functions/is-member-transact-sql.md). Чтобы определить, является ли имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом роли сервера, воспользуйтесь функцией [IS_SRVROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW DEFINITION для роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -101,14 +101,14 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ИЗМЕНИТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [УДАЛИТЬ РОЛЬ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ сервера &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
- [ALTER SERVER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-role-transact-sql.md)   
- [УДАЛИТЬ РОЛЬ сервера &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
- [Функция IS_SRVROLEMEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
+ [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [ALTER SERVER ROLE (Transact-SQL)](../../t-sql/statements/alter-server-role-transact-sql.md)   
+ [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)   
+ [IS_MEMBER (Transact-SQL)](../../t-sql/functions/is-member-transact-sql.md)   
+ [Функция IS_SRVROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

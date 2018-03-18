@@ -1,5 +1,5 @@
 ---
-title: "ВСЕ (Transact-SQL) | Документы Microsoft"
+title: "ANY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -38,6 +38,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="any-transact-sql"></a>ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Сравнивает скалярное значение с набором значений, состоящим из одного столбца. Дополнительные сведения см. в разделе [НЕКОТОРЫЕ &#124; ВСЕ &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+  Сравнивает скалярное значение с набором значений, состоящим из одного столбца. Дополнительные сведения см. в статье [SOME &#124; ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STIntersects (тип данных geography) | Документы Microsoft"
+title: "STIntersects (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geography-data-type"></a>STIntersects (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Возвращает 1, если **geography** экземпляр пересекается с другим **geography** экземпляра. В противном случае возвращается значение 0.  
+  Возвращает значение 1, если экземпляр **geography** потенциально пересекается с другим экземпляром **geography**. В противном случае возвращается значение 0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geography*  
- Другой **geography** экземпляр для сравнения с экземпляром, в котором `STIntersects()` вызывается.  
+ Другой экземпляр **geography** для сравнения с экземпляром, для которого вызван метод `STIntersects()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает **NULL** Если идентификаторы пространственной ссылки (SRID) из **geography** экземпляров не совпадают.  
+ Этот метод всегда возвращает значение **NULL**, если у экземпляров **geography** не совпадают идентификаторы пространственных ссылок (SRID).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STIntersects()` определяет, пересекаются ли два экземпляра `geography`.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  END;
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

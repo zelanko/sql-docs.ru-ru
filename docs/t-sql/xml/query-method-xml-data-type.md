@@ -1,5 +1,5 @@
 ---
-title: "Метод Query() (тип данных xml) | Документы Microsoft"
+title: "Метод query() (тип данных xml) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="query-method-xml-data-type"></a>query() (тип данных xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Определяет запрос XQuery для экземпляра **xml** тип данных. Результат имеет **xml** типа. Метод возвращает экземпляр нетипизированного XML.  
+  Определяет запрос XQuery для экземпляра типа данных **xml**. Результат имеет тип данных **xml**. Метод возвращает экземпляр нетипизированного XML.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,10 +46,10 @@ query ('XQuery')
  Это строка, выражение XQuery, выполняющее в экземпляре XML запросы к узлам — элементам и атрибутам.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры использования метода query() **xml** тип данных.  
+ В этом подразделе приведены примеры использования метода query() типа данных **xml**.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Использование метода query() для переменной типа xml  
- В следующем примере объявляется переменная  **@myDoc**  из **xml** введите и присваивает ей экземпляр XML. **Query()** метод используется для задания запроса XQuery к документу.  
+ В следующем примере объявляется переменная **@myDoc** типа данных **xml**, и этой переменной присваивается экземпляр XML. Далее методом **query()** для документа определяется запрос XQuery.  
   
  Запрос извлекает дочерний элемент <`Features`> элемента <`ProductDescription`>:  
   
@@ -76,7 +76,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>Б. Использование метода query() для столбца типа XML  
- В следующем примере **query()** метод используется для указания запроса XQuery к **CatalogDescription** столбец **xml** введите  **AdventureWorks** базы данных:  
+ В следующем примере метод **query()** используется для задания запроса XQuery к столбцу **CatalogDescription** типа данных **xml** в базе данных **AdventureWorks**:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -92,11 +92,11 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   К столбцу CatalogDescription является типизированным **xml** столбца. Это означает, что имеется связанная с ним коллекция схем. В [прологе XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), **имен** ключевое слово используется для определения префикса, который впоследствии используется в теле запроса.  
+-   Столбец CatalogDescription является типизированным столбцом **xml**. Это означает, что имеется связанная с ним коллекция схем. В [прологе XQuery](../../xquery/modules-and-prologs-xquery-prolog.md) ключевое слово **namespace** используется для определения префикса, который в дальнейшем используется в теле запроса.  
   
--   **Query()** строит XML, <`Product`> элемент, имеющий **ProductModelID** атрибута, в котором **ProductModelID** значение атрибута получить из базы данных. Дополнительные сведения о конструировании XML см. в разделе [конструкции XML &#40; XQuery &#41; ](../../xquery/xml-construction-xquery.md).  
+-   Метод **query()** строит XML, элемент <`Product`>, имеющий атрибут **ProductModelID**, и значение атрибута **ProductModelID** извлекается из базы данных. Дополнительные сведения о конструировании XML см. в разделе [XML-конструкция (XQuery)](../../xquery/xml-construction-xquery.md).  
   
--   [Метод exist() (тип данных XML)](../../t-sql/xml/exist-method-xml-data-type.md) в предложении WHERE используется для нахождения только тех строк, содержащих <`Warranty`> элемент в XML. Опять же **имен** ключевое слово используется для определения двух префиксов пространства имен.  
+-   Метод [exist() (тип данных XML)](../../t-sql/xml/exist-method-xml-data-type.md) в предложении WHERE используется для нахождения только тех строк, которые в XML содержат элемент <`Warranty`>. Ключевое слово **namespace**, опять же, используется для определения двух префиксов пространства имен.  
   
  Частичный результат:  
   
@@ -120,11 +120,11 @@ where CatalogDescription.exist('
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Язык модификации XML-данных &#40; Язык XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Язык модификации XML-данных (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

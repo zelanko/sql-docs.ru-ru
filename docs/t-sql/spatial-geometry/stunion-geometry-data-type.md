@@ -1,5 +1,5 @@
 ---
-title: "STUnion (тип данных geometry) | Документы Microsoft"
+title: "STUnion (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geometry-data-type"></a>STUnion (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает объект, представляющий объединение **geometry** экземпляр с другим **geometry** экземпляра.
+Возвращает объект, представляющий объединение экземпляра **geometry** с другим экземпляром **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляра, образующий объединение с экземпляром, на котором `STUnion()` вызывается.  
+ Другой экземпляр **geometry**, образующий объединение с экземпляром, для которого вызван метод `STUnion()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают. Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID). Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -79,7 +79,7 @@ SELECT @g.STUnion(@h).ToString();
   
  Функция `STUnion()` возвращает результат, содержащий сегмент дуги, так как экземпляр, вызвавший `STUnion()`, содержит сегмент дуги.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

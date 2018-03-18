@@ -1,5 +1,5 @@
 ---
-title: "DROP AVAILABILITY GROUP (Transact-SQL) | Документы Microsoft"
+title: "DROP AVAILABILITY GROUP (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -40,9 +40,9 @@ ms.lasthandoff: 01/25/2018
   Удаляет указанную группу доступности и все ее реплики. Если экземпляр сервера, на котором размещена одна из реплик доступности, находится в режиме «вне сети» при удалении группы доступности, то после перехода в режим «в сети» локальная реплика доступности будет удалена с экземпляра сервера. При удалении группы доступности также удаляется и связанный с ней прослушиватель группы доступности, если он существует.  
   
 > [!IMPORTANT]  
->  Если возможно, удаляйте группу доступности только при наличии подключения к экземпляру сервера, где размещена первичная реплика. При удалении группы доступности с первичной реплики разрешается внесение изменений в бывшие базы данных-источники (без защиты высокого уровня доступности). Удаление группы доступности из вторичной реплики переводит первичную реплику в **RESTORING** состояния и изменения не разрешены в базах данных.  
+>  Если возможно, удаляйте группу доступности только при наличии подключения к экземпляру сервера, где размещена первичная реплика. При удалении группы доступности с первичной реплики разрешается внесение изменений в бывшие базы данных-источники (без защиты высокого уровня доступности). Удаление группы доступности из вторичной реплики переводит первичную реплику в состояние **RESTORING** (восстановление), и в базы данных не разрешается вносить изменения.  
   
- Сведения о других способах удаления группы доступности см. в разделе [удалить группу доступности &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
+ Сведения о других способах удаления группы доступности см. в разделе [Удаление группы доступности (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ DROP AVAILABILITY GROUP group_name
   
 ## <a name="limitations-and-recommendations"></a>Ограничения  
   
--   Выполнение **DROP AVAILABILITY GROUP** необходимо включить функцию групп доступности AlwaysOn на экземпляре сервера. Дополнительные сведения см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+-   Для выполнения инструкции **DROP AVAILABILITY GROUP** необходимо, чтобы на экземпляре сервера были включены группы доступности AlwaysOn. Дополнительные сведения см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 -   **DROP AVAILABILITY GROUP** не может выполняться в составе пакетов или транзакций. В этой инструкции также не поддерживаются выражения и переменные.  
   
@@ -69,12 +69,12 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  Старайтесь не удалять группу доступности, если отказоустойчивый кластер Windows Server (WSFC) не имеет кворума. Если необходимо удалить группу доступности, когда нет кворума кластера, то группа доступности метаданных, хранимая в кластере, не удаляется. После того как кластер снова получит кворум, необходимо будет удалить группу доступности еще раз, чтобы удалить ее из кластера WSFC.  
   
--   На вторичной реплике **DROP AVAILABILITY GROUP** следует использовать только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, является ли **OFFLINE** состояние возникло из-за потери кворума, принудительного перехода на другой ресурс или **DROP AVAILABILITY GROUP**команды. Первичная реплика переходит **RESTORING** состояние, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server).  
+-   На вторичной реплике команда **DROP AVAILABILITY GROUP** должна использоваться только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, возникло состояние **OFFLINE** из-за потери кворума, принудительного перехода на другой ресурс или команды **DROP AVAILABILITY GROUP**. Первичная реплика переходит в состояние **RESTORING**, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server).  
   
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется **ALTER AVAILABILITY GROUP** разрешение для группы доступности, **CONTROL AVAILABILITY GROUP** разрешение, **ALTER ANY AVAILABILITY GROUP** разрешение, или **CONTROL SERVER** разрешение. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо **CONTROL SERVER** разрешение или **УПРАВЛЕНИЯ** разрешение для этой группы доступности.  
+ Необходимо разрешение **ALTER AVAILABILITY GROUP** для группы доступности, разрешение **CONTROL AVAILABILITY GROUP**, разрешение **ALTER ANY AVAILABILITY GROUP** или разрешение **CONTROL SERVER**. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо разрешение **CONTROL SERVER** или разрешение **CONTROL** для этой группы доступности.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется группа доступности `AccountsAG`.  
@@ -83,13 +83,13 @@ DROP AVAILABILITY GROUP group_name
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   
-##  <a name="RelatedContent"></a> Related Content  
+##  <a name="RelatedContent"></a> См. также  
   
 -   [Принцип работы. Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Создание группы ДОСТУПНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Удаление группы доступности &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Удаление группы доступности (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   

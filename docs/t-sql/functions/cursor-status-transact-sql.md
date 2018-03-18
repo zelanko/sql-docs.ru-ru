@@ -1,5 +1,5 @@
 ---
-title: "CURSOR_STATUS (Transact-SQL) | Документы Microsoft"
+title: "CURSOR_STATUS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ CURSOR_STATUS
 'local'  
 Константа, показывающая, что источник курсора — это имя локального курсора.
   
-"*cursor_name*"  
+'*cursor_name*'  
 Имя курсора. Имя курсора должно соответствовать требованиям, предъявляемым к идентификаторам.
   
 'global'   
@@ -64,10 +64,10 @@ CURSOR_STATUS
 'variable'   
 Константа, показывающая, что источник курсора — это локальная переменная.
   
-"*cursor_variable*"  
-Имя переменной курсора. Переменная курсора должна быть определена с **курсор** тип данных.
+'*cursor_variable*'  
+Имя переменной курсора. Переменная курсора должна быть определена с типом данных **cursor**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **smallint**
   
 |Возвращаемое значение|Имя курсора|Переменная курсора|  
@@ -133,8 +133,8 @@ After Close
 -1
 ```  
   
-## <a name="see-also"></a>См. также:
-[Функции работы с курсорами &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[Функции работы с курсорами (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
   
   

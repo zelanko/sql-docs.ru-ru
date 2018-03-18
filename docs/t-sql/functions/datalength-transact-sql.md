@@ -1,5 +1,5 @@
 ---
-title: "DATALENGTH (Transact-SQL) | Документы Microsoft"
+title: "DATALENGTH (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DATALENGTH ( expression )
   
 ## <a name="arguments"></a>Аргументы  
 *expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных.
   
-## <a name="return-types"></a>Возвращаемые типы
-**bigint** Если *выражение* имеет **varchar(max)**, **nvarchar(max)** или **varbinary(max)** типов данных; в противном случае **int**.
+## <a name="return-types"></a>Типы возвращаемых данных
+**bigint**, если *expression* имеет тип данных **varchar(max)**, **nvarchar(max)** или **varbinary(max)**; в противном случае **int**.
   
-## <a name="remarks"></a>Замечания  
-DATALENGTH особенно полезна для **varchar**, **varbinary**, **текст**, **изображения**, **nvarchar**, и **ntext** типы данных, так как эти типы данных можно хранить данные переменной длины.
+## <a name="remarks"></a>Remarks  
+Функция DATALENGTH особенно полезна при работе с данными типов **varchar**, **varbinary**, **text**, **image**, **nvarchar** и **ntext**, потому что они могут хранить данные переменной длины.
   
 Функция DATALENGTH возвращает NULL, если аргументом является NULL.
   
@@ -75,11 +75,11 @@ ORDER BY EnglishProductName;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Функция LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[LEN (Transact-SQL)](../../t-sql/functions/len-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

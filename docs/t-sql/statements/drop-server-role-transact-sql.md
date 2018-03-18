@@ -1,5 +1,5 @@
 ---
-title: "УДАЛИТЬ РОЛЬ сервера (Transact-SQL) | Документы Microsoft"
+title: "DROP SERVER ROLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ DROP SERVER ROLE role_name
  *role_name*  
  Задает определяемую пользователем роль сервера для удаления с сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Определяемые пользователем роли сервера, владеющие защищаемыми объектами, не могут быть удалены с сервера. Чтобы удалить определяемую пользователем роль сервера, владеющую защищаемыми объектами, необходимо сначала передать эти объекты другому владельцу или удалить их.  
   
- Определяемые пользователем роли сервера, у которых есть члены, нельзя удалить. Чтобы удалить роль сервера, определяемых пользователем, содержит члены, необходимо сначала удалить члены роли с помощью [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Определяемые пользователем роли сервера, у которых есть члены, нельзя удалить. Для удаления определяемой пользователем роли сервера с членами необходимо сначала удалить члены из роли с помощью инструкции [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
  Предопределенные роли сервера нельзя удалять.  
   
- Можно просмотреть сведения о членстве в роли с помощью запроса к [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) представления каталога.  
+ Можно просмотреть сведения о членстве в роли путем запроса к представлению каталога [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL для роли сервера или разрешение ALTER ANY SERVER ROLE.  
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>Б. Просмотр членства в роли  
- Чтобы просмотреть членство в роли, используйте **роли сервера (члены**) страницы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или выполните следующий запрос:  
+ Чтобы просмотреть членство в роли, воспользуйтесь страницей **Роль сервера (Члены**) в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или выполните следующий запрос:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -99,10 +99,10 @@ ORDER BY SP1.name ;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ИЗМЕНИТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [СОЗДАТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [УДАЛИТЬ РОЛЬ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Документы Microsoft"
+title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Аргументы  
  ( 'ALL' [,*pool_name* ] )  
  Ключевое слово ALL указывает все поддерживаемые кэши.  
- *pool_name* указывает кэш пула регулятора ресурсов. Освобождены будут только записи, связанные с этим пулом.  
+ Аргумент *pool_name* указывает кэш пула Resource Governor. Освобождены будут только записи, связанные с этим пулом.  
   
  MARK_IN_USE_FOR_REMOVAL  
  Асинхронно освобождает текущие используемые элементы из соответствующих кэшей после того, как они перестают использоваться. Не влияет на новые элементы, созданные в кэше после выполнения DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL.  
@@ -66,10 +66,10 @@ DBCC FREESYSTEMCACHE
  Подавляет вывод всех информационных сообщений.  
   
 ## <a name="remarks"></a>Remarks  
-При выполнении инструкции DBCC FREESYSTEMCACHE очищается кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого очищенного хранилища кэша в кэше планов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал ошибок содержит следующее информационное сообщение: «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша «%s» (части кэша планов) из-за "DBCC FREEPROCCACHE' или 'DBCC FREESYSTEMCACHE' операции.» Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+При выполнении инструкции DBCC FREESYSTEMCACHE очищается кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 ## <a name="result-sets"></a>Результирующие наборы  
-Инструкция DBCC FREESYSTEMCACHE возвращает: «выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
+Инструкция DBCC FREESYSTEMCACHE возвращает следующее сообщение: "Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
 ## <a name="permissions"></a>Разрешения  
 Требует разрешения ALTER SERVER STATE на сервере.
@@ -91,10 +91,10 @@ DBCC FREESYSTEMCACHE ('ALL', default);
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
-[регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
+[Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
   
   

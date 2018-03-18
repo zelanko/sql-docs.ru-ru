@@ -1,5 +1,5 @@
 ---
-title: "ALTER TRIGGER (Transact-SQL) | Документы Microsoft"
+title: "ALTER TRIGGER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Изменяет определение триггера DML, DDL или триггера входа, созданного ранее инструкцией CREATE TRIGGER. Триггеры создаются при помощи инструкции CREATE TRIGGER. Они могут быть созданы непосредственно из [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций или методов сборок, созданных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] общеязыковая среда выполнения (CLR) и их передачи в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о параметрах, используемых в инструкции ALTER TRIGGER см. в разделе [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+  Изменяет определение триггера DML, DDL или триггера входа, созданного ранее инструкцией CREATE TRIGGER. Триггеры создаются при помощи инструкции CREATE TRIGGER. Они могут быть созданы непосредственно из инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или методов сборок, созданных в среде CLR платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], и переданы на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о параметрах, используемых в инструкции ALTER TRIGGER, см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,26 +144,26 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Аргументы  
  *schema_name*  
- Имя схемы, которой принадлежит триггер DML. Действие триггеров DML ограничивается областью схемы таблицы или представления, для которых они созданы. *схемы**_name* является обязательным, только в том случае, если триггер DML и его соответствующая таблица или представление принадлежат схеме по умолчанию. *schema_name* не может быть указан для триггеров DDL или входа.  
+ Имя схемы, которой принадлежит триггер DML. Действие триггеров DML ограничивается областью схемы таблицы или представления, для которых они созданы. Аргумент *schema**_name* необязателен, только если триггер DML и соответствующая таблица или представление принадлежат схеме по умолчанию. Аргумент *schema_name* не может указываться для триггеров DDL или триггеров входа.  
   
- *имя_триггера*  
+ *trigger_name*  
  Существующий триггер, подлежащий изменению.  
   
- *Таблица* | *представление*  
+ *table* | *view*  
  Таблица или представление, в котором выполняется триггер DML. Указывать полное имя таблицы или представления необязательно.  
   
  DATABASE  
- Применяет область действия триггера DDL к текущей базе данных. Если указано, триггер срабатывает всякий раз, когда *event_type* или *event_group* происходит в текущей базе данных.  
+ Применяет область действия триггера DDL к текущей базе данных. Если этот аргумент определен, триггер срабатывает всякий раз при возникновении в базе данных события типа *event_type* или *event_group*.  
   
  ALL SERVER  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Применяет область действия триггера DDL или триггера входа к текущему серверу. Если указано, триггер срабатывает всякий раз, когда *event_type* или *event_group* возникновении в любом месте на текущем сервере.  
+ Применяет область действия триггера DDL или триггера входа к текущему серверу. Если этот аргумент определен, триггер срабатывает всякий раз при возникновении на текущем сервере события типа *event_type* или *event_group*.  
   
  WITH ENCRYPTION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Шифрует sys.syscommentssys.sql_modules операции, которые содержат текст инструкции ALTER TRIGGER. Использование параметра WITH ENCRYPTION не позволяет публиковать триггер как часть репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметр WITH ENCRYPTION не может быть указан для триггеров CLR.  
+ Шифрует записи sys.syscomments sys.sql_modules, содержащие текст инструкции ALTER TRIGGER. Использование параметра WITH ENCRYPTION не позволяет публиковать триггер как часть репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметр WITH ENCRYPTION не может быть указан для триггеров CLR.  
   
 > [!NOTE]  
 >  Чтобы данный параметр остался активным, триггер, созданный с использованием инструкции WITH ENCRYPTION, должен быть определен повторно в инструкции ALTER TRIGGER.  
@@ -174,14 +174,14 @@ AS { sql_statement
  Дополнительные сведения см. в разделе [Предложение EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
- Указывает, что триггер скомпилирован в собственном коде.  
+ Указывает, что триггер компилируется в собственном коде.  
   
  Этот параметр является обязательным для триггеров в таблицах, оптимизированных для памяти.  
   
  SCHEMABINDING  
- Гарантирует, что таблицы, на которые ссылается триггер не может удалить или изменить.  
+ Гарантирует, что таблицы, на которые ссылается триггер, нельзя удалить или изменить.  
   
- Этот параметр является обязательным для триггеров в таблицах, оптимизированных для памяти и не поддерживается для триггеров в обычных таблицах.  
+ Этот параметр является обязательным для триггеров в таблицах, оптимизированных для памяти, и не поддерживается для триггеров в обычных таблицах.  
   
  AFTER  
  Указывает, что этот триггер запускается только после того, как запускающая его инструкция SQL успешно выполнена. Все ссылочные каскадные действия и проверки ограничений также должны быть успешно выполнены перед запуском триггера.  
@@ -200,31 +200,31 @@ AS { sql_statement
  { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] } | { [INSERT ] [ , ] [ UPDATE ] }  
  Задает инструкции изменения данных при применении к таблице или представлению, активирует триггер DML. Необходимо указать как минимум одну инструкцию. В определении триггера разрешается любое сочетание этих параметров в любом порядке. Если указано больше одного параметра, параметры следует разделить запятыми.  
   
- Для триггеров INSTEAD OF параметр DELETE не разрешен в таблицах, имеющих ссылочную связь с указанием каскадного действия ON DELETE. Аналогично параметр UPDATE не разрешен в таблицах, у которых есть ссылочная связь с указанием каскадного действия ON UPDATE. Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
+ Для триггеров INSTEAD OF параметр DELETE не разрешен в таблицах, имеющих ссылочную связь с указанием каскадного действия ON DELETE. Аналогично, параметр UPDATE не разрешен в таблицах, у которых есть ссылочная связь с указанием каскадного действия ON UPDATE. Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
  *event_type*  
- Имя языкового события [!INCLUDE[tsql](../../includes/tsql-md.md)], которое после выполнения вызывает срабатывание триггера DDL. Список событий триггеров DDL, перечислены в [DDL-события](../../relational-databases/triggers/ddl-events.md).  
+ Имя языкового события [!INCLUDE[tsql](../../includes/tsql-md.md)], которое после выполнения вызывает срабатывание триггера DDL. Список событий, которые могут быть использованы в триггерах DDL, приведен в разделе [DDL-события](../../relational-databases/triggers/ddl-events.md).  
   
  *event_group*  
- Имя стандартной группы событий языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Триггер DDL срабатывает после любого [!INCLUDE[tsql](../../includes/tsql-md.md)] событий языка, к которому принадлежит *event_group*. Список групп событий для триггеров DDL, перечислены в [группы DDL-событий](../../relational-databases/triggers/ddl-event-groups.md). После завершения работы, ALTER TRIGGER *event_group* также функционирует в качестве макроса, добавляя события соответствующих типов его представление каталога sys.trigger_events.  
+ Имя стандартной группы событий языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Триггер DDL срабатывает после возникновения любого события языка [!INCLUDE[tsql](../../includes/tsql-md.md)], принадлежащего к группе *event_group*. Список групп событий, которые могут быть использованы в триггерах DDL, приведен в разделе [Группы DDL-событий](../../relational-databases/triggers/ddl-event-groups.md). После завершения инструкции ALTER TRIGGER *event_group* также функционирует в качестве макроса, добавляя события соответствующих типов в представление каталога sys.trigger_events.  
   
  NOT FOR REPLICATION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, что триггер не должен запускаться, когда агент репликации изменяет таблицу, связанную с триггером.  
   
  *sql_statement*  
  Условия и действия триггера.  
   
- Для триггеров в таблицах, оптимизированных для памяти единственным *sql_statement* разрешено на верхнем уровне-блок ATOMIC. T-SQL, допускается внутри блока ATOMIC ограничивается разрешалось использовать в собственном коде T-SQL.  
+ Для триггеров в таблицах, оптимизированных для памяти, единственной инструкцией *sql_statement*, разрешенной на верхнем уровне, является блок ATOMIC. В блоке ATOMIC допускается только T-SQL, разрешенный в процедурах, компилируемых в собственном коде.  
   
- ВНЕШНЕЕ имя \<method_specifier >  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ EXTERNAL NAME \<method_specifier>  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Указывает метод сборки для привязки к триггеру. Этот метод не должен принимать аргументы и возвращать значения void. *class_name* должен быть допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатором и существовать как класс в сборке с видимостью сборки. Класс не может быть вложенным.  
+ Указывает метод сборки для привязки к триггеру. Этот метод не должен принимать аргументы и возвращать значения void. Аргумент *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как класс в сборке с видимостью сборки. Класс не может быть вложенным.  
   
-## <a name="remarks"></a>Замечания  
- Дополнительные сведения об инструкции ALTER TRIGGER см [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения об ALTER TRIGGER см. в подразделе "Замечания" раздела [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  
 >  Параметры EXTERNAL_NAME и ON_ALL_SERVER недоступны в автономной базе данных.  
@@ -241,18 +241,18 @@ AS { sql_statement
  Если действие DELETE по отношению к потомку или ссылающейся таблице является результатом действия CASCADE для инструкции DELETE из родительской таблицы, а для этой дочерней таблицы определен триггер INSTEAD OF для DELETE, то триггер не учитывается и выполняется действие DELETE.  
   
 ## <a name="ddl-triggers"></a>Триггеры DDL  
- В отличие от триггеров DML, триггеры DDL не ограничены областью схемы. Поэтому OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY и OBJECTPROPERTY(EX) не могут использоваться при запросах к метаданным о триггерах DDL. Используйте вместо них представления каталога. Дополнительные сведения см. в разделе [получить сведения о триггерах DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ В отличие от триггеров DML, триггеры DDL не ограничены областью схемы. Поэтому OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY и OBJECTPROPERTY(EX) не могут использоваться при запросах к метаданным о триггерах DDL. Используйте вместо них представления каталога. Дополнительные сведения см. в статье [Получение сведений о триггерах DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## <a name="logon-triggers"></a>Триггеры входа  
  В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживаются триггеры на событиях имен входа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для изменения триггера DML требуется разрешение ALTER в таблице или представлении, в котором определен триггер.  
   
  Чтобы изменить триггер входа или триггер DDL, определенный в области сервера (ON ALL SERVER), требуется разрешение CONTROL SERVER на этом сервере. Чтобы изменить триггер DDL, определенный в области базы данных (ON DATABASE), требуется разрешение ALTER ANY DATABASE DDL TRIGGER в текущей базе данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается триггер DML в базе данных AdventureWorks 2012, который выводит пользовательское сообщение клиенту, когда пользователь пытается добавить или изменить данные в `SalesPersonQuotaHistory` таблицы. Затем триггер изменяется с использованием инструкции `ALTER TRIGGER`, чтобы применить триггер только к действиям `INSERT`. Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation` .  
+ В следующем примере в базе данных AdventureWorks 2012 создается триггер DML, который выводит пользовательское сообщение клиенту, когда пользователь пытается добавить или изменить данные в таблице `SalesPersonQuotaHistory`. Затем триггер изменяется с использованием инструкции `ALTER TRIGGER`, чтобы применить триггер только к действиям `INSERT`. Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation`.  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -270,14 +270,14 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER (Transact-SQL)](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER (Transact-SQL)](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Создание хранимой процедуры](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [Транзакции](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Получение сведений о триггерах DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [Получение сведений о триггерах DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   

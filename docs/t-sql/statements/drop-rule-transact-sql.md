@@ -1,5 +1,5 @@
 ---
-title: "ПРАВИЛО удаления (Transact-SQL) | Документы Microsoft"
+title: "DROP RULE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   Удаляет из текущей базы данных одно или несколько пользовательских правил.  
   
 > [!IMPORTANT]  
->  DROP RULE будет удалена в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать инструкцию DROP RULE при создании новых приложений, и рекомендуется запланировать изменение тех приложений, в которых она используется. Вместо этого используйте ПРОВЕРОЧНЫЕ ограничения, которые можно создавать с помощью ключевого слова CHECK [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Дополнительные сведения см. в статье [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+>  Инструкция DROP RULE будет удалена в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать инструкцию DROP RULE при создании новых приложений, и рекомендуется запланировать изменение тех приложений, в которых она используется. Вместо этого следует использовать проверочные ограничения, которые создаются при помощи ключевого слова CHECK в инструкциях [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) и [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Дополнительные сведения см. в статье [Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,25 +52,25 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляет правило только в том случае, если он уже существует.  
+ Условное удаление правила только в том случае, если оно уже существует.  
   
  *schema_name*  
  Имя схемы, к которой относится правило.  
   
- *правило*  
- Удаляемое правило. Имена правил должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). Указание имени схемы для правил необязательно.  
+ *rule*  
+ Удаляемое правило. Имена правил должны соответствовать требованиям, предъявляемым к [идентификаторам](../../relational-databases/databases/database-identifiers.md). Указание имени схемы для правил необязательно.  
   
-## <a name="remarks"></a>Замечания  
- Если правило привязано к столбцу или псевдониму типа данных, то перед его удалением необходимо удалить привязку Чтобы отменить привязку правила, используйте **sp_unbindrule**. Если в момент удаления правило привязано, то выводится сообщение об ошибке, и инструкция DROP RULE отменяется.  
+## <a name="remarks"></a>Примечания  
+ Если правило привязано к столбцу или псевдониму типа данных, то перед его удалением необходимо удалить привязку при помощи хранимой процедуры **sp_unbindrule**. Если в момент удаления правило привязано, то выводится сообщение об ошибке, и инструкция DROP RULE отменяется.  
   
  После удаления правила новые данные, вводимые в столбцы, ранее управлявшиеся этим правилом, больше им не ограничиваются. На существующие данные удаление правила не влияет.  
   
- Инструкция DROP RULE не применяется к проверочным ограничениям. Дополнительные сведения об удалении ПРОВЕРОЧНЫХ ограничений см. в разделе [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md).  
+ Инструкция DROP RULE не применяется к проверочным ограничениям. Дополнительные сведения об удалении ограничений CHECK см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции DROP RULE пользователь, как минимум, должен иметь разрешение ALTER на схему, которой принадлежит правило.  
   
 ## <a name="examples"></a>Примеры  
@@ -82,11 +82,11 @@ DROP RULE VendorID_rule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_unbindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)  
 

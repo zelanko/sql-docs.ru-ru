@@ -1,5 +1,5 @@
 ---
-title: "Разрешения объекта GRANT (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений на объект (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,39 +62,39 @@ GRANT <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть предоставлено на содержащийся в схеме объект. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть предоставлено на содержащийся в схеме объект. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ALL  
  Предоставление ALL не включает все возможные разрешения, оно эквивалентно предоставлению всех разрешений [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92, применимых к указанному объекту. Значение ALL различается для разных типов объектов  
   
-- Разрешения на скалярные функции: выполнение, ссылается на.  
-- Табличная функция разрешения: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Разрешения на хранимые процедуры: выполнение.  
-- Таблица разрешения: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Просмотр разрешений: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Разрешения на скалярные функции: EXECUTE, REFERENCES.  
+- Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Разрешения на хранимые процедуры: EXECUTE.  
+- Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  Включено для обеспечения совместимости с [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Не изменяет работу ALL.  
   
-*столбец*  
- Указывает имя столбца в таблице, представление или функции с табличным значением, на которых предоставляется разрешение. Круглые скобки не требуются. На столбец могут быть предоставлены только разрешения SELECT, REFERENCES и UPDATE. *столбец* может быть указан в предложении permissions или после имени защищаемого объекта.  
+*column*  
+ Указывает имя столбца в таблице, представление или функции с табличным значением, на которых предоставляется разрешение. Указание круглых скобок ( ) обязательно. На столбец могут быть предоставлены только разрешения SELECT, REFERENCES и UPDATE. Аргумент *column* может быть указан в предложении PERMISSIONS или после имени защищаемого объекта.  
   
 > [!CAUTION]  
 >  Запрет (DENY) уровня таблицы имеет меньший приоритет, чем разрешение (GRANT) уровня столбца. Такая несогласованность в иерархии разрешений сохранена в целях обратной совместимости.  
   
- ON [ОБЪЕКТА::] [ *schema_name* ]. *object_name*  
- Указывает объект, на который предоставляется разрешение. Фраза OBJECT необязательна Если *schema_name* указано. Если ЖЕ она указана, требуется квалификатор области (::). Если *schema_name* не указан, используется схема по умолчанию. Если *schema_name* указано, требуется квалификатор области схемы (.).  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Указывает объект, на который предоставляется разрешение. Фраза OBJECT необязательна, если указан аргумент *schema_name*. Если же она указана, указание квалификатора области (::) обязательно. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
- Чтобы \<database_principal >  
+ TO \<database_principal>  
  Участник, которому предоставляется разрешение.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal > Указывает участника, от которого участник, выполняющий данный запрос, наследует право предоставления разрешения.  
+ AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
@@ -118,12 +118,12 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Например: пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
+>  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример. Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
   
- Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [представления каталога объектов &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+ Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Объект является защищаемым на уровне схемы. Он содержится в схеме, которая является его родителем в иерархии разрешений. В следующей таблице перечислен ряд отдельных разрешений, которые могут быть предоставлены на объект, а также наиболее общие разрешения, которые неявно их подразумевают.  
   
@@ -131,8 +131,8 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
-|Выполните|CONTROL|Выполните|  
+|Delete|CONTROL|Delete|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -142,7 +142,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
   
  При использовании параметра AS налагаются следующие дополнительные требования.  
@@ -214,14 +214,14 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [DENY, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [ОТЗЫВ разрешений на объект &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

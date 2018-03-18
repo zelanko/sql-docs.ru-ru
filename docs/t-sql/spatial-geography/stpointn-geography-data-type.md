@@ -1,5 +1,5 @@
 ---
-title: "STPointN (тип данных geography) | Документы Microsoft"
+title: "STPointN (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geography-data-type"></a>STPointN (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает указанную точку в **geography** экземпляра.  
+  Возвращает указанную точку в экземпляре **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — **Int** выражение от 1 до количества точек в **geography** экземпляра.  
+ Выражение типа **int** со значением в диапазоне от 1 до числа точек в экземпляре **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
- Открытый тип Geospatial Consortium (OGC): **точки**  
+ Тип открытого геопространственного консорциума (OGC): **Point**  
   
 ## <a name="remarks"></a>Remarks  
- Если **geography** экземпляра, созданные пользователем, STPointN() возвращает точку, указанную *выражение* путем упорядочения точек в том порядке, в котором они были первоначально введены.  
+ Если экземпляр **geography** создан пользователем, то метод STPointN() возвращает точку, указанную *expression* путем размещения точек в порядке, в котором они были первоначально введены.  
   
- Если **geography** создан системой, STPointN() возвращает точку, указанную *выражение* путем упорядочения всех точек в том же порядке, они должны быть выведены: сначала по  **География** экземпляра, затем по кольцу в пределах экземпляра (если применимо), а затем по точкам внутри кольца. Это порядок является детерминированным.  
+ Если экземпляр **geography** формируется системой, метод STPointN() возвращает точку, указанную *expression* путем упорядочения всех точек в той последовательности, в которой они должны быть выведены: сначала по экземпляру **geography**, затем по кольцу в пределах экземпляра (если это применимо), после чего по точкам кольца. Это порядок является детерминированным.  
   
- Если этот метод вызывается со значением менее 1, он выдает **ArgumentOutOfRangeException**.  
+ Если этот метод вызывается со значением менее 1, то будет вызвано исключение **ArgumentOutOfRangeException**.  
   
  Если этот метод вызывается со значением, превышающим число точек в экземпляре, он возвращает значение NULL.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

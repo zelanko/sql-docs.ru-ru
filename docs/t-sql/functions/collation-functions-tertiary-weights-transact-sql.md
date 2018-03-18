@@ -1,5 +1,5 @@
 ---
-title: "Функция TERTIARY_WEIGHTS (Transact-SQL) | Документы Microsoft"
+title: "TERTIARY_WEIGHTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Параметры сортировки функций - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>Функции параметров сортировки — TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Возвращает двоичную строку весовых коэффициентов для каждого символа в строке, не относящейся к Юникод и определенной в третичных параметрах сортировки SQL.
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *non_Unicode_character_string_expression*  
-Представляет собой строку [выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **char**, **varchar**, или **varchar(max)** определенные в третичных параметрах сортировки SQL. Список таких параметров сортировки см. в разделе «Примечания».
+Строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **char**, **varchar** или **varchar(max)**, определенное в третичных параметрах сортировки SQL. Список таких параметров сортировки см. в разделе «Примечания».
   
-## <a name="return-types"></a>Возвращаемые типы
-Функция TERTIARY_WEIGHTS возвращает **varbinary** при *non_Unicode_character_string_expression* — **char** или **varchar**и возвращает **varbinary(max)** при *non_Unicode_character_string_expression* — **varchar(max)**.
+## <a name="return-types"></a>Типы возвращаемых данных
+Функция TERTIARY_WEIGHTS возвращает значение типа **varbinary**, если *non_Unicode_character_string_expression* имеет тип **char** или **varchar**, и значение типа **varbinary(max)**, если *non_Unicode_character_string_expression* имеет тип **varchar(max)**.
   
-## <a name="remarks"></a>Замечания  
-Функция TERTIARY_WEIGHTS возвращает значение NULL, если *non_Unicode_character_string_expression* не определен третичными параметрами сортировки SQL. В следующей таблице представлены третичные параметры сортировки SQL.
+## <a name="remarks"></a>Remarks  
+Функция TERTIARY_WEIGHTS возвращает значение NULL, если аргумент *non_Unicode_character_string_expression* не определен третичными параметрами сортировки SQL. В следующей таблице представлены третичные параметры сортировки SQL.
   
 |Идентификатор порядка сортировки|Параметры сортировки SQL|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Функция TERTIARY_WEIGHTS предназначена для использования в определении вычисляемого столбца, определенное на значения **char**, **varchar**, или **varchar(max)** столбца. Определить индекс для вычисляемого столбца и **char**, **varchar**, или **varchar(max)** столбца может повысить производительность при **char**, **varchar**, или **varchar(max)** столбец указан в предложении ORDER BY запроса.
+Функция TERTIARY_WEIGHTS предназначена для использования в определении вычисляемого столбца, который определяется по значениям столбцов типа **char**, **varchar** или **varchar(max)**. Определение индекса для вычисляемого столбца и для столбца типа **char**, **varchar** или **varchar(max)** может повысить производительность, если столбец типа **char**, **varchar** или **varchar(max)** задан в предложении ORDER BY запроса.
   
 ## <a name="examples"></a>Примеры  
 Следующий пример создает вычисляемый столбец в таблице, которая применяет функцию `TERTIARY_WEIGHTS` к значениям столбца `char`.
@@ -103,7 +103,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>См. также:
-[ORDER BY предложения &#40; Transact-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

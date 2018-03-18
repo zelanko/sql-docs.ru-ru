@@ -1,5 +1,5 @@
 ---
-title: "DATETIMEFROMPARTS (Transact-SQL) | Документы Microsoft"
+title: "DATETIMEFROMPARTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Возвращает **datetime** значение для указанной даты и времени.
+Возвращает значение **datetime**, соответствующее указанной дате и времени.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,32 +45,32 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*год*  
+*year*  
 Целочисленное выражение, задающее год.
   
-*месяц*  
+*month*  
 Целочисленное выражение, задающее месяц.
   
-*день*  
+*day*  
 Целочисленное выражение, задающее день.
   
-*час*  
+*hour*  
 Целочисленное выражение, задающее часы.
   
-*минуты*  
+*minute*  
 Целочисленное выражение, задающее минуты.
   
 *секунд*  
 Целочисленное выражение, задающее секунды.
   
-*миллисекунд*  
+*milliseconds*  
 Целочисленное выражение, задающее миллисекунды.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **datetime**
   
-## <a name="remarks"></a>Замечания  
-**DATETIMEFROMPARTS** возвращает полностью инициализированное **datetime** значение. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.
+## <a name="remarks"></a>Remarks  
+**DATETIMEFROMPARTS** возвращает полностью инициализированное значение **datetime**. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.
   
 Для серверов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выше данная функция может быть удаленной. Данная функция не может быть удаленной для серверов с версией ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -90,8 +90,8 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:
-[DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

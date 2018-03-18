@@ -1,5 +1,5 @@
 ---
-title: "Приоритет операторов (Transact-SQL) | Документы Microsoft"
+title: "Приоритет операторов (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 |Level|Операторы|  
 |-----------|---------------|  
 |1|~ (побитовое НЕ)|  
-|2|* (Умножение) / (деление), % (модуль)|  
-|3|+ (Положительное), - (отрицательное), + (сложение), (+ объединение),-(вычитание), & (побитовое и), ^ (побитовое исключающее или), &#124; (Побитовый оператор или)|  
-|4|=, >, \<, > =, < = <>,! =,! >,! < (операторы сравнения)|  
+|2|* (умножение), / (деление), % (остаток деления)|  
+|3|+ (положительное), – (отрицательное), + (сложение), (+ объединение), – (вычитание), & (побитовое И), ^ (побитовое исключающее ИЛИ), | (побитовое ИЛИ)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (операторы сравнения)|  
 |5|NOT|  
 |6|и|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
@@ -88,9 +88,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Логические операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Логические операторы (Transact-SQL)](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

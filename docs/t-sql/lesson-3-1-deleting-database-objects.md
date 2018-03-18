@@ -1,5 +1,5 @@
 ---
-title: "Удаление объектов базы данных | Документы Microsoft"
+title: "Удаление объектов базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>Занятие 3-1-Удаление объектов базы данных
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Чтобы удалить все трассировки этого учебника, достаточно удалить базу данных. Тем не менее, в данном разделе будет показано, как аннулировать любое действие, совершенное при выполнении заданий из этого учебника.  
+# <a name="lesson-3-1---deleting-database-objects"></a>Урок 3–1. Удаление объектов базы данных
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Чтобы удалить все записи, созданные при использовании учебника, достаточно удалить базу данных. Тем не менее, в данном разделе будет показано, как аннулировать любое действие, совершенное при выполнении заданий из этого учебника.  
   
 ### <a name="removing-permissions-and-objects"></a>Удаление разрешений и объектов  
   

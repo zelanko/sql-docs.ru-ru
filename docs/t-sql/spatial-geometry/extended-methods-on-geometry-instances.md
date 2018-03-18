@@ -1,5 +1,5 @@
 ---
-title: "Расширенные методы для геометрических объектов | Документы Microsoft"
+title: "Расширенные методы экземпляров Geometry | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="extended-methods-on-geometry-instances"></a>Расширенные методы экземпляров Geometry
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает несколько расширенных методов для геометрических объектов Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько расширенных методов для геометрических объектов открытого геопространственного консорциума (OGC).  
   
  Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
   
@@ -39,50 +39,50 @@ ms.lasthandoff: 01/25/2018
   
 -   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [Спецификации OGC, географический язык разметки](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [AsBinaryZM &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/asbinaryzm-geometry-datatype.md)  
+-   [AsBinaryZM (тип данных geometry)](../../t-sql/spatial-geometry/asbinaryzm-geometry-datatype.md)  
   
 -   [AsGml (тип данных geometry)](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
 -   [AsTextZM (тип данных geometry)](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)  
   
--   [BufferWithCurves &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+-   [BufferWithCurves (тип данных geometry)](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
 -   [BufferWithTolerance (тип данных geometry)](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)  
   
--   [CurveToLineWithTolerance &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/curvetolinewithtolerance-geometry-data-type.md)  
+-   [CurveToLineWithTolerance (тип данных geometry)](../../t-sql/spatial-geometry/curvetolinewithtolerance-geometry-data-type.md)  
   
 -   [InstanceOf (тип данных geometry)](../../t-sql/spatial-geometry/instanceof-geometry-data-type.md)  
   
--   [Фильтр &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/filter-geometry-data-type.md)  
+-   [Filter (тип данных geometry)](../../t-sql/spatial-geometry/filter-geometry-data-type.md)  
   
--   [HasM &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/hasm-geometry-datatype.md)  
+-   [HasM (тип данных geometry)](../../t-sql/spatial-geometry/hasm-geometry-datatype.md)  
   
--   [HasZ &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/hasz-geometry-datatype.md)  
+-   [HasZ (тип данных geometry)](../../t-sql/spatial-geometry/hasz-geometry-datatype.md)  
   
--   [IsNull &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/isnull-geometry-data-type.md)  
+-   [IsNull (тип данных geometry)](../../t-sql/spatial-geometry/isnull-geometry-data-type.md)  
   
--   [IsValidDetailed &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/isvaliddetailed-geometry-datatype.md)  
+-   [IsValidDetailed (тип данных geometry)](../../t-sql/spatial-geometry/isvaliddetailed-geometry-datatype.md)  
   
--   [М &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
+-   [M (тип данных geometry)](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
   
 -   [MakeValid (тип данных geometry)](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)  
   
--   [MinDbCompatibilityLevel &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/mindbcompatibilitylevel-geometry-data-type.md)  
+-   [MinDbCompatibilityLevel (тип данных geometry)](../../t-sql/spatial-geometry/mindbcompatibilitylevel-geometry-data-type.md)  
   
 -   [Reduce (тип данных geometry)](../../t-sql/spatial-geometry/reduce-geometry-data-type.md)  
   
--   [ShortestLineTo &#40; тип данных geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+-   [ShortestLineTo (тип данных geography)](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
 -   [ToString (тип данных geometry)](../../t-sql/spatial-geometry/tostring-geometry-data-type.md)  
   
--   [Я &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+-   [Z (тип данных geometry)](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
-## <a name="see-also"></a>См. также  
- [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

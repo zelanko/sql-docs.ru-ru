@@ -1,7 +1,7 @@
 ---
 title: "Установка PolyBase | Документация Майкрософт"
 ms.custom: 
-ms.date: 08/31/2016
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,17 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="polybase-installation"></a>Установка PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 02/12/2018
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) (подойдет [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) ). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать;  
+-   Oracle Java SE RunTime Environment (JRE) 7.51или 8 (64 бит) (подойдет [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать; JRE 9 или более поздняя версия не подходят без сервера SQL Server 2017, накопительный пакет обновлений 4, или более поздней версии. Установите JRE 8, PolyBase, а затем выполните обновление до JRE 9. 
   
 -   минимальный объем памяти: 4 ГБ;  
   

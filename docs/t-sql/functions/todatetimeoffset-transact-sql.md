@@ -1,5 +1,5 @@
 ---
-title: "TODATETIMEOFFSET (Transact-SQL) | Документы Microsoft"
+title: "TODATETIMEOFFSET (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает **datetimeoffset** значение, которое преобразовывается из **datetime2** выражение.  
+  Возвращает значение **datetimeoffset**, преобразованное из выражения **datetime2**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,10 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) , которая разрешается [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) значение.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), которое разрешается в значение [datetime2](../../t-sql/data-types/datetime2-transact-sql.md).  
   
 > [!NOTE]  
->  Выражение не может иметь тип **текст**, **ntext**, или **изображения** , так как эти типы нельзя неявно преобразовать в **varchar** или **nvarchar**.  
+>  Выражение не может иметь тип **text**, **ntext** или **image**, так как эти типы нельзя неявно преобразовать в тип **varchar** или **nvarchar**.  
   
  *time_zone*  
  Выражение, которое представляет смещение часового пояса в минутах (если это - целое число), например -120, или в часах и минутах (если это - строка), например "+13.00". Диапазон охватывает значения от +14 до -14 (в часах). Выражение приводится к местному времени для указанного часового пояса time_zone.  
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  Если выражение является символьной строкой, оно должно иметь формат {+|-}TZH:THM.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **DateTimeOffset**. Точность в долях секунды совпадает со значением *datetime* аргумент.  
+ **datetimeoffset**. Дробная точность такая же, как у аргумента *datetime*.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -98,9 +98,9 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [В ЧАСОВОМ ПОЯСЕ &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

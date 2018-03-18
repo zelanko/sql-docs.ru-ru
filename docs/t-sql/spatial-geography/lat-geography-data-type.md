@@ -1,5 +1,5 @@
 ---
-title: "LAT (тип данных geography) | Документы Microsoft"
+title: "Lat (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="lat-geography-data-type"></a>Lat (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Свойство широты **geography** экземпляра.  
+  Возвращает свойство широты для экземпляра **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- В модели OpenGIS Lat определен только для **geography** экземпляров состоит из одной точки. Это свойство будет возвращать значение NULL, если **geography** экземпляры содержат более одной точки. Это свойство является точным и доступно только для чтения.  
+ В модели OpenGIS метод Lat определен только для экземпляров **geography**, состоящих из одной точки. Это свойство возвращает значение NULL, если экземпляры **geography** содержат несколько точек. Это свойство является точным и доступно только для чтения.  
   
 ## <a name="examples"></a>Примеры  
  Это пример создает точку и возвращает широту точки.  
@@ -59,7 +59,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Lat;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

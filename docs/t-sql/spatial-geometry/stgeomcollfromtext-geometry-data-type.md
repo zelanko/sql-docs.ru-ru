@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromText (тип данных geometry) | Документы Microsoft"
+title: "STGeomCollFromText (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geometry** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT), дополненное всеми значениями Z (уровень) и значения M (Мера), сопровождающими экземпляр.
+Возвращает экземпляр **geometry** из WKT-представления открытого геопространственного консорциума (OGC) вместе со значениями Z (высота) и M (мера), сопровождающими экземпляр.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,18 +45,18 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *geometrycollection_tagged_text*  
- Является WKT-представление **geometry** экземпляр, который необходимо вернуть. *geometry_tagged_text* — **nvarchar(max)** выражение.  
+ WKT-представление возвращаемого экземпляра **geometry**. *geometry_tagged_text* является выражением типа **nvarchar(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometry** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geometry** экземпляр, возвращаемый `STGeomCollFromText()` равно соответствующих входных данных WKT.  
+ Тип OGC экземпляра **geometry**, возвращаемый методом `STGeomCollFromText()`, получает значение в зависимости от соответствующих входных данных WKT.  
   
  Этот метод вызывает исключение, если входные данные не являются допустимыми.  
   
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

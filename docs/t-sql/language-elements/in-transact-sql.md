@@ -1,5 +1,5 @@
 ---
-title: "IN (Transact-SQL) | Документы Microsoft"
+title: "IN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -53,29 +53,29 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>Аргументы  
  *test_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *subquery*  
- Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Этот столбец должен иметь тот же тип данных, *test_expression*.  
+ Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Этот столбец должен иметь тот же тип данных, что и аргумент *test_expression*.  
   
- *выражение*[ **,**... *n* ]  
- Список выражений для поиска совпадения. Все выражения должны иметь того же типа, что *test_expression*.  
+ *expression*[ **,**... *n* ]  
+ Список выражений для поиска совпадения. Все выражения должны иметь тот же тип, что и аргумент *test_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="result-value"></a>Значение результата  
- Если значение *test_expression* равен любое значение, возвращаемое *вложенный запрос* или одному *выражение* из списка разделенных запятыми, результирующее значение равно TRUE. в противном случае результирующее значение равно FALSE.  
+ Если значение аргумента *test_expression* равно одному из значений, возвращенных вложенным запросом *subquery* или одному из значений, содержащихся в списке *expression* (где значения разделяются запятыми), результирующее значение равно TRUE. В противном случае оно равно FALSE.  
   
- Предложение NOT IN инвертирует *вложенный запрос* значение или *выражение*.  
+ Предложение NOT IN инвертирует значение *subquery* или *expression*.  
   
 > [!CAUTION]  
->  Пустые значения, возвращаемые методом *вложенный запрос* или *выражение* , по сравнению с *test_expression* с помощью предложения IN или NOT IN, возвращается UNKNOWN. Использование значений NULL с предложениями IN или NOT IN может привести к непредвиденным результатам.  
+>  Для любых значений NULL, возвращаемых в *subquery* или *expression*, которые сравниваются со значением *test_expression* с помощью предложения IN или NOT IN, возвращается результат UNKNOWN. Использование значений NULL с предложениями IN или NOT IN может привести к непредвиденным результатам.  
   
 ## <a name="remarks"></a>Remarks  
- Намеренное Включение очень большого количества значений (много тысяч значений, разделенных запятыми) в круглых скобках в предложение IN может использовать ресурсы и возвратить ошибки 8623 или 8632. Чтобы обойти эту проблему, храните элементы списка IN в таблице и использовать вложенный запрос SELECT внутри предложения.  
+ Явное включение очень большого количества значений (много тысяч значений, разделенных запятыми) в круглые скобки в предложение IN может привести к интенсивному расходованию ресурсов и возврату ошибки 8623 или 8632. Чтобы избежать этой проблемы, храните элементы списка IN в таблице и используйте вложенный запрос SELECT в предложении IN.  
   
- Ошибки 8623:  
+ Ошибка 8623.  
   
  `The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or queries that reference a very large number of tables or partitions. Please simplify the query. If you believe you have received this message in error, contact Customer Support Services for more information.`  
   
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>Г. Использование в и не поддерживается в  
- Следующий пример находит все операции в `FactInternetSales` таблицы, которые соответствуют `SalesReasonKey` значения в `DimSalesReason` таблицы.  
+### <a name="d-using-in-and-not-in"></a>Г. Использование IN и NOT IN  
+ В следующем примере показан поиск всех записей в таблице `FactInternetSales`, которые соответствуют значениям `SalesReasonKey` в таблице `DimSalesReason`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- Следующий пример находит все операции в `FactInternetSalesReason` таблицы, которые не совпадают `SalesReasonKey` значения в `DimSalesReason` таблицы.  
+ В следующем примере показан поиск всех записей в таблице `FactInternetSalesReason`, которые не соответствуют значениям `SalesReasonKey` в таблице `DimSalesReason`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>Д. С помощью вход с помощью списка выражений  
- В следующем примере осуществляется поиск идентификаторов менеджеров по продажам в `DimEmployee` таблица для сотрудников, имеющих первым именем, являющийся либо `Mike` или `Michael`.  
+### <a name="e-using-in-with-an-expression-list"></a>Д. Использование IN в списке выражений  
+ В следующем примере осуществляется поиск всех идентификаторов продавцов в таблице `DimEmployee` сотрудников с именами `Mike` или `Michael`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -211,15 +211,15 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>См. также  
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [ВСЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [НЕКОТОРЫЕ &#124; ВСЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)   
+ [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
 

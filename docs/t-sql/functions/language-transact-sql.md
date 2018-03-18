@@ -1,5 +1,5 @@
 ---
-title: "@@LANGUAGE (Transact-SQL) | Документы Microsoft"
+title: "@@LANGUAGE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;ЯЗЫК (Transact-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает название используемого в данный момент языка.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar**  
   
-## <a name="remarks"></a>Замечания  
- Чтобы просмотреть сведения о настройках языка, включая допустимые официальные названия языков, запустите **sp_helplanguage** без указания аргументов.  
+## <a name="remarks"></a>Remarks  
+ Чтобы просмотреть сведения о настройках языка, включая допустимые официальные названия языков, выполните процедуру **sp_helplanguage** без указания параметров.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается язык текущего сеанса.  
@@ -70,8 +70,8 @@ us_english
   
 ## <a name="see-also"></a>См. также:  
  [Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Задание языка &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
 

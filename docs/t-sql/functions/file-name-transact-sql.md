@@ -1,5 +1,5 @@
 ---
-title: "Имя_файла (Transact-SQL) | Документы Microsoft"
+title: "FILE_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ FILE_NAME ( file_id )
   
 ## <a name="arguments"></a>Аргументы  
  *file_id*  
- Идентификатор файла, для которого необходимо вернуть имя файла. *file_id* — **int**.  
+ Идентификатор файла, для которого необходимо вернуть имя файла. Аргумент *file_id* имеет тип **int**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *file_ID* соответствует столбцу file_id в представлениях каталога sys.master_files или sys.database_files.  
+ Аргумент *file_ID* соответствует столбцу file_id в представлениях каталога sys.master_files или sys.database_files.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает имена файлов для `file_ID 1` и `file_ID` в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных.  
+ В приведенном ниже примере возвращаются имена файлов для `file_ID 1` и `file_ID` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -80,8 +80,8 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
 ``` 
   
 ## <a name="see-also"></a>См. также:  
- [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

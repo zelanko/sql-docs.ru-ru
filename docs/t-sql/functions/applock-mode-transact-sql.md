@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_MODE (Transact-SQL) | Документы Microsoft"
+title: "APPLOCK_MODE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-"*database_principal*"  
-Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Вызывающий эту функцию участник должен быть членом *database_principal*, dbo или db_owner предопределенной роли базы данных для успешного вызова этой функции.
+'*database_principal*'  
+Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Вызывающий эту функцию участник должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner, чтобы успешно выполнить вызов этой функции.
   
-"*resource_name*"  
-Имя ресурса блокировки, указанное клиентским приложением. Приложение должно гарантировать уникальность имени ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*— **nvarchar(255)** без значения по умолчанию. *resource_name* сравнивается в двоичном с учетом регистра, независимо от параметров сортировки текущей базы данных.
+'*resource_name*'  
+Имя ресурса блокировки, указанное клиентским приложением. Приложение должно гарантировать уникальность имени ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *resource_name* имеет тип **nvarchar(255)** и не имеет значения по умолчанию. Аргумент *resource_name* сравнивается в двоичном режиме с учетом регистра символов независимо от параметров сортировки текущей базы данных.
   
-"*lock_owner*"  
-Владелец данной блокировки, который является *lock_owner* значение при запросе блокировки. *lock_owner* — **nvarchar(32)**, а значение может быть либо **транзакции** (по умолчанию) или **сеанса**.
+'*lock_owner*'  
+Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)** и может иметь значение **Transaction** (по умолчанию) или **Session**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **nvarchar(32)**
   
 ## <a name="return-value"></a>Возвращаемое значение
@@ -67,12 +67,12 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Общие**|**Монопольно**||  
+|**Shared**|**Монопольно**||  
   
 *Этот режим блокировки представляет собой сочетание других режимов и не может быть явным образом получен при помощи процедуры sp_getapplock.
   
 ## <a name="function-properties"></a>Свойства функции
-**Недетерминированные**
+**Nondeterministic**
   
 **Nonindexable**
   
@@ -136,9 +136,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
-[APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[процедура sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[APPLOCK_TEST (Transact-SQL)](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

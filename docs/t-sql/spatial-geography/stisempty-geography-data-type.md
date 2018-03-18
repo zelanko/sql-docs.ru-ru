@@ -1,5 +1,5 @@
 ---
-title: "STIsEmpty (тип данных geography) | Документы Microsoft"
+title: "STIsEmpty (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает 1, если **geography** экземпляр пуст. Возвращает 0, если **geography** не является пустым.  
+  Возвращает значение 1, если экземпляр **geography** пуст. Возвращает значение 0, если экземпляр **geography** не пуст.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается пустой экземпляр `geography` и с помощью метода `STIsEmpty()` проверяется, пуст ли этот объект.  
@@ -57,7 +57,7 @@ SET @g = geography::STGeomFromText('POLYGON EMPTY', 4326);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Числовые типы | Документы Microsoft"
+title: "Числовые типы | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -29,12 +29,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="numeric-types"></a>Числовые типы
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает следующие **числовое** типов.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает перечисленные ниже **числовые** типы.
   
 ## <a name="in-this-section"></a>В этом разделе
-[Decimal и numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
-[&#40; float и real Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[int, bigint, smallint и tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
-[Money и smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
+[decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+[Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[int, bigint, smallint и tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+[Типы money и smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
   
   

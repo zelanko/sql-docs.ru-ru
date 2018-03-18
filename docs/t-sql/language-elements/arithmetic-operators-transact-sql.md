@@ -1,5 +1,5 @@
 ---
-title: "Арифметические операторы (Transact-SQL) | Документы Microsoft"
+title: "Арифметические операторы (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -33,22 +33,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="arithmetic-operators-transact-sql"></a>Арифметические операторы (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Арифметические операторы выполняют математические операции над двумя выражениями одного или различных типов данных из категории числовых типов данных. Дополнительные сведения о категориях типов данных см. в разделе [синтаксические обозначения Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+  Арифметические операторы выполняют математические операции над двумя выражениями одного или различных типов данных из категории числовых типов данных. Дополнительные сведения о категориях типов данных см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Оператор|Значение|  
 |--------------|-------------|  
 |[+ (сложение)](../../t-sql/language-elements/add-transact-sql.md)|Сложение|  
 |[- (вычитание)](../../t-sql/language-elements/subtract-transact-sql.md)|Вычитание|  
 |[* (умножение)](../../t-sql/language-elements/multiply-transact-sql.md)|Умножение|  
-|[/ (Деление)](../../t-sql/language-elements/divide-transact-sql.md)|Деление|  
-|[% (Остаток от деления)](../../t-sql/language-elements/modulo-transact-sql.md)|Возвращает целочисленный остаток при делении. Например, 12 % 5 = 2, поскольку остаток от деления 12 на 5 равен 2.|  
+|[/ (деление)](../../t-sql/language-elements/divide-transact-sql.md)|Деление|  
+|[% (остаток от деления)](../../t-sql/language-elements/modulo-transact-sql.md)|Возвращает целочисленный остаток при делении. Например, 12 % 5 = 2, поскольку остаток от деления 12 на 5 равен 2.|  
   
- Плюс (+) и минуса (-) операторы могут также использоваться для выполнения арифметических операций на **datetime** и **smalldatetime** значения.  
+ Операторы (+) и (–) можно также использовать для выполнения арифметических операций со значениями типов **datetime** и **smalldatetime**.  
   
- Дополнительные сведения о точности и масштаба результат арифметической операции см. в разделе [точность, масштаб и длина &#40; Transact-SQL &#41; ](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+ Дополнительные сведения о точности и масштабе результатов арифметических операций см. в статье [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   

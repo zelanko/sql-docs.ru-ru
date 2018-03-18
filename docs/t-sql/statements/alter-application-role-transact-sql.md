@@ -1,5 +1,5 @@
 ---
-title: "ALTER APPLICATION ROLE (Transact-SQL) | Документы Microsoft"
+title: "ALTER APPLICATION ROLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ ALTER APPLICATION ROLE application_role_name
  *application_role_name*  
  Имя изменяемой роли приложения.  
   
- ИМЯ =*new_application_role_name*  
+ NAME =*new_application_role_name*  
  Указывает новое имя роли приложения. Это имя не должно быть уже занято для обращения к любому из участников базы данных.  
   
- ПАРОЛЬ = "*пароль*"  
- Указывает пароль для роли приложения. *пароль* должен соответствовать требованиям политики паролей Windows компьютера, на котором выполняется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Всегда используйте надежные пароли.  
+ PASSWORD ='*password*'  
+ Указывает пароль для роли приложения. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Всегда используйте надежные пароли.  
   
- Значение DEFAULT_SCHEMA =*schema_name*  
- Задает первую схему для поиска сервером, когда он разрешает имена объектов. *schema_name* может быть схемой, не существует в базе данных.  
+ DEFAULT_SCHEMA =*schema_name*  
+ Задает первую схему для поиска сервером, когда он разрешает имена объектов. Аргумент *schema_name* может быть схемой, которой нет в базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если новое имя роли приложения уже существует в базе данных, инструкция завершится неудачно. Если изменяется имя роли приложения, пароль или схема по умолчанию, то идентификатор, связанный с этой ролью, не изменяется.  
   
 > [!IMPORTANT]  
@@ -76,9 +76,9 @@ ALTER APPLICATION ROLE application_role_name
  Роли приложения можно просмотреть в представлении каталога sys.database_principals.  
   
 > [!CAUTION]  
->  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]поведение схем отличается от поведения в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Код, предполагающий, что схемы эквивалентны пользователям базы данных, может возвращать неверные результаты. Старые представления каталога, включая sysobjects, не следует использовать в базе данных, в каком-либо из следующих инструкций DDL инструкций была выполнена: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. В базе данных, в которой когда-либо выполнялась любая из этих инструкций, необходимо использовать новые представления каталога. Новые представления каталога принимают во внимание разделение участников и схем, которые представлены в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения о представлениях каталогов см. в статье [Представления системных каталогов (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] поведение схем отличается от более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Код, предполагающий, что схемы эквивалентны пользователям базы данных, может возвращать неверные результаты. Старые представления каталогов, включая sysobjects, не должны использоваться в базах данных, где когда-либо выполнялась любая из следующих инструкций DDL: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. В базе данных, в которой когда-либо выполнялась любая из этих инструкций, необходимо использовать новые представления каталога. Новые представления каталога принимают во внимание разделение участников и схем, которые представлены в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения о представлениях каталогов см. в статье [Представления каталогов (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо наличие разрешения ALTER ANY APPLICATION ROLE для этой базы данных. Чтобы изменить схему по умолчанию, пользователь должен иметь разрешение ALTER на роль приложения. Роль приложения может менять свою схему по умолчанию, но не имя или пароль.  
   
 ## <a name="examples"></a>Примеры  
@@ -117,10 +117,10 @@ ALTER APPLICATION ROLE receipts_ledger
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Роли приложений](../../relational-databases/security/authentication-access/application-roles.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Удаление РОЛИ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

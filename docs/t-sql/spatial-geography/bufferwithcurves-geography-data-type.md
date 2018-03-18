@@ -1,5 +1,5 @@
 ---
-title: "BufferWithCurves (тип данных geography) | Документы Microsoft"
+title: "BufferWithCurves (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает **geography** экземпляр, представляющий набор всех точек, расстояние которых от вызывающего **geography** экземпляр меньше или равно *расстояние* параметр.  
+  Возвращает экземпляр **geography**, представляющий набор всех точек, расстояние которых от вызывающего экземпляра **geography** меньше параметра *distance* или равно ему.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,12 +45,12 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *distance*  
- — **Float** указывает максимальное расстояние, на котором точки, составляющие буфер, могут находиться от экземпляра географического объекта.  
+ Имеет тип **float** и указывает максимальное расстояние, на котором точки, составляющие буфер, могут находиться от экземпляра geography.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
  Следующие критерии вызовут исключение **ArgumentException**.  
@@ -59,22 +59,22 @@ ms.lasthandoff: 01/25/2018
   
 -   Методу, например `@g.BufferWithCurves('a')`, передается нечисловой параметр  
   
--   **Значение NULL** передается методу, например`@g.BufferWithCurves(NULL)`  
+-   **NULL** передается методу, например `@g.BufferWithCurves(NULL)`  
   
 ## <a name="remarks"></a>Remarks  
  В следующей таблице показаны результаты, возвращенные для разных значений расстояния.  
   
 |Значение расстояния|Измерения типа|Возвращенный пространственный тип|  
 |--------------------|---------------------|---------------------------|  
-|расстояние < 0|Ноль или один|Пустой **GeometryCollection** экземпляра|  
-|расстояние \< 0|Два и более|Объект **CurvePolygon** или **GeometryCollection** с отрицательным буфером.<br /><br /> Примечание: Отрицательный буфер может создать пустой **GeometryCollection**|
-|расстояние = 0|Все измерения|Копия вызывающего **geography** экземпляра|  
-|расстояние > 0|Все измерения|**CurvePolygon** или **GeometryCollection** экземпляра|  
+|расстояние < 0|Ноль или один|Пустой экземпляр **GeometryCollection**|  
+|расстояние \< 0|Два и более|Экземпляр **CurvePolygon** или **GeometryCollection** с отрицательным буфером.<br /><br /> Примечание. Отрицательный буфер может создать пустой экземпляр **GeometryCollection**|
+|расстояние = 0|Все измерения|Копия вызывающего экземпляра **geography**|  
+|расстояние > 0|Все измерения|Экземпляр **CurvePolygon** или **GeometryCollection**|  
   
 > [!NOTE]  
->  Поскольку *расстояние* — **float**, очень маленькое значение может быть приравнено к нулю в вычислениях.  Когда это происходит, затем копия вызывающего **geography** возвращается экземпляр.  
+>  Поскольку аргумент *distance* относится к типу **float**, в расчетах очень маленькое значение может быть приравнено к нулю.  Когда это происходит, возвращается копия вызывающего экземпляра **geography**.  
   
- Если **строка** параметр передается методу, а затем преобразуется в **float** или возникнет исключение `ArgumentException`.  
+ Если методу передается параметр **string**, то он будет преобразован в тип **float** или возникнет исключение `ArgumentException`.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -95,17 +95,17 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>В. Вызов функции BufferWithCurves() со значением параметра < 0, которая возвращает пустую коллекцию GeometryCollection  
- В следующем примере показано, что происходит при *расстояние* параметр равен -2:  
+ Следующий пример демонстрирует, что происходит, когда параметр *distance* равняется –2:  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- Это **ВЫБЕРИТЕ** инструкция возвращает`GEOMETRYCOLLECTION EMPTY`  
+ Эта инструкция **SELECT** возвращает `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>Г. Вызов функции BufferWithCurves() со значением параметра = 0  
- В следующем примере возвращается копия вызывающего **geography** экземпляр:  
+ В следующем примере возвращается копия вызывающего экземпляра **geography**:  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>Д. Вызов функции BufferWithCurves() с ненулевым, но очень малым значением параметра  
- В следующем примере также возвращается копия вызывающего **geography** экземпляр:  
+ В следующем примере также возвращается копия вызывающего экземпляра **geography**:  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -146,8 +146,8 @@ ms.lasthandoff: 01/25/2018
   
  Обратите внимание на то, что в предыдущих двух примерах передавался строковый литерал методу `BufferWithCurves()`. Первый пример будет работать, поскольку строковый литерал может быть преобразован в числовое значение. Но во втором примере возникнет исключение `ArgumentException`.  
   
-## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [BufferWithCurves (тип данных geometry)](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   

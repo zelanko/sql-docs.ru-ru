@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAngle (тип данных geography) | Документы Microsoft"
+title: "EnvelopeAngle (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает максимальный угол между точкой, возвращаемой методом `EnvelopeCenter()` и точкой в **geography** экземпляра в градусах.  
+  Возвращает максимальный угол (в градусах) между точкой, возвращаемой методом `EnvelopeCenter()`, и точкой в экземпляре **geography**.  
   
- Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.  
+ Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 EnvelopeAngle( )  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **число с плавающей запятой**  
+## <a name="return-types"></a>Типы возвращаемых данных  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Возвращаемый тип CLR: **SqlDouble**  
+ Тип возвращаемых данных CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- Этот метод возвращает точку в **geography** экземпляра в градусах. При использовании с EnvelopeCenter(), `EnvelopeAngle()` возвращает ограничивающую окружность **geography** экземпляра.  
+## <a name="remarks"></a>Примечания  
+ Этот метод возвращает точку в экземпляре **geography** в градусах. При использовании с функцией EnvelopeCenter() `EnvelopeAngle()` возвращает ограничивающую окружность экземпляра **geography**.  
   
- В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], этот метод расширен для **FullGlobe** экземпляров.  
+ В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] этот метод расширен для включения экземпляров **FullGlobe**.  
   
- Ограничение полушария, применяемое к `EnvelopeAngle()` в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] был удален. Однако будут возвращены экземпляры с углами более 90 градусов, 180 градусов. `EnvelopeAngle()`не является точным для **geography** экземпляров, охватывающих более одного полушария.  
+ Ограничение полушария, применяемое к `EnvelopeAngle()` в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], было снято. Однако будут возвращены экземпляры с углами более 90 градусов, 180 градусов. Функция `EnvelopeAngle()` не является точной для экземпляров **geography**, охватывающих более одного полушария.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -65,7 +65,7 @@ SELECT @g.EnvelopeAngle();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeCenter &#40; тип данных geography &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [EnvelopeCenter (тип данных geography)](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
   

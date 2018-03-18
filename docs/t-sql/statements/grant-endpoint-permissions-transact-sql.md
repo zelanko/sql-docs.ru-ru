@@ -1,5 +1,5 @@
 ---
-title: "Разрешения GRANT Endpoint (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений на конечные точки (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Определяет разрешения, на конечную точку, которые могут быть предоставлены. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Определяет разрешения, на конечную точку, которые могут быть предоставлены. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- В конечной ТОЧКЕ **::***endpoint_name*  
+ ON ENDPOINT **::***endpoint_name*  
  Указывает конечную точку, на которую предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
   
- Чтобы \<server_principal >  
+ TO \<server_principal>  
  Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа, которому будут представлены разрешения.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с использованием которого участник, выполняющий этот запрос, осуществляет свое право на предоставление разрешений.  
   
-## <a name="remarks"></a>Замечания  
- Разрешения в области сервера могут предоставляться только в том случае, когда текущая база данных **master**.  
+## <a name="remarks"></a>Remarks  
+ Разрешения в области сервера предоставляются только в том случае, если текущей базой данных является **master**.  
   
- Сведения о конечных точках видны в [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) представления каталога. Сведения о разрешениях сервера можно увидеть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога и сведения об участниках сервера отобразится в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Сведения о конечных точках отображаются в представлении каталога [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Сведения о серверных разрешениях отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), а сведения о серверах-участниках — в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Конечная точка — это защищаемый объект на уровне сервера. Наиболее специфичные и ограниченные разрешения, которые могут быть выданы на конечную точку, перечислены в следующей таблице, вместе с общими разрешениями, неявно содержащими их.  
   
@@ -97,7 +97,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL в конечной точке или разрешения ALTER ANY ENDPOINT на сервере.  
   
 ## <a name="examples"></a>Примеры  
@@ -122,11 +122,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ЗАПРЕТ разрешений на конечные точки &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения конечной точки &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Представления каталога конечных точек &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys.Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

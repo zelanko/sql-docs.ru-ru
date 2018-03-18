@@ -1,5 +1,5 @@
 ---
-title: "IIF (Transact-SQL) | Документы Microsoft"
+title: "IIF (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---iif-transact-sql"></a>Логические функции - IIF (Transact-SQL)
+# <a name="logical-functions---iif-transact-sql"></a>Логические функции — IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает одно из двух значений в зависимости от того, принимает логическое выражение значение true или false.  
@@ -52,16 +52,16 @@ IIF ( boolean_expression, true_value, false_value )
  Если этот аргумент не является логическим выражением, то возникает ошибка синтаксиса.  
   
  *true_value*  
- Значение, возвращаемое, если *boolean_expression* имеет значение true.  
+ Возвращаемое значение, если *boolean_expression* имеет значение true.  
   
  *false_value*  
- Значение, возвращаемое, если *boolean_expression* имеет значение false.  
+ Возвращаемое значение, если *boolean_expression* имеет значение false.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тип данных с наивысшим приоритетом из типов в *true_value* и *false_value*. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Возвращает тип данных с наивысшим приоритетом из типов, имеющихся в *true_value* и *false_value*. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
- IIF является быстрым способом написания выражения CASE. Оно вычисляет логическое выражение, переданное в качестве первого аргумента, а затем, исходя из результата вычисления, возвращает один из двух других аргументов. То есть *true_value* возвращается, если логическое выражение имеет значение true и *false_value* возвращается, если логическое выражение имеет значение false или unknown. *true_value* и *false_value* может быть любого типа. Эти же правила применяются к выражению CASE для логических выражений, обработки значения NULL, а возвращаемые типы также применяются к IIF. Дополнительные сведения см. в разделе [случай &#40; Transact-SQL &#41; ](../../t-sql/language-elements/case-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ IIF является быстрым способом написания выражения CASE. Оно вычисляет логическое выражение, переданное в качестве первого аргумента, а затем, исходя из результата вычисления, возвращает один из двух других аргументов. Другими словами, если логическое выражение имеет значение true, то возвращается *true_value*, если же логическое выражение имеет значение false или неизвестно, то возвращается *false_value*. *true_value* и *false_value* могут быть любого типа. Эти же правила применяются к выражению CASE для логических выражений, обработки значения NULL, а возвращаемые типы также применяются к IIF. Дополнительные сведения см. в статье [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md).  
   
  Тот факт, что IIF переводится в CASE, также оказывает влияние на другие аспекты работы этой функции. Поскольку выражения CASE могут быть вложенными только до уровня 10, инструкции IIF также могут быть вложенными максимум до уровня 10. Кроме того, выполнение IIF переносится на другие серверы как семантически равное выражение CASE, при этом для нее характерно все поведение выполняемого удаленно выражения CASE.  
   
@@ -110,7 +110,7 @@ NULL
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [ВЫБЕРИТЕ &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [CHOOSE (Transact-SQL)](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

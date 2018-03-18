@@ -1,5 +1,5 @@
 ---
-title: "CLOSE SYMMETRIC KEY (Transact-SQL) | Документы Microsoft"
+title: "CLOSE SYMMETRIC KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  Имя симметричного ключа, который следует закрыть.  
   
-## <a name="remarks"></a>Замечания  
- Открытые симметричные ключи привязаны к сеансу, а не к контексту безопасности. Открытый ключ останется доступным, пока не будет явно закрыт или сеанс не будет прерван. ЗАКРЫТЬ все SYMMETRIC KEYS закрывает любой главный ключ базы данных, который был открыт в текущем сеансе с помощью [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) инструкции.  Сведения об открытых ключах можно увидеть в [sys.openkeys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) представления каталога.  
+## <a name="remarks"></a>Remarks  
+ Открытые симметричные ключи привязаны к сеансу, а не к контексту безопасности. Открытый ключ останется доступным, пока не будет явно закрыт или сеанс не будет прерван. Инструкция CLOSE ALL SYMMETRIC KEYS закрывает любой главный ключ базы данных, который был открыт в текущем сеансе с помощью инструкции [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Сведения об открытых ключах доступны в представлении каталога [sys.openkeys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Явного разрешения на закрытие симметричного ключа не требуется.  
   
 ## <a name="examples"></a>Примеры  
@@ -81,6 +81,6 @@ GO
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [УДАЛЯТЬ СИММЕТРИЧНЫЙ ключ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
+ [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
   
   

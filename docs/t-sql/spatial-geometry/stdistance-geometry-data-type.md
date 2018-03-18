@@ -1,5 +1,5 @@
 ---
-title: "STDistance (тип данных geometry) | Документы Microsoft"
+title: "STDistance (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geometry-data-type"></a>STDistance (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает кратчайшее расстояние между точкой в **geometry** экземпляра и точки в другом **geometry** экземпляра.  
+  Возвращает наименьшее расстояние от точки в экземпляре **geometry** до точки в другом экземпляре **geometry**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр, из которого измеряется расстояние до экземпляра, на котором `STDistance()` вызывается. Если *other_geometry* является пустым набором `STDistance()` возвращает значение null.  
+ Другой экземпляр **geometry**, от которого измеряется расстояние до экземпляра, где вызван метод `STDistance()`. Если *other_geometry* является пустым множеством, метод `STDistance()` возвращает значение NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **число с плавающей запятой**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Возвращаемый тип CLR: **SqlDouble**  
+ Тип возвращаемых данных CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- `STDistance()`всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают.  
+ Метод `STDistance()` всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geometry** не совпадают.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -65,7 +65,7 @@ SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

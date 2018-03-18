@@ -1,5 +1,5 @@
 ---
-title: "Функция TEXTPTR (Transact-SQL) | Документы Microsoft"
+title: "TEXTPTR (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textptr-transact-sql"></a>Текст и изображения функции - TEXTPTR (Transact-SQL)
+# <a name="text-and-image-functions---textptr-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает указатель на текст значение, соответствующее **текст**, **ntext**, или **изображения** столбца в **varbinary** формат. Извлеченное значение указателя текста может быть использовано в инструкциях READTEXT, WRITETEXT и UPDATETEXT.  
+  Возвращает значение текстового указателя, соответствующего столбцу **text**, **ntext** или **image**, в формате **varbinary**. Извлеченное значение указателя текста может быть использовано в инструкциях READTEXT, WRITETEXT и UPDATETEXT.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Дополнительные возможности недоступны.  
@@ -52,35 +52,35 @@ TEXTPTR ( column )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *столбец*  
- — **Текст**, **ntext**, или **изображения** столбец, который будет использоваться.  
+ *column*  
+ Столбец типа **text**, **ntext** или **image**, который будет использоваться.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varbinary**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для таблиц с внутристрочным текстом функция TEXTPTR возвращает указатель для обрабатываемого текста. Можно получить правильный указатель на текст даже в том случае, если значение текста NULL.  
   
- Нельзя использовать функцию TEXTPTR для столбцов представлений. Она может быть использована только для столбцов таблицы. Чтобы использовать функцию TEXTPTR для столбца представления, необходимо установить уровень совместимости 80 с использованием [уровень совместимости инструкции ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Если таблица не содержит текста в строке, а **текст**, **ntext**, или **изображения** столбец не был инициализирован при помощи инструкции UPDATETEXT, TEXTPTR возвращает указатель null.  
+ Нельзя использовать функцию TEXTPTR для столбцов представлений. Она может быть использована только для столбцов таблицы. Чтобы использовать функцию TEXTPTR для столбца представления, необходимо установить уровень совместимости равным 80 с помощью инструкции [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Если таблица не содержит в строке текстовых данных и если столбец типа **text**, **ntext** или **image** не был инициализирован с помощью инструкции UPDATETEXT, TEXTPTR возвращает указатель со значением NULL.  
   
  Используйте TEXTVALID, чтобы проверить, существует ли указатель на текст. Нельзя использовать инструкции UPDATETEXT, WRITETEXT или READTEXT без действительных текстовых указателей.  
   
- Эти функции и инструкции также полезны при работе с **текст**, **ntext**, и **изображения** данные.  
+ Приведенные ниже функции и инструкции также будут полезны при работе с данными типов **text**, **ntext** и **image**.  
   
 |Функция или инструкция|Description|  
 |---------------------------|-----------------|  
-|Функция PATINDEX**("***шаблон %***",** *выражение***)**|Возвращает позицию знака указанной символьной строки в **текст** или **ntext** столбцов.|  
-|DATALENGTH**(***выражение***)**|Возвращает длину данных в **текст**, **ntext**, и **изображения** столбцов.|  
-|SET TEXTSIZE|Возвращает предельный размер в байтах, **текст**, **ntext**, или **изображения** данные, возвращаемые инструкцией SELECT.|  
-|Подстрока**(***text_column*, *запустить*, *длина***)**|Возвращает **varchar** строку, указанную при помощи заданного *запустить* смещение и *длина*. Длина должна быть меньше 8 KБ.|  
+|PATINDEX**('***%pattern%***' ,** *expression***)**|Возвращает позицию символа указанной символьной строки в столбцах **text** или **ntext**.|  
+|DATALENGTH**(***expression***)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
+|SUBSTRING**(***text_column*, *start*, *length***)**|Возвращает строку типа **varchar**, указанную с помощью определенного смещения *start* и длины *length*. Длина должна быть меньше 8 KБ.|  
   
 ## <a name="examples"></a>Примеры  
   
 > [!NOTE]  
->  Для выполнения следующих примеров необходимо установить **pubs** базы данных.  
+>  Для выполнения приведенных ниже примеров необходимо установить базу данных **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Использование TEXTPTR  
- В следующем примере используется `TEXTPTR` функции, чтобы найти **изображения** столбца `logo` связанных с `New Moon Books` в `pub_info` таблицу `pubs` базы данных. Указатель на текст заносится в локальную переменную `@ptrval.`  
+ На приведенном ниже примере показано, как использовать функцию `TEXTPTR` для нахождения столбца **image** `logo`, связанного с `New Moon Books`, в таблице `pub_info` базы данных `pubs`. Указатель на текст заносится в локальную переменную `@ptrval.`  
   
 ```  
 USE pubs;  
@@ -170,7 +170,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>Г. Возвращение заданных текстовых данных  
- Следующий пример находит `text` столбца (`pr_info`) связанный с `pub_id``0736` в `pub_info` таблицу `pubs` базы данных. Сначала объявляется локальная переменная `@val`. После этого указатель на текст (длинная двоичная строка) записывается в `@val` и передается в качестве параметра в инструкцию `READTEXT`. Тем самым возвращается 10 байт, начиная с пятого (сдвиг равен 4).  
+ На приведенном ниже примере показано, как обнаружить столбец `text` (`pr_info`), связанный с `pub_id``0736`, в таблице `pub_info` базы данных `pubs`. Сначала объявляется локальная переменная `@val`. После этого указатель на текст (длинная двоичная строка) записывается в `@val` и передается в качестве параметра в инструкцию `READTEXT`. Тем самым возвращается 10 байт, начиная с пятого (сдвиг равен 4).  
   
 ```  
 USE pubs;  
@@ -193,11 +193,11 @@ pr_info
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [Значение TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Текст и изображения функции &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
+ [READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)   
+ [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Функции для работы с изображениями и текстом (Transact-SQL)](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   

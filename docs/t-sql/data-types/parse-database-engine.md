@@ -1,5 +1,5 @@
 ---
-title: "Parse (компонент Database Engine) | Документы Microsoft"
+title: "Parse (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Метод Parse преобразует каноническое представление строки **hierarchyid** для **hierarchyid** значение. Синтаксический анализ вызывается неявно при преобразовании из строкового типа в **hierarchyid** происходит. Действие противоположно из [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() является статическим методом.
+Метод Parse преобразует каноническое представление строки **hierarchyid** в значение **hierarchyid**. Метод Parse вызывается неявно при преобразовании из строкового типа в **hierarchyid**. Действие противоположно [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() — это статический метод.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,23 +52,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*входные данные*  
+*input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]: значение типа данных символа, которые было конвертировано.
   
-Среда CLR: Строковое значение, которое оценивается.
+CLR: оцениваемое значение типа String.
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
-**Возвращаемый тип SQL Server: hierarchyid**
+**Возвращаемый тип SQL Server:hierarchyid**
   
-**Возвращаемый тип CLR: SqlHierarchyId**
+**Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Замечания  
-Если синтаксический анализ получает значение, которое не является допустимым строковым представлением **hierarchyid**, возникает исключение. Например если **char** типы данных содержат конечные пробелы, возникает исключение.
+## <a name="remarks"></a>Remarks  
+Если метод Parse получает значение, которое не является допустимым строковым представлением **hierarchyid**, возникает исключение. Например, если типы данных **char** содержат конечные пробелы, возникает исключение.
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Преобразование значений Transact-SQL без таблицы  
-Следующий пример кода использует `ToString` для преобразования **hierarchyid** значения в строку и `Parse` преобразовать строковое значение для **hierarchyid**.
+В приведенном ниже примере кода метод `ToString` преобразует значение **hierarchyid** в строку, а метод `Parse` преобразует строковое значение в **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -96,7 +96,7 @@ string input = “/1/2/”;
 SqlHierarchyId.Parse(input);  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

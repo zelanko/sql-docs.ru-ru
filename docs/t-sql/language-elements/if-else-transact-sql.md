@@ -1,5 +1,5 @@
 ---
-title: "IF... ELSE (Transact-SQL) | Документы Microsoft"
+title: "IF...ELSE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- Дополнительные примеры см. в разделе [ELSE &#40; Если... ELSE &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ Дополнительные сведения см. в разделе [ELSE (IF...ELSE) (Transact-SQL)](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере используется `IF…ELSE` определите, какой из двух ответов для представления пользователю, на основе веса элемента в `DimProduct` таблицы.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В следующем примере используется `IF…ELSE` для определения того, какой из двух ответов показать пользователю, на основе веса элемента в таблице `DimProduct`.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -97,13 +97,13 @@ ELSE
     FROM DimProduct WHERE ProductKey = @productKey);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [BEGIN... КОНЕЦ &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [КОНЕЦ &#40; BEGIN... КОНЕЦ &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [END (BEGIN...END) (Transact-SQL)](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ПОКА &#40; Transact-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Язык управления выполнением &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; Если... ELSE &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md) [ELSE (IF...ELSE) (Transact-SQL)](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

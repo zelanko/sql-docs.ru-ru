@@ -1,5 +1,5 @@
 ---
-title: "@@IO_BUSY (Transact-SQL) | Документы Microsoft"
+title: "@@IO_BUSY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потратил на выполнение операций ввода-вывода с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска. Результат представляется в интервалах ЦП (тактах) и объединяет информацию обо всех ЦП, поэтому может превышать фактическое время выполнения операций. Умножьте@TIMETICKS преобразовать в микросекунды.  
+  Возвращает время, затраченное [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на выполнение операций ввода-вывода с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Результат представляется в интервалах ЦП (тактах) и объединяет информацию обо всех ЦП, поэтому может превышать фактическое время выполнения операций. Умножьте его на значение @@TIMETICKS, чтобы преобразовать в микросекунды.  
   
 > [!NOTE]  
->  Если время возвращаются в@CPU_BUSY, или @@IO_BUSY превышает приблизительно 49 дней совокупного времени ЦП, появится предупреждение об арифметическом переполнении. В этом случае значение @@CPU_BUSY, @@IO_BUSY и @@IDLE переменные не являются точными.  
+>  Если время, возвращенное @@CPU_BUSY или @@IO_BUSY, превышает приблизительно 49 дней совокупного времени ЦП, выдается предупреждение об арифметическом переполнении. В этом случае значения переменных @@CPU_BUSY, @@IO_BUSY и @@IDLE являются неточными.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы отобразить отчет, содержащий несколько статистик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните хранимую процедуру sp_monitor.  
   
 ## <a name="examples"></a>Примеры  
- Следующий код возвращает число миллисекунд, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потратил на выполнение операций ввода-вывода с момента запуска до текущего момента. Для избежания арифметического переполнения при преобразовании значения в микросекунды, в примере преобразуется в одно из значений, чтобы **float** тип данных.  
+ Следующий код возвращает число миллисекунд, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потратил на выполнение операций ввода-вывода с момента запуска до текущего момента. Во избежание арифметического переполнения при преобразовании значения в микросекунды в этом примере одно из значений преобразуется в тип данных **float**.  
   
 ```  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   
@@ -76,9 +76,9 @@ IO microseconds as of
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Системные статистические функции &#40;Transact-SQL&#41;#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

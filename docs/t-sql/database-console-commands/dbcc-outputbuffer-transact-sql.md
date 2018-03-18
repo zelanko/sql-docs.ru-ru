@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC OUTPUTBUFFER (Transact-SQL) | Документы Microsoft"
+title: "DBCC OUTPUTBUFFER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Возвращает текущий буфер вывода в шестнадцатеричном формате и формате ASCII для указанного *session_id*.
+Возвращает текущий буфер вывода в шестнадцатеричном формате и формате ASCII для указанного аргумента *session_id*.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  Строгий (пакетный) запрос для поиска в текущем сеансе.  
- Следующий запрос возвращает *request_id*:  
+ Аргумент *request_id* возвращается с помощью следующего запроса:  
   
 ```sql
 SELECT request_id   
@@ -69,7 +69,7 @@ WHERE session_id = @@spid;
  Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
   
 ## <a name="remarks"></a>Remarks  
-DBCC OUTPUTBUFFER выводит результаты, отправленные для указанного клиента (*session_id*). Для процессов, не содержащих выходных потоков, возвращается сообщение об ошибке.
+DBCC OUTPUTBUFFER выводит результаты, отправленные определенному клиенту (*session_id*). Для процессов, не содержащих выходных потоков, возвращается сообщение об ошибке.
   
 Для вывода выполненной инструкции, которая возвратила результаты, отображаемые инструкцией DBCC OUTPUTBUFFER, выполните инструкцию DBCC INPUTBUFFER.
   
@@ -100,7 +100,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC OUTPUTBUFFER (52);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

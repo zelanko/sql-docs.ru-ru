@@ -1,5 +1,5 @@
 ---
-title: "REPLICATE (Transact-SQL) | Документы Microsoft"
+title: "REPLICATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *string_expression*  
- Выражение символьной строки или типа данных binary. *String_Expression* может быть символьных или двоичных данных.  
+ Выражение символьной строки или типа данных binary. *string_expression* может содержать либо символьные, либо двоичные данные.  
   
 > [!NOTE]  
->  Если *string_expression* не относится к типу **varchar(max)** или **nvarchar(max)**, REPLICATE усекает возвращаемое значение до 8000 байт. Для возврата значений, превышающих 8 000 байт *string_expression* должен быть явно приведен к типу данных соответствующего больших значений.  
+>  Если *string_expression* не относится к типу **varchar(max)** или **nvarchar(max)**, функция REPLICATE усекает возвращаемое значение до 8000 байт. Для возврата значений, превышающих 8000 байт, аргумент *string_expression* должен быть явно приведен к соответствующему типу данных с большими значениями.  
   
  *integer_expression*  
- Выражение любого целочисленного типа, включая **bigint**. Если *integer_expression* имеет отрицательное значение, возвращается значение NULL.  
+ Выражение любого целочисленного типа, включая тип **bigint**. Если аргумент *integer_expression* отрицателен, то возвращается значение NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тот же тип как *string_expression*.  
+ Возвращает тот же тип, что и аргумент *string_expression*.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C: использование функции REPLICATE  
- Этот пример реплицирует `0` символ четыре раза на переднем плане `ItemCode` значение.  
+### <a name="c-using-replicate"></a>В. Использование функции REPLICATE  
+ В приведенном ниже примере производится четырехкратная репликация символа `0` в начале значения `ItemCode`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +138,7 @@ FROM dbo.DimProduct
 ORDER BY Name;  
 ```  
   
- Ниже приведены первых строк в результирующем наборе.  
+ Ниже представлены первые строки в результирующем наборе.  
   
  ```
 Name                     ItemCode       FullItemCode
@@ -151,10 +151,10 @@ AWC Logo Cap             CA-1098        0000CA-1098
 BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
-## <a name="see-also"></a>См. также  
- [ПРОБЕЛ &#40; Transact-SQL &#41;](../../t-sql/functions/space-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [SPACE (Transact-SQL)](../../t-sql/functions/space-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "ЗАДАТЬ STATISTICS TIME (Transact-SQL) | Документы Microsoft"
+title: "SET STATISTICS TIME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  После выполнения инструкции SET STATISTICS TIME ON отображается статистика по времени для инструкций. Если указан параметр OFF, статистика по времени не показывается.  
   
  Значение параметра STATISTICS TIME устанавливается во время выполнения или запуска, а не во время синтаксического анализа.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] невозможно предоставить точную статистику в режиме волокон, который активируется при включении **использование упрощенных пулов** параметра конфигурации.  
+ В Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] невозможно предоставить точную статистику в режиме волокон, который активируется при включении параметра конфигурации **использование упрощенных пулов**.  
   
- **ЦП** столбца в **sysprocesses** таблица обновляется только при выполнении запроса с помощью SET STATISTICS TIME ON. Если SET STATISTICS TIME установлено значение OFF, **0** возвращается.  
+ Столбец **cpu** в таблице **sysprocesses** обновляется только во время выполнения запроса с инструкцией SET STATISTICS TIME ON. Если для параметра SET STATISTICS TIME установлено значение OFF, возвращается значение **0**.  
   
  Настройки ON и OFF влияют на значения в столбце «ЦП» в окне «Просмотр сведений о процессах для текущей деятельности» в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для использования инструкции SET STATISTICS TIME пользователи должны иметь разрешения, необходимые для выполнения инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Разрешение SHOWPLAN не требуется.  
   
 ## <a name="examples"></a>Примеры  
@@ -101,6 +101,6 @@ SQL Server parse and compile time:
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO (Transact-SQL)](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ПРОДОЛЖИТЬ (Transact-SQL) | Документы Microsoft"
+title: "CONTINUE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,6 +36,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Производит перезапуск цикла WHILE. Никакие инструкции после ключевого слова CONTINUE не выполняются. CONTINUE часто, но не всегда, предваряется проверкой IF. Дополнительные сведения см. в разделе [при &#40; Transact-SQL &#41; ](../../t-sql/language-elements/while-transact-sql.md) и [языка управления потоком &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+  Производит перезапуск цикла WHILE. Никакие инструкции после ключевого слова CONTINUE не выполняются. CONTINUE часто, но не всегда, предваряется проверкой IF. Дополнительные сведения см. в разделе [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md) и [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md).  
   
   

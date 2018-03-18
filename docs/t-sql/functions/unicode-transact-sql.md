@@ -1,5 +1,5 @@
 ---
-title: "Юникод (Transact-SQL) | Документы Microsoft"
+title: "UNICODE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>Аргументы  
  **'** *ncharacter_expression* **'**  
- — **Nchar** или **nvarchar** выражение.  
+ Выражение **nchar** или **nvarchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
@@ -145,11 +145,11 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ASCII &#40; Transact-SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [ДИА &#40; Transact-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ASCII (Transact-SQL)](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)   
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
  [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

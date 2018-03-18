@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (тип данных geography) | Документы Microsoft"
+title: "InstanceOf (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Проверяет, может ли **geography** экземпляра совпадает с указанным типом.  
+  Проверяет принадлежность экземпляра **geography** к указанному типу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *geography_type*  
- — **Nvarchar(4000)** строка, задающая один из типов 16, доступных в **geography** иерархия типов.  
+ Строка типа **nvarchar(4000)**, задающая один из 16 типов, доступных в иерархии типов **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Возвращает 1, если тип **geography** экземпляра совпадает со значением указанного типа, или если указанный тип является предком типа экземпляра; в противном случае возвращает 0.  
+ Возвращает значение 1, если тип экземпляра **geography** совпадает с указанным типом или указанный тип является предком типа экземпляра. В противном случае возвращает значение 0.  
   
- Это **geography** поддерживает метод тип **FullGlobe** экземпляры или Пространственные экземпляры, размер которых превышает полусферу.  
+ Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
- Входные данные для метода должен быть одним из следующих: Geometry, точки, кривой, LineString, CircularString, область, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**,  **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint**, или **FullGlobe**.  
+ Входные данные метода должны быть одного из следующих типов: Geometry, Point, Curve, LineString,CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** или **FullGlobe**.  
   
  Если в качестве входного аргумента указана любая другая строка, этот метод вызовет исключение `ArgumentException`.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

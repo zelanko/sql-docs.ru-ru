@@ -1,5 +1,5 @@
 ---
-title: "Функция RAND (Transact-SQL) | Документы Microsoft"
+title: "RAND (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Возвращает псевдослучайные **float** значение от 0 до 1.  
+  Возвращает псевдослучайное значение типа **float** от 0 до 1.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ RAND ( [ seed ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Начальное значение*  
- Должно быть целым числом [выражение](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, или **int**), задающее начальное значение. Если *начальное значение* не указан, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] присваивает случайно выбранное начальное значение. Для указанного начального значения возвращаемый результат всегда будет один и тот же.  
+ *seed*  
+ Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint** или **int**), задающее начальное значение. Если аргумент *seed* не указан, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использует случайное начальное значение. Для указанного начального значения возвращаемый результат всегда будет один и тот же.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **float**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Повторные вызовы RAND() с одинаковым начальным значением возвращают одинаковые результаты.  
   
  Для одного соединения, если RAND() вызван с конкретным начальным значением, все последующие вызовы RAND() выдадут результат, основанный на начальном вызове RAND(). Например, следующий запрос всегда будет возвращать ту же последовательность чисел.  
@@ -78,6 +78,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   

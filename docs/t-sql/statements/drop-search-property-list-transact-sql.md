@@ -1,5 +1,5 @@
 ---
-title: "Удаление СПИСКА СВОЙСТВ поиска (Transact-SQL) | Документы Microsoft"
+title: "DROP SEARCH PROPERTY LIST (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,34 +49,34 @@ DROP SEARCH PROPERTY LIST property_list_name
   
 ## <a name="arguments"></a>Аргументы  
  *property_list_name*  
- Имя списка свойств поиска для удаления. *property_list_name* представляет собой идентификатор.  
+ Имя списка свойств поиска для удаления. *property_list_name* — это идентификатор.  
   
- Чтобы просмотреть имена существующих списков свойств, используйте [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) представление каталога следующим образом:  
+ Чтобы просмотреть имена существующих списков свойств, используйте представление каталога [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) следующим образом:  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Нельзя удалить список свойств поиска из базы данных, пока он связан с каким-либо полнотекстовым индексом, попытки сделать это приводят к ошибкам. Чтобы удалить список свойств поиска из данного полнотекстового индекса, используйте [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) инструкции и укажите предложение SET SEARCH PROPERTY LIST либо с параметром OFF или именем другого списка свойств поиска.  
+## <a name="remarks"></a>Remarks  
+ Нельзя удалить список свойств поиска из базы данных, пока он связан с каким-либо полнотекстовым индексом, попытки сделать это приводят к ошибкам. Чтобы удалить список свойств поиска из данного полнотекстового индекса, воспользуйтесь инструкцией [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) и укажите предложение SET SEARCH PROPERTY LIST либо с параметром OFF, либо с именем другого списка свойств поиска.  
   
- **Чтобы просмотреть свойства перечислены на экземпляре сервера**  
+ **Просмотр списков свойств поиска на экземпляре сервера**  
   
 -   [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- **Чтобы просмотреть свойства перечислены связанные с полнотекстовыми индексами**  
+ **Просмотр списков свойств, связанных с полнотекстовыми индексами**  
   
 -   [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
- **Чтобы удалить список свойств из полнотекстового индекса**  
+ **Удаление списка свойств из полнотекстового индекса**  
   
 -   [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение CONTROL для списка свойств поиска.  
   
 > [!NOTE]  
->  Разрешения CONTROL для списка могут быть предоставлены владельцем списка свойств. По умолчанию владельцем списка свойств поиска является пользователь, создавший этот список. Владелец может быть изменен с помощью [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.  
+>  Разрешения CONTROL для списка могут быть предоставлены владельцем списка свойств. По умолчанию владельцем списка свойств поиска является пользователь, создавший этот список. Владельца можно изменить с помощью инструкции [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере список свойств `JobCandidateProperties` удаляется из базы данных `AdventureWorks2012`.  
@@ -87,11 +87,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [СОЗДАТЬ список СВОЙСТВ поиска &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+ [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

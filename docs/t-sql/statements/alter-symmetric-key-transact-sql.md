@@ -1,5 +1,5 @@
 ---
-title: "ALTER SYMMETRIC KEY (Transact-SQL) | Документы Microsoft"
+title: "ALTER SYMMETRIC KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,31 +72,31 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  Отменяет шифрование при помощи указанного метода. Все виды шифрования из симметричного ключа удалить нельзя.  
   
- СЕРТИФИКАТ *имя_сертификата*  
+ CERTIFICATE *Certificate_name*  
  Указывает сертификат, используемый для шифрования симметричного ключа. Этот сертификат уже должен существовать в базе данных.  
   
- ПАРОЛЬ **= "***пароль***"**  
- Указывает пароль, используемый для шифрования симметричного ключа. *пароль* должен соответствовать требованиям политики паролей Windows компьютера, на котором выполняется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Указывает пароль, используемый для шифрования симметричного ключа. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- СИММЕТРИЧНЫЙ ключ *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  Указывает симметричный ключ, используемый для шифрования изменяемого симметричного ключа. Симметричный ключ уже должен существовать в базе данных и быть открытым.  
   
- АСИММЕТРИЧНЫЙ ключ *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Указывает асимметричный ключ, используемый для шифрования изменяемого симметричного ключа. Асимметричный ключ должен уже существовать в базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]  
 >  Если шифрование симметричного ключа выполняется не с открытым ключом главного ключа базы данных, а с паролем, используется алгоритм шифрования TRIPLE_DES. Поэтому ключи, созданные с помощью сильных алгоритмов шифрования, таких как AES, защищены с помощью более слабого алгоритма.  
   
  Для изменения шифрования симметричного ключа используйте предложения ADD ENCRYPTION и DROP ENCRYPTION. Невозможно, чтобы ключу не соответствовал никакой способ шифрования. Поэтому оптимальным способом изменения метода шифрования является добавление новой формы шифрования и затем удаление старой.  
   
- Чтобы изменить владельца симметричного ключа, используйте [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Для изменения владельца симметричного ключа выполните инструкцию [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 > [!NOTE]  
 >  Алгоритм RC4 поддерживается только в целях обратной совместимости. Когда база данных имеет уровень совместимости 90 или 100, новые материалы могут шифроваться только с помощью алгоритмов RC4 или RC4_128. (Не рекомендуется.) Используйте вместо этого более новые алгоритмы, например AES. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] материалы, зашифрованные с помощью алгоритмов RC4 или RC4_128, могут быть расшифрованы на любом уровне совместимости.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения ALTER на симметричный ключ. При добавлении шифрования по сертификату или асимметричному ключу необходимо разрешение VIEW DEFINITION на сертификат или асимметричный ключ. При удалении шифрования по сертификату или асимметричному ключу необходимо разрешение CONTROL на сертификат или асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
@@ -120,7 +120,7 @@ CLOSE SYMMETRIC KEY JanainaKey043;
 ## <a name="see-also"></a>См. также:  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

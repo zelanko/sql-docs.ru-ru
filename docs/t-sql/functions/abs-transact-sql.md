@@ -1,5 +1,5 @@
 ---
-title: "ABS (Transact-SQL) | Документы Microsoft"
+title: "ABS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Математическая функция, возвращающая абсолютное (положительное) значение указанного числового выражения. (`ABS` изменения отрицательные значения для положительных значений. `ABS`не влияет на ноль или положительные значения.)
+Математическая функция, возвращающая абсолютное (положительное) значение указанного числового выражения. (`ABS` изменяет отрицательные значения на положительные значения. `ABS` не влияет на ноль или положительные значения.)
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -84,10 +84,10 @@ GO
 «Арифметическое переполнение при преобразовании выражения к типу данных int».
 
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Встроенные функции (Transact-SQL)](../../t-sql/functions/functions.md)
   
   

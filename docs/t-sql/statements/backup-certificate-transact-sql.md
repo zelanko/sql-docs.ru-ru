@@ -1,5 +1,5 @@
 ---
-title: "СЕРТИФИКАТА резервной копии (Transact-SQL) | Документы Microsoft"
+title: "BACKUP CERTIFICATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -75,7 +75,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *путь_к_файлу*  
+ *path_to_file*  
  Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен сертификат. Это может быть локальный путь или UNC-путь к местоположению в сети. По умолчанию задается путь к папке DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *path_to_private_key_file*  
@@ -87,14 +87,14 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *decryption_password*  
  Пароль, используемый для дешифрования закрытого ключа перед созданием резервной копии ключа.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если закрытый ключ зашифрован с паролем в базе данных, необходимо указать пароль для дешифрования.  
   
  При создании резервной копии закрытого ключа в файле шифрование является необходимым. Пароль, используемый для защиты резервной копии сертификата, не является тем же ключом, который применялся для шифрования закрытого ключа сертификата.  
   
- Для восстановления резервной копии сертификата, использовать [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)инструкции.  
+ Чтобы восстановить сертификат из резервной копии, используйте инструкцию [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL для сертификата и знание пароля, использованного для шифрования закрытого ключа. Если только общедоступная часть сертификата была подвергнута резервному копированию, требуются некоторые разрешения для сертификата, и чтобы для вызывающей программы не было запрещено разрешение VIEW для сертификата.  
   
 ## <a name="examples"></a>Примеры  
@@ -130,8 +130,8 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [УДАЛИТЬ СЕРТИФИКАТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

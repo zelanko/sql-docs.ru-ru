@@ -1,5 +1,5 @@
 ---
-title: "TEXTVALID (Transact-SQL) | Документы Microsoft"
+title: "TEXTVALID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textvalid-transact-sql"></a>Текст и изображения функции - TEXTVALID (Transact-SQL)
+# <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Объект **текст**, **ntext**, или **изображения** функцию, которая проверяет, является ли указанный текстовый указатель допустимым.  
+  Функция типа **text**, **ntext** или **image**, которая проверяет, является ли указанный текстовый указатель действительным.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Дополнительные возможности недоступны.  
@@ -57,7 +57,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *table*  
  Имя таблицы, которая будет использоваться.  
   
- *столбец*  
+ *column*  
  Имя столбца, который будет использоваться.  
   
  *text_ptr*  
@@ -66,22 +66,22 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
- Возвращает 1, если указатель является действительным, и 0, если указатель недействителен. Обратите внимание, что идентификатор для **текст** столбец должен содержать имя таблицы. Нельзя использовать инструкции UPDATETEXT, WRITETEXT или READTEXT без действительных текстовых указателей.  
+## <a name="remarks"></a>Remarks  
+ Возвращает 1, если указатель является действительным, и 0, если указатель недействителен. Обратите внимание на то, что идентификатор для столбца **text** должен включать имя таблицы. Нельзя использовать инструкции UPDATETEXT, WRITETEXT или READTEXT без действительных текстовых указателей.  
   
- Следующие функции и инструкции также полезны при работе с **текст**, **ntext**, и **изображения** данные.  
+ Приведенные ниже функции и инструкции также будут полезны при работе с данными типов **text**, **ntext** и **image**.  
   
 |Функция или инструкция|Description|  
 |---------------------------|-----------------|  
-|Функция PATINDEX**(**"*шаблон %**"***,** *выражение***)**|Возвращает позицию знака указанной символьной строки в **текст** и **ntext** столбцов.|  
-|DATALENGTH**(***выражение***)**|Возвращает длину данных в **текст**, **ntext**, и **изображения** столбцов.|  
-|SET TEXTSIZE|Возвращает предельный размер в байтах, **текст**, **ntext**, или **изображения** данные, возвращаемые инструкцией SELECT.|  
+|PATINDEX**(**'*%pattern%**'***,** *expression***)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
+|DATALENGTH**(***expression***)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается информация о том, существует ли действительный текстовый указатель для каждого значения в столбце `logo` таблицы `pub_info`.  
   
 > [!NOTE]  
->  Чтобы выполнить этот пример, необходимо установить **pubs** базы данных.  
+>  Чтобы выполнить этот пример, необходимо установить базу данных **pubs**.  
   
 ```  
 USE pubs;  
@@ -111,10 +111,10 @@ pub_id Valid (if 1) Text data
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [Значение TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Текст и изображения функции &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
+ [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
+ [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Функции для работы с изображениями и текстом (Transact-SQL)](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [TEXTPTR (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

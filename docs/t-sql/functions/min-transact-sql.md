@@ -1,5 +1,5 @@
 ---
-title: "MIN (Transact-SQL) | Документы Microsoft"
+title: "MIN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает минимальное значение выражения. Может следовать [предложение OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
+  Возвращает минимальное значение выражения. За функцией может следовать [предложение OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,17 +67,17 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  Указывает, что учитывается каждое уникальное значение. Параметр DISTINCT не имеет смысла при использовании функцией MIN и доступен только для совместимости со стандартом ISO.  
   
  *expression*  
- Может быть константой, именем столбца или функцией, а также любым сочетанием арифметических, побитовых и строковых операторов. Функция MIN может использоваться с **числовое**, **char**, **varchar**, **uniqueidentifier**, или **datetime** столбцы, но не с **бит** столбцов. Агрегатные функции и вложенные запросы не допускаются.  
+ Может быть константой, именем столбца или функцией, а также любым сочетанием арифметических, побитовых и строковых операторов. MIN можно использовать со столбцами **numeric**, **char**, **varchar**, **uniqueidentifier** или **datetime**, но не со столбцами **bit**. Агрегатные функции и вложенные запросы не допускаются.  
   
  Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- НАД **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* , определяет логический порядок, в котором выполняется операция. *order_by_clause* является обязательным. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Аргумент *order_by_clause* является обязательным. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает значение, то же, что *выражение*.  
+ Возвращает то же значение, что и *expression*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значения NULL функцией MIN не учитываются.  
   
  Для столбцов символьных данных функция MIN находит значение, находящееся внизу последовательности сортировки.  
@@ -148,10 +148,10 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-min"></a>В. С помощью мин.  
- В следующем примере Агрегатная функция MIN возвращает цену продукта дешевое (минимальная) в указанном наборе заказов на продажу.  
+### <a name="c-using-min"></a>В. Использование функции MIN  
+ В приведенном ниже примере с помощью агрегатной функции MIN возвращается цена самого дешевого продукта в указанном наборе заказов на продажу.  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,8 +168,8 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  5.1865
  ```  
   
-### <a name="d-using-min-with-over"></a>Г. С помощью MIN с больше  
- Следующие примеры использования аналитической функцией MIN OVER() для возврата цена дешевого продукта в каждом заказе на продажу. Результирующий набор секционируется по `SalesOrderID` столбца.  
+### <a name="d-using-min-with-over"></a>Г. Использование функции MIN с предложением OVER  
+ В приведенных ниже примерах с помощью аналитической функции MIN OVER() возвращается цена самого дешевого продукта в каждом заказе на продажу. Результирующий набор секционируется по столбцу `SalesOrderID`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -192,9 +192,9 @@ LeastExpensiveProduct SalesOrderID
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [МАКСИМАЛЬНОЕ &#40; Transact-SQL &#41;](../../t-sql/functions/max-transact-sql.md)   
- [ЧЕРЕЗ предложение &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [MAX (Transact-SQL)](../../t-sql/functions/max-transact-sql.md)   
+ [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

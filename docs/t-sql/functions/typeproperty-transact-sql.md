@@ -1,5 +1,5 @@
 ---
-title: "TYPEPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "TYPEPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *type*  
  Имя типа данных.  
   
- *Свойство*  
- Тип возвращаемых сведений по этому типу данных. *Свойство* может принимать одно из следующих значений.  
+ *property*  
+ Тип возвращаемых сведений по этому типу данных. Аргумент *property* может иметь одно из перечисленных ниже значений.  
   
 |Свойство|Description|Возвращенное значение|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Тип данных допускает значения NULL.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = не удалось найти тип данных.|  
-|**OwnerId**|Владелец типа.<br /><br /> Примечание: Владельцу схемы не обязательно владельца типа.|Не равен NULL = идентификатор пользователя базы данных владельца типа.<br /><br /> NULL = неподдерживаемый тип или идентификатор типа недопустим.|  
-|**Точность**|Точность типа данных.|Число цифр или символов.<br /><br /> -1 = **xml** или тип данных больших значений<br /><br /> NULL = не удалось найти тип данных.|  
-|**Масштаб**|Масштаб типа данных.|Число символов после запятой для типа данных.<br /><br /> NULL = не является типом данных **числовое** или не найден.|  
+|**OwnerId**|Владелец типа.<br /><br /> Примечание. Владелец схемы может не быть владельцем типа.|Не равен NULL = идентификатор пользователя базы данных владельца типа.<br /><br /> NULL = неподдерживаемый тип или идентификатор типа недопустим.|  
+|**Точность**|Точность типа данных.|Число цифр или символов.<br /><br /> –1 = **xml** или тип данных с большим значением<br /><br /> NULL = не удалось найти тип данных.|  
+|**Масштаб**|Масштаб типа данных.|Число символов после запятой для типа данных.<br /><br /> NULL = тип данных не **числовой**, или не удалось найти тип данных.|  
 |**UsesAnsiTrim**|При создании типа данных параметр дополнения символами ANSI был установлен в состояние ON.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = тип данных не обнаружен или не принадлежит к двоичному или строковому типу данных.|  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -87,13 +87,13 @@ SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Type_id &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [Функция TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [TYPE_ID (Transact-SQL)](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME (Transact-SQL)](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Документы Microsoft"
+title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает токен, который представляет текущий контекст транзакции сеанса. Этот токен используется приложением для связывания потоковых операций FILESTREAM файловой системы с транзакцией. Список разделов по FILESTREAM см. в разделе [большой двоичный объект &#40; Большой двоичный объект &#41; Данные &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  Возвращает токен, который представляет текущий контекст транзакции сеанса. Этот токен используется приложением для связывания потоковых операций FILESTREAM файловой системы с транзакцией. Список разделов, посвященных FILESTREAM, см. в статье [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  Если вызывается функция GET_FILESTREAM_TRANSACTION_CONTEXT, участнику предоставляется доступ к файловой системе для транзакции в течение транзакции. Чтобы разрешить доступ другому пользователю к транзакции через файловую систему, используйте инструкцию EXECUTE AS для запуска функции GET_FILESTREAM_TRANSACTION_CONTEXT от имени другого пользователя.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `GET_FILESTREAM_TRANSACTION_CONTEXT` в [!INCLUDE[tsql](../../includes/tsql-md.md)] транзакцию, чтобы получить контекст транзакции.  
+ В приведенном ниже примере инструкция `GET_FILESTREAM_TRANSACTION_CONTEXT` используется в транзакции [!INCLUDE[tsql](../../includes/tsql-md.md)] для получения контекста транзакции.  
   
 ```csharp  
 using System;  
@@ -282,8 +282,8 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Путь к &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [PathName (Transact-SQL)](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SUSER_ID (Transact-SQL) | Документы Microsoft"
+title: "SUSER_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   Возвращает идентификационный номер имени входа пользователя.  
   
 > [!NOTE]  
->  Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], функция SUSER_ID возвращает значение, указанное как **principal_id** в **sys.server_principals** представления каталога.  
+>  Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], функция SUSER_ID возвращает значения, перечисленные в списке **principal_id** в представлении каталога **sys.server_principals**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,16 +54,16 @@ SUSER_ID ( [ 'login' ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *входа* **"**  
- Имя входа пользователя. *Имя входа* — **nchar**. Если *входа* указывается как **char**, *входа* неявно преобразуется в **nchar**. *Имя входа* может быть любой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа Windows пользователя или группы, имеющей разрешение на подключение к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если *входа* — не указан, возвращается идентификационный номер имени входа для текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL.  
+ **'** *login* **'**  
+ Имя входа пользователя. Аргумент *login* имеет тип **nchar**. Если в качестве *login* указано значение типа **char**, *login* неявно преобразуется в тип **nchar**. *login* может быть любым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пользователем или группой Windows с разрешением на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *login* не задан, то возвращается идентификационный номер имени входа для текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
- Функция SUSER_ID возвращает идентификационные номера только для тех имен входа, которые были явным образом описаны в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот идентификатор используется в рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отслеживания прав собственности и разрешений. Данный идентификатор не является эквивалентом идентификационной записи системы безопасности (SID) для имени входа, возвращаемого функцией SUSER_SID. Если *входа* является именем входа SQL Server, SID сопоставляется идентификатору GUID. Если *входа* является именем входа Windows или группы Windows, SID сопоставляется идентификатору безопасности Windows.  
+## <a name="remarks"></a>Remarks  
+ Функция SUSER_ID возвращает идентификационные номера только для тех имен входа, которые были явным образом описаны в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот идентификатор используется в рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отслеживания прав собственности и разрешений. Данный идентификатор не является эквивалентом идентификационной записи системы безопасности (SID) для имени входа, возвращаемого функцией SUSER_SID. Если аргумент *login* является именем входа SQL Server, то значение SID сопоставляется с идентификатором GUID. Если аргумент *login* является именем входа Windows или группы Windows, то значение SID сопоставляется с идентификатором безопасности Windows.  
   
- Функция SUSER_SID возвращает SUID только для имени входа, которое присутствует в **syslogins** системной таблицы.  
+ Функция SUSER_SID возвращает SUID только для тех имен входа, для которых существуют записи в системной таблице **syslogins**.  
   
  Системные функции могут быть использованы в списке выбора, в предложении WHERE, и везде, где разрешено использование выражения, и за ними всегда должны следовать скобки, даже если не заданы никакие параметры.  
   
@@ -76,7 +76,7 @@ SELECT SUSER_ID('sa');
   
 ## <a name="see-also"></a>См. также:  
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [Функция SUSER_SID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [SUSER_SID (Transact-SQL)](../../t-sql/functions/suser-sid-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

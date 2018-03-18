@@ -1,5 +1,5 @@
 ---
-title: "ИЗМЕНИТЬ тип сообщения (Transact-SQL) | Документы Microsoft"
+title: "ALTER MESSAGE TYPE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,7 +70,7 @@ ALTER MESSAGE TYPE message_type_name
  Тело сообщения должно содержать корректные XML-данные.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- Текст сообщения должен содержать XML, который соответствует схеме в указанной коллекции схем. *Данные* должно быть именем существующей коллекции схем XML.  
+ Текст сообщения должен содержать XML, который соответствует схеме в указанной коллекции схем. Аргумент *schema_collection_name* должен быть именем существующей коллекции XML-схем.  
   
 ## <a name="remarks"></a>Remarks  
  Изменение проверки типов сообщений не влияет на сообщения, которые уже поставлены в очередь.  
@@ -78,7 +78,7 @@ ALTER MESSAGE TYPE message_type_name
  Чтобы изменить параметр AUTHORIZATION для типа сообщений, следует воспользоваться инструкцией ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию разрешением на изменения типа сообщений обладает владелец типа сообщений, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin**предопределенной роли сервера.  
+ По умолчанию разрешением на изменения типа сообщений обладает владелец типа сообщений, члены предопределенной роли базы данных **db_ddladmin** или **db_owner** и члены предопределенной роли сервера **sysadmin**.  
   
  Если инструкция ALTER MESSAGE TYPE задает коллекцию схемы, пользователь, выполняющий инструкцию, должен иметь разрешение на REFERENCES указанной коллекции схем.  
   
@@ -91,10 +91,10 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Создание ТИПА сообщений &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [DROP MESSAGE TYPE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

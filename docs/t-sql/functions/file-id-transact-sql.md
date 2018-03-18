@@ -1,5 +1,5 @@
 ---
-title: "File_id (Transact-SQL) | Документы Microsoft"
+title: "FILE_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/02/2018
   Возвращает идентификатор (ID) файла, соответствующий заданному логическому имени файла в текущей базе данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого функцию [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,16 +54,16 @@ FILE_ID ( file_name )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_файла*  
- Является выражением типа **sysname** , представляющий имя файла, для которого необходимо вернуть идентификатор файла  
+ *file_name*  
+ Выражение типа **sysname**, представляющее имя файла, для которого необходимо вернуть идентификатор файла.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **smallint**  
   
 ## <a name="remarks"></a>Remarks  
- *имя_файла* соответствующее логическое имя файла в столбце имени в представлениях каталога sys.master_files или sys.database_files.  
+ Аргумент *file_name* соответствует логическому имени файла, отображенному в столбце name в представлении каталога sys.master_files или sys.database_files.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификационный номер файла, присваиваемый полнотекстовому каталогу, больше чем 32767. Так как тип возвращаемого значения функции FILE_ID является **smallint**, эта функция не может использоваться для полнотекстовых файлов. Используйте [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) вместо него.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификационный номер файла, присваиваемый полнотекстовому каталогу, больше чем 32767. Так как возвращаемым типом функции FILE_ID является **smallint**, эта функция не может использоваться для полнотекстовых файлов. Используйте вместо этого функцию [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает идентификатор файла `AdventureWorks_Data`.  
@@ -86,8 +86,8 @@ File ID
   
 ## <a name="see-also"></a>См. также:  
  [Устаревшие функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Имя_файла &#40; Transact-SQL &#41;](../../t-sql/functions/file-name-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILE_NAME (Transact-SQL)](../../t-sql/functions/file-name-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

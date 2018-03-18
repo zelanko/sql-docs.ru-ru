@@ -1,5 +1,5 @@
 ---
-title: "Предоставление разрешений участника на уровне сервера (Transact-SQL) | Документы Microsoft"
+title: "GRANT, предоставление разрешений участникам на уровне сервера (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,16 +63,16 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть выдано для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть выдано для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- Имя входа **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
   
- РОЛЬ сервера **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Указывает определяемую пользователем роль сервера, которой предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
   
- Чтобы \<server_principal > указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или роль сервера, к которому предоставляется разрешение.  
+ TO \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или роль сервера, которой представляется разрешение.  
   
  *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,10 +95,10 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с использованием которого участник, выполняющий этот запрос, осуществляет свое право на предоставление разрешений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Разрешения в области сервера предоставляются только в том случае, если текущей база данных является master.  
   
- Сведения о разрешениях сервера можно увидеть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога. Сведения об участниках сервера можно увидеть в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Данные о разрешениях сервера отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Данные о серверах-участниках отображаются в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и роли сервера являются защищаемыми объектами уровня сервера. Наиболее специфичные и ограниченные разрешения, которые могут быть выданы для имени входа или роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перечислены в следующей таблице вместе с общими разрешениями, неявно содержащими их.  
   
@@ -109,7 +109,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для имен входа требуется разрешение CONTROL на имя входа или разрешение ALTER ANY LOGIN на сервер.  
   
  Для ролей сервера требуется разрешение CONTROL на роль сервера или разрешение ALTER ANY SERVER ROLE на сервер.  
@@ -117,7 +117,7 @@ GRANT permission [ ,...n ] }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. Выдача разрешения IMPERSONATE для имени входа  
- В следующем примере предоставляется `IMPERSONATE` разрешение на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа `WanidaBenshoof` для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, созданного из пользователя Windows `AdvWorks\YoonM`.  
+ В следующем примере разрешение `IMPERSONATE` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` выдается имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданному на основе пользователя Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

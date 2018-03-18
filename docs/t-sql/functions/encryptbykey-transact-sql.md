@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYKEY (Transact-SQL) | Документы Microsoft"
+title: "ENCRYPTBYKEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,32 +52,32 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>Аргументы  
  *key_GUID*  
- Идентификатор GUID ключа, используемый для шифрования *текстом*. **uniqueidentifier**.  
+ Идентификатор GUID ключа, используемого для шифрования *cleartext*. **uniqueidentifier**.  
   
- "*текстом*"  
+ '*cleartext*'  
  Данные, которые шифруются ключом.  
   
  @cleartext  
- Переменная типа **nvarchar**, **char**, **varchar**, **двоичных**, **varbinary**, или **nchar** , содержащий данные, зашифрованные с помощью ключа.  
+ Переменная типа **nvarchar**, **char**, **varchar**, **binary**, **varbinary** или **nchar**, содержащая данные, которые будут зашифрованы с помощью ключа.  
   
  *add_authenticator*  
- Указывает, будет ли средство проверки подлинности зашифровано вместе с *текстом*. При использовании структуры проверки подлинности аргумент должен иметь значение 1. **int**.  
+ Указывает, будет ли вместе с аргументом *cleartext* зашифрована структура проверки подлинности. При использовании структуры проверки подлинности аргумент должен иметь значение 1. **int**.  
   
  @add_authenticator  
- Указывает, будет ли средство проверки подлинности зашифровано вместе с *текстом*. При использовании структуры проверки подлинности аргумент должен иметь значение 1. **int**.  
+ Указывает, будет ли вместе с аргументом *cleartext* зашифрована структура проверки подлинности. При использовании структуры проверки подлинности аргумент должен иметь значение 1. **int**.  
   
- *Средство проверки подлинности*  
+ *authenticator*  
  Данные, на основе которых формируется структура проверки подлинности. **sysname**.  
   
  @authenticator  
  Переменная, содержащая данные, на основе которых формируется структура проверки подлинности.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
  Возвращает значение NULL, если ключ не открыт, не существует или является устаревшим ключом RC4, а база данных не находится на уровне совместимости 110 или выше.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция EncryptByKey использует симметричный ключ. Этот ключ должен быть открыт. Если симметричный ключ уже открыт в текущем сеансе, не нужно открывать его снова в контексте запроса.  
   
  Структура проверки подлинности позволяют исключить прямую подмену зашифрованных полей. Например, рассмотрим следующую таблицу с платежной ведомостью.  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  Симметричное кодирование и декодирование осуществляется относительно быстро и подходит для работы с большими объемами данных.  
   
 > [!IMPORTANT]  
->  Использование функций шифрования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совместно с параметром ANSI_PADDING OFF может привести к потере данных из-за неявных преобразований. Дополнительные сведения о параметре ANSI_PADDING см. в разделе [SET ANSI_PADDING &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  Использование функций шифрования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совместно с параметром ANSI_PADDING OFF может привести к потере данных из-за неявных преобразований. Дополнительные сведения об ANSI_PADDING см. в статье [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
- Возможности, продемонстрированные в следующих примерах работают с ключами и сертификатами, созданными в [How To: шифрование столбца данных](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ Возможности, продемонстрированные в следующих примерах, работают с ключами и сертификатами, созданными в разделе [Шифрование столбца данных](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Шифрование строки симметричным ключом  
  Следующий пример показывает, как добавить столбец к таблице `Employee`, а затем зашифровать значение номера социального страхования, который хранится в столбце `NationalIDNumber`.  
@@ -150,11 +150,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY (Transact-SQL)](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES (Transact-SQL)](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

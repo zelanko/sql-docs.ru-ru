@@ -1,5 +1,5 @@
 ---
-title: "IsDescendantOf (компонент Database Engine) | Документы Microsoft"
+title: "IsDescendantOf (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает значение true, если *это* является потомком родительского элемента.
+Возвращает значение true, если *this* является потомком родительского элемента.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*родительский*  
-**Hierarchyid** узла, для которого необходимо выполнить тест IsDescendantOf.
+*parent*  
+Узел **hierarchyid**, для которого следует выполнить проверку IsDescendantOf.
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
-**Возвращаемый тип SQL Server: bit**
+**Возвращаемый тип SQL Server:bit**
   
-**Возвращаемый тип CLR: SqlBoolean**
+**Возвращаемый тип CLR:SqlBoolean**
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Возвращает значение true для всех узлов поддерева, корнем для которых является родительский элемент, и значение false для всех остальных узлов.
   
 Родительский элемент считается своим собственным потомком.
@@ -104,7 +104,7 @@ ELSE
 this.IsDescendantOf(Parent)  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

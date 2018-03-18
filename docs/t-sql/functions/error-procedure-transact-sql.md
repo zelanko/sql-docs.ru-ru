@@ -1,5 +1,5 @@
 ---
-title: "Функция ERROR_PROCEDURE (Transact-SQL) | Документы Microsoft"
+title: "ERROR_PROCEDURE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция ERROR_PROCEDURE может быть вызвана в любом месте области блока CATCH.  
   
- Функция ERROR_PROCEDURE возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, независимо от числа вызовов или места вызова в области блока CATCH. Это отличается от таких функций, таких как@ERROR, который возвращает номер ошибки в инструкции сразу после того, который вызвал ошибку, или в первой инструкции блока CATCH.  
+ Функция ERROR_PROCEDURE возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, независимо от числа вызовов или места вызова в области блока CATCH. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки в той инструкции, которая следует непосредственно за вызвавшей ошибку инструкцией, или в первой инструкции блока CATCH.  
   
  Во вложенных блоках CATCH функция ERROR_PROCEDURE возвращает имя хранимой процедуры или триггера, связанных с областью блока CATCH, в которой содержится ссылка на него. Например: блок CATCH конструкции TRY…CATCH может иметь вложенную конструкцию TRY…CATCH. Внутри вложенного блока CATCH функция ERROR_PROCEDURE возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, вызвавшая вложенный блок CATCH. Если функция ERROR_PROCEDURE выполняется во внешнем блоке CATCH, то возвращается имя хранимой процедуры или триггера, в которых произошла ошибка, вызвавшая вложенный блок CATCH.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>В. Использование функции ERROR_PROCEDURE в блоке CATCH  
  В следующем фрагменте кода показана хранимая процедура, которая формирует ошибку деления на 0. Функция `ERROR_PROCEDURE` возвращает имя хранимой процедуры, в которой произошла ошибка.  
@@ -195,7 +195,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

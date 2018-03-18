@@ -1,5 +1,5 @@
 ---
-title: "CERTENCODED (Transact-SQL) | Документы Microsoft"
+title: "CERTENCODED (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает открытую часть сертификата в двоичном формате. Эта функция принимает идентификатор сертификата и возвращает закодированный сертификат. Двоичный результат может быть передан **Создание сертификата... С двоичным ФАЙЛОМ** для создания нового сертификата.
+Возвращает открытую часть сертификата в двоичном формате. Эта функция принимает идентификатор сертификата и возвращает закодированный сертификат. Двоичный результат можно передавать в инструкции **CREATE CERTIFICATE … WITH BINARY**, чтобы создать сертификат.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,22 +43,22 @@ CERTENCODED ( cert_id )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*Cert_ID*  
-— **Идентификатор_сертификата** сертификата. Этот параметр доступен из sys.certificates или с помощью [CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) функции. *Cert_ID* — тип **int**
+*cert_id*  
+Это идентификатор **certificate_id** сертификата. Его можно получить из sys.certificates или через вызов функции [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md). Аргумент *cert_id* имеет тип **int**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **varbinary**
   
-## <a name="remarks"></a>Замечания  
-**CERTENCODED** и **CERTPRIVATEKEY** используются совместно для возврата различных составляющих сертификата в двоичной форме.
+## <a name="remarks"></a>Remarks  
+Функции **CERTENCODED** и **CERTPRIVATEKEY** используются совместно для возврата различных составляющих сертификата в двоичной форме.
   
-## <a name="permissions"></a>Permissions  
-**CERTENCODED** общедоступна.
+## <a name="permissions"></a>Разрешения  
+Функция **CERTENCODED** общедоступна.
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="simple-example"></a>Простой пример  
-В следующем примере создается сертификат с именем `Shipping04` , а затем использует **CERTENCODED** функция, возвращающая двоичную кодировку сертификата.
+В приведенном ниже примере создается сертификат с именем `Shipping04`, а затем функция **CERTENCODED** используется для возврата сертификата в двоичной кодировке.
   
 ```sql
 CREATE DATABASE TEST1;  
@@ -159,10 +159,10 @@ SELECT @CLEARTEXT AS ClearTextInTarget, @CIPHERTEXT AS CipherTextInTarget, @UNCI
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

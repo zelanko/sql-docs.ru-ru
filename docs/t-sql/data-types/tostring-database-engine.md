@@ -1,5 +1,5 @@
 ---
-title: "ToString (компонент Database Engine) | Документы Microsoft"
+title: "ToString (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="tostring-database-engine"></a>ToString (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает строку с логическим представлением объекта *это*. ToString вызывается неявно при преобразовании из **hierarchyid** в строку типа происходят. Действие противоположно из [синтаксический анализ &#40; компонент Database Engine &#41;](../../t-sql/data-types/parse-database-engine.md).
+Возвращает строку с логическим представлением *this*. Метод ToString вызывается неявно при преобразовании из типа **hierarchyid** в строковый тип. Он действует противоположно методу [Parse (ядро СУБД)](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,13 +51,13 @@ CAST(node AS nvarchar(4000))
 string ToString  ( )   
 ```  
   
-## <a name="return-types"></a>Возвращаемые типы
-**Возврат type:nvarchar(4000) SQL Server**
+## <a name="return-types"></a>Типы возвращаемых данных
+**Возвращаемый тип SQL Server:nvarchar(4000)**
   
-**Возвращаемый тип CLR: String**
+**Возвращаемый тип CLR:String**
   
-## <a name="remarks"></a>Замечания  
-Возвращает логическое место в иерархии. Например `/2/1/` представляет четвертую строку ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в следующей иерархической структуре файловой системы:
+## <a name="remarks"></a>Remarks  
+Возвращает логическое место в иерархии. Например, `/2/1/` представляет четвертую строку ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в следующей иерархической структуре файловой системы:
   
 ```sql
 /        C:\  
@@ -71,7 +71,7 @@ string ToString  ( )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. Пример использования Transact-SQL в таблице  
-В следующем примере возвращается как `OrgNode` столбец как **hierarchyid** тип данных и в более удобочитаемый формат строки:
+В следующем примере столбец `OrgNode` возвращается и как тип данных **hierarchyid**, и в более удобном для чтения строковом формате:
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +95,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>Б. Преобразование значений Transact-SQL без таблицы  
-Следующий пример кода использует `ToString` для преобразования **hierarchyid** значения в строку и `Parse` преобразовать строковое значение для **hierarchyid**.
+В приведенном ниже примере кода метод `ToString` преобразует значение **hierarchyid** в строку, а метод `Parse` преобразует строковое значение в **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -122,7 +122,7 @@ hierarchyidRepresentation    StringRepresentation
 this.ToString()  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

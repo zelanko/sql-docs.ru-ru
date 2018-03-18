@@ -1,5 +1,5 @@
 ---
-title: "Расширенные статические географические методы | Документы Microsoft"
+title: "Расширенные статические географические методы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/25/2018
   
  [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [Спецификации OGC, географический язык разметки](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [GeomFromGML](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
--   [Значение NULL](../../t-sql/spatial-geography/null-geography-data-type.md)  
+-   [Null](../../t-sql/spatial-geography/null-geography-data-type.md)  
   
 -   [Синтаксический анализ](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [Точка](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические агрегатные географические методы](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

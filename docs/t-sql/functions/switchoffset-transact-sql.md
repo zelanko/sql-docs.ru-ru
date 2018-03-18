@@ -1,5 +1,5 @@
-﻿---
-title: "SWITCHOFFSET (Transact-SQL) | Документы Microsoft"
+---
+title: "SWITCHOFFSET (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает **datetimeoffset** значение, которое меняется с смещение часового пояса, хранимые на указанный новый смещение часового пояса.  
+  Возвращает значение смещения часового пояса с типом данных **datetimeoffset**, изменившееся с хранящегося на новое заданное смещение часового пояса.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,20 +54,20 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
 ## <a name="arguments"></a>Аргументы  
  *DATETIMEOFFSET*  
- Выражение, которое разрешается к **datetimeoffset(n)**.  
+ Выражение, которое можно привести к значению типа **datetimeoffset(n)**.  
   
  *time_zone*  
- Символьная строка в формате [+|-]TZH:TZM или целочисленное значение со знаком (в минутах), представляющие смещение часового пояса, с учетом перехода на летнее время.  
+ Символьная строка в формате [+|-]TZH:TZM или целочисленное значение со знаком (или минуты), представляющие смещение часового пояса. Предполагается, что оно настроено и учитывает переход на летнее время.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **DateTimeOffset** с точностью в долях *DATETIMEOFFSET* аргумент.  
+ Значение **datetimeoffset** с точностью в долях секунд, заданной в аргументе *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Замечания  
- SWITCHOFFSET используется для приведения **datetimeoffset** к значению смещения часового пояса, отличного от изначального. SWITCHOFFSET не обновляет хранимое *time_zone* значение.  
+## <a name="remarks"></a>Remarks  
+ SWITCHOFFSET используется для выбора значения **datetimeoffset** в смещении часового пояса, отличающегося от первоначально сохраненного смещения часового пояса. SWITCHOFFSET не обновляет хранимое значение *time_zone*.  
   
- SWITCHOFFSET может использоваться для обновления столбца с типом **datetimeoffset**.  
+ Функция SWITCHOFFSET может использоваться для обновления столбца **datetimeoffset**.  
   
- Использование SWITCHOFFSET с функцией GETDATE() может привести к медленному выполнению. Это происходит потому, что оптимизатор запросов не может получить точные оценки количества элементов для значений даты и времени. Чтобы устранить эту проблему, используйте опцию запроса OPTION (RECOMPILE), чтобы заставить оптимизатор запросов перекомпилировать план запроса при следующем выполнении этого же запроса. Он будет иметь точные оценки количества элементов и сформирует более эффективный план запроса. Дополнительные сведения об указании запроса RECOMPILE см. в разделе [указания запросов &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+ Использование SWITCHOFFSET с функцией GETDATE() может привести к тому, что запрос будет выполняться медленно. Это происходит потому, что оптимизатор запросов не может получить точные оценки количества элементов для значений даты и времени. Чтобы устранить эту проблему, используйте указание запроса OPTION (RECOMPILE), чтобы заставить оптимизатор запросов перекомпилировать план запроса при следующем выполнении этого же запроса. Он будет иметь точные оценки количества элементов и сформирует более эффективный план запроса. Дополнительные сведения об указании запроса RECOMPILE см. в статье [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -98,8 +98,8 @@ FROM dbo.test;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [В ЧАСОВОМ ПОЯСЕ &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (тип данных geography) | Документы Microsoft"
+title: "STIntersection (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает объект, представляющий точки, где **geography** экземпляр пересекается с другим **geography** экземпляра.  
+  Возвращает объект, представляющий точки, в которых экземпляр **geography** пересекается с другим экземпляром **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geography*  
- Другой **geography** экземпляр для сравнения с экземпляром, для которого вызывается STIntersection().  
+ Другой экземпляр **geography**, сравниваемый с экземпляром, для которого вызывается метод STIntersection().  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Возвращается пересечение двух географических экземпляров.  
   
- STIntersection() всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geography** экземпляров не совпадают.  
+ Метод STIntersection() всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geography** не совпадают.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может включать **FullGlobe** экземпляры в наборе возможных результатов, возвращаемый на сервер.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор возможных результатов, возвращаемых на сервер, может включать в себя экземпляры **FullGlobe**.  
   
  Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  
   
@@ -93,7 +93,7 @@ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.6
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

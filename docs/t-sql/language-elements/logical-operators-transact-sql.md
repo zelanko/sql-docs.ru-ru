@@ -1,5 +1,5 @@
 ---
-title: "Логические операторы (Transact-SQL) | Документы Microsoft"
+title: "Логические операторы (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>Логические операторы (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Логические операторы проверяют истину некоторого условия. Логические операторы, например оператор сравнения, возвращают **логическое** типа, имеющего значение TRUE, FALSE или UNKNOWN.  
+  Логические операторы проверяют истину некоторого условия. Логические операторы, например оператор сравнения, возвращают тип данных **Boolean** со значениями TRUE, FALSE или UNKNOWN.  
   
 |Оператор|Значение|  
 |--------------|-------------|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 01/25/2018
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|TRUE, если операнд содержится в заданном списке выражений.|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|TRUE, если оператор удовлетворяет шаблону.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Меняет значение оператора типа Boolean на противоположное.|  
-|[или](../../t-sql/language-elements/or-transact-sql.md)|TRUE, если одно из выражений типа Boolean равно TRUE.|  
+|[OR](../../t-sql/language-elements/or-transact-sql.md)|TRUE, если одно из выражений типа Boolean равно TRUE.|  
 |[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE, если некоторые из сравнений в наборе равны TRUE.|  
   
-## <a name="see-also"></a>См. также  
- [Приоритет операторов &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Приоритет операторов (Transact-SQL)](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

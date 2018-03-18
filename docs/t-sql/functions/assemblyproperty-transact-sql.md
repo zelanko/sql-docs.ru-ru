@@ -1,5 +1,5 @@
 ---
-title: "ASSEMBLYPROPERTY (Transact-SQL) | Документы Microsoft"
+title: "ASSEMBLYPROPERTY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 Имя сборки.
   
 *property_name*  
-Имя свойства, о котором будут получены данные. *property_name* может принимать одно из следующих значений.
+Имя свойства, о котором будут получены данные. *property_name* может иметь одно из указанных ниже значений.
   
-|Значение|Описание|  
+|Значение|Description|  
 |---|---|
 |**CultureInfo**|Локаль сборки.|  
 |**PublicKey**|Открытый ключ или токен открытого ключа сборки.|  
@@ -69,7 +69,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>Примеры  
-В следующем примере предполагается, что сборка `HelloWorld` зарегистрирована в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Дополнительные сведения см. в разделе [Образец Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+В следующем примере предполагается, что сборка `HelloWorld` зарегистрирована в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Дополнительные сведения см. в разделе [Образец "Hello World"](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  
@@ -77,7 +77,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)
   

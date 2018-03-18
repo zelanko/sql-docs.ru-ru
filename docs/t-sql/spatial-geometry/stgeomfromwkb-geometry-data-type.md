@@ -1,5 +1,5 @@
 ---
-title: "STGeomFromWKB (тип данных geometry) | Документы Microsoft"
+title: "STGeomFromWKB (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geometry** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geometry** из WKB-представления открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,23 +45,23 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geometry*  
- WKB-представление **geometry** экземпляр, который необходимо вернуть. *WKB_geometry* — **varbinary(max)** выражение.  
+ WKB-представление возвращаемого экземпляра **geometry**. *WKB_geometry* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geometry** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Тип OGC **geometry** экземпляр, возвращаемый `STGeomFromText()` равно соответствующих входных данных WKB.  
+ Тип OGC экземпляра **geometry**, возвращаемый методом `STGeomFromText()`, получает значение в зависимости от соответствующих входных данных WKB.  
   
- Этот метод вызывает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `STGeomFromWKB()` для создания **geometry** экземпляра.  
+ В приведенном ниже примере используется метод `STGeomFromWKB()`, чтобы создать экземпляр **geometry**.  
   
 ```  
 DECLARE @g geometry;   
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomFromWKB(0x010200000003000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

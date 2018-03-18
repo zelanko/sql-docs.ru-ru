@@ -1,5 +1,5 @@
 ---
-title: "SET DATEFIRST (Transact-SQL) | Документы Microsoft"
+title: "SET DATEFIRST (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Устанавливает первый день недели в виде числа от 1 до 7.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,8 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *номер* | **@***number_var*  
- Целочисленное значение, указывающее первый день недели. Может быть одним из:  
+ *number* | **@***number_var*  
+ Целочисленное значение, указывающее первый день недели. Может быть одним из указанных далее.  
   
 |Значение|Первый день недели|  
 |-----------|------------------------------|  
@@ -73,20 +73,20 @@ SET DATEFIRST 7 ;
 |**4**|Четверг|  
 |**5**|Пятница|  
 |**6**|Суббота|  
-|**7** (по умолчанию, США английский)|Воскресенье|  
+|**7** (по умолчанию, американский английский)|Воскресенье|  
   
-## <a name="remarks"></a>Замечания  
- Чтобы просмотреть текущее значение параметра SET DATEFIRST, используйте [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md) функции.  
+## <a name="remarks"></a>Примечания  
+ Для просмотра текущего значения SET DATEFIRST используется функция [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  Аргумент функции SET DATEFIRST устанавливается во время выполнения или запуска, а не во время синтаксического анализа.  
   
- Указание SET DATEFIRST не влияет на DATEDIFF. DATEDIFF всегда считает воскресенье первым днем недели, чтобы обеспечить детерминистичность работы функции.  
+ Указание SET DATEFIRST не влияет на DATEDIFF. DATEDIFF всегда считает воскресенье первым днем недели, чтобы обеспечить детерминизм работы функции.  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере выводится день недели для даты и показано, к чему приводит изменение `DATEFIRST` параметр.  
+ В следующем примере отображается день недели для даты и показан результат изменения параметра `DATEFIRST`.  
   
 ```  
 -- SET DATEFIRST to U.S. English default value of 7.  
@@ -108,7 +108,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

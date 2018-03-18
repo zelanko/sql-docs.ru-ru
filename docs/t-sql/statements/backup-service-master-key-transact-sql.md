@@ -1,5 +1,5 @@
 ---
-title: "BACKUP SERVICE MASTER KEY (Transact-SQL) | Документы Microsoft"
+title: "BACKUP SERVICE MASTER KEY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,16 +54,16 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ФАЙЛ **= "***путь_к_файлу***"**  
+ FILE **='***path_to_file***'**  
  Указывает полный путь (включая имя файла) к файлу, в который будет выполнен экспорт главного ключа службы. Это может быть локальный путь или UNC-путь к сетевой папке.  
   
- ПАРОЛЬ **= "***пароль***"**  
- Пароль, используемый для шифрования главного ключа службы в файле резервной копии. Пароль проходит проверку сложности. Дополнительные сведения см. в разделе [Password Policy](../../relational-databases/security/password-policy.md).  
+ PASSWORD **='***password***'**  
+ Пароль, используемый для шифрования главного ключа службы в файле резервной копии. Пароль проходит проверку сложности. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Замечания  
- Необходимо создавать резервные копии главного ключа службы и хранить их в безопасном, удаленном месте. Создание такой резервной копии должно быть одной из первых задач администрирования, выполненных на сервере.  
+## <a name="remarks"></a>Примечания  
+ Необходимо создавать резервные копии главного ключа службы и хранить их в безопасном удаленном месте. Создание такой резервной копии должно быть одной из первых задач администрирования, выполненных на сервере.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER на сервер.  
   
 ## <a name="examples"></a>Примеры  
@@ -73,8 +73,8 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

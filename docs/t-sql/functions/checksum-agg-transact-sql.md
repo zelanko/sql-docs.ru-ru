@@ -1,5 +1,5 @@
 ---
-title: "CHECKSUM_AGG (Transact-SQL) | Документы Microsoft"
+title: "CHECKSUM_AGG (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает контрольную сумму значений в группе. Значения NULL пропускаются. Может следовать [предложение OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
+Возвращает контрольную сумму значений в группе. Значения NULL пропускаются. За функцией может следовать [предложение OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,19 +54,19 @@ DISTINCT
 Указывает, что CHECKSUM_AGG возвращает контрольную сумму уникальных значений.
   
 *expression*  
-Должно быть целым числом [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Агрегатные функции и вложенные запросы недопустимы.
+Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Агрегатные функции и вложенные запросы недопустимы.
   
-## <a name="return-types"></a>Возвращаемые типы
-Возвращает контрольную сумму всех *выражение* значений в виде **int**.
+## <a name="return-types"></a>Типы возвращаемых данных
+Возвращает контрольную сумму всех значений *expression* как **int**.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Функция CHECKSUM_AGG может использоваться для обнаружения изменений в таблице.
   
 Порядок строк в таблице не влияет на результат функции CHECKSUM_AGG. Кроме того, функции CHECKSUM_AGG могут использоваться с ключевым словом DISTINCT и предложением GROUP BY.
   
 Если одно из значений в списке выражений меняется, то обычно меняется и контрольная сумма этого списка. Однако существует небольшая вероятность того, что контрольная сумма не изменится.
   
-Действие функции CHECKSUM_AGG аналогично действию других агрегатных функций. Дополнительные сведения см. в разделе [агрегатные функции &#40; Transact-SQL &#41; ](../../t-sql/functions/aggregate-functions-transact-sql.md).
+Действие функции CHECKSUM_AGG аналогично действию других агрегатных функций. Дополнительные сведения см. в статье [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
 В следующем примере функция `CHECKSUM_AGG` используется для обнаружения изменений в столбце `Quantity` таблицы `ProductInventory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
@@ -102,8 +102,8 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Контрольная сумма &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[ЧЕРЕЗ предложение &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)  
+[Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (тип данных geometry) | Документы Microsoft"
+title: "STConvexHull (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает объект, представляющий выпуклую оболочку **geometry** экземпляра.
+Возвращает объект, представляющий выпуклую оболочку экземпляра **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STConvexHull()`Возвращает наименьший Выпуклый многоугольник, который содержит данный **geometry** экземпляра. **Точки** или взаимолинейные **LineString** экземпляров будет создавать экземпляр того же типа, как и входные данные.  
+ Функция `STConvexHull()` возвращает наименьший выпуклый многоугольник, который содержит данный экземпляр **geometry**. **Points** или взаимолинейные экземпляры **LineString** формируют экземпляр такого же типа, как и входные данные.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STConvexHull()` используется для поиска выпуклой оболочки невыпуклого экземпляра `Polygon``geometry`.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 0 2, 1 1, 2 2, 2 0, 0 0))', 0);
 SELECT @g.STConvexHull().ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

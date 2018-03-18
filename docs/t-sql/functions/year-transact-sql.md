@@ -1,5 +1,5 @@
 ---
-title: "ГОД (Transact-SQL) | Документы Microsoft"
+title: "YEAR (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Возвращает целое число, представляющее год указанной *даты*.  
   
- Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,15 +53,15 @@ YEAR ( date )
   
 ## <a name="arguments"></a>Аргументы  
  *date*  
- Выражение, которое разрешается к **время**, **даты**, **smalldatetime**, **datetime**, **datetime2**, или **datetimeoffset** значение. *Даты* аргумент может быть выражением, выражением столбца, определяемой пользователем переменной или строковым литералом.  
+ Выражение, которое можно привести к значению типа **time**, **date**, **smalldatetime**, **datetime**, **datetime2** или **datetimeoffset**. Аргумент *date* может быть выражением, выражением столбца, определяемой пользователем переменной или строковым литералом.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция YEAR возвращает то же значение, что [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**года**, *даты*).  
+ Функция YEAR возвращает то же значение, что и функция [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**year**, *date*).  
   
- Если *даты* содержит только компонент времени, возвращаемое значение равно 1900, базовому году.  
+ Если дата *date* содержит только компонент времени, возвращаемое значение равно 1900, базовому году.  
   
 ## <a name="examples"></a>Примеры  
  Следующая инструкция возвращает значение `2010`. Порядковый номер года.  
@@ -70,14 +70,14 @@ YEAR ( date )
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
- Следующая инструкция возвращает значение `1900, 1, 1`. Аргумент для *даты* номер `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует `0` как 1 января 1900 г.  
+ Следующая инструкция возвращает значение `1900, 1, 1`. В качестве значения аргумента *date* задается число `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует `0` как 1 января 1900 г.  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующая инструкция возвращает значение `1900, 1, 1`. Аргумент для *даты* номер `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует `0` как 1 января 1900 г.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Следующая инструкция возвращает значение `1900, 1, 1`. В качестве значения аргумента *date* задается число `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует `0` как 1 января 1900 г.  
   
 ```  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  

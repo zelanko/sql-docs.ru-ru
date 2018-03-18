@@ -1,5 +1,5 @@
 ---
-title: "XML_SCHEMA_NAMESPACE (Transact-SQL) | Документы Microsoft"
+title: "xml_schema_namespace (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,20 +54,20 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  Имя реляционной схемы. *Relational_schema* — **sysname**.  
   
  *XML_schema_collection_name*  
- Имя коллекции XML-схем, которую необходимо перестроить. *XML_schema_collection_name* is **sysname**.  
+ Имя коллекции XML-схем, которую необходимо перестроить. *XML_schema_collection_name* — **sysname**.  
   
  *Пространство имен*  
- URI пространства имен XML-схемы, которую требуется перестроить. Максимальная длина — 1000 символов. Если URI пространства имен не предоставлен, перестраивается вся коллекция XML-схем. *Пространство имен* — **nvarchar(4000)**.  
+ URI пространства имен XML-схемы, которую требуется перестроить. Максимальная длина — 1000 символов. Если URI пространства имен не предоставлен, перестраивается вся коллекция XML-схем. *Namespace* — **nvarchar(4000)**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **xml**  
   
 ## <a name="remarks"></a>Remarks  
- При импорте компонентов XML-схемы в базе данных с использованием [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) или [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), сохраняются характеристики схемы, используемой для проверки. Поэтому перестроенная схема лексически может отличаться от исходного документа схемы. В частности, теряются комментарии, пробельные символы и заметки, а также данные неявных типов преобразуются в явные. Например \<xs: element name = «e1» / > становится \<xs: element name = «e1» type = «xs: anyType» / >. Кроме этого, префиксы пространства имен не сохраняются.  
+ При импорте компонентов XML-схемы в базу данных с помощью инструкций [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) или [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) сохраняются характеристики схемы, используемые для проверки правильности. Поэтому перестроенная схема лексически может отличаться от исходного документа схемы. В частности, теряются комментарии, пробельные символы и заметки, а также данные неявных типов преобразуются в явные. Например, \<xs:element name="e1" /> преобразуется в \<xs:element name="e1" type="xs:anyType"/>. Кроме этого, префиксы пространства имен не сохраняются.  
   
  Если указан параметр пространства имен, в результирующем документе схемы будут содержаться определения для всех компонентов схемы в этом пространстве имен, даже если они были добавлены в других документах схемы или во время выполнения этапов языка DDL (или если имели место оба случая).  
   
- Эту функцию нельзя использовать для создания документов схемы XML из **sys.sys** коллекции XML-схем.  
+ Эту функцию нельзя использовать для создания документов XML-схемы из коллекции XML-схем **sys.sys**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере коллекция XML-схем `ProductDescriptionSchemaCollection` запрашивается из производственной реляционной схемы в базе данных `AdventureWorks2012`.  
@@ -79,7 +79,7 @@ SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр хранимой коллекции схем XML](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   

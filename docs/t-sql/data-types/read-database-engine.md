@@ -1,5 +1,5 @@
 ---
-title: "Чтение (компонент Database Engine) | Документы Microsoft"
+title: "Read (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="read-database-engine"></a>Read (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Чтение считывает двоичное представление **SqlHierarchyId** из переданного **BinaryReader** и задает **SqlHierarchyId** это значение объекту. Чтение не может вызываться с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Пользуйтесь вместо этого инструкцией CAST или CONVERT.
+Метод Read считывает двоичное представление значения **SqlHierarchyId** из переданного объекта **BinaryReader** и присваивает это значение объекту **SqlHierarchyId**. Метод Read невозможно вызвать с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Пользуйтесь вместо этого инструкцией CAST или CONVERT.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,17 +44,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>Аргументы  
 *r*  
- **BinaryReader** объект, который формирует двоичный поток, соответствующий двоичное представление **hierarchyid** узла.  
+ Объект **BinaryReader**, который формирует двоичный поток, соответствующий двоичному представлению узла **hierarchyid**.  
   
-## <a name="return-types"></a>Возвращаемые типы
- **Возвращаемый тип CLR: void**  
+## <a name="return-types"></a>Типы возвращаемых данных
+ **Возвращаемый тип CLR:void**  
   
-## <a name="remarks"></a>Замечания  
- Чтение не выполняет проверку входных данных. Если указан недопустимый входных данных binary чтения может вызвать исключение. Или он может быть успешным с выдачей недопустимого **SqlHierarchyId** объекту, методы которого выдают непредсказуемые результаты или вызывают исключение.  
+## <a name="remarks"></a>Remarks  
+ Входные данные метода Read не проверяются. Если двоичные входные данные недопустимы, то метод Read может вызвать исключение. Его выполнение также может завершиться успешно, причем будет создан недопустимый объект **SqlHierarchyId**, методы которого будут давать непредсказуемые результаты или вызывать исключение.  
   
- Чтения может быть вызван только на вновь созданный **SqlHierarchyId** объекта.  
+ Метод Read можно вызывать только для новых объектов **SqlHierarchyId**.  
   
- Чтение, используются внутренними механизмами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] когда это необходимо, например, при записи данных в **hierarchyid** столбца. Чтение также можно вызвать изнутри, когда преобразование между **varbinary** и **hierarchyid**.  
+ Метод Read используется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для внутренних целей, например при записи данных в столбец **hierarchyid**. Read также вызывается для внутренних целей, когда выполняется преобразование между **varbinary** и **hierarchyid**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -67,8 +67,8 @@ hid.Read(br);
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Запись &#40; компонент Database Engine &#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString &#40; компонент Database Engine &#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[Write (ядро СУБД)](../../t-sql/data-types/write-database-engine.md)  
+[ToString (ядро СУБД)](../../t-sql/data-types/tostring-database-engine.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

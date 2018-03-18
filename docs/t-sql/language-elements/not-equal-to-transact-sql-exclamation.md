@@ -1,5 +1,5 @@
 ---
-title: "! = (Не равно) (Transact-SQL) | Документы Microsoft"
+title: "!= (не равно) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>Не равно (Transact SQL -) восклицательный знак
+# <a name="not-equal-to-transact-sql---exclamation"></a>Не равно (Transact SQL) — восклицательный знак
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Проверяет неравенство одного выражения другому (оператор сравнения). Если один или оба операнда имеют значение NULL, возвращается значение NULL. Работает так же, как [<> (не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) оператор сравнения.  
+  Проверяет неравенство одного выражения другому (оператор сравнения). Если один или оба операнда имеют значение NULL, возвращается значение NULL. Работает так же, как и оператор сравнения [<> (не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md).  
   
-## <a name="see-also"></a>См. также  
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

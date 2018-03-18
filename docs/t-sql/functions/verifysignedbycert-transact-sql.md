@@ -1,5 +1,5 @@
 ---
-title: "VERIFYSIGNEDBYCERT (Transact-SQL) | Документы Microsoft"
+title: "VERIFYSIGNEDBYCERT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,23 +53,23 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="arguments"></a>Аргументы  
  *Cert_ID*  
- Идентификатор сертификата в базе данных. *Cert_ID* — **int**.  
+ Идентификатор сертификата в базе данных. Аргумент *Cert_ID* имеет тип **int**.  
   
- *Signed_Data*  
- Переменная типа **nvarchar**, **char**, **varchar**, или **nchar** содержит данные, которые были подписаны с помощью сертификата.  
+ *signed_data*  
+ Переменная типа **nvarchar**, **char**, **varchar** или **nchar**, содержащая данные, которые были подписаны с помощью сертификата.  
   
- *подпись*  
- Это подпись, которая была прикреплена к подписанным данным. *подпись* — **varbinary**.  
+ *signature*  
+ Это подпись, которая была прикреплена к подписанным данным. Аргумент *signature* имеет тип **varbinary**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
  Возвращает 1, если подписанные данные не были изменены, и 0 — в противном случае.  
   
-## <a name="remarks"></a>Замечания  
- **VerifySignedBycert** выполняет расшифровку подписи данных с помощью открытого ключа указанного сертификата и сравнивает расшифрованное значение вновь вычисляемый хэш MD5 данных. Если значения совпадают, подтверждается допустимость подписи.  
+## <a name="remarks"></a>Remarks  
+ **VerifySignedBycert** расшифровывает подпись данных с помощью открытого ключа указанного сертификата и сравнивает расшифрованное значение с новым хэшем MD5, вычисленным для данных. Если значения совпадают, подтверждается допустимость подписи.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW DEFINITION на сертификат.  
   
 ## <a name="examples"></a>Примеры  
@@ -97,11 +97,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [CERT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/signbycert-transact-sql.md)   
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)   
+ [SIGNBYCERT (Transact-SQL)](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [УДАЛИТЬ СЕРТИФИКАТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

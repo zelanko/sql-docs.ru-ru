@@ -1,5 +1,5 @@
 ---
-title: "Элементы языка (Transact-SQL) | Документы Microsoft"
+title: "Элементы языка (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.lasthandoff: 01/25/2018
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие элементы языка.  
   
-## <a name="in-this-section"></a>В этом разделе  
-[--&#40; Комментарий &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)  
+## <a name="in-this-section"></a>в этом разделе  
+[-- (комментарий) (Transact-SQL)](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[Косая черта-звездочка &#40; Блок комментариев &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[Косая черта-звездочка (блок комментариев) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
-[Создание СЕАНСА диагностики (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
+[CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[Значение NULL и UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL и UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
 [Транзакции (хранилище данных SQL)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   

@@ -1,5 +1,5 @@
 ---
-title: "Во время (Transact-SQL) | Документы Microsoft"
+title: "WHILE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>Аргументы  
  *Boolean_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) , возвращающий **TRUE** или **FALSE**. Если логическое выражение содержит инструкцию SELECT, инструкция SELECT должна быть заключена в скобки.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), возвращающее значение **TRUE** или **FALSE**. Если логическое выражение содержит инструкцию SELECT, инструкция SELECT должна быть заключена в скобки.  
   
  {*sql_statement* | *statement_block*}  
  Любая инструкция или группа инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], определенная в виде блока инструкций. Для определения блока инструкций используйте ключевые слова потока управления BEGIN и END.  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: простой цикл While  
- В следующем примере в случае, если средняя цена продуктов из списка меньше чем `$300`, цикл `WHILE` удваивает цены, а затем выбирает максимальную. В том случае, если максимальная цена меньше или равна `$500`, цикл `WHILE` повторяется и снова удваивает цены. Этот цикл продолжает удваивать цены, пока максимальная цена больше, чем `$500`, а затем завершается `WHILE` цикла.  
+### <a name="c-simple-while-loop"></a>В. Простой цикл While  
+ В следующем примере в случае, если средняя цена продуктов из списка меньше чем `$300`, цикл `WHILE` удваивает цены, а затем выбирает максимальную. В том случае, если максимальная цена меньше или равна `$500`, цикл `WHILE` повторяется и снова удваивает цены. Этот цикл продолжает удваивать цены до тех пор, пока максимальная цена не будет больше, чем `$500`, после чего выполнение цикла `WHILE` прекращается.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ END
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Курсоры (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  

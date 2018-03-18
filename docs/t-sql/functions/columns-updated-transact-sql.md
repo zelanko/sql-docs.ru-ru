@@ -1,5 +1,5 @@
 ---
-title: "Функция COLUMNS_UPDATED (Transact-SQL) | Документы Microsoft"
+title: "COLUMNS_UPDATED (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **varbinary** битовый шаблон, указывающий на столбцы в таблицу или представление, которое были вставлены или обновлены. Функция COLUMNS_UPDATED используется в теле триггера [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT или UPDATE для проверки возможности выполнения триггером определенных операций.
+Возвращает битовый шаблон **varbinary**, который показывает, какие столбцы таблицы или представления добавлялись или изменялись. Функция COLUMNS_UPDATED используется в теле триггера [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT или UPDATE для проверки возможности выполнения триггером определенных операций.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,15 +47,15 @@ ms.lasthandoff: 11/21/2017
 COLUMNS_UPDATED ( )   
 ```  
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **varbinary**
   
-## <a name="remarks"></a>Замечания  
-Функция COLUMNS_UPDATED проверяет возможность выполнения операций триггером UPDATE или INSERT над множеством столбцов. Чтобы протестировать для инструкций UPDATE или INSERT попыток на один столбец, используйте [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+Функция COLUMNS_UPDATED проверяет возможность выполнения операций триггером UPDATE или INSERT над множеством столбцов. Чтобы проверить срабатывание триггера UPDATE или INSERT в одном столбце, используйте инструкцию [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 Функция COLUMNS_UPDATED возвращает один или более байтов, которые упорядочены слева направо по принципу: крайний правый бит — наименее значащий бит в байте. Крайний правый бит крайнего левого байта представляет первый столбец в таблице, следующий бит слева представляет второй столбец и так далее. Функция COLUMNS_UPDATED возвращает множество байт, если таблица в которой триггер создается, содержит более чем восемь столбцов, с наименее значащим байтом в крайней левой позиции. Функция COLUMNS_UPDATED возвращает значение TRUE для всех столбцов при операциях INSERT, поскольку при вставке столбцам присваиваются явно указанные значения или неявные значения (NULL).
   
-Чтобы проверить обновление и вставку в определенные столбцы, следуйте синтаксису битовых операторов и целой битовой маске проверяемого столбца. Например, в таблице **t1** содержит столбцы **C1**, **C2**, **C3**, **C4**, и **C5** . Чтобы проверить что столбцы **C2**, **C3**, и **C4** являются обновлены (с таблицей **t1** под действием триггера UPDATE), следуйте синтаксису **& 14**. Для проверки только столбец **C2** будет обновлен, укажите **& 2**.
+Чтобы проверить обновление и вставку в определенные столбцы, следуйте синтаксису битовых операторов и целой битовой маске проверяемого столбца. Например, таблица **t1** содержит столбцы **C1**, **C2**, **C3**, **C4** и **C5**. Чтобы проверить, обновлены ли все столбцы **C2**, **C3** и **C4** (в таблице **t1** под действием триггера UPDATE), следуйте синтаксису **& 14**. Чтобы проверить обновление только столбца **C2**, укажите **& 2**.
   
 Функция COLUMNS_UPDATED может быть использована внутри триггера языка [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT или UPDATE.
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>Б. Использование функции COLUMNS_UPDATED для проверки более чем восьми столбцов  
-Чтобы проверить обновления других столбцов таблицы, кроме первых восьми, используйте функцию `SUBSTRING` для проверки корректности бита, возвращенного функцией `COLUMNS_UPDATED`. В следующем примере проверяется наличие обновлений, которые влияют на столбцы `3`, `5`, и `9` в `AdventureWorks2012.Person.Person` таблицы.
+Чтобы проверить обновления других столбцов таблицы, кроме первых восьми, используйте функцию `SUBSTRING` для проверки корректности бита, возвращенного функцией `COLUMNS_UPDATED`. В приведенном ниже примере проверяется обновление столбцов `3`, `5` и `9` таблицы `AdventureWorks2012.Person.Person`.
   
 ```sql
 USE AdventureWorks2012;  
@@ -210,9 +210,9 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Побитовые операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[Побитовые операторы (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
-[Обновление &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE() (Transact-SQL)](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

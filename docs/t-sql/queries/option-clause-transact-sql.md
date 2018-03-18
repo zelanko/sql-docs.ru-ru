@@ -1,5 +1,5 @@
 ---
-title: "Предложение OPTION (Transact-SQL) | Документы Microsoft"
+title: "Предложение OPTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Использование предложение OPTION с предложением GROUP BY  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Использование предложения OPTION с предложением GROUP BY  
  В следующем примере демонстрируется совместное использование предложений `OPTION` и `GROUP BY`.  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>Б. Инструкция SELECT в предложении OPTION меткой  
- В следующем примере показано простое [!INCLUDE[ssDW](../../includes/ssdw-md.md)] инструкции SELECT с меткой в предложении OPTION.  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>Б. Инструкция SELECT с меткой в предложении OPTION  
+ В приведенном ниже примере показана простая инструкция [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT с меткой в предложении OPTION.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,8 +101,8 @@ SELECT * FROM FactResellerSales
   OPTION ( LABEL = 'q17' );  
 ```  
   
-### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>В. Инструкции SELECT с указанием запроса в предложении OPTION  
- В следующем примере показано, использующий подсказки в запросе HASH JOIN в предложении OPTION инструкции SELECT.  
+### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>В. Инструкция SELECT с указанием запроса в предложении OPTION  
+ В приведенном ниже примере показана инструкция SELECT, в которой используется указание запроса HASH JOIN в предложении OPTION.  
   
 ```  
 -- Uses AdventureWorks  
@@ -113,8 +113,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>Г. Инструкция SELECT с меткой и несколько указаний запроса в предложении OPTION  
- Ниже приведен пример [!INCLUDE[ssDW](../../includes/ssdw-md.md)] инструкции SELECT, которая содержит метку и несколько указаний запроса. При запуске запроса на вычислительных узлах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применение хэш-соединения или соединения слиянием, в соответствии со стратегией, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] решает является наиболее оптимальным.  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>Г. Инструкция SELECT с меткой и несколькими указаниями запроса в предложении OPTION  
+ В приведенном ниже примере инструкция [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT содержит метку и несколько указаний запроса. При выполнении запроса в вычислительных узлах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет применять хэш-соединение или соединение слиянием в зависимости от стратегии, которую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определит как оптимальную.  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>Д. Использование указаний запросов при выполнении запроса к представлению  
- В следующем примере создается представление с именем CustomerView и затем использует подсказки в запросе HASH JOIN в запросе, который ссылается на представление и таблицу.  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>Д. Использование указания запроса при запросе представления  
+ В приведенном ниже примере создается представление с именем CustomerView, а затем указание запроса HASH JOIN используется в запросе, который ссылается на представление и таблицу.  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>Е. Запрос в подзапросах выборки и указание запроса  
- В следующем примере показано запрос, содержащий подзапросах выборки и подсказки в запросе. Указание запроса применяется глобально. Указания запросов недопустимы для добавления инструкции подзапроса выборки.  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>Е. Запрос с подвыборкой и указанием запроса  
+ В приведенном ниже примере показан запрос, который содержит как подвыборку, так и указание запроса. Указание запроса применяется глобально. Указания запроса нельзя добавлять к инструкции подвыборки.  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>Ж. Принудительный порядок соединения в соответствии с порядком в запросе  
- Следующий пример использует подсказку FORCE ORDER форсировать план запроса для использования порядок соединения, указанных в запросе. Это улучшит производительность некоторых запросов; не все запросы.  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>Ж. Принудительное соответствие порядка соединения порядку в запросе  
+ В приведенном ниже примере с помощью указания FORCE ORDER настраивается принудительное использование планом запроса порядка соединения, указанного в запросе. Это повышает производительность некоторых, но не всех запросов.  
   
 ```  
 -- Uses AdventureWorks  
@@ -181,8 +181,8 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>З. С помощью EXTERNALPUSHDOWN  
- Следующий пример принудительно Включение предложения WHERE для задания MapReduce для внешней таблицы Hadoop.  
+### <a name="h-using-externalpushdown"></a>З. Использование EXTERNALPUSHDOWN  
+ В приведенном ниже примере предложение WHERE принудительно передается в задание MapReduce во внешней таблице Hadoop.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- В следующем примере запрещается Включение предложения WHERE для задания MapReduce для внешней таблицы Hadoop. Будут возвращены все строки, к которой применяется предложение WHERE PDW.  
+ В приведенном ниже примере запрещается передача предложения WHERE в задание MapReduce во внешней таблице Hadoop. Все строки будут возвращены В PDW, где применяется предложение WHERE.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -198,11 +198,11 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [СЛИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)  
   
   

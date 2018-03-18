@@ -1,5 +1,5 @@
 ---
-title: "SET NUMERIC_ROUNDABORT (Transact-SQL) | Документы Microsoft"
+title: "SET NUMERIC_ROUNDABORT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если параметр SET NUMERIC_ROUNDABORT имеет значение ON, после потери точности в выражении формируется ошибка. Если задано значение OFF, потери точности не приводят к формированию сообщений об ошибках, а результат округляется с точностью столбца или переменной, в которых будет сохранен.  
   
  Потеря точности происходит, когда выполняется попытка сохранения значения с фиксированной точностью в столбце или переменной с меньшей точностью.  
@@ -65,9 +65,9 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  Значение параметра SET NUMERIC_ROUNDABORT задается на этапе выполнения или запуска, но не на этапе синтаксического анализа.
 
- При создании или изменении индексов вычисляемых столбцов или индексированных представлений параметр SET NUMERIC_ROUNDABORT должен принимать значение OFF. Если параметр SET NUMERIC_ROUNDABORT имеет значение ON, CREATE, сбой инструкции UPDATE, INSERT и DELETE на таблицах с индексами на вычисляемых столбцах или индексированных представлений. Дополнительные сведения о необходимых УСТАНОВКАХ параметров SET для индексированных представлений и индексов на вычисляемых столбцах см. в разделе «Вопросы при вы использования операторов SET» в [инструкции SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
+ При создании или изменении индексов вычисляемых столбцов или индексированных представлений параметр SET NUMERIC_ROUNDABORT должен принимать значение OFF. Если значение параметра SET NUMERIC_ROUNDABORT будет равно ON, применение инструкций CREATE, UPDATE, INSERT и DELETE к таблицам с индексами на вычисляемых столбцах или вычисляемым представлениям завершится ошибкой. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).
   
- Чтобы просмотреть текущую настройку этого параметра, выполните следующий запрос:
+ Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос:
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
@@ -76,8 +76,8 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показаны два значения с точностью до четырех десятичных знаков, которые складываются и сохраняются в переменной с точностью до двух десятичных знаков. Выражения демонстрируют влияние различных значений параметров `SET NUMERIC_ROUNDABORT` и `SET ARITHABORT`.  
@@ -146,9 +146,9 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

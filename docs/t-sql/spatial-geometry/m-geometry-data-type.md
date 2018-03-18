@@ -1,5 +1,5 @@
 ---
-title: "M (тип данных geometry) | Документы Microsoft"
+title: "M (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geometry-data-type"></a>M (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **M** (Мера) значение **geometry** экземпляра. Семантика значения этой меры определяется пользователем.  
+  Возвращает значение **M** (мера) для экземпляра **geometry**. Семантика значения этой меры определяется пользователем.  
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ## <a name="arguments"></a>Аргументы  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Значение этого свойства равно null при **geometry** экземпляр не **точки**, а также для любого **точки** экземпляра, для которой не установлено.  
+ Значение этого свойства равно NULL, если экземпляр **geometry** не имеет тип **Point**, а также для любого экземпляра **Point**, для которого он не установлен.  
   
- Это свойство предназначено только для чтения.  
+ Это свойство доступно только для чтения.  
   
- **M** значения не используются ни в каких вычислениях, выполненных библиотекой и не будет выполнена через какие библиотечные изменения.  
+ Значения **M** не используются в библиотечных вычислениях и поэтому не будут передаваться в библиотеку.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Point` со значениями Z (уровень) и M (мера), а также используется выражение `M` для выборки значения M экземпляра.  
@@ -66,9 +66,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Я &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)   
+ [Z (тип данных geometry)](../../t-sql/spatial-geometry/z-geometry-data-type.md)   
  [AsTextZM (тип данных geometry)](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)  
   
   

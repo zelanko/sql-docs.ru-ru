@@ -1,5 +1,5 @@
 ---
-title: "Точка (тип данных geography) | Документы Microsoft"
+title: "Point (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Создает **geography** представляет экземпляр **точки** экземпляра по значениям широты и долготы и Идентификатору пространственной ссылки (SRID).
+Создает экземпляр **geography**, представляющий экземпляр **Point**, по значениям широты и долготы и идентификатору пространственной ссылки (SRID).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,18 +46,18 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *Lat*  
- — **Float** выражение, представляющее координату по оси x **точки** создается.  
+ Выражение **float**, представляющее координату по оси X создаваемого экземпляра **Point**.  
   
  *Long*  
- — **Float** выражение, представляющее координату y элемента **точки** создается. Дополнительные сведения о допустимых широты и долготы см. в разделе [точки](../../relational-databases/spatial/point.md).  
+ Выражение типа **float**, представляющее координату по оси Y создаваемого экземпляра **Point**. Дополнительные сведения о допустимых значениях широты и долготы см. в разделе [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- — **Int** выражение, представляющее идентификатор SRID **geography** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 > [!NOTE]  
 >  Аргументы для метода точки (тип данных geography) имеют обратные координаты по сравнению с WKT.  
@@ -71,7 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

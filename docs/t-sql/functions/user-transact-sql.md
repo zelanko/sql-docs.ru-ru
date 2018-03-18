@@ -1,5 +1,5 @@
 ---
-title: "USER (Transact-SQL) | Документы Microsoft"
+title: "USER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ USER
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **char**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция USER выполняет то же действие, что и системная функция USER_NAME.  
   
  Функцию USER можно указывать в ограничениях DEFAULT инструкций CREATE TABLE и ALTER TABLE либо использовать ее как любую другую стандартную функцию.  
@@ -156,12 +156,12 @@ DBO
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [Функция CURRENT_USER &#40; Transact-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [Функция SESSION_USER &#40; Transact-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [Функция SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [Имя_пользователя &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
+ [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)   
+ [USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

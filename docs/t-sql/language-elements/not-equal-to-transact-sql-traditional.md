@@ -1,5 +1,5 @@
 ---
-title: "&lt;&gt;(Не равно) (Transact-SQL) | Документы Microsoft"
+title: "&lt;&gt; (не равно) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---traditional"></a>Не равно (Transact SQL) — традиционный
+# <a name="not-equal-to-transact-sql---traditional"></a>Не равно (Transact SQL) — традиционный оператор
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Сравнивает два выражения (оператор сравнения). При сравнении ненулевых выражений результат принимает значение TRUE, если левый операнд не равен правому, в противном случае результат принимает значение FALSE. Если один или оба операнда имеют значение NULL, см. в разделе [SET ANSI_NULLS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  Сравнивает два выражения (оператор сравнения). При сравнении ненулевых выражений результат принимает значение TRUE, если левый операнд не равен правому, в противном случае результат принимает значение FALSE. Если один или оба операнда имеют значение NULL, см. раздел [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,14 +52,14 @@ expression <> expression
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Оба выражения должны иметь типы данных, допускающие неявное преобразование. Преобразование зависит от правил [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). Оба выражения должны иметь типы данных, допускающие неявное преобразование. Преобразование зависит от правил [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using--in-a-simple-query"></a>A. С помощью <> в простом запросе  
+### <a name="a-using--in-a-simple-query"></a>A. Использование <> в простом запросе  
  В следующем примере возвращаются все строки из таблицы `Production.ProductCategory`, которые содержат значение в `ProductCategoryID`, равное 3 или 2.  
   
 ```  
@@ -83,9 +83,9 @@ ProductCategoryID Name
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Операторы сравнения &#40; Transact-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы сравнения (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

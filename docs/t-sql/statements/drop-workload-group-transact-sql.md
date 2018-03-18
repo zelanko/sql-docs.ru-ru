@@ -1,5 +1,5 @@
 ---
-title: "DROP WORKLOAD GROUP (Transact-SQL) | Документы Microsoft"
+title: "DROP WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   Удаляет существующую, определяемую пользователем группу рабочей нагрузки регулятора ресурсов.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") [синтаксические обозначения Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ DROP WORKLOAD GROUP group_name
 ## <a name="remarks"></a>Remarks  
  Использование инструкции DROP WORKLOAD GROUP не допускается для внутренней группы или группы по умолчанию регулятора ресурсов.  
   
- При выполнении инструкций DDL рекомендуется иметь представление о состояниях регулятора ресурсов. Дополнительные сведения см. в разделе [регулятора ресурсов](../../relational-databases/resource-governor/resource-governor.md).  
+ При выполнении инструкций DDL рекомендуется иметь представление о состояниях регулятора ресурсов. Дополнительные сведения см. в разделе [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) (Регулятор ресурсов).  
   
  Если группа рабочей нагрузки содержит активные сеансы, удаление или перемещение этой группы в другой пул ресурсов завершится неудачно при вызове инструкции ALTER RESOURCE GOVERNOR RECONFIGURE для применения изменения. Во избежание этой проблемы можно предпринять одно из следующих действий.  
   
@@ -78,13 +78,13 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
- [СОЗДАНИЕ ГРУППЫ рабочей НАГРУЗКИ и &#40; Transact-SQL и &#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
- [СОЗДАТЬ ПУЛ РЕСУРСОВ &#40; Transact-SQL и &#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40; Transact-SQL и &#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SMALLDATETIMEFROMPARTS (Transact-SQL) | Документы Microsoft"
+title: "SMALLDATETIMEFROMPARTS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Возвращает **smalldatetime** значение для указанной даты и времени.  
+  Возвращает значение **smalldatetime**, соответствующее указанной дате и времени.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *год*  
+ *year*  
  Целочисленное выражение, задающее год.  
   
- *месяц*  
+ *month*  
  Целочисленное выражение, задающее месяц.  
   
- *день*  
+ *day*  
  Целочисленное выражение, задающее день.  
   
- *час*  
+ *hour*  
  Целочисленное выражение, задающее часы.  
   
- *минуты*  
+ *minute*  
  Целочисленное выражение, задающее минуты.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **smalldatetime**  
   
-## <a name="remarks"></a>Замечания  
- Эта функция действует как конструктор полностью инициализированного **smalldatetime** значение. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.  
+## <a name="remarks"></a>Remarks  
+ Эта функция действует как конструктор полностью инициализированного значения **smalldatetime**. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.  
   
- Для серверов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выше данная функция может быть удаленной. Не является удаленной для серверов с версией ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Для серверов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выше данная функция может быть удаленной. Она не может быть удаленной для серверов с версией ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Примеры  
   

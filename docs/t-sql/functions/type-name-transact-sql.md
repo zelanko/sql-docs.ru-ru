@@ -1,5 +1,5 @@
 ---
-title: "Функция TYPE_NAME (Transact-SQL) | Документы Microsoft"
+title: "TYPE_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ TYPE_NAME ( type_id )
   
 ## <a name="arguments"></a>Аргументы  
  *type_id*  
- Идентификатор типа, который будет использован. *type_id* — **int**, и он может ссылаться на тип в любой схеме, участник имеет разрешение на доступ к.  
+ Идентификатор типа, который будет использован. Аргумент *type_id* имеет тип **int** и может ссылаться на тип в любой схеме, на доступ к которой у участника имеется разрешение.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **sysname**  
@@ -60,12 +60,12 @@ TYPE_NAME ( type_id )
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как TYPE_NAME, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Замечания  
- Функция TYPE_NAME возвращает значение NULL, если *type_id* является недопустимым или если вызывающий не имеет достаточных разрешений для ссылки на тип.  
+## <a name="remarks"></a>Remarks  
+ Функция TYPE_NAME возвращает значение NULL, если аргумент *type_id* недопустим или у вызывающего объекта недостаточно разрешений для создания ссылки на этот тип.  
   
- Функция TYPE_NAME используется и для системных, и для пользовательских типов данных. Этот тип может содержаться в любой схеме, но неполное имя типа возвращается всегда. Это означает, что имя имеет *схемы***.** .  
+ Функция TYPE_NAME используется и для системных, и для пользовательских типов данных. Этот тип может содержаться в любой схеме, но неполное имя типа возвращается всегда. Это значит, что у имени отсутствует префикс *schema***.** .  
   
- Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделе [выражения &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) и [ГДЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
+ Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в статьях [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах возвращается имя объекта, имя столбца и имя типа для каждого столбца в таблице `Vendor` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -97,15 +97,15 @@ Vendor          PurchasingWebServiceURL  nvarchar
 (8 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере возвращается `TYPE ID` для типа данных с идентификатором `1`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере возвращается значение `TYPE ID` для типа данных с идентификатором `1`.  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
- Список типов запрос sys.types.  
+ Чтобы получить список типов, выполните запрос к sys.types.  
   
 ```  
 SELECT * FROM sys.types;  
@@ -113,10 +113,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Type_id &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_ID (Transact-SQL)](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "ДЕНЬ (Transact-SQL) | Документы Microsoft"
+title: "DAY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает целое число, представляющее день (день месяца) указанной *даты*.
+Возвращает целое число, представляющее день (день месяца) указанной даты *date*.
   
-Общие сведения о всех [!INCLUDE[tsql](../../includes/tsql-md.md)] типов данных даты и времени и функции, в разделе [даты и времени типов данных и функции &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,15 +53,15 @@ DAY ( date )
   
 ## <a name="arguments"></a>Аргументы  
 *date*  
-Выражение, которое разрешается к **время**, **даты**, **smalldatetime**, **datetime**, **datetime2**, или **datetimeoffset** значение. *Даты* аргумент может быть выражением, выражением столбца, определяемой пользователем переменной или строковым литералом.
+Выражение, которое можно привести к значению типа **time**, **date**, **smalldatetime**, **datetime**, **datetime2** или **datetimeoffset**. Аргумент *date* может быть выражением, выражением столбца, определяемой пользователем переменной или строковым литералом.
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
 **int**
   
 ## <a name="return-value"></a>Возвращаемое значение  
-Функция DAY возвращает то же значение, что [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**день**, *даты*).
+Функция DAY возвращает то же значение, что и [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**day**, *date*).
   
-Если *даты* содержит только компонент времени, возвращаемое значение равно 1, базовому дню.
+Если дата *date* содержит только компонент времени, возвращаемое значение равно 1, базовому дню.
   
 ## <a name="examples"></a>Примеры  
 Следующая инструкция возвращает значение `30`. Порядковый номер дня.
@@ -70,13 +70,13 @@ DAY ( date )
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-Следующая инструкция возвращает значение `1900, 1, 1`. Аргумент для *даты* номер `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует `0` как 1 января 1900 г.
+Следующая инструкция возвращает значение `1900, 1, 1`. В качестве значения аргумента *date* задается число `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует `0` как 1 января 1900 г.
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

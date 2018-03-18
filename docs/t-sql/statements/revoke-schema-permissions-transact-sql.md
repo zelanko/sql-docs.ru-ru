@@ -1,5 +1,5 @@
 ---
-title: "REVOKE разрешения схемы (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений на схему (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Указывает разрешение, которое может быть отменено для схемы. Разрешения, которые можно отменить для схемы, перечислены далее в подразделе «Примечания».  
   
  GRANT OPTION FOR  
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Если участник обладает указанным разрешением без параметра GRANT, будет отменено само разрешение.  
   
- ON SCHEMA **::** схемы*_name*  
+ ON SCHEMA **::** schema*_name*  
  Определяет схему, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Схема является защищаемым объектом уровня базы данных, содержащимся в базе данных, которая является материнской по отношению к нему в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно отменить для схемы, перечислены в следующей таблице вместе с более общими разрешениями, неявно содержащими их.  
   
 |Разрешение схемы|Содержится в разрешении схемы|Содержится в разрешении базы данных|  
@@ -113,8 +113,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
-|Выполните|CONTROL|Выполните|  
+|Delete|CONTROL|Delete|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
@@ -123,16 +123,16 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL для схемы.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

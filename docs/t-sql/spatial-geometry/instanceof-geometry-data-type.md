@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (тип данных geometry) | Документы Microsoft"
+title: "InstanceOf (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Метод, который проверяет, может ли **geometry** экземпляра совпадает с указанным типом. Возвращает 1, если тип **geometry** экземпляра совпадает со значением указанного типа, или если указанный тип является предком типа экземпляра; в противном случае возвращает 0.
+Метод, который проверяет принадлежность экземпляра **geometry** к указанному типу. Возвращает значение 1, если экземпляр **geometry** имеет указанный тип или если указанный тип является предком типа экземпляра в иерархии. В противном случае возвращает значение 0.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *geometry_type*  
- — **Nvarchar(4000)** строка, задающая один из 15 типов, доступных в **geometry** иерархия типов.  
+ Строка типа **nvarchar(4000)**, задающая один из 15 типов, доступных в иерархии типов **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Входные данные для метода должен быть одним из следующих: **Geometry**, **точки**, **кривой**, **LineString**,  **CircularString**, **CompoundCurve**, **поверхность**, **многоугольника**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString**, и **MultiPoint**. Этот метод создает исключение **ArgumentException** другие строки при использовании для входных данных.  
+ Входные данные метода должны быть одного из следующих типов: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** или **MultiPoint**. Если в качестве входного аргумента указана любая другая строка, этот метод вызовет исключение **ArgumentException**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `MultiPoint` и производится вызов метода `InstanceOf()`, позволяющего определить, является ли экземпляр `GeometryCollection`.  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

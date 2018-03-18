@@ -1,5 +1,5 @@
 ---
-title: "ERROR_SEVERITY (Transact-SQL) | Документы Microsoft"
+title: "ERROR_SEVERITY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_SEVERITY ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ERROR_SEVERITY может быть вызвана в любом месте в пределах области блока CATCH.  
   
- ERROR_SEVERITY возвращает серьезность ошибки независимо от того, сколько раз она выполняется или где именно она выполняется в пределах области блока CATCH. Этим она отличается от таких функций, как @@ERROR, которая только возвращает номер ошибки в инструкции сразу после того, который вызывает ошибку, или в первой инструкции блока CATCH.  
+ ERROR_SEVERITY возвращает серьезность ошибки независимо от того, сколько раз она выполняется или где именно она выполняется в пределах области блока CATCH. Это отличается от поведения таких функций, как @@ERROR, которые возвращают номер ошибки в инструкции лишь сразу после ее возникновения или в первой инструкции блока CATCH.  
   
  Во вложенных блоках CATCH функция ERROR_SEVERITY возвращает серьезность ошибки специфично для области блока CATCH, в котором она представлена. Например, блок CATCH внешней конструкции TRY...CATCH может содержать вложенную конструкцию TRY...CATCH. В пределах вложенного блока CATCH функция ERROR_SEVERITY возвращает серьезность ошибки, вызвавшей выполнение вложенного блока CATCH. Если функция ERROR_SEVERITY запускается во внешнем блоке CATCH, она возвращает серьезность ошибки, вызвавшей выполнение внешнего блока CATCH.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование ERROR_SEVERITY в блоке CATCH с другими инструментами обработки ошибок  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с серьезностью возвращаются другие сведения относительно ошибки.  
@@ -130,7 +130,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
- [Функция ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

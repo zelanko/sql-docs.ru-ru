@@ -1,5 +1,5 @@
 ---
-title: "OBJECT_DEFINITION (Transact-SQL) | Документы Microsoft"
+title: "OBJECT_DEFINITION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>Аргументы  
  *object_id*  
- Идентификатор объекта, который будет использован. *object_id* — **int**и представляет объект в контексте текущей базы данных.  
+ Идентификатор объекта, который будет использован. Аргумент *object_id* имеет тип **int** и представляет объект, который находится в контексте текущей базы данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(max)**  
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  Пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые пользователю были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как OBJECT_DEFINITION, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Замечания  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Предполагается, что *object_id* находится в контексте текущей базы данных. Параметры сортировки определения объекта всегда совпадают с параметрами сортировки контекста вызывающей базы данных.  
+## <a name="remarks"></a>Remarks  
+ Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] предполагает, что объект с идентификатором *object_id* находится в контексте текущей базы данных. Параметры сортировки определения объекта всегда совпадают с параметрами сортировки контекста вызывающей базы данных.  
   
  OBJECT_DEFINITION применяется к объектам следующих типов:  
   
@@ -85,7 +85,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = представление  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Определения системных объектов видимы для всех. Определения пользовательских объектов видимы владельцу объекта или участникам, которым предоставлены следующие разрешения: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION. Эти разрешения неявно предоставляются членам предопределенных ролей базы данных **db_owner**, **db_ddladmin**и **db_securityadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -111,9 +111,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

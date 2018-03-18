@@ -1,5 +1,5 @@
 ---
-title: "ОТОЗВАТЬ разрешения для сборки (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений на сборку (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -54,10 +54,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!IMPORTANT]  
 >  Если участник обладает указанным разрешением без параметра GRANT, будет отменено само разрешение.  
   
- *разрешение*  
+ *permission*  
  Указывает разрешение, которое может быть отменено на сборку. Перечислены ниже.  
   
- В СБОРКЕ **::***assembly_name*  
+ ON ASSEMBLY **::***assembly_name*  
  Указывает сборку, на которую отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сборка — это защищаемый объект уровня базы данных, который содержится в базе данных, являющейся его родителем в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят по импликации), которые могут быть отменены для сборки.  
   
 |Разрешение сборки|Содержится в разрешении сборки|Содержится в разрешении базы данных|  
@@ -115,17 +115,17 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL на сборку.  
   
 ## <a name="see-also"></a>См. также:  
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [СОЗДАТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

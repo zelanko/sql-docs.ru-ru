@@ -1,5 +1,5 @@
 ---
-title: "Money и smallmoney (Transact-SQL) | Документы Microsoft"
+title: "Типы money и smallmoney (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -42,27 +42,27 @@ ms.lasthandoff: 11/21/2017
 
 Типы данных, представляющие денежные (валютные) значения.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 |Тип данных|Диапазон|Память|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 для 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />Чтобы 922,337,203,685,477.58 для Informatica.  Informatica поддерживает только два десятичных знака, не четыре.)|8 байт|  
-|**smallmoney**|От -214 748,3648 до 214 748,3647|4 байта|  
+|**money**|От –922,337,203,685,477.5808 до 922,337,203,685,477.5807 (от –922,337,203,685,477.58<br />до 922,337,203,685,477.58 в Informatica.  В Informatica поддерживается только два десятичных знака, а не четыре)|8 байт|  
+|**smallmoney**|От -214 748,3648 до 214 748,3647|4 байта|  
   
-**Money** и **smallmoney** типов данных точность до одной десятитысячной денежной единицы, которые они представляют. Для Informatica **money** и **smallmoney** типы данных имеют точность до одну сотую денежные единицы, которые они представляют.
+Типы данных **money** и **smallmoney** имеют точность до одной десятитысячной денежной единицы, которую они представляют. В Informatica типы данных **money** и **smallmoney** имеют точность до одной сотой денежной единицы, которую они представляют.
   
 Чтобы отделить дробные денежные единицы, например центы, от целых денежных единиц, используйте запятую. Например, 2,15 соответствует 2 долларам и 15 центам.
   
 Для этих типов данных может использоваться любой из следующих символов валют.
   
-![Таблица символов валют, шестнадцатеричные значения](../../t-sql/data-types/media/money01.gif "таблица символов валют, шестнадцатеричные значения")
+![Таблица символов валют, шестнадцатеричные значения](../../t-sql/data-types/media/money01.gif "Таблица символов валют, шестнадцатеричные значения")
   
 Валютные или денежные данные не требуется заключать в одинарные кавычки ( ' ). Важно помнить, что, несмотря на возможность указания денежных значений, которым предшествует символ валюты, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сохраняет какие-либо сведения о валюте, связанные с символом, а хранит только числовое значение.
   
-## <a name="converting-money-data"></a>Преобразование данных money
-При преобразовании в **money** из целочисленных типов данных, единицы измерения считаются денежные единицы. Например, целочисленное значение 4 преобразуется в **money** эквивалентное 4 денежные единицы.
+## <a name="converting-money-data"></a>Преобразование данных типа money
+При преобразовании типа данных integer в тип **money** используются денежные единицы. Например, целочисленное значение 4 преобразуется в значение типа данных **money** величиной 4 денежные единицы.
   
-В следующем примере выполняется преобразование **smallmoney** и **money** значения **varchar** и **десятичное** соответственно.
+В следующем примере выполняется преобразование значений типов **smallmoney** и **money** в значения типов **varchar** и **decimal** соответственно.
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
@@ -80,13 +80,13 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Инструкция ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST и CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md) 
- [Создание таблицы &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) 
- [Типы данных &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
- [ЗАДАТЬ @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+[CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
+[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+[Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+[DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)
+[sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

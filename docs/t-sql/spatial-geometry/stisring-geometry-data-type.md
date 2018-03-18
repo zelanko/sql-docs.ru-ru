@@ -1,5 +1,5 @@
 ---
-title: "STIsRing (тип данных geometry) | Документы Microsoft"
+title: "STIsRing (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisring-geometry-data-type"></a>STIsRing (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает 1, если **geometry** экземпляр удовлетворяет следующим требованиям:
--   Это **LineString** экземпляра.  
+Возвращает 1, если экземпляр **geometry** соответствует указанным ниже требованиям.
+-   Является экземпляром **LineString**.  
 -   Он закрыт.  
 -   Он является простым.  
--   Возвращает 0, если **LineString** экземпляр не соответствует требованиям.  
+-   Возвращает значение 0, если экземпляр **LineString** не соответствует требованиям.  
 
- Для **geometry** экземпляра был закрытым и простым, как [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) и [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) должны возвращать 1 при вызове в экземпляре. Чтобы определить тип экземпляра **geometry**, используйте [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
+ Чтобы экземпляр **geometry** был замкнутым и простым, как функция [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md), так и функция [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) должны возвращать значение 1 при вызове для экземпляра. Для определения типа экземпляра **geometry** используйте функцию [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,12 +50,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод возвращает значение null, если экземпляр не **LineString**.  
+ Этот метод возвращает значение NULL, если экземпляр не является **LineString**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `LineString` и используется метод `STIsRing()`, чтобы проверить, что экземпляр является кольцом.  
@@ -66,10 +66,10 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);
 SELECT @g.STIsRing();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STIsClosed (тип данных geometry)](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [STGeometryType &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
- [STIsSimple &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
+ [STGeometryType (тип данных geometry)](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+ [STIsSimple (тип данных geometry)](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

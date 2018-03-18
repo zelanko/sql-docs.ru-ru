@@ -1,5 +1,5 @@
 ---
-title: "ORIGINAL_DB_NAME (Transact-SQL) | Документы Microsoft"
+title: "ORIGINAL_DB_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает имя базы данных, указанное пользователем в строке подключения к базе данных. База данных, указанный с помощью **sqlcmd-d** параметр (используйте *базы данных*) либо выражения источника данных ODBC (начальный каталог =*databasename*).  
+  Возвращает имя базы данных, указанное пользователем в строке подключения к базе данных. Это база данных, указанная с использованием параметра **sqlcmd-d** (USE *база_данных*) либо выражения источника данных ODBC (начальный каталог = *имя_базы_данных*).  
   
  Эта база данных не совпадает с пользовательской базой данных по умолчанию.  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если исходная база данных не указана, эта функция возвращает пустую строку.  
   
 ## <a name="see-also"></a>См. также:  
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
  [Программа osql](../../tools/osql-utility.md)   
- [Собственный клиент SQL Server &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client (ODBC)](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DROP STATISTICS (Transact-SQL) | Документы Microsoft"
+title: "DROP STATISTICS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/22/2016
 ms.prod: sql-non-specified
@@ -60,20 +60,20 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Таблица* | *представление*  
- Имя целевой таблицы или индексированного представления, статистические данные которых должны быть удалены. Имена таблиц и представлений должны соответствовать правилам для [идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md). Указывать владельца таблицы или представления необязательно.  
+ *table* | *view*  
+ Имя целевой таблицы или индексированного представления, статистические данные которых должны быть удалены. Имена таблиц и представлений должны соответствовать требованиям, предъявляемым к [идентификаторам баз данных](../../relational-databases/databases/database-identifiers.md). Указывать владельца таблицы или представления необязательно.  
   
- *имя_статистики*  
+ *statistics_name*  
  Имя удаляемой группы статистических данных. Имена статистических данных должны соответствовать правилам для идентификаторов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Будьте внимательны при удалении статистических данных. Эта операция может повлиять на план выполнения, избранный оптимизатором запросов.  
   
  Статистическая информация по индексам не может быть удалена с помощью инструкции DROP STATISTICS. Статистические данные существуют, пока существует соответствующий индекс.  
   
- Дополнительные сведения об отображении статистики см. в разделе [DBCC SHOW_STATISTICS &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ Дополнительные сведения об отображении статистики см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER для таблицы или представления.  
   
 ## <a name="examples"></a>Примеры  
@@ -96,10 +96,10 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>Б. Удаление статистики из таблицы  
- Удалить следующие примеры `CustomerStats1` статистики из таблицы `Customer`.  
+ В приведенных ниже примерах статистика `CustomerStats1` удаляется из таблицы `Customer`.  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
@@ -112,10 +112,10 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)  

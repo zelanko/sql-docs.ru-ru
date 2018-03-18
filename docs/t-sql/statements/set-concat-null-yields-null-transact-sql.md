@@ -1,5 +1,5 @@
 ---
-title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Документы Microsoft"
+title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда параметр SET CONCAT_NULL_YIELDS_NULL установлен в ON, объединение значения NULL со строкой дает в результате NULL. Например, `SELECT 'abc' + NULL` дает в результате `NULL`. Когда параметр SET CONCAT_NULL_YIELDS_NULL установлен в значение OFF, объединение значения NULL со строкой дает в результате исходную строку (значение NULL рассматривается как пустая строка). Например, `SELECT 'abc' + NULL` дает в результате `abc`.  
   
- Если параметр SET CONCAT_NULL_YIELDS_NULL не задан, параметр **CONCAT_NULL_YIELDS_NULL** применяется параметр базы данных.  
+ Если параметр SET CONCAT_NULL_YIELDS_NULL не задан, применяется параметр **CONCAT_NULL_YIELDS_NULL** базы данных.  
   
 > [!NOTE]  
 >  SET CONCAT_NULL_YIELDS_NULL — это такая же установка, что и установка CONCAT_NULL_YIELDS_NULL для ALTER DATABASE.  
   
  Настройка SET CONCAT_NULL_YIELDS_NULL устанавливается во время выполнения или запуска, но не во время синтаксического анализа.  
   
- Параметр SET CONCAT_NULL_YIELDS_NULL должен быть в состоянии ON при создании или изменении индексов в вычисляемых столбцах или индексированных представлениях. Если параметр SET CONCAT_NULL_YIELDS_NULL установлен в OFF, любое применение инструкций CREATE, UPDATE, INSERT и DELETE к таблицам с индексами на вычисляемых столбцах или к индексированным представлениям завершится ошибкой. Дополнительные сведения о необходимых УСТАНОВКАХ параметров SET для индексированных представлений и индексов на вычисляемых столбцах см. в разделе «Вопросы при вы использования операторов SET» в [инструкции SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ Параметр SET CONCAT_NULL_YIELDS_NULL должен быть в состоянии ON при создании или изменении индексов в вычисляемых столбцах или индексированных представлениях. Если параметр SET CONCAT_NULL_YIELDS_NULL установлен в OFF, любое применение инструкций CREATE, UPDATE, INSERT и DELETE к таблицам с индексами на вычисляемых столбцах или к индексированным представлениям завершится ошибкой. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).  
   
  Когда параметр CONCAT_NULL_YIELDS_NULL установлен в OFF, объединение строк через границы сервера становится невозможным.  
   
@@ -104,6 +104,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

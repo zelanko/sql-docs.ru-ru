@@ -1,5 +1,5 @@
 ---
-title: "BREAK (Transact-SQL) | Документы Microsoft"
+title: "BREAK (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,9 +53,9 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [ПОКА &#40; Transact-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
+ [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Документы Microsoft"
+title: "SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 # <a name="set-ansinulldfltoff-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Изменяет поведение сеанса, чтобы переопределить допустимость значений NULL по умолчанию для новых столбцов, если параметр ANSI null по умолчанию для базы данных **true**. Дополнительные сведения об установке значения параметра ANSI null default см. в разделе [инструкции ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+  Изменяет поведение сеанса, чтобы переопределить допустимость значений NULL по умолчанию в новых столбцах, если параметр ANSI null default базы данных имеет значение **true**. Дополнительные сведения об установке значения параметра ANSI null default см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -58,10 +58,10 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 SET ANSI_NULL_DFLT_OFF OFF
 ```
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данный параметр определяет допустимость значений NULL в новых столбцах только в случае, если допустимость значений NULL не указана в инструкциях CREATE TABLE и ALTER TABLE. Когда параметр SET ANSI_NULL_DFLT_OFF имеет значение ON, новые столбцы, создаваемые инструкциями ALTER TABLE и CREATE TABLE, по умолчанию принимают значение NOT NULL, если допустимость NULL в столбце явно не задана. Параметр SET ANSI_NULL_DFLT_OFF не влияет на столбцы, для которых при создании было явно указано значение NOT NULL или NULL.  
   
- Оба параметра SET ANSI_NULL_DFLT_OFF и SET ANSI_NULL_DFLT_ON не могут быть установлены в ON одновременно. Если один параметр установлен в ON, то другой установлен в OFF. Следовательно, только один из параметров — ANSI_NULL_DFLT_OFF или SET ANSI_NULL_DFLT_ON — может быть установлен в ON, или же оба могут быть установлены в OFF. Если один из параметров установлен в ON, применяется соответствующая установка (SET ANSI_NULL_DFLT_OFF или SET ANSI_NULL_DFLT_ON). Если оба параметра имеют значение OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение столбца is_ansi_null_default_on в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления каталога.  
+ Оба параметра SET ANSI_NULL_DFLT_OFF и SET ANSI_NULL_DFLT_ON не могут быть установлены в ON одновременно. Если один параметр установлен в ON, то другой установлен в OFF. Следовательно, только один из параметров — ANSI_NULL_DFLT_OFF или SET ANSI_NULL_DFLT_ON — может быть установлен в ON, или же оба могут быть установлены в OFF. Если один из параметров установлен в ON, применяется соответствующая установка (SET ANSI_NULL_DFLT_OFF или SET ANSI_NULL_DFLT_ON). Если для обоих параметров установлено значение OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение столбца is_ansi_null_default_on в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Для более надежной работы скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)], используемых в базах данных с различными настройками допустимости значений NULL, рекомендуется всегда указывать NULL или NOT NULL в инструкциях CREATE TABLE и ALTER TABLE.  
   
@@ -76,7 +76,7 @@ SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -155,6 +155,6 @@ DROP TABLE t1, t2, t3, t4, t5, t6;
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_NULL_DFLT_ON &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)  
+ [SET ANSI_NULL_DFLT_ON (Transact-SQL)](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)  
   
   

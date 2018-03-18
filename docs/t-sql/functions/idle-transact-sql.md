@@ -1,5 +1,5 @@
 ---
-title: "@@IDLE (Transact-SQL) | Документы Microsoft"
+title: "@@IDLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40idle-transact-sql"></a>&#x40;&#x40; IDLE (Transact-SQL)
+# <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение времени простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с момента его последнего запуска. Результат указывается в приращениях времени ЦП или «тактах» и является совокупным для всех ЦП, поэтому может превысить фактическое затраченное время. Умножьте@TIMETICKS преобразовать в микросекунды.  
+  Возвращает значение времени простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с момента его последнего запуска. Результат указывается в приращениях времени ЦП или «тактах» и является совокупным для всех ЦП, поэтому может превысить фактическое затраченное время. Умножьте его на значение @@TIMETICKS, чтобы преобразовать в микросекунды.  
   
 > [!NOTE]  
->  Если время возвращаются в@CPU_BUSY, или @@IO_BUSY превышает приблизительно 49 дней совокупного времени ЦП, появится предупреждение об арифметическом переполнении. В этом случае значение @@CPU_BUSY, @@IO_BUSY и @@IDLE переменные не являются точными.  
+>  Если время, возвращенное @@CPU_BUSY или @@IO_BUSY, превышает приблизительно 49 дней совокупного времени ЦП, выдается предупреждение об арифметическом переполнении. В этом случае значения переменных @@CPU_BUSY, @@IO_BUSY и @@IDLE являются неточными.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
- Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистики, запустите **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Чтобы отобразить отчет, содержащий ряд статистических данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните хранимую процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример показывает возвращение количества миллисекунд простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с момента его запуска и до настоящего времени. Для избежания арифметического переполнения при преобразовании значения в микросекунды, в этом примере одно из значений преобразуется в тип данных `float`.  
@@ -76,8 +76,8 @@ Idle microseconds  as of
   
 ## <a name="see-also"></a>См. также:  
  [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)   
- [Системные статистические функции &#40;Transact-SQL&#41;#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

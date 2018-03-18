@@ -1,5 +1,5 @@
 ---
-title: "COS (Transact-SQL) | Документы Microsoft"
+title: "COS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *float_expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float**.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **float**
   
 ## <a name="examples"></a>Примеры  
@@ -72,7 +72,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>Примеры
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 Следующий пример возвращает косинус указанного угла.
@@ -89,8 +89,8 @@ cosCalc1  cosCalc2
 -0.58     0.99
 ```
   
-## <a name="see-also"></a>См. также:
-[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

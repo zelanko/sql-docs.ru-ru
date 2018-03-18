@@ -1,5 +1,5 @@
 ---
-title: "Функция CEILING (Transact-SQL) | Документы Microsoft"
+title: "CEILING (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,9 +48,9 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *numeric_expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) точных числовых или приблизительных числовых типа данных, за исключением **бит** тип данных.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 Возвращает тот же тип, что и аргумент *numeric_expression*.
   
 ## <a name="examples"></a>Примеры  
@@ -70,7 +70,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

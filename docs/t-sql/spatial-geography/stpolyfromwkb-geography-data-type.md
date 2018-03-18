@@ -1,5 +1,5 @@
 ---
-title: "STPolyFromWKB (тип данных geography) | Документы Microsoft"
+title: "STPolyFromWKB (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает **geographyPolygon** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Возвращает экземпляр **geographyPolygon** из WKB-представления открытого геопространственного консорциума (OGC).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,20 +45,20 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_polygon*  
- WKB-представление **geographyPolygon** экземпляр, который необходимо вернуть. *WKB_polygon* — **varbinary(max)** выражение.  
+ Представление в формате WKB возвращаемого экземпляра **geographyPolygon**. *WKB_polygon* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
- — **Int** выражение, представляющее пространственной идентификатор ссылки (SRID) из **geographyPolygon** экземпляр, который необходимо вернуть.  
+ Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyPolygon**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
- Тип OGC: **многоугольника**  
+ Тип OGC: **Polygon**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод создает исключение **FormatException** Если входные данные имеют неверный формат.  
+ Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере метод `STPolyFromWKB()` применяется для создания экземпляра `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STPolyFromWKB(0x01030000000100000005000000F4FDD478E9965EC0DD
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

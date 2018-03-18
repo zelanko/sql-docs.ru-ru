@@ -1,5 +1,5 @@
 ---
-title: "ЗАКРЫТЬ (Transact-SQL) | Документы Microsoft"
+title: "CLOSE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>Аргументы  
  GLOBAL  
- Указывает, что *cursor_name* ссылается на глобальный курсор.  
+ Указывает, что аргумент *cursor_name* ссылается на глобальный курсор.  
   
  *cursor_name*  
- Имя открытого курсора. Если существует как глобальный, так и локальный курсор с *cursor_name* , имя *cursor_name* ссылается на глобальный курсор при GLOBAL указанного; в противном случае — *cursor_name* ссылается на локальный курсор.  
+ Имя открытого курсора. Когда имеются как глобальный, так и локальный курсор с именем *cursor_name*, то *cursor_name* указывает на глобальный курсор, если задано GLOBAL. В противном случае *cursor_name* указывает на локальный курсор.  
   
  *cursor_variable_name*  
  Имя переменной курсора, связанной с открытым курсором.  
@@ -74,11 +74,11 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Курсоры](../../relational-databases/cursors.md)   
  [Курсоры (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DEALLOCATE &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [FETCH &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [ОТКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [DEALLOCATE (Transact-SQL)](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)  
   
   

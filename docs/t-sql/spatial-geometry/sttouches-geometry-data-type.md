@@ -1,5 +1,5 @@
 ---
-title: "STTouches (тип данных geometry) | Документы Microsoft"
+title: "STTouches (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sttouches-geometry-data-type"></a>STTouches (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает 1, если **geometry** экземпляр касается другого **geometry** экземпляра. В противном случае возвращается значение 0.
+Возвращает значение 1, если экземпляр **geometry** пространственно контактирует с другим экземпляром **geometry**. В противном случае возвращается значение 0.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geometry*  
- Другой **geometry** экземпляр для сравнения с экземпляром, в котором `STTouches()` вызывается.  
+ Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STTouches()`.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Два **geometry** касание экземпляров, если пересекаются их наборы точек, но не их внутренние области.  
+ Два экземпляра **geometry** контактируют, если пересекаются их наборы точек, но не внутренние области.  
   
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geometry** экземпляров не совпадают.  
+ Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется `STTouches()`, чтобы протестировать два экземпляра `geometry` и выяснить наличие контакта между ними.  
@@ -68,7 +68,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

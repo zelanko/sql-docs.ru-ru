@@ -1,5 +1,5 @@
 ---
-title: "Методы OGC для геометрических объектов | Документы Microsoft"
+title: "Методы OGC в экземплярах Geometry | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurveN (тип данных geometry)](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine (тип данных geometry)](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

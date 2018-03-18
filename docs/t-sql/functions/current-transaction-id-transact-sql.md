@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_TRANSACTION_ID (Transact-SQL) | Документы Microsoft"
+title: "CURRENT_TRANSACTION_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -45,27 +45,27 @@ CURRENT_TRANSACTION_ID( )
   
 ```  
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **bigint**
   
 ## <a name="return-value"></a>Возвращаемое значение  
-Идентификатор транзакции текущей транзакции в текущем сеансе, взяты из [sys.dm_tran_current_transaction &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+Идентификатор текущей транзакции в текущем сеансе, полученный из представления [sys.dm_tran_current_transaction (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
-Любой пользователь может возвращать идентификатор транзакции текущего сеанса.
+## <a name="permissions"></a>Разрешения  
+Любой пользователь может вернуть идентификатор транзакции текущего сеанса.
   
 ## <a name="examples"></a>Примеры  
-В следующем примере возвращается идентификатор транзакции текущего сеанса:
+В приведенном ниже примере возвращается идентификатор транзакции текущего сеанса.
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
-## <a name="see-also"></a>См. также:
-[sp_set_session_context &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
-[SESSION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/session-context-transact-sql.md)  
+## <a name="see-also"></a>См. также раздел
+[sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
+[SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)  
 [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
-[SET CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)
+[CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)  
+[SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

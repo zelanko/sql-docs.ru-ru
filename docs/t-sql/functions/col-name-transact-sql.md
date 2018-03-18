@@ -1,5 +1,5 @@
 ---
-title: "COL_NAME (Transact-SQL) | Документы Microsoft"
+title: "COL_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>Аргументы  
 *table_id*  
-Идентификационный номер таблицы, содержащей данный столбец. *table_id* относится к типу **int**.
+Идентификационный номер таблицы, содержащей данный столбец. Аргумент *table_id* имеет тип **int**.
   
-*Идентификатор column_id*  
-Идентификатор столбца. *Идентификатор column_id* параметр имеет тип **int**.
+*column_id*  
+Идентификатор столбца. Параметр *column_id* имеет тип **int**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **sysname**
   
 ## <a name="exceptions"></a>Исключения  
@@ -62,13 +62,13 @@ COL_NAME ( table_id , column_id )
   
 Пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые пользователю были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как COL_NAME, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Замечания  
-*Table_id* и *column_id* совместно образуют строку имени столбца.
+## <a name="remarks"></a>Remarks  
+Аргументы *table_id* и *column_id* совместно образуют строку имени столбца.
   
-Дополнительные сведения о получении идентификационных номеров таблиц и столбцов см. в разделе [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
+Дополнительные сведения о получении идентификационных номеров таблиц и столбцов см. в статье [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
-Следующий пример возвращает имя первого столбца в образце `Employee` таблицы.
+В приведенном ниже примере возвращается имя первого столбца в образце таблицы `Employee`.
   
 ```sql
 -- Uses AdventureWorks  
@@ -85,11 +85,11 @@ ColumnName
 BusinessEntityID  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH (Transact-SQL)](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

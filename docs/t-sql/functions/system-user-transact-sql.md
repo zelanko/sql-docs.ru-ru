@@ -1,5 +1,5 @@
 ---
-title: "Функция SYSTEM_USER (Transact-SQL) | Документы Microsoft"
+title: "SYSTEM_USER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,12 +55,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nchar**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функцию SYSTEM_USER можно использовать с ограничениями DEFAULT в инструкциях CREATE TABLE и ALTER TABLE. Она также может использоваться как стандартная функция.  
   
  Если имя пользователя и имя входа различаются, функция SYSTEM_USER возвращает имя входа.  
   
- Если текущий пользователь подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows, функция SYSTEM_USER возвращает идентификационное имя учетной записи Windows в виде: *домена*\\*user_login_name*. Однако, если текущий пользователь подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с проверкой подлинности SQL Server, функция SYSTEM_USER возвращает имя входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `WillisJo`, для пользователя, подключившегося как `WillisJo`.  
+ Если текущий пользователь подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя проверку подлинности Windows, функция SYSTEM_USER возвращает идентификационное имя входа в Windows в следующем формате: *ДОМЕН*\\*имя_входа_пользователя*. Однако, если текущий пользователь подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с проверкой подлинности SQL Server, функция SYSTEM_USER возвращает имя входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `WillisJo`, для пользователя, подключившегося как `WillisJo`.  
   
  Функция SYSTEM_USER возвращает имя текущего выполняемого контекста. Если контекст был переключен с помощью инструкции EXECUTE AS, функция SYSTEM_USER возвращает имя олицетворяемого контекста.  
   
@@ -133,10 +133,10 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: использование функции SYSTEM_USER для получения текущего системного имени пользователя  
- В следующем примере возвращается текущее значение `SYSTEM_USER`.  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>В. Использование функции SYSTEM_USER для получения текущего системного имени пользователя  
+ В приведенном ниже примере возвращается текущее значение `SYSTEM_USER`.  
   
 ```  
 SELECT SYSTEM_USER;  
@@ -145,11 +145,11 @@ SELECT SYSTEM_USER;
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [Функция CURRENT_USER &#40; Transact-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [Функция SESSION_USER &#40; Transact-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [&#40; пользователя Transact-SQL &#41;](../../t-sql/functions/user-transact-sql.md)  
+ [USER (Transact-SQL)](../../t-sql/functions/user-transact-sql.md)  
   
   
 

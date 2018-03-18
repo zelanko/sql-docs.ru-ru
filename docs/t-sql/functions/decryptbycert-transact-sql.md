@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYCERT (Transact-SQL) | Документы Microsoft"
+title: "DECRYPTBYCERT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,32 +49,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *идентификатор_сертификата*  
- Идентификатор сертификата в базе данных. *сертификат*_ID имеет **int**.  
+ *certificate_ID*  
+ Идентификатор сертификата в базе данных. Аргумент *certificate_ID* имеет тип **int**.  
   
- *зашифрованный текст*  
+ *ciphertext*  
  Строка данных, которая была зашифрована при помощи открытого ключа сертификата.  
   
  @ciphertext  
- Переменная типа **varbinary** , содержащий данные, зашифрованные с помощью сертификата.  
+ Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью сертификата.  
   
  *cert_password*  
  Пароль, который использовался для шифрования закрытого ключа сертификата. Должна быть в Юникоде.  
   
  @cert_password  
- Переменная типа **nchar** или **nvarchar** , содержащее пароль, который использовался для шифрования закрытого ключа сертификата. Должна быть в Юникоде.  
+ Переменная типа **nchar** или **nvarchar**, содержащая пароль, который использовался для шифрования закрытого ключа сертификата. Должна быть в Юникоде.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция расшифровывает данные при помощи закрытого ключа сертификата. Криптографические преобразования с использованием асимметричных ключей требуют значительных ресурсов. Поэтому функции EncryptByCert и DecryptByCert не подходят для операций шифрования пользовательских данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для сертификата.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере производится выборка строк из таблицы `[AdventureWorks2012].[ProtectedData04]`, помеченных как `data encrypted by certificate JanainaCert02`. Пример дешифрует зашифрованный текст с помощью закрытого ключа сертификата `JanainaCert02`, который сначала дешифруется с помощью пароля сертификата, `pGFD4bb925DGvbd2439587y`. Расшифрованные данные преобразуются из **varbinary** для **nvarchar**.  
+ В следующем примере производится выборка строк из таблицы `[AdventureWorks2012].[ProtectedData04]`, помеченных как `data encrypted by certificate JanainaCert02`. Пример дешифрует зашифрованный текст с помощью закрытого ключа сертификата `JanainaCert02`, который сначала дешифруется с помощью пароля сертификата, `pGFD4bb925DGvbd2439587y`. Расшифрованные данные преобразуются из типа **varbinary** в тип **nvarchar**.  
   
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
@@ -86,10 +86,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ENCRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+ [ENCRYPTBYCERT (Transact-SQL)](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [УДАЛИТЬ СЕРТИФИКАТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

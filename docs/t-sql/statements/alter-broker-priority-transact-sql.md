@@ -1,5 +1,5 @@
 ---
-title: "ALTER BROKER PRIORITY (Transact-SQL) | Документы Microsoft"
+title: "ALTER BROKER PRIORITY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -62,65 +62,65 @@ FOR CONVERSATION
  Имя изменяемого приоритета диалога. Это имя должно ссылаться на приоритет диалога в текущей базе данных.  
   
  SET  
- Задает критерий для определения применимости приоритета к заданному диалогу. SET является обязательным и должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или параметра PRIORITY_LEVEL.  
+ Задает критерий для определения применимости приоритета к заданному диалогу. Аргумент SET обязателен и должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL.  
   
- CONTRACT_NAME = {*ContractName* | **ANY**}  
- Указывает имя контракта, который будет использоваться в качестве критерия, определяющего применимость приоритета к диалогу. *ContractName* — [!INCLUDE[ssDE](../../includes/ssde-md.md)] идентификатор и необходимо указать имя контракта в текущей базе данных.  
+ CONTRACT_NAME = {*ContractName* | **ANY**}  
+ Указывает имя контракта, который будет использоваться в качестве критерия, определяющего применимость приоритета к диалогу. Аргумент *ContractName* — это идентификатор компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который должен указывать имя контракта в текущей базе данных.  
   
  *ContractName*  
- Указывает, что приоритет диалога может применяться только к диалогам, где в инструкции BEGIN DIALOG, в которой начала диалог параметр ON CONTRACT *ContractName*.  
+ Указывает, что приоритет может применяться только к диалогам, в которых инструкция BEGIN DIALOG, начинающая диалог, содержит параметр ON CONTRACT *ContractName*.  
   
  ANY  
  Указывает, что приоритет может применяться к любому диалогу, независимо от используемого контракта.  
   
  Если аргумент CONTRACT_NAME не был указан, то свойство контракта приоритета диалога не изменяется.  
   
- LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
+ LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
- *LocalServiceName* — [!INCLUDE[ssDE](../../includes/ssde-md.md)] идентификатор и необходимо указать имя службы в текущей базе данных.  
+ Аргумент *LocalServiceName* — это идентификатор [!INCLUDE[ssDE](../../includes/ssde-md.md)]; он должен указывать имя службы в текущей базе данных.  
   
  *LocalServiceName*  
  Указывает, что объектом применения приоритета диалога может быть:  
   
--   Любая конечная точка диалога инициатора, имя вызывающей службы совпадает *LocalServiceName*.  
+-   любая конечная точка-инициатор диалога, имя вызывающей службы которой соответствует аргументу *LocalServiceName*;  
   
--   Любой целевой конечной точке диалога, имя целевой службы соответствует *LocalServiceName*.  
+-   любая целевая конечная точка диалога, имя целевой службы которой соответствует аргументу *LocalServiceName*.  
   
  ANY  
  -   Указывает, что приоритет может применяться к любой конечной точке диалога, независимо от имени локальной службы, используемой точкой.  
   
  Если аргумент LOCAL_SERVICE_NAME не был указан, то свойство локальной службы приоритета диалога не изменяется.  
   
- REMOTE_SERVICE_NAME = {'*RemoteServiceName*"| **ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
- *RemoteServiceName* — это литерал типа **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]использует сравнение байт за байтом *RemoteServiceName* строка. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* — это литерал типа **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Задает приоритет диалога, который будет иметь:  
   
--   Любая конечная точка диалога инициатора, имя целевой службы соответствует *RemoteServiceName*.  
+-   любая конечная точка-инициатор диалога, для которой имя целевой службы совпадает с параметром *RemoteServiceName*;  
   
--   Любой целевой конечной точки диалога, имя которого вызывающей службы совпадает *RemoteServiceName*.  
+-   любая целевая конечная точка диалога, для которой имя вызывающей службы совпадает с параметром *RemoteServiceName*.  
   
  ANY  
  Указывает, что приоритет диалога будет применяться ко всем конечным точкам диалога, вне зависимости от имен удаленных служб, связанных с ними.  
   
  Если аргумент REMOTE_SERVICE_NAME не был указан, то свойство удаленной службы приоритета диалога не изменяется.  
   
- Параметра PRIORITY_LEVEL = { *PriorityValue* | **по умолчанию** }  
- Задает уровень приоритета, который будет присвоен любой конечной точке диалога, использующей контракты и службы, указанные в приоритете диалога. *PriorityValue* должно быть целым литералом в диапазоне от 1 (наименьший приоритет) до 10 (наибольший приоритет).  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ Задает уровень приоритета, который будет присвоен любой конечной точке диалога, использующей контракты и службы, указанные в приоритете диалога. Аргумент *PriorityValue* должен быть целочисленным литералом в диапазоне от 1 (наименьший приоритет) до 10 (наибольший приоритет).  
   
  Если аргумент PRIORITY_LEVEL не был указан, то свойство уровня приоритета для приоритета диалога не изменяется.  
   
 ## <a name="remarks"></a>Remarks  
  Свойства, измененные с помощью инструкции ALTER BROKER PRIORITY, не применяются к существующим диалогам. Существующие диалоги будут использовать приоритет, который был задан при их запуске.  
   
- Дополнительные сведения см. в разделе [CREATE BROKER PRIORITY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-broker-priority-transact-sql.md).  
+ Дополнительные сведения см. в статье [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешение на создание приоритета диалога по умолчанию имеют члены **db_ddladmin** или **db_owner** предопределенных ролей базы данных, а в **sysadmin** предопределенной роли сервера. Необходимо разрешение ALTER на базу данных.  
+ Разрешение на создание приоритета диалога по умолчанию имеют члены предопределенных ролей базы данных **db_ddladmin** и **db_owner** и члены предопределенной роли сервера **sysadmin**. Необходимо разрешение ALTER на базу данных.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -145,9 +145,9 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [СОЗДАТЬ ПРИОРИТЕТ БРОКЕРА &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

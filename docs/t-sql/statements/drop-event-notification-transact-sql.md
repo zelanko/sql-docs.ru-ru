@@ -1,5 +1,5 @@
 ---
-title: "DROP EVENT NOTIFICATION (Transact-SQL) | Документы Microsoft"
+title: "DROP EVENT NOTIFICATION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Аргументы  
  *notification_name*  
- Имя удаляемого уведомления о событии. Можно указать несколько уведомлений о событии. Чтобы просмотреть список созданных уведомлений о событии, используйте [sys.event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ Имя удаляемого уведомления о событии. Можно указать несколько уведомлений о событии. Список созданных уведомлений о событии см. в [sys.event_notifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Показывает область уведомления о событии, относящемся к данному серверу. Параметр SERVER необходимо указать в том случае, если он был указан при создании уведомления о событии.  
@@ -61,11 +61,11 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Показывает область уведомления о событии, относящемся к данной базе данных. Параметр DATABASE необходимо указать в том случае, если он был указан при создании уведомления о событии.  
   
- ОЧЕРЕДЬ *имя_очереди*  
- Показывает область уведомления о событии, относящемся к в очередь указанную *имя_очереди*. Аргумент QUEUE должен быть указан, если он был указан при создании уведомления о событии. *имя_очереди* является именем очереди и также должен быть указан.  
+ QUEUE *queue_name*  
+ Показывает область уведомления о событии, относящемся к очереди, указанной аргументом *queue_name*. Аргумент QUEUE должен быть указан, если он был указан при создании уведомления о событии. Аргумент *queue_name* является именем очереди и также должен быть указан.  
   
-## <a name="remarks"></a>Remarks  
- Если уведомление о событии возникает и удаляется в одной и той же транзакции, то вначале происходит отправка экземпляра уведомления о событии, а затем происходит удаление этого уведомления.  
+## <a name="remarks"></a>Примечания  
+ Если уведомление о событии возникает и удаляется в одной и той же транзакции, то вначале происходит отправка экземпляра уведомления о событии, а затем удаление этого уведомления.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы удалить уведомление о событии, относящемся к уровню базы данных, пользователь должен быть, как минимум, владельцем уведомления о событии или обладать разрешением ALTER ANY DATABASE EVENT NOTIFICATION в данной базе данных.  
@@ -90,10 +90,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ уведомление о СОБЫТИИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [CREATE EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [sys.Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.event (Transact-SQL)](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

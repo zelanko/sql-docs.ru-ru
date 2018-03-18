@@ -1,5 +1,5 @@
 ---
-title: "STDEVP (Transact-SQL) | Документы Microsoft"
+title: "STDEVP (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -67,22 +67,22 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Указывает, что учитывается каждое уникальное значение.  
   
  *expression*  
- Числовое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Агрегатные функции и вложенные запросы не допускаются. *выражение* является выражением категории типа точных числовых или приблизительных числовых данных, за исключением **бит** тип данных.  
+ Числовое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Агрегатные функции и вложенные запросы не допускаются. *expression* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.  
   
- НАД **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* , определяет логический порядок, в котором выполняется операция. *order_by_clause* является обязательным. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Аргумент *order_by_clause* является обязательным. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **float**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если STDEVP используется на всех элементах в инструкции SELECT, каждое значение в результирующем наборе включается в вычисление. Функцию STDEVP можно использовать только для числовых столбцов. Значения NULL пропускаются.  
   
  STDEVP — это детерминированная функция, если она используется без предложений OVER и ORDER BY. Она не детерминирована при использовании с предложениями OVER и ORDER BY. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-stdevp"></a>Ответ с помощью функции STDEVP  
+### <a name="a-using-stdevp"></a>А. Использование функции STDEVP  
  Следующий пример возвращает стандартное отклонение совокупности всех дополнительных значений в таблице `SalesPerson` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -91,10 +91,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>Б. с помощью функции STDEVP  
- В следующем примере возвращается `STDEVP` значений квоты продаж в таблице `dbo.FactSalesQuota`. Первый столбец содержит стандартное отклонение всех уникальных значений, а второй столбец содержит стандартное отклонение всех значений, включая все повторяющиеся значения.  
+### <a name="b-using-stdevp"></a>Б. Использование функции STDEVP  
+ В приведенном ниже примере возвращается результат `STDEVP` для значений квот на продажу в таблице `dbo.FactSalesQuota`. Первый столбец содержит стандартное отклонение всех уникальных значений, а второй — стандартное отклонение всех значений, включая повторяющиеся.  
   
 ```  
 -- Uses AdventureWorks  
@@ -112,8 +112,8 @@ Distinct_Values   All_Values
 397676.79         397226.44
 ```  
   
-### <a name="c-using-stdevp-with-over"></a>В. С помощью функции STDEVP с больше  
- В следующем примере возвращается `STDEVP` значений квоты продаж для каждого квартала календарного года. Обратите внимание, что ключевое слово `ORDER BY` в предложении `OVER` упорядочивает `STDEVP`, а `ORDER BY` в инструкции `SELECT` — результирующий набор.  
+### <a name="c-using-stdevp-with-over"></a>В. Использование STDEVP с предложением OVER  
+ В приведенном ниже примере возвращается результат `STDEVP` для значений квот на продажу в каждом квартале календарного года. Обратите внимание, что ключевое слово `ORDER BY` в предложении `OVER` упорядочивает `STDEVP`, а `ORDER BY` в инструкции `SELECT` — результирующий набор.  
   
 ```  
 -- Uses AdventureWorks  
@@ -137,8 +137,8 @@ Year  Quarter  SalesQuota              StdDeviation
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [ЧЕРЕЗ предложение &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

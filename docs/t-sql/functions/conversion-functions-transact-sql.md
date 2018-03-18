@@ -1,5 +1,5 @@
 ---
-title: "Функции преобразования (Transact-SQL) | Документы Microsoft"
+title: "Функции преобразования (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.lasthandoff: 11/21/2017
 
 Следующие функции поддерживают приведение и преобразование типов данных.
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Синтаксический анализ &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40; Transact-SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE (Transact-SQL)](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST (Transact-SQL)](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT (Transact-SQL)](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE (Transact-SQL)](../../t-sql/functions/try-parse-transact-sql.md)
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции](../../t-sql/functions/functions.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
   

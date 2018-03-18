@@ -1,5 +1,5 @@
 ---
-title: "Функция LEN (Transact-SQL) | Документы Microsoft"
+title: "LEN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/03/2015
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/18/2018
   Возвращает количество символов указанного строкового выражения, исключая конечные пробелы.  
   
 > [!NOTE]  
->  Получить число байтов, используемых для представления выражения, с помощью [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) функции.  
+>  Получить число байтов, используемых для представления выражения, можно с помощью функции [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,15 +51,15 @@ LEN ( string_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *string_expression*  
- Строка, [выражение](../../t-sql/language-elements/expressions-transact-sql.md) для оценки. *String_Expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
+ Оцениваемое строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Аргумент *string_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **bigint** Если *выражение* имеет **varchar(max)**, **nvarchar(max)** или **varbinary(max)** типов данных; в противном случае **int**.  
+ **bigint**, если *expression* имеет тип данных **varchar(max)**, **nvarchar(max)** или **varbinary(max)**; в противном случае **int**.  
   
  Если используются параметры сортировки SC, то возвращаемое целое значение рассматривает суррогатные пары Юникода UTF-16 как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Remarks  
- Функция LEN исключает конечные пробелы. Если это проблемы, рассмотрите возможность использования [DATALENGTH &#40; Transact-SQL &#41; ](../../t-sql/functions/datalength-transact-sql.md) функцию, в которой не усекал строку. При обработке строки в Юникоде, DATALENGTH возвращает вдвое превышает число символов. В следующем примере показано LEN и DATALENGTH с пробелом.  
+ Функция LEN исключает конечные пробелы. Если это может создать проблемы, рекомендуется использовать функцию [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md), которая не усекает строку. При обработке строки Юникода DATALENGTH возвращает удвоенное количество символов. В приведенном ниже примере демонстрируется работа функций LEN и DATALENGTH с конечным пробелом.  
   
 ```  
 DECLARE @v1 varchar(40),  
@@ -82,8 +82,8 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Следующий пример возвращает количество символов в столбце `FirstName` и имена и фамилии сотрудников, расположенных в `Australia`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В приведенном ниже примере возвращается число символов в столбце `FirstName`, а также первое и последнее имена сотрудников в `Australia`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -103,14 +103,14 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>См. также  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [Функция CHARINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
- [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
- [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)   
- [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
+ [CHARINDEX (Transact-SQL)](../../t-sql/functions/charindex-transact-sql.md)  
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)  
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)   
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

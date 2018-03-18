@@ -1,5 +1,5 @@
 ---
-title: "SESSION_CONTEXT (Transact-SQL) | Документы Microsoft"
+title: "SESSION_CONTEXT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Возвращает значение указанного ключа в контексте текущего сеанса. Значение задается с помощью [sp_set_session_context &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) процедуры.  
+  Возвращает значение указанного ключа в контексте текущего сеанса. Значение задается с помощью процедуры [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ SESSION_CONTEXT(N'key')
   
 ## <a name="arguments"></a>Аргументы  
  'key'  
- Ключ извлекается значение (типа sysname).  
+ Ключ (типа sysname) извлекаемого значения.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **sql_variant**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение, связанное с указанным ключом в контексте сеанса, или значение NULL, если значение не было задано для этого ключа.  
+ Значение, связанное с указанным ключом в контексте сеанса, или NULL, если значение для этого ключа не задано.  
   
-## <a name="permissions"></a>Permissions  
- Любой пользователь может считывать контекста сеанса для сеанса.  
+## <a name="permissions"></a>Разрешения  
+ Любой пользователь может считывать контекст своего сеанса.  
   
-## <a name="remarks"></a>Замечания  
- Поведение режима MARS в SESSION_CONTEXT аналогична CONTEXT_INFO. Если пакет MARS задает пару ключ значение, новое значение не возвращается в других пакетах режима MARS в том же соединении только после их запуска после завершения пакетом, устанавливающим новое значение. Если несколько пакетов MARS активны для подключения, значения невозможно задать в качестве «read_only.» Это предотвращает гонки и недетерминированные о нужное значение «по значению».  
+## <a name="remarks"></a>Remarks  
+ Поведение функции MARS для SESSION_CONTEXT аналогично ее поведению для CONTEXT_INFO. Если пакет MARS задает пару "ключ-значение", новое значение не будет возвращаться в других пакетах MARS по тому же соединению, если они были запущены до того, как завершилось выполнение пакета, задавшего это значение. Если в соединении имеется несколько активных пакетов MARS, значения не могут устанавливаться как доступные только для чтения. Это позволяет избежать состояний гонки и неопределенности в отношении того, какое значение является победителем.  
   
 ## <a name="examples"></a>Примеры  
- Следующий простой пример задает значение контекста сеанса для ключа `user_id` 4, а затем использует **SESSION_CONTEXT** функции для получения значения.  
+ В приведенном ниже простом примере значение контекста сеанса для ключа `user_id` устанавливается в 4, а затем используется функция **SESSION_CONTEXT** для получения значения.  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  
@@ -70,9 +70,9 @@ SELECT SESSION_CONTEXT(N'user_id');
   
 ## <a name="see-also"></a>См. также:  
  [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
- [CURRENT_TRANSACTION_ID &#40; Transact-SQL &#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID (Transact-SQL)](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)   
- [SET CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO  (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)   
+ [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

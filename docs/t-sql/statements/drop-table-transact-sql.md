@@ -1,5 +1,5 @@
 ---
-title: "DROP TABLE (Transact-SQL) | Документы Microsoft"
+title: "DROP TABLE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Удаляет одно или больше определений таблиц и все данные, индексы, триггеры, ограничения и разрешения для этих таблиц. Любое представление или хранимая процедура, ссылающаяся на удаленную таблицу должно быть явно удалена с помощью [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) или [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). Отчет о зависимостях в таблице, используйте [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+  Удаляет одно или больше определений таблиц и все данные, индексы, триггеры, ограничения и разрешения для этих таблиц. Любое представление или хранимая процедура, ссылающаяся на удаленную таблицу, должна быть явно удалена с помощью инструкции [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) или [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). Отчет о зависимостях в таблице можно получить из представления [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,10 +80,10 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  База данных SQL Windows Azure поддерживает формат трехкомпонентного имени database_name.[schema_name].object_name, если database_name — это текущая база данных или database_name — это tempdb и object_name начинается с символа «#». База данных SQL Windows Azure не поддерживает четырехкомпонентные имена.  
   
- *ЕСЛИ СУЩЕСТВУЕТ*  
+ *IF EXISTS*  
  **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляет таблицу только в том случае, если он уже существует.  
+ Условное удаление таблицы только в том случае, если она уже существует.  
   
  *schema_name*  
  Имя схемы, которой принадлежит таблица.  
@@ -91,23 +91,23 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
  *имя_таблицы*  
  Имя таблицы, предназначенной для удаления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкцию DROP TABLE нельзя использовать для удаления таблицы, на которую ссылается ограничение FOREIGN KEY. Сначала следует удалить ссылающееся ограничение FOREIGN KEY или ссылающуюся таблицу. Если и ссылающаяся таблица, и таблица, содержащая первичный ключ, удаляются с помощью одной инструкции DROP TABLE, ссылающаяся таблица должна быть первой в списке.  
   
  Несколько таблиц можно удалить из любой базы данных. Если удаляемая таблица ссылается на первичный ключ другой таблицы, которая также удаляется, ссылающаяся таблица с внешним ключом должна стоять в списке перед таблицей, содержащей указанный первичный ключ.  
   
  При удалении таблицы относящиеся к ней правила и значения по умолчанию теряют привязку, а любые связанные с таблицей ограничения или триггеры автоматически удаляются. Если таблица будет создана заново, нужно будет заново привязать все правила и значения по умолчанию, заново создать триггеры и добавить необходимые ограничения.  
   
- При удалении всех строк в таблице с помощью инструкции DELETE *tablename* или с помощью инструкции TRUNCATE TABLE, таблица существует до своего удаления.  
+ При удалении всех строк в таблице с помощью инструкции DELETE *tablename* или TRUNCATE TABLE таблица продолжает существовать, пока она не будет удалена.  
   
- Большие таблицы и индексы, использующие более 128 экстентов, удаляются в два этапа: логически и физически. На логическом этапе существующие единицы распределения, используемые в таблице, отмечаются для освобождения и остаются заблокированными до фиксации транзакции. В физической фазе IAM-страницы, помеченные для освобождения, физически удаляются пакетами.  
+ Большие таблицы и индексы, использующие более 128 экстентов, удаляются в два этапа: логически и физически. На логическом этапе существующие единицы распределения, используемые в таблице, отмечаются для освобождения и остаются заблокированными до фиксации транзакции. В физической фазе страницы IAM, помеченные для освобождения, физически удаляются пакетами.  
   
  При удалении таблицы, которая содержит столбец VARBINARY(MAX) с атрибутом FILESTREAM, не будут удалены никакие данные, которые хранятся в файловой системе.  
   
 > [!IMPORTANT]  
 >  Инструкции DROP TABLE и CREATE TABLE нельзя выполнять для одной таблицы в одном пакете. В противном случае может произойти непредвиденная ошибка.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER на схему, к которой принадлежит эта таблица, разрешение CONTROL для этой таблицы или членство в предопределенной роли базы данных **db_ddladmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -127,7 +127,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>В. Удаление временной таблицы  
- Следующий пример создает временную таблицу, проверяет ее наличие, удаляет ее и снова проверяет ее наличие. В этом примере не использует **IF EXISTS** синтаксис, который доступен, начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Следующий пример создает временную таблицу, проверяет ее наличие, удаляет ее и снова проверяет ее наличие. В этом примере не используется синтаксис **IF EXISTS**, доступный с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```  
 CREATE TABLE #temptable (col1 int);  
@@ -166,9 +166,9 @@ DROP TABLE IF EXISTS T1;
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
- [После УСЕЧЕНИЯ таблицы &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
- [УДАЛИТЬ ПРЕДСТАВЛЕНИЕ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
- [DROP PROCEDURE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

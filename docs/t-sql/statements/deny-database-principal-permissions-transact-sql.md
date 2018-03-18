@@ -1,5 +1,5 @@
 ---
-title: "ЗАПРЕЩЕНИЕ разрешений участникам базы данных (Transact-SQL) | Документы Microsoft"
+title: "DENY, отказ в разрешениях на уровне субъекта базы данных (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -73,34 +73,34 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Обозначает разрешение, которое можно запретить для участника базы данных. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Обозначает разрешение, которое можно запретить для участника базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ПОЛЬЗОВАТЕЛЬ::*пользователь_базы_данных*  
+ USER ::*database_user*  
  Указывает класс и имя пользователя, для которых запрещается разрешение. Квалификатор области (**::**) является обязательным.  
   
- РОЛЬ::*database_role*  
+ ROLE ::*database_role*  
  Указывает класс и имя роли, для которой запрещается разрешение. Квалификатор области (**::**) является обязательным.  
   
- РОЛЬ приложения::*application_role*  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ APPLICATION ROLE ::*application_role*  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает класс и имя роли приложения, для которой запрещается разрешение. Квалификатор области (**::**) является обязательным.  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Указывает участника, от которого участник, выполняющий данный запрос, получает право на отмену разрешения.  
   
- *Пользователь_базы_данных*  
+ *Database_user*  
  Указывает пользователя базы данных.  
   
  *Database_role*  
  Указывает роль базы данных.  
   
  *Application_role*  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает роль приложения.  
   
@@ -119,7 +119,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Указывает пользователя базы данных, не сопоставленного с субъектом серверного уровня.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>Разрешения пользователя базы данных  
  Пользователь базы данных — это защищаемый объект уровня базы данных, содержащийся в базе данных, являющейся родительским элементом в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно запретить для пользователя базы данных, перечислены в следующей таблице наряду с общими разрешениями, неявно их содержащими.  
@@ -150,7 +150,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL для указанного участника или разрешение, неявно включающее в себя разрешение CONTROL.  
   
  Объекты, получившие разрешение CONTROL для базы данных, такие как члены предопределенной роли базы данных db_owner, могут запрещать любое разрешение для любого защищаемого объекта базы данных.  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>В. Запрет разрешения IMPERSONATE на пользователя роли приложения  
  В следующем примере показано, как отменить разрешение `IMPERSONATE` пользователю `HamithaL` на роль приложения [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
   
-**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -188,13 +188,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Предоставление разрешений участникам базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [ОТОЗВАТЬ разрешения участника базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+ [GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [СОЗДАТЬ РОЛИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  

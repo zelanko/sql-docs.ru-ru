@@ -1,5 +1,5 @@
 ---
-title: "STDifference (тип данных geography) | Документы Microsoft"
+title: "STDifference (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geography-data-type"></a>STDifference (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает объект, представляющий набор точек одного **geography** экземпляр, который находится за пределами другого **geography** экземпляра.  
+  Возвращает объект, представляющий набор точек одного экземпляра **geography**, который находится за пределами другого экземпляра **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *other_geography*  
- Другой **geography** , позволяющее определить, какие точки нужно удалить из экземпляра, для которого вызывается STDifference() экземпляра.  
+ Другой экземпляр **geography**, который показывает, какие точки нужно удалить из экземпляра, для которого вызван метод STDifference().  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
- Этот метод создает исключение **ArgumentException** Если экземпляр содержит противоположную границу.  
+ Этот метод вызывает исключение **ArgumentException**, если экземпляр содержит противоположную границу.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод всегда возвращает значение null, если идентификаторы пространственной ссылки (SRID) из **geography** экземпляров не совпадают.  
+ Этот метод всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geography** не совпадают.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], набор возможных результатов, возвращаемый на сервер была расширена для **FullGlobe** экземпляров. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги. Этот метод не является точным.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор возможных результатов, возвращаемый на сервер, был пополнен экземплярами **FullGlobe**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги. Этот метод не является точным.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. Вычисление разницы между двумя географическими объектами  
- В следующем примере используется `STDifference()` вычисляется разница между двумя **geography** экземпляров.  
+ В следующем примере с помощью метода `STDifference()` вычисляется разница между двумя экземплярами **geography**.  
   
 ```  
 DECLARE @g geography;  
@@ -83,7 +83,7 @@ SELECT @g.STDifference(@h).ToString();
  @h.STDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

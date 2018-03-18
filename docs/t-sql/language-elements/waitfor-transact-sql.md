@@ -1,5 +1,5 @@
 ---
-title: "Инструкция WAITFOR (Transact-SQL) | Документы Microsoft"
+title: "WAITFOR (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -65,36 +65,36 @@ WAITFOR
  Заданный период времени (не более 24 часов), который должен пройти до выполнения пакета, хранимой процедуры или продолжения транзакции.  
   
  '*time_to_pass*'  
- Период времени ожидания. *time_to_pass* может быть указан в одном из допустимых форматов для **datetime** данных или его можно указать как локальная переменная. Невозможно указать даты; Таким образом, часть даты **datetime** значение недопустимо.  
+ Период времени ожидания. Аргумент *time_to_pass* может быть задан в одном из допустимых форматов для данных типа **datetime** или в виде локальной переменной. Даты не могут быть указаны, поэтому часть значения **datetime**, относящаяся к дате, не разрешена.  
   
  TIME  
  Заданное время выполнения пакета, хранимой процедуры или транзакции.  
   
  '*time_to_execute*'  
- Время, в которое инструкция WAITFOR завершает работу. *time_to_execute* может быть указан в одном из допустимых форматов для **datetime** данных или его можно указать как локальная переменная. Невозможно указать даты; Таким образом, часть даты **datetime** значение недопустимо.  
+ Время, в которое инструкция WAITFOR завершает работу. Аргумент *time_to_execute* может быть задан в одном из допустимых форматов для данных типа **datetime** или в виде локальной переменной. Даты не могут быть указаны, поэтому часть значения **datetime**, относящаяся к дате, не разрешена.  
   
  *receive_statement*  
  Допустимая инструкция RECEIVE.  
   
 > [!IMPORTANT]  
->  Инструкция WAITFOR с *receive_statement* применимо только к [!INCLUDE[ssSB](../../includes/sssb-md.md)] сообщений. Дополнительные сведения см. в разделе [RECEIVE &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md).  
+>  Инструкция WAITFOR с аргументом *receive_statement* применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделе [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md).  
   
  *get_conversation_group_statement*  
  Допустимая инструкция GET CONVERSATION GROUP.  
   
 > [!IMPORTANT]  
->  Инструкция WAITFOR с *get_conversation_group_statement* применимо только к [!INCLUDE[ssSB](../../includes/sssb-md.md)] сообщений. Дополнительные сведения см. в разделе [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  Инструкция WAITFOR с аргументом *get_conversation_group_statement* применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделе [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
- Время ОЖИДАНИЯ *время ожидания*  
+ TIMEOUT *timeout*  
  Указывает период времени ожидания очередного сообщения (в миллисекундах).  
   
 > [!IMPORTANT]  
->  Инструкция WAITFOR с аргументом TIMEOUT применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделе [RECEIVE &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) и [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  Инструкция WAITFOR с аргументом TIMEOUT применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделах [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md) и [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  Во время выполнения инструкции WAITFOR выполняется транзакция, и другие запросы не могут быть выполнены в рамках этой транзакции.  
   
- Действительная продолжительность задержки может отличаться от времени, указанного в *time_to_pass*, *time_to_execute*, или *время ожидания* и зависит от уровня активности сервера. Счетчик времени запускается, когда запланирован поток, связанный с инструкцией WAITFOR. Если сервер занят, запланированный запуск потока может оказаться невозможным, поэтому время задержки может оказаться больше заданного.  
+ Фактическая временная задержка может различаться в зависимости от времени, указанного в аргументах *time_to_pass*, *time_to_execute* или *timeout*, и зависит от уровня активности сервера. Счетчик времени запускается, когда запланирован поток, связанный с инструкцией WAITFOR. Если сервер занят, запланированный запуск потока может оказаться невозможным, поэтому время задержки может оказаться больше заданного.  
   
  Инструкция WAITFOR не изменяет семантику запроса. Если запрос не может возвратить строки, инструкция WAITFOR будет ждать неограниченное время или до достижения TIMEOUT, если он был задан.  
   
@@ -102,7 +102,7 @@ WAITFOR
   
  Для инструкций WAITFOR невозможно указать представления.  
   
- Если запрос превышает значение, заданное аргументом query  wait, параметр инструкции WAITFOR может завершиться без выполнения. Дополнительные сведения об этом параметре конфигурации см. в разделе [Настройка параметра конфигурации сервера query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Чтобы просмотреть активные и ожидающие процессы, используйте [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md).  
+ Если запрос превышает значение, заданное аргументом query  wait, параметр инструкции WAITFOR может завершиться без выполнения. Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Чтобы просмотреть активные и ожидающие процессы, используйте процедуру [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md).  
   
  Каждая инструкция WAITFOR имеет связанный с ней поток. Если на одном сервере задано несколько инструкций WAITFOR, то можно объединить несколько потоков, ожидающих выполнения этих инструкций. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отслеживает количество потоков, связанных с инструкциями WAITFOR, и случайным образом завершает работу нескольких из этих потоков, если на сервере имеет место нехватка потоков.  
   
@@ -175,9 +175,9 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>См. также  
- [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
+ [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

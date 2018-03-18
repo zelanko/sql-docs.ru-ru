@@ -1,5 +1,5 @@
 ---
-title: "KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Документы Microsoft"
+title: "KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  Удаляет все подписки экземпляра.  
   
  *subscription_id*  
- Удаляет подписку с ИД подписки *ИД_ПОДПИСКИ*.  
+ Удаляет подписку с идентификатором *subscription_id*.  
   
 ## <a name="remarks"></a>Remarks  
  Инструкция KILL QUERY NOTIFICATION SUBSCRIPTION удаляет подписки на уведомления о запросах без выдачи сообщения-уведомления.  
   
- *ИД_ПОДПИСКИ* представляет идентификатор подписки, отображаемый в динамическом административном представлении [sys.dm_qn_subscriptions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ Аргумент *subscription_id* представляет собой идентификатор подписки, отображаемый в динамическом административном представлении [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
   
  Если указанного идентификатора подписки не существует, инструкция возвращает ошибку.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешение на выполнение этой инструкции ограничено членами **sysadmin** предопределенной роли сервера.  
+ Разрешение на выполнение этой инструкции ограничено членами предопределенной роли сервера **sysadmin**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -82,7 +82,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.dm_qn_subscriptions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
+## <a name="see-also"></a>См. также:  
+ [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

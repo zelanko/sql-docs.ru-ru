@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (тип данных geometry) | Документы Microsoft"
+title: "STNumCurves (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Этот метод возвращает количество кривых в **geometry** экземпляра, если экземпляр является типом одномерных пространственных данных. К типам одномерных пространственных данных относятся **LineString**, **CircularString**, и **CompoundCurve**. `STNumCurves`() поддерживает только простые типы; не работает с **geometry** коллекций, например **MultiLineString**.
+Этот метод возвращает число кривых в экземпляре **geometry**, представленном типом одномерных пространственных данных. К одномерным пространственным типам данных относятся **LineString**, **CircularString** и **CompoundCurve**. Метод `STNumCurves`() поддерживает только простые типы; он не поддерживает коллекции **geometry**, такие как **MultiLineString**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,12 +41,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **геометрии**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Возвращаемый тип CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- Пустой одномерный **geometry** экземпляр возвращает 0. **Значение NULL** возвращается, когда **geometry** экземпляр не является одномерным экземпляром или неинициализированным экземпляром.  
+ Пустой одномерный экземпляр **geometry** возвращает значение 0. Значение **NULL** возвращается, если экземпляр **geometry** не является одномерным или неинициализированным экземпляром.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

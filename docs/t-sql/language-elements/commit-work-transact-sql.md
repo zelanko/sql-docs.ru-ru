@@ -1,5 +1,5 @@
 ---
-title: "ФИКСАЦИЯ РАБОЧЕГО (Transact-SQL) | Документы Microsoft"
+title: "COMMIT WORK (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ COMMIT [ WORK ]
 ## <a name="remarks"></a>Remarks  
  Эта инструкция действует идентично инструкции COMMIT TRANSACTION, но в отличие от COMMIT TRANSACTION не принимает пользовательское имя транзакции. С указанием или без указания дополнительного ключевого слова WORK этот синтаксис COMMIT совместим с SQL-92.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   

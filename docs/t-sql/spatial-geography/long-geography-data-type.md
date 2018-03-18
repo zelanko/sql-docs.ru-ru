@@ -1,5 +1,5 @@
 ---
-title: "Long (тип данных geography) | Документы Microsoft"
+title: "Long (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="long-geography-data-type"></a>Long (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Свойство longitude **geography** экземпляра.  
+  Возвращает свойство долготы для экземпляра **geography**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- В модели OpenGIS долго определен только для **geography** экземпляров состоит из одной точки. Это свойство будет возвращать значение NULL, если **geography** экземпляры содержат более одной точки. Это свойство является точным и доступно только для чтения.  
+## <a name="remarks"></a>Примечания  
+ В модели OpenGIS метод Long определен только для экземпляров **geography**, состоящих из одной точки. Это свойство возвращает значение NULL, если экземпляры **geography** содержат несколько точек. Это свойство является точным и доступно только для чтения.  
   
 ## <a name="examples"></a>Примеры  
- В этом примере создается **точки** экземпляра и получает долготу точки.  
+ Это пример создает экземпляр **Point** и получает долготу точки.  
   
 ```  
 DECLARE @g geography;  

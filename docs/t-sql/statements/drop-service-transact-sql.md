@@ -1,5 +1,5 @@
 ---
-title: "DROP SERVICE (Transact-SQL) | Документы Microsoft"
+title: "DROP SERVICE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ DROP SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Параметры SERVICE_NAME*  
+ *service_name*  
  Имя удаляемой службы. Не могут быть указаны имена сервера, базы данных и схемы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Нельзя удалить службу, если на нее ссылаются какие-либо приоритеты диалогов.  
   
  При завершении работы службы из очереди, используемой службой, удаляются все сообщения, относящиеся к этой службе. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет сообщение об ошибке на удаленную сторону всех открытых диалогов, которые используют службу.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешением на удаление службы обладает владелец службы, члены предопределенной роли базы данных db_ddladmin или db_owner и члены предопределенной роли сервера sysadmin.  
   
 ## <a name="examples"></a>Примеры  
@@ -69,11 +69,11 @@ DROP SERVICE service_name
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Инструкция ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

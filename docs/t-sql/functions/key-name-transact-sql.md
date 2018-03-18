@@ -1,5 +1,5 @@
 ---
-title: "KEY_NAME (Transact-SQL) | Документы Microsoft"
+title: "KEY_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,22 +46,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *зашифрованный текст*  
- Текст, зашифрованный симметричным ключом. *cyphertext* — тип **varbinary(8000)**.  
+ *ciphertext*  
+ Текст, зашифрованный симметричным ключом. Аргумент *cyphertext* имеет тип **varbinary(8000)**.  
   
  *key_guid*  
- Идентификатор GUID симметричного ключа. *key_guid* — тип **uniqueidentifier**.  
+ Идентификатор GUID симметричного ключа. Аргумент *key_guid* имеет тип **uniqueidentifier**.  
   
 ## <a name="returned-types"></a>Возвращаемые типы  
  **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], видимость метаданных ограничивается защищаемыми объектами, которыми пользователь владеет или на которые пользователю было предоставлено разрешение. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Отображение имени симметричного ключа, полученное с помощью идентификатора key_guid  
- **Master** база данных содержит симметричный ключ с именем # #ms_servicemasterkey ##. В следующем примере показано, как получить идентификатор GUID ключа из динамического административного представления sys.symmetric_keys, присвоить его переменной, а затем передать эту переменную в функцию KEY_NAME, чтобы вернуть имя, соответствующее идентификатору GUID.  
+ База данных **master** содержит симметричный ключ с именем ##MS_ServiceMasterKey##. В следующем примере показано, как получить идентификатор GUID ключа из динамического административного представления sys.symmetric_keys, присвоить его переменной, а затем передать эту переменную в функцию KEY_NAME, чтобы вернуть имя, соответствующее идентификатору GUID.  
   
 ```  
 USE master;  
@@ -116,8 +116,8 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

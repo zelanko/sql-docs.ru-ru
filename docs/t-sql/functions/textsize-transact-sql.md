@@ -1,5 +1,5 @@
 ---
-title: "@@TEXTSIZE (Transact-SQL) | Документы Microsoft"
+title: "@@TEXTSIZE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;Значение TEXTSIZE (Transact-SQL)
+# <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает текущее значение [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) параметр.  
+  Возвращает текущее значение параметра [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  **integer**  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `SELECT` для отображения `@@TEXTSIZE` до и после изменения с `SET``TEXTSIZE` инструкции.  
+ В приведенном ниже примере инструкция `SELECT` отображает значение `@@TEXTSIZE` до и после его изменения инструкцией `SET``TEXTSIZE`.  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
@@ -75,6 +75,6 @@ Text Size
   
 ## <a name="see-also"></a>См. также:  
  [Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Значение TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
+ [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)  
   
   

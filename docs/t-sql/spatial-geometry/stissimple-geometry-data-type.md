@@ -1,5 +1,5 @@
 ---
-title: "STIsSimple (тип данных geometry) | Документы Microsoft"
+title: "STIsSimple (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает 1, если **geometry** экземпляр является простым, как определено, Open Geospatial Consortium (OGC). Возвращает 0, если **geometry** экземпляр не является простым.
+Возвращает 1, если экземпляр **geometry** является простым по определению консорциума OGC. Возвращает значение 0, если экземпляр **geometry** не является простым.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **бит**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Возвращаемый тип CLR: **SqlBoolean**  
+ Тип возвращаемых данных CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Чтобы быть простым, **geometry** экземпляр должен отвечать следующим требованиям:  
+ Чтобы быть простым, экземпляр **geometry** должен отвечать следующим требованиям:  
   
 -   Каждая фигура экземпляра не должна пересекать саму себя, за исключением конечных точек.  
   
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STIsSimple();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

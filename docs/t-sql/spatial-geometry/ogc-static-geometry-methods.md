@@ -1,5 +1,5 @@
 ---
-title: "Статические геометрические методы OGC | Документы Microsoft"
+title: "Статические геометрические методы OGC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [STGeomFromText (тип данных geometry)](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
   
@@ -73,8 +73,8 @@ ms.lasthandoff: 01/25/2018
   
 -   [STGeomCollFromWKB (тип данных geometry)](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
-## <a name="see-also"></a>См. также  
- [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

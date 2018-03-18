@@ -1,5 +1,5 @@
 ---
-title: "@@CONNECTIONS (Transact-SQL) | Документы Microsoft"
+title: "@@CONNECTIONS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;СОЕДИНЕНИЯ (Transact-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Возвращает количество попыток соединения — успешных или неуспешных — с момента запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -48,15 +48,15 @@ ms.lasthandoff: 11/21/2017
 @@CONNECTIONS  
 ```  
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **integer**
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Соединения пользователей бывают разными. Приложения, например, могут открывать несколько соединений с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] незаметно для пользователя.
   
-Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистику, включая попытки соединений, запустите **sp_monitor**.
+Чтобы отобразить отчет, содержащий ряд статистических данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая попытки соединения, выполните процедуру **sp_monitor**.
   
-@@MAX_CONNECTIONS — максимальное число соединений, разрешенных одновременно на сервер. @@CONNECTIONS увеличивается с попытками входа, поэтому @@CONNECTIONS может быть больше, чем @@MAX_CONNECTIONS .
+@@MAX_CONNECTIONS — это максимальное число соединений с сервером, разрешенных одновременно. Значение @@CONNECTIONS увеличивается при каждой попытке входа в систему, поэтому значение @@CONNECTIONS может превышать значение @@MAX_CONNECTIONS.
   
 ## <a name="examples"></a>Примеры  
 Следующий пример возвращает число попыток входа в систему на текущую дату и время.
@@ -75,8 +75,8 @@ Today's Date and Time  Login Attempts
 12/5/2006 10:32:45 AM  211023         
 ```  
   
-## <a name="see-also"></a>См. также:
-[Системные статистические функции &#40;Transact-SQL&#41;#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ВЫБЕРИТЕ @local_variable (Transact-SQL) | Документы Microsoft"
+title: "SELECT @local_variable (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select-localvariable-transact-sql"></a>ВЫБЕРИТЕ @local_variable (Transact-SQL)
+# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Присваивает локальной переменной значение выражения.  
+  Присваивает локальную переменную значению выражения.  
   
- Для назначения переменных рекомендуется использовать [ЗАДАТЬ @local_variable ](../../t-sql/language-elements/set-local-variable-transact-sql.md) вместо SELECT @*local_variable*.  
+ Для присваивания переменных рекомендуется использовать инструкцию [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) вместо SELECT @*local_variable*.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,23 +64,23 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 Составной оператор присваивания:  
   |оператор |действие |   
   |-----|-----|  
-  | = | Выражение, которое следует, назначается переменной. |  
-  | += | Добавьте и назначьте |   
+  | = | Присваивает следующее за ним выражение переменной. |  
+  | += | Сложение и присваивание |   
   | -= | Вычитание и присваивание |  
-  | \*= | Умножение и назначение |  
+  | \*= | Умножение и присваивание |  
   | /= | Деление и присваивание |  
-  | %= | Остаток от деления и назначение |  
-  | &= | Побитовое и и назначение |  
-  | ^= | Побитовое исключающее или и присвоить |  
-  | \|= | Побитовое или и присвоить |  
+  | %= | Остаток от деления и присваивание |  
+  | &= | Выполнение побитовой операции AND и присваивание |  
+  | ^= | Выполнение побитовой операции XOR и присваивание |  
+  | \|= | Выполнение побитовой операции OR и присваивание |  
   
  *expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). В их число также входит скалярный вложенный запрос.  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). В их число также входит скалярный вложенный запрос.  
   
 ## <a name="remarks"></a>Remarks  
- SELECT @*local_variable* обычно используется для возвращения одного значения в переменной. Тем не менее, когда *выражение* имя столбца, могут возвращать несколько значений. Если инструкция SELECT возвращает более одного значения, переменной присваивается последнее возвращенное значение.  
+ SELECT @*local_variable* обычно используется для возвращения одиночного значения в переменную. Однако, если аргумент *expression* является именем столбца, может вернуться несколько значений. Если инструкция SELECT возвращает более одного значения, переменной присваивается последнее возвращенное значение.  
   
- Если инструкция SELECT не возвращает ни одной строки, переменная сохраняет свое текущее значение. Если *выражение* является скалярным вложенным запросом, возвращает значение не переменная имеет значение NULL.  
+ Если инструкция SELECT не возвращает ни одной строки, переменная сохраняет свое текущее значение. Если аргумент *expression* является скалярным вложенным запросом, который не возвращает значений, переменная принимает значение NULL.  
   
  Одна инструкция SELECT может инициализировать несколько локальных переменных.  
   
@@ -89,7 +89,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Инструкции SELECT @local_variable для возвращения одиночного значения  
+### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Используйте инструкцию SELECT @local_variable для возвращения одиночного значения  
  В следующем примере переменной `@var1` присвоено значение `Generic Name`. Запрос к таблице `Store` не возвращает строк, потому что в ней отсутствует значение, указанное для `CustomerID`. Переменная сохраняет значение `Generic Name`.  
   
 ```sql  
@@ -111,7 +111,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>Б. Инструкции SELECT @local_variable возвращает значение null  
+### <a name="b-use-select-localvariable-to-return-null"></a>Б. Используйте инструкцию SELECT @local_variable для возвращения значения NULL  
  В следующем примере вложенный запрос используется для присвоения значения `@var1`. Так как значение, заданное для `CustomerID`, не существует, вложенный запрос не возвращает значение и переменная принимает значение `NULL`.  
   
 ```sql  
@@ -133,10 +133,10 @@ Company Name
 NULL  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
   
   

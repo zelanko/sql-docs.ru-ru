@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC INDEXDEFRAG (Transact-SQL) | Документы Microsoft"
+title: "DBCC INDEXDEFRAG (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 Дефрагментирует индексы указанной таблицы или представления.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Используйте [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого инструкцию [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>Аргументы  
  *database_name* | *database_id* | 0  
- База данных, содержащая индекс для дефрагментации. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
+ База данных, содержащая индекс для дефрагментации. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  Таблица или представление, содержащие индекс для дефрагментации. Имена таблиц и представлений должны соответствовать требованиям, предъявляемым к идентификаторам.  
@@ -91,7 +91,7 @@ DBCC INDEXDEFRAG
   
 В отличие от инструкции DBCC DBREINDEX и операций создания индексов вообще, инструкция DBCC INDEXDEFRAG выполняется в режиме в сети. Она не удерживает блокировки длительное время. Таким образом, она не блокирует выполнение запросов или обновлений. Так как время дефрагментации зависит от степени фрагментации, сравнительно нефрагментированный индекс иногда можно дефрагментировать быстрее, чем создать новый индекс. На дефрагментацию сильно фрагментированного индекса может уйти гораздо больше времени, чем на его создание заново.
   
-Процесс дефрагментации всегда полностью регистрируется в журнале независимо от модели восстановления баз данных. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). Дефрагментация сильно фрагментированного индекса может привести к записи большего объема данных, чем создание индекса с полной регистрацией в журнале. Однако дефрагментация выполняется как ряд кратких транзакций, поэтому она не требует большого журнала, если часто создаются резервные копии журнала или если применяется простая (SIMPLE) модель восстановления.
+Процесс дефрагментации всегда полностью регистрируется в журнале независимо от модели восстановления баз данных. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). Дефрагментация сильно фрагментированного индекса может привести к записи большего объема данных, чем создание индекса с полной регистрацией в журнале. Однако дефрагментация выполняется как ряд кратких транзакций, поэтому она не требует большого журнала, если часто создаются резервные копии журнала или если применяется простая (SIMPLE) модель восстановления.
   
 ## <a name="restrictions"></a>Ограничения  
 Инструкция DBCC INDEXDEFRAG перемещает конечные страницы индекса в произвольном порядке. Таким образом, если содержимое индекса чередуется на диске с содержимым других индексов, выполнение инструкции DBCC INDEXDEFRAG для этого индекса не приведет к расположению всех конечных страниц индекса в последовательном порядке. Чтобы улучшить кластеризацию страниц, создайте индекс заново.
@@ -116,11 +116,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Разрешения  
-Вызывающий объект должен быть владельцем таблицы или быть членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных.
+Вызывающий должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_ddladmin**.
   
 ## <a name="examples"></a>Примеры  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Использование DBCC INDEXDEFRAG для дефрагментации индекса  
-Следующий код дефрагментирует все секции `PK_Product_ProductID` индекса в `Production.Product` в таблицу `AdventureWorks` базы данных.
+Приведенный ниже код дефрагментирует все секции индекса `PK_Product_ProductID` таблицы `Production.Product` в базе данных `AdventureWorks`.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
@@ -234,9 +234,9 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)

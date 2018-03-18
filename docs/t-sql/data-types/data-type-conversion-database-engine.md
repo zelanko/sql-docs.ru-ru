@@ -1,5 +1,5 @@
 ---
-title: "Тип данных преобразования (компонент Database Engine) | Документы Microsoft"
+title: "Преобразование типов данных (ядро СУБД) | Документы Майкрософт"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -39,20 +39,20 @@ ms.lasthandoff: 11/21/2017
 
 Преобразование типов данных происходит в следующих случаях:
 -   При перемещении, сравнении или объединении данных одного объекта с данными другого объекта эти данные могут преобразовываться из одного типа в другой.  
--   Когда данные из [!INCLUDE[tsql](../../includes/tsql-md.md)] столбец результатов, код возврата или выходных параметров перемещается в переменной программы, данные должны быть преобразованы из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системного типа данных в тип данных переменной.  
+-   При передаче в переменную программы данных из результирующего столбца [!INCLUDE[tsql](../../includes/tsql-md.md)], кода возврата или параметра вывода эти данные должны преобразовываться из системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в тип данных переменной.  
   
 При взаимных преобразованиях переменных приложения и столбцов результирующих наборов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кодов возврата, параметров и маркеров параметров поддерживаемые преобразования типов данных определяются API базы данных.
   
-## <a name="implicit-and-explicit-conversion"></a>Явные и неявные преобразования
+## <a name="implicit-and-explicit-conversion"></a>Явное и неявное преобразование
 Преобразование типов данных бывает явным и неявным.
   
-Неявное преобразование скрыто от пользователя. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует данные из одного типа в другой. Например, если **smallint** сравнивается с **int**, **smallint** неявно преобразуется в **int** до сравнения продолжается.
+Неявное преобразование скрыто от пользователя. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует данные из одного типа в другой. Например, если **smallint** сравнивается с **int**, то перед сравнением **smallint** неявно преобразуется в **int**.
   
-**GETDATE()** неявно преобразуется в стиль даты 0. **SYSDATETIME()** неявно преобразуется в стиль даты 21.
+**GETDATE()** выполняет неявное преобразование в стиль даты 0. **SYSDATETIME()** выполняет неявное преобразование в стиль даты 21.
   
 Явное преобразование выполняется с помощью функций CAST и CONVERT.
   
-[CAST и CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) преобразуют значение (локальную переменную, столбец или другое выражение) из одного типа в другой. Например, приведенная ниже функция `CAST` преобразует числовое значение `$157.27` в строку символов `'157.27'`:
+Функции [CAST и CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) преобразуют значение (локальную переменную, столбец или выражение) из одного типа данных в другой. Например, приведенная ниже функция `CAST` преобразует числовое значение `$157.27` в строку символов `'157.27'`:
   
 ```sql
 CAST ( $157.27 AS VARCHAR(10) )  
@@ -60,30 +60,30 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 Если программный код [!INCLUDE[tsql](../../includes/tsql-md.md)] должен соответствовать требованиям ISO, используйте функцию CAST вместо CONVERT. Использование функции CONVERT вместо CAST дает преимущество в дополнительной функциональности.
   
-На следующей иллюстрации показаны все явные и неявные преобразования типов данных, допустимые для системных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. К ним относятся **xml**, **bigint**, и **sql_variant**. Нет неявного преобразования на назначение на основе **sql_variant** тип данных, но существует неявное преобразование в **sql_variant**.
+На следующей иллюстрации показаны все явные и неявные преобразования типов данных, допустимые для системных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это могут быть типы **xml**, **bigint** и **sql_variant**. При присваивании неявного преобразования из типа **sql_variant** не происходит, но неявное преобразование в тип **sql_variant** производится.
   
-![Таблица преобразования типов данных](../../t-sql/data-types/media/lrdatahd.png "таблица преобразования типов данных")
+![Таблица преобразования типов данных](../../t-sql/data-types/media/lrdatahd.png "Таблица преобразования типов данных")
   
 ## <a name="data-type-conversion-behaviors"></a>Поведение преобразования типов данных
-Некоторые виды явного и неявного преобразования типов данных не поддерживаются при преобразовании типа данных одного объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в тип данных другого объекта. Например **nchar** значение не может быть преобразовано **изображения** значение. **Nchar** можно преобразовать в **двоичных** с помощью явного преобразования к неявному преобразованию к **двоичных** не поддерживается. Тем не менее **nchar** могут явно или неявно преобразовываться в **nvarchar**.
+Некоторые виды явного и неявного преобразования типов данных не поддерживаются при преобразовании типа данных одного объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в тип данных другого объекта. Например, значение типа **nchar** нельзя преобразовать в значение типа **image**. Тип данных **nchar** можно преобразовать в тип данных **binary** только явно. Неявное преобразование в **binary** не поддерживается. Однако тип данных **nchar** можно преобразовать в тип **nvarchar** как явно, так и неявно.
   
 В следующих подразделах приведено описание процесса преобразования следующих типов данных:
   
  - [binary и varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
  - [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
- - [Money и smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
- - [бит &#40; Transact-SQL &#41;](../../t-sql/data-types/bit-transact-sql.md)  
+ - [Типы money и smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ - [bit (Transact-SQL)](../../t-sql/data-types/bit-transact-sql.md)  
  - [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
- - [smalldatetime &#40; Transact-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+ - [smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)  
  - [char и varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
- - [Decimal и numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+ - [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
  - [sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)  
  - [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
- - [&#40; float и real Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
- - [раз &#40; Transact-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)  
- - [DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
- - [int, bigint, smallint и tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
- - [uniqueidentifier &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
+ - [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)  
+ - [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)  
+ - [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)  
+ - [int, bigint, smallint и tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+ - [uniqueidentifier (Transact-SQL)](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
   
 ###  <a name="converting-data-types-by-using-ole-automation-stored-procedures"></a>Преобразование типов данных с помощью хранимых процедур OLE-автоматизации  
 Поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует типы данных [!INCLUDE[tsql](../../includes/tsql-md.md)], а OLE-автоматизация — типы данных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], хранимым процедурам OLE-автоматизации приходится преобразовывать данные, которыми они обмениваются.
@@ -92,38 +92,38 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 |Тип данных SQL Server|Тип данных Visual Basic|  
 |--------------------------|----------------------------|  
-|**char**, **varchar**, **текст**, **nvarchar**, **ntext**|**Строковые значения**|  
-|**десятичное число**, **числовой**|**Строковые значения**|  
+|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
+|**decimal**, **numeric**|**String**|  
 |**bit**|**Логическое значение**|  
-|**двоичный**, **varbinary**, **изображения**|Одномерный массив **Byte()** массива|  
+|**binary**, **varbinary**, **image**|Одномерный массив **Byte()**|  
 |**int**|**Long**|  
-|**smallint**|**Целочисленный**|  
-|**tinyint**|**Байт**|  
+|**smallint**|**Integer**|  
+|**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Один**|  
 |**money**, **smallmoney**|**Измерение валют**|  
-|**DateTime**, **smalldatetime**|**Дата**|  
-|Все значения NULL|**Variant** присваивается значение Null|  
+|**datetime**, **smalldatetime**|**Дата**|  
+|Все значения NULL|**Variant** со значением NULL|  
   
-Все одиночные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значения преобразуются в один [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] значение, за исключением элемента **двоичных**, **varbinary**, и **изображения** значения. Эти значения преобразуются в одномерные **Byte()** массива в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Этот массив имеет диапазон от **байт (**0, чтобы *длина*1**)** где *длина* число байтов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **двоичный**, **varbinary**, или **изображения** значения.
+Все одиночные значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в одиночные значения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], за исключением **binary**, **varbinary** и **image**. В [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] эти значения преобразуются в одномерные массивы **Byte()**. Этот массив имеет диапазон **Byte(**от 0 до *length*1**)**, где *length* — число байтов в значениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** или **image**.
   
 Ниже приведена таблица преобразования типов данных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] в типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 |Тип данных Visual Basic|Тип данных SQL Server|  
 |----------------------------|--------------------------|  
-|**Длинное**, **целое**, **байтов**, **логическое**, **объекта**|**int**|  
-|**Двойные**, **один**|**float**|  
+|**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
+|**Double**, **Single**|**float**|  
 |**Измерение валют**|**money**|  
 |**Дата**|**datetime**|  
-|**Строка** длиной 4000 символов или меньше|**varchar**/**nvarchar**|  
-|**Строка** с более чем 4 000 символов|**текст**/**ntext**|  
-|Одномерный массив **Byte()** массива размером 8 000 байт или меньше|**varbinary**|  
-|Одномерный массив **Byte()** массива размером более 8 000 байт.|**image**|  
+|**String** длиной 4000 символов или меньше|**varchar**/**nvarchar**|  
+|**String** длиной более 4000 символов|**text**/**ntext**|  
+|Одномерный массив **Byte()** размером 8000 байт или меньше|**varbinary**|  
+|Одномерный массив **Byte()** размером более 8000 байт|**image**|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Хранимые процедуры OLE-автоматизации (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

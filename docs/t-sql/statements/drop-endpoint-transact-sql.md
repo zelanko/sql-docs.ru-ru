@@ -1,5 +1,5 @@
 ---
-title: "DROP ENDPOINT (Transact-SQL) | Документы Microsoft"
+title: "DROP ENDPOINT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DROP ENDPOINT endPointName
  Инструкции ENDPOINT DDL внутри пользовательской транзакции выполняться не могут.  
   
 ## <a name="permissions"></a>Разрешения  
- Пользователь должен быть членом **sysadmin** предопределенной роли сервера, владельцем конечной точки, или было предоставлено разрешение CONTROL на конечную точку.  
+ Пользователь должен быть элементом предопределенной роли сервера **sysadmin** либо владельцем конечной точки, или ему должно быть предоставлено разрешение CONTROL на конечную точку.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется созданная ранее конечная точка с именем `sql_endpoint`.  
@@ -66,7 +66,7 @@ DROP ENDPOINT endPointName
 DROP ENDPOINT sql_endpoint;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

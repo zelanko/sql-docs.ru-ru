@@ -1,5 +1,5 @@
 ---
-title: "QUOTENAME (Transact-SQL) | Документы Microsoft"
+title: "QUOTENAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
   
 ## <a name="arguments"></a>Аргументы  
  '*character_string*'  
- Строка символьных данных в Юникоде. *character_string* — **sysname** и не должна превышать 128 символов. Если ввести более 128 символов, будет возвращено значение NULL.  
+ Строка символьных данных в Юникоде. Аргумент *character_string* имеет тип **sysname**, а его длина ограничена 128 символами. Если ввести более 128 символов, будет возвращено значение NULL.  
   
- "*значение аргумента quote_character*"  
- Односимвольная строка, используемая в качестве разделителя. Может быть одинарной кавычки ( **"** ), левую или правую скобку ( **[]** ), или двойной кавычкой ( **»** ). Если *значение аргумента quote_character* не указан, используются скобки.  
+ '*quote_character*'  
+ Односимвольная строка, используемая в качестве разделителя. Может быть одинарной кавычкой (**'**), открывающей или закрывающей квадратной скобкой (**[]**) или двойной кавычкой (**"**). Если значение аргумента *quote_character* не задано, то используются скобки.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(258)**  
@@ -75,7 +75,7 @@ SELECT QUOTENAME('abc[]def');
   
  Обратите внимание, что закрывающая квадратная скобка в строке `abc[]def` удвоена, чтобы указать на escape-символ.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере из строки `abc def` и символов `[` и `]` создается правильный идентификатор с разделителем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -90,18 +90,18 @@ SELECT QUOTENAME('abc def');
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [PARSENAME &#40; Transact-SQL &#41;](../../t-sql/functions/parsename-transact-sql.md)  
- [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
- [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [PARSENAME (Transact-SQL)](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

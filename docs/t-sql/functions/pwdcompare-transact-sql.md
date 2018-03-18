@@ -1,5 +1,5 @@
 ---
-title: "PWDCOMPARE (Transact-SQL) | Документы Microsoft"
+title: "PWDCOMPARE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ PWDCOMPARE ( 'clear_text_password'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *clear_text_password* **"**  
- Незашифрованный пароль. *clear_text_password* — **sysname** (**nvarchar(128)**).  
+ **'** *clear_text_password* **'**  
+ Незашифрованный пароль. Аргумент *clear_text_password* имеет тип **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Хэш шифрования пароля. *password_hash* — **varbinary(128)**.  
+ Хэш шифрования пароля. Аргумент *password_hash* имеет тип **varbinary(128)**.  
   
- *Версия*  
- Устаревший параметр, который можно присвоить значение 1, если *password_hash* представляет значение для имени входа из более ранней, чем [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] которое было перенесено в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, но никогда не преобразуются в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] системы. *версия* — **int**.  
+ *version*  
+ Устаревший параметр, который может быть установлен в значение 1, если *password_hash* представляет значение для имени входа из версии ранее [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], которое было перенесено в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более позднюю версию, но так и не было преобразовано в систему [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Аргумент *version* имеет тип **int**.  
   
 > [!CAUTION]  
 >  Этот параметр предназначен для обеспечения обратной совместимости, однако он пропускается, так как теперь большие двоичные объекты хэшей паролей содержат собственные описания версий. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
@@ -65,14 +65,14 @@ PWDCOMPARE ( 'clear_text_password'
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
- Возвращает 1, если хэш *clear_text_password* соответствует *password_hash* параметр и 0, если это не так.  
+ Возвращает значение 1, если хэш параметра *clear_text_password* совпадает со значением параметра *password_hash*, или значение 0 в противном случае.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция PWDCOMPARE — это не угроза устойчивости хэшей паролей, потому что этот же самый тест можно было бы выполнить, если попытаться использовать для входа пароль, заданный как первый параметр.  
   
- **PWDCOMPARE** не может использоваться с паролями пользователей автономной базы данных. Какой-либо эквивалент для автономной базы данных отсутствует.  
+ **PWDCOMPARE** нельзя использовать с паролями пользователей автономных баз данных. Какой-либо эквивалент для автономной базы данных отсутствует.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Функция PWDENCRYPT общедоступна.  
   
  Для просмотра столбца password_hash column представления sys.sql_logins требуется разрешение CONTROL SERVER.  
@@ -96,7 +96,7 @@ WHERE PWDCOMPARE('password', password_hash) = 1 ;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [PWDENCRYPT &#40; Transact-SQL &#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
+ [PWDENCRYPT (Transact-SQL)](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

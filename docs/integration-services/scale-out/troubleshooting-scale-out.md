@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc22e1bac1e2a409061f73131cdfd203c8948fa3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 ### <a name="solution"></a>Решение
 1.  Убедитесь в том, что компонент Scale Out включен.
 
-    В SQL Server Management Studio в обозревателе объектов щелкните правой кнопкой мыши узел **SSISDB** и установите флажок **Масштабирование разрешено**.
+    В SQL Server Management Studio в обозревателе объектов щелкните правой кнопкой мыши узел **SSISDB** и установите флажок **Scale Out разрешен**.
 
     ![Включен ли режим Scale Out](media\isenabled.PNG)
 
@@ -114,7 +114,7 @@ ms.lasthandoff: 01/25/2018
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-Если у учетной записи нет доступа, предоставьте ей соответствующие права с помощью приведенной ниже команды и перезапустите службу рабочей роли Scale Out.
+Если у учетной записи нет доступа, предоставьте ей соответствующие права с помощью приведенной ниже команды и перезапустите рабочую службу Scale Out.
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}

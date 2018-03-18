@@ -1,5 +1,5 @@
 ---
-title: "Команд консоли базы данных | Документы Microsoft"
+title: "Консольные команды базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие команды управления.
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 
 |||  
 |-|-|  

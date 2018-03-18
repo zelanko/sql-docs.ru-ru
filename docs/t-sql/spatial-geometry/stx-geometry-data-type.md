@@ -1,5 +1,5 @@
 ---
-title: "STX (тип данных geometry) | Документы Microsoft"
+title: "STX (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stx-geometry-data-type"></a>STX (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Свойство координаты X **точки**экземпляра.
+Свойство координаты по оси X экземпляра **Point**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Значение этого свойства будет иметь значение null, если **geometry** экземпляр не является точкой.  
+ Это свойство будет иметь значение NULL, если экземпляр **geometry** не является точкой.  
   
- Это свойство предназначено только для чтения.  
+ Это свойство доступно только для чтения.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `Point` и с помощью метода `STX` получается координата экземпляра по оси X.  
@@ -62,9 +62,9 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STX;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STY (тип данных geometry)](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [STSrid &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid (тип данных geometry)](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

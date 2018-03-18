@@ -1,5 +1,5 @@
 ---
-title: "UnionAggregate (тип данных geography) | Документы Microsoft"
+title: "UnionAggregate (тип данных geography) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,21 +45,21 @@ UnionAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Аргументы  
  *geography_operand*  
- — **Geography** столбец таблицы типа, который содержит набор из **geography** объектов для выполнения операции union.  
+ Столбец таблицы типа **geography**, в котором содержится набор объектов **geography**, с которыми выполняется операция объединения.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **geography**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 ## <a name="remarks"></a>Remarks  
- Метод возвращает **null** Если входные данные с различными идентификаторами SRID. В разделе [идентификаторы пространственных ссылок &#40; SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+ Метод возвращает значение **NULL**, если во входных данных содержатся различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Метод игнорирует **null** входных данных.  
+ Метод не обрабатывает входные значения **NULL**.  
   
 > [!NOTE]  
->  Метод возвращает **null** при входе присутствуют только значения **null**.  
+>  Метод возвращает значение **NULL**, если входными являются значения **NULL**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере выполняется `UnionAggregate` на наборе **geography** расположение точек в границах города.  
+ В следующем примере выполняется операция `UnionAggregate` в наборе различных географических точек **geography** в границах города.  
   
  ```
  USE AdventureWorks2012  
@@ -71,7 +71,7 @@ UnionAggregate ( geography_operand )
  GROUP BY City;
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

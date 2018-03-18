@@ -1,5 +1,5 @@
 ---
-title: "РАЗНИЦА (Transact-SQL) | Документы Microsoft"
+title: "DIFFERENCE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- Алфавитно-цифровое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом.  
+ Буквенно-цифровое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
- Возвращаемое целое число является количеством одинаковых символов в значениях SOUNDEX. Возвращаемое значение лежит в диапазоне от 0 до 4:0 указывает weak сходство или его отсутствие, а 4 указывает на сильное сходство или одинаковые значения.  
+## <a name="remarks"></a>Remarks  
+ Возвращаемое целое число является количеством одинаковых символов в значениях SOUNDEX. Диапазон возвращаемых значений: от 0 до 4. Значение 0 указывает на слабое сходство или его отсутствие; значение 4 указывает на сильное сходство или одинаковые значения.  
   
  Функции DIFFERENCE и SOUNDEX учитывают параметры сортировки.  
   
 ## <a name="examples"></a>Примеры  
- В первой части следующего примера сравниваются значения `SOUNDEX` двух очень похожих строк. Для сортировки Latin1_General `DIFFERENCE` возвращает значение `4`. Во второй части следующего примера `SOUNDEX` значения для сравнения двух очень разных строк и параметры сортировки Latin1_General `DIFFERENCE` возвращает значение `0`.  
+ В первой части следующего примера сравниваются значения `SOUNDEX` двух очень похожих строк. Для параметров сортировки Latin1_General функция `DIFFERENCE` возвращает значение `4`. Во второй части приведенного ниже примера сравниваются значения `SOUNDEX` двух абсолютно разных строк. Для параметров сортировки Latin1_General функция `DIFFERENCE` возвращает значение `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -85,8 +85,8 @@ B432  G650  0
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция SOUNDEX &#40; Transact-SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [SOUNDEX (Transact-SQL)](../../t-sql/functions/soundex-transact-sql.md)   
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

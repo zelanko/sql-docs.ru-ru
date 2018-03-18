@@ -1,5 +1,5 @@
 ---
-title: "+ (Унарный плюс) (Transact-SQL) | Документы Microsoft"
+title: "+ (унарный плюс) (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>Унарные операторы — положительный результат
+# <a name="unary-operators---positive"></a>Унарные операторы — положительное значение
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает значение числового выражения (унарный оператор). Унарные операторы выполняют операцию только на одном выражении любого типа данных из категории числовых типов данных.   
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) какой-либо один из данных типов в категории числовых типов данных, за исключением **datetime** и **smalldatetime** типов данных.  
+ Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md) любого из типов данных категории числовых типов данных, кроме типов данных **datetime** и **smalldatetime**.  
   
 ## <a name="result-types"></a>Типы результата  
  Возвращает тип данных *numeric_expression*.  
   
 ## <a name="remarks"></a>Remarks  
- Хотя оператор унарного сложения может стоять перед любым числовым выражением, он не выполняет никаких действий со значением, полученным в результате вычисления выражения. В частности, оно не вернет положительное значение, если значение выражения отрицательно. Для получения положительного значения из отрицательного значения выражения, используйте [ABS](../../t-sql/functions/abs-transact-sql.md) функции.  
+ Хотя оператор унарного сложения может стоять перед любым числовым выражением, он не выполняет никаких действий со значением, полученным в результате вычисления выражения. В частности, оно не вернет положительное значение, если значение выражения отрицательно. Для получения положительного значения из отрицательного значения выражения предназначена функция [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -111,10 +111,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [ABS &#40; Transact-SQL &#41;](../../t-sql/functions/abs-transact-sql.md)  
+ [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ABS (Transact-SQL)](../../t-sql/functions/abs-transact-sql.md)  
   
   

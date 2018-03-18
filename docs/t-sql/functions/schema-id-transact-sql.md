@@ -1,5 +1,5 @@
 ---
-title: "SCHEMA_ID (Transact-SQL) | Документы Microsoft"
+title: "SCHEMA_ID (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |Термин|Определение|  
 |----------|----------------|  
-|*schema_name*|Имя схемы. *schema_name* — **sysname**. Если *schema_name* не задан, SCHEMA_ID возвращает идентификатор схемы по умолчанию вызывающего объекта.|  
+|*schema_name*|Имя схемы. Аргумент *schema_name* имеет тип **sysname**. Если аргумент *schema_name* не задан, SCHEMA_ID возвращает идентификатор схемы по умолчанию вызывающего элемента.|  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
- Будет возвращено значение NULL, если *schema_name* не является допустимой схемой.  
+ Возвращает NULL, если *schema_name* не является допустимой схемой.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID возвращает идентификаторы системных и пользовательских схем. Функцию SCHEMA_ID можно вызывать в списке выбора, в предложении WHERE и в любом месте, где разрешается выражение.  
   
 ## <a name="examples"></a>Примеры  
@@ -77,9 +77,9 @@ SELECT SCHEMA_ID('dbo');
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Schema_name &#40; Transact-SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [sys.schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME (Transact-SQL)](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas (Transact-SQL)](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

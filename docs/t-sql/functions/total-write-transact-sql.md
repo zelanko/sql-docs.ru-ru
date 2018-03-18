@@ -1,5 +1,5 @@
 ---
-title: "@@TOTAL_WRITE (Transact-SQL) | Документы Microsoft"
+title: "@@TOTAL_WRITE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
- Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистику, включая чтение и запись действий, запустите **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Для отображения отчета, содержащего несколько статистик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе действий чтения и записи, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается общее количество операций чтения и записи на диске до текущей даты и времени.  
@@ -71,8 +71,8 @@ Reads       Writes      As of
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Системные статистические функции &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_READ &#40;Transact-SQL&#41;](../../t-sql/functions/total-read-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Документы Microsoft"
+title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -50,36 +50,36 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>Аргументы  
  *cert_ID*  
- Идентификатор сертификата, используемого для защиты симметричного ключа. *cert_ID* — **int**.  
+ Идентификатор сертификата, используемого для защиты симметричного ключа. Аргумент *cert_ID* имеет тип **int**.  
   
  *cert_password*  
- Пароль, защищающий закрытый ключ сертификата. Может принимать значение NULL, если закрытый ключ защищен главным ключом базы данных. *cert_password* — **nvarchar**.  
+ Пароль, защищающий закрытый ключ сертификата. Может принимать значение NULL, если закрытый ключ защищен главным ключом базы данных. Аргумент *cert_password* имеет тип **nvarchar**.  
   
- "*зашифрованного текста*"  
- Данные, зашифрованные с помощью ключа. *зашифрованный текст* — **varbinary**.  
+ '*ciphertext*'  
+ Данные, зашифрованные с помощью ключа. Аргумент *ciphertext* имеет тип **varbinary**.  
   
  @ciphertext  
- Переменная типа **varbinary** , содержащий данные, зашифрованные с помощью ключа.  
+ Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью ключа.  
   
  *add_authenticator*  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Должно быть равно значению, переданному функции EncryptByKey при шифровании данных. — **1** Если использовалась структура проверки подлинности. *add_authenticator* — **int**.  
+ Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Значение этого аргумента должно быть равно значению, переданному в функцию EncryptByKey при шифровании данных. Имеет значение **1**, если была использована структура проверки подлинности. Аргумент *add_authenticator* имеет тип **int**.  
   
  @add_authenticator  
  Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Значение этого аргумента должно быть равно значению, переданному функции EncryptByKey при шифровании данных.  
   
- *Средство проверки подлинности*  
- Данные, из которых создается структура проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. *Средство проверки подлинности* — **sysname**.  
+ *authenticator*  
+ Данные, из которых создается структура проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. Аргумент *authenticator* имеет тип **sysname**.  
   
  @authenticator  
  Переменная, содержащая сведения, из которых формируются данные для проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **varbinary** с максимальным размером 8 000 байт.  
+ Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция DecryptByKeyAutoCert объединяет функциональность OPEN SYMMETRIC KEY и DecryptByKey. В отдельной операции она расшифровывает симметричный ключ и использует его для расшифровки текста.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DEFINITION на симметричный ключ и разрешение CONTROL на сертификат.  
   
 ## <a name="examples"></a>Примеры  
@@ -134,8 +134,8 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
   
 ## <a name="see-also"></a>См. также:  
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY (Transact-SQL)](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

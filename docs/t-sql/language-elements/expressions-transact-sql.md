@@ -1,5 +1,5 @@
 ---
-title: "Выражения (Transact-SQL) | Документы Microsoft"
+title: "Выражения (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -89,22 +89,22 @@ ms.lasthandoff: 01/25/2018
   
 |Термин|Определение|  
 |----------|----------------|  
-|*Константа*|Символ, представляющий одно конкретное значение данных. Дополнительные сведения см. в разделе [константы &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
-|*scalar_function*|— Это единица [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, который предоставляет определенную службу и возвращает одиночное значение. *scalar_function* может быть встроенной скалярной функцией, таких как SUM, GETDATE или CAST или скалярные определяемые пользователем функции.|  
-|[ *table_name ***.* * ]|Имя или псевдоним таблицы.|  
+|*constant*|Символ, представляющий одно конкретное значение данных. Дополнительные сведения см. в статье [Константы (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md).|  
+|*scalar_function*|Единица синтаксиса [!INCLUDE[tsql](../../includes/tsql-md.md)], который предоставляет определенную службу и возвращает одиночное значение. *scalar_function* может быть встроенной скалярной функцией, такой как SUM, GETDATE или CAST, либо определяемыми пользователем скалярными функциями.|  
+|[ *table_name***.** ]|Имя или псевдоним таблицы.|  
 |*column*|Имя столбца. Только имя столбца используется в выражении.|  
-|*переменная*|Имя переменной или параметр. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
+|*variable*|Имя переменной или параметр. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** *expression*  **)**|Любое допустимое выражение из определенных в этом разделе. Скобки являются операторами группировки, гарантирующими, что все операторы выражения внутри скобок будут выполнены, прежде чем результирующее выражение будет объединено с другим.|  
-|**(** *scalar_subquery* **)**|Вложенный запрос, возвращающий одиночное значение. Например:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** *scalar_subquery* **)**|Вложенный запрос, возвращающий одиночное значение. Пример:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Унарные операторы можно применять только к выражениям, выполняемым с любыми типами данных из категории числовых типов данных. Оператор, имеющий только один числовой операнд:<br /><br /> + обозначает положительное число.<br /><br /> - обозначает отрицательное число.<br /><br /> ~ обозначает оператор дополнения.|  
-|{ *binary_operator* }|Этот оператор указывает, как объединяются два выражения для получения единого результата. *binary_operator* может быть арифметический оператор, оператор присваивания (=), побитовый оператор, оператор сравнения, логический оператор, оператор объединения строк (+) или унарный оператор. Дополнительные сведения об операторах см. в разделе [операторами &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
-|*ranking_windowed_function*|Любая ранжирующая функция языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения см. в разделе [Ранжирующие функции &#40; Transact-SQL &#41; ](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|Любая агрегатная функция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], содержащая предложение OVER. Дополнительные сведения см. в разделе [предложение OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|{ *binary_operator* }|Этот оператор указывает, как объединяются два выражения для получения единого результата. Аргумент *binary_operator* может быть арифметическим, логическим, битовым или унарным оператором, а также оператором присвоения (=), сравнения или объединения (+). Дополнительные сведения об операторах [ см. в разделе ](../../t-sql/language-elements/operators-transact-sql.md)Операторы (Transact-SQL).|  
+|*ranking_windowed_function*|Любая ранжирующая функция языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения см. в разделе [Ранжирующие функции (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md).|  
+|*aggregate_windowed_function*|Любая агрегатная функция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], содержащая предложение OVER. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>Результаты выражения  
  Для простых выражений, состоящих из одной константы, переменной, скалярной функции или имени столбца, в качестве типа данных, параметров сортировки, числа разрядов, точности и значения выражения используются тип данных, параметры сортировки, число разрядов, точность и значение элемента, на который они ссылаются.  
   
- При объединении двух выражений с помощью сравнения или логических операторов, тип данных результата: логическое значение, а значение является одним из следующих: TRUE, FALSE или UNKNOWN. Дополнительные сведения о логических типах данных см. в разделе [операторы сравнения &#40; Transact-SQL &#41; ](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+ При объединении двух выражений с помощью операторов сравнения или логических операторов результат будет иметь логический тип данных и может принимать одно из следующих значений: TRUE, FALSE или UNKNOWN. Дополнительные сведения о логических типах данных см. в разделе [Операторы сравнения (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
   
  При объединении двух выражений с помощью арифметических, побитовых или строковых операторов тип данных результата определяется используемым оператором.  
   
@@ -121,9 +121,9 @@ ms.lasthandoff: 01/25/2018
   
  Если неявное или явное преобразование не поддерживается, эти два выражения объединить невозможно.  
   
- Параметры сортировки любого выражения, результатом которого является символьная строка, определяются правилами очередности параметров сортировки. Дополнительные сведения см. в разделе [очередность параметров сортировки &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ Параметры сортировки любого выражения, результатом которого является символьная строка, определяются правилами очередности параметров сортировки. Дополнительные сведения см. в статье [Очередность параметров сортировки (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- В языке программирования, таких как C или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], результатом вычисления выражения всегда один результат. Выражения в [!INCLUDE[tsql](../../includes/tsql-md.md)] выберите список подчиняются правилу: выражение вычисляется по отдельности для каждой строки в результирующем наборе. У отдельных выражений могут быть различные значения в каждой строке результирующего набора, но у каждой строки имеется только одно значение для выражения. Например, в следующей инструкции `SELECT` выражениями являются как ссылка на `ProductID`, так и значение `1+2` в списке выбора:  
+ В языке программирования, таком как C или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], вычисление выражения всегда приводит к получению единственного результата. Выражения в списке [!INCLUDE[tsql](../../includes/tsql-md.md)] подчиняются правилу: выражение вычисляется отдельно для каждой строки в результирующем наборе. У отдельных выражений могут быть различные значения в каждой строке результирующего набора, но у каждой строки имеется только одно значение для выражения. Например, в следующей инструкции `SELECT` выражениями являются как ссылка на `ProductID`, так и значение `1+2` в списке выбора:  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,18 +135,18 @@ GO
   
  Выражение `1+2` дает результат `3` в каждой строке результирующего набора. Несмотря на то, что выражение `ProductID` формирует уникальное значение для каждой строки в результирующем наборе, в каждой строке содержится только одно значение для `ProductID`.  
   
-## <a name="see-also"></a>См. также  
- [В ЧАСОВОМ ПОЯСЕ &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [ОБЪЕДИНЕННЫЙ &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Приоритет типов данных &#40; Transact-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Функция NULLIF &#40; Transact-SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [NULLIF (Transact-SQL)](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   

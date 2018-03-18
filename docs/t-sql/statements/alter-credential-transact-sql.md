@@ -1,5 +1,5 @@
 ---
-title: "ALTER CREDENTIAL (Transact-SQL) | Документы Microsoft"
+title: "ALTER CREDENTIAL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,20 +54,20 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Имя, связанное с изменяемыми учетными данными.  
   
- УДОСТОВЕРЕНИЕ **= "***identity_name***"**  
+ IDENTITY **='***identity_name***'**  
  Указывает имя учетной записи для использования при подключении за пределами сервера.  
   
- СЕКРЕТ **= "***секрет***"**  
- Указывает секретный код, необходимый для исходящей проверки подлинности. *секрет* является необязательным.  
+ SECRET **='***secret***'**  
+ Указывает секретный код, необходимый для исходящей проверки подлинности. Аргумент *secret* является необязательным.  
   
-## <a name="remarks"></a>Замечания  
- При изменении учетных данных значения *identity_name* и *секрет* сбрасываются. Если необязательный аргумент SECRET не указан, значение хранимого секретного кода устанавливается в NULL.  
+## <a name="remarks"></a>Remarks  
+ При изменении учетных данных значения *identity_name* и *secret* сбрасываются. Если необязательный аргумент SECRET не указан, значение хранимого секретного кода устанавливается в NULL.  
   
  Секретный код шифруется с использованием главного ключа службы. Если главный ключ службы формируется заново, то секретный код шифруется повторно с использованием нового ключа.  
   
- Сведения об учетных данных отображается в **sys.credentials** представления каталога.  
+ Сведения об учетных данных отображаются в представлении каталога **sys.credentials**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение ALTER ANY CREDENTIAL. Если учетные данные являются системными, требуется разрешение CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
@@ -90,10 +90,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Учетные данные &#40; компонент Database Engine &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL (Transact-SQL)](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

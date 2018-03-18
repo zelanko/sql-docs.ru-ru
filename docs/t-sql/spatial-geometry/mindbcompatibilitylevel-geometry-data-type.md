@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (тип данных geometry) | Документы Microsoft"
+title: "MinDbCompatibilityLevel (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает минимальный уровень совместимости, распознает **geometry** экземпляр типа данных.
+Возвращает минимальный уровень совместимости базы данных, при котором поддерживается экземпляр типа данных **geometry**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип возвращаемого значения: **int**  
+ Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Возвращаемый тип CLR: **int**  
+ Тип возвращаемых данных CLR: **int**  
   
 ## <a name="remarks"></a>Remarks  
  Используйте `MinDbCompatibilityLevel()` для проверки пространственного объекта на совместимость, прежде чем менять уровень совместимости базы данных.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  END
 ``` 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

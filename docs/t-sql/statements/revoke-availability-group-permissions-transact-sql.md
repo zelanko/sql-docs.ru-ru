@@ -1,5 +1,5 @@
 ---
-title: "Разрешения группы доступности REVOKE (Transact-SQL) | Документы Microsoft"
+title: "REVOKE, отмена разрешений группы доступности (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (отзыв) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Отменяет разрешения для группы доступности Always On. 
+  Отменяет разрешения для группы доступности AlwaysOn. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,13 +56,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
- Указывает разрешение, которое может быть отменено для группы доступности. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ *permission*  
+ Указывает разрешение, которое может быть отменено для группы доступности. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- В ГРУППЕ ДОСТУПНОСТИ **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
  Указывает группу доступности, для которой отменяется разрешение. Квалификатор области (**::**) является обязательным.  
   
- {ИЗ | К} \<server_principal > указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, для которого отменяется разрешение.  
+ { FROM | TO } \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], у которого отменяется разрешение.  
   
  *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -91,10 +91,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], от которого участник, выполняющий этот запрос, получает право отмены разрешения.  
   
-## <a name="remarks"></a>Замечания  
- Разрешения в области сервера могут быть отменены только в том случае, если текущая база данных **master**.  
+## <a name="remarks"></a>Remarks  
+ Разрешения на уровне сервера могут быть отозваны, только если текущей базой данных является **master**.  
   
- Сведения о группах доступности можно увидеть в [sys.availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) представления каталога. Сведения о разрешениях сервера можно увидеть в [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) представления каталога и сведения об участниках сервера отобразится в [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
+ Сведения о группах доступности отображаются в представлении каталога [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Сведения о серверных разрешениях отображаются в представлении каталога [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), а сведения о серверах-участниках — в представлении каталога [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Группа доступности защищается на уровне сервера. В следующей таблице указаны конкретные, ограниченные разрешения, которые могут быть отменены для группы доступности, а также более общие разрешения, неявно включающие первую категорию разрешений.  
   
@@ -106,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для группы доступности или разрешения ALTER ANY AVAILABILTIY GROUP для сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>В. Отмена ранее предоставленного разрешения с предложением WITH GRANT OPTION  
- Если разрешение было предоставлено с помощью параметра WITH GRANT OPTION, используйте REVOKE GRANT OPTION FOR... для удаления параметра WITH GRANT OPTION. В следующем примере предоставляется разрешение, из которого затем удаляется параметр WITH GRANT OPTION.  
+ Если разрешение было предоставлено с предложением WITH GRANT OPTION, используйте REVOKE GRANT OPTION FOR… для удаления параметра WITH GRANT OPTION. В следующем примере предоставляется разрешение, из которого затем удаляется параметр WITH GRANT OPTION.  
   
 ```  
 USE master;  
@@ -144,10 +144,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Группа доступности ПРЕДОСТАВЬТЕ разрешения &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
- [ЗАПРЕТ разрешений группы доступности &#40; Transact-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+ [GRANT, предоставление разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [DENY, запрет разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys.availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Представления каталога групп доступности AlwaysOn (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  

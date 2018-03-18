@@ -1,5 +1,5 @@
 ---
-title: "uniqueidentifier (Transact-SQL) | Документы Microsoft"
+title: "uniqueidentifier (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/1/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/02/2018
 16-байтовый идентификатор GUID.
   
 ## <a name="remarks"></a>Remarks  
-Столбец или локальную переменную **uniqueidentifier** типа данных можно инициализировать значение одним из следующих способов:
--   С помощью [NEWID](../../t-sql/functions/newid-transact-sql.md) или [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) функции.    
--   Путем преобразования из строковой константы в форме *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx* - *xxxxxxxxxxxx*, в котором каждый *x* представляет собой шестнадцатеричную цифру в диапазоне 0-9 или a-f. Например, 6F9619FF-8B86-D011-B42D-00C04FC964FF является допустимым **uniqueidentifier** значение.  
+Столбец или локальную переменную типа **uniqueidentifier** можно инициализировать следующими способами:
+-   с помощью функции [NEWID](../../t-sql/functions/newid-transact-sql.md) или [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md);    
+-   путем преобразования из строковой константы в виде *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, где каждому *x* соответствует шестнадцатеричная цифра (0–9 или A–F). Например, 6F9619FF-8B86-D011-B42D-00C04FC964FF является допустимым значением **uniqueidentifier**.  
   
-Операторы сравнения можно использовать с **uniqueidentifier** значения. однако их упорядочивание реализовано без использования поразрядного сравнения. Только операции, которые могут выполняться к **uniqueidentifier** значение — это сравнения (=, <>, \<, >, \<=, > =) и проверки на значение NULL (IS NULL и IS NOT NULL). Никакие другие арифметические операторы не поддерживаются. Все ограничения и свойства столбцов, за исключением ИДЕНТИФИКАТОРОВ, можно использовать на **uniqueidentifier** тип данных.
+Значения **uniqueidentifier** поддерживают операторы сравнения, однако их упорядочивание реализовано без использования поразрядного сравнения. Со значениями **uniqueidentifier** можно выполнять только операции сравнения (=, <>, \<, >, \<=, >=) и проверки значения NULL (IS NULL и IS NOT NULL). Никакие другие арифметические операторы не поддерживаются. К типу данных **uniqueidentifier** можно применять все ограничения и свойства столбцов, за исключением IDENTITY.
   
-Репликация слиянием и репликация транзакций с обновляемыми подписками пользуются **uniqueidentifier** столбцы для обеспечения уникальной идентификации строк в нескольких копиях таблицы.
+При репликации слиянием и репликации транзакций с обновляемыми подписками столбцы **uniqueidentifier** используются для уникальной идентификации строк в нескольких копиях таблицы.
   
 ## <a name="converting-uniqueidentifier-data"></a>Преобразование данных uniqueidentifier  
-**Uniqueidentifier** тип считается преобразовании символьного выражения в символьный тип и поэтому является распространяются правила усечения при преобразовании в символьный тип. Это значит, что при преобразовании символьного выражения в символьный тип данных другой длины значения, слишком длинные для нового типа данных, усекаются. См. подраздел «Примеры» ниже.
+Тип **uniqueidentifier** считается символьным типом при преобразовании из символьного выражения, поэтому на него распространяются правила усечения при преобразовании в символьный тип. Это значит, что при преобразовании символьного выражения в символьный тип данных другой длины значения, слишком длинные для нового типа данных, усекаются. См. подраздел «Примеры» ниже.
   
 ## <a name="limitations-and-restrictions"></a>ограничения
 
-Эти средства и компоненты не поддерживают `uniqueidentifier` тип данных:
+Следующие средства и компоненты не поддерживают тип данных `uniqueidentifier`:
 - PolyBase
-- [Средство загрузке dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) для параллельного хранилища данных
+- [Средство загрузки dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) для Parallel Data Warehouse
 
 ## <a name="examples"></a>Примеры  
 В следующем примере значение `uniqueidentifier` преобразуется в тип данных `char`.
@@ -64,7 +64,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-Следующий пример показывает усечение данных, когда значение является слишком длинным для преобразования в заданный тип данных. Поскольку **uniqueidentifier** ограничен 36 символов, символов, в которых превышает длину, усекаются.
+Следующий пример показывает усечение данных, когда значение является слишком длинным для преобразования в заданный тип данных. Так как тип данных **uniqueidentifier** ограничен 36 символами, все символы, выходящие за пределы этой длины, будут усечены.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -87,8 +87,8 @@ String                                       TruncatedValue
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID (Transact-SQL)](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

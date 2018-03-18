@@ -1,5 +1,5 @@
 ---
-title: "РАСПАКОВКА (Transact-SQL) | Документы Microsoft"
+title: "DECOMPRESS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/30/2015
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="decompress-transact-sql"></a>РАСПАКОВКА (Transact-SQL)
+# <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Распакуйте входное выражение с помощью алгоритма GZIP. Результат сжатия — массив байтов (тип VARBINARY(MAX)).  
+  Распаковывает входное выражение с использованием алгоритма GZIP. Результатом сжатия является массив байтов (типа VARBINARY(MAX)).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,17 +44,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- — **Varbinary (***n***)**, **varbinary(max)**, или **двоичный (** *n***)**. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Выражение типа **varbinary(***n***)**, **varbinary(max)** или **binary(***n***)**. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Возвращает тип данных **varbinary(max)** типа. Входной аргумент сжата с помощью алгоритма ZIP. Пользователь должен явно приведен результат для типа целевого объекта, при необходимости.  
+ Возвращает тип данных **varbinary(max)**. Входной аргумент распаковывается с использованием алгоритма ZIP. Пользователю необходимо явно привести результат к требуемому конечному типу.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. Распаковка данных во время выполнения запроса  
- Приведенный ниже показан способ отображения сжатие данных из таблицы.  
+ В приведенном ниже примере показано, как сжать данные в таблице.  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -62,8 +62,8 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>Б. Отображение сжатых данных, с помощью вычисляемого столбца  
- Следующий пример показывает создание таблицы для хранения распакованных данных:  
+### <a name="b-display-compressed-data-using-computed-column"></a>Б. Отображение сжатых данных с помощью вычисляемого столбца  
+ В приведенном ниже примере показано создание таблицы для хранения распакованных данных.  
   
 ```  
 CREATE TABLE (  
@@ -76,7 +76,7 @@ CREATE TABLE (
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [СЖАТИЕ &#40; Transact-SQL &#41;](../../t-sql/functions/compress-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)  
   
   

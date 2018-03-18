@@ -1,5 +1,5 @@
 ---
-title: "Создание АУДИТА сервера (Transact-SQL) | Документы Microsoft"
+title: "CREATE SERVER AUDIT (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/26/2018
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Создает объект аудита сервера с помощью компонента аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Создает объект аудита сервера с помощью компонента аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,34 +86,34 @@ CREATE SERVER AUDIT audit_name
  FILEPATH ='*os_file_path*'  
  Путь к журналу аудита. Имя файла формируется на основе имени аудита и его идентификатора GUID.  
   
- Параметр MAXSIZE = { *max_size}*  
- Задает максимальный размер, до которого может увеличиваться файл аудита. *Max_size* значение должно быть целым, МБ, ГБ, ТБ и без ограничений. Минимальный размер, который можно указать для *max_size* 2 МБ, максимальное — 2 147 483 647 ТБ. Если указано значение UNLIMITED, увеличение размера файла будет происходить до заполнения диска. (0 также указывает на отсутствие ограничения.) Указав значение менее 2 МБ вызывает ошибка MSG_MAXSIZE_TOO_SMALL. Значение по умолчанию — UNLIMITED.  
+ MAXSIZE = { *max_size }*  
+ Задает максимальный размер, до которого может увеличиваться файл аудита. Значение *max_size* должно быть целым числом, за которым следует MB, GB, TB или UNLIMITED. Минимальный размер для *max_size* составляет 2 МБ, а максимальный — 2 147 483 647 ТБ. Если указано значение UNLIMITED, увеличение размера файла будет происходить до заполнения диска. (0 также указывает на отсутствие ограничения.) Если указано значение менее 2 МБ, возникает ошибка MSG_MAXSIZE_TOO_SMALL. Значение по умолчанию — UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{целое* | НЕОГРАНИЧЕННОЕ}  
- Указывает максимальное количество файлов, хранимых в файловой системе помимо текущего. *MAX_ROLLOVER_FILES* значение должно быть целым числом или без ограничений. Значение по умолчанию — UNLIMITED. Этот параметр проверяется при каждом перезапуске аудита (это может происходить при экземпляр [!INCLUDE[ssDE](../../includes/ssde-md.md)] перезагрузки или при включении аудита и включите снова) или при необходимости создается новый файл, так как достигнуто параметр MAXSIZE. Когда *MAX_ROLLOVER_FILES* вычисляется, если число файлов превышает *MAX_ROLLOVER_FILES* задание, удаляется самый старый файл. В результате, когда параметр *MAX_ROLLOVER_FILES* равно 0, новый файл создается каждый раз *MAX_ROLLOVER_FILES* оценивается параметр. Только один файл будет автоматически удалены при *MAX_ROLLOVER_FILES* параметр оценивается, поэтому если значение *MAX_ROLLOVER_FILES* — уменьшается, количество файлов не сокращаться, если старые файлы, удалить вручную. Максимальное число файлов, которое можно указать, составляет 2 147 483 647.  
+ MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ Указывает максимальное количество файлов, хранимых в файловой системе помимо текущего. Значением *MAX_ROLLOVER_FILES* должно быть целое число или UNLIMITED. Значение по умолчанию — UNLIMITED. Этот параметр проверяется при каждом перезапуске аудита (это может происходить во время перезапуска экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или после выключения и повторного включения аудита) или когда становится необходим новый файл, поскольку достигается предел MAXSIZE. Если при вычислении параметра *MAX_ROLLOVER_FILES* количество файлов превышает значение *MAX_ROLLOVER_FILES*, удаляется самый старый файл. Поэтому если параметр *MAX_ROLLOVER_FILES* имеет значение 0, то каждый раз, когда проверяется значение *MAX_ROLLOVER_FILES*, создается новый файл. При проверке значения *MAX_ROLLOVER_FILES* автоматически удаляется только один файл, поэтому если значение параметра *MAX_ROLLOVER_FILES* уменьшается, то количество файлов не будет сокращаться, если старые файлы не удалить вручную. Максимальное число файлов, которое можно указать, составляет 2 147 483 647.  
   
  MAX_FILES =*integer*  
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Задает максимальное число файлов аудита, которые могут быть созданы. При достижении предела переключение на первый файл не производится. При достижении предела MAX_FILES любое действие, которое вызывает дополнительных событий аудита формироваться, завершается с ошибкой.  
+ Задает максимальное число файлов аудита, которые могут быть созданы. При достижении предела переключение на первый файл не производится. При достижении предела MAX_FILES любое действие, которое вызывает создание дополнительных событий аудита, завершается ошибкой.  
   
  RESERVE_DISK_SPACE = { ON | OFF }  
  Этот параметр заранее размещает на диске файл в соответствии со значением MAXSIZE. Применяется, только если MAXSIZE не имеет значения UNLIMITED. Значение по умолчанию — OFF.  
   
  QUEUE_DELAY =*integer*  
- Определяет задержку в миллисекундах, после которой продолжается выполнение действий аудита. Значение 0 соответствует синхронной доставке. Минимальное значение задаваемой задержки запроса составляет 1000 (1 секунда), и это значение используется по умолчанию. Максимальное значение составляет 2 147 483 647 (2 147 483,647 секунд или 24 дня, 20 часов, 31 минута и 23,647 секунд). Если указано недопустимое значение, возникает ошибка MSG_INVALID_QUEUE_DELAY.  
+ Определяет задержку в миллисекундах, после которой продолжается выполнение действий аудита. Значение 0 соответствует синхронной доставке. Минимальное значение задаваемой задержки запроса составляет 1000 (1 секунда), и это значение используется по умолчанию. Максимальное значение составляет 2 147 483 647 (2 147 483,647 секунд или 24 дня, 20 часов, 31 минута и 23,647 секунд). Если указано недопустимое значение, происходит ошибка MSG_INVALID_QUEUE_DELAY.  
   
- ON_FAILURE = {ПРОДОЛЖИТЬ | ЗАВЕРШЕНИЕ РАБОТЫ | FAIL_OPERATION}  
+ ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION }  
  Указывает, будет ли экземпляр, выполняющий запись в целевой объект, вызывать ошибку, продолжать работу или останавливать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если целевой объект не может выполнить запись в журнал аудита. Значение по умолчанию — CONTINUE.  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работа продолжается. Записи аудита не сохраняются. Аудит продолжает попытки регистрации событий и возобновляется, если причина сбоя будет устранена. Выбрав вариант продолжения можно разрешить непроверенные действия, которые могут нарушать политики безопасности. Используйте этот параметр, когда продолжение операции компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] является более важным, чем сохранение полного аудита.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работа продолжается. Записи аудита не сохраняются. Аудит продолжает попытки регистрации событий и возобновляется после устранения причины сбоя. Выбор варианта "Продолжить" разрешает непроверенные действия, которые могут нарушать политики безопасности. Используйте этот параметр, когда продолжение операции компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] является более важным, чем сохранение полного аудита.  
   
 SHUTDOWN  
-Вызывает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершить работу, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удалось записать данные в цель аудита по любой причине. Пользователь, который запустил `CREATE SERVER AUDIT` оператора должен быть `SHUTDOWN` разрешения внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С завершением работы сохраняется даже в том случае, если `SHUTDOWN` позже отменено разрешение от выполнения входа. Если пользователь не имеет этого разрешения, то инструкция завершается с ошибками и аудита не быть создается. Используйте этот параметр, когда сбой аудита может нанести ущерб безопасности или целостности системы. Дополнительные сведения см. в разделе [завершение работы](../../t-sql/language-elements/shutdown-transact-sql.md).  
+Приводит к принудительному завершению работы экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается записать данные в целевой объект аудита по любой причине. Имя входа, выполняющее инструкцию `CREATE SERVER AUDIT`, должно иметь разрешение `SHUTDOWN` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поведение завершения работы сохраняется даже в том случае, если имя входа, выполняющее инструкцию, позднее отменяет разрешение `SHUTDOWN`. Если у пользователя нет этого разрешения, выполнение инструкции завершится ошибкой и аудит не будет создан. Используйте этот параметр, когда сбой аудита может нанести ущерб безопасности или целостности системы. Дополнительные сведения см. в разделе [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md).  
   
  FAIL_OPERATION  
- Действия с базой данных завершаются ошибкой, если они вызывают события аудита. Действия, которые не вызывают события аудита, можно продолжить, но могут быть отсутствуют события аудита. Аудит продолжает попытки регистрации событий и возобновляется, если причина сбоя будет устранена. Используйте этот параметр, если обеспечение полного аудита более важно, чем полный доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Действия с базой данных завершаются ошибкой, если они вызывают события аудита. Действия, которые не вызывают события аудита, можно продолжить, но события аудита возникать не будут. Аудит продолжает попытки регистрации событий и возобновляется после устранения причины сбоя. Используйте этот параметр, если обеспечение полного аудита более важно, чем полный доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
  AUDIT_GUID =*uniqueidentifier*  
@@ -127,10 +127,10 @@ SHUTDOWN
  event_field_name  
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Имя поля события, которое идентифицирует источник предиката. Поля аудита описаны в [sys.fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Все поля могут быть отфильтрованы, за исключением `file_name`, `audit_file_offset`, и `event_time`.  
+ Имя поля события, которое идентифицирует источник предиката. Поля аудита описаны в разделе [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Фильтровать можно все поля, за исключением `file_name`, `audit_file_offset` и `event_time`.  
 
 > [!NOTE]  
->  Хотя `action_id` и `class_type` поля имеют тип **varchar** в sys.fn_get_audit_file, их можно использовать только с номерами подключенными источник предикатов для фильтрации. Чтобы получить список значений для использования с `class_type`, выполните следующий запрос:  
+>  Хотя поля `action_id` и `class_type` имеют тип **varchar** в sys.fn_get_audit_file, их можно использовать только с числами, когда они служат источником предикатов для фильтрации. Чтобы получить список значений для использования с `class_type`, выполните следующий запрос:  
 > ```sql
 > SELECT spt.[name], spt.[number]
 > FROM   [master].[dbo].[spt_values] spt
@@ -142,7 +142,7 @@ SHUTDOWN
  number  
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- — Включая любого числового типа **десятичное**. Ограничения: недостаток доступной физической памяти или слишком большое число, которое невозможно представить 64-разрядным целым.  
+ Любой числовой тип, включая **decimal**. Ограничения: недостаток доступной физической памяти или слишком большое число, которое невозможно представить 64-разрядным целым.  
   
  ' string '  
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -179,7 +179,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ###  <a name="ExampleWhere"></a> В. Создание аудита сервера, содержащего предложение WHERE  
- В следующем примере создается база данных, схема и две таблицы. Таблица с именем `DataSchema.SensitiveData` содержит конфиденциальные данные и доступ к таблице должны записываться в аудите. Таблица с именем `DataSchema.GeneralData` не содержит конфиденциальных данных. Спецификация аудита базы данных осуществляет аудит доступа ко всем объектам в схеме `DataSchema`. Аудит сервера создается с предложением WHERE, которое ограничивает аудит сервера таблицей `SensitiveData`. Аудит сервера предполагает аудита папка существует в `C:\SQLAudit`.  
+ В следующем примере создается база данных, схема и две таблицы. Таблица с именем `DataSchema.SensitiveData` содержит конфиденциальные данные, и доступ к ней должен регистрироваться в аудите. Таблица с именем `DataSchema.GeneralData` не содержит конфиденциальных данных. Спецификация аудита базы данных осуществляет аудит доступа ко всем объектам в схеме `DataSchema`. Аудит сервера создается с предложением WHERE, которое ограничивает аудит сервера таблицей `SensitiveData`. Аудит сервера предполагает наличие папки аудита в `C:\SQLAudit`.  
   
 ```sql  
 CREATE DATABASE TestDB;  
@@ -218,26 +218,26 @@ SELECT * FROM fn_get_audit_file('C:\SQLAudit\AuditDataAccess_*.sqlaudit',default
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [Создание СПЕЦИФИКАЦИИ АУДИТА сервера &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Создание аудита сервера и спецификации аудита сервера](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

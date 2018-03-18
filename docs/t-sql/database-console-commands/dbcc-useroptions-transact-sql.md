@@ -1,5 +1,5 @@
 ---
-title: "Инструкция DBCC USEROPTIONS (Transact-SQL) | Документы Microsoft"
+title: "DBCC USEROPTIONS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -90,7 +90,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC USEROPTIONS;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)

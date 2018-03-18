@@ -1,5 +1,5 @@
 ---
-title: "DROP пользователя (Transact-SQL) | Документы Microsoft"
+title: "DROP USER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -58,15 +58,15 @@ DROP USER user_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
- **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Условно удаляет пользователя только в том случае, если он уже существует.  
+ Условное удаление пользователя только в том случае, если он уже существует.  
   
- *имя_пользователя*  
+ *user_name*  
  Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Пользователи, которые владеют защищаемыми объектами, не могут быть удалены из базы данных. Перед удалением пользователя, который владеет защищаемым объектом, необходимо удалить или сменить владельца защищаемого объекта.  
   
  Пользователя «Гость» нельзя удалить, однако его можно отключить, отменив разрешение CONNECT путем выполнения инструкции REVOKE CONNECT FROM GUEST в любой базе данных, кроме master или tempdb.  
@@ -74,7 +74,7 @@ DROP USER user_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY USER для базы данных.  
   
 ## <a name="examples"></a>Примеры  

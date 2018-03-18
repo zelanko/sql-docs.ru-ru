@@ -1,5 +1,5 @@
 ---
-title: "DROP INDEX (Transact-SQL) | Документы Microsoft"
+title: "DROP INDEX (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/21/2017
 
   Удаляет один или несколько реляционных, пространственных, фильтруемых или XML-индексов из текущей базы данных. Можно удалить кластеризованный индекс и переместить полученную в результате таблицу в другую файловую группу или схему секционирования в одной транзакции, указав параметр MOVE TO.  
   
- Инструкция DROP INDEX неприменима к индексам, созданным при указании ограничений параметров PRIMARY KEY и UNIQUE. Для удаления ограничения и соответствующего индекса используется [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) с предложением DROP CONSTRAINT.  
+ Инструкция DROP INDEX неприменима к индексам, созданным при указании ограничений параметров PRIMARY KEY и UNIQUE. Для удаления ограничения и соответствующего индекса используется инструкция [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) с предложением DROP CONSTRAINT.  
   
 > [!IMPORTANT]  
->  Синтаксис, определяемый в `<drop_backward_compatible_index>` будет удалена в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого синтаксиса в новых разработках и учитывайте необходимость изменения в будущем приложений, использующих эти функции сейчас. Используйте синтаксис, описанный в `<drop_relational_or_xml_index>`. XML-индексы нельзя удалить с использованием обратно совместимого синтаксиса.  
+>  Синтаксис, определяемый в `<drop_backward_compatible_index>`, не будет поддерживаться в будущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого синтаксиса в новых разработках и учитывайте необходимость изменения в будущем приложений, использующих эти функции сейчас. Используйте синтаксис, описанный в `<drop_relational_or_xml_index>`. XML-индексы нельзя удалить с использованием обратно совместимого синтаксиса.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -119,10 +119,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
+ *IF EXISTS*  
  **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляет индекс только в том случае, если он уже существует.  
+ Условное удаление индекса только в том случае, если он уже существует.  
   
  *index_name*  
  Имя индекса, который необходимо удалить.  
@@ -133,27 +133,27 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *schema_name*  
  Имя схемы, которой принадлежит таблица или представление.  
   
- *представления table_or_view_name*  
+ *table_or_view_name*  
  Имя таблицы или представления, связанного с индексом. Пространственные индексы поддерживаются только для таблиц.  
   
- Чтобы отобразить отчет по индексам объекта, используйте [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.  
+ Чтобы отобразить отчет по индексам объекта, следует воспользоваться представлением каталога [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  База данных SQL Windows Azure поддерживает формат трехкомпонентного имени database_name.[schema_name].object_name, если database_name — это текущая база данных или database_name — это tempdb и object_name начинается с символа «#».  
   
- \<drop_clustered_index_option >  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ \<drop_clustered_index_option>  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Управляет параметрами кластеризованного индекса. Эти параметры неприменимы к другим типам индексов.  
   
  MAXDOP = *max_degree_of_parallelism*  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (уровнями производительности P2 и P3 только).  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (уровни производительности P2 и P3).  
   
- Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+ Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]  
 >  Параметр MAXDOP нельзя использовать для пространственных или XML-индексов.  
   
- *max_degree_of_parallelism* может быть:  
+ Параметр *max_degree_of_parallelism* может иметь одно из следующих значений:  
   
  1  
  Подавляет формирование параллельных планов.  
@@ -170,7 +170,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 >  Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Определяет, будут ли базовые таблицы и связанные индексы доступны для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF.  
   
@@ -185,17 +185,17 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ПЕРЕМЕСТИТЬ в { *partition_scheme_name***(***column_name***)** | *имя_файловой_группы*  |  **»**по умолчанию**»**  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]поддерживает «default» в качестве имени файловой группы.  
+ MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
+ **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] поддерживает "default" в качестве имени файловой группы.  
   
  Определяет размещение, куда будут перемещаться строки данных, находящиеся на конечном уровне кластеризованного индекса. Данные перемещаются в новое расположение со структурой типа куча. В качестве нового расположения можно указать файловую группу или схему секционирования, но они должны уже существовать. Параметр MOVE TO недопустим для индексированных представлений и некластеризованных индексов. Если ни схема секционирования, ни файловая группа не указаны, результирующая таблица помещается в схему секционирования или файловую группу, которая определена для кластеризованного индекса.  
   
- Если кластеризованный индекс удаляется с помощью параметра MOVE TO, то все некластеризованные индексы базовых таблиц создаются заново, но остаются в исходных файловых группах или схемах секционирования. Если базовая таблица перемещается в другую файловую группу или схему секционирования, некластеризованные индексы не перемещаются для совпадения с новым расположением базовой таблицы (кучи). Поэтому некластеризованные индексы могут потерять выравнивание с кучей, даже если ранее они были выровнены с кластеризованным индексом. Дополнительные сведения о выравнивании секционированного индекса см. в разделе [секционированных таблиц и индексов](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Если кластеризованный индекс удаляется с помощью параметра MOVE TO, то все некластеризованные индексы базовых таблиц создаются заново, но остаются в исходных файловых группах или схемах секционирования. Если базовая таблица перемещается в другую файловую группу или схему секционирования, некластеризованные индексы не перемещаются для совпадения с новым расположением базовой таблицы (кучи). Поэтому некластеризованные индексы могут потерять выравнивание с кучей, даже если ранее они были выровнены с кластеризованным индексом. Дополнительные сведения о выравнивании секционированных индексов см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  *partition_scheme_name* **(** *column_name* **)**  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Указывает схему секционирования, в которой будет размещена результирующая таблица. Схема секционирования должна уже были созданы с помощью инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Если размещение не указано и таблица секционирована, таблица включается в ту же схему секционирования, где размещен существующий кластеризованный индекс.  
+ Указывает схему секционирования, в которой будет размещена результирующая таблица. Схема секционирования должна быть создана заранее выполнением инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Если размещение не указано и таблица секционирована, таблица включается в ту же схему секционирования, где размещен существующий кластеризованный индекс.  
   
  Имя столбца в схеме не обязательно должно соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы.  
   
@@ -204,56 +204,56 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Указывает файловую группу, в которую будет помещена результирующая таблица. Если размещение не указано и таблица не секционирована, тогда результирующая таблица включается в ту файловую группу, где размещен существующий кластеризованный индекс. Файловая группа должна существовать.  
   
- **«**по умолчанию**»**  
+ **"**default**"**  
  Указывает размещение по умолчанию для результирующей таблицы.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, например: MOVE TO **»**по умолчанию**»** или MOVE TO **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"**default**"** или MOVE TO **[**default**]**. Если указывается параметр **"**default**"**, то параметр QUOTED_IDENTIFIER для текущего сеанса должен иметь значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **»**по умолчанию**»** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Определяет папку, в которую будет перемещаться таблица FILESTREAM, находящаяся на конечном уровне кластеризованного индекса. Данные перемещаются в новое расположение со структурой типа куча. В качестве нового расположения можно указать файловую группу или схему секционирования, но они должны уже существовать. Параметр FILESTREAM ON недопустим для индексированных представлений или некластеризованных индексов. Если не указана схема секционирования, то данные будут размещены в той же схеме секционирования или файловой группе, которая была определена для кластеризованного индекса.  
   
  *partition_scheme_name*  
- Указывает схему секционирования для данных FILESTREAM. Схема секционирования должна уже были созданы с помощью инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Если размещение не указано и таблица секционирована, таблица включается в ту же схему секционирования, где размещен существующий кластеризованный индекс.  
+ Указывает схему секционирования для данных FILESTREAM. Схема секционирования должна быть создана заранее выполнением инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Если размещение не указано и таблица секционирована, таблица включается в ту же схему секционирования, где размещен существующий кластеризованный индекс.  
   
  При указании схемы секционирования для инструкции MOVE TO необходимо использовать ту же схему секционирования, что и для инструкции FILESTREAM ON.  
   
  *filestream_filegroup_name*  
  Указывает файловую группу FILESTREAM для данных FILESTREAM. Если расположение не указано, а таблица не секционирована, данные включаются в файловую группу FILESTREAM по умолчанию.  
   
- **«**по умолчанию**»**  
+ **"**default**"**  
  Указывает расположение по умолчанию для данных FILESTREAM.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, например: MOVE TO **»**по умолчанию**»** или MOVE TO **[**по умолчанию**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"**default**"** или MOVE TO **[**default**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При удалении некластеризованного индекса его определение удаляется из метаданных, а страницы данных сбалансированного дерева индекса удаляются из файлов базы данных. При удалении кластеризованного индекса определение индекса удаляется из метаданных, а строки данных, которые хранились на конечном уровне кластеризованного индекса, сохраняются в результирующей неупорядоченной таблице — куче. Все пространство, ранее занимаемое индексом, освобождается. Оно может быть впоследствии использовано любым объектом базы данных.  
   
  Индекс невозможно удалить, если файловая группа, в которой он размещен, находится в режиме вне сети или доступна только для чтения.  
   
  Если удален кластеризованный индекс индексированного представления, то все некластеризованные индексы и автоматически создаваемые статистики в этом представлении автоматически удаляются. Статистики, созданные вручную, не удаляются.  
   
- Синтаксис*table_or_view_name***.** *index_name* сохраняется для обеспечения обратной совместимости. Пространственный или XML-индекс нельзя удалить с использованием синтаксиса обратной совместимости.  
+ Синтаксис *table_or_view_name***.***index_name* сохраняется для обратной совместимости. Пространственный или XML-индекс нельзя удалить с использованием синтаксиса обратной совместимости.  
   
  Если удаляемый индекс содержит 128 и более экстентов, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает действительное освобождение страниц и связанных с ними блокировок до фиксации транзакции.  
   
- Иногда индексы удаляются и пересоздаются для реорганизации или перестроения индекса, например чтобы применить новое значение коэффициента заполнения, или для реорганизации данных после массовой загрузки. Для этого с помощью [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)более эффективна, особенно для кластеризованных индексов. Инструкция ALTER INDEX REBUILD выполняется с оптимизациями, предотвращающими дополнительные издержки на перестройку некластеризованных индексов.  
+ Иногда индексы удаляются и пересоздаются для реорганизации или перестроения индекса, например чтобы применить новое значение коэффициента заполнения, или для реорганизации данных после массовой загрузки. Для этих задач более эффективно использование инструкции [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), особенно для кластеризованных индексов. Инструкция ALTER INDEX REBUILD выполняется с оптимизациями, предотвращающими дополнительные издержки на перестройку некластеризованных индексов.  
   
 ## <a name="using-options-with-drop-index"></a>Использование параметров инструкции DROP INDEX  
- При удалении кластеризованного индекса можно задать следующие параметры: MAXDOP, ONLINE и MOVE TO.  
+ При удалении кластеризованного индекса можно установить следующие параметры: MAXDOP, ONLINE и MOVE TO.  
   
  Используйте параметр MOVE TO, чтобы удалить кластеризованный индекс и переместить результирующую таблицу в другую файловую группу или схему секционирования в одной транзакции.  
   
- При присвоении параметру ONLINE значения ON запросы и изменения базовых данных и связанных некластеризованных индексов не блокируются во время выполнения транзакции DROP INDEX. В режиме в сети одновременно может удаляться только один кластеризованный индекс. Полное описание параметра ONLINE см. в разделе [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ При присвоении параметру ONLINE значения ON запросы и изменения базовых данных и связанных некластеризованных индексов не блокируются во время выполнения транзакции DROP INDEX. В режиме в сети одновременно может удаляться только один кластеризованный индекс. Полное описание параметра ONLINE см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
- Невозможно удалить кластеризованный индекс сети если индекс отключен на представлении или содержит **текст**, **ntext**, **изображения**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml** столбцов в строках данных конечного уровня.  
+ Кластеризованный индекс нельзя удалить в режиме в сети, если индекс недоступен в представлении или содержит столбцы типа **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или **xml** в строках данных конечного уровня.  
   
  Использование параметров ONLINE = ON и MOVE TO требует дополнительного временного места на диске.  
   
- После удаления индекса результирующая куча появляется в **sys.indexes** представление со значением NULL в каталога **имя** столбца. Чтобы просмотреть имя таблицы, необходимо присоединить **sys.indexes** с **sys.tables** на **object_id**. Пример запроса см. в примере Г.  
+ После удаления индекса результирующая куча появляется в представлении каталога **sys.indexes** со значением NULL в столбце **name**. Для просмотра имени таблицы выполните соединение **sys.indexes** с **sys.tables** по **object_id**. Пример запроса см. в примере Г.  
   
  На многопроцессорных компьютерах под управлением [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] или выше инструкция DROP INDEX может использовать больше процессоров для операций просмотра и сортировки, связанных с удалением кластеризованного индекса, как и в случаях с другими инструкциями. Можно вручную настроить число процессоров, применяемых для запуска инструкции DROP INDEX, указав параметр индекса MAXDOP. Дополнительные сведения см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -263,25 +263,25 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 2.  Изменить таблицу с помощью инструкции ALTER TABLE ... Параметр REBUILD ..., определяющий параметр сжатия.  
   
-При удалении кластеризованного индекса в режиме не в сети удаляются только верхние уровни кластеризованных индексов, следовательно, операция выполняется довольно быстро. При удалении кластеризованного индекса в оперативном режиме, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестраивает кучу два раза — один раз для шага 1 и один раз для шага 2. Дополнительные сведения о сжатии данных см. в разделе [сжатие данных](../../relational-databases/data-compression/data-compression.md).  
+При удалении кластеризованного индекса в режиме не в сети удаляются только верхние уровни кластеризованных индексов, следовательно, операция выполняется довольно быстро. При удалении кластеризованного индекса в режиме ONLINE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестраивает кучу два раза: один для первого шага, один для второго. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>XML-индексы  
- Параметры не могут быть указаны при удалении индекса anXML. Кроме того, нельзя использовать *table_or_view_name***.** *index_name* синтаксиса. При удалении первичного XML-индекса все связанные вторичные XML-индексы удаляются автоматически. Дополнительные сведения см в разделе [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ При удалении XML-индекса нельзя указывать параметры. Кроме того, нельзя использовать синтаксис *table_or_view_name***.***index_name*. При удалении первичного XML-индекса все связанные вторичные XML-индексы удаляются автоматически. Дополнительные сведения см в разделе [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Пространственные индексы  
- Пространственные индексы поддерживаются только для таблиц. При удалении пространственного индекса нельзя указывать любые параметры или использовать **.** *index_name*. Правильный синтаксис:  
+ Пространственные индексы поддерживаются только для таблиц. При удалении пространственного индекса нельзя указывать любые параметры или использовать **.***index_name*. Правильный синтаксис:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   
  Дополнительные сведения о пространственных индексах см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции DROP INDEX как минимум требуется разрешение ALTER для таблицы или представления. По умолчанию это разрешение предоставляется предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_ddladmin** и **db_owner** .  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-dropping-an-index"></a>A. Удаление индекса  
- В следующем примере удаляется индекс `IX_ProductVendor_VendorID` на `ProductVendor` в таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных.  
+ В следующем примере показано, как удалить индекс `IX_ProductVendor_VendorID` в таблице `ProductVendor` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
@@ -302,7 +302,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>В. Удаление кластеризованного индекса в режиме в сети и установка параметра MAXDOP  
  В следующем примере удаляется кластеризованный индекс с параметром `ONLINE`, установленным в значение `ON` и параметром `MAXDOP`, установленным в значение `8`. Поскольку параметр MOVE TO не был указан, результирующая таблица сохраняется в той же файловой группе, что и индекс. В этих примерах используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]  
   
-**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -399,17 +399,17 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [Создание ПРОСТРАНСТВЕННОГО ИНДЕКСА &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [СОЗДАТЬ XML-индекс &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX (Transact-SQL)](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
 

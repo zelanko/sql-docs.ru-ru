@@ -1,5 +1,5 @@
 ---
-title: "НИЖНЯЯ (Transact-SQL) | Документы Microsoft"
+title: "LOWER (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ LOWER ( character_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *character_expression*  
- — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. *character_expression* должен иметь тип данных, который неявно преобразуется в **varchar**. В противном случае используйте [ПРИВЕДЕНИЯ](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
+ [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. Аргумент *character_expression* должен иметь тип данных, который может быть неявно преобразован в тип **varchar**. В противном случае используйте [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar** или **nvarchar**  
@@ -79,10 +79,10 @@ minipump              MINIPUMP               minipump
 taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [ВЕРХНЯЯ &#40; Transact-SQL &#41;](../../t-sql/functions/upper-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [UPPER (Transact-SQL)](../../t-sql/functions/upper-transact-sql.md)  
   
   
 

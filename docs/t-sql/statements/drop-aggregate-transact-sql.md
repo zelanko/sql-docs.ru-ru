@@ -1,5 +1,5 @@
 ---
-title: "DROP AGGREGATE (Transact-SQL) | Документы Microsoft"
+title: "DROP AGGREGATE (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет пользовательскую агрегатную функцию из текущей базы данных. Определяемые пользователем статистические функции создаются с помощью [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
+  Удаляет пользовательскую агрегатную функцию из текущей базы данных. Определяемые пользователем агрегатные функции создаются при помощи инструкции [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,9 +51,9 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
   
 ## <a name="arguments"></a>Аргументы  
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно производится удаление статистической функции только в том случае, если он уже существует.  
+ Условное удаление агрегатной функции только в том случае, если она уже существует.  
   
  *schema_name*  
  Имя схемы, которой принадлежит определяемая пользователем агрегатная функция.  
@@ -74,8 +74,8 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [СОЗДАТЬ агрегат &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CREATE AGGREGATE (Transact-SQL)](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [Создание пользовательских агрегатных функций](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   
   

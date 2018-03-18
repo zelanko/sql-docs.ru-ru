@@ -1,5 +1,5 @@
 ---
-title: "ATAN (Transact-SQL) | Документы Microsoft"
+title: "ATAN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает угол в радианах, тангенс которого равен указанному **float** выражение. Эта функция арктангенсом.
+Возвращает угол в радианах, тангенс которого задан выражением **float**. Эта функция арктангенсом.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ATAN ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *float_expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в **float**.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип **float**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **float**
   
 ## <a name="examples"></a>Примеры  
-В следующем примере выполняются **float** выражение и возвращается значение Арктангенса указанного угла.
+В приведенном ниже примере принимается выражение **float** и возвращается ATAN указанного угла.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -95,8 +95,8 @@ The ATAN of 197.1099392 is: 1.56572
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-В следующем примере выполняются **float** выражения и возвращает арктангенс указанного угла.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+В приведенном ниже примере принимается выражение **float** и возвращается арктангенс указанного угла.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
@@ -114,9 +114,9 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 1.55       -1.57       0.00       0.15       1.57
 ```
   
-## <a name="see-also"></a>См. также:
-[Функция CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[CEILING (Transact-SQL)](../../t-sql/functions/ceiling-transact-sql.md)  
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

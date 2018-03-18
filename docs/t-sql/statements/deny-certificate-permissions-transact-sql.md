@@ -1,5 +1,5 @@
 ---
-title: "ЗАПРЕТ разрешений на сертификат (Transact-SQL) | Документы Microsoft"
+title: "DENY, запрет разрешений на сертификат (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *разрешение*  
+ *permission*  
  Указывает разрешение, которое может быть запрещено для сертификата. Перечислены ниже.  
   
- СЕРТИФИКАТ ON **::***имя_сертификата*  
- Указывает сертификат, для которого выполняется запрет разрешения. Необходим квалификатор области «::».  
+ ON CERTIFICATE **::***certificate_name*  
+ Указывает сертификат, для которого выполняется запрет разрешения. Квалификатор области "::" является обязательным.  
   
  *database_principal*  
- Задает участника, для которого запрещается разрешение, — Это может быть:  
+ Задает участника, для которого запрещается разрешение. Это может быть:  
   
 -   пользователь базы данных;  
   
@@ -72,9 +72,9 @@ DENY permission  [ ,...n ]
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
@@ -94,11 +94,11 @@ DENY permission  [ ,...n ]
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Сертификат является защищаемым объектом уровня базы данных, содержащимся в базе данных, являющейся его родительским элементом в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть запрещены для сертификата.  
   
 |Разрешение сертификата|Содержится в разрешении сертификата|Содержится в разрешении базы данных|  
@@ -109,16 +109,16 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL для сертификата. При использовании предложения AS указанный участник должен являться владельцем сертификата.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

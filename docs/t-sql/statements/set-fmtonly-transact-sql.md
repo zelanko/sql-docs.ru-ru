@@ -1,5 +1,5 @@
 ---
-title: "SET FMTONLY (Transact-SQL) | Документы Microsoft"
+title: "SET FMTONLY (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   Возвращает клиенту только метаданные. Может использоваться для тестирования формата ответа без фактического выполнения запроса.  
   
 > [!NOTE]  
->  Не используйте эту функцию. Эта возможность была заменена [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), и [sys.dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
+>  Не используйте эту функцию. Эта функция была заменена на [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) и [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +51,17 @@ ms.lasthandoff: 11/21/2017
 SET FMTONLY { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В результате запроса не было обработано или отправлено клиенту ни одной строки, так как параметр FMTONLY установлен в ON (инструкцией SET FMTONLY ON).  
   
  Инструкция SET FMTONLY относится ко времени выполнения, а не ко времени синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>Ответ, просмотрите сведения о заголовке столбца для запроса без фактического выполнения запроса.  
+### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>А. Просмотр сведений о заголовке столбца для запроса без фактического выполнения запроса.  
  В следующем примере состояние параметра `SET FMTONLY` изменяется на `ON`, после чего выполняется инструкция `SELECT`. В результате этой настройки инструкция возвращает только сведения о столбце; строки с данными не возвращаются.  
   
 ```  
@@ -76,10 +76,10 @@ SET FMTONLY OFF;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>Б. Просмотрите сведения о заголовке столбца для запроса без фактического выполнения запроса.  
- Приведенный ниже показано, как возвращать сведения только об столбца заголовок (метаданные) для запроса. Пакет начинается с FMTONLY установлен в OFF и примет вид FMTONLY ON перед инструкцией SELECT. В результате инструкции SELECT для возврата только заголовки столбцов; строки данных, не возвращаются.  
+### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>Б. Просмотр сведений о заголовке столбца для запроса без фактического выполнения запроса.  
+ В следующем примере показано, как возвращать только сведения о столбце заголовка (метаданные) для запроса. Пакет начинается с FMTONLY с заданным значением OFF, и перед выполнением инструкции SELECT значение FMTONLY меняется на ON. В результате инструкция SELECT возвращает только заголовки столбцов; строки с данными не возвращаются.  
   
 ```  
 -- Uses AdventureWorks  

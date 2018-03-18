@@ -1,5 +1,5 @@
 ---
-title: "MOVE CONVERSATION (Transact-SQL) | Документы Microsoft"
+title: "MOVE CONVERSATION (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -61,12 +61,12 @@ MOVE CONVERSATION conversation_handle
  Переменная или константа, содержащая идентификатор группы сообщений, в которую перемещается диалог. *conversation_group_id* должен иметь тип **uniqueidentifier**.  
   
 ## <a name="remarks"></a>Remarks  
- Инструкция MOVE CONVERSATION Перемещает диалог, указанный аргументом *conversation_handle* к группе сообщений, определяется *conversation_group_id*. Диалоги могут перенаправляться только между группами диалогов, связанными с одной и той же очередью.  
+ Инструкция MOVE CONVERSATION перемещает диалог, указанный аргументом *conversation_handle*, в группу сообщений, определяемую аргументом *conversation_group_id*. Диалоги могут перенаправляться только между группами диалогов, связанными с одной и той же очередью.  
   
 > [!IMPORTANT]  
->  Если инструкция MOVE CONVERSATION не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**), [!INCLUDE[tsql](../../includes/tsql-md.md)] признак конца инструкции.  
+>  Если инструкция MOVE CONVERSATION не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Инструкция MOVE CONVERSATION блокирует группу сообщений, связанных с *conversation_handle* и группы сообщений, заданные *conversation_group_id* до транзакции содержит оператор фиксации или отката.  
+ Инструкция MOVE CONVERSATION блокирует группу сообщений, связанную с диалогом *conversation_handle*, а также группу, заданную аргументом *conversation_group_id*, до тех пор, пока транзакция, содержащая инструкцию, не будет зафиксирована или откачена.  
   
  Инструкция MOVE CONVERSATION недопустима в пользовательских функциях.  
   
@@ -88,11 +88,11 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [GET CONVERSATION GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [sys.conversation_groups (Transact-SQ)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

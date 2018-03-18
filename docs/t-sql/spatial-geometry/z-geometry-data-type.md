@@ -1,5 +1,5 @@
 ---
-title: "Z (тип данных geometry) | Документы Microsoft"
+title: "Z (тип данных geometry) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип: **число с плавающей запятой**  
+ Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- Значение этого свойства будет иметь значение null, если экземпляр geometry не является точкой, а также для любого **точки** экземпляра, для которой не установлено.  
+ Значение этого свойства будет NULL, если экземпляр geometry не является точкой, а также для любого экземпляра **Point**, для которого оно не задано.  
   
- Это свойство предназначено только для чтения.  
+ Это свойство доступно только для чтения.  
   
  Координаты по оси Z не используются ни в каких вычислениях, выполненных библиотекой, и не проходят ни через какие библиотечные изменения.  
   
@@ -64,9 +64,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [М &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+## <a name="see-also"></a>См. также:  
+ [M (тип данных geometry)](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM (тип данных geometry)](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

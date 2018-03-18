@@ -1,5 +1,5 @@
 ---
-title: "@@TOTAL_ERRORS (Transact-SQL) | Документы Microsoft"
+title: "@@TOTAL_ERRORS (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **integer**  
   
-## <a name="remarks"></a>Замечания  
- Не все ошибки записи, обнаруженные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], учитываются данной функцией. Случайные устранимые ошибки записи исправляются самим сервером и не учитываются. Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистику, включая общее количество ошибок, запустите **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Не все ошибки записи, обнаруженные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], учитываются данной функцией. Случайные устранимые ошибки записи исправляются самим сервером и не учитываются. Для отображения отчета, содержащего статистику по нескольким параметрам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая общее количество ошибок, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
  В данном примере выдается количество ошибок, обнаруженных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по состоянию на текущий момент времени.  
@@ -72,7 +72,7 @@ Errors      As of
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Системные статистические функции &#40;Transact-SQL&#41;#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

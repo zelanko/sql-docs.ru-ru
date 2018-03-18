@@ -1,5 +1,5 @@
 ---
-title: "FILEGROUP_NAME (Transact-SQL) | Документы Microsoft"
+title: "FILEGROUP_NAME (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ FILEGROUP_NAME ( filegroup_id )
   
 ## <a name="arguments"></a>Аргументы  
  *filegroup_id*  
- Идентификатор файловой группы, для которой возвращается имя файловой группы. *filegroup_id* — **smallint**.  
+ Идентификатор файловой группы, для которой возвращается имя файловой группы. Аргумент *filegroup_id* имеет тип **smallint**.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Замечания  
- *filegroup_id* соответствует **data_space_id** столбца в **sys.filegroups** представления каталога.  
+## <a name="remarks"></a>Remarks  
+ Аргумент *filegroup_id* соответствует столбцу **data_space_id** в представлении каталога **sys.filegroups**.  
   
 ## <a name="examples"></a>Примеры  
  На следующем примере показано, как вернуть имя файловой группы для идентификатора файловой группы `1` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -82,8 +82,8 @@ PRIMARY
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функции метаданных &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [sys.filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   
