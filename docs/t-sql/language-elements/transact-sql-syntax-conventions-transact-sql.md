@@ -1,7 +1,7 @@
 ---
 title: "Синтаксические обозначения в Transact-SQL (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -35,11 +35,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7c4eb67190b5123296fbcffb3fac3f09e9ec2000
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e829518825abe3b4b6da589513d085161eddcb0
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,32 +63,32 @@ ms.lasthandoff: 01/25/2018
 ## <a name="multipart-names"></a>Многочастные имена  
  Если не указано иное, все ссылки [!INCLUDE[tsql](../../includes/tsql-md.md)] на имена объектов базы данных могут быть четырехсоставными именами, записываемыми в следующей форме.  
   
- *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
+*server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
  | *database_name***.**[*schema_name*]**.***object_name*  
   
  | *schema_name***.***object_name*  
   
- *| object_name*  
+ | *object_name*  
   
- *server_name*  
- Указывает имя связанного или удаленного сервера.  
+*server_name*  
+Указывает имя связанного или удаленного сервера.  
   
- *database_name*  
- Указывает имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если объект хранится на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда объект находится на связанном сервере, аргумент *database_name* указывает каталог OLE DB.  
+*database_name*  
+Указывает имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если объект хранится на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда объект находится на связанном сервере, аргумент *database_name* указывает каталог OLE DB.  
   
- *schema_name*  
- Если объект находится в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указывает имя схемы, которая содержит объект. Когда объект находится на связанном сервере, аргумент *schema_name* указывает имя схемы OLE DB.  
+*schema_name*  
+Если объект находится в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указывает имя схемы, которая содержит объект. Когда объект находится на связанном сервере, аргумент *schema_name* указывает имя схемы OLE DB.  
   
- *object_name*  
- Ссылается на имя объекта.  
+*object_name*  
+Ссылается на имя объекта.  
   
- При ссылке на конкретный объект нет необходимости всякий раз указывать сервер, базу данных и схему — компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] попытается определить этот объект. Однако, если объект не удается найти, возвращается ошибка.  
+При ссылке на конкретный объект нет необходимости всякий раз указывать сервер, базу данных и схему — компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] попытается определить этот объект. Однако, если объект не удается найти, возвращается ошибка.  
   
 > [!NOTE]  
->  Чтобы избежать ошибок разрешения имен, при указании объекта области схемы рекомендуется указать имя схемы.  
+> Чтобы избежать ошибок разрешения имен, при указании объекта области схемы рекомендуется указать имя схемы.  
   
- Чтобы пропустить промежуточные узлы, для обозначения их позиций используйте точки. В следующей таблице показаны допустимые форматы имен объектов.  
+Чтобы пропустить промежуточные узлы, для обозначения их позиций используйте точки. В следующей таблице показаны допустимые форматы имен объектов.  
   
 |Формат ссылки на объект|Description|  
 |-----------------------------|-----------------|  
@@ -102,32 +102,31 @@ ms.lasthandoff: 01/25/2018
 |*object*|Имена сервера, базы данных и схемы пропущены.|  
   
 ## <a name="code-example-conventions"></a>Соглашения примеров кода  
- Если не указано иное, примеры, приведенные в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)], были проверены с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и настроек по умолчанию для следующих параметров:  
+Если не указано иное, примеры, приведенные в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)], были проверены с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и настроек по умолчанию для следующих параметров:  
   
 -   ANSI_NULLS  
-  
 -   ANSI_NULL_DFLT_ON  
-  
 -   ANSI_PADDING  
-  
 -   ANSI_WARNINGS  
-  
 -   CONCAT_NULL_YIELDS_NULL  
-  
 -   QUOTED_IDENTIFIER  
   
- Большинство примеров кода в руководстве по [!INCLUDE[tsql](../../includes/tsql-md.md)] было проверено на серверах, работающих с порядком сортировки с учетом регистра. Тестовые серверы, как правило, использовали кодовую страницу ANSI/ISO 1252.  
+Большинство примеров кода в руководстве по [!INCLUDE[tsql](../../includes/tsql-md.md)] было проверено на серверах, работающих с порядком сортировки с учетом регистра. Тестовые серверы, как правило, использовали кодовую страницу ANSI/ISO 1252.  
   
- Многие примеры кода добавляют к строковым константам в Юникоде префикс в виде буквы **N**. Без префикса **N** строка преобразуется в кодовую страницу базы данных по умолчанию. Кодовая страница по умолчанию может не распознавать определенные символы.  
+Многие примеры кода добавляют к строковым константам в Юникоде префикс в виде буквы **N**. Без префикса **N** строка преобразуется в кодовую страницу базы данных по умолчанию. Кодовая страница по умолчанию может не распознавать определенные символы.  
   
 ## <a name="applies-to-references"></a>Ссылки «Относится к»  
- Ссылка [!INCLUDE[tsql](../../includes/tsql-md.md)] включает разделы, относящиеся к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. В верхней части каждого раздела есть глава, где указано, какие продукты поддерживают тему раздела. Если продукт не указан, то компонент, описанный в разделе, для данного продукта недоступен. Например, группы доступности были введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В разделе **CREATE AVAILABILITY GROUP** указано, что он применяется к **SQL Server (SQL Server 2012 до текущей версии)**, так как он не применяется к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+Ссылка [!INCLUDE[tsql](../../includes/tsql-md.md)] включает статьи, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+
+В верхней части каждого раздела есть глава, где указано, какие продукты поддерживают тему раздела. Если продукт не указан, то компонент, описанный в разделе, для данного продукта недоступен. Например, группы доступности были введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В статье по **CREATE AVAILABILITY GROUP** указано, что эта функция применима к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), так как она неприменима к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- В некоторых случаях в продукте используется общая тема раздела, но не все аргументы поддерживаются. Например, пользователи автономной базы данных впервые появились в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Инструкция **CREATE USER** может использоваться в любом продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако синтаксис **WITH PASSWORD** не может использоваться с более ранними версиями. В этом случае дополнительные главы **Область применения** вставляются в описания соответствующих аргументов в разделе.  
+В некоторых случаях в продукте используется общая тема раздела, но не все аргументы поддерживаются. Например, пользователи автономной базы данных впервые появились в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Инструкция **CREATE USER** может использоваться в любом продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако синтаксис **WITH PASSWORD** не может использоваться с более ранними версиями. В этом случае дополнительные главы **Область применения** вставляются в описания соответствующих аргументов в разделе.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md)  
-  
-  
+[Справочник по Transact-SQL &#40;ядро СУБД&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[Зарезервированные ключевые слова &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
+[Проблемы проектирования Transact-SQL](http://msdn.microsoft.com/library/dd193411.aspx)    
+[Проблемы именования Transact-SQL](http://msdn.microsoft.com/library/dd193246.aspx)        
+[Проблемы производительности Transact-SQL](http://msdn.microsoft.com/library/dd172117.aspx)    
 
 

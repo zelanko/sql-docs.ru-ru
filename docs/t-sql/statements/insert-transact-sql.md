@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -149,14 +149,14 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  Необязательное ключевое слово, которое можно использовать между ключевым словом INSERT и целевой таблицей.  
   
  *server_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя связанного сервера, на котором расположены таблица или представление. *server_name* может указываться как имя [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или с помощью функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
  Когда *server_name* указывается как имя связанного сервера, необходимо указать *database_name* и *schema_name*. Если *server_name* указано с помощью OPENDATASOURCE, то аргументы *database_name* и *schema_name* могут применяться не ко всем источникам данных, в зависимости от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
  *database_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя базы данных.  
   
@@ -171,7 +171,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  Представление, на которое ссылается аргумент *table_or_view_name*, должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM в представлении. Например, инструкция INSERT в многотабличном представлении должна использовать аргумент *column_list*, который ссылается только на столбцы из одной базовой таблицы. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Либо функция [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), либо функция [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Использование этих функций зависит от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
@@ -266,27 +266,27 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  Любое предложение WHERE, содержащее допустимый критерий поиска \<search_condition>, фильтрующее строки, которые возвращены аргументом \<dml_statement_with_output_clause>. Дополнительные сведения см. в разделе [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md). При использовании в этом контексте критерий \<search_condition> не должен содержать вложенных запросов, определяемых пользователем скалярных функций, выполняющих доступ к данным, агрегатных функций, TEXTPTR или предикатов полнотекстового поиска. 
   
  DEFAULT VALUES  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Заполняет новую строку значениями по умолчанию, определенными для каждого столбца.  
   
  BULK  
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Используется внешними средствами для передачи потока двоичных данных. Этот параметр не предназначен для использования с такими средствами, как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL или программными интерфейсами для доступа к данным, такими как Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  FIRE_TRIGGERS  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, что при передаче потока двоичных данных будут выполняться триггеры INSERT, определенные для целевой таблицы. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, что при передаче потока двоичных данных будет выполняться проверка всех ограничений целевой таблицы или представления. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, что пустые столбцы во время передачи потока двоичных данных должны сохранить значение NULL. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
@@ -294,7 +294,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  Определяет приблизительное число килобайт данных в пакете как *kilobytes_per_batch*. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  ROWS_PER_BATCH =*rows_per_batch*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает приблизительное число строк в потоке двоичных данных. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -398,7 +398,9 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  При использовании выражения TOP в инструкции INSERT строки, на которые имеются ссылки, не упорядочиваются, а предложение ORDER BY не может быть прямо указано в этих инструкциях. Если для вставки строк в значимом хронологическом порядке необходимо использовать предложение TOP, вместе с ним в инструкции подзапроса выборки следует использовать предложение ORDER BY. См. подраздел «Примеры» далее в этом разделе.
  
-Запросы INSERT, которые используют SELECT с ORDER BY для заполнения строк, гарантируют способ вычисления значений идентификатора, но не порядок вставки строк.    
+Запросы INSERT, которые используют SELECT с ORDER BY для заполнения строк, гарантируют способ вычисления значений идентификатора, но не порядок вставки строк.
+
+В Parallel Data Warehouse предложение ORDER BY недопустимо в инструкциях VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, встраиваемых функциях, производных таблицах, подзапросах и обобщенных табличных выражениях, если также не указать TOP.
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
  Инструкция INSERT всегда полностью регистрируется в журнале, кроме случаев использования функции OPENROWSET с ключевым словом BULK или выполнения инструкции `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. Для этих операций возможно минимальное протоколирование. Дополнительные сведения см. в подразделе «Рекомендации по массовой загрузке данных» этого раздела.  
@@ -722,7 +724,7 @@ GO
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>Н. Вставка данных в удаленную таблицу с использованием связанного сервера  
  В следующем примере в удаленную таблицу вставляются строки. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object*.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE master;  
@@ -751,7 +753,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>О. Вставка данных в удаленную таблицу с помощью функции OPENQUERY  
  В следующем примере выполняется вставка строки в удаленную таблицу с помощью вызова функции [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), возвращающей набор строк. В этом примере используется имя связанного сервера, созданного в предыдущем примере.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 INSERT OPENQUERY (MyLinkServer, 
@@ -764,7 +766,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>П. Вставка данных в удаленную таблицу с помощью функции OPENDATASOURCE  
  В следующем примере выполняется вставка строки в удаленную таблицу с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -781,7 +783,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>Т. Вставка во внешнюю таблицу, созданную с помощью PolyBase  
  Вы можете экспортировать данные из SQL Server в службу хранилища Azure или Hadoop. Для этого сначала необходимо создать внешнюю таблицу, которая указывает на целевой файл или каталог. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. При выполнении инструкции INSERT INTO создается целевой файл или каталог (если его не существует), а результаты выполнения инструкции SELECT экспортируются в указанное расположение в заданном формате.  Дополнительные сведения см. в разделе [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
-**Область применения**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 -- Create an external table.   
@@ -857,7 +859,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>Ф. Использование функции OPENROWSET с параметром BULK для массовой загрузки данных а таблицу  
  В следующем примере выполняется вставка строки в таблицу из файла данных вызовом функции OPENQUERY. Для оптимизации производительности указывается табличная подсказка IGNORE_TRIGGERS. Дополнительные примеры см. в разделе [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  

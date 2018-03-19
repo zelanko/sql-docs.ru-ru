@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="converting-date-and-time-data"></a>Преобразование данных типа Date и Time
 При преобразовании в типы данных даты и времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отвергает все значения, которые он не распознает как значения даты или времени. Сведения об использовании функций CAST и CONVERT c данными типов даты и времени см. в статье [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Преобразование типа данных datetimeoffset в другие типы данных даты и времени
+Этот раздел описывает, что происходит при преобразовании типа данных **datetimeoffset** в другие типы даты и времени.
   
 При преобразовании в тип **date** копируются год, месяц и день. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `date`.  
   
@@ -198,9 +201,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Преобразование типа данных datetimeoffset в другие типы данных даты и времени
-В приведенной ниже таблице показано, каким образом тип данных **datetimeoffset** преобразуется в другие типы даты и времени.
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>Преобразование строковых литералов в datetimeoffset
 Преобразование строковых литералов в типы данных даты и времени разрешается, если все части строк записаны в допустимом формате. Иначе возникает ошибка времени выполнения. Явные или скрытые преобразования, в которых не задан стиль преобразования типов данных даты и времени в строковые литералы, будут проведены в формате по умолчанию для текущего сеанса. В таблице ниже приводятся правила преобразования строковых литералов в тип данных **datetimeoffset**.
