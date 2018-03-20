@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Каталог базы данных WideWorldImportersDW
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Описания для схем, таблиц и хранимых процедур в базе данных WideWorldImportersDW. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описания для схем, таблиц и хранимых процедур в базе данных WideWorldImportersDW. 
 
 WideWorldImportersDW базы данных используется для хранения данных и аналитической обработки. Транзакционные данные о продажах и покупки создается в базе данных WideWorldImporters и загружается в WideWorldImportersDW базы данных с помощью **ежедневно выполняемый процесс ETL**.
 
@@ -35,7 +37,7 @@ WideWorldImportersDW базы данных используется для хр�
 
 Различные типы таблиц организованы в три схемы.
 
-|схема|Description|
+|Схема|Описание|
 |-----------------------------|---------------------|
 |Измерение|Таблицы измерений.|
 |Факт|Таблицы фактов.|  
@@ -97,7 +99,7 @@ WideWorldImportersDW имеет следующие таблицы фактов. 
 Процедуры, используемые в процессе ETL, попадают в следующие категории:
 - Вспомогательные процедуры для пакета ETL - все Get * процедуры.
 - Процедуры, используемые ETL-пакета по переносу промежуточные данные в таблицах хранилища данных — все процедуры миграции *.
-- `PopulateDateDimensionForYear`— Принимает года и гарантирует, что все даты за этот год, вставляются в `Dimension.Date` таблицу.
+- `PopulateDateDimensionForYear` — Принимает года и гарантирует, что все даты за этот год, вставляются в `Dimension.Date` таблицу.
 
 ### <a name="sequences-schema"></a>Схемы последовательностей
 

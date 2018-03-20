@@ -55,7 +55,6 @@
 ### [Использование для управления PowerShell](sql-server-linux-manage-powershell.md)
 ### [Использование доставки журналов](sql-server-linux-use-log-shipping.md)
 ### [Использование DB Mail и оповещений по почте](sql-server-linux-db-mail-sql-agent.md)
-### [Настройка нескольких подсетей для доступности](sql-server-linux-configure-multiple-subnet.md)
 
 ## [анализа](sql-server-linux-migrate-overview.md)
 ### [Экспорт и импорт BACPAC из Windows](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [Настройка в Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Отработка отказа](sql-server-linux-availability-group-failover-ha.md)
 ##### [Эксплуатация](sql-server-linux-availability-group-operate-ha.md)
+##### [Настройка нескольких подсетей для доступности](sql-server-linux-configure-multiple-subnet.md)
 #### [Создание только для чтения и масштабирования]()
 ##### [Настройка группы доступности](sql-server-linux-availability-group-configure-rs.md)
 #### [Настройка кроссплатформенности (Windows и Linux)](sql-server-linux-availability-group-cross-platform.md)

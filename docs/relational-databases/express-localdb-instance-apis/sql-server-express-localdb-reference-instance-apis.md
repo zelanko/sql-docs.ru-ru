@@ -13,19 +13,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b12274cfd0ee0c7703229cc416793fb23a1a91ae
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a3fa10bd51bca3bacd1f54157cf860e305724866
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB - Справочник по API-интерфейсов экземпляра
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Традиционно экземпляры SQL Server, устанавливаемые на один компьютер, разделены физически, то есть каждый из них должен быть установлен или удален отдельно, каждый из них имеет отдельный набор двоичных файлов и выполняется в отдельном процессе службы. Имя экземпляра SQL Server используется для указания того, с каким экземпляром SQL Server пользователь хочет установить соединение.  
+  Традиционно экземпляры SQL Server, устанавливаемые на один компьютер, разделены физически, то есть каждый из них должен быть установлен или удален отдельно, каждый из них имеет отдельный набор двоичных файлов и выполняется в отдельном процессе службы. Имя экземпляра SQL Server используется для указания того, с каким экземпляром SQL Server пользователь хочет установить соединение.  
   
  В API экземпляра SQL Server Express LocalDB используется упрощенная, «легкая» модель экземпляров. Хотя отдельные экземпляры LocalDB разделены на диске и в реестре, они используют тот же набор общих двоичных файлов LocalDB. Кроме того, LocalDB не использует службы; экземпляры LocalDB запускаются по запросу через вызовы API экземпляра LocalDB. В LocalDB имя экземпляра используется для указания того, с какими экземплярами LocalDB пользователь хочет работать.  
   

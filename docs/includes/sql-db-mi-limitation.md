@@ -1,0 +1,2 @@
+> [!IMPORTANT]  
+> На [экземпляр управляемого базы данных Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), эта функция T-SQL имеет определенные изменения в работе. В разделе [различия Azure SQL базы данных управляемого экземпляра T-SQL из SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information) подробные сведения для всех изменений в поведении T-SQL.

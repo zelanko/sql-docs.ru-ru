@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a9ccfb4f49e490cb681561aeaa5a0e9a8e86ad0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Рабочий процесс WideWorldImportersDW ETL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]ETL-пакета WWI_Integration используется для переноса данных из базы данных WideWorldImporters WideWorldImportersDW базы данных при изменении данных. Пакет периодически запускается (чаще всего ежедневно).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ETL-пакета WWI_Integration используется для переноса данных из базы данных WideWorldImporters WideWorldImportersDW базы данных при изменении данных. Пакет периодически запускается (чаще всего ежедневно).
 
 ## <a name="overview"></a>Обзор
 
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 
 После этого ряда задач потока данных загружает каждого измерения, а затем каждый из фактов.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - SQL Server 2016 (или более поздней версии) с базами данных WideWorldImporters и WideWorldImportersDW. Это могут быть на одном или разных экземплярах SQL Server.
 - SQL Server Management Studio (SSMS)
@@ -55,15 +57,15 @@ ms.lasthandoff: 12/05/2017
 
 В последнем выпуске образца:
 
-[Wide world-importers выпуска](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Загрузите файл пакета служб SSIS **ежедневно ETL.ispac**.
 
 Исходный код для повторного создания образца базы данных доступен из следующего расположения.
 
-[Wide world importers —](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
-## <a name="install"></a>Установить
+## <a name="install"></a>Установка
 
 1. Развертывание пакета служб SSIS.
    - Откройте пакет «Ежедневный ETL.ispac» из проводника Windows. Это приведет к запуску мастера развертывания служб Integration Services.

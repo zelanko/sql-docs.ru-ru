@@ -20,19 +20,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1bb07cf51939aec91de5b86b682545de9bfab382
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Приложения управления могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании WQL приложение извлекает тип события из определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных или объекта базы данных (в настоящее время поддерживаются только объекты очереди). Поставщик WMI для событий сервера преобразует запрос в уведомление о событии, созданную в целевую базу данных для уведомлений о событиях области видимости базы данных или объекта или в **master** базы данных для событиях уровня сервера уведомления.  
+  Приложения управления могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании WQL приложение извлекает тип события из определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных или объекта базы данных (в настоящее время поддерживаются только объекты очереди). Поставщик WMI для событий сервера преобразует запрос в уведомление о событии, созданную в целевую базу данных для уведомлений о событиях области видимости базы данных или объекта или в **master** базы данных для событиях уровня сервера уведомления.  
   
  Например, рассмотрим следующий WQL-запрос.  
   

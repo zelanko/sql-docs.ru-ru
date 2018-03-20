@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-graph-architecture"></a>График архитектуры SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ ms.lasthandoff: 02/12/2018
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Теперь расширяется для поддержки создания узла AS или AS КРАЯ таблицы. Обратите внимание, что краевую таблицу может или не может иметь любой пользователь, определенные атрибуты.  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|Узел и границей таблицы можно изменить так же, как реляционной таблице, используя `ALTER TABLE`. Пользователи могут добавлять или изменять столбцы определяемых пользователем, индексы или ограничения. Изменение столбцов внутренних graph, однако, как `$node_id` или `$edge_id`, приведет к ошибке.  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |Пользователи могут создавать индексы на псевдостолбцов и заданные пользователем столбцы в таблицах на узле и границей. Поддерживаются все типы индексов, включая кластеризованный и некластеризованный индексы columnstore.  |
-|DROP TABLE |[DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Узел и границей таблиц можно удалить используя реляционную таблицу так же, как `DROP TABLE`. Однако в этом выпуске нет никаких ограничений, чтобы нет краев пункты удаленного узла и каскадного удаления границ, после удаления узла или узла таблицы не поддерживается. Рекомендуется, если удаляется таблица узла, пользователи drop краям, подключенных к узлам в этой таблице узлов вручную, чтобы обеспечить целостность графа.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Узел и границей таблиц можно удалить используя реляционную таблицу так же, как `DROP TABLE`. Однако в этом выпуске нет никаких ограничений, чтобы нет краев пункты удаленного узла и каскадного удаления границ, после удаления узла или узла таблицы не поддерживается. Рекомендуется, если удаляется таблица узла, пользователи drop краям, подключенных к узлам в этой таблице узлов вручную, чтобы обеспечить целостность графа.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Инструкции языка Обработки данных
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/12/2018
 |Задача   |Связанный раздел  |Примечания
 |---  |---  |---  |
 |SELECT |[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)|Узлы и ребра, хранятся в виде таблицы внутренне, таким образом большинство операций, поддерживаемых в таблице в SQL Server или база данных SQL Azure поддерживаются на узел и границей таблицы  |
-|MATCH  | [УЧИТЫВАТЬ &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|Встроенные соответствия введен для поддержки сопоставления шаблонов и прохождения через граф.  |
+|MATCH  | [СООТВЕТСТВИЕ &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|Встроенные соответствия введен для поддержки сопоставления шаблонов и прохождения через граф.  |
 
 
 

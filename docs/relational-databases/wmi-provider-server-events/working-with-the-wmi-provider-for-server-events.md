@@ -23,19 +23,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a560ca7d3bdcb2450ec3369a0663516c05987884
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Работа с поставщиком WMI для событий сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-В этом разделе приводятся рекомендации, которые следует учитывать при программировании с помощью поставщика WMI для событий сервера.  
+  В этом разделе приводятся рекомендации, которые следует учитывать при программировании с помощью поставщика WMI для событий сервера.  
   
 ## <a name="enabling-service-broker"></a>Включение компонента Service Broker  
  Поставщик WMI для событий сервера преобразует запросы на события WQL в уведомления о событиях в целевой базе данных. Понимание работы уведомлений о событиях полезно при программировании поставщика. Дополнительные [Поставщик WMI для событий сервера основные понятия о поставщике](http://technet.microsoft.com/library/ms180560.aspx)сведения см. в разделе.  

@@ -1,7 +1,7 @@
 ---
 title: "sp_describe_first_result_set (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -25,16 +25,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Возвращает метаданные для первого возможного результирующего набора [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Возвращает пустой результирующий набор, если пакет не вернул результатов. Вызывает ошибку, если [!INCLUDE[ssDE](../../includes/ssde-md.md)] не удается определить метаданные для первого запроса, который будет выполнен при выполнении статического анализа. Динамическое административное представление [sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) возвращает те же сведения.  
+  Возвращает метаданные для первого возможного результирующего набора [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Возвращает пустой результирующий набор, если пакет не вернул результатов. Вызывает ошибку, если [!INCLUDE[ssDE](../../includes/ssde-md.md)] не удается определить метаданные для первого запроса, который будет выполнен при выполнении статического анализа. Динамическое административное представление [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) возвращает те же сведения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tsql =** ] **"***Transact SQL_batch***"**  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
   
  [  **@params =** ] **N'***параметры***"**  
- @paramsобеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)**.  
+ @params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)**.  
   
- Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n*заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в @params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет в инструкции не содержит параметров, @params не требуется. Значением по умолчанию для этого аргумента является NULL.  
+ Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, означающий определения дополнительных параметров. Каждый параметр, указанный в инструкции должен быть определен в @params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет в инструкции не содержит параметров, @params не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
  [  **@browse_information_mode =** ] *tinyint*  
  Указывает, происходит ли возврат дополнительных ключевых столбцов и сведений об исходной таблице. Если он имеет значение 1, то каждый запрос анализируется аналогично анализу запроса с параметром FOR BROWSE. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
@@ -71,7 +71,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>Результирующие наборы  
  Эти общие метаданные возвращаются в виде результирующего набора с одной строкой для каждого столбца в результирующих метаданных. Каждая строка описывает тип и допустимость значений NULL в столбце в формате, описанном в следующем разделе. Если первая инструкция не существует для каждого пути управления, возвращается результирующий набор с нулем строк.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**бит NOT NULL**|Указывает, что столбец является дополнительным, добавленным для целей просмотра сведений, и что он фактически не отображается в результирующем наборе.|  
 |**column_ordinal**|**int NOT NULL**|Содержит порядковый номер столбца в результирующем наборе. Позиция первого столбца будет указана как 1.|  
@@ -79,9 +79,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**бит NOT NULL**|Содержит значение 1, если столбец допускает значения NULL, значение 0, если столбец не допускает значения NULL, и значение 1, если не удалось определить, допускает ли столбец значения NULL.|  
 |**system_type_id**|**int NOT NULL**|Содержит system_type_id для типа данных столбца, как указано в sys.types. Для типов CLR, даже если system_type_name возвращает NULL, этот столбец вернет значение 240.|  
 |**system_type_name**|**nvarchar(256) значение NULL**|Содержит имя и аргументы (длина, точность, масштаб и т. д.), указанные для типа данных столбца. Если тип данных является пользовательским псевдонимом, то здесь указывается базовый системный тип данных. Если это определяемый пользователем тип данных CLR, то в этом столбце вернется NULL.|  
-|**max_length**|**smallint NOT NULL**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, установленное **sp_tableoption «text in row»**.|  
-|**точность**|**tinyint NOT NULL**|Точность столбца, если он является числовым. В противном случае возвращается 0.|  
-|**Масштаб**|**tinyint NOT NULL**|Масштаб значений столбца в случае числового выражения. В противном случае возвращается 0.|  
+|**max_length**|**Smallint, не NULL**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, установленное **sp_tableoption «text in row»**.|  
+|**precision**|**tinyint NOT NULL**|Точность столбца, если он является числовым. В противном случае возвращается 0.|  
+|**масштаб**|**tinyint NOT NULL**|Масштаб значений столбца в случае числового выражения. В противном случае возвращается 0.|  
 |**collation_name**|**sysname NULL**|Имя параметров сортировки столбца, если он символьный. В противном случае возвращается NULL.|  
 |**user_type_id**|**int NULL**|Для типов CLR и псевдонимов содержит user_type_id для типа данных столбца, как указано в sys.types. В противном случае значение равно NULL.|  
 |**user_type_database**|**sysname NULL**|Для типов CLR и псевдонимов содержит имя базы данных, в которой этот тип определен. В противном случае значение равно NULL.|  
@@ -96,7 +96,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_case_sensitive**|**бит NOT NULL**|Возвращает значение 1, если столбец относится к строковому типу с учетом регистра, либо значение 0 в противном случае.|  
 |**is_fixed_length_clr_type**|**бит NOT NULL**|Возвращает значение 1, если столбец относится имеет тип CLR с фиксированной длиной, либо в противном случае значение 0.|  
 |**source_server**|**sysname**|Имя исходного сервера, возвращаемое столбцом этого результата (если он исходит от удаленного сервера). Имя дается так, как оно отображается в представлении sys.servers. Возвращает NULL, если столбец поступает с локального сервера или если невозможно определить, с какого сервера он поступил. Заполняется только при запросе просмотра информации.|  
-|**база_данных_источник**|**sysname**|Имя исходной базы данных, возвращаемое столбцом этого результата. Возвращает NULL, если не удалось определить базу данных. Заполняется только при запросе просмотра информации.|  
+|**source_database**|**sysname**|Имя исходной базы данных, возвращаемое столбцом этого результата. Возвращает NULL, если не удалось определить базу данных. Заполняется только при запросе просмотра информации.|  
 |**source_schema**|**sysname**|Имя исходной схемы, возвращаемое столбцом в этом результате. Возвращает NULL, если не удалось определить схему. Заполняется только при запросе просмотра информации.|  
 |**source_table**|**sysname**|Имя исходной таблицы, возвращаемое столбцом в этом результате. Возвращает NULL, если не удалось определить таблицу. Заполняется только при запросе просмотра информации.|  
 |**source_column**|**sysname**|Имя исходного столбца, возвращаемое результирующим столбцом. Возвращает NULL, если не удалось определить столбец. Заполняется только при запросе просмотра информации.|  
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_updateable**|**бит NULL**|Возвращает значение 1, если столбец можно обновлять, либо значение 0 в противном случае. Возвращает NULL, если не удалось определить, можно ли обновлять столбец.|  
 |**is_computed_column**|**бит NULL**|Возвращает значение 1, если столбец является вычисляемым столбцом, либо значение 0 в противном случае. Возвращает NULL, если не удалось определить, является ли столбец вычисляемым столбцом.|  
 |**is_sparse_column_set**|**бит NULL**|Возвращает значение 1, если столбец является разреженным, и значение 0 в противном случае. Возвращает NULL, если не удалось определить, является ли столбец частью набора разреженных столбцов.|  
-|**значение ordinal_in_order_by_list**|**smallint NULL**|Позиция этого столбца в списке ORDER BY. Возвращает NULL, если столбец не отображается в списке ORDER BY, или если список ORDER BY нельзя однозначно определить.|  
+|**ordinal_in_order_by_list**|**smallint NULL**|Позиция этого столбца в списке ORDER BY. Возвращает NULL, если столбец не отображается в списке ORDER BY, или если список ORDER BY нельзя однозначно определить.|  
 |**order_by_list_length**|**smallint NULL**|Длина списка ORDER BY. Возвращает NULL, если нет списка ORDER BY или если список ORDER BY нельзя однозначно определить. Обратите внимание, что это значение будет одинаковым для всех строк, возвращенных **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Если значение ordinal_in_order_by_list не равно NULL, **order_by_is_descending** столбца сообщает направление предложение ORDER BY для этого столбца. В противном случае возвращается значение NULL.|  
 |**tds_type_id**|**int NOT NULL**|Для внутреннего использования.|  
@@ -199,7 +199,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|имя|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -212,7 +212,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|имя|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -225,9 +225,9 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|имя|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|B3|dbo|v|В2|0|  
+|0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>Примеры проблем  
@@ -407,9 +407,8 @@ N'
   
  Результат: **int NULL** поскольку dbo.t1.a и s1.t1.a имеют тип **int** и различную допустимость значений NULL.  
   
-## <a name="see-also"></a>См. также:  
- [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>См. также  
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ 
