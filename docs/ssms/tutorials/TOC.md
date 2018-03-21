@@ -1,4 +1,5 @@
 # [Учебники: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+## [Подключение и отправка запроса к SQL Server с помощью SQL Server Management Studio](connect-query-sql-server.md)
 
 # Занятия
 ## [Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
