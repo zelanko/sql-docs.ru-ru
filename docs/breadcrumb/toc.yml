@@ -125,12 +125,21 @@
         - name: 'SQL Server в Linux:'
           href: /sql/linux/
           homepage: /sql/linux/sql-server-linux-overview
-        - name: "Углубленная аналитика на SQL\_Server"
+        - name: Изучение служб машины SQL Server
           href: /sql/advanced-analytics/
-          homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-        - name: "Службы R\_Services на SQL\_Server"
+          homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+        - name: Чтение
           href: /sql/advanced-analytics/r/
           homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+        - name: Python
+          href: /sql/advanced-analytics/python/
+          homepage: /sql/advanced-analytics/python/sql-server-python-services
+        - name: Установка и настройка.
+          href: /sql/advanced-analytics/install/
+          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+        - name: Учебники
+          href: /sql/advanced-analytics/tutorials/
+          homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
         - name: SQL Server
           href: /sql/sql-server/
           homepage: /sql/sql-server/sql-server-technical-documentation
@@ -210,7 +219,7 @@
                         - name: Клиент
                           href: /sql/analysis-services/multidimensional-models-adomd-net-client/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-                        - name: Server
+                        - name: Сервер
                           href: /sql/analysis-services/multidimensional-models-adomd-net-server/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
                     - name: "Объекты\_AMO"
@@ -309,7 +318,7 @@
                 - name: доставка журналов;
                   href: /sql/database-engine/log-shipping/
                   homepage: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-            - name: Службы Data Quality Services
+            - name: Data Quality Services
               href: /sql/data-quality-services/
               homepage: /sql/data-quality-services/data-quality-services
               items:
@@ -360,7 +369,7 @@
                 - name: Служба
                   href: /sql/integration-services/service/
                   homepage: /sql/integration-services/service/integration-services-service-ssis-service
-                - name: Системные хранимые процедуры.
+                - name: Системные хранимые процедуры
                   href: /sql/integration-services/system-stored-procedures/
                   homepage: /sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog
                 - name: Системные представления
@@ -645,7 +654,7 @@
                 - name: Транзакционная
                   href: /sql/relational-databases/replication/transactional/
                   homepage: /sql/relational-databases/replication/transactional/transactional-replication
-            - name: Регулятор ресурсов
+            - name: Resource Governor
               href: /sql/relational-databases/resource-governor/
               homepage: /sql/relational-databases/resource-governor/resource-governor
             - name: Создание скриптов
@@ -679,7 +688,7 @@
             - name: Трассировка SQL
               href: /sql/relational-databases/sql-trace/
               homepage: /sql/relational-databases/sql-trace/sql-trace
-            - name: Statistics
+            - name: Статистика
               href: /sql/relational-databases/statistics/
               homepage: /sql/relational-databases/statistics/statistics
             - name: Хранимые процедуры
@@ -703,7 +712,7 @@
             - name: Системные представления информационной схемы
               href: /sql/relational-databases/system-information-schema-views/
               homepage: /sql/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql
-            - name: Системные хранимые процедуры.
+            - name: Системные хранимые процедуры
               href: /sql/relational-databases/system-stored-procedures/
               homepage: /sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql
             - name: Системные таблицы
@@ -845,7 +854,7 @@
               href: /sql/relational-databases/native-client/
               homepage: /sql/relational-databases/native-client/sql-server-native-client-programming
               items:
-                - name: Функции
+                - name: Компоненты
                   href: /sql/relational-databases/native-client/features/
                   homepage: /sql/relational-databases/native-client/features/sql-server-native-client-features
                 - name: Приложения
@@ -898,7 +907,7 @@
                         - name: Результаты
                           href: /sql/relational-databases/native-client-ole-db-how-to/results/
                           homepage: /sql/relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db
-                        - name: FILESTREAM
+                        - name: FileStream
                           href: /sql/relational-databases/native-client-ole-db-how-to/filestream/
                           homepage: /sql/relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db
                 - name: интерфейс ODBC
