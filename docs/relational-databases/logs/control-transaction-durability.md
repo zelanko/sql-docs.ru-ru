@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 25ab48e5b7b0ea6a8696c9ab03a9a7b08172ba53
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="control-transaction-durability"></a>Управление устойчивостью транзакций
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] фиксации транзакций могут быть либо полностью устойчивыми, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, либо отложенными устойчивыми (также известные как отложенная запись).    
+  Фиксации транзакций[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть либо полностью устойчивыми, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, либо отложенными устойчивыми (также известные как отложенная запись).    
     
  Полностью устойчивые фиксации транзакций являются синхронными и сообщают об успешной фиксации и возвращают управление клиенту только после записи журналов транзакций на диск.     Устойчивые фиксации транзакций являются асинхронными и сообщают об успешной фиксации до записи журналов транзакций на диск. Запись журнала транзакций на диск необходима, чтобы транзакция была устойчивой. Отложенные транзакции становятся устойчивыми после записи журнала транзакций на диск.    
     
@@ -90,7 +90,7 @@ ms.lasthandoff: 02/12/2018
     
         При успешной фиксации полностью устойчивой транзакции или sp_flush_log все предыдущие отложенные устойчивые транзакции гарантированно становятся устойчивыми.
         
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предпринимает попытку записать журнал на диск, основываясь как на ведении журналов, так и на времени, даже если все транзакции, являются отложенными устойчивыми. Это эта попытка завершается успешно, если устройство ввода-вывода справляется с обработкой. Однако служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предоставляет каких-либо надежных гарантий устойчивости, кроме устойчивых транзакций и sp_flush_log.      
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предпринимает попытку записать журнал на диск, основываясь как на ведении журналов, так и на времени, даже если все транзакции являются отложенными устойчивыми. Это эта попытка завершается успешно, если устройство ввода-вывода справляется с обработкой. Однако служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предоставляет каких-либо надежных гарантий устойчивости, кроме устойчивых транзакций и sp_flush_log.      
     
   
     

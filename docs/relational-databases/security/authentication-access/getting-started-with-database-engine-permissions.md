@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>Список разрешений  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] предусмотрено 230 разрешений. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предусмотрено 219 разрешений. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] предусмотрено 214 разрешений. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] предусмотрено 195 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]и [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] разрешений меньше, так как они определяют только часть ядра СУБД, тогда как отдельные их разрешения не применяются к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. На следующей схеме показаны разрешения и их связи друг с другом. Некоторые из разрешений более высокого уровня (например, `CONTROL SERVER`) указаны несколько раз. Рисунок в этой статье слишком мал для чтения. Щелкните изображение, чтобы скачать **плакат разрешений для ядра СУБД** в формате PDF.  
   
-[![Разрешения для ядра СУБД](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Разрешения для ядра СУБД](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  Схему связей между субъектами [!INCLUDE[ssDE](../../../includes/ssde-md.md)] и объектами сервера и базы данных см. в разделе [Иерархия разрешений (компонент Database Engine)](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

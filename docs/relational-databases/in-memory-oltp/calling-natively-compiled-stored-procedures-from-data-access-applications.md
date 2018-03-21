@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9965ea8ab6c5b1492a57cfd20b03bd17167bd6d2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9111de789fad1ef59d2d1785d44e686a0993c956
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-В этом разделе приведены рекомендации по вызову хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным.  
+  В этом разделе приведены рекомендации по вызову хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным.  
   
  Невозможна итерация курсора по хранимым процедурам, скомпилированным в собственном коде.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/12/2018
   
  SqlClient не поддерживает получение данных только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой (CommandType.SchemaOnly). Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
  Версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не позволяют получить данные только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой. Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Следующие рекомендации применимы к вызовам хранимой процедуры, скомпилированным в собственном коде, с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

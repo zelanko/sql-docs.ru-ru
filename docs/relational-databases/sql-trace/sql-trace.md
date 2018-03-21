@@ -14,18 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 941be6a78b7482ed75b367fe325aade3914f396c
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-trace"></a>Трассировка SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  

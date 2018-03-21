@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3482d6e097e77966be39e33b6eb31b7d941c7624
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 50d2fc5af283489b8f02d2a7e7aa54dc76d14e59
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Требования для использования таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.lasthandoff: 02/12/2018
   
  Помимо [требований к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), для использования выполняющейся в памяти OLTP необходимо следующее.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) или более поздней версии, любой выпуск. Для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (с предварительным пакетом обновления 1, SP1) необходим выпуск Enterprise, Developer или Evaluation.
+-   Любой выпуск [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) или более поздней версии. Для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (с предварительным пакетом обновления 1, SP1) необходим выпуск Enterprise, Developer или Evaluation.
     
     > [!NOTE]
     > Для выполняющейся в памяти OLTP нужна 64-разрядная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] достаточный объем памяти для хранения данных в оптимизированных для памяти таблицах и индексах, а также дополнительная память для поддержания рабочей нагрузки. Дополнительные сведения см. в статье [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется достаточный объем памяти для хранения данных в оптимизированных для памяти таблицах и индексах, а также дополнительная память для поддержания рабочей нагрузки. Дополнительные сведения см. в статье [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) .  
 
 -   Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается на виртуальной машине, объем памяти, выделенный такой машине, должен быть достаточным для того, чтобы обеспечить память, необходимую для оптимизированных для памяти таблиц и индексов. В зависимости от ведущего приложения виртуальной машины для выделения необходимой памяти может служить параметр конфигурации "Резервирование памяти", а при использовании динамической памяти — "Минимальный объем ОЗУ". Убедитесь, что эти параметры удовлетворяют потребности баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

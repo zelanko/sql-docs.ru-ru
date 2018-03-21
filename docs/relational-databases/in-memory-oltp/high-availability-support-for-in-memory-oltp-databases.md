@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: eb13a7b90d1e84a57a5c989058dd32ebd2b8eeb3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Поддержка высокого уровня доступности в базах данных OLTP в памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
+  Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
   
  При развертывании выполняющейся в памяти OLTP базы данных в конфигурации группы доступности AlwaysOn изменения, внесенные в оптимизированные для памяти таблицы в первичной реплике, применяются в памяти к таблицам во вторичных репликах при применении операции REDO. Это означает, что отработка отказа на вторичную реплику может выполняться очень быстро, так как данные уже находятся в памяти. Кроме того, для запросов доступны таблицы во вторичных репликах, для которых был настроен доступ на чтение.  
   

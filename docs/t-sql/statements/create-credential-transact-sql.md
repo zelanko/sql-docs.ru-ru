@@ -31,17 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Создает учетные данные на уровне сервера. Учетные данные являются записью, которая содержит сведения для проверки подлинности, необходимые для подключения к ресурсу извне SQL Server. Большинство учетных данных включают имя пользователя и пароль Windows. Например, при сохранении резервной копии базы данных в определенном расположении серверу SQL Server может потребоваться предоставить специальные учетные данные для доступа к этому расположению. Дополнительные сведения см. в статье [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Чтобы создать учетные данные на уровне базы данных, используйте инструкцию [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Учетные данные на уровне сервера следует применять тогда, когда для доступа к нескольким базам данных на сервере необходимо использовать одни и те же учетные данные. Учетные данные на уровне базы данных повышают ее переносимость. При переносе базы данных на новый сервер учетные данные на уровне базе данных переносятся вместе с ней. Используйте учетные данные на уровне базы данных в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -162,12 +164,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Учетные данные (Ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [ALTER CREDENTIAL (Transact-SQL)](../../t-sql/statements/alter-credential-transact-sql.md)   
  [DROP CREDENTIAL (Transact-SQL)](../../t-sql/statements/drop-credential-transact-sql.md)   
  [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
+ [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Подписанные URL-адреса](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  

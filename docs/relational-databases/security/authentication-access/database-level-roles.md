@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 
 Разрешения пользовательских ролей базы данных можно настроить с помощью инструкций GRANT, DENY и REVOKE. Дополнительные сведения см. в разделе [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-Список всех разрешений см. в афише с [разрешениями для ядра СУБД](http://go.microsoft.com/fwlink/?LinkId=229142) . (Разрешения уровня сервера нельзя предоставлять роли базы данных. Имена входа и другие субъекты уровня сервера (например, роли сервера) нельзя добавлять в роли базы данных. Для обеспечения безопасности на уровне сервера в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]используйте вместо этого [роли сервера](../../../relational-databases/security/authentication-access/server-level-roles.md) . Разрешения уровня сервера нельзя предоставлять посредством ролей в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Список всех разрешений см. в афише с [разрешениями для ядра СУБД](https://aka.ms/sql-permissions-poster) . (Разрешения уровня сервера нельзя предоставлять роли базы данных. Имена входа и другие субъекты уровня сервера (например, роли сервера) нельзя добавлять в роли базы данных. Для обеспечения безопасности на уровне сервера в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]используйте вместо этого [роли сервера](../../../relational-databases/security/authentication-access/server-level-roles.md) . Разрешения уровня сервера нельзя предоставлять посредством ролей в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
 ## <a name="fixed-database-roles"></a>предопределенные роли базы данных
   
@@ -145,11 +145,11 @@ ms.lasthandoff: 11/21/2017
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|Удаляет роль из базы данных.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|Создает новую роль базы данных в текущей базе данных.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Удаляет роль базы данных из текущей базы данных.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)], должны использовать вместо этого `ALTER ROLE`.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , должны использовать вместо этого `ALTER ROLE` .|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Удаляет учетную запись безопасности из роли SQL Server в текущей базе данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , должны использовать вместо этого `ALTER ROLE` .|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Добавляет разрешение для роли.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Запрещает разрешение для роли.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Удаляет разрешения, выданные или запрещенные ранее.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Разрешения | Добавляет разрешение для роли.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Разрешения | Запрещает разрешение для роли.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Разрешения | Удаляет разрешения, выданные или запрещенные ранее.
   
   
 ## <a name="public-database-role"></a>Роль базы данных public  

@@ -15,22 +15,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 caps.latest.revision: 
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c63c70bdd99e31466aa94f72d765e50e0db78779
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 50ae258437afb40cd2b427048dfe24330676f94f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Установка компонентов бизнес-аналитики SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Компоненты SQL Server, которые являются частью платформы бизнес-аналитики Майкрософт, включают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и несколько клиентских приложений, используемых для создания аналитических данных и работы с ними. В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассказывается, как установить эти функции.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить на автономных серверах, в конфигурациях с масштабным развертыванием или как приложения общей службы в ферме SharePoint. При установке служб в ферме включаются функции бизнес-аналитики, доступные только в Sharepoint, включая [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], конструктор нерегламентированных интерактивных отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], который работает с табличными шаблонами баз данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить на автономных серверах, в конфигурациях с масштабным развертыванием или как приложения общей службы в ферме SharePoint. При установке служб в ферме включаются функции бизнес-аналитики, доступные только в Sharepoint, включая [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], конструктор нерегламентированных интерактивных отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который работает с табличными шаблонами баз данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="sql-server-bi-features"></a>Компоненты бизнес-аналитики SQL Server  
  Все компоненты SQL Server, включая компоненты бизнес-аналитики, устанавливаются с помощью программы установки SQL Server. Приведенные ниже ссылки предоставляют дополнительные сведения о каждой из функций бизнес-аналитики.  

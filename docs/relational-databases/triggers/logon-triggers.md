@@ -1,7 +1,7 @@
 ---
 title: "Триггеры входа | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,15 +23,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a22d0170dfe776207ca5fe9ecb79cbce3684e797
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="logon-triggers"></a>Триггеры входа
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Триггеры входа вызывают срабатывание хранимых процедур в ответ на событие LOGON. Это событие вызывается при установке пользовательского сеанса с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после завершения этапа проверки подлинности при входе, но перед тем, как пользовательский сеанс реально устанавливается. Следовательно, все сообщения, которые возникают внутри триггера и обычно достигают пользователя, такие как сообщения об ошибках и сообщения от инструкции PRINT, перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если проверка подлинности завершается сбоем, триггеры входа не срабатывают.  
+[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  Триггеры входа вызывают срабатывание хранимых процедур в ответ на событие LOGON. Это событие вызывается при установке пользовательского сеанса с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после завершения этапа проверки подлинности при входе, но перед тем, как пользовательский сеанс реально устанавливается. Следовательно, все сообщения, которые возникают внутри триггера и обычно достигают пользователя, такие как сообщения об ошибках и сообщения от инструкции PRINT, перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если проверка подлинности завершается сбоем, триггеры входа не срабатывают.  
   
  Можно использовать триггеры входа для проверки и управления сеансами сервера, например для отслеживания входов в систему, ограничения входов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или ограничения числа сеансов для конкретного имени входа. Например, в следующем коде триггер входа запрещает попытки входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , инициированные под именем входа *login_test* , если уже созданы три пользовательских сеанса под этим именем входа.  
   

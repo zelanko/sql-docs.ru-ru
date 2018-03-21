@@ -34,17 +34,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77ff590d36f866c8679bfbc16e605565d9d8d1d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9648aabb541ff4754eb0c5c0be2a0021e25c27dd
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Добавляет сертификат в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  Эта функция несовместима с экспортом базы данных с использованием платформы приложения уровня данных (DACFx). Необходимо удалить все сертификаты перед экспортом.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -141,7 +143,7 @@ CREATE CERTIFICATE certificate_name
  Биты закодированного сертификата ASN, указанного в качестве двоичной константы.  
   
  BINARY =*private_key_bits*  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Биты закрытого ключа, указанного в качестве двоичной константы. Биты могут находиться в зашифрованном виде. Если они зашифрованы, пользователь должен предоставить пароль для расшифровки. Проверка политики паролей для данного пароля не выполняется. Биты закрытого ключа должны быть в формате файла PVK.  
   
@@ -149,7 +151,7 @@ CREATE CERTIFICATE certificate_name
  Указывает пароль, необходимый для расшифровки закрытого ключа, получаемого из файла. Это предложение необязательно, если закрытый ключ защищен пустым паролем. Не рекомендуется сохранять закрытый ключ в файл без защиты паролем. Если требуется ввод пароля, но верный пароль не указан, выполнение инструкции завершится ошибкой.  
   
  ENCRYPTION BY PASSWORD ='*password*'  
- Указывает пароль для шифрования закрытого ключа. Этот аргумент нужно использовать лишь в том случае, если необходимо зашифровать сертификат с помощью пароля. Если аргумент опущен, закрытый ключ шифруется с использованием главного ключа базы данных. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Password Policy](../../relational-databases/security/password-policy.md).  
+ Указывает пароль для шифрования закрытого ключа. Этот аргумент нужно использовать лишь в том случае, если необходимо зашифровать сертификат с помощью пароля. Если аргумент опущен, закрытый ключ шифруется с использованием главного ключа базы данных. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
  SUBJECT ='*certificate_subject_name*'  
  Термин *subject* (субъект) относится к полю в метаданных сертификата, определяемому стандартом X.509. Длина субъекта не должна превышать 64 символов, и это ограничение действует для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Windows он может иметь длину до 128 символов. Субъекты, имеющие длину больше 128 символов, усекаются, если они сохраняются в каталоге, однако в большом двоичном объекте (BLOB), содержащем сертификат, сохранится полное имя субъекта.  

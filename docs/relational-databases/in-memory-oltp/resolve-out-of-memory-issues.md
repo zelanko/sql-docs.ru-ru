@@ -14,20 +14,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 190a55e0feb08aa4e7e0601e6a7fec92b249ea05
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5474d67c93569bdabf214da4bb8dafd6ad793cab
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует больше памяти, чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и делает это по-другому. Возможно, что объем памяти, установленный и выделенный для [!INCLUDE[hek_2](../../includes/hek-2-md.md)], станет недостаточным для растущих потребностей. В таком случае может возникнуть нехватка памяти. В этом разделе описывается восстановление из ситуации с нехваткой памяти. В статье [Наблюдение и устранение неисправностей при использовании памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) вы найдете рекомендации, которые помогут вам избежать многих ситуаций нехватки памяти.  
+  [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует больше памяти, чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и делает это по-другому. Возможно, что объем памяти, установленный и выделенный для [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , станет недостаточным для растущих потребностей. В таком случае может возникнуть нехватка памяти. В этом разделе описывается восстановление из ситуации с нехваткой памяти. В статье [Наблюдение и устранение неисправностей при использовании памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) вы найдете рекомендации, которые помогут вам избежать многих ситуаций нехватки памяти.  
   
 ## <a name="covered-in-this-topic"></a>Темы данного раздела  
   
