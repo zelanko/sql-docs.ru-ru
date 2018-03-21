@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Настройка клиента обработки и анализа данных для использования с SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 02/11/2018
 
 + Microsoft R Server (для SQL Server 2016)
 
-    - Чтобы установить из программы установки SQL Server, в разделе [создать изолированный сервер R](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Чтобы установить из программы установки SQL Server, в разделе [Установка SQL Server 2016 R Server (автономный)](../install/sql-r-standalone-windows-install.md)
 
     - Чтобы использовать отдельный установщик под управлением Windows, см. [Установка машины обучения сервера для Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + Машинное обучение сервера (для SQL Server 2017 г.)
 
-    - Чтобы установить из программы установки SQL Server, в разделе [создать изолированный сервер R](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Чтобы установить из программы установки SQL Server, в разделе [установки сервера SQL Server 2017 г машины обучения (автономный)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - Чтобы использовать отдельный установщик под управлением Windows, см. [установить 9.1 R Server для Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/11/2018
  
     Настройка RTVS для использования клиентских библиотек Microsoft R в разделе [о клиент Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
-+ Visual Studio 2017 г.
++ Visual Studio 2017
 
     Даже бесплатный выпуск Community Edition включает в себя нагрузки обработки и анализа данных, что установка шаблонов проектирования для R, Python и F #.
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/11/2018
 
     В разделе [этот сайт](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) некоторые примеры того, как создать и отладить R проектов, с помощью средства R для Visual Studio. 
 
-+ Visual Studio 2017 г.
++ Visual Studio 2017
 
     Если установить клиент Microsoft R или R Server **перед** установки Visual Studio, библиотеки R Server автоматически обнаруживаются и используется для пути к библиотеке. Если вы не установили библиотеки RevoScaleR из **средств R** последовательно выберите пункты **установить клиент R**.
 

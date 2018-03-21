@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 8509556cd886f90dbac2211bc0282e8656bdc03e
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установить новые пакеты Python на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ Необходимо установить службы обучения машины (в базе данных) с параметром языка Python. Инструкции см. в разделе [Настройка службы обучения Python машины](setup-python-machine-learning-services.md).
++ Необходимо установить службы обучения машины (в базе данных) с параметром языка Python. Инструкции см. в разделе [установки служб SQL Server 2017 г машины обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md).
 
 + Для каждого экземпляра сервера необходимо установить отдельную копию пакета. Пакеты не могут использоваться совместно экземпляров.
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/28/2018
 
 + При установке пакетов Python на сервере без доступа к Интернету, необходимо загрузить его WHL на другом компьютере и скопируйте его на сервер.
 
-    Например, на отдельном компьютере, можно загрузить файл WHL с этого сайта [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), а затем скопируйте файл `cntk-2.1-cp35-cp35m-win_amd64.whl` в локальную папку на компьютере SQL Server.
+    Например, на отдельном компьютере, можно загрузить файл WHL с этого сайта [ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), а затем скопируйте файл `cntk-2.1-cp35-cp35m-win_amd64.whl` в локальную папку на компьютере SQL Server.
 
 + 2017 г. SQL Server использует Python 3.5. 
 

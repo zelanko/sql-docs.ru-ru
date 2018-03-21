@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f25aa61329742373cff9fcbb38b893500d5baa12
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Системные требования, установка и файлы драйвера
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -101,6 +101,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 |Компонент|Описание|  
 |---------------|-----------------|  
 |msodbcsql17.dll или <br> msodbcsql13.dll или <br> msodbcsql11.dll|Файл библиотеки динамической компоновки (DLL), содержащий все функциональные возможности драйвера. Этот файл устанавливается в папку % SYSTEMROOT%\System32.|  
+|msodbcdiag17.dll или <br> msodbcdiag13.dll или <br> msodbcdiag11.dll|Файл библиотеки динамической компоновки (DLL), содержащий интерфейс драйвера диагностики (трассировки). Этот файл устанавливается в папку % SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll или <br> msodbcsqlr13.rll или <br> msodbcsqlr11.rll|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папку % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm или <br> s11ch_msodbcsql.chm |Файл справки мастера источников данных, описывающий, как создать источник данных для драйвера. Этот файл устанавливается в %SYSTEMROOT%\System32\1033 <br /> <br /> **Примечание:** нет файла chm для 17 драйвера ODBC. |  
 |msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для его использования.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h 17 драйвера ODBC или 13 устанавливается в %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h для ODBC Driver 11 устанавливается в %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 

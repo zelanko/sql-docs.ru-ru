@@ -19,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 35738101548f3b0790131c8106bb37e482cc7316
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Предварительные требования для данного пошагового руководства обработки и анализа данных для SQL Server и R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/11/2018
 + Машинного обучения службы (в базе данных) для SQL Server 2017 г.
 + SQL Server 2016 R Services
 
-Дополнительные сведения см. в разделе [настроить SQL Server R Services (в базе данных](../r/set-up-sql-server-r-services-in-database.md).
+Дополнительные сведения см. в разделе [установки служб SQL Server 2017 г машины обучения](../install/sql-machine-learning-services-windows-install.md) или [установки служб SQL Server 2016 R](../install/sql-r-services-windows-install.md).
 
 > [!IMPORTANT]
 > Версии SQL Server более ранней версии 2016 не поддерживают интеграцию с R. Однако старых баз данных SQL можно использовать как источник данных ODBC.
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 - **Клиент Microsoft R** — это средство разработки, которое поддерживает разработку на языке R, с помощью пакета RevoScaleR. Чтобы получить его, см. статью о [начале работы с клиентом Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client).
 
-- **RStudio** — одна из наиболее популярных сред для разработки на языке R. Дополнительные сведения см. на странице [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
+- **RStudio** — одна из наиболее популярных сред для разработки на языке R. Дополнительные сведения см. в разделе [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
 
     Не удается завершить этот учебник, с помощью универсального установки RStudio или в другой среде; R-пакетов и библиотек подключений, необходимо также установить для Microsoft R Open. Дополнительные сведения см. в разделе [Настройка клиента обработки и анализа данных](../r/set-up-a-data-science-client.md).
 

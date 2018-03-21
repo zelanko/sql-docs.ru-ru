@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>С помощью кода R в Transact-SQL (R в быстрый запуск SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
-+ Если возникли ошибки из данного запроса, установки могут быть неполными. После добавления компонента с помощью мастера установки SQL Server необходимо выполнить некоторые дополнительные действия, чтобы включить использование библиотек внешнего кода.  См. сведения в статье [Установка служб R SQL Server (в базе данных)](../r/set-up-sql-server-r-services-in-database.md).
++ Если возникли ошибки из данного запроса, установки могут быть неполными. После добавления компонента с помощью мастера установки SQL Server необходимо выполнить некоторые дополнительные действия, чтобы включить использование библиотек внешнего кода.  В разделе [установить SQL Server 2017 г машинного самообучения, службы](../install/sql-machine-learning-services-windows-install.md) или [Установка служб R SQL Server 2016](../install/sql-r-services-windows-install.md).
 
 + Убедитесь, что запущена служба панели запуска. В зависимости от конкретной среды может потребоваться включить рабочие учетные записи R для подключения к SQL Server, установить дополнительные сетевые библиотеки, включить удаленное выполнение кода или перезапустить экземпляр после настройки всех компонентов. См. сведения в статье [Часто задаваемые вопросы по обновлению и установке для служб R SQL Server](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

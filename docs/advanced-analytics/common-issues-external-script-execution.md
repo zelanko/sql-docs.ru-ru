@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Распространенные проблемы с выполнением внешних скриптов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *Журналы безопасности указывают, что учетная запись NT SERVICE не удалось войти в систему*
 
-Сведения о том, как предоставить необходимые разрешения для этой группы пользователей см. в разделе [настроить SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+Сведения о том, как предоставить необходимые разрешения для этой группы пользователей см. в разделе [установки служб SQL Server 2016 R](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Это ограничение не распространяется на тот случай, если вы используете имена входа SQL для выполнения скриптов R с удаленной рабочей станции.
@@ -233,7 +233,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 Несмотря на то, что при работе в консоли R, являются общими Очистка рабочей области, он может иметь непредвиденные последствия в SQL контекста вычислений.
 
-`revoScriptConnection`— Это объект в рабочую область R, который содержит сведения о сеанса R, который вызывается из SQL Server. Тем не менее если код R содержит команду, чтобы очистить рабочую область (такие как `rm(list=ls())`), все сведения о сеансе и других объектов в рабочую область R также очищается.
+`revoScriptConnection` — Это объект в рабочую область R, который содержит сведения о сеанса R, который вызывается из SQL Server. Тем не менее если код R содержит команду, чтобы очистить рабочую область (такие как `rm(list=ls())`), все сведения о сеансе и других объектов в рабочую область R также очищается.
 
 Чтобы избежать этого Избегайте беспорядочное Очистка переменных и других объектов запущенном R в SQL Server. Можно удалить с помощью определенных переменных **удалить** функции:
 

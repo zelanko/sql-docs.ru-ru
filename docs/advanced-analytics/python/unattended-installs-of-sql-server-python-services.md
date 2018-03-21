@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Автоматически устанавливать службы обучения машины Python (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
     > [!NOTE]
     > 
-    > Нет новых опции установки для Python: `SQL_INST_MPY` и`IACCEPTPYTHONLICENSETERMS`
+    > Нет новых опции установки для Python: `SQL_INST_MPY` и `IACCEPTPYTHONLICENSETERMS`
 
 2. Перезапустите сервер, как указано.
 3. Выполните действия по настройке после установки, как описано в [в этом разделе](#bkmk_PostInstall). Потребуется другой перезапуск службы SQL Server.

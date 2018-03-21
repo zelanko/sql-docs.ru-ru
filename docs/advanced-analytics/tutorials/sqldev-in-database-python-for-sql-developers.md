@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Аналитика в базе данных Python для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="prerequisites"></a>предварительные требования
 
-+ Установить экземпляр SQL Server 2017 г. с компьютера службы обучения и включены Python. Дополнительные сведения см. в разделе [настройки служб SQL Server машины обучения с Python](../python/setup-python-machine-learning-services.md).
++ Установить экземпляр SQL Server 2017 г. с компьютера службы обучения и включены Python. Дополнительные сведения см. в разделе [установки служб SQL Server 2017 г машины обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md).
 + Учетная запись, используемая для этого пошагового руководства, должна иметь разрешения на создание баз данных и других объектов, отправку данных, выбор данных и выполнение хранимых процедур.
 
 ### <a name="experience-level"></a>Уровень качества

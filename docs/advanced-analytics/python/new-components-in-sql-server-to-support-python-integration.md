@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6f948473c51d6212d432ddb179d7a61fcfdef117
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Компоненты SQL Server для поддержки интеграции Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 Для поддержки удаленных сценариев выполнения могут потребоваться дополнительные действия.
 
-Дополнительные сведения см. в разделе [машины обучения служб](setup-python-machine-learning-services.md)
+Дополнительные сведения см. в разделе [установки служб SQL Server 2017 г машины обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md).
 
 ### <a name="launchpad"></a>Панель запуска
 
@@ -105,7 +105,7 @@ BxlServer использует вспомогательное соединени
   + Записи данных в таблицы: например, при сохранении результатов в таблицу
   + Создание объектов базы данных: например, при сохранении внешнего скрипта в рамках новой хранимой процедуры.
 
-  Когда [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] — используется в качестве контекста вычислений для выполнения сценария Python с удаленного клиента, а исполняемый файл Python должны получать данные из внешнего источника, ODBC используется для обратной записи. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Сопоставляет удостоверение пользователя, выполняющего удаленной команды к удостоверению пользователя в текущем экземпляре и выполняет команду ODBC, используя учетные данные пользователя. Строка подключения, необходимая для выполнения этого вызова ODBC, получается из клиентского кода.
+  Когда [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] — используется в качестве контекста вычислений для выполнения сценария Python с удаленного клиента, а исполняемый файл Python должны получать данные из внешнего источника, ODBC используется для обратной записи. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Сопоставляет удостоверение пользователя, выполняющего удаленной команды к удостоверению пользователя в текущем экземпляре и выполняет команду ODBC, используя учетные данные пользователя. Строка подключения, необходимая для выполнения этого вызова ODBC, получается из клиентского кода.
 
 ## <a name="interaction-of-components"></a>Взаимодействие компонентов
 
@@ -125,7 +125,7 @@ BxlServer использует вспомогательное соединени
 4. BxlServer координаты с помощью среды выполнения Python для управления обмен данными и хранения результатов работы.
 5. Вспомогательные SQL управляет взаимодействием связанные задачи и процессы, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer использует вспомогательное соединение SQL для передачи состояния и результатов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Возвращает результаты и закрывает связанные задачи и процессы.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] получает результаты и закрывает связанные задачи и процессы.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Python скриптов, выполненных с помощью удаленного клиента
 

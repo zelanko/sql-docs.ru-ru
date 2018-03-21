@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Настройка службы обучения машины SQL Server (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
 **Применяется к:** SQL Server 2016, SQL Server 2017 г.
 
-## <a name="bkmk_prereqs"></a> Предварительная проверка
+## <a name="bkmk_prereqs"> </a> Предварительная проверка
 
 + Машины обучения в базе данных требуется SQL Server 2016 или более поздней версии. 
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/11/2018
 
 + Платформа обучения машины требует дополнительной настройки, после завершения установки. Конкретные меры зависят от того, организации и политик безопасности, конфигурацию сервера и предполагаемым пользователям. Мы рекомендуем просмотреть все шаги и определить дополнительные конфигурации, необходимых в вашей среде.
 
-## <a name="bkmk2016top"></a>Установка служб R SQL Server 2016 (в базе данных)
+## <a name="bkmk2016top"></a> Установка служб R SQL Server 2016 (в базе данных)
 
 > [!div class="checklist"]
 > * Установка компонента database engine и машинного обучения функции
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/11/2018
 7. После завершения установки перезагрузите компьютер.
 
 
-## <a name="bkmk2017top"></a>Установка служб SQL Server 2017 г машинного обучения (в базе данных)
+## <a name="bkmk2017top"></a> Установка служб SQL Server 2017 г машинного обучения (в базе данных)
 
 > [!div class="checklist"]
 > * Установка компонента database engine и машинного обучения функции
@@ -240,7 +240,7 @@ ms.lasthandoff: 02/11/2018
     + [Дополнительные шаги после установки: Настройка службы и разрешений](#bkmk_FollowUp) 
     + [Устранение неполадок машинного обучения в SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>Дополнительные шаги после установки
+## <a name="bkmk_FollowUp"></a> Дополнительные шаги после установки
 
 В зависимости от вашей вариант использования для машинного обучения может потребоваться внести дополнительные изменения на сервере, брандмауэр, учетные записи, используемые службой, или разрешения базы данных. Необходимые изменения различаются в зависимости от варианта.
 

@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0a065ffeeaf5a88ac26cc1e628eaec5d39ba462a
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Наблюдение за службами обучения на компьютере с помощью пользовательских отчетов в среде Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,6 +118,6 @@ ms.lasthandoff: 02/15/2018
 
 ## <a name="see-also"></a>См. также:
 
-[Мониторинг служб R](../../advanced-analytics/r-services/monitoring-r-services.md)
+[Наблюдение за службами](managing-and-monitoring-r-solutions.md)
 
-[Расширенные события для служб R](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+[Расширенные события для служб R](extended-events-for-sql-server-r-services.md)

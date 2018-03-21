@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8631ebd8cee2eb5f94fd1c28bee71f9fcfee192f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>Учебники для служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,8 +111,8 @@ ms.lasthandoff: 02/11/2018
 
 Чтобы запустить эти учебники, необходимо загрузить и установить SQL Server машинного обучения компонентов, как описано здесь:
 
-+ [Настройка служб SQL Server 2017 г машины обучения или служб R SQL Server 2016](../r/set-up-sql-server-r-services-in-database.md)
-+ [Настройка служб SQL Server 2017 г Python](../python/setup-python-machine-learning-services.md)
++ [Установка служб SQL Server 2017 г машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md)
++ [Установка служб R SQL Server 2016 (в базе данных)](../install/sql-r-services-windows-install.md)
 
 С 2017 г. SQL Server можно установить R и Python либо оба. В противном случае общий процесс установки, архитектуры и требований одинаковы.
 

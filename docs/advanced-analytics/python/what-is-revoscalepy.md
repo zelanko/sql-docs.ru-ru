@@ -13,11 +13,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="introducing-revoscalepy"></a>Знакомство с приложением revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,12 +84,12 @@ SQL Server и Python используют разные типы данных в 
 
 | Функция| Описание|Примечания|
 | ------ | ------ |------ |
-|`rx_btrees` | Вписать вероятностного градиентного повышенные деревья принятия решений|`rx_btrees_ex`в CTP 2.0.|
-|`rx_dforest` | Вписать классификации и регрессии леса принятия решений|`rx_dforest_ex`в CTP 2.0.|
-|`rx_dtree` | Соответствия деревьев классификации и регрессии |`rx_dtree_ex`в CTP 2.0.|
-|`rx_lin_mod` | Создать модель линейный|`rx_lin_mod_ex`в CTP 2.0.|
-|`rx_logit` | создание модели логистической регрессии;|`rx_logit_ex`в CTP 2.0.|
-|`rx_predict` | Создание прогнозов из обученной модели|`rx_predict_ex`в CTP 2.0.|
+|`rx_btrees` | Вписать вероятностного градиентного повышенные деревья принятия решений|`rx_btrees_ex` в CTP 2.0.|
+|`rx_dforest` | Вписать классификации и регрессии леса принятия решений|`rx_dforest_ex` в CTP 2.0.|
+|`rx_dtree` | Соответствия деревьев классификации и регрессии |`rx_dtree_ex` в CTP 2.0.|
+|`rx_lin_mod` | Создать модель линейный|`rx_lin_mod_ex` в CTP 2.0.|
+|`rx_logit` | создание модели логистической регрессии;|`rx_logit_ex` в CTP 2.0.|
+|`rx_predict` | Создание прогнозов из обученной модели|`rx_predict_ex` в CTP 2.0.|
 |`rx_summary` | Сформировать сводку о модели||
 
 Версия Python также предоставляются новые алгоритмы машинного обучения [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
@@ -108,7 +108,7 @@ SQL Server и Python используют разные типы данных в 
 
 MicrosoftML для Python также включает множество преобразований и вспомогательных функций, таких как:
 
-+ `rx_predict`для создания прогнозов из обученной модели и может использоваться для оценки в реальном времени
++ `rx_predict` для создания прогнозов из обученной модели и может использоваться для оценки в реальном времени
 + функции featurization изображения
 + функции для обработки и мнений извлечение текста
 
@@ -157,7 +157,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 Для выполнения кода Python в SQL Server, необходимо установить 2017 г. SQL Server вместе с функцию **службы обучения машины**и включен языка Python. SQL Server более ранних версий не поддерживают интеграции Python.
 
 > [!NOTE]
-> Контексты вычислений SQL Server не поддерживают дистрибутивов открытым исходным кодом Python. Тем не менее если требуется для публикации и использования приложений Python из Windows, можно установить Microsoft Server обучения машины без установки SQL Server. Дополнительные сведения см. в разделе [Создание изолированного сервера R Server](../r/create-a-standalone-r-server.md)
+> Контексты вычислений SQL Server не поддерживают дистрибутивов открытым исходным кодом Python. Тем не менее если требуется для публикации и использования приложений Python из Windows, можно установить Microsoft Server обучения машины без установки SQL Server. Дополнительные сведения см. в разделе [установки сервера SQL Server 2017 г машины обучения (автономный)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ## <a name="get-more-help"></a>Дополнительная справка
 

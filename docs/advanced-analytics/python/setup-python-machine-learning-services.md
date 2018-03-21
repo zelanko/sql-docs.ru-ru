@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Настройка службы обучения машины Python (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/11/2018
 
 Для выполнения автоматической установки, используйте параметры командной строки для программы установки SQL Server и аргументы, связанные с Python. Дополнительные сведения см. в разделе [устанавливает автоматическая установка SQL Server с Python Machine Learning Services](unattended-installs-of-sql-server-python-services.md).
 
-##  <a name="bkmk_installPythonInDatabase"></a>Шаг 1: Установка машинного обучения службы (в базе данных) на сервере SQL Server
+##  <a name="bkmk_installPythonInDatabase"></a> Шаг 1: Установка машинного обучения службы (в базе данных) на сервере SQL Server
 
 1. Запустите мастер настройки для 2017 г. SQL Server.
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/11/2018
 
 6. По завершении установки перезагрузите компьютер.
 
-##  <a name="bkmk_enableFeature"></a>Шаг 2: Включить выполнение сценариев Python
+##  <a name="bkmk_enableFeature"></a> Шаг 2: Включить выполнение сценариев Python
 
 1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/11/2018
 > [!NOTE]
 > Столбцы или заголовки, используемые в скрипте, Python не возвращаются, намеренно. Чтобы добавить имена столбцов для получения выходных данных, необходимо указать схему для возврата набора данных. Сделать это с помощью параметра с РЕЗУЛЬТАТОВ хранимой процедуры, имен столбцов и указать тип данных SQL.
 > 
-> Например можно добавить следующую строку, чтобы создать имя произвольного столбца:`WITH RESULT SETS ((Col1 AS int))`
+> Например можно добавить следующую строку, чтобы создать имя произвольного столбца: `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>Шаг 4: Дополнительная настройка
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > Не все перечисленные изменения требуются и не могут быть необходимы. Требования зависят от схемы безопасности, где установлен SQL Server, и как пользователи для подключения к базе данных и выполнения внешних скриптов.
 
-###  <a name="bkmk_configureAccounts"></a>Включить неявной проверки подлинности для запуска учетной записи группы
+###  <a name="bkmk_configureAccounts"></a> Включить неявной проверки подлинности для запуска учетной записи группы
 
 В процессе установки создается ряд учетных записей пользователей Windows в целях выполнения задач с токеном безопасности службы [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. Когда пользователь отправляет сценарий Python или R от внешнего клиента, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] активирует учетной записи свободных рабочих. Затем он сопоставляется удостоверения вызывающего пользователя и запускает скрипт от имени пользователя.
 

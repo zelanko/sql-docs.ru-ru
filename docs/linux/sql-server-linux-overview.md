@@ -1,10 +1,10 @@
-﻿---
+---
 title: "Общие сведения о SQL Server для Linux | Документы Microsoft"
 description: "Эта статья описывает, как SQL Server работает на ОС Linux и предоставляет сведения о том, как для получения дополнительных сведений."
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 3ec35adddc04a42ed885600a2e8402121c86107c
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server в Linux:
 
@@ -46,9 +46,9 @@ SQL Server 2017 теперь работает на платформе Linux. Э�
 
 | Инструмент | Учебник |
 |-----|-----|
-| Visual Studio (VS код) | [Использование кода VS с SQL Server на Linux](sql-server-linux-develop-use-vscode.md) |
+| Visual Studio (VS код) | [Использование кода VS с SQL Server в Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Использование SSMS в Windows для подключения к SQL Server на Linux](sql-server-linux-develop-use-ssms.md) |
-| SQL Server Data Tools (SSDT) | [Использование средств SSDT с SQL Server на Linux](sql-server-linux-develop-use-ssdt.md) |
+| SQL Server Data Tools (SSDT) | [Использование средств SSDT с SQL Server в Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>Изучение
 

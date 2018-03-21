@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: node-js
 ms.reviewer: 
 ms.suite: sql
@@ -16,13 +15,13 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c3f3203af56f39a4f9beffc8a7a616c0cde64270
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 85c5c9f1fe80893c9d778c6e1cfb7ce889aa1c61
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер node.js для SQL Server
 

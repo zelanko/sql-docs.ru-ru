@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Установка сервера обучения Machine (автономный) или Microsoft R Server (изолированный) из командной строки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/11/2018
 При установке сервера Machine Learning или Microsoft R Server (изолированный) на компьютере, который имеет доступ к Интернету отсутствует, необходимо заранее загрузить необходимые компоненты R (или Python) и скопируйте их в локальную папку. Расположения загрузки. в разделе [Установка компонентов обучения компьютер без доступа к Интернету](installing-ml-components-without-internet-access.md).
 
 
-## <a name="bkmk_mls2017"></a>Установка Microsoft машинного обучения Server (изолированный)
+## <a name="bkmk_mls2017"></a> Установка Microsoft машинного обучения Server (изолированный)
 
 **Применяется к: SQL Server 2017 г.**
 
