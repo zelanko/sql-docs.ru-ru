@@ -1,16 +1,16 @@
 ---
-title: "Метод NextRecordset (ADO) | Документы Microsoft"
+title: Метод NextRecordset (ADO) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4e0e38fc9c01a65916d7979fddfae929d43acf1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nextrecordset-method-ado"></a>Метод NextRecordset (ADO)
 Очищает текущий [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта и возвращает следующий **записей** с помощью перемещения через ряд команд.  
@@ -54,7 +54,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>Remarks  
  Используйте **NextRecordset** метод для возврата результатов инструкция комплексной команды в следующую команду или хранимую процедуру, которая возвращает несколько результатов. При открытии **записей** объекта, основанного на инструкция комплексной команды (например, «ВЫБЕРИТЕ \* из таблицы table1; ВЫБЕРИТЕ \* из table2») с помощью [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод [команда](../../../ado/reference/ado-api/command-object-ado.md) или [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод **набора записей**, ADO выполняет только первая команда и возвращает результаты в *записей*. Чтобы открыть результаты последующих команд в инструкции, вызовите **NextRecordset** метод.  
   
- При условии, что имеются дополнительные результаты и **записей** содержит составные операторы не отключается или переданы через границы процессов **NextRecordset** метод будет продолжать вернуть **записей** объектов. Если команды, возвращающей строки выполняется успешно, но данные не возвращаются, возвращенный **записей** объекта будут открыты, но не пустой. Тест для этого случая путем проверки, что [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства являются оба **True**. Если не тип команда выполняется успешно, возвращенный возвращающие строки **записей** объект будет закрыт, это можно проверить путем проверки [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство **записей**. Если нет дополнительных результатов *записей* будет присвоено *ничего не*.  
+ При условии, что имеются дополнительные результаты и **записей** содержит составные операторы не отключается или переданы через границы процессов **NextRecordset** метод будет продолжать вернуть **записей** объектов. Если команды, возвращающей строки выполняется успешно, но данные не возвращаются, возвращенный **записей** объекта будут открыты, но не пустой. Тест для этого случая путем проверки, что [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства являются оба **True**. Если команда не возвращает строк выполняется успешно, возвращенный **записей** объект будет закрыт, это можно проверить путем проверки [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство **записей**. Если нет дополнительных результатов *записей* будет присвоено *ничего не*.  
   
  **NextRecordset** метод не доступен на несвязанный **записей** объекта, где [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) ему было присвоено **ничего**(в Microsoft Visual Basic) или значение NULL (на других языках).  
   

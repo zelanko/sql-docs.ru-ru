@@ -1,16 +1,16 @@
 ---
-title: "Свойство RecordCount (ADO) | Документы Microsoft"
+title: Свойство RecordCount (ADO) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,38 +20,50 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92faeb5d2ec0b62c03292f71e0299c779e362478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a6ee9d1ea1c4e996c9608bc1ce76ff3f1baa7c62
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="recordcount-property-ado"></a>Свойство RecordCount (ADO)
-Указывает количество записей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
+
+Указывает количество записей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.
   
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **длинные** значение, указывающее количество записей в **записей**.  
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает **длинные** значение, указывающее количество записей в **записей**.
   
-## <a name="remarks"></a>Remarks  
- Используйте **RecordCount** , свойство, чтобы узнать, сколько записей в **записей** объекта. Свойство возвращает значение -1, если ADO не удается определить число записей или если тип поставщика или курсор не поддерживает **RecordCount**. Чтение **RecordCount** свойство для закрытого **записей** приводит к ошибке.  
-  
- Если **записей** объект поддерживает приблизительное позиционирование или закладки??? то есть **(adApproxPosition) поддерживает** или **(adBookmark) поддерживает**соответственно, возвращают **True**код Это значение будет точное число записей в **записей**независимо от того, является ли он полностью заполнен. Если **записей** объект не поддерживает приблизительное позиционирования, это свойство может быть значительно пустой тратой ресурсов, так как все записи должны быть получены и подсчитаны для возврата точный **RecordCount** значение.  
-  
+## <a name="remarks"></a>Remarks
+
+Используйте **RecordCount** , свойство, чтобы узнать, сколько записей в **записей** объекта. Свойство возвращает значение -1, если ADO не удается определить число записей или если тип поставщика или курсор не поддерживает **RecordCount**. Чтение **RecordCount** свойство для закрытого **записей** приводит к ошибке.
+
+#### <a name="bookmarks-or-approximate-positioning"></a>Закладки или приблизительный позиционирования
+
+Если объект Recordset *does* поддерживает либо закладки или приблизительного позиционирования, это свойство возвращает точное число записей в наборе записей. Это свойство возвращает точное число независимо от того, является ли набор записей был полностью заполнен.
+
+Напротив, если объект набора записей не *не* поддерживает закладки и приблизительное позиционирования, доступ к этому свойству может быть пустой тратой значительных ресурсов. Стока возникает, поскольку все записи, необходимо получить и подсчитаны для возврата точного значения RecordCount.
+
+- **adBookmark** связанные с закладки.
+- **adApproxPosition** относится к приблизительное позиционирования.
+
 > [!NOTE]
->  В версиях ADO 2.8 и более ранних версий, поставщик SQLOLEDB выбирает все записи, если используется серверный курсор, несмотря на то что он возвращает **True** для обоих **(adApproxPosition) поддерживает** и **(AdBookmark) поддерживает**.  
+> В версиях ADO 2.8 и более ранних версий, поставщик SQLOLEDB выбирает все записи, если используется серверный курсор, несмотря на то что он возвращает **True** для обоих **(adApproxPosition) поддерживает** и **(AdBookmark) поддерживает**.
   
- Тип курсора **записей** объекта влияет ли можно определить количество записей. **RecordCount** свойство будет возвращать значение -1 для однонаправленного курсора; Фактический подсчет для статического или курсор набора ключей; и -1 или фактический подсчет для динамический курсор, в зависимости от источника данных.  
+Тип курсора **записей** объекта влияет ли можно определить количество записей. **RecordCount** свойство будет возвращать значение -1 для однонаправленного курсора; Фактический подсчет для статического или курсор набора ключей; и -1 или фактический подсчет для динамический курсор, в зависимости от источника данных.
   
-## <a name="applies-to"></a>Объект применения  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+## <a name="applies-to"></a>Объект применения
+
+[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Фильтр и пример RecordCount свойства (Visual Basic)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
- [Фильтр и пример использования свойств RecordCount (VC ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
- [Свойство AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+## <a name="see-also"></a>См. также
+
+[Фильтр и пример RecordCount свойства (Visual Basic)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
+[Фильтр и пример использования свойств RecordCount (VC ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
+[Свойство AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+[Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

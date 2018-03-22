@@ -1,16 +1,16 @@
 ---
-title: "Bookmark-свойство (ADO) | Документы Microsoft"
+title: Bookmark-свойство (ADO) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>Свойство закладка (ADO)
 Указывает закладка, которая однозначно определяет текущую запись в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта или задает текущую запись **записей** объект для записи, определяемый допустимую закладку.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
  При открытии **записей** объектов, каждый из него записей имеет уникальный закладки. Чтобы сохранить закладку в текущей записи, присвойте значение **закладки** свойства переменной. Чтобы быстро вернуться к этой записи в любое время после перемещения в другой записи, задайте **записей** объекта **закладки** значение этой переменной.  
   
- Пользователь может не иметь возможность просматривать значения закладки. Кроме того пользователи не должен ожидать закладки для непосредственного сравнения??? две закладки, ссылающиеся на ту же запись может иметь различные значения.  
+ Пользователь может не иметь возможность просматривать значения закладки. Кроме того пользователи не должен ожидать закладки, чтобы быть сравнить непосредственно, так как две закладки, ссылающиеся на ту же запись может иметь разные значения.  
   
  При использовании [клон](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копии **записей** объекта, **закладки** значений свойств исходного и дубликат **набора записей**  объекты идентичны, и их можно использовать попеременно. Тем не менее, нельзя использовать закладки из разных **записей** объектов взаимозаменяемо, даже если они были созданы из одного источника или команды.  
   
