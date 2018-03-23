@@ -1,16 +1,16 @@
 ---
-title: "sp_spaceused (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_spaceused (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Аргументы  
 
-Для [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spacedused` необходимо указать именованные параметры (например `sp_spacedused (@objname= N'Table1');` вместо того чтобы полагаться на порядковый номер параметра. 
+Для [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` необходимо указать именованные параметры (например `sp_spaceused (@objname= N'Table1');` вместо того чтобы полагаться на порядковый номер параметра. 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -58,7 +58,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 Если *objname* не указан, результаты возвращаются для всей базы данных.  
 *ObjName* — **nvarchar(776)**, значение по умолчанию NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] поддерживают только объекты базы данных и таблицы.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] поддерживают только объекты базы данных и таблицы.
   
  [ **@updateusage=**] **'***updateusage***'**  
  Указывает, что для обновления сведений об использовании места на диске следует запустить инструкцию DBCC UPDATEUSAGE. Когда *objname* — не указан, инструкция запускается в отношении всей базы данных; в противном случае инструкция выполняется *objname*. Значения могут быть **true** или **false**. *UPDATEUSAGE* — **varchar(5)**, значение по умолчанию **false**.  
@@ -81,8 +81,8 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0|Когда  *@objname*  имеет значение null или не указан, возвращаются два результирующих набора. Два результирующих набора поведение установлено по умолчанию.|  
-|1|Когда  *@objname*  = null или является не указан, возвращается один результирующий набор.|  
+|0|Когда *@objname* имеет значение null или не указан, возвращаются два результирующих набора. Два результирующих набора поведение установлено по умолчанию.|  
+|1|Когда *@objname* = null или является не указан, возвращается один результирующий набор.|  
   
  *oneresultset* — **бит**, значение по умолчанию **0**.  
 
@@ -174,7 +174,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_pending_truncation**|**varchar(18)**|Общий размер файлов контрольных точек с состоянием WAITING_FOR_LOG_TRUNCATION, в КБ. Это дисковое пространство для файлов контрольных точек, ожидающих очистки, когда происходит усечение журнала. Возвращает значение NULL, если базы данных не имеет по крайней мере одному контейнеру файловую группу memory_optimized_data. Этот столбец содержит только включено, если `@include_total_xtp_storage=1`.|
 
 ## <a name="remarks"></a>Remarks  
- **database_size** всегда требуется большее, чем сумма **зарезервированные** + **нераспределенное пространство** , так как он включает размер файлов журнала, но **зарезервировано** и **unallocated_space** учитывают только страницы данных.  
+ **database_size** всегда требуется большее, чем сумма **зарезервированные** + **нераспределенное пространство** , так как он включает размер файлов журнала, но **зарезервировано**и **unallocated_space** учитывают только страницы данных.  
   
  Страницы, используемые XML-индексов и полнотекстовых индексов, включаются в **index_size** обоих результирующих наборах. Когда *objname* указано, страницы XML-индексов и полнотекстовых индексов для объекта также учитываются в общую сумму **зарезервированные** и **index_size** результаты.  
   
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>В. Отображение информации о удаленная таблица связана с таблицей с включенным Stretch  
- Приведенный ниже приведены пространства, занятого удаленной таблицы, связанной с таблицей с включенным Stretch с помощью  **@mode**  аргумент, чтобы указать удаленному целевому объекту. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ Приведенный ниже приведены пространства, занятого удаленной таблицы, связанной с таблицей с включенным Stretch с помощью **@mode** аргумент, чтобы указать удаленному целевому объекту. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -256,13 +256,13 @@ GO
 ## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

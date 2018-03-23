@@ -1,25 +1,25 @@
 ---
-title: "Руководство по установке для 2017 г. SQL Server в Linux | Документы Microsoft"
-description: "Установка, обновление и удаление SQL Server в Linux. Online, вне сети и автоматической сценарии рассматриваются в данной статье."
+title: Руководство по установке для 2017 г. SQL Server в Linux | Документы Microsoft
+description: Установка, обновление и удаление SQL Server в Linux. Online, вне сети и автоматической сценарии рассматриваются в данной статье.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -47,12 +47,10 @@ ms.lasthandoff: 03/09/2018
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Подсистема docker** | 1.8+ | [Получить Docker](http://www.docker.com/products/overview)
 
+Корпорация Майкрософт также поддерживает развертывание и Управление контейнерами SQL Server с помощью OpenShift и Kubernetes.
+
 > [!NOTE]
-> Иногда имеется возможность установить и запустить SQL Server на других платформах Linux тесно связаны, но SQL Server только протестированы и поддерживаются на платформах, перечисленные в предыдущей таблице.
-
-Корпорация Майкрософт поддерживает развертывание и Управление контейнерами SQL Server с помощью OpenShift и Kubernetes.
-
-Последние политика поддержки для SQL Server 2017 г. в разделе [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server протестированы и поддерживаются в Linux, для перечисленных выше распределений. Если вы решили установить SQL Server на неподдерживаемой операционной системе, см. в статье **политика поддержки** раздел [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) поддержке последствия.
 
 ## <a id="system"></a> Требования к системе
 
@@ -170,7 +168,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a> Автономную установку
 
-Если компьютер Linux не имеет доступа к сети хранилища, используемых в [краткие](#platforms), можно непосредственно загрузить файлы пакета. Эти пакеты находятся в хранилище Майкрософт по адресу [https://packages.microsoft.com](https://packages.microsoft.com).
+Если компьютер Linux не имеет доступа к сети хранилища, используемых в [краткие](#platforms), можно непосредственно загрузить файлы пакета. Эти пакеты находятся в хранилище Microsoft [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
 > После успешной установки шаги, указанные в краткие руководства необязательно для загрузки или вручную установить пакеты SQL Server. Этот раздел предназначен только для сценария автономной работы.
