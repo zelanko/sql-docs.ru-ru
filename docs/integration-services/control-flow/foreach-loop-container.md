@@ -1,16 +1,16 @@
 ---
-title: "Контейнер \"Цикл по каждому элементу\" | Документы Майкрософт"
-ms.custom: 
+title: Контейнер "Цикл по каждому элементу" | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -33,14 +33,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/20/2018
 ---
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/20/2018
   
 -   Перечислитель набора строк схемы ADO.NET для перечисления сведений схемы об источнике данных. Например, можно перечислить таблицы базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и вывести их список.  
   
--   Перечислитель с циклом по каждому файлу для перечисления файлов в папке. Перечислитель может просматривать вложенные папки. Например, можно считать все файлы с расширением LOG, находящиеся в папке Windows и всех вложенных в нее папках.  
+-   Перечислитель с циклом по каждому файлу для перечисления файлов в папке. Перечислитель может просматривать вложенные папки. Например, можно считать все файлы с расширением *.LOG, находящиеся в папке Windows и всех вложенных в нее папках.  
   
 -   Перечислитель по объекту из переменной для перечисления объектов, содержащихся в заданной переменной. Перечисляемым объектом может быть массив, объект **DataTable**ADO.NET, перечислитель служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и т. п. Например, можно перечислить значения массива, в которых содержатся имена серверов.  
   
@@ -442,7 +442,7 @@ ms.lasthandoff: 03/20/2018
  Укажите имя каталога HDFS, содержащего файлы HDFS, которые необходимо перечислить.  
   
  **Фильтр по имени файла**  
- Укажите фильтр имен, чтобы выбрать файлы с определенным шаблоном имени. Например, MySheet*.xls\* включает такие файлы, как MySheet001.xls и MySheetABC.xlsx.  
+ Укажите фильтр имен, чтобы выбрать файлы с определенным шаблоном имени. Например, MySheet\*.xls\* включает такие файлы, как MySheet001.xls и MySheetABC.xlsx.  
   
  **Получение имени файла**  
  Укажите тип имени файла, получаемого службами SSIS.  
