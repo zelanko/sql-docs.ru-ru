@@ -1,38 +1,124 @@
 ---
-title: "Среда SQL Server Management Studio (SSMS) — журнал изменений | Документация Майкрософт"
-ms.custom: 
-ms.date: 02/15/2018
+title: Среда SQL Server Management Studio (SSMS) — журнал изменений | Документация Майкрософт
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a87476c668bcbf8226348349d6886c39ce8563bf
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 9865ff96b084d70b3dcd067ad8d57c7cece01a62
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).
 
 
+## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
 
-## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+Номер выпуска: 17.6<br>
+Номер сборки: 14.0.17230.0<br>
+Дата выпуска: 20 марта 2018 г.
 
+### <a name="whats-new"></a>новые возможности
+
+**Общие ошибки SSMS**
+
+Управляемый экземпляр базы данных SQL:
+
+- Добавлена поддержка [Управляемого экземпляра базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Управляемый экземпляр базы данных SQL Azure (предварительная версия) — это новая разновидность базы данных SQL Azure, предоставляющая почти полную совместимость с локальным развертыванием SQL Server, собственную реализацию [виртуальной сети](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview), которая решает распространенные проблемы безопасности, и [бизнес-модель](https://azure.microsoft.com/pricing/details/sql-database/), подходящую клиентам локальных версий SQL Server.
+- Поддержка распространенных сценариев управления, таких как:
+   - создание и изменение баз данных;
+   - резервное копирование и восстановление баз данных;
+   - импорт, экспорт, извлечение и публикация приложений уровня данных;
+   - просмотр и изменение свойств сервера;
+   - полная поддержка обозревателя объектов;
+   - создание скриптов для объектов базы данных;
+   - поддержка заданий агента SQL;
+   - поддержка связанных серверов.
+- Дополнительные сведения об управляемых экземплярах можно найти [здесь](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
+
+
+Обозреватель объектов:
+- Добавлены параметры, отключающие принудительное заключение имен в скобки при перетаскивании из обозревателя объектов в окно запроса. (Предложения пользователей [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) и [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
+
+Классификация данных:
+- Общие усовершенствования и исправления ошибок.
+
+**Integration Services (IS)**
+
+- Добавлена поддержка развертывания пакетов в [Управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+
+### <a name="bug-fixes"></a>Исправления ошибок
+
+**Общие ошибки SSMS**
+
+Классификация данных:
+
+- Устранена проблема с *классификацией данных*, из-за которой новые добавляемые классификации отображались с устаревшим *типом сведений* и *меткой конфиденциальности*.
+- Устранена проблема, из-за которой *классификация данных* не работала для сервера с параметрами сортировки с учетом регистра.
+        
+Always On:
+
+- Устранена проблема с панелью мониторинга групп доступности, из-за которой при выборе команды *Сбор данных по задержке* могла возникнуть ошибка, если для сервера были заданы параметры сортировки с учетом регистра.
+- Устранена проблема, из-за которой в среде SSMS группа доступности неправильно отображалась как *распределенная* при завершении работы службы кластера.
+- Устранена проблема, которая заключалась в том, что при создании группы доступности с помощью диалогового окна *Создание группы доступности* параметр *ReadOnlyRoutingUrl* был обязательным.
+- Устранена проблема, из-за которой в случае сбоя сервера-источника и переходе на сервер-получатель вручную возникало исключение NullReferenceException.
+- Устранена проблема, из-за которой при создании группы доступности с помощью резервного копирования и восстановления с целью инициализации базы данных во вторичных репликах файлы базы данных создавались в каталоге по умолчанию. Исправление заключается в следующем:
+   - Добавлен проверяющий элемент управления для каталогов данных и журналов.
+   - Файл перемещается, только если данная реплика и первичная реплика находятся в разных ОС.
+- Устранена проблема, которая заключалась в том, что мастер SSMS не создавал параметр *CLUSTER_TYPE*, что приводило к сбою присоединения вторичной реплики.
+
+Программа установки:
+- Устранена проблема, из-за которой попытка обновить SSMS путем установки пакета обновления завершалась сбоем, если среда SSMS не была установлена в расположении по умолчанию.
+
+SMO:
+- Устранена проблема с производительностью, из-за которой создание скриптов для таблиц в SQL Server 2016 и более поздних версиях могло занимать до 30 секунд (теперь на это требуется менее 1 секунды).
+
+Обозреватель объектов:
+- Устранена проблема, из-за которой при попытке развернуть узел *Управление* в обозревателе объектов в SSMS могло возникать исключение наподобие следующего: "Невозможно привести объект типа DBNull к другим типам".
+- Устранена проблема, из-за которой при выполнении команды *Запустить PowerShell* не обнаруживался модуль SQLServer в случае, если определенный пользователем профиль PowerShell создавал выходные данные.
+- Исправлена проблема с периодическими зависаниями, которые могли происходить при щелчке правой кнопкой мыши по узлу таблицы или индекса в обозревателе объектов.
+
+Database Mail:
+- Устранена проблема, из-за которой *мастер настройки Database Mail* создавал исключение при попытке отображения более чем 16 профилей или управления ими.
+
+
+**Analysis Services**
+
+- Устранена проблема, из-за которой при изменении источника данных для модели с уровнем совместимости 1400 в среде SSMS изменения не сохранялись на сервере.
+
+**Integration Services (IS)**
+
+- Устранена проблема, из-за которой в среде SSMS не отображались узел каталога служб SSIS и отчеты при подключении к Управляемому экземпляру базы данных SQL Azure.
+
+### <a name="known-issues"></a>Известные проблемы
+
+В настоящее время известных проблем в этом выпуске нет.
+
+## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
+
+Чтобы скачать предыдущие версии SSMS, щелкните заголовки со ссылками в приведенных ниже разделах.
+
+## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![скачать](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Общедоступная версия | Номер сборки: 14.0.17224.0
+
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### <a name="whats-new"></a>новые возможности
 
@@ -78,10 +164,10 @@ SMO:
 
 Шаблоны 
 
-- Компонент Database Mail: исправлено несколько опечаток [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+- Database Mail: исправлено несколько опечаток [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
 
 Обозреватель объектов:
-- Исправлена проблема, из-за которой управляемое сжатие завершалось сбоем для индексов (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
+- Устранена проблема, из-за которой управляемое сжатие завершалось сбоем для индексов (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
 
 Аудит.
 - Исправлена проблема с функцией *Объединение файлов аудита*.
@@ -92,14 +178,6 @@ SMO:
 Классификация данных
 - Удаление классификации и последующее добавление новой классификации для того же столбца вручную приводят к тому, что в главном представлении столбцу назначаются прежние тип сведений и метка конфиденциальности.<br>
 *Решение*. Назначьте новые тип сведений и метку конфиденциальности после добавления классификации в главном представлении и перед сохранением изменений.
-
-
-
-## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
-
-Чтобы скачать предыдущие версии SSMS, щелкните заголовки со ссылками в приведенных ниже разделах.
-
-
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![скачать](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
@@ -181,7 +259,7 @@ XE Profiler:
 - Установка SSMS:
     - Устранена проблема, из-за которой установка SSMS приводила к изменению конфигурации всех установленных продуктов на компьютере.
 - Параметры пользователя:
-   - При помощи этого исправления независимым пользователям облака для государственных организаций США предоставлен непрерывный доступ к их базе данных SQL Azure и ресурсам ARM из SSMS посредством универсальной аутентификации и входа Azure Active Directory.  Пользователям предыдущих версий SSMS нужно открыть меню "Средства | Параметры | Службы Azure" и в группе управления ресурсами изменить конфигурацию свойства Active Directory Authority на https://login.microsoftonline.us.
+   - При помощи этого исправления независимым пользователям облака для государственных организаций США предоставлен непрерывный доступ к их базе данных SQL Azure и ресурсам ARM из SSMS посредством универсальной аутентификации и входа Azure Active Directory.  Пользователям предыдущих версий SSMS нужно открыть меню "Сервис | Параметры | Службы Azure" и в группе управления ресурсами изменить значение свойства "Центр Active Directory" на https://login.microsoftonline.us.
 
 **Analysis Services**
 
@@ -377,7 +455,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Исправлена проблема, возникавшая при попытке напечатать результаты запроса (в виде текста).  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - Исправлена проблема, из-за которой в SSMS неправильно удалялись таблицы и другие объекты при создании скриптов для удаления таких объектов в базе данных SQL Azure.
 - Исправлена проблема, из-за которой среда SSMS иногда не запускалась и выводилось сообщение об ошибке "Не удается найти один или несколько компонентов. Переустановите приложение".
-- Исправлена проблема, из-за которой идентификатор SPID в пользовательском интерфейсе SSMS мог оказаться не синхронизированным и устаревшим. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- Исправлена проблема, из-за которой идентификатор SPID в пользовательском интерфейсе SSMS мог оказаться несинхронизированным и устаревшим. https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - Исправлена проблема в программе автоматической установки SSMS, из-за которой аргумент /passive обрабатывался как /quiet.
 - Исправлена проблема, из-за которой при запуске SSMS иногда возникала ошибка "Ссылка на объект не указывает на экземпляр объекта". http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - Исправлена проблема в мастере сжатия данных, которая приводила к аварийному завершению работы SSMS при нажатии кнопки "Вычислить" в таблице графика.
@@ -404,7 +482,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Исправлена проблема в компоненте "Диаграмма базы данных", из-за которой в SSMS возникала ошибка "Индекс находился вне границ массива", а пользователь мог изменить режим таблицы только на стандартный. https://connect.microsoft.com/SQLServer/feedback/details/3133792 и http://connect.microsoft.com/SQLServer/feedback/details/3135326
 - Исправлена проблема при резервном копировании или восстановлении по URL-адресу, из-за которой в SSMS не перечислялись классические учетные записи хранения.
 - Исправлена проблема, из-за которой при попытке добавить защищаемые объекты, привязанные к схеме, к ролям базы данных создавалось исключение. https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- Исправлена проблема, из-за которой при развертывании узла таблицы в SSMS периодически выводилось сообщение об ошибке "Неопределенные данные. Этот метод или свойство не может вызываться для значений, равных Null". http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- Исправлена проблема, из-за которой при развертывании узла таблицы в SSMS периодически выводилось сообщение об ошибке "Неопределенные данные. Этот метод или свойство не может вызываться для значений, равных Null". при развертывании узла таблицы http://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: исправлена проблема, из-за которой процесс DTAEngine.exe завершался вследствие повреждения кучи при вычислении функции секционирования с определенными граничными значениями.
 
 
@@ -422,10 +500,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Исправлена проблема, из-за которой не могли отображаться отчеты о выполнении для каталога базы данных SSIS.
 - Исправлены проблемы в SSMS, связанные с низкой производительностью при работе с большим числом проектов или пакетов.
 
-## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![скачать](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Общедоступен | Номер сборки: 14.0.17119.0
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### <a name="enhancements"></a>Улучшения
 
@@ -449,10 +527,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Написание скриптов: проблему, из-за которой службы SSMS могли случайно удалять объекты базы данных SQL Azure при попытке создать скрипт удаления, можно решить, отключив соответствующий параметр.  В следующий выпуск служб SSMS будут внесены соответствующие исправления.
 - Обозреватель объектов: исправлена проблема, из-за которой узел "Базы данных" не разворачивался при подключении к базе данных Azure, созданной с помощью команды копирования COPY AS.
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![скачать](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
 Общедоступен | Номер сборки: 14.0.17099.0
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### <a name="enhancements"></a>Улучшения 
 
@@ -658,11 +736,11 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * Исправлена проблема, когда при щелчке плана запроса XML не открывался правильный пользовательский интерфейс SSMS.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>![скачать](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
 Общедоступен | Номер сборки: 13.0.16000.28
 
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
 
 * Исправлена проблема, связанная со сбоем, который мог происходить при щелчке базы данных с именем таблицы, содержащим ";:".
 * Исправлена проблема, из-за которой изменения, внесенные на странице "Модель" в окне свойств табличной базы данных AS, становятся причиной вывода исходного определения при помощи скрипта. 
@@ -685,10 +763,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * Исправлена проблема, связанная со сбоями SSMS, происходившими при закрытии приложения или при попытке отобразить диалоговое окно ошибки.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [SSMS 16.4.1 (сентябрь 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![скачать](../ssdt/media/download.png) [SSMS 16.4.1 (сентябрь 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=828615)
 Общедоступен | Номер сборки: 13.0.15900.1
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
 
 *  Устранена проблема со сбоем инструкции ALTER и изменением хранимой процедуры:  
 [Элемент Microsoft Connect № 3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -749,11 +827,11 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [SSMS 16.3 (август 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>![скачать](../ssdt/media/download.png) [SSMS 16.3 (август 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=824938)
 Общедоступная версия | Номер версии: 13.0.15700.28
 
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
 
 * Теперь каждому ежемесячному выпуску SSMS присваивается номер.
 
@@ -807,10 +885,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 ---
-## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [Пакет исправления для SSMS за июль 2016 г.](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![скачать](../ssdt/media/download.png) [Пакет исправления для SSMS за июль 2016 г.](http://go.microsoft.com/fwlink/?LinkID=822301)
 Общедоступная версия | Номер версии: 13.0.15600.2
 
-[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
 
 * **Исправление ошибки в среде SSMS, которое делает доступными отсутствующие пункты контекстного меню**.  
 *Связанные запросы об ошибках от клиентов*  
@@ -819,7 +897,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 [Элемент Microsoft Connect № 2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
 
 ---
-## <a name="ssms-july-2016"></a>SSMS, июль 2016 г. 
+## <a name="ssms-july-2016-install-the-july-2016-hotfix"></a>Версия SSMS за июль 2016 г. (установите исправление за июль 2016 г.)
 Общедоступная версия | Номер версии: 13.0.15500.91
 
 * *Изменение от 5 июля:* улучшена поддержка табличных баз данных SQL Server 2016 (уровень совместимости 1200) в диалоговом окне процесса и в мастере развертывания служб Analysis Services.

@@ -1,35 +1,35 @@
 ---
-title: "Заметки о выпуске SQL Server 2016 | Документация Майкрософт"
-ms.date: 02/27/2018
+title: Заметки о выпуске SQL Server 2016 | Документация Майкрософт
+ms.date: 03/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 1a6d422098fdacb3a7bc6392b99fe63bb25c2c36
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016, включая пакеты обновления. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
 > [![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 >
@@ -37,12 +37,51 @@ ms.lasthandoff: 02/28/2018
 >
 > [![Скачать SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 с пакетом обновления 1 (SP1) обновляет все выпуски и уровни служб SQL Server 2016 до версии SQL Server 2016 с пакетом обновления 1 (SP1). Помимо исправлений, перечисленных в этой статье, SQL Server 2016 с пакетом обновления 1 (SP1) содержит исправления, включенные в SQL Server 2016 с накопительным пакетом обновления 1 (CU1), накопительным пакетом обновления 2 (CU2) и накопительным пакетом обновления 3 (CU3).
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)
+![info_tip](../sql-server/media/info-tip.png) В SQL Server 2016 с пакетом обновления 1 (SP1) входят все исправления вплоть до накопительного пакета обновления 3 для SQL Server 2016 RTM, включая обновление для системы безопасности MS16-136. Этот выпуск содержит все исправления из накопительных пакетов обновления для SQL Server 2016 до накопительного пакета обновления 3 включительно, а также обновление для системы безопасности MS16-136, выпущенное 8 ноября 2016 г. 
 
-- [Страница скачивания SQL Server 2016 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) (Сведения о выпуске SQL Server 2016 с пакетом обновления 1). В этой статье содержатся отдельные ошибки и проблемы, исправленные или устраненные в пакете обновления 1.
- - ![info_tip](../sql-server/media/info-tip.png) См. статью [Центр обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx), где приведены ссылки и сведения для всех поддерживаемых версий, включая пакеты обновления для [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+В выпусках Standard, Web, Express и Local DB продукта SQL Server с пакетом обновления 1 (SP1) доступны следующие функции (если не указано иное):
+- Always Encrypted
+- Отслеживание измененных данных (недоступно в выпуске Express)
+- columnstore
+- Сжатие
+- Динамическое маскирование данных
+- Аудит мелких фрагментов данных
+- Выполняющаяся в памяти OLTP (недоступна в выпуске Local DB)
+- Несколько контейнеров файлового потока (недоступно в выпуске Local DB)
+- Секционирование
+- PolyBase
+- Безопасность на уровне строк
+
+В приведенной ниже таблице представлена сводка основных улучшений в SQL Server 2016 с пакетом обновления 1 (SP1).
+
+|Компонент|Description|Дополнительные сведения|
+|---|---|---|
+|Массовая вставка в кучи с автоматическим использованием указания TABLOCK, если установлен флаг трассировки 715| Флаг трассировки 715 включает блокировку таблицы для операций массовой загрузки в кучу без некластеризованных индексов.|[Перенос рабочих нагрузок SAP в SQL Server производится в 2,5 раза быстрее](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|CREATE или ALTER|Развертывание объектов, таких как хранимые процедуры, триггеры, определяемые пользователем функции и представления.|[Блог по ядру СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|Поддержка DROP TABLE для репликации|Поддержка DROP TABLE DDL для репликации позволяет удалять статьи репликации.|[Статья базы знаний 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|Подписывание драйвера RsFx файлового потока|Драйвер RsFx файлового потока подписывается и сертифицируется с помощью портала "Информационная панель Центра разработки оборудования для Windows" (портал разработчика), что позволяет без проблем устанавливать драйвер RsFx файлового потока для SQL Server 2016 с пакетом обновления 1 (SP1) в ОС Windows Server 2016 и Windows 10.|[Перенос рабочих нагрузок SAP в SQL Server производится в 2,5 раза быстрее](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|Разрешение LPIM в учетной записи службы SQL — программное определение|Администраторы баз данных могут программно определять, действует ли разрешение "Блокировка страниц в памяти" (LPIM) во время запуска службы.|[Выбор разработчика: программное определение наличия разрешений LPIM и IFI в SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Очистка отслеживания изменений вручную|Новая хранимая процедура очищает внутреннюю таблицу отслеживания изменений по требованию.| [Статья базы знаний 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|Параллельные изменения INSERT..SELECT в локальных временных таблицах|Новые параллельные операции INSERT в INSERT..SELECT.|[Группа консультантов по SQL Server](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Showplan XML|Расширенная диагностика, включающая предупреждение о временно предоставляемом буфере памяти, сведения о максимальном объеме памяти, предоставляемом для запроса, установленных флагах трассировки, а также другие диагностические данные. | [Статья базы знаний 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|Память класса хранилища|Ускорьте обработку транзакций с помощью памяти класса хранилища в Windows Server 2016, которая позволяет на порядок сократить время фиксации транзакций.|[Блог по ядру СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|USE HINT|Используйте параметр запроса `OPTION(USE HINT('<option>'))` для изменения поведения оптимизатора запросов с помощью поддерживаемых указаний уровня запроса. В отличие от QUERYTRACEON, параметр USE HINT не требует привилегий администратора.|[Выбор разработчика: указания запроса USE HINT](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|Дополнения XEvent|Возможности диагностики, предоставляемые новыми расширенными событиями и счетчиками производительности, позволяют более эффективно устранять задержки.|[Расширенные события](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+
+Кроме того, обратите внимание на указанные ниже исправления.
+- На основе отзывов администраторов баз данных и участников сообщества SQL начиная с SQL Server 2016 с пакетом обновления 1 (SP1) сообщения журнала, связанные с Hekaton, сведены к минимуму.
+- Ознакомьтесь с новыми [флагами трассировки](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Полные версии образцов баз данных WideWorldImporters работают с выпусками Standard и Express начиная с SQL Server 2016 с пакетом обновления 1 (SP1) и доступны в [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Вносить изменения в образцы не требуется. Резервные копии баз данных, созданные в версии RTM выпуска Enterprise, работают с выпусками Standard и Express в SQL Server 2016 с пакетом обновления 1 (SP1). 
+
+После установки SQL Server 2016 с пакетом обновления 1 (SP1) может потребоваться перезагрузка. Мы рекомендуем запланировать и выполнить перезагрузку после установки SQL Server 2016 с пакетом обновления 1 (SP1).
+
+### <a name="download-pages-and-more-information"></a>Страницы загрузки и дополнительные сведения
+
+- [Скачать пакет обновления 1 (SP1) для Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
+- [Выпущен SQL Server 2016 с пакетом обновления 1 (SP1)](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [Сведения о выпуске SQL Server 2016 с пакетом обновления 1 (SP1)](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) В [Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) можно найти ссылки и сведения для всех поддерживаемых версий, включая пакеты обновления для [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Ядро СУБД (общедоступная версия)](#bkmk_ga_instalpatch) 

@@ -1,29 +1,29 @@
 ---
-title: "Поддержка управляющих объектов SQL Server для выполняющейся в памяти OLTP | Документация Майкрософт"
-description: "В этой статье описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP."
-ms.custom: 
+title: Поддержка управляющих объектов SQL Server для выполняющейся в памяти OLTP | Документация Майкрософт
+description: В этой статье описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP.
+ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: 
-author: JennieHubbard
+caps.latest.revision: ''
+author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 723de25c649545751bda5ddd79db47c5c367f478
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e1dd179fee8f797d42231f65dc8600508e6c7c67
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/12/2018
 - FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (конструктор)
 - **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (перечисление)
 - Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (свойство)
-- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (элемент перечисления)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (член перечисления)
 - Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (свойство)
 - Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (свойство)
 - StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (свойство)

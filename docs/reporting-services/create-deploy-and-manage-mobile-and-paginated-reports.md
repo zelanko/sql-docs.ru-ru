@@ -1,16 +1,16 @@
 ---
-title: "Службы Reporting Services (SSRS) | Документы Майкрософт"
-description: "Сведения о средствах и службах для создания мобильных отчетов и отчетов Reporting Services с разбивкой на страницы, а также локальных отчетов Power BI."
-ms.custom: 
+title: Службы Reporting Services (SSRS) | Документы Майкрософт
+description: Сведения о средствах и службах для создания мобильных отчетов и отчетов Reporting Services с разбивкой на страницы, а также локальных отчетов Power BI.
+ms.custom: ''
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Службы SQL Server Reporting Services (SSRS) и Power BI предоставляют полный спектр готовых к использованию средств и служб для создания и развертывания мобильных отчетов и отчетов Reporting Services с разбиением на страницы в локальной среде, а также управления ими.
+Службы SQL Server Reporting Services (SSRS) предоставляют спектр готовых к использованию средств и служб для создания и развертывания мобильных отчетов и отчетов с разбиением на страницы в локальной среде, а также управления ими.
 
 ![Все службы SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "Все службы SQL Server Reporting Services")
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/09/2018
 
 * **"Традиционные" отчеты с разбиением на страницы** были обновлены, чтобы можно было создавать по-современному выглядящие отчеты с помощью обновленных средств и новых функций.
 * **Новые мобильные отчеты** с гибким макетом, который адаптируется под различные устройства и способы их удержания.
-* **Современный веб-портал** , который можно открыть в любом современном браузере. На новом портале можно упорядочивать и просматривать мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности Reporting Services, а также отчеты Power BI Desktop. На портале также можно сохранять книги Excel.
+* **Современный веб-портал** , который можно открыть в любом современном браузере. На новом портале можно упорядочивать и просматривать мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности Reporting Services. На портале также можно сохранять книги Excel.
 
 Далее приведены более подробные сведения по каждому из этих аспектов.
 
@@ -90,13 +90,13 @@ ms.lasthandoff: 01/09/2018
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-Для пользователей, работающих в основном режиме служб Reporting Services, представлен современный веб-портал, который можно открыть в любом современном браузере. На новом портале доступны все ваши мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности Reporting Services, а также отчеты Power BI Desktop. Дополнительные сведения об [отчетах Power BI в службах Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md).  
+Для пользователей, работающих в основном режиме служб Reporting Services, представлен современный веб-портал, который можно открыть в любом современном браузере. На новом портале доступны все ваши мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности Reporting Services.
 
 Веб-портал можно снабдить собственной фирменной символикой. Кроме того, можно создавать ключевые показатели эффективности непосредственно на веб-портале. Ключевые показатели эффективности позволяют быстро отслеживать основные бизнес-метрики в браузере без открытия отчета. 
 
 Новый веб-портал является полностью переработанной версией диспетчера отчетов. Теперь это основанное на стандартах одностраничное приложение HTML5, под которое оптимизированы все наиболее распространенные современные браузеры, включая Edge, Internet Explorer 10 и 11, Chrome, Firefox, Safari.
 
-Содержимое на веб-портале упорядочивается по типу: мобильные отчеты Reporting Services и отчеты с разбивкой на страницы, ключевые показатели эффективности, а также отчеты Power BI Desktop, книги Excel, общие наборы данных и общие источники данных для использования в качестве стандартных блоков отчетов. Портал обеспечивает их безопасное хранение и управление ими в виде традиционной иерархии папок. Вы можете пометить избранные элементы и управлять содержимым, если это входит в ваши обязанности.
+Содержимое на веб-портале упорядочивается по типу: мобильные отчеты Reporting Services и отчеты с разбивкой на страницы, ключевые показатели эффективности, книги Excel, общие наборы данных и общие источники данных для использования в качестве стандартных блоков отчетов. Портал обеспечивает их безопасное хранение и управление ими в виде традиционной иерархии папок. Вы можете пометить избранные элементы и управлять содержимым, если это входит в ваши обязанности.
 
 На новом портале вы по-прежнему можете запланировать обработку отчетов, обращаться к отчетам по запросу и подписываться на опубликованные отчеты.
 
@@ -119,6 +119,5 @@ ms.lasthandoff: 01/09/2018
 * [Установка служб Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Установка построителя отчетов](../reporting-services/install-windows/install-report-builder.md)   
 * [Скачать SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Отчеты Power BI в службах Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

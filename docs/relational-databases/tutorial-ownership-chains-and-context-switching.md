@@ -1,16 +1,16 @@
 ---
-title: "Руководство. Цепочки владения и переключение контекста | Документация Майкрософт"
-ms.custom: 
+title: Руководство. Цепочки владения и переключение контекста | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b473f9f36e66de356c92e627114c934022b37838
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1ec6c4b013fabd008d2de3388ea163eae0428dcb
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Плакат со всеми разрешениями компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Плакат со всеми разрешениями [!INCLUDE[ssDE](../includes/ssde-md.md)] см. по ссылке [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Создание хранимой процедуры для доступа к данным  
 Для переключения контекста внутри базы данных используйте инструкцию EXECUTE AS. Инструкции EXECUTE AS требуются разрешения IMPERSONATE.  

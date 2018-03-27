@@ -1,16 +1,16 @@
 ---
-title: "SERVERPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: SERVERPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает сведения о свойстве экземпляра сервера.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -63,17 +65,17 @@ SERVERPROPERTY ( 'propertyname' )
 |Выпуск|Установленный выпуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте значение этого свойства для определения функций и ограничений, таких как [ограничения вычислительной емкости для разных выпусков SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). В 64-разрядных версиях компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] к обозначению версии добавляется «(64-разрядная версия)».<br /><br /> Возвращает:<br /><br /> выпуск «Enterprise Edition»;<br /><br /> выпуск "Enterprise Edition": лицензирование по числу ядер;<br /><br /> выпуск «Enterprise Evaluation Edition»;<br /><br /> выпуск «Business Intelligence»;<br /><br /> выпуск «Developer Edition»;<br /><br /> выпуск «Express Edition»;<br /><br /> экспресс-выпуск с дополнительными службами;<br /><br /> выпуск «Standard Edition»;<br /><br /> «Web Edition».<br /><br /> "SQL Azure" означает [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssDW](../../includes/ssdw-md.md)].<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |EditionID|EditionID представляет установленный выпуск продукта для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте значение этого свойства для определения функций и ограничений, таких как [ограничения вычислительной емкости для разных выпусков SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: лицензирование по числу ядер<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> –1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = база данных SQL или хранилище данных SQL<br /><br /> Базовый тип данных: **bigint**|  
 |EngineEdition|Выпуск компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленного на сервере.<br /><br /> 1 = Personal или Desktop Engine (недоступен для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий).<br /><br /> 2 = Standard (возвращается для выпусков Standard, Web и Business Intelligence).<br /><br /> 3 = Enterprise (это значение возвращается для выпусков Evaluation Edition, Developer Edition и обоих вариантов Enterprise Edition).<br /><br /> 4 = Express (возвращается для выпусков Express, Express with Tools и Express with Advanced Services).<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 – [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Базовый тип данных: **int**|  
-|HadrManagerStatus|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Показывает, запущен ли диспетчер [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].<br /><br /> 0 = не запущен, ожидает связи.<br /><br /> 1 = запущен и выполняется.<br /><br /> 2 = не запущен и завершился неудачно.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
+|HadrManagerStatus|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Показывает, запущен ли диспетчер [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].<br /><br /> 0 = не запущен, ожидает связи.<br /><br /> 1 = запущен и выполняется.<br /><br /> 2 = не запущен и завершился неудачно.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
 |InstanceDefaultDataPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам данных экземпляра.|  
 |InstanceDefaultLogPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам журналов экземпляра.|  
 |InstanceName|Имя экземпляра, к которому подключен пользователь.<br /><br /> Возвращает значение NULL в случае, если имя экземпляра установлено по умолчанию, при возникновении ошибки и в случае, если входные данные оказываются недопустимы.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Возвращает значение 1, если компонент расширенной аналитики был установлен во время установки системы, или значение 0, если компонент расширенной аналитики не был установлен.|  
 |IsClustered|Экземпляр сервера настроен для работы в отказоустойчивом кластере.<br /><br /> 1 = в кластере.<br /><br /> 0 = не в кластере.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |IsFullTextInstalled|На текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлены компоненты полнотекстового и семантического индексирования.<br /><br /> 1 = компоненты полнотекстового и семантического индексирования установлены.<br /><br /> 0 = компоненты полнотекстового и семантического индексирования не установлены.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsHadrEnabled|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена на этом экземпляре сервера.<br /><br /> 0 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключен.<br /><br /> 1 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включен.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**<br /><br /> Для реплик доступности, создаваемых и запускаемых на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на экземпляре сервера должна быть включена служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Примечание**. Свойство IsHadrEnabled относится только к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Другие возможности высокого уровня доступности или аварийного восстановления, такие как зеркальное отображение базы данных или доставка журналов, не затрагиваются этим свойством сервера.|  
+|IsHadrEnabled|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена на этом экземпляре сервера.<br /><br /> 0 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключен.<br /><br /> 1 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включен.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**<br /><br /> Для реплик доступности, создаваемых и запускаемых на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на экземпляре сервера должна быть включена служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Примечание**. Свойство IsHadrEnabled относится только к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Другие возможности высокого уровня доступности или аварийного восстановления, такие как зеркальное отображение базы данных или доставка журналов, не затрагиваются этим свойством сервера.|  
 |IsIntegratedSecurityOnly|Сервер запущен во встроенном режиме безопасности.<br /><br /> 1 = встроенная безопасность (проверка подлинности Windows)<br /><br /> 0 = без встроенного режима безопасности. (Как проверка подлинности Windows, так и проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsLocalDB|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Сервер является экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
-|IsPolybaseInstalled|**Область применения**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Возвращает значение, показывающее, установлен ли компонент PolyBase в экземпляре сервера.<br /><br /> 0 = компонент PolyBase не установлен.<br /><br /> 1 = компонент PolyBase установлен.<br /><br /> Базовый тип данных: **int**|  
+|IsLocalDB|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Сервер является экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
+|IsPolybaseInstalled|**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Возвращает значение, показывающее, установлен ли компонент PolyBase в экземпляре сервера.<br /><br /> 0 = компонент PolyBase не установлен.<br /><br /> 1 = компонент PolyBase установлен.<br /><br /> Базовый тип данных: **int**|  
 |IsSingleUser|Server запущен в однопользовательском режиме.<br /><br /> 1 = однопользовательский режим.<br /><br /> 0 = не однопользовательский режим.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |IsXTPSupported|**Применимо к**: SQL Server (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Сервер поддерживает компонент In-Memory OLTP.<br /><br /> 1 = сервер поддерживает компонент In-Memory OLTP.<br /><br /> 0= сервер не поддерживает компонент In-Memory OLTP.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |LCID|Код локали Windows для параметров сортировки.<br /><br /> Базовый тип данных: **int**|  
@@ -83,7 +85,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ProcessID|Идентификатор процесса службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью свойства ProcessID удобно определять, какой файл Sqlservr.exe принадлежит этому экземпляру.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |ProductBuild|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] начиная с октября 2015 г.<br /><br /> Номер сборки.|  
 |ProductBuildType|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Тип текущей сборки.<br /><br /> Возвращает одно из следующих значений.<br /><br /> OD = выпуск по запросу для определенного клиента.<br /><br /> GDR = выпуск для общего распространения посредством обновления Windows.<br /><br /> NULL<br />= неприменимо.|  
-|ProductLevel|Уровень версии экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Возвращает одно из следующих значений.<br /><br /> 'RTM' = Исходная выпущенная версия<br /><br /> 'SP*n*' = версия пакета обновления<br /><br /> 'CTP*n*' = ознакомительная версия для сообщества<br /><br /> Базовый тип данных: **nvarchar(128)**|  
+|ProductLevel|Уровень версии экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Возвращает одно из следующих значений.<br /><br /> 'RTM' = Исходная выпущенная версия<br /><br /> 'SP*n*' = версия пакета обновления<br /><br /> 'CTP*n*', = ознакомительная версия для сообщества<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |ProductMajorVersion|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Основная версия.|  
 |ProductMinorVersion|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Дополнительная версия.|  
 |ProductUpdateLevel|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Уровень обновления текущей сборки. CU означает накопительный пакет обновления.<br /><br /> Возвращает одно из следующих значений.<br /><br /> CU*n* = накопительный пакет обновления<br /><br /> NULL<br />= неприменимо.|  
@@ -100,7 +102,7 @@ SERVERPROPERTY ( 'propertyname' )
 |FilestreamConfiguredLevel|Настроенный уровень доступа FILESTREAM. Дополнительные сведения см. в разделе [Уровень доступа к файловому потоку](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
 |FilestreamEffectiveLevel|Действующий уровень доступа FILESTREAM. Это значение может отличаться от значения FilestreamConfiguredLevel, если уровень был изменен и ожидается перезапуск экземпляра или перезагрузка компьютера. Дополнительные сведения см. в разделе [Уровень доступа к файловому потоку](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **sql_variant**  
   
 ## <a name="remarks"></a>Remarks  

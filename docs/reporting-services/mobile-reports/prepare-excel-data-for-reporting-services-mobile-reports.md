@@ -1,27 +1,27 @@
 ---
-title: "Подготовка данных Excel для мобильных отчетов служб Reporting Services | Документы Майкрософт"
-ms.custom: 
+title: Подготовка данных Excel для мобильных отчетов служб Reporting Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/09/2018
   
 Как можно заметить в приведенном выше примере, первая строка содержит имя параметра, представленного в этом столбце. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] сохраняет эти заголовки, чтобы их можно было посмотреть в настройках элемента коллекции. Но заголовки столбцов не являются обязательными. Если они отсутствуют, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] создает заголовки в стандартном для Excel формате A, B, C, ..., АА, BB, ... и т. д.  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]автоматически определяет наличие заголовков в первой строке, сравнивая типы данных в двух первых ячейках каждого столбца. Если типы данных в двух первых ячейках не совпадают ни в одном столбце, считается, что заголовки столбцов содержит первая строка. Поэтому если заголовки таблицы имеют числовой формат, добавьте строку в качестве префикса в имя заголовка, чтобы при импорте они опознавались как заголовки.  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] автоматически определяет наличие заголовков в первой строке, сравнивая типы данных в двух первых ячейках каждого столбца. Если типы данных в двух первых ячейках не совпадают ни в одном столбце, считается, что заголовки столбцов содержит первая строка. Поэтому если заголовки таблицы имеют числовой формат, добавьте строку в качестве префикса в имя заголовка, чтобы при импорте они опознавались как заголовки.  
   
 ## <a name="cells"></a>Ячейки  
   

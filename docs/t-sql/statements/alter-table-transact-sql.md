@@ -1,16 +1,16 @@
 ---
-title: "ALTER TABLE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -61,22 +61,24 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62bb3df1044b6acc580daefc75ace88bca441e53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Изменяет определение таблицы путем изменения, добавления или удаления столбцов и ограничений, переназначения и перестраивания секций, а также отключения или включения ограничений и триггеров.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -414,7 +416,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  Свойство ROWGUIDCOL не обеспечивает уникальности значений, хранимых в столбце, и не формирует автоматически значения для новых строк, вставляемых в таблицу. Для формирования уникальных значений для каждого столбца можно использовать функцию NEWID в инструкциях INSERT или определить функцию NEWID как значение по умолчанию для столбца.  
   
  [ {ADD | DROP} PERSISTED ]  
- Указывает, что свойство PERSISTED добавлено к указанному столбцу или удалено из него. Столбец должен быть вычисляемым столбцом, который задается при помощи детерминированных выражений. Для столбцов, указанных как PERSISTED, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] физически хранит вычисляемые значения в таблице и обновляет значения при обновлении любого столбца, от которого зависит вычисляемый столбец. Если пометить вычисляемый столбец как PERSISTED, можно создавать индексы по вычисляемым столбцам, которые заданы, являются детерминированными, но не точными выражениями. Дополнительные сведения см. в разделе [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+ Указывает, что свойство PERSISTED добавлено к указанному столбцу или удалено из него. Столбец должен быть вычисляемым столбцом, который задается при помощи детерминированных выражений. Для столбцов, указанных как PERSISTED, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] физически хранит вычисляемые значения в таблице и обновляет значения при обновлении любого столбца, от которого зависит вычисляемый столбец. Если пометить вычисляемый столбец как PERSISTED, можно создавать индексы по вычисляемым столбцам, которые заданы, являются детерминированными, но не точными выражениями. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
  Любой вычисляемый столбец, используемый как столбец секционирования секционированной таблицы, должен быть явно помечен PERSISTED.  
   
@@ -533,7 +535,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Переопределяет параметр конфигурации **max degree of parallelism** только на время выполнения операции. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет параметр конфигурации **max degree of parallelism** только на время выполнения операции. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
  Используйте параметр MAXDOP для ограничения числа процессоров, применяемых при выполнении параллельных планов. Максимальное число процессоров — 64.  
   
@@ -697,7 +699,7 @@ TABLE
  DATA_COMPRESSION  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие параметры выбора.  
+ Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие варианты выбора.  
   
  None  
  Таблица или указанные секции не сжимаются. Это не относится к таблицам columnstore.  
@@ -738,12 +740,12 @@ TABLE
  Имя набора столбцов. Набор столбцов представляет собой нетипизированное XML-представление, в котором все разреженные столбцы таблицы объединены в структурированные выходные данные. Набор столбцов не может быть добавлен в таблицу, если в ней содержатся разреженные столбцы. Дополнительные сведения о наборах столбцов см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Включает или выключает ограничения для таблицы FileTable, заданные системой. Может использоваться только для таблицы FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает имя каталога таблицы FileTable, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов FileTable в базе данных. Проверка уникальности не учитывает регистр символов независимо от параметров сортировки SQL. Может использоваться только для таблицы FileTable.  
 ```    
@@ -755,7 +757,7 @@ TABLE
           ( MIGRATION_STATE = PAUSED ) | ( <table_stretch_options> [, ...n] )  
         } )  
 ```    
-**Область применения**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Включает или отключает Stretch Database для таблицы. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -794,7 +796,7 @@ ALTER TABLE \<table_name>
  Отключение Stretch Database не приводит к удалению удаленной таблицы. Если вы хотите удалить размещенную удаленно таблицу, вам нужно сделать это с помощью портала управления Azure.  
   
 [ FILTER_PREDICATE = { null | *predicate* } ]  
- **Область применения**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Дополнительно указывает предикат фильтра для выбора строк для миграции из таблицы, которая содержит данные журнала и текущие данные. Этот предикат должен вызывать детерминированную встроенную функцию с табличным значением. Более подробную информацию см. в разделах [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) и [Выбор строк для миграции с помощью функции фильтра (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).   
   
@@ -806,7 +808,7 @@ ALTER TABLE \<table_name>
  Если вы указываете предикат фильтра, необходимо также указать *MIGRATION_STATE*.  
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
- **Область применения**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 -   Укажите `OUTBOUND` для миграции данных с SQL Server на Azure.  
   
@@ -864,7 +866,7 @@ IF EXISTS
  Столбцы типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** или определяемые пользователем типы среды CLR нельзя добавить в операцию в режиме "в сети". Столбец нельзя добавлять в сети, если в результате такой операции максимальный размер строки превысит ограничение в 8060 байт. В этом случае столбец добавляется в рамках операции вне сети.  
   
 ## <a name="parallel-plan-execution"></a>Выполнение параллельного плана  
- В выпуске [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и более поздних версиях число процессоров, применяемых для выполнения одной инструкции ALTER TABLE ADD (на базе индекса) CONSTRAINT или DROP (кластеризованный индекс) CONSTRAINT, определяется с помощью параметра конфигурации **max degree of parallelism** и текущей рабочей нагрузки. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, что система занята, то перед началом выполнения инструкции степень параллелизма операции автоматически понижается. Можно вручную настроить число процессоров, применяемых для запуска инструкции, указав параметр MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ В выпуске [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и более поздних версиях число процессоров, применяемых для выполнения одной инструкции ALTER TABLE ADD (на базе индекса) CONSTRAINT или DROP (кластеризованный индекс) CONSTRAINT, определяется с помощью параметра конфигурации **max degree of parallelism** и текущей рабочей нагрузки. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, что система занята, то перед началом выполнения инструкции степень параллелизма операции автоматически понижается. Можно вручную настроить число процессоров, применяемых для запуска инструкции, указав параметр MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 ## <a name="partitioned-tables"></a>Секционированные таблицы  
  Помимо выполнения операций SWITCH, затрагивающих секционированные таблицы, инструкция ALTER TABLE может использоваться для изменения состояния столбцов, ограничений и триггеров секционированной таблицы точно так же, как она используется для несекционированных таблиц. Однако данная инструкция не может использоваться для изменения способа, которым секционируется сама таблица. Чтобы заново секционировать секционированную таблицу, используйте [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) и [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Кроме того, невозможно изменить тип данных столбца секционированной таблицы.  
@@ -902,10 +904,10 @@ IF EXISTS
 ## <a name="replicating-schema-changes"></a>Репликация изменений схемы  
  По умолчанию при выполнении команды ALTER TABLE для опубликованной таблицы в издателе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher это изменение распространяется для всех подписчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта функция имеет некоторые ограничения и может быть отключена. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## <a name="data-compression"></a>Data Compression  
+## <a name="data-compression"></a>Сжатие данных  
  В системных таблицах не может быть включено сжатие. Если таблица является кучей, то операция перестроения в режиме ONLINE будет однопотоковой. Используйте режим OFFLINE для выполнения многопотоковых операций перестроения кучи. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
- Оценить состояние сжатия таблицы, индекса или секции можно с помощью хранимой процедуры [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
+ Оценить состояние сжатия таблицы, индекса или секции можно с помощью хранимой процедуры [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  На секционированные таблицы налагаются следующие ограничения.  
   
@@ -1391,7 +1393,7 @@ ENABLE CHANGE_TRACKING;
   
 В следующем примере разрешается отслеживание изменений и отслеживание столбцов, которые обновляются при внесении изменений.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql  
 USE AdventureWorks2012;  

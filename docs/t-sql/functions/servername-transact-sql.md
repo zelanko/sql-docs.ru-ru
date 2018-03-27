@@ -1,16 +1,16 @@
 ---
-title: "@@SERVERNAME (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: '@@SERVERNAME (Transact-SQL) | Документы Майкрософт'
+ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@SERVERNAME'
@@ -21,23 +21,25 @@ helpviewer_keywords:
 - '@@SERVERNAME function'
 - local servers [SQL Server]
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f1e7dbd47562368653ce75eee9d2a412164a9c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 40f441998f2f5055bdacb0ac6d796a6d3ad56f68
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="x40x40servername-transact-sql"></a>@@SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает имя локального сервера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,20 +48,20 @@ ms.lasthandoff: 11/21/2017
 @@SERVERNAME  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
  Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает серверу имя компьютера. Чтобы изменить имя сервера, выполните процедуру **sp_addserver**, а затем перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- При наличии нескольких установленных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция @@SERVERNAME возвращает следующие сведения об имени локального сервера, если это имя не было изменено после установки.  
+ При наличии нескольких установленных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция @@SERVERNAME возвращает указанные ниже сведения об имени локального сервера, если это имя не было изменено после установки.  
   
 |Экземпляр|Информация о сервере|  
 |--------------|------------------------|  
 |Экземпляр по умолчанию|'*имя_сервера*'|  
 |Именованный экземпляр|'*имя_сервера*\\*имя_экземпляра*'|  
-|экземпляр отказоустойчивого кластера — экземпляр по умолчанию|'*имя_виртуального_сервера*'|  
-|экземпляр отказоустойчивого кластера — именованный экземпляр|'*имя_виртуального_сервера*\\*имя_экземпляра*'|  
+|экземпляр отказоустойчивого кластера — экземпляр по умолчанию|'*имя_виртуального_сервера*'|  
+|экземпляр отказоустойчивого кластера — именованный экземпляр|'*имя_виртуального_сервера*\\*имя_экземпляра*'|  
   
  Хотя функция @@SERVERNAME и свойство SERVERNAME функции SERVERPROPERTY могут возвращать строки в похожих форматах, эта информация может различаться. Свойство SERVERNAME автоматически сообщает об изменениях сетевого имени компьютера.  
   

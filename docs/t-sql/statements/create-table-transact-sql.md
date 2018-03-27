@@ -1,16 +1,16 @@
 ---
-title: "CREATE TABLE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE TABLE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  Синтаксис [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] см. в статье [CREATE TABLE (хранилище данных SQL Azure)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="simple-syntax"></a>Простой синтаксис  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="full-syntax"></a>Полный синтаксис  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -363,7 +365,7 @@ column_name <data_type>
   
  AS FileTable 
  
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
  
  Создает новую таблицу FileTable. Нет необходимости указывать столбцы, так как таблица FileTable имеет фиксированное схему. Дополнительные сведения о таблицах FileTable см. в разделе [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
   
@@ -387,7 +389,7 @@ column_name <data_type>
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически определяет для вычисляемых столбцов допустимость значений NULL на основе использованных выражений. Считается, что результат большинства выражений допускает значение NULL, даже если используются только столбцы, для которых значение NULL запрещено, так как при возможном переполнении или потере точности может получаться значение NULL. Для выяснения возможности вычисляемого столбца таблицы принимать значение NULL используйте функцию COLUMNPROPERTY со свойством **AllowsNull**. Добиться того, чтобы выражение не допускало значения NULL, можно, указав ISNULL с константой *check_expression*, где константа представляет собой ненулевое значение, заменяющее любое значение NULL. Для вычисляемых столбцов, основанных на выражениях, содержащих определяемые пользователем типы среды CLR, требуется разрешение REFERENCES на тип.  
   
  PERSISTED  
- Указывает, что компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет физически хранить вычисляемые значения в таблице и обновлять их при изменении любого столбца, от которого зависит вычисляемый столбец. Указание PERSISTED для вычисляемого столбца позволяет создать индекс по вычисляемому столбцу, который будет детерминистическим, но неточным. Дополнительные сведения см. в разделе [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Все вычисляемые столбцы, используемые в столбцах секционирования секционированной таблицы, должны быть явно помечены как PERSISTED. Если указан параметр PERSISTED, значение *computed_column_expression* должно быть детерминированным.  
+ Указывает, что компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет физически хранить вычисляемые значения в таблице и обновлять их при изменении любого столбца, от которого зависит вычисляемый столбец. Указание PERSISTED для вычисляемого столбца позволяет создать индекс по вычисляемому столбцу, который будет детерминистическим, но неточным. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md). Все вычисляемые столбцы, используемые в столбцах секционирования секционированной таблицы, должны быть явно помечены как PERSISTED. Если указан параметр PERSISTED, значение *computed_column_expression* должно быть детерминированным.  
   
  ON { *partition_scheme* | *filegroup* | **"**default**"** }  
 
@@ -524,7 +526,7 @@ column_name <data_type>
  Некластеризованный индекс columnstore хранится и управляется как кластеризованный индекс columnstore. Он называется некластеризованным индексом columnstore, потому что столбцы могут быть ограничены и он существует как дополнительный индекс в таблице.  
   
  ON *partition_scheme_name***(***column_name***)**  
- Задает схему секционирования, которая определяет файловые группы соответствующие секциям секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы, за исключением случая секционирования индекса UNIQUE, когда аргумент *column_name* должен быть выбран из используемых в качестве уникального ключа. Это ограничение дает возможность компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверять уникальность значений ключа только в одной секции.  
+ Задает схему секционирования, которая определяет файловые группы, соответствующие секциям секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы, за исключением случая секционирования индекса UNIQUE, когда аргумент *column_name* должен быть выбран из используемых в качестве уникального ключа. Это ограничение дает возможность компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверять уникальность значений ключа только в одной секции.  
   
 > [!NOTE]  
 >  При секционировании неуникального кластеризованного индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию добавляет столбец секционирования в список ключей кластеризованного индекса, если этого столбца еще нет в списке. При секционировании неуникального некластеризованного индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как неключевой (включенный) столбец индекса, если этого столбца еще нет в списке.  
@@ -542,11 +544,11 @@ column_name <data_type>
  ON **"**default**"**  
  Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
- Слово «default» в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"**default**"** или ON **[**default**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"**default**"** или ON **[**default**]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
 
  Указывает размещение данных FILESTREAM для таблицы при создании кластеризованного индекса. Предложение FILESTREAM_ON позволяет перемещать данные FILESTREAM в другую файловую группу FILESTREAM или схему секционирования.  
   
@@ -585,13 +587,13 @@ column_name <data_type>
   
  Дополнительные сведения, в том числе об ограничениях функции, см. в разделе [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
- **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  SPARSE  
  Указывает, что столбец является разреженным столбцом. Хранилище разреженных столбцов оптимизируется для значений NULL. Для разреженных столбцов нельзя указать параметр NOT NULL. Дополнительные ограничения и сведения о разреженных столбцах см. в разделе [Разреженные столбцы](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны три функции:  
   
@@ -607,7 +609,7 @@ column_name <data_type>
   
  FILESTREAM  
    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
 
  Допустимо только для столбцов типа **varbinary(max)**. Указывает хранилище FILESTREAM для данных больших двоичных объектов типа **varbinary(max)**.  
   
@@ -763,7 +765,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  \< table_option> ::= Указывает один или более параметров таблицы.  
   
  DATA_COMPRESSION  
- Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие параметры выбора.  
+ Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие варианты выбора.  
   
  None  
  Таблица или указанные секции не сжимаются.  
@@ -820,7 +822,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  Если указано значение ON, процент свободного места, определяемый параметром FILLFACTOR, применяется к страницам индекса промежуточного уровня. Если указано значение OFF или значение FILLFACTOR не указано, страницы промежуточного уровня заполняются до приблизительного объема, оставляющего достаточно места для, как минимум, одной строки максимального размера, которого может достигать индекс, при этом учитывается набор ключей на промежуточных страницах. Значение по умолчанию — OFF.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=***коэффициент_заполнения*  
  Определяет величину в процентах, показывающую насколько должен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] заполнять конечный уровень каждой страницы индекса во время его создания и изменения. Значение *fillfactor* должно быть целым числом от 1 до 100. Значение по умолчанию равно 0. Значения коэффициентов заполнения 0 и 100 идентичны.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
@@ -850,14 +852,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  FILETABLE_DIRECTORY = *directory_name*  
    
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя каталога таблицы FileTable, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов FileTable в базе данных. Проверка уникальности выполняется без учета регистра, независимо от параметров сортировки. Если это значение не задано, то используется имя таблицы FileTable.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя параметров сортировки, применяемых к столбцу **Name** в таблице FileTable. Для соответствия семантике именования файлов Windows параметры сортировки не должны учитывать регистр. Если это значение не задано, то используются параметры сортировки по умолчанию базы данных. Если в параметрах сортировки по умолчанию базы данных учитывается регистр, то выдается ошибка и операция CREATE TABLE оканчивается неуспешно.  
   
@@ -869,21 +871,21 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*  
    
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя, которое должно использоваться для ограничения первичного ключа, автоматически создаваемого в FileTable. Если это значение не задано, то имя для ограничения формируется системой.  
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя, которое должно использоваться для ограничения уникальности, автоматически создаваемого в столбце **stream_id** в FileTable. Если это значение не задано, то имя для ограничения формируется системой.  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя, которое должно использоваться для ограничения уникальности, автоматически создаваемого в столбцах **parent_path_locator** и **name** в FileTable. Если это значение не задано, то имя для ограничения формируется системой.  
   
@@ -897,7 +899,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
   
-**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Создание новой таблицы, для которой включена или отключена Stretch Database. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -912,7 +914,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  [ FILTER_PREDICATE = { null | *predicate* } ]  
    
   
-**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Дополнительно указывает предикат фильтра для выбора строк для миграции из таблицы, которая содержит данные журнала и текущие данные. Этот предикат должен вызывать детерминированную встроенную функцию с табличным значением. Более подробную информацию см. в разделе [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) и [Выбор строк для миграции с помощью функции фильтра](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). 
    
@@ -1252,10 +1254,10 @@ SELECT * FROM tempdb.sys.database_files
 > [!NOTE]  
 >  Как драйвер ODBC для SQL Server, так и поставщик OLE DB для SQL Server (Майкрософт) предусматривают по умолчанию значение параметра ANSI_NULL_DFLT_ON = ON. Пользователи ODBC и OLE DB могут настраивать этот параметр в источниках данных ODBC или с помощью установки атрибутов или свойств соединения в приложении.  
   
-## <a name="data-compression"></a>Data Compression  
+## <a name="data-compression"></a>Сжатие данных  
  В системных таблицах не может быть включено сжатие. При создании таблицы параметру сжатия данных присваивается значение NONE, если не указано иное. При указании списка секций или секции, выходящей за пределы диапазона, будет сформирована ошибка. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
- Оценить состояние сжатия таблицы, индекса или секции можно с помощью хранимой процедуры [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
+ Оценить состояние сжатия таблицы, индекса или секции можно с помощью хранимой процедуры [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.  

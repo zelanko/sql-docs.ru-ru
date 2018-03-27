@@ -1,16 +1,16 @@
 ---
-title: "GRANT (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: GRANT (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>Инструкция GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Предоставляет разрешения на защищаемый объект участнику.  Общий подход заключается в том, чтобы предоставить \<некоторые разрешения> на \<некоторый объект> \<некоторому пользователю, имени входа или группе> (GRANT…ON…TO). Общее описание разрешений см. в разделе [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>Аргументы  
  ALL  
- Этот параметр устарел и сохранен только для поддержки обратной совместимости. Он не предоставляет все возможные разрешения. Выдача разрешения ALL эквивалентна предоставлению следующих разрешений.  
+ Этот параметр устарел и сохранен только для поддержки обратной совместимости. Он не предоставляет все возможные разрешения. Предоставление разрешения ALL эквивалентно предоставлению следующих разрешений: 
   
 -   Если защищаемым объектом является база данных, аргумент ALL относится к разрешениям BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.  
   
@@ -126,7 +126,7 @@ AS *principal*
 AS в данной инструкции не дает возможность олицетворять другого пользователя. 
   
 ## <a name="remarks"></a>Remarks  
- Полное описание синтаксиса инструкции GRANT сложно. Предыдущая диаграмма синтаксиса была упрощена, чтобы продемонстрировать ее структуру. Полное описание синтаксиса предоставления разрешений на конкретные защищаемые объекты приведено в разделах, перечисленных ниже.  
+ Полное описание синтаксиса инструкции GRANT сложно. Предыдущая диаграмма синтаксиса была упрощена, чтобы продемонстрировать ее структуру. Полное описание синтаксиса предоставления разрешений на конкретные защищаемые объекты приведено в статьях, перечисленных ниже.  
   
  Инструкция REVOKE может использоваться для удаления уже выданных прав доступа, а инструкция DENY может использоваться, чтобы предотвратить получение участником определенного разрешения посредством инструкции GRANT.  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
- Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## <a name="permissions"></a>Разрешения  
- Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое. Если используется параметр AS, налагаются дополнительные ограничения. Дополнительные сведения см. в разделах, посвященных конкретным защищаемым объектам.  
+ Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое. Если используется параметр AS, налагаются дополнительные ограничения. Дополнительные сведения см. в статьях, посвященных конкретным защищаемым объектам.  
   
  Владельцы объектов могут предоставлять разрешения на объекты, которыми они владеют. Участники, имеющие разрешение CONTROL на защищаемый объект, могут предоставлять разрешение на этот защищаемый объект.  
   
  Участники, которым предоставлено разрешение CONTROL SERVER, такие как члены предопределенной роли сервера &lt;legacyBold&gt;sysadmin&lt;/legacyBold&gt;, могут предоставлять любое разрешение на любой защищаемый объект сервера. Участники, получившие разрешение CONTROL на базу данных, такие как члены предопределенной роли базы данных db_owner, могут предоставлять любое разрешение на любой защищаемый объект в базе данных. Владельцы разрешения CONTROL, связанного со схемой, могут предоставлять любые разрешения на работу с любыми объектами, содержащимися в данной схеме.  
   
 ## <a name="examples"></a>Примеры  
- В следующей таблице перечислены защищаемые объекты и разделы, в которых описывается синтаксис инструкций по работе с ними.  
+ В приведенной ниже таблице перечислены защищаемые объекты и статьи, в которых описывается синтаксис инструкций по работе с ними.  
   
 |||  
 |-|-|  
@@ -174,7 +174,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Группа доступности|[GRANT, предоставление разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
 |Сертификат|[GRANT, предоставление разрешений на сертификат (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
 |Контракт|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|база данных|[GRANT, предоставление разрешений на базу данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
+|База данных|[GRANT, предоставление разрешений на базу данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
 |Учетные данные для базы данных|[GRANT, предоставление разрешений на учетные данные для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
 |Конечная точка|[GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
 |Полнотекстовый каталог|[GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
@@ -182,12 +182,12 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Компонент|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Имя входа|[GRANT, предоставление разрешений участникам на уровне сервера (Transact-SQL)](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
 |Тип сообщений|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Object|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Объект|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Очередь|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Привязка удаленной службы|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Role|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Роль|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Маршрут|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|схема|[GRANT, предоставление разрешений на схему (Transact-SQL)](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|Схема|[GRANT, предоставление разрешений на схему (Transact-SQL)](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |Список свойств поиска|[GRANT, предоставление разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
 |Сервер|[GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
 |Служба|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
@@ -195,10 +195,10 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Симметричный ключ|[GRANT, предоставление разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
 |Синоним|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Системные объекты|[GRANT, предоставление разрешения на системный объект (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
-|Table|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Таблица|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Тип|[GRANT, предоставление разрешений на тип (Transact-SQL)](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
 |Пользователь|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Просмотр|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Представление|[GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Коллекция схем XML|[GRANT, предоставление разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>См. также:  

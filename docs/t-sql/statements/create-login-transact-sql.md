@@ -1,16 +1,16 @@
 ---
-title: "CREATE LOGIN (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE LOGIN (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 87b7859980292cd8c6bf50f72c59b3cd3125800e
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Создает имя входа компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -111,22 +113,22 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов.  Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*.  
   
  PASSWORD **=***hashed_password*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа.  
   
  HASHED  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что пароль, введенный после аргумента PASSWORD, уже хэширован. Если этот параметр не выбран, то строка, введенная в качестве пароля, хэшируется перед сохранением в базе данных. Данный параметр может быть применен только для миграции баз данных с одного сервера на другой. Не используйте параметр HASHED для создания новых имен входа. Параметр HASHED нельзя использовать с хэшами, созданными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 или более ранних версий.  
   
  MUST_CHANGE  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот параметр задан, то при первом использовании нового имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивается новый пароль.  
   
  CREDENTIAL **=***credential_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя учетных данных для сопоставления с новым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетные данные уже должны существовать на сервере. В настоящее время этот параметр только связывает учетные данные с именем входа. Учетные данные не могут быть сопоставлены с именем входа системного администратора (sa).  
   
@@ -138,22 +140,22 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 -   Идентификатор SID имени входа [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: структура SID, допустимая для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Как правило, это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
 DEFAULT_DATABASE **=***database*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  База данных по умолчанию, связываемая с именем входа. Если этот параметр не задан, то базой данных по умолчанию становится master.  
   
 DEFAULT_LANGUAGE **=***language*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Язык по умолчанию, назначаемый имени входа. Если этот параметр не задан, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для сервера. При смене языка по умолчанию для сервера язык по умолчанию имени входа не меняется.  
   
 CHECK_EXPIRATION **=** { ON | **OFF** }  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, должна ли политика истечения срока действия паролей принудительно применяться к этому имени входа. Значение по умолчанию — OFF.  
   
 CHECK_POLICY **=** { **ON** | OFF }  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что политики паролей Windows компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны принудительно применяться к этому имени входа. Значение по умолчанию — ON.  
   
@@ -165,17 +167,17 @@ CHECK_POLICY **=** { **ON** | OFF }
 -   Один из неалфавитных символов, например пробел, _, @, *, ^, %! #, $ или &.  
   
 WINDOWS  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя входа сопоставлено с именем входа Windows.  
   
 CERTIFICATE *certname*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя сертификата, связываемого с данным именем входа. Этот сертификат должен уже существовать в базе данных master.  
   
 ASYMMETRIC KEY *asym_key_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя асимметричного ключа, связываемого с данным именем входа. Этот ключ должен уже существовать в базе данных master.  
   
@@ -191,7 +193,7 @@ ASYMMETRIC KEY *asym_key_name*
  Если значение CHECK_POLICY равно OFF, то *lockout_time* сбрасывается и параметру CHECK_EXPIRATION также присваивается значение OFF.  
   
 > [!IMPORTANT]  
->  Параметры CHECK_EXPIRATION и CHECK_POLICY будут принудительно применяться только в [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] или более поздних версиях. Дополнительные сведения см. в разделе [Password Policy](../../relational-databases/security/password-policy.md).  
+>  Параметры CHECK_EXPIRATION и CHECK_POLICY будут принудительно применяться только в [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] или более поздних версиях. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
  Имена входа, созданные из сертификатов или асимметричных ключей, используются только для подписи кода. Они не могут использоваться для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имя входа можно создать на основе сертификата или ассиметричного ключа только в том случае, если сертификат или асимметричный ключ уже существуют в базе данных master.  
   
@@ -244,20 +246,22 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO  
 ```  
   
-### <a name="b-creating-a-login-with-a-password"></a>Б. Создание имени входа с паролем  
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>Б. Создание имени входа с паролем, который необходимо изменить
  В следующем примере создается имя входа для конкретного пользователя и назначается пароль. Параметр `MUST_CHANGE` требует, чтобы пользователь изменил этот пароль при первом подключении к серверу.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
+CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' 
+    MUST_CHANGE,  CHECK_EXPIRATION = ON;
 GO  
 ```  
+[!NOTE] Невозможно использовать параметр MUST_CHANGE, если параметр CHECK_EXPIRATION имеет значение OFF.
   
 ### <a name="c-creating-a-login-mapped-to-a-credential"></a>В. Создание имени входа, сопоставленного с учетными данными  
  В следующем примере создается имя входа для конкретного пользователя с использованием идентификатора пользователя. Это имя входа сопоставляется с учетными данными.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',   
@@ -268,7 +272,7 @@ GO
 ### <a name="d-creating-a-login-from-a-certificate"></a>Г. Создание имени входа на основе сертификата  
  В следующем примере создается имя входа для конкретного пользователя на основе сертификата в базе данных master.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE MASTER;  
@@ -283,7 +287,7 @@ GO
 ### <a name="e-creating-a-login-from-a-windows-domain-account"></a>Д. Создание имени входа на основе учетной записи домена Windows  
  В следующем примере имя входа создается на основе учетной записи домена Windows.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;  
@@ -341,9 +345,9 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Политика паролей](../../relational-databases/security/password-policy.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
  [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  

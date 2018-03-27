@@ -1,16 +1,16 @@
 ---
-title: "Подсистема аудита SQL Server (ядро СУБД) | Документация Майкрософт"
-ms.custom: 
+title: Подсистема аудита SQL Server (ядро СУБД) | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]доступно несколько уровней аудита, применение которых зависит от существующих требований или стандартов установки. Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет средства и процессы, необходимые для включения, хранения и просмотра аудитов на различных объектах серверов и баз данных.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  Группы действий подсистемы аудита уровня базы данных и действия подсистемы аудита описываются в разделе [Действия и группы действий подсистемы аудита SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
-### <a name="target"></a>Цель  
+### <a name="target"></a>Назначение  
  Результаты аудита отправляются цели, которая может быть файлом, журналом событий безопасности Windows или журналом событий приложений Windows. Журналы необходимо периодически просматривать и архивировать, чтобы у цели оставалось достаточно места для создания дополнительных записей.  
   
 > [!IMPORTANT]  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>Зеркальное отображение баз данных и подсистема аудита SQL Server  
  Если для базы данных определена спецификация аудита базы данных и используется зеркальное отображение базы данных, то в нее будет включена спецификация аудита базы данных. Для правильной работы на зеркальном экземпляре SQL необходимо выполнить настройку следующих элементов.  
   
--   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID**=***\<идентификатор GUID подсистемы аудита целевого сервера*>.  
+-   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID**=***\<GUID из аудита исходного сервера*>.  
   
 -   При использовании в качестве цели двоичного файла учетная запись службы зеркального сервера должна обладать необходимыми разрешениями на место назначения, куда производится запись аудиторского следа.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  Члены роли sysadmin могут изменять любой компонент аудита; члены роли db_owner могут изменять спецификации аудита в базе данных. Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполнит проверку наличия у имени входа, пытающегося выполнить создание или изменение спецификации аудита (хотя бы разрешения ALTER ANY DATABASE AUDIT). Однако при присоединении базы данных проверка не производится. Следует считать, что спецификации аудита базы данных настолько надежны, насколько надежны участники, имеющие роли sysadmin или db_owner.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Создание спецификации аудита для сервера и базы данных](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  

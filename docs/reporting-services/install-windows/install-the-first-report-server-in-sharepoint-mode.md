@@ -1,25 +1,25 @@
 ---
-title: "Установка первого сервера отчетов в режиме интеграции с SharePoint | Документы Майкрософт"
-ms.custom: 
+title: Установка первого сервера отчетов в режиме интеграции с SharePoint | Документы Майкрософт
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **Создание приложений служб Reporting Services**  
   
--   После установки и регистрации служб Reporting Services создайте одно или несколько приложений служб Reporting Services. Для создания приложения службы Reporting Services учетную запись службы фермы SharePoint необходимо временно включить в группу локальных администраторов. Дополнительные сведения о разрешениях учетной записи SharePoint 2013 см. в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/en-us/library/cc678863.aspx), а о разрешениях учетной записи SharePoint 2016 — в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   После установки и регистрации служб Reporting Services создайте одно или несколько приложений служб Reporting Services. Для создания приложения службы Reporting Services учетную запись службы фермы SharePoint необходимо временно включить в группу локальных администраторов. Дополнительные сведения о разрешениях учетной записи SharePoint 2013 см. в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx), а о разрешениях учетной записи SharePoint 2016 — в статье [Разрешения и параметры безопасности учетной записи в SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      В целях безопасности не рекомендуется, чтобы учетные записи администраторов фермы SharePoint также являлись учетными записями администраторов локальной операционной системы. Если вы добавили учетную запись администратора фермы в группу локальных администраторов в ходе процесса настройки, рекомендуется удалить учетную запись из группы локальных администраторов после завершения установки.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > В случае с SharePoint 2016 сервер SharePoint, на который будут устанавливаться службы Reporting Services, должен иметь **пользовательскую** роль сервера. Развертывание служб Reporting Services может быть успешно выполнено на сервере SharePoint, который не относится к **пользовательской** роли, однако во время следующего периода обслуживания SharePoint MinRole остановит службы Reporting Services, так как обнаружит, что службы Reporting Services в режиме интеграции с SharePoint не поддерживают ни одну из остальных ролей сервера SharePoint. Приложение служб Reporting Services поддерживает только **пользовательскую** роль.
  
  > [!NOTE]
- > Если одновременно в SharePoint 2016 планируется установка службы Power Pivot, установите ее до начала установки служб Reporting Services. Службу Power Pivot нельзя установить на сервер SharePoint в **пользовательской** роли, поэтому такая очередность установки позволит избежать многократного переключения ролей.
+ > Если одновременно в SharePoint 2016 планируется установка службы Power Pivot, установите ее до начала установки служб Reporting Services. Службу Power Pivot можно установить на сервер SharePoint только в **пользовательской** роли.
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>Применение пользовательской роли к серверу SharePoint 2016
  

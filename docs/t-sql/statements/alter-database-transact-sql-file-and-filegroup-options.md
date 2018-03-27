@@ -1,16 +1,16 @@
 ---
-title: "Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -44,21 +44,23 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ef66eef5192d18cb2a443f0ed45f2b29a018c883
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Изменяет файлы и файловые группы, связанные с базой данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Добавляет или удаляет файлы и файловые группы из базы данных и изменяет атрибуты базы данных или ее файлов и файловых групп. Другие параметры ALTER DATABASE см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+  Изменяет файлы и файловые группы, связанные с базой данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Добавляет или удаляет файлы и файловые группы из базы данных и изменяет атрибуты базы данных или ее файлов и файловых групп. Другие параметры ALTER DATABASE см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -196,7 +198,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  Если файл находится в необработанной секции, аргумент *os_file_name* должен указывать только букву диска существующей необработанной секции. В каждый необработанный раздел может быть помещен только один файл.  
   
  **'** *filestream_path* **'**  
- Для файловой группы FILESTREAM параметр FILENAME указывает путь, где будут храниться данные FILESTREAM. Должен существовать путь вплоть до последнего каталога, но последний каталог существовать не должен. Например, если указать путь «C:\MyFiles\MyFilestreamData», папка «C:\MyFiles» должна существовать до запуска инструкции ALTER DATABASE, а папка «MyFilestreamData» — не должна.  
+ Для файловой группы FILESTREAM параметр FILENAME указывает путь, где будут храниться данные FILESTREAM. Должен существовать путь вплоть до последнего каталога, но последний каталог существовать не должен. Например, если указать путь "C:\MyFiles\MyFilestreamData", папка "C:\MyFiles" должна существовать до запуска инструкции ALTER DATABASE, а папка "MyFilestreamData" — не должна.  
   
  Свойства SIZE и FILEGROWTH к файловой группе FILESTREAM неприменимы.  
   
@@ -226,7 +228,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  Максимальный размер файла. Суффиксы KB, MB, GB и TB могут использоваться для указания килобайтов, мегабайтов, гигабайтов или терабайтов. По умолчанию — MБ. Укажите целое число без десятичного разделителя. Если аргумент *max_size* не указан, то размер файла может увеличиваться до тех пор, пока диск не будет заполнен.  
   
  UNLIMITED  
- Указывает, что файл может расти вплоть до заполнения диска. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл журнала, для которого задано неограниченное увеличение размера, имеет максимальный размер 2 ТБ, а файл данных — 16 ТБ. Ограничения размера отсутствуют, если этот параметр указан для контейнера FILESTREAM. Размер продолжает увеличиваться до полного заполнения диска.  
+ Указывает, что файл может расти вплоть до заполнения диска. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл журнала, для которого задано неограниченное увеличение размера, имеет максимальный размер 2 ТБ, а файл данных — 16 ТБ. Ограничения размера отсутствуют, если этот параметр указан для контейнера FILESTREAM. Размер продолжает увеличиваться до полного заполнения диска.  
   
  FILEGROWTH *growth_increment*  
  Задает автоматический шаг роста файла. Значение параметра FILEGROWTH для файла не может превосходить значение параметра MAXSIZE. Параметр FILEGROWTH не применяется к файловым группам FILESTREAM.  
@@ -234,13 +236,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  *growth_increment*  
  Объем пространства, добавляемого к файлу каждый раз, когда требуется увеличение пространства.  
   
- Значение может быть указано в килобайтах, мегабайтах, гигабайтах, терабайтах или процентах (%). Если указано число без суффикса MB, KB или %, то по умолчанию используется MB. Если размер указан в процентах (%), то шаг роста это заданная часть в процентах от размера файла во время этого файла. Указанный размер округляется до ближайших 64 КБ.  
+ Значение может быть указано в килобайтах, мегабайтах, гигабайтах, терабайтах или процентах (%). Если указано число без суффикса MB, KB или %, то по умолчанию используется MB. Если размер указан в процентах (%), то шаг роста — это заданная часть в процентах от размера файла во время этого файла. Указанный размер округляется до ближайших 64 КБ.  
   
  Значение 0 указывает, что автоматическое приращение выключено и дополнительное пространство для файла не разрешено.  
   
  Если параметр FILEGROWTH не задан, доступны следующие значения по умолчанию.  
   
-|Version|Значения по умолчанию|  
+|Версия|Значения по умолчанию|  
 |-------------|--------------------|  
 |Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Данные — 64 МБ. Файлы журналов — 64 МБ.|  
 |Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 1 МБ. Файлы журналов — 10 %.|  
@@ -291,7 +293,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  Устанавливает свойство «только для чтения» или «чтение и запись» для файловой группы.  
   
  DEFAULT  
- Изменяет файловую группу по умолчанию базы данных на *filegroup_name*. Только одна файловая группа в базе данных может быть файловой группой по умолчанию. Дополнительные сведения см. в статье [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+ Изменяет файловую группу по умолчанию базы данных на *filegroup_name*. Только одна файловая группа в базе данных может быть файловой группой по умолчанию. Дополнительные сведения см. в статье [Файлы и группы файлов базы данных](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  NAME = *new_filegroup_name*  
  Изменяет имя файловой группы на *new_filegroup_name*.  
@@ -336,7 +338,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
   
 Добавить или удалить файл во время выполнения инструкции `BACKUP` невозможно.  
   
-Для каждой базы данных может указываться не более 32 767 файлов и 32 767 файловых групп.  
+Для каждой базы данных может указываться не более 32 767 файлов и 32 767 файловых групп.  
   
 Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и в более поздних версиях состояние файла базы данных (например, в сети или вне сети) поддерживается независимо от состояния базы данных. Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md). 
 -  Состояние файлов в пределах файловой группы определяет доступность файловой группы в целом. Чтобы файловая группа была доступна, необходимо, чтобы все файлы в файловой группе находились в режиме в сети. 

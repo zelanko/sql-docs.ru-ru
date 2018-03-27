@@ -1,16 +1,16 @@
 ---
-title: "FROM (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 08/09/2017
+title: FROM (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  Указывает, что конкретная версия данных возвращается из указанной темпоральной таблицы и связывается с таблицей журнала с системным управлением версиями.  
   
-\<tablesample_clause>  
- Указывает, что из таблицы возвращается выборка данных. Выборка может быть приблизительной. Это предложение может быть использовано в инструкциях SELECT, UPDATE или DELETE в отношении любой первичной или соединяемой таблицы. TABLESAMPLE не может быть указано для представлений.  
+### <a name="tablesample-clause"></a>Предложение Tablesample
+**Применимо к:** SQL Server, база данных SQL 
+ 
+ Указывает, что из таблицы возвращается выборка данных. Выборка может быть приблизительной. Это предложение может использоваться в инструкциях SELECT или UPDATE в отношении любой первичной или присоединенной таблицы. TABLESAMPLE не может быть указано для представлений.  
   
 > [!NOTE]  
 >  При использовании предложения TABLESAMPLE к базам данных, которые были обновлены до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с уровнем совместимости базы данных 110 или больше, оператор PIVOT нельзя использовать в запросах рекурсивного обобщенного табличного выражения (CTE). Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Константное целочисленное выражение, используемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для формирования случайного числа. *repeat_seed* имеет тип **bigint**. Если аргумент *repeat_seed* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значение случайным образом. Для определенного значения аргумента *repeat_seed* результат выборки всегда тот же, если в таблице не было произведено никаких изменений. Результат выражения *repeat_seed* должен быть целочисленным значением больше нуля.  
   
- \<joined_table>  
- Результирующий набор, полученный из двух или более таблиц. Для нескольких соединений следует использовать скобки, чтобы изменить естественный порядок соединений.  
+### <a name="tablesample-clause"></a>Предложение Tablesample
+**Применимо к:** хранилище данных SQL
+
+ Указывает, что из таблицы возвращается выборка данных. Выборка может быть приблизительной. Это предложение может использоваться в инструкциях SELECT или UPDATE в отношении любой первичной или присоединенной таблицы. TABLESAMPLE не может быть указано для представлений. 
+
+ PERCENT  
+ Указывает, что из таблицы должен быть извлечен процент строк таблицы, равный значению аргумента *sample_number*. При указании PERCENT хранилище данных SQL возвращает приближенное значение указанного процента. При указании PERCENT выражение *sample_number* должно иметь значение от 0 до 100.  
+
+
+### <a name="joined-table"></a>Соединяемая таблица 
+Соединяемая таблица — это результирующий набор, полученный из двух или более таблиц. Для нескольких соединений следует использовать скобки, чтобы изменить естественный порядок соединений.  
   
-\<join_type>  
- Указание типа операции соединения.  
+### <a name="join-type"></a>Тип соединения
+Указание типа операции соединения.  
   
- **INNER**  
+ INNER  
  Указывает, что возвращаются все совпадающие пары строк. Отмена несовпадающих строк из обеих таблиц. Если тип соединения не указан, этот тип задается по умолчанию.  
   
  FULL [ OUTER ]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [ OUTER ]  
  Указывает, что все строки из правой таблицы, не соответствующие условиям соединения, включаются в результирующий набор, а выходные столбцы, соответствующие оставшейся таблице, устанавливаются в значение NULL в дополнение ко всем строкам, возвращаемым внутренним соединением.  
   
-\<join_hint>  
- Указывает, что оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует одно указание соединения, или алгоритм выполнения, для каждого соединения, указанного в предложении FROM. Дополнительные сведения см. в разделе [Указания соединений (Transact-SQL)](../../t-sql/queries/hints-transact-sql-join.md).  
+### <a name="join-hint"></a>Указание соединения  
+Указывает, что оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует одно указание соединения, или алгоритм выполнения, для каждого соединения, указанного в предложении FROM. Дополнительные сведения см. в разделе [Указания соединений (Transact-SQL)](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] эти указания соединения применяются к соединениям INNER по двум несовместимым столбцам распределения. Они могут повысить производительность запросов, ограничивая объем перемещаемых данных, который происходит во время обработки запросов. Допустимые указания соединения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] показаны ниже.  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Источник таблицы, определенный в предыдущем аргументе. Дополнительные сведения см. в разделе «Примечания».  
   
+### <a name="pivot-clause"></a>Предложение PIVOT
+
  *table_source* PIVOT \<pivot_clause>  
  Указывает, что значение *table_source* основано на *pivot_column*. *table_source* представляет собой таблицу или табличное выражение. Выходными данными является таблица, содержащая все столбцы *table_source*, за исключением *pivot_column* и *value_column*. Столбцы *table_source*, кроме *pivot_column* и *value_column*, называются столбцами группирования оператора PIVOT. Дополнительные сведения о PIVOT и UNPIVOT см. в разделе [Использование операторов PIVOT и UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>Х. Использование TABLESAMPLE для чтения данных из выборки строк в таблице  
+ В следующем примере используется `TABLESAMPLE` в предложении `FROM` для возврата около `10` процентов всех строк из таблицы `Customer`.  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>См. также:  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   

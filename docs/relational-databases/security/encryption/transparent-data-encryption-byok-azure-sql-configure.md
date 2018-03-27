@@ -1,35 +1,36 @@
 ---
-title: "Включение прозрачного шифрования данных с использованием собственного ключа Azure Key Vault с помощью PowerShell | Документы Майкрософт"
-description: "Сведения о настройке базы данных и хранилища данных SQL Azure для использования прозрачного шифрования данных (TDE) для шифрования хранящихся данных с помощью PowerShell."
-keywords: 
-documentationcenter: 
+title: Включение прозрачного шифрования данных SQL с использованием собственного ключа Azure Key Vault с помощью PowerShell и CLI | Документы Майкрософт
+description: Сведения о настройке базы данных и хранилища данных SQL Azure для использования прозрачного шифрования данных (TDE) с целью шифрования хранящихся данных с помощью PowerShell или CLI.
+keywords: ''
+documentationcenter: ''
 author: aliceku
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
+ms.devlang: azurecli, powershell
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 03/15/2018
 ms.author: aliceku
-ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 9d1fee3a22bfa930f70a8c6e2585f60acaf5f419
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault (предварительная версия) с помощью PowerShell
+# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault (предварительная версия) с помощью PowerShell и CLI
+
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Это практическое руководство показывает, как использовать ключ из Azure Key Vault для прозрачного шифрования данных (TDE) (в предварительной версии) в хранилище данных или базе данных SQL. Дополнительные сведения о TDE с поддержкой создания собственных ключей (BYOK) (в предварительной версии) см. в статье о [прозрачном шифровании данных с поддержкой BYOK в Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites-for-powershell"></a>Необходимые условия для использования PowerShell
 
 - Требуется подписка Azure и права администратора этой подписки.
 - [Рекомендуется, но необязательно] Наличие аппаратного модуля безопасности (HSM) или локального хранилища ключей для создания локальной копии материала ключа средства защиты TDE.
@@ -42,9 +43,9 @@ ms.lasthandoff: 01/04/2018
    - не быть отключенным;
    - иметь возможность выполнять операции *получения*, *упаковки ключа*, *распаковки ключа*.
 
-## <a name="step-1-assign-an-aad-identity-to-your-server"></a>Шаг 1. Назначение удостоверения AAD серверу 
+## <a name="step-1-assign-an-azure-ad-identity-to-your-server"></a>Шаг 1. Назначение удостоверения Azure Active Directory серверу 
 
-При наличии существующего сервера добавьте удостоверение AAD на сервер, как показано ниже.
+При наличии существующего сервера добавьте удостоверение Azure Active Directory на сервер, как показано ниже.
 
    ```powershell
    $server = Set-AzureRmSqlServer `
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/04/2018
    -AssignIdentity
    ```
 
-Если вы создаете сервер, используйте командлет [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) с тегом -Identity, чтобы добавить удостоверение во время этого процесса:
+Если вы создаете сервер, используйте командлет [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) с тегом -Identity, чтобы добавить удостоверение Azure Active Directory во время этого процесса:
 
    ```powershell
    $server = New-AzureRmSqlServer `
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/04/2018
 > 
 
 >[!Tip]
->Пример KeyId из Key Vault: https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h.
+>Пример идентификатора KeyId из Key Vault: https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
 >
 
    ```powershell
@@ -124,7 +125,7 @@ ms.lasthandoff: 01/04/2018
 
 Теперь для базы данных или хранилища данных включено прозрачное шифрование данных с помощью ключа шифрования в хранилище Key Vault.
 
-## <a name="step-5-check-the-encryption-state-and-encryption-activity-of-the-database-or-data-warehouse"></a>Шаг 5. Проверьте состояние шифрования и действие шифрования базы данных или хранилища данных
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Шаг 5. Проверка состояния и активности шифрования
 
 Воспользуйтесь командлетом [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption), чтобы узнать состояние шифрования, и командлетом [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity), чтобы проверить ход выполнения шифрования для базы данных или хранилища данных.
 
@@ -192,4 +193,67 @@ ms.lasthandoff: 01/04/2018
 - Узнайте, как заменить средство защиты TDE сервера в соответствии с требованиями безопасности: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md) (Смена средства защиты прозрачного шифрования данных с помощью PowerShell).
 - Узнайте, как удалить потенциально скомпрометированное средство защиты TDE в случае угрозы безопасности, изучив [эту статью](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
 
+## <a name="prerequisites-for-cli"></a>Необходимые условия для использования CLI
 
+- Требуется подписка Azure и права администратора этой подписки.
+- [Рекомендуется, но необязательно] Наличие аппаратного модуля безопасности (HSM) или локального хранилища ключей для создания локальной копии материала ключа средства защиты TDE.
+- Интерфейс командной строки версии 2.0 или более поздней. Чтобы установить последнюю версию и подключиться к подписке Azure, см. статью [Установка и настройка кроссплатформенного интерфейса командной строки Azure 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
+- Созданные Azure Key Vault и ключ для TDE.
+   - [Управление Key Vault с помощью CLI 2.0](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Инструкции по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+- Ключ, используемый для прозрачного шифрования данных, должен иметь следующие характеристики:
+   - быть бессрочным;
+   - не быть отключенным;
+   - иметь возможность выполнять операции *получения*, *упаковки ключа*, *распаковки ключа*.
+   
+## <a name="step-1-create-a-server-and-assign-an-azure-ad-identity-to-your-server"></a>Шаг 1. Создание сервера и назначение ему удостоверения Azure Active Directory
+      ```cli
+      # create server (with identity) and database
+      az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
+      az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+      ```
+
+ 
+## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Шаг 2. Предоставление серверу разрешений на доступ к хранилищу Key Vault
+      ```cli
+      # create key vault, key and grant permission
+      az keyvault create -n "VaultName" -g "ResourceGroupName" 
+      az keyvault key create -n myKey -p software --vault-name "VaultName" 
+      az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
+      ```
+
+ 
+## <a name="step-3-add-the-key-vault-key-to-the-server-and-set-the-tde-protector"></a>Шаг 3. Добавление ключа из хранилища Key Vault на сервер и настройка средства защиты TDE
+  
+     ```cli
+     # add server key and update encryption protector
+      az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
+      az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
+      ```
+  
+  > [!Note]
+> Общая длина имени хранилища ключей и имени ключа не может превышать 94 символов.
+> 
+
+>[!Tip]
+>Пример идентификатора KeyId из Key Vault: https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>
+  
+## <a name="step-4-turn-on-tde"></a>Шаг 4. Включение TDE 
+      ```cli
+      # enable encryption
+      az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
+      ```
+
+Теперь для базы данных или хранилища данных включено прозрачное шифрование данных с помощью ключа шифрования в хранилище Key Vault.
+
+## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Шаг 5. Проверка состояния и активности шифрования
+
+     ```cli
+      # get encryption scan progress
+      az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      # get whether encryption is on or off
+      az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+      ```

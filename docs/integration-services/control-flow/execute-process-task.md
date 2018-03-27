@@ -1,16 +1,16 @@
 ---
-title: "Задача \"Выполнение процесса\" | Документы Майкрософт"
-ms.custom: 
+title: Задача "Выполнение процесса" | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76ea783edab9673a720d5b95883caffff9d9a4d7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bf81fa613863d01bc672aba97af796bbd27ad896
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача «Выполнение процесса» запускает приложение или пакетный файл как часть рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
      Дополнительные сведения см. в разделе [My.Application.CommandLineArgs Property](http://go.microsoft.com/fwlink/?LinkId=129200), в справочнике [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
--   Если для подготовки приложения применяется Microsoft Visual C#, используйте метод **Main** .  
+-   Если для подготовки приложения применяется Microsoft Visual C#, используйте метод **Main**.  
   
      Дополнительные сведения см. в разделе [Command-Line Arguments (C# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=129406)в руководстве по программированию на C#.  
   
