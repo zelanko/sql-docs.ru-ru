@@ -1,27 +1,28 @@
 ---
-title: "Проекты служб Data Quality Services (DQS) | Microsoft Docs"
-ms.custom: 
+title: Проекты служб Data Quality Services (DQS) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ee5c4c70581b275ce19b597f505a8d577ea88a0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 97ee117319697d817f760a25332728648fa565f9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-quality-projects-dqs"></a>Проекты служб Data Quality Services (DQS)
   Проект служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) предназначен для использования базы знаний для повышения качества источника данных путем выполнения операций *очистки данных* и *сопоставления данных* с последующим экспортом результирующих данных в базу данных SQL Server или файл .csv. Вы можете создать проект служб DQS как проект очистки или проект сопоставления для выполнения соответствующих операций. Проекты очистки и сопоставления вы можете выполнять с использованием одной базы знаний, так как знания для очистки и сопоставления данных могут быть встроены в ту же базу знаний.  

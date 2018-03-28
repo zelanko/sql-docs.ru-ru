@@ -1,31 +1,32 @@
 ---
-title: "Импорт значений в домен из файла Excel | Microsoft Docs"
-ms.custom: 
+title: Импорт значений в домен из файла Excel | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Импорт значений в домен из файла Excel
   В этом разделе описывается, как импортировать значения из файла Excel в домен [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Использование файла Excel для импорта значений домена в приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет упростить процесс создания набора знаний, экономя время и усилия. Это позволяет пользователям, у которых имеется список допустимых значений данных в файле формата Excel или в текстовом файле, импортировать эти значения в домен. Из файла Microsoft Excel вы можете импортировать значения домена в домен или домены в базу знаний. (Дополнительные сведения об импорте доменов в базу знаний см. в разделе [Импорт доменов из файла Excel при обнаружении набора знаний](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).) Экспорт в файл Excel не поддерживается.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Каждая строка представляет значение домена.  
   
--   Первая строка представляет имена доменов либо первое значение или запись данных, в зависимости от того, установлен ли флажок **Использовать первую строку в качестве заголовка** . Если выбран флажок **Use First Row as header** при использовании XSLX- или XLS-файла, имена столбцов, равные NULL, автоматически преобразуются в имена F*n*, а к именам повторяющихся столбцов добавляется номер.  
+-   Первая строка представляет имена доменов либо первое значение или запись данных, в зависимости от того, установлен ли флажок **Использовать первую строку в качестве заголовка** . Если выбран флажок **Использовать первую строку в качестве заголовка** при использовании XSLX- или XLS-файла, имена столбцов, равные NULL, автоматически преобразуются в имена F*n*, а к именам повторяющихся столбцов добавляется номер.  
   
 -   Если отменить операцию импорта до ее завершения, выполняется откат операции, а импорт данных не выполняется.  
   

@@ -1,31 +1,32 @@
 ---
-title: "Запуск проекта сопоставления | Microsoft Docs"
-ms.custom: 
+title: Запуск проекта сопоставления | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
   В этом разделе описано, как выполнить сопоставление данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). В процессе сопоставления выявляются кластеры соответствующих друг другу записей согласно правилам сопоставления в политике сопоставления, одна запись из каждого кластера обозначается как «выжившая» согласно правилу выживания, и результаты экспортируются. Процесс сопоставления в службах DQS, называемый также удалением дубликатов, является автоматизированным, однако правила сопоставления можно создавать интерактивно, также можно выбирать правило выживания из нескольких вариантов, таким образом можно управлять процессом сопоставления.  
