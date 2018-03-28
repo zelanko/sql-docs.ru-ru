@@ -1,27 +1,28 @@
 ---
-title: "PDOStatement::bindColumn | Документы Microsoft"
-ms.custom: 
+title: PDOStatement::bindColumn | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43e23294e172ae615e1670d9866bfb32aa92f00c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d5f85c59eec602a483dd68da5df030f4d5cf18d6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +50,7 @@ $*driverdata*: необязательные смешанные параметр�
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение TRUE в случае успеха, в противном случае — значение FALSE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Пример  
@@ -72,7 +73,8 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Класс PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>См. также  
+[Класс PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

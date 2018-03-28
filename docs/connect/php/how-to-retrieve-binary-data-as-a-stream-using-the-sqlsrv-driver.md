@@ -1,30 +1,31 @@
 ---
-title: "Как: извлечение двоичных данных в виде потока с помощью драйвера SQLSRV | Документы Microsoft"
-ms.custom: 
+title: 'Как: извлечение двоичных данных в виде потока с помощью драйвера SQLSRV | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fcc77b9da09f1cc59afb06cbd4a562213479251f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f992cf6f54469da63d910e2fb1d53be4b026e06b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение двоичных данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/18/2017
 ## <a name="example"></a>Пример  
 Следующий пример извлекает двоичные данные (в данном случае это изображение) из таблицы *Production.ProductPhoto* базы данных AdventureWorks. Изображение извлекается в виде потока и отображается в браузере.  
   
-Извлечение данных изображения в виде потока осуществляется с помощью [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) и [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с типом возвращаемого значения, указанным в виде двоичного потока. Тип возвращаемого значения определяется с помощью константы **SQLSRV_PHPTYPE_STREAM**. Сведения о **sqlsrv** константы, в разделе [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Извлечение данных изображения в виде потока осуществляется с помощью [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) и [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с типом возвращаемого значения, указанным в виде двоичного потока. Тип возвращаемого значения определяется с помощью константы **SQLSRV_PHPTYPE_STREAM**. Сведения о **sqlsrv** константы, в разделе [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   
 ```  
 <?php  
@@ -95,8 +96,10 @@ sqlsrv_close( $conn);
   
 Процедура указания типа возвращаемого значения в примере показывает, как указать тип возвращаемого значения PHP в виде двоичного потока. Технически это не требуется в примере из-за *LargePhoto* поле имеет тип varbinary(max) SQL Server и таким образом возвращаются в виде двоичного потока по умолчанию. Дополнительные сведения о типах данных PHP по умолчанию см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов возвращаемых данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>См. также:  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>См. также  
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
   

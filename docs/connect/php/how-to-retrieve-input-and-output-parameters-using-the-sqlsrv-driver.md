@@ -1,33 +1,35 @@
 ---
-title: "Как: извлечение параметров ввода-вывода, с помощью драйвера SQLSRV | Документы Microsoft"
-ms.custom: 
+title: 'Как: извлечение параметров ввода-вывода, с помощью драйвера SQLSRV | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76423ca2d960951ecdc7a58181393eed792ab756
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 36a13b70c105ea6dfa27d7a261d2e926b122b569
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Эта статья описывает, как использовать драйвер SQLSRV для вызова хранимой процедуры, в которой один параметр определен как параметр ввода/вывода, и получить результаты. Обратите внимание, что при извлечении параметра ввода/вывода все результаты, возвращаемые хранимой процедурой, должны быть использованы до того, как становится доступно значение возвращаемого параметра.  
+Эта статья описывает, как использовать драйвер SQLSRV для вызова хранимой процедуры, в которой один параметр определен как параметр ввода/вывода, и получить результаты. При извлечении параметра ввода вывода, должны быть использованы все результаты, возвращаемые хранимой процедурой перед становится доступно значение возвращаемого параметра.  
   
 > [!NOTE]  
 > Переменные, которые инициализируются или обновляются с использованием **null**, **DateTime**или типов потоков, нельзя использовать в качестве параметров вывода.  
@@ -41,9 +43,9 @@ ms.lasthandoff: 11/18/2017
 Поскольку хранимая процедура возвращает два результата, [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) должен вызываться после выполнения хранимой процедуры, чтобы сделать доступным значение выходного параметра. После вызова метода **sqlsrv_next_result**, *$vacationHrs* содержит значение параметра выходных данных, возвращаемых хранимой процедурой.  
   
 > [!NOTE]  
-> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в статье [Вызов хранимой процедуры](http://go.microsoft.com/fwlink/?linkid=119517).  
+> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в разделе [вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -127,8 +129,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
-[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>См. также  
+[Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+
+[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [Извлечение данных](../../connect/php/retrieving-data.md)  
   

@@ -1,32 +1,32 @@
 ---
-title: "SQL Server машинного обучения и служб R (в базе данных) | Документы Microsoft"
+title: SQL Server машинного обучения и служб R (в базе данных) | Документы Microsoft
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server машинного обучения и служб R (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Установка в базе данных машинного обучения работает в контексте экземпляр ядра СУБД SQL Server, предоставляя поддержку внешних скриптов R и Python резидентного данных в экземпляре SQL Server. Поскольку машинное обучение интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно analytics близко к данным, избежав затрат и рисков, связанных с перемещением данных.
 
-Поскольку ядро базы данных имеет несколько экземпляров, можно установить более одного экземпляра аналитики в базе данных или даже старой и новой версии side-by-side. Доступные параметры: либо [обучения машины службы (в базе данных) для SQL Server 2017 г.](../install/sql-machine-learning-standalone-windows-install.md) с R и Python, или [служб R SQL Server 2016 (в Datatbase)](../install/sql-r-standalone-windows-install.md) с только что R. 
+Поскольку ядро базы данных имеет несколько экземпляров, можно установить более одного экземпляра аналитики в базе данных или даже старой и новой версии side-by-side. Доступные параметры: либо [обучения машины службы (в базе данных) для SQL Server 2017 г.](../install/sql-machine-learning-standalone-windows-install.md) с R и Python, или [служб R (в базе данных) для SQL Server 2016](../install/sql-r-standalone-windows-install.md) с только что R. 
 
 Компоненты обучения машины также могут быть установлены как независимой от экземпляра [автономные серверы](r-server-standalone.md). Как правило, мы рекомендуется обрабатывать (автономный) и (в базе данных) установок как взаимно монопольного во избежание конфликтов ресурсов, но если имеется достаточно ресурсов, существуют не запрет для сотрудников на обоих их установки на одном физическом компьютере.
 

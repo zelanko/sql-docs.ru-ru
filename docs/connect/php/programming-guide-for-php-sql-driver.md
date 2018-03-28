@@ -1,29 +1,30 @@
 ---
-title: "Руководство по программированию для драйвера PHP SQL | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Руководство по программированию для драйверов Майкрософт для PHP для SQL Server | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84771a36a7adcaced6ab770edf30a33f0ac542bb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0979320b3dad5c8dc73c7d2d23aafe35e9ef4cbc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="programming-guide-for-php-sql-driver"></a>Руководство по программированию для драйвера SQL PHP
+# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по программированию для драйвера Microsoft для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Этот раздел содержит статьи, которые помогут вам разрабатывать приложения с помощью [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -40,12 +41,17 @@ ms.lasthandoff: 11/18/2017
 |[Преобразование типов данных](../../connect/php/converting-data-types.md)|Описывает указание типов данных и предоставление сведений о типах данных по умолчанию.|  
 |[Обработка ошибок и предупреждений](../../connect/php/handling-errors-and-warnings.md)|Описывает обработку ошибок и предупреждений.|  
 |[Ведение журнала](../../connect/php/logging-activity.md)|Содержит сведения о ведении журналов ошибок и предупреждений.|  
-|[Вопросы безопасности для драйвера SQL PHP](../../connect/php/security-considerations-for-php-sql-driver.md)|Описывает аспекты безопасности, связанные с разработкой, развертыванием и запуском приложений.|  
+|[Использование постоянного шифрования с драйверы Майкрософт для PHP для SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Предоставляет сведения об использовании функции постоянного шифрования с помощью драйверов PHP.|  
+|[Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Описывает аспекты безопасности, связанные с разработкой, развертыванием и запуском приложений.|  
   
-## <a name="see-also"></a>См. также:  
-[Общие сведения о драйвере SQL PHP](../../connect/php/overview-of-the-php-sql-driver.md)
-[Приступая к работе с драйвером SQL PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+## <a name="see-also"></a>См. также  
+[Общие сведения о драйверы Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[Начало работы с драйверы Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
   

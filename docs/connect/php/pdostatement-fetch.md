@@ -1,27 +1,28 @@
 ---
-title: "PDOStatement::fetch | Документы Microsoft"
-ms.custom: 
+title: PDOStatement::fetch | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f503ddd9d661d2b2bfa75a3c19219874f159c42
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7326279bc150c25c712ca708dcd137a9e0d805d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,10 +46,10 @@ $*cursor_offset*: символ необязательно (целое число
 ## <a name="return-value"></a>Возвращаемое значение  
 Смешанное значение, которое возвращает строку или значение false.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Курсор автоматически перемещается вперед при вызове fetch. Следующая таблица содержит список возможных $*fetch_style* значения.  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|Описание|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Указывает массив, индексированный по имени столбца.|  
 |PDO::FETCH_BOTH|Указывает массив, индексированный по имени столбца и с отчетом от нуля. Это значение по умолчанию.|  
@@ -63,13 +64,13 @@ $*cursor_offset*: символ необязательно (целое число
   
 Если курсор является прокручиваемым (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch перемещает курсор в пределах границ результирующего набора. Следующая таблица содержит список возможных $*cursor_orientation* значения.  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|Описание|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|Извлекает следующую строку. Это значение по умолчанию.|  
 |PDO::FETCH_ORI_PRIOR|Извлекает предыдущую строку.|  
 |PDO::FETCH_ORI_FIRST|Извлекает первую строку.|  
 |PDO::FETCH_ORI_LAST|Извлекает последнюю строку.|  
-|Значение PDO::FETCH_ORI_ABS, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по номеру строки.|  
+|PDO::FETCH_ORI_ABS, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по номеру строки.|  
 |PDO::FETCH_ORI_REL, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по положению относительно текущей позиции.|  
   
 Если значение, указанное для $*cursor_offset* или $*cursor_orientation* приводит к выходу за границу результирующего набора, fetch завершается с ошибкой.  
@@ -146,7 +147,8 @@ $*cursor_offset*: символ необязательно (целое число
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Класс PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>См. также  
+[Класс PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,28 +1,28 @@
 ---
-title: "С помощью постоянного шифрования с драйвером JDBC | Документы Microsoft"
-ms.custom: 
+title: С помощью постоянного шифрования с драйвером JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>С помощью постоянного шифрования с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 Дополнительные сведения о данном свойстве см. в разделе [как настройка java.sql.Time отправляются на сервер](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Настройка способа отправки строковые значения сервера
-**SendStringParametersAsUnicode** свойство соединения используется для настройки способа отправки строковых значений SQL Server. Если задано значение true, то строковые параметры отправляются на сервер в Юникоде. Если задано значение false, строковые параметры отправляются в формате Юникод, например ASCII или MBCS, а не в Юникоде. Значение по умолчанию для этого свойства равно true. Если постоянное шифрование включено и char/varchar/varchar(max) столбец зашифрован, значение **sendStringParametersAsUnicode** должно быть присвоено значение true (или оставить значение по умолчанию). Если это свойство имеет значение false, драйвер возникает исключение при вставке данных со столбцом зашифрованные char/varchar/varchar(max). Дополнительные сведения о данном свойстве см. в разделе [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
+**SendStringParametersAsUnicode** свойство соединения используется для настройки способа отправки строковых значений SQL Server. Если задано значение true, то строковые параметры отправляются на сервер в Юникоде. Если задано значение false, строковые параметры отправляются в формате Юникод, например ASCII или MBCS, а не в Юникоде. Значение по умолчанию для этого свойства равно true. Если постоянное шифрование включено и char/varchar/varchar(max) столбец зашифрован, значение **sendStringParametersAsUnicode** должно быть присвоено значение false. Если это свойство имеет значение true, драйвер вызовет исключение при расшифровке данных из зашифрованного char/varchar/varchar(max) столбца, содержащего символы Юникода. Дополнительные сведения о данном свойстве см. в разделе [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Извлечение и изменение данных в зашифрованных столбцах
 После включения постоянного шифрования для запросов приложений можно использовать стандартные API-интерфейсы JDBC извлекать или изменять данные в столбцах зашифрованной базы данных. Если приложение имеет разрешения, необходимые базы данных и может получить доступ к главному ключу столбца, драйвер будет шифровать все параметры запроса, предназначенные для зашифрованных столбцов и расшифровывать данные, полученные из зашифрованных столбцов.

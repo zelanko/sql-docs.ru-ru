@@ -1,33 +1,35 @@
 ---
-title: "Как: подключение с использованием проверки подлинности Windows | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Как: подключение с использованием проверки подлинности Windows | Документы Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, Windows Authentication
+helpviewer_keywords:
+- connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7032726897facd93e88007a879e94c40dda809c2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7b82c96b78bb81e1b8749f6a0d3899662c54d780
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Практическое руководство. Подключение с использованием проверки подлинности Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-По умолчанию [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует для подключения к серверу проверку подлинности Windows. Следует отметить, что в большинстве случаев это означает, что для подключения к серверу используется удостоверение процесса или удостоверение потока веб-сервера (если веб-сервер использует олицетворение), а не удостоверение конечного пользователя.  
+По умолчанию [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует для подключения к серверу проверку подлинности Windows. Важно отметить, что в большинстве случаев это означает, что удостоверение процесса веб-сервера или удостоверение потока (если веб-сервер использует олицетворение) используется для подключения к серверу, а не удостоверение конечного пользователя.  
   
 При использовании проверки подлинности Windows для подключения к SQL Server необходимо учитывать следующие аспекты.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="example"></a>Пример  
 Благодаря драйверу SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]следующий пример использует проверку подлинности Windows для подключения к локальному экземпляру SQL Server. После установки соединения на сервер отправляет запрос имени входа пользователя, осуществляющего доступ к базе данных.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   
 ```  
 <?php  
@@ -109,13 +111,20 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Руководство по программированию для драйвера SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Практическое руководство. Создание имени входа SQL Server](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[Практическое руководство. Создание пользователя базы данных](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Управление пользователями, ролями и именами входа](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[Отделение пользователей от схем](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Разрешения объекта GRANT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+## <a name="see-also"></a>См. также  
+[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Как: создать имя входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[Как: Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Управление пользователями, ролями и именами входа](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Отделение пользователей от схем](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Разрешения объекта GRANT (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

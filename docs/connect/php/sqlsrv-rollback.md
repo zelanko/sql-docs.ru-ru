@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_rollback | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_rollback | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_rollback
+apiname:
+- sqlsrv_rollback
 apitype: NA
 helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_rollback
 - sqlsrv_rollback
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ce3939c990113302c82d744b82874647811e611
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fbc323ab197fdcba01048289d25650ff17baeffa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ sqlsrv_rollback( resource $conn)
   
 Первый запрос в примере вставляет новый заказ на продажу в таблицу *Sales.SalesOrderDetail* базы данных AdventureWorks. Этот заказ содержит пять единиц продукта с кодом 709. Второй запрос уменьшает количество складского запаса продукта с кодом 709 на пять единиц. Поскольку для точного отражения состояния заказов и доступности продуктов требуется успешное выполнение обоих запросов в базе данных, эти запросы включены в состав транзакции.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -128,8 +130,10 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > Не используйте внедренный Transact-SQL для выполнения транзакций. Например, не выполняйте инструкцию с BEGIN TRANSACTION в качестве запроса Transact-SQL для начала транзакции. При использовании внедренного Transact-SQL для выполнения транзакций невозможно гарантировать правильную работу транзакций.  
   
-## <a name="see-also"></a>См. также:  
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Практическое руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)  
-[Общие сведения о драйвере SQL PHP](../../connect/php/overview-of-the-php-sql-driver.md) 
+## <a name="see-also"></a>См. также  
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Практическое руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)
+
+[Общие сведения о драйверы Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

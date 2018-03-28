@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_rows_affected | Документы Microsoft"
-ms.custom: 
+title: sqlsrv_rows_affected | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_rows_affected
+apiname:
+- sqlsrv_rows_affected
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62fd71d47b762680d9c85a24366c0c3b55cf9109
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5d796398575bd84ed87f65832825d1bc325864bb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ sqlsrv_rows_affected( resource $stmt)
 Целое число, указывающее количество строк, измененных при выполнении последней инструкции. Если никакие строки не были изменены, возвращается нуль (0). Если данные о количестве измененных строк недоступны, возвращается минус единица (-1). Если при получении количества измененных строк произошла ошибка, возвращается значение **false** .  
   
 ## <a name="example"></a>Пример  
-Следующий пример отображает число строк, измененных инструкцией UPDATE. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример отображает число строк, измененных инструкцией UPDATE. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -95,8 +97,11 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
   

@@ -1,27 +1,28 @@
 ---
-title: "PDOStatement::getColumnMeta | Документы Microsoft"
-ms.custom: 
+title: PDOStatement::getColumnMeta | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c43b41503fe74744a9c28c18210af6445a216a4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a02a781be90a360a3da4be2b040c1ec7d6a5ab82
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ array PDOStatement::getColumnMeta ( $column );
 ## <a name="return-value"></a>Возвращаемое значение  
 Ассоциативный массив (ключ и значение), содержащий метаданные для столбца. Описание полей в массиве см. в разделе "Примечания".  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 В следующей таблице перечислены поля в массиве, возвращенном getColumnMeta.  
   
 |NAME|VALUES|  
@@ -75,7 +76,8 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Класс PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>См. также  
+[Класс PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,34 +1,35 @@
 ---
-title: "Прямой - подготовленной инструкции драйвер PDO_SQLSRV выполнение инструкции | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Прямой - подготовленной инструкции драйвер PDO_SQLSRV выполнение инструкции | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8df460f169a1890c9e30bd2b72baa4a38fd4bf31
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d7967e4f2c888ccdb90c56ac3b1504187b77b48a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-В этом разделе описывается использование атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY для указания выполнения прямой инструкции вместо значения по умолчанию, который находится на выполнение подготовленной инструкции.  Если драйвер подготавливает инструкцию, это может привести лучшую производительность, если инструкция будет выполняться несколько раз с помощью привязанных параметров.  
+В этом разделе описывается использование атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY для указания выполнения прямой инструкции вместо значения по умолчанию, который находится на выполнение подготовленной инструкции. С помощью подготовленных инструкций может привести к более высокую производительность при выполнении инструкции несколько раз с помощью параметра привязки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Если вы хотите отправить [!INCLUDE[tsql](../../includes/tsql_md.md)] инструкции непосредственно на сервер без Подготовка инструкции с помощью драйвера, можно задать с помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (или как driver-параметр, передаваемый в [PDO::__construct](../../connect/php/pdo-construct.md)) или при вызове [PDO::prepare](../../connect/php/pdo-prepare.md). По умолчанию значение PDO::SQLSRV_ATTR_DIRECT_QUERY равно False (на выполнение подготовленной инструкции use).  
   
 Если вы используете [PDO::query](../../connect/php/pdo-query.md), может потребоваться прямое выполнение. Перед вызовом метода [PDO::query](../../connect/php/pdo-query.md), вызовите [PDO::setAttribute](../../connect/php/pdo-setattribute.md) и PDO::SQLSRV_ATTR_DIRECT_QUERY присвоено значение True.  Каждый вызов [PDO::query](../../connect/php/pdo-query.md) могут быть выполнены с другими параметрами для PDO::SQLSRV_ATTR_DIRECT_QUERY.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 После вызова метода [PDO::prepare](../../connect/php/pdo-prepare.md), PDO::SQLSRV_ATTR_DIRECT_QUERY значение нельзя изменить при выполнении подготовленного запроса.  
   
-Если запрос требует контекст, который был задан в предыдущем запросе, следует выполнять запросы с PDO::SQLSRV_ATTR_DIRECT_QUERY имеет значение True. Например при использовании временных таблиц в запросах, PDO::SQLSRV_ATTR_DIRECT_QUERY должно быть присвоено значение True.  
+Если запрос требует контекст, который был задан в предыдущем запросе, затем выполните запросы с PDO::SQLSRV_ATTR_DIRECT_QUERY имеет значение True. Например при использовании временных таблиц в запросах, PDO::SQLSRV_ATTR_DIRECT_QUERY должно быть присвоено значение True.  
   
 В следующем примере показано, что при необходимости контекста из предыдущей инструкции необходимо задать значение True, PDO::SQLSRV_ATTR_DIRECT_QUERY.  Этот пример использует временные таблицы, которые доступны только для последующих инструкций в программе запросы выполняются непосредственно.  
   
@@ -71,6 +72,6 @@ ms.lasthandoff: 11/18/2017
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>См. также  
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

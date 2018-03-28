@@ -1,30 +1,31 @@
 ---
-title: "Как: Указание типов данных PHP | Документы Microsoft"
-ms.custom: 
+title: 'Как: Указание типов данных PHP | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b12a1042d4090a9e2369f602010199dea54431ed
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>Практическое руководство. Указание типов данных PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,12 +40,12 @@ ms.lasthandoff: 11/18/2017
   
 3.  Извлеките данные поля из возвращенной строки с помощью [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с требуемым типом данных PHP, указанным в качестве необязательного третьего параметра. Если необязательный третий параметр не указан, данные возвращаются в соответствии с типами PHP по умолчанию. Дополнительные сведения о типах возвращаемых данных PHP по умолчанию см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Сведения о константах, используемых для указания типа данных PHP см. в разделе о PHPTYPE статьи [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Сведения о константах, используемых для указания типа данных PHP см. в разделе о PHPTYPE статьи [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает строки из таблицы *Production.ProductReview* базы данных AdventureWorks. В каждой возвращаемой строке поле *ReviewDate* извлекается в виде строки, а поле *Comments* —в виде потока. Потоковые данные отображаются с помощью функции [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
+Следующий пример извлекает строки из таблицы *Production.ProductReview* базы данных AdventureWorks. В каждой возвращаемой строке *ReviewDate* извлекается в виде строки и *комментарии* извлекается в виде потока. Потоковые данные отображаются с помощью функции [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -110,9 +111,12 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > Функция [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) предоставляет способ получения сведений о поле, включая информацию о типе, перед выполнением запроса.  
   
-## <a name="see-also"></a>См. также:  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>См. также  
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

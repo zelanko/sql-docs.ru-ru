@@ -1,16 +1,16 @@
 ---
-title: "managed_backup.sp_backup_config_schedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: managed_backup.sp_backup_config_schedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ba08667f9eebe37cc5493903b714ee1bf0d67f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6325c940487b37fea083a923a20f884bd872a0b4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Тип частоты для управляемых операции резервного копирования, который можно присвоить значение «Ежедневно» или «Еженедельно».  
   
  @days_of_week  
- Дни недели для резервных копий при @full_backup_freq_type задана еженедельная. Укажите имена полную строку как «Понедельник».  Можно также указать более чем один день недели, разделенных запятыми. Например «Понедельник, среда, пятница».  
+ Дни недели для резервных копий при @full_backup_freq_type задана еженедельная. Укажите имена полную строку как «Понедельник».  Можно также указать более чем один день недели, разделенные вертикальной линией. Например N'Monday | Среда | Пятница ".  
   
  @backup_begin_time  
  Время начала резервного копирования. Резервное копирование не будет запущен за пределами периода времени, которая определяется сочетанием @backup_begin_time и @backup_duration.  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Продолжительность периода времени создания резервной копии. Обратите внимание, что нет никакой гарантии, что резервное копирование будет завершено в период времени, определяемый @backup_begin_time и @backup_duration. Операции резервного копирования, которые запущены в этот период времени, но превышает длительность окна не будут отменены.  
   
  @log_backup_freq  
- Определяет частоту резервных копий журнала транзакций. Эти резервные копии происходит через регулярные интервалы, а не по расписанию, указанный для архивации базы данных. @log_backup_freq0 — допустимым, указывающая, резервное копирование журнала не может быть в часах и минутах Отключение резервные копии журналов только приемлемо для баз данных с простой модели восстановления.  
+ Определяет частоту резервных копий журнала транзакций. Эти резервные копии происходит через регулярные интервалы, а не по расписанию, указанный для архивации базы данных. @log_backup_freq 0 — допустимым, указывающая, резервное копирование журнала не может быть в часах и минутах Отключение резервные копии журналов только приемлемо для баз данных с простой модели восстановления.  
   
 > [!NOTE]  
 >  При изменении модели восстановления с простой на полную, необходимо перенастроить log_backup_freq от 0 к ненулевое значение.  

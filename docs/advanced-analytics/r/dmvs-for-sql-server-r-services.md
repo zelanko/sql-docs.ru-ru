@@ -1,31 +1,31 @@
 ---
-title: "Динамические административные представления для служб SQL Server Machine Learning | Документы Microsoft"
-ms.custom: 
+title: Динамические административные представления для служб SQL Server Machine Learning | Документы Microsoft
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>Динамические административные представления для служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом разделе перечислены представления системного каталога и динамические административные представления, связанные с машинного обучения в SQL Server.
+Статья список системных представлений каталога и динамические административные представления, связанные с машинного обучения в SQL Server.
 
 Сведения о расширенных событиях см. в разделе [расширенные события для машинного обучения](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/11/2018
   Это динамическое административное представление возвращает данные следующих счетчиков для внешних скриптов по каждому экземпляру.
 
   + **Общее число выполнений**: число внешних процессов запуска с помощью локальных или удаленных вызовов
-  + **Параллельное выполнение**: количество раз, которые включены в скрипт  _@parallel_  спецификации и что [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] была возможность создания и использования в параллельном плане запроса
+  + **Параллельное выполнение**: количество раз, которые включены в скрипт _@parallel_ спецификации и что [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] была возможность создания и использования в параллельном плане запроса
   + **Потоковая передача выполнений**: число попыток был вызван функциональные возможности потоковой передачи
   + **Выполнение SQL CC**: число внешних скриптов выполнения, когда вызов был создан удаленно и SQL Server был используется в контексте
   + **Имена для входа с подразумеваемой проверкой подлинности** — количество петлевых вызовов ODBC с использованием подразумеваемой проверки подлинности, то есть [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] выполнял вызов от имени пользователя, отправившего запрос скрипта.

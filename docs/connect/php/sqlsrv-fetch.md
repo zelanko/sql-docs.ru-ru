@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_fetch | Документы Microsoft"
-ms.custom: 
+title: sqlsrv_fetch | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch
+apiname:
+- sqlsrv_fetch
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9e7e835dbc1033fc5351f6a7af161c8ca021026
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cdb47b0250989bd2568a4b46f9957933f6f75130
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +71,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 Если следующая строка результирующего набора успешно извлечена, возвращается значение **true** . Если других результатов в результирующем наборе нет, возвращается значение **null** . Если произошла ошибка, возвращается значение **false** .  
   
 ## <a name="example"></a>Пример  
-Следующий пример использует **sqlsrv_fetch** для извлечения строки данных, содержащей обзор продукта и имя автора обзора. Для получения данных из результирующего набора, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) используется. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример использует **sqlsrv_fetch** для извлечения строки данных, содержащей обзор продукта и имя автора обзора. Для получения данных из результирующего набора, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) используется. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -127,8 +129,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Извлечение данных](../../connect/php/retrieving-data.md)  
+
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
   

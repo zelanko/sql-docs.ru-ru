@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_prepare | Документы Microsoft"
-ms.custom: 
+title: sqlsrv_prepare | Документы Microsoft
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_prepare
+apiname:
+- sqlsrv_prepare
 apitype: NA
 helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56dbdc5aad9e0c9362ee7d5f9ddb5650a920130d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,7 +68,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Элемент|Описание|  
     |-----------|---------------|  
     |*&$value*|Буквенное значение или ссылка на переменную PHP.|  
-    |*$direction*[необязательно]|Одно из следующих **SQLSRV_PARAM_\***  константы, используемые для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[необязательно]|Одно из следующих **SQLSRV_PARAM_\***  константы, используемые для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*[необязательно]|Объект **SQLSRV_PHPTYPE_\***  константа, указывающая тип данных PHP для возвращаемого значения.|  
     |*$sqlType*[необязательно]|Объект **SQLSRV_SQLTYPE_\***  константа, указывающая тип данных SQL Server для входного значения.|  
   
@@ -81,17 +83,17 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс инструкции. Если не удается создать ресурс инструкции, возвращается значение **false** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 При подготовке инструкции, которая использует переменные в качестве параметров, эти переменные привязываются к инструкции. Это означает, что в случае обновления значений переменных при следующем выполнении инструкции она будет использовать обновленные значения параметров.  
   
 Сочетание **sqlsrv_prepare** и **sqlsrv_execute** разделяет подготовку и выполнение инструкции между двумя вызовами функции и может использоваться для выполнения параметризованных запросов. Эта функция оптимально подходит для многократного выполнения инструкции с различными значениями параметров для каждого выполнения.  
   
-Сведения об альтернативных стратегиях для записи и чтения больших объемов информации см. в статьях [Пакеты инструкций SQL](http://go.microsoft.com/fwlink/?LinkId=104225) и [BULK INSERT](http://go.microsoft.com/fwlink/?LinkId=104226).  
+Об альтернативных стратегиях для записи и чтения больших объемов информации см. в разделе [пакеты инструкций SQL](../../odbc/reference/develop-app/batches-of-sql-statements.md) и [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 Дополнительные сведения см. в статье [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Пример  
-Следующий пример подготавливает и выполняет инструкцию. При выполнении инструкция (см. [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), обновляется поле в *Sales.SalesOrderDetail* таблицы базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример подготавливает и выполняет инструкцию. При выполнении инструкция (см. [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), обновляется поле в *Sales.SalesOrderDetail* таблицы базы данных AdventureWorks. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -138,7 +140,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Пример  
-Следующий пример показывает, как подготовить инструкцию и затем повторно выполнить ее с другими значениями параметров. Пример обновляет столбец *OrderQty* в таблице *Sales.SalesOrderDetail* базы данных AdventureWorks. После завершения обновлений в базу данных направляется запрос, чтобы убедиться, что обновления выполнены успешно. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример показывает, как подготовить инструкцию и затем повторно выполнить ее с другими значениями параметров. Пример обновляет столбец *OrderQty* в таблице *Sales.SalesOrderDetail* базы данных AdventureWorks. После завершения обновлений в базу данных направляется запрос, чтобы убедиться, что обновления выполнены успешно. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -250,12 +252,18 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>См. также:  
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)  
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)  
-[Использование параметров направления](../../connect/php/using-directional-parameters.md)  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-  
+## <a name="see-also"></a>См. также  
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)
+
+[Использование параметров направления](../../connect/php/using-directional-parameters.md)
+
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+

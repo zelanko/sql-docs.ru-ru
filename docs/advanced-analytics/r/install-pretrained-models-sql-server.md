@@ -1,65 +1,66 @@
 ---
-title: "Установка моделей предварительно обученные машинного обучения в SQL Server | Документы Microsoft"
+title: Установка моделей предварительно обученной машинного обучения в SQL Server | Документы Microsoft
 ms.date: 03/14/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: fd02766e4020e6f522d50bbd471c5f84c66a998b
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Установить предварительно обученные машинного обучения моделей, основанных на SQL Server
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установить предварительно обученной машинного обучения моделей, основанных на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье описывает, как добавлять предварительно обученной модели к экземпляру SQL Server, уже имеет служб R или машины обучения службы установлены.
+В этой статье описывает, как добавлять предварительно обученной модели к экземпляру SQL Server, уже имеет служб R или установлены службы SQL Server машины обучения. 
 
-Предварительно обученной модели, включенные в MicrosoftML были созданы для помощи клиентам, которым требуется для выполнения задач, таких как featurization мнений анализа или изображения, но не обладают ресурсы для получения больших наборов данных или обучения сложные модели. Team Server обучения машины создается и обучения этих моделей, которые помогут приступить к работе над text и image, для обеспечения эффективного. Дополнительные сведения см. в разделе [ресурсов](#bkmk_resources) этой статьи.
+Для клиентов, которым требуется для выполнения задач, таких как featurization мнений анализа или изображения, но не обладают ресурсы для получения больших наборов данных или обучения сложной модели существует предварительно обученной модели. Team Server обучения машины создается и обучения этих моделей, которые помогут приступить к работе над text и image, для обеспечения эффективного. Дополнительные сведения см. в разделе [ресурсов](#bkmk_resources) этой статьи.
 
-Пример использования предварительно обученной модели с данными SQL Server см. в записи командой SQL Server машинного обучения:
+Пример использования предварительно обученной модели с данными SQL Server, см. в записи командой SQL Server машинного обучения: [анализ мнений с Python в службах SQL Server машины обучения](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-+ [Анализ мнений с Python в службах SQL Server машины обучения](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+## <a name="pre-trained-model-availability"></a>Доступность предварительно обученной модели
 
-## <a name="install-the-pre-trained-models"></a>Установить предварительно обученной модели
+Предварительно обученной модели устанавливаются с помощью установочного носителя Microsoft Server обучения машины (или Microsoft R Server, при добавлении модели к установке SQL Server 2016). Бесплатный выпуск Developer edition можно использовать для установки моделей. Нет без дополнительных затрат, связанные с установкой модели. 
 
-Можно использовать предварительно обученной модели со следующими продуктами:
+Предварительно обученной модели работают с следующих продуктов и языков. Программа установки обнаруживает библиотеки интеграции, MicrosoftML или microsoftml языка и затем вставляет предварительно обученной модели в соответствующие библиотеки. После завершения установки модели доступ к модели через функции библиотеки.
 
-+ Службы R SQL Server 2016 (в базе данных)
-+ SQL Server 2017 г машины обучения Services (в базе данных)
-+ Сервер машинного обучения (автономный)
++ SQL Server 2016 R Services (в базе данных) - R, только с [MicrosoftML библиотеки](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R Server (изолированный) - R, только с [MicrosoftML библиотеки](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ Службы SQL Server 2017 г машины обучения (в базе данных) - R с помощью [MicrosoftML библиотеки] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python с [microsoftml библиотеки](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ Сервера SQL Server 2017 г машины обучения (автономный) - R с помощью [MicrosoftML библиотеки] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python с [microsoftml библиотеки](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 В процессе установки, немного отличается в зависимости от используемой версии SQL Server. В следующих разделах инструкции для каждой версии.
 
 > [!NOTE]
-> Это не возможность считывать или изменять предварительно обученной модели, так как они будут сжаты, использование собственного формата для повышения производительности.
+> Не является возможность считывать или изменять предварительно обученной модели. Они будут сжаты, использование собственного формата для повышения производительности.
 
-### <a name="obtain-files-for-an-offline-installation"></a>Получить файлы для автономной установки
+## <a name="obtain-files-for-an-offline-installation"></a>Получить файлы для автономной установки
 
 Чтобы установить предварительно обученной модели на сервере, который не имеет доступа к Интернету, необходимо заранее загрузить соответствующих установщиков и скопируйте установщик в локальную папку на сервере. 
 
 Просмотреть эту страницу для ссылки для загрузки для всех установщиков R Server и сервера Machine обучения: [автономную установку](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="install-pretrained-models-with-sql-server-2016-r-services"></a>Установить предварительно обученные модели с помощью служб R SQL Server 2016
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>Установить предварительно обученной модели на SQL Server 2016 R Services
 
 С SQL Server 2016 можно установить и использовать предварительно обученной модели R, только при обновлении машинного обучения компонентов в процессе, называемом **привязки**. 
 
-Это сделать, выполнив отдельного установщика Windows для Microsoft R Server или машины обучения, а также при выборе экземпляра или экземпляров **привязки**. Привязка экземпляр означает, что политика поддержки связанный с экземпляром изменилось, чтобы разрешить более частые обновления R. 
+Это делается путем выполнения отдельного установщика Windows для Microsoft R Server или обучения машины на компьютере, имеющих установку служб R SQL Server 2016 и выбрав экземпляр или экземпляры, чтобы **привязки**. Привязка экземпляр означает, что политика поддержки связанный с экземпляром изменилось, чтобы разрешить более частые обновления R. 
 
 1. Запустите отдельного установщика Windows для любого [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) или [машины обучения Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Выберите экземпляр для обновления и выберите вариант, чтобы получить предварительно обученные модели.
+2. Выберите экземпляр для обновления и выберите вариант, чтобы получить предварительно обученной модели.
 
     Дополнительные сведения см. в разделе [обновление компонентов машины обучения, используемый сервером SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
@@ -113,18 +114,18 @@ ms.lasthandoff: 03/19/2018
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-### <a name="install-pretrained-models-on-sql-server-2017"></a>Установить предварительно обученные модели в SQL Server 2017 г.
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>Установить предварительно обученной модели в службах обучения машин SQL Server (в базе данных)
 
-Если вы уже установили 2017 г. SQL Server, предварительно обученные модели можно получить двумя способами:
+Если вы уже установили 2017 г. SQL Server, предварительно обученной модели можно получить двумя способами:
 
-+ Обновление компонентов Python и R с помощью привязки и установите предварительно обученные модели в то же время
++ Обновление компонентов Python и R с помощью привязки и установите предварительно обученной модели в то же время
 + Установка только предварительно обученной модели
 
 Следующие инструкции описывают процесс для обновления компонентов машины обучения и получение предварительно обученной модели в то же время.
 
 1. Запустите программу установки на основе Windows для компьютера сервера обучения. Установщик можно загрузить по ссылкам на этой странице: [установить машины обучения для Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Если вы устанавливаете моделей на сервере, у которого нет доступа к Интернету, убедитесь, что также загрузите установщик для предварительно обученные модели на этой странице: [автономную установку сервера обучения машины](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
+2. Если вы устанавливаете моделей на сервере, у которого нет доступа к Интернету, убедитесь, что также загрузите установщик для предварительно обученных моделей на этой странице: [автономную установку сервера обучения машины](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
 
 3. Запустите программу установки.
 
@@ -140,11 +141,11 @@ WITH 2017 г. SQL Server дополнительная настройка не т
 > 
 > Для моделей, Python может появиться ошибка при вызове файла модели в коде Python. Это связано с ограничением в текущей реализации Python, который ограничения длины пути к файлу модели. Эта проблема была исправлена и будут доступны в будущих исправлений.
 
-### <a name="installing-pretrained-models-with-r-server-standalone"></a>Установка предварительно обученные модели с использованием R Server (изолированный)
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>Установка предварительно обученной модели с помощью SQL Server автономным сервером r.
 
 Если вы установили более ранней версии R Server (автономный) с помощью программы установки SQL Server 2016, можно добавить возможность использовать предварительно обученной модели по обновлению сервера R с помощью более новой установщика Windows под управлением. 
 
-Предварительно обученные модели стали доступны как дополнительный компонент [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), но были добавлены с каждым выпуском обновления. Мы рекомендуем получение последней версии, возможно, но здесь перечислены предыдущие выпуски [освобождает R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
+Предварительно обученной модели стали доступны как дополнительный компонент [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), но были добавлены с каждым выпуском обновления. Мы рекомендуем получение последней версии, возможно, но здесь перечислены предыдущие выпуски [освобождает R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
 
 Следующие инструкции описывают обновление компонентов R и в то же время добавить предварительно обученной модели.
 
@@ -179,11 +180,11 @@ WITH 2017 г. SQL Server дополнительная настройка не т
     + Накопительное обновление 1: **9.2.0.24**
     + Накопительное обновление 4: **9.3.0**
 
-    Например позволяя использовать последнюю версию предварительно обученные модели для R, в установке по умолчанию R Server (изолированный), запуске этой инструкции:
+    Например позволяя использовать последнюю версию предварительно обученной модели для R, в установке по умолчанию R Server (изолированный), запуске этой инструкции:
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-### <a name="installing-pretrained-models-with-machine-learning-server-standalone"></a>Установка предварительно обученные модели с машины обучения Server (изолированный)
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>Установить предварительно обученной модели с автономным сервером SQL Server 2017 г.
 
 Если вы установили обучения компьютере, на сервер с помощью программы установки SQL Server 2017 г., добавляется предварительно обученной модели, запустив программу установки на основе Windows. Можно выбрать параметр для обновления компонентов R или Python и одновременно добавлять предварительно обученной модели. 
 
@@ -200,19 +201,19 @@ WITH 2017 г. SQL Server дополнительная настройка не т
 + ResNet 101
 + AlexNet
 
-Дополнительные сведения об алгоритмах, используемых в этих deep обучения моделей и как ere реализации и обучить с помощью CNTK см. в следующих статьях:
+Дополнительные сведения об алгоритмах, используемых в этих углубленного обучения моделей и порядок реализации и обучить с помощью CNTK, см. в этих статьях:
 
 + [Специалисты корпорации Майкрософт алгоритм задает его вехи ImageNet запроса](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Набор средств Майкрософт вычислительной сети предлагает обучения вычислительной мощности, но наиболее эффективный распределенных глубиной](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-### <a name="how-to-use-pre-trained-models-for-text-analysis"></a>Как использовать предварительно обученной модели для анализа текста
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>Как использовать предварительно обученной модели для анализа текста
 
-См. следующий пример показывает, как использовать модель featurization предварительно обученные текст для текстовой классификации:
+См. в следующем примере для демонстрации использования featurization текст предварительно обученной модели классификации текста.
 
 [Анализ мнений, с помощью Featurizer текста](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-### <a name="how-to-use-pretrained-models-for-image-detection"></a>Использование предварительно обученные модели для образа обнаружения
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>Использование предварительно обученной модели для образа обнаружения
 
 Предварительно обученной модели для изображений поддерживает featurization изображений, которые предоставляются. Чтобы использовать модель, вызовите **featurizeImage** преобразования. Загружено изображение, размер и создания признаков в обученной модели. Выходные данные DNN featurizer затем используется для обучения модели линейной классификации изображений.
 

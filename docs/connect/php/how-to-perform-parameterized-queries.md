@@ -1,30 +1,31 @@
 ---
-title: "Как: выполнение параметризованных запросов | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Как: выполнение параметризованных запросов | Документы Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Практическое руководство. Выполнение параметризованных запросов
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 2.  Инициализируйте или обновите переменные PHP, которые соответствуют заполнителям в запросе Transact-SQL.  
   
-3.  Используйте переменные PHP из шага 2, чтобы создать или обновить массив значений параметров, порядок которых соответствует заполнителям параметров в строке Transact-SQL.  
+3.  Используйте переменные PHP из шага 2, чтобы создать или обновить массив значений параметров, которые соответствуют соответствует заполнителям параметров в строке Transact-SQL. Значения параметров в массиве должен быть в том же порядке, в качестве заполнителей, для их представления.
   
 4.  Выполните запрос:  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 Затем пример отправляет в базу данных запрос для проверки правильности обновления количества. Идентификатор продукта является параметром в запросе SELECT.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>Пример  
 Следующий пример демонстрирует неявную привязку переменных при использовании функции **sqlsrv_prepare** . Этот пример вставляет несколько заказов на продажу в таблицу *Sales.SalesOrderDetail* . *$Params* привязывается к инструкции (*$stmt*) при **sqlsrv_prepare** вызывается. Перед каждым выполнением запроса, который вставляет в таблицу новый заказ на продажу, массив *$params* обновляется новыми значениями, соответствующими сведениям об этом заказе на продажу. При последующем выполнении запроса используются новые значения параметров.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -193,9 +194,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Преобразование типов данных](../../connect/php/converting-data-types.md)  
-[Вопросы безопасности для драйвера SQL PHP](../../connect/php/security-considerations-for-php-sql-driver.md)
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
+## <a name="see-also"></a>См. также  
+[Преобразование типов данных](../../connect/php/converting-data-types.md)
+
+[Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

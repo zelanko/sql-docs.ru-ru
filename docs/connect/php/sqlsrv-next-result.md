@@ -1,17 +1,19 @@
 ---
-title: "sqlsrv_next_result | Документы Microsoft"
-ms.custom: 
+title: sqlsrv_next_result | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_next_result
+apiname:
+- sqlsrv_next_result
 apitype: NA
 helpviewer_keywords:
 - multiple result sets
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb34a1e134bf13f797157fbe49d1cb210fb4f036
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1158706ba73a97a358e43bbe32e84bd85f926409
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,9 +57,9 @@ sqlsrv_next_result( resource $stmt )
 Следующий пример создает и выполняет хранимую процедуру, которая вставляет обзор продукта в таблицу *Production.ProductReview* , а затем выбирает все обзоры для указанного продукта. После выполнения хранимой процедуры первый результат (количество строк, затронутых запросом INSERT в хранимой процедуре) используется без вызова **sqlsrv_next_result**. Следующий результат (строк, возвращаемых запросом SELECT в хранимой процедуре) делается доступным путем вызова **sqlsrv_next_result** и используется с помощью [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в статье [Вызов хранимой процедуры](http://go.microsoft.com/fwlink/?linkid=119517).  
+> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в разделе [вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -190,7 +192,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > Первый (или единственный) результат, возвращаемый пакетным запросом или хранимой процедурой, становится активным без вызова **sqlsrv_next_result**.  
   
-Пример использует таблицу *Purchasing.ProductReview* базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?linkid=67739) , при этом предполагается, что эта база данных установлена на сервере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В этом примере *Purchasing.ProductReview* таблицу [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных и предполагается, что эта база данных установлена на сервере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -269,10 +271,15 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
+## <a name="see-also"></a>См. также  
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)
+
   

@@ -1,40 +1,40 @@
 ---
-title: "Библиотеки Python | Документы Microsoft"
-ms.custom: 
+title: Библиотеки Python | Документы Microsoft
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6292b9139f4ad43a0bdd8de4b1d849cb0caaa627
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 14691885d6dcdb91558ddc9566f4320c8119a9dd
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Библиотеки Python и типы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом разделе описываются библиотеки Python, которые входят в состав следующих продуктов:
+В этой статье описываются библиотеки Python, которые входят в состав следующих продуктов:
 
 + Изучение служб (в базе данных) машины SQL Server
 + Microsoft машинного обучения Server (изолированный)
 
-В этом разделе также перечислены неподдерживаемые типы данных и списки тип данных преобразования, которые может выполнять неявно при передаче данных между Python и SQL Server.
+В этой статье также перечислены неподдерживаемые типы данных и списки тип данных преобразования, которые может выполнять неявно при передаче данных между Python и SQL Server.
 
 ## <a name="python-version"></a>Версия Python
 
 2017 г CTP-версия SQL Server 2.0 включает часть дистрибутив Anaconda и Python 3.6.
 
-Часть возможностей RevoScaleR (rxLinMod rxLogit, rxPredict, rxDTrees, rxBTrees, может быть несколько других) с помощью API-Интерфейсы Python, с помощью нового пакета Python **RevoScalePy**. Для работы с данными, с помощью Pandas кадров данных, можно использовать эти пакеты. XDF-файлов или запросов анализа данных SQL.
+Часть возможностей RevoScaleR (rxLinMod rxLogit, rxPredict, rxDTrees, rxBTrees, может быть несколько других) с помощью API-интерфейсы Python, с помощью нового пакета Python **revoscalepy**. Этот пакет можно использовать для работы с данными, с помощью кадров данных Pandas, XDF-файлов или запросов анализа данных SQL.
 
 Дополнительные сведения см. в разделе [возможности revoscalepy?](what-is-revoscalepy.md).
 

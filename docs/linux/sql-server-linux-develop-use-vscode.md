@@ -1,6 +1,6 @@
 ---
-title: "Использовать расширение mssql кода Visual Studio для SQL Server | Документы Microsoft"
-description: "Этого учебника показано, как использовать расширение mssql для VS Code. Это расширение позволяет редактировать и запускать скрипты Transact-SQL в VS Code."
+title: Использовать расширение mssql кода Visual Studio для SQL Server | Документы Microsoft
+description: Этого учебника показано, как использовать расширение mssql для VS Code. Это расширение позволяет редактировать и запускать скрипты Transact-SQL в VS Code.
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование кода Visual Studio для создания и выполнения скриптов Transact-SQL для SQL Server
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/13/2018
 
    | Настройка | Описание |
    |-----|-----|
-   | **Имя сервера** | Имя экземпляра SQL Server. В этом учебнике использовать **localhost** для подключения к локальному экземпляру SQL Server на компьютере. При подключении к удаленному серверу SQL Server, введите имя машины целевого SQL Server или его IP-адрес. |
+   | **Имя сервера** | Имя экземпляра SQL Server. В этом учебнике использовать **localhost** для подключения к локальному экземпляру SQL Server на компьютере. При подключении к удаленному серверу SQL Server, введите имя машины целевого SQL Server или его IP-адрес. Если требуется указать порт для экземпляра SQL Server, используйте запятую, чтобы изолировать его от имени. Например можно ввести для локального сервера, работающего на порту 1401 **localhost, 1401**. |
    | **[Необязательно] Имя базы данных** | База данных, который вы хотите использовать. В целях этого учебника не указать базу данных и нажмите клавишу **ввод** для продолжения. |
    | **Имя пользователя** | Введите имя пользователя, имеющего доступ к базе данных на сервере. В этом учебнике используется значение по умолчанию **SA** учетную запись, созданную во время установки SQL Server. |
    | **Пароль (имя входа SQL)** | Введите пароль для указанного пользователя. | 

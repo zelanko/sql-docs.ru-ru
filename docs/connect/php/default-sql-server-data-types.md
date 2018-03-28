@@ -1,30 +1,31 @@
 ---
-title: "По умолчанию для типов данных SQL Server | Документы Microsoft"
-ms.custom: 
+title: По умолчанию для типов данных SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b81f0a84c40fc7d184beccf1532386b4284fafd
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c1facac748e24d465144f93d2e4ccdf38608e6b3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="default-sql-server-data-types"></a>Типы данных SQL Server по умолчанию
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +35,8 @@ ms.lasthandoff: 11/18/2017
 |Тип данных PHP|Тип SQL Server по умолчанию в драйвере SQLSRV|Тип SQL Server по умолчанию в драйвере PDO_SQLSRV|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|не поддерживается|  
-|Логическое значение|bit|bit|  
-|Integer|int|int|  
+|Boolean|bit|bit|  
+|Целочисленный|int|int|  
 |Число с плавающей запятой|float(24)|не поддерживается|  
 |Строка (длина менее 8000 байт)|varchar (<string length>)|varchar (<string length>)|  
 |Строка (длина более 8000 байт)|varchar(max)|varchar(max)|  
@@ -46,10 +47,14 @@ ms.lasthandoff: 11/18/2017
 |Объект|Не поддерживается.|Не поддерживается.|  
 |DateTime (1)|datetime|Не поддерживается.|  
   
-## <a name="see-also"></a>См. также:  
-[Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
-[Типы PHP](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[Типы данных (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+## <a name="see-also"></a>См. также  
+[Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Преобразование типов данных](../../connect/php/converting-data-types.md)
+
+[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
+
+[Типы PHP](http://php.net/manual/language.types.php)
+
+[Типы данных (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
   

@@ -1,30 +1,30 @@
 ---
-title: "Элементы языка T-SQL - аналитика платформы системы Parallel Data Warehouse | Документы Microsoft"
+title: Элементы языка T-SQL - аналитика платформы системы Parallel Data Warehouse | Документы Microsoft
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW)."
+description: Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
 services: sql-data-warehouse
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="language-elements"></a>Элементы языка
 Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/05/2018
 * [- (отрицательное значение)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (вычитание)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (умножение)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Деление)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (деление)](../t-sql/language-elements/divide-transact-sql.md)
 * [Остаток от деления](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Подстановочные символы для совпадения
@@ -71,7 +71,7 @@ ms.lasthandoff: 03/05/2018
 * [> = (большие, чем или равно)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (меньше или равно)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (Не равно)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [! = (Не равно)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= (Не равно)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -283,7 +283,7 @@ ms.lasthandoff: 03/05/2018
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [ИНСТРУКЦИЯ SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные справочные сведения см. в разделе [инструкции T-SQL](tsql-statements.md) и [системных представлений T-SQL](tsql-system-views.md).

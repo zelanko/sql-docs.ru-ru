@@ -1,37 +1,39 @@
 ---
-title: "sqlsrv_num_fields | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_num_fields | Документы Microsoft
+ms.custom: ''
+ms.date: 03/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_num_fields
+apiname:
+- sqlsrv_num_fields
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978f04e3796cc104844ca86e3ac74b1c24cc10e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 80028fcf1b4a1c3d947bef49c2a4edc617f9d2d1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Извлекает количество полей в активном результирующем наборе. Обратите внимание, что **sqlsrv_num_fields** можно вызвать для любой подготовленной инструкции до или после выполнения.  
+Извлекает количество полей в активном результирующем наборе. Эта функция может вызываться для любой подготовленной инструкции до или после выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,9 +49,9 @@ sqlsrv_num_fields( resource $stmt)
 Целочисленное значение, представляющее количество полей в активном результирующем наборе. Если возникает ошибка, возвращается логическое значение **false** .  
   
 ## <a name="example"></a>Пример  
-Следующий пример выполняет запрос, чтобы получить все поля для первых трех строк в таблице *HumanResources.Department* базы данных Adventureworks. Функция **sqlsrv_num_fields** определяет количество полей в результирующем наборе. Это позволяет отображать данные посредством итерации по полям в каждой возвращаемой строке.  
+В следующем примере выполняется запрос, чтобы получить все поля для первых трех строк в *HumanResources.Department* таблицы базы данных AdventureWorks. Функция **sqlsrv_num_fields** определяет количество полей в результирующем наборе. Это позволяет отображать данные посредством итерации по полям в каждой возвращаемой строке.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -94,8 +96,10 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
   

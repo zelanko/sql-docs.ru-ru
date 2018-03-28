@@ -1,27 +1,28 @@
 ---
-title: "PDO::beginTransaction | Документы Microsoft"
-ms.custom: 
+title: PDO::beginTransaction | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 131edab231009e63c32a3c5b7a4d6ffccfc7d407
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 51a04874f23dcae77347d85ad0ebd284a1e3b03c
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,14 +39,14 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение true, если вызов метода выполнен успешно, в противном случае — значение false.  
   
-## <a name="remarks"></a>Замечания  
-Транзакции, начавшиеся с PDO::beginTransaction, заканчиваются при вызове [PDO::commit](../../connect/php/pdo-commit.md) или [PDO::rollback](../../connect/php/pdo-rollback.md) .  
+## <a name="remarks"></a>Remarks  
+Транзакции, начавшиеся с PDO::beginTransaction заканчивается при [PDO::commit](../../connect/php/pdo-commit.md) или [PDO::rollback](../../connect/php/pdo-rollback.md) вызывается.  
   
 PDO::beginTransaction не подвержен влиянию со стороны значения PDO::ATTR_AUTOCOMMIT (и не влияет на него).  
   
 Вы не можете вызвать PDO::beginTransaction до завершения предыдущего PDO::beginTransaction с PDO::rollback или PDO::commit.  
   
-Если этот метод завершается ошибкой, подключение возвращается в режим автофиксации.  
+Если этот метод завершается ошибкой, то соединение переходит в режим автофиксации.  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -65,7 +66,8 @@ PDO::beginTransaction не подвержен влиянию со стороны
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Класс PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>См. также  
+[Класс PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

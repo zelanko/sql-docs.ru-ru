@@ -1,26 +1,26 @@
 ---
-title: "SQL Server Services обучения машины — доступность функций между выпусками | Документы Microsoft"
-ms.custom: 
+title: SQL Server Services обучения машины — доступность функций между выпусками | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>Доступность функций между выпусками служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  Функции обучения компьютера доступны в SQL Server 2016 и 2017 г. SQL Server. В этой статье перечислены выпуски, предоставляя функции, описываются ограничения, которые применяются в определенных выпусках и перечислены возможности, доступные только в определенных выпусках.
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>Компоненты SQL Server 2017 г машинного обучения
+## <a name="sql-server-2017-features"></a>Компоненты SQL Server 2017 г.
 
-Выпуски Enterprise и Developer имеют одинаковые покрытие компонентов, что можно создавать решения для полной установкой без затрат на одном. Несмотря на то, что выпуски, функционируют equivlanet, использование Developer Edition не поддерживается для рабочей среды.
+Выпуски Enterprise и Developer имеют одинаковые покрытие компонентов, что можно создавать решения для полной установкой без затрат на одном. Несмотря на то, что выпуски функционально эквивалентны, использование Developer Edition не поддерживается для рабочей среды.
 
 Разница между основных и дополнительных интеграции — шкалы. Улучшенные возможности интеграции можно использовать все доступные ядра для параллельной обработки наборов данных в любом масштабе, допустимых для компьютера. Основные интеграционные только 2 ядра, а также к наборам данных, изменение размера в памяти. 
 

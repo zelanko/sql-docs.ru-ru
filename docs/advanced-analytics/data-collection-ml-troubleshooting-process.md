@@ -1,28 +1,28 @@
 ---
-title: "Устранение неполадок при сборе данных для машинного обучения — SQL Server"
-ms.custom: 
+title: Устранение неполадок при сборе данных для машинного обучения — SQL Server
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок при сборе данных для машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ SQL Server R Services впервые появился в SQL Server 2016. Пре
 
 В зависимости от выпуска SQL Server, вы используете некоторые машинного обучения функциональность может быть недоступность или ограниченная.
 
-В следующих разделах список функций компьютера обучения в выпусках Enterprise, Developer, Standard и Express.
+См. следующие статьи для получения списка функций компьютера обучения в выпусках Enterprise, Developer, Standard и Express.
 
 * [Выпуски и поддерживаемых функций SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Различия в возможностях R между выпусками SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Если службы обучения машина не запущена, можно определить установленную версию Python, просмотрев файл pythonlauncher.config. Рекомендуется создать и открыть копию файла, чтобы случайного изменения любого свойства.
 
-1. Только для SQL Server 2017 г.:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. Только для SQL Server 2017 г.: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. Получить значение для **PYTHONHOME**.
 3. Получает значение в текущем рабочем каталоге.
 
@@ -262,7 +262,7 @@ SQL Server создает отдельные файлы журналов для 
 
 Например следующие сообщения являются общих системных ошибок, относящихся к структуре расширяемости SQL Server: 
 
-* *Служба панели запуска SQL Server (MSSQLSERVER) не удалось запуститься из-за следующей ошибки:<text>*
+* *Служба панели запуска SQL Server (MSSQLSERVER) не удалось запуститься из-за следующей ошибки:  <text>*
 
 * *Служба не ответила на запрос запуска или управления в течение отведенного времени.* 
 

@@ -1,38 +1,39 @@
 ---
-title: "В драйвере PHP для SQL Server Support for LocalDB | Документы Microsoft"
-ms.custom: 
-ms.date: 02/03/2017
+title: Поддержка LocalDB | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: drivers
 ms.component: php
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9315847a8e36520b360d16681ffe5b00f08d6975
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server Support for LocalDB (Поддержка драйвера PHP для SQL Server для LocalDB)
+# <a name="support-for-localdb"></a>Поддержка LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], облегченная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], именуемая LocalDB, будут доступны. В этом разделе обсуждается, как можно установить соединение с базой данных на экземпляре LocalDB.
+LocalDB — это облегченная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] которого был доступен с [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. В этом разделе обсуждается, как можно установить соединение с базой данных на экземпляре LocalDB.
 
 ## <a name="remarks"></a>Remarks
 
 Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB, разделе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] раздел электронной документации на [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
-LocalDB позволяет выполнять следующие действия.
+Вкратце LocalDB позволяет:
 
 -   Использовать программу **sqllocaldb.exe i** для поиска имени экземпляра по умолчанию.
 
@@ -81,8 +82,8 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Вы LocalDB можно загрузить из [страницы пакета дополнительных компонентов SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=236805), или из [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] экспресс-выпуск. Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, вам потребуется sqlcmd из [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], который можно получить из загрузки служебные программы командной строки в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] страницы пакета дополнительных компонентов.
+Инструкции по установке LocalDB см. в разделе [документации LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Если изменение данных в экземпляре LocalDB с помощью sqlcmd.exe потребуется [программы sqlcmd](../../tools/sqlcmd-utility.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Подключение к серверу](../../connect/php/connecting-to-the-server.md)

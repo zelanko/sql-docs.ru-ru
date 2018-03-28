@@ -1,32 +1,37 @@
 ---
-title: "Функция SQLBrowseConnect | Документы Microsoft"
-ms.custom: 
+title: Функция SQLBrowseConnect | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLBrowseConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLBrowseConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBrowseConnect
-helpviewer_keywords: SQLBrowseConnect function [ODBC]
+f1_keywords:
+- SQLBrowseConnect
+helpviewer_keywords:
+- SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Функция SQLBrowseConnect
 **Соответствия**  
@@ -75,7 +80,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLBrowseConnect** возвращает значение SQL_ERROR, SQL_SUCCESS_WITH_INFO или SQL_NEED_DATA, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение sql_handle_stmt и *дескриптор ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLBrowseConnect** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Буфер \* *OutConnectionString* не был достаточно велик, чтобы вернуть всей обзора результирующую строку подключения, поэтому строка была усечена. Буфер **StringLength2Ptr* содержит длину неусеченный Обзор результирующей строки подключения. (Функция возвращает значение SQL_NEED_DATA.)|  
@@ -113,7 +118,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Аргумент InConnectionString  
  Обзор запроса строки подключения имеет следующий синтаксис:  
   
- *Строка подключения* :: = *атрибута*[;] &#124; *атрибута*; *подключения stringattribute* :: = *ключевое слово атрибут*=*значение атрибута* &#124; ДРАЙВЕР = [{}]*значение атрибута [*}]*ключевое слово атрибут* :: = DSN &#124; UID &#124; PWD &#124; *драйвер определенные keywordattribute значений атрибутов* :: = *символ stringdriver определенные атрибут-ключевое слово* :: = *идентификатор*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  где *символьной строки* имеет ноль или более символов; *идентификатор* имеет один или несколько символов. *ключевое слово атрибут* не учитывает регистр; *значение атрибута* может учитываться регистр; и значение **DSN** ключевое слово не состоит из одних пробелов. Из-за соединения строки и инициализации файл грамматики, ключевые слова и атрибут значения, содержащие символы **[] {} (),? \*=! @** следует избегать. Из-за грамматики в сведениях о системе, ключевые слова и имена источников данных не может содержать обратную косую черту (\\) символов. Для ODBC 2. *x* драйвера, значение атрибута для ключевое слово DRIVER можно заключать в фигурные скобки.  
   
@@ -124,7 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Аргумент OutConnectionString  
  Обзор результирующей строки соединения является списком атрибутов соединения. Атрибут соединения состоит из ключевого слова атрибута и соответствующее значение атрибута. Обзор результирующей строки подключения имеет следующий синтаксис:  
   
- *Строка подключения* :: = *атрибута*[;] &#124; *атрибута*; *подключения stringattribute* :: = [\*]*ключевое слово атрибут = атрибут valueattribute ключевое слово* :: = *ODBC атрибута ключевое слово* &#124; *driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124; PWD} [:*локализованные идентификатор*]*-определенные атрибут-ключевое слово driver* :: = *идентификатор*[:*локализованные идентификатор*]*значение атрибута* :: = {*списка значений атрибута*} &#124;? (Фигурных скобок является литералом, они возвращаются с помощью драйвера.) *списка значений атрибута* :: = *символьной строки* [:*локализованные символьная строка*] &#124; *символьной строки* [:*локализованные символьная строка*], *списка значений атрибута*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
+ *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  где *символьной строки* и *локализованные символьная строка* иметь ноль или более символов; *идентификатор* и *локализованные идентификатор* имеют один или несколько символов. *ключевое слово атрибут* не учитывает регистр; и *значение атрибута* может учитываться регистр. Из-за соединения строки инициализации файл грамматики, ключевые слова, идентификаторы локализованные и значения атрибутов, содержать символы **[] {} (),? \*=! @** следует избегать. Из-за грамматики в сведениях о системе, ключевые слова и имена источников данных не может содержать обратную косую черту (\\) символов.  
   
@@ -286,6 +299,6 @@ int main() {
 |Возврат описания драйверов и атрибуты|[Функция SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Освобождение дескриптора соединения|[Функция SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

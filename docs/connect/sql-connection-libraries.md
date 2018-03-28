@@ -1,23 +1,23 @@
 ---
-title: "Библиотеки подключения для баз данных SQL Microsoft | Документы Microsoft"
-description: "Предоставляет ссылки для загрузки модулей, которые обеспечивают подключение к Microsoft SQL Server и базы данных SQL Azure из различных языков программирования клиента."
+title: Библиотеки подключения для баз данных SQL Microsoft | Документы Microsoft
+description: Предоставляет ссылки для загрузки модулей, которые обеспечивают подключение к Microsoft SQL Server и базы данных SQL Azure из различных языков программирования клиента.
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/28/2018
 
 #### <a name="oop-to-relational-mismatch"></a>Объектно реляционные несоответствие
 
-*Реляционные*: клиентские программы, записанные в объектно ориентированный язык программирования (OOP) часто использовать драйверы SQL, возвращающие запрашиваемые данные в формате, который несколько реляционных, чем объектно-ориентированный. С помощью ADO.NET в C# является одним из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код объектно-ориентированное Программирование.
+*Реляционные*: клиентские программы, записанные в объектно ориентированный язык программирования (OOP) часто использовать драйверы SQL, которые возвращают запрашиваемые данные в формате, несколько реляционных, чем объектно-ориентированной. С помощью ADO.NET в C# является одним из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код объектно-ориентированное Программирование.
 
 *Объектно-реляционные Преобразователи*: других драйверов или платформы возврата запрошенных данных в формате объектно-ориентированное Программирование, как избежать несоответствия. Эти драйверы работать, ожидается, что классы были определены для сопоставления столбцов данных из отдельных таблиц SQL. Драйвер выполняет *объектно реляционное сопоставление* (ORM) для возврата результатов запроса в виде экземпляра класса. Корпорации Майкрософт Entity Framework (EF) для C# и режима гибернации для Java, приведены два примера.
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Драйвер node.js, инструкции по установке](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu или PHP, MacOS драйвер из Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Драйвер PHP Linux или macOS из Github](http://github.com/Microsoft/msphpsql/) |
 | Python   | [pyodbc инструкции по установке](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Загрузите ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Драйвер Ruby, инструкции по установке](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Страница загрузки Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 ## <a name="build-an-app-webpages"></a>Сборки в приложение веб-страниц
 
 
-[http://AKA.MS/sqldev](http://aka.ms/sqldev) вы перейдете на набор *сборки в приложении* веб-страниц. Веб-страниц содержат сведения о многочисленные сочетания программирования языка, операционной системы и драйвера подключения SQL. Помимо сведений, предоставляемых сборки в приложение веб-страниц являются следующие элементы:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) Вы перейдете на набор *сборки в приложении* веб-страниц. Веб-страниц содержат сведения о многочисленные сочетания программирования языка, операционной системы и драйвера подключения SQL. Помимо сведений, предоставляемых сборки в приложение веб-страниц являются следующие элементы:
 
 - Сведения о том, как приступить к работе с самого начала, для каждого сочетания языка + операционной системы и драйвера.
     - Инструкции по установке последние версии драйверов подключения SQL.

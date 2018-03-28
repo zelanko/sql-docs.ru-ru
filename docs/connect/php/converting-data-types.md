@@ -1,28 +1,28 @@
 ---
-title: "Преобразование типов данных | Документы Microsoft"
-ms.custom: 
-ms.date: 01/16/2018
+title: Преобразование типов данных | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 177f4cc6c28a231fe37df65a46976c4c8836e912
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5caf6c4e807b734bae6705a1777f6889f571be9d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="converting-data-types"></a>Преобразование типов данных
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,8 +41,11 @@ ms.lasthandoff: 03/15/2018
 |[Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Демонстрирует использование [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]на поддержку данных ASCII в Linux или macOS.<br /><br />Поддержка символов ASCII в средах, отличных от Windows была добавлена в версии 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
 ## <a name="see-also"></a>См. также  
-[Руководство по программированию для драйвера SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
   

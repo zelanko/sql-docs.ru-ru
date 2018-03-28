@@ -1,99 +1,100 @@
 ---
-title: "Загрузка драйвера PHP SQL | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: loading the driver
+helpviewer_keywords:
+- loading the driver
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90ba63857ea38481577083d2a85999e789dfcb84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5a21dcd1f7f416a7bdade75e1648aec9795680a1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="loading-the-php-sql-driver"></a>Загрузка драйвера SQL PHP
+# <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Эта статья содержит инструкции по загрузке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] в пространстве процесса PHP.  
+Эта страница содержит инструкции по загрузке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] в PHP пространстве процесса.  
   
-Существует два способа загрузки драйвера. Драйвер можно загрузить при запуске PHP или во время выполнения скрипта PHP.  
+Можно загрузить предварительно подготовленный драйверы для вашей платформы из [драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) странице Github проекта. Каждый пакет установки содержит файлы драйвера SQLSRV и PDO_SQLSRV потоками и однопоточных варианты. В Windows они также доступны в виде 32-разрядных и 64-разрядных Variant. В разделе [требования к системе для драйвера Microsoft SQL Server для PHP](../../connect/php/system-requirements-for-the-php-sql-driver.md) список файлов драйверов, которые содержатся в каждом пакете. Файл драйвера должно соответствовать версии PHP, архитектура и threadedness среды PHP.
+
+В Linux и macOS, драйверов можно также установить с помощью нагрузка PECL, обнаруженных в [установки учебника](../../connect/php/installation-tutorial-linux-mac.md).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Перемещение файла драйвера в каталог расширения  
-Независимо от используемой процедуры первым шагом является помещение файла драйвера в каталог, где его сможет найти среда выполнения PHP. Поэтому поместите файл драйвера в каталог расширения PHP. Список файлов драйверов, которые устанавливаются вместе с [, см. в статье](../../connect/php/system-requirements-for-the-php-sql-driver.md) Требования к системе (драйверы Майкрософт для PHP для SQL Server) [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-  
-При необходимости укажите расположение каталога файла драйвера в файле конфигурации PHP (php.ini) с помощью **extension_dir** параметр. Например, при помещении файла драйвера в каталог c:\php\ext, используйте следующий параметр:  
+Драйвер должен быть расположен в каталоге, где его сможет найти среда выполнения PHP. Можно легко помещение файла драйвера в каталог расширения PHP по умолчанию — чтобы найти каталог по умолчанию, запустите `php -i | sls extension_dir` в Windows или `php -i | grep extension_dir` на Linux или macOS. Если каталог расширение по умолчанию не используется, укажите каталог, в файле конфигурации PHP (php.ini) с помощью **extension_dir** параметр. Например, в Windows, если вы поместили файла драйвера вашей `c:\php\ext` directory, добавьте следующую строку в файл php.ini:
   
 ```  
 extension_dir = "c:\PHP\ext"  
-```  
-  
-## <a name="loading-the-driver-at-php-startup"></a>Загрузка драйвера при запуске PHP  
-Чтобы загрузить [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] при запуске PHP, сначала переместите файл драйвера в каталог расширения. Затем выполните следующие действия:  
-  
-1.  Чтобы включить **SQLSRV** изменить драйвер, **php.ini** , добавив следующую строку в раздел расширения или изменив строку, которая уже существует:  
-  
-    В Windows (этот пример использует драйвер поток версии 4.0 для PHP 7): 
-    ```  
-    extension=php_sqlsrv_7_ts.dll  
-    ```  
-    В системе Linux (этот пример использует версию установки нагрузка PECL): 
-    ```  
-    extension=sqlsrv.so  
-    ```  
-    Чтобы включить **PDO_SQLSRV** изменить драйвер, **php.ini** , добавив следующую строку в раздел расширения или изменив строку, которая уже существует:  
-  
-    В Windows (этот пример использует драйвер поток версии 4.0 для PHP 7):
-    ```  
-    extension=php_pdo_sqlsrv_7_ts.dll  
-    ```  
-    В системе Linux (этот пример использует версию установки нагрузка PECL):
-    ```  
-    extension=pdo_sqlsrv.so  
-    ```  
-  
-2.  Если вы хотите использовать **PDO_SQLSRV** драйвера, объекты данных PHP (PDO) должен иметь расширение доступно, виде встроенного расширения или динамически загруженного расширения. Если необходимо загрузить драйвер PDO_SQLSRV динамически, библиотека php_pdo.dll (или pdo.so в Linux) должен находиться в каталоге расширения и должен находиться в php.ini следующую строку:
+```
 
-    В Windows:  
+## <a name="loading-the-driver-at-php-startup"></a>Загрузка драйвера при запуске PHP  
+Чтобы загрузить драйвер SQLSRV, при запуске PHP, сначала переместите файл драйвера в каталог расширения. Затем выполните следующие действия:  
+  
+1.  Чтобы включить **SQLSRV** изменить драйвер, **php.ini** , добавив следующую строку в раздел расширения, изменив имя файла соответствующим образом:  
+  
+    В Windows: 
+    ```  
+    extension=php_sqlsrv_72_ts.dll  
+    ```  
+    В Linux, если вы скачали готовых двоичных файлов для распространения: 
+    ```  
+    extension=php_sqlsrv_72_nts.so  
+    ```
+    При компиляции двоичных SQLSRV из источника или с нагрузка PECL получит вместо имя sqlsrv.so:
+    ```
+    extension=sqlsrv.so
+    ```
+  
+2.  Чтобы включить **PDO_SQLSRV** драйвера, объекты данных PHP (PDO) должен иметь расширение доступно, виде встроенного расширения или динамически загруженного расширения.
+
+    В Windows готовых двоичных файлов PHP поставляются с PDO встроенные, поэтому нет необходимости изменить файл php.ini, чтобы загрузить ее. Если, однако были скомпилированы PHP из источника и указано отдельное расширение PDO для построения, он будет называться `php_pdo.dll`, и скопируйте его в каталог расширения и добавьте следующую строку в файл php.ini должна:  
     ```
     extension=php_pdo.dll  
-    ```  
-    На платформе Linux:  
     ```
-    extension=pdo.so  
-    ```  
+    В Linux после установки PHP, с помощью диспетчера пакетов системы, PDO, скорее всего, устанавливается как динамически загружаемые расширения с именем pdo.so. Расширение PDO должны загружаться перед расширением PDO_SQLSRV, иначе произойдет сбой загрузки. Обычно расширения загружаются с помощью отдельного INI-файлов, и эти файлы доступны для чтения после php.ini. Таким образом Если pdo.so загружается через свой собственный INI-файла, не требуется отдельный файл Загрузка драйвера PDO_SQLSRV после PDO. 
+
+    Чтобы определить каталог, которому расположены файлы .ini конкретного расширения, запустите `php --ini` и запишите каталога, выбранного в списке `Scan for additional .ini files in:`. Найдите файл, который загружает pdo.so (скорее всего предваряться число, например 10 pdo.ini). Числовой префикс указывает порядок загрузки INI-файлов, а файлы, которые не имеют числовой префикса загружаются в алфавитном порядке. Создайте файл для загрузки файла драйвера PDO_SQLSRV, называется 30-pdo_sqlsrv.ini (любое число больше, префиксы pdo.ini works) или pdo_sqlsrv.ini (если pdo.ini имеет префикс не число) и добавьте следующую строку, изменение файла как соответствующие:  
+    ```
+    extension=php_pdo_sqlsrv_72_nts.so
+    ```
+    Как с SQLSRV, если выполнена компиляция двоичных PDO_SQLSRV из источника или с нагрузка PECL, получит вместо имя pdo_sqlsrv.so:
+    ```
+    extension=pdo_sqlsrv.so
+    ```
+    Скопируйте этот файл в каталог, содержащий INI-файлов. 
+
+    Если выполнена компиляция PHP из источника со встроенной поддержкой PDO, отдельного INI-файла не требуется и соответствующую строку выше можно добавить в файл php.ini.
   
 3.  Перезапустите веб-сервер.  
   
 > [!NOTE]  
-> Чтобы определить, был ли драйвер успешно загружен, запустите скрипт, который вызывает [phpinfo()](http://go.microsoft.com/fwlink/?LinkId=108678).  
+> Чтобы определить, был ли драйвер успешно загружен, запустите скрипт, который вызывает [phpinfo()](http://php.net/manual/en/function.phpinfo.php).  
   
-Дополнительные сведения о директивах **php.ini** см. в статье [Описание основных директив php.ini](http://go.microsoft.com/fwlink/?LinkId=105817).  
+Дополнительные сведения о **php.ini** директив, в разделе [описание основных директив php.ini](http://php.net/manual/en/ini.core.php).  
   
-## <a name="loading-the-driver-at-php-script-runtime"></a>Загрузка драйвера во время выполнения скрипта PHP  
-Чтобы загрузить [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] во время выполнения скрипта, сначала переместите файл драйвера в каталог расширения. Затем добавьте следующую строку в начало скрипта PHP, который соответствует имени файла драйвера:  
-  
-```  
-dl('php_pdo_sqlsrv_7_ts.dll');  
-```  
-  
-Дополнительные сведения о функциях PHP, связанных с динамически загружаемыми расширениями см. в разделе [dl](http://go.microsoft.com/fwlink/?LinkId=105818) и [extension_loaded.](http://go.microsoft.com/fwlink/?LinkId=105819)  
-  
-## <a name="see-also"></a>См. также:  
-[Приступая к работе с драйвером PHP SQL](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[, см. в статье](../../connect/php/system-requirements-for-the-php-sql-driver.md)
-[Руководство по программированию для драйвера PHP SQL](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Справочник по API драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+## <a name="see-also"></a>См. также  
+[Начало работы с драйверы Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Требования к системе для драйвера Microsoft PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Справочник по API для драйвера PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

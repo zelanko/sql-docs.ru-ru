@@ -1,52 +1,38 @@
 ---
-title: "Установка компонентов обучения машины SQL Server на виртуальной машине Azure | Документы Microsoft"
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
+title: Установка компонентов обучения машины SQL Server на виртуальной машине Azure | Документы Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: d2f0f38086c7725e14261afa9a40f29b212b748f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Установка SQL Server машинного обучения функции на виртуальной машине Azure
+# <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Установка SQL Server машинного обучения функции на виртуальной машине Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-При развертывании виртуальной машины Azure, включающий [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], теперь можно выбрать машинного обучения, как средство для добавления экземпляра при создании виртуальной Машины.
+Мы рекомендуем использовать [виртуальная машина анализа данных](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), но если требуется, чтобы к виртуальной Машине с только что служб SQL Server 2017 г машины обучения или служб R SQL Server 2016, в этой статье поможет выполнить действия.
 
-+ [Создание новой виртуальной Машины, службы R и SQL Server 2016](#new)
-+ [Добавление компонентов обучения машины к существующей виртуальной машины с SQL Server 2016](#existing)
+## <a name="create-a-virtual-machine-on-azure"></a>Создание виртуальной машины в Azure
 
-> [!NOTE]
-> Виртуальные машины, теперь доступны для 2017 г. SQL Server! В разделе [это объявление](https://azure.microsoft.com/blog/announcing-new-azure-vm-images-sql-server-2017-on-linux-and-windows/) подробные сведения.
-> 
-> R также доступна как функцию предварительного просмотра в базе данных SQL Azure. Дополнительные сведения см. в разделе [с помощью R в базе данных SQL Azure](../r/using-r-in-azure-sql-database.md).
-
-## <a name="create-a-new-sql-server-2017-virtual-machine"></a>Создание новой виртуальной машины SQL Server 2017 г.
-
-Чтобы использовать R или Python в 2017 г. SQL Server, убедитесь, что получение виртуальной машины под управлением Windows. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] в Linux поддерживает быстрое [оценки собственного](../sql-native-scoring.md) с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL, но другие машинного обучения возможности не доступны еще в этом выпуске.
-
-Список предложений виртуальной Машине SQL Server см. в статье: [Обзор SQL Server на виртуальных машинах Azure (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
-
-### <a name="new"></a>Создание новой виртуальной Машины SQL Server Enterprise с машинного обучения
-
-1. На портале Azure щелкните виртуальные МАШИНЫ и нажмите кнопку Создать.
-2. Установите SQL Server 2017 г Enterprise Edition.
+1. На портале Azure в списке слева, нажмите кнопку **виртуальные машины** и нажмите кнопку **добавить**.
+2. Поиск SQL Server 2017 г Enterprise Edition или SQL Server 2016 Enterprise Edition.
 3. Настройте имя сервера и разрешения учетной записи, а затем выберите ценовой план.
-4. В **параметры сервера SQL Server** (шаг 4 в мастере установки виртуальной Машины), найдите **Machine Services обучения (Advanced Analytics)** и нажмите кнопку **включить**.
+4. В **параметры сервера SQL Server** (шаг 4 в мастере установки виртуальной Машины), найдите **Machine Services обучения (Advanced Analytics)** (или **R Services** для SQL Server 2016) и нажмите кнопку  **Включить**.
 5. Просмотрите сводку, представленную для проверки, и нажмите кнопку **ОК**.
 6. Когда виртуальная машина будет готова, подключитесь к ней и откройте предварительно установленную среду SQL Server Management Studio. Машинное обучение готов к выполнению.
 7. Чтобы проверить их готовность, вы можете открыть новое окно запроса и выполнить простую инструкцию (например, приведенную ниже), в которой используется язык R для создания последовательности чисел от 1 до 10.
@@ -113,7 +99,3 @@ ms.lasthandoff: 03/21/2018
   Он требуется для подключений замыкания на себя. Если возникли следующие ошибки, включите поддержку TCP/IP на виртуальной машине, которая поддерживает экземпляр:
 
   «DBNETLIB; SQL Server не существует или доступ запрещен»
-
-## <a name="related-resources"></a>Связанные ресурсы
-
-[Использование языка R в базе данных Azure SQL](../r/using-r-in-azure-sql-database.md)

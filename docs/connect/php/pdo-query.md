@@ -1,27 +1,28 @@
 ---
-title: "PDO::Query | Документы Microsoft"
-ms.custom: 
+title: PDO::Query | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42c24102f31df86ebf76d855d80487f5bba15e82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,16 +47,16 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>Исключения  
 PDOException.  
   
-## <a name="remarks"></a>Замечания  
-Запрос, выполняемый с PDO::query могут выполнять подготовленной инструкции, в зависимости от настройки PDO::SQLSRV_ATTR_DIRECT_QUERY; в разделе [выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) для получения дополнительной информации.  
+## <a name="remarks"></a>Remarks  
+Запрос, выполняемый с PDO::query могут выполнять подготовленной инструкции, в зависимости от настройки PDO::SQLSRV_ATTR_DIRECT_QUERY. Дополнительные сведения см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение PDO::exec; в разделе [PDO::setAttribute](../../connect/php/pdo-setattribute.md) для получения дополнительной информации.  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение PDO::exec; Дополнительные сведения см. в разделе [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Можно указать следующие параметры для $*fetch_style*.  
   
-|style|Description|  
+|style|Описание|  
 |---------|---------------|  
-|Значение PDO::FETCH_COLUMN, *num*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
+|PDO::FETCH_COLUMN, *num*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
 |Значение PDO::FETCH_CLASS, "*classname*", массив ( *arglist* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *arglist*.|  
 |Значение PDO::FETCH_CLASS, "*classname*"|Назначает имена столбцов свойствам в существующем классе.|  
   
@@ -123,7 +124,8 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Класс PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>См. также  
+[Класс PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

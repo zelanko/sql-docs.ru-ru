@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_fetch_array | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_fetch_array | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_array
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 087d26284d99ee0021acded71b7bb5a2ff3e2cd6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [необязательно]: Предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|Следующая строка данных возвращается в виде числового массива.|  
 |SQLSRV_FETCH_ASSOC|Следующая строка данных возвращается в виде ассоциативного массива. Ключами массива являются имена столбцов в результирующем наборе.|  
@@ -70,7 +72,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 В зависимости от значения параметра *$fetchType* , возвращаемый **массив** может быть **массивом**с числовым индексом и (или) ассоциативным **массивом**. По умолчанию возвращается **массив** с числовыми и ассоциативными ключами. Для значения в возвращенном массиве используется тип данных PHP по умолчанию. Дополнительные сведения о типах данных PHP по умолчанию см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Если возвращается столбец без имени, то ассоциативным ключом для данного элемента массива будет пустая строка (""). Например, рассмотрим эту инструкцию Transact-SQL, которая вставляет значение в таблицу базы данных и извлекает созданный сервером первичный ключ:  
   
 ```
@@ -87,7 +89,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Если результирующий набор содержит несколько столбцов без имени, значение последнего столбца без имени присваивается ключу пустой строки ("").  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает каждую строку результирующего набора в виде ассоциативного **массива**. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример извлекает каждую строку результирующего набора в виде ассоциативного **массива**. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -130,7 +132,7 @@ sqlsrv_close( $conn);
   
 В примере извлекаются сведения о продукте из *Purchasing.PurchaseOrderDetail* таблицы базы данных AdventureWorks для продуктов, имеющих указанную дату и количество запасов (*StockQty*) меньше, чем указанное значение.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -185,9 +187,12 @@ sqlsrv_close( $conn);
   
 Если извлекается поле без имени, то ассоциативным ключом для данного элемента массива будет пустая строка (""). Дополнительные сведения см. в статье [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-## <a name="see-also"></a>См. также:  
-[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Руководство по программированию для драйвера SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>См. также  
+[Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

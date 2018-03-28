@@ -1,34 +1,34 @@
 ---
-title: "Общие сведения об архитектуре служб SQL Server Machine Learning | Документы Microsoft"
-ms.custom: 
+title: Общие сведения об архитектуре служб SQL Server Machine Learning | Документы Microsoft
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Общие сведения об архитектуре служб SQL Server машины обучения 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом разделе описываются цели extensibility Framework, которая поддерживает выполнение сценария Python и R в SQL Server.
+В этой статье описываются цели extensibility Framework, которая поддерживает выполнение сценария Python и R в SQL Server.
 
 Он также предоставляет обзор проектирования архитектуры для достижения этих целей процесс поддерживается и выполнения и преимущества интеграции SQL Server R и Python.
 
-В целом инфраструктура расширяемости R и Python, почти совпадает с незначительными различиями в подробные сведения о средства запуска, которые вызываются, параметры конфигурации и т. д. Сведения о реализации для конкретного языка находятся в следующих разделах:
+В целом инфраструктура расширяемости R и Python, почти совпадает с незначительными различиями в подробные сведения о средства запуска, которые вызываются, параметры конфигурации и т. д. Сведения о реализации для конкретного языка см. статьи:
 
 - [Обзор архитектуры для SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Общие сведения об архитектуре для Python в SQL Server](python/architecture-overview-sql-server-python.md)

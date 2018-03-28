@@ -1,28 +1,30 @@
 ---
-title: "Пример приложения (драйвер SQLSRV) | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Пример приложения (драйвер SQLSRV) | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: example application
+helpviewer_keywords:
+- example application
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 662eaf5a9d499cb97e1d36a5712f37298f2cf26e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4665b4205ae896c7aaadd574d60c1cb9db6283b4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="example-application-sqlsrv-driver"></a>Пример приложения (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,17 +33,17 @@ ms.lasthandoff: 11/18/2017
   
 ### <a name="running-the-example-application"></a>Выполнение примера приложения  
   
-1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. в разделе [Приступая к работе с драйвером SQL PHP](../../connect/php/getting-started-with-the-php-sql-driver.md).
+1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в разделе [Приступая к работе с драйверы Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Скопируйте код, приведенный ниже в этом документе, в два файла: adventureworks_demo.php и photo.php.  
 3.  Поместите файлы adventureworks_demo.php и photo.php в корневой каталог веб-сервера.  
-4.  Запустите приложение, открыв http://localhost/adventureworks_demo.php в браузере.  
+4.  Запустите приложение, запуск http://localhost/adventureworks_demo.php из браузера.  
   
 ## <a name="requirements"></a>Требования  
 Для запуска примера приложения обзоров продуктов AdventureWorks на компьютере должны выполняться следующие условия:  
   
--   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. в разделе [Требования к системе (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в разделе [требования к системе для драйвера Microsoft SQL Server для PHP](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
 -   Файлы adventureworks_demo.php и photo.php находятся в корневом каталоге веб-сервера. Эти файлы должны содержать код, приведенный ниже в этом документе.  
--   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](http://go.microsoft.com/fwlink/?LinkID=67739) .  
+-   SQL Server 2005 или SQL Server 2008 с [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) подключенной базой данных устанавливается на локальном компьютере.  
 -   Установлен веб-браузер.  
   
 ## <a name="demonstrates"></a>Демонстрации  
@@ -560,10 +562,14 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Подключение к серверу](../../connect/php/connecting-to-the-server.md)  
-[Сравнение функций выполнения](../../connect/php/comparing-execution-functions.md)  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+## <a name="see-also"></a>См. также  
+[Подключение к серверу](../../connect/php/connecting-to-the-server.md)
+
+[Сравнение функций выполнения](../../connect/php/comparing-execution-functions.md)
+
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

@@ -1,27 +1,28 @@
 ---
-title: "Извлечение данных в виде потока с помощью драйвера SQLSRV | Документы Microsoft"
-ms.custom: 
+title: Извлечение данных в виде потока с помощью драйвера SQLSRV | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Извлечение данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  Используйте [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) для извлечения полей из строки. Указать, что данные извлекается в виде потока с помощью **SQLSRV_PHPTYPE_STREAM (<encoding>)** третьего параметра в вызове функции. В этой таблице перечислены константы, используемые для задания кодировок и их описаний.  
   
-    |Константа SQLSRV|Description|  
+    |Константа SQLSRV|Описание|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|Данные возвращаются в виде потока необработанных байтов с сервера без применения кодировки или преобразования.|  
     |SQLSRV_ENC_CHAR|Данные возвращаются в виде 8-битовых символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).|  
@@ -54,7 +55,8 @@ ms.lasthandoff: 11/18/2017
 |[Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Демонстрирует, как извлекать символьные данные в виде потока.|  
 |[Практическое руководство. Извлечение двоичных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Демонстрирует, как извлекать двоичные данные в виде потока.|  
   
-## <a name="see-also"></a>См. также:  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
+## <a name="see-also"></a>См. также  
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

@@ -1,42 +1,43 @@
 ---
-title: "Как: отправка данных в виде потока | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Как: отправка данных в виде потока | Документы Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Практическое руководство. Отправка данных в виде потока
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует преимущества потоков PHP для отправки больших объектов на сервер. Примеры в этой статье демонстрируют процедуру отправки данных в виде потока. Первый пример использует драйвер SQLSRV, чтобы продемонстрировать поведение по умолчанию, которое заключается в отправке всех потоковых данных во время выполнения запроса. Второй пример использует SQLSRV драйвер для демонстрации процедуры отправки до восьми килобайт (8 КБ) потоковых данных на сервер за один раз.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует преимущества потоков PHP для отправки больших объектов на сервер. Примеры в этой статье демонстрируют процедуру отправки данных в виде потока. Первый пример использует драйвер SQLSRV, чтобы продемонстрировать поведение по умолчанию, которое заключается в отправке всех потоковых данных во время выполнения запроса. Во втором примере использует драйвер SQLSRV для демонстрации процедуры отправки до восьми килобайт (8 КБ) потоковых данных во время на сервере.  
   
 Третий пример показывает, как отправить потоковые данные на сервер с помощью драйвера PDO_SQLSRV.  
   
-## <a name="example"></a>Пример  
+## <a name="example-sending-stream-data-at-execution"></a>Пример: Отправки потоковых данных во время выполнения
 Следующий пример вставляет строку в таблицу *Production.ProductReview* базы данных AdventureWorks. Комментарии клиентов (*$comments*) открываются в виде потока с PHP [fopen](http://php.net/manual/en/function.fopen.php) функцией и затем передаются в потоковом режиме сервером при выполнении запроса.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Пример  
-Следующий пример похож на предыдущий, однако поведение по умолчанию, заключающееся в отправке всех потоковых данных во время выполнения, отключено. Пример использует [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) для отправки потоковых данных на сервер. С каждым вызовом отправляется до 8 килобайт (8 КБ) данных **sqlsrv_send_stream_data**. Скрипт подсчитывает количество вызовов, сделанных **sqlsrv_send_stream_data** , и выводит это количество в консоль.  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Пример: Отправка потока данных с помощью sqlsrv_send_stream_data
+В следующем примере выполняются таким же, как в предыдущем примере, но отключена по умолчанию, заключающееся в отправке всех потоковых данных во время выполнения. Пример использует [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) для отправки потоковых данных на сервер. С каждым вызовом отправляется до 8 килобайт (8 КБ) данных **sqlsrv_send_stream_data**. Скрипт подсчитывает количество вызовов, сделанных **sqlsrv_send_stream_data** , и выводит это количество в консоль.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 Хотя примеры в этой статье отправляют на сервер символьные данные, в виде потока можно передавать данные в любом формате. Например, методы, описанные в этой статье, можно также использовать для отправки изображений в двоичном формате в виде потоков.  
   
-## <a name="example"></a>Пример  
+## <a name="example-sending-an-image-as-a-stream"></a>Пример: Отправка изображения в виде потока 
   
 ```  
 <?php  
@@ -175,8 +176,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+## <a name="see-also"></a>См. также  
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
   

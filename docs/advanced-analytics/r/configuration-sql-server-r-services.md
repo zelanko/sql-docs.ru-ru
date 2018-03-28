@@ -1,26 +1,26 @@
 ---
-title: "Настройка и управление | Документы Microsoft"
-ms.custom: 
+title: Настройка и управление | Документы Microsoft
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>Настройка и управление
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="r-package-management"></a>Управление пакетами R
 
-В этих разделах описывается, как установить новый R-пакеты на экземпляре SQL Server, управление библиотеками пакет R и восстановление библиотеки пакета после восстановления базы данных.
+Эти статьи описывается, как установить новый R-пакеты на экземпляре SQL Server, управление библиотеками пакет R и восстановление библиотеки пакета после восстановления базы данных.
 
 + [Установка пакетов R и управление ими](installing-and-managing-r-packages.md)
 + [Установка нового R-пакеты](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="service-configuration"></a>Настройка службы
 
-В этих разделах описаны внесение изменений в базовую архитектуру службы и управление субъекты безопасности, связанных с ней расширяемости.
+Эти статьи описывается внесение изменений в базовую архитектуру службы и управлять субъектами безопасности, связанных с ней расширяемости.
 
 + [Вопросы безопасности](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Изменение пула учетных записей пользователей для служб SQL Server R](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-governance"></a>Управление ресурсами
 
-В этих разделах описывается, как реализовать управление ресурсами для заданий R или Python, используя доступную функция регулятора ресурсов в выпуске Enterprise Edition.
+Эти статьи описывают, как реализовать управление ресурсами для заданий R или Python, используя доступную функция регулятора ресурсов в выпуске Enterprise Edition.
 
 + [Управление ресурсами для служб R](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [Создание пула ресурсов для R](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="initial-setup"></a>Начальная настройка
 
-Дополнительная справка, относящиеся к начальной установки и конфигурации можно найти в следующих разделах:
+Дополнительная справка, относящиеся к начальной установки и конфигурации можно найти в следующих статьях:
 
 + [Часто задаваемые вопросы по обновлению и установке](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [Вопросы безопасности](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

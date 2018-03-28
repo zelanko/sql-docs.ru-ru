@@ -1,30 +1,31 @@
 ---
-title: "Как: укажите типы данных SQL Server при использовании драйвера SQLSRV | Документы Microsoft"
-ms.custom: 
+title: 'Как: укажите типы данных SQL Server при использовании драйвера SQLSRV | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3ad9f3e6aa9e136f76122f39079db21b31c30d3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f88116134641d955c886bdee840982fa7710b934
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Практическое руководство. Указание типов данных SQL Server при использовании драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/18/2017
 Ниже представлена обобщенная процедура указания типа данных SQL Server при отправке данных на сервер:  
   
 > [!NOTE]  
-> Если тип данных SQL Server не указан, используются типы по умолчанию. Дополнительные сведения о типах данных SQL Server по умолчанию см. в статье [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
+> Если указан тип данных SQL Server, используются типы по умолчанию. Дополнительные сведения о типах данных SQL Server по умолчанию см. в статье [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
   
 1.  Определите запрос Transact-SQL, который вставляет или обновляет данные. Используйте вопросительные знаки (?) в качестве заполнителей для значений параметров в запросе.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  Создайте массив *$params* , используемый при подготовке или выполнении запроса. Обратите внимание, что при указании типа данных SQL Server каждый элемент массива *$params* также должен быть массивом.  
   
-4.  Укажите требуемый тип данных SQL Server, используя соответствующую **SQLSRV_SQLTYPE_\***  константы в качестве четвертого параметра в каждом подмассиве массива *$params* массива. Полный список **SQLSRV_SQLTYPE_\***  константы, в разделе SQLTYPEs [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Например, в следующем коде *$changeDate*, *$rate*и *$payFrequency* соответственно указаны как типы SQL Server **datetime**, **money**и **tinyint** в массиве *$params* . Так как для параметра *$employeeId* тип SQL Server не указан и параметр инициализируется целым числом, используется тип SQL Server по умолчанию **integer** .  
+4.  Укажите требуемый тип данных SQL Server, используя соответствующую **SQLSRV_SQLTYPE_\***  константы в качестве четвертого параметра в каждом подмассиве из *$params* массива. Полный список **SQLSRV_SQLTYPE_\***  константы, в разделе SQLTYPEs [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Например, в следующем коде *$changeDate*, *$rate*и *$payFrequency* соответственно указаны как типы SQL Server **datetime**, **money**и **tinyint** в массиве *$params* . Так как для параметра *$employeeId* тип SQL Server не указан и параметр инициализируется целым числом, используется тип SQL Server по умолчанию **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -60,9 +61,9 @@ ms.lasthandoff: 11/18/2017
     ```  
   
 ## <a name="example"></a>Пример  
-Следующий пример вставляет данные в таблицу *HumanResources.EmployeePayHistory* базы данных AdventureWorks. Типы SQL Server указаны для параметров *$changeDate*, *$rate*и *$payFrequency* . Тип SQL Server по умолчанию используется для параметра *$employeeId* . Чтобы убедиться, что данные были успешно вставлены, выполняется извлечение и отображение тех же данных.  
+Следующий пример вставляет данные в *HumanResources.EmployeePayHistory* таблицы базы данных AdventureWorks. Типы SQL Server указаны для параметров *$changeDate*, *$rate*и *$payFrequency* . Тип SQL Server по умолчанию используется для параметра *$employeeId* . Чтобы убедиться, что данные были успешно вставлены, выполняется извлечение и отображение тех же данных.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В этом примере предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -140,10 +141,14 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Извлечение данных](../../connect/php/retrieving-data.md)  
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
+## <a name="see-also"></a>См. также  
+[Извлечение данных](../../connect/php/retrieving-data.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)
+
+[Преобразование типов данных](../../connect/php/converting-data-types.md)
+
 [Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

@@ -1,27 +1,28 @@
 ---
-title: "Подключение к серверу | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Подключение к серверу | Документы Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: "44"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c8f04b08517de9b21e5e3104b43b18db0324a863
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 818a71b8e0bc60168602e7fc0228c21319d08a21
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connecting-to-the-server"></a>Подключение к серверу
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,11 +42,12 @@ ms.lasthandoff: 11/18/2017
 |[Организация пулов соединений](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Предоставляет сведения об использовании пулов подключений в драйвере.|  
 |[Практическое руководство. Отключение множественных активных результирующих наборов (функция MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Описывает отключение функции MARS при установке соединения.|  
 |[Параметры соединения](../../connect/php/connection-options.md)|Содержит список параметров, которые допускаются в ассоциативном массиве, содержащем атрибуты подключения.|  
-|[PHP Driver for SQL Server Support for LocalDB (Поддержка драйвера PHP для SQL Server для LocalDB)](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Описывает поддержку [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] функции LocalDB, которая была добавлена в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
-|[Поддержка драйвера PHP для SQL Server для функций высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Описывает, как можно настроить приложение, чтобы воспользоваться преимуществами высокого уровня доступности, аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Описывает поддержку [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] функции LocalDB, которая была добавлена в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Поддержка высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Описывает, как можно настроить приложение, чтобы воспользоваться преимуществами высокого уровня доступности, аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
 |[Подключение к базе данных Microsoft Azure SQL](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Описывает соединение с базой данных SQL Azure.|  
 |[Устойчивость подключений](../../connect/php/connection-resiliency.md)|Обсуждается функция устойчивости подключений восстанавливающей прерванных соединений.|  
 
-## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера PHP SQL](../../connect/php/programming-guide-for-php-sql-driver.md)
-[пример приложения &#40; Драйвер SQLSRV &#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+## <a name="see-also"></a>См. также  
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  

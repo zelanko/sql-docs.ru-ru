@@ -1,27 +1,28 @@
 ---
-title: "Очистка данных в составном домене | Microsoft Docs"
-ms.custom: 
+title: Очистка данных в составном домене | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b823b710ca928769db6ecc64b60abc714f41de5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 91d4c9da464b19edc803f7b8b2ff4e8995ed91fb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Очистка данных в составном домене
   В этом разделе описывается очистка составных доменов в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов и соответствует полю данных, которое включает несколько связанных терминов. Отдельные домены в составном домене должны иметь общие области набора знаний. Дополнительные сведения о составных доменах см. в разделе [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  

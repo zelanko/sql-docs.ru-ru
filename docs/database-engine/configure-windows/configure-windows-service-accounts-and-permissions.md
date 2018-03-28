@@ -1,16 +1,16 @@
 ---
-title: "Настройка учетных записей службы Windows и разрешений | Документы Майкрософт"
-ms.custom: 
+title: Настройка учетных записей службы Windows и разрешений | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -53,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
-ms.author: MikeRayMSFT
+ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4f037130b00871303648aefd3d35553e702091a8
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,15 +136,15 @@ ms.lasthandoff: 02/23/2018
 |Компонент|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 и выше|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Контроллер распределенного воспроизведения|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиент распределенного воспроизведения|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |Средство запуска FD (полнотекстовый поиск)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[Виртуальная учетная запись](#VA_Desc)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
+|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
+|службы синхронизации контроля версий[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
 |[!INCLUDE[rsql_extensions](../../includes/rsql-extensions-md.md)]|NTSERVICE\MSSQLLaunchpad|NTSERVICE\MSSQLLaunchpad|  
 |Ядро PolyBase  |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
 |Служба перемещения данных PolyBase |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
@@ -156,13 +156,13 @@ ms.lasthandoff: 02/23/2018
 |Компонент|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент|Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
+|Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |Средство запуска FD (полнотекстовый поиск)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[Виртуальная учетная запись](#VA_Desc)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
+|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
+|службы синхронизации контроля версий[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
 
 ####  <a name="Changing_Accounts"></a> Изменение свойств учетной записи
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/23/2018
     |-------------|--------------------------|  
     |Экземпляр по умолчанию службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]|**NT SERVICE\MSSQLSERVER**|  
     |Именованный экземпляр службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с именем **PAYROLL**|**NT SERVICE\MSSQL$PAYROLL**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба агента на экземпляре по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
+    |Служба агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  Дополнительные сведения об управляемых учетных записях служб и виртуальных учетных записях см. в разделе **Основные понятия управляемых учетных записей служб и виртуальных учетных записей** [Пошагового руководства по учетным записям служб](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) , а также в документе [Вопросы и ответы по управляемым учетным записям служб](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
@@ -236,8 +236,8 @@ ms.lasthandoff: 02/23/2018
 |MSSQLServerOLAPService|ASSVCACCOUNT, ASSVCPASSWORD, ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT, RSSVCPASSWORD, RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Контроллер распределенного воспроизведения|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиент распределенного воспроизведения|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
+|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
+|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
 |[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
 |Ядро PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
@@ -293,7 +293,7 @@ ms.lasthandoff: 02/23/2018
   
  В следующей таблице перечислены разрешения, которые запрашивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб или локальных групп Windows, используемых компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба|Разрешения, предоставляемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|Служба[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Разрешения, предоставляемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$**имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
@@ -312,7 +312,7 @@ ms.lasthandoff: 02/23/2018
  * Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ###  <a name="Reviewing_ACLs"></a> Разрешения файловой системы, предоставляемые для SQL Server согласно SID-идентификаторам служб или локальным группам Windows  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь доступ к ресурсам. Списки управления доступом задаются для каждого удостоверения безопасности службы или локальной группы Windows.  
+ Учетные записи служб[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь доступ к ресурсам. Списки управления доступом задаются для каждого удостоверения безопасности службы или локальной группы Windows.  
   
 > [!IMPORTANT]  
 >  В конфигурации с отказоустойчивым кластером ресурсы на общих дисках должны быть включены в список управления доступом для локальной учетной записи.  
@@ -362,7 +362,7 @@ ms.lasthandoff: 02/23/2018
 ||130\dts\binn|Чтение и выполнение|  
 ||130\shared|Чтение и выполнение|  
 ||130\shared\Errordumps|Чтение и запись|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер|130\shared\ASConfig|Чтение|  
+|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |130\shared\ASConfig|Чтение|  
 ||130\shared|Чтение и выполнение|  
 ||130\shared\Errordumps|Чтение и запись|  
 |SQLWriter|н/д (запускается с учетной записью локальной системы)||  
@@ -379,14 +379,14 @@ ms.lasthandoff: 02/23/2018
 ||80\tools|Чтение и выполнение|  
 ||130\sdk|Чтение|  
 ||Microsoft SQL Server\130\Setup Bootstrap|Чтение и выполнение|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Контроллер распределенного воспроизведения|\<ToolsDir>\DReplayController\Log\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
+|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayController\Log\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\resources\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayController\\{все DLL-библиотеки}|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Чтение и выполнение, список содержимого папки|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиент распределенного воспроизведения|\<ToolsDir>\DReplayClient\Log\|Чтение, выполнение, просмотр содержимого папки|  
+|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayClient\Log\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\resources\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\ (все DLL-библиотеки)|Чтение и выполнение, список содержимого папки|  
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/23/2018
 ||Только администратор|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<имя_экземпляра_SQL>*|Полный доступ|  
 ||Администраторы, система|\tools\binn\schemas\sqlserver\2004\07\showplan|Полный доступ|  
 ||Пользователи|\tools\binn\schemas\sqlserver\2004\07\showplan|Чтение и выполнение|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Удостоверение пула приложений диспетчера отчетов, учетная запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , все|*\<папка установки>*\Reporting Services\ReportManager, *\<папка установки>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Чтение|  
 ||Удостоверение пула приложений диспетчера отчетов|*\<установка>*\Reporting Services\ReportManager\Pages\\*.\*|Чтение|  
 ||\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\ReportServer|Чтение|  
@@ -421,7 +421,7 @@ ms.lasthandoff: 02/23/2018
 ||Все|*\<установка>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||СЕТЕВАЯ СЛУЖБА|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|Полное|  
 ||Все|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Все|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> Управление чтением|  
 ||Пользователь служб терминала|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
 ||Опытные пользователи|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
@@ -451,8 +451,8 @@ ms.lasthandoff: 02/23/2018
 |--------------------------|-------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Запись в почтовый слот с помощью xp_sendmail.|Разрешения на запись по сети.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Запуск xp_cmdshell пользователем, не являющимся администратором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Работа в качестве части операционной системы, а также замена токена уровня процесса.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент (MSSQLSERVER)|Использование функции автоматического перезапуска.|Должен быть членом локальной группы «Администраторы».|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] )|Позволяет настраивать базы данных для оптимальной производительности запросов.|При первом запуске приложение должно быть инициализировано пользователем с учетными данными системного администратора. После этого пользователи dbo могут при использовании помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивать только те таблицы, владельцами которых они являются. Дополнительные сведения см. в статье "Инициализация помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] при первом использовании" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Использование функции автоматического перезапуска.|Должен быть членом локальной группы «Администраторы».|  
+|Помощник по настройке[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Позволяет настраивать базы данных для оптимальной производительности запросов.|При первом запуске приложение должно быть инициализировано пользователем с учетными данными системного администратора. После этого пользователи dbo могут при использовании помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивать только те таблицы, владельцами которых они являются. Дополнительные сведения см. в статье "Инициализация помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] при первом использовании" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 > [!IMPORTANT]  
 >  Перед обновлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]включите проверку подлинности Windows для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проверьте необходимые настройки конфигурации по умолчанию: является ли учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом группы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin.  
@@ -488,7 +488,7 @@ ms.lasthandoff: 02/23/2018
   
 -   Разрешение уровня сервера**VIEW ANY DATABASE** .  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки создает пространство имен SQL WMI и предоставляет разрешение на чтение удостоверению безопасности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает пространство имен SQL WMI и предоставляет разрешение на чтение удостоверению безопасности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ###  <a name="Pipes"></a> Именованные каналы  
 
@@ -539,13 +539,13 @@ ms.lasthandoff: 02/23/2018
  Удостоверение безопасности службы модуля записи VSS в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляется в качестве имени входа в экземпляр [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Имя входа удостоверения безопасности службы является членом предопределенной роли сервера **sysadmin** .  
   
 ####  <a name="SQLWMI"></a> SQL WMI и права доступа  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки подготавливает учетную запись **NT SERVICE\Winmgmt** как имя входа [!INCLUDE[ssDE](../../includes/ssde-md.md)] и добавляет ее к фиксированной роли сервера **sysadmin** .  
+ Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подготавливает учетную запись **NT SERVICE\Winmgmt** как имя входа [!INCLUDE[ssDE](../../includes/ssde-md.md)] и добавляет ее к фиксированной роли сервера **sysadmin** .  
   
 #### <a name="ssrs-provisioning"></a>Подготовка служб SSRS  
  Учетная запись, указанная во время установки, предоставляется в качестве члена роли базы данных **RSExecRole** . Дополнительные сведения см. в разделе [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> Подготовка служб SSAS  
- [!INCLUDE[ssAS](../../includes/ssas-md.md)] различаются в зависимости от способа развертывания сервера. При установке [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется, чтобы служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускалась под учетной записью домена. Учетные записи домена необходимы для поддержки механизма управляемых учетных записей, встроенного в SharePoint. По этой причине программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предоставляет учетную запись службы по умолчанию, например виртуальную учетную запись, для установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Дополнительные сведения о подготовке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint см. в статье [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
+ Требования к учетной записи службы[!INCLUDE[ssAS](../../includes/ssas-md.md)] различаются в зависимости от способа развертывания сервера. При установке [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется, чтобы служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускалась под учетной записью домена. Учетные записи домена необходимы для поддержки механизма управляемых учетных записей, встроенного в SharePoint. По этой причине программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предоставляет учетную запись службы по умолчанию, например виртуальную учетную запись, для установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Дополнительные сведения о подготовке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint см. в статье [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
  Для всех других случаев автономной установки служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] можно предоставить службу для запуска под учетной записью домена, встроенной системной учетной записью, управляемой или виртуальной учетной записью. Дополнительные сведения о подготовке учетных записей см. в статье [Настройка учетных записей службы (службы Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
   
@@ -622,7 +622,7 @@ ms.lasthandoff: 02/23/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент  
+-   Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
   
      Необходимо помнить, что служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена в экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
   
@@ -636,7 +636,7 @@ ms.lasthandoff: 02/23/2018
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер  
+-   Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
   
 -   Модуль записи SQL  
   

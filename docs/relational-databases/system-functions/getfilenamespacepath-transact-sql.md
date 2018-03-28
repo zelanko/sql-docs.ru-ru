@@ -1,16 +1,16 @@
 ---
-title: "GetFileNamespacePath (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: GetFileNamespacePath (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7dcdc32fa7f7d9519b00f5d33d9d0083ca85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 24f1365d63025b4c1d6457691c4efdfc29bd003c
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ ms.lasthandoff: 02/09/2018
 |**1**|Возвращает полный путь UNC, начиная с `\\computer_name`.|  
   
  *@option*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *@option*может принимать одно из следующих значений:  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *@option* Может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Возвращает имя сервера, преобразованное в формат NetBIOS, например<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> Это значение по умолчанию.|  
-|**1**|Возвращает имя сервера без преобразования, например:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
-|**2**|Возвращает полный путь сервера, например:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
+|**0**|Возвращает имя сервера, преобразованное в формат NetBIOS, например<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Это значение по умолчанию.|  
+|**1**|Возвращает имя сервера без преобразования, например:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|Возвращает полный путь сервера, например:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **nvarchar(max)**  
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/09/2018
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого рекомендуется получать полный путь для файла во время выполнения с помощью **FileTableRootPath** и **GetFileNamespacePath** функций, как показано в следующем примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  
-USE MyDocumentDB;  
+USE MyDocumentDatabase;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
   
@@ -103,7 +103,7 @@ WHERE Name = N’document.docx’;
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
 WHERE Name = N’document.docx’;  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDB\MyFileTable\MyDocDirectory\document.docx”  
+-- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
 WHERE Name = N’document.docx’;  
 ```  

@@ -1,31 +1,31 @@
 ---
-title: "Установка служб R SQL Server 2016 (в базе данных) | Документы Microsoft"
-ms.custom: 
+title: Установка служб R SQL Server 2016 (в базе данных) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "установка служб R SQL Server"
-- "Установка служб SQL Server машины обучения"
-- "Установка служб R Services"
-- "установить SQL машинного обучения"
-ms.assetid: 
-caps.latest.revision: 
+- установка служб R SQL Server
+- Установка служб SQL Server машины обучения
+- Установка служб R Services
+- установить SQL машинного обучения
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Установка служб SQL Server 2016 R Services (в базе данных) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/21/2018
 
 ## <a name="bkmk_prereqs"> </a> Контрольный список действий перед установкой
 
-+ SQL Server 2016 является обязательным. Если SQL Server 2016, установите [обучения машины службы (в базе данных) для SQL Server 2017 г](sql-machine-learning-services-windows-install.md) вместо него.
++ Программа установки SQL Server 2016 является обязательным, если вы хотите установить R Services. Если вместо этого у вас есть установочный носитель SQL Server 2017 г., следует установить [обучения машины службы (в базе данных) для SQL Server 2017 г](sql-machine-learning-services-windows-install.md) для получения интеграция R для этой версии SQL Server.
 
 + Требуется экземпляр ядра СУБД. Не удается установить R так же, хотя постепенно добавить его к существующему экземпляру.
 

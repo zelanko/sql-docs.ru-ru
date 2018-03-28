@@ -1,28 +1,30 @@
 ---
-title: "Как: выполнение транзакций | Документы Microsoft"
-ms.custom: 
+title: 'Как: выполнение транзакций | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction support
+helpviewer_keywords:
+- transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 15f4ba792e7657125c6964f098c6c1f7a9fe83f0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-transactions"></a>Практическое руководство. Выполнение транзакций
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/18/2017
   
 В оставшейся части этой статьи объясняется и демонстрируется, как использовать драйвер SQLSRV для выполнения транзакций.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Шаги по выполнению транзакции можно обобщить следующим образом.  
   
 1.  Начните транзакцию с помощью **sqlsrv_begin_transaction**.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/18/2017
   
     По умолчанию [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] находится в режиме автоматической фиксации. Это означает, что все запросы автоматически фиксируются после успешного выполнения, если только они не были обозначены как часть явной транзакции с помощью **sqlsrv_begin_transaction**.  
   
-    Если явная транзакция не фиксируется с помощью **sqlsrv_commit**, при закрытии соединения или прерывании работы сценария выполняется ее откат.  
+    Если явная транзакция не фиксируется с помощью **sqlsrv_commit**, она откатывается при закрытии соединения или прерывании работы сценария.  
   
     Не используйте внедренный Transact-SQL для выполнения транзакций. Например, не выполняйте инструкцию с BEGIN TRANSACTION в качестве запроса Transact-SQL для начала транзакции. При использовании внедренного Transact-SQL для выполнения транзакций невозможно гарантировать правильную работу транзакций.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/18/2017
   
 Следующие запросы (удаление заказа на продажу и обновление складских запасов продуктов) являются частью транзакции.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ### <a name="code"></a>код  
   
@@ -155,10 +157,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Комментарии  
-Чтобы уделить основное внимание работе транзакции, в предыдущий пример не включены некоторые рекомендуемые аспекты обработки ошибок. В рабочем приложении рекомендуется проверять каждый вызов функции **sqlsrv** на наличие ошибок и обрабатывать их соответствующим образом.  
+Чтобы уделить основное внимание работе транзакции, в предыдущий пример не включены некоторые рекомендуемые аспекты обработки ошибок. В рабочем приложении рекомендуется проверять каждый вызов **sqlsrv** функции ошибок и обработки их соответствующим образом.
   
-## <a name="see-also"></a>См. также:  
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Транзакции (компонент Database Engine)](http://go.microsoft.com/fwlink/?LinkId=105862)  
+## <a name="see-also"></a>См. также  
+[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Транзакции (компонент Database Engine)](https://msdn.microsoft.com/library/ms190612.aspx)
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
   

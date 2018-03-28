@@ -1,24 +1,24 @@
 ---
-title: "Установка SQL Server 2017 г. машинного самообучения, службы (в базе данных) в Windows | Документы Microsoft"
-ms.custom: 
+title: Установка SQL Server 2017 г. машинного самообучения, службы (в базе данных) в Windows | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Установка SQL Server 2017 г. машинного самообучения, службы (в базе данных) в Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/21/2018
 
 ## <a name="bkmk_prereqs"> </a> Контрольный список действий перед установкой
 
-+ SQL Server 2017 г. является обязательным. Если SQL Server 2016, установите [служб R (в базе данных) для SQL Server 2016](sql-r-services-windows-install.md) вместо него.
++ Программа установки SQL Server 2017 г. является обязательным, если вы хотите установить службы обучения компьютера с поддержкой языка R, Python или оба. Если вместо этого установочного носителя SQL Server 2016, можно установить [служб R SQL Server 2016 (в базе данных)](sql-r-services-windows-install.md) для получения поддержки языка R.
 
 + Требуется экземпляр ядра СУБД. Не удается установить только R или функций Python, хотя их можно добавить постепенно в существующий экземпляр.
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 03/21/2018
   
          Чтобы использовать R и Python с SQL Server, необходимо установить экземпляр компонента database engine. Можно использовать значение по умолчанию или именованный экземпляр.
   
-    -   **Машинное обучение службы (в базе данных)**
+    -   **Службы машинного обучения (в базе данных)**
   
          Этот параметр устанавливает службы базы данных, которые поддерживают R и выполнения сценария Python.
 

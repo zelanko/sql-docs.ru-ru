@@ -1,28 +1,30 @@
 ---
-title: "Организация пулов соединений (драйверы Microsoft для PHP для SQL Server) | Документы Microsoft"
-ms.custom: 
+title: Организация пулов соединений (драйверы Microsoft для PHP для SQL Server) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connection pooling support
+helpviewer_keywords:
+- connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5edf501c5a3a46fd30d21c4c5fdad81711c539d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Организация пулов соединений (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +39,13 @@ ms.lasthandoff: 11/18/2017
   
 -   После закрытия соединение возвращается в пул.  
   
-Дополнительные сведения о пуле соединений см. в статье [Организация пулов соединений для диспетчера драйверов](http://go.microsoft.com/fwlink/?linkid=119622).  
+Дополнительные сведения об использовании пулов подключений см. в разделе [подключений](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="enablingdisabling-connection-pooling"></a>Организация пулов соединений Включение и отключение
 ### <a name="windows"></a>Windows
 Можно принудить драйвер создать новое соединение (вместо поиска эквивалентного соединения в пуле соединений), задав значение *ConnectionPooling* атрибута в строку подключения к **false**  (или 0).  
   
-Если *ConnectionPooling* атрибут указан в строке подключения или если он имеет значение **true** (или 1), драйвер будет создан новое соединение, только если эквивалентного соединения не существует в пул соединений.  
+Если *ConnectionPooling* атрибут указан в строке подключения или если он имеет значение **true** (или 1), драйвер создает новое соединение, только если эквивалентного соединения не существует в пул соединений.  
   
 Сведения о других атрибутах соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
 ### <a name="linux-and-mac-os-x"></a>Linux и Mac OS X
@@ -65,7 +67,8 @@ CPTimeout=<int value>
 Pooling=No
 ```
   
-## <a name="see-also"></a>См. также:  
-[Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)  
+## <a name="see-also"></a>См. также  
+[Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+
 [Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

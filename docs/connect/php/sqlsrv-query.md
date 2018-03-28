@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_query | Документы Microsoft"
-ms.custom: 
+title: sqlsrv_query | Документы Microsoft
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_query
+apiname:
+- sqlsrv_query
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_query
 - executing queries
 - API Reference, sqlsrv_query
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: "46"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: de82748f8888a02104e5365817096d0ffb79a182
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9fb6aaec1fa37e9d8b5c3f54c1a84ee0ea4f3aea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,9 +65,9 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |Элемент|Описание|  
     |-----------|---------------|  
     |*$value*|Буквенное значение, переменная PHP или ссылочная переменная PHP.|  
-    |*$direction*[необязательно]|Одно из следующих **SQLSRV_PARAM_\***  константы, используемые для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[необязательно]|Объект **SQLSRV_PHPTYPE_\***  константа, указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$sqlType*[необязательно]|Объект **SQLSRV_SQLTYPE_\***  константа, указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[необязательно]|Одно из следующих **SQLSRV_PARAM_\***  константы, используемые для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[необязательно]|Объект **SQLSRV_PHPTYPE_\***  константа, указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$sqlType*[необязательно]|Объект **SQLSRV_SQLTYPE_\***  константа, указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в разделе [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
 *$options* [необязательно]: ассоциативный массив, который задает свойства запроса. Поддерживаются следующие ключи:  
   
@@ -78,13 +80,13 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс инструкции. Если инструкция не удается создать или выполнить, **false** возвращается.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 **Sqlsrv_query** функция хорошо подходит для одноразовых запросов и должна использоваться по умолчанию для выполнения запросов, если только не действуют особые обстоятельства. Эта функция предоставляет оптимальный метод для выполнения запроса с использованием минимального количества кода. Функция **sqlsrv_query** подготавливает и выполняет инструкцию, а также может применяться для выполнения параметризованных запросов.  
   
 Дополнительные сведения см. в статье [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Пример  
-В следующем примере отдельная строка вставляется в таблицу *Sales.SalesOrderDetail* базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В следующем примере отдельная строка вставляется в таблицу *Sales.SalesOrderDetail* базы данных AdventureWorks. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 > [!NOTE]  
 > Несмотря на то, что в следующем примере инструкция INSERT для демонстрации использования **sqlsrv_query** для однократного выполнения инструкции, эта концепция распространяется на все инструкции Transact-SQL.  
@@ -131,7 +133,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Пример  
-В следующем примере обновляется поле в *Sales.SalesOrderDetail* таблицы базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В следующем примере обновляется поле в *Sales.SalesOrderDetail* таблицы базы данных AdventureWorks. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -194,10 +196,15 @@ sqlsrv_close($conn);
 ```
 
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)  
+
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)  
+
 [Использование параметров направления](../../connect/php/using-directional-parameters.md)  
+
   

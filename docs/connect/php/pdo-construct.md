@@ -1,27 +1,28 @@
 ---
-title: "PDO::__construct | Документы Microsoft"
-ms.custom: 
+title: PDO::__construct | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c615bf11081ee791a6a3a700c4c7bae514fe4fae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3a1c40e8e31cbba9eb93155c3f81f6dd03452b59
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,12 +51,12 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ## <a name="exceptions"></a>Исключения  
 PDOException  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Объект соединения можно закрыть, установив для экземпляра значение NULL.  
   
 После подключения PDO::errorCode отображает 01000 вместо 00000.  
   
-Если какой-либо причине происходит сбой PDO::__construct, возникает исключение, даже если для PDO::ATTR_ERRMODE задано значение PDO::ERRMODE_SILENT.  
+Если для какой-либо причине происходит сбой PDO::__construct, исключение, даже если PDO::ATTR_ERRMODE задано значение PDO::ERRMODE_SILENT.  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -92,7 +93,8 @@ PDOException
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Класс PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>См. также  
+[Класс PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

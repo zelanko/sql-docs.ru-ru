@@ -1,30 +1,32 @@
 ---
-title: "Как: подключение с использованием проверки подлинности SQL Server | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Как: подключение с использованием проверки подлинности SQL Server | Документы Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, SQL Server Authentication
+helpviewer_keywords:
+- connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7885d3d2be29b2ad8de9c4f576c7441b43b37726
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>Практическое руководство. Подключение с использованием проверки подлинности SQL Server
+# <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддерживает проверку подлинности SQL Server при подключении к SQL Server.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="example"></a>Пример  
 Следующий пример использует драйвер SQLSRV с проверкой подлинности SQL Server для подключения к локальному экземпляру SQL Server. Значения для необходимых *UID* и *PWD* атрибуты соединения, взяты из конкретного приложения текстовые файлы, *uid.txt* и *pwd.txt*в *C:\AppData* каталога. После установки соединения на сервер отправляется запрос для проверки имени входа пользователя.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
+Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   
 ```  
 <?php  
@@ -134,14 +136,22 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Руководство по программированию для драйвера SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[Практическое руководство. Создание имени входа SQL Server](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[Практическое руководство. Создание пользователя базы данных](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Управление пользователями, ролями и именами входа](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[Отделение пользователей от схем](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Разрешения объекта GRANT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+## <a name="see-also"></a>См. также  
+[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[Как: создать имя входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[Как: Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Управление пользователями, ролями и именами входа](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Отделение пользователей от схем](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Разрешения объекта GRANT (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
