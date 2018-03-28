@@ -1,26 +1,26 @@
 ---
-title: "Средства R, входящий в состав программы установки SQL Server | Документы Microsoft"
-ms.custom: 
+title: Средства R, входящий в состав программы установки SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 8178f4a1347ef58fd7ee143fbe843e3525ac4cf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="r-tools-included-with-sql-server-setup"></a>Средства R, входящий в состав программы установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,10 +49,10 @@ ms.lasthandoff: 02/11/2018
 
 Чтобы найти эти средства, определите R библиотеки, в которой была установлена при установке SQL Server или автономный машинного обучения функции. Например по умолчанию при установке средств R находятся в этих папках:
 
-+ Службы SQL Server 2016 R:`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ Изолированный сервер Microsoft R:`~\Program Files\Microsoft R\R_SERVER\bin\x64`
-+ Машины SQL Server 2017 г. изучение служб:`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ Машинное обучение Server (изолированный):`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
++ Службы SQL Server 2016 R: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Изолированный сервер Microsoft R: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ Машины SQL Server 2017 г. изучение служб: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Машинное обучение Server (изолированный): `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
 
 Если вам нужна помощь с помощью средств R, просто откройте **RGui**, нажмите кнопку **справки**, а затем выберите один из вариантов.
 

@@ -1,25 +1,25 @@
 ---
-title: "Подготовьте виртуальную машину для машинного обучения в Azure | Документы Microsoft"
-ms.custom: 
+title: Подготовьте виртуальную машину для машинного обучения в Azure | Документы Microsoft
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Подготовьте виртуальную машину для машинного обучения в Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ ms.lasthandoff: 02/11/2018
 
 Если требуется использовать пакеты, такие как RevoScaleR или MicrosoftML не требуется дополнительная настройка.
 
-## <a name="bkmk_list"></a>Список виртуальных машин
+## <a name="bkmk_list"></a> Список виртуальных машин
 
 В настоящее время для машинного обучения с помощью SQL Server доступны следующие виртуальные машины.
 
