@@ -1,16 +1,16 @@
 ---
-title: "CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -20,7 +20,7 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="large-object-data-types"></a>Типы данных больших объектов  
  Столбцы типа данных **изображения**, **текст**, и **ntext** всегда назначаются **NULL** значение, если __ $operation = 1 или \_ \_$operation = 3. Столбцы типа данных **varbinary(max)**, **varchar(max)**, или **nvarchar(max)** назначаются **NULL** значения при \_ \_$operation = 3, если столбец не изменен во время обновления. Когда \_ \_$operation = 1, этим столбцам присваиваются их значения во время удаления. Вычисляемые столбцы, которые включены в экземпляре отслеживания, всегда имеют значение **NULL**.  
   
- По умолчанию максимальный объем данных, которые можно добавить в столбец, отслеженный с помощью одной инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT, не должен превышать 65 536 байт или 64 КБ. Чтобы увеличить этот размер для поддержки большего размера данных LOB, используйте [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) для указания больший максимальный размер. Дополнительные сведения см. в статье [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ По умолчанию максимальный объем данных, которые можно добавить в столбец, отслеженный с помощью одной инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT, не должен превышать 65 536 байт или 64 КБ. Чтобы увеличить этот размер для поддержки большего размера данных LOB, используйте [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) для указания больший максимальный размер. Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
 ## <a name="data-definition-language-modifications"></a>Изменения, внесенные с помощью языка DDL  
  Изменения DDL в исходной таблице, например добавление или удаление столбцов, записываются в [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) таблицы. Эти изменения не применяются к таблице изменений. То есть определение таблицы изменений остается постоянным. При вставке строк в таблицу изменений процесс отслеживания не учитывает столбцы, которые не появляются в списке отслеживаемых столбцов, связанных с исходной таблицей. Если в списке отслеживаемых столбцов появляется столбец, больше не присутствующий в исходной таблице, этому столбцу присваивается значение NULL.  

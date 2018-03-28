@@ -1,19 +1,19 @@
 ---
-title: "Выбор метода обновления компонента Database Engine | Документы Майкрософт"
-ms.custom: 
+title: Выбор метода обновления компонента Database Engine | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+  Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Дерево выбора метода для обновления компонента Database Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода для обновления компонента Database Engine")  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
   
 -   среда разработки без конфигурации высокой доступности;  
   
--   рабочая среда без критически важных нагрузок, которая допускает некоторое время простоя и в которой используется новое оборудование и программное обеспечение. Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   рабочая среда без критически важных нагрузок, которая допускает некоторое время простоя и в которой используется новое оборудование и программное обеспечение. Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  При запуске программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] останавливается и перезапускается в процессе выполнения предварительных проверок.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/09/2018
  Поскольку новая среда   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет те же системные объекты, что и текущая среда, потребуется выполнить миграцию пользовательских баз данных из существующей системы в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таким способом, который позволит свести к минимуму время простоя в существующей системе. Выполнить перенос базы данных можно с помощью резервного копирования и восстановления или перенаправления LUN в среде SAN. В приведенных ниже схемах приводятся этапы обоих методов.  
   
 > [!CAUTION]  
->  Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+>  Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  После переноса пользовательской базы данных перенаправьте новых пользователей в новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью одного из имеющихся методов (например, переименовав сервер, используя запись DNS или изменив строки подключения).  Метод новой установки сокращает риски и время простоя по сравнению с обновлением на месте и упрощает обновление оборудования и операционной системы, необходимые для обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/09/2018
 -   Масштабируемая среда SQL Server Reporting Services. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Следующие шаги
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
