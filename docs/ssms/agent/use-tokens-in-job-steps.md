@@ -1,16 +1,16 @@
 ---
-title: "Использование токенов в шагах задания | Документация Майкрософт"
-ms.custom: 
+title: Использование токенов в шагах задания | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -19,20 +19,24 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 17ab22d0b8904dab6efce43fd4778bfbd5962f1e
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент позволяет применять токены в скриптах шагов заданий на языке [!INCLUDE[tsql](../../includes/tsql_md.md)]. Применение токенов при написании шагов заданий обеспечивают такую же гибкость, какую дают переменные при написании программ. После добавления токена в скрипт шага задания агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] замещает токен во время выполнения, до того как шаг задания выполняется подсистемой [!INCLUDE[tsql](../../includes/tsql_md.md)]  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент позволяет применять токены в скриптах шагов заданий на языке [!INCLUDE[tsql](../../includes/tsql_md.md)] . Применение токенов при написании шагов заданий обеспечивают такую же гибкость, какую дают переменные при написании программ. После добавления токена в скрипт шага задания агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] замещает токен во время выполнения, до того как шаг задания выполняется подсистемой [!INCLUDE[tsql](../../includes/tsql_md.md)]  
   
 > [!IMPORTANT]  
 > Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 1 (SP1), синтаксис токена шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] был изменен. В результате все токены, используемые в шагах заданий, теперь должны сопровождаться экранирующим макросом, в противном случае они вызовут ошибку. Использование управляющих макросов и обновление шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , в которых используются токены, описывается в разделах «Основные сведения об использовании токенов», «Макросы и токены агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] » и «Обновление шагов заданий для использования маркеров». Кроме того, также изменился синтаксис [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] , при котором для обнаружения токенов шагов заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] (например «`[DATE]`») использовались квадратные скобки. Теперь необходимо заключить имена токенов в круглые скобки и поставить знак доллара (`$`) в начале синтаксиса токена. Пример:  
@@ -44,7 +48,7 @@ ms.lasthandoff: 02/23/2018
 > [!IMPORTANT]  
 > Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или инструментария WMI. Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. К этим токенам относятся: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** и **WMI(***свойство***)**. Обратите внимание, что в этом выпуске использование токенов распространяется на все оповещения.  
 >   
-> Если необходимо использовать эти токены, убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Затем, чтобы включить эти токены, щелкните правой кнопкой мыши элемент **Агент SQL Server** в обозревателе объектов, выберите пункт меню **Свойства** и на странице **Система предупреждений** установите флажок **Заменить токены всех ответов заданий на предупреждения**.  
+> Если необходимо использовать эти токены, убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Затем, чтобы включить эти токены, щелкните правой кнопкой мыши элемент **Агент SQL Server** в обозревателе объектов, выберите пункт меню **Свойства**и на странице **Система предупреждений** установите флажок **Заменить токены всех ответов заданий на предупреждения** .  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Замена токена агента выполняется просто и эффективно: агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] заменяет токен точным строковым литералом. Все токены обрабатываются с учетом регистра. Шаги заданий должны это учитывать для учетной записи и правильно заключать в кавычки применяемые токены или преобразовывать замещающие строки к верному типу данных.  
   

@@ -1,30 +1,32 @@
 ---
-title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
-ms.custom: 
+title: Новые возможности в SQL Server 2017 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: "71"
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 47d6f056dce4ad26a10e082d27119523fde303d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки для разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
 
 [![Скачать из центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте выпуск SQL Server 2017 за октябрь 2017 г.:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
@@ -79,7 +81,7 @@ SQL Server 2017 включает множество новых функций, 
 - Обновление с SQL Server 2012, SQL Server 2014 или SQL Server 2016 до SQL Server 2017 Master Data Services обеспечит вам улучшенную производительность и усовершенствованный интерфейс. 
 - Теперь вы можете просматривать на странице **Обозреватель** веб-приложения отсортированный список сущностей, коллекций и иерархий.
 - Использование хранимой процедуры позволило значительно ускорить промежуточную обработку миллионов записей.
-- Кроме того, улучшена работа при разворачивании на странице **Управление группами** папки **Сущности** для назначения моделям разрешений. Страница **Управление группами** находится в веб-приложении в разделе **Безопасность**. Дополнительные сведения об улучшении производительности: [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Дополнительные сведения о назначении разрешений: [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
+- Кроме того, улучшена работа при разворачивании на странице **Управление группами** папки **Сущности** для назначения моделям разрешений. Страница **Управление группами** находится в веб-приложении в разделе **Безопасность**. Дополнительные сведения об улучшении производительности см. в разделе [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Дополнительные сведения о назначении разрешений: [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>Службы SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 включает множество улучшений для табличных моделей. К ним относятся следующие объекты.
@@ -128,5 +130,7 @@ SQL Server Analysis Services 2017 включает множество улуч
 - Узнайте, [что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

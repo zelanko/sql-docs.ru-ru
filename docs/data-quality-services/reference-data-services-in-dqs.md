@@ -1,27 +1,28 @@
 ---
-title: "Службы эталонных данных в DQS | Microsoft Docs"
-ms.custom: 
+title: Службы эталонных данных в DQS | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c8ff28a3194600f1783158deb5e56d96b036963
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: ee0c75c41ac8feb6141adbaa0ef1daa363b31d6f
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
   Эталонными данными называется точный и полный набор взаимосвязанных или категорированных глобальных данных (выходящих за пределы предприятия), доступных в доверенных общедоступных доменах или у поставщиков дополнительного коммерческого содержания.  
@@ -37,11 +38,11 @@ ms.lasthandoff: 01/19/2018
 -   Поддерживает использование эталонных данных из Windows Azure Marketplace, а также непосредственно от сторонних поставщиков эталонных данных.  
   
 ##  <a name="Marketplace"></a> Использование эталонных данных из Windows Azure Marketplace  
- DQS поддерживает использование эталонных данных из Windows Azure Marketplace, позволяя поставщикам содержания предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. по адресу [Сведения о Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS поддерживает использование эталонных данных из Windows Azure Marketplace, позволяя поставщикам содержания предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. в статье [Сведения о Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291)).  
   
  Органичная интеграция между Marketplace и DQS упрощает шаги, связанные с обнаружением, исследованием и получением информации для проектов служб DQS из среды служб DQS. Данные из DQS обрабатываются, что помогает пользователям DQS обеспечивать высокое качество данных за счет нового подхода — использования DQS, Marketplace и поставщиков служб ссылочных данных вместе друг с другом.  
   
- Чтобы использовать эталонные данные из Marketplace в DQS для очистки, требуется наличие ключа учетной записи Marketplace. Ключ учетной записи Marketplace создается бесплатно. Платить нужно только за подписку на платные наборы данных. Сама подписка является бесплатной, также не требуется платить за использование бесплатных наборов данных. Дополнительные сведения о создании ключа учетной записи Marketplace см. по адресу [Создание учетной записи](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId = 212936).  
+ Чтобы использовать эталонные данные из Marketplace в DQS для очистки, требуется наличие ключа учетной записи Marketplace. Ключ учетной записи Marketplace создается бесплатно. Платить нужно только за подписку на платные наборы данных. Сама подписка является бесплатной, также не требуется платить за использование бесплатных наборов данных. Дополнительные сведения о создании ключа учетной записи Marketplace см. в статье [Создание учетной записи](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)).  
   
  Кроме того, в рамках DQS вы можете выполнить следующие операции Marketplace:  
   

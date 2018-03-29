@@ -1,16 +1,16 @@
 ---
-title: "@@VERSION (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 09/18/2017
+title: '@@VERSION (Transact-SQL) | Документы Майкрософт'
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@VERSION'
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9f2a03af933d739760944f72aaea935e8bb3e682
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dfd1f9ea8d2ca1bf0411de07f0228cc95a2623bd
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version — функции настройки Transact SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 @@VERSION  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
@@ -69,15 +69,23 @@ ms.lasthandoff: 11/21/2017
   
  Для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] возвращаются следующие сведения.  
   
--   Выпуск — «База данных SQL Windows Azure»  
+-   Выпуск — "Microsoft SQL Azure"  
   
--   Уровень продукта «(CTP)» или «(RTM)»  
+-   Уровень продукта — "(RTM)"  
   
 -   Версия продукта  
   
 -   Дата сборки  
   
 -   Заявление об авторских правах  
+
+> [!NOTE]  
+> Нам известно о проблеме, когда @@VERSION сообщает о неправильной версии продукта для базы данных SQL Azure. Версия ядра базы данных SQL Server, выполняющаяся в базе данных SQL Azure, всегда выше локальной версии SQL Server и содержит последние исправления безопасности. Это означает, что уровень исправления всегда совпадает с локальной версией SQL Server или выше ее, и что последние функции, доступные в SQL Server, также доступны в базе данных SQL Azure.
+>
+> Чтобы определить выпуск ядра базы данных программным способом, используйте SELECT SERVERPROPERTY('EngineEdition'). Этот запрос вернет "5" для автономных баз данных и "8" для управляемых экземпляров в базе данных SQL Azure. 
+>
+> После решения этой проблемы документация будет обновлена.
+
   
 ## <a name="examples"></a>Примеры  
   

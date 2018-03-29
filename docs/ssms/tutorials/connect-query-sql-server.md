@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Учебник. Подключение и выполнение запросов к SQL Server с помощью SQL Server Management Studio
+# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Учебник. Подключение к SQL Server и выполнение запросов с помощью SQL Server Management Studio
 В этом учебнике вы научитесь использовать SQL Server Management Studio (SSMS) для подключения к экземпляру SQL Server и выполнению некоторых основных команд Transact-SQL (T-SQL). В этой статье показано, как выполнять следующие задачи:
-    - [Подключение к SQL Server](#connect-to-a-sql-server)
-    - [Создание базы данных (**TutorialDB**)](#create-a-database)
-    - [Создание таблицы (**Customers**) в новой базе данных](#create-a-table)
-    - [Вставка строк в новую таблицу **Customers**](#insert-rows)
-    - [Выполнение запроса к таблице **Customers** и просмотр результатов](#view-query-results)
-    - [Проверка свойств подключения с помощью окна запроса](#verify-your-query-window-connection-properties)
-    - [Изменение сервера, к которому подключено окно запроса](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [Подключение к SQL Server](#connect-to-a-sql-server)
+> * [Создание базы данных (**TutorialDB**)](#create-a-database)
+> * [Создание таблицы (**Customers**) в новой базе данных](#create-a-table)
+> * [Вставка строк в новую таблицу **Customers**](#insert-rows)
+> * [Выполнение запроса к таблице **Customers** и просмотр результатов](#view-query-results)
+> * [Проверка свойств подключения с помощью окна запроса](#verify-your-query-window-connection-properties)
+> * [Изменение сервера, к которому подключено окно запроса](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>предварительные требования

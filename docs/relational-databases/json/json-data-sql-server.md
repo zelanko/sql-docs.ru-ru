@@ -1,30 +1,30 @@
 ---
-title: "Работа с данными JSON в SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Работа с данными JSON в SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="json-data-in-sql-server"></a>Данные JSON в SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,31 @@ FOR JSON PATH
 ```  
   
 Дополнительные сведения см. в разделах [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) и [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
-  
+
+## <a name="use-cases-for-json-data-in-sql-server"></a>Варианты использования данных JSON в SQL Server
+
+Поддержка JSON в SQL Server и базе данных SQL Azure позволяет объединить принципы NoSQL и реляционных баз данных. Вы можете легко преобразовывать реляционные данные в частично структурированные и наоборот. Однако JSON не заменяет существующие реляционные модели. Ниже приведены некоторые конкретные варианты использования с преимуществами поддержки JSON в SQL Server и базе данных SQL. Дополнительные сведения см. в статье о [вариантах использования JSON в SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+
+### <a name="simplify-complex-data-models"></a>Упрощение сложных моделей данных
+
+Рассмотрите возможность денормализации модели данных с полями JSON вместо нескольких дочерних таблиц. Дополнительные сведения см. в статье об [упрощении доступа к данным с помощью денормализованных моделей](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/).
+
+### <a name="store-retail-and-e-commerce-data"></a>Хранение данных розничной торговли и электронной коммерции
+
+Храните сведения о продуктах, используя в денормализованной модели множество атрибутов переменных для обеспечения гибкости. Дополнительные сведения см. в статьях о [проектировании каталогов продуктов в SQL Server с помощью JSON](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/) и [индексации данных JSON в каталогах продуктов](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/).
+
+### <a name="process-log-and-telemetry-data"></a>Обработка данных журнала и данных телеметрии
+
+Загружайте, запрашивайте и анализируйте данные журнала, хранящиеся в виде JSON-файлов, используя все возможности языка Transact-SQL. Дополнительные сведения см. в разделе об *анализе данных журналов и данных телеметрии* в статье о [вариантах использования JSON в SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+
+### <a name="store-semi-structured-iot-data"></a>Сохранение частично структурированных данных Интернета вещей
+
+Чтобы проанализировать данные Интернета вещей в режиме реального времени, загружайте входящие данные непосредственно в базу данных, а не размещайте их в месте хранения. Дополнительные сведения см. в статье о [работе с данными Интернета вещей Azure в базе данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/).
+
+### <a name="simplify-rest-api-development"></a>Упрощение разработки REST API
+
+Легко преобразовывайте реляционные данных из базы данных в формат JSON, используемый интерфейсами REST API, которые поддерживают ваш веб-сайт. Дополнительные сведения см. в статье об [упрощении разработки REST API для современных одностраничных приложений с помощью SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/).
+
 ## <a name="combine-relational-and-json-data"></a>Объединение реляционных данных и данных JSON
 SQL Server предоставляет гибридную модель для хранения и обработки реляционных данных и данных JSON с использованием стандартного языка Transact-SQL. Вы можете формировать коллекции документов JSON в таблицах, устанавливать отношения между ними, комбинировать строго типизированные скалярные столбцы, которые хранятся в таблицах с гибкими парами "ключ —значение", хранящимися в столбцах JSON, и запрашивать скалярные значения и значения JSON в одной таблице или нескольких с использованием полного Transact-SQL.
  

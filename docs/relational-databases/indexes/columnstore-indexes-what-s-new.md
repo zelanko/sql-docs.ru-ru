@@ -1,41 +1,39 @@
 ---
-title: "Новые возможности индексов columnstore | Документация Майкрософт"
-ms.custom: 
-ms.date: 12/1/2017
+title: Новые возможности индексов columnstore | Документация Майкрософт
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Сводка функций индексов columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и для последних выпусков [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Edition, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Сводка функций индексов columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и для последних выпусков [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны только в выпуске Premium.
+ > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровне Premium для базы данных SQL и уровне Standard (S3 и более поздние версии). Для SQL Server (2016 с пакетом обновления 1 (SP1) и более поздних версий) индексы columnstore доступны во всех выпусках. Для SQL Server (2016 с пакетом обновления 1 (SP1) и более ранних версий) индексы columnstore доступны только в выпуске Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В следующей таблице перечислены основные функции для индексов columnstore и продукты, в которых они доступны.  
 
-|Функция индекса columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Функция индекса columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |Пакетное выполнение для многопоточных запросов.|да|да|да|да|да|да| 
 |Пакетное выполнение для однопоточных запросов.|||да|да|да|да|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/12/2018
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] поддерживает нематериализованные вычисляемые столбцы в кластеризованных индексах columnstore. Материализованные столбцы не поддерживаются в кластеризованных индексах columnstore. Вы не можете создать некластеризованный индекс для индекса columnstore с вычисляемым столбцом. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  
+ В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  
   
 ### <a name="functional"></a>Функции  
   
@@ -126,7 +124,7 @@ ms.lasthandoff: 02/12/2018
 -   Для таблиц в памяти запросы к индексу columnstore выполняются только в режиме взаимодействия, а не в собственном режиме в памяти. Поддерживается параллельное выполнение.  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] кластеризованный индекс columnstore был представлен в качестве основного формата хранилища. Это позволило выполнять регулярные операции загрузки, а также операции обновления, удаления и вставки.  
+ В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] кластеризованный индекс columnstore был представлен в качестве основного формата хранилища. Это позволило выполнять регулярные операции загрузки, а также операции обновления, удаления и вставки.  
   
 -   Таблица может использовать кластеризованный индекс columnstore в качестве основного хранилища таблиц. Использование других индексов не допускается в таблице, однако кластеризованный индекс columnstore является обновляемым, что позволяет выполнять регулярные операции загрузки и вносить изменения в отдельные строки.  
 -   Некластеризованный индекс columnstore имеет те же функции, что и в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], за исключением того, что теперь дополнительные операторы могут выполняться в пакетном режиме. Он по-прежнему не поддерживает обновление, помимо перестроения и переключения секций. Некластеризованный индекс columnstore поддерживается только в таблицах на диске, но не в таблицах в памяти.  
@@ -135,7 +133,7 @@ ms.lasthandoff: 02/12/2018
 -   Следующие операторы выполняются в пакетном режиме для многопоточных запросов: SCAN, FILTER, PROJECT, JOIN, GROUP BY и UNION ALL.  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] был представлен некластеризованный индекс columnstore как еще один тип индекса для таблиц rowstore и пакетной обработки запросов к данным columnstore.  
+ В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] был представлен некластеризованный индекс columnstore как еще один тип индекса для таблиц rowstore и пакетной обработки запросов к данным columnstore.  
   
 -   Таблица rowstore может включать один некластеризованный индекс columnstore.  
 -   Индекс columnstore доступен только для чтения. После создания индекса columnstore нельзя обновлять таблицу с помощью операций `INSERT`, `DELETE` и `UPDATE`. Для выполнения этих операций необходимо удалить индекс, обновить таблицу и перестроить индекс columnstore. Дополнительные данные в таблицу можно загрузить с помощью переключения секций. Преимущество переключения секций заключается в том, что можно загрузить данные без удаления и перестроения индекса columnstore.  

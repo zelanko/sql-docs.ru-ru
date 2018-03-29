@@ -16,30 +16,30 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 0613d9352e7be20de52fb771fb8e28823556304b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник: дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio. В нем рассматриваются следующие задачи: 
 
-   - Закомментирование и раскомментирование текста на языке Transact-SQL (T-SQL)
-   - Задание отступов в тексте
-   - Фильтрация объектов в обозревателе объектов
-   - Доступ к журналу ошибок SQL Server
-   - Поиск имени экземпляра SQL Server
+> [!div class="checklist"]
+> * Закомментирование и раскомментирование текста на языке Transact-SQL (T-SQL)
+> * Задание отступов в тексте
+> * Фильтрация объектов в обозревателе объектов
+> * Доступ к журналу ошибок SQL Server
+> * Поиск имени экземпляра SQL Server
 
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к SQL Server и база данных AdventureWorks. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Скачайте [образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). 
-    - Инструкции по восстановлению баз данных в SSMS можно найти в статье [Восстановление базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Скачайте [образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению баз данных в SSMS можно найти в статье [Восстановление базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
-## <a name="commenting--uncommenting-your-t-sql"></a>Закомментирование и раскомментирование текста на языке T-SQL
+## <a name="comment--uncomment-your-t-sql-code"></a>Закомментирование и раскомментирование кода T-SQL
 Части текста можно закомментировать и раскомментировать с помощью кнопки комментария на панели инструментов. Закомментированный текст не выполняется. 
 
 1. Откройте среду SQL Server Management Studio. 
@@ -48,37 +48,40 @@ ms.lasthandoff: 03/21/2018
 4. Вставьте в текстовое окно следующий фрагмент кода T-SQL: 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. Выделите часть текста с инструкцией **Alter Database** и нажмите на панели инструментов кнопку **комментария**: 
+
+
+5. Выделите часть текста с инструкцией **Alter Database** и нажмите на панели инструментов кнопку **комментария**: 
 
     ![Комментарий](media/ssms-tricks/comment.png)
-3. Нажмите кнопку **Выполнить**, чтобы выполнить незакомментированную часть текста. 
-4. Выделите весь текст, кроме команды **Alter Database**, и нажмите на панели инструментов кнопку **комментария**:
+6. Нажмите кнопку **Выполнить**, чтобы выполнить незакомментированную часть текста. 
+7. Выделите весь текст, кроме команды **Alter Database**, и нажмите на панели инструментов кнопку **комментария**:
 
     ![Закомментирование всего текста](media/ssms-tricks/commenteverything.png)
 
-5. Выделите часть текста с инструкцией **Alter Database** и нажмите кнопку **Раскомментировать**, чтобы раскомментировать ее:
+8. Выделите часть текста с инструкцией **Alter Database** и нажмите кнопку **Раскомментировать**, чтобы раскомментировать ее:
 
     ![Раскомментирование](media/ssms-tricks/uncomment.png)
     
-6. Нажмите кнопку **Выполнить**, чтобы выполнить раскомментированную часть текста. 
+9. Нажмите кнопку **Выполнить**, чтобы выполнить незакомментированную часть текста. 
 
 ## <a name="indent-your-text"></a>Задание отступов в тексте
 Кнопки отступов позволяют увеличивать и уменьшать отступы в тексте. 
@@ -87,33 +90,35 @@ GO
 2. Вставьте в текстовое окно следующий фрагмент кода T-SQL: 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-    SELECT name 
-        FROM sys.databases 
-        WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+        SELECT name 
+            FROM sys.databases 
+            WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. Выделите часть текста с инструкцией **Alter Database** и нажмите на панели инструментов кнопку **Увеличить отступ**, чтобы сдвинуть текст вправо.
+ 
+3. Выделите часть текста с инструкцией **Alter Database** и нажмите на панели инструментов кнопку **Увеличить отступ**, чтобы сдвинуть текст вправо.
 
     ![Увеличить отступ](media/ssms-tricks/increaseindent.png)
 
-3. Снова выделите часть текста с инструкцией **Alter Database** и нажмите кнопку **Уменьшить отступ**, чтобы сдвинуть текст обратно. 
+4. Снова выделите часть текста с инструкцией **Alter Database** и нажмите кнопку **Уменьшить отступ**, чтобы сдвинуть текст обратно. 
     ![Уменьшение отступа](media/ssms-tricks/decreaseindent.png)
 
 
-## <a name="filtering-objects-in-object-explorer"></a>Фильтрация объектов в обозревателе объектов
+## <a name="filter-objects-in-object-explorer"></a>Фильтрация объектов в обозревателе объектов
 Если база данных содержит много объектов, найти определенный объект может быть непросто. Чтобы упростить эту задачу, можно фильтровать объекты. В этом разделе описывается, как фильтровать таблицы, но аналогичные действия можно использовать для любого другого узла в **обозревателе объектов**.
 
 1. Подключитесь к серверу SQL Server.
@@ -135,10 +140,10 @@ GO
     
 
 
-## <a name="accessing-your-sql-server-error-log"></a>Доступ к журналу ошибок SQL Server
+## <a name="access-your-sql-server-error-log"></a>Доступ к журналу ошибок SQL Server
 Журнал ошибок — это файл, который содержит подробные сведения о происходящем с SQL Server. С помощью SSMS можно просматривать его и выполнять к нему запросы. Его можно также можно найти на диске как файл LOG.
 
-### <a name="finding-your-error-log-if-you-cannot-connect-to-sql"></a>Поиск журнала ошибок в случае, если не удается подключиться к SQL
+### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>Поиск журнала ошибок в случае, если не удается подключиться к SQL
 1. Откройте диспетчер конфигурации SQL Server. 
 2. Разверните узел **Службы**.
 3. Щелкните правой кнопкой мыши экземпляр SQL Server и выберите пункт **Свойства**.
@@ -152,9 +157,9 @@ GO
     - В этом расположении имеется несколько файлов errorlog.*. Текущий журнал — это файл, имя которого заканчивается на *.log. Файлы, имена которых заканчиваются номерами, — это предыдущие журналы. Новый журнал создается при каждом перезапуске SQL Server. 
 6. Откройте этот файл в Блокноте. 
 
-### <a name="finding-your-error-log-if-youre-connected-to-sql"></a>Поиск журнала ошибок при наличии подключения к SQL
+### <a name="find-your-error-log-if-youre-connected-to-sql"></a>Поиск журнала ошибок при наличии подключения к SQL
 1. Подключитесь к серверу SQL Server.
-2. Откройте окно **Новый запрос**. 
+2. Откройте окно **Новый запрос**.
 3. Вставьте в окно запроса следующий фрагмент кода T-SQL и нажмите кнопку **Выполнить**:
 
 
@@ -174,7 +179,7 @@ GO
     ![Просмотр журнала ошибок в SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
 ### <a name="query-error-log-within-ssms"></a>Запрос журнала ошибок в SSMS
-1. Подключитесь к серверу SQL Server.
+1. Подключитесь к серверу SQL Server.
 2. Откройте окно **Новый запрос**.
 3. Вставьте в окно запроса следующий фрагмент кода T-SQL:
 
@@ -195,7 +200,7 @@ GO
 3. Найдите в файле текст "Имя сервера".
   - В одинарных кавычках указано имя экземпляра, к которому вы будете подключаться: ![Имя сервера в журнале ошибок](media/ssms-tricks/servernameinlog.png)
 
-### <a name="once-youre-connected"></a>После подключения
+### <a name="once-youre-connected-to-sql"></a>После подключения к SQL 
 Узнать имя экземпляра, к которому выполнено подключение, можно в трех местах. 
 
 1. Имя сервера приводится в **обозревателе объектов**.

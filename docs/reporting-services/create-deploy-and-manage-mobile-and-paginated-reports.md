@@ -1,8 +1,8 @@
 ---
-title: Службы Reporting Services (SSRS) | Документы Майкрософт
-description: Сведения о средствах и службах для создания мобильных отчетов и отчетов Reporting Services с разбивкой на страницы, а также локальных отчетов Power BI.
+title: Что такое SQL Server Reporting Services (SSRS)? | Документы Майкрософт
+description: Сведения о средствах и службах для создания мобильных отчетов и отчетов Reporting Services с разбивкой на страницы в локальной среде.
 ms.custom: ''
-ms.date: 07/01/2017
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: ''
@@ -24,17 +24,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Ищете сервер отчетов Power BI? См. раздел [Начало работы с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 Службы SQL Server Reporting Services (SSRS) предоставляют спектр готовых к использованию средств и служб для создания и развертывания мобильных отчетов и отчетов с разбиением на страницы в локальной среде, а также управления ими.
 
@@ -51,9 +51,6 @@ ms.lasthandoff: 03/17/2018
 * **Современный веб-портал** , который можно открыть в любом современном браузере. На новом портале можно упорядочивать и просматривать мобильные отчеты, отчеты с разбивкой на страницы и ключевые показатели эффективности Reporting Services. На портале также можно сохранять книги Excel.
 
 Далее приведены более подробные сведения по каждому из этих аспектов.
-
-> [!NOTE]
-> Ищете сервер отчетов Power BI? См. раздел [Начало работы с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ### <a name="whats-new-in-reporting-services"></a>Новые возможности служб Reporting Services
 

@@ -1,16 +1,16 @@
 ---
-title: "Обработка множественных шагов задания | Документация Майкрософт"
-ms.custom: 
+title: Обработка множественных шагов задания | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -19,19 +19,23 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d193665f6d46a1e21ed397e3fe33c22afa95cc8b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 79692f0272c617544c3f368f9062dc5ff875fa49
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="handle-multiple-job-steps"></a>Обработка множественных шагов задания
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
 Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком***. Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  
   
 ![Управление потоком шагов заданий агента SQL Server](../../ssms/agent/media/dbflow01.gif "Управление потоком шагов заданий агента SQL Server")  
@@ -46,7 +50,7 @@ ms.lasthandoff: 02/23/2018
 Шаги задания должны быть автономными. Это значит, что задание не может передавать логические значения, данные или числовые значения между шагами задания. Однако можно передавать значения из одного шага задания [!INCLUDE[tsql](../../includes/tsql_md.md)] в другой с помощью постоянных таблиц или глобальных временных таблиц. Можно передавать значения между шагами задания, в которых запускаются исполняемые программы, с помощью файлов. Например, исполняемая программа, выполняемая на одном шаге задания, записывает файл, а программа, выполняемая на последующем шаге, считывает файл.  
   
 > [!NOTE]  
-> Если создаются задания с циклическими шагами (за шагом 1 следует шаг 2, затем шаг 2 возвращается к шагу 1), то при создании задания с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] выдается предупреждающее сообщение.  
+> Если создаются задания с циклическими шагами (за шагом 1 следует шаг 2, затем шаг 2 возвращается к шагу 1), то при создании задания с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]выдается предупреждающее сообщение.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент записывает сведения о задании и шагах задания в журнал заданий.  
   

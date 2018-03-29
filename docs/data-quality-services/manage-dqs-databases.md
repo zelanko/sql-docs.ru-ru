@@ -1,27 +1,28 @@
 ---
-title: "Управление базами данных DQS | Microsoft Docs"
-ms.custom: 
+title: Управление базами данных DQS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61bdf391348154a3b395c5934ab7b60173f4eb47
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 138fd9e68a665f2a0b793891c8a6b723f5d78ea7
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   В этом разделе приведены сведения о действиях по управлению базами данных, которые можно выполнять с базами данных DQS, например резервное копирование и восстановление или отсоединение и присоединение.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/19/2018
 -   Модель восстановления для баз данных DQS по умолчанию имеет значение **Простая**. В простой модели восстановления ведется минимальное протоколирование транзакций, и усечение журнала выполняется автоматически после завершения транзакции, чтобы освободить место в журнале транзакций (LDF-файле). Подробные сведения о простой модели восстановления см. в разделе [Полные резервные копии баз данных &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  -   В простой модели восстановления, если записи журнала остаются активными в течение длительного времени (например, в продолжительной транзакции), усечение журнала может откладываться, в результате журнал транзакций будет заполняться. Кроме того, усечение журнала не приводит к уменьшению размера физического файла журнала (LDF-файла). Для уменьшения размера физического файла журнала необходимо выполнить его сжатие. Сведения об устранении неполадок с журналом транзакций см. в разделе [Журнал транзакций &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) или в статье службы поддержки Майкрософт по адресу [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   В простой модели восстановления, если записи журнала остаются активными в течение длительного времени (например, в продолжительной транзакции), усечение журнала может откладываться, в результате журнал транзакций будет заполняться. Кроме того, усечение журнала не приводит к уменьшению размера физического файла журнала (LDF-файла). Для уменьшения размера физического файла журнала необходимо выполнить его сжатие. Сведения об устранении неполадок с журналом транзакций см. в разделе [Журнал транзакций (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md) или в статье службы поддержки Майкрософт по адресу [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Необходимо регулярно выполнять полное или разностное резервное копирование баз данных DQS, а также создавать резервную копию журнала транзакций, чтобы выполнять восстановление данных на момент времени. Дополнительные сведения см. в разделах [Полные резервные копии баз данных &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) и [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Присоединение и отсоединение баз данных DQS  

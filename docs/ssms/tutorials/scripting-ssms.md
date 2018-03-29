@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Учебник: создание скриптов для объектов в среде SQL Server Management Studio
 В этом учебнике вы научитесь создавать скрипты Transact-SQL (T-SQL) для различных объектов, доступных в SQL Server Management Studio.  В нем приводятся примеры создания скриптов для следующих объектов: 
- - запросов при выполнении действий в графическом пользовательском интерфейсе;
- - баз данных двумя разными способами ("Сформировать скрипт как" и "Создать скрипт");
- - Таблицы
- - Хранимые процедуры
- - Расширенные события
+
+> [!div class="checklist"]
+> * запросов при выполнении действий в графическом пользовательском интерфейсе;
+> * баз данных двумя разными способами ("Сформировать скрипт как" и "Создать скрипт");
+> * Таблицы
+> * Хранимые процедуры
+> * Расширенные события
 
 Если говорить коротко, создать скрипт для любого объекта в **обозревателе объектов** можно, щелкнув его правой кнопкой мыши и выбрав пункт **Создать скрипт для объекта как**. 
 
@@ -41,14 +43,13 @@ ms.lasthandoff: 03/21/2018
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Скачайте [образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). 
-    - Инструкции по восстановлению баз данных в SSMS можно найти в статье [Восстановление базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Скачайте [образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению баз данных в SSMS можно найти в статье [Восстановление базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-gui"></a>Создание скриптов для запросов в графическом пользовательском интерфейсе
 Каждый раз при выполнении задачи с помощью графического пользовательского интерфейса в SSMS можно также создать код T-SQL, связанный с этой задачей. Ниже приведены примеры выполнения этого действия при создании резервной копии базы данных и сжатии журнала транзакций.  Аналогичные инструкции применимы к любому действию, выполняемому в графическом пользовательском интерфейсе. 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>Создание скрипта T-SQL при резервном копировании базы данных
+### <a name="script-t-sql-when-backing-up-a-database"></a>Создание скрипта T-SQL при резервном копировании базы данных
 1. Подключитесь к серверу SQL Server.
 2. Разверните узел **Базы данных** .
 3. Щелкните правой кнопкой мыши имя базы данных и выберите пункты **Задачи** > **Создать резервную копию**.
