@@ -13,6 +13,7 @@
 ## [Архивация и восстановление](tutorial-backup-restore-sql-server.md)
 # Практические руководства
 ## [Панели мониторинга и мини-приложения аналитических сведений](insight-widgets.md)
+## [Расширения](extensions.md)
 ## [Фрагменты кода](code-snippets.md)
 ## [Интегрированный терминал (PowerShell, Bash)](integrated-terminal.md)
 ## [Сочетания клавиш](keyboard-shortcuts.md)
