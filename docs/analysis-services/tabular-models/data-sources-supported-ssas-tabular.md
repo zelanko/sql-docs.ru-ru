@@ -1,33 +1,36 @@
 ---
-title: "Источники данных, поддерживаемые в табличных моделях служб SQL Server Analysis Services | Документы Microsoft"
-ms.custom: 
-ms.date: 02/22/2018
+title: Источники данных, поддерживаемые в SQL Server Analysis Services табличной модели 1200 | Документы Microsoft
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>Источники данных, поддерживаемые в табличных моделях
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Источники данных, поддерживаемые в SQL Server Analysis Services табличных моделей 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Azure Analysis Services. в разделе [источники данных, поддерживаемые в службах Analysis Services Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+  
+В этой статье описываются типы источников данных, которые могут использоваться с табличных моделей служб SQL Server Analysis Services на 1200 и низкий уровень совместимости. 
 
-  В этой статье описываются типы источников данных, которые можно использовать с табличными моделями.  
+Для моделей на уровнях совместимости 1400. в разделе [источники данных, поддерживаемые в SQL Server Analysis Services табличной модели 1400](data-sources-supported-ssas-tabular-1400.md).
+
+Azure Analysis Services. в разделе [источники данных, поддерживаемые в службах Analysis Services Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Поддерживаемые источники данных для табличных моделей в памяти  
 При установке среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]программа установки не устанавливает поставщиков, указанных для каждого из источников данных. Некоторые поставщики могут быть установлены с другими приложениями на данном компьютере. В других случаях может потребоваться загрузить и установить поставщик.  
@@ -73,3 +76,9 @@ Microsoft SQL Server    |  2008 и более поздних версий      |
 Столбцы из разных источников данных, содержащие схожие данные, служат основой для создания связей в конструкторе моделей. При использовании разнородных источников данных выберите таблицы со столбцами, которые можно сопоставить с таблицами в других источниках данных, содержащими идентичные или аналогичные данные.  
   
 Поставщики OLE DB иногда обеспечивают повышенную производительность для крупномасштабных данных. Если нужно выбрать один из нескольких поставщиков, подходящих для некоторого источника данных, вначале следует проверить работу поставщика OLE DB.  
+
+## <a name="see-also"></a>См. также:
+
+[Источники данных поддерживается в SQL Server Analysis Services табличной модели 1400](data-sources-supported-ssas-tabular-1400.md)
+
+[Источники данных, поддерживаемые в Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

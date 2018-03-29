@@ -1,28 +1,45 @@
 ---
-title: "Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft"
-description: "Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия)"
+title: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft
+description: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия)
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске Studio операций SQL (Предварительная версия)
 
-**[Загрузите общедоступной предварительной версии февраля](download.md)**
+**[Загрузите марта общедоступной предварительной версии](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>Март 2018 (март Предварительная версия)
+
+Дата выпуска: 28 марта 2018  
+версия: 0.27.3
+
+*Общедоступной предварительной версии марта* продолжает устранить основные проблемы GitHub и ориентированы на улучшение нашей истории расширяемости. В частности Включение диспетчера расширений, улучшение панель мониторинга управления и предоставление агента SQL Server и расширения аналитики. Этот выпуск включает следующие улучшения:
+
+- Улучшения модели расширяемости панели мониторинга для поддержки области конфигурации и аналитики с вкладками.
+   - Диспетчер расширений позволяет простой приобретения расширений.
+   - Расширения мониторинга для sp_whoisactive из [whoisactive.com](http://www.whoisactive.com).
+   - Дополнительные сведения см. в разделе [расширения функциональности операции SQL Studio](extensions.md).
+- Добавьте дополнительные [API-интерфейсов расширения для подключения и объект explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) управления.
+- Исправления важных клиентов по-прежнему [GitHub проблемы](https://github.com/Microsoft/sqlopsstudio/issues).
+
+Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## <a name="february-2018-february-public-preview"></a>2018 февраля (февраль Предварительная версия)
 
@@ -63,8 +80,6 @@ ms.lasthandoff: 02/19/2018
 - Исправьте и перетащите критические ошибки скрипта.
 - Исправьте неправильные закрепленных значок меню "Пуск".
 - Исправьте фирменная символика значок отсутствует учетная запись Azure.
-
-Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## <a name="december-2017-december-public-preview"></a>Декабрь 2017 г. (декабрь Предварительная версия)

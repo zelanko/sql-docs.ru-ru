@@ -1,15 +1,15 @@
 ---
-title: "Развертывание решений модели с использованием программы развертывания | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
+title: Развертывание решений модели с использованием программы развертывания | Документы Microsoft
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -17,21 +17,25 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 38e91da35dc590b3acbe0f49517e3fad891510fc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Развертывание решений моделей с использованием программы развертывания
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Программа **Microsoft.AnalysisServices.Deployment** позволяет запустить механизм развертывания служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Программа **Microsoft.AnalysisServices.Deployment** позволяет запустить механизм развертывания служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
   
+> [!NOTE]
+> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Программа мастера развертывания устанавливается вместе с [SQL Server Managment Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Убедитесь, что вы используете последнюю версию. По умолчанию в мастере развертывания последней версии устанавливается в C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -70,7 +74,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ## <a name="remarks"></a>Замечания  
  Программа **Microsoft.AnalysisServices.Deployment** использует набор файлов, которые содержат определения объектов, адресаты развертывания, параметры развертывания и параметры настройки конфигурации, и пытается развернуть определения объекта на указанные адресаты развертывания с помощью указанных параметров развертывания и параметров настройки конфигурации. Эта программа может предоставить пользовательский интерфейс, если будет вызвана в режиме файлов ответов или в режиме вывода. Дополнительные сведения о том, как использовать пользовательский интерфейс, предоставляемый этой программой для создания файлов ответов, см. в разделе [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
- Эта программа находится в папке «\Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio».  
+ Программа находится в папке \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio.  
   
 ##  <a name="Modes"></a> Режимы  
  Программа может запускаться в режимах, перечисленных в следующей таблице.  

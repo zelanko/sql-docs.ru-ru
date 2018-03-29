@@ -104,7 +104,9 @@
 
 # [Импорт и экспорт данных](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [Система отслеживания измененных данных](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [Загрузка данных из Excel](load-data-to-from-excel-with-ssis.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Соединитель с SAP BW (Microsoft)](microsoft-connector-for-sap-bw.md)
 ## [Установка соединителя с SAP BW (Microsoft)](installing-the-microsoft-connector-for-sap-bw.md)
@@ -175,8 +177,8 @@
 #### [Занятие 3-3. Тестирование развернутых пакетов](lesson-3-3-testing-the-deployed-packages.md)
 
 # Ресурсы
-## [Получить справку на форуме SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-## [Получить справку на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## [Читать блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Получить справку на форуме SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Получить справку на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Читать блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
 ## [Сообщить о проблемах или запросить новые функции](https://feedback.azure.com/forums/908035-sql-server)
 ## [Получить документы на ПК](../sql-server/sql-server-help-installation.md)

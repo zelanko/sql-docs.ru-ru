@@ -102,8 +102,8 @@
 ## [Интеллектуальный анализ данных](data-mining-tutorials-analysis-services.md)  
 
 # Практическое руководство
-## [Табличное моделирование](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [Многомерное моделирование](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [Табличные модели](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [Многомерные модели](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [Интеллектуальный анализ данных](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot для Sharepoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [Управление серверами](../analysis-services/instances/analysis-services-instance-management.md)

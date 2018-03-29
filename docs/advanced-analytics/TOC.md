@@ -1,33 +1,49 @@
 # Обзор
+
 ## [Что такое службы машинного обучения SQL Server?](what-is-sql-server-machine-learning.md)
+### [Аналитика в базе данных](r/sql-server-r-services.md)
+### [Отдельный сервер](r/r-server-standalone.md)
 ## [Новые возможности](what-s-new-in-sql-server-machine-learning-services.md)
-## [Обзор архитектуры](architecture-overview-machine-learning.md)
 ## [Функции разных выпусков](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-# Установить 
-## [Службы машинного обучения (в базе данных)](install/sql-machine-learning-services-windows-install.md)
-## [Сервер машинного обучения (автономный)](install/sql-machine-learning-standalone-windows-install.md)
-## SQL Server 2016
-### [Службы R (в базе данных)](install/sql-r-services-windows-install.md)
-### [R Server (изолированный)](install/sql-r-standalone-windows-install.md)
-## [Установка из командной строки](install/sql-ml-component-commandline-install.md)
-## [Автономная установка (без Интернета)](install/sql-ml-component-install-without-internet-access.md)
-
-# [Службы машинного обучения — R](r/sql-server-r-services.md)
-## [Архитектура](r/architecture-overview-sql-server-r.md)
+# [Архитектура](architecture-overview-machine-learning.md)
+## [R](r/architecture-overview-sql-server-r.md)
 ### [Совместимость с R](r/r-interoperability-in-sql-server.md)
 ### [Компоненты, обеспечивающие интеграцию R](r/new-components-in-sql-server-to-support-r.md)
 ### [Безопасность R](r/security-overview-sql-server-r.md)
+## [Python](python/architecture-overview-sql-server-python.md)
+### [Python в Службах машинного обучения](python/sql-server-python-services.md)
+### [Совместимость c Python](python/python-interoperability.md)
+### [Компоненты для поддержки Python](python/new-components-in-sql-server-to-support-python-integration.md)
+### [Безопасность Python](python/security-overview-sql-server-python-services.md)
+<!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
+<!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
+<!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
+<!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-## [Учебные материалы по R в SQL Server](tutorials/sql-server-r-tutorials.md)
+# Установить 
 
+## [Аналитика в базе данных](install/sql-machine-learning-services-windows-install.md)
+## [Отдельный сервер](install/sql-machine-learning-standalone-windows-install.md)
+## [Предварительно обученная модель](r/install-pretrained-models-sql-server.md)
+## SQL Server 2016
+### [Службы R (в базе данных)](install/sql-r-services-windows-install.md)
+### [R Server (изолированный)](install/sql-r-standalone-windows-install.md)
+### [Привязка к Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [Установка из командной строки](install/sql-ml-component-commandline-install.md)
+## [Автономная установка (без Интернета)](install/sql-ml-component-install-without-internet-access.md)
+## [Настройка средств R](r/set-up-a-data-science-client.md)
+## [Настройка средств Python](python/setup-python-client-tools-sql.md)
+
+# [Руководства, примеры, решения](tutorials/machine-learning-services-tutorials.md)
+
+## [R](tutorials/sql-server-r-tutorials.md)
 ### [R. Использование кода на языке R в Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 #### [Работа с входными и выходными данными](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [Типы и объекты данных R и SQL](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 #### [Использование функций R с данными SQL Server](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
 #### [Создание модели прогнозирования](tutorials/rtsql-create-a-predictive-model-r.md)
 #### [Получение прогнозов с помощью модели и построение графика с результатами](tutorials/rtsql-predict-and-plot-from-model.md)
-
 ### [R. Пошаговое руководство по обработке и анализу данных](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 #### [Предварительные требования для работы с пошаговыми руководствами по обработке и анализу данных](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
 #### [Подготовка данных](tutorials/walkthrough-prepare-the-data.md)
@@ -37,7 +53,6 @@
 #### [Создание характеристик данных с помощью SQL и R](tutorials/walkthrough-create-data-features.md)
 #### [Создание и сохранение модели](tutorials/walkthrough-build-and-save-the-model.md)
 #### [Развертывание и использование модели](tutorials/walkthrough-deploy-and-use-the-model.md)
-
 ### [R. Глубокое погружение в обработку и анализа данных с помощью RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 #### [Работа с данными SQL Server](tutorials/deepdive-work-with-sql-server-data-using-r.md)
 #### [Создание объектов данных SQL Server с помощью функции RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
@@ -54,7 +69,6 @@
 #### [Анализ данных в локальном контексте вычисления](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Перенос данных между SQL Server и файлом XDF](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Создание простого моделирования](tutorials/deepdive-create-a-simple-simulation.md)
-
 ### [R. Дополнительные аналитические функции в базе данных для разработчиков SQL](tutorials/sqldev-in-database-r-for-sql-developers.md)
 #### [Шаг 1. Скачивание образца данных](tutorials/sqldev-download-the-sample-data.md)
 #### [Шаг 2. Импорт данных в SQL Server с помощью PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
@@ -63,62 +77,35 @@
 #### [Шаг 5. Обучение и сохранение модели с помощью T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
 #### [Шаг 6. Ввод модели в эксплуатацию](tutorials/sqldev-operationalize-the-model.md)
 
-
-# [Службы машинного обучения — Python](python/sql-server-python-services.md)
-
-## [Архитектура](python/architecture-overview-sql-server-python.md)
-### [Совместимость c Python](python/python-interoperability.md)
-### [Компоненты для поддержки Python](python/new-components-in-sql-server-to-support-python-integration.md)
-### [Безопасность Python](python/security-overview-sql-server-python-services.md)
-<!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
-<!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
-<!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
-<!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
-
-## [Учебники по Python](tutorials/sql-server-python-tutorials.md)
-
+## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python. Запуск Python с помощью T-SQL](tutorials/run-python-using-t-sql.md)
 #### [Упаковка Python в хранимую процедуру](tutorials/wrap-python-in-tsql-stored-procedure.md)
 #### [Обучение и оценка на основе модели Python в SQL Server](tutorials/train-score-using-python-in-tsql.md)
 #### [Создание модели с помощью revoscalepy в контексте вычислений SQL Server](tutorials/use-python-revoscalepy-to-create-model.md)
-
 ### [Python. Дополнительные аналитические функции в базе данных для разработчиков SQL](tutorials/sqldev-in-database-python-for-sql-developers.md)
-
 #### [Скачивание образца данных](tutorials/sqldev-py1-download-the-sample-data.md)
 #### [Импорт данных в SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
 #### [Анализ и визуализация данных](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 #### [Создание функций данных с помощью T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Обучение и сохранение модели](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Ввод модели в эксплуатацию](tutorials/sqldev-py6-operationalize-the-model.md)
-
-# [Сервер машинного обучения (автономный)](r/r-server-standalone.md)
+## [Примеры](https://github.com/Microsoft/sql-server-samples)
+## [Решения](tutorials/data-science-scenarios-and-solution-templates.md)
 
 # [Инструкции](r/sql-server-machine-learning-tasks.md)
 
-## [Управление пакетами R для SQL Server](r/r-package-management-for-sql-server-r-services.md)
-
+## [Управление пакетами](r/r-package-management-for-sql-server-r-services.md)
 ### [Установка новых пакетов R в SQL Server](r/install-additional-r-packages-on-sql-server.md)
-
 ### [Установка новых пакетов Python в SQL Server](python/install-additional-python-packages-on-sql-server.md)
-
-### [Настройка инструментов Python для использования с SQL Server](python/setup-python-client-tools-sql.md)
-
 ### [Включение управления пакетами R для экземпляра SQL Server](r/r-package-how-to-enable-or-disable.md)
-
 ### [Определение установленных пакетов на SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-
 ### [Использование функций RevoScaleR для поиска или установки пакетов R в SQL Server](r/use-revoscaler-to-manage-r-packages.md)
-
 ### [Синхронизация пакетов R, установленных в SQL Server](r/package-install-uninstall-and-sync.md)
-
 ### [Пакеты R, установленные вместе с SQL Server](r/installing-and-managing-r-packages.md)
-
 ### [Создание локального репозитория пакетов с помощью miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-
 ### [Как избежать ошибок, связанных с библиотеками пакетов пользователей для R](r/packages-installed-in-user-libraries.md)
 
 ## Изучение данных и моделирование
-
 ### [Библиотеки и типы данных R](r/r-libraries-and-data-types.md)
 ### [Библиотеки и типы данных Python](python/python-libraries-and-data-types.md)
 ### [Собственная оценка](sql-native-scoring.md)
@@ -128,30 +115,23 @@
 ### [Загрузка объектов R с помощью ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
 ### [Преобразование кода на языке R для использования в службах машинного обучения](r/converting-r-code-for-use-in-sql-server.md)
 ### [Создание нескольких моделей с помощью rxExecBy](r/creating-multiple-models-using-rxexecby.md)
-### [Установка предварительно обученных моделей](r/install-pretrained-models-sql-server.md)
 ### [Использование данных из кубов OLAP в R](r/using-data-from-olap-cubes-in-r.md)
 ### [Создание хранимой процедуры с помощью sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## Производительность
-
 ### [Настройка производительности для R — обзор](r/sql-server-r-services-performance-tuning.md)
 ### [Настройка производительности для R — конфигурация SQL Server](r/sql-server-configuration-r-services.md)
 ### [Настройка производительности для R — R и оптимизация данных](r/r-and-data-optimization-r-services.md)
 ### [Настройка производительности для R — результаты](r/performance-case-study-r-services.md)
 ### [Использование функций профилирования кода R](r/using-r-code-profiling-functions.md)
 
-
 ## Администрирование
-
 ### [Настройка R и управление R](r/configuration-sql-server-r-services.md)
 ### [Дополнительные параметры конфигурации для служб машинного обучения](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Вопросы безопасности для среды выполнения R в SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Изменение пула учетных записей пользователей для служб машинного обучения SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-
 ### [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
-
 ### [Развертывание и использование моделей с помощью веб-служб](operationalization-with-mrsdeploy.md)
-
 ### [Решения управления и мониторинга](r/managing-and-monitoring-r-solutions.md
 ### [Известные проблемы в службах машинного обучения](r/resource-governance-for-r-services.md)
 ### [Создание пула ресурсов для машинного обучения](r/how-to-create-a-resource-pool-for-r.md)
@@ -161,6 +141,15 @@
 ### [Использование функций профилирования кода R](r/using-r-code-profiling-functions.md)
 ### [Мониторинг служб машинного обучения с помощью настраиваемых отчетов в Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
+# [Справочник](r/machine-learning-services-r-reference.md)
+
+## [MicrosoftML](using-the-microsoftml-package.md)
+## [RevoScaleR](r/revoscaler-overview.md)
+### [Функции RevoScaleR для данных SQL Server](r/scaler-functions-for-working-with-sql-server-data.md)
+## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
+## [revoscalepy](python/what-is-revoscalepy.md)
+
 # Ресурсы
 
 ## [Известные проблемы](known-issues-for-sql-server-machine-learning-services.md)
@@ -169,17 +158,12 @@
 ## [Использование R в Базах данных SQL Azure](r/using-r-in-azure-sql-database.md)
 
 ## [Рекомендации по настройке и устранению неполадок](machine-learning-troubleshooting-faq.md)
-### [Подготовка виртуальной машины обработки и анализа данных](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Настройка виртуальной машины](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Сбор данных для устранения неполадок](data-collection-ml-troubleshooting-process.md)
 ### [Вопросы и ответы по обновлению и установке](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [Распространенные проблемы при выполнении внешних скриптов](common-issues-external-script-execution.md)
-## [Привязка к Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-## [Настройка средств обработки и анализа данных](r/setup-or-configure-r-tools.md)
-## [Настройка клиента обработки и анализа данных](r/set-up-a-data-science-client.md)
-## [Настройка виртуальной машины](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## Блоги
-
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Машинное обучение](https://blogs.technet.microsoft.com/machinelearning/)
@@ -187,17 +171,3 @@
 ## Форумы отзывов
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
 ### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
-
-# [Справочник](r/machine-learning-services-r-reference.md)
-## [MicrosoftML](using-the-microsoftml-package.md)
-## [RevoScaleR](r/revoscaler-overview.md)
-### [Функции RevoScaleR для данных SQL Server](r/scaler-functions-for-working-with-sql-server-data.md)
-## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
-## [RevoScalePy](python/what-is-revoscalepy.md)
-
-# [Шаблоны и примеры](tutorials/machine-learning-services-tutorials.md)
-
-## [Шаблоны решений по обработке и анализу данных](tutorials/data-science-scenarios-and-solution-templates.md)
-## [Образцы SQL Server](https://github.com/Microsoft/sql-server-samples)
-

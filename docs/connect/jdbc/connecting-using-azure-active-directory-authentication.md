@@ -1,28 +1,28 @@
 ---
-title: "Подключение с использованием проверки подлинности Azure Active Directory | Документы Microsoft"
-ms.custom: 
+title: Подключение с использованием проверки подлинности Azure Active Directory | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 Это статье содержатся сведения о разработке приложений Java, чтобы использовать функцию проверки подлинности Azure Active Directory с Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server.
@@ -212,16 +212,15 @@ You have successfully logged on as: <your user name>
 1.  Создайте учетную запись приложения в Azure Active Directory для службы.
     1. Войдите в портал управления Azure
     2. В панели навигации слева щелкните Azure Active Directory
-    3. Щелкните клиент каталога, которую вы хотите зарегистрировать образца приложения. Это должен быть том же каталоге, который связан с базой данных (сервер размещения базы данных).
-    4. Щелкните вкладку "приложения".
-    5. В ящике нажмите кнопку "Добавить".
-    6. Нажмите кнопку «Добавить приложение, разрабатываемое моей организацией».
-    7. Введите mytokentest как понятное имя для приложения, выберите «Веб-приложение и/или Web API» и нажмите кнопку Далее.
-    8. При условии, что это приложение является управляющей программы или службы и не веб-приложения, оно не содержит знак в URL-адрес или URI идентификатора приложения. Для этих двух полей введите http://mytokentest
-    9. Хотя по-прежнему на портале Azure на вкладке Настройка приложения
-    10. Найдите значение идентификатора клиента и скопируйте его, потребуется позднее при настройке приложения (например, a4bbfe26-dbaa-4fec-8ef5-223d229f647d). См. в следующем моментальном снимке.
-    11. В разделе «Ключи» выберите длительность ключ, сохранить конфигурацию и скопируйте ключ для последующего использования. Это секрет клиента.
-    12. Внизу щелкните «Просмотреть конечные точки» и скопируйте URL-адрес в разделе «ENDPOINT АВТОРИЗАЦИИ OAUTH 2.0» для последующего использования. Это URL-адрес службы маркеров безопасности.
+    3. Перейдите на вкладку «Регистрация приложения».
+    4. В ящике нажмите кнопку «Регистрация нового приложения».
+    5. Введите понятное имя для приложения mytokentest, выберите «веб-приложения и API».
+    6. URL-адрес входа не требуется. Дайте ничего: «http://mytokentest».
+    7. Нажмите кнопку «Создать» в нижней.
+    9. Хотя по-прежнему на портале Azure на вкладке «Параметры», приложения и откройте вкладку «Свойства».
+    10. Найти значение «Идентификатор приложения» (также НАЗЫВАЕМОГО идентификатор клиента) и скопируйте его, потребуется позднее при настройке приложения (например, 1846943b-ad04-4808-aa13-4702d908b5c1). См. в следующем моментальном снимке.
+    11. Найти значение «URL-адрес идентификатор приложения» и скопируйте его, это URL-адрес службы маркеров безопасности.
+    12. В разделе «Ключи» создайте ключ, заполнив поля «имя», выбрав длительность ключа и сохранения конфигурации (оставьте пустым поле значения). После сохранения, значение поля должно иметь заполняется автоматически, скопируйте сформированное значение. Это секрет клиента.
 
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Войдите на сервер SQL Azure пользовательской базы данных как администратора Azure Active Directory и пользователь автономной базы данных с помощью резервов команды T-SQL, для основного приложения. В разделе [подключение к базе данных SQL или SQL данные хранилища с использованием Azure Active Directory проверки подлинности](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Дополнительные сведения о создании администратора Azure Active Directory и пользователь автономной базы данных.
@@ -253,8 +252,8 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
