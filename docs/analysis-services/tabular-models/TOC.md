@@ -1,6 +1,7 @@
 # [Обзор](tabular-models-ssas.md)  
 
 # [Создание табличных моделей](tabular-model-solutions-ssas-tabular.md)  
+## [Поддерживаемые источники данных в 1400 табличных моделях](data-sources-supported-ssas-tabular-1400.md)  
 ## [Поддерживаемые источники данных в 1200 табличных моделях](data-sources-supported-ssas-tabular.md)  
 ## [Поддерживаемые типы данных](data-types-supported-ssas-tabular.md)  
 ## [Конструктор табличных моделей](tabular-model-designer-ssas.md)  
@@ -23,6 +24,8 @@
 ### [Настройка моделирования данных по умолчанию и свойств развертывания](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## Импорт данных
+
+### [Поддерживаемые источники данных в 1400 табличных моделях](data-sources-supported-ssas-tabular-1400.md)  
 ### [Поддерживаемые источники данных в 1200 табличных моделях](data-sources-supported-ssas-tabular.md)  
 ### [Поддерживаемые типы данных](data-types-supported-ssas-tabular.md)  
 ### [Олицетворение](impersonation-ssas-tabular.md)  
