@@ -1,0 +1,5 @@
+# [Filestream и OLE DB](filestream-and-ole-db.md)
+# [Чтение столбца FILESTREAM в файле с использованием интерфейса IBCPSession (OLE DB)](read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)
+# [Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB)](retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)
+# [Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)
+# [Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)
