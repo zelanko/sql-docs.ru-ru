@@ -106,6 +106,66 @@
                     - name: Синтаксис
                       href: /sql/odbc/reference/syntax/
                       homepage: /sql/odbc/reference/syntax/odbc-reference
+            - name: OLE DB
+              href: /sql/connect/oledb/
+              homepage: /sql/connect/oledb/oledb-driver-for-sql-server-programming
+              items:
+                - name: Компоненты
+                  href: /sql/connect/oledb/features/
+                  homepage: /sql/connect/oledb/features/oledb-driver-for-sql-server-features
+                - name: Приложения
+                  href: /sql/connect/oledb/applications/
+                  homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
+                - name: OLE DB
+                  href: /sql/connect/oledb/ole-db/
+                  homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db
+                  items:
+                    - name: Драйвер
+                      href: /sql/connect/oledb/ole-db-driver/
+                      homepage: /sql/connect/oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application
+                    - name: Объекты источника данных
+                      href: /sql/connect/oledb/ole-db-data-source-objects/
+                      homepage: /sql/connect/oledb/ole-db-data-source-objects/data-source-objects-ole-db
+                    - name: Команды
+                      href: /sql/connect/oledb/ole-db-commands/
+                      homepage: /sql/connect/oledb/ole-db-commands/commands
+                    - name: Наборы строк
+                      href: /sql/connect/oledb/ole-db-rowsets/
+                      homepage: /sql/connect/oledb/ole-db-rowsets/rowsets
+                    - name: Большие двоичные объекты
+                      href: /sql/connect/oledb/ole-db-blobs/
+                      homepage: /sql/connect/oledb/ole-db-blobs/blobs-and-ole-objects
+                    - name: Таблицы и индексы
+                      href: /sql/connect/oledb/ole-db-tables-indexes/
+                      homepage: /sql/connect/oledb/ole-db-tables-indexes/tables-and-indexes
+                    - name: Типы данных
+                      href: /sql/connect/oledb/ole-db-data-types/
+                      homepage: /sql/connect/oledb/ole-db-data-types/data-types-ole-db
+                    - name: Возвращающие табличное значение параметры
+                      href: /sql/connect/oledb/ole-db-table-valued-parameters/
+                      homepage: /sql/connect/oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db
+                    - name: Дата и время
+                      href: /sql/connect/oledb/ole-db-date-time/
+                      homepage: /sql/connect/oledb/ole-db-date-time/date-and-time-improvements-ole-db
+                    - name: Transactions
+                      href: /sql/connect/oledb/ole-db-transactions/
+                      homepage: /sql/connect/oledb/ole-db-transactions/transactions
+                    - name: ошибки
+                      href: /sql/connect/oledb/ole-db-errors/
+                      homepage: /sql/connect/oledb/ole-db-errors/errors
+                    - name: Интерфейсы
+                      href: /sql/connect/oledb/ole-db-interfaces/
+                      homepage: /sql/connect/oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces
+                    - name: Как
+                      href: /sql/connect/oledb/ole-db-how-to/
+                      homepage: /sql/connect/oledb/ole-db-how-to/ole-db-how-to-topics
+                      items:
+                        - name: Результаты
+                          href: /sql/connect/oledb/ole-db-how-to/results/
+                          homepage: /sql/connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db
+                        - name: FileStream
+                          href: /sql/connect/oledb/ole-db-how-to/filestream/
+                          homepage: /sql/connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db
             - name: PHP
               href: /sql/connect/php/
               homepage: /sql/connect/php/microsoft-php-driver-for-sql-server
