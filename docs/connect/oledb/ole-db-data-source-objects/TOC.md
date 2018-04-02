@@ -1,0 +1,7 @@
+# [Объекты источников данных (OLE DB)](data-source-objects-ole-db.md)
+# [Свойства сведений об источнике данных](data-source-information-properties.md)
+# [Свойства источника данных (OLE DB)](data-source-properties-ole-db.md)
+# [Свойства инициализации и авторизации](initialization-and-authorization-properties.md)
+# [Материализованные объекты источника данных](persisted-data-source-objects.md)
+# [Свойства сеанса — драйвер OLE DB для SQL Server](session-properties-oledb-driver-for-sql-server.md)
+# [Сеансы](sessions.md)
