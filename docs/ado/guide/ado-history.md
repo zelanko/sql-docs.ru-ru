@@ -1,29 +1,29 @@
 ---
-title: "Журнал ADO | Документы Microsoft"
-ms.custom: 
+title: Журнал ADO | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>Функции ADO для каждого выпуска
 В этом разделе перечислены новые функции, представленные для каждого выпуска ADO, ADO MD и ADOX.
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
  *За пределами зоны надежных узлов не разрешен доступ жесткого диска.*
 В междоменная работа со скриптами с использованием ненадежных узлов, будут отключены следующие операции: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, и **Recordset.Open**используется в сочетании с **adCmdFile** флаг или с помощью поставщика Microsoft OLE DB сохраняемости (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *и* **Stream.LoadFromFile***обрабатывает только физические файлы.* 
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, и* **Stream.LoadFromFile***обрабатывает только физические файлы.* 
 Эти методы теперь убедитесь, что дескрипторы файлов указывают только физические файлы.
 
  **Recordset.ActiveCommand***возвращает ошибку при вызове с HTML и ASP-страницы.* 
@@ -50,24 +50,24 @@ ms.lasthandoff: 02/09/2018
  *Поддержка 64-разрядной платформы* ADO 2.7 появилась поддержка для 64-разрядных процессоров.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***метод* начиная с ADO 2.6, объекты ADO MD можно получить с помощью уникальные имена в соответствии с [свойство UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Имена родительских объектов не обязательно должны быть известны и родительские коллекции, не нужно заполнять для получения схемы объекта. В разделе [GetSchemaObject метод (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***метод* начиная с ADO 2.6, объекты ADO MD можно получить с помощью уникальные имена в соответствии с [свойство UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Имена родительских объектов не обязательно должны быть известны и родительские коллекции, не нужно заполнять для получения схемы объекта. В разделе [GetSchemaObject метод (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Команда потоки* **команда** объект поддерживает команды в формате потока в качестве альтернативы использованию **CommandText** свойство. [Свойство CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) может использоваться для указания XML-шаблоны или диаграмм обновления как **команда** входа с поставщик Microsoft OLE DB для SQL Server.
 
- **Диалект***свойство* [диалект](../../ado/reference/ado-api/dialect-property.md) новое свойство, которое определяет синтаксис и общие правила, что поставщик использует для синтаксического анализа в строку или поток.
+ **Диалект***свойство* [диалект](../../ado/reference/ado-api/dialect-property.md) новое свойство, которое определяет синтаксис и общие правила, что поставщик использует для синтаксического анализа в строку или поток.  
 
- **Command.Execute***метод* [выполнить метод](../../ado/reference/ado-api/execute-method-ado-command.md) объекта ADO **команда** объект был расширен и теперь использовать потоки для ввода и вывода.
+ **Command.Execute***метод* [выполнить метод](../../ado/reference/ado-api/execute-method-ado-command.md) объекта ADO **команда** объект был расширен и теперь использовать потоки для ввода и вывода.  
 
  *Поле statusvalues* Если пользователь, возникает ошибка DB_E_ERRORSOCCURRED, при изменении **поле** из **записей**, теперь заполнит ADO **Field.Status**свойство информация о состоянии соответствующие, чтобы пользователь будет иметь дополнительные сведения о том, что пошло не так. В разделе [свойство Status (поле ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***свойство* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) — это новое свойство **команды** с именем объекта, который указывает, должен использовать поставщика параметры.
+ **NamedParameters***свойство* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) — это новое свойство **команды** с именем объекта, который указывает, должен использовать поставщика параметры.  
 
  *Результирующие наборы в потоках* ADO может возвращать результирующие наборы из источника данных в **поток**, а не **записей** объекта. Использует последнюю версию поставщика Microsoft OLE DB для SQL Server, можно получить XML-результатов от поставщика, выполнение запроса «Для XML». Объект **поток** результирующий набор, который получает можно открыть с помощью команды «Для XML» как источник. В разделе [получение результирующих наборов в потоки](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
  *Результирующий набор одну строку* ADO **запись** объекта будет открываться в командной строке или **команда** объект, который возвращает одну строку данных от поставщика. Это позволяет повысить производительность с поставщиками MDAC 2.6. В разделе [Open-метод (запись ADO)](../../ado/reference/ado-api/open-method-ado-record.md).
 
 ## <a name="ado-25"></a>ADO 2.5
- **Запись** *объекта* вводит ADO 2.5 **записи** объекта для представления и управления строку из **записей** или поставщик данных или объект Инкапсуляция частично структурированных данных, например файла или каталога.
+ **Запись** *объекта* вводит ADO 2.5 **запись** объекта для представления и управления строку из **записей** или поставщик данных, или объект инкапсуляции частично структурированных данных, например файла или каталога.
 
  **Поток** *объекта* ADO 2.5 также вводит **поток** объект для представления потока двоичных или текстовых данных.
 

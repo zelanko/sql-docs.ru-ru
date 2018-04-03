@@ -1,31 +1,31 @@
 ---
-title: "Табличный шаблон баз данных | Документы Microsoft"
-ms.custom: 
+title: Табличный шаблон баз данных | Документы Microsoft
+ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cbfa3c258d784b3a591abd13c2eb90f333bf53a1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 74bcec8f68523c772f9d903ec285b2b7632a1f29
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>Управление базами данных развернутой табличной модели
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-База данных табличной модели — это база данных служб Analysis Services, которая создается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью шаблона проекта табличной модели служб Analysis Services, где таблицы и связи являются основными структурами для представления данных.  
+  База данных табличной модели — это база данных служб Analysis Services, которая создается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью шаблона проекта табличной модели служб Analysis Services, где таблицы и связи являются основными структурами для представления данных.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Обработка базы данных, таблицы или секции (службы Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)  
@@ -40,8 +40,8 @@ ms.lasthandoff: 02/23/2018
   
 
     
-## <a name="related-content"></a>См. также  
- [Решения табличных моделей](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Решения табличных моделей](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
  [Доступ к данным табличной модели](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 

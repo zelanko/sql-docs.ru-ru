@@ -1,29 +1,29 @@
 ---
-title: "Проблемы проектирования безопасности ADO | Документы Microsoft"
-ms.custom: 
+title: Проблемы проектирования безопасности ADO | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9345a48ff39fe4c2a6cd9af03778ef8904986958
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 21fa5dbf11649f350a9d5d2614d83d6b45011147
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-security-design-features"></a>Средства разработки безопасности ADO
 В следующих разделах описаны функции проектирования безопасности в данных ActiveX объектов (ADO) 2.8 и более поздних версий. Эти изменения были внесены в ADO 2.8 для повышения безопасности. ADO 6.0, включенный в Windows DAC 6.0 в Windows Vista, функционально эквивалентен ADO 2.8, включенного в компонентах MDAC 2.8 в Windows XP и Windows Server 2003. Этот раздел содержит сведения о том, как лучше всего безопасности приложений в ADO 2.8 или более поздней версии.

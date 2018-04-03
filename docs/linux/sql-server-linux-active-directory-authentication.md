@@ -1,6 +1,6 @@
 ---
-title: "Active учебника каталога проверки подлинности для SQL Server для Linux | Документы Microsoft"
-description: "Этот учебник шаги конфигурации используется для проверки подлинности AAD для SQL Server в Linux."
+title: Active учебника каталога проверки подлинности для SQL Server для Linux | Документы Microsoft
+description: Этот учебник шаги конфигурации используется для проверки подлинности AAD для SQL Server в Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
@@ -8,19 +8,19 @@ manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник: Проверка подлинности Active Directory используйте с помощью SQL Server в Linux
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/24/2018
 
 Выполните следующие действия, чтобы присоединить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену Active Directory:
 
-1. Используйте  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  для присоединения к домену AD хост-компьютере. Если это еще не сделано, установите на клиентские пакеты Kerberos и realmd [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера с помощью диспетчера пакетов дистрибутив Linux:
+1. Используйте **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** для присоединения к домену AD хост-компьютере. Если это еще не сделано, установите на клиентские пакеты Kerberos и realmd [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера с помощью диспетчера пакетов дистрибутив Linux:
 
    ```bash
    # RHEL
@@ -137,6 +137,8 @@ ms.lasthandoff: 02/24/2018
    > Если появится сообщение об ошибке, «не установлены необходимые пакеты», то следует установить эти пакеты с помощью диспетчера пакетов дистрибутив Linux, перед запуском `realm join` еще раз.
    >
    > Если появляется сообщение об ошибке «Недостаточно разрешений на присоединение к домену» затем необходимо проконсультироваться с администратором домена, что разрешения достаточны для присоединения к домену компьютеры Linux.
+   >
+   > Если появляется сообщение об ошибке, «ответ контроллера Kerberos-домена не соответствует ожиданиям,» затем может не были выбраны правильные имя пользователя. Имена областей чувствительны к регистру, обычно прописные буквы и могут идентифицироваться с помощью команды `realm discover contoso.com`.
    
    > SQL Server использует SSSD и NSS для сопоставления идентификаторов безопасности (SID) учетных записей пользователей и групп. SSSD должна быть настроена и запущена в порядке для SQL Server для создания имен входа AD успешно. Realmd обычно выполняется автоматически в процессе присоединения к домену, но в некоторых случаях это необходимо сделать отдельно.
    >
@@ -145,7 +147,7 @@ ms.lasthandoff: 02/24/2018
   
 5. Убедитесь, что теперь можно собрать сведения о пользователе из домена и что можно получить билет Kerberos, что и пользователь.
 
-   В следующем примере используется **идентификатор**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, и  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  команд для этого.
+   В следующем примере используется **идентификатор**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, и **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** команд для этого.
 
    ```bash
    id user@contoso.com
@@ -170,7 +172,7 @@ ms.lasthandoff: 02/24/2018
 ## <a id="createuser"></a> Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы
 
   > [!NOTE]
-  > Далее шаги использования вашей [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением работы.
+  > Далее шаги использования вашей [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** перед продолжением работы.
 
 1. На контроллере домена запустите [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) команду PowerShell, чтобы создать нового пользователя AD с помощью пароля, срок действия не ограничен. В этом примере имена учетной записи «mssql», но имя учетной записи может быть любое. Вам будет предложено ввести новый пароль для учетной записи:
 
@@ -206,7 +208,7 @@ ms.lasthandoff: 02/24/2018
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Создание файла keytab с  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  для пользователя AD, созданный на предыдущем шаге. При появлении запроса введите пароль для этой учетной записи AD.
+2. Создание файла keytab с **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** для пользователя AD, созданный на предыдущем шаге. При появлении запроса введите пароль для этой учетной записи AD.
 
    ```bash
    sudo ktutil
