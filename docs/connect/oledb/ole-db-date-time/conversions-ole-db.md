@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e363464201a3d80c296ccd111e6708d5b3176501
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: f6bff4cdd5ea1a6b2fef3283ba9c0413e3d26842
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="conversions-ole-db"></a>Преобразования (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/30/2018
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, выполняемые драйвер OLE DB для SQL Server, отличаются от спецификации OLE DB.  
+>  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. Драйвер OLE DB для SQL Server следует совпадает с поведением [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. В результате некоторые преобразования, выполняемые драйвер OLE DB для SQL Server, отличаются от спецификации OLE DB.  
   
  Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» раздела [поддержка типов данных даты OLE DB и улучшения времени](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   

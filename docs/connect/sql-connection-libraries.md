@@ -11,13 +11,13 @@ ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 08/09/2017
+ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
@@ -27,7 +27,6 @@ ms.lasthandoff: 03/28/2018
 - MacOS
 - Windows
 
-
 #### <a name="oop-to-relational-mismatch"></a>Объектно реляционные несоответствие
 
 *Реляционные*: клиентские программы, записанные в объектно ориентированный язык программирования (OOP) часто использовать драйверы SQL, которые возвращают запрашиваемые данные в формате, несколько реляционных, чем объектно-ориентированной. С помощью ADO.NET в C# является одним из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код объектно-ориентированное Программирование.
@@ -35,7 +34,6 @@ ms.lasthandoff: 03/28/2018
 *Объектно-реляционные Преобразователи*: других драйверов или платформы возврата запрошенных данных в формате объектно-ориентированное Программирование, как избежать несоответствия. Эти драйверы работать, ожидается, что классы были определены для сопоставления столбцов данных из отдельных таблиц SQL. Драйвер выполняет *объектно реляционное сопоставление* (ORM) для возврата результатов запроса в виде экземпляра класса. Корпорации Майкрософт Entity Framework (EF) для C# и режима гибернации для Java, приведены два примера.
 
 Этой статье использует отдельные разделы для помещения в эти два вида драйверы соединения.
-
 
 <a name="anchor-20-drivers-relational-access" />
 
@@ -53,18 +51,16 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-
 | Язык | Загрузка драйвера SQL |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core для Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core для MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core для Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
-| Node.js  | [Драйвер node.js, инструкции по установке](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Драйвер PHP Linux или macOS из Github](http://github.com/Microsoft/msphpsql/) |
-| Python   | [pyodbc инструкции по установке](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Загрузите ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Драйвер Ruby, инструкции по установке](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Страница загрузки Ruby](https://rubyinstaller.org/downloads/) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core для Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core для MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core для Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Node.js | [Драйвер node.js, инструкции по установке](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Драйвер PHP Linux или macOS из Github](http://github.com/Microsoft/msphpsql/) |
+| Python | [pyodbc инструкции по установке](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Загрузите ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Драйвер Ruby, инструкции по установке](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Страница загрузки Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
-
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -82,14 +78,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
 | Ruby | [Ruby на направляющие](http://rubyonrails.org/) |
-| &nbsp; | <br /> |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Сборки в приложение веб-страниц
-
-
 [http://aka.ms/sqldev](http://aka.ms/sqldev) Вы перейдете на набор *сборки в приложении* веб-страниц. Веб-страниц содержат сведения о многочисленные сочетания программирования языка, операционной системы и драйвера подключения SQL. Помимо сведений, предоставляемых сборки в приложение веб-страниц являются следующие элементы:
 
 - Сведения о том, как приступить к работе с самого начала, для каждого сочетания языка + операционной системы и драйвера.
@@ -99,24 +92,16 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
     - Примеры кода ORM.
     - Демонстрации индекс ColumnStore для значительно повысить производительность.
 
-
 #### <a name="first-page-of-build-an-app-webpages"></a>Первая страница сборки в приложение веб-страниц
-
 ![Сборки в приложение веб-страниц, первая страница экрана][image-ref-163-buildanapp-webpages-first-page]
 
-
 #### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Меню для Java - Ubuntu сборки в приложение веб-страниц
-
 ![Сборки в приложение веб-страниц, меню Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
 
 &nbsp;
 
-
 ## <a name="related-links"></a>Связанные ссылки
-
 - [Примеры для подключения к базе данных SQL Azure в облаке, с использованием Java и других языков кода](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
-
 
 <!-- Image references -->
 

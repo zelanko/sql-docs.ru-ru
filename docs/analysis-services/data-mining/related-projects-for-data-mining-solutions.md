@@ -1,31 +1,31 @@
 ---
-title: "Связанные проекты для решений интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
+title: Связанные проекты для решений интеллектуального анализа данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Связанные проекты для решений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Для решения интеллектуального анализа данных требуется, как минимум, проект интеллектуального анализа данных, определяющий источники данных, представления источников данных, структуры и модели интеллектуального анализа данных. Однако, если модели интеллектуального анализа данных используются для каждодневного принятия решений, важно, чтобы интеллектуальный анализ данных интегрировался с другой частью решения для прогнозирующего анализа, включая следующие процессы и компоненты.  
+  Для решения интеллектуального анализа данных требуется, как минимум, проект интеллектуального анализа данных, определяющий источники данных, представления источников данных, структуры и модели интеллектуального анализа данных. Однако, если модели интеллектуального анализа данных используются для каждодневного принятия решений, важно, чтобы интеллектуальный анализ данных интегрировался с другой частью решения для прогнозирующего анализа, включая следующие процессы и компоненты.  
   
 -   Подготовка и выбор данных и переменных Включает очистку данных, управление метаданными и интеграцию нескольких источников данных, а также преобразование, слияние данных и загрузку в хранилище данных.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/23/2018
  [семантическое индексирование](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> службы SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют компоненты и функции, необходимые для подготовки данных и обучения моделей в проекте интеллектуального анализа данных. Хотя многие задачи очистки и подготовки данных можно решить с помощью других инструментов, например скриптов, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеют множество преимуществ для интеллектуального анализа данных.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]предоставляют компоненты и компоненты, необходимые для подготовки данных и обучения моделей в проекте интеллектуального анализа данных. Хотя многие задачи очистки и подготовки данных можно решить с помощью других инструментов, например скриптов, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеют множество преимуществ для интеллектуального анализа данных.  
   
 -   Представляют задачи как часть рабочего процесса, которую можно повторять, автоматизировать, разветвлять и расширять.  
   
@@ -209,6 +209,6 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>См. также  
  [Решения многомерной модели ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Решения табличных моделей](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Решения табличных моделей](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

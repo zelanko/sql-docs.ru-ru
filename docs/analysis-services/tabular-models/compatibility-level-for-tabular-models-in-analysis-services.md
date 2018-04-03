@@ -1,28 +1,29 @@
 ---
-title: "Уровень совместимости для табличных моделей в службах Analysis Services | Документы Microsoft"
-ms.custom: 
-ms.date: 10/16/2017
+title: Уровень совместимости для табличных моделей в службах Analysis Services | Документы Microsoft
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Уровень совместимости для табличных моделей служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 Уровень совместимости 1400 функциональные возможности включают:
 
 *  Новая инфраструктура для импорта в табличной модели и подключение к данным с поддержкой TOM API-интерфейсы и скрипты TMSL. Это обеспечивает поддержку дополнительных данных источников, таких как хранилище больших двоичных объектов Azure. Дополнительные источники данных будут указывать включены в будущих обновлений.
-*  Преобразование данных и данных возможности гибридного веб-приложения с помощью выражений получение данных и M.
+*  Преобразование данных и данных возможности гибридного веб-приложения с помощью выражений получение данных и M в SSDT.
 *  Меры теперь поддерживает свойство строки подробностей выражение DAX, включение средств бизнес-Аналитики, таких как Microsoft Excel перехода на подробные данные из статистических отчета. Например при конечным пользователям просматривать общий объем продаж по региону и месяц, режиме связанного заказе. 
 *  Безопасность на уровне объекта для имена таблиц и столбцов в дополнение к данным в них.
 *  Расширенная поддержка для неоднородных иерархий.
@@ -48,10 +49,10 @@ ms.lasthandoff: 01/08/2018
 |**Уровень совместимости**|**Версия сервера**| 
 |1400|Azure служб Analysis Services, SQL Server 2017 г. |  
 |1200|Azure Analysis Services, SQL Server 2017 г., SQL Server 2016| 
-|1103|SQL Server 2017 г *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
-|1100|SQL Server 2017 г *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\*уровни совместимости 1100 и 1103 являются устаревшими в 2017 г. SQL Server.
+\* уровни совместимости 1100 и 1103 являются устаревшими в 2017 г. SQL Server.
   
 ## <a name="set-compatibility-level"></a>Уровень совместимости набор 
  При создании нового проекта табличной модели в SQL Server Data Tools (SSDT), можно указать уровень совместимости на **конструктор табличных моделей** диалогового окна. 
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
  Это свойство указывает наивысший уровень совместимости базы данных, которая будет выполняться на сервере. Поддерживаемый уровень совместимости доступен только для чтения. Его нельзя изменить.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Уровень совместимости многомерной базы данных](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Новые возможности служб Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Создание нового проекта табличной модели](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  

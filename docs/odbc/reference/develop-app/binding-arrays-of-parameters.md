@@ -1,31 +1,32 @@
 ---
-title: "Привязка массивов параметров | Документы Microsoft"
-ms.custom: 
+title: Привязка массивов параметров | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>Привязка массивы параметров
 Приложения, использующие массивы параметров связать массивы с параметрами в инструкции SQL. Существует два стиля привязки:  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  Привязка на уровне столбца значение по умолчанию. Приложения также можно изменить из привязка привязка на уровне столбцов, установив атрибут инструкции SQL_ATTR_PARAM_BIND_TYPE. На следующем рисунке, на уровне столбца работает привязка.  
   
- ![Показано, как столбец &#45; works статистику привязки](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Показано, как столбец&#45;статистику происходит связывание](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  Например следующий код связывает 10-элементные массивы параметров для столбцов PartID, описаний и цен и выполняет инструкцию, чтобы вставить 10 строк. Используется привязка на уровне столбцов.  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  где строки пронумерованы от 1 до размера набор параметров. Смещения, если оно определено, является значение, указанное в атрибуте SQL_ATTR_PARAM_BIND_OFFSET_PTR инструкции. Ниже показано, как на уровне строки работает привязки. Параметры могут размещаться в структуре в любом порядке, но отображаются в последовательном порядке для ясности.  
   
- ![Отображает строки &#45; works статистику привязки](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Отображает строки&#45;статистику происходит связывание](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  Следующий код создает структуру с элементов для значений, следует хранить в столбцах PartID, описание и цену. Затем выделяет массив из 10 элементов этих структур и привязывает его к параметрам для столбцов PartID, описаний и цен, используя привязку на уровне строки. Затем выполняется инструкция insert 10 строк.  
   
