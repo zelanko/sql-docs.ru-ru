@@ -1,29 +1,28 @@
 ---
-title: "Использовать модель Python в SQL для обучения и оценки | Документы Microsoft"
+title: Использовать модель Python в SQL для обучения и оценки | Документы Microsoft
 titleSuffix: SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 02/28/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 20ba339a29a62fbcffde31828062bee440042d63
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 976ccb21ed125bb65ba52eb05fd8b08664061a31
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="use-python-model-in-sql-for-training-and-scoring"></a>Использовать модель Python в SQL для обучения и оценки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -156,7 +155,7 @@ ms.lasthandoff: 03/08/2018
 
     В этом примере были приложены простой, используя данные из набора данных iris Python для оценки. (См. в строке `iris_data[[1,2,3,4]])`.) Однако более обычно выполнить SQL-запрос для получения новых данных и передачи, в Python как `InputDataSet`. 
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Замечания
 
 Если вы привыкли работать в Python, может быть привычно загрузка данных, создание некоторых сводки и диаграмм, а затем Обучение модели и создание некоторые показатели в 250 одной строки кода.
 

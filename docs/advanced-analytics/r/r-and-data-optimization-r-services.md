@@ -1,26 +1,24 @@
 ---
-title: "Производительность служб R - оптимизация данных | Документы Microsoft"
-ms.custom: 
+title: Производительность служб R - оптимизация данных | Документы Microsoft
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Производительность служб R - оптимизация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +137,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`поддерживает `maxDepth` параметр, который управляет глубину дерева принятия решений. Как `maxDepth` является увеличение производительности может привести к снижению, поэтому важно проанализировать преимущества увеличении глубины и что приводит к падению производительности.
+    `rxDTree` поддерживает `maxDepth` параметр, который управляет глубину дерева принятия решений. Как `maxDepth` является увеличение производительности может привести к снижению, поэтому важно проанализировать преимущества увеличении глубины и что приводит к падению производительности.
 
     Можно также управлять баланс между времени точность сложности и прогноза путем настройки параметров, таких как `maxNumBins`, `maxDepth`, `maxComplete`, и `maxSurrogate`. Если увеличить глубину до 10 или 15, стоимость вычислений сильно увеличится.
 

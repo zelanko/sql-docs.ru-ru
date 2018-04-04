@@ -1,26 +1,24 @@
 ---
-title: "Компоненты SQL Server для поддержки R | Документы Microsoft"
-ms.custom: 
+title: Компоненты SQL Server для поддержки R | Документы Microsoft
+ms.custom: ''
 ms.date: 04/05/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: cc9f600d6bfce5d522abb8452800c35f41069b92
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Компоненты SQL Server для поддержки R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ BxlServer использует вспомогательное соединени
 4. BxlServer взаимодействует со средой выполнения R для управления обменом данными между [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и хранилищем результатов работы.
 5. Вспомогательные SQL управляет взаимодействием связанные задачи и процессы, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer использует вспомогательное соединение SQL для передачи состояния и результатов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Возвращает результаты и закрывает связанные задачи и процессы.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] получает результаты и закрывает связанные задачи и процессы.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Скрипты R, выполняемые из удаленного клиента
 
@@ -132,7 +130,7 @@ BxlServer использует вспомогательное соединени
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Общие сведения об архитектуре](architecture-overview-sql-server-r.md)
+[Обзор архитектуры](architecture-overview-sql-server-r.md)
 
 [Общие сведения о безопасности](security-overview-sql-server-r.md)
 

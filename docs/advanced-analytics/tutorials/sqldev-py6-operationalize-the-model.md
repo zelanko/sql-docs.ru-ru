@@ -1,30 +1,28 @@
 ---
-title: "Шаг 6: Ввода в эксплуатацию модели Python, с помощью SQL Server | Документы Microsoft"
-ms.custom: 
+title: 'Шаг 6: Ввода в эксплуатацию модели Python, с помощью SQL Server | Документы Microsoft'
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Шаг 6: Ввода в эксплуатацию модели Python, с помощью SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -354,16 +352,16 @@ GO
 
 Выходные данные обе процедуры — вероятность совета оплачиваемой для маршрута такси с указанными параметрами и компонентами.
 
-### <a name="changes"></a>Изменения
+### <a name="changes"></a> Изменения
 
 В этом разделе перечислены изменения в код, используемый в этом учебнике. Эти изменения были внесены в соответствии с последней **revoscalepy** версии. Дополнительные сведения о API см [Python функции Справочник по библиотеке](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
 | Изменить сведения о | Примечания|
 | ----|----|
 | Удалить `import pandas` всех выборок| pandas теперь загрузки по умолчанию|
-| функция `rx_predict_ex` изменено на`rx_predict`| Требуется RTM и предварительных версий`rx_predict_ex`|
-| функция `rx_logit_ex` изменено на`rx_logit`| Требуется RTM и предварительных версий`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`изменено на`prob_list = prob_array["tipped_Pred"].values`| обновления для API|
+| функция `rx_predict_ex` изменено на `rx_predict`| Требуется RTM и предварительных версий `rx_predict_ex`|
+| функция `rx_logit_ex` изменено на `rx_logit`| Требуется RTM и предварительных версий `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` изменено на `prob_list = prob_array["tipped_Pred"].values`| обновления для API|
 
 Если вы установили службы Python, с помощью предварительной версии SQL Server 2017 г., рекомендуется обновить. Можно также обновить только компоненты Python и R с помощью последний выпуск сервера Machine обучения. Дополнительные сведения см. в разделе [с использованием привязки для обновления экземпляра SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

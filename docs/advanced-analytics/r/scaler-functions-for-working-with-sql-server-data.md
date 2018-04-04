@@ -1,28 +1,26 @@
 ---
-title: "Функции RevoScaleR для работы с данными SQL Server | Документы Microsoft"
-ms.custom: 
+title: Функции RevoScaleR для работы с данными SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 70591237d61d81dd78b09a5ce0c7d251a1b29796
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>Функции RevoScaleR для работы с данными SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 02/11/2018
 
 Из R, может выполнять инструкции DDL, если у вас есть необходимые разрешения для экземпляра и базы данных. Следующие функции использовать вызовы ODBC на выполнение инструкций DDL или получить схему базы данных.
 
-+ `rxSqlServerTableExists`и [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -удалить [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] таблицу или проверить существование таблицы базы данных или объекта
++ `rxSqlServerTableExists` и [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -удалить [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] таблицу или проверить существование таблицы базы данных или объекта
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) -выполнения команды языка определения данных (DDL), определяет или обрабатывает объекты базы данных. Эта функция не может возвращать данные и используется только для извлечения или изменения схемы объекта или метаданных.
 
@@ -55,7 +53,7 @@ ms.lasthandoff: 02/11/2018
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) — создает контекст вычислений SQL Server, который позволяет функциям **ScaleR** выполняться в службах R SQL Server. Этот контекст вычислений в настоящее время поддерживается только для экземпляров SQL Server под управлением Windows.
 
-+ `rxGetComputeContext`и [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) — получить или задать активный контекст.
++ `rxGetComputeContext` и [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) — получить или задать активный контекст.
 
 ## <a name="move-data-and-transform-data"></a>Перемещение данных и преобразования данных
 

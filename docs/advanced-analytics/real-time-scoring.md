@@ -1,25 +1,25 @@
 ---
-title: "В реальном времени оценки | Документы Microsoft"
-ms.custom: 
+title: В реальном времени оценки | Документы Microsoft
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f8473280725732f92d1156a65ea087677b3af170
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="realtime-scoring"></a>Оценки в реальном времени
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -81,10 +81,10 @@ ms.lasthandoff: 02/11/2018
 
 + RevoScaleR моделей
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   Модели, отмеченные \* также поддерживает собственный оценки с помощью функции ПРОГНОЗА.
@@ -118,7 +118,7 @@ ms.lasthandoff: 02/11/2018
 
 ### <a name="known-issues"></a>Известные проблемы
 
-+ `sp_rxPredict`Возвращает сообщение неточными при передаче значения NULL в качестве модели: «System.Data.SqlTypes.SqlNullValueException:Data в Null».
++ `sp_rxPredict` Возвращает сообщение неточными при передаче значения NULL в качестве модели: «System.Data.SqlTypes.SqlNullValueException:Data в Null».
 
 ## <a name="next-steps"></a>Следующие шаги
 

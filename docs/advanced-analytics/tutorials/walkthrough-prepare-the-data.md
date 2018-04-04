@@ -1,30 +1,28 @@
 ---
-title: "Подготовка данных с помощью PowerShell (Пошаговое руководство) | Документы Microsoft"
-ms.custom: 
+title: Подготовка данных с помощью PowerShell (Пошаговое руководство) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Подготовка данных с помощью PowerShell (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ ms.lasthandoff: 02/11/2018
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - В этом примере функция grep R используется для поиска вектор доступные пути и найти пути, включающего «Program Files». Дополнительные сведения см. на странице [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - В этом примере функция grep R используется для поиска вектор доступные пути и найти пути, включающего «Program Files». Дополнительные сведения см. в разделе [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Если вы считаете, что пакеты уже установлены, проверьте список установленных пакетов с `installed.packages()`.
 
@@ -277,7 +275,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 Данные представляют собой представительную выборку из набора данных по работе такси в Нью-Йорке, который содержит записи о более чем 173 миллионах отдельных поездок в 2013 году, включая сведения о размере оплаты и чаевых за каждую поездку. Чтобы с этими данными было проще работать, команда Майкрософт по обработке и анализу данных произвела выборку приблизительно 1 % из всего набора.  Эти данные были помещены в общедоступный контейнер хранилища BLOB-объектов в Azure в формате CSV. Источник данных находится несжатого файла, непосредственно под 350 МБ.
 
-+ Открытый набор данных: [такси NYC и Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Открытый набор данных: [такси NYC и Limousine Commission] ()http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Построение моделей машинного Обучения Azure в наборе данных такси NYC] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 

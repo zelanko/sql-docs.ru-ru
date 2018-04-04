@@ -1,28 +1,26 @@
 ---
-title: "Как для создания Многомерных запросов, с помощью olapR | Документы Microsoft"
-ms.custom: 
+title: Как для создания Многомерных запросов, с помощью olapR | Документы Microsoft
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Создание запросов многомерных Выражений, с помощью olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/11/2018
 + Создание новых объектов OLAP
 + Обратная запись для секций, включая меры или суммы
 
-## <a name="buildMDX"></a>Создать запрос многомерных Выражений из R
+## <a name="buildMDX"></a> Создать запрос многомерных Выражений из R
 
 1. Определите строку подключения, указывающую источник данных OLAP (экземпляр служб SQL Server Analysis Services ) и поставщик MSOLAP.
 
@@ -51,8 +49,8 @@ ms.lasthandoff: 02/11/2018
 4. Используйте следующие вспомогательные функции, чтобы предоставить дополнительные сведения об измерениях и мерах для включения в запрос многомерных выражений:
 
      + `cube()` Укажите имя базы данных SSAS. При соединении с именованным экземпляром введите имя компьютера и имя экземпляра. 
-     + `columns()`Укажите имена мер для использования в **СТОЛБЦЫ ON** аргумент.
-     + `rows()`Укажите имена мер для использования в **СТРОК ON** аргумент.
+     + `columns()` Укажите имена мер для использования в **СТОЛБЦЫ ON** аргумент.
+     + `rows()` Укажите имена мер для использования в **СТРОК ON** аргумент.
      + `slicers()` Укажите поле или элементы для использования в качестве среза. Срез аналогичен фильтру, который применяется ко всем данным запроса многомерных выражений.
      
      + `axis()` Укажите имя дополнительной оси для использования в запросе. 
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/11/2018
   + `executeMD` возвращает многомерный массив.
   + `execute2D` возвращает двухмерный (табличный) кадр данных.
 
-## <a name="executeMDX"></a>Выполнение допустимый запрос многомерных Выражений из R
+## <a name="executeMDX"></a> Выполнение допустимый запрос многомерных Выражений из R
 
 1. Определите строку подключения, указывающую источник данных OLAP (экземпляр служб SQL Server Analysis Services ) и поставщик MSOLAP.
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Возврат всех элементов заданного измерения и иерархии
 
-После определения источника и создания дескриптора укажите куб, измерение и иерархию для возврата. В результаты, возвращаемые, элементы, которые начинаются с префикса  **->**  представляют потомков предыдущего элемента.
+После определения источника и создания дескриптора укажите куб, измерение и иерархию для возврата. В результаты, возвращаемые, элементы, которые начинаются с префикса **->** представляют потомков предыдущего элемента.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

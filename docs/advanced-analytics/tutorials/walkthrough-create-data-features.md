@@ -1,30 +1,28 @@
 ---
-title: "Создание компонентов данных, с помощью R и SQL (Пошаговое руководство) | Документы Microsoft"
-ms.custom: 
+title: Создание компонентов данных, с помощью R и SQL (Пошаговое руководство) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Создание компонентов данных, с помощью R и SQL (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 Ваш раз может сильно различаться, в зависимости от скорости сети и конфигурации оборудования. В конфигурациях, мы протестировали [!INCLUDE[tsql](../../includes/tsql-md.md)] функция подход был быстрее, чем с помощью пользовательской функции R. Таким образом, что мы познакомились с использование [!INCLUDE[tsql](../../includes/tsql-md.md)] функция эти вычисления в последующих шагах.
 
 > [!TIP]
-> Очень часто компонентов проектирование с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] будет выполняться быстрее, чем R. Например, T-SQL включает быстрого управления окнами и Ранжирующие функции, которые могут быть применены к общие вычисления обработки и анализа данных, например чередующихся скользящих средних и  *n* -плитки. Выберите наиболее эффективный способ в зависимости от особенностей данных и поставленной задачи.
+> Очень часто компонентов проектирование с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] будет выполняться быстрее, чем R. Например, T-SQL включает быстрого управления окнами и Ранжирующие функции, которые могут быть применены к общие вычисления обработки и анализа данных, например чередующихся скользящих средних и *n*-плитки. Выберите наиболее эффективный способ в зависимости от особенностей данных и поставленной задачи.
 
 ## <a name="next-lesson"></a>Следующее занятие
 

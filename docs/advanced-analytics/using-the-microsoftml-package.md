@@ -1,29 +1,27 @@
 ---
-title: "С помощью пакета MicrosoftML с SQL Server | Документы Microsoft"
-ms.custom: 
+title: С помощью пакета MicrosoftML с SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>С помощью пакета MicrosoftML с SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML содержит разнообразные машинного об�
 
 - Дерево и принятия решений модели леса принятия решений: `rxFastTree` — это алгоритм дерева решений, ранее известные как FastRank, который был разработан для использования в Bing. Это одно из самых популярных и быстрых средств обучения. Поддерживает двоичную классификацию и регрессию.
 
-  `rxFastForest`модель логистической регрессии основана на метод случайного леса. Этот вариант похож на функцию `rxLogit` в RevoScaleR, но поддерживает регуляризацию L1 и L2. Поддерживает двоичную классификацию и регрессию.
+  `rxFastForest` модель логистической регрессии основана на метод случайного леса. Этот вариант похож на функцию `rxLogit` в RevoScaleR, но поддерживает регуляризацию L1 и L2. Поддерживает двоичную классификацию и регрессию.
 
 - Алгоритм логистической регрессии: `rxLogisticRegression` аналогична модель логистической регрессии `rxLogit` функции в RevoScaleR, с дополнительной поддержкой L1 и L2. Поддерживает двоичные или мультиклассовой классификации.
 

@@ -1,34 +1,32 @@
 ---
-title: "Управление ресурсами для машинного обучения в SQL Server | Документы Microsoft"
-ms.custom: 
+title: Управление ресурсами для машинного обучения в SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 11cfaba5f645824158e0c25103ec355e513fa075
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Управление ресурсами для машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье Обзор ресурсами функции в SQL Server, позволяющих выделять и сбалансировать ресурсы, используемые сценарии R и Python.
 
-**Применяется к:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] и [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**Применимо к:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] и [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Цели ресурсами для машинного обучения
 
@@ -90,7 +88,7 @@ SQL Server поддерживает три типа пулов ресурсов 
 
 В программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержка внешних скриптов необязательна. Даже после установки машинного обучения функции, возможность выполнения внешних скриптов, по умолчанию отключена, и должен вручную перенастроить свойства и перезапустить экземпляр, чтобы включить выполнение скриптов.
 
-Таким образом, если на проблему ресурсов, необходимо устранить немедленно, или проблема безопасности, администраторы могут немедленно отключить любое выполнение внешнего скрипта с помощью [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и задав свойство `external scripts enabled` FALSE или 0.
+Таким образом, если на проблему ресурсов, необходимо устранить немедленно, или проблема безопасности, администраторы могут немедленно отключить любое выполнение внешнего скрипта с помощью [sp_configure &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и установите свойство `external scripts enabled` FALSE или 0.
   
 ## <a name="see-also"></a>См. также:
 

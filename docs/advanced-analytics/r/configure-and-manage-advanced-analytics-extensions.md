@@ -1,27 +1,25 @@
 ---
-title: "Дополнительные параметры конфигурации для службы обучения машины | Документы Microsoft"
+title: Дополнительные параметры конфигурации для службы обучения машины | Документы Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Дополнительные параметры конфигурации для службы обучения машины
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 
 **Применяется к:** служб R SQL Server 2016, SQL Server 2017 г машинного обучения служб
 
-##  <a name="bkmk_Provisioning"></a>Подготовка к работе дополнительные учетные записи пользователей для машины учебные
+##  <a name="bkmk_Provisioning"></a> Подготовка к работе дополнительные учетные записи пользователей для машины учебные
 
 Внешний скрипт обрабатывает в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются в контексте учетные записи локальных пользователей с ограниченными правами доступа. Выполнение этих процессов в отдельные учетные записи с низким уровнем привилегий дает следующие преимущества:
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 02/11/2018
 
 Дополнительные сведения о том, как внести изменения в пуле учетных записей пользователей см. в разделе [изменение пула учетных записей пользователей для служб SQL Server Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-##  <a name="bkmk_ManagingMemory"></a>Управление памятью, используемые процессами внешних скриптов
+##  <a name="bkmk_ManagingMemory"></a> Управление памятью, используемые процессами внешних скриптов
 
 По умолчанию среды выполнения внешнего скрипта для машинного обучения ограничены не более 20% всей памяти компьютера. Зависит от системы, но в общем случае может оказаться этот предел недостаточной для задач серьезные машинного обучения, такие как Обучение модели или прогноза на несколько строк данных. 
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 Дополнительные сведения о разрешениях, необходимых для запуска служб SQL Server, см. в разделе [Права доступа и права Windows](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-##  <a name="bkmk_ChangingConfig"></a>Изменить дополнительные параметры служб
+##  <a name="bkmk_ChangingConfig"></a> Изменить дополнительные параметры служб
 
 В ранних версиях служб SQL Server 2016 R можно изменить некоторые свойства службы, изменив [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] файла конфигурации. 
 
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/11/2018
 
 **Изменение параметров отладки**
 
-Некоторые свойства можно изменить только с помощью файла конфигурации панели запуска, который может быть полезен в случаях, например отладки. Файл конфигурации создается во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки и по умолчанию сохраняется в формате обычного текста в следующем расположении:`<instance path>\binn\rlauncher.config`
+Некоторые свойства можно изменить только с помощью файла конфигурации панели запуска, который может быть полезен в случаях, например отладки. Файл конфигурации создается во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки и по умолчанию сохраняется в формате обычного текста в следующем расположении: `<instance path>\binn\rlauncher.config`
 
 Для изменения этого файла необходимо иметь права администратора на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При изменением файла конфигурации рекомендуется сделать его резервную копию.
 
