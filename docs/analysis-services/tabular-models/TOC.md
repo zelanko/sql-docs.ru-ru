@@ -1,19 +1,19 @@
-# [Обзор](tabular-models-ssas.md)  
-
-# [Создание табличных моделей](tabular-model-solutions-ssas-tabular.md)  
+# [Табличные модели](tabular-models-ssas.md)  
+## [Уровень совместимости](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [Поддерживаемые источники данных в 1400 табличных моделях](data-sources-supported-ssas-tabular-1400.md)  
 ## [Поддерживаемые источники данных в 1200 табличных моделях](data-sources-supported-ssas-tabular.md)  
 ## [Поддерживаемые типы данных](data-types-supported-ssas-tabular.md)  
+
+# Создание табличных моделей
 ## [Конструктор табличных моделей](tabular-model-designer-ssas.md)  
 ## [База данных рабочей области](workspace-database-ssas-tabular.md)  
-## [Уровень совместимости](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [Проекты табличной модели](tabular-model-projects-ssas-tabular.md)  
 ### [Создание нового проекта табличной модели](create-a-new-tabular-model-project-analysis-services.md)  
 ### [Импорт из служб Analysis Services](import-from-analysis-services-ssas-tabular.md)  
 ### [Импорт из Power Pivot](import-from-power-pivot-ssas-tabular.md)  
 
-## [Свойства](properties-ssas-tabular.md)  
+## Свойства
 ### [Power View — свойства отчетов](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View — настройка набора полей по умолчанию](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View — настройка свойств работы таблицы](power-view-configure-table-behavior-properties-for-reports.md)  

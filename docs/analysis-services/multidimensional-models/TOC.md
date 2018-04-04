@@ -1,4 +1,4 @@
-# [Обзор](multidimensional-models-ssas.md)
+# [Многомерные модели](multidimensional-models-ssas.md)
  
 # [Многомерные решения](multidimensional-model-solutions-ssas.md)  
 ## [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
