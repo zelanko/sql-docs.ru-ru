@@ -1,16 +1,16 @@
 ---
-title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER SERVER CONFIGURATION (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -115,7 +115,7 @@ SET <optionspec>
  Включает связывание потоков оборудования с процессорами.  
   
  CPU = { AUTO | \<CPU_range_spec> }  
- Распределяет рабочие потоки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на каждый ЦП в заданном диапазоне. Для процессоров вне заданного диапазона не назначены потоки.  
+ Распределяет рабочие потоки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на каждый ЦП в заданном диапазоне. Для процессоров вне заданного диапазона не будут назначены потоки.  
   
  AUTO  
  Указывает, что для потока не назначен ЦП. Разрешено свободное перемещение потоков операционной системой между процессорами в зависимости от рабочей нагрузки сервера. Это значение по умолчанию, которое рекомендуется использовать.  
@@ -124,7 +124,7 @@ SET <optionspec>
  Указывает ЦП или диапазон процессоров, которым будут назначаться потоки.  
   
  { CPU_ID | CPU_ID  TO  CPU_ID } [ ,...n ]  
- Список из одного или нескольких процессоров. Идентификаторы ЦП начинаются с 0 и имеют тип **integer**.  
+ Список из одного или нескольких процессоров. Идентификаторы ЦП начинаются с 0 и имеют **целочисленное значение**.  
   
  NUMANODE = \<NUMA_node_range_spec>  
  Назначает потоки всем процессорам, принадлежащим заданному узлу NUMA или диапазону узлов.  
@@ -133,7 +133,7 @@ SET <optionspec>
  Указывает номер узла NUMA или диапазон узлов NUMA.  
   
  { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
- Это список из одного или нескольких узлов NUMA. Идентификаторы NUMA начинаются с 0 и имеют тип **integer**.  
+ Это список из одного или нескольких узлов NUMA. Идентификаторы NUMA начинаются с 0 и имеют **целочисленное значение**.  
   
  **\<diagnostic_log> ::=**  
   
@@ -201,8 +201,8 @@ SQLDUMPEREDUMPFLAGS
   
  Для определения целевого кластера укажите одно из следующих значений:  
   
- *кластер_windows*  
- Объект имени WSFC-кластера (CNO). Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
+ *windows_cluster*  
+ Объект имени (CNO) WSFC-кластера. Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
   
  LOCAL  
  Локальный кластер WSFC.  
@@ -214,7 +214,7 @@ SQLDUMPEREDUMPFLAGS
 **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула с помощью энергонезависимого хранилища, например твердотельных накопителей (SSD), для сохранения чистых страниц, данных в пуле. Дополнительные сведения об этой возможности см. в разделе [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула не поддерживается ни в одном из выпусков SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула с помощью энергонезависимого хранилища, например твердотельных накопителей (SSD), для сохранения чистых страниц данных в пуле. Дополнительные сведения об этой возможности см. в разделе [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула поддерживается не во всех выпусках SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
  Определяет путь к каталогу и имя файла кэша расширения буферного пула. Файл должен иметь расширение BPE. Необходимо отключить BUFFER POOL EXTENSION, чтобы изменить FILENAME.  
@@ -243,11 +243,11 @@ SQLDUMPEREDUMPFLAGS
 > [!WARNING]  
 > Существуют известные проблемы с работой инструкции ALTER SERVER CONFIGURATION с параметром SOFT NUMA и агентом SQL Server.  Ниже приведена рекомендуемая последовательность операций.  
 > 1) Остановите экземпляр агента SQL Server.  
-> 2) Выполнение инструкции ALTER SERVER CONFGURATION с параметром SOFT NUMA.  
+> 2) Выполнение инструкции ALTER SERVER CONFIGURATION с параметром SOFT NUMA.  
 > 3) Повторно запустите экземпляр SQL Server.  
 > 4) Запустите экземпляр агента SQL Server.  
   
-**Дополнительные сведения.** Если инструкция ALTER SERVER CONFIGURATION с параметром SOFTNUMA выполняется до перезапуска службы SQL Server, то при остановке службы агента SQL Server будет выполнена команда T-SQL RECONFIGURE, которая вернет для параметра SOFTNUMA значение, заданное до выполнения ALTER SERVER CONFIGURATION. 
+**Дополнительные сведения.** Если инструкция ALTER SERVER CONFIGURATION с параметром SET SOFTNUMA выполняется до перезапуска службы SQL Server, то при остановке службы агента SQL Server будет выполнена команда T-SQL RECONFIGURE, которая вернет для параметра SOFTNUMA значение, заданное до выполнения ALTER SERVER CONFIGURATION. 
   
 ## <a name="general-remarks"></a>Общие замечания  
  Для этой инструкции не требуется перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если явно не указано обратное. Для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуск ресурса кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
@@ -270,7 +270,7 @@ SQLDUMPEREDUMPFLAGS
 |[Настройка параметров журнала диагностики](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Установка свойств отказоустойчивого кластера](#Failover)|HealthCheckTimeout|  
 |[Изменение контекста кластера для реплики доступности](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Установка расширения буферного пула](#BufferPoolExtension)|РАСШИРЕНИЕ БУФЕРНОГО ПУЛА|  
+|[Установка расширения буферного пула](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
   
 ###  <a name="Affinity"></a> Установка соответствия процессов  
  В примерах этого раздела показано соответствие процессов центральным процессорам (ЦП) и узлам NUMA. Сервер в этих примерах состоит из 256 процессоров, организованных в четыре группы по 16 узлов NUMA в каждой. Потоки не назначаются какому-либо узлу NUMA или ЦП.  
@@ -319,7 +319,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="Diagnostic"></a> Настройка параметров журнала диагностики  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

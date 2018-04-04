@@ -1,16 +1,16 @@
 ---
-title: "Запланированный переход на другой ресурс вручную для группы доступности (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Запланированный переход на другой ресурс вручную для группы доступности (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.availabilitygroup.manualfailover.f1
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1523eff2118c8a451b13167510e204d039f84fa
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 273222eb4eae452f9385f415723535b416ec7c95
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Запланированный переход на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/08/2018
 ##  <a name="BeforeYouBegin"></a> Перед началом 
 
 >[!IMPORTANT]
->Существуют определенные процедуры по отработке отказа группы доступности для чтения и масштабирования без диспетчера кластеров. Если в группе доступности задан параметр CLUSTER_TYPE = NONE (тип кластера — отсутствует), следуйте процедурам, описанным в разделе [Отработка отказа первичной реплики в группе доступности для чтения и масштабирования](#Fail-over-the-primary-replica-on-a-read-scale-availability-group).
+>Существуют определенные процедуры по отработке отказа группы доступности для чтения и масштабирования без диспетчера кластеров. Если в группе доступности задан параметр CLUSTER_TYPE = NONE (тип кластера — отсутствует), следуйте процедурам, описанным в разделе [Отработка отказа первичной реплики в группе доступности для чтения и масштабирования](#fail-over-the-primary-replica-on-a-read-scale-availability-group).
 
 ###  <a name="Restrictions"></a> Ограничения 
   

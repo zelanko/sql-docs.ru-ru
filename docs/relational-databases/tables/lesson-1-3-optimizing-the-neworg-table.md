@@ -1,35 +1,36 @@
 ---
-title: "Оптимизация таблицы NewOrg | Документация Майкрософт"
-ms.custom: 
-ms.date: 03/06/2017
+title: Оптимизация таблицы NewOrg | Документация Майкрософт
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2526b0a159349655b68f6364e6a070e4661e422
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 39a6587d88d14f9ac1950f7e1f6896258860b452
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>Занятие 1.3. Оптимизация таблицы NewOrg
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Таблица **NewOrd**, созданная в задании [Заполнение таблицы существующими иерархическими данными](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md), содержит все сведения о сотрудниках и представляет иерархическую структуру с использованием типа данных **hierarchyid**. Эта задача добавляет новые индексы для поддержки поиска по столбцу **hierarchyid** .  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Таблица **NewOrd** , созданная в задании [Заполнение таблицы существующими иерархическими данными](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) , содержит все сведения о сотрудниках и представляет иерархическую структуру с использованием типа данных **hierarchyid** . Эта задача добавляет новые индексы для поддержки поиска по столбцу **hierarchyid** .  
   
 ## <a name="clustered-index"></a>Кластеризованный индекс  
 Столбец **hierarchyid** (**OrgNode**) является первичным ключом таблицы **NewOrg** . После создания таблицы в ней содержался кластеризованный индекс **PK_NewOrg_OrgNode** , обеспечивающий уникальность значений в столбце **OrgNode** . Кластеризованный индекс также поддерживает поиск по таблице по глубине.  
@@ -42,18 +43,18 @@ ms.lasthandoff: 01/18/2018
 1.  Чтобы обеспечить функционирование запросов, работающих на одном и том же уровне иерархии, следует использовать метод [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) для создания вычисляемого столбца, содержащего уровень иерархии. Затем следует создать составной индекс, основанный на уровне и **Hierarchyid**. Запустите следующий код для создания вычисляемого столбца и индекса преимущественно в ширину:  
   
     ```  
-    ALTER TABLE NewOrg   
+    ALTER TABLE HumanResources.NewOrg   
        ADD H_Level AS OrgNode.GetLevel() ;  
     CREATE UNIQUE INDEX EmpBFInd   
-       ON NewOrg(H_Level, OrgNode) ;  
+       ON HumanResources.NewOrg(H_Level, OrgNode) ;  
     GO  
     ```  
   
 2.  Создайте уникальный индекс для столбца **EmployeeID** . Это стандартный единичный уточняющий запрос относительно одного сотрудника по номеру **EmployeeID** . Запустите следующий код, чтобы создать индекс для столбца **EmployeeID**:  
   
     ```  
-    CREATE UNIQUE INDEX EmpIDs_unq ON NewOrg(EmployeeID) ;  
-    GO  
+    CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
+    GO
     ```  
   
 3.  Запустите следующий код, чтобы получить данные из таблицы, упорядоченные относительно каждого из этих трех индексов:  
@@ -61,17 +62,17 @@ ms.lasthandoff: 01/18/2018
     ```  
     SELECT OrgNode.ToString() AS LogicalNode,  
     OrgNode, H_Level, EmployeeID, LoginID  
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY OrgNode;  
-  
+
     SELECT OrgNode.ToString() AS LogicalNode,  
     OrgNode, H_Level, EmployeeID, LoginID   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY H_Level, OrgNode;  
-  
+
     SELECT OrgNode.ToString() AS LogicalNode,  
     OrgNode, H_Level, EmployeeID, LoginID   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY EmployeeID;  
     GO  
     ```  
@@ -81,52 +82,39 @@ ms.lasthandoff: 01/18/2018
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
     Индекс преимущественно в глубину: записи сотрудников хранятся рядом с записью их менеджера.  
-  
-    `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
-  
-    `/             0x         0         1      zarifin`  
-  
-    `/1/          0x58        1         2      tplate`  
-  
-    `/1/1/       0x5AC0       2         4      schai`  
-  
-    `/1/1/1/     0x5AD6       3         9      jwang`  
-  
-    `/1/1/2/     0x5ADA       3        10      malexander`  
-  
-    `/1/2/       0x5B40       2         5      elang`  
-  
-    `/1/3/       0x5BC0       2         6      gsmits`  
-  
-    `/2/         0x68         1         3      hjensen`  
-  
-    `/2/1/       0x6AC0       2         7      sdavis`  
-  
-    `/2/2/       0x6B40       2         8      norint`  
-  
+
+    ```
+    LogicalNode OrgNode H_Level EmployeeID  LoginID
+    /   0x  0   1   adventure-works\ken0
+    /1/ 0x58    1   2   adventure-works\terri0
+    /1/1/   0x5AC0  2   3   adventure-works\roberto0
+    /1/1/1/ 0x5AD6  3   4   adventure-works\rob0
+    /1/1/2/ 0x5ADA  3   5   adventure-works\gail0
+    /1/1/3/ 0x5ADE  3   6   adventure-works\jossef0
+    /1/1/4/ 0x5AE1  3   7   adventure-works\dylan0
+    /1/1/4/1/   0x5AE158    4   8   adventure-works\diane1
+    /1/1/4/2/   0x5AE168    4   9   adventure-works\gigi0
+    /1/1/4/3/   0x5AE178    4   10  adventure-works\michael6
+    /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
+    ```
+
     Индекс преимущественно по **EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID**.  
-  
-    `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
-  
-    `/             0x         0         1      zarifin`  
-  
-    `/1/          0x58        1         2      tplate`  
-  
-    `/2/         0x68         1         3      hjensen`  
-  
-    `/1/1/       0x5AC0       2         4      schai`  
-  
-    `/1/2/       0x5B40       2         5      elang`  
-  
-    `/1/3/       0x5BC0       2         6      gsmits`  
-  
-    `/2/1/       0x6AC0       2         7      sdavis`  
-  
-    `/2/2/       0x6B40       2         8      norint`  
-  
-    `/1/1/1/     0x5AD6       3         9      jwang`  
-  
-    `/1/1/2/     0x5ADA       3        10      malexander`  
+
+    ```
+    LogicalNode OrgNode H_Level EmployeeID  LoginID
+    /   0x  0   1   adventure-works\ken0
+    /1/ 0x58    1   2   adventure-works\terri0
+    /1/1/   0x5AC0  2   3   adventure-works\roberto0
+    /1/1/1/ 0x5AD6  3   4   adventure-works\rob0
+    /1/1/2/ 0x5ADA  3   5   adventure-works\gail0
+    /1/1/3/ 0x5ADE  3   6   adventure-works\jossef0
+    /1/1/4/ 0x5AE1  3   7   adventure-works\dylan0
+    /1/1/4/1/   0x5AE158    4   8   adventure-works\diane1
+    /1/1/4/2/   0x5AE168    4   9   adventure-works\gigi0
+    /1/1/4/3/   0x5AE178    4   10  adventure-works\michael6
+    /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
+    /1/1/5/1/   0x5AE358    4   12  adventure-works\thierry0
+    ```
   
 > [!NOTE]  
 > Диаграммы, на которых показана разница между индексом преимущественно в глубину и индексом преимущественно в ширину, см. в разделе [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).  
@@ -136,15 +124,15 @@ ms.lasthandoff: 01/18/2018
 1.  Столбец **ManagerID** представляет связь "сотрудник-менеджер", которая на данный момент представлена столбцом **OrgNode** . Если другим приложениям столбец **ManagerID** не нужен, то, возможно, стоит его удалить с помощью следующей инструкции:  
   
     ```  
-    ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
+    ALTER TABLE HumanResources.NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
 2.  Столбец **EmployeeID** также является избыточным. Столбец **OrgNode** уникально идентифицирует каждого сотрудника. Если другим приложениям столбец **EmployeeID** не нужен, то, возможно, стоит его удалить с помощью следующей инструкции:  
   
     ```  
-    DROP INDEX EmpIDs_unq ON NewOrg ;  
-    ALTER TABLE NewOrg DROP COLUMN EmployeeID ;  
+    DROP INDEX EmpIDs_unq ON HumanResources.NewOrg ;  
+    ALTER TABLE HumanResources.NewOrg DROP COLUMN EmployeeID ;  
     GO  
     ```  
   
@@ -155,16 +143,16 @@ ms.lasthandoff: 01/18/2018
 2.  Замените старую таблицу **EmployeeDemo** новой. Запустите следующий код, чтобы удалить старую таблицу и присвоить новой таблице имя старой:  
   
     ```  
-    DROP TABLE EmployeeDemo ;  
+    DROP TABLE HumanResources.EmployeeDemo ;  
     GO  
-    sp_rename 'NewOrg', EmployeeDemo ;  
+    sp_rename 'HumanResources.NewOrg', 'EmployeeDemo' ;  
     GO  
     ```  
   
 3.  Запустите следующий код, чтобы изучить окончательную таблицу:  
   
     ```  
-    SELECT * FROM EmployeeDemo ;  
+    SELECT * FROM HumanResources.EmployeeDemo ;  
     ```  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  

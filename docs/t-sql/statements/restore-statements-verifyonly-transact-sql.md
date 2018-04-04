@@ -1,16 +1,16 @@
 ---
-title: "RESTORE VERIFYONLY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 03/15/2017
+title: RESTORE VERIFYONLY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - VERIFYONLY
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - verifying backups
 - checking backups
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-caps.latest.revision: 
+caps.latest.revision: 64
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b5cd93baf9fc13bd5333f5589dbb56413091671a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b85303faa74d981462cfe1e59c19158df086ecd1
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Инструкции RESTORE — VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Проверяет, но не восстанавливает резервную копию, а также проверяет полноту резервного набора данных и возможность его считывания. Однако инструкция RESTORE VERIFYONLY не проверяет структуру данных, содержащихся в томах резервной копии. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкция RESTORE VERIFYONLY была расширена с целью проведения дополнительной проверки данных для увеличения вероятности обнаружения ошибок. Цель — приблизиться к настоящей операции восстановления, насколько это возможно. Дополнительные сведения см. в разделе «Примечания».  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  Если резервная копия достоверна, то компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об успешном выполнении.  
   
 > [!NOTE]  

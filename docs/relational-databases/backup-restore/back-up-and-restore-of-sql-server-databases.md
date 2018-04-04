@@ -1,16 +1,16 @@
 ---
-title: "Резервное копирование и восстановление баз данных SQL Server | Документация Майкрософт"
-ms.custom: 
-ms.date: 07/29/2016
+title: Резервное копирование и восстановление баз данных SQL Server | Документация Майкрософт
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disaster recovery [SQL Server], see restoring [SQL Server]
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dddfcc3841704e7863a55253e8152b44d73a8d9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   В этом разделе описываются преимущества резервного копирования баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , основные условия резервного копирования и восстановления, а также приводятся стратегии резервного копирования и восстановления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и рассматриваются вопросы безопасности, связанные с резервным копированием и восстановлением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > **Нужны пошаговые инструкции?** Этот раздел не **содержит конкретные шаги по выполнению резервного копирования.** Если вы хотите перейти непосредственно к сведениям о создании резервных копий, прокрутите эту страницу вниз до раздела ссылок, упорядоченного по задачам резервного копирования и по потребности в SSMS или T-SQL.  
   
  Компонент резервного копирования и восстановления SQL Server обеспечивает необходимую защиту важных данных, которые хранятся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы минимизировать риск необратимой потери данных, необходимо регулярно создавать резервные копии баз данных, в которых будут сохраняться производимые изменения данных. Хорошо продуманная стратегия резервного копирования и восстановления защищает базы от потери данных при повреждениях, происходящих из-за различных сбоев. Проверьте выбранную стратегию, выполнив восстановление баз данных из набора резервных копий; это поможет эффективно среагировать на реальные проблемы.  
