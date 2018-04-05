@@ -1,19 +1,21 @@
 ---
-title: "Список зарезервированных слов Jet 4.0 использует SQL-92 при ExtendedAnsiSQL_Set | Документы Microsoft"
-ms.custom: 
+title: Список зарезервированных слов Jet 4.0 использует SQL-92 при ExtendedAnsiSQL_Set | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: extendedANSISQL [ODBC], reserved words
+helpviewer_keywords:
+- extendedANSISQL [ODBC], reserved words
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

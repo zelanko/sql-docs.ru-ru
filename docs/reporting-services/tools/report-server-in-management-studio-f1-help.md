@@ -1,19 +1,20 @@
 ---
-title: "Справка F1 по работе с сервером отчетов в среде Management Studio | Документы Майкрософт"
-ms.custom: 
+title: Справка F1 по работе с сервером отчетов в среде Management Studio | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: Object Explorer, help
+helpviewer_keywords:
+- Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
