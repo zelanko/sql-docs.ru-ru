@@ -1,30 +1,30 @@
 ---
-title: "Установка Microsoft ODBC Driver for SQL Server для Linux и macOS | Документы Microsoft"
-ms.custom: 
-ms.date: 03/13/2018
+title: Установка Microsoft ODBC Driver for SQL Server для Linux и macOS | Документы Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 
+caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -500,6 +500,40 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 -   [(Сведения об ошибкеhttp://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     Номер ошибки, указанный в URL-адресе (11001), следует изменить в соответствии с отображаемой ошибкой.  
+  
+## <a name="driver-files"></a>Файлы драйверов
+Драйвер ODBC для Linux и MacOS состоит из следующих компонентов:
+
+### <a name="linux"></a>Linux
+
+|Компонент|Описание|  
+|---------------|-----------------|  
+|libmsodbcsql-17. X.so.X.X или libmsodbcsql-13. X.so.X.X|Общий объект (`so`) файлов динамической библиотеки, которая содержит все функциональные возможности драйвера. Этот файл устанавливается в `/opt/microsoft/msodbcsql17/lib64/` 17 драйвера и в `/opt/microsoft/msodbcsql/lib64/` для Driver 13.|  
+|`msodbcsqlr17.rll`или`msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для его использования.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h устанавливается в `/opt/microsoft/msodbcsql17/include/` 17 драйвера и в `/opt/microsoft/msodbcsql/include/` для Driver 13. |
+|LICENSE.txt|Текстовый файл, содержащий условия лицензионного соглашения. Этот файл будет помещен в `/usr/share/doc/msodbcsql17/` 17 драйвера и в `/usr/share/doc/msodbcsql/` для Driver 13.|
+|RELEASE_NOTES|Текстовый файл, содержащий заметки о выпуске. Этот файл будет помещен в `/usr/share/doc/msodbcsql17/` 17 драйвера и в `/usr/share/doc/msodbcsql/` для Driver 13.|
+
+
+### <a name="macos"></a>MacOS
+
+|Компонент|Описание|  
+|---------------|-----------------|  
+|libmsodbcsql.17.dylib или libmsodbcsql.13.dylib|Динамическая библиотека (`dylib`) файл, содержащий все функциональные возможности драйвера. Этот файл устанавливается в `/usr/local/lib/`.|  
+|`msodbcsqlr17.rll`или`msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 17 драйвера и в `[driver .dylib directory]../share/msodbcsql/resources/en_US/` для Driver 13. | 
+|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для его использования.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h устанавливается в `/usr/local/include/msodbcsql17/` 17 драйвера и в `/usr/local/include/msodbcsql/` для Driver 13. |
+|LICENSE.txt|Текстовый файл, содержащий условия лицензионного соглашения. Этот файл будет помещен в `/usr/local/share/doc/msodbcsql17/` 17 драйвера и в `/usr/local/share/doc/msodbcsql/` для Driver 13. |
+|RELEASE_NOTES|Текстовый файл, содержащий заметки о выпуске. Этот файл будет помещен в `/usr/local/share/doc/msodbcsql17/` 17 драйвера и в `/usr/local/share/doc/msodbcsql/` для Driver 13. |
+
+## <a name="resource-file-loading"></a>Загрузка файла ресурсов
+
+Этот драйвер должен загрузить файл ресурсов для своей работы. Этот файл называется `msodbcsqlr17.rll` или `msodbcsqlr13.rll` в зависимости от версии драйвера. Расположение `.rll` файла задается относительно расположения драйвера сам (`so` или `dylib`), как указано в приведенной выше таблице. Начиная с версии 17,1 драйвер также попытается загрузить `.rll` по умолчанию каталог, если загрузка из относительный путь завершается сбоем. Пути к файлам ресурсов по умолчанию являются:
+
+Linux: `/opt/microsoft/msodbcsql17/share/resources/en_US/`
+
+macOS: `/usr/local/share/msodbcsql17/resources/en_US/`
+
+
   
 ## <a name="see-also"></a>См. также
 

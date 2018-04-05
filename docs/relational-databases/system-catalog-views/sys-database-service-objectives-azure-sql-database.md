@@ -1,33 +1,33 @@
 ---
-title: "sys.database_service_objectives (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.database_service_objectives (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "Пул эластичных БД"
-- "пул эластичных управления"
+- Пул эластичных БД
+- пул эластичных управления
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.lasthandoff: 02/03/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|database_id|int|Идентификатор базы данных, уникальное внутри экземпляра сервера базы данных SQL Azure. Joinable с [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edition|sysname|Уровень обслуживания для базы данных или хранилища данных: **основные**, **Стандартная**, **Premium** или **хранилища данных**.|  
-|service_objective|sysname|Ценовой категории базы данных. Если база данных находится в пуле эластичных, возвращает **ElasticPool**.<br /><br /> На **основные** уровня возвращает **основные**.<br /><br /> **Одной базы данных в уровень обслуживания standard** возвращает одно из следующих действий: S0, S1, S2 или S3.<br /><br /> **Одной базы данных в уровня premium** возвращает из следующих: P1, P2, P4, P6/P3 или P11.<br /><br /> **Хранилище данных SQL** возвращает DW100 через DW2000.|  
+|database_id|int|Идентификатор базы данных, уникальное внутри экземпляра сервера базы данных SQL Azure. Joinable с [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edition|sysname|Уровень обслуживания для базы данных или хранилища данных: **основные**, **Стандартная**, **Premium**, **общего назначения**,  **Критический для бизнеса**, или **хранилища данных**.|  
+|service_objective|sysname|Ценовой категории базы данных. Если база данных находится в пуле эластичных, возвращает **ElasticPool**.<br /><br /> На **основные** уровня возвращает **основные**.<br /><br /> Одной базы данных в уровень обслуживания standard возвращает текущих допустимых значений для этого уровня.<br /><br /> Одной базы данных в уровня premium возвращает текущих допустимых значений для этого уровня службы.<br /><br />Одной базы данных на уровне службы общего назначения возвращает текущих допустимых значений для этого уровня службы.<br /><br />Одной базы данных на уровне службы важными бизнес возвращает текущих допустимых значений для этого уровня службы.<br /><br /> Хранилище данных SQL возвращает текущих допустимых значений для хранилища данных SQL.|  
 |elastic_pool_name|sysname|Имя [эластичного пула](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , к которой принадлежит базе данных. Возвращает **NULL** при одной базы данных или warehoue данных базы данных.|  
   
 ## <a name="permissions"></a>Разрешения  

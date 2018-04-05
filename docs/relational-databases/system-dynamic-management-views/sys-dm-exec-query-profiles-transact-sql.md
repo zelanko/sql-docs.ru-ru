@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_query_profiles (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_query_profiles (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_profiles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b93ca80039e4fbfd0ce7d9d432ac03b256cb2a7f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -97,10 +97,10 @@ ms.lasthandoff: 02/03/2018
  ЗАДАТЬ STATISTICS XML ON и SET STATISTICS PROFILE ON всегда использовать статистику выполнения запросов прежних версий инфраструктуры профилирования.
   
 ## <a name="permissions"></a>Разрешения  
- На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо разрешение VIEW SERVER STATE на сервере.  
-  
- На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.  
-  
+
+На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+   
 ## <a name="examples"></a>Примеры  
  Шаг 1: Войдите в сеанс, в котором вы планируете выполнить запрос можно будет анализировать sys.dm_exec_query_profiles. Чтобы настроить запрос для профилирования воспользуйтесь SET STATISTICS PROFILE. Выполните ваш запрос в данном сеансе.  
   
@@ -134,7 +134,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

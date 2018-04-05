@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_clr_properties (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_clr_properties (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_clr_properties
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f26f5870db7794bb52da665a17a3f70198fc341
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/03/2018
   
  **Mscoree не загружено** и **загружается Mscoree** отображают процесс инициализации размещенной среды CLR при запуске сервера состояний и не могут быть показаны.  
   
- **Версию среды CLR, заблокирован с mscoree** состояние может возникать, когда внутрипроцессной среды CLR не используется и, таким образом, он еще не была инициализирована. Внутрипроцессная среда CLR инициализируется при первом запуске инструкции DDL (такие как [CREATE ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md)) или выполнении управляемого объекта базы данных.  
+ **Версию среды CLR, заблокирован с mscoree** состояние может возникать, когда внутрипроцессной среды CLR не используется и, таким образом, он еще не была инициализирована. Внутрипроцессная среда CLR инициализируется при первом запуске инструкции DDL (такие как [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) или выполнении управляемого объекта базы данных.  
   
  **Среда CLR инициализируется** состояние означает, что внутрипроцессная среда CLR успешно инициализирована. Обратите внимание, что оно не является признаком включения выполнения пользовательского кода CLR. Если первый выполнение пользовательского кода CLR включено и отключить, используя [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) хранимой процедуры значение состояния по-прежнему будет **среда CLR инициализируется**.  
   
@@ -74,14 +74,14 @@ ms.lasthandoff: 02/03/2018
   
  **CLR остановлена состояние** можно увидеть, только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершает работу.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Свойства и значения этого представления может измениться в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вследствие улучшений функциональных возможностей интеграции со средой CLR.  
   
 ## <a name="permissions"></a>Разрешения  
- На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо разрешение VIEW SERVER STATE на сервере.  
   
- На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.  
-  
+На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+
 ## <a name="examples"></a>Примеры  
  В следующем примере происходит получение данных о внутрипроцессной среде CLR:  
   
@@ -92,6 +92,6 @@ FROM sys.dm_clr_properties;
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Общеязыковая среда выполнения, связанные с динамическим административным представлениям &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с общеязыковой &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   
