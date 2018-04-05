@@ -1,16 +1,16 @@
 ---
-title: "Сжатие базы данных | Документация Майкрософт"
-ms.custom: 
+title: Сжатие базы данных | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.shrinkdatabase.f1
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - database shrinking [SQL Server]
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Просмотр количества свободного (нераспределенного) пространства в базе данных. Дополнительные сведения см. в разделе [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
+-   Просмотр количества свободного (нераспределенного) пространства в базе данных. Дополнительные сведения см. в разделе [Отображение данных и сведений о пространстве журнала для базы данных](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Обратите внимание на следующие сведения при планировании сжатия базы данных.  
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_posttracertoken (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_posttracertoken (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedur+I741es
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,7 +22,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта процедура записывает трассировочный токен в журнал транзакций на издателе и начинает процесс трассировки статистики задержек. Данные сохраняются, когда токен трассировки записывается в журнал транзакций, когда его получает агент чтения журнала и когда его применяет агент распространителя. Эта хранимая процедура выполняется на издателе в базе данных публикации. Дополнительные сведения см. в статье [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+  Эта процедура записывает трассировочный токен в журнал транзакций на издателе и начинает процесс трассировки статистики задержек. Данные сохраняются, когда токен трассировки записывается в журнал транзакций, когда его получает агент чтения журнала и когда его применяет агент распространителя. Эта хранимая процедура выполняется на издателе в базе данных публикации. Дополнительные сведения см. в статье [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication** =] **"***публикации***"**  
+ [ **@publication**=] **"***публикации***"**  
  Имя публикации, для которой измеряется задержка. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@tracer_token_id=** ] *tracer_token_id***выходных данных**  
@@ -71,7 +71,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_posttracertoken**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
