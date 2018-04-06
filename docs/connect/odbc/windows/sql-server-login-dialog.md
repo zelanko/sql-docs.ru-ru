@@ -1,27 +1,28 @@
 ---
-title: "Диалоговое окно «имя входа» (ODBC) для SQL Server | Документы Microsoft"
-ms.custom: 
-ms.date: 09/27/2017
+title: Диалоговое окно «имя входа» (ODBC) для SQL Server | Документы Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Диалоговое окно «Вход в сервер SQL» (ODBC)
 
@@ -44,6 +45,7 @@ ms.lasthandoff: 11/18/2017
 - **Интегрированные с Windows** проверку подлинности с использованием учетной записи вошедшего в систему пользователя
 - **Пароль Active Directory** с Идентификатором имени входа и пароля
 - **Интегрированные службы Active Directory** проверку подлинности с использованием учетной записи вошедшего в систему пользователя
+- **Active Directory интерактивный** проверки подлинности с Идентификатором входа
 
 В разделе [2 экран мастера источника данных](../../../connect/odbc/windows/dsn-wizard-2.md) Дополнительные сведения о режимах проверки подлинности.
 
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/18/2017
 
 ### <a name="login-id"></a>Идентификатор входа
 
-Указывает идентификатор входа SQL Server или Azure Active Directory для использования для подключения, если **режим проверки подлинности** равно **SQL Server** или **пароль Active Directory**. В противном случае **идентификатора входа** поле отключено.
+Указывает идентификатор входа SQL Server или Azure Active Directory для использования для подключения, если **режим проверки подлинности** равно **SQL Server** или **пароль Active Directory** или **Active Directory интерактивной**. В противном случае **идентификатора входа** поле отключено.
 
 ### <a name="password"></a>Пароль
 
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/18/2017
 
 В этом поле новый пароль указывается второй раз, для подтверждения.
 
-### <a name="database"></a>База данных
+### <a name="database"></a>база данных
 
 Указывает базу данных по умолчанию, которая будет использоваться для соединения. Данная настройка переопределяет базу данных по умолчанию, указанную для имени входа на сервере. Если база данных не была указана, соединение использует базу данных по умолчанию, указанную для имени входа на сервере.
 
@@ -107,6 +109,6 @@ ms.lasthandoff: 11/18/2017
 
 Это может быть применимо, только если **использовать устойчивое шифрование данных** включен. При выборе сертификата сервера не удалось проверить правильного имени узла сервера и быть выдан доверенным центром сертификации.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Драйвер Microsoft ODBC для SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

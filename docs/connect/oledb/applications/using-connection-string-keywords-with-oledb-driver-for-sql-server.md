@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 7917f0c1344ff8e79250791d1b262cece9ca3c4c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>Использование ключевых слов строки подключения с помощью драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|Имя участника-службы для партнера по обеспечению отработки отказа. Значение по умолчанию — пустая строка. Драйвер OLE DB для SQL Server для использования по умолчанию, сформированное поставщиком имя участника-службы в результате пустая строка.|  
 |**Язык**|SSPROPT_INIT_CURRENTLANGUAGE|Язык [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Включает или отключает режим MARS для соединения для сервера версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более поздней версии. Допустимы значения «yes» и «no». Значение по умолчанию — «no».|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Всегда указывайте **MultiSubnetFailover = Yes** при подключении к прослушивателю группы доступности из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] группы доступности или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра отказоустойчивого кластера. **MultiSubnetFailover = Yes** настраивает драйвер OLE DB для SQL Server для обеспечения более быстрое обнаружение и подключение к серверу (активного). Возможные значения: **Да** и **Нет**. Значение по умолчанию — **нет**. Например:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Дополнительные сведения о драйвер OLE DB для SQL Server поддержку [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в разделе [драйвер OLE DB для SQL Server поддержку высокого уровня доступности и аварийного восстановления](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Синоним для «Network».|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|Сетевая библиотека, используемая для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.|  
 |**Сетевая библиотека**|SSPROP_INIT_NETWORKLIBRARY|Синоним для «Network».|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**Исходное имя файла**|SSPROP_INIT_FILENAME|Имя первичного файла присоединяемой базы данных (включает полный путь). Для использования **AttachDBFileName**, необходимо также указать имя базы данных с помощью ключевого слова базы данных в строке поставщика. Если база данных уже присоединена, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не присоединяет ее повторно, а использует для соединения присоединенную базу данных по умолчанию.|  
 |**Встроенные функции безопасности**|DBPROP_AUTH_INTEGRATED|Принимает значение «SSPI» для проверки подлинности Windows.|  
 |**Соединения режима MARS**|SSPROP_INIT_MARSCONNECTION|Включает или отключает режим MARS для соединения. Распознаются значения «true» и «false». Значение по умолчанию — «false».|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Всегда указывайте **MultiSubnetFailover = True** при подключении к прослушивателю группы доступности из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] группы доступности или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра отказоустойчивого кластера. **MultiSubnetFailover = True** настраивает драйвер OLE DB для SQL Server для обеспечения более быстрое обнаружение и подключение к серверу (активного). Допустимые значения — **True** и **False**. По умолчанию **False**. Например:<br /><br /> `MultiSubnetFailover=True`<br /><br /> Дополнительные сведения о драйвер OLE DB для SQL Server поддержку [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в разделе [драйвер OLE DB для SQL Server поддержку высокого уровня доступности и аварийного восстановления](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Сетевой адрес**|SSPROP_INIT_NETWORKADDRESS|Сетевой адрес экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.<br /><br /> Дополнительные сведения о допустимом синтаксисе адресов см. в описании **адрес** ключевого слова в этом разделе.|  
 |**Сетевая библиотека**|SSPROP_INIT_NETWORKLIBRARY|Сетевая библиотека, используемая для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Размер сетевого пакета. Значение по умолчанию — 4096.|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**Исходное имя файла**|SSPROP_INIT_FILENAME|Имя первичного файла присоединяемой базы данных (включает полный путь). Для использования **AttachDBFileName**, необходимо также указать имя базы данных с помощью ключевого слова базы данных в строке поставщика. Если база данных уже присоединена, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не присоединяет ее повторно, а использует для соединения присоединенную базу данных по умолчанию.|  
 |**Встроенные функции безопасности**|DBPROP_AUTH_INTEGRATED|Принимает значение «SSPI» для проверки подлинности Windows.|  
 |**Соединения режима MARS**|SSPROP_INIT_MARSCONNECTION|Включает или отключает режим MARS для соединения для сервера версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более поздней версии. Распознаются значения «true» и «false». По умолчанию используется значение «false».|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Всегда указывайте **MultiSubnetFailover = True** при подключении к прослушивателю группы доступности из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] группы доступности или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра отказоустойчивого кластера. **MultiSubnetFailover = True** настраивает драйвер OLE DB для SQL Server для обеспечения более быстрое обнаружение и подключение к серверу (активного). Допустимые значения — **True** и **False**. По умолчанию **False**. Например:<br /><br /> `MultiSubnetFailover=True`<br /><br /> Дополнительные сведения о драйвер OLE DB для SQL Server поддержку [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в разделе [драйвер OLE DB для SQL Server поддержку высокого уровня доступности и аварийного восстановления](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Сетевой адрес**|SSPROP_INIT_NETWORKADDRESS|Сетевой адрес экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.<br /><br /> Дополнительные сведения о допустимом синтаксисе адресов см. в описании **адрес** ключевого слова в этом разделе.|  
 |**Сетевая библиотека**|SSPROP_INIT_NETWORKLIBRARY|Сетевая библиотека, используемая для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в организации.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Размер сетевого пакета. Значение по умолчанию — 4096.|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **Примечание** в строке подключения свойство «Old Password» устанавливает значение свойства SSPROP_AUTH_OLD_PASSWORD, которой является текущий пароль (возможно истекшим сроком действия), недоступным через свойство строки поставщика.  
   
 ## <a name="see-also"></a>См. также:  
- [Построение приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

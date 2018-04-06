@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_resource_stats (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_resource_stats (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -57,21 +57,18 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Разрешения  
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Remarks  
- Данные, возвращенные **sys.dm_db_resource_stats** выражается в процентах от максимально разрешенных ограничений DTU для уровня производительности или уровня службы, которые выполняются для баз данных Basic, Standard и Premium. Для уровней Web и Business эти числа указывают проценты в условиях уровня производительности Standard S2. Например, если при выполнении в базе данных Web или Business значение avg_cpu_percent возвращает 70 %, это означает 70 % лимита уровня S2. Кроме того, для уровней Web и Business проценты могут отражать количество сверх 100 %, что также основывается на ограничении уровня S2.  
-  
+## <a name="remarks"></a>Замечания  
+ Данные, возвращенные **sys.dm_db_resource_stats** выражается в процентах от максимально разрешенных ограничений DTU для уровня производительности или уровня службы, которые выполняются для баз данных Basic, Standard и Premium.
+ 
  Если база данных переключилась на другой сервер за последние 60 минут, представление будет возвращать только данные за то время, в течение которого она была базой данных-источником с момента отработки отказа.  
   
- Для получения менее детального представления данных используйте **sys.resource_stats** представление каталога **master** базы данных. Это представление сохраняет данные каждые 5 минут и сохраняет исторические данные в течение 14 дней.  Дополнительные сведения см. в разделе [sys.resource_stats &#40; База данных Azure SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Для получения менее детального представления данных используйте **sys.resource_stats** представление каталога **master** базы данных. Это представление сохраняет данные каждые 5 минут и сохраняет исторические данные в течение 14 дней.  Дополнительные сведения см. в разделе [sys.resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Когда база данных является членом эластичного пула, Статистика ресурсов, представленный в виде процента значений выражаются в виде процентов максимальные значения DTU для баз данных, как указано в конфигурации пула эластичных БД.  
   
 ## <a name="example"></a>Пример  
   
-> [!NOTE]  
->  Для уровней Web и Business эти числа указывают проценты в условиях уровня производительности Standard S2. Например, если при выполнении в базе данных Web или Business значение avg_cpu_percent возвращает 70 %, это означает 70 % лимита уровня S2. Кроме того, для уровней Web и Business проценты могут отражать количество сверх 100 %, что также основывается на ограничении уровня S2.  
-  
- Следующий пример возвращает данные об использовании ресурсов, упорядоченные по последнему времени для подключенной в текущий момент базы данных.  
+Следующий пример возвращает данные об использовании ресурсов, упорядоченные по последнему времени для подключенной в текущий момент базы данных.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
@@ -106,7 +103,7 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sys.resource_stats &#40; База данных Azure SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Уровни обслуживания](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Возможности уровня службы и ограничения](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

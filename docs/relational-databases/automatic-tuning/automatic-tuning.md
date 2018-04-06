@@ -1,31 +1,31 @@
 ---
-title: "Автоматической настройки | Документы Microsoft"
-description: "Дополнительные сведения об автоматической настройки в SQL Server и базы данных SQL Azure"
-ms.custom: 
+title: Автоматической настройки | Документы Microsoft
+description: Дополнительные сведения об автоматической настройки в SQL Server и базы данных SQL Azure
+ms.custom: ''
 ms.date: 08/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: automatic-tuning
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance tuning [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/12/2018
 
 Вы можете отдельно для каждой базы данных включить автоматическую настройку и указать, что при ухудшении производительности после изменения плана следует принудительно использовать последний известный эффективный план. Автоматическая настройка включается с помощью следующей команды.
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -92,7 +92,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет все необходимые представления и процедуры, необходимые для наблюдения за производительностью и устранения неполадок в хранилище запросов.
 
-В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], можно найти с помощью системных представлений хранилища запросов регрессию при выборе плана. В [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает и отображает потенциальных регрессию при выборе плана и рекомендуемые действия, которые должны применяться в [sys.dm_db_tuning_recommendations &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) представления. В представлении отображаются сведения о проблему, важность проблемы и сведения, например указанный запрос, идентификатор регрессионных плана, идентификатор, используемый для сравнения, в качестве базового плана и [!INCLUDE[tsql_md](../../includes/tsql_md.md)] инструкцию, которая может выполняться по устранению проблема.
+В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], можно найти с помощью системных представлений хранилища запросов регрессию при выборе плана. В [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает и отображает потенциальных регрессию при выборе плана и рекомендуемые действия, которые должны применяться в [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) представления. В представлении отображаются сведения о проблему, важность проблемы и сведения, например указанный запрос, идентификатор регрессионных плана, идентификатор, используемый для сравнения, в качестве базового плана и [!INCLUDE[tsql_md](../../includes/tsql_md.md)] инструкцию, которая может выполняться по устранению проблема.
 
 | type | description | datetime | score | подробности | … |
 | --- | --- | --- | --- | --- | --- |
@@ -104,11 +104,12 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - Описание, которое содержит сведения о том, почему [!INCLUDE[ssde_md](../../includes/ssde_md.md)] считает, что это изменение плана потенциальных снижения производительности.
  - Дата и время при обнаружении потенциальных регрессии.
  - Оценка этой рекомендации. 
- - Сведения о проблемах, например идентификатор плана обнаруженных, идентификатор плана регрессионных, идентификатор плана, обязательно должно устранить проблему, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] скрипт, который может применяться для устранения проблемы, и т. д. Сведения хранятся в [формат JSON](../../relational-databases/json/index.md).
+ - Сведения о проблемах, например идентификатор плана обнаруженных, идентификатор плана регрессионных, идентификатор плана, обязательно должно устранить проблему, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ сценарий, который может применяться для устранения проблемы, и т. д. Сведения хранятся в [формат JSON](../../relational-databases/json/index.md).
 
 Используйте следующий запрос, чтобы получить скрипт, который устраняет проблемы и Дополнительные сведения о примерные получить:
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -171,14 +172,14 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="alternative---manual-index-management"></a>Альтернативой - Управление индексами вручную
 
-Без управления автоматическое индекс, ему потребуется вручную запросить [sys.dm_db_missing_index_details &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) представление, чтобы найти индексы, которые могут повысить производительность, создать индексы, используя сведения, представленные в этом представлении и вручную отслеживать производительность запроса. Чтобы найти индексы, которые должны быть удалены, пользователи должны статистику операционного использования индексов для поиска редко используемые индексы.
+Без управления автоматическое индекс, ему потребуется вручную запросить [sys.dm_db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) представление, чтобы найти индексы, которые могут повысить производительность, создать индексы, используя указанные данные в состав этого представления и вручную монитор производительности запроса. Чтобы найти индексы, которые должны быть удалены, пользователи должны статистику операционного использования индексов для поиска редко используемые индексы.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] упрощает этот процесс. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] анализа рабочей нагрузки, определяет запросы, которые могут выполняться быстрее с новым индексом и идентифицирует неиспользуемые или повторяющиеся индексы. Дополнительные сведения об идентификации индексов, которые должны быть изменены на [найти рекомендации по индексам на портале Azure](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>См. также  
- [ALTER AUTOMATIC_TUNING SET базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER базы данных SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           

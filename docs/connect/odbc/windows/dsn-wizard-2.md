@@ -1,27 +1,28 @@
 ---
-title: "Экран мастера 2 (драйвер ODBC для SQL Server) источника данных | Документы Microsoft"
-ms.custom: 
-ms.date: 09/27/2017
+title: Экран мастера 2 (драйвер ODBC для SQL Server) источника данных | Документы Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Экран 2 мастера источников данных
 
@@ -47,9 +48,13 @@ ms.lasthandoff: 11/18/2017
 
 Указывает, что драйвер пройти проверку подлинности SQL Server с помощью Azure Active Directory идентификатор входа и пароль.
 
+### <a name="with-active-directory-interactive-authentication"></a>С помощью Active Directory интерактивной проверки подлинности
+
+Указывает, что драйвер пройти проверку подлинности SQL Server с помощью Azure Active Directory интерактивный режим, указав идентификатор входа. Это приведет к началу диалоговое окно запроса проверки подлинности Windows Azure.
+
 ### <a name="login-id"></a>Идентификатор входа
 
-Указывает идентификатор входа, драйвер использует при подключении к SQL Server, если **с проверкой подлинности SQL Server с помощью идентификатора входа и пароль, введенный пользователем** или **с использованием идентификатора входа проверки подлинности пароль с Active Directory и пароль, введенный пользователем** выбран. Это относится только к соединениям, установленным для определения настроек по умолчанию сервера; это не относится к последующим соединениям, установленным с использованием данного источника данных, после того как он был создан.
+Указывает идентификатор входа, драйвер использует при подключении к SQL Server, если **с проверкой подлинности SQL Server с помощью идентификатора входа и пароль, введенный пользователем** или **с использованием идентификатора входа проверки подлинности пароль с Active Directory и пароль, введенный пользователем** или **с Active Directory интерактивной проверки подлинности с использованием идентификатора входа, введенные пользователем** выбран. Это относится только к соединениям, установленным для определения настроек по умолчанию сервера; это не относится к последующим соединениям, установленным с использованием данного источника данных, после того как он был создан.
 
 ### <a name="password"></a>Пароль
 

@@ -1,29 +1,29 @@
 ---
-title: "Имя источника данных и подключение строковых ключевые слова и атрибуты, используемые в драйвере ODBC для SQL Server | Документы Microsoft"
-ms.custom: 
-ms.date: 01/24/2018
+title: Имя источника данных и подключение строковых ключевые слова и атрибуты, используемые в драйвере ODBC для SQL Server | Документы Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
 - DSN
 - Connection String Keywords
 - Connection Attributes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09af03a1f7f9389bbbc86bc5f9f1a5a358aaf885
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Имя источника данных и ключевых слов строки подключения и атрибуты
 
@@ -166,6 +166,7 @@ ms.lasthandoff: 02/11/2018
 |SqlPassword|SQL_AU_PASSWORD|Проверка подлинности SQL Server с именем пользователя и пароль.|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory встроенной проверки подлинности.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Проверка подлинности Azure Active Directory пароль.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Проверка подлинности Azure Active Directory интерактивный.|
 | |SQL_AU_RESET|Не задано. Переопределяет любое имя источника данных или строку подключения.|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
@@ -185,7 +186,7 @@ ms.lasthandoff: 02/11/2018
 | Значение ключевого слова | Значение атрибута| Описание |
 |-|-|-|
 |Да|SQL_IS_ON|(По умолчанию) Включает разрешение IP-адресов для прозрачной сети.|
-|нет|SQL_IS_OFF|Отключает сетевую разрешение IP-адресов.|
+|Нет|SQL_IS_OFF|Отключает сетевую разрешение IP-адресов.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -193,7 +194,7 @@ ms.lasthandoff: 02/11/2018
 
 | Значение ключевого слова | Описание |
 |-|-|
-|нет|(По умолчанию) Используйте sp_describe_first_result_set для метаданных, если он доступен. |
+|Нет|(По умолчанию) Используйте sp_describe_first_result_set для метаданных, если он доступен. |
 |Да| Используйте SET FMTONLY для метаданных. |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
@@ -219,6 +220,6 @@ ms.lasthandoff: 02/11/2018
 
 | Значение атрибута | Описание |
 |-|-|
-| char * | Путь к библиотеке поставщика хранилища ключей |
+| char * | Путь к библиотеке поставщика хранилища ключей |
 
 

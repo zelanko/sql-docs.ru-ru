@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_missing_index_details (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_missing_index_details (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_missing_index_details
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c10432f27701da1b3a99176df6797317051d2ec2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ed4324637696d9da80c4cf8da276226276c63b1c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.lasthandoff: 02/03/2018
 |**included_columns**|**nvarchar(4000)**|Список столбцов с разделителями-запятыми, необходимых в качестве столбцов для запроса. Дополнительные сведения о или включенных столбцах см. в разделе [создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Для индексов, оптимизированных для памяти (оба хэширования и оптимизированных для памяти некластеризованный), игнорировать **included_columns**. Все столбцы таблицы включаются в каждый индекс с оптимизацией для памяти.|  
 |**инструкция**|**nvarchar(4000)**|Имя таблицы, в которой отсутствует индекс.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Сведения, возвращаемые функцией **sys.dm_db_missing_index_details** обновляется, когда запрос оптимизирован оптимизатором запросов и не сохраняется. Сведения об отсутствующих индексах хранятся только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, чтобы сохранить их после перезагрузки сервера.  
   
- Чтобы определить, какие группы входит отсутствующий индекс является частью, вы можете запросить **sys.dm_db_missing_index_groups** динамическому административному представлению, объединив его с **sys.dm_db_missing_index_details**  на основе **index_handle** столбца.  
+ Чтобы определить, какие группы входит отсутствующий индекс является частью, вы можете запросить **sys.dm_db_missing_index_groups** динамическому административному представлению, объединив его с **sys.dm_db_missing_index_details ** на основе **index_handle** столбца.  
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Использование сведений об отсутствующих индексах в инструкциях CREATE INDEX  
  Для преобразования сведений, возвращенных **sys.dm_db_missing_index_details** инструкции CREATE INDEX для дисковых и оптимизированных для памяти индексы, столбцы равенства должны быть помещены перед столбцами неравенства, а вместе они должны образовать индекс ключа. Включенные столбцы должны быть добавлены в инструкцию CREATE INDEX с помощью предложения INCLUDE. Чтобы определить эффективный порядок столбцов равенства, расположите их на основе их выборности, перечисляя наиболее выбираемые столбцы первыми (крайние левые в списке столбцов).  
@@ -65,10 +65,11 @@ ms.lasthandoff: 02/03/2018
 ## <a name="transaction-consistency"></a>Согласованность транзакций  
  Если транзакция создает или удаляет таблицу, то строки, содержащие сведения отсутствующих индексов об удаленных объектах, удаляются из данного объекта DMO, сохраняя согласованность транзакций.  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
-  
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+
 ## <a name="see-also"></a>См. также  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   

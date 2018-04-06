@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_sys_info (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_os_sys_info (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|Указывает идентификатор текущей последовательности монитора взаимоблокировок. Не допускает значения NULL.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Представляет **ms_tick** номер при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска. Сравнивается с текущим столбцом ms_ticks. Не допускает значения NULL.|  
 |**sqlserver_start_time**|**datetime**|Указывает дату и время последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не допускает значения NULL.|  
-|**affinity_type**|**int**|**Применяется к: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Задает текущий используемый тип привязки процесса к процессорам. Не допускает значения NULL. Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**Применяется к: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Задает текущий используемый тип привязки процесса к процессорам. Не допускает значения NULL. Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Применяется к: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Описывает **affinity_type** столбца. Не допускает значения NULL.<br /><br /> MANUAL = сходство было задано хотя бы для одного ЦП.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может свободно перемещать потоки между процессорами.|  
 |**process_kernel_time_ms**|**bigint**|**Применяется к: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] через [! ВКЛЮЧИТЬ [ssCurrent]**(.. /Token/ssCurrent_md.MD)].<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме ядра. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
 |**process_user_time_ms**|**bigint**|**Применяется к: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в пользовательском режиме. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**Применяется к: начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** .<br /><br />Сведения о еще в будущем. |
 |**sql_memory_model**|**int**|**Применяется к: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, а начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Указывает модель памяти, используемый сервером SQL Server для выделения памяти. Не допускает значения NULL.<br /><br />1 = модель обычной памяти<br />2 = блокировка страниц в памяти<br /> 3 = больших страниц в памяти|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Применяется к: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, а начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Указывает модель памяти, используемый сервером SQL Server для выделения памяти. Не допускает значения NULL.<br /><br />**ОБЫЧНАЯ** = SQL Server использует модель обычной памяти для выделения памяти. Это модель памяти sql по умолчанию для учетной записи службы SQL Server не имеет блокировка страниц в памяти привилегии во время запуска.<br />**LOCK_PAGES** = SQL server используется блокировка страниц в памяти для выделения памяти. Это диспетчер памяти sql по умолчанию для учетной записи службы SQL Server необходима блокировка страниц в памяти во время запуска SQL Server.<br /> **LARGE_PAGES** = SQL Server с помощью больших страниц в памяти для выделения памяти. SQL Server использует распределителя больших страниц для выделения памяти только в выпуске Enterprise edition, когда учетная запись службы SQL Server необходима блокировка страниц в памяти во время запуска сервера и при включении 834 флаг трассировки.|
-|**pdw_node_id**|**int**|**Применяется к: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> Идентификатор для узла, это распределение.|  
 |**socket_count** |**int** | **Применяется к: начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** .<br /><br />Указывает количество сокетов процессоров, доступных в системе. |  
 |**cores_per_socket** |**int** | **Применяется к: начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Указывает число процессоров на сокетов, доступных в системе. |  
 |**numa_node_count** |**int** | **Применяется к: начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Указывает количество узлов numa, доступных в системе. Этот столбец содержит физической архитектуры NUMA, а также программная архитектура numa-узлов. |  
   
-## <a name="permissions"></a>Разрешения  
- На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется `VIEW SERVER STATE` разрешение на сервере.  
-  
- На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.  
-  
+## <a name="permissions"></a>Разрешения
+
+На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, относящиеся к операционной системе SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,29 +1,45 @@
 ---
-title: "Замечания - драйвер Microsoft ODBC для SQL Server в Linux и macOS | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Замечания - драйвер Microsoft ODBC для SQL Server в Linux и macOS | Документы Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f193f7e58fa2cf24d02a345d60ca6c74e211fc7e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске для Microsoft ODBC Driver for SQL Server для Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17,1 драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows
+
+**Добавлены возможности**:
+
+Поддержка `SQL_COPT_SS_CEKCACHETTL` и `SQL_COPT_SS_TRUSTEDCMKPATHS` атрибуты соединения (Дополнительные сведения см. в разделе [использование постоянного шифрования с драйвером ODBC для SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` Обеспечивает управление время, которое существует в локальном кэше ключей шифрования столбцов, а также его очистки
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Позволяет приложению ограничение операций AE только использовать указанный список главных ключей столбцов
+
+
+
+Поддержка загрузки `.rll` из расположения по умолчанию (Дополнительные сведения см. в разделе [раздел «Загрузка файла ресурсов» в документе установки](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+
+[Исправления ошибок](../bug-fixes.md)
+
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на macOS и Linux
 

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_tran_locks (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_tran_locks (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_locks
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,24 +53,25 @@ ms.lasthandoff: 02/20/2018
 |**resource_lock_partition**|**Int**|Идентификатор секционирования блокировки для ресурса с секционированными блокировками. Это значение для ресурса с несекционированными блокировками равно 0.|  
 |**request_mode**|**nvarchar(60)**|Режим запроса. Режимом для предоставленных запросов является режим предоставления, для запросов в ожидании — запрашиваемый режим.|  
 |**request_type**|**nvarchar(60)**|Тип запроса. Значение LOCK.|  
-|**request_status**|**nvarchar(60)**|Текущее состояние запроса. Возможные значения: GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT или ABORT_BLOCKERS. Дополнительные сведения об ожиданиях с низким приоритетом и блокираторах отмены см. в разделе *low_priority_lock_wait* раздел [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_status**|**nvarchar(60)**|Текущее состояние запроса. Возможные значения: GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT или ABORT_BLOCKERS. Дополнительные сведения об ожиданиях с низким приоритетом и блокираторах отмены см. в разделе *low_priority_lock_wait* раздел [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Возвращает приблизительное количество случаев, когда этот ресурс был запрошен одним и тем же объектом.|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|Идентификатор сеанса, которому в данный момент принадлежит этот запрос. Для распределенных и связанных транзакций идентификатор владеющего сеанса может меняться. Значение -2 показывает, что запрос относится к потерянной распределенной транзакции. Значение -3 показывает, что запрос принадлежит отложенной транзакции восстановления, например транзакции, для которой откат во время восстановления был отложен из-за невозможности успешно завершить операцию.|  
 |**request_exec_context_id**|**int**|Идентификатор контекста выполнения процесса, которому в данный момент принадлежит запрос.|  
 |**request_request_id**|**int**|Идентификатор запроса (идентификатор пакета) в процессе, которому в данный момент принадлежит запрос. Это значение меняется каждый раз при изменении в соединении режима MARS для транзакций.|  
 |**request_owner_type**|**nvarchar(60)**|Тип сущности, которой принадлежит запрос. Запрос диспетчера блокировок может принадлежать нескольким разным объектам. Возможны следующие значения:<br /><br /> TRANSACTION = Запрос принадлежит транзакции.<br /><br /> CURSOR = Запрос принадлежит курсору.<br /><br /> SESSION = Запрос принадлежит сеансу пользователя.<br /><br /> SHARED_TRANSACTION_WORKSPACE = Запрос принадлежит общей части рабочего пространства транзакции.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = Запрос принадлежит монопольной части рабочей области транзакции.<br /><br /> NOTIFICATION_OBJECT = запрос принадлежит внутреннему компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот компонент попросил диспетчера блокировок уведомлять его в случае, если другой компонент ожидает получения блокировки. Функция FileTable — это компонент, который использует это значение.<br /><br /> **Примечание:** рабочие пространства предназначены внутренне хранят блокировки для прикрепленных сеансов.|  
-|**request_owner_id**|**bigint**|Идентификатор определенного владельца запроса.<br /><br /> Если владельцем запроса является транзакция, это значение содержит идентификатор транзакции.<br /><br /> Если владельцем запроса, является таблица FileTable **request_owner_id** имеет одно из следующих значений.<br /><br /> <br /><br /> -4: таблица FileTable получила блокировку базы данных.<br /><br /> -3: таблица FileTable получила блокировку таблицы.<br /><br /> Другое значение: значение представляет дескриптор файла. Это значение также отображается как **fcb_id** в динамическом административном представлении [sys.dm_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_id**|**bigint**|Идентификатор определенного владельца запроса.<br /><br /> Если владельцем запроса является транзакция, это значение содержит идентификатор транзакции.<br /><br /> Если владельцем запроса, является таблица FileTable **request_owner_id** имеет одно из следующих значений.<br /><br /> <br /><br /> -4: таблица FileTable получила блокировку базы данных.<br /><br /> -3: таблица FileTable получила блокировку таблицы.<br /><br /> Другое значение: значение представляет дескриптор файла. Это значение также отображается как **fcb_id** в динамическом административном представлении [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|Идентификатор GUID определенного владельца запроса. Это значение используется только распределенной транзакцией, для которой оно является идентификатором GUID координатора MS DTC.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Это значение представляет идентификатор заблокированного пространства запрашивающего объекта. Идентификатор заблокированного пространства определяет, совместимы ли друг с другом два запрашивающих объекта и можно ли им предоставить блокировки в режимах, которые в противном случае привели бы к конфликту.|  
 |**lock_owner_address**|**varbinary(8)**|Адрес внутренней структуры данных в памяти, используемый для отслеживания этого запроса. Этот столбец может быть соединен с **resource_address** столбца в **sys.dm_os_waiting_tasks**.|  
 |**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Состояние предоставленного запроса показывает, что блокировка ресурса была предоставлена запрашивающему объекту. Ожидающий запрос обозначает, что запрос еще не был предоставлен. Возвращаются следующие типы ожидающих запросов **request_status** столбца:  
   
 -   Состояние преобразованного запроса означает, что запрашивающий объект получил запрос ресурса и в настоящий момент ожидает, пока будет предоставлено обновление исходного запроса.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 02/20/2018
   
 -   SET TRANSACTION ISOLATION LEVEL для определения уровня блокировки сеанса. Дополнительные сведения см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Табличные подсказки блокировки для указания уровня блокировки для отдельной ссылки таблицы в предложении FROM. Синтаксис и ограничения см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Табличные подсказки блокировки для указания уровня блокировки для отдельной ссылки таблицы в предложении FROM. Синтаксис и ограничения см. в разделе [табличные подсказки &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  В пределах одного сеанса ресурсу может быть предоставлено более одной блокировки. Другой сущности, которые выполняются в одном сеансе можно друг является владельцем блокировки на тот же ресурс и информация отображается в **request_owner_type** и **request_owner_id** столбцы, которые являются возвращенный **sys.dm_tran_locks**. Если несколько экземпляров одной и той же **request_owner_type** существует, **request_owner_id** столбец используется для различия экземпляров. Для распределенных транзакций **request_owner_type** и **request_owner_guid** столбцы будут показаны различные сведения о сущности.  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 02/20/2018
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- Следующие события XEvents относятся к секции **КОММУТАТОР** и перестроение индекса в сети. Сведения о синтаксисе см. в разделе [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).  
+ Следующие события XEvents относятся к секции **КОММУТАТОР** и перестроение индекса в сети. Сведения о синтаксисе см. в разделе [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   

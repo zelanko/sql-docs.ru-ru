@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_wait_stats (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_os_wait_stats (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_wait_stats_TSQL
@@ -22,24 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: 
+caps.latest.revision: 111
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: afc91e5254a85d0863f2461e50d9ec55e0cb5bbd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d3add34699a2b0fa77d47d27ac8084f503802b43
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает данные обо всех случаях ожидания, обнаруженных выполнявшимися потоками. Это агрегированное представление можно использовать для диагностики проблем производительности как всего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и конкретных запросов и пакетов. [sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) предоставляет аналогичные сведения в сеансе.  
+Возвращает данные обо всех случаях ожидания, обнаруженных выполнявшимися потоками. Это агрегированное представление можно использовать для диагностики проблем производительности как всего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и конкретных запросов и пакетов. [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) предоставляет аналогичные сведения в сеансе.  
   
 > [!NOTE] 
-> Вызов его из  **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , используйте имя **sys.dm_pdw_nodes_os_wait_stats**.  
+> Вызов его из **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, используйте имя **sys.dm_pdw_nodes_os_wait_stats**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,11 +50,12 @@ ms.lasthandoff: 02/03/2018
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
 |pdw_node_id|**int**|Идентификатор для узла, это распределение. <br/> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
-  
-##  <a name="WaitTypes"></a>Типы ожиданий  
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+
+##  <a name="WaitTypes"></a> Типы ожиданий  
  **Ожидание ресурсов** Ожидание ресурсов имеет место, когда исполнитель запрашивает доступ к ресурсу, который недоступен, так как ресурс используется другим исполнителем или пока не доступна. Примерами ожидания ресурсов являются блокировки, кратковременные блокировки, сетевые ожидания и ожидания дискового ввода-вывода. Ожидания блокировок и кратковременных блокировок представляют собой ожидания объектов синхронизации.  
   
 **Ожидания очередей**  
@@ -943,7 +944,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |Имеет место при ожидании завершения контрольной точки., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_ENABLED |Происходит, когда назначение контрольных точек отключена и система ожидает назначения контрольных точек должно быть включено., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_STATE_LOCK |Происходит при синхронизации проверки состояния контрольной точки., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **ПРИМЕНИМО К**: с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_GUEST |Происходит, когда необходимо прекратить получение уведомлений о нехватке памяти выделения памяти базы данных., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_HOST_WAIT |Происходит, когда ожидание активации компонентом database engine и реализуемых основным приложением., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -1014,7 +1015,7 @@ GO
 |XTPPROC_PARTITIONED_STACK_CREATE |Происходит при распределение узлов NUMA в собственном коде компиляции хранимой процедуры кэш структуры (происходит в одном потоке) для данной процедуры., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
 
   
- Следующие события XEvents относятся к секции **КОММУТАТОР** и перестроение индекса в сети. Сведения о синтаксисе см. в разделе [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).  
+ Следующие события XEvents относятся к секции **КОММУТАТОР** и перестроение индекса в сети. Сведения о синтаксисе см. в разделе [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   
@@ -1022,13 +1023,13 @@ GO
   
 -   ddl_with_wait_at_low_priority  
   
- Матрицу совместимости блокировок см [sys.dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
     
- [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Динамические административные представления, относящиеся к операционной системе SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys.dm_db_wait_stats &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [sys.dm_db_wait_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 
