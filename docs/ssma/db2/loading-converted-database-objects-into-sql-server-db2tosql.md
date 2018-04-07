@@ -1,30 +1,31 @@
 ---
-title: "Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL) | Документы Microsoft"
+title: Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL)
 После преобразования схемы DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать скрипты самостоятельно. Кроме того, SSMA позволяет заменить метаданные целевой фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **файл** последовательно выберите пункты **откройте**, а затем нажмите кнопку **файл**.  
   
-2.  В **откройте** диалоговом окне выберите файл сценария, а затем[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  В **откройте** диалоговом окне выберите файл сценария, а затем [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  Чтобы выполнить полный сценарий, нажмите клавишу **F5** ключа.  
   
@@ -115,6 +116,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в процессе миграции должно [переноса данных DB2 в SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
-## <a name="see-also"></a>См. также:  
-[Перенос данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

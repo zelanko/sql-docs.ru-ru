@@ -1,30 +1,31 @@
 ---
-title: "Подключитесь к DB2 (DB2ToSQL) | Документы Microsoft"
+title: Подключитесь к DB2 (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b590cbfefdbc01e67e4049ffa3d920afd08b1f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-db2-db2tosql"></a>Подключитесь к DB2 (DB2ToSQL)
 Используйте **подключение к DB2** диалоговое окно подключения к базе данных DB2, которые требуется перенести.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 Это стандартный режим.  
   
-**User name**  
+**Имя пользователя**  
 Введите имя пользователя, который будет использоваться SSMA для подключения к базе данных DB2.  
   
 **Пароль**  

@@ -1,15 +1,16 @@
 ---
-title: "Параметры (сопоставление типов) проекта (AccessToSQL) | Документы Microsoft"
+title: Параметры (сопоставление типов) проекта (AccessToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры (сопоставление типов) проекта (AccessToSQL)
 Параметры сопоставления типов проекта позволяют задать сопоставления типов по умолчанию для проекта SSMA. Можно также указать сопоставления типов для отдельных объектов базы данных. Дополнительные сведения см. в разделе [сопоставление исходной и целевой типы данных](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -54,26 +55,26 @@ ms.lasthandoff: 12/21/2017
 |Тип данных Microsoft Access|Тип данных SQL Server|  
 |--------------------|------------------------|  
 |**двоичные [\*... \*]**|**varbinary [\*]**|  
-|**boolean**|**bit**|  
-|**байт**|**tinyint**|  
+|**boolean**|**бит**|  
+|**byte**|**tinyint**|  
 |**Валюта**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**Идентификатор GUID**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**Long**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**MEMO**|**nvarchar(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**MEMO** — для Access 97|**varchar(max)**|  
-|**один**|**real**|  
-|**text[\*.. \*]**|**nvarchar [\*]**|  
-|**text[\*.. \*]** — для Access 97|**varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar [\*]**|  
+|**текст [\*... \*]** — для Access 97|**varchar[\*]**|  
   
 **Добавить**  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-**Изменить**  
+**Правка**  
 Щелкните, чтобы изменить тип данных в списке сопоставления.  
   
 **Удалить**  
@@ -82,7 +83,7 @@ ms.lasthandoff: 12/21/2017
 **По умолчанию**  
 Щелкните, чтобы сбросить все сопоставления типов данных по умолчанию SSMA.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сопоставление исходного и целевого типов данных](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
 [Reference(Access) интерфейса пользователя](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -1,30 +1,31 @@
 ---
-title: "Настройка параметров проекта (DB2ToSQL) | Документы Microsoft"
+title: Настройка параметров проекта (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2688a05f0875bc279d993c500a48ca7b6d9f4894
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-db2tosql"></a>Настройка параметров проекта (DB2ToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, параметры пользовательского интерфейса и данных миграции. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что параметры конфигурации подходят для проекта.  
@@ -46,11 +47,11 @@ SSMA имеет пять наборов параметров проекта.
   
 Он также имеет четыре режима для настройки этих параметров:  
   
--   Default  
+-   По умолчанию  
   
 -   Optimistic  
   
--   Полное  
+-   Полная  
   
 -   Другой  
   
@@ -58,15 +59,15 @@ SSMA имеет пять наборов параметров проекта.
   
 Дополнительные сведения о параметрах и применение параметров в каждом режиме см. в следующих разделах:  
   
--   [Параметры проекта &#40; Преобразование &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
+-   [Параметры проекта &#40;преобразования&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)  
   
--   [Параметры проекта &#40; Миграция &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
+-   [Параметры проекта &#40;миграции&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)  
   
--   [Параметры проекта &#40; Синхронизация &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
+-   [Параметры проекта&#40;синхронизации&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
   
--   [Параметры проекта &#40; GUI &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
+-   [Параметры проекта &#40;графического интерфейса пользователя&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
   
--   [Параметры проекта &#40; Сопоставление типов &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
+-   [Параметры проекта &#40;сопоставление типов&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
 ## <a name="setting-project-options"></a>Настройка параметров проекта  
 В SSMA можно настроить параметры по умолчанию для всех проектов. Эти параметры сохраняются в файл конфигурации SSMA и применены к новый созданный проект.  
@@ -99,13 +100,13 @@ SSMA имеет пять наборов параметров проекта.
   
 3.  Нажмите кнопку **ОК** для сохранения настроек.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
--   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления DB2 и типов данных SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
+-   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления DB2 и типов данных SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   В противном случае можно преобразовывать определения объектов базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта. Дополнительные сведения см. в разделе [преобразование схемы DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   В противном случае можно преобразовывать определения объектов базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта. Дополнительные сведения см. в разделе [преобразование схемы DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[Сопоставление DB2 и типов данных SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Сопоставление типов данных SQL Server и DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   

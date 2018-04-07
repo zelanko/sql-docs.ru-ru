@@ -1,33 +1,34 @@
 ---
-title: "Работа с SSMA для MySQL консоли (MySQLToSQL) | Документы Microsoft"
+title: Работа с SSMA для MySQL консоли (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bd319d0cff1a3f7d7681591a59b640a2afd9d24
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c14c4bcbe30c99794673ed4a08389e451765885
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Работа с SSMA для MySQL консоли (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) для MySQL теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для MySQL теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
   
 В этом разделе объясняется процедуры для переноса базы данных MySQL, с помощью SSMA консольного приложения.  
   
@@ -35,18 +36,18 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**Разделы**|**Описание**|  
-|[Начало работы с SSMA для консоли MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Описание процедуры для выполнения консольного приложения.|  
-|[Параметры командной строки в консоли SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Описывает параметры командной строки и параметры для работы приложения консоли SSMA.|  
-|[Создание файлов скриптов &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Объясняется, как создать файл скрипта.|  
-|[Создание файлов значение переменной &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|Объясняется, как создать файл значение переменной.|  
-|[Создание файлов подключения сервера &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)|Объясняется, как создать файл соединения сервера.|  
-|[Выполнение консоли SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|Описание команд файла скрипта для работы приложения консоли SSMA.|  
-|[Работа с консоли скрипт образцы файлов &#40; MySQLToSQL &#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Описывает способ легко настроить, сценарии, которые были предоставлены в образцах файлов вместе с продуктом|  
-|[Управление паролями &#40; MySQLToSQL &#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Описывает о пароль шифрования и расшифровки и импорт / экспорт сведения о пароле.|  
-|[Создание отчетов &#40; MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Список команд для создания отчетов.|  
-|[Устранение неполадок &#40; MySQLToSQL &#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Предоставляет краткие сведения о решении проблем миграции.|  
+|**Разделы**|**Description**|  
+|[Начало работы с SSMA для консоли MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Описание процедуры для выполнения консольного приложения.|  
+|[Параметры командной строки в консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Описывает параметры командной строки и параметры для работы приложения консоли SSMA.|  
+|[Создание файлов скриптов &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Объясняется, как создать файл скрипта.|  
+|[Создание файлов значение переменной &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)|Объясняется, как создать файл значение переменной.|  
+|[Создание файлов подключения сервера &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)|Объясняется, как создать файл соединения сервера.|  
+|[Выполнение консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|Описание команд файла скрипта для работы приложения консоли SSMA.|  
+|[Работа с файлами скриптов образца консоли &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Описывает способ легко настроить, сценарии, которые были предоставлены в образцах файлов вместе с продуктом|  
+|[Управление паролями &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Описывает о пароль шифрования и расшифровки и импорт / экспорт сведения о пароле.|  
+|[Создание отчетов &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Список команд для создания отчетов.|  
+|[Устранение неполадок &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Предоставляет краткие сведения о решении проблем миграции.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Начало работы с SSMA для консоли MySQL](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   

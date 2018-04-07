@@ -1,26 +1,26 @@
 ---
-title: "Настройка подключения к PolyBase для внешних данных (система платформы аналитики)"
+title: Настройка подключения к PolyBase для внешних данных (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 
-ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+caps.latest.revision: 43
+ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Настройка подключения к PolyBase для внешних данных
 В этой статье описывается настройка PolyBase в SQL Server PDW для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. С помощью PolyBase для запуска запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилища BLOB-объектов Azure и SQL Server PDW.  
@@ -121,7 +121,7 @@ ms.lasthandoff: 01/29/2018
   
     Чтобы запустить PolyBase область HDInsight и внешних 2.0 кластера Hadoop, используйте параметры по умолчанию yarn-site.xml на внешних кластера Hadoop.  
   
-6.  Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. В разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).  
+6.  Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. В разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 7.  Проверьте параметры безопасности для подключений Hadoop. Если **слабая проверка подлинности** в Hadoop стороне включен с помощью `dfs.permission = true`, необходимо создать пользователя Hadoop **pdw_user** и предоставьте полный доступ для чтения и разрешения на запись для этого пользователя. SQL Server PDW и соответствующие вызовы из SQL Server PDW всегда выдается как **pdw_user**.  — Имя основного пользователя и не может изменяться в этой версии подключения к Hadoop и выпуска SQL Server PDW. При отключенной безопасности в Hadoop с помощью `dfs.permission = false`, а затем нужно принимать никаких дальнейших действий.  
   
@@ -129,12 +129,12 @@ ms.lasthandoff: 01/29/2018
   
 9. Для подключений Hadoop решите, какие пользователи могут создавать внешнего источника данных в Hadoop. Присвойте каждого пользователя IP-адрес и порт номер каждого имени узла Hadoop и дать им **ALTER ANY EXTERNAL DATA SOURCE** или **CONTROL SERVER** разрешение.  
   
-10. Также для подключения к WASB требуется пересылки DNS настроены на устройстве. Настройка пересылки DNS, в разделе [использовать DNS-сервер пересылки для разрешения DNS-имена устройств не &#40; Система платформы аналитики &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+10. Также для подключения к WASB требуется пересылки DNS настроены на устройстве. Настройка пересылки DNS, в разделе [использовать DNS-сервер пересылки для разрешения DNS-имена устройств не &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 Авторизованные пользователи теперь можно создать внешние источники данных, внешние форматы файлов и внешних таблиц. Их можно использовать для интеграции данных из нескольких источников, включая Hadoop, хранилище больших двоичных объектов Microsoft Azure и SQL Server PDW.  
 
 ## <a name="kerberos-configuration"></a>Конфигурация Kerberos  
-Обратите внимание, что при PolyBase проходит проверку подлинности Kerberos защищенного кластера, параметр hadoop.rpc.protection должно быть присвоено проверки подлинности. Это действие оставляет обмена данными между узлами Hadoop в незашифрованном виде. 
+Обратите внимание, что при PolyBase проходит проверку подлинности Kerberos защищенного кластера, параметр hadoop.rpc.protection должно быть присвоено проверки подлинности. При этом обмен данными между узлами Hadoop остается в незашифрованном виде. 
 
  Для подключения к защищенным с помощью Kerberos кластеру [с помощью MIT KDC]:
    
@@ -161,9 +161,9 @@ ms.lasthandoff: 01/29/2018
   
 4. Создайте объект учетных данных для базы данных, чтобы указать аутентификационные сведения для каждого пользователя Hadoop. См. статью [Объекты T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).  
 
-5. Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. В разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).
+5. Перезапустите регион PDW. Чтобы сделать это, используйте средство Configuration Manager. В разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).
  
 ## <a name="see-also"></a>См. также  
-[Конфигурация устройства &#40; Система платформы аналитики &#41;](appliance-configuration.md)  
+[Конфигурация устройства &#40;система платформы аналитики&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

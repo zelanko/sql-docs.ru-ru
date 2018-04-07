@@ -1,15 +1,16 @@
 ---
-title: "Подключение к базе данных Azure SQL (MySQLToSQL) | Документы Microsoft"
+title: Подключение к базе данных Azure SQL (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb1ee676132fb2a87af01b2674aa45bbc756ec6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9470c9f615a6c013e992e2b162701f64722d4a0f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Подключение к базе данных Azure SQL (MySQLToSQL)
 Для переноса баз данных MySQL в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранит сведения о экземпляра SQL Azure, вы подключены, но не хранит пароли.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="establishing-a-sql-azure-connection"></a>Установка SQL Azure подключение  
 Перед началом преобразования объектов базы данных MySQL в синтаксис SQL Azure, необходимо установить подключение к экземпляру SQL Azure, где требуется выполнить миграцию базы данных MySQL или баз данных.  
   
-При определении свойств соединения, можно также указать базы данных, где будет выполнена миграция объектов и данных. Это сопоставление на уровне схемы MySQL можно настроить, после подключения к SQL Azure. Дополнительные сведения см. в разделе [сопоставления баз данных MySQL в схемы SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+При определении свойств соединения, можно также указать базы данных, где будет выполнена миграция объектов и данных. Это сопоставление на уровне схемы MySQL можно настроить, после подключения к SQL Azure. Дополнительные сведения см. в разделе [сопоставления баз данных MySQL в схемы SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > Прежде чем подключиться к SQL Azure, убедитесь, что запущен экземпляр SQL Azure и может принимать подключения.  
@@ -88,14 +89,14 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
--   Сопоставление схем MySQL и баз данных SQL Azure и схемы, в разделе [сопоставления баз данных MySQL в схемы SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Сопоставление схем MySQL и баз данных SQL Azure и схемы, в разделе [сопоставления баз данных MySQL в схемы SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   Чтобы настроить параметры конфигурации для проектов, в разделе [задание параметров проекта &#40; MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   Чтобы настроить параметры конфигурации для проектов, в разделе [задание параметров проекта &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   Настройка сопоставления исходных и целевых типов данных, в разделе [MySQL сопоставления и типов данных SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Настройка сопоставления исходных и целевых типов данных, в разделе [MySQL сопоставления и типов данных SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Если необходимо выполнить эти действия, можно преобразовать определения объектов базы данных MySQL в определения объектов SQL Azure. Дополнительные сведения см. в разделе [преобразование баз данных MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Если необходимо выполнить эти действия, можно преобразовать определения объектов базы данных MySQL в определения объектов SQL Azure. Дополнительные сведения см. в разделе [преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция MySQL баз данных SQL Server — Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

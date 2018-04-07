@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Драйвер OLE DB для SQL Server поддержку высокого уровня доступности и аварийного восстановления
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В этом разделе обсуждаются драйвер OLE DB для поддержки SQL Server (добавлено в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения ко вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  В этой статье описывается драйвер OLE DB для поддержки SQL Server (добавлено в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения ко вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Прослушиватель для заданной группы доступности можно задать в строке подключения. Если драйвер OLE DB для приложения SQL Server подключен к базе данных в группе доступности, которая выполняет отработку отказа, то исходное соединение разрывается и приложение должно установить новое соединение для продолжения работы после отработки отказа.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/03/2018
 Ключевое слово **ApplicationIntent** служит для включения маршрутизации только для чтения.  
   
 ## <a name="read-only-routing"></a>Маршрутизация только для чтения  
-Маршрутизация только для чтения — это функция, которая может обеспечить доступность реплики базы данных, доступной только для чтения. Включение маршрутизации только для чтения  
+Маршрутизация только для чтения — это функция, которая способна обеспечить доступность реплики базы данных только для чтения. Включение маршрутизации только для чтения  
   
 1.  Необходимо установить соединение с прослушивателем группы доступности Always On.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/03/2018
   
 Возможно, что не все из нескольких соединений, использующих маршрутизацию только для чтения, будут подключаться к одной и той же реплике только для чтения. Изменения в синхронизации баз данных или в конфигурации маршрутизации сервера могут привести к тому, что клиент будет подключаться к различным репликам только для чтения. Чтобы убедиться, что все запросы только для чтения подключаться к той же репликой только для чтения, не указывайте прослушиватель группы доступности AlwaysOn в **сервера** ключевое слово строки подключения. Вместо этого укажите имя экземпляра, доступного только для чтения.  
   
-На маршрутизацию только для чтения может потребоваться больше времени, чем на подключение к первичной реплике, поскольку маршрутизация только для чтения предусматривает прежде всего подключение к первичной реплике, а затем поиск наиболее подходящей доступной для чтения вторичной реплики. Учитывая этот факт, следует увеличить время ожидания входа в систему.  
+Маршрутизация только для чтения может занять больше времени, чем подключение к источнику, так как при этом сначала производится соединение с источником, а затем поиск наилучшего, доступного для чтения получателя. Учитывая этот факт, следует увеличить время ожидания входа в систему.  
   
 ## <a name="ole-db"></a>OLE DB  
 Драйвер OLE DB для SQL Server поддерживает как **ApplicationIntent** и **MultiSubnetFailover** ключевые слова.   
@@ -113,18 +113,15 @@ ms.lasthandoff: 04/03/2018
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Драйвер OLE DB для приложений SQL Server OLE DB можно использовать один из способов для указания назначения приложения:  
+Драйвер OLE DB для SQL Server приложения можно использовать один из способов для указания назначения приложения:  
   
- **IDBInitialize::Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
   
- **IDataInitialize::GetDataSource**  
+ -   **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** принимает строку подключения, которая может содержать ключевое слово **Application Intent**.  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** получает значение свойства, которое в настоящее время задано для источника данных.  Значение **Application Intent** можно получить с помощью свойств DBPROP_INIT_PROVIDERSTRING и SSPROP_INIT_APPLICATIONINTENT.  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  Чтобы задать значение свойства **ApplicationIntent**, вызовите **IDBProperties::SetProperties**, передав свойство **SSPROP_INIT_APPLICATIONINTENT** со значением "**ReadWrite**" или "**ReadOnly**" или свойство **DBPROP_INIT_PROVIDERSTRING** со значением, содержащим "**ApplicationIntent=ReadOnly**" или "**ApplicationIntent=ReadWrite**".  
   
 Назначение приложения можно указать в поле "Свойства назначения приложения" на вкладке "Все" в диалоговом окне **Свойства канала передачи данных**.  
@@ -133,13 +130,22 @@ ms.lasthandoff: 04/03/2018
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-Свойство эквивалентного соединения:  
+Эквивалентными свойствами соединения являются следующие:  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-Свойство SSPROP_INIT_MULTISUBNETFAILOVER логического типа. Свойство принимает значения VARIANT_TRUE или VARIANT_FALSE.
+Драйвер OLE DB для SQL Server приложения можно использовать один из следующих методов для задания параметра MultiSubnetFailover:  
 
-Чтобы задать значение свойства MultiSubnetFailover, вызовите **IDBProperties::SetProperties** передачи в свойстве SSPROP_INIT_MULTISUBNETFAILOVER со значением **VARIANT_TRUE** или **VARIANT_ FALSE**. 
+ -   **IDBInitialize::Initialize**  
+ **IDBInitialize::Initialize** использует ранее настроенный набор свойств для инициализации источника данных и создания объекта источника данных. Укажите назначение приложения в качестве свойства поставщика или в виде расширенной строки свойств.  
+  
+ -   **IDataInitialize::GetDataSource**  
+ **IDataInitialize::GetDataSource** принимает строку подключения, которая может содержать **MultiSubnetFailover** ключевое слово.  
+
+-   **IDBProperties::SetProperties**  
+Чтобы задать **MultiSubnetFailover** значение свойства, вызовите **IDBProperties::SetProperties** передав **SSPROP_INIT_MULTISUBNETFAILOVER** свойство со значением  **VARIANT_TRUE** или **VARIANT_FALSE** или **DBPROP_INIT_PROVIDERSTRING** свойство которых содержит значение «**MultiSubnetFailover = Yes** «или»**MultiSubnetFailover = нет**».
 
 #### <a name="example"></a>Пример
 

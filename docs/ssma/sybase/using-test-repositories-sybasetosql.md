@@ -21,13 +21,13 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>С помощью репозиториев теста (SybaseToSQL)
 Хранилище тестов SSMA хранилищ инженер-испытатель SSMA тестовые случаи и результаты теста для последующего использования. Репозиторий данных сохраняются в таблицах SQL Server **TestCaseRepository** и **RunTestCaseResultRepository** в схеме **ssma_sybase_utilities** из **ssmatesterdb_syb** базы данных.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Нажмите кнопку **изменить** кнопку, чтобы запустить мастер тестовый случай и изменить выбранного теста.  
   
--   Нажмите кнопку **запуска** кнопку, чтобы открыть [выполнение тестовых случаев &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) диалоговое окно и выполнение выбранного теста.  
+-   Нажмите кнопку **запуска** кнопку, чтобы открыть [выполнение тестовых случаев &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) диалоговое окно и выполнение выбранного теста.  
   
 ## <a name="test-results-repository"></a>Репозиторий результатов теста  
 Репозиторий результатов теста можно просмотреть на **результаты теста** страница **репозитория тестовых случаев** окна. Открыть, щелкнув **результаты теста...** из **тест-инженер** меню.  
@@ -80,11 +80,11 @@ ms.lasthandoff: 12/21/2017
   
 На странице результатов тестирования доступны следующие кнопки:  
   
--   Нажмите кнопку **представление** кнопку, чтобы открыть [просмотра отчетов тестовый случай &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) текущего результата тестового случая.  
+-   Нажмите кнопку **представление** кнопку, чтобы открыть [просмотра отчетов тестовый случай &#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) текущего результата тестового случая.  
   
 -   Нажмите кнопку **удалить** кнопку, чтобы удалить выбранный результат теста  
   
-## <a name="see-also"></a>См. также:  
-[Выполнение тестовых случаев &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Тестирование миграции объектов базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Выполнение тестовых случаев &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Тестирование перенесенные объекты базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

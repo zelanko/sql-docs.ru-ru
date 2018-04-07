@@ -1,30 +1,31 @@
 ---
-title: "Управление паролями (DB2ToSQL) | Документы Microsoft"
+title: Управление паролями (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74947c5495678743e5dbf7cd022ca98e9e1c9363
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac75b648845dbfa767256ddbe4ba162fc308a0de
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-db2tosql"></a>Управление паролями (DB2ToSQL)
 Этот раздел посвящен безопасности пароли к базам данных и процедуру для импорта и экспорта их между серверами:  
@@ -42,7 +43,7 @@ SSMA позволяет защищать пароль базы данных.
   
 1.  **Открытым текстом:** в атрибут "value" узла «пароль» введите пароль базы данных. Он находится на узле сервера определения в разделе "сервер" из файла сценария или файла соединения сервера.  
   
-    Пароли в виде открытого текста не являются безопасными. Таким образом, будет возникать следующее предупреждающее сообщение в окно консоли: *«Server &lt;идентификатор сервера&gt; пароль предоставляется в виде открытого текста, не является безопасной, SSMA консольное приложение предоставляет возможность защитить пароль с помощью шифрования, см. в разделе securepassword — параметр в файле справки SSMA для получения дополнительной информации.»*  
+    Пароли в виде открытого текста не являются безопасными. Таким образом, будет возникать следующее предупреждающее сообщение в окно консоли: *«Server &lt;идентификатор сервера&gt; пароль предоставляется в виде открытого текста, не является безопасной, приложение консоли SSMA обеспечивает возможность защиты пароль с помощью шифрования, см. в разделе параметр – securepassword в SSMA файл справки для получения дополнительной информации.»*  
   
     **Зашифрованные пароли:** указанный пароль в этом случае сохраняется в зашифрованном виде на локальном компьютере в ProtectedStorage.ssma.  
   
@@ -137,6 +138,6 @@ SSMA консольного приложения позволяет экспор
     Please confirm password: xxxxxxxx
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Выполнение команд консоли SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

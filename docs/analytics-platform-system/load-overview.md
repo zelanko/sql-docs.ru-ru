@@ -1,25 +1,25 @@
 ---
-title: "Загрузить"
+title: Загрузить
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Можно загрузить или вставки данных в SQL Server Parallel данных хранилища (PDW) с помощью служб Integration Services, программа bcp, dwloader или инструкцию SQL INSERT."
+description: Можно загрузить или вставки данных в SQL Server Parallel данных хранилища (PDW) с помощью служб Integration Services, программа bcp, dwloader или инструкцию SQL INSERT.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: "22"
-ms.openlocfilehash: be5ea7c2b939b58c7dfd826965f1568431cb1bff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 77bb7e3ba6a3377fe63decf06a872872eaa4ee61
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-sql-server-pdw"></a>Загрузка (SQL Server PDW)
 Можно загрузить или вставки данных в SQL Server Parallel данных хранилища (PDW) с помощью служб Integration Services [программа bcp](../tools/bcp-utility.md), **dwloader** загрузчика командной строки или инструкции SQL INSERT.  
@@ -46,9 +46,9 @@ dwloader загружает данные непосредственно в вы�
 For more information, see [Prepared statements](prepared-statements.md).
 -->
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
-|Задача|Description|  
+|Задача|Описание|  
 |--------|---------------|  
 |Создание промежуточной базы данных.|[Создание промежуточной базы данных](staging-database.md)|  
 |Загрузить со службами Integration Services.|[Загрузка с помощью служб Integration Services](load-with-ssis.md)|  

@@ -1,26 +1,26 @@
 ---
-title: "Удаленная таблица копирования (SQL Server PDW)"
+title: Удаленная таблица копирования (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: "23"
-ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: fe6e808b8db8534f38db250d838d6a2cf132a30d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="remote-table-copy"></a>Копирование удаленной таблицы
 Описывает, как использовать функцию копирования удаленной таблицы копирование таблиц из базы данных SQL Server PDW для удаленных баз данных SMP SQL Server (отличных от устройства). Используйте копию удаленной таблицы включает звезда сценарии для SQL Server PDW.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Данные для копирования должен быть доступным для выбора один допустимый SQL Server PDW [ВЫБЕРИТЕ](../t-sql/queries/select-transact-sql.md) инструкции.  
   
--   На целевой сервер должен быть сервером не является специализированным. Не удается скопировать данные непосредственно из одного устройства в другую с помощью инструкции в этом разделе.  
+-   Целевой сервер не должен быть устройством. Не удается скопировать данные непосредственно из одного устройства в другую с помощью инструкции в этом разделе.  
   
 -   Сервер назначения должны быть доступны для всех узлов в сети Infiniband устройства.  
   

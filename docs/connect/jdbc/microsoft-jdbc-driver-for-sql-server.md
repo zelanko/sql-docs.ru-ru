@@ -1,31 +1,31 @@
 ---
-title: "Драйвер Microsoft JDBC для SQL Server | Документы Microsoft"
-ms.custom: 
+title: Драйвер Microsoft JDBC для SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Драйвер Microsoft JDBC для SQL Server
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвера JDBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 В стремясь постоянно улучшать взаимодействие Корпорация Майкрософт предоставляет драйвер Java Database Connectivity (JDBC) для использования с SQL Server и базы данных SQL Azure. Драйвер распространяется бесплатно и позволяет подключаться к базам данных из любого приложения Java, сервера приложений или мини-приложения с поддержкой Java. Это драйвер JDBC типа 4, который обеспечивает обмен данными с базами данных через стандартные интерфейсы API JDBC.
 

@@ -21,13 +21,13 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2612b2658ae1d89891e410768dc0e31d78eb299c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Найти мастера баз данных (Выбор расположения) (AccessToSQL)
 На странице Выбор расположения найти мастера баз данных введите параметры поиска для нахождения баз данных Access.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/21/2017
 **Владелец**  
 Введите полное имя пользователя Windows владельца. Это может быть отформатирован как *домена*\\*пользователя*.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Добавление и удаление файлов баз данных Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [Reference(Access) интерфейса пользователя](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -1,15 +1,16 @@
 ---
-title: "Перенос данных MySQL в SQL Server — базы данных Azure SQL (MySQLToSQL) | Документы Microsoft"
+title: Перенос данных MySQL в SQL Server — базы данных Azure SQL (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Data Migration, server side data migration
 - Data Migration,client side data migration
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0887825cf16986b78cad5d1889a04d73dacf222a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bef9d72e855f70d520323950b789c1c330bcde4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Перенос данных MySQL в SQL Server — базы данных Azure SQL (MySQLToSQL)
 После успешной синхронизации преобразованные объекты с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, можно выполнить перенос данных из MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure.  
@@ -106,17 +107,17 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > Если SSMA для пакета расширения MySQL не установлен на экземпляре SQL Server, а **модуль переноса данных стороне сервера** выбран, то во время миграции данных в целевую базу данных, обнаружена следующая ошибка: "SSMA переноса данных компоненты не найдены на сервере SQL Server, перенос данных на сервере будет невозможно. Проверьте, правильно ли установлен пакет расширений ". Нажмите кнопку **отменить** завершить перенос данных.  
   
-5.  В **подключение к MySQL** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении к MySQL см. в разделе [подключение к MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+5.  В **подключение к MySQL** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении к MySQL см. в разделе [подключение к MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
     Если в целевую базу данных SQL Server, затем введите учетные данные подключения в **подключение к SQL Server** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о соединении с SQL Server см. в разделе [подключение к SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    Если в целевую базу данных SQL Azure, затем введите учетные данные подключения в **подключение к SQL Azure** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о подключении к SQL Azure см. в разделе [подключение к базе данных SQL Azure &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
+    Если в целевую базу данных SQL Azure, затем введите учетные данные подключения в **подключение к SQL Azure** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о подключении к SQL Azure см. в разделе [подключение к базе данных SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
     Сообщения будут отображаться в **вывода** области. По завершении миграции, **отчет о миграции данных** отображается. Если перемещение данных, щелкните строку, которая содержит ошибки и нажмите кнопку **сведения**. По окончании работы с отчетом щелкните **закрыть**. Дополнительные сведения об отчете о переносе данных см. в разделе [(SSMA Common) отчет о миграции данных](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > При использовании выпуска SQL Express в целевой базе данных допускается только клиентских данных миграцию и миграцию данных сервера не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция MySQL баз данных SQL Server — Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

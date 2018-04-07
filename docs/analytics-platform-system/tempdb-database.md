@@ -1,27 +1,27 @@
 ---
-title: "База данных (SQL Server PDW) tempdb"
+title: База данных (SQL Server PDW) tempdb
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 **База данных tempdb** это системная база данных SQL Server PDW, сохраняет локальных временных таблиц для пользовательских баз данных. Временные таблицы часто используются для повышения производительности запросов. Например можно использовать временную таблицу в модуль сценария и использовать вычисляемые данные.  
@@ -81,7 +81,7 @@ SQL Server PDW выполняет те же операции в постоянн
   
 -   Запустите консольных команд базы данных к временным таблицам.  
   
--   Используйте то же имя для двух или более временных таблиц в одном пакете. Если в пакете используется несколько локальная временная таблица, они должны иметь уникальное имя. Если несколько сеансов выполнение того же пакета и создание одной локальной временной таблицы, SQL Server PDW внутренним образом добавляет числовой суффикс к имени локальной временной таблицы, для поддержания уникальное имя для каждой локальной временной таблицы.  
+-   Используйте то же имя для двух или более временных таблиц в одном пакете. Если в пакете используется несколько локальных временных таблиц, они должны иметь уникальные имена. Если несколько сеансов выполнение того же пакета и создание одной локальной временной таблицы, SQL Server PDW внутренним образом добавляет числовой суффикс к имени локальной временной таблицы, для поддержания уникальное имя для каждой локальной временной таблицы.  
   
 > [!NOTE]  
 > Вы *можно* создавать и обновлять статистику во временной таблице. **ALTER INDEX** может использоваться для перестроения кластеризованного индекса.  
@@ -91,7 +91,7 @@ SQL Server PDW выполняет те же операции в постоянн
   
 ## <a name="RelatedTasks"></a>Связанные задачи  
   
-|Задания|Description|  
+|Задания|Описание|  
 |---------|---------------|  
 |Создание таблицы в **tempdb**.|Можно создать пользователя временную таблицу в инструкциях CREATE TABLE и CREATE TABLE AS SELECT. Дополнительные сведения см. в разделе [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) и [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Просмотр списка таблиц, существующих в **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

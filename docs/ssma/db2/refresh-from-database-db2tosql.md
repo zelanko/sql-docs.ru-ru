@@ -1,30 +1,31 @@
 ---
-title: "Обновление из базы данных (DB2ToSQL) | Документы Microsoft"
+title: Обновление из базы данных (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 421c86c9b8b61c95d5221c7ca28af9762a530778
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-db2tosql"></a>Обновление из базы данных (DB2ToSQL)
 **Обновление из базы данных** диалоговое окно позволяет выбрать объекты, которые нужно обновить в базе данных DB2. Строки в диалоговом окне отображаются цветовые обозначения, исходя из состояния метаданных:  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Если объект является новым в базе данных DB2, строки розовым цветом.  
   
-Можно указать параметры обновления объекта по умолчанию в **параметры проекта** диалоговое окно. Дополнительные сведения см. в разделе [параметры проекта &#40; Синхронизация &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+Можно указать параметры обновления объекта по умолчанию в **параметры проекта** диалоговое окно. Дополнительные сведения см. в разделе [параметры проекта&#40;синхронизации&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
 Чтобы получить доступ к **обновление из базы данных** диалоговое окно, щелкните правой кнопкой мыши объект в обозревателе метаданных DB2 и нажмите кнопку **обновление из базы данных**.  
   

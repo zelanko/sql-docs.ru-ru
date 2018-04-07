@@ -1,15 +1,16 @@
 ---
-title: "Подключение к MySQL (MySQLToSQL) | Документы Microsoft"
+title: Подключение к MySQL (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
 Для переноса баз данных MySQL в SQL Server или SQL Azure, необходимо подключиться к базе данных MySQL, которые требуется перенести. При подключении SSMA получает метаданные о всех схем MySQL и затем отображается в панели обозревателя метаданных MySQL. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/21/2017
     > -   **ОК** кнопка включена, когда предоставила требуемую информацию. Если пути к файлам недопустимы, кнопку «ОК» будет отключен.  
     > -   **Отменить** кнопка закрывает диалоговое окно и **отключает** параметр из главной формы подключения SSL.  
   
-7.  Дополнительные сведения см. в разделе [подключение к MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  Дополнительные сведения см. в разделе [подключение к MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
 ## <a name="reconnecting-to-mysql"></a>Повторное подключение к MySQL  
 Подключение к серверу базы данных остается активным, если закрыть проект. При повторном открытии проекта, необходимо переподключить, если требуется активное подключение к базе данных. Вы можете работать вне сети до необходимо обновить метаданные, загрузка объектов базы данных в SQL Server или SQL Azure и переноса данных.  
@@ -121,8 +122,8 @@ ms.lasthandoff: 12/21/2017
 5.  Нажмите кнопку **ОК**.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом в процессе миграции является [подключение к SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+Следующим шагом в процессе миграции является [подключение к SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция MySQL баз данных SQL Server — Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "Сетевая конфигурация устройства (система платформы аналитики)"
+title: Сетевая конфигурация устройства (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>Сетевая конфигурация устройства
 SQL Server PDW appliance строится и настроен исправление набор IP-адресов на протяжении всех серверов и соответствующие устройства из фабричной установки Оборудования. При доставке устройства необходимо изменить конфигурацию IP-адрес внешнего (Ethernet) обращаться для соответствия требованиям центра данных определенного клиента.  
@@ -30,7 +30,7 @@ SQL Server PDW appliance строится и настроен исправлен
   
 **Сетевая конфигурация** страница позволяет просматривать внешний параметры сети для узлов на устройстве Analytics Platform System. Эта страница доступна только для чтения.  
   
-![Сеть устройств DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Чтобы обновить конфигурацию сети на устройстве  
 Изменить, изменив IP-адреса домена структуры, рабочая нагрузка домена и доменов HDInsight **AplianceInfo.xml** файл и затем запустить программу установки. Эта операция выполняется в автономном режиме. HDInsight (при его наличии) и PDW областей останавливается автоматически при изменении IP-адреса.  
@@ -64,6 +64,6 @@ SQL Server PDW appliance строится и настроен исправлен
   
 -   PDU **Dell измеряемые стойку PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>См. также:  
-[Запустите диспетчер конфигурации &#40; Система платформы аналитики &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>См. также  
+[Запустите диспетчер конфигурации &#40;система платформы аналитики&#41;](launch-the-configuration-manager.md)  
   

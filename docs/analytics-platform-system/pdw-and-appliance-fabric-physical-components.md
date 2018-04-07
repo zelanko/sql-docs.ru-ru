@@ -1,26 +1,26 @@
 ---
-title: "PDW и устройством структуры физические компоненты (система платформы аналитики)"
+title: PDW и устройством структуры физические компоненты (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Физические компоненты PDW и структуры устройства
 Имена и описания для компонентов физической структуры PDW и устройством. Регион PDW содержит все эти компоненты.  
@@ -56,12 +56,12 @@ ms.lasthandoff: 12/21/2017
 Эти компоненты являются частью структуры устройства.  
   
 ### <a name="virtual-machines"></a>Виртуальные машины  
-*appliance_domain*- WDS  
+*appliance_domain*-WDS  
 Это узлов виртуальных машин службы развертывания Windows (WDS), который использует система платформы аналитики развертывания операционных систем Windows по сети устройства. Он также содержит службу DHCP, которая позволяет узлам appliance присоединиться к сети устройство без необходимости предварительно настроенный IP-адрес.  
   
 *Appliance_domain*WDS — виртуальная машина работает на HST01 и могут выполнять переход на HST02. Виртуальная машина WDS и виртуальных машин VMM во время установки устройства развертывания Windows на физических узлах. Во время жизненного цикла устройства VMM и WDS операций, таких как замена узла.  
   
-*appliance_domain*- VMM  
+*appliance_domain*-VMM  
 Virtual Machine Manager (VMM) на виртуальной машине и могут выполнять переход на HST02. System Center для развертывания операционной системы на физических узлах, размещаемых VMM. VMM также предоставляет Windows Server Update Services (WSUS) для применения или удаления обновления Windows для всех узлов и виртуальных машин.  
   
 *appliance_domain*-AD01, *appliance_domain*-AD02  
@@ -85,8 +85,8 @@ Virtual Machine Manager (VMM) на виртуальной машине и мог
 *appliance_domain*-DAS01 через *appliance_domain*-DAS03  
 Это непосредственно подключенное хранилище, подключенном к вычислительных узлов. HP имеет один DAS для каждые два вычислительных узлов. Dell и такты имеют один DAS для каждые три вычислительных узлов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Конфигурация устройства &#40; Система платформы аналитики &#41;](appliance-configuration.md)  
-[Задачи управления устройством &#40; Система платформы аналитики &#41;](appliance-management-tasks.md)  
+[Конфигурация устройства &#40;система платформы аналитики&#41;](appliance-configuration.md)  
+[Задачи управления устройством &#40;система платформы аналитики&#41;](appliance-management-tasks.md)  
   

@@ -1,32 +1,32 @@
 ---
-title: "Мониторинг устройства с помощью консоли администрирования (система платформы аналитики)"
+title: Мониторинг устройства с помощью консоли администрирования (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Монитор устройства с помощью консоли администрирования
 Консоль администратора — SQL Server PDW веб-приложения, который предоставляет доступ к информации состояния работоспособности и производительности устройства. Пользователи подключаться к консоли администрирования через Internet Explorer.  
   
 ## <a name="About"></a>О консоли администрирования  
-![Главная страница консоли устройств](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Устройство**  
 Корневая  
@@ -112,12 +112,12 @@ HDFS
 |-|-|  
 |**Тип данных**|**Как получить доступ к консоли администрирования**|  
 |Общее состояние устройства|Нажмите кнопку **состояние устройства** в верхнем меню или **Главная**.|  
-|видны узлы|Нажмите кнопку **предупреждения**. Дополнительные сведения см. в разделе [консоли администрирования основные сведения о предупреждениях &#40; Система платформы аналитики &#41; ](understanding-admin-console-alerts.md).|  
+|Предупреждения|Нажмите кнопку **предупреждения**. Дополнительные сведения см. в разделе [консоли администрирования основные сведения о предупреждениях &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Устройство компонентов и их состояния|Нажмите кнопку **состояние устройства** в верхнем меню или **Главная**.|  
 |Монитор запросов (включая запросы, загрузки, резервное копирование и восстановление)|Нажмите кнопку **сеансы** для просмотра в данный момент активным или последних сеансов.<br /><br />Нажмите кнопку **запросы** для просмотра в данный момент активным или последних запросов. Информация, отображаемая для запросов, включает в себя загрузку, резервное копирование и восстановление.<br /><br />Нажмите кнопку **блокировки** для просмотра активных блокировок.|  
 |Отслеживать Дополнительные сведения для загрузки, резервное копирование и восстановление.|Нажмите кнопку **загружает** или **резервного копирования и восстановления**.|  
 |Сведения о производительности|Нажмите кнопку **монитора производительности**.|  
   
-## <a name="see-also"></a>См. также:  
-[Мониторинг устройства &#40; Система платформы аналитики &#41;](appliance-monitoring.md)  
+## <a name="see-also"></a>См. также  
+[Мониторинг устройства &#40;система платформы аналитики&#41;](appliance-monitoring.md)  
   

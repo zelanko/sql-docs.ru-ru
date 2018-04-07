@@ -21,13 +21,13 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc01dc51a4c3b50e77a719d9b3bab08def84f879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Подключение к Sybase ASE (SybaseToSQL)
 Для переноса баз данных Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, необходимо подключиться к адаптивной сервер, содержащий базы данных, которые требуется перенести. При подключении SSMA получает метаданные обо всех базах данных на сервере адаптивной и отображает метаданные базы данных на панели обозревателя метаданных Sybase. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  
@@ -39,21 +39,21 @@ ms.lasthandoff: 12/21/2017
 ## <a name="required-ase-permissions"></a>ASE необходимые разрешения  
 Учетная запись, используемая для подключения к ASE должен иметь по крайней мере **открытый** доступ к базе данных master, а также для любой базы данных-источники для миграции на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Кроме того чтобы выбрать разрешения на таблицы, которые переносятся, пользователь должен иметь разрешения SELECT для следующих системных таблиц:  
   
--   .dbo.sysobjects [source_db]  
+-   [source_db].dbo.sysobjects  
   
--   .dbo.syscolumns [source_db]  
+-   [source_db].dbo.syscolumns  
   
--   .dbo.sysusers [source_db]  
+-   [source_db].dbo.sysusers  
   
--   .dbo.systypes [source_db]  
+-   [source_db].dbo.systypes  
   
--   .dbo.sysconstraints [source_db]  
+-   [source_db].dbo.sysconstraints  
   
--   .dbo.syscomments [source_db]  
+-   [source_db].dbo.syscomments  
   
--   .dbo.sysindexes [source_db]  
+-   [source_db].dbo.sysindexes  
   
--   .dbo.sysreferences [source_db]  
+-   [source_db].dbo.sysreferences  
   
 -   master.dbo.sysdatabases  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/21/2017
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    Дополнительные сведения см. в разделе [соединиться Sybase &#40; SybaseToSQL &#41; ](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
+    Дополнительные сведения см. в разделе [соединиться Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
 ## <a name="reconnecting-to-sybase-ase"></a>Повторное подключение к Sybase ASE  
 Подключение к серверу базы данных остается активным, если закрыть проект. При повторном открытии проекта, если требуется активное подключение к серверу адаптивной необходимо переподключить. Можно работать автономно, пока вы хотите обновить метаданные, загрузки объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure и перенос данных.  
@@ -129,6 +129,6 @@ ms.lasthandoff: 12/21/2017
   
 -   Следующим шагом в процессе миграции должно [подключение к экземпляру SQL Server](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [подключение к экземпляру SQL Azure](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция баз данных Sybase ASE в SQL Server — Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84759a9bee3439f0a561176a6d8583149770f02d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d1f3250b044706f742310a575135b0526484403
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Найти мастера баз данных (выберите файлы) (AccessToSQL)
 На странице Выбор файлов найти мастера баз данных перечислены файлы, которые были обнаружены во время поиска. Чтобы выбрать файл для добавления SSMA, выберите строку, содержащую имя файла. После завершения выбора файлов нажмите кнопку **Далее** для отображения страницы выбора проверки.  
@@ -61,6 +61,6 @@ ms.lasthandoff: 12/21/2017
 **Изменен**  
 Дата и время последнего обновления базы данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Reference(Access) интерфейса пользователя](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

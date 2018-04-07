@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bda748c764d49044a76638ebd2e87a6d831ae66f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Драйвер OLE DB для компонентов SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/30/2018
  [Имя участника-службы &#40;имени участника-службы&#41; поддержка в клиентских соединениях](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  Обсуждение расширенной поддержки имен участника-службы (SPN) для проведения взаимной проверки подлинности по всем протоколам.  
   
- [Поддержка разреженных столбцов в драйвере OLE DB для SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
+ [Поддержка разреженных столбцов в драйвере OLE DB для SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
  Содержит описание драйвер OLE DB для SQL Server, поддержка разреженных столбцов.  
   
  [Улучшения функций даты и времени](../../oledb/features/date-and-time-improvements.md)  
@@ -87,21 +87,21 @@ ms.lasthandoff: 03/30/2018
  [Обнаружение метаданных](../../oledb/features/metadata-discovery.md)  
  Обсуждение улучшений в механизме обнаружения метаданных, внесенных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Поддержка UTF-16 в драйвер OLE DB для SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+ [Поддержка UTF-16 в драйвере OLE DB для SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Рассматривает изменение поведения, появившееся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Если при привязке результата столбца или выходного параметра указывается буфер фиксированной длины и **wchar** символ, записываемый в буфер перед завершающим символом, является старшим суррогатной пары, а также если следующего **wchar** символ является младшим символом-заместителем кодовая точка, драйвер OLE DB для SQL Server не добавит в буфер старший символ-заместитель кодовую точку.  
   
- [Драйвер OLE DB для SQL Server поддержку высокого уровня доступности и аварийного восстановления](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Описывает, как можно настроить приложение, чтобы воспользоваться преимуществами высокого уровня доступности, аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Доступ к диагностическим сведениям в журнале расширенных событий](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Описание усовершенствований драйвер OLE DB для SQL Server и данные трассировки, который предоставляет доступ к диагностическим сведениям в в кольцевом буфере и журналах XEvents.  
   
- [Драйвер OLE DB для SQL Server Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [Поддержка драйвера OLE DB для SQL Server в LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Описывает драйвер OLE DB для SQL Server поддержку функции LocalDB.  
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для SQL Server программирования](../../oledb/oledb-driver-for-sql-server-programming.md)      
  [Разделы руководства по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [Установка драйвера OLE DB для SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [Установка драйвера OLE DB для SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   
   

@@ -1,30 +1,31 @@
 ---
-title: "Параметры командной строки в консоли SSMA (DB2ToSQL) | Документы Microsoft"
+title: Параметры командной строки в консоли SSMA (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Параметры командной строки в консоли SSMA (DB2ToSQL)
 Корпорация Майкрософт предоставляет широкий набор параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -162,21 +163,21 @@ ms.lasthandoff: 12/21/2017
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md).  
+Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Параметр справки SecurePassword: – securepassword-? / Help  
 Отображает сводку синтаксиса параметров консоли SSMA:  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>Следующий шаг  
 Следующий шаг зависит от требований проекта:  
   
-1.  Для указания пароля или экспорта / импорта паролей см. в разделе [управление паролями &#40; DB2ToSQL &#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
+1.  Для указания пароля или экспорта / импорта паролей см. в разделе [управление паролями &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
   
-2.  Для создания отчетов, в разделе [создания отчетами &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md).  
+2.  Для создания отчетов, в разделе [создания отчетами &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-3.  Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
+3.  Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   

@@ -1,30 +1,31 @@
 ---
-title: "Параметры (Синхронизация) (SybaseToSQL) проекта | Документы Microsoft"
-ms.custom: 
+title: Параметры (Синхронизация) (SybaseToSQL) проекта | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23b91803d96e77e171bb32e4af7d42dc45872b14
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e25ed9954d033d080cbe8b00222e9dbcc641bce
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Параметры проекта (Синхронизация) (SybaseToSQL)
 На странице синхронизации **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA загружает объекты базы данных, такие как таблицы и хранимые процедуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure.  

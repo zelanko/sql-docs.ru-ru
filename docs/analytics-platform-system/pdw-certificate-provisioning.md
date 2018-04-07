@@ -1,26 +1,26 @@
 ---
-title: "Сертификат PDW подготовки (система платформы аналитики)"
+title: Сертификат PDW подготовки (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>Подготовка сертификата PDW
 **Подготовка сертификата PDW** страница Analytics Platform System**Configuration Manager** импортирует или удаляет сертификат, используемый регион PDW. Использование, сертификат для шифрования соединения может помочь безопасного обмена данными с узла управления через клиенты SQL Server, средства, использующие драйверы SQL Server PDW [консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md), и загружает служб Integration Services.  
@@ -51,7 +51,7 @@ SQL Server PDW поддерживает использование сертиф�
   
 ### <a name="to-import-the-certificate"></a>Чтобы импортировать сертификат  
   
-1.  Запустите **Configuration Manager**. Дополнительные сведения см. в разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).  
+1.  Запустите **Configuration Manager**. Дополнительные сведения см. в разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  В левой области **Configuration Manager**, разверните **топологии хранилища параллельных данных**, а затем нажмите кнопку **сертификаты**.  
   
@@ -65,7 +65,7 @@ SQL Server PDW не зашифрует текущего соединения с 
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>Чтобы удалить ранее импортированный сертификат  
   
-1.  Запустите **Configuration Manager**. Дополнительные сведения см. в разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).  
+1.  Запустите **Configuration Manager**. Дополнительные сведения см. в разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  В левой области **Configuration Manager**, разверните **топологии хранилища параллельных данных**, а затем нажмите кнопку **сертификаты**.  
   
@@ -75,9 +75,9 @@ SQL Server PDW не зашифрует текущего соединения с 
   
 SQL Server PDW продолжит шифрования текущих подключений, но не будет использовать сертификат удален для новых соединений.  
   
-![Сертификат PDW DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
+![DWConfig Appliance PDW Certificate](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
-## <a name="see-also"></a>См. также:  
-[Запустите диспетчер конфигурации &#40; Система платформы аналитики &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>См. также  
+[Запустите диспетчер конфигурации &#40;система платформы аналитики&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

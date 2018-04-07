@@ -1,26 +1,26 @@
 ---
-title: "Импорт пакета управления SCOM для PDW (система платформы аналитики)"
+title: Импорт пакета управления SCOM для PDW (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: "6"
-ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>Импорт пакета управления SCOM для PDW
 Выполните следующие действия для импорта пакетов управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления требуются для наблюдения за SQL Server PDW из SCOM.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 System Center Operations Manager 2007 R2 должны быть установлены и запущены.  
   
-Пакеты управления должны быть установлены. В разделе [установить пакеты управления SCOM &#40; Система платформы аналитики &#41; ](install-the-scom-management-packs.md).  
+Пакеты управления должны быть установлены. В разделе [установить пакеты управления SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
   
 ## <a name="Step1"></a>Шаг 1: Импорт Appliance базовый пакет управления SQL Server  
   
@@ -76,14 +76,14 @@ System Center Operations Manager 2007 R2 должны быть установл�
   
 4.  Нажмите кнопку **Установить**.  
   
-    ![Нажмите "установить"](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Click Install](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Щелкните **Закрыть**.  
   
-    ![Нажмите кнопку Закрыть](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
+    ![Click Close](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>Следующий шаг  
-Импортированных пакетов управления, перейти к следующему шагу: [настройки SCOM для монитора Analytics Platform System &#40; Система платформы аналитики &#41; ](configure-scom-to-monitor-analytics-platform-system.md).  
+Импортированных пакетов управления, перейти к следующему шагу: [настройки SCOM для монитора Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

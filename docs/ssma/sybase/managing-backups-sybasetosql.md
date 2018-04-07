@@ -21,13 +21,13 @@ ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>Управление резервными копиями (SybaseToSQL)
 Sybase управления резервным копированием позволяет резервного копирования и восстановления таблицы данных до или после выполнения теста. Можно также управлять содержимое резервной копии с помощью диалогового окна управления содержимое резервной копии.  
@@ -103,6 +103,6 @@ Sybase управления резервным копированием позв
   
 -   Нажмите кнопку **закрыть** кнопку, чтобы закрыть диалоговое окно.  
   
-## <a name="see-also"></a>См. также:  
-[Тестирование миграции объектов базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Тестирование перенесенные объекты базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

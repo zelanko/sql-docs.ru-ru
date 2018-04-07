@@ -1,30 +1,31 @@
 ---
-title: "Подключения к базе данных Azure SQL (MySQLToSQL) | Документы Microsoft"
+title: Подключения к базе данных Azure SQL (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21b24f9b46490f0eb83a0b9508b8b5b2213cd7a9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Подключения к базе данных Azure SQL (MySQLToSQL)
 Подключения в SQL Azure-диалоговое окно можно используйте для подключения к базе данных SQL Azure, которые требуется перенести.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 > [!IMPORTANT]  
 > SSMA для MySQL не поддерживает подключение к базе данных master в SQL Azure.  
   
-**User name**  
+**Имя пользователя**  
   
 Введите имя пользователя, который будет использоваться SSMA для подключения к базе данных SQL Azure  
   

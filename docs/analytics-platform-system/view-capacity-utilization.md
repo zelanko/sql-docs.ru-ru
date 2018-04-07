@@ -1,26 +1,26 @@
 ---
-title: "Использование емкости представление (система платформы аналитики)"
+title: Использование емкости представление (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: "9"
-ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="view-capacity-utilization"></a>Просмотр использования емкости
 В этом разделе описывается просмотр степень использования производительности в SQL Server PDW appliance.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Чтобы просмотреть использование ресурсов с помощью консоли администрирования  
 Чтобы просмотреть пространство, используемое, откройте консоль администрирования и нажмите кнопку **хранения** вкладки. Отсутствует **хранения** вкладке регион PDW и регион HDI.  
   
-![Хранилище консоли администрирования PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Чтобы просмотреть использование ресурсов с помощью запросов  
 Чтобы понять, если узел работает в условиях нехватки места на, система мониторинга работоспособности SQL Server PDW уже отслеживает свободное пространство для всех томов в каждом узле.  
@@ -109,7 +109,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Мониторинг устройства &#40; Система платформы аналитики &#41;](appliance-monitoring.md)  
+[Мониторинг устройства &#40;система платформы аналитики&#41;](appliance-monitoring.md)  
   

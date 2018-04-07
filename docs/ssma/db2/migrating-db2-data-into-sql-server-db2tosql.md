@@ -1,30 +1,31 @@
 ---
-title: "Миграция данных DB2 в SQL Server (DB2ToSQL) | Документы Microsoft"
+title: Миграция данных DB2 в SQL Server (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7249a757ecc1c7c8fb88687953eed93e98890d45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Перенос данных DB2 в SQL Server (DB2ToSQL)
 После успешной синхронизации преобразованные объекты с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно выполнить перенос данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > SSMA для DB2 пакет расширения не установлены ли на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]и если **модуль переноса данных стороне сервера** выбран, то во время миграции данных в целевую базу данных, обнаружена следующая ошибка: "SSMA переноса данных компоненты не найдены на сервере SQL Server, перенос данных на сервере будет невозможно. Проверьте, правильно ли установлен пакет расширений ". Нажмите кнопку **отменить** завершить перенос данных.  
   
-5.  В **подключение к DB2** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении к DB2 см. в разделе [подключение к базе данных DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  В **подключение к DB2** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении к DB2 см. в разделе [подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     Для подключения к целевой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], введите учетные данные соединения в **подключение к SQL Server** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], в разделе [подключение к SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -107,6 +108,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 > При использовании выпуска SQL Express в целевой базе данных допускается только клиентских данных миграцию и миграцию данных сервера не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
-[Перенос данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

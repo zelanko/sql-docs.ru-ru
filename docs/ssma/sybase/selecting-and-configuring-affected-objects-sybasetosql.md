@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка затронутые объекты (SybaseToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 Если тест-инженер SSMA не может проверить любые из этих объектов, вы увидите ссылку с меткой **некоторые из выделенных объектов содержат ошибки** в дереве объектов. Щелкните эту ссылку для просмотра причины, почему не удается сравнить эти объекты и снимите флажок не тот объект.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Таблица  
 Вкладка «таблица» содержит представление сетки выбранную таблицу. Сетка содержит следующие сведения о выбранной таблицы.  
   
 -   Имя столбца  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Правило  
   
--   Default  
+-   По умолчанию  
   
 -   Идентификатор  
   
@@ -126,9 +126,9 @@ ms.lasthandoff: 12/21/2017
 Вы можете изменить эти инструкции SELECT для предоставления пользовательской проверки. Чтобы сохранить изменения в Sybase и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] инструкции, используют **применить** кнопок в исходной и целевой SQL, соответственно.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Настройка порядка вызовов &#40; SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[Настройка порядка вызовов &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Выполнение тестовых случаев &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Тестирование миграции объектов базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Выполнение тестовых случаев &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Тестирование перенесенные объекты базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

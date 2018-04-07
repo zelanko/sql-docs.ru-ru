@@ -1,25 +1,25 @@
 ---
-title: "Сертификат PDW подготовки (система платформы аналитики)"
+title: Сертификат PDW подготовки (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Подготовка сертификата PDW страницы аналитика платформы System Configuration Manager импортирует или удаляет сертификат, используемый PDW."
+description: Подготовка сертификата PDW страницы аналитика платформы System Configuration Manager импортирует или удаляет сертификат, используемый PDW.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>Подготовка сертификата PDW
 **Подготовка сертификата PDW** страница Analytics Platform System**Configuration Manager** импортирует или удаляет сертификат, используемый PDW. 
@@ -53,7 +53,7 @@ SQL Server PDW поддерживает использование сертиф�
 ### <a name="to-import-the-certificate"></a>Чтобы импортировать сертификат  
   
 1.  Запустите **Configuration Manager**.  
-Дополнительные сведения см. в разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).  
+Дополнительные сведения см. в разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
 
 2.  В левой области **Configuration Manager**, разверните **топологии хранилища параллельных данных**, а затем нажмите кнопку **сертификаты**.  
   
@@ -83,5 +83,5 @@ SQL Server PDW продолжит шифрования текущих подкл
   
 ![Сертификат PDW DWConfig](media/dwconfig-appl-pdw-cert.png "сертификат PDW устройств DWConfig")  
   
-## <a name="see-also"></a>См. также:  
-[Запустите диспетчер конфигурации &#40; Система платформы аналитики &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>См. также  
+[Запустите диспетчер конфигурации &#40;система платформы аналитики&#41;](launch-the-configuration-manager.md)  

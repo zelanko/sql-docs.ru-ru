@@ -1,26 +1,26 @@
 ---
-title: "Режим блокировки (SQL Server PDW)"
+title: Режим блокировки (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: "27"
-ms.openlocfilehash: c1cb1b0ec346ff18d40a3ac03e7ba45b37666c98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="locking-behavior"></a>Режим блокировки
 SQL Server PDW использует блокировки для обеспечения целостности транзакций и поддержания согласованности баз данных, когда несколько пользователей имеют доступ к данным, в то же время.  
@@ -101,7 +101,7 @@ SQL Server поддерживает следующие типы блокиров
   
 -   RangeX_X (исключающий ключевой диапазон и монопольная блокировка ресурса). Блокировка диалога, используемая во время обновления ключа в диапазоне.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

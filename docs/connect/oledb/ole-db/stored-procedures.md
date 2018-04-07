@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b3b294bb410423688f94521b857ca3062e02c4e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: bbae7466e59e16be3195637987ce0b6724078934
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Хранимая процедура ([хранимых процедур &#40; компонент Database Engine &#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) представляет собой исполняемый объект в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
+  Хранимая процедура ([хранимых процедур & #40; компонент Database Engine & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) представляет собой исполняемый объект в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
   
 -   Хранимые процедуры  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Выполнение хранимой процедуры &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [Выполнение хранимой процедуры & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [Вызов хранимой процедуры &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [Вызов хранимой процедуры & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  

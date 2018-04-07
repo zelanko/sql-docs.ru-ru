@@ -1,30 +1,31 @@
 ---
-title: "Параметры (Загрузка системных объектов) проекта (DB2ToSQL) | Документы Microsoft"
+title: Параметры (Загрузка системных объектов) проекта (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0bf007faf72861607740d5af0f6ec418fefb71f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0ec81e97380007724ba1cfeb9ee2580ca64edd0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Параметры (Загрузка системных объектов) проекта (DB2ToSQL)
 На странице загрузки системных объектов **параметры проекта** диалоговое окно позволяет указать, какие объекты системы DB2 SSMA преобразует и загружает в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -38,21 +39,21 @@ ms.lasthandoff: 12/21/2017
 ## <a name="default-settings"></a>Параметры по умолчанию  
 Преобразование объектов системы использует системные ресурсы и занимает время. Чтобы повысить производительность, SSMA выбирает только наиболее часто используемые системные объекты, как показано в следующем списке:  
   
--   SYS. DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS. DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
 -   SYS. DBMS_UTILITY  
   
 -   SYS. СТАНДАРТ  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
--   SYS. DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS. DBMS_SQL  
+-   SYS.DBMS_SQL  
   
--   SYS. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 Если объекты DB2 ссылается на дополнительные системные объекты, следует выбрать этих объектов. Если системные объекты, на которые ссылается объектов базы данных DB2 не выбран, SSMA выдает ошибки преобразования. Если возникнут ошибки преобразования, причиной является отсутствие системных объектов, выберите объекты, отсутствующие в этом диалоговом окне. Затем можно повторить преобразование при необходимости.  
   

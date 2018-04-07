@@ -1,26 +1,26 @@
 ---
-title: "Исправления Analytics платформы System (система платформы аналитики)"
+title: Исправления Analytics платформы System (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
-caps.latest.revision: "25"
-ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 25
+ms.openlocfilehash: 1a054ead9ef39169257eb1813ba49eae06082b96
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Применения исправлений системы платформы аналитики
 В этом разделе описывается, как для применения исправлений для программного обеспечения Analytics Platform System.  
@@ -38,14 +38,14 @@ ms.lasthandoff: 12/21/2017
   
 -   Система платформы аналитики имени входа с разрешениями для доступа к консоли администрирования, чтобы отслеживать состояние устройств. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Базы знаний для подключения к учетной записи администратора домена структуры *< имя_домена >***-HST01** узла.  
+-   Базы знаний для подключения к учетной записи администратора домена структуры *< имя_домена > ***-HST01** узла.  
   
 ## <a name="HowToInstallPDW"></a>Для установки исправления система платформы аналитики  
 В отличие от обновлений Майкрософт исправления для программного обеспечения Analytics Platform System не обрабатываются с помощью служб WSUS. У них другой рабочий процесс и устанавливаются при выполнении пакета исправлений.  
   
 1.  **Проверьте индикаторы состояния устройства.**  
   
-    1.  Откройте консоль администратора и перейдите на страницу состояния устройства. Дополнительные сведения см. в разделе [отслеживать устройства с помощью консоли администрирования &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+    1.  Откройте консоль администратора и перейдите на страницу состояния устройства. Дополнительные сведения см. в разделе [отслеживать устройства с помощью консоли администрирования &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
     2.  Прежде чем перейти к следующему шагу необходимо устранить все индикаторы, желтый или красный. Некоторые исключения составляют:  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
     2.  Используйте **Запуск от имени администратора** параметр, чтобы открыть командную строку.  
   
-    3.  Выполните следующую команду, заменив  *<HotfixPackageName>*  с именем исполняемого пакета исправлений и замены других элементов заполнитель *< >* соответствующие сведения.  
+    3.  Выполните следующую команду, заменив *<HotfixPackageName>* с именем исполняемого пакета исправлений и замены других элементов заполнитель *< >* соответствующие сведения.  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
@@ -67,9 +67,9 @@ ms.lasthandoff: 12/21/2017
   
     4.  Выполните действия, представленные на пакет исправлений.  
   
-## <a name="see-also"></a>См. также:  
-[Загрузить и установить обновления Майкрософт &#40; Система платформы аналитики &#41;](download-and-apply-microsoft-updates.md)  
-[Удаление обновлений Майкрософт &#40; Система платформы аналитики &#41;](uninstall-microsoft-updates.md)  
-[Удаление исправлений системы платформы аналитики &#40; Система платформы аналитики &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Обслуживание программного обеспечения &#40; Система платформы аналитики &#41;](software-servicing.md)  
+## <a name="see-also"></a>См. также  
+[Загрузить и установить обновления Microsoft &#40;система платформы аналитики&#41;](download-and-apply-microsoft-updates.md)  
+[Удаление обновлений &#40;система платформы аналитики&#41;](uninstall-microsoft-updates.md)  
+[Удаление исправлений системы платформы аналитики &#40;система платформы аналитики&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Обслуживание программного обеспечения &#40;система платформы аналитики&#41;](software-servicing.md)  
   

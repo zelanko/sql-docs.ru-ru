@@ -1,30 +1,31 @@
 ---
-title: "Параметры (преобразование) (SybaseToSQL) проекта | Документы Microsoft"
-ms.custom: 
+title: Параметры (преобразование) (SybaseToSQL) проекта | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Параметры проекта (преобразование) (SybaseToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или синтаксис SQL Azure.  
@@ -271,7 +272,7 @@ ms.lasthandoff: 12/21/2017
 **Режим по умолчанию или Optimistic/Full:** метки с ошибкой  
   
 **Число сообщений инструкции RAISERROR**  
-ASE пользователя сообщения хранятся в каждой базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]сообщения для пользователя централизованно хранятся и доступны через **sys.messages** представления каталога. Кроме ASE пользовательских сообщений начинаются с 20000, но [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] сообщения об ошибках начинаются с 50001.  
+ASE пользователя сообщения хранятся в каждой базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] сообщения для пользователя централизованно хранятся и доступны через **sys.messages** представления каталога. Кроме ASE пользовательских сообщений начинаются с 20000, но [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] сообщения об ошибках начинаются с 50001.  
   
 Этот параметр указывает число, которое необходимо добавить к номеру сообщения ASE пользователя для преобразования его в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] сообщение для пользователя. Если ваш [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет сообщений для пользователя в **sys.messages** представления каталога, может потребоваться изменить этот номер более высокое значение. Это преобразованное сообщение номера не конфликтуют с существующие номера сообщений.  
   
@@ -334,7 +335,7 @@ ASE пользователя сообщения хранятся в каждой
 **Полный режим:** Replace, функция  
   
 **Функция DATALENGTH**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure и ASE различаются значения, возвращенного функция DATALENGTH, когда значение является пробелом. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ возвращает значение 0, SQL Azure и ASE возвращает 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] / SQL Azure и ASE различаются значения, возвращенного функция DATALENGTH, когда значение является пробелом. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ возвращает значение 0, SQL Azure и ASE возвращает 1.  
   
 -   Чтобы использовать поведение ASE, выберите **заменить функцию**. Выражение CASE для эмуляции режима Sybase ASE, заменяются все вызовы функция DATALENGTH.  
   
@@ -454,6 +455,6 @@ ASE пользователя сообщения хранятся в каждой
 > [!NOTE]  
 > При подключении к SQL Azure, он по умолчанию — True.  
   
-## <a name="see-also"></a>См. также:  
-[Справочник по пользовательскому интерфейсу &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Справочник по пользовательскому интерфейсу &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

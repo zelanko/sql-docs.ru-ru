@@ -21,13 +21,13 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73019709b3ce9b40dc05f678cc64d33305504213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13035f6ca6e0a2dc95b3b0f7907b066abdbda716
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Оценка баз данных MySQL для преобразования (MySQLToSQL)
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, следует определить быть сложность миграции и о том, сколько времени займет миграции. SSMA можно создать отчет об оценки, который показывает процент объекты, которые будут преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  
@@ -85,13 +85,13 @@ ms.lasthandoff: 12/21/2017
   
 -   Обновите синтаксис MySQL в SSMA. Вы можете обновить синтаксис только для процедур и функций. Чтобы обновить синтаксис, выберите объект на панели обозревателя метаданных MySQL, нажмите кнопку **SQL** вкладку, а затем изменить код SQL. Если покинуть элемент будет предложено сохранить изменения синтаксиса. Можно просмотреть ошибки для объекта на **отчетов** вкладки.  
   
--   В MySQL можно изменить объект MySQL для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к MySQL &#40; MySQLToSQL &#41; ](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
+-   В MySQL можно изменить объект MySQL для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
   
 -   Объект можно исключить из процесса миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или обозреватель метаданных SQL Azure и обозреватель метаданных MySQL, снимите флажок рядом с элементом загрузить объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure и перенос данных из MySQL.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Преобразование базы данных MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+[Преобразование базы данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция MySQL баз данных SQL Server — Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

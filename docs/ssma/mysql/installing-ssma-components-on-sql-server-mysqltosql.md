@@ -21,13 +21,13 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Установка компонентов SSMA на SQL Server (MySQLToSql)
 Помимо установки SSMA, необходимо установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эти компоненты включают пакет расширения SSMA, поддерживающей переноса данных и поставщики MySQL, чтобы включить возможность подключения сервера к серверу.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 **Чтобы установить пакет расширения**  
   
-1.  Скопируйте SSMA для пакета расширения MySQL. *n*. Install.exe, где  *n*  — номер сборки, на компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Скопируйте SSMA для пакета расширения MySQL. *n*. Install.exe, где *n* — номер сборки, на компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 2.  Дважды щелкните SSMA для пакета расширения MySQL. *n*. Install.exe.  
   
@@ -81,13 +81,13 @@ ms.lasthandoff: 12/21/2017
   
     Проверка подлинности Windows будет использовать учетные данные Windows для входа на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверки подлинности, необходимо ввести [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имя входа и пароль.  
   
-10. В следующем диалоговом выберите **установки базы данных программы**  *n* , где  *n*  номер версии, а затем нажмите кнопку **Далее**.  
+10. В следующем диалоговом выберите **установки базы данных программы** *n*, где *n* номер версии, а затем нажмите кнопку **Далее**.  
   
     **Sysdb** база данных создается с таблицами, в этой базе данных создаются хранимые процедуры, необходимые для переноса данных (с помощью модуль переноса данных стороны сервера).  
   
 11. Чтобы установить эти программы на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]выберите **Да**и нажмите кнопку **Далее**. Чтобы завершить работу мастера, нажмите кнопку **нет**.  
   
-## <a name="see-also"></a>См. также:  
-[Установка SSMA для клиента MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Установка SSMA для клиента MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[Миграция MySQL баз данных SQL Server — Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

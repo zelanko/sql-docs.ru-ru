@@ -1,25 +1,25 @@
 ---
-title: "Загрузка данных со службами Integration Services"
+title: Загрузка данных со службами Integration Services
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS)."
+description: Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Загрузка данных со службами Integration Services
 Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS).  
@@ -59,14 +59,14 @@ For general information about developing Integration Services packages, see [Des
 Чтобы запустить пакет из в SQL Server Data Tools, щелкните пакет правой кнопкой мыши и выберите **выполнение пакета**.  
   
 ### <a name="run-from-powershell"></a>Выполните в PowerShell  
-Чтобы запустить пакет из Windows PowerShell с помощью **dtexec** программы:`dtexec /FILE <packagePath>`  
+Чтобы запустить пакет из Windows PowerShell с помощью **dtexec** программы: `dtexec /FILE <packagePath>`  
   
-Например `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Командную строку запуска из Windows 
-Чтобы запустить пакет из командной строки Windows, с помощью **dtexec** программы:`dtexec /FILE <packagePath>`  
+Чтобы запустить пакет из командной строки Windows, с помощью **dtexec** программы: `dtexec /FILE <packagePath>`  
   
-Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`.  
+Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Типы данных  
 При использовании службы Integration Services для загрузки данных из источника данных в базе данных SQL Server PDW, сначала сопоставляются данные из источника данных в типы данных служб Integration Services. Это позволяет сопоставлять данные из нескольких источников с общим набором типов данных.  
@@ -89,7 +89,7 @@ For general information about developing Integration Services packages, see [Des
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -156,7 +156,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>Примеры  
   
-### <a name="Walkthrough"></a>А. Простой нагрузочный из неструктурированного файла  
+### <a name="Walkthrough"></a>A. Простой нагрузочный из неструктурированного файла  
 Следующий пример демонстрирует использование служб Integration Services для загрузки данных неструктурированного файла в SQL Server PDW Appliance нагрузки простых данных.  В этом примере предполагается, что службы Integration Services уже установлен на клиентском компьютере, и SQL Server PDW назначения установлено, как описано выше.  
   
 В этом примере мы будет загружена в `Orders` таблицы, которая имеет следующая инструкция DDL. `Orders` Таблица является частью `LoadExampleDB` базы данных.  
@@ -251,7 +251,7 @@ id,city,lastUpdateDate,orderDate
   
 2.  Пакет будет запущен и ход выполнения, а также все ошибки отображаются в **выполняется** области. Использовать клиент SQL, чтобы подтвердить загрузку или контроля нагрузки через консоль администрирования SQL Server PDW.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создать задачу «скрипт», использующий адаптер назначения PDW служб SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
 [Проектирование и разработка пакетов (службы Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  

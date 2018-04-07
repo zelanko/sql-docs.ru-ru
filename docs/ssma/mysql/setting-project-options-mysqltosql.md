@@ -21,13 +21,13 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9de9ab5f01b0d6b5bf46c45d091e93430cfb8067
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры на уровне проекта. Эти параметры задают преобразование объектов, процесс миграции данных и сопоставлении типов данных источника к типам данных целевого объекта.  Перед началом преобразования объектов в SQL Server или SQL Azure или переноса данных в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -49,11 +49,11 @@ SSMA имеет пять наборов параметров проекта.
   
 Можно настроить параметры проекта четырьмя способами:  
   
--   Default  
+-   По умолчанию  
   
 -   Optimistic  
   
--   Полное  
+-   Полная  
   
 -   Другой  
   
@@ -61,17 +61,17 @@ SSMA имеет пять наборов параметров проекта.
   
 Дополнительные сведения о параметрах и применение параметров в каждом режиме см. в следующих разделах:  
   
--   [Параметры проекта &#40; Преобразование &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [Параметры проекта &#40;преобразования&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
--   [Параметры проекта &#40; Миграция &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
+-   [Параметры проекта &#40;миграции&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
 -   [Параметры проекта (GUI) (SSMA общее)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Параметры проекта &#40; Сопоставление типов &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
+-   [Параметры проекта &#40;сопоставление типов&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
--   [Параметры проекта &#40; Синхронизация &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+-   [Параметры проекта &#40;синхронизации&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Параметры проекта &#40; База данных Azure SQL &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Параметры проекта &#40;базы данных Azure SQL&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Настройка параметров проекта  
 В SSMA можно настроить параметры по умолчанию для всех проектов. Эти параметры сохраняются в файл конфигурации SSMA и применены к новый созданный проект.  
@@ -107,10 +107,10 @@ SSMA имеет пять наборов параметров проекта.
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
--   Настройка сопоставления исходных и целевых типов данных, в разделе [MySQL сопоставления и типов данных SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Настройка сопоставления исходных и целевых типов данных, в разделе [MySQL сопоставления и типов данных SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   В противном случае можно преобразовать определения объектов базы данных MySQL в SQL Server или SQL Azure определений объектов. Дополнительные сведения см. в разделе [преобразование баз данных MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   В противном случае можно преобразовать определения объектов базы данных MySQL в SQL Server или SQL Azure определений объектов. Дополнительные сведения см. в разделе [преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Сопоставление MySQL и типов данных SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Сопоставление типов данных SQL Server, а MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

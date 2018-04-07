@@ -1,26 +1,26 @@
 ---
-title: "Сброс пароля (система платформы аналитики)"
+title: Сброс пароля (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: "26"
-ms.openlocfilehash: 5b342aca4498816e59e0fafcb882c5c039fed501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="password-reset"></a>Сброс пароля
 **Сброса пароля** страница позволяет изменить пароль для учетной записи администратора, используемой Analytics Platform System.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 > [!IMPORTANT]  
 > Для устройства обновление 1, **Configuration Manager** неправильно изменяется пароль локального администратора учетных записей по всему PDW Виртуальной машины. Если это необходимо, обратитесь в CSS для получения дополнительных инструкций.  
   
-**SA**  
+**sa**  
 **Sa** входа в SQL Server. **sa** является членом **sysadmin** предопределенной роли сервера и является администратором SQL Server. Пароль **sa** входа также можно изменить с помощью **ALTER LOGIN** инструкции.  
   
 ## <a name="password-requirements"></a>Требования к паролю  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-reset-a-password"></a>Чтобы сбросить пароль  
   
-1.  Подключения на узел элемента управления и запустите **Configuration Manager** (**dwconfig.exe**). Дополнительные сведения см. в разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).  
+1.  Подключения на узел элемента управления и запустите **Configuration Manager** (**dwconfig.exe**). Дополнительные сведения см. в разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  В левой области **Configuration Manager**, нажмите кнопку **сброса пароля**.  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 12/21/2017
   
     Изменения, внесенные в эти учетные записи не влияют на всех активных сеансов, но будут применены при следующем входе для каждого пользователя.  
   
-    ![Пароль SQL Server DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>См. также:  
-[Задать пароль администратора для входа в систему узлов AD в службах каталогов восстановить режим &#40; DSRM &#41; &#40; Система платформы аналитики &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[Запустите диспетчер конфигурации &#40; Система платформы аналитики &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>См. также  
+[Задать пароль администратора для входа в систему узлов AD в режиме восстановления служб каталогов &#40;DSRM&#41; &#40;система платформы аналитики&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[Запустите диспетчер конфигурации &#40;система платформы аналитики&#41;](launch-the-configuration-manager.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "Глобальные параметры (тестировщик) (SybaseToSQL) | Документы Microsoft"
-ms.custom: 
+title: Глобальные параметры (тестировщик) (SybaseToSQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8091140978d417fa33beed187f055b26af2b9d31
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Глобальные параметры (тестировщик) (SybaseToSQL)
 Используйте страницу тест-инженер **глобальные параметры** диалогового окна для задания параметров для тест-инженера SSMA.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Да  
   
-2.  нет  
+2.  Нет  
   
 **Дополнительные таблицы, в режиме энергосбережения**  
 Этот параметр определяет способ сохранения внутренних вспомогательных таблицах, созданному в ходе выполнения тестового случая. Для этого конкретного значения параметра можно задать следующие параметры:  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Да  
   
-2.  нет  
+2.  Нет  
   
 **Остановить выполнение теста после первой ошибки**  
 Этот параметр указывает, следует ли остановить текущее выполнение тестового случая, если произошла ошибка во время выполнения. Набор параметров по умолчанию — **Да**.  
@@ -70,8 +71,8 @@ ms.lasthandoff: 12/21/2017
   
 1.  Да  
   
-2.  нет  
+2.  Нет  
   
-## <a name="see-also"></a>См. также:  
-[Завершение подготовки тестового случая &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Завершение подготовки тестовый случай &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

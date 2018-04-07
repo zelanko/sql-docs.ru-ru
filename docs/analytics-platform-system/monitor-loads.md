@@ -1,25 +1,25 @@
 ---
-title: "Монитор загрузки для хранилища параллельных данных"
+title: Монитор загрузки для хранилища параллельных данных
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Можно отслеживать active и последние [dwloader](dwloader.md) загружается с помощью консоли администрирования Analytics Platform System (APS) или системные представления параллельного хранилища данных (PDW)."
+description: Можно отслеживать active и последние [dwloader](dwloader.md) загружается с помощью консоли администрирования Analytics Platform System (APS) или системные представления параллельного хранилища данных (PDW).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: "6"
-ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-loads"></a>Контролировать загрузку
 Можно отслеживать active и последние [dwloader](dwloader.md) загружается с помощью консоли администрирования Analytics Platform System (APS) или параллельного хранилища данных (PDW) [системных представлений](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 

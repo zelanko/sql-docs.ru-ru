@@ -1,24 +1,24 @@
 ---
-title: "Предоставить разрешения"
+title: Предоставить разрешения
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>Предоставить разрешения
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Предоставление разрешений для мониторинга устройства
-SQL Server PDW appliance можно отслеживать с помощью системных представлений SQL Server PDW или консоли администрирования. Имена входа требуются уровень сервера **VIEW SERVER STATE** разрешение для отслеживания устройства. Имена входа требуют **разрешение ALTER ANY CONNECTION** разрешения завершить соединения с помощью консоли администрирования или **KILL** команды. Сведения о разрешениях, необходимых для использования консоли администрирования см. в разделе [GRANT, предоставление разрешений для использования консоли администрирования &#40; SQL Server PDW &#41; ](#grant-permissions-to-use-the-admin-console).  
+SQL Server PDW appliance можно отслеживать с помощью системных представлений SQL Server PDW или консоли администрирования. Имена входа требуются уровень сервера **VIEW SERVER STATE** разрешение для отслеживания устройства. Имена входа требуют **разрешение ALTER ANY CONNECTION** разрешения завершить соединения с помощью консоли администрирования или **KILL** команды. Сведения о разрешениях, необходимых для использования консоли администрирования см. в разделе [GRANT, предоставление разрешений для использования консоли администрирования &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="PermsAdminConsole"></a>Предоставить разрешение для отслеживания устройства с помощью системных представлений  
 Следующие инструкции SQL Создание имени входа `monitor_login` и предоставляет **VIEW SERVER STATE** право `monitor_login` входа.  
@@ -248,8 +248,8 @@ GO
   
 Для создания учетных записей администратора см. [предопределенных ролей сервера](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 [СОЗДАНИЕ ИМЕНИ ВХОДА](../t-sql/statements/create-login-transact-sql.md)  
 [СОЗДАНИЕ ПОЛЬЗОВАТЕЛЯ](../t-sql/statements/create-user-transact-sql.md)  
 [СОЗДАНИЕ РОЛИ](../t-sql/statements/create-role-transact-sql.md)  
-[Нагрузки](load-overview.md)  
+[Load](load-overview.md)  

@@ -1,15 +1,16 @@
 ---
-title: "Параметры командной строки в консоли SSMA (MySQLToSQL) | Документы Microsoft"
+title: Параметры командной строки в консоли SSMA (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa2e0210a3d59e41b9adf9d44b593e3bc83e9aef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 747d4fcd7825d718ee7216b0ff364954cc121059
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Параметры командной строки в консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет широкий набор параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -172,21 +173,21 @@ ms.lasthandoff: 12/21/2017
   
 `C:\>SSMAforMySQLConsole.EXE -?`  
   
-Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40; MySQLToSQL &#41; ](../../ssma/mysql/appendix-1-mysqltosql.md).  
+Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Параметр справки SecurePassword: – securepassword-? / Help  
 Отображает сводку синтаксиса параметров консоли SSMA:  
   
 `C:\>SSMAforMySQLConsole.EXE -securepassword -?`  
   
-Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40; MySQLToSQL &#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
+Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40;MySQLToSQL&#41;](../../ssma/mysql/appendix-1-mysqltosql.md)  
   
 ### <a name="next-step"></a>Следующий шаг  
 Следующий шаг зависит от требований проекта:  
   
--   Для указания пароля или экспорта / импорта паролей см. в разделе [управление паролями &#40; MySQLToSQL &#41; ](../../ssma/mysql/managing-passwords-mysqltosql.md).  
+-   Для указания пароля или экспорта / импорта паролей см. в разделе [управление паролями &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md).  
   
--   Для создания отчетов, в разделе [создания отчетами &#40; MySQLToSQL &#41; ](../../ssma/mysql/generating-reports-mysqltosql.md).  
+-   Для создания отчетов, в разделе [создания отчетами &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
--   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
+-   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   

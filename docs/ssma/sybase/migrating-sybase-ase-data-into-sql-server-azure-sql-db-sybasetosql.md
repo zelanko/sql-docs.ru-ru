@@ -1,15 +1,16 @@
 ---
-title: "Перенос данных Sybase ASE в SQL Server — база данных Azure SQL | Документы Microsoft"
-ms.custom: 
+title: Перенос данных Sybase ASE в SQL Server — база данных Azure SQL | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ff0dfa9d72d7616d7e775361de03728fd951bea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab42e495eb4e76b6e9d7b6a2cca3d031eed12448
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Перенос данных Sybase ASE в SQL Server — базы данных Azure SQL (SybaseToSQL)
 После успешной загрузки объектов базы данных Sybase адаптивной Server Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базу данных SQL Azure, можно перенести данные из ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базу данных SQL Azure.  
@@ -106,17 +107,17 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > SSMA для Sybase расширения пакет установлен на экземпляре SQL Server и если **модуль переноса данных стороне сервера** выбран, то во время миграции данных в целевую базу данных, обнаружена следующая ошибка: "SSMA переноса данных компоненты не найдены на сервере SQL Server, перенос данных на сервере будет невозможно. Проверьте, правильно ли установлен пакет расширений ". Нажмите кнопку **отменить** завершить перенос данных.  
   
-5.  В **соединиться Sybase ASE** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении для Sybase ASE см. в разделе [соединиться Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
+5.  В **соединиться Sybase ASE** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении для Sybase ASE см. в разделе [соединиться Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
     Если в целевую базу данных SQL Server, затем введите учетные данные подключения в **подключение к SQL Server** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о соединении с SQL Server см. в разделе [подключение к SQL Server(SybaseToSQL)](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
-    Если база данных SQL Azure в целевую базу данных, затем введите учетные данные подключения в **подключение к базе данных SQL Azure** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о подключении к базе данных SQL Azure см. в разделе [подключение к базе данных SQL Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+    Если база данных SQL Azure в целевую базу данных, затем введите учетные данные подключения в **подключение к базе данных SQL Azure** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о подключении к базе данных SQL Azure см. в разделе [подключение к базе данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
     Сообщения будут отображаться в **вывода** области. По завершении миграции, **отчет о миграции данных** отображается. Если перемещение данных, щелкните строку, которая содержит ошибки и нажмите кнопку **сведения**. По окончании работы с отчетом щелкните **закрыть**. Дополнительные сведения об отчете о переносе данных см. в разделе [(SSMA Common) отчет о миграции данных](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > При использовании выпуска SQL Express в целевой базе данных допускается только клиентских данных миграцию и миграцию данных сервера не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция баз данных Sybase ASE в SQL Server — Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

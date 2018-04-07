@@ -1,29 +1,29 @@
 ---
-title: "Инструкции T-SQL аналитики платформы системы Parallel Data Warehouse | Документы Microsoft"
+title: Инструкции T-SQL аналитики платформы системы Parallel Data Warehouse | Документы Microsoft
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Инструкции Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW)."
+description: Инструкции Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 54613765219912b7ad0db5d4dfd36478f6e5e3b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="t-sql-topics"></a>Разделы T-SQL
 Инструкции Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
@@ -82,11 +82,11 @@ ms.lasthandoff: 12/21/2017
 * [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
 * [Использование операторов PIVOT и UNPIVOT](../t-sql/queries/from-using-pivot-and-unpivot.md)
-* [ГРУППИРОВАТЬ ПО](../t-sql/queries/select-group-by-transact-sql.md)
-* [НАЛИЧИЕ](../t-sql/queries/select-having-transact-sql.md)
+* [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
+* [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
-* [ПАРАМЕТР](../t-sql/queries/option-clause-transact-sql.md)
-* [ОБЪЕДИНЕНИЕ](../t-sql/language-elements/set-operators-union-transact-sql.md)
+* [OPTION](../t-sql/queries/option-clause-transact-sql.md)
+* [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
 * [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
 * [Совмещение имен](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)

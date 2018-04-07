@@ -21,13 +21,13 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Параметры командной строки в консоли SSMA (SybaseToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -165,21 +165,21 @@ ms.lasthandoff: 12/21/2017
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40; SybaseToSQL &#41; ](../../ssma/sybase/appendix-1-sybasetosql.md).  
+Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Параметр справки SecurePassword: – securepassword-? / Help  
 Отображает сводку синтаксиса параметров консоли SSMA:  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40; SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+Табличного отображения консоли SSMA параметры командной строки, см. в разделе [приложение - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>Следующий шаг  
 Следующий шаг зависит от требований проекта:  
   
--   Для указания пароля или экспорта / импорта паролей см. в разделе [управление паролями &#40; SybaseToSQL &#41; ](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   Для указания пароля или экспорта / импорта паролей см. в разделе [управление паролями &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   Для создания отчетов, в разделе [создания отчетами &#40; SybaseToSQL &#41; ](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   Для создания отчетов, в разделе [создания отчетами &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
--   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   

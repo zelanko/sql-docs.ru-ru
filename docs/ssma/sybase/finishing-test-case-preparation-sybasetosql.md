@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Завершение подготовки тестового случая (SybaseToSQL)
 Последней странице мастера отображается описание тестового случая и сведения об объектах, задействованных в тесте. Кроме того на этой странице можно задать теста параметры выполнения.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 -   При выборе **нет**, все тестовые выполнения изменения данных будут сохранены.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>Дополнительные таблицы, в режиме энергосбережения  
-Определяет режим сохранения для вспомогательных таблиц, создаваемых во время выполнения теста. См. в описании вспомогательных таблицах в [выполнение тестовых случаев &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) раздела.  
+Определяет режим сохранения для вспомогательных таблиц, создаваемых во время выполнения теста. См. в описании вспомогательных таблицах в [выполнение тестовых случаев &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) раздела.  
   
 -   При выборе **всегда сохранять**, для использования в дальнейшем всегда будут храниться данные вспомогательных таблиц.  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 12/21/2017
   
 -   При выборе **попросите пользователя, если не удалось выполнить сравнение таблиц**, пользователь может выбрать необходимое действие, если происходит ошибка.  
   
-Нажмите кнопку **Готово** кнопку, чтобы сохранить тестовый случай, подготовленного в [репозиториев теста с помощью &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Нажмите кнопку **Готово** кнопку, чтобы сохранить тестовый случай, подготовленного в [репозиториев теста с помощью &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[С помощью репозиториев теста &#40; SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Выполнение тестовых случаев &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Тестирование миграции объектов базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[С помощью репозиториев теста &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Выполнение тестовых случаев &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Тестирование перенесенные объекты базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

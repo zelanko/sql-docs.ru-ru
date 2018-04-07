@@ -1,25 +1,25 @@
 ---
-title: "Прозрачное шифрование данных для параллельного хранилища данных"
+title: Прозрачное шифрование данных для параллельного хранилища данных
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Прозрачное шифрование данных (TDE) выполняет в реальном времени ввода-вывода шифрования и расшифровки данных и файлов журнала транзакций и специальные файлы журналов PDW."
+description: Прозрачное шифрование данных (TDE) выполняет в реальном времени ввода-вывода шифрования и расшифровки данных и файлов журнала транзакций и специальные файлы журналов PDW.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: "22"
-ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transparent-data-encryption"></a>прозрачное шифрование данных.
 Чтобы защитить базу данных, можно принять ряд мер предосторожности, например спроектировать систему безопасности, проводить шифрование конфиденциальных ресурсов и поместить серверы базы данных под защиту брандмауэра. Однако если будет похищен физический носитель (например, диск или ленты резервной копии), злоумышленник может легко восстановить или подключить базу данных и получить доступ к данным. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
@@ -277,12 +277,12 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
   
 -   [Шифрование SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
   
--   [Иерархия шифрования](../relational-databases/security/encryption/encryption-hierarchy.md)  
+-   [Иерархия средств шифрования](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
 -   [Ключи шифрования SQL Server и базы данных](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [ИЗМЕНЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
 [СОЗДАНИЕ ГЛАВНОГО КЛЮЧА](../t-sql/statements/create-master-key-transact-sql.md)  
 [СОЗДАНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/create-database-encryption-key-transact-sql.md)  

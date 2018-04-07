@@ -1,36 +1,37 @@
 ---
-title: "Сопоставление типов данных SQL Server (DB2ToSQL) и DB2 | Документы Microsoft"
+title: Сопоставление типов данных SQL Server (DB2ToSQL) и DB2 | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bb4f2a1e09861a701a83ef4cd66c6a5e979bc0fa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Сопоставление типов данных SQL Server (DB2ToSQL) и DB2
 Типы баз данных DB2 отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы базы данных. При преобразовании объекты базы данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, необходимо указать способ сопоставления типов данных DB2 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
-SSMA имеет набор по умолчанию сопоставлений типов данных. Список сопоставлений по умолчанию см. в разделе [параметры проекта &#40; Сопоставление типов &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
+SSMA имеет набор по умолчанию сопоставлений типов данных. Список сопоставлений по умолчанию см. в разделе [параметры проекта &#40;сопоставление типов&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Сопоставление наследования типов  
 Можно настроить сопоставления типов на уровне проекта, объект уровне или уровне категории объектов (например, все хранимые процедуры). Параметры наследуются от более высокого уровня, если они не переопределены на более низком уровне. Например, при сопоставлении **smallmoney** для **money** на уровне проекта, все объекты в проекте будет использовать это сопоставление, если не настроить сопоставление на уровне объекта или категории.  
@@ -84,7 +85,7 @@ SSMA имеет набор по умолчанию сопоставлений т
   
     4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
   
-        Некоторые типы требуют длину целевого типа данных. Если это необходимо, введите новую длину данных в **замените** поле, а затем[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Некоторые типы требуют длину целевого типа данных. Если это необходимо, введите новую длину данных в **замените** поле, а затем [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  Чтобы удалить сопоставление типа пользовательских данных, выполните следующее:  
   
@@ -94,9 +95,9 @@ SSMA имеет набор по умолчанию сопоставлений т
   
         Не удается удалить наследуемые сопоставления. Тем не менее наследуемые сопоставления переопределяются пользовательских сопоставлений на отдельный объект или объект категории.  
   
-## <a name="next-steps"></a>Next Steps  
-Следующим шагом в процессе миграции является либо [отчета оценки &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) или [преобразование схемы DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). При создании отчета оценки объектов DB2 автоматически преобразуются во время оценки.  
+## <a name="next-steps"></a>Следующие шаги  
+Следующим шагом в процессе миграции является либо [отчета оценки &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) или [преобразование схемы DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). При создании отчета оценки объектов DB2 автоматически преобразуются во время оценки.  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция DB2 баз данных SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

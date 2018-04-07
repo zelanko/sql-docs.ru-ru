@@ -1,15 +1,16 @@
 ---
-title: "Сопоставление MySQL и типов данных SQL Server (MySQLToSQL) | Документы Microsoft"
+title: Сопоставление MySQL и типов данных SQL Server (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 265030255071cb9292cf5604320d98c447173928
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee34e34e1b0048fd1cb15744cc215962e5a563e5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление MySQL и типов данных SQL Server (MySQLToSQL)
 Типы баз данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или типов базы данных SQL Azure. При преобразовании объектов базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
-SSMA имеет набор по умолчанию сопоставлений типов данных. Список сопоставлений по умолчанию см. в разделе [параметры проекта &#40; Сопоставление типов &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+SSMA имеет набор по умолчанию сопоставлений типов данных. Список сопоставлений по умолчанию см. в разделе [параметры проекта &#40;сопоставление типов&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Сопоставление наследования типов  
 Можно настроить сопоставления типов на уровне проекта, объект уровне или уровне категории объектов (например, все хранимые процедуры). Параметры наследуются от более высокого уровня, если они не переопределены на более низком уровне. Например, при сопоставлении **smallint** для **int** на уровне проекта, все объекты в проекте будет использовать это сопоставление, если не настроить сопоставление на уровне объекта или категории.  
@@ -91,6 +92,6 @@ SSMA имеет набор по умолчанию сопоставлений т
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в процессе миграции является либо [Создание отчета оценки](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) или [объектов базы данных MySQL преобразования в SQL Server или SQL Azure синтаксис](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7). При создании отчета MySQL объектов автоматически преобразуются во время оценки.  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция MySQL баз данных SQL Server — Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,15 +1,16 @@
 ---
-title: "Создание файлов скрипта (MySQLToSQL) | Документы Microsoft"
+title: Создание файлов скрипта (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddfe50aa62403c1dda26ebf1f2017bdf45bf7864
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1bef1029a5bfcde8f3cad7c83393c026e7d8a5d9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-mysqltosql"></a>Создание файлов скрипта (MySQLToSQL)
 В первую очередь перед запуском приложения консоли SSMA для создания файла сценария и при необходимости создания файла значение переменной и файла подключения сервера.  
@@ -353,7 +354,7 @@ ms.lasthandoff: 12/21/2017
 -   **Максимальное попыток подключения:** Если установленное соединение времени ожидания или останавливается из-за сбоя сети, сервер необходимо повторно подключить. Попыток повторного соединения разрешено более **5** повторных попыток, после чего консоль автоматически выполняет повторное подключение. Средство автоматическое переподключение уменьшает вашей трудозатраты в повторным выполнением скрипта.  
   
 ## <a name="server-connection-parameters"></a>Параметры подключения сервера  
-Параметры подключения сервера можно определить в файле скрипта или в файле соединения сервера. Обратитесь к [Создание файлы подключения Server &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) более подробные сведения.  
+Параметры подключения сервера можно определить в файле скрипта или в файле соединения сервера. Обратитесь к [Создание файлов подключения сервера &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) более подробные сведения.  
   
 ## <a name="script-commands"></a>Команды скриптов  
 Файл скрипта содержит последовательность команд рабочего процесса миграции в формате XML. SSMA консольное приложение обрабатывает миграции порядке команды отображаются в файле скрипта.  
@@ -401,14 +402,14 @@ ms.lasthandoff: 12/21/2017
   
 Шаблоны (файлы) можно выполнять после изменения параметров, отображаемых в ней для релевантности.  
   
-Полный список команд сценария можно найти в [выполнении консоли SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+Полный список команд сценария можно найти в [выполнение консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="script-file-validation"></a>Проверка файла скрипта  
 Пользователь может легко проверить свой файл скрипта соответствие файлу определения схемы **«M2SSConsoleScriptSchema.xsd»** доступны в папке «Схемы».  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [Создание переменной значение файлов &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+Следующий шаг в работе консоли — [Создание переменной значение файлов &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[Создание файлов значение переменной &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Создание файлов значение переменной &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

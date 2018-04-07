@@ -1,30 +1,31 @@
 ---
-title: "Подключиться к Sybase (SybaseToSQL) | Документы Microsoft"
-ms.custom: 
+title: Подключиться к Sybase (SybaseToSQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 85cc0d5c5dbea4526afd86fb4efb4b4ec65d7ac9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Подключиться к Sybase (SybaseToSQL)
 Используйте **соединиться Sybase** диалоговое окно подключения к экземпляру Sybase адаптивной Server Enterprise (ASE), которые требуется перенести.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 **Порт сервера**  
 Если вы используете нестандартный порт для подключения к ASE, введите номер порта. Номер порта по умолчанию — 5000. Это стандартный режим.  
   
-**User name**  
+**Имя пользователя**  
 Введите имя пользователя, который используется для подключения к ASE. Это стандартный режим.  
   
 **Пароль**  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
     |Настройка|Параметр Sybase 12,5|Параметр Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Имя сервера|Имя сервера|Сервер|  
+    |Имя сервера|Имя сервера|Server|  
     |Порт|Адрес порта сервера|Порт|  
     |Имя пользователя|Идентификатор пользователя|Идентификатор пользователя|  
     |Пароль|Пароль|Пароль|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
     |Настройка|Параметр Sybase 12,5-15|  
     |-----------|-----------------------------|  
     |Имя драйвера|Драйвер|  
-    |Имя сервера|Сервер|  
+    |Имя сервера|Server|  
     |Имя пользователя|UID|  
     |Пароль|PWD|  
     |Номер порта|Порт|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/21/2017
   
     |Настройка|Параметр Sybase 12,5-15|  
     |-----------|-----------------------------|  
-    |Имя сервера|Сервер|  
+    |Имя сервера|Server|  
     |Имя пользователя|UID|  
     |Пароль|PWD|  
     |Номер порта|Порт|  

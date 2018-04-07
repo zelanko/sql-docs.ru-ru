@@ -1,30 +1,31 @@
 ---
-title: "Установка SSMA для DB2 клиента (DB2ToSQL) | Документы Microsoft"
+title: Установка SSMA для DB2 клиента (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cddb418e373c5ac61d2788f7e8a41d51c5976b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eca6ea25d2f8518c1414dd2d6e41464d87828d16
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Установка SSMA для DB2 клиента (DB2ToSQL)
 SSMA клиента состоит из файлов программы, которые выполняют следующие задачи:  
@@ -54,7 +55,7 @@ SSMA предназначен для работы с DB2 для z/OS верси�
   
 -   Поставщик OLEDB Microsoft для DB2 версии 5 или более поздней версии и подключения к базам данных DB2, которые требуется перенести.  
   
--   Доступ к и необходимых разрешений на компьютере, на котором целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базе данных SQL Azure, где можно будет миграция объектов базы данных и данных. Дополнительные сведения см. в разделе [подключение к SQL Server &#40; DB2eToSQL &#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+-   Доступ к и необходимых разрешений на компьютере, на котором целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базе данных SQL Azure, где можно будет миграция объектов базы данных и данных. Дополнительные сведения см. в разделе [подключение к SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 -   4 ГБ ОЗУ рекомендуется.  
   
@@ -67,7 +68,7 @@ SSMA можно загрузить из Интернета. Загрузить �
   
 **Чтобы установить клиент SSMA**  
   
-1.  Дважды щелкните SSMA для DB2  *n* . Install.exe, где  *n*  — номер сборки.  
+1.  Дважды щелкните SSMA для DB2 *n*. Install.exe, где *n* — номер сборки.  
   
 2.  На странице приветствия нажмите кнопку **Далее**.  
   
@@ -84,7 +85,7 @@ SSMA можно загрузить из Интернета. Загрузить �
   
 Расположение установки по умолчанию — C:\Program Files\Microsoft SQL Server Migration Assistant для DB2.  
   
-## <a name="see-also"></a>См. также:  
-[Установка компонентов SSMA на SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
-[Миграция баз данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Установка компонентов SSMA на SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[Миграция DB2 баз данных SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

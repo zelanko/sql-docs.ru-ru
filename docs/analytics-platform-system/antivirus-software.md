@@ -1,26 +1,26 @@
 ---
-title: "Антивирусное программное обеспечение (система платформы аналитики)"
+title: Антивирусное программное обеспечение (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: "29"
-ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 29
+ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="antivirus-software"></a>Антивирусное программное обеспечение
 Если для центра обработки данных требуется антивирусное программное обеспечение, эти рекомендации используются для установки антивирусного программного обеспечения на Analytics Platform System. Рекомендуется не устанавливать антивирусное программное обеспечение без строгих требований центра обработки данных.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   G:\  
   
-***appliance_domain*-AD01** и  ***appliance_domain*-AD02**  
+***appliance_domain*-AD01** and ***appliance_domain*-AD02**  
   
 -   Без ограничений  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/21/2017
   
 -   G:\  
   
-***appliance_domain*- VMM**  
+***appliance_domain*-VMM**  
   
 -   Без ограничений  
   
-***appliance_domain*- WDS**  
+***appliance_domain*-WDS**  
   
 -   Без ограничений  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 12/21/2017
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>См. также:  
-[Задачи управления устройством &#40; Система платформы аналитики &#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>См. также  
+[Задачи управления устройством &#40;система платформы аналитики&#41;](appliance-management-tasks.md)  
   

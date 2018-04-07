@@ -1,30 +1,31 @@
 ---
-title: "Сопоставление MySQL и SQL Server символ набор (MySQLToSQL) | Документы Microsoft"
+title: Сопоставление MySQL и SQL Server символ набор (MySQLToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Сопоставление MySQL и SQL Server символ набор (MySQLToSQL)
 Для символьных типов данных MySQL, выражения и литералы можно указать набор символов (набор символов).  
@@ -91,22 +92,22 @@ ms.lasthandoff: 12/21/2017
     |**Имя кодировки**|**Описание CharSet**|**Тип целевого набора символов (по умолчанию)**|  
     |Big5|Китайская традиционная Big5|NCHAR/NVARCHAR (по умолчанию)|  
     |dec8|Западная DEC европейские|CHAR/VARCHAR (по умолчанию)|  
-    |CP850|Западная DOS европейские|CHAR/VARCHAR (по умолчанию)|  
+    |cp850|Западная DOS европейские|CHAR/VARCHAR (по умолчанию)|  
     |hp8|Западная Европейского HP|CHAR/VARCHAR (по умолчанию)|  
     |koi8r|Русский Relcom КОИ8 R|CHAR/VARCHAR (по умолчанию)|  
     |латиница 1|Европейский Западная CP1252|CHAR/VARCHAR (по умолчанию)|  
     |latin2|ISO 8859-2 Центральноевропейская|CHAR/VARCHAR (по умолчанию)|  
     |swe7|7-разрядных шведский|CHAR/VARCHAR (по умолчанию)|  
-    |ASCII|US ASCII|CHAR/VARCHAR (по умолчанию)|  
+    |ascii|US ASCII|CHAR/VARCHAR (по умолчанию)|  
     |ujis|Японский EUC-JP|NCHAR/NVARCHAR (по умолчанию)|  
     |sjis|Японская Shift-JIS|NCHAR/NVARCHAR (по умолчанию)|  
     |иврит|ISO 8859-8 иврит|CHAR/VARCHAR (по умолчанию)|  
     |tis620|Тайский TIS620|CHAR/VARCHAR (по умолчанию)|  
     |euckr|Корейский EUC KR|NCHAR/NVARCHAR (по умолчанию)|  
     |koi8u|Украинский КОИ8 U|CHAR/VARCHAR (по умолчанию)|  
-    |GB2312|GB2312 Китайский (упрощенный)|NCHAR/NVARCHAR (по умолчанию)|  
+    |gb2312|GB2312 Китайский (упрощенный)|NCHAR/NVARCHAR (по умолчанию)|  
     |греческий|ISO 8859-7 греческая|CHAR/VARCHAR (по умолчанию)|  
-    |CP 1250|Центрально-европейская Windows|CHAR/VARCHAR (по умолчанию)|  
+    |cp 1250|Центрально-европейская Windows|CHAR/VARCHAR (по умолчанию)|  
     |GBK|Китайская упрощенная GBK|NCHAR/NVARCHAR (по умолчанию)|  
     |latin5|ISO 8859-9 турецкая|CHAR/VARCHAR (по умолчанию)|  
     |armscii8|Армянский ARMSCII-8|CHAR/VARCHAR (по умолчанию)|  
@@ -118,9 +119,9 @@ ms.lasthandoff: 12/21/2017
     |MacRoman|Западная Европейского Mac|CHAR/VARCHAR (по умолчанию)|  
     |cp852|Европейский центральный DOS|CHAR/VARCHAR (по умолчанию)|  
     |latin7|ISO 8859-13 балтийская|CHAR/VARCHAR (по умолчанию)|  
-    |CP 1251|Кириллица Windows|CHAR/VARCHAR (по умолчанию)|  
-    |CP 1256|Арабский Windows|CHAR/VARCHAR (по умолчанию)|  
-    |CP 1257|Балтийская Windows|CHAR/VARCHAR (по умолчанию)|  
+    |cp 1251|Кириллица Windows|CHAR/VARCHAR (по умолчанию)|  
+    |cp 1256|Арабский Windows|CHAR/VARCHAR (по умолчанию)|  
+    |cp 1257|Балтийская Windows|CHAR/VARCHAR (по умолчанию)|  
     |BINARY|Двоичный псевдо charset|CHAR/VARCHAR (по умолчанию)|  
     |geostd8|Грузинский GEOSTD8|CHAR/VARCHAR (по умолчанию)|  
     |cp932|SJIS для японского языка Windows|NCHAR/NVARCHAR (по умолчанию)|  

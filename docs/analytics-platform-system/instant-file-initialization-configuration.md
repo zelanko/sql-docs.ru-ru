@@ -1,26 +1,26 @@
 ---
-title: "Мгновенная инициализация конфигурации (система платформы аналитики)"
+title: Мгновенная инициализация конфигурации (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: "20"
-ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>Мгновенная инициализация конфигурации
 Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных. Установка флажка, чтобы включить мгновенную инициализацию файлов улучшит производительность SQL Server PDW. Тем не менее если это представляет угрозу безопасности за вас бизнеса, затем оставьте поле флажок снят.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>Чтобы включить мгновенную инициализацию файлов или Off  
   
-1.  Запустите диспетчер конфигурации. Дополнительные сведения см. в разделе [запустить диспетчер конфигурации &#40; Система платформы аналитики &#41; ](launch-the-configuration-manager.md).  
+1.  Запустите диспетчер конфигурации. Дополнительные сведения см. в разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  В левой области Configuration Manager щелкните **быстрой инициализации файлов**.  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 12/21/2017
     > [!WARNING]  
     > При отключении мгновенную инициализацию файлов аспектом безопасности, описанных выше для функции по-прежнему могут относиться к файлы, удаленные во время включения мгновенную инициализацию файлов.  
   
-4.  Нажмите кнопку **Применить**. Изменения будут применены до экземпляров SQL Server в SQL Server PDW appliance службы будут запущены вновь очередного. Требуется перезагрузка устройства служб в разделе [состояние служб PDW &#40; Система платформы аналитики &#41; ](pdw-services-status.md).  
+4.  Нажмите кнопку **Применить**. Изменения будут применены до экземпляров SQL Server в SQL Server PDW appliance службы будут запущены вновь очередного. Требуется перезагрузка устройства служб в разделе [состояние служб PDW &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
 5.  Повторите действия, описанные выше, как может потребоваться **добавить разрешение для учетной записи резервной копии** удаление **выполнения задач по обслуживанию томов** разрешение.  
   
-![Инициализация устройств DWConfig PDW момент файла](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![DWConfig Appliance PDW Instant File Initialization](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
 Дополнительные сведения о быстрой инициализации файлов см. в разделе [быстрой инициализации файлов](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx).  
   

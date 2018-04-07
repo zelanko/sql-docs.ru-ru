@@ -1,25 +1,25 @@
 ---
-title: "Общие сведения о параллельного хранилища данных"
+title: Общие сведения о параллельного хранилища данных
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "В этом разделе описывается программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System."
+description: В этом разделе описывается программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="parallel-data-warehouse-overview"></a>Общие сведения о параллельного хранилища данных
 В этом разделе описывается программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System.  
@@ -248,15 +248,15 @@ For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw
 ### <a name="admin-console"></a>Административная консоль  
 Консоль администрирования дает возможность просмотра текущего состояния о работоспособности устройства. Это работает как веб-приложения на узел элемента управления и доступен по протоколу https.  
   
-Дополнительные сведения см. в разделе [отслеживать устройства с помощью консоли администрирования &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+Дополнительные сведения см. в разделе [отслеживать устройства с помощью консоли администрирования &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>Системные представления  
 Консоль администрирования основана на представление системных запросов. Вы можете запрашивать системные представления отдельно, чтобы получить конкретные сведения, которые вам необходимы.  
 
-Дополнительные сведения см. в разделе [отслеживать устройства с помощью системных представлений &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-system-views.md) 
+Дополнительные сведения см. в разделе [отслеживать устройства с помощью системных представлений &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 Существуют пакеты управления System Center Operations Manager (SCOM) для SQL Server PDW. 
 
-Чтобы настроить устройство для SCOM, см. [отслеживать устройства с помощью System Center Operations Manager &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Чтобы настроить устройство для SCOM, см. [отслеживать устройства с помощью System Center Operations Manager &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

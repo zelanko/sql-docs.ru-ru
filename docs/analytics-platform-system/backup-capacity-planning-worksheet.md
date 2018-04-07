@@ -1,25 +1,25 @@
 ---
-title: "Планирование мощности листа резервного сервера (SQL Server PDW)"
+title: Планирование мощности листа резервного сервера (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения резервного копирования базы данных SQL Server PDW операций и восстановления."
+description: Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения резервного копирования базы данных SQL Server PDW операций и восстановления.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
-caps.latest.revision: "6"
-ms.openlocfilehash: e025410f3be18b5f8276984219dd1cb6a40c2a87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: 1548d284f78043e5f878bafe9922480fe762dbfe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-server-capacity-planning-worksheet"></a>Лист планирования емкости резервное копирование сервера
 Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения резервного копирования базы данных SQL Server PDW операций и восстановления. Используется для создания плана для приобретения новых или подготовки существующих резервных серверов.  
@@ -48,6 +48,6 @@ ms.lasthandoff: 12/21/2017
   
 После определения требований к емкости вернуться к [приобретать и настраивать сервер загрузки](acquire-and-configure-loading-server.md) разделе для планирования покупки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Резервное копирование и загрузка оборудования](backup-and-loading-hardware.md)  
   

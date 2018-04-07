@@ -1,30 +1,31 @@
 ---
-title: "Параметры (преобразование) (MySQLToSQL) проекта | Документы Microsoft"
+title: Параметры (преобразование) (MySQLToSQL) проекта | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Параметры проекта (преобразование) (MySQLToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис MySQL в синтаксис SQL Server или SQL Azure.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |**Термин**|**Определение**|  
-|**По умолчанию ограничивающего прямоугольника {XMAX &#124; XMIN &#124; YMAX &#124; YMIN} для пространственных индексов**|Определяет значение по умолчанию для {XMAX &#124; XMIN &#124; YMAX &#124; Параметр YMIN} ограничивающего прямоугольника, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Режим оптимистичного**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**По умолчанию, ограничивающего прямоугольника {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} для пространственных индексов**|Определяет значение по умолчанию для {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} параметра ограничивающего прямоугольника, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Режим оптимистичного**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Плотность сетки для пространственных индексов**|Определяет значение по умолчанию для LEVEL_1, LEVEL_2, LEVEL_3 и LEVEL_4 плотности сетки, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Режим оптимистичного**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Полный режим**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию|  
   
 ### <a name="transactions"></a>Transactions  
@@ -120,6 +121,6 @@ ms.lasthandoff: 12/21/2017
 |**Числовые литералы с точности превышает 38**|Указывает, как преобразовать числовые литералы с точности превышает 38.<br /><br />**Режим по умолчанию**: округления, если это возможно<br /><br />**Режим оптимистичного**: округления, если это возможно<br /><br />**Полный режим**: округления, если это возможно|  
 |**Ноль date в не столбцов со значениями NULL**|Указывает способ обработки назначения не столбцов со значениями NULL нуль-Date, ноль в даты или значения недопустимые даты и времени.<br /><br />**Режим по умолчанию**: GETDATE()<br /><br />**Режим оптимистичного**: GETDATE()<br /><br />**Полный режим**: GETDATE()|  
   
-## <a name="see-also"></a>См. также:  
-[Справочник по пользовательскому интерфейсу &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+## <a name="see-also"></a>См. также  
+[Справочник по пользовательскому интерфейсу &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

@@ -1,36 +1,37 @@
 ---
-title: "Сочетания клавиш (AccessToSQL) | Документы Microsoft"
+title: Сочетания клавиш (AccessToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3a66b199bed34de91c19a089345d110f9f805ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f058e02cb587157577b38095fc02598abbd35f44
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="shortcut-keys-accesstosql"></a>Сочетания клавиш (AccessToSQL)
 Можно использовать сочетания клавиш для перемещения по SSMA приложения. Дополнительные сведения см. в следующих разделах:  
   
--   [Команды меню и другие сочетания клавиш &#40; AccessToSQL &#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
+-   [Другие сочетания клавиш и команды меню &#40;AccessToSQL&#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Начало работы с SQL Server Migration Assistant для Access &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+## <a name="see-also"></a>См. также  
+[Приступая к работе с SQL Server Migration Assistant для Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
   

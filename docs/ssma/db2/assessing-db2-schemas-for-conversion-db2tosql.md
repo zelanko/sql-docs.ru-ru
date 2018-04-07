@@ -1,30 +1,31 @@
 ---
-title: "Оценка схемы DB2 для преобразования (DB2ToSQL) | Документы Microsoft"
+title: Оценка схемы DB2 для преобразования (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ee5825c7a7df208baeccd27a463defb2c6e250c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96c437f34bbe4b45c33082a18536aef33dd4b218
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Оценка схемы DB2 для преобразования (DB2ToSQL)
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], следует определить быть сложность миграции и о том, сколько времени займет миграции. SSMA можно создать отчет об оценки, который показывает процент объекты, которые будут преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  
@@ -82,13 +83,13 @@ ms.lasthandoff: 12/21/2017
   
     -   Обновите синтаксис DB2 в SSMA. Синтаксис для процедур, функций, триггеров, упакованные функции и процедуры упакованных можно обновить. Чтобы обновить синтаксис, выберите объект на панели обозревателя метаданных DB2, нажмите кнопку **SQL** вкладку, а затем изменить код SQL. Если покинуть элемент будет предложено сохранить изменения синтаксиса. Можно просмотреть ошибки для объекта на **отчетов** вкладки.  
   
-    -   В DB2 можно изменить объект DB2 для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
+    -   В DB2 можно изменить объект DB2 для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
     -   Объект можно исключить из процесса миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозревателя метаданных и обозревателя метаданных DB2, снимите флажок рядом с элементом, прежде чем загрузить объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенос данных из DB2.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Преобразование схемы DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[Преобразование схем DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция DB2 баз данных SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

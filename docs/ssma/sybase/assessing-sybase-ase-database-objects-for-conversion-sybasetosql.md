@@ -1,30 +1,31 @@
 ---
-title: "Оценки объектов базы данных SAP ASE для преобразования (SybaseToSQL) | Документы Microsoft"
-ms.custom: 
+title: Оценки объектов базы данных SAP ASE для преобразования (SybaseToSQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e22710f19c00a846c33e1dd378e7b0de5b8526e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 99342797792c8b57eff144e8c5a611bbace2776d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Оценки для преобразования (SybaseToSQL) объектов базы данных SAP ASE
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure SQL, необходимо определить, как сложность миграции и о том, сколько времени должно уходить. SSMA можно создать отчет об оценки, который показывает процент объектов и процедуры, которые успешно преобразуются в [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA также позволяет просматривать конкретные проблемы, которые может вызвать сбой преобразования.  
@@ -79,13 +80,13 @@ ms.lasthandoff: 12/21/2017
   
     -   Обновите синтаксис ASE в SSMA. Вы можете обновить синтаксис только для хранимых процедур и триггеров. Чтобы обновить синтаксис, выберите объект на панели обозревателя метаданных Sybase, нажмите кнопку **SQL** вкладку, а затем измените код SQL. При переходе из элемента, вам будет предложено сохранить изменения синтаксиса. Просмотреть ошибки для объекта на **отчетов** вкладки.  
   
-    -   В ASE можно изменить объект ASE для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к Sybase ASE &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+    -   В ASE можно изменить объект ASE для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
     -   Объект можно исключить из процесса миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или обозреватель метаданных SQL Azure и обозреватель метаданных Sybase, снимите флажок рядом с элементом загрузить объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure SQL и перенести данные из ASE.
   
 ## <a name="next-steps"></a>Следующие шаги  
-[Преобразование объектов SAP ASE базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+[Преобразование объектов базы данных ASE SAP &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных SAP ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция баз данных SAP ASE в SQL Server — Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

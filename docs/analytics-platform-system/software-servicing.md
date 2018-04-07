@@ -1,32 +1,32 @@
 ---
-title: "Программное обеспечение обслуживания (система платформы аналитики)"
+title: Программное обеспечение обслуживания (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
-caps.latest.revision: "33"
-ms.openlocfilehash: 8435291233a9486632f3d26ecae90c4bf1be8e21
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 33
+ms.openlocfilehash: 8bddf00569ad4c5e5c78e801399b589a9f6d5f42
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="software-servicing"></a>Обслуживание программного обеспечения
 В этом разделе перечислены требования для устройства система платформы аналитики, включая исправления для WSUS и система платформы аналитики обслуживания программного обеспечения.  
   
 ## <a name="Basics"></a>Основы обслуживания программного обеспечения  
-**WSUS:** устройства система платформы аналитики должна быть настроена для получения обновлений из Windows Server Update Services (WSUS). Эти обновления включают серьезные изменения в программное обеспечение устройства. После настройки, большого количества обновлений автоматически установит и не требуют работ по администрированию. Как правило, настроенным во время обновления WSUS [настройки Windows Server Update Services &#40; WSUS &#41; &#40; Система платформы аналитики &#41; ](configure-windows-server-update-services-wsus.md) шаг выполняется во время установки нового устройства. В противном случае выполнение этого шага настройки можно выполнить позже. Сведения о WSUS см. в разделе [веб-сайта WSUS руководства](http://go.microsoft.com/fwlink/?LinkId=202417).  
+**WSUS:** устройства система платформы аналитики должна быть настроена для получения обновлений из Windows Server Update Services (WSUS). Эти обновления включают серьезные изменения в программное обеспечение устройства. После настройки, большого количества обновлений автоматически установит и не требуют работ по администрированию. Как правило, настроенным во время обновления WSUS [настройки Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md) шаг выполняется во время установки нового устройства. В противном случае выполнение этого шага настройки можно выполнить позже. Сведения о WSUS см. в разделе [веб-сайта WSUS руководства](http://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Исправления:** Кроме того, необходимо применить исправления Analytics Platform System. Объект *исправление* обновления программного обеспечения, созданных для конкретного клиента для устранения проблемы с программным обеспечением Analytics Platform System. Каждое исправление является исполняемым файлом, который устанавливает исправление, устраняющее проблему заказчика. Каждое исправление также содержит совокупность всех ранее выпущенных обновлений программного обеспечения для Windows, SQL Server и Analytics Platform System. Если необходимо установить исправление, службу технической поддержки Майкрософт предоставит вам исправлений и инструкции.  
   
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="software-servicing-topics"></a>Обслуживание разделы программного обеспечения  
 Следующие разделы описывают Управление обслуживанием программного обеспечения на устройстве.  
   
--   [Загрузить и установить обновления Майкрософт &#40; Система платформы аналитики &#41;](download-and-apply-microsoft-updates.md)  
+-   [Загрузить и установить обновления Microsoft &#40;система платформы аналитики&#41;](download-and-apply-microsoft-updates.md)  
   
--   [Удаление обновлений Майкрософт &#40; Система платформы аналитики &#41;](uninstall-microsoft-updates.md)  
+-   [Удаление обновлений &#40;система платформы аналитики&#41;](uninstall-microsoft-updates.md)  
   
--   [Применить исправления системы платформы аналитики &#40; Система платформы аналитики &#41;](apply-analytics-platform-system-hotfixes.md)  
+-   [Применения исправлений системы платформы аналитики &#40;система платформы аналитики&#41;](apply-analytics-platform-system-hotfixes.md)  
   
--   [Удаление исправлений системы платформы аналитики &#40; Система платформы аналитики &#41;](uninstall-analytics-platform-system-hotfixes.md)  
+-   [Удаление исправлений системы платформы аналитики &#40;система платформы аналитики&#41;](uninstall-analytics-platform-system-hotfixes.md)  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

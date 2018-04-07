@@ -1,30 +1,31 @@
 ---
-title: "Преобразование схем DB2 (DB2ToSQL) | Документы Microsoft"
+title: Преобразование схем DB2 (DB2ToSQL) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Преобразование схем DB2 (DB2ToSQL)
 После подключения к DB2, подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и параметры сопоставления данных и набор проектов, можно преобразовать объекты базы данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов базы данных.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 Во время преобразования SSMA выводит сообщения об ошибках на панели списка ошибок и выходных сообщений в области вывода. Позволяет определить, имеются ли изменения баз данных DB2 или процесс преобразования для получения результатов требуемое преобразование выходные данные и сведения об ошибке.  
   
 ## <a name="setting-conversion-options"></a>Установка параметров преобразования  
-Перед преобразованием объектов, проверьте параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [параметры проекта &#40; Преобразование &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md).  
+Перед преобразованием объектов, проверьте параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [параметры проекта &#40;преобразования&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Результаты преобразования  
 В следующей таблице показаны объекты DB2 преобразуются и итоговый [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов:  
@@ -151,13 +152,13 @@ ms.lasthandoff: 12/21/2017
   
 -   Можно изменить исходный код для процедуры на **SQL** вкладки.  
   
--   Можно изменить объект в базе данных DB2 для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
+-   Можно изменить объект в базе данных DB2 для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
 -   Объект можно исключить из процесса миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозревателя метаданных и обозревателя метаданных DB2, снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенос данных из DB2.  
   
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в процессе миграции должно [загрузит преобразованные объекты в SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
-## <a name="see-also"></a>См. также:  
-[Перенос данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

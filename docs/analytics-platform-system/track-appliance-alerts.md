@@ -1,26 +1,26 @@
 ---
-title: "Отслеживать оповещения устройства (система платформы аналитики)"
+title: Отслеживать оповещения устройства (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="track-appliance-alerts"></a>Отслеживать оповещения устройства
 В этом разделе описывается использование консоли администрирования и системных представлений для отслеживания оповещений в в SQL Server PDW appliance.  
@@ -33,7 +33,7 @@ SQL Server PDW журналы и оповещения [sys.dm_pdw_component_heal
 ### <a name="view-alerts-by-using-the-admin-console"></a>Просмотр оповещений с помощью консоли администрирования  
 Отсутствует **оповещения** область PDW области HDI, а также области структуры устройства. После перехода на другой ресурс, переход на другой ресурс событие включается в число оповещений на странице. Имеется страница PDW области, области HDI и области структуры устройства. Каждая страница работоспособности имеет вкладки. Дополнительные сведения о предупреждении щелкните **работоспособности** страницы, **оповещения** , а затем щелкните оповещение.  
   
-![Предупреждения консоли администрирования PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 На **оповещения** страницы:  
   
@@ -76,7 +76,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Мониторинг устройства &#40; Система платформы аналитики &#41;](appliance-monitoring.md)  
+[Мониторинг устройства &#40;система платформы аналитики&#41;](appliance-monitoring.md)  
   

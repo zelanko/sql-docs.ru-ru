@@ -1,30 +1,31 @@
 ---
-title: "Параметры (миграция) (SybaseToSQL) проекта | Документы Microsoft"
-ms.custom: 
+title: Параметры (миграция) (SybaseToSQL) проекта | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Параметры проекта (миграция) (SybaseToSQL)
 На странице миграции **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA выполняет миграцию данных из Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |Термин|Определение|  
 |--------|--------------|  
-|**Замените неподдерживаемый дат**|Указывает, следует ли SSMA правильную дат, предшествующих самой ранней [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** даты (01 января 1753 г.).<br /><br />Чтобы сохранить значения на текущую дату, выберите **ничего не**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]в столбце datetime не будет принимать дат, предшествующих 01 января 1753 г. При использовании старых даты, необходимо преобразовать значения даты и времени в символьные значения.<br /><br />Чтобы преобразовать даты до 01 января 1753 г. значение NULL, выберите **замените NULL**.<br /><br />Чтобы заменить дат, предшествующих 01 января 1753 поддерживаемая Дата, выберите **замените ближайшего поддерживаемая Дата**.<br /><br />**Режим по умолчанию**: не предпринимать никаких действий<br /><br />**Режим оптимистичного**: не предпринимать никаких действий<br /><br />**Полный режим**: замените ближайшего поддерживаемая Дата|  
+|**Замените неподдерживаемый дат**|Указывает, следует ли SSMA правильную дат, предшествующих самой ранней [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** даты (01 января 1753 г.).<br /><br />Чтобы сохранить значения на текущую дату, выберите **ничего не**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в столбце datetime не будет принимать дат, предшествующих 01 января 1753 г. При использовании старых даты, необходимо преобразовать значения даты и времени в символьные значения.<br /><br />Чтобы преобразовать даты до 01 января 1753 г. значение NULL, выберите **замените NULL**.<br /><br />Чтобы заменить дат, предшествующих 01 января 1753 поддерживаемая Дата, выберите **замените ближайшего поддерживаемая Дата**.<br /><br />**Режим по умолчанию**: не предпринимать никаких действий<br /><br />**Режим оптимистичного**: не предпринимать никаких действий<br /><br />**Полный режим**: замените ближайшего поддерживаемая Дата|  
   
 ## <a name="migration-engine"></a>Модуль переноса  
   

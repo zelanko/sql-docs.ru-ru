@@ -1,31 +1,31 @@
 ---
-title: "Настройка Windows Server Update Services (WSUS) (система платформы аналитики)"
+title: Настройка Windows Server Update Services (WSUS) (система платформы аналитики)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+caps.latest.revision: 41
+ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Настройка Windows Server Update Services (WSUS)
 Эти инструкции пошаговые инструкции по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System. Необходимо настроить службы WSUS, перед применением обновлений программного обеспечения с устройством. На виртуальной машине VMM устройства уже установлена служба WSUS.  
   
-Дополнительные сведения о настройке служб WSUS см. в разделе [руководство по установке служб WSUS пошаговое](http://go.microsoft.com/fwlink/?LinkId=202417) на веб-сайт WSUS. После настройки WSUS, в разделе [загрузки и применения обновлений Майкрософт &#40; Система платформы аналитики &#41; ](download-and-apply-microsoft-updates.md) для запуска обновления.  
+Дополнительные сведения о настройке служб WSUS см. в разделе [руководство по установке служб WSUS пошаговое](http://go.microsoft.com/fwlink/?LinkId=202417) на веб-сайт WSUS. После настройки WSUS, в разделе [загрузки и применения обновлений Майкрософт &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) для запуска обновления.  
   
 > [!WARNING]  
 > Если возникают ошибки во время этого процесса настройки, остановите и обратитесь за помощью в службу поддержки. Не пропускать ошибки и продолжения процесса после получения ошибки.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/29/2018
   
 -   Знаете IP-адрес прокси-сервера, если устройства будут использовать прокси-сервер для доступа к вышестоящему серверу или Центра обновления Майкрософт.  
   
--   В большинстве случаев WSUS требуется для доступа к серверам вне устройства. Для поддержки этого сценария использования системы DNS платформы Analytics можно настроить для поддержки пересылки внешнее имя, которое позволит Analytics Platform System узлов и виртуальных машин (ВМ) для использования внешнего DNS-серверы для разрешения имен вне устройство. Дополнительные сведения см. в разделе [использовать DNS-сервер пересылки для разрешения DNS-имена устройств не &#40; Система платформы аналитики &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   В большинстве случаев WSUS требуется для доступа к серверам вне устройства. Для поддержки этого сценария использования системы DNS платформы Analytics можно настроить для поддержки пересылки внешнее имя, которое позволит Analytics Platform System узлов и виртуальных машин (ВМ) для использования внешнего DNS-серверы для разрешения имен вне устройство. Дополнительные сведения см. в разделе [использовать DNS-сервер пересылки для разрешения DNS-имена устройств не &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Настройка службы Windows Server Update Services (WSUS)  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/29/2018
   
         ![Меню панели мониторинга диспетчера сервера](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Если при первом запуске мастера WSUS, возможно, потребуется настроить каталог для хранения обновлений. `C:\wsus`является подходящее место; Однако может предоставить другой путь.  
+    4.  Если при первом запуске мастера WSUS, возможно, потребуется настроить каталог для хранения обновлений. `C:\wsus` является подходящее место; Однако может предоставить другой путь.  
   
         ![Путь WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/29/2018
 После настройки WSUS для Analytics Platform System, следующим шагом является для группирования серверов устройства. Добавляя все серверы, устройства в группу, WSUS будет иметь возможность обновления программного обеспечения на всех серверах в устройстве.  
   
 > [!NOTE]  
-> Система WSUS предназначена для асинхронного выполнения. Инициирование действия не всегда приводит к появлению немедленно обновить. Таким образом может потребоваться подождать некоторое время, пока компьютеры будут отображаться в диалоговых окнах служб WSUS. Под управлением `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` команды, описанные в конце этого раздела [загрузки и применения обновлений Майкрософт &#40; Система платформы аналитики &#41; ](download-and-apply-microsoft-updates.md) может помочь обновление диалоговые окна.  
+> Система WSUS предназначена для асинхронного выполнения. Инициирование действия не всегда приводит к появлению немедленно обновить. Таким образом может потребоваться подождать некоторое время, пока компьютеры будут отображаться в диалоговых окнах служб WSUS. Под управлением `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` команды, описанные в конце этого раздела [загрузки и применения обновлений Майкрософт &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) может помочь обновление диалоговые окна.  
   
 #### <a name="to-group-the-appliance-servers"></a>Для группировки серверов устройства  
   

@@ -1,15 +1,16 @@
 ---
-title: "Выбор и настройка объектов для теста (SybaseToSQL) | Документы Microsoft"
-ms.custom: 
+title: Выбор и настройка объектов для теста (SybaseToSQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Выбор и настройка объектов для теста (SybaseToSQL)
 На этом этапе выберите объекты для тестирования и настроить параметры для сравнения процедуры и функции выходные параметры, а также возвращаемые значения функций.  
   
 ## <a name="selection-of-objects-to-test"></a>Выбор объектов для тестирования  
-В дереве объектов Sybase, находится в левой части окна проверьте объекты, которые вы хотите запустить в процессе тестирования. Просмотреть весь список тестируемых объектов в [тестирование перенесенные объекты базы данных &#40; SybaseToSQL &#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) раздела.  
+В дереве объектов Sybase, находится в левой части окна проверьте объекты, которые вы хотите запустить в процессе тестирования. Просмотреть весь список тестируемых объектов в [тестирование перенесенные объекты базы данных &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) раздела.  
   
 Если тест-инженер SSMA не поддерживает объекты, выбранные для тестирования, вы увидите ссылку с меткой **некоторые из выделенных объектов содержат ошибки** в дереве объектов. Щелкните эту ссылку для просмотра причины, почему не удается проверить эти объекты и снимите флажок не тот объект.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="use-during-comparisons"></a>Используется при выполнении сравнений  
 Включите использование выбранного параметра в отличие от результатов теста.  
   
--   При выборе **True**, SSMA сравнит выходное значение этого параметра после выполнения процедуры на Sybase с соответствующим значением на[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   При выборе **True**, SSMA сравнит выходное значение этого параметра после выполнения процедуры на Sybase с соответствующим значением на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   При выборе**False**, параметр исключаются из результатов проверки.  
   
@@ -90,8 +91,8 @@ ms.lasthandoff: 12/21/2017
 Значения входных параметров можно указать на **значения вызовите** страницы. **Добавить вызов** кнопка добавляет новый вызов с пустой параметр значения. **Удалите вызов** кнопка удаляет текущего вызова.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Выбор и настройка затронутые объекты &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Выбор и настройка затронутые объекты &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Тестирование миграции объектов базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>См. также  
+[Тестирование перенесенные объекты базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

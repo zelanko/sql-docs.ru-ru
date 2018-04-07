@@ -1,26 +1,26 @@
 ---
-title: "Отправлять отзывы телеметрии Майкрософт (SQL Server PDW)"
+title: Отправлять отзывы телеметрии Майкрософт (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 18
+ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Отправить данные телеметрии отзыв в корпорацию Майкрософт
 Система платформы аналитики имеет это телеметрии необязательный компонент, который отправляет данные в консоли администрирования Microsoft. Рекомендуется включить этот параметр, чтобы помочь в улучшении продукта.  
@@ -39,11 +39,11 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-enable-feedback"></a>Включение обратной связи  
   
-1.  С учетной записью администратора домена устройство подключиться к узлу элемента управления (***appliance_domain*-CTL01**) и откройте окно командной строки, используя учетные данные администратора Windows.  
+1.  С учетной записью администратора домена устройство подключиться к узлу элемента управления (***appliance_domain *-CTL01**) и откройте окно командной строки, используя учетные данные администратора Windows.  
   
 2.  Перейдите в следующий каталог: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Импорт модуля`Configure-RemoteMonitoring.ps1`  
+3.  Импорт модуля `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Для импорта, вам необходимо использовать две точки в команде.  
@@ -89,11 +89,11 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-disable-telemetry"></a>Отключение телеметрии  
   
-1.  С учетной записью администратора домена устройство подключиться к узлу элемента управления (***appliance_domain*-CTL01**) и откройте окно PowerShell с правами администратора.  
+1.  С учетной записью администратора домена устройство подключиться к узлу элемента управления (***appliance_domain *-CTL01**) и откройте окно PowerShell с правами администратора.  
   
 2.  Перейдите в следующий каталог: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Импорт модуля`Configure-RemoteMonitoring.ps1`  
+3.  Импорт модуля `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Для импорта, вам необходимо использовать две точки в команде.  
@@ -116,9 +116,9 @@ ms.lasthandoff: 12/21/2017
   
 Вреда в работе `Disable-RemoteMonitoring` команды несколько раз.  
   
-## <a name="see-also"></a>См. также:  
-[Мониторинг устройства с помощью консоли администрирования &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Мониторинг устройства с помощью системных представлений &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-system-views.md)  
-[Мониторинг устройства с помощью System Center Operations Manager &#40; Система платформы аналитики &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным &#40; Система платформы аналитики &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="see-also"></a>См. также  
+[Мониторинг устройства с помощью консоли администрирования &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[Мониторинг устройства с помощью системных представлений &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-system-views.md)  
+[Мониторинг устройства с помощью System Center Operations Manager &#40;система платформы аналитики&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+[Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным &#40;система платформы аналитики&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   
