@@ -1,27 +1,28 @@
 ---
-title: "Драйвер ODBC для Linux и macOS - высокого уровня доступности и аварийного восстановления | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Драйвер ODBC для Linux и macOS - высокого уровня доступности и аварийного восстановления | Документы Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Драйвер ODBC для Linux и macOS поддержку высокого уровня доступности и аварийного восстановления
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ ms.lasthandoff: 11/18/2017
 2.  Если приложение использует **ApplicationIntent=ReadWrite** и расположение вторичных реплик настроено для доступа только для чтения.  
   
 При соединении происходит ошибка, если первичная реплика настроена на отклонение рабочих нагрузок только для чтения, а строка подключения содержит **ApplicationIntent=ReadOnly**.  
-  
-## <a name="specifying-application-intent"></a>Задание намерения приложения  
-При указании **ApplicationIntent=ReadOnly**клиент запрашивает рабочую нагрузку чтения при установке соединения с базой данных с поддержкой AlwaysOn. Сервер принудительно реализует намерение в момент соединения и во время инструкции USE database, но только для базы данных AlwaysOn включены.
 
-Ключевое слово **ApplicationIntent** не работает с базами данных прежних версий, доступными только для чтения.  
 
-База данных может допускать или не допускать рабочую нагрузку чтения для целевой базы данных AlwaysOn. (Используйте **ALLOW_CONNECTIONS** предложения **PRIMARY_ROLE** и **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкции.)  
-  
-Ключевое слово **ApplicationIntent** служит для включения маршрутизации только для чтения.  
-  
-## <a name="read-only-routing"></a>Маршрутизация только для чтения  
-Маршрутизация только для чтения — это функция, которая способна обеспечить доступность реплики базы данных только для чтения. Включение маршрутизации только для чтения  
-  
-1.  Установите соединение с прослушивателем группы доступности Always On.  
-  
-2.  Ключевое слово строки подключения **ApplicationIntent** должно быть установлено в значение **ReadOnly**.  
-  
-3.  Администратор базы данных должен настроить группу доступности на включение маршрутизации только для чтения.  
-  
-Несколько соединений, использующих маршрутизацию только для чтения могут подключаться к разным репликам только для чтения. Изменения в синхронизации баз данных или в конфигурации маршрутизации сервера могут привести к тому, что клиент будет подключаться к различным репликам только для чтения. Чтобы гарантировать, что все запросы на подключение только для чтения будут соединяться с одной и той же репликой только для чтения, не передавайте прослушиватель группы доступности в ключевое слово соединения **Server** . Вместо этого укажите имя экземпляра, доступного только для чтения.  
-  
-На подключение с использованием маршрутизации только для чтения требуется больше времени, чем подключение к первичной реплике. Поэтому следует увеличить время ожидания входа. Сначала маршрутизации только для чтения подключается к первичной реплике, а затем ищет наиболее подходящую вторичную реплику, доступную для чтения.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>Синтаксис ODBC
 
 Два ключевых слов строки подключения ODBC поддерживают [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
@@ -117,12 +100,12 @@ ms.lasthandoff: 11/18/2017
   
 Приложения ODBC, который использует [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] можно использовать один из двух функций для подключения:  
   
-|Функция|Description|  
+|Функция|Описание|  
 |------------|---------------|  
 |[Функция SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через атрибут соединения или имя источника данных (DSN).|  
 |[Функция SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через DSN, ключевое слово строки подключения или атрибут соединения.|
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 
 [Ключевые слова строки подключения и имена источников данных (DSN)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 

@@ -1,27 +1,28 @@
 ---
-title: "Драйвер JDBC поддерживает высокий уровень доступности и аварийного восстановления | Документы Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Драйвер JDBC поддерживает высокий уровень доступности и аварийного восстановления | Документы Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/18/2017
   
  Указание **multiSubnetFailover = true** при соединении с объектом, кроме прослушивателя группы доступности или экземпляра отказоустойчивого кластера может привести к отрицательно влияет на производительность и не поддерживается.  
   
- Если диспетчер безопасности не установлен, то виртуальная машина Java кэширует виртуальные IP-адреса (VIP) на ограниченный период времени (по умолчанию определяемый реализацией JDK и свойствами Java networkaddress.cache.ttl и networkaddress.cache.negative.ttl). Если диспетчер безопасности JDK установлен, то виртуальная машина Java будет кэшировать адреса VIP, причем кэш по умолчанию не обновляется. Необходимо установить «время существования» для кэша виртуальной машины Java (networkaddress.cache.ttl) в один день. Если этого не сделать, то старые значения не будут исключаться из кэша виртуальной машины Java при добавлении или обновлении адресов VIP. Дополнительные сведения о параметрах networkaddress.cache.ttl и networkaddress.cache.negative.ttl см. в разделе [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ Если диспетчер безопасности не установлен, то виртуальная машина Java кэширует виртуальные IP-адреса (VIP) на ограниченный период времени (по умолчанию определяемый реализацией JDK и свойствами Java networkaddress.cache.ttl и networkaddress.cache.negative.ttl). Если диспетчер безопасности JDK установлен, то виртуальная машина Java будет кэшировать адреса VIP, причем кэш по умолчанию не обновляется. Необходимо установить «время существования» для кэша виртуальной машины Java (networkaddress.cache.ttl) в один день. Если этого не сделать, то старые значения не будут исключаться из кэша виртуальной машины Java при добавлении или обновлении адресов VIP. Дополнительные сведения о параметрах networkaddress.cache.ttl и networkaddress.cache.negative.ttl см. в разделе [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Следуйте приведенным ниже рекомендациям для подключения к серверу в группе доступности или экземпляру отказоустойчивого кластера.  
   
@@ -93,29 +94,11 @@ ms.lasthandoff: 11/18/2017
  При обновлении [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] приложения, которое в настоящее время использует зеркальное отображение базы данных в сценарии с несколькими подсетями, необходимо удалить **failoverPartner** свойства соединения и замените ее на **multiSubnetFailover**  значение **true** и заменить имя сервера в строке соединения с прослушивателем группы доступности. Если в строке подключения используются **failoverPartner** и **multiSubnetFailover = true**, то драйвер выдаст ошибку. Тем не менее если в строке подключения используются **failoverPartner** и **multiSubnetFailover = false** (или **ApplicationIntent = ReadWrite**), приложение будет использовать базу данных зеркальное отображение.  
   
  Драйвер возвращает ошибку, если базы данных-источника в группе Доступности используется зеркальное отображение базы данных и **multiSubnetFailover = true** используется в строке подключения, которая подключается к основной базе данных вместо к группе доступности прослушиватель.  
-  
-## <a name="specifying-application-intent"></a>Задание намерения приложения  
- Когда **applicationIntent = ReadOnly**, клиент запрашивает рабочую нагрузку только для чтения при подключении к базе данных с поддержкой AlwaysOn. Сервер принудительно применяет намерение при установке соединения и при выполнении инструкции USE, но только для баз данных, поддерживающих AlwaysOn.  
-  
- **ApplicationIntent** ключевое слово не работает с базами данных прежних версий, только для чтения.  
-  
- База данных может допускать или не допускать рабочую нагрузку чтения для целевой базы данных AlwaysOn. (Это выполняется с использованием предложения **ALLOW_CONNECTIONS** инструкций **PRIMARY_ROLE** и **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)].)  
-  
- **ApplicationIntent** ключевое слово используется для включения маршрутизации только для чтения.  
-  
-## <a name="read-only-routing"></a>Маршрутизация только для чтения  
- Маршрутизация только для чтения — это функция, которая способна обеспечить доступность реплики базы данных только для чтения. Включение маршрутизации только для чтения  
-  
-1.  Необходимо установить соединение с прослушивателем группы доступности AlwaysOn.  
-  
-2.  **ApplicationIntent** ключевое слово строки подключения должно быть присвоено **ReadOnly**.  
-  
-3.  Группа доступности должна быть настроена администратором базы данных на поддержку маршрутизации только для чтения.  
-  
- Возможно, что не все из нескольких соединений, использующих маршрутизацию только для чтения, будут подключаться к одной и той же реплике только для чтения. Изменения в синхронизации баз данных или в конфигурации маршрутизации сервера могут привести к тому, что клиент будет подключаться к различным репликам только для чтения. Чтобы убедиться, что все запросы только для чтения подключаться к той же репликой только для чтения, не указывайте прослушиватель группы доступности или виртуальный IP-адрес для **serverName** ключевое слово строки подключения. Вместо этого укажите имя экземпляра, доступного только для чтения.  
-  
- Маршрутизация только для чтения может занять больше времени, чем подключение к источнику, так как при этом сначала производится соединение с источником, а затем поиск наилучшего, доступного для чтения получателя. Учитывая этот факт, следует увеличить время ожидания входа в систему.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Новые методы, поддерживающие multiSubnetFailover и applicationIntent  
  Следующие методы обеспечивают программный доступ к **multiSubnetFailover**, **applicationIntent** и **transparentNetworkIPResolution** строки подключения ключевые слова:  
   
@@ -136,9 +119,9 @@ ms.lasthandoff: 11/18/2017
  **GetMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** и **setTransparentNetworkIPResolution** методы, также добавляются в [класса SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ Класс SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), и [класса SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## <a name="ssl-certificate-validation"></a>Проверка сертификатов SSL  
- Группа доступности состоит из нескольких физических серверов. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]добавлена поддержка **альтернативное имя субъекта** в сертификатах SSL, что несколько узлов могут быть связаны с тем же сертификатом. Дополнительные сведения о протоколе SSL см. в разделе [основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Группа доступности состоит из нескольких физических серверов. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлена поддержка **альтернативное имя субъекта** в сертификатах SSL, что несколько узлов могут быть связаны с тем же сертификатом. Дополнительные сведения о протоколе SSL см. в разделе [основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключение к SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md)  
   

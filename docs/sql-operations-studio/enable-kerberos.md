@@ -1,6 +1,6 @@
 ---
-title: "Использование проверки подлинности Active Directory (Kerberos) при соединении с SQL Studio операций (Предварительная версия) | Документы Microsoft"
-description: "Включение Kerberos для использования проверки подлинности Active Directory для операций SQL Studio (Предварительная версия)"
+title: Использование проверки подлинности Active Directory (Kerberos) при соединении с SQL Studio операций (Предварительная версия) | Документы Microsoft
+description: Включение Kerberos для использования проверки подлинности Active Directory для операций SQL Studio (Предварительная версия)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,21 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение [!INCLUDE[name-sos](../includes/name-sos-short.md)] к экземпляру SQL Server с использованием проверки подлинности Windows — Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]поддерживает подключение к SQL Server с помощью Kerberos.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] поддерживает подключение к SQL Server с помощью Kerberos.
 
 Чтобы использовать встроенную проверку подлинности (проверка подлинности Windows) на macOS или Linux, необходимо настроить **билета Kerberos** связывание текущего пользователя с учетной записью домена Windows. 
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Проверка наличия установки Kerberos в Sql Server
 
 Имя входа на хост-компьютер Sql Server. Из командной строки в Windows, используйте `setspn -L %COMPUTERNAME%` для просмотра списка всех имен участника-службы для узла. Вы увидите записи, которые начинаются с MSSQLSvc/HostName.Domain.com это означает, что Sql Server зарегистрировал имени участника-службы и готов к приему проверки подлинности Kerberos. 
-- Если нет доступа к узлу Sql Server, то из любой другой ОС Windows соединяется с одной службой Active Directory, можно использовать команду `setspn -L <SQLSERVER_NETBIOS>` где < SQLSERVER_NETBIOS > — имя компьютера hsot сервера Sql Server.
+- Если нет доступа к узлу Sql Server, то из любой другой ОС Windows соединяется с одной службой Active Directory, можно использовать команду `setspn -L <SQLSERVER_NETBIOS>` где < SQLSERVER_NETBIOS > — имя компьютера узла Sql Server.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Получить центра распространения ключей Kerberos
@@ -62,7 +62,7 @@ The command completed successfully
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Изменить `/etc/network/interfaces` так, чтобы контроллер домена AD IP-адрес указан в качестве dns имен. Пример: 
+Изменить `/etc/network/interfaces` так, чтобы контроллер домена AD IP-адрес указан в качестве dns имен. Например: 
 
 ```/etc/network/interfaces
 <...>
@@ -128,7 +128,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>MacOS
 
-- Присоединение к macOS к контроллеру домена Active Directory [описанные ниже] (https://support.apple.com/kb/PH26282?viewlocale=en_US & языковой стандарт = en_US).
+- Присоединение к macOS к контроллеру домена Active Directory [описанные ниже] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 
@@ -170,7 +170,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Подключение с использованием[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Подключение с использованием [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Создание нового профиля подключения
 
