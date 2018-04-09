@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите Studio операций SQL (Предварительная версия)
 
@@ -60,7 +60,10 @@ ms.lasthandoff: 04/05/2018
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить Studio операций SQL (Предварительная версия) для Linux
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux](https://go.microsoft.com/fwlink/?linkid=870840).
+1. Загрузите [! ВКЛЮЧИТЬ[имя sos](../includes/name-sos-short.md) для Linux с помощью одного из установщиков или tar.gz архива:
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+    - [.RPM](https://go.microsoft.com/fwlink/?linkid=870841)
+    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. Чтобы извлечь файл и запустите [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
 
    **Debian установки:**
@@ -84,7 +87,8 @@ ms.lasthandoff: 04/05/2018
    cd ~ 
    cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
    tar -xvf ~/sqlops-linux-<version string>.tar.gz 
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
    sqlops 
    ``` 
 

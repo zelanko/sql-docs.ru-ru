@@ -105,6 +105,7 @@
 # [Импорт и экспорт данных](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
 # [Загрузка данных из Excel](load-data-to-from-excel-with-ssis.md)
+# [Загрузка данных в хранилище данных SQL](load-data-to-sql-data-warehouse.md)
 
 # [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 

@@ -13,11 +13,11 @@ ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: f54d131868caf332351d7806881ea89238843236
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 21d4ea90d5ee29c68161f9cf2d59ed2d31002d0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Для создания модели с помощью Python с revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,6 @@ ms.lasthandoff: 04/04/2018
 ## <a name="prerequisites"></a>предварительные требования
 
 + На этом занятии рассматривается различных данных, чем предыдущие занятия. Необходимо сначала выполнить предыдущие занятия. Однако если выполнены предыдущие занятия и сервер уже настроен для выполнения Python, используйте этого сервера и базы данных как контекст вычислений.
-
 + Для выполнения кода Python, используя SQL Server в качестве вычислительных контексте требуется SQL Server 2017 или более поздней версии. Кроме того, необходимо явно установить и включить функцию, затем **службы обучения машины**, выбрав параметр языка Python.
 
     Если вы установили предварительную версию служб SQL Server 2017 г., следует обновить для по крайней мере RTM-версии. Чтобы развернуть и улучшения функций Python продолжалось более поздние версии службы. Некоторые возможности работы с этим учебником может не работать в ранних предварительных версий.
@@ -52,9 +51,9 @@ ms.lasthandoff: 04/04/2018
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]

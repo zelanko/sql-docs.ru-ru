@@ -102,7 +102,6 @@
 ### [Обновление экземпляров реплики](upgrading-always-on-availability-group-replica-instances.md)  
 ### [Просмотр состояния работоспособности с помощью политик](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
 
-
 # Ссылки
 ## [Командлеты PowerShell](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
 ## [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
@@ -143,3 +142,17 @@
 ### [Некоторые реплики доступности не находятся в рабочем состоянии](some-availability-replicas-do-not-have-a-healthy-role.md)  
 ### [Некоторые синхронные реплики не синхронизированы](some-synchronous-replicas-are-not-synchronized.md)  
 ### [Служба кластеров WSFC находится вне сети](wsfc-cluster-service-is-offline.md)  
+## [Руководство по устранению неполадок и мониторингу](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+### [Мониторинг производительности для групп доступности](monitor-performance-for-always-on-availability-groups.md)
+### [Устранение неполадок: превышение RPO в группе доступности](troubleshoot-availability-group-exceeded-rpo.md)
+### [Устранение неполадок: превышение RTO в группе доступности](troubleshoot-availability-group-exceeded-rto.md)
+### [Устранение неполадок: изменения в первичной реплике не отражены во вторичной](troubleshoot-primary-changes-not-reflected-on-secondary.md)
+### [Полезные инструменты для устранения неполадок](useful-tools-for-troubleshooting.md)
+#### [Расширенные события](always-on-extended-events.md)
+#### [Журнал диагностики работоспособности](always-on-health-diagnostics-log.md)
+#### [Политики](always-on-policies.md)
+#### [Кольцевые буферы](always-on-ring-buffers.md)
+#### [Типы ожидания](always-on-wait-types.md)
+#### [CLUSTER.LOG](cluster-log-always-on-availability-groups.md)
+#### [Динамические административные представления и представления системного каталога](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+#### [Журнал ошибок SQL Server](sql-server-error-log-always-on-availability-groups.md)

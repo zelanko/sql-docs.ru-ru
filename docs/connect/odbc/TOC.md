@@ -7,3 +7,6 @@
 # [Скачивание драйвера ODBC Driver for SQL Server](download-odbc-driver-for-sql-server.md)
 
 # [Ключевые слова и атрибуты строки подключения DSN](dsn-connection-string-attribute.md)
+# [Использование Azure Active Directory с драйвером ODBC](using-azure-active-directory.md)
+
+# [Исправления ошибок](bug-fixes.md)

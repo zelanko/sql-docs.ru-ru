@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Список ошибок, исправленных
 
@@ -38,10 +38,10 @@ ms.lasthandoff: 04/05/2018
 - Исправлена ошибка редких на 32-разрядной версии Windows, при преобразовании значение с плавающей запятой в целое число
 - Устранена проблема, где бы Вставка double в десятичное поле с постоянным шифрованием на ошибки усечения не возвращают данные
 - Исправлено в установщик MacOS предупреждение
+- Фиксированный отправку неверном состоянии для SQL Server при попытке восстановления сеанса, если устойчивость подключений и организации пулов соединений оба включены, вызывая сеанса для удаления с сервера
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Фиксированный отправку неверном состоянии для SQL Server при попытке восстановления сеанса, если устойчивость подключений и организации пулов соединений оба включены, вызывая сеанса для удаления с сервера
 - Исправлена ошибка, если при использовании проверки подлинности Kerberos, инструкции bulk insert может завершиться с ошибкой «доступ запрещен»
 - Удален обходной путь представлен в версии ниже 2.3.1 unixODBC ошибки (драйвер двойной размеры некоторые буферы, передаваемый unixODBC)
 - Исправлена устойчивость подключений (повторное подключение) висячей при использовании ColumnEncryption = включено

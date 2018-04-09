@@ -1,6 +1,6 @@
 ---
-title: Обновлено - служб Analysis Services для SQL Server docs | Документы Microsoft
-description: Отображение фрагментов обновленное содержимое для последних измененных в документации служб Analysis Services для Microsoft SQL Server.
+title: Обновлено - образцы для SQL Server docs | Документы Microsoft
+description: Отображение фрагментов обновленное содержимое недавно измененные в документацию, образцы для Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: ssas
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 41d563b6ca464b46df9ee8e61b084ad18dad51fa
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Новые и недавно обновленные: службы Analysis Services для SQL Server
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>Новые и недавно обновленные: образцы для SQL Server
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
-- *Предметной области:* &nbsp; **служб Analysis Services для SQL Server**.
+- *Предметной области:* &nbsp; **образцы для SQL Server**.
 
 
 
