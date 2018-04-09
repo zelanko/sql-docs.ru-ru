@@ -1,81 +1,41 @@
 ---
-title: "Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов | Документы Майкрософт"
-ms.custom: 
-ms.date: 07/27/2015
+title: Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b713cbe4afa9a54e9753e3347d4b2e6b85d91144
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f80aebe1158d3ac4d64bd49c683b43719ab1a6f3
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
-  Этот раздел содержит описание и сам скрипт для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS, который копирует элементы и параметры содержимого с одного сервера отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой с помощью программы **RS.exe** . Программа RS.exe установлена с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]как в собственном режиме, так и в режиме SharePoint. Скрипт копирует элементы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , например отчеты и подписки, с одного сервера на другой. Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов.  
-  
-  
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим 
-  
-## <a name="in-this-topic"></a>В этом разделе.  
-  
--   [Загрузка скрипта ssrs_migration.rss](#bkmk_download_script)  
-  
--   [Поддерживаемые сценарии](#bkmk_supported_scenarios)  
-  
--   [Элементы и ресурсы, которые переносит скрипт](#bkmk_what_is_migrated)  
-  
--   [Необходимые разрешения](#bkmk_required_permissions)  
-  
--   [Использование скрипта](#bkmk_how_to_use_the_script)  
-  
--   [Описание параметра](#bkmk_parameter_description)  
-  
--   [Другие примеры](#bkmk_more_examples)  
-  
-    -   [С сервера отчетов в собственном режиме на сервер отчетов в собственном режиме](#bkmk_native_2_native)  
-  
-    -   [Из собственного режима в режим интеграции с SharePoint — корневой сайт](#bkmk_native_2_sharepoint_root)  
-  
-    -   [Из собственного режима в режим интеграции с SharePoint — семейство веб-сайтов бизнес-аналитики](#bkmk_native_2_sharepoint_with_site)  
-  
-    -   [С сервера отчетов в режиме интеграции с SharePoint на сервер отчетов в режиме интеграции с SharePoint — семейство веб-сайтов бизнес-аналитики](#bkmk_sharepoint_2_sharepoint)  
-  
-    -   [С сервера отчетов в собственном режиме на другой сервер отчетов в собственном режиме — виртуальная машина Windows Azure](#bkmk_native_to_native_Azure_vm)  
-  
-    -   [Сервер отчетов в режиме интеграции с SharePoint, семейство веб-сайтов бизнес-аналитики, на сервер отчетов в собственном режиме — виртуальная машина Windows Azure](#bkmk_sharepoint_site_to_native_Azure_vm)  
-  
--   [Проверка](#bkmk_verification)  
-  
--   [Устранение неполадок](#bkmk_troubleshoot)  
-  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+Эта статья содержит описание и сам скрипт для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS, который копирует элементы и параметры содержимого с одного сервера отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой с помощью программы **RS.exe**. Программа RS.exe установлена с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]как в собственном режиме, так и в режиме SharePoint. Скрипт копирует элементы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , например отчеты и подписки, с одного сервера на другой. Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов.  
+
 ##  <a name="bkmk_download_script"></a> Загрузка скрипта ssrs_migration.rss  
- Скачайте скрипт с сайта CodePlex [Скрипт программы RS.exe служб Reporting Services переносит содержимое](https://azuresql.codeplex.com/releases/view/115207) в локальную папку. Дополнительную информацию смотрите в разделе [Использование скрипта](#bkmk_how_to_use_the_script) данной темы.  
+ Скачайте скрипт с сайта GitHub [Скрипт переноса RS.exe служб Reporting Services](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss) в локальную папку. Дополнительные сведения см. в разделе [Использование скрипта](#bkmk_how_to_use_the_script) данной статьи.  
   
 ##  <a name="bkmk_supported_scenarios"></a> Поддерживаемые сценарии  
- Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов. Скрипт поддерживает следующие версии сервера отчетов.  
+ Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов. Этот скрипт поддерживает версии сервера отчетов [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и более поздние, а также сервер отчетов Power BI.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
-  
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-  
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
- Скрипт может копировать содержимое между серверами отчетов, работающих в одном или разных режимах. Например, можно запустить скрипт, чтобы скопировать содержимое с сервера отчетов [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , работающего в собственном режиме, на сервер отчетов [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] в режиме интеграции с SharePoint. Можно запустить скрипт с любого сервера, на котором установлена программа RS.exe. Например, в таком развертывании можно сделать следующее.  
+Скрипт может копировать содержимое между серверами отчетов, работающих в одном или разных режимах. Например, можно запустить скрипт, чтобы скопировать содержимое с сервера отчетов [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , работающего в собственном режиме, на сервер отчетов [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] в режиме интеграции с SharePoint. Можно запустить скрипт с любого сервера, на котором установлена программа RS.exe. Например, в таком развертывании можно сделать следующее.  
   
 -   Запустите RS.exe и скрипт **НА** сервере A.  
   
@@ -97,11 +57,11 @@ ms.lasthandoff: 01/09/2018
 |Элемент|Перенесено|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |паролей|**Нет**|**Нет**|Пароли **НЕ** переносятся. После переноса элементов содержимого обновите учетные данные на целевом сервере. Например, источники данных с сохраненными учетными данными.|  
-|Мои отчеты|**Нет**|**Нет**|Работа функции «Мои отчеты» в собственном режиме основана на именах входа конкретных пользователей, поэтому служба скриптов не имеет доступа к содержимому папки «Мои отчеты» для пользователей, не указанных параметром **–u** , который используется для запуска скрипта RSS. Кроме того, папка «Мои отчеты» не является компонентом служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, и элементы в папках нельзя копировать в среду SharePoint. Поэтому скрипт не копирует элементы отчета из папок «Мои отчеты» на исходном сервере отчетов, работающем в собственном режиме.<br /><br /> Чтобы перенести содержимое папки «Мои отчеты» с помощью этого скрипта, выполните следующие действия.<br /><br /> 1.  Создайте новую папку в диспетчере отчетов. Также можно создать папки или вложенные папки для каждого пользователя.<br />2.  Войдите в систему в качестве одного из пользователей, у которого есть папка «Мои отчеты».<br />3.  В диспетчере отчетов выберите папку **Мои отчеты**.<br />4.  Выберите представление **Подробности** для папки.<br />5.  Выберите каждый отчет, который следует скопировать.<br />6.  Нажмите кнопку **Переместить** на панели инструментов диспетчера отчетов.<br />7.  Выберите нужную папку назначения.<br />8.  Повторите шаги 2–7 для каждого пользователя.<br />9. Выполните скрипт.|  
+|Мои отчеты|**Нет**|**Нет**|Работа функции «Мои отчеты» в собственном режиме основана на именах входа конкретных пользователей, поэтому служба скриптов не имеет доступа к содержимому папки «Мои отчеты» для пользователей, не указанных параметром **–u** , который используется для запуска скрипта RSS. Кроме того, папка "Мои отчеты" не является компонентом служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, и элементы в папках нельзя копировать в среду SharePoint. Поэтому скрипт не копирует элементы отчета из папок «Мои отчеты» на исходном сервере отчетов, работающем в собственном режиме.<br /><br /> Чтобы перенести содержимое папки "Мои отчеты" с помощью этого скрипта, выполните следующие действия:<br /><br /> 1.  Создайте новую папку в диспетчере отчетов. Также можно создать папки или вложенные папки для каждого пользователя.<br />2.  Войдите в систему в качестве одного из пользователей, у которого есть папка "Мои отчеты".<br />3.  В диспетчере отчетов выберите папку **Мои отчеты**.<br />4.  Выберите представление **Подробности** для папки.<br />5.  Выберите каждый отчет, который следует скопировать.<br />6.  Нажмите кнопку **Переместить** на панели инструментов диспетчера отчетов.<br />7.  Выберите нужную папку назначения.<br />8.  Повторите шаги 2–7 для каждого пользователя.<br />9. Выполните скрипт.|  
 |Журнал|**Нет**|**Нет**||  
 |Параметры журнала|Да|Да|Параметры журнала переносятся, в то время как данные журнала НЕТ.|  
-|Расписания|да|да|Чтобы перенести расписания, агент SQL Server должен быть запущен на целевом сервере. Если агент SQL Server не запущен на целевом объекте, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|Роли и системные политики|Да|Да|По умолчанию скрипт не копирует пользовательскую схему разрешений с одного сервера на другой. По умолчанию элементы копируются на целевой сервер, при этом флагу inherit parent permissions задается значение TRUE. Если нужно, чтобы скрипт скопировал разрешения для отдельных элементов, воспользуйтесь переключателем SECURITY.<br /><br /> Если исходный и целевой серверы **работают в разных режимах сервера отчетов**, например выполняется перенос из собственного режима в режим интеграции с SharePoint, и используется выключатель SECURITY, скрипт попытается сопоставить роли и группы по умолчанию на основе сравнения, приведенного в следующем разделе [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Пользовательские роли и группы не будут скопированы на целевой сервер.<br /><br /> Если скрипт копирует между серверами, **которые работают в одном режиме**, и используется переключатель SECURITY, скрипт создает на целевом сервере новые роли (собственный режим) или группы (режим интеграции с SharePoint).<br /><br /> Если роль уже существует на целевом сервере, скрипт создаст сообщение об ошибке (см. пример ниже) и продолжит перенос других элементов. После завершения работы скрипта убедитесь, что роли на целевом сервере настроены в соответствии с потребностями. Роли миграции: найдено 8 элементов.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).<br /><br /> **Примечание.** Если пользователь существует на исходном сервере и отсутствует на целевом сервере, скрипт не сможет применить назначение ролей на целевом сервере (даже при использовании параметра SECURITY).|  
+|Расписания|да|да|Чтобы перенести расписания, агент SQL Server должен быть запущен на целевом сервере. Если агент SQL Server не запущен на целевом объекте, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
+|Роли и системные политики|Да|Да|По умолчанию скрипт не копирует пользовательскую схему разрешений с одного сервера на другой. По умолчанию элементы копируются на целевой сервер, при этом флагу inherit parent permissions задается значение TRUE. Если нужно, чтобы скрипт скопировал разрешения для отдельных элементов, воспользуйтесь переключателем SECURITY.<br /><br /> Если исходный и целевой серверы **работают в разных режимах сервера отчетов**, например выполняется перенос из собственного режима в режим интеграции с SharePoint, и используется выключатель SECURITY, скрипт попытается сопоставить роли и группы по умолчанию на основе сравнения, приведенного в статье [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Пользовательские роли и группы не будут скопированы на целевой сервер.<br /><br /> Если скрипт копирует между серверами, **которые работают в одном режиме**, и используется переключатель SECURITY, скрипт создает на целевом сервере новые роли (собственный режим) или группы (режим интеграции с SharePoint).<br /><br /> Если роль уже существует на целевом сервере, скрипт создаст сообщение об ошибке (см. пример ниже) и продолжит перенос других элементов. После завершения работы скрипта убедитесь, что роли на целевом сервере настроены в соответствии с потребностями. Роли миграции: найдено 8 элементов.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).<br /><br /> **Примечание.** Если пользователь существует на исходном сервере и отсутствует на целевом сервере, скрипт не сможет применить назначение ролей на целевом сервере (даже при использовании параметра SECURITY).|  
 |Общий источник данных|Да|Да|Скрипт не перезаписывает существующие элементы на целевом сервере. Если элемент с таким же именем уже существует на целевом сервере, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Учетные данные **НЕ** копируются как часть источника данных. После переноса элементов содержимого обновите учетные данные на целевом сервере.|  
 |Общий набор данных|Да|Да||  
 |Папка|Да|Да|Скрипт не перезаписывает существующие элементы на целевом сервере. Если элемент с таким же именем уже существует на целевом сервере, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -116,7 +76,7 @@ ms.lasthandoff: 01/09/2018
 |Элементы отчета|Да|Да||  
   
 ##  <a name="bkmk_required_permissions"></a> Необходимые разрешения  
- Разрешения, необходимые для чтения и записи элементов и ресурсов, разные для разных методов, используемых в скрипте. В следующей таблице перечислены методы, используемые для каждого элемента или ресурса, и ссылки на соответствующее содержимое. Переходите к отдельным разделам, в которых приведены необходимые разрешения. Например, обязательные требования для метода ListChildren следующие:  
+ Разрешения, необходимые для чтения и записи элементов и ресурсов, различные для разных методов, используемых в скрипте. В следующей таблице перечислены методы, используемые для каждого элемента или ресурса, и ссылки на соответствующее содержимое. Переходите к отдельным разделам, в которых приведены необходимые разрешения. Например, обязательные требования для метода ListChildren следующие:  
   
 -   **Обязательные разрешения для собственного режима:** свойства ReadProperties для элемента  
   
@@ -256,7 +216,7 @@ ms.lasthandoff: 01/09/2018
 |**-v ts**="TARGET_URL"|URL-адрес целевого сервера отчетов||  
 |**-v tu**="domain\username" **-v tp**="password"|Учетные данные для целевого сервера.|OPTIONAL, если не указаны учетные данные, используются учетные данные по умолчанию. **Примечание.** На целевом сервере пользователь будет указан как "создатель" общего расписания, чья учетная запись "изменила" элементы отчета.|  
 |**-v tst**="SITE"||OPTIONAL. Этот параметр используется только для серверов отчетов в режиме интеграции с SharePoint.|  
-|**-v tf** ="TARGETFOLDER"|Задайте «/» для перехода в корневой уровень. Задайте «/folder/subfolder» для копирования в уже существующую папку. Все из папки SOURCEFOLDER будет скопировано в папку TARGETFOLDER.|OPTIONAL, «/» по умолчанию.|  
+|**-v tf** ="TARGETFOLDER"|Задайте «/» для перехода в корневой уровень. Задайте "/folder/subfolder" для копирования в уже существующую папку. Все из папки SOURCEFOLDER будет скопировано в папку TARGETFOLDER.|OPTIONAL, «/» по умолчанию.|  
 |**-v security**= "True/False"|Если значение равно FALSE, элементы целевого каталога унаследуют параметры безопасности в соответствии с параметрами целевой системы. Этот параметр рекомендуется использовать для миграций между серверами отчетов разных типов, например из собственного режима в режим интеграции с SharePoint. Если значение равно TRUE, скрипт пытается перенести параметры безопасности.|OPTIONAL, значение по умолчанию FALSE.|  
   
 ##  <a name="bkmk_more_examples"></a> Другие примеры  
@@ -306,7 +266,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
   
 -   С сервера отчетов **SourceServer**в собственном режиме.  
   
--   На сервер отчетов **TargetServer** в собственном режиме, работающий на виртуальной машине Windows Azure. Сервер **TargetServer** не входит в домен **SourceServer** , при этом **User2** является администратором на виртуальной машине Windows Azure, где работает **TargetServer**.  
+-   На сервер отчетов **TargetServer** в собственном режиме, работающий на виртуальной машине Windows Azure. Сервер **TargetServer** не входит в домен **SourceServer**, при этом **User2** является администратором на виртуальной машине Windows Azure, где работает **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
@@ -320,7 +280,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   С сервера отчетов **SourceServer** в режиме интеграции с SharePoint, который содержит семейство веб-сайтов бизнес-аналитики и общую библиотеку документов.  
   
--   На сервер отчетов **TargetServer** в собственном режиме, работающий на виртуальной машине Windows Azure. Сервер **TargetServer** не входит в домен **SourceServer** , при этом **User2** является администратором на виртуальной машине Windows Azure, где работает **TargetServer**.  
+-   На сервер отчетов **TargetServer** в собственном режиме, работающий на виртуальной машине Windows Azure. Сервер **TargetServer** не входит в домен **SourceServer**, при этом **User2** является администратором на виртуальной машине Windows Azure, где работает **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
@@ -360,7 +320,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 -   Не удалось подключиться к серверу: http://\<имя_сервера>/ReportServer/ReportService2010.asmx  
   
- Запустите скрипт еще раз с флагом **–t** , чтобы просмотреть сообщение следующего вида:  
+ Запустите скрипт еще раз с флагом **–t**, чтобы просмотреть сообщение следующего вида:  
   
 -   System.Exception: не удалось подключиться к серверу: http://\<имя_сервера>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Запрос завершился ошибкой с кодом состояния HTTP 401: отсутствуют права доступа**.   в System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage сообщение, ответ WebResponse, responseStream потока, логическое asyncCall) на System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (строка имя_метода Object [] parameters) в Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() на Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (URL-адрес строки String userName, строковый пароль Строка домена, время ожидания Int32) в Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---конец трассировки стека внутреннего исключения---  
   

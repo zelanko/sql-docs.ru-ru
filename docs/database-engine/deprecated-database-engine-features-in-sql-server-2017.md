@@ -1,31 +1,32 @@
 ---
-title: "Нерекомендуемые функции ядра СУБД в SQL Server 2017 | Документы Майкрософт"
-ms.custom: 
+title: Нерекомендуемые функции ядра СУБД в SQL Server 2017 | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee8ea46df926675535f1ed685c7df464af7d893f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
 |Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Удаленные серверы|@@remserver|Замените удаленные серверы связанными серверами.|None|None|  
+|Удаленные серверы|\@\@remserver|Замените удаленные серверы связанными серверами.|None|None|  
 |Удаленные серверы|SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Задание параметров|**SET ROWCOUNT** для инструкций **INSERT**, **UPDATE**и **DELETE** .|Ключевое слово TOP|SET ROWCOUNT|109|  
 |Табличные указания|Табличная подсказка HOLDLOCK без скобок.|Используйте HOLDLOCK со скобками.|Табличная подсказка HOLDLOCK без скобок.|167|  
@@ -159,7 +160,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL в качестве имени столбца в инструкциях DML.|Используйте $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL в качестве имени столбца в инструкциях DML.|Используйте $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование # и ## в качестве имен временной таблицы и временной хранимой процедуры.|Используйте по крайней мере один дополнительный символ.|Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте @, @@ или @@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@.|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте \@, \@\@ или \@\@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)].|Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@.|"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте ключевое слово DEFAULT в качестве значения по умолчанию.|Не используйте слово DEFAULT в качестве значения по умолчанию.|Ключевое слово DEFAULT в качестве значения по умолчанию.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование пробела в качестве разделителя табличных подсказок.|В качестве разделителя отдельных табличных подсказок используйте запятую.|Несколько табличных указаний без запятых|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (*) в режиме совместимости 90.|Вместо этого следует использовать функцию COUNT_BIG.|Список выбора индексированного представления без COUNT_BIG(*)|2|  

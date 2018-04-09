@@ -1,32 +1,32 @@
 ---
-title: "Отслеживание производительности хранимых процедур, скомпилированных в собственном коде | Документация Майкрософт"
-ms.custom: 
-ms.date: 03/16/2017
+title: Отслеживание производительности хранимых процедур, скомпилированных в собственном коде | Документация Майкрософт
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5f180e94f835adaa91812e0341dab85d382c2c2
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 1912c692998f08f947b9fb147d049048b8101ad6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Отслеживание производительности скомпилированных в собственном коде хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом разделе показано, как наблюдать за производительностью хранимых процедур, скомпилированных в собственном коде  
+  В этой статье показано, как наблюдать за производительностью хранимых процедур, скомпилированных в собственном коде, а также других скомпилированных в собственном коде модулей T-SQL.  
   
 ## <a name="using-extended-events"></a>Использование расширенных событий  
  Для трассировки выполнения запроса используйте расширенное событие **sp_statement_completed** . Создайте сеанс с этим событием, при этом можно использовать фильтр в object_id для определенной хранимой процедуры, скомпилированной в собственном коде. Расширенное событие вызывается после выполнения каждого запроса. Время ЦП и время существования, указанные расширенным событием, показывают объем ресурсов ЦП, который потребовался на выполнение запроса, и время его выполнения. Скомпилированная в собственном коде хранимая процедура, которая потребляет значительное время ЦП, может сталкиваться с проблемами производительности.  
@@ -39,21 +39,39 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  Дополнительные сведения о расширенном событии **sp_statement_completed** см. в статье [Как получить инструкцию, которая вызвала событие](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
-## <a name="using-data-management-views"></a>Использование динамических административных представлений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает сбор статистики выполнения для скомпилированных в собственном коде хранимых процедур как на уровне процедуры, так и на уровне запроса. Из-за влияния на производительность сбор статистики выполнения по умолчанию не используется.  
-  
- Включать и отключать сбор статистики для скомпилированных в собственном коде хранимых процедур можно с помощью [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
-  
- Если сбор статистики включен с помощью процедуры [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md), можно с помощью [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) выполнять мониторинг производительности скомпилированной в собственном коде хранимой процедуры.  
-  
- Если сбор статистики включен с помощью процедуры [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md), можно с помощью [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) выполнять мониторинг производительности скомпилированной в собственном коде хранимой процедуры.  
-  
- Прежде всего включите сбор статистики. Затем выполните скомпилированную в собственном коде хранимую процедуру. После завершения сбора статистики отключите его. Затем проанализируйте статистику выполнения, которая была возвращена динамическими административными представлениями.  
-  
+## <a name="using-data-management-views-and-query-store"></a>Использование динамических административных представлений и хранилища запросов
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] поддерживают сбор статистики выполнения для скомпилированных в собственном коде хранимых процедур как на уровне процедуры, так и на уровне запроса. Из-за влияния на производительность сбор статистики выполнения по умолчанию не используется.  
+
+Статистика выполнения отражается в системных представлениях [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) и [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), а также в [хранилище запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
+
+### <a name="enabling-procedure-level-execution-statistics-collection"></a>Включение сбора статистики на уровне процедуры
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
+```sql
+EXEC sys.sp_xtp_control_proc_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_PROCEDURE_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+```
+
+### <a name="enabling-query-level-execution-statistics-collection"></a>Включение сбора статистики на уровне запроса
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне запроса с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
+```sql
+EXEC sys.sp_xtp_control_query_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне инструкции с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_QUERY_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+```
+
+## <a name="sample-queries"></a>Примеры запросов
+
  После того как статистика выполнения хранимых процедур, скомпилированных в собственном коде, будет собрана, запросить ее для определенной процедуры можно будет с помощью [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md), а для запросов — с помощью [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).  
-  
-> [!NOTE]  
->  Если сбор статистики включен, то накопленное время рабочей роли для скомпилированных в собственном коде хранимых процедур указывается в миллисекундах. Если запрос выполняется за время меньше миллисекунды, это значение будет равно 0. Для скомпилированных в собственном коде хранимых процедур функция **total_worker_time** может быть неточной, если за время меньше миллисекунды выполняется большое количество хранимых процедур.  
+ 
   
  После сбора статистики следующий запрос возвращает имена и статистику выполнения скомпилированных в собственном коде хранимых процедур в текущей базе данных.  
   
@@ -99,7 +117,9 @@ where  st.dbid=db_id() and st.objectid in (select object_id
 from sys.sql_modules where uses_native_compilation=1)  
 order by qs.total_worker_time desc  
 ```  
-  
+
+## <a name="query-execution-plans"></a>Планы выполнения запросов
+
  Скомпилированные в собственном коде хранимые процедуры поддерживают SHOWPLAN_XML (предполагаемый план выполнения). С помощью предполагаемого плана выполнения можно проверять план запроса с целью выявления проблем. Общие причины появления некачественных планов.  
   
 -   Статистика не была обновлена перед созданием процедуры.  

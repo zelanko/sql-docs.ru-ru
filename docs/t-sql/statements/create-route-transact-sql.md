@@ -1,16 +1,16 @@
 ---
-title: "CREATE ROUTE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 03/14/2017
+title: CREATE ROUTE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8ef29633b2585a139fdd9e009458f36f38f00c56
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Добавляет новый маршрут к таблице маршрутов для текущей базы данных. Для исходящих сообщений компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] определяет маршруты, проверяя таблицу маршрутов в локальной базе данных. Для сообщений диалогов, начатых в другом экземпляре, включая пересылаемые сообщения, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] проверяет маршруты в базе данных **msdb**.  
   
@@ -90,7 +90,9 @@ WHERE database_id = DB_ID()
  Время в секундах, в течение которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит маршрут в таблице маршрутизации. По истечении этого времени действие маршрута истекает, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выборе маршрута для новых диалогов далее его не рассматривает. Если предложение опущено, то аргумент *route_lifetime* имеет значение NULL, и срок маршрута никогда не истекает.  
   
  ADDRESS **='***next_hop_address***'**  
- Указывает сетевой адрес для данного маршрута. Аргумент *next_hop_address* задает адрес TCP/IP в следующем формате:  
+Для управляемого экземпляра базы данных SQL аргумент `ADDRESS` должен задавать локальный адрес. 
+
+Указывает сетевой адрес для данного маршрута. Аргумент *next_hop_address* задает адрес TCP/IP в следующем формате:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   

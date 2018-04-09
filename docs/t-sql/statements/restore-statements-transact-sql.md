@@ -1,16 +1,16 @@
 ---
-title: "RESTORE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 08/09/2016
+title: RESTORE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -42,19 +42,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 
+caps.latest.revision: 248
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ff7514b66515dbeac88a3506723f1cdb8a2279bd
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Восстанавливает резервные копии, выполненные при помощи команды BACKUP. Эта команда позволяет выполнить следующие сценарии восстановления.  
   
@@ -70,6 +70,8 @@ ms.lasthandoff: 01/25/2018
   
 -   Вернуть базу данных к моменту времени, на который был выполнен моментальный снимок базы данных.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  Дополнительные сведения о сценариях восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  Дополнительные сведения об аргументах см. в разделе [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   При восстановлении базы данных из другого экземпляра примите во внимание сведения из раздела [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 > **ПРИМЕЧАНИЕ.** Дополнительные сведения о восстановлении из службы хранилища BLOB-объектов Microsoft Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -132,7 +134,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }   
+RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -155,7 +157,10 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
- | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
+ | { DISK    -- Does not apply to SQL Database Managed Instance
+     | TAPE  -- Does not apply to SQL Database Managed Instance
+     | URL   -- Applies to SQL Server and SQL Database Managed Instance
+   } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
 Note: URL is the format used to specify the location and the file name for the Windows Azure Blob. Although Windows Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
@@ -194,7 +199,7 @@ Note: URL is the format used to specify the location and the file name for the W
 --Monitoring Options  
  | STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. Does not apply to SQL Database Managed Instance
  | { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
@@ -316,7 +321,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  Если восстановить базу данных предыдущей версии до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], то эта база данных автоматически обновится. Как правило, база данных сразу становится доступной. Но если база данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] содержит полнотекстовые индексы, при обновлении будет произведен их импорт, сброс или повторное создание в зависимости от установленного значения свойства сервера  **upgrade_option** . Если при обновлении выбран режим импорта (**upgrade_option** = 2) или перестроения (**upgrade_option** = 0), полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если для обновления выбран режим «Импортировать», а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены. Чтобы изменить значение свойства сервера **upgrade_option** , следует использовать процедуру [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
- При первом присоединении базы данных к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или ее восстановлении копия главного ключа базы данных (зашифрованная главным ключом службы) еще не хранится на сервере. Необходимо расшифровать главный ключ базы данных с помощью инструкции **OPEN MASTER KEY** . Как только главный ключ базы данных будет расшифрован, появится возможность разрешить автоматическую расшифровку в будущем с помощью инструкции **ALTER MASTER KEY REGENERATE** , чтобы оставить на сервере копию главного ключа базы данных, зашифрованного с помощью главного ключа службы. После обновления базы данных с переходом от более ранней версии главный ключ базы данных должен быть создан повторно для использования нового алгоритма шифрования AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). Время, необходимое для повторного создания главного ключа базы данных с обновлением до алгоритма шифрования AES, зависит от числа объектов, защищаемых главным ключом базы данных. Повторное создание главного ключа базы данных с обновлением до алгоритма шифрования AES необходимо произвести только один раз. Это никак не повлияет на последующие операции повторного создания, выполняемые в соответствии со стратегией смены ключей.  
+ При первом присоединении базы данных к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или ее восстановлении копия главного ключа базы данных (зашифрованная главным ключом службы) еще не хранится на сервере. Необходимо расшифровать главный ключ базы данных с помощью инструкции **OPEN MASTER KEY**. Как только главный ключ базы данных будет расшифрован, появится возможность разрешить автоматическую расшифровку в будущем с помощью инструкции **ALTER MASTER KEY REGENERATE**, чтобы оставить на сервере копию главного ключа базы данных, зашифрованного с помощью главного ключа службы. После обновления базы данных с переходом от более ранней версии главный ключ базы данных должен быть создан повторно для использования нового алгоритма шифрования AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). Время, необходимое для повторного создания главного ключа базы данных с обновлением до алгоритма шифрования AES, зависит от числа объектов, защищаемых главным ключом базы данных. Повторное создание главного ключа базы данных с обновлением до алгоритма шифрования AES необходимо произвести только один раз. Это никак не повлияет на последующие операции повторного создания, выполняемые в соответствии со стратегией смены ключей.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Во время автономного восстановления, если указанная база данных используется, функция RESTORE после короткой задержки принудительно отключает пользователей. Для восстановления в режиме «в сети» непервичной файловой группы база данных может продолжать использоваться, за исключением тех случаев, когда восстанавливаемая файловая группа переводится в режим вне сети. Данные в указанной базе данных заменяются восстановленными данными.  
@@ -331,10 +336,35 @@ Note: URL is the format used to specify the location and the file name for the W
   
  Восстановление поврежденной базы данных **master** выполняется при помощи специальной процедуры. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
- Восстановление базы данных из копии удаляет кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных». Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.  
+ Восстановление базы данных из копии удаляет кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.  
   
  Чтобы восстановить базу данных доступности, сначала восстановите базу данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем добавьте базу данных в группу доступности.  
-  
+
+## <a name="general-remarks---sql-database-managed-instance"></a>Общие примечания — управляемый экземпляр базы данных SQL
+
+Асинхронное восстановление будет продолжаться даже в случае разрыва соединения с клиентом. В случае разрыва соединения вы можете просмотреть состояние операции восстановления (а также инструкций CREATE и DROP для базы данных) в представлении [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md). 
+
+Следующие параметры базы данных устанавливаются или переопределяются и в последующем не могут быть изменены:
+
+- NEW_BROKER (если брокер не включен в BAK-файле)
+- ENABLE_BROKER (если брокер не включен в BAK-файле)
+- AUTO_CLOSE=OFF (если для базы данных в BAK-файле установлен параметр AUTO_CLOSE=ON)
+- RECOVERY FULL (если для базы данных в BAK-файле установлен режим восстановления SIMPLE или BULK_LOGGED)
+- Добавляется оптимизированная для операций в памяти файловая группа с названием XTP (если она отсутствовала в исходном BAK-файле). Любые существующие оптимизированные для операций в памяти файловые группы переименовываются в XTP
+- Параметры SINGLE_USER и RESTRICTED_USER преобразуются в MULTI_USER
+
+## <a name="limitations---sql-database-managed-instance"></a>Ограничения — управляемый экземпляр базы данных SQL
+Применяются следующие ограничения:
+
+- BAK-файлы, содержащие несколько резервных наборов данных, не могут быть восстановлены.
+- BAK-файлы, содержащие несколько файлов журнала, не могут быть восстановлены.
+- Если BAK-файл содержит данные FILESTREAM, восстановление завершится сбоем.
+- На данный момент невозможно восстановление резервных копий, которые содержат базы данных с активными объектами для выполнения в памяти.
+- В настоящее время невозможно восстановление резервных копий, содержащих базы данных, в которых в какой-то момент времени существовали объекты для выполнения в памяти.
+- На данный момент невозможно восстановление резервных копий, которые содержат базы данных, находящиеся в режиме только для чтения. В ближайшее время эти ограничения будут устранены.
+
+Дополнительные сведения см. в разделе [Управляемый экземпляр](/azure/sql-database/sql-database-managed-instance)
+
 ## <a name="interoperability"></a>Совместимость  
   
 ### <a name="database-settings-and-restoring"></a>Настройка базы данных и восстановление  

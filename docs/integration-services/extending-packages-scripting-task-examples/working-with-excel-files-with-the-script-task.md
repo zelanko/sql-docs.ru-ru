@@ -1,15 +1,15 @@
 ---
-title: "Работа с файлами Excel в задаче \"Скрипт\" | Документы Майкрософт"
-ms.custom: 
-ms.date: 03/17/2017
+title: Работа с файлами Excel в задаче "Скрипт" | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Работа с файлами Excel в задаче "Скрипт"
-  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют диспетчер соединений Excel, источник «Excel» и назначение «Excel» для работы с данными, хранящимися в электронных таблицах в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Технологии, описанные в этом разделе, используют задачу «Скрипт» для получения сведений о доступных базах данных Excel (файлах книги) и таблицах (листах и именованных диапазонах). Эти образцы можно легко изменить для работы с любыми другими источниками данных на основе файлов, поддерживаемыми поставщиком OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
+  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют диспетчер соединений Excel, источник «Excel» и назначение «Excel» для работы с данными, хранящимися в электронных таблицах в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Технологии, описанные в этом разделе, используют задачу «Скрипт» для получения сведений о доступных базах данных Excel (файлах книги) и таблицах (листах и именованных диапазонах).
   
- [Настройка пакета для проверки образцов](#configuring)  
-  
- [Пример 1. Проверка существования файла Excel](#example1)  
-  
- [Пример 2. Проверка существования таблицы Excel](#example2)  
-  
- [Пример 3. Получение списка файлов Excel в папке](#example3)  
-  
- [Пример 4. Получение списка таблиц в файле Excel](#example4)  
-  
- [Отображение результатов образцов](#testing)  
-  
-> [!NOTE]  
->  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
+> [!TIP]  
+>  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи "Скрипт". Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+
+> [!IMPORTANT]
+> Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+ 
 ##  <a name="configuring"></a> Настройка пакета для проверки образцов  
  Для тестирования всех образцов этого раздела можно настроить отдельный пакет. В них используется много одинаковых переменных пакета и классов платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Настройка пакета для использования с примерами этого раздела  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Настройка пакета для использования с примерами этого раздела  
   
 1.  Создайте новый проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и откройте пакет по умолчанию для изменения.  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> Описание примера 1. Проверка существования файла Excel  
  В этом примере определяется, существует ли файл книги Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelFileExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  
   
-#### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
+### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
 1.  Добавьте в пакет новую задачу "Скрипт" и измените ее имя на **ExcelFileExists**.  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> Описание примера 2. Проверка существования таблицы Excel  
  В этом примере определяется, существует ли лист или именованный диапазон Excel, указанный в переменной `ExcelTable`, в книге Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelTableExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  
   
-#### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
+### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
 1.  Добавьте в пакет новую задачу "Скрипт" и измените ее имя на **ExcelTableExists**.  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> Описание примера 3. Получение списка файлов Excel в папке  
  В этом примере массив заполняется списком файлов Excel, найденных в папке, которая была указана в качестве значения переменной `ExcelFolder`, а затем этот массив копируется в переменную `ExcelFiles`. Можно использовать перечислитель по объекту из переменной, чтобы выполнить итерацию по файлам в массиве.  
   
-#### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
+### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
 1.  Добавьте в пакет новую задачу "Скрипт" и измените ее имя на **GetExcelFiles**.  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Список таблиц в книге Excel включает в себя и листы (которые имеют суффикс $), и именованные диапазоны. Если нужно отфильтровать список только по листам или только по именованным диапазонам, то, возможно, понадобится добавить дополнительный код.  
   
-#### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
+### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
 1.  Добавьте в пакет новую задачу "Скрипт" и измените ее имя на **GetExcelTables**.  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> Отображение результатов образцов  
  Если все образцы в этом разделе были настроены для использования с одним пакетом, можно соединить все задачи «Скрипт» с дополнительной задачей «Скрипт», отображающей выход всех образцов.  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Настройка задачи «Скрипт» для отображения выхода всех образцов в этом разделе  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Настройка задачи «Скрипт» для отображения выхода всех образцов в этом разделе  
   
 1.  Добавьте в пакет новую задачу "Скрипт" и измените ее имя на **DisplayResults**.  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

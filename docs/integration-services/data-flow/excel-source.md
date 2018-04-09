@@ -1,16 +1,16 @@
 ---
-title: "Источник Excel | Документы Майкрософт"
-ms.custom: 
-ms.date: 03/14/2017
+title: Источник Excel | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Источник Excel
   Источник Excel извлекает данные из листов или диапазонов в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
-  
+
+> [!IMPORTANT]
+> Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
+## <a name="access-mode"></a>Режим доступа
  Источник Excel предоставляет четыре различных режима доступа к данным для их извлечения:  
   
 -   Таблица или представление.  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   Результат выполнения инструкции SQL. Может использоваться параметризированный запрос.  
   
 -   Результат выполнения инструкции SQL хранится в переменной.  
-  
-> [!IMPORTANT]  
->  Лист или диапазон в Excel эквивалентны таблице или представлению. Список доступных таблиц в редакторах источников и целевых объектов Excel отображает существующие листы (идентифицируются как имя листа с добавленным знаком $, например, «Лист1$») и именованные диапазоны (идентифицируются отсутствием знака $, например, «Мой_диапазон»). Дополнительные сведения см. в разделе, посвященном вопросам применения.  
   
  Источник Excel для подключения к источнику данных использует диспетчер соединений Excel, и диспетчер соединений определяет исходный файл книги. Дополнительные сведения см. в статье [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="related-content"></a>См. также  
-  
--   Запись блога [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)(на английском языке) на сайте hrvoje.piasevoli.com  
-  
--   Запись в блоге [Excel в службах Integration Services, часть 1 из 3. Соединения и компоненты](http://go.microsoft.com/fwlink/?LinkId=217674)на сайте dougbert.com  
-  
--   Запись в блоге [Excel в службах Integration Services, часть 2 из 3. Таблицы и типы данных](http://go.microsoft.com/fwlink/?LinkId=217675)на сайте dougbert.com  
-  
--   Запись в блоге [Excel в службах Integration Services, часть 3 из 3. Проблемы и альтернативы](http://go.microsoft.com/fwlink/?LinkId=217676)на сайте dougbert.com  
-  
-  
+[Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+[Назначение "Excel"](excel-destination.md)  
+[Диспетчер подключений Excel](../connection-manager/excel-connection-manager.md)

@@ -1,16 +1,16 @@
 ---
-title: "Удаление столбцов из таблицы | Документация Майкрософт"
-ms.custom: 
+title: Удаление столбцов из таблицы | Документация Майкрософт
+ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], deleting
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57897bbf048817c930984a58a244525ceb4a48ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 3b16e2ae7b17f7c38e47971d1ad60b6a38ca1481
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="delete-columns-from-a-table"></a>Удаление столбцов из таблицы
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/18/2018
   В этом разделе приведены инструкции по удалению столбцов таблиц в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!CAUTION]  
->  При удалении столбца из таблицы этот столбец и все содержащиеся в нем данные удаляются из базы данных. Отменить это действие невозможно.  
+>  При удалении столбца из таблицы удаляются сам столбец и все содержащиеся в нем данные.
   
  **В этом разделе**  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-delete-columns-by-using-object-explorer"></a>Удаление столбцов с помощью обозревателя объектов  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  В **обозревателе объектов** найдите таблицу, из которой нужно удалить столбцы, и разверните ее, чтобы отобразить имена столбцов. 
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-delete-columns"></a>Удаление столбцов  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

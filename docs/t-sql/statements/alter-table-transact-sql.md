@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  Указывает свойство ROWGUIDCOL, добавленное к указанному столбцу или удаленное из него. Свойство ROWGUIDCOL указывает, что данный столбец является столбцом идентификатора GUID строки. Только один столбец **uniqueidentifier** в каждой таблице можно назначить в качестве столбца ROWGUIDCOL, и только одному столбцу **uniqueidentifier** можно назначить свойство ROWGUIDCOL. Нельзя присваивать свойство ROWGUIDCOL столбцу определяемого пользователем типа данных.  
   
- Свойство ROWGUIDCOL не обеспечивает уникальности значений, хранимых в столбце, и не формирует автоматически значения для новых строк, вставляемых в таблицу. Для формирования уникальных значений для каждого столбца можно использовать функцию NEWID в инструкциях INSERT или определить функцию NEWID как значение по умолчанию для столбца.  
+ Свойство ROWGUIDCOL не обеспечивает уникальности значений, хранимых в столбце, и не формирует автоматически значения для новых строк, вставляемых в таблицу. Для создания уникальных значений в каждом столбце следует использовать функцию NEWID или NEWSEQUENTIALID в инструкциях INSERT либо использовать функцию NEWID или NEWSEQUENTIALID по умолчанию для столбца.  
   
  [ {ADD | DROP} PERSISTED ]  
  Указывает, что свойство PERSISTED добавлено к указанному столбцу или удалено из него. Столбец должен быть вычисляемым столбцом, который задается при помощи детерминированных выражений. Для столбцов, указанных как PERSISTED, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] физически хранит вычисляемые значения в таблице и обновляет значения при обновлении любого столбца, от которого зависит вычисляемый столбец. Если пометить вычисляемый столбец как PERSISTED, можно создавать индексы по вычисляемым столбцам, которые заданы, являются детерминированными, но не точными выражениями. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md).  

@@ -1,48 +1,53 @@
 ---
-title: "Изучение текущей структуры таблицы сотрудников | Документация Майкрософт"
-ms.custom: 
-ms.date: 03/01/2017
+title: Изучение текущей структуры таблицы сотрудников | Документация Майкрософт
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dac77c64b9ebb2c47fcaf399e6366964bfcee50c
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: fa6d4693132ec646438ab7cd0f45f85569c4109f
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>Занятие 1.1. Изучение текущей структуры таблицы сотрудников
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] содержит таблицу **Employee** в схеме **HumanResources**. Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос к таблице **HumanResources.EmployeeDemo** , позволяющий просмотреть структуру данных в таблице без использования типа данных **hierarchyid** .  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] (или более поздней версии) содержит таблицу **Employee** в схеме **HumanResources**. Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос к таблице **HumanResources.EmployeeDemo** , позволяющий просмотреть структуру данных в таблице без использования типа данных **hierarchyid** .  
   
 ### <a name="to-copy-the-employee-table"></a>Копирование таблицы Employee  
   
-1.  Запустите следующий код в окне редактора запросов, чтобы скопировать структуру и данные таблицы **Employee** в новую таблицу **EmployeeDemo**.  
+1.  Запустите следующий код в окне редактора запросов, чтобы скопировать структуру и данные таблицы **Employee** в новую таблицу **EmployeeDemo**. Поскольку в исходной таблице уже используется hierarchyid, этот запрос фактически преобразует иерархию в плоскую структуру, чтобы получить записи руководителя и сотрудника. В следующих частях этого занятия мы будем реконструировать эту иерархию.
   
     ```  
     USE AdventureWorks ;  
     GO  
   
-    SELECT EmployeeID, LoginID, ManagerID, Title, HireDate   
+    SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
+      (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
+            WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
+                (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID
+        , emp.JobTitle, emp.HireDate
     INTO HumanResources.EmployeeDemo   
-    FROM HumanResources.Employee ;  
-    GO  
+    FROM HumanResources.Employee emp ;
+    GO
     ```  
   
 ### <a name="to-examine-the-structure-and-data-of-the-employeedemo-table"></a>Изучение структуры и данных таблицы EmployeeDemo  
@@ -51,8 +56,8 @@ ms.lasthandoff: 01/18/2018
   
     ```  
     SELECT   
-         Mgr.EmployeeID AS MgrID, Mgr.LoginID AS Manager,   
-         Emp.EmployeeID AS E_ID, Emp.LoginID, Emp.Title  
+        Mgr.EmployeeID AS MgrID, Mgr.LoginID AS Manager,   
+        Emp.EmployeeID AS E_ID, Emp.LoginID, Emp.JobTitle  
     FROM HumanResources.EmployeeDemo AS Emp  
     LEFT JOIN HumanResources.EmployeeDemo AS Mgr  
     ON Emp.ManagerID = Mgr.EmployeeID  
@@ -62,22 +67,22 @@ ms.lasthandoff: 01/18/2018
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
     ```  
-    MgrID Manager                 E_ID LoginID                  Title  
-    NULL NULL                      109 adventure-works\ken0     Chief Executive Officer  
-    3    adventure-works\roberto0  4   adventure-works\rob0     Senior Tool Designer  
-    3    adventure-works\roberto0  9   adventure-works\gail0    Design Engineer  
-    3    adventure-works\roberto0  11  adventure-works\jossef0  Design Engineer  
-    3    adventure-works\roberto0  158 adventure-works\dylan0   Research and Development Manager  
-    3    adventure-works\roberto0  263 adventure-works\ovidiu0  Senior Tool Designer  
-    3    adventure-works\roberto0  267 adventure-works\michael8 Senior Design Engineer  
-    3    adventure-works\roberto0  270 adventure-works\sharon0  Design Engineer  
-    6    adventure-works\david0    2   adventure-works\kevin0   Marketing Assistant  
+    MgrID Manager                 E_ID LoginID                  JobTitle  
+    NULL    NULL    1   adventure-works\ken0    Chief Executive Officer
+    1   adventure-works\ken0    2   adventure-works\terri0  Vice President of Engineering
+    1   adventure-works\ken0    16  adventure-works\david0  Marketing Manager
+    1   adventure-works\ken0    25  adventure-works\james1  Vice President of Production
+    1   adventure-works\ken0    234 adventure-works\laura1  Chief Financial Officer
+    1   adventure-works\ken0    263 adventure-works\jean0   Information Services Manager
+    1   adventure-works\ken0    273 adventure-works\brian3  Vice President of Sales
+    2   adventure-works\terri0  3   adventure-works\roberto0    Engineering Manager
+    3   adventure-works\roberto0    4   adventure-works\rob0    Senior Tool Designer
     ...  
     ```  
   
     Получаемый в результате набор содержит 290 строк.  
   
-Обратите внимание, что использование предложения **ORDER BY** приводит к тому, что прямые подчиненные каждого уровня управления будут находиться вместе. Например, все семь прямых подчиненных уровня **MgrID** 3 (roberto0) перечисляются вместе. Сгруппировать всех косвенных подчиненных уровня **MgrID** 3 тоже возможно, хотя это гораздо сложнее.  
+Обратите внимание, что использование предложения **ORDER BY** приводит к тому, что прямые подчиненные каждого уровня управления будут находиться вместе. Например, все семь прямых подчиненных уровня **MgrID** 1 (ken0) перечисляются вместе. Сгруппировать всех косвенных подчиненных уровня **MgrID** 1 тоже возможно, хотя это гораздо сложнее.  
   
 В следующей задаче мы создадим новую таблицу с типом данных **hierarchyid** и переместим в нее данные.  
   

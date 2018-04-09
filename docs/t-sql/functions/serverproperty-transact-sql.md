@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: ''
+caps.latest.revision: 128
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 65e2c160cddd188b91887e7ed414033c9b51c1d0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ComputerNamePhysicalNetBIOS|Имя NetBIOS для локального компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Для кластеризованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на отказоустойчивом кластере это значение изменяется, когда экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переключается на другие узлы в отказоустойчивом кластере.<br /><br /> Для изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это значение остается постоянным и совпадает со значением, возвращаемым свойством MachineName.<br /><br /> **Примечание**. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в отказоустойчивом кластере и необходимо получить имя экземпляра отказоустойчивого кластера, воспользуйтесь свойством MachineName.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |Выпуск|Установленный выпуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте значение этого свойства для определения функций и ограничений, таких как [ограничения вычислительной емкости для разных выпусков SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). В 64-разрядных версиях компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] к обозначению версии добавляется «(64-разрядная версия)».<br /><br /> Возвращает:<br /><br /> выпуск «Enterprise Edition»;<br /><br /> выпуск "Enterprise Edition": лицензирование по числу ядер;<br /><br /> выпуск «Enterprise Evaluation Edition»;<br /><br /> выпуск «Business Intelligence»;<br /><br /> выпуск «Developer Edition»;<br /><br /> выпуск «Express Edition»;<br /><br /> экспресс-выпуск с дополнительными службами;<br /><br /> выпуск «Standard Edition»;<br /><br /> «Web Edition».<br /><br /> "SQL Azure" означает [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssDW](../../includes/ssdw-md.md)].<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |EditionID|EditionID представляет установленный выпуск продукта для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте значение этого свойства для определения функций и ограничений, таких как [ограничения вычислительной емкости для разных выпусков SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: лицензирование по числу ядер<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> –1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = база данных SQL или хранилище данных SQL<br /><br /> Базовый тип данных: **bigint**|  
-|EngineEdition|Выпуск компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленного на сервере.<br /><br /> 1 = Personal или Desktop Engine (недоступен для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий).<br /><br /> 2 = Standard (возвращается для выпусков Standard, Web и Business Intelligence).<br /><br /> 3 = Enterprise (это значение возвращается для выпусков Evaluation Edition, Developer Edition и обоих вариантов Enterprise Edition).<br /><br /> 4 = Express (возвращается для выпусков Express, Express with Tools и Express with Advanced Services).<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 – [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Базовый тип данных: **int**|  
+|EngineEdition|Выпуск компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленного на сервере.<br /><br /> 1 = Personal или Desktop Engine (недоступен для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий).<br /><br /> 2 = Standard (возвращается для выпусков Standard, Web и Business Intelligence).<br /><br /> 3 = Enterprise (это значение возвращается для выпусков Evaluation Edition, Developer Edition и обоих вариантов Enterprise Edition).<br /><br /> 4 = Express (возвращается для выпусков Express, Express with Tools и Express with Advanced Services).<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 – [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = управляемый экземпляр<br /><br /> Базовый тип данных: **int**|  
 |HadrManagerStatus|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Показывает, запущен ли диспетчер [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].<br /><br /> 0 = не запущен, ожидает связи.<br /><br /> 1 = запущен и выполняется.<br /><br /> 2 = не запущен и завершился неудачно.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
 |InstanceDefaultDataPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам данных экземпляра.|  
 |InstanceDefaultLogPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам журналов экземпляра.|  
@@ -123,6 +123,13 @@ GO
   
 ### <a name="version-properties"></a>Свойства версии  
  Функция `SERVERPROPERTY` возвращает отдельные свойства, которые относятся к информации о версии, а функция [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) объединяет выходные данные в одну строку. Если для конкретного приложения требуются отдельные строки свойств, можно использовать функцию `SERVERPROPERTY`, которая возвращает эти строки, а не заниматься синтаксическим анализом результатов функции [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
+
+> [!NOTE]  
+> Нам известно о проблеме, когда SERVERPROPERTY сообщает неправильные свойства версии для базы данных SQL Azure. Версия ядра базы данных SQL Server, выполняющаяся в базе данных SQL Azure, всегда выше локальной версии SQL Server и содержит последние исправления безопасности. Это означает, что уровень исправления всегда совпадает с локальной версией SQL Server или выше ее, и что последние функции, доступные в SQL Server, также доступны в базе данных SQL Azure.
+>
+> Чтобы определить выпуск ядра базы данных программным способом, используйте SELECT SERVERPROPERTY('EngineEdition'). Этот запрос вернет "5" для автономных баз данных и "8" для управляемых экземпляров в базе данных SQL Azure. 
+>
+> После решения этой проблемы документация будет обновлена.
 
 ## <a name="permissions"></a>Разрешения
 

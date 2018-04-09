@@ -1,16 +1,16 @@
 ---
-title: "RESTORE FILELISTONLY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 03/15/2017
+title: RESTORE FILELISTONLY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE FILELISTONLY
@@ -24,22 +24,25 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 
+caps.latest.revision: 83
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cc42e61ff88ee1d7b1d61a2a4ed214d72b3e1d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Инструкции RESTORE — FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
 
   Возвращает результирующий набор со списком файлов журнала и базы данных, содержащихся в резервном наборе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Описания аргументов см. в разделе [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -93,7 +96,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|Логическое имя файла.|  
 |PhysicalName|**nvarchar(260)**|Физическое имя или имя файла в операционной системе.|  
 |Тип|**char(1)**|Тип файла:<br /><br /> **L** = файл журнала Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл данных<br /><br /> **F** = полнотекстовый каталог<br /><br /> **S** = файловый поток, FileTable или контейнер [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
-|FileGroupName|**nvarchar(128)**|Имя файловой группы, в которую входит файл.|  
+|FileGroupName|**nvarchar(128)** NULL|Имя файловой группы, в которую входит файл.|  
 |Размер|**numeric(20,0)**|Текущий размер в байтах.|  
 |MaxSize|**numeric(20,0)**|Максимальный разрешенный размер в байтах.|  
 |FileID|**bigint**|Идентификатор файла, уникальный в пределах базы данных.|  
@@ -105,13 +108,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|Размер резервной копии этого файла в байтах.|  
 |SourceBlockSize|**int**|Размер блока физического устройства, содержащего файл, в байтах (не устройства резервного копирования).|  
 |FileGroupID|**int**|Идентификатор файловой группы.|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|Для разностных резервных копий изменения номеров LSN, которые превышают или равны **DifferentialBaseLSN**, включаются в разность.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
-|DifferentialBaseGUID|**uniqueidentifier**|Для разностных резервных копий — уникальный идентификатор базовой копии для разностного копирования.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|Для разностных резервных копий — уникальный идентификатор базовой копии для разностного копирования.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
 |IsReadOnly|**bit**|**1** = Файл доступен только для чтения.|  
 |IsPresent|**bit**|**1** = Файл присутствует в резервной копии.|  
-|TDEThumbprint|**varbinary(32)**|Показывает отпечаток ключа шифрования базы данных. Отпечатком шифратора является хэш SHA-1 сертификата, с которым шифруется ключ. Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
-|SnapshotURL|**nvarchar(360)**|URL-адрес моментального снимка Azure файла базы данных, содержащегося в резервной копии FILE_SNAPSHOT. Возвращает значение NULL, если резервная копия FILE_SNAPSHOT отсутствует.|  
+|TDEThumbprint|**varbinary(32)** NULL|Показывает отпечаток ключа шифрования базы данных. Отпечатком шифратора является хэш SHA-1 сертификата, с которым шифруется ключ. Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|SnapshotURL|**nvarchar(360)** NULL|URL-адрес моментального снимка Azure файла базы данных, содержащегося в резервной копии FILE_SNAPSHOT. Возвращает значение NULL, если резервная копия FILE_SNAPSHOT отсутствует.|  
   
 ## <a name="security"></a>безопасность  
  В операции создания резервной копии могут дополнительно указываться пароли для набора носителей, резервного набора данных или и того и другого. Если для набора носителей или резервного набора данных установлен пароль, то в инструкции RESTORE необходимо указывать правильные пароли. Эти пароли предотвращают несанкционированные операции восстановления и присоединения резервных наборов данных к носителю при помощи инструментов [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пароль не запрещает перезапись носителей с помощью параметра FORMAT инструкции BACKUP.  

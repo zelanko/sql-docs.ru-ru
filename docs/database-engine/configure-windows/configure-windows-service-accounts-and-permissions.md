@@ -53,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: ''
+caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4f037130b00871303648aefd3d35553e702091a8
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ ms.lasthandoff: 03/22/2018
   
     Для работы с групповыми управляемыми учетными записями служб в SQL Server 2014 и более поздних версий требуется операционная система Windows Server 2012 R2 или более поздней версии. Серверам с Windows Server 2012 R2 должно быть выделено [2998082 КБ](http://support.microsoft.com/kb/2998082) , чтобы службы могли выполнять вход после изменения пароля, не нарушая работу системы.  
   
-    Дополнительные сведения см. в статье [Групповые управляемые учетные записи служб](http://technet.microsoft.com/library/hh831782.aspx).  
+    Дополнительные сведения см. в разделе [Групповые управляемые учетные записи служб](http://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  Прежде чем программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможет использовать групповую управляемую учетную запись службы для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , администратор домена должен создать такую учетную запись в Active Directory.  

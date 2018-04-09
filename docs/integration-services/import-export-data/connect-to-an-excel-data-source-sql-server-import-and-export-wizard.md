@@ -1,28 +1,28 @@
 ---
-title: "Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
-ms.custom: 
-ms.date: 06/20/2017
+title: Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server) | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16ace15a73d9ef727612c59f8c9329a4d4437312
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **Microsoft Excel** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server.
@@ -30,6 +30,11 @@ ms.lasthandoff: 01/25/2018
 На следующем снимке экрана показан пример подключения к книге Microsoft Excel.
 
 ![Подключение через Excel](../../integration-services/import-export-data/media/excel-connection.png) 
+
+Для подключения к файлам Excel может потребоваться скачать и установить дополнительные файлы. Дополнительные сведения см. в разделе [Получение файлов, необходимых для подключения к Excel](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel).
+
+> [!IMPORTANT]
+> Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
 ## <a name="options-to-specify"></a>Указываемые параметры
 
@@ -50,10 +55,7 @@ ms.lasthandoff: 01/25/2018
 > Мастер не может открыть защищенный паролем файл Excel.
 
  **Версия Excel**  
-Выберите версию Excel для исходной рабочей книги.
-
-> [!IMPORTANT]
-> Для подключения к файлам Excel может потребоваться скачать и установить дополнительные файлы. Дополнительные сведения см. в разделе [Получение файлов, необходимых для подключения к Excel](#officeDownloads).
+Выберите версию Excel для исходной или целевой рабочей книги.
 
 **Первая строка содержит имена столбцов**  
 Укажите, содержит ли первая строка данных имена столбцов.
@@ -68,18 +70,8 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]
 > Чтобы использовать 64-разрядную версию мастера экспорта и импорта SQL Server, нужно установить SQL Server. SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS) являются 32-разрядными приложениями и устанавливают только 32-разрядные файлы, включая 32-разрядную версию мастера.
 
-## <a name="officeDownloads"></a>Получение файлов, необходимых для подключения к Excel  
-Если компоненты подключения для файлов источников данных Microsoft Office, включая Excel и Access, еще не установлены, может потребоваться скачать их. Скачать последнюю версию компонентов подключения для файлов Excel и Access можно на следующей странице: [Распространяемый компонент ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
-  
-Последняя версия компонентов позволяет открывать файлы, созданные в более ранних версиях Excel.
-
-Если на компьютере установлена 32-разрядная версия Office, нужно установить 32-разрядную версию компонентов, а также убедиться в том, что пакет запускается в 32-разрядном режиме.
-
-Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Пример:
-
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
-
 ## <a name="see-also"></a>См. также раздел
+[Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

@@ -1,28 +1,28 @@
 ---
-title: "Приступая к работе с простым примером мастера импорта и экспорта | Документы Майкрософт"
-ms.custom: 
+title: Приступая к работе с простым примером мастера импорта и экспорта | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Приступая к работе с простым примером мастера импорта и экспорта
 Сведения о том, что следует ожидать от мастера экспорта и импорта SQL Server, на примере типичного сценария — импорта данных из электронной таблицы Excel в базу данных SQL Server. Даже если вы планируете использовать другой источник и другое назначение, в этом разделе вы найдете основную часть сведений о работе с мастером.
@@ -62,9 +62,12 @@ ms.lasthandoff: 02/19/2018
 ## <a name="step-3---pick-excel-as-your-data-source"></a>Шаг 3. Выбор Excel в качестве источника данных
 На следующей странице **Выбор источника данных** выберите Microsoft Excel в качестве источника данных. Затем перейдите к файлу Excel и выберите его. Наконец, укажите версию Excel, которую вы использовали для создания файла.
 
+> [!IMPORTANT]
+> Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 ![Выбор источника данных Excel](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-Дополнительные сведения о подключении к Excel см. в разделе [Подключение к источнику данных Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Дополнительные сведения об этой странице мастера см. в разделе [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+Дополнительные сведения об этой странице мастера см. в разделе [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>Шаг 4. Выбор SQL Server в качестве назначения
 На следующей странице **Выбор назначения** выберите Microsoft SQL Server в качестве назначения, выбрав в списке одного из поставщиков данных, подключающегося к SQL Server. В этом примере выберите **Поставщик данных .Net Framework для SQL Server**.
@@ -162,4 +165,4 @@ ms.lasthandoff: 02/19/2018
 
 -   **Сведения о подключении к источникам данных и назначениям.** Сведения о подключении к данным см. на соответствующей странице, выбрав ее в списке в разделе [Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Для каждого распространенного источника данных имеется отдельная страница документации.
 
-
+-   **Дополнительные сведения о загрузке файлов в приложение Excel и из него.** Сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

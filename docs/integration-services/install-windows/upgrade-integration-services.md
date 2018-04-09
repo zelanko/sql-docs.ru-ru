@@ -1,16 +1,16 @@
 ---
-title: "Обновление служб Integration Services | Документы Майкрософт"
-ms.custom: 
+title: Обновление служб Integration Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
   Если на компьютере установлены службы [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или их более поздняя версия, вы можете обновить их до [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/20/2018
  Рекомендуется перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]запустить помощник по обновлению. Помощник по обновлению сообщит о проблемах, которые могут возникнуть при обновлении существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] до нового формата [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 > [!NOTE]  
->  В текущей версии служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]не поддерживается миграция или запуск пакетов служб Data Transformation Services (DTS). Следующие функциональные возможности служб DTS более не поддерживаются.  
+>  В выпуске SQL Server 2012 не поддерживается миграция или запуск пакетов служб DTS. Следующие функциональные возможности служб DTS более не поддерживаются.  
 >   
 >  -   Среда выполнения DTS  
 > -   API-интерфейс служб DTS  

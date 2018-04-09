@@ -1,30 +1,30 @@
 ---
-title: "Определение исходного запроса (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Определение исходного запроса (мастер импорта и экспорта SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 485faeca41d64c744a091c0efd4be8a05109a6b8
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Определение исходного запроса (мастер импорта и экспорта SQL Server)
 Если вы указали, что нужно определить запрос для выбора копируемых данных, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Определение исходного запроса**. На этой странице выполняется написание и тестирование запроса SQL, который выбирает данные для копирования из источника данных в место назначения. Можно также вставить текст сохраненного запроса или загрузить его из файла.
@@ -64,7 +64,10 @@ WHERE CommissionPct > 0.015
  Выберите сохраненный файл, содержащий текст запроса SQL, с помощью диалогового окна **Открыть**. При выборе файла текст копируется из файла в текстовое поле **Инструкция SQL** .  
  
 ## <a name="excelQueries"></a> Определение исходного запроса для Excel
-### <a name="specify-excel-objects-in-queries"></a>Указание объектов Excel в запросах
+
+> [!IMPORTANT]
+> Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 Существует три типа объектов Excel, к которым можно выполнить запрос.
 -   **Лист** Чтобы выполнить запрос к листу, добавьте в конец имени листа символ $ и окружите строку разделителями, например **[Лист1$]**.
 
@@ -83,9 +86,6 @@ WHERE CommissionPct > 0.015
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### <a name="prepare-the-excel-source-data"></a>Подготовка исходных данных Excel
-Если в качестве исходной таблицы указан лист или диапазон, драйвер считывает *непрерывный* блок ячеек, начиная с первой непустой ячейки в верхнем левом углу листа или диапазона. Поэтому в исходных данных не должно быть пустых строк. Например, пустой строки не должно быть между заголовками столбцов и строками данных. Если после заголовка следуют пустые строки в верхней части листа над данными, выполнить запрос к листу не удастся. В Excel необходимо присвоить имя диапазону данных и выполнить запрос к именованному диапазону, а не к листу.
 
 ## <a name="whats-next"></a>Дальнейшие действия  
  После написания и тестирования запроса SQL, выбирающего данные для копирования, откроется страница, которая зависит от назначения для данных.  

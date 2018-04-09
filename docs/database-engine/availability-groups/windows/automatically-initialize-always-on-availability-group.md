@@ -1,26 +1,27 @@
 ---
-title: "Автоматическая инициализация группы доступности AlwaysOn | Документы Майкрософт"
-ms.custom: 
-ms.date: 08/23/2017
+title: Автоматическая инициализация группы доступности AlwaysOn | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Автоматическая инициализация группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ FROM sys.dm_hadr_automatic_seeding
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+Для определения узких мест производительности в процессе автоматического заполнения можно использовать два столбца: *total_disk_io_wait_time_ms* и *total_network_wait_time_ms*. Эти два столбца также присутствуют в расширенном событии *hadr_physical_seeding_progress*.
+
+**total_disk_io_wait_time_ms** представляет время, которое поток резервного копирования или восстановления затрачивает на ожидание ответа диска. Это значение определяется накопительным образом с момента начала операции заполнения. Если диски не готовы для чтения или записи потока резервного копирования, поток резервного копирования или восстановления переходит в спящее состояние и активируется каждую секунду для проверки готовности диска.
+        
+**total_network_wait_time_ms** интерпретируется по-разному для первичной и вторичной реплики. Для первичной реплики значение этого счетчика представляет время управления сетевым потоком. Для вторичной реплики это значение представляет время, в течение которого поток восстановления ожидает доступности сообщения для записи на диск.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>Диагностика инициализации базы данных с помощью автоматического заполнения в журнале ошибок
 

@@ -1,26 +1,26 @@
 ---
-title: "Импорт данных из Excel в SQL | Документация Майкрософт"
-ms.custom: 
-ms.date: 08/02/2017
+title: Импорт данных из Excel в SQL | Документация Майкрософт
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.lasthandoff: 02/03/2018
     -   BCP;
     -   Фабрика данных Azure
 
+В этом обзоре отсутствует полное описание таких сложных средств и служб, как службы SSIS или фабрика данных Azure. Дополнительные сведения об интересующем вас решении доступны по ссылкам ниже.
+
 > [!IMPORTANT]
-> В этом обзоре отсутствует полное описание таких сложных средств и служб, как службы SSIS или фабрика данных Azure. Дополнительные сведения об интересующем вас решении доступны по ссылкам ниже.
+> Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
 ## <a name="sql-server-import-and-export-wizard"></a>мастер импорта и экспорта SQL Server
 
@@ -209,6 +211,5 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [Перемещение данных с помощью действия копирования](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [Руководство. Копирование данных из хранилища BLOB-объектов Azure в базу данных SQL с помощью фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## <a name="next-steps"></a>Следующие шаги
-
-Дополнительные сведения об интересующем вас решении доступны по ссылкам ниже.
+## <a name="see-also"></a>См. также:
+[Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

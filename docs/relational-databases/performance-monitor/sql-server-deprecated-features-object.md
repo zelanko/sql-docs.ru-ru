@@ -1,16 +1,16 @@
 ---
-title: "SQL Server, объект Deprecated Features | Документация Майкрософт"
-ms.custom: 
+title: SQL Server, объект Deprecated Features | Документация Майкрософт
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |------------------------------------------------------|-----------------|  
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
 |синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` *<имя_функции>*`()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
-|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|Обнаружен идентификатор, начинающийся с символов @ или @@. Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@. Происходит один раз на каждую компиляцию.|  
+|"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)]|Обнаружен идентификатор, начинающийся с символов \@ или \@\@. Не используйте в качестве идентификаторов \@ или \@v@ или имена, начинающиеся с \@\@. Происходит один раз на каждую компиляцию.|  
 |ADDING TAPE DEVICE|Обнаружена нерекомендуемая функция sp_addumpdevice'**лента**'. Вместо нее используйте процедуру sp_addumpdevice'**диск**'. Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Общее число использований устаревшего параметра TORN_PAGE_DETECTION инструкции ALTER DATABASE с момента последнего запуска экземпляра сервера. Вместо этого параметра используйте синтаксис PAGE_VERIFY. Происходит один раз для каждой инструкции DDL.|  
@@ -99,7 +99,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |EXT_soap_endpoints|Обнаружено sys.soap_endpoints. Собственные XML-веб-службы устарели. Вместо этого следует использовать технологию WCF (Windows Communications Foundation) или ASP.NET.|  
 |EXTPROP_LEVEL0TYPE|Обнаружено значение TYPE параметра level0type. Используйте SCHEMA как level0type и TYPE как level1type. Происходит один раз для каждого запроса.|  
 |EXTPROP_LEVEL0USER|При level1type указано также level0type USER. Используйте USER только как level0type для расширенных свойств непосредственно в пользователе. Происходит один раз для каждого запроса.|  
-|FASTFIRSTROW|Обнаружен синтаксис FASTFIRSTROW. Перепишите инструкции, чтобы они использовали синтаксис OPTION (FAST *n*). Происходит один раз на каждую компиляцию.|  
+|FASTFIRSTROW|Обнаружен синтаксис FASTFIRSTROW. Перепишите инструкции так, чтобы в них использовался синтаксис OPTION (FAST *n*). Происходит один раз на каждую компиляцию.|  
 |FILE_ID|Обнаружен синтаксис FILE_ID. Перепишите инструкции для использования FILE_IDEX. Происходит один раз на каждую компиляцию.|  
 |fn_get_sql|Скомпилирована функция fn_get_sql. Вместо нее используйте sys.dm_exec_sql_text. Происходит один раз на каждую компиляцию.|  
 |fn_servershareddrives|Скомпилирована функция fn_servershareddrives. Вместо нее используйте sys.dm_io_cluster_shared_drives. Происходит один раз на каждую компиляцию.|  
@@ -193,7 +193,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_defaultlanguage|Обнаружена хранимая процедура sp_defaultlanguage. Используйте вместо нее инструкцию ALTER LOGIN. Происходит один раз на каждую компиляцию.|  
 |sp_denylogin|Обнаружена хранимая процедура sp_denylogin. Вместо нее используйте инструкцию ALTER LOGIN DISABLE. Происходит один раз для каждого запроса.|  
 |процедура sp_depends|Обнаружена хранимая процедура sp_depends. Вместо нее используйте динамические функции управления sys.dm_sql_referencing_entities и sys.dm_sql_referenced_entities. Происходит один раз для каждого запроса.|  
-|sp_detach_db @keepfulltextindexfile|Аргумент @keepfulltextindexfile обнаружен в инструкции sp_detach_db statement. Не используйте этот аргумент.|  
+|sp_detach_db \@keepfulltextindexfile|Обнаружен аргумент \@keepfulltextindexfile в инструкции sp_detach_db. Не используйте этот аргумент.|  
 |sp_dropalias|Обнаружена хранимая процедура sp_dropalias. Псевдонимы заменены сочетанием учетных записей пользователей и ролями базы данных. Удалите псевдонимы в обновленных базах данных с помощью хранимой процедуры sp_dropalias. Происходит один раз на каждую компиляцию.|  
 |sp_dropapprole, хранимая процедура|Обнаружена хранимая процедура sp_dropapprole. Вместо нее используйте инструкцию DROP APPLICATION ROLE. Происходит один раз для каждого запроса.|  
 |sp_dropextendedproc|Обнаружена хранимая процедура sp_dropextendedproc. Используйте вместо нее среду CLR. Происходит один раз на каждую компиляцию.|  
@@ -206,10 +206,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_fulltext_catalog|Обнаружена хранимая процедура sp_fulltext_catalog. Вместо нее используйте инструкцию CREATE/ALTER/DROP FULLTEXT CATALOG. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_column|Обнаружена хранимая процедура sp_fulltext_column. Используйте вместо нее инструкцию ALTER FULLTEXT INDEX. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_database, хранимая процедура|Обнаружена хранимая процедура sp_fulltext_database. Используйте вместо нее инструкцию ALTER DATABASE. Происходит один раз на каждую компиляцию.|  
-|sp_fulltext_service @action=clean_up|Обнаружен параметр clean_up хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
-|sp_fulltext_service @action=connect_timeout|Обнаружен параметр connect_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
-|sp_fulltext_service @action=data_timeout|Обнаружен параметр data_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
-|sp_fulltext_service @action=resource_usage|Обнаружен параметр «resource_usage» хранимой процедуры sp_fulltext_service. Этот параметр не действует. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=clean_up|Обнаружен параметр clean_up хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=connect_timeout|Обнаружен параметр connect_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=data_timeout|Обнаружен параметр data_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=resource_usage|Обнаружен параметр «resource_usage» хранимой процедуры sp_fulltext_service. Этот параметр не действует. Происходит один раз для каждого запроса.|  
 |sp_fulltext_table|Обнаружена хранимая процедура sp_fulltext_table. Вместо нее используйте инструкцию CREATE/ALTER/DROP FULLTEXT INDEX. Происходит один раз на каждую компиляцию.|  
 |sp_getbindtoken|Обнаружена хранимая процедура sp_getbindtoken. Вместо нее используйте режим MARS или распределенные транзакции. Происходит один раз на каждую компиляцию.|  
 |sp_grantdbaccess|Обнаружена хранимая процедура sp_grantdbaccess. Вместо нее используйте инструкцию CREATE USER. Происходит один раз для каждого запроса.|  
