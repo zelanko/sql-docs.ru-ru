@@ -1,6 +1,6 @@
 ---
-title: "Обновленные статьи: документация \"Службы Data Quality Services для SQL Server\" | Microsoft Docs"
-description: "Отрывки из недавно обновленного содержимого в документации по службам Data Quality Services для Microsoft SQL Server."
+title: 'Обновленные статьи: документация "Службы Data Quality Services для SQL Server" | Microsoft Docs'
+description: Отрывки из недавно обновленного содержимого в документации по службам Data Quality Services для Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: dqs
 ms.date: 02/03/2018
-ms.openlocfilehash: e5d82b7e42b7a33edb9ff09acb891933a9fa1b31
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c90dbd42d77d7654a24f96076221f9d37fabf426
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Новые и обновленные статьи: Службы Data Quality Services для SQL Server
 
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/15/2018
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)

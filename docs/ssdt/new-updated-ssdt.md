@@ -1,6 +1,6 @@
 ---
-title: "Обновленные документы по SSDT для SQL Server | Документация Майкрософт"
-description: "Отображение фрагментов обновленного содержимого для последних изменений в документации по SQL Server Data Tools (SSDT) для Microsoft SQL Server."
+title: Обновленные документы по SSDT для SQL Server | Документация Майкрософт
+description: Отображение фрагментов обновленного содержимого для последних изменений в документации по SQL Server Data Tools (SSDT) для Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: ssdt
 ms.date: 02/03/2018
-ms.openlocfilehash: c591ddddd60af31fe2d338fdee25ea2c17ab0ea5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad139f5ff9389c1a04a7f077d61facc7643db323
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>Новые и недавно обновленные: SQL Server Data Tools (SSDT)
 
@@ -188,7 +188,7 @@ ms.lasthandoff: 02/09/2018
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)

@@ -1,17 +1,14 @@
 ---
-title: "Использование профилировщика XEvent для SSMS | Документация Майкрософт"
-ms.custom: 
+title: Использование профилировщика XEvent для SSMS | Документация Майкрософт
+ms.custom: ''
 ms.date: 10/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
+ms.service: ''
 ms.reviewer: genemi
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server], system health session
@@ -23,19 +20,20 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d478dc053a744cfffa9f7234fe49bad552cc429
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a59b2a0fed20b372e6070782f2013f2e01e29d2
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>Использование профилировщика XEvent для SSMS
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Профилировщик XEvent — это компонент SQL Server Management Studio (SSMS), который отображает динамическое окно просмотра расширенных событий. В этом обзоре описаны возможные причины для использования этого профилировщика, его основные функции и действия, необходимые для просмотра расширенных событий.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Профилировщик XEvent — это компонент SQL Server Management Studio (SSMS), который отображает динамическое окно просмотра расширенных событий. В этом обзоре описаны возможные причины для использования этого профилировщика, его основные функции и действия, необходимые для просмотра расширенных событий.
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>Когда стоит использовать профилировщик XEvent?
 В отличие от SQL Profiler, профилировщик XEvent непосредственно интегрирован в SSMS и основан на масштабируемой технологии расширенных событий ядра СУБД SQL. Эта функция позволяет получить быстрый доступ к динамическому потоковому представлению диагностических событий в SQL Server. Это представление можно настроить, сохранив параметры в файле .viewsettings, чтобы поделиться ими с другими пользователями SSMS. Сеанс, созданный с помощью профилировщика XE, меньше вмешивается в работу SQL Server по сравнению с аналогичной трассировкой SQL при использовании SQL Profiler. Пользователь также может настроить этот сеанс с помощью окна свойств сеанса XE или с помощью TSQL.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Эта функция доступна только в SQL Server Management Studio (SSMS) 17.3 и более поздних версиях. Убедитесь, что вы используете последнюю версию. Ее можно найти [здесь](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a id="getting-started"></a> Приступая к работе

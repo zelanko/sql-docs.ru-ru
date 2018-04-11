@@ -1,6 +1,6 @@
 ---
-title: "Обновленные документы по PowerShell | Документация Майкрософт"
-description: "Отображение фрагментов обновленного содержимого для последних изменений в документации по SQL Server."
+title: Обновленные документы по PowerShell | Документация Майкрософт
+description: Отображение фрагментов обновленного содержимого для последних изменений в документации по SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: powershell
 ms.date: 02/03/2018
-ms.openlocfilehash: 4c14ff7713b6ca4138407cd105bb010e004e781c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8967deea4eb4a64b58166d859fabcf0db44a01c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>Новые и недавно обновленные: документы по PowerShell
 
@@ -130,7 +130,7 @@ ms.lasthandoff: 02/15/2018
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)

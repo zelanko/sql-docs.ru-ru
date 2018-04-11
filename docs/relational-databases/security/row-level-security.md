@@ -1,16 +1,14 @@
 ---
-title: "Безопасность на уровне строк | Документация Майкрософт"
-ms.custom: 
+title: Безопасность на уровне строк | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: security
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - access control predicates
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b150fa58725e157834c202224c679ee5119cdb8a
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.lasthandoff: 11/21/2017
  При использовании более формальных терминов можно сказать, что RLS представляет управление доступом на основе предиката. Он поддерживает гибкую, централизованную оценку на основе предиката, которая может учитывать метаданные или другие критерии, определяемые администратором по своему усмотрению. Предикат используется как критерий для определения, имеет ли пользователь соответствующий доступ к данным на основе атрибутов пользователя. Управление доступом на основе метки можно реализовать с помощью управления доступом на основе предиката.  
   
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Создание, изменение или удаление политик безопасности требует разрешения **ALTER ANY SECURITY POLICY** . Создание или удаление политики безопасности требует разрешения **ALTER** для схемы.  
   
  Кроме того, для каждого добавляемого предиката требуются следующие разрешения:  

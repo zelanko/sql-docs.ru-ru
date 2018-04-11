@@ -1,28 +1,27 @@
 ---
-title: "Прозрачное шифрование данных для хранилища данных и базы данных SQL Azure | Документы Майкрософт"
-description: "Общие сведения о прозрачном шифровании данных для хранилища данных и базы данных SQL. Этот документ описывает его преимущества и параметры конфигурации, включая прозрачное шифрование данных, управляемое службой, и создание собственных ключей."
-keywords: 
+title: Прозрачное шифрование данных для хранилища данных и базы данных SQL Azure | Документы Майкрософт
+description: Общие сведения о прозрачном шифровании данных для хранилища данных и базы данных SQL. Этот документ описывает его преимущества и параметры конфигурации, включая прозрачное шифрование данных, управляемое службой, и создание собственных ключей.
+keywords: ''
 author: becczhang
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
-ms.custom: 
+ms.custom: ''
 ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 5c9ff69d5219e3cd508031669d67002931fa4060
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Прозрачное шифрование данных для хранилища данных и базы данных SQL Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

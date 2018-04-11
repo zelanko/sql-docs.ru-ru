@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ffe97ae02f04c6ff8df04755d24ea6f771133cc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 785a3740d27b57bc4aee02f3cfccfd22b95d987f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Удаленные серверы|SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Задание параметров|**SET ROWCOUNT** для инструкций **INSERT**, **UPDATE**и **DELETE** .|Ключевое слово TOP|SET ROWCOUNT|109|  
 |Табличные указания|Табличная подсказка HOLDLOCK без скобок.|Используйте HOLDLOCK со скобками.|Табличная подсказка HOLDLOCK без скобок.|167|  
-|Инструменты|sqlmaint, программа|Использование функции планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|None|None|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Функции, не поддерживаемые в будущей версии SQL Server  
  Поддержка приведенных ниже функций компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]будет сохранена, однако будет удалена в более поздней версии. (с какой именно версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , пока не определено).  

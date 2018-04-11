@@ -1,28 +1,28 @@
 ---
-title: "Примеры бизнес-правил (службы Master Data Services) | Документы Майкрософт"
-ms.custom: 
+title: Примеры бизнес-правил (службы Master Data Services) | Документы Майкрософт
+ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3e10456b5254bc007420eb6850f00ede131f31aa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>Примеры бизнес-правил (службы Master Data Services)
 В этой статье приводятся примеры бизнес-правил для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Эти примеры можно найти в образцах моделей, которые устанавливаются вместе с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
@@ -160,8 +160,7 @@ Else
 3. Выберите сущность, к которой применяется правило, как указано в таблицах выше, а затем щелкните **Бизнес-правила**.  
 4. Щелкните имя бизнес-правила, которое нужно просмотреть. В пользовательском интерфейсе отобразятся инструкции **If**, **Then** и **Else** .  
   
-## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем   
-Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com).   
+ 
   
   
   

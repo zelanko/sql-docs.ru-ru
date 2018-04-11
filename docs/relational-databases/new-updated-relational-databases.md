@@ -1,6 +1,6 @@
 ---
-title: "Обновлено — документы по реляционным базам данных | Документация Майкрософт"
-description: "Отображение фрагментов обновленного содержимого для последних изменений в документации по реляционным базам данных."
+title: Обновлено — документы по реляционным базам данных | Документация Майкрософт
+description: Отображение фрагментов обновленного содержимого для последних изменений в документации по реляционным базам данных.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: relational-databases
 ms.date: 02/03/2018
-ms.openlocfilehash: 38f9ee55137c54adddb07fbe9f3b74dd43d51a3a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f30e38adef7faedb273dbd1b22c4ac9d3e8223b4
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Новые и недавно обновленные статьи — документы по реляционным базам данных
 
@@ -550,7 +550,7 @@ GO
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)

@@ -1,16 +1,16 @@
 ---
-title: "Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Performance (SQL Server)
@@ -23,27 +23,24 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 1e3b52ab64122fab76182d355cbd5c54d2b72c39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр производительности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-На этой странице представлены ссылки, помогающие найти сведения, касающиеся производительности в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  На этой странице представлены ссылки, помогающие найти сведения, касающиеся производительности в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Условные обозначения**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>Это незавершенный процесс. Был ли центр производительности полезным? Как мы можем его улучшить?  
- Какие сведения вы искали и удалось ли вам их найти? Что мы упустили? Что бы еще вы хотели видеть здесь? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="configuration-options-for-performance"></a>Параметры конфигурации для оптимизации производительности  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет возможность оказывать влияние на производительность компонента Database Engine базы данных с помощью ряда параметров конфигурации на уровне [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]позволяет выполнять большую часть этих оптимизаций (но не все) автоматически.  

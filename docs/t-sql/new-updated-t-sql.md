@@ -1,6 +1,6 @@
 ---
-title: "Обновленные документы по T-SQL | Документы Майкрософт"
-description: "Отрывки из недавно обновленного содержимого в документации по Transact-SQL."
+title: Обновленные документы по T-SQL | Документы Майкрософт
+description: Отрывки из недавно обновленного содержимого в документации по Transact-SQL.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: t-sql
 ms.date: 02/03/2018
-ms.openlocfilehash: c1f1ce751bd4bca781644e7e2f5282320c8c88a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 62f316ece41b5a1779ad039984e5065b0d94e8d0
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>Новые и недавно обновленные: документы по Transact-SQL
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 02/09/2018
 MAXDOP = *max_degree_of_parallelism*
 **Применимо к**: SQL Server (с версии SQL Server 2017 с накопительным пакетом обновления 3 (CU3)).
 
- Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции со статистикой. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.
+ Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции со статистикой. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.
 
  Параметр *max_degree_of_parallelism* может иметь одно из следующих значений:
 
@@ -135,7 +135,7 @@ MAXDOP = *max_degree_of_parallelism*
 
 **Применимо к**: SQL Server (с версии SQL Server 2017 с накопительным пакетом обновления 3 (CU3)).
 
- Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции со статистикой. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.
+ Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции со статистикой. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.
 
  Параметр *max_degree_of_parallelism* может иметь одно из следующих значений:
 
@@ -188,7 +188,7 @@ MAXDOP = *max_degree_of_parallelism*
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../samples/new-updated-samples.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)

@@ -1,28 +1,28 @@
 ---
-title: "Установка и настройка служб Master Data Services | Документы Майкрософт"
-ms.custom: 
+title: Установка и настройка служб Master Data Services | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 
+caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e539d5a06f53fd4b79530031c8f1dec9dd493aae
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: debbf608daac6d95527939808b620d34fe1e4c31
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
   В этой статье рассматривается установка [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютере под управлением Windows Server 2012 R2, настройка базы данных и веб-сайта MDS, а также развертывание образцов моделей и данных. Службы[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) позволяют организациям управлять надежной версией данных.   
@@ -284,10 +284,7 @@ ms.lasthandoff: 03/05/2018
  Создайте модель и сущности для данных. См. разделы [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md) и [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
  Общие сведения об использовании модели и сущностей для создания структуры данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] см. в разделе [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
-  
-## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
- Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии сюда: [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
-  
+    
 ## <a name="see-also"></a>См. также:  
  [База данных служб Master Data Services](../master-data-services/master-data-services-database.md)   
  [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)   
