@@ -1,16 +1,16 @@
 ---
-title: "sp_addserver (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addserver (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addserver
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,20 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@server =** ] **"***сервера***"**  
+ [ **@server =** ] **'***server***'**  
  Имя сервера. Имена серверов должны быть уникальными и соответствовать правилам именования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, за исключением того, что пробелы не допускаются. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
  Если несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливаются на компьютере, каждый экземпляр работает, как если бы он находится на отдельном сервере. Укажите именованный экземпляр, обратившись к *сервера* как *имя_сервера\имя_экземпляра*.  
   
  [  **@local =** ] **'LOCAL'**  
- Указывает, что добавляемый сервер — локальный. **@local**— **varchar(10)**, значение по умолчанию NULL. Указание  **@local**  как **ЛОКАЛЬНОГО** определяет  **@server**  как имя локального сервера и причины @@SERVERNAME функция, возвращающая значение из *сервера*.  
+ Указывает, что добавляемый сервер — локальный. **@local** — **varchar(10)**, значение по умолчанию NULL. Указание **@local** как **ЛОКАЛЬНОГО** определяет **@server** как имя локального сервера и причины @@SERVERNAME функция, возвращающая значение из *сервера*.  
   
  Программа настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время установки присваивает этой переменной в качестве значения имя компьютера. По умолчанию имя компьютера является подключении пользователей к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без дополнительной настройки.  
   
  Локальное переопределение вступает в силу только после перезагрузки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. На каждом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть определен только один локальный сервер.  
   
  [  **@duplicate_ok =** ] **«duplicate_OK»**  
- Указывает, допустимо ли совпадение имен серверов. **@duplicate_OK**— **varchar(13)**, значение по умолчанию NULL. **@duplicate_OK**может иметь только значение **duplicate_OK** или иметь значение NULL. Если **duplicate_OK** указан и имя сервера, который добавляется уже существует, ошибка не возникает. Если именованные параметры не используются,  **@local**  должен быть указан.  
+ Указывает, допустимо ли совпадение имен серверов. **@duplicate_OK** — **varchar(13)**, значение по умолчанию NULL. **@duplicate_OK** может иметь только значение **duplicate_OK** или иметь значение NULL. Если **duplicate_OK** указан и имя сервера, который добавляется уже существует, ошибка не возникает. Если именованные параметры не используются, **@local** должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -76,7 +76,7 @@ sp_addserver [ @server = ] 'server' ,
   
  С помощью **sp_addserver** для добавления удаленного сервера более не поддерживается. Вместо этого используйте хранимую процедуру [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует членства в предопределенной роли сервера **setupadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -86,11 +86,11 @@ sp_addserver [ @server = ] 'server' ,
 sp_addserver 'ACCOUNTS', 'local';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   

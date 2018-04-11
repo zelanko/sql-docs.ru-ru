@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_uncontained_entities (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_uncontained_entities
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.lasthandoff: 02/03/2018
 |*statement_ offset_begin*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, откуда начинается неавтономная инструкция. В противном случае возвращается значение null.|  
 |*statement_ offset_end*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, где заканчивается неавтономная инструкция. Значение -1 обозначает конец модуля. В противном случае возвращается значение null.|  
 |*statement_type*|**nvarchar(512)**|Тип инструкции.|  
-|*Имя feature_*|**nvarchar(256)**|Возвращает внешнее имя объекта.|  
+|*feature_ name*|**nvarchar(256)**|Возвращает внешнее имя объекта.|  
 |*feature_type_name*|**nvarchar(256)**|Возвращает тип функции.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  sys.dm_db_uncontained_entities показывает сущности, которые могут пересекать границы базы данных. Будут возвращены все сущности пользователей, которые могут использовать объекты за пределами базы данных.  
   
  В отчете указываются следующие типы функций.  

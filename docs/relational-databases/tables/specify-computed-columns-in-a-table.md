@@ -1,30 +1,30 @@
 ---
-title: "Указание вычисляемых столбцов в таблице | Документация Майкрософт"
-ms.custom: 
+title: Указание вычисляемых столбцов в таблице | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,11 +33,11 @@ ms.lasthandoff: 02/23/2018
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом работы выполните следующие действия.**  
   
      [Ограничения](#Limitations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Задание вычисляемого столбца с использованием:**  
   
@@ -47,15 +47,15 @@ ms.lasthandoff: 02/23/2018
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a> ограничения  
+###  <a name="Limitations"></a> Ограничения  
   
 -   Вычисляемый столбец нельзя использовать ни в качестве определения ограничения DEFAULT или FOREIGN KEY, ни вместе с определением ограничения NOT NULL. Однако если вычисляемый столбец определен детерминированным выражением и тип данных результата допускается для индексных столбцов, то вычисляемый столбец может быть использован как ключевой столбец в индексе или как часть ограничений PRIMARY KEY или UNIQUE. Например, если таблица содержит столбцы a и b со значениями целого типа, то вычисляемый столбец a + b может быть индексирован, но вычисляемый столбец a+DATEPART(dd, GETDATE()) не может быть индексирован, так как значение может меняться при каждом следующем вычислении.  
   
 -   Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/23/2018
     > [!IMPORTANT]  
     >  Если формула связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка «`Error validating the formula for column column_name.`». Используйте функцию CAST или CONVERT, чтобы устранить конфликт типа данных. Например, если столбец типа **nvarchar** объединяется со столбцом типа **int**, то целочисленный тип необходимо преобразовать в **nvarchar** , как показано в следующей формуле: `('Prod'+CONVERT(nvarchar(23),ProductID))`. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный** , чтобы указать, следует ли сохранять данные.  
+5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный**, чтобы указать, следует ли сохранять данные.  
   
 6.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   

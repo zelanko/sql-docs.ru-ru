@@ -1,16 +1,16 @@
 ---
-title: "sp_resyncmergesubscription (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_resyncmergesubscription (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher**  =] **"***издатель***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
   
- [  **@publisher_db**  =] **"***publisher_db***"**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе в базе данных публикации. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
   
- [  **@publication**  =] **"***публикации***"**  
+ [ **@publication** =] **"***публикации***"**  
  Имя публикации. *Публикация*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@subscriber**  =] **"***подписчика***"**  
+ [ **@subscriber** =] **"***подписчика***"**  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на подписчике. Если хранимая процедура выполняется на издателе, то надо указать подписчик.  
   
- [  **@subscriber_db**  =] **"***subscriber_db***"**  
+ [ **@subscriber_db** =] **"***subscriber_db***"**  
  Имя базы данных подписки. *subscription_db* — **sysname**, значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на подписчике в базе данных подписки. Если хранимая процедура выполняется на издателе, то надо указать подписчик.  
   
- [  **@resync_type**  =] *аргумент resync_type*  
+ [ **@resync_type** =] *аргумент resync_type*  
  Указывает, когда должна начаться повторная синхронизация. *Аргумент resync_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -87,10 +87,10 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
  Значение **0** для *аргумент resync_type* параметр, который повторно применяет все изменения с момента создания исходного моментального снимка, может быть много ресурсов, но возможно гораздо меньше, чем полная повторная инициализация. Например, если исходный моментальный снимок был отправлен месяц назад, это значение приведет к повторному применению данных прошедшего месяца. Если исходный моментальный снимок содержал 1 ГБ данных, а объем изменений за последний месяц составил 2 МБ измененных данных, более эффективным будет повторное применение данных, а не полного моментального снимка размером в 1 ГБ.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_resyncmergesubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

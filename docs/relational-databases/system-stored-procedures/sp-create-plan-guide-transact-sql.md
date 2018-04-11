@@ -1,16 +1,16 @@
 ---
-title: "sp_create_plan_guide (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_create_plan_guide (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-caps.latest.revision: 
+caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,38 +73,38 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Указывает *statement_text* появляется в контексте [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимая процедура, скалярная функция, функция из нескольких инструкций табличное или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML в текущей базе данных.  
   
  SQL  
- Указывает *statement_text* появляется в контексте изолированной инструкции или пакета, который может быть отправлена на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каким-либо способом. [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкций по общим объектам языка среды CLR или расширенных хранимых процедур или с помощью инструкции EXEC EXEC N'*sql_string*", обрабатываются как пакеты на сервере и, следовательно, могут быть определены как @type  **=**  «SQL». Если указан SQL, указание запроса, PARAMETERIZATION {FORCED | ПРОСТОЙ} не может указываться в @hints параметра.  
+ Указывает *statement_text* появляется в контексте изолированной инструкции или пакета, который может быть отправлена на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каким-либо способом. [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций по общим объектам языка среды CLR или расширенных хранимых процедур или с помощью инструкции EXEC EXEC N'*sql_string*", обрабатываются как пакеты на сервере и, следовательно, могут быть определены как @type **=** «SQL». Если указан SQL, указание запроса, PARAMETERIZATION {FORCED | ПРОСТОЙ} не может указываться в @hints параметра.  
   
  TEMPLATE  
  Указывает, что структура плана применяется к любым запросам, параметризированным в форме, заданной в *statement_text*. Если указан TEMPLATE только PARAMETERIZATION {FORCED | Указание ПРОСТОГО} запроса могут быть указаны в @hints параметра. Дополнительные сведения о структуры планов TEMPLATE см. в разделе [укажите параметризации запросов с помощью планов](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [@module_or_batch =] {N'[ *schema_name*. ] *object_name*"| N'*batch_text*"| NULL}  
+ [@module_or_batch =]{ N'[ *schema_name*. ] *object_name*"| N'*batch_text*"| NULL}  
  Указывает имя объекта, в котором *statement_text* появляется, и текст пакета, в котором *statement_text* отображается. Текст пакета не может содержать инструкцию USE*базы данных* инструкции.  
   
  Структура плана совпадала с пакетом, переданным из приложения *batch_tex*t должно быть предоставлено в том же формате, символ к символу, в котором он передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются. Дополнительные сведения см. в разделе «Примечания».  
   
  [*schema_name*.] *object_name* указывает имя [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимая процедура, скалярная функция, функция из нескольких инструкций табличное или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML, который содержит *statement_text*. Если *имя_схемы* не указан, *schema_name* используется схема текущего пользователя. Если указано значение NULL и @type = «SQL», значение @module_or_batch присвоено значение @stmt. Если @type = "ШАБЛОНА**"**, @module_or_batch должен иметь значение NULL.  
   
- [ @params =] {N' *@parameter_name data_type* [,*.. .n* ]' | NULL}  
- Указывает определения всех параметров, внедренных в *statement_text*. @paramsприменяется, только если одно из следующих установлено значение true:  
+ [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ Указывает определения всех параметров, внедренных в *statement_text*. @params применяется, только если одно из следующих установлено значение true:  
   
--   @type= 'SQL' или 'TEMPLATE'. Если «ШАБЛОН» @params не должен иметь значение NULL.  
+-   @type = 'SQL' или 'TEMPLATE'. Если «ШАБЛОН» @params не должен иметь значение NULL.  
   
 -   *statement_text* передается с помощью процедуры sp_executesql и значение @params параметр указан, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет внутреннюю отправку инструкции после ее параметризации. Отправка параметризованных запросов через API-интерфейсы базы данных (включая ODBC, OLE DB и ADO.NET) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выглядит как вызов процедуры sp_executesql либо API-процедуры серверного курсора, поэтому они также могут совпадать со структурой плана SQL или TEMPLATE.  
   
- *@parameter_namedata_type* должны быть указаны в формате, точное оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо с помощью процедуры sp_executesql или отправки после параметризации. Дополнительные сведения см. в разделе «Примечания». Если пакет не содержит параметров, необходимо указать значение NULL. Размер @params ограничивается только доступной памяти на сервере.  
+ *@parameter_name data_type* должны быть указаны в формате, точное оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо с помощью процедуры sp_executesql или отправки после параметризации. Дополнительные сведения см. в разделе «Примечания». Если пакет не содержит параметров, необходимо указать значение NULL. Размер @params ограничивается только доступной памяти на сервере.  
   
- [@hints =] {N'OPTION (*query_hint* [,*.. .n* ])' | N'*XML_showplan*"| NULL}  
+ [@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
  N'OPTION (*query_hint* [,*.. .n* ])  
  Указывает предложение OPTION, чтобы присоединить к запросу, который соответствует @stmt. @hints должен синтаксически совпадает с предложением OPTION инструкции SELECT и может содержать любую допустимую последовательность указаний запроса.  
   
- N'*XML_showplan*"  
+ N'*XML_showplan*'  
  План запроса в формате XML для применения в качестве указания.  
   
  Значение аргумента XML_showplan рекомендуется присвоить переменной, иначе каждый символ одиночной кавычки необходимо предварять дополнительным символом одиночной кавычки. См. пример Д.  
   
  NULL  
- Указывает, что любое существующее указание, заданное в предложении OPTION запроса, не применяется к запросу. Дополнительные сведения см. в разделе [предложение OPTION &#40; Transact-SQL &#41; ](../../t-sql/queries/option-clause-transact-sql.md).  
+ Указывает, что любое существующее указание, заданное в предложении OPTION запроса, не применяется к запросу. Дополнительные сведения см. в разделе [предложение OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ## <a name="remarks"></a>Замечания  
  Аргументы процедуры sp_create_plan_guide должны задаваться в указанном порядке. При задании значений параметрам процедуры **sp_create_plan_guide**все имена параметров необходимо указывать явно или вообще не указывать. Например, если указан параметр **@name =**, необходимо также указать параметры **@stmt =**, **@type =** и т. д. Аналогично, если параметр **@name =** пропущен и указано только его значение, для остальных параметров также должны быть указаны только значения, но не имена. Имена аргументов приводятся исключительно в целях описания, чтобы помочь разобраться с синтаксисом. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет соответствие указанных имен параметров их позициям.  
@@ -127,7 +127,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   Пробельные символы (знаки табуляции, пробелы, возвраты каретки и переводы строки) внутри строки.  
   
--   Комментарии ( **--**  или  **/ \* \* /** ).  
+-   Комментарии (**--** или **/ \* \* /**).  
   
 -   Точка с запятой (;) в конце строки.  
   
@@ -148,7 +148,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Влияние структуры плана на кэш планов  
  Создание структуры плана в модуле стирает план запроса для этого модуля из кэша планов. Создание структуры плана типа OBJECT или SQL в потоке стирает план запроса для потока, который имеет такое же значение хеш-функции. Создание структуры плана типа TEMPLATE стирает все потоки с одним оператором из кэша планов через базу данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для создания структуры плана типа OBJECT необходимо разрешение ALTER на соответствующий объект. Чтобы создать структуру плана типа SQL или TEMPLATE, необходимо обладать разрешением ALTER на текущую базу данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -332,17 +332,17 @@ EXEC sp_create_plan_guide
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Руководства планов](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides (Transact-SQL)](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_cached_plans & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide (Transact-SQL)](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [sp_get_query_template &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

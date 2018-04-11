@@ -1,31 +1,31 @@
 ---
-title: "Руководство по архитектуре управления памятью | Документация Майкрософт"
-ms.custom: 
+title: Руководство по архитектуре управления памятью | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,8 +62,8 @@ ms.lasthandoff: 02/09/2018
 | |32-разрядная версия <sup>1</sup> |64-разрядная версия|
 |-------|-------|-------| 
 |Обычная память |Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . до достижения предела обработки виртуального адресного пространства — <br>— 2 ГБ<br>— 3 ГБ с параметром загрузки /3gb <sup>2</sup> <br>— 4 ГБ на WOW64 <sup>3</sup> |Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . до достижения предела обработки виртуального адресного пространства — <br>— 7 ТБ с архитектурой IA64 (IA64 не поддерживается в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздней)<br>— Максимум, поддерживаемый операционной системой при использовании архитектуры x64 <sup>4</sup>
-|Механизм AWE (позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выходить за пределы обработки виртуального адресного пространства на 32-разрядной платформе). |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Выпуски Standard, Enterprise и Developer — буферный пул, достаточный для доступа к 64 ГБ памяти.|Неприменимо <sup>5</sup> |
-|Привилегия операционной системы на блокировку страниц в памяти (позволяет блокировать физическую память, препятствует вытеснению блокированной памяти). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Выпуски Standard, Enterprise и Developer — для процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо использовать механизм AWE. Память, распределенная с использованием механизма AWE, не может быть выгружена. <br> Предоставление данного разрешения без включения AWE не оказывает влияния на сервер. | Используется, только если это необходимо, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|Механизм AWE (позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выходить за пределы обработки виртуального адресного пространства на 32-разрядной платформе). |Выпуски[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer — буферный пул, достаточный для доступа к 64 ГБ памяти.|Неприменимо <sup>5</sup> |
+|Привилегия операционной системы на блокировку страниц в памяти (позволяет блокировать физическую память, препятствует вытеснению блокированной памяти). <sup>6</sup> |Выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer — для процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо использовать механизм AWE. Память, распределенная с использованием механизма AWE, не может быть выгружена. <br> Предоставление данного разрешения без включения AWE не оказывает влияния на сервер. | Используется, только если это необходимо, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32-разрядные версии недоступны, начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb — это параметр загрузки операционной системы. Дополнительные сведения см. в библиотеке MSDN.  
@@ -91,13 +91,13 @@ ms.lasthandoff: 02/09/2018
 
 В следующей таблице указано, управляется ли определенный тип выделения памяти параметрами конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)*.
 
-|Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Одностраничные выделения|Да|Да, объединяются в выделения страниц "Любой размер"|
-|Многостраничные выделения|нет|Да, объединяются в выделения страниц "Любой размер"|
-|Выделения CLR|нет|Да|
-|Память стеков потоков|нет|нет|
-|Прямые выделения из Windows|нет|нет|
+|Многостраничные выделения|Нет|Да, объединяются в выделения страниц "Любой размер"|
+|Выделения CLR|Нет|Да|
+|Память стеков потоков|Нет|Нет|
+|Прямые выделения из Windows|Нет|Нет|
 
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделять больше памяти, чем указано в значении "Макс. памяти сервера". Это поведение может возникать, если значение ***Общая память сервера (КБ)*** уже достигло параметра ***Целевая память сервера (КБ)*** (как указано в параметре "Макс. памяти сервера"). Если из-за фрагментации памяти недостаточно смежных областей свободной памяти для соответствия требованиям многостраничных запросов памяти (больше 8 КБ), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может превысить объем вместо отклонения запроса памяти. 
 
@@ -119,9 +119,9 @@ ms.lasthandoff: 02/09/2018
 
 В следующей таблице указано, попадает ли конкретный тип выделения памяти в регион *memory_to_reserve* виртуального адресного пространства для процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-|Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Одностраничные выделения|нет|Нет, объединяется в выделения страниц "Любой размер"|
+|Одностраничные выделения|Нет|Нет, объединяется в выделения страниц "Любой размер"|
 |Многостраничные выделения|Да|Нет, объединяется в выделения страниц "Любой размер"|
 |Выделения CLR|Да|Да|
 |Память стеков потоков|Да|Да|
@@ -180,7 +180,7 @@ FROM sys.dm_os_process_memory;
 Параметры конфигурации "Мин. памяти сервера" и "Макс. памяти сервера" устанавливают верхний и нижний пределы объема памяти, занятого буферным пулом и другими кэшами ядра СУБД [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Буферный пул не сразу выделяет объем памяти, определенный минимальным значением. Он начинает расти от объема, необходимого для инициализации. По мере увеличения рабочей нагрузки на компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] выделение памяти продолжается. Буферный пул не освободит занятую память, пока не достигнет размера, определенного минимальным значением. Как только это значение будет достигнуто, буферный пул применит стандартный алгоритм выделения и освобождения памяти по мере необходимости. Единственное отличие заключается в том, что буферный пул никогда не освобождает объем памяти ниже предела, определяемого параметром "Минимальная память сервера", — и никогда не занимает объем больше предела, определяемого параметром "Максимальная память сервера".
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как процесс занимает больше памяти, чем указано в параметре max server memory. И внутренние, и внешние компоненты могут занимать память за пределами буферного пула, что также входит в ее общий расход, однако буферный пул все еще составляет наибольшую часть общего объема памяти, потребляемого [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> Сам[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как процесс занимает больше памяти, чем указано в параметре max server memory. И внутренние, и внешние компоненты могут занимать память за пределами буферного пула, что также входит в ее общий расход, однако буферный пул все еще составляет наибольшую часть общего объема памяти, потребляемого [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Объем памяти, занимаемой компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], напрямую зависит от рабочей нагрузки на экземпляр. Экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , обрабатывающий не слишком много запросов, может и не достигнуть предела, указываемого параметром min server memory.
 
@@ -280,9 +280,9 @@ FROM sys.dm_os_process_memory;
 
 ## <a name="understanding-non-uniform-memory-access"></a>Основные сведения о неоднородном доступе к памяти
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] совместим с архитектурой NUMA и хорошо работает на оборудовании NUMA без дополнительной настройки. С ростом тактовой частоты и количества процессоров становится труднее сократить время задержки памяти, необходимой для использования дополнительной производительности системы. Для устранения этого недостатка поставщики оборудования применяют большие кэши третьего уровня, но это является всего лишь полумерой. Архитектура NUMA обеспечивает масштабируемое решение для этой проблемы. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] позволяет использовать преимущество компьютеров на основе NUMA без необходимости изменять что-либо в приложении. Дополнительные сведения см. в статье [Как настроить сервер SQL Server на использование программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] совместим с архитектурой неоднородного доступа к памяти (NUMA) и хорошо работает на оборудовании NUMA без дополнительной настройки. С ростом тактовой частоты и количества процессоров становится труднее сократить время задержки памяти, необходимой для использования дополнительной производительности системы. Для устранения этого недостатка поставщики оборудования применяют большие кэши третьего уровня, но это является всего лишь полумерой. Архитектура NUMA обеспечивает масштабируемое решение для этой проблемы. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] позволяет использовать преимущество компьютеров на основе NUMA без необходимости изменять что-либо в приложении. Дополнительные сведения см. в статье [Как настроить сервер SQL Server на использование программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 [Параметры конфигурации сервера «Server Memory»](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Считывание страниц](../relational-databases/reading-pages.md)   
 [Запись страниц](../relational-databases/writing-pages.md)   

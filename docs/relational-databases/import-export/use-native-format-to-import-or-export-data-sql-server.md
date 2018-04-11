@@ -1,31 +1,31 @@
 ---
-title: "Использование собственного формата для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Использование собственного формата для импорта или экспорта данных (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 02/15/2018
 
 Собственный формат поддерживается следующими параметрами командной строки:  
 
-|Command|Параметр|Description|  
+|Command|Параметр|Описание|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Приводит к использованию служебной программой bcp собственных типов данных. *|  
 |BULK INSERT|DATAFILETYPE **="native"**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
@@ -155,7 +155,7 @@ Notepad D:\BCP\myNative.fmt
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
 ### **Использование bcp и собственного формата для экспорта данных**<a name="bcp_native_export"></a>
-**-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
+Параметр**-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 
 ```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
@@ -165,7 +165,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Использование bcp и собственного формата для импорта данных без файла форматирования**<a name="bcp_native_import"></a>
-**-n** и команда **IN** .  В командной строке введите следующие команды:
+Параметр**-n** и команда **IN** .  В командной строке введите следующие команды:
 
 ```cmd
 REM Truncate table (for testing)
@@ -179,7 +179,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_native_import_fmt"></a>
-**-n** и **-f** и команда **IN** .  В командной строке введите следующие команды:
+Параметры**-n** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
 
 ```cmd
 REM Truncate table (for testing)

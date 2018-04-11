@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscription (Transact-SQL) | Документы Microsoft"
+title: sp_addsubscription (Transact-SQL) | Документы Microsoft
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication=] '*публикации*"  
+ [ @publication=] '*publication*'  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [ @article=] '*статьи*"  
@@ -91,13 +91,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber=] '*подписчика*"  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [ @destination_db=] '*destination_db*"  
+ [ @destination_db=] '*destination_db*'  
  Имя целевой базы данных, в которую помещаются реплицированные данные. *destination_db* — **sysname**, значение по умолчанию NULL. Если задано значение NULL, *destination_db* задается имя базы данных публикации. Для издателей Oracle *destination_db* должен быть указан. Для отличных от подписчика SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
   
  [ @sync_type=] '*sync_type*"  
  Тип синхронизации подписки. *sync_type* — **nvarchar(255)**, и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |none|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание: Этот параметр рекомендуется к использованию. Вместо этого используйте значение «replication support only».|  
 |automatic (по умолчанию)|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
@@ -111,21 +111,21 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] '*состояние*"  
  Состояние подписки. *состояние* — **sysname**, значение по умолчанию NULL. Если этот параметр не задан явно, при репликации ему устанавливается одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |active|Подписка инициализирована и готова к принятию изменений. Этот параметр устанавливается, когда значение *sync_type* имеет значение none, инициализировать при резервном копировании или только поддержка репликации.|  
 |subscribed|Требуется инициализация подписки. Этот параметр устанавливается, когда значение *sync_type* выполняется автоматически.|  
   
- [ @subscription_type=] '*subscription_type*"  
+ [ @subscription_type=] '*subscription_type*'  
  Тип подписки. *subscription_type* — **nvarchar(4)**, значение по умолчанию push. Может принимать значения push или pull. Агенты распространителя принудительных подписок находятся на распространителе, а агенты распространителя подписок по запросу — на подписчике. *subscription_type* может принимать значение pull для создания именованной подписки по запросу, известной издателю. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Анонимные подписки не нуждаются в использовании этой хранимой процедуры.  
   
- [ @update_mode=] '*update_mode*"  
+ [ @update_mode=] '*update_mode*'  
  Представляет тип обновления. *update_mode* — **nvarchar(30)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |read only (по умолчанию)|Подписка только для чтения. Изменения у подписчика не отправляются издателю.|  
 |sync tran|Включает поддержку немедленно обновляемых подписок. Не поддерживается для издателей Oracle.|  
@@ -138,9 +138,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] '*loopback_detection*"  
  Определяет, отправляет ли агент распространителя транзакции, изначально созданные на подписчике, обратно подписчику. *loopback_detection* — **nvarchar(5)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в статье [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в статье [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
 |NULL (по умолчанию)|Автоматически устанавливается значение true для подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение false для подписчика, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -202,40 +202,40 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @active_end_date=] *active_end_date*  
  Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
- [ @optional_command_line=] '*optional_command_line*"  
+ [ @optional_command_line=] '*optional_command_line*'  
  Необязательное приглашение к вводу команды. *optional_command_line* — **nvarchar(4000)**, значение по умолчанию NULL.  
   
  [ @reserved=] '*зарезервированные*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*"  
+ [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Является ли подписка может быть синхронизирована посредством [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если это значение равно FALSE, подписка не регистрируется диспетчером синхронизации Windows. Если значение равно TRUE, подписка регистрируется диспетчером синхронизации Windows и может быть синхронизирована без запуска среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Не поддерживается для издателей Oracle.  
   
- [ @offloadagent=] '*remote_agent_activation*"  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  Указывает на то, что агент может быть активирован удаленно. *remote_agent_activation* — **бит** значение по умолчанию 0.  
   
 > [!NOTE]  
 >  Этот аргумент является устаревшим и сохраняется только для поддержки обратной совместимости скриптов.  
   
- [ @offloadserver=] '*remote_agent_server_name*"  
+ [ @offloadserver= ] '*remote_agent_server_name*'  
  Указывает сетевое имя сервера, используемого для удаленной активации. *remote_agent_server_name*— **sysname**, значение по умолчанию NULL.  
   
  [ @dts_package_name=] '*dts_package_name*"  
  Указывает имя пакета служб DTS. *dts_package_name* — **sysname** значение по умолчанию NULL. Например, для задания пакета DTSPub_Package параметр должен быть равен `@dts_package_name = N'DTSPub_Package'`. Этот аргумент доступен для принудительных подписок. Для добавления сведений о пакете служб DTS к подписке по запросу используется процедура sp_addpullsubscription_agent.  
   
- [ @dts_package_password=] '*dts_package_password*"  
+ [ @dts_package_password= ] '*dts_package_password*'  
  Задает пароль для пакета, если он имеется. *dts_package_password* — **sysname** значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать пароль, если *dts_package_name* указано.  
   
- [ @dts_package_location=] '*dts_package_location*"  
+ [ @dts_package_location= ] '*dts_package_location*'  
  Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)**, значение по умолчанию РАСПРОСТРАНИТЕЛЬ. Пакет может храниться на распространителе или на подписчике.  
   
  [ @distribution_job_name=] '*distribution_job_name*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*издатель*"  
+ [ @publisher= ] '*publisher*'  
  Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -244,7 +244,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype=] '*backupdevicetype*"  
  Задает тип устройства резервного копирования, используемого при инициализации подписчика из резервной копии. *backupdevicetype* — **nvarchar(20)**, и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |logical (по умолчанию)|Устройство резервного копирования является логическим устройством.|  
 |disk|Устройство резервного копирования является жестким диском.|  
@@ -282,9 +282,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  Тип подписчика. *subscriber_type* — **tinyint**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|0 (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Подписчик|  
+|0 (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Подписчик|  
 |1|Сервер источника данных ODBC|  
 |2|База данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Поставщик OLE DB|  
@@ -298,7 +298,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Замечания  
  Процедура sp_addsubscription используется в репликации моментальных снимков и репликации транзакций.  
   
- При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнять [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и укажите учетные данные учетной записи Windows различия, зависящие от агента для @job_login и @job_password. Дополнительные сведения см. в статье [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнять [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и укажите учетные данные учетной записи Windows различия, зависящие от агента для @job_login и @job_password. Дополнительные сведения см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  Процедура sp_addsubscription закрывает доступ для подписчиков ODBC и OLE DB к следующим публикациям.  
   
@@ -316,20 +316,20 @@ sp_addsubscription [ @publication = ] 'publication'
   
  При выборе параметров **sync_type** *replication support only*, *initialize with backup*или *initialize from lsn*агент чтения журнала необходимо запустить после выполнения процедуры **sp_addsubscription**, чтобы скрипты установки были записаны в базу данных распространителя. Агент чтения журнала должен работать под учетной записью, которая является членом предопределенной роли сервера **sysadmin** . Если параметр **sync_type** установлен в значение *Automatic*, никаких специальных действий агента чтения журнала не требуется.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Процедуру sp_addsubscription могут выполнять только члены предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner. Для подписок по запросу пользователи, имеющие имена входа в списке доступа к публикации, могут выполнять процедуру sp_addsubscription.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Создание подписки для подписчика, отличного от подписчика SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

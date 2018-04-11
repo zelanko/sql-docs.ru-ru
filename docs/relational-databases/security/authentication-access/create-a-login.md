@@ -1,16 +1,16 @@
 ---
-title: "Создание имени для входа | Документация Майкрософт"
-ms.custom: 
+title: Создание имени для входа | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>Создание имени входа
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/06/2017
   
 > **ПРИМЕЧАНИЕ.** При подключении к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по имени входа идентификатор проверяется в базе данных master. Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] на уровне базы данных. При использовании пользователей автономной базы данных имя для входа не требуется. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-##  <a name="Security"></a> безопасность  
+##  <a name="Security"></a> Безопасность  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Требуется наличие разрешения **ALTER ANY LOGIN** или **ALTER LOGIN** на сервере.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
  **Членство в роли базы данных для:**  *имя_базы_ данных*  
  Выберите роли для этого пользователя в указанной базе данных. Все пользователи входят в роль **public** во всех базах данных, и удалить их оттуда нельзя. Дополнительные сведения о ролях баз данных см. в разделе [Роли уровня базы данных](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### <a name="securables"></a>Защищаемые объекты  
+### <a name="securables"></a>Securables  
  На странице **Защищаемые объекты** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа. На этой странице доступны следующие параметры.  
   
  **Верхняя сетка**  
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  Нажмите кнопку **Поиск**.  
   
-2.  В диалоговом окне **Добавление объектов** выберите один из следующих параметров: **Определенные объекты…**, **Все объекты типов…**или **Сервер***имя_сервера*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  В **Добавление объектов** диалоговое окно, выберите один из следующих вариантов: **конкретные объекты...** , **Все объекты типов...** , или **сервера *** имя_сервера*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **ПРИМЕЧАНИЕ.** При выборе параметра **Сервер***имя_сервера* верхняя сетка автоматически заполняется всеми защищаемыми объектами сервера.  
+    > **Примечание:** при выборе **сервера *** имя_сервера* автоматически верхняя Сетка заполняется всеми защищаемыми объектами сервера.  
   
 3.  При выборе параметра **Конкретные объекты...**  
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 12/06/2017
   
 -   Сведения о предоставлении разрешения для имени входа см. в разделе [Предоставление разрешения для участника](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

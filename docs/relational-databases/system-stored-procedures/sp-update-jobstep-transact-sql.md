@@ -1,16 +1,16 @@
 ---
-title: "sp_update_jobstep (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_update_jobstep (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,16 +71,16 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  Идентификатор задания, которому принадлежит шаг. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL. Либо *job_id* или *job_name* должно быть указано, но не оба аргумента одновременно.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя задания, которому принадлежит шаг. *job_name*— **sysname**, значение по умолчанию NULL. Либо *job_id* или *job_name* должно быть указано, но не оба аргумента одновременно.  
   
- [ **@step_id =**] *step_id*  
+ [  **@step_id =**] *step_id*  
  Идентификационный номер шага задания, которое необходимо изменить. Этот номер не может быть изменен. *step_id*— **int**, не имеет значения по умолчанию.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **"***step_name***"**  
  Новое имя шага. *step_name*— **sysname**, значение по умолчанию NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **"***подсистемы***"**  
  Подсистема, используемая агентом Microsoft SQL Server для выполнения *команда*. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
   
  [  **@command =**] **"***команда***"**  
@@ -92,7 +92,7 @@ sp_update_jobstep
  [ **@cmdexec_success_code =**] *success_code*  
  Значение, возвращаемое **CmdExec** командой подсистемы, чтобы указать, что *команда* выполнена успешно. *success_code* — **int**, значение по умолчанию NULL.  
   
- [ **@on_success_action =**] *success_action*  
+ [  **@on_success_action =**] *success_action*  
  Действие, выполняемое, если выполнение этапа завершится успешно. *success_action* — **tinyint**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
@@ -102,7 +102,7 @@ sp_update_jobstep
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *success_step_id.*|  
   
- [ **@on_success_step_id =**] *success_step_id*  
+ [  **@on_success_step_id =**] *success_step_id*  
  Идентификационный номер шага данного задания, для выполнения, если шаг завершился успешно и *success_action* — **4**. *success_step_id* — **int**, значение по умолчанию NULL.  
   
  [ **@on_fail_action =**] *fail_action*  
@@ -124,7 +124,7 @@ sp_update_jobstep
  [  **@database_name =**] **"***базы данных***"**  
  Имя базы данных, в которой выполняется шаг [!INCLUDE[tsql](../../includes/tsql-md.md)]. *База данных*— **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
- [ **@database_user_name =**] **'***user***'**  
+ [  **@database_user_name =**] **"***пользователя***"**  
  Имя учетной записи пользователя, которая используется при выполнении шага [!INCLUDE[tsql](../../includes/tsql-md.md)]. *пользователь*— **sysname**, значение по умолчанию NULL.  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -136,7 +136,7 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **"***имя_файла***"**  
  Имя файла, в котором будут сохранены выходные данные этого шага. *имя_файла* — **nvarchar(200)**, значение по умолчанию NULL. Данный аргумент действителен только с командами, запущенными в подсистемах [!INCLUDE[tsql](../../includes/tsql-md.md)] или CmdExec.  
   
  Чтобы вернуть аргументу output_file_name значение NULL, необходимо задать *имя_выходного_файла* на пустую строку ("") или строке пробелов, но не могут использовать **CHAR(32)** функции. Например, установление данного аргумента равным пустой строке производится следующим образом:  
@@ -154,7 +154,7 @@ sp_update_jobstep
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
 |**16**|Записать журнал в таблицу (добавить к существующему журналу).|  
   
- [  **@proxy_id** =] *proxy_id*  
+ [ **@proxy_id**= ] *proxy_id*  
  Идентификатор учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* — тип **int**, значение по умолчанию NULL. Если не *proxy_id* указано, не *proxy_name* указано и не *имя_пользователя* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
  [ **@proxy_name**= ] **'***proxy_name***'**  
@@ -163,7 +163,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_update_jobstep** должна запускаться из **msdb** базы данных.  
   
  Обновление шага задания увеличивает номер версии задания.  
@@ -200,7 +200,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [Просмотр или изменение заданий](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

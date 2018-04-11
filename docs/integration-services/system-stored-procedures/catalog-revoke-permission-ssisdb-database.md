@@ -1,31 +1,31 @@
 ---
-title: "catalog.revoke_permission (база данных SSISDB) | Документы Майкрософт"
-ms.custom: 
+title: catalog.revoke_permission (база данных SSISDB) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ catalog.revoke_permission [ @object_type = ] object_type
  5 (другая ошибка)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Remarks  
- None  
+## <a name="remarks"></a>Замечания  
+ Нет  
   
 ## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
@@ -82,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Членство в роли сервера **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если задан тип разрешения permission_type, хранимая процедура удаляет разрешение, явно предоставленное участнику на объект. Даже если таких экземпляров нет, процедура возвращает значение успешного выполнения (`0`). Если permission_type не задан, хранимая процедура удаляет все разрешения, явно предоставленные участнику на объект.  
   
 > [!NOTE]  

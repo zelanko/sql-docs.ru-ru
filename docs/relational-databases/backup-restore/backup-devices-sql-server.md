@@ -1,16 +1,16 @@
 ---
-title: "Устройства резервного копирования (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Устройства резервного копирования (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 
+caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Во время выполнения операции резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных (*резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
+  Во время выполнения операции резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных (*резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
    
 ##  <a name="TermsAndDefinitions"></a> Термины и определения  
  диск для резервного копирования  
@@ -75,9 +75,9 @@ ms.lasthandoff: 02/23/2018
   
  TO DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Пример:  
+ Например:  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
 GO  
@@ -89,9 +89,9 @@ GO
   
  FROM DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например,  
+ Например:  
   
-```  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
@@ -102,7 +102,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Чтобы избежать неоднозначности, особенно в скриптах, рекомендуется явно указывать путь каталога резервного копирования в каждом предложении DISK. Однако это менее важно при использовании редактора запросов. В этом случае, если вы уверены, что файл резервного копирования находится в определенном по умолчанию каталоге для резервных копий, можно опустить путь в предложении DISK. В следующем примере с помощью инструкции `BACKUP` создается резервная копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в определенном по умолчанию каталоге резервных копий.  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = ’AdventureWorks2012.bak’;  
 GO  
@@ -125,9 +125,9 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Указание имени в формате UNC  
  Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\***имя_системы***\\***имя_общего_ресурса***\\***путь***\\***имя_файла*.  
   
- Пример:  
+ Например:  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
@@ -155,9 +155,9 @@ GO
   
  TO TAPE **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Пример:  
+ Например:  
   
-```  
+```sql  
 BACKUP LOG AdventureWorks2012   
    TO TAPE = '\\.\tape0';  
 GO  
@@ -200,7 +200,7 @@ GO
   
  После того как определено логическое устройство резервного копирования в инструкциях BACKUP или RESTORE, можно указывать логическое устройство резервного копирования вместо использования физического имени устройства. Например, следующая инструкция создает резервную копию базы данных `AdventureWorks2012` в логическое устройство резервного копирования `AdventureWorksBackups` .  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO AdventureWorksBackups;  
 GO  
@@ -272,7 +272,7 @@ GO
   
 -   [Удаление устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [SQL Server, объект Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   

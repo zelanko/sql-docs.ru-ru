@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergearticleconflicts (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpmergearticleconflicts (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b7a1d10d6d2ba731ceaaaba51b8f786b262a2e28
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +49,22 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- — Имя публикации слиянием. *публикации* — **sysname**, значение по умолчанию  **%** , который возвращает все статьи в базе данных, содержащие конфликты.  
+ — Имя публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%**, который возвращает все статьи в базе данных, содержащие конфликты.  
   
- [  **@publisher=**] **"***издатель***"**  
+ [ **@publisher=**] **'***publisher***'**  
  — Это имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  — Это имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**в статье**|**sysname**|Имя статьи.|  
-|**Этот аргумент**|**sysname**|Владелец исходного объекта.|  
+|**article**|**sysname**|Имя статьи.|  
+|**source_owner**|**sysname**|Владелец исходного объекта.|  
 |**source_object**|**nvarchar(386)**|Имя исходного объекта.|  
-|**conflict_table**|**тип nvarchar(258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
+|**conflict_table**|**nvarchar(258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
 |**guidcolname**|**sysname**|Имя RowGuidCol для исходного объекта.|  
 |**centralized_conflicts**|**int**|Указывает, хранятся ли конфликтные записи на заданном издателе.|  
   
@@ -76,10 +76,10 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Замечания  
  **sp_helpmergearticleconflicts** используется в репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergearticleconflicts**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

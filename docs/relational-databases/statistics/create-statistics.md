@@ -1,16 +1,16 @@
 ---
-title: "Создание статистики | Документация Майкрософт"
-ms.custom: 
+title: Создание статистики | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: statistics
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-statistics
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-statistics"></a>Создание статистики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  
+  Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом работы выполните следующие действия.**  
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания статистики используются:**  
   
@@ -60,9 +60,9 @@ ms.lasthandoff: 02/23/2018
   
 -   Удалить, переименовать или изменить определение столбца таблицы, определенного в предикате отфильтрованной статистики, нельзя.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Пользователь должен быть владельцем таблицы или индексированного представления либо членом одной из следующих ролей: предопределенная роль сервера **sysadmin** , предопределенная роль базы данных **db_owner** или предопределенная роль базы данных **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -100,7 +100,7 @@ ms.lasthandoff: 02/23/2018
      **Идентификатор**  
      Если флажок установлен, обозначает столбец идентификаторов.  
   
-     **Разрешить значения NULL**  
+     **Allow Nulls**  
      Указывает, допускает ли столбец значения NULL.  
   
      **Добавить**  
@@ -109,10 +109,10 @@ ms.lasthandoff: 02/23/2018
      **Удалить**  
      Удалите выбранный столбец из сетки статистики.  
   
-     **вверх**  
+     **Вверх**  
      Переместите выбранный столбец ближе к началу сетки статистики. Расположение в сетке может существенно влиять на ценность статистики.  
   
-     **вниз**  
+     **Переместить вниз**  
      Переместить выбранный столбец ближе к концу сетки статистики.  
   
      **Последнее обновление статистики по этим столбцам:**  
@@ -124,7 +124,7 @@ ms.lasthandoff: 02/23/2018
      На странице **Фильтр** в диалоговом окне **Создание статистики по таблице***имя_таблицы* отображается указанное ниже свойство.  
   
      **Критерий фильтра**  
-     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  В диалоговом окне **Создание статистики по таблице***имя_таблицы* на странице **Общее** нажмите кнопку **Добавить**.  
   

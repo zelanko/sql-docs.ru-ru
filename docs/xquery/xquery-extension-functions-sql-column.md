@@ -1,16 +1,16 @@
 ---
-title: "SQL: column() (XQuery) | Документы Microsoft"
-ms.custom: 
+title: 'SQL: column() (XQuery) | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery - функции SQL: column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Обратите внимание, что ссылка на столбец, указанный в **SQL: column()** внутри XQuery ссылается на столбец в строке, которая обрабатывается.  
   
  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], могут ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае нельзя ссылаться на столбцы, имеющие тип **xml** или среды CLR определяемый пользователем тип.  
@@ -144,6 +144,6 @@ select @x
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   
  [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
- [Язык модификации XML-данных &#40; Язык XML DML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Язык модификации XML-данных (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

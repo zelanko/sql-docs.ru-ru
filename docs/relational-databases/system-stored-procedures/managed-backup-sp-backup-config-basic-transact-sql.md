@@ -1,16 +1,16 @@
 ---
-title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: managed_backup.sp_backup_config_basic (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
   Настраивает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] базовые параметры для конкретной базы данных или экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Эта процедура может вызываться для для создания стандартных конфигураций управляемого резервного копирования. Однако если планируется добавлять расширенные функции или настраиваемое расписание, сначала выполните эти настройки, с помощью [managed_backup.sp_backup_config_advanced &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) и [managed_backup.sp_backup_config_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) перед включением управляемого резервного копирования с помощью этой процедуры.  
+>  Эта процедура может вызываться для для создания стандартных конфигураций управляемого резервного копирования. Однако если планируется добавлять расширенные функции или настраиваемое расписание, сначала выполните эти настройки, с помощью [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) и [managed_backup.sp_ backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) перед включением управляемого резервного копирования с помощью этой процедуры.  
    
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,10 +69,10 @@ EXEC managed_backup.sp_backup_config_basic
  Срок хранения файлов резервной копии в днях. @storage_url — Целое число. Это обязательный параметр при настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При изменении [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурации, этот параметр является необязательным. Если аргумент не указан, сохраняются существующие значения конфигурации.  
   
  @credential_name  
- Имя объекта учетных данных SQL, который используется для проверки подлинности учетной записи хранения Windows Azure. @credentail_name— **SYSNAME**. Если указано, страничный большой двоичный объект хранится резервная копия. Если этот параметр имеет значение NULL, резервной копии будет храниться как большой двоичный объект блока. Резервное копирование на страничный большой двоичный объект является устаревшими, поэтому лучше использовать новые возможности резервного копирования блока больших двоичных объектов. При использовании для изменения конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен. Если не указан, сохраняются существующие значения конфигурации.  
+ Имя объекта учетных данных SQL, который используется для проверки подлинности учетной записи хранения Windows Azure. @credentail_name — **SYSNAME**. Если указано, страничный большой двоичный объект хранится резервная копия. Если этот параметр имеет значение NULL, резервной копии будет храниться как большой двоичный объект блока. Резервное копирование на страничный большой двоичный объект является устаревшими, поэтому лучше использовать новые возможности резервного копирования блока больших двоичных объектов. При использовании для изменения конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен. Если не указан, сохраняются существующие значения конфигурации.  
   
 > [!WARNING]  
->  **@credential_name**  Параметр в настоящее время не поддерживается. Поддерживается только резервное копирование в блочные BLOB-объектов, требующий этот параметр, чтобы иметь значение NULL.  
+>  **@credential_name** Параметр в настоящее время не поддерживается. Поддерживается только резервное копирование в блочные BLOB-объектов, требующий этот параметр, чтобы иметь значение NULL.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [managed_backup.sp_backup_config_advanced &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

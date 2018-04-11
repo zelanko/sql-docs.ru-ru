@@ -1,16 +1,16 @@
 ---
-title: "Исходное свойство (ошибка ADO) | Документы Microsoft"
+title: Исходное свойство (ошибка ADO) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="source-property-ado-error"></a>Свойство Source (ошибка)
 Указывает имя объекта или приложения, вызвавшего ошибку.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строка** значение, указывающее имя объекта или приложения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **источника** свойство [ошибка](../../../ado/reference/ado-api/error-object.md) объектом, чтобы определить имя объекта или приложения, вызвавшего ошибку. Это может быть имя класса объекта или программный код. Для ошибок в ADO, значение свойства будет **ADODB. *** ObjectName*, где *ObjectName* имя объекта, запустившего ошибку. ADOX и ADO MD, будет иметь значение **ADOX. *** ObjectName* и **ADOMD. *** ObjectName,* соответственно.  
   
  Зависимости документации ошибок из **источника**, [номер](../../../ado/reference/ado-api/number-property-ado.md), и [описание](../../../ado/reference/ado-api/description-property.md) свойства **ошибка** объектов, можно написать код который будет соответствующим образом обработать ошибку.  

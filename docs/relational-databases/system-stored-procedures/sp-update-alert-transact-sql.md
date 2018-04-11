@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_update_alert (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_update_alert (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,25 +69,25 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@name =**] **'***name***'**  
+ [  **@name =**] **"***имя***"**  
  Имя обновляемого предупреждения. *имя* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@new_name =**] **'***new_name***'**  
+ [  **@new_name =**] **"***новое_имя***"**  
  Новое имя предупреждения. Имя должно быть уникальным. *новое_имя* — **sysname**, значение по умолчанию NULL.  
   
- [  **@enabled =**] *включена*  
+ [ **@enabled =**] *enabled*  
  Указывает, включено ли предупреждение (**1**) или не включено (**0**). *включить* — **tinyint**, значение по умолчанию NULL. Сработать может только активированное предупреждение.  
   
  [ **@message_id =**] *message_id*  
  Новое сообщение или номер ошибки, определяющие предупреждение. Как правило *message_id* соответствует номеру ошибки в **sysmessages** таблицы. *message_id* — **int**, значение по умолчанию NULL. Сообщение, код может использоваться только в том случае, если уровень серьезности для предупреждения является **0**.  
   
- [ **@severity =**] *severity*  
+ [  **@severity =**] *серьезности*  
  Новый уровень серьезности (от **1** через **25**) для определения предупреждения. Любой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщение, отправленное в журнал приложений Windows с заданным уровнем серьезности, будет активировать предупреждение. *Серьезность* — **int**, значение по умолчанию NULL. Уровень серьезности может использоваться только в том случае, если параметр идентификатор сообщения для предупреждения равен **0**.  
   
  [ **@delay_between_responses =**] *delay_between_responses*  
  Новый период ожидания (в секундах) между ответами на предупреждение. *delay_between_responses* — **int**, значение по умолчанию NULL.  
   
- [ **@notification_message =**] **'***notification_message***'**  
+ [  **@notification_message =**] **"***notification_message***"**  
  Измененный текст дополнительного сообщения, переданного оператору как часть сообщения электронной почты, **net send**, или на пейджер. *notification_message* — **nvarchar(512)**, значение по умолчанию NULL.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
@@ -111,10 +111,10 @@ sp_update_alert
  [ **@job_id =**] *job_id*  
  Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL. Если *job_id* указано, *job_name* должен быть опущен.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя задания, выполняющегося при срабатывании данного предупреждения. *job_name* — **sysname**, значение по умолчанию NULL. Если *job_name* указано, *job_id* должен быть опущен.  
   
- [ **@occurrence_count =** ] *occurrence_count*  
+ [  **@occurrence_count =** ] *occurrence_count*  
  Сбрасывает количество появлений предупреждения. *occurrence_count* — **int**, значение по умолчанию NULL и может быть задано только в **0**.  
   
  [ **@count_reset_date =**] *count_reset_date*  
@@ -138,13 +138,13 @@ sp_update_alert
  [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  Зарезервировано.  
   
- [ **@performance_condition =**] **'***performance_condition***'**  
+ [  **@performance_condition =**] **"***performance_condition***"**  
  Значение, выраженное в формате **"***itemcomparatorvalue***"**. *performance_condition* — **nvarchar(512)**, значение по умолчанию NULL и состоит из следующих элементов.  
   
 |Элемент формата|Описание|  
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
-|*Оператор сравнения*|Один из этих операторов:  **>** ,  **<** ,**=**|  
+|*Оператор сравнения*|Один из этих операторов: **>**, **<**, **=**|  
 |*Value*|Числовое значение счетчика|  
   
  [  **@category_name =**] **"***категории***"**  
@@ -159,7 +159,7 @@ sp_update_alert
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Только **sysmessages** записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] в журнале приложений Windows могут запускать оповещение.  
   
  **Хранимая процедура sp_update_alert** изменяет только те предупреждения параметры, для которых параметр заданы значения. Если параметр пропущен, сохраняется текущая настройка.  
@@ -182,7 +182,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

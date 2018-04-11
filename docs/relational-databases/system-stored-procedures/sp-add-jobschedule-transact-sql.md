@@ -1,16 +1,16 @@
 ---
-title: "sp_add_jobschedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_add_jobschedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Идентификационный номер задания, которому добавляется расписание. *Аргумент job_id* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***job_name***"**  
  Имя задания, которому добавляется расписание. *job_name* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **"***имя***"**  
  Имя расписания. *имя* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -126,7 +126,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* показывает вхождения интервалов. Например если *frequency_relative_interval* равно **2**, *frequency_type* равно **32**, и *frequency_ интервал* равно **3**, планируемые задания будут выполняться во второй вторник каждого месяца.  
   
- [ **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
+ [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
  Число недель или месяцев между запланированными выполнениями задания. *frequency_recurrence_factor* используется только в том случае, если *frequency_type* равно **8**, **16**, или **32**. *frequency_recurrence_factor* — **int**, значение по умолчанию 0.  
   
  [ **@active_start_date=** ] *active_start_date*  
@@ -143,10 +143,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_end_time=***active_end_time*  
  Время в любой день между *active_start_date* и *active_end_date* окончания выполнения задания. *active_end_time* — **int**, не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=***schedule_id***выходных данных**  
  Идентификационный номер, присваиваемый учетной записи-посреднику после успешного создания. *schedule_id* является выходной переменной типа **int**, не имеет значения по умолчанию.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] *schedule_uid *** выходных данных**  
  Уникальный идентификатор для расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -155,7 +155,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы добавить расписание задания, используйте **sp_add_schedule** для создания расписания и **sp_attach_schedule** присоединение расписания к заданию.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -185,11 +185,11 @@ EXEC msdb.dbo.sp_add_jobschedule
  [Создание и присоединение расписаний к заданиям](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [Планирование задания](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Создание расписания](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

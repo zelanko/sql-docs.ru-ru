@@ -1,16 +1,16 @@
 ---
-title: "Справка F1 для свойств индекса | Документация Майкрософт"
-ms.custom: 
+title: Справка F1 для свойств индекса | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
+caps.latest.revision: 38
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="index-properties-f1-help"></a>Справка F1 свойств индекса
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.lasthandoff: 02/23/2018
  **Удалить**  
  Удаляет выбранный столбец из ключа индекса.  
   
- **вверх**  
+ **Вверх**  
  Перемещает выбранный столбец вверх в сетке ключа индекса.  
   
  **Переместить вниз**  
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/23/2018
 >  Этот параметр недоступен для XML-индексов, а также в случае, если индекс является отключенным кластеризованным индексом.  
   
  **Укажите максимальную степень параллелизма**  
- Ограничивает число процессоров, используемых в одновременном исполнении планов. При значении по умолчанию 0 используется реальное число доступных ЦП. При установке значения 1 создание параллельных планов становится невозможным; при установке значения больше 1 ограничивается максимальное число процессоров, используемых для выполнения одного запроса. Этот параметр становится доступным только в случае, если диалоговое окно находится в состоянии **Перестроение** или **Повторное создание** . Дополнительные сведения см. в статье [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Ограничивает число процессоров, используемых в одновременном исполнении планов. При значении по умолчанию 0 используется реальное число доступных ЦП. При установке значения 1 создание параллельных планов становится невозможным; при установке значения больше 1 ограничивается максимальное число процессоров, используемых для выполнения одного запроса. Этот параметр становится доступным только в случае, если диалоговое окно находится в состоянии **Перестроение** или **Повторное создание** . Дополнительные сведения см. в статье [Задание параметра максимальной степени параллелизма для оптимальной производительности](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Если задано значение, превышающее число доступных ЦП, используется фактическое число доступных ЦП.  
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/23/2018
  **Y-max**  
  Координата по оси Y правого верхнего угла ограничивающего прямоугольника.  
   
-### <a name="general"></a>Общие  
+### <a name="general"></a>Общие сведения  
  **Схемой тесселяции**  
  Указывает схему тесселяции индекса. Поддерживаются следующие схемы тесселяции.  
   

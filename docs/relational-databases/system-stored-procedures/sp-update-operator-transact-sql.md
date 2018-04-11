@@ -1,16 +1,16 @@
 ---
-title: "sp_update_operator (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_update_operator (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,10 +69,10 @@ sp_update_operator
  [ @enabled=] *включена*  
  Число, указывающее текущее состояние оператора (**1** включенный в настоящее время **0** в противном случае). *включить* — **tinyint**, значение по умолчанию NULL. Если оператор не включен, он не будет получать предупреждающих оповещений.  
   
- [ @email_address=] '*email_address*"  
+ [ @email_address=] '*email_address*'  
  Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* — **nvarchar(100)**, значение по умолчанию NULL.  
   
- [ @pager_address=] '*pager_number*"  
+ [ @pager_address=] '*pager_number*'  
  Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_number* — **nvarchar(100)**, значение по умолчанию NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
@@ -106,7 +106,7 @@ sp_update_operator
 |**32**|Пятница|  
 |**64**|Суббота|  
   
- [ @netsend_address=] '*netsend_address*"  
+ [ @netsend_address=] '*netsend_address*'  
  Сетевой адрес оператора, которому посылается сетевое сообщение. *netsend_address*— **nvarchar(100)**, значение по умолчанию NULL.  
   
  [ @category_name=] '*категории*"  
@@ -115,7 +115,7 @@ sp_update_operator
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Инструкцию sp_update_operator нужно выполнять из базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -140,9 +140,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [Хранимая процедура sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [Хранимая процедура sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
