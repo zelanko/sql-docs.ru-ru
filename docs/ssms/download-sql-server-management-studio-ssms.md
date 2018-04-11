@@ -1,7 +1,7 @@
 ---
 title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 04/06/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 014067623255c257ee611b8be8a0b8f49f5e57bc
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -152,7 +152,7 @@ SSMS 17.6 — это новейшая версия SQL Server Management Studi
 
 Ниже перечислены проблемы и ограничения в выпуске 17.6.
 
-В настоящее время известных проблем нет.
+Существует известная проблема, когда SSMS 17.6 аварийно завершает работу при настройке расписания в плане обслуживания.
 
 
 ## <a name="previous-releases"></a>Предыдущие выпуски
