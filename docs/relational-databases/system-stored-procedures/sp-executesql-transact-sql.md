@@ -1,16 +1,16 @@
 ---
-title: "sp_executesql (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_executesql (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_executesql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,15 +56,15 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>Аргументы  
  [ @stmt=] *инструкции*  
- Строка в Юникоде, содержащий [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакета. @stmtдолжен быть константой или переменной в Юникоде. Более сложные выражения Юникода, например объединение двух строк с помощью оператора +, недопустимы. Символьные константы недопустимы. Если константа в Юникоде указывается, она должна начинаться с префикса **N**. Например, константа Юникода **N 'sp_who'** является допустимым, а символьная константа **'sp_who'** не является. Размер строки ограничивается только доступной серверу баз данных памятью. На 64-разрядных серверах размер строки ограничен 2 ГБ, максимальный размер **nvarchar(max)**.  
+ Строка в Юникоде, содержащий [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакета. @stmt должен быть константой или переменной в Юникоде. Более сложные выражения Юникода, например объединение двух строк с помощью оператора +, недопустимы. Символьные константы недопустимы. Если константа в Юникоде указывается, она должна начинаться с префикса **N**. Например, константа Юникода **N 'sp_who'** является допустимым, а символьная константа **'sp_who'** не является. Размер строки ограничивается только доступной серверу баз данных памятью. На 64-разрядных серверах размер строки ограничен 2 ГБ, максимальный размер **nvarchar(max)**.  
   
 > [!NOTE]  
->  @stmtможет содержать параметры, называющиеся аналогично именам переменных, например:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt может содержать параметры, называющиеся аналогично именам переменных, например: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Каждый параметр, включенный в аргумент @stmt, должен иметь соответствующую запись в списке определений параметров @params и в списке значений параметров.  
   
- [ @params=] N'@*parameter_name**data_type* [,...*n* ] '  
- Строка, содержащая определения всех параметров, внедренных в @stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n*заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в @stmtmust определяться в @params. Если инструкция или пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в аргументе @stmt не содержат параметров, @params может отсутствовать. Этот аргумент по умолчанию принимает значение NULL.  
+ [ @params=] N'@*parameter_name ** data_type* [,... *n* ] "  
+ Строка, содержащая определения всех параметров, внедренных в @stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, означающий определения дополнительных параметров. Каждый параметр, указанный в @stmtmust определяться в @params. Если инструкция или пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в аргументе @stmt не содержат параметров, @params может отсутствовать. Этот аргумент по умолчанию принимает значение NULL.  
   
  [ @param1=] '*значение1*"  
  Значение для первого параметра, определенного в строке параметров. Это значение может быть константой или переменной в Юникоде. Каждому параметру, указанному в @stmt, должно соответствовать значение. Если инструкция или пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в @stmt не содержат параметров, список значений может отсутствовать.  
@@ -140,7 +140,7 @@ SELECT @max_title;
   
 -   Целочисленный параметр определен в собственном формате. Приведение к Юникоду не требуется.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -240,7 +240,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>Г. Выполнение простой инструкции SELECT  
  В следующем примере создается и выполняется простая инструкция `SELECT`, содержащая внедренный параметр с именем `@level`.  
@@ -257,7 +257,7 @@ EXECUTE sp_executesql
   
  Дополнительные примеры см. в разделе [sp_executesql (Transact-SQL)](http://msdn.microsoft.com/library/ms188001.aspx).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
