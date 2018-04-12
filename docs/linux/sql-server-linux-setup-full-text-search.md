@@ -1,6 +1,6 @@
 ---
-title: "Установка SQL Server Full-Text Search в Linux | Документы Microsoft"
-description: "В этой статье описывается установка SQL Server Full-Text Search в Linux."
+title: Установка SQL Server Full-Text Search в Linux | Документы Microsoft
+description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
@@ -98,7 +98,7 @@ sudo zypper update mssql-server-fts
 | Арабский | 1025 |
 | Bengali (India) | 1093 |
 | Букмол | 1044 |
-| Бразильский португальский | 1046 |
+| Португальский (Бразилия) | 1046 |
 | British English | 2057 |
 | Болгарский | 1026 |
 | Каталонский | 1027 |

@@ -1,16 +1,16 @@
 ---
-title: "TRY_PARSE (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: TRY_PARSE (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRY_PARSE_TSQL
@@ -20,7 +20,7 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -85,12 +85,12 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Числовой|real|Один|NumberStyles.Float|  
 |Числовой|smallmoney|Decimal|NumberStyles.Currency|  
 |Числовой|money|Decimal|NumberStyles.Currency|  
-|Дата и время|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|date|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
   
  **Дополнительные сведения о параметре культуры**  
   
@@ -125,7 +125,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Эстонский|1061|Et-EE|  
 |latviešu|Латышский|1062|lv-LV|  
 |lietuvių|Литовский|1063|lt-LT|  
-|Português (Brasil)|Бразильский португальский|1046|pt-BR|  
+|Português (Brasil)|Португальский (Бразилия)|1046|pt-BR|  
 |繁體中文|Китайский (традиционный)|1028|zh-TW|  
 |한국어|Корейский|1042|Ko-KR|  
 |简体中文|Китайский (упрощенный)|2052|zh-CN|  
@@ -190,9 +190,9 @@ False
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Синтаксический анализ &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)   
- [Функции преобразования &#40; Transact-SQL &#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [Синтаксический анализ & #40; Transact-SQL & #41;](../../t-sql/functions/parse-transact-sql.md)   
+ [Функции преобразования & #40; Transact-SQL & #41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
+ [TRY_CONVERT & #40; Transact-SQL & #41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

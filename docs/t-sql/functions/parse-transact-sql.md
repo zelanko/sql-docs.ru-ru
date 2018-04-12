@@ -1,16 +1,16 @@
 ---
-title: "Синтаксический анализ (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Синтаксический анализ (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PARSE
@@ -20,7 +20,7 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -91,12 +91,12 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Числовой|real|Один|NumberStyles.Float|  
 |Числовой|smallmoney|Decimal|NumberStyles.Currency|  
 |Числовой|money|Decimal|NumberStyles.Currency|  
-|Дата и время|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|date|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
   
  **Дополнительные сведения о параметре культуры**  
   
@@ -131,7 +131,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Эстонский|1061|Et-EE|  
 |latviešu|Латышский|1062|lv-LV|  
 |lietuvių|Литовский|1063|lt-LT|  
-|Português (Brasil)|Бразильский португальский|1046|pt-BR|  
+|Português (Brasil)|Португальский (Бразилия)|1046|pt-BR|  
 |繁體中文|Китайский (традиционный)|1028|zh-TW|  
 |한국어|Корейский|1042|Ko-KR|  
 |简体中文|Китайский (упрощенный)|2052|zh-CN|  
