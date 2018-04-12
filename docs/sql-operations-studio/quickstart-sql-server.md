@@ -1,6 +1,6 @@
 ---
-title: "Краткое руководство: Подключение и отправку запросов SQL Server с помощью операций SQL Studio (Предварительная версия) | Документы Microsoft"
-description: "Краткого руководства показано, как использовать Studio операций SQL (Предварительная версия) для подключения к SQL Server и выполнить запрос"
+title: 'Краткое руководство: Подключение и отправку запросов SQL Server с помощью SQL Operations Studio (preview) | Документы Microsoft'
+description: Краткого руководства показано, как использовать SQL Operations Studio (preview) для подключения к SQL Server и выполнить запрос
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ ms.lasthandoff: 03/09/2018
 ## <a name="connect-to-a-sql-server"></a>Подключиться к SQL Server
 
    
-1. Запуск  **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. При первом запуске  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  **подключения** откроется диалоговое окно. Если **подключения** не открывается диалоговое окно, нажмите кнопку **новое подключение** значок в **СЕРВЕРЫ** страницы:
+1. Запуск **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. При первом запуске *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **подключения** откроется диалоговое окно. Если **подключения** не открывается диалоговое окно, нажмите кнопку **новое подключение** значок в **СЕРВЕРЫ** страницы:
    
    ![Значок нового подключения](media/quickstart-sql-server/new-connection-icon.png)
 

@@ -1,6 +1,6 @@
 ---
-title: "Краткое руководство: Подключение и запроса к базе данных Azure SQL с помощью операций SQL Studio (Предварительная версия) | Документы Microsoft"
-description: "Краткого руководства показано, как использовать для подключения к базе данных SQL и выполнить запрос SQL Studio операций (Предварительная версия)"
+title: 'Краткое руководство: Подключение и запроса к базе данных Azure SQL с помощью SQL Operations Studio (preview) | Документы Microsoft'
+description: Краткого руководства показано, как использовать для подключения к базе данных SQL и выполнить запрос SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Краткое руководство: Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения и запроса базы данных Azure SQL
 
-Это краткое руководство демонстрирует использование  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  для подключения к базе данных Azure SQL, а затем использовать инструкции Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
+Это краткое руководство демонстрирует использование *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* для подключения к базе данных Azure SQL, а затем использовать инструкции Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/09/2018
 
    ![Значок нового подключения](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Если ваш сервер не имеет правило брандмауэра, разрешающее SQL Studio операций для подключения, **создать новое правило брандмауэра** открывается форма. Заполните форму для создания нового правила брандмауэра. Дополнительные сведения см. в разделе [правила брандмауэра](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Если ваш сервер не имеет правило брандмауэра, разрешающее SQL Operations Studio для подключения, **создать новое правило брандмауэра** открывается форма. Заполните форму для создания нового правила брандмауэра. Дополнительные сведения см. в разделе [правила брандмауэра](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Новое правило брандмауэра](media/quickstart-sql-database/firewall.png)  
 

@@ -1,6 +1,6 @@
 ---
-title: "Создание и Настройка сочетаний клавиш в Studio операций SQL (Предварительная версия) | Документы Microsoft"
-description: "Дополнительные сведения о создании и настройке сочетаний клавиш в Studio операций SQL (Предварительная версия)."
+title: Создание и Настройка сочетаний клавиш в SQL Operations Studio (preview) | Документы Microsoft
+description: Дополнительные сведения о создании и настройке сочетаний клавиш в SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

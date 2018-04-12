@@ -1,6 +1,6 @@
 ---
-title: Использование проверки подлинности Active Directory (Kerberos) при соединении с SQL Studio операций (Предварительная версия) | Документы Microsoft
-description: Включение Kerberos для использования проверки подлинности Active Directory для операций SQL Studio (Предварительная версия)
+title: Использование проверки подлинности Active Directory (Kerberos) при соединении с SQL Operations Studio (preview) | Документы Microsoft
+description: Включение Kerberos для использования проверки подлинности Active Directory для SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified

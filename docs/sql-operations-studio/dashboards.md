@@ -1,6 +1,6 @@
 ---
-title: "Быстрый доступ к аналитики и общие задачи в Studio операций SQL (Предварительная версия) | Документы Microsoft"
-description: "Сведения по отображению информативные мини-приложения в Studio операций SQL (Предварительная версия)."
+title: Быстрый доступ к аналитики и общие задачи в SQL Operations Studio (preview) | Документы Microsoft
+description: Сведения по отображению информативные мини-приложения в SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

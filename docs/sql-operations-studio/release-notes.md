@@ -1,6 +1,6 @@
 ---
-title: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft
-description: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия)
+title: Заметки о выпуске Microsoft SQL Operations Studio (preview) | Документы Microsoft
+description: Заметки о выпуске Microsoft SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске Studio операций SQL (Предварительная версия)
+# <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске SQL Operations Studio (preview)
 
 **[Загрузите марта общедоступной предварительной версии](download.md)**
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/28/2018
 - Улучшения модели расширяемости панели мониторинга для поддержки области конфигурации и аналитики с вкладками.
    - Диспетчер расширений позволяет простой приобретения расширений.
    - Расширения мониторинга для sp_whoisactive из [whoisactive.com](http://www.whoisactive.com).
-   - Дополнительные сведения см. в разделе [расширения функциональности операции SQL Studio](extensions.md).
+   - Дополнительные сведения см. в разделе [расширения функциональности SQL Operations Studio](extensions.md).
 - Добавьте дополнительные [API-интерфейсов расширения для подключения и объект explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) управления.
 - Исправления важных клиентов по-прежнему [GitHub проблемы](https://github.com/Microsoft/sqlopsstudio/issues).
 

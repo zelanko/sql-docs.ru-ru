@@ -1,6 +1,6 @@
 ---
-title: "Что такое Studio операций SQL (Предварительная версия) | Документы Майкрософт"
-description: "Studio операций SQL (Предварительная версия) — это бесплатное, упрощенная средство, работающей в Windows, macOS и Linux, для управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure; везде, где они выполняются."
+title: Что такое SQL Operations Studio (preview) | Документы Майкрософт
+description: SQL Operations Studio (preview) — это бесплатное, упрощенная средство, работающей в Windows, macOS и Linux, для управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure; везде, где они выполняются.
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

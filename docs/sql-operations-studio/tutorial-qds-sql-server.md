@@ -1,6 +1,6 @@
 ---
-title: "Учебник: Включить пять самых медленных запросов пример мини-приложения - Studio операций SQL (Предварительная версия) | Документы Microsoft"
-description: "Этот учебник демонстрирует включение пять самых медленных запросов образец мини-приложения на панель мониторинга базы данных."
+title: 'Учебник: Включить пять самых медленных запросов пример мини-приложения - SQL Operations Studio (preview) | Документы Microsoft'
+description: Этот учебник демонстрирует включение пять самых медленных запросов образец мини-приложения на панель мониторинга базы данных.
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

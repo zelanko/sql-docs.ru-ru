@@ -1,6 +1,6 @@
 ---
-title: "Включить или отключить сбор данных об использовании и приводит к сбою создания отчетов для операций SQL Studio (Предварительная версия) | Документы Microsoft"
-description: "В этой статье описывается управление, если сбоев, данные отчетов и об использовании собираются и отправляются в корпорацию Майкрософт."
+title: Включить или отключить сбор данных об использовании и приводит к сбою создания отчетов для SQL Operations Studio (preview) | Документы Microsoft
+description: В этой статье описывается управление, если сбоев, данные отчетов и об использовании собираются и отправляются в корпорацию Майкрософт.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

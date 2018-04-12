@@ -1,4 +1,4 @@
-# [SQL Operations Studio (предварительная версия)](what-is.md)
+# [SQL Operations Studio (preview)](what-is.md)
 # [Установка](download.md)
 # [Заметки о выпуске](release-notes.md)
 # Краткие руководства
@@ -24,7 +24,7 @@
 ## [Сбор данных об использовании](usage-data-collection.md)
 # Ресурсы
 ## [Справочник по Transact-SQL](../t-sql/language-reference.md)
-## [Репозиторий GitHub для SQL Operations Studio (предварительная версия)](https://www.github.com/Microsoft/SqlOpsStudio)
+## [Репозиторий GitHub для SQL Operations Studio (preview)](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [Блог по SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [Новые и обновленные Статьи](new-updated-sql-operations-studio.md)
 # [Вопросы и ответы](faq.md)

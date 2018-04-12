@@ -1,6 +1,6 @@
 ---
-title: "Операции SQL Studio пользователя (Предварительная версия) и параметры рабочей области | Документы Microsoft"
-description: "Как изменить Studio операций SQL (Предварительная версия) пользователя и параметры рабочей области."
+title: SQL Operations Studio (preview) пользователя и параметры рабочей области | Документы Microsoft
+description: Как изменить SQL Operations Studio (preview) пользователя и параметры рабочей области.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>Горячий выхода
 
-Операции SQL Studio запоминает несохраненные изменения в файлы при выходе по умолчанию. Это то же, что функция горячей выхода в Visual Studio Code.
+SQL Operations Studio запоминает несохраненные изменения в файлы при выходе по умолчанию. Это то же, что функция горячей выхода в Visual Studio Code.
 
 По умолчанию горячей выхода — off. Включить активную выход путем редактирования `files.hotExit` параметр. Дополнительные сведения см. в разделе [горячей выхода (в документации по Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

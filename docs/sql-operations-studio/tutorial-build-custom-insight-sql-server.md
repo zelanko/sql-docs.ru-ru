@@ -1,6 +1,6 @@
 ---
-title: "Учебник: Построение пользовательского представления мини-приложение в Studio операций SQL (Предварительная версия) | Документы Microsoft"
-description: "Демонстрирует построение пользовательского представления мини-приложения и добавить их к панели мониторинга сервера и базы данных в SQL Studio операций (Предварительная версия)."
+title: 'Учебник: Построение пользовательского представления мини-приложение в SQL Operations Studio (preview) | Документы Microsoft'
+description: Демонстрирует построение пользовательского представления мини-приложения и добавить их к панели мониторинга сервера и базы данных в SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

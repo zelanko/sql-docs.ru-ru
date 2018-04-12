@@ -1,6 +1,6 @@
 ---
-title: "Учебник: Включение таблицы места использования образца insight мини-приложения в Studio операций SQL (Предварительная версия) | Документы Microsoft"
-description: "Этот учебник демонстрирует включение таблицы места использования образца insight мини-приложения на панель мониторинга базы данных SQL Studio операций (Предварительная версия)."
+title: 'Учебник: Включение таблицы места использования образца insight мини-приложения в SQL Operations Studio (preview) | Документы Microsoft'
+description: Этот учебник демонстрирует включение таблицы места использования образца insight мини-приложения на панель мониторинга базы данных SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

@@ -1,6 +1,6 @@
 ---
-title: Обновлено - документами операций SQL Studio | Документы Microsoft
-description: Отображение фрагментов обновленное содержимое для последних измененных в документацию, для операций SQL Studio.
+title: Обновлено - документами SQL Operations Studio | Документы Microsoft
+description: Отображение фрагментов обновленное содержимое для последних измененных в документацию, для SQL Operations Studio.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,7 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Обновление новых и недавно: docs Studio операций SQL
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Обновление новых и недавно: docs SQL Operations Studio
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
-- *Предметной области:* &nbsp; **операций SQL Studio**.
+- *Предметной области:* &nbsp; **SQL Operations Studio**.
 
 
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/08/2018
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Заметки о выпуске Studio операций SQL (Предварительная версия)](release-notes.md)
+1. [Заметки о выпуске SQL Operations Studio (preview)](release-notes.md)
 
 
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/08/2018
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Загрузите и установите Studio операций SQL (Предварительная версия)](#TitleNum_1)
+1. [Загрузите и установите SQL Operations Studio (preview)](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/08/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Загрузите и установите Studio операций SQL (Предварительная версия)](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Загрузите и установите SQL Operations Studio (preview)](download.md)
 
 *Обновлено: 18.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -99,20 +99,20 @@ ms.lasthandoff: 04/08/2018
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
-**Получение операций SQL Studio (Предварительная версия) для Windows**
+**Получение SQL Operations Studio (preview) для Windows**
 
 
-Этот выпуск Studio операций SQL (Предварительная версия) включает стандартные возможности установщика Windows и .zip.
+Этот выпуск SQL Operations Studio (preview) включает стандартные возможности установщика Windows и .zip.
 
 **Установщик**
 
-1. Загрузите и запустите [установщик Studio операций SQL (Предварительная версия) для Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Запуск приложения SQL Studio операций (Предварительная версия).
+1. Загрузите и запустите [установщик SQL Operations Studio (preview) для Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Запуск приложения SQL Operations Studio (preview).
 
 
 **ZIP-файл**
 
-1. Загрузить [.zip Studio операций SQL (Предварительная версия) для Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Загрузить [.zip SQL Operations Studio (preview) для Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 
 
 
