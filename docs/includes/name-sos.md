@@ -1,1 +1,1 @@
-<Token>Microsoft SQL Studio операций (Предварительная версия)</Token>
+<Token>Microsoft SQL Operations Studio (Предварительная версия)</Token>
