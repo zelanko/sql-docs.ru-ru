@@ -1,16 +1,16 @@
 ---
-title: "DBCC INPUTBUFFER (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/14/2017
+title: DBCC INPUTBUFFER (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 
+caps.latest.revision: 51
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f3292b45e9a0e73754bc4f3247c18c431f11271a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DBCC INPUTBUFFER возвращает набор строк со следующ�
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Тип события. Может быть **RPC Event** или **Language Event**. Если последние события не обнаружены, на выходе будет **No Event**.|  
-|**Параметры**|**smallint**|0 = Текст<br /><br /> 1- *n* = параметры|  
+|**Параметры**|**smallint**|0 = Текст<br /><br /> 1- *n* = параметры|  
 |**EventInfo**|**nvarchar(4000)**|Если столбец **EventType** имеет значение RPC, столбец **EventInfo** содержит лишь имя процедуры. Для значения Language столбца **EventType** выводятся только первые 4000 символов события.|  
   
 Например, в случае, когда последним событием в буфере было DBCC INPUTBUFFER(11), инструкция DBCC INPUTBUFFER возвращает следующий результирующий набор.
@@ -104,7 +104,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 SELECT @@spid;  
 ```
   
-В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней Standard и Basic требуется учетная запись администратора [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней "Премиум" и "Критически важный для бизнеса" необходимо разрешение VIEW DATABASE STATE в базе данных. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] для уровней "Стандартный", "Базовый" и "Общего назначения" требуется учетная запись администратора [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
 ## <a name="examples"></a>Примеры  
 В следующем примере инструкция `DBCC INPUTBUFFER` выполняется по второму соединению, в то время как по ранее установленному соединению выполняется длинная транзакция.

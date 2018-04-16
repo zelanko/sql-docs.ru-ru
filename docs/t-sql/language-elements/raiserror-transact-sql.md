@@ -1,16 +1,16 @@
 ---
-title: "RAISERROR (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: RAISERROR (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6102463ccd42e8057349b4480aa71d818aaafedf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 >  Эти спецификации типа основаны на изначально определенных доя функции **printf** в стандартной библиотеке C. Спецификации типов, используемые в строках сообщений инструкции RAISERROR, сопоставляются с типами данных языка [!INCLUDE[tsql](../../includes/tsql-md.md)], а спецификации, используемые в функции **printf**, сопоставляются с типами данных языка C. Спецификации типов, используемые в функции **printf**, не поддерживаются инструкцией RAISERROR, если в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] нет типов данных, схожих с соответствующими типами данных языка C. Например, спецификация *%p* для указателей не поддерживается инструкцией RAISERROR, так как в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] нет типа данных для указателей.  
   
 > [!NOTE]  
->  Для преобразования какого-либо значения в тип данных [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint** необходимо указать спецификацию **%I64d**.  
+>  Для преобразования какого-либо значения в тип данных [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** нужно указать спецификацию **%I64d**.  
   
- **@** *local_variable*  
- Переменная любого допустимого типа данных для символов, содержащая строку того же формата, что и строка *msg_str*.Аргумент  **@***local_variable* должен иметь тип **char** или **varchar** либо должен неявно преобразовываться в эти типы данных.  
+ *@local_variable*  
+ Переменная любого допустимого типа данных для символов, содержащая строку того же формата, что и строка *msg_str*. Аргумент *@local_variable* должен иметь тип **char** или **varchar** либо должен неявно преобразовываться в эти типы данных.  
   
  *severity*  
  Определенная пользователем степень серьезности, связанный с этим сообщением. Если при помощи аргумента *msg_id* вызываются пользовательские сообщения, созданные процедурой sp_addmessage, уровень серьезности, указанный в инструкции RAISERROR, заменяет уровень серьезности, указанный в процедуре sp_addmessage.  
@@ -295,13 +295,13 @@ GO
  [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [xp_logevent (Transact-SQL)](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
+ [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL)](../../t-sql/functions/error-state-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   

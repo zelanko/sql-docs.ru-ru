@@ -1,6 +1,6 @@
 ---
-title: "Управление SQL Server для Linux | Документы Microsoft"
-description: "В этой статье ссылки на общие задачи управления и средства для SQL Server под управлением Linux."
+title: Управление SQL Server для Linux | Документы Microsoft
+description: В этой статье ссылки на общие задачи управления и средства для SQL Server под управлением Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (Предварительная версия)
 
-Новые операции Studio Microsoft SQL (Предварительная версия) — это средство кросс платформенных управления SQL Server. Дополнительные сведения см. в разделе [Studio операций Microsoft SQL (Предварительная версия)](../sql-operations-studio/what-is.md).
+Новые операции Microsoft SQL Operations Studio (preview) — это средство кросс платформенных управления SQL Server. Дополнительные сведения см. в разделе [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio в Windows
 
