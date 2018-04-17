@@ -1,16 +1,16 @@
 ---
-title: "sp_browsereplcmds (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_browsereplcmds (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e7a2a18736c95d11447d2330ffbe48c99da3a2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2e7bc94efc680663436b0cc77692c35aaa36bac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Указывает, если команды с указанным *article_id* возвращаются. *article_id* — **int**, значение по умолчанию NULL.  
   
  [  **@command_id =**] *command_id*  
- Расположение команды в [MSrepl_commands &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указано, все остальные параметры должны быть также, указаны и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
+ Расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указано, все остальные параметры должны быть также, указаны и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
  Указывает, что возвращены только команды для конкретного агента репликации. *agent_id* — **int**, значение по умолчанию NULL.  
@@ -82,14 +82,14 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**varbinary(16)**|Последовательный номер команды.|  
 |**originator_srvname**|**sysname**|Сервер, на котором была начата транзакция.|  
 |**originator_db**|**sysname**|База данных, в которой была начата транзакция.|  
 |**article_id**|**int**|Идентификатор статьи.|  
 |**type**|**int**|Тип команды.|  
-|**partial_command**|**bit**|Обозначает, является ли эта команда частичной.|  
+|**partial_command**|**бит**|Обозначает, является ли эта команда частичной.|  
 |**hashKey**|**int**|Только для внутреннего применения.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
@@ -102,12 +102,12 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="remarks"></a>Замечания  
  **sp_browsereplcmds** используется в репликации транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или члены **db_owner** или **replmonitor** фиксированных ролей базы данных в базе данных распространителя могут выполнять процедуру **sp_browsereplcmds**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

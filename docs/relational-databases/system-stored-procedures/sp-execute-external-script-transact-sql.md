@@ -2,7 +2,7 @@
 title: sp_execute_external_script (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,12 +63,12 @@ sp_execute_external_script
  @script = N'*сценарий*"  
  Внешний язык сценария, указанного как литерал или ВВОД. *сценарий* — **nvarchar(max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*' ]  
+ [ @input_data_1_name = N'*input_data_1_name*"]  
  Задает имя переменной, которая используется для представления запроса, определенного по @input_data_1. Тип данных переменной в внешнего скрипта зависит от языка. В случае R Входная переменная является кадра данных. В случае Python он должен быть табличной. *input_data_1_name* — **sysname**.  
   
  Значение по умолчанию — `InputDataSet`.  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*"]  
  Задает входные данные, используемые внешних скриптов в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Тип данных *input_data_1* — **nvarchar(max)**.
   
  [ @output_data_1_name = N'*output_data_1_name*"]  
@@ -90,7 +90,7 @@ sp_execute_external_script
  [ @parameter1 = "*значение1*" [OUT | ВЫВОД] [,.. .n]]  
  Список значений для входных параметров, используемых внешних скриптов.  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 
 Используйте **sp_execute_external_script** для выполнения сценариев, написанных на поддерживаемом языке. В настоящее время поддерживаемые языки, R для SQL Server 2016 и Python и R для 2017 г. SQL Server. 
 
@@ -129,11 +129,11 @@ sp_execute_external_script
   
 -   **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **time**  
+-   **datetime2**, **datetimeoffset**, **времени**  
   
 -   **sql_variant**  
   
--   **text**, **image**  
+-   **текст**, **изображения**  
   
 -   **xml**  
   

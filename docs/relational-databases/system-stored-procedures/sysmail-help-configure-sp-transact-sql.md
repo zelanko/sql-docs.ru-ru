@@ -1,16 +1,16 @@
 ---
-title: "sysmail_help_configure_sp (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmail_help_configure_sp (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f768cd5e1cbbbcfa3f5b74d7ae52d2e9f357e1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 49bfb41a364ab5c82b42026d23d0768f4297a9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@parameter_name** = ] **'***parameter_name***'**  
- Имя параметра конфигурации, значение которого нужно получить. Если указано, значение параметра конфигурации возвращается в  **@parameter_value**  ВЫХОДНОЙ параметр. Если аргумент  **@parameter_name**  указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации компонента Database Mail в экземпляре.  
+ [**@parameter_name** =] **"***parameter_name***"**  
+ Имя параметра конфигурации, значение которого нужно получить. Если указано, значение параметра конфигурации возвращается в **@parameter_value** ВЫХОДНОЙ параметр. Если аргумент **@parameter_name** указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации компонента Database Mail в экземпляре.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если аргумент  **@parameter_name**  указан, то возвращает результирующий набор со следующими столбцами.  
+ Если аргумент **@parameter_name** указан, то возвращает результирующий набор со следующими столбцами.  
   
 ||||  
 |-|-|-|  
 |Имя столбца|Тип данных|Описание|  
 |**paramName**|**nvarchar(256)**|Имя параметра конфигурации.|  
-|**paramvalue**|**nvarchar(256)**|Значение параметра конфигурации.|  
+|**ParamValue**|**nvarchar(256)**|Значение параметра конфигурации.|  
 |**Описание**|**nvarchar(256)**|Описание параметра конфигурации.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Хранимая процедура **sysmail_help_configure_sp** перечислены текущие параметры конфигурации компонента Database Mail для экземпляра.  
   
- Когда  **@parameter_name**  указан, но указан без выходного параметра, для  **@parameter_value** , эта хранимая процедура не возвращает результат.  
+ Когда **@parameter_name** указан, но указан без выходного параметра, для **@parameter_value**, эта хранимая процедура не возвращает результат.  
   
  Хранимая процедура **sysmail_help_configure_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедура должна вызываться с трехкомпонентным именем, если текущая база данных не **msdb**.  
   
@@ -96,6 +96,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Компонент Database Mail хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

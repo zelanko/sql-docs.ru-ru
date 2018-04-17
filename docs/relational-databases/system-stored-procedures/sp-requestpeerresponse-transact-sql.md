@@ -1,16 +1,16 @@
 ---
-title: "sp_requestpeerresponse (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_requestpeerresponse (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d0a4009c5a6615a000989e2d41f2902ac37535f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 339f3ddd78d506e256b995d3458ac0212e32e720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication** =] **"***публикации***"**  
+ [ **@publication**=] **"***публикации***"**  
  Имя публикации в одноранговой топологии, для которой проверяется состояние. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@description** =] **"***описание***"**  
+ [ **@description**=] **"***описание***"**  
  Определяемые пользователем данные, которые могут использоваться для идентификации отдельных запросов состояния. *Описание* — **nvarchar(4000)**, значение по умолчанию NULL.  
   
- [  **@request_id**  =] *идентификатор_запроса*  
- Возвращает идентификатор нового запроса. *идентификатор_запроса* — **int** и является ВЫХОДНЫМ параметром. Это значение может использоваться при выполнении [sp_helppeerresponses &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) для просмотра всех ответов на запрос состояния.  
+ [ **@request_id** =] *идентификатор_запроса*  
+ Возвращает идентификатор нового запроса. *идентификатор_запроса* — **int** и является ВЫХОДНЫМ параметром. Это значение может использоваться при выполнении [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) для просмотра всех ответов на запрос состояния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -67,11 +67,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
  **sp_requestpeerresponse** не может выполняться внутри пользовательской транзакции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_requestpeerresponse**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_deletepeerrequesthistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_repl_traninfo (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_repl_traninfo (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 62a96943b48eaa3c87924055c47d690e2af3354e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ ms.lasthandoff: 02/03/2018
 |**begin_lsn**|**nvarchar(64)**|Регистрационный номер (LSN) начальной записи транзакции в журнале.|  
 |**commit_lsn**|**nvarchar(64)**|Номер LSN записи в журнале фиксирования транзакции.|  
 |**dbid**|**smallint**|Идентификатор базы данных.|  
-|**rows**|**int**|Идентификатор реплицированной команды в транзакции.|  
+|**Строки**|**int**|Идентификатор реплицированной команды в транзакции.|  
 |**xdesid**|**nvarchar(64)**|Идентификатор транзакции.|  
 |**artcache_table_address**|**varbinary(8)**|Адрес в памяти структуры кэшированной таблицы статьи, использованной в последний раз для данной транзакции.|  
 |**server**|**nvarchar(514)**|Имя сервера.|  
 |**server_len_in_bytes**|**smallint**|Длина символьной строки имени сервера, в байтах.|  
 |**базой данных**|**nvarchar(514)**|Имя базы данных.|  
 |**db_len_in_bytes**|**smallint**|Длина символьной строки имени базы данных, в байтах.|  
-|**originator**|**nvarchar(514)**|Имя сервера, где была создана транзакция.|  
+|**Инициатор**|**nvarchar(514)**|Имя сервера, где была создана транзакция.|  
 |**originator_len_in_bytes**|**smallint**|Длина символьной строки, в байтах, имени сервера, где была создана транзакция.|  
 |**orig_db**|**nvarchar(514)**|Имя базы данных, в которой была создана транзакция.|  
 |**orig_db_len_in_bytes**|**smallint**|Длина символьной строки, в байтах, имени базы данных, в которой была создана транзакция.|  
@@ -78,12 +78,12 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных публикации или базу данных, для которой включена система отслеживания измененных данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Сведения возвращаются только для объектов или таблиц реплицированной базы данных, для которых включена система отслеживания измененных данных и которые загружены в данный момент времени в кэш статьи.  
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления &#40; связанные с репликацией Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
+ [Динамические административные представления, связанные с репликацией &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Динамические административные представления, связанные с системой отслеживания измененных данных (Transact-SQL)](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

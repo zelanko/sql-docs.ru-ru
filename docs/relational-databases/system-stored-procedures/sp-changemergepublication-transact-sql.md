@@ -1,16 +1,16 @@
 ---
-title: "sp_changemergepublication (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_changemergepublication (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f1798cd29ac1ee4afc0d7323866e37711291851
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   
-|Свойство|Значение|Description|  
+|property|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Анонимные подписки разрешены.|  
 ||**false**|Анонимные подписки запрещены.|  
@@ -113,19 +113,19 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Удаляет сведения о публикации из службы Active Directory.|  
 |**replicate_ddl**|**1**|Производится репликация инструкций DDL, выполняемых на издателе.|  
 ||**0**|Репликация инструкций DDL не производится.|  
-|**хранения**||Это **int** , представляющий количество *retention_period_unit* единицы измерения, для которого необходимо сохранить изменения для данной публикации. Если подписка не синхронизирована в течение срока хранения, а ожидающие обработки изменения, которые были бы получены, удалены операцией очистки на стороне распространителя, срок действия подписки истекает, и подписка должна быть создана заново. Максимальный допустимый срок хранения равен числу дней между 31 декабря 9999 года и текущей датой.<br /><br /> Примечание: Срок хранения для публикаций слиянием содержит 24-часовой льготный период для размещения подписчиков в разных часовых поясах.|  
-|**retention_period_unit**|**день**|Срок хранения указан в днях.|  
-||**Неделя**|Срок хранения указан в неделях.|  
-||**месяц**|Срок хранения указан в месяцах.|  
-||**год**|Срок хранения указан в годах.|  
+|**Хранения**||Это **int** , представляющий количество *retention_period_unit* единицы измерения, для которого необходимо сохранить изменения для данной публикации. Если подписка не синхронизирована в течение срока хранения, а ожидающие обработки изменения, которые были бы получены, удалены операцией очистки на стороне распространителя, срок действия подписки истекает, и подписка должна быть создана заново. Максимальный допустимый срок хранения равен числу дней между 31 декабря 9999 года и текущей датой.<br /><br /> Примечание: Срок хранения для публикаций слиянием содержит 24-часовой льготный период для размещения подписчиков в разных часовых поясах.|  
+|**retention_period_unit**|**day**|Срок хранения указан в днях.|  
+||**week**|Срок хранения указан в неделях.|  
+||**month**|Срок хранения указан в месяцах.|  
+||**year**|Срок хранения указан в годах.|  
 |**snapshot_in_defaultfolder**|**true**|Файлы моментального снимка сохранены в папке для моментальных снимков по умолчанию.|  
 ||**false**|Файлы моментальных снимков хранятся в альтернативном каталоге, который задается параметром *alt_snapshot_folder*. Такое сочетание позволяет размещать файлы моментальных снимков одновременно и в каталоге по умолчанию, и в альтернативном каталоге.|  
 |**snapshot_ready**|**true**|Моментальный снимок доступен для публикации.|  
 ||**false**|Моментальный снимок для публикации не доступен.|  
-|**status**|**активный**|Публикация находится в активном состоянии.|  
+|**status**|**Активный**|Публикация находится в активном состоянии.|  
 ||**Неактивные**|Публикация находится в неактивном состоянии.|  
 |**sync_mode**|**собственный** или<br /><br /> **собственный bcp**|Для исходного моментального снимка используются результаты вывода всех таблиц в собственном режиме программы массового копирования.|  
-||**символ**<br /><br /> или **символ bcp**|Для исходного моментального снимка используются результаты вывода всех таблиц в символьном режиме программы массового копирования, что требуется подписчикам, отличным от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**character**<br /><br /> или **символ bcp**|Для исходного моментального снимка используются результаты вывода всех таблиц в символьном режиме программы массового копирования, что требуется подписчикам, отличным от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Примечание: после использования partition_groups, если нужно вернуться к использованию **setupbelongs**и задайте **use_partition_groups = false** в **changemergearticle**, это может быть не неправильно отражено после получения моментального снимка. Триггеры, формируемые моментальным снимком, совместимы с группами секций.<br /><br /> В этом случае достаточно установить неактивное состояние, изменить **use_partition_groups**, а затем установить состояние активной.|**true**|Публикация использует предварительно вычисляемые секции.|  
 ||**false**|Публикация не использует предварительно вычисляемые секции.|  
 |**validate_subscriber_info**||Содержит список функций для получения сведений о подписчике. Затем проверяет условие динамического фильтра, которое используется для подписчика при проверке правильности секционирования данных.|  
@@ -197,14 +197,14 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changemergepublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

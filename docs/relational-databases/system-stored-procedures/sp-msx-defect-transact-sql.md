@@ -1,16 +1,16 @@
 ---
-title: "sp_msx_defect (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_msx_defect (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf63da8bfb0ac882e3d3949a91b848ba689985a6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e1ff62980554c0b6c8593b119520ae2e32da89b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@forced_defection =**] *forced_defection*  
+ [  **@forced_defection =**] *forced_defection*  
  Указывает, следует ли выполнять принудительное исключение в случае, если главный SQLServerAgent надолго потерян по причине невосстановимого **msdb** базы данных или нет **msdb** резервной копии базы данных. *forced_defection*— **бит**, значение по умолчанию **0**, что означает, что принудительное исключение не выполняется. Значение **1** включает принудительное исключение.  
   
  После принудительного исключения, выполнив **sp_msx_defect**, является членом **sysadmin** предопределенной роли сервера на главном SQLServerAgent необходимо запустить следующую команду, чтобы завершить исключение:  
@@ -64,14 +64,14 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Когда **sp_msx_defect** завершается должным образом, будет возвращено сообщение.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователь должен быть членом предопределенной роли сервера **sysadmin** .  
   
 ## <a name="see-also"></a>См. также  
- [sp_msx_enlist &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+ [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

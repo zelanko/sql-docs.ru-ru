@@ -2,7 +2,7 @@
 title: sys.dm_fts_index_population (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cfb07b67f17deeba2c0995ceace90335082cccb
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7fb871ad7a5a2e8a74615ef24cdc31ea3a68774a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,13 +44,13 @@ ms.lasthandoff: 04/05/2018
 |**database_id**|**int**|Идентификатор базы данных, в которой содержится заполняемый полнотекстовый индекс.|  
 |**catalog_id**|**int**|Идентификатор полнотекстового каталога, в котором содержится полнотекстовый индекс.|  
 |**table_id**|**int**|Идентификатор таблицы, в которой содержится заполняемый полнотекстовый индекс.|  
-|**memory_address**|**varbinary(8)**|Адрес внутренней структуры данных в памяти, используемый, чтобы представлять активное заполнение.|  
+|**адрес_памяти**|**varbinary(8)**|Адрес внутренней структуры данных в памяти, используемый, чтобы представлять активное заполнение.|  
 |**population_type**|**int**|Тип заполнения. Это может быть:<br /><br /> 1 = полное заполнение;<br /><br /> 2 = добавочное заполнение на основе отметок времени;<br /><br /> 3 = ручное обновление отслеженных изменений;<br /><br /> 4 = фоновое обновление отслеженных изменений.|  
 |**population_type_description**|**nvarchar(120)**|Описание типа заполнения.|  
 |**is_clustered_index_scan**|**бит**|Указывает, включает ли заполнение просмотр кластеризованных индексов.|  
 |**range_count**|**int**|Число поддиапазонов, на которые распараллелена операция заполнения.|  
 |**completed_range_count**|**int**|Число диапазонов, для которых обработка завершена.|  
-|**outstanding_batch_count**|**int**|Число необработанных пакетов для данного заполнения. Дополнительные сведения см. в разделе [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**счетчик_необработанных_пакетов**|**int**|Число необработанных пакетов для данного заполнения. Дополнительные сведения см. в разделе [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
 |**status**|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Состояние операции заполнения. Примечание: некоторые из состояний являются временными. Это может быть:<br /><br /> 3 = запускается<br /><br /> 5 = выполняется нормально<br /><br /> 7 = обработка остановлена<br /><br /> Например, это состояние появляется в процессе автоматического слияния.<br /><br /> 11 = заполнение прервано<br /><br /> 12 = извлечение данных о семантическом подобии|  
 |**status_description**|**nvarchar(120)**|Описание состояния заполнения.|  
 |**completion_type**|**int**|Состояние завершения данного заполнения.|  

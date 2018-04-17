@@ -1,16 +1,16 @@
 ---
-title: "sp_help_fulltext_system_components (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_fulltext_system_components (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 29ac6d68ff966d037f6f969d7483f3f1113fb127
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -51,10 +52,10 @@ sp_help_fulltext_system_components
  'all'  
  Возвращает сведения для всех полнотекстовых компонентов.  
   
- [ **@component_type=** ] *component_type*  
+ [  **@component_type=** ] *component_type*  
  Указывает тип компонента. *component_type* может принимать одно из следующих действий:  
   
--   **wordbreaker**  
+-   **средство разбиения по словам**  
   
 -   **фильтр**  
   
@@ -77,7 +78,7 @@ sp_help_fulltext_system_components
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> фильтр<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
 |**componentname**|**sysname**|Имя компонента.|  
-|**clsid**|**uniqueidentifier**|Идентификатор класса компонента.|  
+|**Идентификатор CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом **serveradmin** предопределенной роли сервера.|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
 |**Изготовитель**|**sysname**|Имя производителя компонента.|  
@@ -92,7 +93,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **открытый** роли; тем не менее, пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Этот метод очень важен при подготовке к обновлению. Запустите хранимую процедуру в определенной базе данных и используйте результаты, чтобы определить, будет ли определенный каталог затронут обновлением.  
   
 ## <a name="examples"></a>Примеры  
@@ -114,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>В. Определение того, зарегистрировано ли средство разбиения по словам  
- В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере задаются имена параметров,  **@component_type**  и  **@param** .  
+ В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере задаются имена параметров, **@component_type** и **@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -147,6 +148,6 @@ GO
  [Просмотр или изменение зарегистрированных фильтры и средства разбиения по словам](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Компонент Full-Text Search и семантический поиск хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

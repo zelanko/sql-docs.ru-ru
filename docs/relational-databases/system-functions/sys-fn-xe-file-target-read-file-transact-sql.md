@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_xe_file_target_read_file (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6284bd7690c715ed47177b42a5a1f5beb4b4b6a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   Читает файлы, создаваемые асинхронным целевым файловым объектом расширенных событий. Возвращается одно событие в каждой строке в формате XML.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, сформированные в формате XEL и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Расширенные события поддерживают только результаты трассировки в формате XEL. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, сформированные в формате XEL и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Расширенные события поддерживают только результаты трассировки в формате XEL. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,10 +82,10 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Содержимое события в формате XML. Не допускает значение NULL.|  
 |file_name|**nvarchar(260)**|Имя файла, содержащего событие. Не допускает значение NULL.|  
 |file_offset|**bigint**|Смещение блока в файле, содержащем событие. Не допускает значение NULL.|  
-|timestamp_utc|**datetime2**|**Применяется к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время события (по Гринвичу). Не допускает значение NULL.|  
+|timestamp_utc|**datetime2**|**Применимо к**: с [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время события (по Гринвичу). Не допускает значение NULL.|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Чтение больших результирующих наборов, выполнив **sys.fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к возникновению ошибки. Используйте **результаты в файл** режим (**Ctrl + Shift + F**) для экспорта больших результирующих наборов в файл и вместо этого прочитать файл с помощью другого средства.  
   
 ## <a name="permissions"></a>Разрешения  

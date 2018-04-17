@@ -1,16 +1,16 @@
 ---
-title: "sp_add_alert (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_add_alert (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e6218ad7eaba6f6f6e108739dee392b0f9ec177
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +60,22 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **"***имя***"**  
  Имя предупреждения. Имя появляется в сообщении электронной почты или пейджера, отправленном в ответ на предупреждение. Оно должно быть уникальным и может содержать символа процента (**%**) символов. *имя* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@message_id =** ] *message_id*  
+ [  **@message_id =** ] *message_id*  
  Номер сообщения об ошибке, которое определяет предупреждение. (Обычно соответствует номеру ошибки в **sysmessages** таблицы.) *message_id* — **int**, значение по умолчанию **0**. Если *серьезность* используется для определения предупреждения, *message_id* должно быть **0** или иметь значение NULL.  
   
 > [!NOTE]  
 >  Только **sysmessages** ошибки записываются в журнал приложений Microsoft Windows может вызвать отправку предупреждения.  
   
- [ **@severity =** ] *severity*  
+ [  **@severity =** ] *серьезности*  
  Уровень серьезности (от **1** через **25**), определяемый предупреждением. Любой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщение, находящееся в **sysmessages** таблицы отправляется [!INCLUDE[msCoName](../../includes/msconame-md.md)] в журнале приложений Windows с указанной степенью серьезности вызывает отправку предупреждения. *Серьезность* — **int**, значение по умолчанию 0. Если *message_id* используется для определения предупреждения, *серьезность* должно быть **0**.  
   
  [  **@enabled =** ] *включена*  
  Показывает текущее состояние предупреждения. *включить* — **tinyint**, значение по умолчанию 1 (включено). Если **0**, предупреждение не включено и не срабатывает.  
   
- [ **@delay_between_responses =** ] *delay_between_responses*  
+ [  **@delay_between_responses =** ] *delay_between_responses*  
  Период ожидания (в секундах) между откликами на предупреждение. *delay_between_responses*— **int**, значение по умолчанию **0**, что означает, что нет времени ожидания между ответами (каждое вхождение предупреждения формирует отклик). Отклик может иметь одну из следующих форм либо обе формы.  
   
 -   Одно или несколько уведомлений отправлено через электронную почту или пейджер.  
@@ -84,10 +84,10 @@ sp_add_alert [ @name = ] 'name'
   
  Установкой этого значения можно предотвратить, например отправку нежелательных почтовых сообщений, если предупреждение возникает многократно за короткий промежуток времени.  
   
- [ **@notification_message =** ] **'***notification_message***'**  
+ [  **@notification_message =** ] **"***notification_message***"**  
  Необязательное дополнительное сообщение, отправляемое оператору как часть сообщения электронной почты, **net send**, или на пейджер. *notification_message* — **nvarchar(512)**, значение по умолчанию NULL. Указание *notification_message* можно использовать для добавления специальных комментариев, таких как корректирующие процедуры.  
   
- [ **@include_event_description_in =** ] *include_event_description_in*  
+ [  **@include_event_description_in =** ] *include_event_description_in*  
  Указывает, следует ли включить в текст сообщения уведомления с описанием ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *include_event_description_in*— **tinyint**, значение по умолчанию **5** (электронной почты и **net send**) и может иметь одно или несколько из следующих значений, соединенных **Или** логический оператор.  
   
 > [!IMPORTANT]  
@@ -107,10 +107,10 @@ sp_add_alert [ @name = ] 'name'
  [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  Последовательность символов, которой должно соответствовать описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword_pattern* — **nvarchar(100)**, значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %**).  
   
- [ **@job_id =** ] *job_id*  
+ [  **@job_id =** ] *job_id*  
  Идентификатор задания, которое запускается в ответ на это предупреждение. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **"***job_name***"**  
  Имя задания, которое запускается в ответ на это предупреждение. *job_name*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Не реализовано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0. *raise_snmp_trap* — **tinyint**, значение по умолчанию 0.  
   
- [ **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **"***performance_condition***"**  
  Значение, выраженное в формате "*itemcomparatorvalue*". *performance_condition* — **nvarchar(512)** значение по умолчанию NULL и состоит из следующих элементов.  
   
 |Элемент формата|Описание|  
@@ -131,10 +131,10 @@ sp_add_alert [ @name = ] 'name'
  [  **@category_name =** ] **"***категории***"**  
  Имя категории предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **"***wmi_namespace***"**  
  Пространство имен WMI для запроса событий. *wmi_namespace* — **sysname**, значение по умолчанию NULL. Поддерживаются только пространства имен на локальном сервере.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **"***wmi_query***"**  
  Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -143,7 +143,7 @@ sp_add_alert [ @name = ] 'name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_add_alert** должна запускаться из **msdb** базы данных.  
   
  Это обстоятельства, при которых ошибки или сообщения, сформированные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], передаются в журнал приложений Windows и, следовательно, могут вызвать следующие предупреждения.  
@@ -191,12 +191,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [Хранимая процедура sp_update_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [Хранимая процедура sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

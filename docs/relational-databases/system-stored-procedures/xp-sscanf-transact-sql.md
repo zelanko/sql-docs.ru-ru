@@ -1,16 +1,16 @@
 ---
-title: "xp_sscanf (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: xp_sscanf (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_sscanf_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70835bdde4e84dbe889c8ae4f2ec5da24b314d5f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 315612c728140f575ed78e94f5643e795951a9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  OUTPUT  
  При указании помещает значение *аргумент* в выходном параметре.  
   
- *Формат*  
+ *format*  
  Аналогично поддерживаемой в языке C отформатированная символьная строка **sscanf** функции. В настоящее время поддерживается только аргумент форматирования %s.  
   
- *Аргумент*  
+ *argument*  
  — **Varchar** переменной присвоено значение соответствующего *формат* аргумент.  
   
  *n*  
@@ -69,8 +69,8 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере с помощью `xp_sscanf` из исходной строки извлекаются два значения на основании их положений в формате этой строки.  
@@ -89,9 +89,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Общие расширенные хранимые процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+ [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_sprintf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

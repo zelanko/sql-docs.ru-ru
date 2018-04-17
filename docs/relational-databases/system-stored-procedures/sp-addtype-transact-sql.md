@@ -1,16 +1,16 @@
 ---
-title: "sp_addtype (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addtype (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addtype
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61a5e94d0e57bdaaac63181c9257defdfd87d8eb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Создает псевдоним типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) вместо него.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_addtype [ @typename = ] type,
   
 ||||  
 |-|-|-|  
-|**bigint**|**binary(n)**|**bit**|  
+|**bigint**|**binary(n)**|**бит**|  
 |**char(n)**|**datetime**|**decimal**|  
 |**float**|**image**|**int**|  
 |**money**|**nchar(n)**|**ntext**|  
@@ -68,22 +68,22 @@ sp_addtype [ @typename = ] type,
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
- Кавычки необходимы для всех параметров, в которых содержатся начальные пробелы или знаки пунктуации. Дополнительные сведения о доступных типах данных см. в разделе [типы данных &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md).  
+ Кавычки необходимы для всех параметров, в которых содержатся начальные пробелы или знаки пунктуации. Дополнительные сведения о доступных типах данных см. в разделе [типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
  *n*  
  Неотрицательное целое число, которое показывает длину выбранного типа данных.  
   
  *P*  
- Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (как слева, так и справа от десятичного разделителя). Дополнительные сведения см. в разделе [decimal и numeric &#40; Transact-SQL &#41; ](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (как слева, так и справа от десятичного разделителя). Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *s*  
- Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric &#40; Transact-SQL &#41; ](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ *S*  
+ Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  [  **@nulltype =** ] **"***null_type***"**  
- Указывает, как псевдоним типа данных обрабатывает значения NULL. *null_type* — **varchar (**8**)**, значение по умолчанию NULL и должны быть заключены в одинарные кавычки ('NULL', 'NOT NULL» или 'NONULL'). Если *null_type* не был явно задан с **sp_addtype**, ему присваивается текущее допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если  **@phystype**  — **бит**, и  **@nulltype**  не указан, значение по умолчанию — не NULL.  
+ Указывает, как псевдоним типа данных обрабатывает значения NULL. *null_type* — **varchar (**8**)**, значение по умолчанию NULL и должны быть заключены в одинарные кавычки ('NULL', 'NOT NULL» или 'NONULL'). Если *null_type* не был явно задан с **sp_addtype**, ему присваивается текущее допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **@phystype** — **бит**, и **@nulltype** не указан, значение по умолчанию — не NULL.  
   
 > [!NOTE]  
->  *Null_type* параметр только определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в разделе [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [создание таблицы &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+>  *Null_type* параметр только определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в разделе [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -103,7 +103,7 @@ sp_addtype [ @typename = ] type,
   
  Псевдонимы типов данных не могут быть определены с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **таблицы**, **xml**, **varchar(max)**, **nvarchar(max)** или **varbinary(max)** типов данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **db_owner** или **db_ddladmin** предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -141,17 +141,17 @@ EXEC sp_addtype fax, 'varchar(24)', 'NULL';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_bindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [Хранимая процедура sp_droptype &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_bindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [Хранимая процедура sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Хранимая процедура sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [sp_unbindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [Хранимая процедура sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

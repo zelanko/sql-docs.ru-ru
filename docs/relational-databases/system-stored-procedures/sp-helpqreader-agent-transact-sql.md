@@ -1,16 +1,16 @@
 ---
-title: "sp_helpqreader_agent (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpqreader_agent (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50492a76e742459e7b883f9887026d0ce63d1eb1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0e7aeb2448ff44ef39a638ea61c64b72f0a7d123
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор агента.|  
-|**name**|**nvarchar(100)**|Имя агента.|  
-|**Аргумент job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
+|**name**|**Nvarchar(100)**|Имя агента.|  
+|**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
 |**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой запускается агент распространителя, который возвращается в формате *домена*\\*username*.|  
-|**job_password**|**sysname**|По соображениям безопасности значение  **\* \* \* \* \* \* \* \* \* \***  всегда возвращается.|  
+|**job_password**|**sysname**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -65,10 +65,10 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="remarks"></a>Замечания  
  **sp_helpqreader_agent** используется в репликации транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Если значение *frompublisher* — **1**, только члены **sysadmin** предопределенной роли сервера на издателе или члены **db_owner**предопределенной роли базы данных в базе данных публикации могут выполнять процедуру **sp_helpqreader_agent**. В противном случае — только члены **sysadmin** предопределенной роли сервера на распространителе или члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_helpqreader_ агент**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Включение обновляемых подписок для публикации транзакций](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

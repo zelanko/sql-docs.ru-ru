@@ -1,16 +1,16 @@
 ---
-title: "sp_dropuser (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dropuser (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropuser
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 242950773bb0eabbd8b4170a05fd228311604bdf
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d7499b5d45d5d55479fe00792a3631b3d655621
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Удаляет пользователя из текущей базы данных. **sp_dropuser** обеспечивает совместимость с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) вместо него.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,13 +60,13 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Используйте **sp_helpuser** для отображения списка имен пользователей, которые могут быть удалены из текущей базы данных.  
   
- Когда удаляется пользователь базы данных, также удаляются все псевдонимы этого пользователя. Если пользователь является владельцем пустой схемы с тем же именем, что и у пользователя, эта схема будет удалена. Если пользователь владеет любыми другими защищаемыми объектами базы данных, то он не будет удален. Необходимо сначала передать права владения объектами другому участнику. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md). При удалении пользователя базы данных автоматически удаляются разрешения, связанные с пользователем, а пользователь удаляется из всех ролей базы данных, членом которых он является.  
+ Когда удаляется пользователь базы данных, также удаляются все псевдонимы этого пользователя. Если пользователь является владельцем пустой схемы с тем же именем, что и у пользователя, эта схема будет удалена. Если пользователь владеет любыми другими защищаемыми объектами базы данных, то он не будет удален. Необходимо сначала передать права владения объектами другому участнику. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md). При удалении пользователя базы данных автоматически удаляются разрешения, связанные с пользователем, а пользователь удаляется из всех ролей базы данных, членом которых он является.  
   
- **sp_dropuser** не может использоваться для удаления владельца базы данных (**dbo**) **INFORMATION_SCHEMA** пользователей, или **гостевой** пользователя из  **Главный** или **tempdb** баз данных. В несистемных базах данных `EXEC sp_dropuser 'guest'` отменяет разрешение CONNECT для пользователя **гостевой**. Однако сам пользователь не будет удален.  
+ **sp_dropuser** не может использоваться для удаления владельца базы данных (**dbo**) **INFORMATION_SCHEMA** пользователей, или **гостевой** пользователя из **master**  или **tempdb** баз данных. В несистемных базах данных `EXEC sp_dropuser 'guest'` отменяет разрешение CONNECT для пользователя **гостевой**. Однако сам пользователь не будет удален.  
   
  **sp_dropuser** не может выполняться внутри пользовательской транзакции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY USER для базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -77,10 +77,10 @@ EXEC sp_dropuser 'Albert';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Безопасность хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [УДАЛИТЬ пользователя &#40; Transact-SQL &#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [УДАЛИТЬ пользователя & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

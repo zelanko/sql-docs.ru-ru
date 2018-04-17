@@ -1,6 +1,6 @@
 ---
-title: Загрузите и установите Microsoft SQL Operations Studio (preview) | Документы Microsoft
-description: Загрузка и установка Microsoft SQL Operations Studio (preview) для Windows, macOS или Linux
+title: Загрузите и установите Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft
+description: Загрузка и установка Microsoft SQL операций Studio (Предварительная версия) для Windows, macOS или Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите SQL Operations Studio (preview)
+# <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите Studio операций SQL (Предварительная версия)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] выполняется на Windows, macOS и Linux.
 
@@ -28,13 +28,13 @@ ms.lasthandoff: 04/08/2018
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|28 марта 2018 |0.27.3|
-|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|28 марта 2018 |0.27.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=870841)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 марта 2018 |0.27.3|
+|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.ZIP](https://go.microsoft.com/fwlink/?linkid=870838)|28 марта 2018 |0.27.3|
+|MacOS|[.ZIP](https://go.microsoft.com/fwlink/?linkid=870839)|28 марта 2018 |0.27.3|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=870841)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 марта 2018 |0.27.3|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Получение SQL Operations Studio (preview) для Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Получение операций SQL Studio (Предварительная версия) для Windows
 
 Этот выпуск [!INCLUDE[name-sos](../includes/name-sos-short.md)] включает стандартные возможности установщика Windows и .zip: 
 
@@ -51,17 +51,17 @@ ms.lasthandoff: 04/08/2018
 3. Выполнить `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>Получить для macOS SQL Operations Studio (preview)
+## <a name="get-sql-operations-studio-preview-for-macos"></a>Получить для macOS Studio операций SQL (Предварительная версия)
 
 1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=870839).
 2. Чтобы развернуть содержимое ZIP-файл, дважды щелкните его.
 3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] в *запуска*, перетащите *sqlops.app* для *приложений* папки.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить SQL Operations Studio (preview) для Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить Studio операций SQL (Предварительная версия) для Linux
 
-1. Загрузите [! ВКЛЮЧИТЬ[имя sos](../includes/name-sos-short.md) для Linux с помощью одного из установщиков или tar.gz архива:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+1. Загрузить [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или tar.gz архива:
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.RPM](https://go.microsoft.com/fwlink/?linkid=870841)
     - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. Чтобы извлечь файл и запустите [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
@@ -101,7 +101,7 @@ ms.lasthandoff: 04/08/2018
    sudo apt-get install libuwind8
    ```
 
-   **Redhat:** 
+   **RedHat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Удаление SQL Operations Studio (preview)
+## <a name="uninstall-sql-operations-studio-preview"></a>Удаление операций SQL Studio (Предварительная версия)
 
 Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с помощью установщика Windows, удалите так же, как удалить любое другое приложение Windows.
 

@@ -1,16 +1,16 @@
 ---
-title: "sp_restoremergeidentityrange (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_restoremergeidentityrange (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a42807009ffd42b16fe08fde76b7f91e34d62742
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4f0b8d768d99acda314754b6d613c277c590f280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication**  =] **"***публикации***"**  
+ [ **@publication** =] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, и значение по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей публикации.  
   
- [  **@article**  =] **"***статьи***"**  
+ [ **@article** =] **"***статьи***"**  
  Имя статьи. *статья* — **sysname**, со значением по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей статьи.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -59,13 +59,13 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Замечания  
  **sp_restoremergeidentityrange** используется с репликацией слиянием.  
   
- **sp_restoremergeidentityrange** возвращает сведения о выделении диапазона идентификаторов максимальное от распространителя и обновляет значения в **max_used** столбец [MSmerge_identity_range_allocations & # 40; Transact-SQL &#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) для статей, которые используют автоматическое управление диапазонами идентификаторов.  
+ **sp_restoremergeidentityrange** возвращает сведения о выделении диапазона идентификаторов максимальное от распространителя и обновляет значения в **max_used** столбец [MSmerge_identity_range_allocations &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) для статей, которые используют автоматическое управление диапазонами идентификаторов.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_restoremergeidentityrange**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_addmergearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_addextendedproc (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addextendedproc (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproc_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addextendedproc
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c17007edd948c5d914c6fc2ad602fb4cebb7d13
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5b0b6e5be52bb598fb218a6fd355515eaedb7593
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 > [!IMPORTANT]  
 >  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить проблему, используйте **sp_dropextendedproc** для отмены регистрации библиотеки DLL, а затем зарегистрируйте его с **sp_addextendedproc**, указав полный путь.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Примеры  
@@ -84,12 +84,12 @@ GO
 EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_dropextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

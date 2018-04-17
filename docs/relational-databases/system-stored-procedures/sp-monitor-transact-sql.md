@@ -1,16 +1,16 @@
 ---
-title: "sp_monitor (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_monitor (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_monitor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b4ef90280e72a7afd6a8787b053115a4bffa4fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b54b2e5cc7918a59780e631d60b8cfc9014cfee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmonitor-transact-sql"></a>Хранимая процедура sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,28 +50,28 @@ sp_monitor
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**last_run**|Время **sp_monitor** последнего запуска.|  
 |**current_run**|Время **sp_monitor** запущена.|  
 |**секунд**|Число секунд, прошедших с момента **sp_monitor** была запущена.|  
 |**CPU_BUSY**|Время в секундах, которое ЦП сервера затратил на работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**IO_BUSY**|Время в секундах, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] затратил на операции ввода и вывода.|  
-|**время простоя**|Время простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в секундах.|  
+|**Простоя**|Время простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в секундах.|  
 |**packets_received**|Количество входящих пакетов, считанных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packets_sent**|Число исходящих пакетов, записанных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**packet_errors**|Количество ошибок, с которыми столкнулся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время чтения и записи пакетов.|  
 |**total_read**|Число операций чтения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_write**|Число операций записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_errors**|Количество ошибок, с которыми столкнулся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время чтения и записи.|  
-|**подключения**|Количество входов или попыток входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Подключения**|Количество входов или попыток входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Замечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью набора функций отслеживает объем проделанной работы. Выполнение **sp_monitor** отображает текущие значения, возвращенные этими функциями и показывает, насколько они изменились со времени последнего запуска этой процедуры.  
   
  Для каждого столбца, статистика выводится в виде *номер*(*номер*)-*номер*% или *номер*(*номер*). Первый *номер* определяет количество секунд (для **cpu_busy**, **io_busy**, и **простоя**) или общее количество (для других переменные) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была перезапущена. *Номер* в скобках отображает количество секунд или общее количество с момента последнего **sp_monitor** была запущена. Процент — это доля времени с момента **sp_monitor** последнего запуска. Например, если в отчете отображается **cpu_busy** равно 4250 (215)-68%, ЦП был загружен 4250 секунд со времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вверх, 215 секунд с момента последнего запуска **sp_monitor** был последнего выполнения и 68 процентов Общее время с момента **sp_monitor** последнего запуска.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -91,7 +91,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**CPU_BUSY**|**IO_BUSY**|**время простоя**|  
+|**CPU_BUSY**|**IO_BUSY**|**Простоя**|  
 |190(0)-0%|187(0)-0%|148(556)-99%|  
   
 ||||  
@@ -101,11 +101,11 @@ EXEC sp_monitor
   
 |||||  
 |-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**подключения**|  
+|**total_read**|**total_write**|**total_errors**|**Подключения**|  
 |141(0)|54920(127)|0(0)|4(0)|  
   
-## <a name="see-also"></a>См. также:  
- [sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

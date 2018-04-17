@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_column_store_row_group_physical_stats_TSQL
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - dm_db_column_store_row_group_physical_stats
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
-caps.latest.revision: 
+caps.latest.revision: 15
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 025dc1b94158635d1543d41a430aa2a0ba716a83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 769ef6a26a4874bfef08015bf6a41a8bd9094743
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Предоставляет последнюю информацию на уровне группы строк обо всех индексов columnstore в текущей базе данных.  
   
- При этом расширяется в представление каталога [sys.column_store_row_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
+ При этом расширяется в представление каталога [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |**size_in_bytes**|**bigint**|Общий размер в байтах всех страниц в этой группе строк. Этот размер включает размер, необходимый для хранения метаданных или Общие словари.|  
 |**trim_reason**|**tinyint**|Причины, вызвавшей группы строк COMPRESSED иметь меньше, чем максимальное число строк.<br /><br /> 0 — UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - МАССОВОЙ ЗАГРУЗКИ<br /><br /> 3 — REORG<br /><br /> 4 — DICTIONARY_SIZE<br /><br /> 5 — MEMORY_LIMITATION<br /><br /> 6 — RESIDUAL_ROW_GROUP<br /><br /> 7 - STATS_MISMATCH<br /><br /> 8 - ПОДГОНЯТЬСЯ ПО РАЗМЕРУ|  
 |**trim_reason_desc**|**nvarchar(60)**|Описание *trim_reason*.<br /><br /> 0 — UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: произошла при обновлении с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 - NO_TRIM: Группы строк не усекаются. Группа строк была сжата с максимально 1,048,476 строк.  Число строк, может быть меньше, если subsset строк было удалено, после закрытия разностную группу строк<br /><br /> 2 — массовой загрузки: Число строк ограничено размер пакета для массовой загрузки.<br /><br /> 3 — REORG: Принудительное сжатие во время выполнения команды REORG.<br /><br /> 4 — DICTIONARY_SIZE: Размер словаря увеличился слишком велик для сжатия всех строк друг с другом.<br /><br /> 5 — MEMORY_LIMITATION: Недостаточно памяти для сжатия всех строк друг с другом.<br /><br /> 6 — RESIDUAL_ROW_GROUP: Закрыто в рамках последней группы строк с строки < 1 миллион во время построения индекса<br /><br /> STATS_MISMATCH: только для columnstore в таблице в памяти. Если статистика неправильно указано, > = 1 миллион строк полное в заключительный фрагмент, но мы нашли меньшее число, сжатой группы строк будут иметь < 1 миллион строк<br /><br /> Подгоняться по РАЗМЕРУ: только для columnstore в таблице в памяти. Если резервная копия заключительного > 1 млн строк на полное, оставшиеся строки последнего пакета сжаты, если число между 100 КБ и 1 миллион|  
-|**transition_to_compressed_state**|tinyint|Показывает, как это группы строк они не перемещались дельта-хранилища в сжатый состояние в columnstore.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 — INDEX_BUILD<br /><br /> 3 — TUPLE_MOVER<br /><br /> 4 — REORG_NORMAL<br /><br /> 5 – REORG_FORCED<br /><br /> 6 - МАССОВОЙ ЗАГРУЗКИ<br /><br /> 7 - СЛИЯНИЯ|  
+|**transition_to_compressed_state**|tinyint|Показывает, как это группы строк они не перемещались дельта-хранилища в сжатый состояние в columnstore.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 — INDEX_BUILD<br /><br /> 3 — TUPLE_MOVER<br /><br /> 4 — REORG_NORMAL<br /><br /> 5 — REORG_FORCED<br /><br /> 6 - МАССОВОЙ ЗАГРУЗКИ<br /><br /> 7 - СЛИЯНИЯ|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE — операция неприменима к deltastore. Или группа строк была сжата перед обновлением до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] в этом случае журнал не сохраняется.<br /><br /> Перестроение индекса в сжатые группы строк или INDEX_BUILD — создание индекса.<br /><br /> TUPLE_MOVER — кортежей в фоновом режиме сжатые группы строк. Это происходит после группы строк изменяет состояние из ОТКРЫТОГО ЗАКРЫТО.<br /><br /> REORG_NORMAL — операция реорганизации, ALTER INDEX... REORG перемещать ЗАКРЫТОЙ группы строк из deltastore в columnstore. Это произошло раньше времени на перемещение группы строк, кортежей.<br /><br /> REORG_FORCED — это группа строк была открыта в deltastore и принудительного раньше, чем его полное число строк в columnstore.<br /><br /> BULKLOAD — операции массовой загрузки сжатые группы строк напрямую без использования deltastore.<br /><br /> СЛИЯНИЕ — операции merge объединять один или несколько групп строк в этой группе строк и затем выполнить сжатие columnstore.|  
 |**has_vertipaq_optimization**|bit|Оптимизация Vertipaq улучшает сжатие columnstore изменять порядок строк в группе строк, чтобы добиться более эффективного сжатия. Эта оптимизация происходит автоматически в большинстве случаев. Существует два варианта Vertipaq оптимизация не используется:<br/>  A. Когда перемещает разностной группы строк в columnstore и один или несколько некластеризованных индексов на основе индекса columnstore - в этом случае оптимизации Vertipaq пропущено до сводит к минимуму изменения в индекс сопоставления;<br/> Б. для индексов columnstore для таблиц, оптимизированных для памяти. <br /><br /> 0 = нет<br /><br /> 1 = да|  
 |**Создание**|bigint|Строки группы поколение, связанное с этой группой строк.|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/03/2018
  Возвращает по одной строке для каждой группы строк в текущей базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуются следующие разрешения.  
+ Требуются следующие разрешения:  
   
 -   Разрешение CONTROL на таблицу.  
   
@@ -94,13 +95,13 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Запросив системный каталог SQL Server часто задаваемые вопросы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
- [sys.column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   

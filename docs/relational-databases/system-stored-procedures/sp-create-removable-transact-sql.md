@@ -1,16 +1,16 @@
 ---
-title: "sp_create_removable (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_create_removable (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,33 +62,33 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@dbname=** ] **'***dbname***'**  
+ [  **@dbname=** ] **"***dbname***"**  
  Имя базы данных, создаваемой для использования на съемных носителях. *DBName* — **sysname**.  
   
- [ **@syslogical=** ] **'***syslogical***'**  
+ [  **@syslogical=** ] **"***syslogical***"**  
  Логическое имя файла, содержащего таблицы системных каталогов. *syslogical* — **sysname**.  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
+ [  **@sysphysical=** ] **"***sysphysical***"**  
  Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *sysphysical* — **nvarchar(260)**.  
   
- [ **@syssize=** ] *syssize*  
+ [  **@syssize=** ] *syssize*  
  Размер файла, содержащего таблицы системных каталогов (в мегабайтах). *syssize* — **int**. Минимальное *syssize* -1.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
+ [  **@loglogical=** ] **"***loglogical***"**  
  Логическое имя файла, содержащего журнал транзакций. *loglogical* — **sysname**.  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+ [  **@logphysical=** ] **"***logphysical***"**  
  Физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *logphysical* — **nvarchar(260)**.  
   
- [ **@logsize=** ] *logsize*  
+ [  **@logsize=** ] *logsize*  
  Размер файла, содержащего журнал транзакций (в мегабайтах). *logsize* — **int**. Минимальное *logsize* -1.  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] **"***datalogical***"**  
  Логическое имя файла, содержащего таблицы данных. *datalogical* — **sysname**.  
   
  Можно создать от 1 до 16 файлов данных. Обычно создание более одного файла данных требуется для больших баз данных, распространяемых на нескольких дисках.  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+ [  **@dataphysical1=** ] **"***dataphysical***"**  
  Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *dataphysical* — **nvarchar(260)**.  
   
  [  **@datasize1=** ] **"***datasize***"**  
@@ -100,7 +100,7 @@ sp_create_removable
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте данную хранимую процедуру для создания копий баз данных на таких съемных носителях как компакт-диски, и распространения их среди других пользователей.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -113,12 +113,12 @@ sp_create_removable
   
 |Операция с базой данных|Разрешения, задаваемые для файлов|  
 |---------------------------|------------------------------|  
-|Изменение для добавления нового файла|Создан|  
+|Изменение для добавления нового файла|Создание|  
 |Создание резервной копии|Присоединение|  
 |Восстановление|Отсоединение|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не набор данных и файла журнала разрешения.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не задает разрешения на файлы данных и файлы журнала.  
   
 ## <a name="examples"></a>Примеры  
  В ходе выполнения следующего примера создается удаляемая база данных `inventory`.  
@@ -137,12 +137,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>См. также  
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

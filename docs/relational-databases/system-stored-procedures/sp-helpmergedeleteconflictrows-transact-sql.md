@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergedeleteconflictrows (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpmergedeleteconflictrows (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af2e83f26bfe8f94dd0befcc71259c4d04ed148a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6af4f2128a2ced993129c4e9b813ecd8d9154716
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию  **%** . Если указана публикация, возвращаются все конфликты, определенные этой публикацией.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если указана публикация, возвращаются все конфликты, определенные этой публикацией.  
   
  [  **@source_object=**] **"***source_object***"**  
  Имя исходного объекта. *source_object* — **nvarchar(386)**, значение по умолчанию NULL.  
@@ -63,7 +63,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Исходный объект для конфликта удаления.|  
 |**ROWGUID**|**uniqueidentifier**|Идентификатор строки для конфликта удаления.|  
@@ -80,10 +80,10 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ## <a name="remarks"></a>Замечания  
  **sp_helpmergedeleteconflictrows** используется в репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergedeleteconflictrows**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

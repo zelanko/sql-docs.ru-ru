@@ -1,16 +1,16 @@
 ---
-title: "sp_settriggerorder (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_settriggerorder (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_settriggerorder
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 690831cac89e20932cbf3c8759af569e01097238
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +50,16 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@triggername=** ] **"**[ *triggerschema***.**] *аргумент triggername***"**  
- Имя триггера, порядок срабатывания которого нужно установить или изменить, и схема, которой он принадлежит, если таковая имеется. [*triggerschema***.**] *аргумент triggername* — **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *triggerschema* не может быть указан для триггеров DDL или входа.  
+ [  **@triggername=** ] **"**[ *triggerschema ***.**] *аргумент triggername *** "**  
+ Имя триггера, порядок срабатывания которого нужно установить или изменить, и схема, которой он принадлежит, если таковая имеется. [*triggerschema ***.**]* аргумент triggername * — **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *triggerschema* не может быть указан для триггеров DDL или входа.  
   
- [ **@order=** ] **"***значение***"**  
+ [ **@order=** ] **'***value***'**  
  Новый порядок срабатывания для триггера. *значение* — **varchar(10)** и может принимать одно из следующих значений.  
   
 > [!IMPORTANT]  
 >  **Первый** и **последний** триггеры должны быть двумя различными триггерами.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Первая**|Триггер срабатывает первым.|  
 |**Последняя**|Триггер срабатывает последним.|  
@@ -70,7 +71,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  Триггер можно назначить в качестве **первый** или **последний** триггер для типа инструкций только после этого его определения в качестве триггера данного типа инструкций. Например, триггер **TR1** можно назначить **первый** для инструкции INSERT в таблице **T1** Если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Возвращает ошибку, если **TR1**, определенный только как триггер INSERT устанавливается в качестве **первый**, или **последний**, триггер для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  
   
  **@namespace=** { **'DATABASE'** | **«СЕРВЕР»** | NULL}  
- При *аргумент triggername* является триггером DDL  **@namespace**  указывает, является ли *аргумент triggername* был создан в области базы данных или в области сервера. Если *аргумент triggername* триггером входа необходимо указать сервер. Дополнительные сведения об области действия триггеров DDL см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md). Если не указан или если указано значение NULL, *аргумент triggername* является триггером DML.  
+ При *аргумент triggername* является триггером DDL **@namespace** указывает, является ли *аргумент triggername* был создан в области базы данных или в области сервера. Если *аргумент triggername* триггером входа необходимо указать сервер. Дополнительные сведения об области действия триггеров DDL см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md). Если не указан или если указано значение NULL, *аргумент triggername* является триггером DML.  
   
 ||  
 |-|  
@@ -108,7 +109,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Если тот же триггер необходимо назначить в качестве первого или последнего порядок для нескольких типов инструкций, **sp_settriggerorder** необходимо выполнить для каждого типа инструкций. Кроме того, триггер должен быть сначала определен для типа инструкций, прежде чем он может быть назначен как **первый** или **последний** запуск триггера данного типа инструкций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы установить порядок запуска триггера DDL сервера (созданного с помощью ON ALL SERVER) или триггера входа, необходимо разрешение CONTROL SERVER.  
   
  Чтобы установить порядок запуска триггера DDL базы данных (созданного с помощью ON DATABASE), необходимо разрешение ALTER ANY DATABASE DDL TRIGGER.  
@@ -135,9 +136,9 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

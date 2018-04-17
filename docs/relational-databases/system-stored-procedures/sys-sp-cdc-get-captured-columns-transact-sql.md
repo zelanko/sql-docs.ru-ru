@@ -1,16 +1,16 @@
 ---
-title: "процедуру sys.sp_cdc_get_captured_columns (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: процедуру sys.sp_cdc_get_captured_columns (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_get_captured_columns
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e232446f85dabc19856913ebf2e0cc5f886dc8cb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b83ae2c1872002f2a22663f6ac0b7dd5a8a63ddb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Имя схемы исходной таблицы.|  
 |source_table|**sysname**|Имя исходной таблицы.|  
@@ -81,7 +81,7 @@ sys.sp_cdc_get_captured_columns
   
  Используйте [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) для получения сведений об определении данных инструкции языка DDL, применяемые к исходной таблице. Результирующий набор содержит сведения обо всех изменениях DDL, изменивших структуру отслеживаемого исходного столбца.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner. Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных. Если вызывающий объект не имеет разрешения на просмотр исходных данных, то функция возвращает ошибку 22981 (Объект не существует или доступ запрещен).  
   
 ## <a name="examples"></a>Примеры  
@@ -95,7 +95,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.sp_cdc_help_change_data_capture &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

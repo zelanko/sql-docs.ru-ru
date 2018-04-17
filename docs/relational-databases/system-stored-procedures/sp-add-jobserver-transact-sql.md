@@ -1,16 +1,16 @@
 ---
-title: "sp_add_jobserver (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_add_jobserver (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobserver
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b132644593bd62cc9830ffd61490253e1a89ae2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f981b67671de38eada0ad2d1ed23c9f2a9a59f56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =** ] *job_id*  
+ [  **@job_id =** ] *job_id*  
  Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **"***job_name***"**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -65,8 +65,8 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
- **@automatic_post**существует в **sp_add_jobserver**, но отсутствует в списке аргументов. **@automatic_post**Зарезервировано для внутреннего использования.  
+## <a name="remarks"></a>Замечания  
+ **@automatic_post** существует в **sp_add_jobserver**, но отсутствует в списке аргументов. **@automatic_post** Зарезервировано для внутреннего использования.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_post_msx_operation (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_post_msx_operation (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 08cda2f3508e5c4f338c8e607654f5e41ed803f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,22 +58,22 @@ sp_post_msx_operation
 |Тип объекта|Операция|  
 |-----------------|---------------|  
 |**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
-|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**СЕРВЕР**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**РАСПИСАНИЕ**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [ **@object_type =**] **'***object***'**  
+ [  **@object_type =**] **"***объекта***"**  
  Тип объекта, для которого отправляется операция. Допустимые типы: **задания**, **сервера**, и **РАСПИСАНИЕ**. *Объект* — **varchar(64)**, значение по умолчанию **задания**.  
   
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Идентификационный номер задания, к которому применяется операция. *Аргумент job_id* — **uniqueidentifier**, не имеет значения по умолчанию. **0x00** подразумевает все задания. Если *объекта* — **сервера**, затем *job_id*не является обязательным.  
   
  [ **@specific_target_server =**] **'***target_server***'**  
  Имя целевого сервера, к которому применяется заданная операция. Если *job_id* указан, но *целевой_сервер* не указан, то операции направляются на все серверы задания. *целевой_сервер* — **nvarchar(30)**, значение по умолчанию NULL.  
   
- [ **@value =**] *value*  
+ [  **@value =**] *значение*  
  Интервал опроса (в секундах). Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Укажите этот параметр, только если *операции* — **SET-POLL**.  
   
- [ **@schedule_uid=** ] *schedule_uid*  
+ [  **@schedule_uid=** ] *schedule_uid*  
  Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -82,7 +82,7 @@ sp_post_msx_operation
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_post_msx_operation** должна запускаться из **msdb** базы данных.  
   
  **sp_post_msx_operation** всегда может вызывать безопасно, так как он сначала определяет, если текущий сервер является многосерверных агента Microsoft SQL Server и если да, является ли *объекта*многосерверным заданием.  
@@ -101,9 +101,9 @@ sp_post_msx_operation
  [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_resync_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_stop_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

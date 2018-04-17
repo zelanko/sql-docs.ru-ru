@@ -1,16 +1,16 @@
 ---
-title: "sp_addlinkedserver (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addlinkedserver (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35173890392c69d6ef6fe40c71b484ae9db3bee3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@server=** ] **"***сервера***"**  
+ [ **@server=** ] **'***server***'**  
  Имя создаваемого связанного сервера. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
  [  **@srvproduct=** ] **"***product_name***"**  
@@ -72,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  При создании связанного сервера для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента экземпляра можно указать с помощью ключевого слова SERVER как сервер =*servername*\\*instancename*для указания определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* — имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает, и *instancename* имя конкретного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к которой будет подключен пользователь.  
   
 > [!NOTE]  
->  Чтобы получить доступ к зеркальной базе данных, строка соединения должна содержать имя базы данных. Это имя необходимо, чтобы предоставить поставщику доступа к данным возможность пытаться отработать отказ. Базы данных могут быть указаны в  **@provstr**  или  **@catalog**  параметра. Кроме того, строка соединения может содержать имя партнера по обеспечению отработки отказа.  
+>  Чтобы получить доступ к зеркальной базе данных, строка соединения должна содержать имя базы данных. Это имя необходимо, чтобы предоставить поставщику доступа к данным возможность пытаться отработать отказ. Базы данных могут быть указаны в **@provstr** или **@catalog** параметра. Кроме того, строка соединения может содержать имя партнера по обеспечению отработки отказа.  
   
  [  **@catalog=** ] **"***каталога***"**  
  Каталог, который должен использоваться при подключении к поставщику OLE DB. *каталог* — **sysname**, значение по умолчанию NULL. *каталог* передается как свойство DBPROP_INIT_CATALOG для инициализации поставщика OLE DB. Если связанный сервер определен для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то каталог ссылается на базу данных по умолчанию, с которой сопоставлен связанный сервер.  
@@ -88,9 +88,9 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 |Удаленный источник данных OLE DB|Поставщик OLE DB|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (по умолчанию)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента||**SQLNCLI**|Сетевое имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (для экземпляра по умолчанию)|||Имя базы данных (необязательно)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента||**SQLNCLI**|*ServerName*\\*instancename* (для конкретного экземпляра)|||Имя базы данных (необязательно)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (по умолчанию)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента||**SQLNCLI**|Сетевое имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (для экземпляра по умолчанию)|||Имя базы данных (необязательно)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента||**SQLNCLI**|*ServerName*\\*instancename* (для конкретного экземпляра)|||Имя базы данных (необязательно)|  
 |Oracle, версия 8 или более поздняя|Поставщик Oracle для OLE DB|Любой|**(Oraoledb.Oracle)**|Псевдоним для базы данных Oracle||||  
 |Access/Jet|Поставщик OLE DB для Jet (Майкрософт)|Любой|**Microsoft.Jet.OLEDB.4.0**|Полный путь к файлу базы данных Jet||||  
 |Источник данных ODBC|Поставщик Microsoft OLE DB для ODBC|Любой|**MSDASQL**|Системный DSN источника данных ODBC||||  
@@ -114,7 +114,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!IMPORTANT]  
 >  При создании связанного сервера с помощью **sp_addlinkedserver**, для всех локальных имен входа добавляется Самосопоставление по умолчанию. Поставщики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которых выполнена проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получить доступ к поставщику под учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторам нужно рассмотреть применение процедуры `sp_droplinkedsrvlogin <linkedserver_name>, NULL` для удаления глобального сопоставления.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  `sp_addlinkedserver` Оператора требуется `ALTER ANY LINKED SERVER` разрешение. (SSMS **создать связанный сервер** диалоговое окно реализуется в виде, необходимо быть членом `sysadmin` предопределенной роли сервера.)  
   
 ## <a name="examples"></a>Примеры  
@@ -310,14 +310,14 @@ exec ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer
 select * from myLinkedServer.myDatabase.dbo.myTable  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Хранимые процедуры &#40; с распределенными запросами Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Распределенные запросы хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Системные таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

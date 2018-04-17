@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_xe_objects (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_xe_objects (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_objects
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f1146f74618195b28fd19f2464bc45a2498c61
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2143a0aeaf4012c23e3d84452961596535b4c7e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
  |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |имя|**nvarchar(60)**|Имя объекта. имя является уникальным в рамках пакета для конкретного типа объектов. Не допускает значение NULL.|  
-|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> действие<br /><br /> target;<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> type<br /><br /> Не допускает значение NULL.|  
+|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> действие<br /><br /> target;<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> Тип<br /><br /> Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который представляет это действие. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_packages.package_id. Не допускает значение NULL.|  
 |description|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности объекта. Допускает значение NULL.|  

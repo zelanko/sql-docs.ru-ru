@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_windows_info (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_os_windows_info (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_windows_info
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdb100404984cd679c2899a78a655872afbf501c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac000ce78154d6650c388709257178f4576161cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает одну строку с информацией о версии операционной системы Windows.  
   
-  Применяется только к SQL Server, работающей под управлением Windows. Чтобы просмотреть аналогичные informaton для SQL Server, запущенный на узле не под управлением Windows, например в Linux, используйте [sys.dm_os_host_info &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  Применяется только к SQL Server, работающей под управлением Windows. Чтобы просмотреть аналогичные informaton для SQL Server, запущенный на узле не под управлением Windows, например в Linux, используйте [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 По умолчанию разрешение SELECT на sys.dm_os_windows_info предоставляется роли public. Если отозван, требуется разрешение VIEW SERVER STATE на сервере.  
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
-Чтобы просмотреть informaton для SQL, выполняемыми на узле не под управлением Windows, например в Linux, используйте [sys.dm_os_host_info &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+Чтобы просмотреть informaton для SQL, выполняемыми на узле не под управлением Windows, например в Linux, используйте [sys.dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает все столбцы из **sys.dm_os_windows_info** представления.  

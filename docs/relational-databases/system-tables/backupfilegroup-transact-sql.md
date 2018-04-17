@@ -1,16 +1,16 @@
 ---
-title: "backupfilegroup (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: backupfilegroup (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 
+caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2787b6a012268378421017c0a2912385c669da17
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e3a0ffb005b52f4460415f166a6edc197218671d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |**is_readonly**|**бит**|1 = Файловая группа доступна только для чтения.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Может иметь значение NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 > [!IMPORTANT]  
 >  Одно и то же имя файловой группы может использоваться в разных базах данных, однако у каждой файловой группы есть свой идентификатор GUID. Таким образом **(backup_set_id filegroup_guid)** является уникальным ключом, идентифицирующим файловую группу в **backupfilegroup**.  
@@ -62,11 +62,11 @@ ms.lasthandoff: 02/03/2018
  Чтобы уменьшить число строк в данной таблице, а также в других таблицах резервной копии и журнал, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
   
 ## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Резервное копирование и восстановление таблицы &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Системные таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

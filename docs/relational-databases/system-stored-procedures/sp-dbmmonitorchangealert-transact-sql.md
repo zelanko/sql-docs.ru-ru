@@ -1,16 +1,16 @@
 ---
-title: "sp_dbmmonitorchangealert (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dbmmonitorchangealert (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41132fa5fd69036e9bc504628cd353d809d6a0bf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ec370000d664f8caa5dfb6eff526bbff2cb49ae2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_dbmmonitorchangealert database_name
 |4|Затраты на фиксирование изменений на зеркальном сервере|Указывает количество миллисекунд средней задержки транзакции, которая допустима перед формированием предупреждения на основном сервере. Задержка — это объем дополнительной нагрузки во время ожидания экземпляром основного сервера экземпляра зеркального сервера для добавления записи журнала транзакции в очередь повтора. Это значение уместно только в режиме высокой безопасности.|  
 |5|Срок хранения|Метаданные, управляющие длительностью хранения строк в таблице состояния зеркального отображения базы данных.|  
   
- Сведения об идентификаторах событий, соответствующих предупреждениям см. в разделе [пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения &#40; SQL Server &#41; ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Сведения об идентификаторах событий, соответствующих предупреждениям см. в разделе [пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
  *alert_threshold*  
  Пороговое значение для предупреждения. Если при обновлении состояния зеркального отображения возвращено значение выше данного порога, в журнал событий Windows будет внесена запись. Это значение, в зависимости от метрики производительности, представлено в KБ, минутах или миллисекундах.  
@@ -74,7 +74,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  Чтобы просмотреть текущие значения, выполните [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) хранимой процедуры.  
   
- *включен*  
+ *Включен*  
  Включены ли предупреждения?  
   
  0 = предупреждения отключены.  
@@ -101,7 +101,7 @@ sp_dbmmonitorchangealert database_name
 |1|Самая старая неотправленная транзакция|30 минут|Да|  
 |2|Неотправленный журнал|10 000 КБ|Да|  
 |3|Невосстановленный журнал|10 000 КБ|Да|  
-|4|Затраты на фиксирование изменений на зеркальном сервере|1 000 миллисекунд|нет|  
+|4|Затраты на фиксирование изменений на зеркальном сервере|1 000 миллисекунд|Нет|  
 |5|Срок хранения|8 часов|Да|  
   
 ```  
@@ -114,7 +114,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;
   
 ## <a name="see-also"></a>См. также  
  [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorhelpalert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+ [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   
   

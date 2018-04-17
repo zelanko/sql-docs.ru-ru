@@ -1,16 +1,16 @@
 ---
-title: "sysmail_delete_mailitems_sp (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmail_delete_mailitems_sp (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d518e72a5ad45147bc9cdf3316c7bd2eba07e7fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@sent_before=** ] **'***sent_before***'**  
+ [  **@sent_before=** ] **"***sent_before***"**  
  Удаляет сообщения электронной почты до даты и времени, указанных в *sent_before* аргумент. *sent_before* — **datetime** и значение по умолчанию NULL. Значение NULL соответствует всем датам.  
   
  [ **@sent_status=** ] **'***sent_status***'**  
@@ -56,8 +56,8 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
- Сообщения компонента Database Mail и их вложения хранятся в **msdb** базы данных. Сообщения должны периодически удаляться, чтобы предотвратить **msdb** рост больше, чем ожидается, так и в соответствии со своей программой хранения документов организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из таблиц компонента Database Mail. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другие необязательные аргументы можно удалить только сообщения определенного типа, указанный как **sent_status** аргумент. Необходимо указать аргумент для  **@sent_before**  или  **@sent_status** . Чтобы удалить все сообщения, используйте  **@sent_before = getdate()**.  
+## <a name="remarks"></a>Замечания  
+ Сообщения компонента Database Mail и их вложения хранятся в **msdb** базы данных. Сообщения должны периодически удаляться, чтобы предотвратить **msdb** рост больше, чем ожидается, так и в соответствии со своей программой хранения документов организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из таблиц компонента Database Mail. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другие необязательные аргументы можно удалить только сообщения определенного типа, указанный как **sent_status** аргумент. Необходимо указать аргумент для **@sent_before** или **@sent_status**. Чтобы удалить все сообщения, используйте  **@sent_before = getdate()**.  
   
  Удаление сообщений электронной почты также удаляет вложения, связанные с этими сообщениями. Удаление сообщений не удаляет соответствующие записи в **sysmail_event_log**. Используйте [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) для удаления элементов из журнала.  
   
@@ -95,9 +95,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sysmail_allitems &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

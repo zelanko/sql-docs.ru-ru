@@ -1,16 +1,16 @@
 ---
-title: "sp_helppeerresponses (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helppeerresponses (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerresponses
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44abb0462f6360ea1823383f318c41998240545e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 312020da93e5df6ea6f2f4cf0fcc482e8f4b94bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@request_id** =] *идентификатор_запроса*  
+ [ **@request_id**=] *идентификатор_запроса*  
  Идентификатор запроса конкретного состояния. *идентификатор_запроса* — **int**, не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**идентификатор_запроса**|**int**|Идентификатор запроса состояния.|  
+|**request_id**|**int**|Идентификатор запроса состояния.|  
 |**однорангового узла**|**sysname**|Имя узла, сформировавшего ответ.|  
 |**peer_db**|**sysname**|Имя базы данных узла, сформировавшего ответ.|  
 |**received_date**|**datetime**|Дата и время, когда запрашивающий объект получил ответ от однорангового узла, который отправил этот ответ.|  
@@ -66,11 +66,11 @@ sp_helppeerresponses [ @request_id = ] request_id
   
  **sp_helppeerresponses** процедура используется при восстановлении базы данных публикации в топологии одноранговая сеть.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_helppeerresponses**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_deletepeerrequesthistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_help_jobhistory (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_jobhistory (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 885f5e6cc09438ac8bc1f2341351ab08890019f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,34 +60,34 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***job_name***"**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@step_id=** ] *step_id*  
+ [  **@step_id=** ] *step_id*  
  Идентификационный номер этапа. *step_id* — **int**, значение по умолчанию NULL.  
   
- [ **@sql_message_id=** ] *sql_message_id*  
+ [  **@sql_message_id=** ] *sql_message_id*  
  Идентификационный номер сообщения об ошибке, возвращаемый Microsoft SQL Server при запуске задания. *sql_message_id* — **int**, значение по умолчанию NULL.  
   
  [ **@sql_severity=** ] *sql_severity*  
  Уровень серьезности сообщения об ошибке, возвращаемого SQL Server при запуске задания. *sql_severity* — **int**, значение по умолчанию NULL.  
   
- [ **@start_run_date=** ] *start_run_date*  
+ [  **@start_run_date=** ] *start_run_date*  
  Дата запуска задания. *start_run_date*— **int**, значение по умолчанию NULL. *start_run_date* должен быть задан в формате ГГГГММДД, где гггг — четырехзначное число года, мм — двухзначное число месяца, а дд — двухзначное число дня.  
   
- [ **@end_run_date=** ] *end_run_date*  
+ [  **@end_run_date=** ] *end_run_date*  
  Дата завершения задания. *end_run_date* — **int**, значение по умолчанию NULL. *end_run_date*должен быть задан в формате ГГГГММДД, где гггг — четырехзначное число года, мм — двухзначное число месяца, а дд — двухзначное число дня.  
   
- [ **@start_run_time=** ] *start_run_time*  
+ [  **@start_run_time=** ] *start_run_time*  
  Время запуска задания. *start_run_time* — **int**, значение по умолчанию NULL. *start_run_time*должен быть задан в формате ЧЧММСС, где ЧЧ — двухзначное число часов, мм — двухзначное число минут, а СС — двухзначное число дня.  
   
  [ **@end_run_time=** ] *end_run_time*  
  Время завершения выполнения задания. *end_run_time* — **int**, значение по умолчанию NULL. *end_run_time*должен быть задан в формате ЧЧММСС, где ЧЧ — двухзначное число часов, мм — двухзначное число минут, а СС — двухзначное число дня.  
   
- [ **@minimum_run_duration=** ] *minimum_run_duration*  
+ [  **@minimum_run_duration=** ] *minimum_run_duration*  
  Минимальное время для выполнения задания. *minimum_run_duration* — **int**, значение по умолчанию NULL. *minimum_run_duration*должен быть задан в формате ЧЧММСС, где ЧЧ — двухзначное число часов, мм — двухзначное число минут, а СС — двухзначное число дня.  
   
  [ **@run_status=** ] *run_status*  
@@ -102,7 +102,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Сообщение о проценте выполнения|  
 |**5**|Неизвестно|  
   
- [ **@minimum_retries=** ] *minimum_retries*  
+ [  **@minimum_retries=** ] *minimum_retries*  
  Минимальное число повторных попыток выполнить задание. *minimum_retries* — **int**, значение по умолчанию NULL.  
   
  [ **@oldest_first=** ] *oldest_first*  
@@ -111,7 +111,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  [ **@server=** ] **'***server***'**  
  Имя сервера, на котором было выполнено задание. *сервер* — **nvarchar(30)**, значение по умолчанию NULL.  
   
- [ **@mode=** ] **'***mode***'**  
+ [  **@mode=** ] **"***режим***"**  
  Выводит ли SQL Server все столбцы в результирующем наборе (**полного**) или только краткую сводку столбцов. *режим* — **varchar(7)**, значение по умолчанию **Сводка**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -140,7 +140,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
 |**server**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда (**локального**).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_help_jobhistory** возвращает отчет по журналу для указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  
   
 ## <a name="permissions"></a>Разрешения  

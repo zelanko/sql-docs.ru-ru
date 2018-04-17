@@ -1,16 +1,16 @@
 ---
-title: "sp_help_targetserver (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_targetserver (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c45b6bc34b8003d78cd60916b9db22557fb0f4b1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 91f89a27c0e41102bd19ae80e21a8d278b746ff2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Идентификационный номер сервера.|  
 |**server_name**|**nvarchar(30)**|Имя сервера.|  
-|**расположение**|**nvarchar(200)**|Расположение указанного сервера.|  
+|**расположение**|**Nvarchar(200)**|Расположение указанного сервера.|  
 |**time_zone_adjustment**|**int**|Настройка временной зоны в часах, от среднего времени по Гринвичу.|  
 |**enlist_date**|**datetime**|Дата прикрепления указанного сервера.|  
 |**last_poll_date**|**datetime**|Дата последнего опроса сервером заданий.|  
 |**status**|**int**|Состояние указанного сервера.|  
 |**unread_instructions**|**int**|Наличие на сервере непрочитанных инструкций. Если все строки были загружены, этот столбец имеет **0**.|  
 |**local_time**|**datetime**|Локальная дата и время на целевом сервере, которые основаны на локальном времени целевого сервера после последнего опроса главного сервера.|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
+|**enlisted_by_nt_user**|**Nvarchar(100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
 |**poll_interval**|**int**|Частота в секундах, с которой целевой сервер опрашивает службу Master SQLServerAgent, чтобы загрузить задания и выгрузить состояние заданий.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -98,11 +98,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_targetservergroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

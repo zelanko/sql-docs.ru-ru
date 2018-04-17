@@ -1,16 +1,16 @@
 ---
-title: "sp_OAMethod (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_OAMethod (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dcf9235953ca1e907c4bae97562d5ea0a00049b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,18 +71,18 @@ sp_OAMethod objecttoken , methodname
   
 -   Метод возвращает массив в качестве выходного параметра.  
   
- [  *@parametername*   **=**  ] *параметр*[ **ВЫВОДА** ]  
+ [  *@parametername*** =**] *параметр*[ **ВЫВОДА** ]  
  Параметр метода. Если указано, *параметр* должен быть величиной соответствующего типа данных.  
   
  Для получения возвращаемого значения аргумент, *параметр* должен быть локальной переменной соответствующего типа данных, и **ВЫВОДА** должен быть указан. Если задан параметр-константа или **ВЫВОДА** не указан, любое возвращаемое выходным параметром значение игнорируется.  
   
- Если указано, *имя_параметра* должно быть имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что  **@**  *имя_параметра*не [!INCLUDE[tsql](../../includes/tsql-md.md)] локальной переменной. Знак (**@**) удаляется, и *имя_параметра*передается объекту OLE имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
+ Если указано, *имя_параметра* должно быть имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что  **@** *имя_параметра*не [!INCLUDE[tsql](../../includes/tsql-md.md)] локальной переменной. Знак (**@**) удаляется, и *имя_параметра*передается объекту OLE имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
  *n*  
  Заполнитель, указывающий на возможность указания нескольких параметров.  
   
 > [!NOTE]  
->  *@parametername*может быть именованным параметром, так как он является частью указанного метода и передается через объект. Другие параметры для такой хранимой процедуры задаются позицией, а не именем.  
+>  *@parametername* может быть именованным параметром, так как он является частью указанного метода и передается через объект. Другие параметры для такой хранимой процедуры задаются позицией, а не именем.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое число (неуспешное завершение), которое является целочисленным значением типа HRESULT, возвращаемого объектом OLE-автоматизации.  
@@ -112,7 +112,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>Замечания  
  Можно также использовать **sp_OAMethod** для получения значения свойства.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -144,8 +144,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [OLE-автоматизация хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [OLE Automation хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

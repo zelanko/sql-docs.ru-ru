@@ -1,16 +1,16 @@
 ---
-title: "Процедура sp_repladdcolumn (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Процедура sp_repladdcolumn (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d638619d087d43b0820fdf21650a9b8db1f7cf63
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e7457c7829662d5716db9e794836f12e3a785564
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Имя публикации, к которой добавляется новый столбец. *publication_to_add* — **nvarchar(4000)**, значение по умолчанию **все**. Если **все**, а затем влияют на все публикации, содержащей эту таблицу. Если *publication_to_add* задано, добавлен новый столбец имеет только для этой публикации.  
   
  [ @from_agent =] *from_agent*  
- Выполняется ли хранимая процедура агентом репликации. *from_agent* — **int**, значение по умолчанию **0**, где значение **1** используется, если эта хранимая процедура выполняется агентом репликации, а в всех остальных случаях значение по умолчанию **0**следует использовать.  
+ Выполняется ли хранимая процедура агентом репликации. *from_agent* — **int**, значение по умолчанию **0**, где значение **1** используется, если эта хранимая процедура выполняется агентом репликации, а в каждом другой вариант значение по умолчанию **0**следует использовать.  
   
  [ @schema_change_script =] '*сценарий schema_change_script*"  
  Указывает имя и путь к скрипту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемому для изменения пользовательских хранимых процедур, сформированных системой. *сценарий schema_change_script* — **nvarchar(4000)**, значение по умолчанию NULL. При репликации транзакций допустимо заменять одну или несколько хранимых процедур по умолчанию пользовательскими. *сценарий schema_change_script* выполняется после изменения схемы реплицируемой таблицы статьи с помощью процедуры sp_repladdcolumn его можно использовать одно из следующих действий:  
@@ -94,10 +94,10 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера sysadmin и предопределенной роли базы данных db_owner могут выполнять процедуру sp_repladdcolumn.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устаревшие возможности репликации SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

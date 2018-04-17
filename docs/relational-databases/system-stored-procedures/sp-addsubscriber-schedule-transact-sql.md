@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscriber_schedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addsubscriber_schedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a84145ac6088d56df3ad08eeff6aac2da038654
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4dd092a18fb8265e6ce8d29fe68d2f3b13445cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>Хранимая процедура sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@agent_type =** ] *agent_type*  
  Тип агента. *agent_type* — **smallint**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Агент распространителя|  
 |**1**|Агент слияния.|  
@@ -89,7 +89,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Дата агента распространителя. Этот параметр используется при *frequency_type* равно **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Первая|  
 |**2**|Вторая|  
@@ -137,11 +137,11 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="remarks"></a>Замечания  
  **sp_addsubscriber_schedule** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_addsubscriber_schedule**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_changesubscriber_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

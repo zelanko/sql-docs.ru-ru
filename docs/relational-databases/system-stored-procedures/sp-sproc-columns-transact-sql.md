@@ -1,16 +1,16 @@
 ---
-title: "sp_sproc_columns (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_sproc_columns (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9488e94ffa0d3532ce72e421f5deadaf1acbed77
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f176d3f6be7f48920bee35ceae38977e6b947623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +78,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
@@ -86,7 +87,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COLUMN_TYPE**|**smallint**|Это поле всегда возвращает значение:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**ТИП ДАННЫХ**|**smallint**|Целочисленный код для типа данных ODBC. Если этот тип данных нельзя сопоставить с типом ISO, то значением будет NULL. Собственное имя типа данных возвращается в **TYPE_NAME** столбца.|  
 |**TYPE_NAME**|**sysname**|Строковое представление типа данных. Это имя типа данных, как представлено соответствующей СУБД.|  
-|**ТОЧНОСТЬ**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** столбец имеет десятичную форму.|  
+|**PRECISION**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** столбец имеет десятичную форму.|  
 |**LENGTH**|**int**|Размер передаваемых данных.|  
 |**МАСШТАБ**|**smallint**|Число цифр справа от десятичной запятой.|  
 |**ОСНОВАНИЕ СИСТЕМЫ СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления для числовых типов.|  
@@ -103,11 +104,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="remarks"></a>Замечания  
  **sp_sproc_columns** эквивалентно **SQLProcedureColumns** в ODBC. Возвращенные результаты сортируются по **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **имя_процедуры**и порядок, в котором параметры появляются в процедуре Определение.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
-## <a name="see-also"></a>См. также:  
- [Каталога хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

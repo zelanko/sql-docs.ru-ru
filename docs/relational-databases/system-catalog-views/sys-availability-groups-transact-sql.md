@@ -1,16 +1,16 @@
 ---
-title: "sys.availability_groups (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.availability_groups (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_groups_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a11cf2be1634440517fa0e21a3a1d0b9c749dca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 308566c623ccc10efaee06258594581a6ba3c37e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**automated_backup_preference**|**tinyint**|Предпочитаемое расположение для выполнения резервного копирования баз данных доступности в этой группе доступности. Ниже приведены возможные значения и их описания.<br /><br /> <br /><br /> 0: основной. Резервное копирование должно всегда выполняться в первичной реплике.<br /><br /> 1: только Вторичная. Создание резервных копий во вторичной реплике является предпочтительным.<br /><br /> 2: предпочтение вторичной. Создание резервных копий во вторичной реплике является предпочтительным, но создание резервных копий в первичной реплике также является допустимым при отсутствии вторичных реплик для операций резервного копирования. Это поведение по умолчанию.<br /><br /> 3: любая реплика. Приоритет места выполнения резервного копирования отсутствует.<br /><br /> <br /><br /> Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**automated_backup_preference_desc**|**nvarchar(60)**|Описание **automated_backup_preference**, одно из:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> None|  
 |**version**|**smallint**|Версия метаданных группы доступности в отказоустойчивом кластере Windows. Этот номер версии увеличивается, когда добавляются новые функции.|  
-|**basic_features**|**бит**|Указывает, является ли это основной группы доступности. Дополнительные сведения см. в разделе [основные группы доступности &#40; Всегда в группах доступности &#41; ](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
+|**basic_features**|**бит**|Указывает, является ли это основной группы доступности. Дополнительные сведения см. в разделе [Базовые группы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**бит**|Указывает, включена ли поддержка DTC для этой группы доступности. **DTC_SUPPORT** параметр **CREATE AVAILABILITY GROUP** управляет этот параметр.|  
 |**db_failover**|**бит**|Указывает, поддерживает ли группы доступности перехода на другой ресурс для условий работоспособности базы данных. **DB_FAILOVER** параметр **CREATE AVAILABILITY GROUP** управляет этот параметр.|  
 |**is_distributed**|**бит**|Указывает, является ли это распределенной группы доступности. Дополнительные сведения см. в разделе [Распределенные группы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
@@ -72,9 +72,9 @@ ms.lasthandoff: 02/03/2018
  Требует разрешения VIEW ANY DEFINITION на экземпляре сервера.  
   
 ## <a name="see-also"></a>См. также  
- [sys.availability_replicas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_replicas (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Отслеживание групп доступности &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Отслеживание групп доступности & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Отслеживание групп доступности (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

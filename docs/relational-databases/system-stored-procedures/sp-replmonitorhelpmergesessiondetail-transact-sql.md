@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85338afafa7ca61b6cea5388c7a5f362edf35caa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8ccd4cb18d3bc9113a6c82b1c83363fa11a15728
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** =] *session_id*  
  Задает сеанс агента. *session_id* — **int** без значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Фаза сеанса синхронизации может принимать одно из следующих значений:<br /><br /> **0** = Строка инициализации или итоговая строка<br /><br /> **1** = выгрузка<br /><br /> **2** = загрузка|  
 |**Столбец ArticleName**|**sysname**|Название синхронизируемой статьи. **Столбец ArticleName** также содержит сводные данные для строк в результирующем наборе, которые не отражают подробности о статье.|  
@@ -75,10 +75,10 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
  При выполнении на подписчике, **sp_replmonitorhelpmergesessiondetail** только возвращает подробные сведения о последних 5 сеансов агента слияния.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **db_owner** или **replmonitor** предопределенной роли базы данных на базу данных распространителя на распространителе или на базе данных подписки на подписчике могут выполнять **sp_ replmonitorhelpmergesessiondetail**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

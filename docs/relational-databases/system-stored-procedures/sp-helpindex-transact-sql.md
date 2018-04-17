@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_helpindex (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_helpindex (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpindex_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpindex
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cef2b217751b15eced19d8f77312b2bd6a5a59d0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f4eb81259a56e66170a132fa1b1625432544ca64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpindex-transact-sql"></a>Хранимая процедура sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Имя индекса.|  
 |**index_description**|**varchar(210)**|Описание индекса, включая файловую группу, в которой он находится.|  
@@ -67,8 +68,8 @@ sp_helpindex [ @objname = ] 'name'
   
  **Хранимая процедура sp_helpindex** предоставляет доступ только к упорядочиваемым столбцам индекса; поэтому она не предоставляет сведения об XML-индексы или Пространственные индексы.  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере сообщаются данные о типах индексов в таблице `Customer`.  
@@ -80,8 +81,8 @@ EXEC sp_helpindex N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

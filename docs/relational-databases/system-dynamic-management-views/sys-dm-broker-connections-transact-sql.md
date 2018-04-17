@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_broker_connections (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_broker_connections (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_connections
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abe087369c6584f1548930cf25f8930a2e78bc8c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3818944074a84e2eb5c97fcb12e8b1da940c1a2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,8 @@ ms.lasthandoff: 02/03/2018
 |**login_state**|**smallint**|Состояние процесса входа в систему для данного соединения. Возможные значения:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ЧЕРЕЗ ИНТЕРНЕТ<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Текущее состояние входа в систему с удаленного компьютера. Возможные значения:<br /><br /> Инициализируется подтверждение соединения.<br /><br /> Подтверждение соединения ожидает сообщения согласования входа.<br /><br /> Подтверждение соединения инициализировало и отправило контекст безопасности для проверки подлинности.<br /><br /> Подтверждение соединения получило и приняло контекст безопасности для проверки подлинности.<br /><br /> Подтверждение соединения инициализировало и отправило контекст безопасности для проверки подлинности. Существует дополнительный механизм для проверки подлинности сторон.<br /><br /> Подтверждение соединения получило и отправило принятый контекст безопасности для проверки подлинности. Существует дополнительный механизм для проверки подлинности сторон.<br /><br /> Подтверждение соединения ожидает сообщения инициализации подтверждения контекста безопасности.<br /><br /> Подтверждение соединения ожидает сообщения принятия подтверждения контекста безопасности.<br /><br /> Подтверждение соединения ожидает сообщения отклонения SSPI для ошибки проверки подлинности.<br /><br /> Подтверждение соединения ожидает сообщения предварительного главного секретного кода.<br /><br /> Подтверждение соединения ожидает сообщения проверки.<br /><br /> Подтверждение соединения ожидает сообщения разрешения конфликта.<br /><br /> Подтверждение соединения завершено и готово к обмену сообщениями.<br /><br /> Ошибка соединения.|  
 |**peer_certificate_id**|**int**|Идентификатор локального объекта сертификата, который используется удаленным экземпляром для проверки подлинности. Владелец этого сертификата должен иметь разрешение CONNECT для конечной точки компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Допускает значение NULL.|  
-|**encryption_algorithm**|**smallint**|Алгоритм шифрования, применяемый для данного соединения. Допускает значение NULL. Возможные значения:<br /><br /> **Значение &#124; Описание &#124; Соответствующий параметр DDL**<br /><br /> 0 &#124; Нет &#124; Отключено<br /><br /> 1 &#124; ТОЛЬКО ПОДПИСИ<br /><br /> 2 &#124; AES, RC4 &#124; Требуется &#124; Требуется алгоритм RC4}<br /><br /> 3 &#124; AES &#124; Требуется алгоритм AES<br /><br /> **Примечание:** алгоритм RC4 поддерживается только для обеспечения обратной совместимости. Когда база данных имеет уровень совместимости 90 или 100, новые материалы могут шифроваться только с помощью алгоритмов RC4 или RC4_128. (Не рекомендуется.) Используйте вместо этого более новые алгоритмы, например AES. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях материалы, зашифрованные с помощью алгоритмов RC4 или RC4_128, могут быть расшифрованы на любом уровне совместимости.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Текстовое представление алгоритма шифрования. Допускает значение NULL. Возможные значения:<br /><br /> **Описание &#124; Соответствующий параметр DDL**<br /><br /> Нет &#124; Отключено<br /><br /> RC4 &#124; {Требуется &#124; Требуется алгоритм RC4}<br /><br /> AES &#124; Требуется алгоритм AES<br /><br /> NONE, RC4 &#124; {Поддерживается &#124; Поддерживается алгоритм RC4}<br /><br /> NONE, AES &#124; Поддерживается алгоритм RC4<br /><br /> RC4, AES &#124; Требуется алгоритм RC4 AES<br /><br /> AES, RC4 &#124; Требуется алгоритм AES RC4<br /><br /> NONE, RC4, AES &#124; Поддерживается алгоритм RC4 AES<br /><br /> NONE, AES, RC4 &#124;  Поддерживается алгоритм AES RC4|  
+|**encryption_algorithm**|**smallint**|Алгоритм шифрования, применяемый для данного соединения. Допускает значение NULL. Возможные значения:<br /><br /> **Значение &#124; описание &#124; параметр соответствующие DDL**<br /><br /> 0 &#124; нет &#124; отключено<br /><br /> 1 &AMP;#124; ТОЛЬКО ПОДПИСИ<br /><br /> 2 &#124; AES, RC4 &#124; необходимые &#124; требуется алгоритм RC4}<br /><br /> 3 &#124; AES &#124;требуется алгоритм AES<br /><br /> **Примечание:** алгоритм RC4 поддерживается только для обеспечения обратной совместимости. Когда база данных имеет уровень совместимости 90 или 100, новые материалы могут шифроваться только с помощью алгоритмов RC4 или RC4_128. (Не рекомендуется.) Используйте вместо этого более новые алгоритмы, например AES. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях материалы, зашифрованные с помощью алгоритмов RC4 или RC4_128, могут быть расшифрованы на любом уровне совместимости.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Текстовое представление алгоритма шифрования. Допускает значение NULL. Возможные значения:<br /><br /> **Описание &#124; параметр соответствующие DDL**<br /><br /> Нет &#124; отключено<br /><br /> RC4 &#124; {необходимые &#124; требуется алгоритм RC4}<br /><br /> AES &#124; требуется алгоритм AES<br /><br /> NONE, RC4 &#124; {поддерживается &#124; поддерживается алгоритм RC4}<br /><br /> NONE, AES &#124; поддерживается алгоритм RC4<br /><br /> RC4, AES &#124; требуется алгоритм RC4 AES<br /><br /> AES, RC4 &#124; требуется алгоритм AES RC4<br /><br /> NONE, RC4, AES &#124; поддерживается алгоритм RC4 AES<br /><br /> NONE, AES, RC4 &#124; поддерживается алгоритм AES RC4|  
 |**receives_posted**|**smallint**|Количество асинхронных сетевых операций приема, которые не завершены в данном соединении. Допускает значение NULL.|  
 |**is_receive_flow_controlled**|**бит**|Показывает наличие сетевых операций приема, отсроченных элементами управления потоком из-за того, что сеть занята. Допускает значение NULL.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Количество запрошенных, но незавершенных сетевых операций отправки для данного соединения. Допускает значение NULL.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Компонент Service Broker, связанные с динамическим административным представлениям &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Компонент Service Broker, связанные с динамическим административным представлениям & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

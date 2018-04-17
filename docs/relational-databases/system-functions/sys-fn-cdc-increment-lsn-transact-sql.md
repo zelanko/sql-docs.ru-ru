@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_cdc_increment_lsn (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.fn_cdc_increment_lsn (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - fn_cdc_increment_lsn
 - sys.fn_cdc_increment_lsn
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87a9b418504d938ea5f201aabed8a727b9474887
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 00925a0374b45ee0eb0fbf1a488858884e465f05
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Номер LSN, возвращаемый функцией, всегда больше заданного значения. Между указанными двумя значениями не может быть промежуточных номеров LSN.  
   
  Для систематического отображения информации об изменениях данных с течением времени можно периодически вызывать функцию запроса, каждый раз указывая новые значения границ интервала. Чтобы исключить потерю данных, необходимо в качестве нижней границы последующего запроса использовать верхнюю границу предыдущего запроса. Так как интервал запроса является замкнутым, то новое значение нижней границы должно быть больше, чем значение верхней границы предыдущего запроса. Однако необходимо убедиться, что разница между указанными значениями границ достаточно мала и не включает номеров LSN каких-либо изменений. Для получения этого значения используется функция sys.fn_cdc_increment_lsn.  
@@ -81,8 +81,8 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [CDC.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [CDC.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

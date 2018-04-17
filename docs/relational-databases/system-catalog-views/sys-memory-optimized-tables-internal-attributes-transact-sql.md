@@ -1,16 +1,16 @@
 ---
-title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.memory_optimized_tables_internal_attributes
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89184c98512dcd4f4aeadc86ac4cfc8ccaff0ef7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 | :------ |:----------| :-----|
 |object_id  |**int**|       Идентификатор пользовательской таблицы. Внутренние оптимизированные для памяти таблицы, служащие для поддержки пользовательской таблицы (например, хранилища вне строки или удаленных строк в случае сочетания Hk/Columnstore), имеют то же значение object_id, что и их родительский объект. |
 |xtp_object_id  |**bigint**|    Идентификатор объекта выполняющейся в памяти OLTP, который соответствует внутренней оптимизированной для памяти таблице, используемой для поддержки пользовательской таблицы. Он уникален в пределах базы данных и может изменяться за время существования объекта. 
-|type|  **int** |   Тип внутренней таблицы.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|Тип|  **int** |   Тип внутренней таблицы.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Описание типа<br/><br/>DELETED_ROWS_TABLE — внутренняя таблица, отслеживающая удаленные строки для индекса columnstore<br/>USER_TABLE — таблица, содержащая данные пользователя в строке<br/>DICTIONARIES_TABLE — словари для индекса columnstore<br/>SEGMENTS_TABLE — сжатые сегменты для индекса columnstore<br/>ROW_GROUPS_INFO_TABLE — метаданные для групп сжатых строк индекса columnstore<br/>INTERNAL OFF-ROW DATA TABLE — внутренняя таблица, используемая для хранения столбца вне строки. В данном случае minor_id отражает столбец column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE — оперативный заключительный фрагмент таблицы журнала на диске. Вставляемые в журнал строки сначала вставляются во внутреннюю таблицу, оптимизированную для памяти. Существует фоновая задача, которая асинхронно перемещает строки из этой внутренней таблицы в таблицу журнала на диске. |
 |minor_id|  **int**|    Значение 0 указывает на пользователя или внутреннюю таблицу<br/><br/>Ненулевое значение обозначает идентификатор столбца, хранящегося вне строки. Соединяется с column_id в sys.columns.<br/><br/>Каждый столбец, хранящийся вне строки, имеет соответствующую строку в этом системном представлении.|
 

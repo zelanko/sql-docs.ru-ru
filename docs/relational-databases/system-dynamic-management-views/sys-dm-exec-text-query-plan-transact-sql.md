@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_text_query_plan (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 10/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_text_query_plan
@@ -22,21 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8521e394e35d7762084f28c44426cd7cb25284cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает инструкцию Showplan в текстовом формате для пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] или для определенной инструкции в пакете. План запроса, указанный в дескрипторе плана может быть кэширован или выполняться в данный момент. Это табличная функция аналогична [sys.dm_exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), но имеет следующие отличия:  
+  Возвращает инструкцию Showplan в текстовом формате для пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] или для определенной инструкции в пакете. План запроса, указанный в дескрипторе плана может быть кэширован или выполняться в данный момент. Это табличная функция аналогична [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), но имеет следующие отличия:  
   
 -   Вывод плана запроса возвращается в текстовом формате.  
   
@@ -80,7 +81,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | DEFAULT  
+*statement_end_offset* | -1 | ПО УМОЛЧАНИЮ  
 Конечная позиция запроса, который описывает строка, в соответствующем тексте пакета или сохраняемом объекте, в байтах.  
   
 *statement_start_offset* — **int**.  
@@ -92,12 +93,12 @@ sys.dm_exec_text_query_plan
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
-|**ObjectID**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
+|**objectid**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
 |**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для **заказов** приложения может называться **orderproc; 1**, **orderproc; 2**, и т. д. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
-|**шифрование**|**бит**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
+|**Шифрование**|**бит**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**nvarchar(max)**|Содержит представление Showplan времени компиляции плана выполнения запроса, заданного аргументом *plan_handle*. Инструкция Showplan имеет текстовый формат. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При следующих условиях вывод инструкции Showplan не возвращается в **план** возвращаемой таблицы для **sys.dm_exec_text_query_plan**:  
   
 -   Если план запроса, который задается с помощью *plan_handle* извлекается из кэша планов, **query_plan** возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием дескриптора плана и когда он использовался с **sys.dm_exec_text_query_plan**.  

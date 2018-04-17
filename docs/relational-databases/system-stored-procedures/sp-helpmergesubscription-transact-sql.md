@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergesubscription (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpmergesubscription (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85f9d4b9bba5d3dd6e56fcda1a81b6eafd49223d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e00420643c9579cbb963060a73f61a9fa22ef242
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию  **%** . Публикация уже должна существовать и соответствовать правилам идентификаторов. Если значение равно NULL или  **%** , возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Публикация уже должна существовать и соответствовать правилам идентификаторов. Если значение равно NULL или **%**, возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
   
  [  **@subscriber=**] **"***подписчика***"**  
- Имя подписчика. *подписчик* — **sysname**, значение по умолчанию  **%** . Если этот аргумент равен NULL или %, возвращаются сведения обо всех подписках данной публикации.  
+ Имя подписчика. *подписчик* — **sysname**, значение по умолчанию **%**. Если этот аргумент равен NULL или %, возвращаются сведения обо всех подписках данной публикации.  
   
  [  **@subscriber_db=**] **"***subscriber_db***"**  
- Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию  **%** , которое возвращает сведения обо всех базах данных подписки.  
+ Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех базах данных подписки.  
   
  [  **@publisher=**] **"***издатель***"**  
- Имя издателя. Издатель должен быть действительным сервером. *издатель*— **sysname**, значение по умолчанию  **%** , которая возвращает сведения обо всех издателях.  
+ Имя издателя. Издатель должен быть действительным сервером. *издатель*— **sysname**, значение по умолчанию **%**, которая возвращает сведения обо всех издателях.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
- Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию  **%** , которое возвращает сведения обо всех базах данных издателя.  
+ Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех базах данных издателя.  
   
  [  **@subscription_type=**] **"***subscription_type***"**  
  Тип подписки. *subscription_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Принудительная** (по умолчанию)|Принудительная подписка|  
-|**запросу**|Подписка по запросу|  
+|**По запросу**|Подписка по запросу|  
 |**оба**|Обе подписки: по запросу и принудительная подписка|  
   
  [  **@found=**] **"***найти***" выходные данные**  
@@ -81,10 +81,10 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Имя подписки.|  
-|**публикации**|**sysname**|Имя публикации.|  
+|**Публикации**|**sysname**|Имя публикации.|  
 |**издатель**|**sysname**|Имя издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
 |**подписчик**|**sysname**|Имя подписчика.|  
@@ -92,12 +92,12 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|Состояние подписки.<br /><br /> **0** = все задания ожидают запуска<br /><br /> **1** = одно или более заданий запускаются<br /><br /> **2** = все задания выполнены успешно<br /><br /> **3** = по крайней мере одно задание выполняется<br /><br /> **4** = все задания назначены по расписанию и бездействия<br /><br /> **5** = по крайней мере одно задание производит попытку запуска после предыдущего сбоя<br /><br /> **6** = по крайней мере одно задание завершилось неудачно|  
 |**subscriber_type**|**int**|Тип подписчика.|  
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = принудительно отправить<br /><br /> **1** = по запросу<br /><br /> **2** = both|  
-|**приоритет**|**float(8)**|Число, показывающее приоритет подписки.|  
-|**параметром sync_type, равным**|**tinyint**|Тип синхронизации подписки.|  
+|**priority**|**float(8)**|Число, показывающее приоритет подписки.|  
+|**sync_type**|**tinyint**|Тип синхронизации подписки.|  
 |**Описание**|**nvarchar(255)**|Короткое описание данной подписки слиянием.|  
 |**merge_jobid**|**binary(16)**|Идентификатор задания агента слияния.|  
 |**full_publication**|**tinyint**|Подписка к полной или фильтрованной публикации.|  
-|**offload_enabled**|**bit**|Указывает, установлено ли на запуск выполнение разгрузки агента репликации на подписчике. Если равно NULL, выполняется на издателе.|  
+|**offload_enabled**|**бит**|Указывает, установлено ли на запуск выполнение разгрузки агента репликации на подписчике. Если равно NULL, выполняется на издателе.|  
 |**offload_server**|**sysname**|Имя сервера, на который запущен агент.|  
 |**use_interactive_resolver**|**int**|Возвращает сведения о том, был ли использован интерактивный сопоставитель во время взаимодействия. Если **0**, интерактивный арбитр конфликтов не используется.|  
 |**Имя узла**|**sysname**|Значение задается, если подписка фильтруется по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) функции.|  
@@ -113,13 +113,13 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
  Для анонимных подписок *subscription_type*значение всегда равно **1** (по запросу). Тем не менее, необходимо выполнить [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) на подписчике сведения об анонимных подписках.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или в списке доступа к публикации для публикации, к которой принадлежит подписка могут выполнять процедуру **sp_ helpmergesubscription**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_addmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sysmergepartitioninfoview (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmergepartitioninfoview (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 92e3effdde5a4272094e55e7baed289d009ce275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя статьи.|  
 |**type**|**tinyint**|Показывает тип статьи. Предусмотрены следующие типы.<br /><br /> **0x0A** = таблица.<br /><br /> **0x20** = только схема процедуры.<br /><br /> **0x40** = только схема представления или только схема индексированного представления.<br /><br /> **0x80** = только схема функции.|  
-|**objid**|**int**|Идентификатор для опубликованного объекта.|  
+|**objID**|**int**|Идентификатор для опубликованного объекта.|  
 |**sync_objid**|**int**|Идентификатор объекта представления, представляющего синхронизированный набор данных.|  
 |**view_type**|**tinyint**|Тип представления:<br /><br /> **0** = не представление; используются все базовые объекты.<br /><br /> **1** = постоянное представление.<br /><br /> **2** = временное представление.|  
 |**artid**|**uniqueidentifier**|Уникальный идентификационный номер данной статьи.|  
 |**Описание**|**nvarchar(255)**|Краткое описание статьи.|  
 |**pre_creation_command**|**tinyint**|Действие по умолчанию при создании статьи в базе данных подписки.<br /><br /> **0** = none — Если таблица уже существует на подписчике, никакие действия не выполняются.<br /><br /> **1** = Удалить — удаляет таблицу перед ее повторным созданием.<br /><br /> **2** = delete — производить операцию удаления на предложение WHERE в фильтре подмножества основе.<br /><br /> **3** = Truncate — аналогично 2, но операции удаления страниц вместо строк. Однако предложение WHERE не используется.|  
 |**pubid**|**uniqueidentifier**|Идентификатор публикации, которой принадлежит данная статья.|  
-|**nickname**|**int**|Сопоставление псевдонима для идентификатора статьи.|  
+|**Понятное имя**|**int**|Сопоставление псевдонима для идентификатора статьи.|  
 |**column_tracking**|**int**|Показывает, реализовано ли отслеживание столбцов для статьи.|  
 |**status**|**tinyint**|Показывает состояние статьи. Может иметь одно из следующих значений:<br /><br /> **1** = Unsynced — скрипт начальной обработки для публикации таблицы будет выполняться при следующем запуске агента моментальных снимков.<br /><br /> **2** = active — скрипт начальной обработки для публикации таблицы была выполнена.|  
 |**conflict_table**|**sysname**|Имя локальной таблицы, которая содержит конфликтные записи для текущей статьи. Таблица приведена только в ознакомительных целях, и ее содержимое может быть изменено или удалено пользовательскими процедурами устранения конфликтов или непосредственно администратором.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 |**select_proc**|**sysname**|Имя автоматически формируемой хранимой процедуры, используемой агентом слияния для выполнения блокировки и поиска столбцов и строк в статье.|  
 |**metadata_select_proc**|**sysname**|Имя автоматически сформированной хранимой процедуры, используемой для доступа к метаданным в системных таблицах репликаций слиянием.|  
 |**delete_proc**|**sysname**|Процедура, используемая для удаления строк во время синхронизации.|  
-|**schema_option**|**binary(8)**|Битовая карта параметра формирования схемы для данной статьи. Дополнительные сведения о поддерживаемых *schema_option* значения, в разделе [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|Битовая карта параметра формирования схемы для данной статьи. Дополнительные сведения о поддерживаемых *schema_option* значения, в разделе [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Имя таблицы, созданной на стороне подписчика.|  
 |**destination_owner**|**sysname**|Имя владельца целевого объекта.|  
 |**resolver_clsid**|**nvarchar(50)**|Идентификатор пользовательского сопоставителя конфликтов. Для обработчика бизнес-логики это значение NULL.|  
@@ -88,22 +88,22 @@ ms.lasthandoff: 02/03/2018
 |**processing_order**|**int**|Указывает порядок обработки статей в публикации слиянием. При задании значения **0** означает, что статьи не упорядочены и статьи обрабатываются в порядке от наименьшего к наибольшему значению. Если значения двух статей совпадают, то эти статьи обрабатываются одновременно. Дополнительные сведения см. в статье [Определение порядка обработки для статей публикации слиянием](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
 |**upload_options**|**tinyint**|Определяет, могут ли изменения быть произведены на подписчике или переданы с подписчика. Может принимать одно из следующих значений:<br /><br /> **0** = нет ограничений на обновления, производимые на подписчике; все изменения передаются на издатель.<br /><br /> **1** = изменения на подписчике разрешены, но они не передаются на издатель.<br /><br /> **2** = изменения на подписчике не разрешены.|  
 |**published_in_tran_pub**|**бит**|Показывает, что статья в публикации слиянием также опубликована в публикации транзакций.<br /><br /> **0** = статья не опубликована в транзакционной статье.<br /><br /> **1** = статья также опубликована в транзакционной статье.|  
-|**lightweight**|**бит**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Упрощенный**|**бит**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**бит**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|Идентификатор представления таблицы перед обновлениями.|  
 |**delete_tracking**|**бит**|Указывает, производится ли репликация операций удаления:<br /><br /> **0** = удаления не реплицируются.<br /><br /> **1** = удаления реплицируются, что является поведением по умолчанию для репликации слиянием.<br /><br /> Если значение *delete_tracking* — **0**, строки, удаляемые на подписчике должны быть вручную удалены на издателе, а строки, удаленные на издателе должен быть вручную удалены на подписчике.<br /><br /> Примечание: Значение **0** приведет к отсутствию конвергенции.|  
 |**compensate_for_errors**|**бит**|Указывает, будут ли выполняться корректирующие действия, если во время синхронизации возникнут ошибки:<br /><br /> **0** = компенсационные действия отключены.<br /><br /> **1** = изменения, которые невозможно применить к подписчику или издателю, всегда вызывают компенсационные действия для их отмены, что является поведением по умолчанию для репликации слиянием.<br /><br /> Примечание: Значение **0** приведет к отсутствию конвергенции.|  
 |**pub_range**|**bigint**|Размер диапазона идентификаторов издателя.|  
-|**range**|**bigint**|Размер диапазона последовательных значений идентификаторов, выделяемого подписчикам.|  
-|**threshold**|**int**|Пороговое процентное значение диапазона идентификаторов.|  
+|**диапазон**|**bigint**|Размер диапазона последовательных значений идентификаторов, выделяемого подписчикам.|  
+|**Пороговое значение**|**int**|Пороговое процентное значение диапазона идентификаторов.|  
 |**stream_blob_columns**|**бит**|Указывает, используется ли потоковая оптимизация для столбцов больших двоичных объектов. **1** означает, что будет предприниматься попытка оптимизации.|  
 |**preserve_rowguidcol**|**бит**|Указывает, будет ли репликация пользоваться существующим столбцом глобального идентификатора строки. Значение **1** обозначает, что существующий столбец ROWGUIDCOL. **0** означает столбец ROWGUIDCOL добавлен при репликации.|  
 |**partition_view_id**|**int**|Указывает представление, которое определяет секцию подписчика.|  
 |**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|Инструкция, используемая внутри триггера репликации слиянием, для получения идентификатора секции для каждой удаленной или обновленной строки, основанной на значениях старого столбца.|  
-|**partition_inserted_view_rule**|**Sysname**|Инструкция, используемая внутри триггера репликации слиянием, для получения идентификатора секции для каждой вставленной или обновленной строки, основанной на значениях нового столбца.|  
-|**membership_eval_proc_name**|**sysname**|Имя процедуры, оценивающей текущие идентификаторы секций строк в [MSmerge_contents &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
+|**partition_inserted_view_rule**|**sysname**|Инструкция, используемая внутри триггера репликации слиянием, для получения идентификатора секции для каждой вставленной или обновленной строки, основанной на значениях нового столбца.|  
+|**membership_eval_proc_name**|**sysname**|Имя процедуры, оценивающей текущие идентификаторы секций строк в [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
 |**column_list**|**sysname**|Список разделенных запятой столбцов, опубликованных в статье.|  
 |**column_list_blob**|**sysname**|Список разделенных запятой столбцов, опубликованных в статье, включая столбцы больших двоичных объектов.|  
 |**expand_proc**|**sysname**|Имя процедуры, которая заново оценивает идентификаторы секций для всех дочерних строк вновь вставленной родительской строки и для всех родительских строк, которые претерпели изменение секции или были удалены.|  
@@ -117,9 +117,9 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Управление секциями для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepartition &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_helpmergepartition &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   

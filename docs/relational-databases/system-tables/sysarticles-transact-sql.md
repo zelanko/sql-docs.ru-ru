@@ -1,16 +1,16 @@
 ---
-title: "sysarticles (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysarticles (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sysarticles system table
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce368158e29c1ba76442e38d374a5ddd615f75f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1d97ab4186607a36849a815ef8403bacc7d1511c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Содержит по одной строке для каждой статьи из локальной базы данных. Данная таблица хранится в опубликованной базе данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Столбец идентификаторов, в котором хранится уникальный идентификатор статьи.|  
 |**creation_script**|**nvarchar(255)**|Скрипт схемы для статьи.|  
@@ -62,13 +62,13 @@ ms.lasthandoff: 11/21/2017
 |**del_scripting_proc**|**int**|Зарегистрированная пользовательская хранимая процедура или скрипт, выполняющиеся при репликации инструкции DELETE.|  
 |**upd_scripting_proc**|**int**|Зарегистрированная пользовательская хранимая процедура или скрипт, выполняющиеся при репликации инструкции UPDATE.|  
 |**custom_script**|**nvarchar(2048)**|Зарегистрированная пользовательская хранимая процедура или скрипт, выполняющиеся в конце триггера DDL.|  
-|**fire_triggers_on_snapshot**|**bit**|Показывает, выполняются ли реплицируемые триггеры при применении моментального снимка. Может принимать одно из следующих значений:<br /><br /> **0** = триггеры не выполняются.<br /><br /> **1** = триггеры выполняются.|  
+|**fire_triggers_on_snapshot**|**бит**|Показывает, выполняются ли реплицируемые триггеры при применении моментального снимка. Может принимать одно из следующих значений:<br /><br /> **0** = триггеры не выполняются.<br /><br /> **1** = триггеры выполняются.|  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
   
   

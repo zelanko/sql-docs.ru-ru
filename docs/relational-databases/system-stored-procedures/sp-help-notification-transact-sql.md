@@ -1,16 +1,16 @@
 ---
-title: "sp_help_notification (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_notification (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c779b314553c1895071ab04b5131d998c029cc94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@object_type =**] **'***object_type***'**  
+ [  **@object_type =**] **"***object_type***"**  
  Возвращаемый тип информации. *object_type*— **char(9)**, не имеет значения по умолчанию. *object_type* может принимать значение ALERTS, перечисляя предупреждения, назначенные указанному имени оператора*,* или OPERATORS, перечисляя операторов, ответственных за указанное имя предупреждения*.*  
   
- [ **@name =**]  **'***name***'**  
+ [  **@name =**] **"***имя***"**  
  Имя оператора (если *object_type* имеет значение OPERATORS) или имя предупреждения (если *object_type* имеет значение ALERTS). *имя* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@enum_type =**] **'***enum_type***'**  
+ [  **@enum_type =**] **"***enum_type***"**  
  *Object_type*сведений, возвращаемых. *enum_type* — ФАКТИЧЕСКИ в большинстве случаев. *enum_type*— **char(10)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -76,7 +76,7 @@ sp_help_notification
 |**4**|NetSend: возвращает только **use_netsend** столбца.|  
 |**7**|Все: возвращает все столбцы.|  
   
- [ **@target_name =**] **'***target_name***'**  
+ [  **@target_name =**] **"***target_name***"**  
  Имя искомого предупреждения (если *object_type* имеет значение ALERTS) или имя искомого оператора (если *object_type* имеет значение OPERATORS). *target_name* требуется только в том случае, если *enum_type* является целевым ОБЪЕКТОМ. *target_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-valves"></a>Значения кодов возврата  
@@ -89,9 +89,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Идентификатор предупреждения.|  
 |**alert_name**|**sysname**|Имя предупреждения.|  
-|**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**use_netsend**|**int**|Уведомление оператора происходит с помощью сетевого всплывающего окна.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
+|**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**use_netsend**|**int**|Уведомление оператора происходит с помощью сетевого всплывающего окна.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**has_email**|**int**|Количество уведомлений, отправленных для данного предупреждения по электронной почте.|  
 |**has_pager**|**int**|Количество уведомлений, отправленных для данного предупреждения по пейджеру.|  
 |**has_netsend**|**int**|Число **net send** уведомлений, отправленных для данного предупреждения.|  
@@ -102,14 +102,14 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Идентификационный номер оператора.|  
 |**operator_name**|**sysname**|Имя оператора.|  
-|**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**use_netsend**|**int**|Для уведомления оператора используется всплывающее сетевое сообщение.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**has_email**|**int**|У оператора есть адрес электронной почты.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**has_pager**|**int**|У оператора есть адрес пейджера.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**has_netsend**|**int**|Оператор имеет настроенное уведомление net send.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
+|**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**use_netsend**|**int**|Для уведомления оператора используется всплывающее сетевое сообщение.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**has_email**|**int**|У оператора есть адрес электронной почты.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**has_pager**|**int**|У оператора есть адрес пейджера.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**has_netsend**|**int**|Оператор имеет настроенное уведомление net send.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эта хранимая процедура должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -148,9 +148,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

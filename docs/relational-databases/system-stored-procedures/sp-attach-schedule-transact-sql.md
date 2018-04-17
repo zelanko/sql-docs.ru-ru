@@ -1,16 +1,16 @@
 ---
-title: "sp_attach_schedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_attach_schedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3dc76db676b05d358b6ec6b33b2b5043f7ac63de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,25 +49,25 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификационный номер задания, добавляемого в расписание. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **"***job_name***"**  
  Имя задания, к которому добавляется расписание. *job_name*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@schedule_id =** ] *schedule_id*  
+ [  **@schedule_id =** ] *schedule_id*  
  Идентификационный номер расписания, задаваемого для задания. *schedule_id*— **int**, значение по умолчанию NULL.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **"***schedule_name***"**  
  Имя элемента расписания, задаваемого для задания. *schedule_name*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Расписание и задание должны иметь одного и того же владельца.  
   
  Расписание может быть назначено более чем одному заданию. Задание может выполняться более чем в одном расписании.  
@@ -87,7 +87,7 @@ sp_attach_schedule
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет, если пользователь является владельцем задания и расписания.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет, является ли пользователь владельцем и задания и расписания.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается расписание с именем `NightlyJobs`. Задания, использующие это расписание, выполняются на сервере каждый день в `01:00`. В этом примере расписание подключается к заданиям `BackupDatabase` и `RunReports`.  
@@ -118,8 +118,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [процедуру sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [процедуру sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

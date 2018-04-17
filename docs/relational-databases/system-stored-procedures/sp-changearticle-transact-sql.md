@@ -1,16 +1,16 @@
 ---
-title: "sp_changearticle (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_changearticle (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
-|Свойство|Значения|Description|  
+|property|Значения|Описание|  
 |--------------|------------|-----------------|  
 |**creation_script**||Путь и имя скрипта схемы статьи, используемого для создания целевых таблиц. Значение по умолчанию — NULL.|  
 |**del_cmd**||Инструкция DELETE к выполнению; иначе формируется из журнала.|  
@@ -82,8 +82,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||Команда предсоздания, которая перед применением синхронизации может полностью или частично удалить данные из целевой таблицы или выполнить ее усечение.|  
 ||**Нет**|Не использует команду.|  
 ||**DROP**|Удаляет целевую таблицу полностью.|  
-||**удалить**|Удаляет целевую таблицу.|  
-||**усечение**|Усекает целевую таблицу.|  
+||**delete**|Удаляет целевую таблицу.|  
+||**truncate**|Усекает целевую таблицу.|  
 |**pub_identity_range**||Управляет размером диапазонов идентификаторов, назначенных на подписчике. В случае одноранговой репликации не поддерживается.|  
 |**schema_option**||Указывает битовую карту параметра формирования схемы для данной статьи. *schema_option* — **binary(8)**. Дополнительные сведения см. в подразделе «Примечания» далее в этом разделе.|  
 ||**0x00**|Отключает выполнение сценариев агентом моментальных снимков.|  
@@ -124,7 +124,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x400000000**|Проводит репликацию параметра сжатия для данных и индексов. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о создании объектов до применения моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> См. связанный параметр **0x100000000**.|  
 ||**0x1000000000**|Преобразует среды выполнения (CLR) определяемые пользователем типы (UDT) больше 8000 байт для **varbinary(max)** , чтобы столбцы определяемого Пользователем типа могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x2000000000**|Преобразует **hierarchyid** тип данных, который **varbinary(max)** , чтобы столбцы типа **hierarchyid** могут реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|Преобразует **hierarchyid** тип данных, который **varbinary(max)** , чтобы столбцы типа **hierarchyid** могут реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Проводит репликацию всех фильтруемых индексов для таблицы. Дополнительные сведения об отфильтрованных индексах см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Преобразует **geography** и **geometry** типами данных **varbinary(max)** , чтобы столбцы этих типов могут реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Реплицирует индексы для столбцов типа **geography** и **geometry**.|  
@@ -137,10 +137,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**нет имен столбцов**|Имена столбцов не включаются в реплицируемую инструкцию INSERT.|  
 ||**Нет горизонтальные секции служб dts**|Горизонтальная секция статьи не задается трансформируемой подпиской.|  
 ||**Нет**|Очищает все параметры состояния в [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) и помечает статью как неактивную.|  
-||**Параметры**|Изменения передаются подписчику при помощи параметризированных команд. Это значение по умолчанию для новой статьи.|  
-||**строковые литералы**|Изменения передаются подписчику при помощи значений строковых литералов.|  
+||**parameters**|Изменения передаются подписчику при помощи параметризированных команд. Это значение по умолчанию для новой статьи.|  
+||**Строковые литералы**|Изменения передаются подписчику при помощи значений строковых литералов.|  
 |**sync_object**||Имя таблицы или представления, которые используются для создания выходного файла синхронизации. Значение по умолчанию — NULL. Не поддерживается для издателей Oracle.|  
-|**табличное пространство**||Определяет табличное пространство, используемое таблицей, выполняющей протоколирование, для статьи, опубликованной с базы данных Oracle. Дополнительные сведения см. в статье [Управление табличными пространствами Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**Табличное пространство**||Определяет табличное пространство, используемое таблицей, выполняющей протоколирование, для статьи, опубликованной с базы данных Oracle. Дополнительные сведения см. в статье [Управление табличными пространствами Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**Пороговое значение**||Процентное значение, определяющее, когда агентом распространителя выделяется новый диапазон идентификаторов. В случае одноранговой репликации не поддерживается.|  
 |**type**||Не поддерживается для издателей Oracle.|  
 ||**logbased**|Статья на основе журнала.|  
@@ -163,7 +163,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Сведения о свойствах, при изменении которых требуется формирование нового моментального снимка, см. в разделе «Примечания».  
   
- [  **@force_reinit_subscription=]***этот*  
+ [**@force_reinit_subscription=] *** этот*  
  Подтверждает, что действие, выполняемое данной хранимой процедурой, может сделать необходимой повторную инициализацию текущих подписок. *Этот* — **бит** значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье не вызывают повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
@@ -172,7 +172,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Свойства, которые при изменении потребуют повторной инициализации всех текущих подписок, см. в разделе «Примечания».  
   
- [  **@publisher** =] **"***издатель***"**  
+ [ **@publisher**=] **"***издатель***"**  
  Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -181,7 +181,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_changearticle** используется в репликации моментальных снимков и репликации транзакций.  
   
  Если статья принадлежит к публикации, поддерживающей-одноранговой репликации транзакций, можно выбрать только **описание**, **ins_cmd**, **upd_cmd**и **del_cmd** свойства.  
@@ -252,13 +252,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changearticle**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств статьи](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

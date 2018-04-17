@@ -2,7 +2,7 @@
 title: sp_add_jobschedule (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: e3e17e1cb49063da0916f04cac2a8c6a49e6e83c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификационный номер задания, которому добавляется расписание. *Аргумент job_id* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
  [  **@job_name=** ] **"***job_name***"**  
@@ -70,10 +70,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@name=** ] **"***имя***"**  
  Имя расписания. *имя* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
- [ **@enabled=** ] *enabled_flag*  
+ [  **@enabled=** ] *enabled_flag*  
  Отображает текущее состояние расписания. *enabled_flag* — **tinyint**, значение по умолчанию **1** (включено). Если **0**, расписание не включено. Если расписание отключено, то задание не выполняется.  
   
- [ **@freq_type=** ] *frequency_type*  
+ [  **@freq_type=** ] *frequency_type*  
  Это значение указывает, когда должно выполняться задание. *frequency_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|Выполняется при запуске службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускается при простое компьютера.|  
   
- [ **@freq_interval=** ] *frequency_interval*  
+ [  **@freq_interval=** ] *frequency_interval*  
  Дни, когда выполняется задание. *frequency_interval* — **int**, значение по умолчанию 0 и зависит от значения *frequency_type* как указано в следующей таблице:  
   
 |Значение|Действие|  
@@ -108,10 +108,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**0x4**|Минуты|  
 |**0x8**|Часы|  
   
- [ **@freq_subday_interval=** ] *frequency_subday_interval*  
+ [  **@freq_subday_interval=** ] *frequency_subday_interval*  
  Число *frequency_subday_type* периодов должно пройти между выполнениями задания. *frequency_subday_interval* — **int**, значение по умолчанию 0.  
   
- [ **@freq_relative_interval=** ] *frequency_relative_interval*  
+ [  **@freq_relative_interval=** ] *frequency_relative_interval*  
  Далее описывается *frequency_interval* при *frequency_type* равно **32** (относительно ежемесячно).  
   
  *frequency_relative_interval* — **int**, без значения по умолчанию и может принимать одно из следующих значений:  
@@ -129,18 +129,18 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
  Число недель или месяцев между запланированными выполнениями задания. *frequency_recurrence_factor* используется только в том случае, если *frequency_type* равно **8**, **16**, или **32**. *frequency_recurrence_factor* — **int**, значение по умолчанию 0.  
   
- [ **@active_start_date=** ] *active_start_date*  
+ [  **@active_start_date=** ] *active_start_date*  
  Дата, когда может начаться выполнение задания. *active_start_date* — **int**, не имеет значения по умолчанию. Формат даты: ГГГГMMДД. Если *active_start_date* не установлен, дата должна быть больше или равна 19900101.  
   
  После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см в разделе «Планирование даты начала» [Создание и присоединение расписаний к заданиям](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
- [ **@active_end_date=** ] *active_end_date*  
+ [  **@active_end_date=** ] *active_end_date*  
  Дата, когда может быть остановлено выполнение задания. *active_end_date* — **int**, не имеет значения по умолчанию. Формат даты: ГГГГMMДД.  
   
- [ **@active_start_time=** ] *active_start_time*  
+ [  **@active_start_time=** ] *active_start_time*  
  Время в любой день между *active_start_date* и *active_end_date* начала выполнения задания. *active_start_time* — **int**, не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
- [ **@active_end_time=***active_end_time*  
+ [**@active_end_time= *** active_end_time*  
  Время в любой день между *active_start_date* и *active_end_date* окончания выполнения задания. *active_end_time* — **int**, не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
  [  **@schedule_id=***schedule_id***выходных данных**  

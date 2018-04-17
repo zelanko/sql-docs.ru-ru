@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f8837e835a1e7ef4d8a4ecdf16adea077a9f878
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c86286a8412f41dbc8c30bc5bcd68489aa27f99e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,11 +96,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Номер LSN-фиксации транзакции, связанный с этим изменением. Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN-фиксации.|  
 |__CDC_SEQVAL|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  
-|\<столбцы из @column_list>|**зависит от**|Столбцы, которые определены в *column_list* функции sp_cdc_generate_wrapper_function при ее вызове для формирования скрипта, создающего функцию-оболочку.|  
-|__CDC_OPERATION|**nvarchar(2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет различаются в зависимости от значения аргумента *row_filter_option* в вызове:<br /><br /> *row_filter_option* = 'all'<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = «all update old»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
+|\<столбцы из @column_list>|**Зависит от**|Столбцы, которые определены в *column_list* функции sp_cdc_generate_wrapper_function при ее вызове для формирования скрипта, создающего функцию-оболочку.|  
+|__CDC_OPERATION|**nvarchar(2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет различаются в зависимости от значения аргумента *row_filter_option* в вызове:<br /><br /> *row_filter_option* = «все»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = «all update old»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
 |\<столбцы из @update_flag_list>|**бит**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \__CDC_OPERATION равно d ", «I» или «uo». Когда \__CDC_OPERATION является 'UN', он имеет значение 1, если обновление изменило соответствующий столбец. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Функция fn_all_changes_<экземпляр_отслеживания> служит оболочкой для функции запроса cdc.fn_cdc_get_all_changes_<экземпляр_отслеживания>. Хранимая процедура sys.sp_cdc_generate_wrapper формирует скрипт для создания оболочки.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  
@@ -113,7 +113,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Используя параметр @closed_high_end_point при создании скрипта, можно формировать оболочки для поддержки закрытой или открытой верхней границы в заданном окне запроса. Таким образом, можно решить, включаются ли в интервал записи, для которых время фиксации совпадает с верхней границей интервала извлекаемых данных. По умолчанию верхняя граница включается в интервал.  
   
- Результирующий набор, возвращаемый процедурой **все изменения** функции-оболочки возвращает __ $start_lsn и \_ \_$seqval столбцов таблицы изменений в качестве \__CDC_STARTLSN и \__ CDC_SEQVAL, соответственно. Следует с помощью только те отслеживаемые столбцы, которые были доступны в  *@column_list*  параметр при формировании оболочки. Если  *@column_list*  имеет значение NULL, все отслеживаемые исходные столбцы возвращаются. Исходными столбцами следует столбец операции \__CDC_OPERATION, который представляет собой столбец 1 или 2 символа, который определяет операцию.  
+ Результирующий набор, возвращаемый процедурой **все изменения** функции-оболочки возвращает __ $start_lsn и \_ \_$seqval столбцов таблицы изменений в качестве \__CDC_STARTLSN и \__ CDC_SEQVAL, соответственно. Следует с помощью только те отслеживаемые столбцы, которые были доступны в *@column_list* параметр при формировании оболочки. Если *@column_list* имеет значение NULL, все отслеживаемые исходные столбцы возвращаются. Исходными столбцами следует столбец операции \__CDC_OPERATION, который представляет собой столбец 1 или 2 символа, который определяет операцию.  
   
  Затем к результирующему набору добавляются битовые флаги для каждого столбца, указанного параметром @update_flag_list. Для **все изменения** оболочки, битовых флагов всегда равно NULL, если значение __CDC_OPERATION равно бы ", «I» или «uo» —. Если \__CDC_OPERATION является 'UN', флаг задается значение 1 или 0, в зависимости от того, является ли изменен столбец в результате операции обновления.  
   
@@ -121,6 +121,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>См. также  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [CDC.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_get_sql (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.fn_get_sql (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2f4572bfe948456f98e446d05e8c5601490431c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   Возвращает текст инструкции SQL для указанного дескриптора SQL.  
   
 > [!IMPORTANT]  
->  В будущей версии Microsoft SQL Server этот компонент будет удален. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо нее используйте sys.dm_exec_sql_text. Дополнительные сведения см. в разделе [sys.dm_exec_sql_text &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  В будущей версии Microsoft SQL Server этот компонент будет удален. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо нее используйте sys.dm_exec_sql_text. Дополнительные сведения см. в разделе [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -70,8 +70,8 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**бит**|Указывает, зашифрован ли объект.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
 |text|**text**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
   
-## <a name="remarks"></a>Remarks  
- Допустимый дескриптор SQL можно получить из столбца sql_handle [sys.dm_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) динамическое административное представление.  
+## <a name="remarks"></a>Замечания  
+ Допустимый дескриптор SQL можно получить из столбца sql_handle [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) динамическое административное представление.  
   
  Если передается дескриптор, больше не существует в кэше, функция fn_get_sq**l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
   
@@ -101,8 +101,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция DBCC INPUTBUFFER &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [Инструкция DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

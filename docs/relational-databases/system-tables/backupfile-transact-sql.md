@@ -1,16 +1,16 @@
 ---
-title: "backupfile (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: backupfile (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfile
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: adc995b312ea396c8fba84cbb5e5b43d2f3545e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/03/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Уникальный идентификационный номер файла, содержащего набор данных с резервной копией. References **backupset(backup_set_id)**.|  
+|**backup_set_id**|**int**|Уникальный идентификационный номер файла, содержащего набор данных с резервной копией. Ссылки на **backupset(backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Семейный номер первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**first_media_number**|**smallint**|Номер носителя для первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Имя файловой группы, содержащей резервную копию файла базы данных. Может иметь значение NULL.|  
@@ -66,17 +66,17 @@ ms.lasthandoff: 02/03/2018
 |**is_readonly**|**бит**|1 = файл только для чтения.|  
 |**is_present**|**бит**|1 = файл содержится в резервном наборе данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Инструкция RESTORE VERIFYONLY FROM *устройство_резервного_копирования* WITH LOADHISTORY заполняет столбцы **backupmediaset** таблицу с соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить число строк в данной таблице, а также в других таблицах резервной копии и журнал, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
   
 ## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Резервное копирование и восстановление таблицы &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Системные таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

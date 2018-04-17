@@ -1,16 +1,16 @@
 ---
-title: "Использование WQL с поставщиком WMI для событий сервера | Документы Microsoft"
-ms.custom: 
+title: Использование WQL с поставщиком WMI для событий сервера | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 
+caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bb07cf51939aec91de5b86b682545de9bfab382
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 05731087009d1f1ab444c7f740889ee441bb99a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ WHERE where_condition
  *event_property*  
  Свойство события. Примеры включают **PostTime**, **SPID**, и **LoginName**. Просмотрите каждое событие, перечисленных в [поставщик WMI для событий классов и свойств сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) определить, какие свойства оно имеет. Например, событие DDL_DATABASE_LEVEL_EVENTS имеет **DatabaseName** и **UserName** свойства. Также наследует **SQLInstance**, **LoginName**, **PostTime**, **SPID**, и **ComputerName** свойства от родительских событий.  
   
- **,** *...n*  
+ **,** *.. .n*  
  Указывает, что *event_property* могут запрашиваться несколько раз, разделенных запятыми.  
   
  \*  
@@ -90,7 +90,7 @@ WHERE where_condition
   
  Только `=` операнд может быть использован вместе с **DatabaseName**, **SchemaName**, и **ObjectName**. Другие выражения нельзя использовать с этими свойствами событий.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  *Where_condition* поставщика WMI для событий сервера синтаксис зависит следующее:  
   
 -   Область, в которой поставщик пытается получить указанный *event_type*: уровень сервера, уровень базы данных или уровень объекта (в настоящее время поддерживаются только объекты очереди). В конечном счете эта область определяет тип уведомления о событии, создаваемого в базе данных-получателе. Этот процесс называется регистрацией уведомления о событии.  

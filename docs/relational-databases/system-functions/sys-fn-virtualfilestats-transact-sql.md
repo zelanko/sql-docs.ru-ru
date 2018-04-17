@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_virtualfilestats (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.fn_virtualfilestats (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19ef497fad4032f1e0bdb0b40c2f2a850ad40cdf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49517833bb4869ae3eb72f078207e68caa09e98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>Аргументы  
  *database_id* | ЗНАЧЕНИЕ NULL  
- Идентификатор базы данных. *database_id* — **int**, не имеет значения по умолчанию. Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Идентификатор базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *file_id* | ЗНАЧЕНИЕ NULL  
  Идентификатор файла. *file_id* — **int**, не имеет значения по умолчанию. Чтобы получить сведения обо всех файлах в базе данных, укажите значение NULL.  
@@ -61,18 +62,18 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Идентификатор базы данных.|  
 |**FileId**|**smallint**|Идентификатор файла.|  
-|**TimeStamp**|**bigint**|Отметка времени базы данных, указывающая, когда была получена информация. **int** в версиях до [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**Отметка времени**|**bigint**|Отметка времени базы данных, указывающая, когда была получена информация. **int** в версиях до [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |**Количество запросов на чтение**|**bigint**|Количество считываний для этого файла.|  
 |**BytesRead**|**bigint**|Число считанных из файла байтов.|  
 |**IoStallReadMS**|**bigint**|Общее количество времени, в миллисекундах, затраченного пользователями на ожидание выполнения операций чтения из файла.|  
 |**Количество запросов на запись**|**bigint**|Количество операций записи для этого файла.|  
-|**BytesWritten**|**bigint**|Число байтов, записанных в файл.|  
+|**Записано байт**|**bigint**|Число байтов, записанных в файл.|  
 |**IoStallWriteMS**|**bigint**|Общее количество времени, в миллисекундах, затраченного пользователями на ожидание выполнения операций записи в файл.|  
 |**IoStallMS**|**bigint**|Сумма **IoStallReadMS** и **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|Значение дескриптора файла.|  
 |**BytesOnDisk**|**bigint**|Физический размер файла на диске (в байтах).<br /><br /> Для файлов базы данных, это то же значение, что **размер** в **sys.database_files**, но выражается в байтах, а не страницы.<br /><br /> Для разреженных файлов моментального снимка базы данных это пространство, используемое операционной системой для данного файла.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **fn_virtualfilestats** — это система, табличная функция, которая дает статистическую информацию, например общее количество операций ввода-вывода, выполненных над файлом. Эту функцию можно использовать для контроля времени, затрачиваемого пользователями на ожидание выполнения чтения или записи в файл. Эта функция также помогает выявить файлы, над которыми выполняется много операций ввода-вывода.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -108,8 +109,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
+ [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

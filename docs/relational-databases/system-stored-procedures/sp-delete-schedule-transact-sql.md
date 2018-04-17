@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_schedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_delete_schedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc8bc8efb8d9382a0e7c1ab1c24b5534ff6786f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6f58b11385f92c34ba5ced00cb94517f737c4bdb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@schedule_id=** ] *schedule_id*  
+ [  **@schedule_id=** ] *schedule_id*  
  Идентификационный номер удаляемого расписания. *schedule_id* — **int**, значение по умолчанию NULL.  
   
 > **Примечание:** либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **"***schedule_name***"**  
  Имя удаляемого расписания. *schedule_name* — **sysname**, значение по умолчанию NULL.  
   
 > **Примечание:** либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@force_delete** = ] *force_delete*  
+ [ **@force_delete** =] *force_delete*  
  Указывает, будет ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается ошибкой, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -66,7 +66,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  По умолчанию расписание нельзя удалить, если оно прикреплено к заданию. Удаление расписания, прикрепленного к заданию, укажите значение **1** для *force_delete*. Удаление расписания не приведет к остановке запущенных заданий.  
   
 ## <a name="permissions"></a>Разрешения  

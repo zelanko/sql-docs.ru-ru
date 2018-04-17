@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_parameter_encryption (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_describe_parameter_encryption (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_parameter_encryption
@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_describe_parameter_encryption
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b458e871ff32abe97727fc5d1a2c07f6c628e1cf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59cd9e2425f55c8b3b138d25de298b8fae400474
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,9 +51,9 @@ sp_describe_parameter_encryption
  Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact SQL_batch может быть nvarchar(n) или nvarchar(max).  
   
  [ @params =] N'parameters'  
- *@params*обеспечивает строку объявления параметров для пакета Transact-SQL, схожего с sp_executesql. Параметры могут быть nvarchar(n) или nvarchar(max).  
+ *@params* обеспечивает строку объявления параметров для пакета Transact-SQL, схожего с sp_executesql. Параметры могут быть nvarchar(n) или nvarchar(max).  
   
- Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n*заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в  *@params* . Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет в инструкции не содержит параметров,  *@params*  не является обязательным. Значением по умолчанию для этого аргумента является NULL.  
+ Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, означающий определения дополнительных параметров. Каждый параметр, указанный в инструкции должен быть определен в *@params*. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет в инструкции не содержит параметров, *@params* не является обязательным. Значением по умолчанию для этого аргумента является NULL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  0 указывает на успешное завершение. Что еще указывают на сбой.  
@@ -66,11 +67,11 @@ sp_describe_parameter_encryption
   
  Каждая строка первый результирующий набор описывает пару ключей; ключ шифрования зашифрованного столбца и его соответствующий главный ключ столбца.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
 |**database_id**|**int**|Идентификатор базы данных.|  
-|**column_encryption_key_id**|**int**|Идентификатор столбца ключа шифрования. Примечание: этот идентификатор обозначает строку в [sys.column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) представления каталога.|  
+|**column_encryption_key_id**|**int**|Идентификатор столбца ключа шифрования. Примечание: этот идентификатор обозначает строку в [sys.column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) представления каталога.|  
 |**column_encryption_key_version**|**int**|Зарезервировано для последующего использования. В настоящее время всегда содержит 1.|  
 |**column_encryption_key_metadata_version**|**binary(8)**|Отметка времени, представляющий время создания ключа шифрования столбца.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Зашифрованное значение ключа шифрования столбца.|  
@@ -80,10 +81,10 @@ sp_describe_parameter_encryption
   
  Каждая строка второй результирующий набор содержит метаданные шифрования для одного параметра.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
-|**имя_параметра**|**sysname**|Имя одного из параметров, указанных в  *@params*  аргумент.|  
+|**parameter_name**|**sysname**|Имя одного из параметров, указанных в *@params* аргумент.|  
 |**column_encryption_algorithm**|**tinyint**|Код, указывающий на алгоритм шифрования, настроенный для столбца, параметра соответствует. В настоящее время поддерживаются значения: 2 для **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Код, указывающий тип шифрования, настроенный для столбца, параметра соответствует. Поддерживаемыми значениями являются:<br /><br /> 0 — обычный текст (столбец не зашифрован)<br /><br /> 1 — случайного шифрования<br /><br /> 2 — детерминированного шифрования.|  
 |**column_encryption_key_ordinal**|**int**|Задать код строки на первый результат. Соответствующей строки описание ключа шифрования столбца, настроенный для столбца, соответствующий параметр.|  
@@ -92,7 +93,7 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>Замечания  
  Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер клиента, поддерживающий постоянное шифрование, автоматически вызывает **sp_describe_parameter_encryption** для получения метаданных шифрования для параметризованных запросов, создаваемых приложением. Впоследствии драйвер использует метаданные шифрования для шифрования значений параметров, которые соответствуют столбцам базы данных, защищенных с помощью постоянного шифрования и подставляет значения параметров открытого текста, приложения, зашифрованный с значения параметров перед отправкой запроса к ядру СУБД.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** и **VIEW ANY COLUMN MASTER KEY DEFINITION** разрешения в базе данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -169,8 +170,8 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>См. также:  
- [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+## <a name="see-also"></a>См. также  
+ [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Постоянное шифрование (разработка клиентских приложений)](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

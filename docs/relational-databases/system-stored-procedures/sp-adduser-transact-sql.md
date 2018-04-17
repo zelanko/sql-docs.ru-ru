@@ -1,16 +1,16 @@
 ---
-title: "sp_adduser (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_adduser (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_adduser
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_adduser
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d1a5e8a9041d32823a44f2f0329562741c2e253a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5b2530fa9b76e5aa46bda8a8eaaeb3ee6b70faba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Добавляет нового пользователя в текущую базу данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) вместо него.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ sp_adduser [ @loginame = ] 'login'
  [  **@name_in_db =** ] **"***пользователя***"**  
  Имя нового пользователя базы данных. *пользователь* — **sysname**, значение по умолчанию NULL. Если *пользователя* не указан, по умолчанию используется имя нового пользователя базы данных *входа* имя. Указание *пользователя* задает имя для нового пользователя в базе данных, отличное от имени входа уровня сервера.  
   
- [  **@grpname =** ] **"***роли***"**  
+ [  **@grpname =** ] **"***роль***"**  
  Роль базы данных, членом которой становится новый пользователь. *роль* — **sysname**, значение по умолчанию NULL. *роль* должна быть допустимая роль в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -83,7 +83,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо, чтобы пользователь был владельцем базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -109,8 +109,8 @@ EXEC sp_adduser 'Arvind';
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Безопасность хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   

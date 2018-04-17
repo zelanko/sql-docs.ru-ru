@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_service (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_fulltext_service (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@action=**] **'***action***'**  
+ [  **@action=**] **"***действия***"**  
  Это свойство для изменения или сброса. *Действие* — **nvarchar(100),** без значения по умолчанию. Список*c*свойства необходимые данные, их описания и значения, которые могут быть установлены, см. в разделе *значение* аргумент. Данный аргумент возвращает следующие свойства: тип данных, текущее значение выполнения, минимальное или максимальное значение, а также состояние устаревания, если оно применимо.  
   
  [  **@value=**] *значение*  
@@ -69,7 +69,7 @@ sp_fulltext_service [ [@action=] 'action'
 |**resource_usage**|**int**|Не имеет функции в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях, поэтому не обрабатывается.|  
 |**update_languages**|NULL|Обновляет список языков и фильтров, зарегистрированных для полнотекстового поиска. Языки указываются при настройке индексирования и полнотекстовых запросов. Фильтры используются узлом управляющей программы фильтрации для извлечения текстовых сведений из соответствующих форматов файлов, таких как DOCX, хранящихся в типы данных, такие как **varbinary**, **varbinary(max)**, **изображения** , или **xml**, для полнотекстового индексирования.<br /><br /> Дополнительные сведения см. в статье [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
 |**upgrade_option**|**int**|Управляет переносом полнотекстовых индексов при обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до более поздней. Это свойство применяется к обновлению, выполняемому путем присоединения базы данных, восстановления базы данных из резервной копии или восстановления файла из резервной копии, а также в случае, если база данных копируется мастером копирования баз данных.<br /><br /> Может принимать одно из следующих значений.<br /><br /> 0 = при перестроении полнотекстовых каталогов используются новые и улучшенные средства разбиения по словам. Перестроение индексов может занять длительное время, а после обновления может потребоваться значительный объем ресурсов ЦП и памяти.<br /><br /> 1 = полнотекстовые каталоги сбрасываются. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Полнотекстовые файлы каталога удалены, но метаданные для полнотекстовых каталогов и полнотекстовых индексов сохранены. После обновления для всех полнотекстовых индексов отключается отслеживание изменений и сканирование не запускается автоматически. После завершения обновления каталог останется пустым, пока не будет вручную запущено полное заполнение.<br /><br /> 2 = полнотекстовые каталоги импортируются. Обычно импорт производится значительно быстрее перестроения. Например, если используется только один ЦП, то импорт выполняется в 10 раз быстрее, чем перестроение. Однако в импортированных полнотекстовых каталогах не используются новые улучшенные средства разбиения по словам, поэтому со временем рекомендуется произвести перестроение полнотекстовых каталогов.<br /><br /> Примечание: Перестроение может выполняться в многопоточном режиме, и если более 10 процессоров доступны, то перестроение может выполниться быстрее импорта, если будет разрешено использовать все процессоры.<br /><br /> Если полнотекстовый каталог недоступен, перестраиваются связанные полнотекстовые индексы. Этот параметр доступен только для баз данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> Сведения о выборе параметра полнотекстового обновления см. в статье[Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).<br /><br /> Примечание: Чтобы установить это свойство [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], используйте **режим обновления полнотекстового** свойство. Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).|  
-|**verify_signature**|**int**|Указывает допустимость загрузки в средство полнотекстового поиска только подписанных двоичных файлов. По умолчанию загружаются только доверенные, подписанные двоичные файлы.<br /><br /> 1 = производится проверка того, что загружаются только достоверные подписанные двоичные файлы (по умолчанию).<br /><br /> 0 = не проверять наличие подписи у двоичных файлов.|  
+|**параметр verify_signature**|**int**|Указывает допустимость загрузки в средство полнотекстового поиска только подписанных двоичных файлов. По умолчанию загружаются только доверенные, подписанные двоичные файлы.<br /><br /> 1 = производится проверка того, что загружаются только достоверные подписанные двоичные файлы (по умолчанию).<br /><br /> 0 = не проверять наличие подписи у двоичных файлов.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -100,7 +100,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Компонент Full-Text Search](../../relational-databases/search/full-text-search.md)   
- [FULLTEXTSERVICEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

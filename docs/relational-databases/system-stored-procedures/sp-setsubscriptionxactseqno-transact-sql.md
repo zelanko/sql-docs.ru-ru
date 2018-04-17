@@ -1,16 +1,16 @@
 ---
-title: "sp_setsubscriptionxactseqno (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_setsubscriptionxactseqno (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab7bf1c5fb7653f4b61af1912af7de3454bf776
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7ec407d84267e8a2a03d2a6774e7c86cc469af94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**ИСХОДНЫЙ XACT_SEQNO**|**varbinary(16)**|Исходный номер LSN следующей транзакции, которая должна быть применена на подписчике.|  
 |**ОБНОВЛЕННЫЕ XACT_SEQNO**|**varbinary(16)**|Обновленный номер LSN следующей транзакции, которая должна быть применена на подписчике.|  
@@ -80,7 +80,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  **sp_setsubscriptionxactseqno** не может использоваться в топологии репликации транзакций для коллег.  
   
- **sp_setsubscriptionxactseqno** может использоваться для пропуска определенной транзакции, вызывающей ошибку при применении на подписчике. Если происходит сбой, и после остановки агента распространителя, вызовите [sp_helpsubscriptionerrors &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) на распространителе для получения значения xact_seqno поврежденной транзакции, а затем вызвать **sp_setsubscriptionxactseqno**, передав это значение для *xact_seqno*. Тем самым будет обеспечена обработка только одной команды после этого номера LSN.  
+ **sp_setsubscriptionxactseqno** может использоваться для пропуска определенной транзакции, вызывающей ошибку при применении на подписчике. Если происходит сбой, и после остановки агента распространителя, вызовите [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) на распространителе для получения значения xact_seqno поврежденной транзакции, а затем вызвать **sp_setsubscriptionxactseqno**, передав это значение для *xact_seqno*. Тем самым будет обеспечена обработка только одной команды после этого номера LSN.  
   
  Укажите значение **0** для *xact_seqno* для доставки всех ожидающих применения команд в базе данных распространителя на подписчик.  
   
@@ -88,7 +88,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  При возникновении этой ошибки необходимо запустить агент распространителя с потоком одной подписки. Дополнительные сведения см. в статье [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_setsubscriptionxactseqno**.  
   
   

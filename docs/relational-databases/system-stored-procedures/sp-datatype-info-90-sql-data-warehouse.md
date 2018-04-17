@@ -1,37 +1,38 @@
 ---
-title: "sp_datatype_info_90 (хранилище данных SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_datatype_info_90 (хранилище данных SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 0cca052fb77b2f6bc2db691f884043079197d439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Возвращает сведения о типах данных, поддерживаемых текущей средой.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,10 +44,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@data_type=** ] *data_type*  
+ [  **@data_type=** ] *data_type*  
  Кодовый номер типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* — **int**, значение по умолчанию 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
+ [  **@ODBCVer=** ] *odbc_version*  
  Версия используемого протокола ODBC. *odbc_version* — **tinyint**, значение по умолчанию 2.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -59,9 +60,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Тип данных, зависящий от СУБД.|  
 |DATA_TYPE|**smallint**|Код типа ODBC, с которым сопоставляются все столбцы данного типа.|  
 |PRECISION|**int**|Максимальная точность типа данных в источнике данных. Для типов данных, к которым понятие точности не применимо, возвращается значение NULL. Значение, возвращаемое для столбца PRECISION, имеет десятичную форму.|  
-|LITERAL_PREFIX|**varchar(**32**)**|Символ или символы, используемые перед константой. Например, знак кавычки (**"**) для символьных типов и 0 x для двоичного файла.|  
-|LITERAL_SUFFIX|**varchar(**32**)**|Символ или символы, используемые после константы. Например, знак кавычки (**"**) для символьных типов и без кавычек для двоичного файла.|  
-|CREATE_PARAMS|**varchar(**32**)**|Описание параметров создания типа данных. Например **десятичное** — «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
+|LITERAL_PREFIX|**varchar (**32**)**|Символ или символы, используемые перед константой. Например, знак кавычки (**"**) для символьных типов и 0 x для двоичного файла.|  
+|LITERAL_SUFFIX|**varchar (**32**)**|Символ или символы, используемые после константы. Например, знак кавычки (**"**) для символьных типов и без кавычек для двоичного файла.|  
+|CREATE_PARAMS|**varchar (**32**)**|Описание параметров создания типа данных. Например **десятичное** — «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
 |SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
@@ -77,13 +78,13 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Значение точности интервала, если *data_type* — **интервал**; в противном случае — значение NULL.|  
 |USERTYPE|**smallint**|**usertype** значение из таблицы systypes.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  sp_datatype_info эквивалентна SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Следующий пример возвращает сведения о **sysname** и **nvarchar** типы данных, указав *data_type* значение `-9`.  
   
 ```  

@@ -1,16 +1,16 @@
 ---
-title: "sp_help_publication_access (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_publication_access (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1568ded984bcb38c6633fdf5ceddfb2b960df41b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b9fb4ee142f179c4570fb24516a891e41045fd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_help_publication_access [ @publication = ] 'publication'
  Идентификатор входа. *return_granted* — **бит**, значение по умолчанию 1. Если **0** указан и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если **0** указывается и используется проверка подлинности Windows, имена входа, не было специально отказано доступ ни в одном издатель или распространитель возвращаются.  
   
  [  **@login=**] **"***входа***"**  
- Идентификатор стандартного защищенного имени входа. *Имя входа* — **sysname**, значение по умолчанию  **%** .  
+ Идентификатор стандартного защищенного имени входа. *Имя входа* — **sysname**, значение по умолчанию **%**.  
   
  [  **@initial_list =**] *initial_list*  
  Указывает, должен ли быть возвращен список всех элементов с правом доступа к публикации или только тех из них, которые имели право доступа до того, как были добавлены к списку новые элементы. *initial_list* имеет тип bit и значение по умолчанию **0**.  
@@ -67,7 +67,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Фактическое имя входа.|  
 |**Isntname**|**int**|**0** = имя входа не является пользователем Windows.<br /><br /> **1** = имя входа принадлежит пользователю Windows.|  
@@ -81,12 +81,12 @@ sp_help_publication_access [ @publication = ] 'publication'
   
  Если оба **Isntname** и **Isntgroup** в результирующий набор, **0**, предполагается, что имя входа является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_help_publication_access**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_grant_publication_access &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

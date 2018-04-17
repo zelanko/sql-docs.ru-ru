@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_jobsteplog (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_delete_jobsteplog (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobsteplog
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f5bf88c8b02b51dac095dcd0445d3324e23e5e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 83299ab01c2ec8c82b979bb2193cce1a9ca87803
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,24 +53,24 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@job_id =**] **'***job_id***'**  
  Идентификационный номер задания, содержащего журнал шагов задания, который необходимо удалить. *Аргумент job_id* — **int**, значение по умолчанию NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > **Примечание:** либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@step_id =**] *step_id*  
- Идентификационный номер шага задания, журнал которого планируется удалить. Если не включен, удаляются все журналы шагов задания, если  **@older_than**  или  **@larger_than**  указаны. *step_id* — **int**, значение по умолчанию NULL.  
+ [  **@step_id =**] *step_id*  
+ Идентификационный номер шага задания, журнал которого планируется удалить. Если не включен, удаляются все журналы шагов задания, если **@older_than** или **@larger_than** указаны. *step_id* — **int**, значение по умолчанию NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **"***step_name***"**  
  Имя шага задания, журнал которого необходимо удалить. *step_name* — **sysname**, значение по умолчанию NULL.  
   
 > **Примечание:** либо *step_id* или *step_name* можно указать, но не оба аргумента одновременно.  
   
- [ **@older_than =**] **'***date***'**  
- Дата и время создания старейшего сохраняемого журнала шагов задания. Удаляются все журналы шагов задания старше указанной даты и времени. *Дата* — **datetime**, значение по умолчанию NULL. Оба  **@older_than**  и  **@larger_than**  можно указать.  
+ [  **@older_than =**] **"***даты***"**  
+ Дата и время создания старейшего сохраняемого журнала шагов задания. Удаляются все журналы шагов задания старше указанной даты и времени. *Дата* — **datetime**, значение по умолчанию NULL. Оба **@older_than** и **@larger_than** можно указать.  
   
- [ **@larger_than =**] **'***size_in_bytes***'**  
- Размер в байтах самого большого сохраняемого журнала шагов задания. Удаляются все журналы шагов задания, размер которых превышает указанный. Оба  **@larger_than**  и  **@older_than**  можно указать.  
+ [  **@larger_than =**] **"***size_in_bytes***"**  
+ Размер в байтах самого большого сохраняемого журнала шагов задания. Удаляются все журналы шагов задания, размер которых превышает указанный. Оба **@larger_than** и **@older_than** можно указать.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -78,10 +78,10 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_delete_jobsteplog** в **msdb** базы данных.  
   
- Если никакие аргументы, кроме  **@job_id**  или  **@job_name**  заданы, удаляются все журналы шагов задания для указанного задания.  
+ Если никакие аргументы, кроме **@job_id** или **@job_name** заданы, удаляются все журналы шагов задания для указанного задания.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_help_jobsteplog &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

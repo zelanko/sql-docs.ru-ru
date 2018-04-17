@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_rda_set_query_mode (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sp_rda_set_query_mode (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_set_query_mode
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75040d59b21772d4089fce38074ff22895937e48
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a803ed67f498a04c56700129869140e3b8c4eda1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,20 +65,20 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>Разрешения  
  Требуются права db_owner.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Расширенные хранимые процедуры также задать режим запроса для базы данных с поддержкой Stretch.  
   
 -   **sp_rda_deauthorize_db**  
   
      После запуска **sp_rda_deauthorize_db** , все запросы, адресованные баз данных с поддержкой Stretch и таблицы ошибкой. То есть режим запроса имеет значение DISABLED. Чтобы выйти из этого режима, выполните одно из следующих действий.  
   
-    -   Запустите [sys.sp_rda_reauthorize_db &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure. Эта операция автоматически сбрасывает режиме запроса LOCAL_AND_REMOTE, что является поведением по умолчанию для базы данных Stretch. То есть запросы возвращают результаты из локальных и удаленных данных.  
+    -   Запустите [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure. Эта операция автоматически сбрасывает режиме запроса LOCAL_AND_REMOTE, что является поведением по умолчанию для базы данных Stretch. То есть запросы возвращают результаты из локальных и удаленных данных.  
   
     -   Запустите [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) с аргументом LOCAL_ONLY, чтобы разрешить запросы продолжают выполняться только локальные данные.  
   
 -   **sp_rda_reauthorize_db**  
   
-     При запуске [sys.sp_rda_reauthorize_db &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure, эта операция автоматически восстанавливает режим запроса LOCAL_AND_REMOTE, что является поведением по умолчанию для базы данных Stretch. То есть запросы возвращают результаты из локальных и удаленных данных.  
+     При запуске [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure, эта операция автоматически восстанавливает режим запроса LOCAL_AND_REMOTE, а это поведение по умолчанию для База данных Stretch. То есть запросы возвращают результаты из локальных и удаленных данных.  
   
 ## <a name="see-also"></a>См. также  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   

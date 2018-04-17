@@ -1,16 +1,16 @@
 ---
-title: "xp_logininfo (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: xp_logininfo (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  Имя пользователя или группы Windows, которым предоставляется доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* — **sysname**, значение по умолчанию NULL. Если *account_name* не указан, все группы Windows и пользователях, которым явным образом было предоставлено разрешение на вход в отчет будут включены. *account_name* должно быть полным. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
   
  **«все»** | **«члены»**  
- Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **@option**— **varchar(10)**, значение по умолчанию NULL. Если не **все** указано, отображаются только путь для первого разрешения.  
+ Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **@option** — **varchar(10)**, значение по умолчанию NULL. Если не **все** указано, отображаются только путь для первого разрешения.  
   
  [  **@privilege =** ] *имя_переменной*  
  Выходной параметр, возвращающий уровень прав доступа для указанной учетной записи Windows. *имя_переменной* — **varchar(10)**, значение по умолчанию «Not wanted». Возвращаемый уровень прав доступа, является **пользователя**, **администратора**, или **null**.  
@@ -65,7 +65,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Имя учетной записи**|**sysname**|Полностью уточненное имя учетной записи Windows.|  
 |**type**|**типа char(8)**|Тип учетной записи Windows. Допустимые значения: **пользователя** или **группы**.|  
@@ -84,7 +84,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  **xp_logininfo** возвращает только сведения из глобальных групп Active Directory, не универсальных групп.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** предопределенной роли сервера или членство в **открытый** предопределенной роли базы данных в **master** базы данных и разрешения EXECUTE.  
   
 ## <a name="examples"></a>Примеры  
@@ -94,11 +94,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимая процедура sp_denylogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Общие расширенные хранимые процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

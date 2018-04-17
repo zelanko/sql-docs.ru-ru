@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_stats_properties (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_stats_properties (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_stats_properties_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31a4637f2bdfdddc220ccb930dd4873956ddbf3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,13 +58,13 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта (таблицы или индексированного представления), для которого возвращаются свойства объекта статистики.|  
 |stats_id|**int**|Идентификатор объекта статистики. Является уникальным в пределах таблицы или индексированного представления. Дополнительные сведения см. в статье [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|last_updated|**datetime2**|Дата и время последнего обновления объекта статистики. Дополнительные сведения см. в разделе [примечания](#Remarks) разделу на этой странице.|  
+|last_updated|**datetime2**|Дата и время последнего обновления объекта статистики. Дополнительные сведения см. в подразделе [Примечания](#Remarks) на этой странице.|  
 |rows|**bigint**|Общее число строк в таблице или индексированном представлении при последнем обновлении статистики. Если статистика отфильтрована или соответствует отфильтрованному индексу, количество строк может быть меньше, чем количество строк в таблице.|  
 |rows_sampled|**bigint**|Общее количество строк, выбранных для статистических вычислений.|  
 |шаги|**int**|Число шагов в гистограмме. Дополнительные сведения см. в статье [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Общее количество строк в таблице до применения критерия фильтра (для отфильтрованной статистики). Если статистика не отфильтрована, то unfiltered_rows равно значению, которое возвращается в столбце rows.|  
 |modification_counter|**bigint**|Общее количество изменений в начальном столбце статистики (на основе которого строится гистограмма) с момента последнего обновления статистики.<br /><br /> Оптимизированные для памяти таблицы: запуск [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот столбец содержит: общее количество изменений для таблицы с момента последнего статистические данные о времени были обновлены или перезапуска базы данных.|  
-|persisted_sample_percent|**float**|Сохранен образец процент, используемый для обновления статистики, которые явно не указан процент выборки. Если значение равно нулю, процентное значение сохраненного образец устанавливается для этой статистики.<br /><br /> **Применяется к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> Замечания  
  **sys.dm_db_stats_properties** возвращает пустой набор строк при выполнении любого из следующих условий:  
@@ -75,7 +76,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  Это поведение позволяет безопасно использовать **sys.dm_db_stats_properties** при перекрестном применении к строкам в представлениях, таких как **sys.objects** и **sys.stats**.  
  
-Дата обновления статистики хранится в [большой двоичный объект статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммы](../../relational-databases/statistics/statistics.md#histogram) и [вектор плотностей](../../relational-databases/statistics/statistics.md#density), а не в метаданных. При чтении нет данных для создания статистических данных, статистические данные большого двоичного объекта не создается, дата не доступен и *last_updated* столбец имеет значение NULL. Это происходит для отфильтрованной статистики, для которого предикат не возвращает ни одной строки или новые пустые таблицы.
+Дата обновления статистики хранится в [большом двоичном объекте статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммой](../../relational-databases/statistics/statistics.md#histogram) и [вектором плотности](../../relational-databases/statistics/statistics.md#density), а не в метаданных. При чтении нет данных для создания статистических данных, статистические данные большого двоичного объекта не создается, дата не доступен и *last_updated* столбец имеет значение NULL. Это происходит с отфильтрованной статистикой, для которой предикат не возвращает ни одной строки, или с новыми пустыми таблицами.
   
 ## <a name="permissions"></a>Разрешения  
  Требуется наличие у пользователя разрешения на выбор столбцов статистики либо то, чтобы пользователь был владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.  

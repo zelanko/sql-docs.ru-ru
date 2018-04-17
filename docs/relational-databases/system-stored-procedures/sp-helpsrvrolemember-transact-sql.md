@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsrvrolemember (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpsrvrolemember (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsrvrolemember
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36c1ac793a550b453508928b6544e95ed20b37b5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91e88ec91181cff6e7129a5af41c3476604f7c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@srvrolename =** ] **"***роли***"**  
+ [  **@srvrolename =** ] **"***роль***"**  
  Имя предопределенной роли сервера. *роль* — **sysname**, значение по умолчанию NULL. Если *роли*не указан, результирующий набор включает сведения о всех предопределенных ролей сервера.  
   
  *роль* может иметь любое из следующих значений.  
   
-|Предопределенная роль сервера|Description|  
+|Предопределенная роль сервера|Описание|  
 |-----------------------|-----------------|  
 |sysadmin|Системные администраторы|  
 |securityadmin|Администраторы безопасности.|  
@@ -67,7 +67,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Имя роли сервера|  
 |MemberName|**sysname**|Имя члена ServerRole|  
@@ -78,11 +78,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  Все имена входа является членом группы public. sp_helpsrvrolemember не распознает роль public, так как внутри системы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не реализует открытый как роль.  
   
- Чтобы добавлять или удалять членов ролей сервера, см. раздел [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Чтобы добавлять или удалять членов ролей сервера, см. раздел [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember не принимает роль сервера, определяемого пользователем в качестве аргумента. Для определения членов роли сервера, определяемых пользователем, см. в примерах в [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember не принимает роль сервера, определяемого пользователем в качестве аргумента. Для определения членов роли сервера, определяемых пользователем, см. в примерах в [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -92,11 +92,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_helprole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Безопасность хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

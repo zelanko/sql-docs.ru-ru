@@ -1,16 +1,16 @@
 ---
-title: "sp_markpendingschemachange (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_markpendingschemachange (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1712e646a8efda1fdc4f06d912a1021a0beaff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fb7bcbed7f49c4b48adb5317f2e418f37d5264e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@schemaversion=** ] *schemaversion*  
- Идентифицирует отложенное изменение схемы. *schemaversion* — **int**, со значением по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) списка отложенные изменения схемы для публикации.  
+ Идентифицирует отложенное изменение схемы. *schemaversion* — **int**, со значением по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) списка отложенные изменения схемы для публикации.  
   
  [  **@status=** ] **"***состояние***"**  
  Обозначает, будет ли пропущено отложенное изменение схемы. *состояние* — **nvarchar(10)** со значением по умолчанию **active**. Если значение *состояние* — **пропущен**, то выбранное изменение схемы не будут реплицированы.  
@@ -66,10 +66,10 @@ sp_markpendingschemachange [@publication = ] 'publication'
   
  **sp_markpendingschemachange** хранимой процедуры предназначены для поддержки репликации слиянием и должна использоваться только в том случае, когда других корректирующих действий, таких как повторная инициализация, не удалось исправить ситуацию или являются слишком затратными в условия производительности.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_markpendingschemachange**.  
   
-## <a name="see-also"></a>См. также:  
- [sysmergeschemachange &#40; Transact-SQL &#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

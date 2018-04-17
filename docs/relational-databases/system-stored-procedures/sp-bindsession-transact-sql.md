@@ -1,16 +1,16 @@
 ---
-title: "sp_bindsession (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_bindsession (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindsession
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28023afe6fa8440764bacab40ad3bca49b54611a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f7d47d969caa2e4f93482f4f457971d32c179264
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Привязывает или развязывает сеанс к другим сеансам в одном экземпляре компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Привязывание сеансов позволяет двум и более сеансам участвовать в одной транзакции и общих блокировках, пока выполняется ROLLBACK TRANSACTION или COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте режим MARS или распределенные транзакции. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов &#40; Режим MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте режим MARS или распределенные транзакции. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов & #40; Режим MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,8 +66,8 @@ sp_bindsession { 'bind_token' | NULL }
   
  Отменить привязку из сеанса с помощью **sp_bindsession** без указания *bind_token* или путем передачи значения NULL в *bind_token*.  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере указанный токен привязки привязывается к текущему сеансу.  
@@ -82,9 +82,9 @@ EXEC sp_bindsession 'BP9---5---->KB?-V'<>1E:H-7U-]ANZ';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_getbindtoken &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
- [srv_getbindtoken &#40; Расширенная хранимая процедура API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
+## <a name="see-also"></a>См. также  
+ [sp_getbindtoken & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [srv_getbindtoken &#40;API расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_help_jobschedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_jobschedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +50,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификационный номер задания. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***job_name***"**  
  Имя задания. *job_name*— **sysname**, значение по умолчанию NULL.  
   
 > **Примечание:** либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **"***schedule_name***"**  
  Имя элемента расписания для задания. *schedule_name*— **sysname**, значение по умолчанию NULL.  
   
- [ **@schedule_id=** ] *schedule_id*  
+ [  **@schedule_id=** ] *schedule_id*  
  Идентификатор элемента расписания для задания. *schedule_id*— **int**, значение по умолчанию NULL.  
   
  [  **@include_description=** ] *этот аргумент*  
@@ -76,12 +76,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Идентификационный номер расписания.|  
 |**schedule_name**|**sysname**|Имя расписания.|  
-|**включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
+|**Включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
 |**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = однократно<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно, относительно **freq_interval**<br /><br /> **64** = выполнять, когда **SQLServerAgent** запуске службы.|  
-|**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Число **freq_subday_type** периодов должно пройти между выполнениями задания. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Запланированные задания **freq_interval** в каждом месяце. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Число **freq_subday_type** периодов должно пройти между выполнениями задания. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Запланированные задания **freq_interval** в каждом месяце. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Число месяцев между выполнениями задания по расписанию.|  
 |**active_start_date**|**int**|Дата, когда начинает действовать расписание.|  
 |**active_end_date**|**int**|Дата, когда прекращает действовать расписание.|  
@@ -94,9 +94,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**job_count**|**int**|Возвращенное количество заданий.|  
   
-> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **базы данных msdb** . **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
+> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **базы данных msdb** .   **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Параметры **sp_help_jobschedule** может использоваться только в определенных сочетаниях. Если *schedule_id* указано, ни *job_id* , ни *job_name* можно указать. В противном случае *job_id* или *job_name* параметры могут использоваться с *schedule_name*.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -154,9 +154,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

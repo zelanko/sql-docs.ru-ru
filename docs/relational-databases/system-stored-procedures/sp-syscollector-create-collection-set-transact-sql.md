@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_create_collection_set (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_syscollector_create_collection_set (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,24 +79,24 @@ sp_syscollector_create_collection_set
   
  Значение по умолчанию для *collection_mode* — 0. Когда *collection_mode* равно 0, *schedule_uid* или *schedule_name* должен быть указан.  
   
- [ **@days_until_expiration =** ] *days_until_expiration*  
+ [  **@days_until_expiration =** ] *days_until_expiration*  
  Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint** со значением по умолчанию 730 (два года). *days_until_expiration* должно быть 0 или положительным целым числом.  
   
- [ **@proxy_id =** ] *proxy_id*  
+ [  **@proxy_id =** ] *proxy_id*  
  Уникальный идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* — **int** со значением по умолчанию NULL. Если указано, *proxy_name* должен иметь значение NULL. Для получения *proxy_id*, запрос системной таблицы sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. в разделе [создать прокси-агента SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
   
  [  **@proxy_name =** ] "*proxy_name*"  
  Имя учетной записи-посредника. *proxy_name* — **sysname** со значением по умолчанию NULL. Если указано, *proxy_id* должен иметь значение NULL. Для получения *proxy_name*, запрос системной таблицы sysproxies.  
   
- [ **@schedule_uid =** ] '*schedule_uid*'  
+ [  **@schedule_uid =** ] "*schedule_uid*"  
  Идентификатор GUID, указывающий на расписание. *schedule_uid* — **uniqueidentifier** со значением по умолчанию NULL. Если указано, *schedule_name* должен иметь значение NULL. Для получения *schedule_uid*, запрос системной таблицы sysschedules.  
   
  Когда *collection_mode* имеет значение 0, *schedule_uid* или *schedule_name* должен быть указан. Когда *collection_mode* имеет значение 1, *schedule_uid* или *schedule_name* учитывается, если указан.  
   
- [ **@schedule_name =** ] '*schedule_name*'  
+ [  **@schedule_name =** ] "*schedule_name*"  
  Имя расписания. *schedule_name* — **sysname** со значением по умолчанию NULL. Если указано, *schedule_uid* должен иметь значение NULL. Для получения *schedule_name*, запрос системной таблицы sysschedules.  
   
- [ **@logging_level =** ] *logging_level*  
+ [  **@logging_level =** ] *logging_level*  
  Уровень ведения журнала. *LOGGING_LEVEL* — **smallint** с одним из следующих значений:  
   
  0 - регистрировать сведения о выполнении и события служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], которые отслеживают:  
@@ -113,25 +113,25 @@ sp_syscollector_create_collection_set
   
 -   Ход непрерывно работающего сбора.  
   
--   Предупреждающие события от [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   Предупреждающие события от служб [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
- 2 - первого уровня ведения журнала и подробных сведений о событиях из [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+ 2 - ведение журнала на уровне -1, а также запись подробных сведений о событиях служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  Значение по умолчанию для *logging_level* -1.  
   
  [  **@description =** ] "*описание*"  
  Описание набора элементов сбора. *Описание* — **nvarchar(4000)** со значением по умолчанию NULL.  
   
- [ **@collection_set_id =** ] *collection_set_id*  
+ [  **@collection_set_id =** ] *collection_set_id, чтобы выделить*  
  Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** с ВЫВОДОМ и является обязательным.  
   
- [ **@collection_set_uid =** ] '*collection_set_uid*'  
+ [  **@collection_set_uid =** ] "*аргумент collection_set_uid*"  
  Идентификатор GUID набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier** с выходными данными со значением по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Функция sp_syscollector_create_collection_set должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

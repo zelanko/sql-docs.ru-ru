@@ -1,16 +1,16 @@
 ---
-title: "sp_set_firewall_rule (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sp_set_firewall_rule (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_firewall_rule
 - firewall_rules, setting server rules
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38ef5788aba91bfde21df091321a69dbacbeb8e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: ebfeaead5a1cce95aa2378f15f8ffaa73410509d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>Аргументы  
  В следующей таблице показаны поддерживаемые аргументы и параметры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-|Имя|Datatype|Description|  
+|Название|Datatype|Описание|  
 |----------|--------------|-----------------|  
 |[@name =] 'name'|**NVARCHAR(128)**|Имя, используемое для описания и определения параметров брандмауэра на уровне сервера.|  
 |[@start_ip_address =] 'start_ip_address»|**VARCHAR(50)**|Наименьший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`.|  
@@ -63,9 +64,9 @@ sp_set_firewall_rule [@name =] 'name',
   
  При добавлении параметра брандмауэра уровня сервера, в котором начальный и конечный IP-адреса равны `0.0.0.0`, позволяет разрешить доступ к вашей [!INCLUDE[ssSDS](../../includes/sssds-md.md)] из Azure. Укажите значение *имя* параметр, который поможет запомнить предназначение параметра брандмауэра уровня сервера.  
   
- В [!INCLUDE[ssSDS](../../includes/sssds-md.md)], требуются данные входа для проверки подлинности подключения и правила брандмауэра уровня сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедитесь в том, что база данных имеет последнюю версию таблицы, имена входа, выполните [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] данные имени входа необходимы для проверки подлинности подключения, и правила брандмауэра на уровне сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедиться в том, что база данных имеет последнюю версию таблицы имен входа, выполните инструкцию [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только уровня сервера имя входа субъекта созданное процессом подготовки или участника Azure Active Directory назначен администратора можно создавать и изменять правила брандмауэра уровня сервера. Пользователь должен быть подключен к базе данных master, чтобы выполнить хранимую процедуру sp_set_firewall_rule.  
   
 ## <a name="examples"></a>Примеры  
@@ -88,7 +89,7 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Брандмауэр базы данных Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [Как: Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sys.firewall_rules &#40; База данных Azure SQL &#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)
+ [sys.firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

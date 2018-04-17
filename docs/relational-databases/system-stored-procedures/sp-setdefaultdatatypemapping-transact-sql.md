@@ -1,16 +1,16 @@
 ---
-title: "sp_setdefaultdatatypemapping (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_setdefaultdatatypemapping (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28b267b8e03fed032811aeaa98bbbf8b7c4b515c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: acc35763731c38a7c0eddac9b89c2649ce88f176
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +66,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@mapping_id=** ] *mapping_id*  
  Идентифицирует сопоставление типа данных.  *mapping_id* — **int**, и значение по умолчанию NULL. При указании *mapping_id*, а затем остальные параметры не требуются.  
   
- [  **@source_dbms** =] **"***source_dbms***"**  
+ [ **@source_dbms**=] **"***source_dbms***"**  
  Это имя СУБД, с которой сопоставлены типы данных. *source_dbms* — **sysname**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Источником является база данных Oracle.|  
@@ -80,7 +80,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@source_version=** ] **"***source_version***"**  
  Номер версии исходной СУБД. *source_version* — **varchar(10)**, значение по умолчанию NULL.  
   
- [  **@source_type** =] **"***source_type***"**  
+ [ **@source_type**=] **"***source_type***"**  
  Тип данных в исходной СУБД. *source_type* — **sysname**. Этот параметр обязателен, если *mapping_id* имеет значение NULL.  
   
  [  **@source_length_min=** ] *source_length_min*  
@@ -104,10 +104,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@source_nullable=** ] *source_nullable*  
  Показывает, что тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* — **бит**, значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
   
- [  **@destination_dbms**  =] **"***destination_dbms***"**  
+ [ **@destination_dbms** =] **"***destination_dbms***"**  
  Название целевой СУБД. *destination_dbms* — **sysname**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Целевая база данных — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Целевой является база данных Oracle.|  
@@ -115,10 +115,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|Целевой является база данных Sybase.|  
 |NULL (по умолчанию)||  
   
- [  **@destination_version** =] **"***destination_version***"**  
+ [ **@destination_version**=] **"***destination_version***"**  
  Версия продукта целевой СУБД. *destination_version* — **varchar(10)**, значение по умолчанию NULL.  
   
- [  **@destination_type** =] **"***destination_type***"**  
+ [ **@destination_type**=] **"***destination_type***"**  
  Тип данных, приведенных в списке целевой СУБД. *destination_type* — **sysname**, значение по умолчанию NULL.  
   
  [  **@destination_length=** ] *destination_length*  
@@ -141,12 +141,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  Сопоставления типов данных по умолчанию применяются ко всем топологиям репликации, включенным в указанную СУБД.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_setdefaultdatatypemapping**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Указание сопоставления типов данных для издателя Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [sp_getdefaultdatatypemapping &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_helpdatatypemap &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
+ [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

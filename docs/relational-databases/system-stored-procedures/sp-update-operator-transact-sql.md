@@ -2,7 +2,7 @@
 title: sp_update_operator (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38da9010e434570fbcd75e026f11c50450e10691
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a98f5a61c76e1e6ef0cd2dc2a17a445084dd15eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,10 +69,10 @@ sp_update_operator
  [ @enabled=] *включена*  
  Число, указывающее текущее состояние оператора (**1** включенный в настоящее время **0** в противном случае). *включить* — **tinyint**, значение по умолчанию NULL. Если оператор не включен, он не будет получать предупреждающих оповещений.  
   
- [ @email_address=] '*email_address*'  
+ [ @email_address=] '*email_address*"  
  Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* — **nvarchar(100)**, значение по умолчанию NULL.  
   
- [ @pager_address=] '*pager_number*'  
+ [ @pager_address=] '*pager_number*"  
  Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_number* — **nvarchar(100)**, значение по умолчанию NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
@@ -106,7 +106,7 @@ sp_update_operator
 |**32**|Пятница|  
 |**64**|Суббота|  
   
- [ @netsend_address=] '*netsend_address*'  
+ [ @netsend_address=] '*netsend_address*"  
  Сетевой адрес оператора, которому посылается сетевое сообщение. *netsend_address*— **nvarchar(100)**, значение по умолчанию NULL.  
   
  [ @category_name=] '*категории*"  

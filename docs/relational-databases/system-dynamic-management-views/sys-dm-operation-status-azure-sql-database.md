@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_operation_status (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_operation_status (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/05/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_operation_status_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59e6d4c26fe241cc9137b55a75854396a224064f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 7dd1f41a50a51669862e7b12704b88a28164185a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно только в **master** базы данных для имени входа субъекта серверного уровня.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для использования этого представления, должны быть подключены к **master** базы данных. Используйте `sys.dm_operation_status` просмотра в **master** базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера для отслеживания состояния следующих операций, выполняемых над [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Создание базы данных  
@@ -91,9 +92,9 @@ SELECT * FROM sys.dm_ operation_status
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Георепликация динамические административные представления и функции &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.geo_replication_links &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40; База данных Azure SQL &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
+ [Георепликация динамические административные представления и функции &#40;база данных Azure SQL&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [sys.dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

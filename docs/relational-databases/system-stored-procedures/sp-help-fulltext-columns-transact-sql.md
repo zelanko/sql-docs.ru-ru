@@ -1,16 +1,16 @@
 ---
-title: "sp_help_fulltext_columns (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_fulltext_columns (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_columns
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74905280aa6602c4ff2826d564b76ca8769e2dfc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 46f611667ca69f0e8daa2567dd8bd6c61162e18c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@table_name=**] **'***table_name***'**  
+ [  **@table_name=**] **"***table_name***"**  
  Одно- или двухкомпонентное имя таблицы, для которой запрашиваются сведения о полнотекстовом индексе. *имя_таблицы* — **nvarchar(517)**, значение по умолчанию NULL. Если *table_name* опущен, сведения о столбце полнотекстового индекса извлекаются для каждой таблицы с индексом full-text.  
   
- [ **@column_name=**] **'***column_name***'**  
+ [  **@column_name=**] **"***column_name***"**  
  Имя столбца, для которого запрашиваются метаданные полнотекстового индекса. *column_name* — **sysname**, значение по умолчанию NULL. Если *column_name* опущен или имеет значение NULL, возвращаются сведения полнотекстового столбца для каждого полнотекстового индексированного столбца для *table_name*. Если *table_name* также опущен или имеет значение NULL, возвращаются сведения о столбце полнотекстового индекса для каждого полнотекстового индексированного столбца для всех таблиц в базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -65,7 +65,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Владелец таблицы. Это имя пользователя базы данных, создавшего таблицу.|  
 |**TABLE_ID**|**int**|Идентификатор таблицы.|  
-|**TABLE_NAME**|**sysname**|Имя таблицы.|  
+|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы.|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|Столбец таблицы с полнотекстовым индексом, предназначенной для индексирования.|  
 |**FULLTEXT_COLID**|**int**|Идентификатор столбца с полнотекстовым индексом.|  
 |**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Столбец в таблице с полнотекстовым индексом, указывающий тип документа столбца с полнотекстовым индексом. Это значение применимо только в случае, если полнотекстовый индексированный столбец **varbinary(max)** или **изображения** столбца.|  

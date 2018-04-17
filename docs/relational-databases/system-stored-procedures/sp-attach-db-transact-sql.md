@@ -1,16 +1,16 @@
 ---
-title: "sp_attach_db (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_attach_db (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b17a11f31faff52e2519d2c10d34af88108f0399
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 460d9eab90fb65f4d271829d76d72dfa26f0b1b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +54,11 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@dbname=** ] **'***dbnam* **'**  
+ [  **@dbname=** ] **"*** dbnam* **"**  
  Имя базы данных, присоединяемой к серверу. Имя должно быть уникальным. *DBName* — **sysname**, значение по умолчанию NULL.  
   
  [ **@filename1=** ] **'***filename_n***'**  
- Это физическое имя файла базы данных, содержащее путь к каталогу. *filename_n* — **nvarchar(260)**, значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с  **@filename1**  и возрастают до  **@filename16** . Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
+ Это физическое имя файла базы данных, содержащее путь к каталогу. *filename_n* — **nvarchar(260)**, значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **@filename1** и возрастают до **@filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
   
 > [!NOTE]  
 >  Этот аргумент сопоставляется с параметром FILENAME инструкции CREATE DATABASE. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -71,12 +71,12 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Sp_attach_db** хранимая процедура должна выполняться только в базах данных, которые были предварительно отсоединены от сервера с помощью явной **sp_detach_db** операции или на скопированных базах данных. Если нужно указать более 16 файлов, используйте инструкцию CREATE DATABASE *имя_базы_данных* FOR ATTACH или CREATE DATABASE *имя_базы_данных* FOR_ATTACH_REBUILD_LOG. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Предполагается, что любые неуказанные файлы находятся в своем последнем известном расположении. Чтобы использовать файл, расположенный в другом месте, необходимо указать его новое расположение.  
   
- База данных, созданная в более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не может быть присоединена в ранних версиях.  
+ База данных, созданная в более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не может быть присоединена в ранних версиях.  
   
 > [!NOTE]  
 >  Невозможно отсоединить или присоединить моментальный снимок базы данных.  
@@ -85,14 +85,14 @@ sp_attach_db [ @dbname= ] 'dbname'
   
 -   При подключении базы данных к тому же экземпляру и версии сервера, к которому была подключена оригинальная база данных, не требуется никаких дополнительных действий.  
   
--   Если присоединить базу данных на том же экземпляре сервера, но с обновленной версии, необходимо выполнить [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) обновить репликацию после завершения операции присоединения.  
+-   При подключении базы данных к обновленной версии того же экземпляра сервера необходимо запустить процедуру [sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) для обновления репликации по завершении операции подключения.  
   
--   При присоединении базы данных на другом экземпляре сервера, независимо от версии, необходимо выполнить [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) удалить репликацию после завершения операции присоединения.  
+-   При подключении базы данных к другому экземпляру сервера, независимо от его версии, необходимо запустить процедуру [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) для удаления репликации по завершении операции подключения.  
   
- При первом присоединении базы данных к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или ее восстановлении копия главного ключа базы данных (зашифрованная главным ключом службы) еще не хранится на сервере. Необходимо расшифровать главный ключ базы данных с помощью инструкции **OPEN MASTER KEY** . Как только главный ключ базы данных будет расшифрован, появится возможность разрешить автоматическую расшифровку в будущем с помощью инструкции **ALTER MASTER KEY REGENERATE** , чтобы оставить на сервере копию главного ключа базы данных, зашифрованного с помощью главного ключа службы. После обновления базы данных с переходом от более ранней версии главный ключ базы данных должен быть создан повторно для использования нового алгоритма шифрования AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). Время, необходимое для повторного создания главного ключа базы данных с обновлением до алгоритма шифрования AES, зависит от числа объектов, защищаемых главным ключом базы данных. Повторное создание главного ключа базы данных с обновлением до алгоритма шифрования AES необходимо произвести только один раз. Это никак не повлияет на последующие операции повторного создания, выполняемые в соответствии со стратегией смены ключей.  
+ При первом присоединении базы данных к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или ее восстановлении копия главного ключа базы данных (зашифрованная главным ключом службы) еще не хранится на сервере. Необходимо расшифровать главный ключ базы данных с помощью инструкции **OPEN MASTER KEY**. Как только главный ключ базы данных будет расшифрован, появится возможность разрешить автоматическую расшифровку в будущем с помощью инструкции **ALTER MASTER KEY REGENERATE**, чтобы оставить на сервере копию главного ключа базы данных, зашифрованного с помощью главного ключа службы. После обновления базы данных с переходом от более ранней версии главный ключ базы данных должен быть создан повторно для использования нового алгоритма шифрования AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). Время, необходимое для повторного создания главного ключа базы данных с обновлением до алгоритма шифрования AES, зависит от числа объектов, защищаемых главным ключом базы данных. Повторное создание главного ключа базы данных с обновлением до алгоритма шифрования AES необходимо произвести только один раз. Это никак не повлияет на последующие операции повторного создания, выполняемые в соответствии со стратегией смены ключей.  
   
 ## <a name="permissions"></a>Разрешения  
- Сведения об управлении разрешениями при присоединении базы данных см. в разделе [CREATE DATABASE &#40; Transact SQL Server-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Сведения об управлении разрешениями при присоединении базы данных см. в разделе [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В данном примере происходит подключение файлов из базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] к текущему серверу.  
@@ -107,9 +107,9 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>См. также  
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [Хранимая процедура sp_removedbreplication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_removedbreplication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

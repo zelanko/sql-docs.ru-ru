@@ -2,7 +2,7 @@
 title: sp_add_schedule (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df04306671a8e2a0f0ded0fc7482e56955102a83
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5ce5f60759175964885532cf9cd674dde3a693a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,10 +103,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Минуты|  
 |**0x8**|Часы|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
+ [  **@freq_subday_interval =** ] *freq_subday_interval*  
  Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval*— **int**, значение по умолчанию **0**. Примечание: Интервал должен быть больше 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
+ [  **@freq_relative_interval =** ] *freq_relative_interval*  
  Задание вхождения *freq_interval* в каждом месяце, если *freq_interval* — 32 (ежемесячное относительное расписание). *freq_relative_interval*— **int**, значение по умолчанию **0**, и может принимать одно из следующих значений. *freq_relative_interval* учитывается в тех случаях, где *freq_type* не равно 32.  
   
 |Значение|Описание (единица измерения)|  
@@ -127,16 +127,16 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
  При обработке еженедельных или ежемесячных расписаний агент пропускает значение active_start_date, если оно в прошлом, и использует вместо него текущую дату. Когда расписание агента SQL Server создается с использованием хранимой процедуры sp_add_schedule, можно указать параметр active_start_date, который определяет дату начала выполнения задания. Если это еженедельное или ежемесячное расписание, а параметру active_start_date задана дата в прошлом, параметр active_start_date пропускается и в качестве его значения используется текущая дата.  
   
- [ **@active_end_date =** ] *active_end_date*  
+ [  **@active_end_date =** ] *active_end_date*  
  Дата, когда может быть остановлено выполнение задания. *active_end_date*— **int**, значение по умолчанию **99991231**, что означает 31 декабря 9999 года. Используется формат ГГГГММДД.  
   
  [  **@active_start_time =** ] *active_start_time*  
  Время в любой день между *active_start_date* и *active_end_date* для начала выполнения задания. *active_start_time*— **int**, значение по умолчанию **000000**, что означает 12:00:00 по в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
- [ **@active_end_time =** ] *active_end_time*  
+ [  **@active_end_time =** ] *active_end_time*  
  Время в любой день между *active_start_date* и *active_end_date* завершения выполнения задания. *active_end_time*— **int**, значение по умолчанию **235959**, что означает 23:59:59. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **"***owner_login_name***"**  
  Имя сервера-участника, владеющего расписанием. *owner_login_name* — **sysname**, и значение по умолчанию NULL, которое указывает, что расписание будет владеет его создатель.  
   
  [ **@schedule_uid**=] *schedule_uid *** выходных данных**  

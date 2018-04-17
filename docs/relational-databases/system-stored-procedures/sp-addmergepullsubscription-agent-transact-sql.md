@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergepullsubscription_agent (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addmergepullsubscription_agent (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4658a2c2f960cdee289eb90940aac7cb92107e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a4034453646cc75c41ac2dd0f2bd7661778e65c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -327,7 +327,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1** (по умолчанию)|Используется встроенная проверка подлинности Windows.|  
   
 > [!NOTE]  
->  При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Для использования веб-синхронизации необходимо подключиться к веб-серверу с использованием шифруемого соединения SSL. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+>  При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Для использования веб-синхронизации необходимо подключиться к веб-серверу с использованием шифруемого соединения SSL. Дополнительные сведения см. в статье [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md).  
   
  [  **@internet_timeout =** ] *internet_timeout*  
  Время в секундах до истечения срока действия запроса на веб-синхронизацию. *internet_timeout* — **int**, значение по умолчанию **300** секунд.  
@@ -355,16 +355,16 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addmergepullsubscription_agent**.  
   
-## <a name="see-also"></a>См. также:  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>См. также  
+ [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

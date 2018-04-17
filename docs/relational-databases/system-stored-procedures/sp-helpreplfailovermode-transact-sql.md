@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_helpreplfailovermode (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_helpreplfailovermode (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 212775844dde7400ca3ddb17753091aa56b582f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dd85f6f45b7104c73b83b08d6fc434eb14e9c70b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +65,10 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [**@failover_mode=**] **"***failover_mode***" выходные данные**  
  Возвращает режим, в котором выполняются изменения данных на подписчике. *failover_mode* — **nvarchar(10)** значение по умолчанию NULL. — **ВЫВОДА** параметра.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**немедленно**|Немедленное обновление: изменения, выполненные на подписчике, немедленно распространяются на издатель с использованием протокола двухфазной фиксации (2PC).|  
-|**в очереди**|Запрошенное обновление: изменения, выполненные на подписчике, помещаются в очередь.|  
+|**Немедленно**|Немедленное обновление: изменения, выполненные на подписчике, немедленно распространяются на издатель с использованием протокола двухфазной фиксации (2PC).|  
+|**В очереди**|Запрошенное обновление: изменения, выполненные на подписчике, помещаются в очередь.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -76,10 +76,10 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>Замечания  
  **Хранимая процедура sp_helpreplfailovermode** используется в репликации моментальных снимков или репликации транзакций, для которых подписки включены для немедленного обновления с обновлением посредством очередей при отработке отказа в случае сбоя.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_helpreplfailovermode**.  
   
-## <a name="see-also"></a>См. также:  
- [Хранимая процедура sp_setreplfailovermode &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Хранимая процедура sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

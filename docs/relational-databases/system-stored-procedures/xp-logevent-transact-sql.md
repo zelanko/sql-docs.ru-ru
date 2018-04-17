@@ -1,16 +1,16 @@
 ---
-title: "xp_logevent (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: xp_logevent (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logevent
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logevent
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ac262c1d16baf15eb9f1eafd05960f8d1905ec9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 18f3cf3516eee810aca57c4be2b2521df15c9b45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ERROR_NUMBER*  
+ *error_number*  
  Номер пользовательской ошибки, больший 50 000. Максимальное значение равно 2 147 483 647 (2^31 - 1).  
   
  **"** *сообщение* **"**  
@@ -66,7 +66,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ## <a name="remarks"></a>Замечания  
  При отправке сообщений от [!INCLUDE[tsql](../../includes/tsql-md.md)] процедур, триггеров, пакетов и т. д., использовать инструкцию RAISERROR вместо процедуры xp_logevent. xp_logevent не вызывает обработчик сообщений клиента и не задавайте@ERROR. Чтобы записывать сообщения в средство просмотра событий Windows и в файл журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует выполнить инструкцию RAISERROR.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner в базе данных master или членство в предопределенной роли сервера sysadmin.  
   
 ## <a name="examples"></a>Примеры  
@@ -83,10 +83,10 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Общие расширенные хранимые процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_cdc_log_scan_sessions (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4417ef0b9d7aef7de1133d05772ae8e80160b30b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Для отслеживания измененных данных - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 |**start_time**|**datetime**|Время начала сеанса.<br /><br /> Когда **session_id** = 0, время начала сбора статистики.|  
 |**end_time**|**datetime**|Время окончания сеанса.<br /><br /> NULL = сеанс активен.<br /><br /> Когда **session_id** = 0, время окончания последнего сеанса.|  
 |**duration**|**bigint**|Продолжительность сеанса в секундах.<br /><br /> Значение 0 означает, что сеанс не содержит транзакций системы отслеживания измененных данных.<br /><br /> Когда **session_id** = 0 сумма продолжительность (в секундах) всех сеансов, содержащих транзакций системы отслеживания измененных данных.|  
-|**scan_phase**|**nvarchar(200)**|Текущая стадия сеанса. Ниже приведены возможные значения и их описания.<br /><br /> 1: чтение конфигурации<br />2: первая проверка, построение хэш-таблицы<br />3: во-вторых сканирования<br />4: во-вторых сканирования<br />5: во-вторых сканирования<br />6: управление версиями<br />7: последнего сканирования<br />8: Готово<br /><br /> Когда **session_id** = 0, это значение всегда равно «Aggregate».|  
+|**scan_phase**|**Nvarchar(200)**|Текущая стадия сеанса. Ниже приведены возможные значения и их описания.<br /><br /> 1: чтение конфигурации<br />2: первая проверка, построение хэш-таблицы<br />3: во-вторых сканирования<br />4: во-вторых сканирования<br />5: во-вторых сканирования<br />6: управление версиями<br />7: последнего сканирования<br />8: Готово<br /><br /> Когда **session_id** = 0, это значение всегда равно «Aggregate».|  
 |**error_count**|**int**|Количество обнаруженных ошибок.<br /><br /> Когда **session_id** = 0, общее число ошибок во всех сеансах.|  
 |**start_lsn**|**nvarchar(23)**|Начальный номер LSN для сеанса.<br /><br /> Когда **session_id** = 0, первый номер LSN последнего сеанса.|  
 |**current_lsn**|**nvarchar(23)**|Текущий номер LSN, который был просмотрен.<br /><br /> Когда **session_id** = 0, текущий номер LSN равен 0.|  
@@ -63,11 +63,11 @@ ms.lasthandoff: 02/03/2018
 |**empty_scan_count**|**int**|Количество последовательных сеансов, не содержащих транзакций системы отслеживания измененных данных.|  
 |**failed_sessions_count**|**int**|Число сеансов, завершившихся неудачно.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значения в этом динамическом административном представлении сбрасываются при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение VIEW DATABASE STATE **sys.dm_cdc_log_scan_sessions** динамическое административное представление. Дополнительные сведения о разрешениях для динамических административных представлений см. в разделе [динамические административные представления и функции &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Требуется разрешение VIEW DATABASE STATE **sys.dm_cdc_log_scan_sessions** динамическое административное представление. Дополнительные сведения о разрешениях для динамических административных представлений см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается информация о самом последнем сеансе.  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sys.dm_cdc_errors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

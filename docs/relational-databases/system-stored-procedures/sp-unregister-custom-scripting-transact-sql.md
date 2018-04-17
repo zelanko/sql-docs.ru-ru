@@ -1,16 +1,16 @@
 ---
-title: "sp_unregister_custom_scripting (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_unregister_custom_scripting (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fce6b2d16e732b76519cb0fbf66a16ca5db6928f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1d2d1e9e081984645fcad82d59d6229f30225502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@type**  =] **"***тип***"**  
+ [ **@type** =] **"***типа***"**  
  Тип удаляемой пользовательской хранимой процедуры или скрипта. *Тип* — **varchar(16)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**Вставка**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется при репликации инструкции INSERT.|  
-|**обновление**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется при репликации инструкции UPDATE.|  
-|**удалить**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется при репликации инструкции DELETE.|  
+|**insert**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется при репликации инструкции INSERT.|  
+|**Обновление**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется при репликации инструкции UPDATE.|  
+|**delete**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется при репликации инструкции DELETE.|  
 |**custom_script**|Зарегистрированная пользовательская хранимая процедура или скрипт выполняется в конце триггера языка DDL.|  
   
- [  **@publication**  =] **"***публикации***"**  
+ [ **@publication** =] **"***публикации***"**  
  Имя публикации, для которой удаляется пользовательская хранимая процедура или скрипт. *Публикация* — **sysname**, значение по умолчанию NULL.  
   
- [  **@article**  =] **"***статьи***"**  
+ [ **@article** =] **"***статьи***"**  
  Имя статьи, для которой удаляется пользовательская хранимая процедура или скрипт. *статья* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -70,10 +70,10 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="remarks"></a>Замечания  
  **sp_unregister_custom_scripting** используется в моментальных снимков и репликации транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных могут выполнять **sp_ unregister_custom_scripting**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_register_custom_scripting &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   

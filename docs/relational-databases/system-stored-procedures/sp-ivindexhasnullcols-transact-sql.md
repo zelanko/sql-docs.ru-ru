@@ -1,16 +1,16 @@
 ---
-title: "sp_ivindexhasnullcols (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_ivindexhasnullcols (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dbdbe2a627eb49dbd2ab71bef5bc102f1b157d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b69b3557009b72579e579e9ca0400b1639d3787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@viewname** =] **"***view_name***"**  
+ [ **@viewname**=] **"***view_name***"**  
  Имя представления, для которого требуется проверка. *view_name* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@fhasnullcols** =] *field_has_null_columns* выходных данных  
+ [ **@fhasnullcols**=] *field_has_null_columns* выходных данных  
  Флаг, указывающий, имеются ли в индексе представления столбцы, допускающие значение NULL. *view_name* — **sysname**, не имеет значения по умолчанию. Возвращает значение **1** Если в индексе представления есть столбцы, допускающие значение NULL. Возвращает значение **0** Если представление не содержит столбцов, допускающих значение NULL.  
   
 > [!NOTE]  
@@ -64,10 +64,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
  По умолчанию, статьи индексированного представления в публикации создаются как таблицы на подписчиках. Однако если индексированные столбцы допускают значения NULL, индексированное представление создается на подписчике как индексированное представление, а не как таблица. Выполнив данную хранимую процедуру, можно предупредить пользователя о существовании (или отсутствии) данной проблемы в текущем индексированном представлении.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_ivindexhasnullcols**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

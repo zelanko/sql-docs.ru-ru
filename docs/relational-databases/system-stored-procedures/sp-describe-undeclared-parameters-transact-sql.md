@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_undeclared_parameters (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_describe_undeclared_parameters (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает результирующий набор, который содержит метаданные о необъявленных параметрах в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Учитывается каждый параметр, который используется в  **@tsql**  пакета, но не объявлены в  **@params** . Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если  **@tsql**  входном пакете не имеет параметров, кроме объявленных в  **@params** .  
+  Возвращает результирующий набор, который содержит метаданные о необъявленных параметрах в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Учитывается каждый параметр, который используется в **@tsql** пакета, но не объявлены в **@params**. Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если **@tsql** входном пакете не имеет параметров, кроме объявленных в **@params**.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +53,7 @@ sp_describe_undeclared_parameters
  Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
   
  [  **@params =** ] **N'***параметры***"**  
- @paramsобеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] работает пакет, как и в хранимой процедуре sp_executesql. *Параметры* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
+ @params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] работает пакет, как и в хранимой процедуре sp_executesql. *Параметры* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
   
  Строка, содержащая определения всех параметров, внедренных в *Transact SQL_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. n — заполнитель, указывающий дополнительные определения параметра. Если выполнение инструкции Transact-SQL или пакета в инструкции не содержит параметров, @params не требуется. Этот аргумент по умолчанию принимает значение NULL.  
   
@@ -65,13 +66,13 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_describe_undeclared_parameters** возвращает следующий результирующий набор.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Содержит порядковый номер параметра в результирующем наборе. Позиция первого параметра будет указана как 1.|  
 |**name**|**sysname NOT NULL**|Содержит имя параметра.|  
 |**suggested_system_type_id**|**int NOT NULL**|Содержит **system_type_id** типа данных параметра, как указано в sys.types.<br /><br /> Для типов CLR даже если **system_type_name** столбец возвратит NULL, этот столбец вернет значение 240.|  
 |**suggested_system_type_name**|**nvarchar (256) значение NULL**|Содержит имя типа данных. Включает аргументы (длина, точность, масштаб), заданные для типа данных параметра. Если тип данных является пользовательским псевдонимом, то здесь указывается базовый системный тип данных. Если это определяемый пользователем тип данных CLR, то в этом столбце возвращается значение NULL. Если не удается определить тип параметра, возвращается значение NULL.|  
-|**suggested_max_length**|**smallint NOT NULL**|В разделе sys.columns. для **max_length** описание столбца.|  
+|**suggested_max_length**|**Smallint, не NULL**|В разделе sys.columns. для **max_length** описание столбца.|  
 |**suggested_precision**|**tinyint NOT NULL**|В разделе sys.columns. содержащий описание столбца precision.|  
 |**suggested_scale**|**tinyint NOT NULL**|В разделе sys.columns. содержащий описание столбца scale.|  
 |**suggested_user_type_id**|**int NULL**|Для типов CLR и псевдонимов содержит user_type_id для типа данных столбца, как указано в sys.types. В противном случае значение равно NULL.|  
@@ -203,7 +204,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **varchar(8000)**, **varchar(max)**, **nvarchar(4000)**, и **nvarchar(max)** - другие строковые типы данных (такие как **текст**, **char(8000)**, **nvarchar(30)**, т. д.) не учитываются.  
   
-    -   **varbinary(8000)** и **varbinary(max)** -другие двоичные типы данных не учитываются (например, **изображения**, **binary(8000)**,  **varbinary(30)**и т. д.).  
+    -   **varbinary(8000)** и **varbinary(max)** -другие двоичные типы данных не учитываются (например, **изображения**, **binary(8000)**, **varbinary (30)** и т. д.).  
   
     -   **Дата**, **time(7)**, **smalldatetime**, **datetime**, **datetime2(7)**, **datetimeoffset(7)**  — Другие типы даты и времени, таких как **time(4)**, не учитываются.  
   
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     В этом случае **int** и **smallint** требуется одно преобразование. Для любого другого типа данных требуется несколько преобразований. Поскольку **int** имеет приоритет над **smallint**, **int** используется для @p. Дополнительные сведения о приоритете типов данных см. в разделе [очередности типов данных &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     В этом случае **int** и **smallint** требуется одно преобразование. Для любого другого типа данных требуется несколько преобразований. Поскольку **int** имеет приоритет над **smallint**, **int** используется для @p. Дополнительные сведения о приоритете типов данных см. в разделе [очередности типов данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
      Это правило применяется, только если существует неявное преобразование между каждым из типов, равнозначных по правилу 1, и типом данных с максимальным приоритетом. Если неявное преобразование отсутствует, то определение типа данных завершается с ошибкой. Например, в запросе `SELECT @p FROM t`, тип данных выведение завершается ошибкой, так как любой тип данных для @p бы хорошо. Например, нет неявного преобразования из **int** для **xml**.  
   
@@ -254,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  В последнем примере данным запросом `SELECT NULL + @p`, **int** выбирается для @p за счет преобразования типов (c).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение на выполнение @tsql аргумент.  
   
 ## <a name="examples"></a>Примеры  
@@ -279,9 +280,9 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

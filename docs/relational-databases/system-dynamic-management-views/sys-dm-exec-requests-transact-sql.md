@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_requests (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_requests (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_requests_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: 
+caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51f71a3274031ad3a9a795e94fa0c15968fc2bfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/03/2018
 |user_id|**int**|Идентификатор пользователя, отправившего данный запрос. Не допускает значение NULL.|  
 |connection_id|**uniqueidentifier**|Идентификатор соединения, по которому поступил запрос. Допускает значение NULL.|  
 |blocking_session_id|**smallint**|Идентификатор сеанса, блокирующего данный запрос. Если этот столбец содержит значение NULL, то запрос не блокирован или сведения о сеансе блокировки недоступны (или не могут быть идентифицированы).<br /><br /> -2 = Блокирующий ресурс принадлежит потерянной распределенной транзакции.<br /><br /> -3 = Блокирующий ресурс принадлежит отложенной транзакции восстановления.<br /><br /> -4 = Идентификатор сеанса владельца кратковременной блокировки определить на данный момент не удалось из-за переходов между внутренними состояниями кратковременной блокировки.|  
-|wait_type|**nvarchar(60)**|Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Допускает значение NULL.<br /><br /> Сведения о типах ожиданий см. в разделе [sys.dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Допускает значение NULL.<br /><br /> Сведения о типах ожиданий см. в разделе [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Если запрос в настоящий момент блокирован, в столбце содержится продолжительность текущего ожидания (в миллисекундах). Не допускает значение NULL.|  
 |last_wait_type|**nvarchar(60)**|Если запрос был блокирован ранее, в столбце содержится тип последнего ожидания. Не допускает значение NULL.|  
 |wait_resource|**nvarchar(256)**|Если запрос в настоящий момент блокирован, в столбце указан ресурс, освобождения которого ожидает запрос. Не допускает значение NULL.|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 02/03/2018
 |is_resumable |**бит** |**Область применения**: начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемые индекса. |  
   
 ## <a name="permissions"></a>Разрешения  
- Если у пользователя есть `VIEW SERVER STATE` разрешение на сервере, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE`не может быть предоставлено в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , `sys.dm_exec_requests` всегда ограничен до текущего соединения. 
+ Если у пользователя есть `VIEW SERVER STATE` разрешение на сервере, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE` не может быть предоставлено в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , `sys.dm_exec_requests` всегда ограничен до текущего соединения. 
   
 ## <a name="examples"></a>Примеры  
   
@@ -154,7 +155,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

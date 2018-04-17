@@ -1,16 +1,16 @@
 ---
-title: "sp_helparticle (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helparticle (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 823862d782cafd605dd7f4686dcdb3b4baa6a0b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 25fcce9f83befaeed78abd62ea2e0ad088460756
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,12 @@ sp_helparticle [ @publication = ] 'publication'
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@article=**] **"***статьи***"**  
- Имя статьи в публикации. *статья* — **sysname**, значение по умолчанию  **%** . Если *статьи* — не указан, возвращаются сведения по всем статьям публикации.  
+ Имя статьи в публикации. *статья* — **sysname**, значение по умолчанию **%**. Если *статьи* — не указан, возвращаются сведения по всем статьям публикации.  
   
  [  **@returnfilter=**] *returnfilter*  
  Указывает, должен ли происходить возврат предложения фильтра. *returnfilter* — **бит**, значение по умолчанию **1**, возвращающий предложение фильтра.  
   
- [  **@publisher** =] **"***издатель***"**  
+ [ **@publisher**=] **"***издатель***"**  
  Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Идентификатор статьи**|**int**|Идентификатор статьи.|  
 |**Имя статьи**|**sysname**|Имя статьи.|  
@@ -85,12 +85,12 @@ sp_helparticle [ @publication = ] 'publication'
 |**update_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном обновлении статей таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном удалении в статьях таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**Путь скрипта создания**|**nvarchar(255)**|Путь и имя скрипта схемы статьи, используемого для создания целевых таблиц.|  
-|**вертикальной секции**|**bit**|Является ли вертикальное секционирование включено для данной статьи; При задании значения **1** означает, что вертикальное секционирование включено.|  
+|**вертикальной секции**|**бит**|Является ли вертикальное секционирование включено для данной статьи; При задании значения **1** означает, что вертикальное секционирование включено.|  
 |**pre_creation_cmd**|**tinyint**|Команда, выполняемая перед инструкциями DROP TABLE, DELETE TABLE и TRUNCATE.|  
 |**filter_clause**|**ntext**|Предложение WHERE задает горизонтальную фильтрацию.|  
-|**schema_option**|**binary(8)**|Битовая карта параметра создания схемы для заданной статьи. Полный список **schema_option** значения, в разделе [sp_addarticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|Битовая карта параметра создания схемы для заданной статьи. Полный список **schema_option** значения, в разделе [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**sysname**|Имя владельца целевого объекта.|  
-|**Этот аргумент**|**sysname**|Владелец исходного объекта.|  
+|**source_owner**|**sysname**|Владелец исходного объекта.|  
 |**unqua_source_object**|**sysname**|Имя исходного объекта без учета имени его владельца.|  
 |**sync_object_owner**|**sysname**|Владелец представления, определяющего опубликованную статью. .|  
 |**unqualified_sync_object**|**sysname**|Имя представления, определяющего опубликованную статью, без учета имени владельца.|  
@@ -101,7 +101,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**Аргумент identity_range**|**bigint**|Диапазон размер диапазона идентификаторов на подписчике, если аргументу статьи *identityrangemanagementoption* значение **автоматически** или **auto_identity_range** значение  **значение true,**.|  
 |**Пороговое значение**|**bigint**|Процентное значение, показывающее момент, когда агент распространителя выделяет новый диапазон идентификаторов.|  
 |**identityrangemanagementoption**|**int**|Указывает способ управления диапазоном идентификаторов для статьи.|  
-|**fire_triggers_on_snapshot**|**bit**|Используется в случае, когда реплицированные пользовательские триггеры срабатывают при применении исходного моментального снимка:<br /><br /> **1** = триггеры выполняются.<br /><br /> **0** = триггеры не выполняются.|  
+|**fire_triggers_on_snapshot**|**бит**|Используется в случае, когда реплицированные пользовательские триггеры срабатывают при применении исходного моментального снимка:<br /><br /> **1** = триггеры выполняются.<br /><br /> **0** = триггеры не выполняются.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -109,15 +109,15 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="remarks"></a>Замечания  
  **sp_helparticle** используется в репликации моментальных снимков и репликации транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или для текущей публикации списка доступа публикации могут выполнять процедуру **sp_helparticle**.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_helptranarticle](../../relational-databases/replication/codesnippet/tsql/sp-helparticle-transact-_1.sql)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств статьи](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

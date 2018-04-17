@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_generate_wrapper_function_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b32fc0848943814052a72e4b3f91eb4f5556a4bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8a8049558f764d0d135984ec7d00cab06dbb5abd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип столбца|Description|  
+|Имя столбца|Тип столбца|Описание|  
 |-----------------|-----------------|-----------------|  
-|**имя функции**|**nvarchar(145)**|Имя формируемой функции.|  
+|**function_name**|**nvarchar(145)**|Имя формируемой функции.|  
 |**create_script**|**nvarchar(max)**|Скрипт, создающий функцию-оболочку экземпляра отслеживания.|  
   
 ## <a name="remarks"></a>Замечания  
@@ -110,8 +110,8 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Отслеживание изменений в данных &#40; Службы SSIS &#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [Сбор данных об изменениях &#40;служб SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

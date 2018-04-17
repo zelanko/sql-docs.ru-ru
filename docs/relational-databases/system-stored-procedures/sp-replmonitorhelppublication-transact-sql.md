@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelppublication (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_replmonitorhelppublication (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581bfbad00edf6797f2bc21b15a17421d8217d73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 880ceb504a2ad8fba418374db362fa0574dfa9c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher**  =] **"***издатель***"**  
+ [ **@publisher** =] **"***издатель***"**  
  Имя издателя, состояние которого отслеживается. *издатель* — **sysname**, значение по умолчанию NULL. Если **null**, будут возвращены сведения обо всех издателях, использующих этот распространитель.  
   
- [  **@publisher_db**  =] **"***publisher_db***"**  
+ [ **@publisher_db** =] **"***publisher_db***"**  
  Имя опубликованной базы данных. *publisher_db* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
   
- [  **@publication**  =] **"***публикации***"**  
+ [ **@publication** =] **"***публикации***"**  
  Имя отслеживаемой публикации. *Публикация* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  Тип публикации. *publication_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -74,10 +74,10 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisher_db**|**sysname**|Имя издателя.|  
-|**публикации**|**sysname**|Имя публикации.|  
+|**Публикации**|**sysname**|Имя публикации.|  
 |**publication_type**|**int**|Тип публикации, который может принимать одно из следующих значений:<br /><br /> **0** = публикация транзакций<br /><br /> **1** = публикация моментальных снимков<br /><br /> **2** = публикация слиянием|  
 |**status**|**int**|Реальное состояние всех агентов репликации, связанных с публикацией, которое может принимать одно из следующих значений:<br /><br /> **1** = запущен<br /><br /> **2** = выполнено успешно<br /><br /> **3** = выполняется<br /><br /> **4** = бездействует<br /><br /> **5** = Повтор<br /><br /> **6** = ошибка|  
 |**Предупреждение**|**int**|Максимальный уровень предупреждений, выдаваемых подпиской, принадлежащей публикации; это значение может быть результатом операции логического OR над одним или несколькими из следующих значений:<br /><br /> **1** = expiration — подписка на публикацию транзакций не синхронизирована в течение порогового срока хранения.<br /><br /> **2** = latency — превышение времени для репликации данных транзакционного издателя подписчику пороговое значение, указанное в секундах.<br /><br /> **4** = mergeexpiration — подписка на публикацию слиянием не синхронизирована в течение порогового срока хранения.<br /><br /> **8** = mergefastrunduration — время, затраченное на завершение синхронизации подписки слиянием через быстрое сетевое соединение превышает значение, в секундах.<br /><br /> **16** = mergeslowrunduration — время, затраченное на завершение синхронизации подписки слиянием через медленное или коммутируемое сетевое соединение превышает значение, в секундах.<br /><br /> **32** = mergefastrunspeed — скорость доставки строк при синхронизации подписки на публикацию слиянием оказалась пороговой, в строках в секунду, через быстрое сетевое соединение.<br /><br /> **64** = mergefastrunspeed — скорость доставки строк при синхронизации подписки на публикацию слиянием не достигла порогового значения, в строках в секунду, через медленное или коммутируемое сетевое соединение.|  
@@ -85,7 +85,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_latency**|**int**|Наименьшая задержка (в секундах) изменения данных, зафиксированная для публикации транзакций агентом чтения журнала или агентом распространителя.|  
 |**average_latency**|**int**|Средняя задержка (в секундах) изменения данных, зафиксированная для публикации транзакций агентом чтения журнала или агентом распространителя.|  
 |**last_distsync**|**datetime**|Дата и время последнего запуска агента распространителя.|  
-|**хранения**|**int**|Срок хранения публикации.|  
+|**Хранения**|**int**|Срок хранения публикации.|  
 |**latencythreshold**|**int**|Порог задержки, установленный для публикации транзакций.|  
 |**expirationthreshold**|**int**|Порог истечения, установленный для публикации в случае публикации слиянием.|  
 |**agentnotrunningthreshold**|**int**|Порог, установленный для самого долгого времени, в течение которого агент не работает.|  
@@ -106,10 +106,10 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Замечания  
  **sp_replmonitorhelppublication** используется со всеми типами репликации.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **db_owner** или **replmonitor** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_replmonitorhelppublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

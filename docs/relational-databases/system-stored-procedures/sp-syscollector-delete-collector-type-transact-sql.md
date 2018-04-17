@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_delete_collector_type (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_syscollector_delete_collector_type (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14bfab3376da20b677414106e293ad21103e52dc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d6afbae5b26890c0018f38550430c44a4c40fda1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
+ [  **@collector_type_uid =** ] **"***аргумент collector_type_uid***"**  
  Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** и должен иметь значение, если *имя* имеет значение NULL.  
   
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **"***имя***"**  
  Имя типа сборщика. *имя* — **sysname** и должен иметь значение, если *аргумент collector_type_uid* имеет значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Либо *аргумент collector_type_uid* или *имя* должен иметь значение, и не может иметь значение NULL.  
   
  Эта процедура вызовет ошибку, если существуют элементы сбора этого типа сборщика.  

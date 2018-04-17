@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergearticle (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addmergearticle (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd9d9ead2695338116dd3da6a60285756cb433c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,10 +91,10 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@source_object=** ] **"***source_object***"**  
  Публикуемый объект базы данных. *source_object* — **sysname**, не имеет значения по умолчанию. Дополнительные сведения о типах объектов, которые могут быть опубликованы при репликации слиянием см. в разделе [публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@type=** ] **"***тип***"**  
+ [  **@type=** ] **"***типа***"**  
  Тип статьи. *Тип* — **sysname**, значение по умолчанию **таблицы**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Таблица** (по умолчанию)|Таблица со схемой и данными. Репликация проверяет таблицу, определяя данные, которые должны реплицироваться.|  
 |**только схема func**|Только функция со схемой.|  
@@ -118,12 +118,12 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@pre_creation_cmd=** ] **"***pre_creation_cmd***"**  
  Указывает действие системы, если во время применения моментального снимка таблица уже существует на подписчике. *pre_creation_cmd* — **nvarchar(10)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Нет**|Если таблица на подписчике уже существует, не выполняется никаких действий.|  
-|**удалить**|Выполняет удаление, используя предложение WHERE, указанное в фильтре подмножества.|  
+|**delete**|Выполняет удаление, используя предложение WHERE, указанное в фильтре подмножества.|  
 |**Удалить** (по умолчанию)|Удаляет таблицу перед ее повторным созданием. Требуется для поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] подписчиков.|  
-|**усечение**|Усекает целевую таблицу.|  
+|**truncate**|Усекает целевую таблицу.|  
   
  [  **@creation_script=** ] **"***creation_script***"**  
  Путь и имя необязательного скрипта схемы статьи, применяемого для создания статьи в базе данных подписки. *creation_script* — **nvarchar(255)**, значение по умолчанию NULL.  
@@ -134,7 +134,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@schema_option=** ] *schema_option*  
  Битовая карта параметра создания схемы для данной статьи. *schema_option* — **binary(8)**и может быть [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) над одним или несколькими из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0x00**|Запрещает выполнение сценариев агентом моментальных снимков и использует сценарий предварительного создания схемы, указанной в *creation_script*.|  
 |**0x01**|Формирует создание объекта (CREATE TABLE, CREATE PROCEDURE и т.п.). Это значение по умолчанию для статей хранимых процедур.|  
@@ -171,7 +171,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x400000000**|Проводит репликацию параметра сжатия для данных и индексов. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о создании объектов до применения моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> См. связанный параметр **0x100000000**.|  
 |**0x1000000000**|Преобразует типами среды CLR (CLR) определяемого пользователем (UDT) в **varbinary(max)** , чтобы столбцы определяемого Пользователем типа могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0x2000000000**|Преобразует **hierarchyid** тип данных, который **varbinary(max)** , чтобы столбцы типа **hierarchyid** могут реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x2000000000**|Преобразует **hierarchyid** тип данных, который **varbinary(max)** , чтобы столбцы типа **hierarchyid** могут реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Проводит репликацию всех фильтруемых индексов для таблицы. Дополнительные сведения об отфильтрованных индексах см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
 |**0x8000000000**|Преобразует **geography** и **geometry** типами данных **varbinary(max)** , чтобы столбцы этих типов могут реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|Реплицирует индексы для столбцов типа **geography** и **geometry**.|  
@@ -232,7 +232,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **1** указывает, что подпись будет проверяться, чтобы увидеть, что он получен из надежного источника.  
   
  [  **@destination_object=** ] **"***destination_object***"**  
- Имя объекта в базе данных подписки. *destination_object* — **sysname**, значение по умолчанию, равное значению аргумента  **@source_object** . Этот аргумент может быть указан только для статей типа «только схема», например для статей хранимых процедур, представлений или пользовательских функций. Если статья, указанная является статьи таблицы, значение в  *@source_object*  переопределяет значение в *destination_object*.  
+ Имя объекта в базе данных подписки. *destination_object* — **sysname**, значение по умолчанию, равное значению аргумента **@source_object**. Этот аргумент может быть указан только для статей типа «только схема», например для статей хранимых процедур, представлений или пользовательских функций. Если статья, указанная является статьи таблицы, значение в *@source_object* переопределяет значение в *destination_object*.  
   
  [  **@allow_interactive_resolver=** ] **"***allow_interactive_resolver***"**  
  Разрешает или запрещает использование интерактивного арбитра конфликтов для данной статьи. *allow_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE. **значение true,** разрешает использование интерактивного арбитра конфликтов для данной статьи; **false** отключает его.  
@@ -246,7 +246,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@check_permissions=** ] *check_permissions*  
  Битовая карта разрешений уровня таблицы, которые проверяются, когда агент слияния применяет изменения на издателе. Если имя входа или пользовательская учетная запись на издателе, от имени которой выполняется процесс слияния, не обладает необходимыми разрешениями на таблицы, недопустимые изменения регистрируются в журнале как конфликты. *check_permissions* — **int**и может быть [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) одного или нескольких из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0x00** (по умолчанию)|Разрешения не проверяются.|  
 |**0x10**|Проверяет разрешения на издателе перед передачей операций вставки, выполняемых на подписчике.|  
@@ -293,7 +293,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@partition_options=** ] *partition_options*  
  Определяет метод, при помощи которого производится секционирование статьи, что позволяет произвести оптимизацию производительности в случае, когда все строки принадлежат только одной секции или только одной подписке. *partition_options* — **tinyint**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Фильтрация для статьи либо статическая, либо не возвращает уникальное подмножество данных для каждой из секций, то есть перекрывающаяся секция.|  
 |**1**|Секции перекрываются, и обновления языка обработки данных DML, выполняемые на подписчике, не могут изменить секцию, к которой принадлежит строка.|  
@@ -309,13 +309,13 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  Определяет ограничения на обновления, производимые на подписчике с клиентской подпиской. Дополнительные сведения см. в статье [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* — **tinyint**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Без ограничений. Изменения, произведенные на подписчике, передаются на издатель.|  
 |**1**|Изменения на подписчике разрешены, но они не передаются на издатель.|  
 |**2**|Изменения на подписчике не разрешены.|  
   
- Изменение *subscriber_upload_options* требуется подписки для повторной инициализации, вызвав [sp_reinitmergepullsubscription &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
+ Изменение *subscriber_upload_options* требуется подписки для повторной инициализации, вызвав [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
   
 > [!NOTE]  
 >  Если исходная таблица для статьи уже опубликована в другой публикации, значение *subscriber_upload_options* должно быть одинаковым для обеих статей.  
@@ -323,7 +323,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@identityrangemanagementoption=** ] *identityrangemanagementoption*  
  Указывает способ управления диапазоном идентификаторов для статьи. *identityrangemanagementoption* — **nvarchar(10)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Нет**|Запрещает управление диапазонами идентификаторов.|  
 |**Вручную**|Помечает столбец идентификаторов как NOT FOR REPLICATION, чтобы разрешить ручное управление диапазонами идентификаторов.|  
@@ -392,18 +392,18 @@ sp_addmergearticle [ @publication = ] 'publication'
 |Тип статьи|Значения параметра схемы|  
 |------------------|--------------------------|  
 |**только схема func**|**0x01** и **0x2000**|  
-|**только схема индексированного представления**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**, и **0x200000**|  
+|**только схема индексированного представления**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**и **0x200000**|  
 |**только схема процедуры**|**0x01** и **0x2000**|  
 |**table**|Все параметры.|  
-|**только схема представления**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**, и **0x200000**|  
+|**только схема представления**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**и **0x200000**|  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)   

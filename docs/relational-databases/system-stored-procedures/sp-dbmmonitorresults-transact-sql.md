@@ -1,16 +1,16 @@
 ---
-title: "sp_dbmmonitorresults (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dbmmonitorresults (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce88354c3d378dbfa2e7bc71acd57ed52aaf5131
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cfa798863af2c43f00908accf30c8d03c06202f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_dbmmonitorresults database_name
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя зеркальной базы данных.|  
-|**role**|**int**|Текущая роль экземпляра сервера в зеркальном отображения:<br /><br /> 1 = основная;<br /><br /> 2 = зеркальная;|  
+|**Роли**|**int**|Текущая роль экземпляра сервера в зеркальном отображения:<br /><br /> 1 = основная;<br /><br /> 2 = зеркальная;|  
 |**mirroring_state**|**int**|Состояние базы данных:<br /><br /> 0 = приостановлено;<br /><br /> 1 = отключено<br /><br /> 2 = идет процесс синхронизации;<br /><br /> 3 = ожидание отработки отказа;<br /><br /> 4 = синхронизирована;|  
 |**witness_status**|**int**|Состояние соединения свидетеля в сеансе зеркального отображения базы данных, может быть:<br /><br /> 0 = неизвестное состояние;<br /><br /> 1 = подключен;<br /><br /> 2 = отключен;|  
 |**log_generation_rate**|**int**|Объем сформированного файла журнала, с момента с предыдущего обновления состояния зеркального отображения текущей базы данных, в килобайтах в секунду.|  
@@ -106,7 +106,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Приблизительное системное время основного сервера, с которым синхронизирована зеркальная база данных. Это значение имеет смысл только на экземпляре основного сервера.|  
 |**local_time**|**datetime**|Значение системного времени на локальном экземпляре сервера, когда эта строка была обновлена.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_dbmmonitorresults** может выполняться только в контексте **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -125,10 +125,10 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
   
 ## <a name="see-also"></a>См. также  
  [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

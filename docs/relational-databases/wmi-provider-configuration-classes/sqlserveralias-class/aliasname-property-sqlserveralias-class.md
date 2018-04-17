@@ -1,16 +1,16 @@
 ---
-title: "Свойство AliasName (класс SqlServerAlias) | Документы Microsoft"
-ms.custom: 
+title: Свойство AliasName (класс SqlServerAlias) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - AliasName Property (SqlServerAlias Class)
@@ -19,16 +19,16 @@ apilocation:
 helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-caps.latest.revision: 
+caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 603d3d62942285995e980d1a208fa865a3bd98a4
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 9f63001750fae36a68bb172dd9c69e12d1e3f538
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Свойство AliasName (класс SqlServerAlias)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,5 +48,5 @@ object.AliasName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **string** , определяющее имя псевдонима соединения сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   

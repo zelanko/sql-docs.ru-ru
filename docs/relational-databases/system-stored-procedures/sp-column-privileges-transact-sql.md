@@ -1,16 +1,16 @@
 ---
-title: "sp_column_privileges (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_column_privileges (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f930dc96633f526259dccf89f7fb592a4f9caf10
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если *table_owner* не указан и текущий пользователь не является владельцем таблицы с указанным *table_name*, sp_column_privileges выполняет поиск таблицы с указанным *table_name* принадлежат владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
  [ @table_qualifier=] '*table_qualifier*"  
- Имя квалификатора таблицы. *table_qualifier* — *sysname*, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор***.** *владельца***.** *имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+ Имя квалификатора таблицы. *table_qualifier* — *sysname*, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор***.*** владелец***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
  [ @column_name=] '*столбца*"  
  Единственный столбец, который используется при получении только одного столбца сведений о каталоге. *столбец* — **nvarchar (**384**)**, значение по умолчанию NULL. Если *столбца* — не указано, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *столбца* представляет имя столбца, как показано в таблице sys.columns. *столбец* может содержать подстановочные знаки, используя шаблоны совпадения базовой СУБД. Для максимальной совместимости клиент шлюза должен использовать только согласование установленного образца ISO (символы-шаблоны % и _).  
@@ -66,7 +67,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  sp_column_privileges эквивалентна SQLColumnPrivileges в ODBC. Возвращаемые результаты сортируются по столбцам TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME и PRIVILEGE.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Имя квалификатора таблицы. Это поле может иметь значение NULL.|  
 |TABLE_OWNER|**sysname**|Имя владельца таблицы. Это поле всегда возвращает значение.|  
@@ -80,7 +81,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Замечания  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешения предоставляются инструкцией GRANT и отзываются инструкцией REVOKE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
 ## <a name="examples"></a>Примеры  
@@ -95,7 +96,7 @@ EXEC sp_column_privileges @table_name = 'Employee'
     ,@column_name = 'SalariedFlag';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

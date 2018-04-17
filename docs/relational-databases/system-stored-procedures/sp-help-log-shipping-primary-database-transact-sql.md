@@ -1,16 +1,16 @@
 ---
-title: "sp_help_log_shipping_primary_database (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_log_shipping_primary_database (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_primary_database_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_primary_database
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56de87e340bc9bd6006208754451c54c145fbdba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 257d4310d46f757ab2d34760b99a394bba933330
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_help_log_shipping_primary_database
 |-----------------|-----------------|  
 |**primary_id**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
 |**primary_database**|Имя базы данных-источника в конфигурации доставки журналов.|  
-|**backup_directory**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
+|**каталог_резервной_копии**|Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника.|  
 |**backup_share**|Сетевой или UNC-путь к каталогу резервных копий.|  
 |**backup_retention_period**|Время хранения файла резервной копии журнала в каталоге резервных копий (в минутах).|  
 |**backup_compression**|Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = отключено. Не сжимать резервные копии журналов.<br /><br /> **1** = включен. Всегда сжимать резервные копии журналов.<br /><br /> **2** = использовать значение параметра [Просмотр или настройка параметра конфигурации сервера по умолчанию сжатие резервных копий](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Это значение по умолчанию.<br /><br /> Сжатие резервной копии поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или в более поздней версии). В других выпусках это значение всегда равно 2.|  
@@ -78,7 +78,7 @@ sp_help_log_shipping_primary_database
 |**last_backup_date_utc**|Время и дата создания последней резервной копии журнала транзакций в базе данных-источнике, выраженные в формате UTC.|  
 |**history_retention_period**|Промежуток времени в минутах, после которого записи истории доставки журнала данной базы данных-источника будут удалены.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_help_log_shipping_primary_database** должна запускаться из **master** базы данных на сервере-источнике.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

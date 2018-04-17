@@ -1,16 +1,16 @@
 ---
-title: "sp_dropmergefilter (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dropmergefilter (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9890268638d5c4559d1239823699a68948aaa19f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 91bfb4694a088bfac75f14286bd0ea9879f763eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
   
  **1** означает, что изменения статьи слияния могут привести к недействительности моментального снимка. Если это так, значение **1** дает разрешение нового моментального снимка.  
   
- [  **@force_reinit_subscription** =] *этот*  
+ [ **@force_reinit_subscription**=] *этот*  
  Включает или отключает возможность отметки подписки как недействительной. *Этот* — **бит**, значение по умолчанию **0**.  
   
  **0** указывает, что изменения в фильтре статьи слияния не приводят к недействительности подписок.  
@@ -77,14 +77,14 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ## <a name="remarks"></a>Замечания  
  **sp_dropmergefilter** используется в репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_dropmergefilter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [Хранимая процедура sp_helpmergefilter &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [Хранимая процедура sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

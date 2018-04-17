@@ -2,7 +2,7 @@
 title: Хранимая процедура sp_update_alert (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,10 +75,10 @@ sp_update_alert
  [  **@new_name =**] **"***новое_имя***"**  
  Новое имя предупреждения. Имя должно быть уникальным. *новое_имя* — **sysname**, значение по умолчанию NULL.  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**] *включена*  
  Указывает, включено ли предупреждение (**1**) или не включено (**0**). *включить* — **tinyint**, значение по умолчанию NULL. Сработать может только активированное предупреждение.  
   
- [ **@message_id =**] *message_id*  
+ [  **@message_id =**] *message_id*  
  Новое сообщение или номер ошибки, определяющие предупреждение. Как правило *message_id* соответствует номеру ошибки в **sysmessages** таблицы. *message_id* — **int**, значение по умолчанию NULL. Сообщение, код может использоваться только в том случае, если уровень серьезности для предупреждения является **0**.  
   
  [  **@severity =**] *серьезности*  
@@ -90,7 +90,7 @@ sp_update_alert
  [  **@notification_message =**] **"***notification_message***"**  
  Измененный текст дополнительного сообщения, переданного оператору как часть сообщения электронной почты, **net send**, или на пейджер. *notification_message* — **nvarchar(512)**, значение по умолчанию NULL.  
   
- [ **@include_event_description_in =**] *include_event_description_in*  
+ [  **@include_event_description_in =**] *include_event_description_in*  
  Указывает, следует ли включить в текст сообщения уведомления описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из журнала приложений Windows. *include_event_description_in* — **tinyint**, значение по умолчанию NULL и может принимать один или несколько из следующих значений.  
   
 |Значение|Описание|  
@@ -108,7 +108,7 @@ sp_update_alert
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
  Последовательность символов, которая должна присутствовать в описании ошибки в журнале сообщений об ошибках. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword* — **nvarchar(100)**, значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %**).  
   
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL. Если *job_id* указано, *job_name* должен быть опущен.  
   
  [  **@job_name =**] **"***job_name***"**  
@@ -150,10 +150,10 @@ sp_update_alert
  [  **@category_name =**] **"***категории***"**  
  Имя категории предупреждения. *Категория* — **sysname** значение по умолчанию NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **"***wmi_namespace***"**  
  Пространство имен WMI для запроса событий. *wmi_namespace* — **sysname**, значение по умолчанию NULL.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **"***wmi_query***"**  
  Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

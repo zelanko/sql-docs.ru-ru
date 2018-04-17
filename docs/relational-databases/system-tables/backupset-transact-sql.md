@@ -1,16 +1,16 @@
 ---
-title: "backupset (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: backupset (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 
+caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1675b6703b8729458ff10fae7d83a2c56328ee59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  Содержит по одной строке для каждого резервного набора данных. Объект *резервный набор данных* содержит резервную копию из одной успешной операции резервного копирования. Инструкции RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY и RESTORE VERIFYONLY выполняются над отдельным резервным набором данных в рамках набора носителей на указанном устройстве или устройствах резервного копирования.  
+  Содержит по одной строке для каждого резервного набора данных. *Резервный набор данных* содержит резервную копию, полученную в результате отдельной успешной операции резервного копирования. Инструкции RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY и RESTORE VERIFYONLY выполняются над отдельным резервным набором данных в рамках набора носителей на указанном устройстве или устройствах резервного копирования.  
   
  Эта таблица хранится в **msdb** базы данных.  
 
@@ -52,17 +53,17 @@ ms.lasthandoff: 02/03/2018
 |**last_media_number**|**smallint**|Номер носителя, которым заканчивается резервный набор данных. Может иметь значение NULL.|  
 |**catalog_family_number**|**tinyint**|Номер семейства носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
 |**catalog_media_number**|**smallint**|Номер носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
-|**position**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файла в [резервного КОПИРОВАНИЯ &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файла в [резервного КОПИРОВАНИЯ &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Дата и время окончания срока действия для резервного набора. Может иметь значение NULL.|  
 |**software_vendor_id**|**int**|Идентификационный номер поставщика программного обеспечения, выполняющего запись заголовка резервного носителя. Может иметь значение NULL.|  
 |**name**|**nvarchar(128)**|Имя резервного набора. Может иметь значение NULL.|  
 |**Описание**|**nvarchar(255)**|Описание резервного набора данных. Может иметь значение NULL.|  
 |**user_name**|**nvarchar(128)**|Имя пользователя, выполняющего операцию резервного копирования. Может иметь значение NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]основной номер версии. Может иметь значение NULL.|  
-|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Дополнительный номер версии. Может иметь значение NULL.|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Номер сборки. Может иметь значение NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Основной номер версии. Может иметь значение NULL.|  
+|**software_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
+|**software_build_version**|**smallint**|Номер сборки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
 |**time_zone**|**smallint**|Разница между местным временем (в месте осуществления операции резервного копирования) и временем в формате UTC в 15-минутных интервалах. Может принимать значения от -48 до +48 включительно. Значение 127 соответствует неизвестному значению. Например, -20 — время на восточном побережье США (Eastern Standard Time, EST), отстоящее на пять часов вперед от UTC. Может иметь значение NULL.|  
-|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Номер вспомогательной версии формата ленты. Может иметь значение NULL.|  
+|**mtf_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Может иметь значение NULL.|  
 |**first_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для первой или самой ранней записи журнала в резервном наборе данных. Может иметь значение NULL.|  
 |**last_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для следующей записи журнала после резервного набора данных. Может иметь значение NULL.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для записи, с которой должна начинаться операция повтора. Может иметь значение NULL.|  
@@ -100,20 +101,20 @@ ms.lasthandoff: 02/03/2018
 |**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно **last_recovery_fork_guid**, это регистрационный номер вилки. В противном случае значение равно NULL.|  
 |**database_guid**|**uniqueidentifier**|Уникальный идентификатор базы данных. Это соответствует **BindingID** инструкции RESTORE HEADERONLY. При восстановлении базы данных назначается новое значение.|  
 |**family_guid**|**uniqueidentifier**|Уникальный идентификатор оригинальной базы данных в момент создания. Это значение остается неизменным при восстановлении базы данных, даже если ей присваивается другое имя.|  
-|**differential_base_lsn**|**numeric(25,0)**|Основной регистрационный номер транзакции в журнале для разностного резервного копирования. Для однобазового разностного резервного копирования; изменения с номерами LSN больше или равно **differential_base_lsn** включаются в разностную резервную копию.<br /><br /> Для многобазового разностного резервного копирования значение равно NULL, а базовый номер LSN должен быть определен на файловом уровне (см. [backupfile &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Для неразностных типов резервного копирования значение всегда равно NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Основной регистрационный номер транзакции в журнале для разностного резервного копирования. Для однобазового разностного резервного копирования; изменения с номерами LSN больше или равно **differential_base_lsn** включаются в разностную резервную копию.<br /><br /> Для многобазового разностного резервного копирования значение равно NULL, а базовый номер LSN должен быть определен на файловом уровне (см. [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Для неразностных типов резервного копирования значение всегда равно NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Для разностной резервной копии с одной основой значение является уникальным идентификатором базовой копии для разностного копирования.<br /><br /> Для многобазового разностного резервного копирования значение равно NULL, а базовая копия для разностного копирования должна быть определена на файловом уровне.<br /><br /> Для неразностных типов резервного копирования значение равно NULL.|  
-|**compressed_backup_size**|**Numeric(20,0)**|Общее число байт в резервной копии, хранящейся на диске.<br /><br /> Для вычисления коэффициента сжатия используйте **compressed_backup_size** и **backup_size**.<br /><br /> Во время **msdb** обновления, это значение будет равно NULL. Это означает резервное копирование без сжатия.|  
+|**compressed_backup_size**|**numeric(20,0)**|Общее число байт в резервной копии, хранящейся на диске.<br /><br /> Для вычисления коэффициента сжатия используйте **compressed_backup_size** и **backup_size**.<br /><br /> Во время **msdb** обновления, это значение будет равно NULL. Это означает резервное копирование без сжатия.|  
 |**key_algorithm**|**nvarchar(32)**|Алгоритм шифрования резервной копии. Значение NO_Encryption указывает, что резервная копия не была зашифрована.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Инструкция RESTORE VERIFYONLY FROM *устройство_резервного_копирования* WITH LOADHISTORY заполняет столбец **backupmediaset** таблицу с соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить число строк в данной таблице, а также в других таблицах резервной копии и журнал, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
   
 ## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Резервное копирование и восстановление таблицы &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -122,6 +123,6 @@ ms.lasthandoff: 02/03/2018
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [Резервное копирование и восстановление таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [Резервное копирование и восстановление таблицы &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

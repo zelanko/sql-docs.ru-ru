@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_log_shipping_secondary_database (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_delete_log_shipping_secondary_database (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_log_shipping_secondary_database_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_database
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a0406ce09b9a6b55193f3f935e6a3a95d17c3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f95db54a944a0152bd46fad1dd9371346e6d893c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletelogshippingsecondarydatabase-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +56,14 @@ sp_delete_log_shipping_secondary_database
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_delete_log_shipping_secondary_database** должна запускаться из **master** базы данных на сервере-получателе.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

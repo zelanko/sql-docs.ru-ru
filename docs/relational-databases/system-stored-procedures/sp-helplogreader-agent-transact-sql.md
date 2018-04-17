@@ -1,16 +1,16 @@
 ---
-title: "sp_helplogreader_agent (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helplogreader_agent (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplogreader_agent
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee9020dff1819069c3449bd85cbbf61d440acd91
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fdcee5a30dd32dc7ce269bc8ab5e2ba3adb6da40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher** =] **"***издатель***"**  
+ [ **@publisher**=] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -52,13 +52,13 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор агента.|  
-|**name**|**nvarchar(100)**|Имя агента.|  
+|**name**|**Nvarchar(100)**|Имя агента.|  
 |**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при соединении с издателем, который может быть одним из следующих:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности<br /><br /> **1** = проверка подлинности Windows.|  
 |**publisher_login**|**sysname**|Имя входа в систему, используемое при соединении с издателем.|  
-|**publisher_password**|**nvarchar(524)**|По соображениям безопасности значение  **\* \* \* \* \* \* \* \* \* \***  всегда возвращается.|  
-|**Аргумент job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
+|**publisher_password**|**nvarchar(524)**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
+|**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
 |**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой запускается агент чтения журнала, который возвращается в формате *домена*\\*username*.|  
-|**job_password**|**sysname**|По соображениям безопасности значение  **\* \* \* \* \* \* \* \* \* \***  всегда возвращается.|  
+|**job_password**|**sysname**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -66,12 +66,12 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>Замечания  
  **sp_helplogreader_agent** используется в репликации транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера на издателе или члены **db_owner** предопределенной роли базы данных в базе данных публикации могут выполнять процедуру **sp_helplogreader_agent**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_addlogreader_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [sp_changelogreader_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   
   

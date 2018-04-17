@@ -1,16 +1,16 @@
 ---
-title: "Свойство PropertyIndex (класс SqlServiceAdvancedProperty) | Документы Microsoft"
-ms.custom: 
+title: Свойство PropertyIndex (класс SqlServiceAdvancedProperty) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyIndex Property (SqlServiceAdvancedProperty Class)
@@ -20,16 +20,16 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyIndex property
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
-caps.latest.revision: 
+caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0547dca7df9b0c6b46b67a9907f88ac71b4a5c5
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 12605a96f4c37c30ef910001357c606b558a4bea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Свойство PropertyIndex (класс SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ object.PropertyIndex [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Объект **uint32** значение, определяющее положение дополнительного свойства в массиве дополнительных свойств, к которой принадлежит указанной службы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -1,16 +1,16 @@
 ---
-title: "sysmail_delete_profileaccount_sp (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmail_delete_profileaccount_sp (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26daacbb43092e81ec4798d8199d69f67fe067f1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0f80f3e20b32cb7571e1be5e77aa9eba1256dc74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@profile_id** = ] *profile_id*  
+ [ **@profile_id** =] *profile_id*  
  Идентификатор удаляемого профиля. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* может быть указан.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **"***profile_name***"**  
  Имя удаляемого профиля. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* может быть указан.  
   
- [ **@account_id** = ] *account_id*  
+ [ **@account_id** =] *account_id*  
  Идентификатор удаляемой учетной записи. *account_id* — **int**, значение по умолчанию NULL. Либо *account_id* или *account_name* может быть указан.  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **"***account_name***"**  
  Имя удаляемой учетной записи. *account_name* — **sysname**, значение по умолчанию NULL. Либо *account_id* или *account_name* может быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -65,7 +65,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Возвращает ошибку, если указанная учетная запись не связана с указанным профилем.  
   
  Если указана учетная запись, но не указан профиль, хранимая процедура удаляет указанную учетную запись из всех профилей. Например, если предстоит отключить существующий SMTP-сервер, то следует удалить учетные записи, в которых используется этот SMTP-сервер, из всех профилей, вместо того чтобы удалять каждую учетную запись из каждого профиля.  
@@ -90,6 +90,6 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создайте учетную запись электронной почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Компонент Database Mail хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

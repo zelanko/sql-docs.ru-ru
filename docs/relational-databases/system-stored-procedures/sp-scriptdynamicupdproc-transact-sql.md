@@ -1,16 +1,16 @@
 ---
-title: "sp_scriptdynamicupdproc (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_scriptdynamicupdproc (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89a2704f20a2bdea0bb015d0280492dc594057da
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b548223d520696f7c7a2b48f4010247666d41597
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="remarks"></a>Замечания  
  **sp_scriptdynamicupdproc** используется в репликации транзакций. По умолчанию, при синтаксисе MCALL в сценарий включаются все столбцы, входящие в инструкцию UPDATE, а для определения измененных столбцов используется битовая карта. Если столбец не изменился, ему присваиваются его же значения, что обычно не приводит ни к каким проблемам. Если столбец является индексированным, выполняются дополнительные операции. При таком динамическом подходе принимаются во внимание только измененные столбцы, в результате чего формируется оптимальная инструкция UPDATE. Однако составление динамической инструкции UPDATE требует дополнительной обработки в период выполнения. Рекомендуется протестировать динамический и статический подходы и выбрать оптимальное решение.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Примеры  
@@ -132,7 +132,7 @@ if @@rowcount = 0
   
  После выполнения этой хранимой процедуры можно использовать получившийся в итоге скрипт для создания хранимой процедуры вручную на подписчиках.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 title: sp_helpmergearticleconflicts (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7a1d10d6d2ba731ceaaaba51b8f786b262a2e28
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: c1e1ff0c3a7706067a1686947a52db08d950c5e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +51,17 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
  [  **@publication=**] **"***публикации***"**  
  — Имя публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%**, который возвращает все статьи в базе данных, содержащие конфликты.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **"***издатель***"**  
  — Это имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **"***publisher_db***"**  
  — Это имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**article**|**sysname**|Имя статьи.|  
+|**В статье**|**sysname**|Имя статьи.|  
 |**source_owner**|**sysname**|Владелец исходного объекта.|  
 |**source_object**|**nvarchar(386)**|Имя исходного объекта.|  
 |**conflict_table**|**nvarchar(258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  

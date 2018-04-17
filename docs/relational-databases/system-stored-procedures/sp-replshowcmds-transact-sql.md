@@ -1,16 +1,16 @@
 ---
-title: "sp_replshowcmds (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_replshowcmds (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7e949d3372266ca3857204e5d6bc5e35111855a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d684722c0112dcadac5484aa21ca5c84226d479d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@maxtrans**  =] *maxtrans*  
+ [ **@maxtrans** =] *maxtrans*  
  Число транзакций, сведения о которых необходимо возвратить. *maxtrans* — **int**, значение по умолчанию **1**, которое указывает максимальное число транзакций, ожидающих репликации, для которой **sp_replshowcmds** Возвращает сведения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_replshowcmds** — это диагностическая процедура, которая возвращает сведения о базе данных публикации, из которого выполняется.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Последовательный номер команды.|  
 |**originator_id**|**int**|Идентификатор инициатора команды всегда **0**.|  
@@ -73,15 +73,15 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  **sp_replshowcmds** следует запускать только в целях устранения неполадок с репликацией.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_replshowcmds**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сообщения об ошибках](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

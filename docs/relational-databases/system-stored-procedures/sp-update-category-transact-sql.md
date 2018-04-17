@@ -1,16 +1,16 @@
 ---
-title: "sp_update_category (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_update_category (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fab5ea9aea708af028114ef59e9274931c8257f9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4209e442c2fdd53537bca6d53d398d918a12f58a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@class =**] **'***class***'**  
+ [  **@class =**] **"***класс***"**  
  Класс обновляемой категории. *Класс*— **varchar(8)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -58,16 +58,16 @@ sp_update_category
 |**JOB**|Обновляет категорию заданий.|  
 |**ОПЕРАТОР**|Обновляет категорию операторов.|  
   
- [ **@name =**] **'***old_name***'**  
+ [  **@name =**] **"***старое_имя***"**  
  Текущее имя категории. *старое_имя*— **sysname**, не имеет значения по умолчанию.  
   
- [ **@new_name =**] **'***new_name***'**  
+ [  **@new_name =**] **"***новое_имя***"**  
  Новое имя категории. *новое_имя*— **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_update_category** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -88,9 +88,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

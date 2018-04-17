@@ -1,16 +1,16 @@
 ---
-title: "sp_fkeys (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_fkeys (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 09/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fkeys
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 511266de529055263470af2de8c463369d7f3c6e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b8d8e8616e919f3d457572aced700b65ea0a21ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +78,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|Имя квалификатора таблицы (с первичным ключом). Это поле может иметь значение NULL.|  
 |PKTABLE_OWNER|**sysname**|Имя владельца таблицы (с первичным ключом). Это поле всегда возвращает значение.|  
@@ -106,7 +107,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 Хранимая процедура sp_fkeys эквивалентно SQLForeignKeys в ODBC.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется `SELECT` на схему.  
   
 ## <a name="examples"></a>Примеры  
@@ -119,17 +120,17 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В приведенном ниже примере выводится список внешних ключей для таблицы `DimDate` базы данных `AdventureWorksPDW2012`. Строки не возвращаются, поскольку [!INCLUDE[ssDW](../../includes/ssdw-md.md)] не поддерживает внешние ключи.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Каталога хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_pkeys &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
+ [sp_pkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   
 

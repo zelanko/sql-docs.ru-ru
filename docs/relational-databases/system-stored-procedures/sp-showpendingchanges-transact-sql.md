@@ -1,16 +1,16 @@
 ---
-title: "процедура sp_showpendingchanges (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: процедура sp_showpendingchanges (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80816191ac9ad2cd9a210c59268b23f4ea3a093
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54a87a2162049fe6e3ec450a60836afffa406973
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,30 +52,30 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @destination_server  **=**  ] **"***destination_server***"**  
+ [ @destination_server **=** ] **"***destination_server***"**  
  Имя сервера, на котором применяются реплицированные изменения. *destination_server* — **sysname**, и значение по умолчанию NULL.  
   
- [ @publication  **=**  ] **"***публикации***"**  
+ [ @publication **=** ] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Когда *публикации* указан, результаты ограничены только указанной публикацией.  
   
- [ @article  **=**  ] **"***статьи***"**  
+ [ @article **=** ] **"***статьи***"**  
  Имя статьи. *статья* — **sysname**, значение по умолчанию NULL. Когда *статьи* указан, результаты ограничены только указанной статьи.  
   
- [ @show_rows  **=**  ] *show_rows*  
+ [ @show_rows **=** ] *show_rows*  
  Указывает, содержит ли результирующий набор более конкретные сведения об ожидающих изменениях со значением по умолчанию **0**. Если значение **1** указан, то результирующий набор содержит столбцы is_delete и rowguid.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|Имя сервера, на который реплицируются изменения.|  
 |pub_name|**sysname**|Имя публикации.|  
 |destination_db_name|**sysname**|Название базы данных, к которой реплицируются изменения.|  
-|is_dest_subscriber|**bit**|Свидетельствует об изменениях, реплицируемых на подписчика. Значение **1** указывает, что изменения реплицируются на подписчик. **0** означает, что изменения реплицируются на издателя.|  
+|is_dest_subscriber|**бит**|Свидетельствует об изменениях, реплицируемых на подписчика. Значение **1** указывает, что изменения реплицируются на подписчик. **0** означает, что изменения реплицируются на издателя.|  
 |article_name|**sysname**|Название статьи для таблицы, где были произведены изменения.|  
 |pending_deletes|**int**|Число удалений, ожидающих репликации.|  
 |pending_ins_and_upd|**int**|Число вставок и обновлений, ожидающих репликации.|  
-|is_delete|**bit**|Указывает, является ли ожидающее изменение удалением. Значение **1** указывает, что изменение является удалением. Должно иметь значение **1** для @show_rows.|  
+|is_delete|**бит**|Указывает, является ли ожидающее изменение удалением. Значение **1** указывает, что изменение является удалением. Должно иметь значение **1** для @show_rows.|  
 |rowguid|**uniqueidentifier**|Идентификатор GUID, который определяет измененную строку. Должно иметь значение **1** для @show_rows.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -90,10 +90,10 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  Если статья, указанная для *статьи* не принадлежит к публикации, указанной в *публикации,* возвращаются при значении 0 для pending_deletes и pending_ins_and_upd.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner могут выполнять процедуру sp_showpendingchanges.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

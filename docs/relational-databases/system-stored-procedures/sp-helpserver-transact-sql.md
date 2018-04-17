@@ -1,16 +1,16 @@
 ---
-title: "sp_helpserver (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpserver (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpserver
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f211b282456e1fa94f16c8eafdd758d41a72280
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,24 +48,24 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@server =** ] **"***сервера***"**  
+ [ **@server =** ] **'***server***'**  
  Сервер, о котором возвращаются сведения. Когда *сервера* не указан, обо всех серверах в **master.sys.servers**. *сервер* — **sysname**, значение по умолчанию NULL.  
   
  [  **@optname =** ] **"***параметр***"**  
  Параметр, описывающий сервер. *параметр* — **varchar (**35**)**, значение по умолчанию NULL, и должен иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**совместимые параметры сортировки**|Влияет на выполнение распределенных запросов на связанных серверах. Если значение этого параметра равно true.|  
-|**доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
+|**Доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
 |**dist**|Распространитель.|  
 |**dpub**|Удаленный издатель для этого распространителя.|  
 |**Отложенная проверка схемы**|Пропускает проверку схемы удаленных таблиц в начале запроса.|  
 |**pub**|Издатель.|  
-|**RPC**|Включает RPC с определенного сервера.|  
+|**rpc**|Включает RPC с определенного сервера.|  
 |**RPC out**|Включает RPC на определенный сервер.|  
-|**Sub**|Подписчик.|  
-|**системы**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|Подписчик.|  
+|**Системы**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
  [  **@show_topology =** ] **"***значение аргумента show_topology***"**  
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя сервера.|  
 |**имя_сети**|**sysname**|Сетевое имя сервера.|  
@@ -89,7 +89,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="remarks"></a>Замечания  
  У сервера может быть несколько состояний.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения не проверяются.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,18 +112,18 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_adddistpublisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_addsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

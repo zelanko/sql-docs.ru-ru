@@ -1,16 +1,16 @@
 ---
-title: "sp_dropdynamicsnapshot_job, хранимая процедура (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dropdynamicsnapshot_job, хранимая процедура (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdynamicsnapshot_job
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6dc65589951513a5d05dbfad68cecb8d92745
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 90ebd9aedd629f92acd5614cc1010dbc87ed637b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  [  **@publication=**] **"***публикации***"**  
  Имя публикации, из которой удаляется отфильтрованное задание моментального снимка данных. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@dynamic_snapshot_jobname** =] **"***dynamic_snapshot_jobname***"**  
+ [ **@dynamic_snapshot_jobname**=] **"***dynamic_snapshot_jobname***"**  
  Имя удаляемого отфильтрованного задания моментального снимка данных. *dynamic_snapshot_jobname*имеет тип sysname, и если не указаны значения по умолчанию для любого задания имени будет связан с *dynamic_snapshot_jobid*.  
   
- [  **@dynamic_snapshot_jobid** =] **"***dynamic_snapshot_jobid***"**  
+ [ **@dynamic_snapshot_jobid**=] **"***dynamic_snapshot_jobid***"**  
  Идентификатор созданного задания моментального снимка удаляемых данных. *dynamic_snapshot_jobid*— **uniqueidentifier**, по умолчанию NULL.  
   
 > [!IMPORTANT]  
@@ -70,10 +70,10 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="remarks"></a>Замечания  
  **sp_dropdynamicsnapshot** используется в репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_dropdynamicsnapshot**.  
   
-## <a name="see-also"></a>См. также:  
- [Хранимая процедура sp_adddynamicsnapshot_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Хранимая процедура sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

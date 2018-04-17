@@ -1,16 +1,16 @@
 ---
-title: "sp_help_proxy (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_proxy (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 314eeb6365afafce64ff85aa822e9b2be8c64770
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_help_proxy
  [ **@proxy_id** = ] *id*  
  Идентификационный номер учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **"***proxy_name***"**  
  Имя учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_name* — **sysname**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [ **@subsystem_name** = ] '*subsystem_name*'  
+ [ **@subsystem_name** =] '*subsystem_name*"  
  Имя подсистемы, для которой будут выводиться учетные записи-посредники. *Subsystem_name* — **sysname**, значение по умолчанию NULL. Когда *subsystem_name* указано, *имя* также должен быть указан.  
   
  В следующей таблице показаны значения для каждой подсистемы.  
@@ -75,7 +75,7 @@ sp_help_proxy
 |Dts|Выполнение пакетов служб SSIS|  
 |PowerShell|Скрипт PowerShell|  
   
- [  **@name**  =] '*имя*"  
+ [ **@name** =] '*имя*"  
  Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого должны быть перечислены учетные записи-посредники. Имя — **nvarchar(256)**, значение по умолчанию NULL. Когда *имя* указано, *subsystem_name* также должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -88,13 +88,13 @@ sp_help_proxy
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**name**|**sysname**|Имя учетной записи-посредника.|  
 |**credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
-|**включен**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** — не включено, **1** = включена}|  
+|**Включен**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** — не включено, **1** = включена}|  
 |**Описание**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
 |**user_sid**|**varbinary(85)**|Идентификатор безопасности Windows для пользователя Windows, соответствующего этой учетной записи-посреднику.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если параметры не указаны, **sp_help_proxy** выводятся сведения обо всех прокси-серверов в экземпляре.  
   
  Чтобы определить, какие учетные записи-посредники определенное имя входа можно использовать для данной подсистемы, укажите *имя* и *subsystem_name*. Если эти аргументы определены, **sp_help_proxy** перечислены учетные записи-посредники, которым указанное имя входа может доступа, которые могут использоваться для указанной подсистемы.  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Хранимая процедура sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

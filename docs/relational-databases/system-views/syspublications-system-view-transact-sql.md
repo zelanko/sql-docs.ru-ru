@@ -1,16 +1,16 @@
 ---
-title: "syspublications (Системное представление) (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: syspublications (Системное представление) (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - syspublications view
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b67197861029cbd9b16e1c829e4570540ca377f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 978d352a45fd10fcb1945c9614f7b04154419ccd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (System View) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 |**immediate_sync_ready**|**бит**|Показывает наличие моментального снимка, созданного агентом моментальных снимков, а также его готовность к работе в новых подписках. Это имеет значение только для немедленно обновляемых публикаций. **1** указывает, что моментальный снимок готов.|  
 |**allow_sync_tran**|**бит**|Определяет, разрешены ли для публикации немедленно обновляемые подписки. **1** означает, что немедленно обновляемые подписки разрешены.|  
 |**autogen_sync_procs**|**бит**|Определяет, формируется ли на издателе синхронизируемая хранимая процедура для немедленно обновляемой подписки. **1** означает, что создается на издателе.|  
-|**хранения**|**int**|Продолжительность (в часах) поддержки изменений публикации в базе данных распространителя.|  
+|**Хранения**|**int**|Продолжительность (в часах) поддержки изменений публикации в базе данных распространителя.|  
 |**allow_queued_tran**|**бит**|Указывает, разрешено ли накопление изменений в подписчике в очереди до тех пор, пока их можно применить к издателю. Если **1**, изменения на подписчике помещаются в очередь.|  
 |**snapshot_in_defaultfolder**|**бит**|Указывает, хранятся ли файлы моментальных снимков в папке по умолчанию. Если **0**, файлы моментальных снимков хранятся в расположении, указанном в *alternate_snapshot_folder*. 1 = файлы моментальных снимков находятся в папке по умолчанию.|  
 |**alt_snapshot_folder**|**nvarchar(510)**|Указывает местоположение альтернативной папки для моментального снимка.|  
@@ -83,10 +83,10 @@ ms.lasthandoff: 02/03/2018
 |**originator_id**|**smallint**|Определяет каждый узел в одноранговой топологии репликации для обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [процедура sp_helppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [процедура sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

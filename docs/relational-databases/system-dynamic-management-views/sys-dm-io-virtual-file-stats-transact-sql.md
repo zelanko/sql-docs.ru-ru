@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_io_virtual_file_stats (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_io_virtual_file_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6b704b626969110929436663fc5b8aadc0932e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -63,7 +64,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | ЗНАЧЕНИЕ NULL
 
- **ПРИМЕНЯЕТСЯ к:** SQL Server (начиная с 2008), база данных SQL Azure
+ **ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
 
  Идентификатор базы данных. *database_id* имеет тип int и не имеет значения по умолчанию. Допустимыми входными значениями являются идентификационный номер базы данных или NULL. Когда указывается значение NULL, возвращаются все базы данных экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -71,7 +72,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | ЗНАЧЕНИЕ NULL
 
-**ПРИМЕНЯЕТСЯ к:** SQL Server (начиная с 2008), база данных SQL Azure
+**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
  
 Идентификатор файла. *file_id* имеет тип int и не имеет значения по умолчанию. Правильные значения — идентификационный номер файла или значение NULL. Когда указывается значение NULL, возвращаются все файлы базы данных.  
   
@@ -94,13 +95,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|Общее время задержек выполнения операций чтения-записи над файлом, в миллисекундах.|  
 |**size_on_disk_bytes**|**bigint**|Число байтов, используемых файлом на диске. Для разреженных файлов это показывает реальное число байт, занимаемых на диске, которое используется для моментальных снимков базы данных.|  
 |**file_handle**|**varbinary**|Дескриптор данного файла в Windows.|  
-|**io_stall_queued_read_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для чтения. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_read_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для чтения. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
-|**pdw_node_id**|**int**|**Область применения:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
+|**pdw_node_id**|**int**|**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение VIEW SERVER STATE. Дополнительные сведения см. в разделе [динамические административные представления и функции &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Необходимо разрешение VIEW SERVER STATE. Дополнительные сведения см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Примеры  
 
@@ -127,7 +128,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Я O связанные динамические административные представления и функции &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Я O связанные динамические административные представления и функции &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

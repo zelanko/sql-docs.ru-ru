@@ -1,16 +1,16 @@
 ---
-title: "sys.syscolumns (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.syscolumns (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-enginel, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscolumns
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syscolumns system table
 - sys.syscolumns compatibility view
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15de1e84d8b3dcbe9d1949cb0ba745cfea671287
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f1f149934c0d92df8a1184bc57a5fcb02f7673c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -51,14 +52,14 @@ ms.lasthandoff: 02/09/2018
 |**xusertype**|**smallint**|Идентификатор расширенного пользовательского типа. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
 |**длина**|**smallint**|Максимальная длина физического хранилища из **sys**. **типы**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**colid**|**smallint**|Идентификатор столбца или параметра.|  
+|**XScale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**идентификатора столбца**|**smallint**|Идентификатор столбца или параметра.|  
 |**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**reserved**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Зарезервировано**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Идентификатор значения по умолчанию для данного столбца.|  
-|**domain**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
+|**Домен**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
 |**number**|**smallint**|Номер подпроцедуры, если процедура сгруппирована:<br /><br /> 0 = Непроцедурные элементы.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -72,11 +73,11 @@ ms.lasthandoff: 02/09/2018
 |**масштаб**|**int**|Масштаб для данного столбца.<br /><br /> NULL = данные не числовые.|  
 |**iscomputed**|**int**|Флаг, обозначающий, является ли столбец вычисляемым:<br /><br /> 0 = невычисляемый;<br /><br /> 1 = вычисляемый.|  
 |**isoutparam**|**int**|Указывает, относится ли параметр процедуры к выходным параметрам:<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|**isnullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|**параметры сортировки**|**sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
+|**IsNullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|**Параметры сортировки**|**sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
   
 ## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

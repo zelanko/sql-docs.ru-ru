@@ -2,7 +2,7 @@
 title: sp_altermessage (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0922bc2c5365b31c1f4b385e43b10302f6465c52
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 969713a50ccb6b495c191f4262f6a6c837617bc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *аргумент message_number*  
  Номер ошибки сообщения из **sys.messages**. *Аргумент message_number* — **int** без значения по умолчанию.  
   
- [ **@parameter =** ] **'***write_to_log*'  
+ [  **@parameter =** ] **"*** write_to_log*"  
  Используется с **@parameter_value** указывает, что сообщение для записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] в журнале приложений Windows. *write_to_log* — **sysname** без значения по умолчанию. *write_to_log* необходимо присвоить значение WITH_LOG или значение NULL. Если *write_to_log* равен WITH_LOG или значение NULL и значение для **@parameter_value** — **true**, сообщение записывается в журнал приложений Windows. Если *write_to_log* равен WITH_LOG или значение NULL, а значение для **@parameter_value** — **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть запись в зависимости от того, как была вызвана ошибка. Если *write_to_log* указано, значение для **@parameter_value** также должен быть указан.  
   
 > [!NOTE]  

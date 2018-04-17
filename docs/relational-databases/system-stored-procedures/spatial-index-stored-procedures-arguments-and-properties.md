@@ -1,32 +1,32 @@
 ---
-title: "Аргументы и свойства пространственного индекса хранимых процедур | Документы Microsoft"
-ms.custom: 
+title: Аргументы и свойства пространственного индекса хранимых процедур | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0dda9bafb3f38648e2ab1de333d303c9b0e372c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b3aa1c3d1704fd8131265cc0567219edad43ccb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры - аргументов и свойств пространственного индекса
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Синтаксис  
  Синтаксис определенных хранимых процедур пространственного индекса см. в следующих разделах.  
   
--   [sp_help_spatial_geometry_index &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Аргументы  
  [  **@tabname =**] **"***tabname***"**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  Этот выходной параметр возвращает результирующий набор во фрагменте XML. *xml_output* — **xml** без значения по умолчанию.  
   
 ## <a name="properties"></a>Свойства  
- Задать  **@verboseoutput**  = 0 для возврата основных свойств, как показано в таблице ниже.  **@verboseoutput**  > 0 для возврата всех свойств пространственного индекса.  
+ Задать **@verboseoutput** = 0 для возврата основных свойств, как показано в таблице ниже. **@verboseoutput** > 0 для возврата всех свойств пространственного индекса.  
   
  **Base_Table_Rows**  
  Количество строк в базовой таблице. Значение — **bigint**.  
@@ -309,7 +309,7 @@ ms.lasthandoff: 11/21/2017
  **Primary_Filter_Efficiency**  
  Если выбрано P строк, с основным фильтром и O — количество строк вывода, этот returnsO/P в процентах. Чем выше эффективность основного фильтра, тем меньше ложных положительных результатов необходимо обработать дополнительному фильтру. Это свойство является основным. Значение — **число с плавающей запятой.**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом **открытый** роли. Необходимо разрешение READ ACCESS на сервере и объекте. Это относится ко всем хранимым процедурам пространственного индекса.  
   
 ## <a name="remarks"></a>Замечания  
@@ -318,19 +318,19 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>Примеры  
  Примеры см. в следующих разделах:  
   
--   [sp_help_spatial_geometry_index &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также:  
- [Пространственный индекс хранимых процедур &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры пространственного индекса &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Основы языка XQuery](../../xquery/xquery-basics.md)   
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_column (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_fulltext_column (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_column_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1099b9ee7ebf38703701a2160e15d24b80ba859
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,10 +54,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@tabname=** ] **'***qualified_table_name***'**  
+ [  **@tabname=** ] **"***таблицы не собирались***"**  
  Имя таблицы, состоящее из одной или двух частей. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *таблицы не собирались* — **nvarchar(517)**, и не имеет значения по умолчанию.  
   
- [ **@colname=** ] **'***column_name***'**  
+ [  **@colname=** ] **"***column_name***"**  
  Имя столбца в *таблицы не собирались*. Столбец должен иметь символьный тип, **varbinary(max)** или **изображения** столбца и не может быть вычисляемым столбцом. *column_name* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
@@ -68,15 +69,15 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |Значение|Описание|  
 |-----------|-----------------|  
 |**add**|Добавляет *column_name* из *таблицы не собирались* для неактивного полнотекстового индекса таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
-|**drop**|Удаляет *column_name* из *таблицы не собирались* из неактивного полнотекстового индекса таблицы.|  
+|**DROP**|Удаляет *column_name* из *таблицы не собирались* из неактивного полнотекстового индекса таблицы.|  
   
- [ **@language=** ] **'***language_term***'**  
- Язык данных, хранящихся в столбце. Список языков, включенных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [sys.fulltext_languages &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ [  **@language=** ] **"***language_term***"**  
+ Язык данных, хранящихся в столбце. Список языков, включенных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Указывайте значение «Neutral», если столбец содержит данные на нескольких языках или на языке, который не поддерживается. Значение по умолчанию задается параметром конфигурации «default full-text language».  
   
- [ **@type_colname =** ] **'***type_column_name***'**  
+ [  **@type_colname =** ] **"***type_column_name***"**  
  Имя столбца в *таблицы не собирались* , содержащего тип документа *column_name*. Этот столбец должен быть **char**, **nchar**, **varchar**, или **nvarchar**. Оно используется, только если тип данных столбца *column_name* относится к типу **varbinary(max)** или **изображения**. *type_column_name* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -85,7 +86,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если полнотекстовый индекс активен, все выполняющиеся заполнения прекращаются. Более того, если для таблицы с полнотекстовым индексом включено отслеживание изменений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удостоверится, что индекс актуален. Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекратит текущее заполнение таблицы, удалит существующий индекс и начнет новое заполнение.  
   
  Если используется отслеживание изменений и нужно добавить или удалить столбец, сохранив полнотекстовый индекс, таблицу следует деактивировать, а затем добавить или удалить нужные столбцы. Эти действия закрепляют индекс. Таблица может быть активирована позже, когда имеет смысл начать заполнение.  
@@ -128,8 +129,8 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Full-Text Search и семантический поиск хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

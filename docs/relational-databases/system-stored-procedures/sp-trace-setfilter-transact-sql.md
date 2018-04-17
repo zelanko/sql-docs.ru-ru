@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setfilter (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_trace_setfilter (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Применяет фильтр к трассировке. **sp_trace_setfilter** может выполняться только для существующих остановленных трассировок (*состояние* — **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Возвращает сообщение об ошибке, если эта хранимая процедура выполняется для трассировки, которая не существует или которого *состояние* не **0**.  
+  Применяет фильтр к трассировке. **sp_trace_setfilter** может выполняться только для существующих остановленных трассировок (*состояние* — **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возвращает сообщение об ошибке, если эта хранимая процедура выполняется для трассировки, которая не существует или которого *состояние* не **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  
@@ -53,16 +53,16 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@traceid=** ] *trace_id*  
+ [  **@traceid=** ] *trace_id*  
  Идентификатор трассировки, для которой устанавливается фильтр. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой.  
   
- [ **@columnid=** ] *column_id*  
+ [  **@columnid=** ] *column_id*  
  Является идентификатором столбца, к которому применяется фильтр. *Идентификатор column_id* — **int**, не имеет значения по умолчанию. Если *column_id* имеет значение NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляет все фильтры для указанной трассировки.  
   
- [ **@logical_operator** = ] *logical_operator*  
+ [ **@logical_operator** =] *logical_operator*  
  Указывает, является ли AND (**0**) или OR (**1**) применяется оператор. *logical_operator* — **int**, не имеет значения по умолчанию.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
+ [  **@comparison_operator=** ] *оператор_сравнения*  
  Задает тип сравнения, которое будет выполнено. *оператор_сравнения* — **int**, не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
   
 |Значение|Оператор сравнения|  
@@ -76,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Не похоже|  
   
- [ **@value=** ] *value*  
+ [  **@value=** ] *значение*  
  Определяет значение, с помощью которого будет выполняться фильтрация. Тип данных *значение* должен соответствовать типу данных столбца для фильтрации. Например, если фильтр применен к столбцу Object ID, **int** тип данных *значение* должно быть **int**. Если *значение* — **nvarchar** или **varbinary**, он может иметь длину не больше 8000.  
   
  Когда оператором сравнения является LIKE или NOT LIKE, то логический оператор может содержать «%» или другой фильтр, подходящий для операции LIKE.  
@@ -103,7 +103,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_trace_setfilter** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимую процедуру, которая выполняет многие действия, ранее выполнявшиеся расширенными хранимыми процедурами в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте **sp_trace_setfilter** вместо **xp_trace_set\*фильтра** расширенные хранимые процедуры для создания, применения, удаления или управлять фильтров в трассировках. Дополнительные сведения см. в разделе [фильтра трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Все фильтры для определенного столбца должны быть одновременно разрешены однократным выполнением **sp_trace_setfilter**. Например, если пользователь собирается применить два фильтра к столбцу имен приложений и один фильтр к столбцу имен пользователей, то ему потребуется указать фильтры для имен приложений последовательно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку, когда пользователь пытается указать фильтр по имени приложения в пределах одного хранимого вызова процедуры, за которым указывается фильтр по имени пользователя, после чего — второй фильтр по имени приложения.  

@@ -1,15 +1,15 @@
 ---
-title: "sys.dm_external_script_requests | Документы Microsoft"
-ms.custom: 
+title: sys.dm_external_script_requests | Документы Microsoft
+ms.custom: ''
 ms.date: 06/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_requests
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6b73281b970940caced870dbf75c78946f9f559b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Соответствует идентификатору процесса, получаемому [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Соответствует идентификатору процесса как полученных [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Ключевое слово, которое представляет поддерживаемый язык скриптов. Сейчас поддерживается только `R` .|  
 |degree_of_parallelism|**int**|Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов.|  
 |external_user_name|**nvarchar**|Рабочая учетная запись Windows, под которой был выполнен скрипт.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 >   
 >  Пользователям, выполняющим внешние скрипты, требуется дополнительное разрешение EXECUTE ANY EXTERNAL SCRIPT, однако администраторы могут использовать это динамическое административное представление без такого разрешения. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 
 Это представление можно отфильтровать с помощью идентификатора языка скриптов.
 
@@ -91,7 +91,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

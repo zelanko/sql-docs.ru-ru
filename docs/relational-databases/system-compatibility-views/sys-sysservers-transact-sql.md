@@ -1,16 +1,16 @@
 ---
-title: "sys.sysservers (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sysservers (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysservers
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95f88c44e0501fab834bb476e0350cf48bc91757
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7cd9657b883ff008f8ef174f6be82de7c2118c2f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.lasthandoff: 02/09/2018
 |-----------------|---------------|-----------------|  
 |**srvid**|**smallint**|Идентификатор (только для локального использования) удаленного сервера.|  
 |**srvstatus**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**srvname**|**sysname**|Имя сервера.|  
+|**SRVNAME**|**sysname**|Имя сервера.|  
 |**srvproduct**|**sysname**|Название продукта для удаленного сервера.|  
-|**providername**|**nvarchar(128)**|Имя поставщика OLE DB для доступа к этому серверу.|  
-|**datasource**|**nvarchar(4000)**|Значение источника данных OLE DB.|  
+|**ProviderName**|**nvarchar(128)**|Имя поставщика OLE DB для доступа к этому серверу.|  
+|**Источник данных**|**nvarchar(4000)**|Значение источника данных OLE DB.|  
 |**расположение**|**nvarchar(4000)**|Местоположение OLE DB.|  
 |**providerstring**|**nvarchar(4000)**|Строка поставщика OLE DB.|  
 |**schemadate**|**datetime**|Дата последнего обновления этой строки.|  
@@ -61,22 +61,22 @@ ms.lasthandoff: 02/09/2018
 |**querytimeout**|**int**|Время ожидания выполнения запросов на сервере.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**бит**|1 = удаленный сервер.<br /><br /> 0 = связанный сервер.|  
-|**rpc**|**бит**|1 =  **sp_serveroption@rpc**  значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@rpc**  значение **false** или **off**.|  
-|**pub**|**бит**|1 =  **sp_serveroption@pub**  значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@pub**  значение **false** или **off**.|  
-|**sub**|**бит**|1 =  **sp_serveroption@sub**  значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@sub**  значение **false** или **off**.|  
-|**dist**|**бит**|1 =  **sp_serveroption@dist**  значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@dist**  значение **false** или **off**.|  
-|**dpub**|**бит**|1 =  **sp_serveroption@dpub**  значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@dpub**  значение **false** или **off**.|  
+|**rpc**|**бит**|1 = **sp_serveroption@rpc** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@rpc** значение **false** или **off**.|  
+|**pub**|**бит**|1 = **sp_serveroption@pub** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@pub** значение **false** или **off**.|  
+|**sub**|**бит**|1 = **sp_serveroption@sub** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@sub** значение **false** или **off**.|  
+|**dist**|**бит**|1 = **sp_serveroption@dist** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@dist** значение **false** или **off**.|  
+|**dpub**|**бит**|1 = **sp_serveroption@dpub** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@dpub** значение **false** или **off**.|  
 |**rpcout**|**бит**|1 =  **sp_serveroption@rpc out** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@rpc out** значение **false** или **off**.|  
-|**dataaccess**|**бит**|1 =  **sp_serveroption@data доступа** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@data доступа** значение **false** или **off**.|  
+|**DataAccess**|**бит**|1 =  **sp_serveroption@data доступа** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@data доступа** значение **false** или **off**.|  
 |**collationcompatible**|**бит**|1 =  **sp_serveroption@collation совместимых** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@collation совместимых** значение **false** или **off**.|  
-|**системы**|**бит**|1 =  **sp_serveroption@system**  значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@system**  значение **false** или **off**.|  
+|**Системы**|**бит**|1 = **sp_serveroption@system** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@system** значение **false** или **off**.|  
 |**useremotecollation**|**бит**|1 =  **sp_serveroption@remote сортировки** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@remote сортировки** значение **false** или **off**.|  
 |**lazyschemavalidation**|**бит**|1 =  **sp_serveroption@lazy проверки схемы** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@lazy проверки схемы** значение **false** или **off**.|  
-|**параметры сортировки**|**sysname**|Параметры сортировки сервера, задаваемое при помощи  **sp_serveroption@collation имя**.|  
-|**nonsqlsub**|bit|0 = сервер является экземпляром типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = сервер не является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**Параметры сортировки**|**sysname**|Параметры сортировки сервера, задаваемое при помощи  **sp_serveroption@collation имя**.|  
+|**nonsqlsub**|bit|0 = сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1= сервер не является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

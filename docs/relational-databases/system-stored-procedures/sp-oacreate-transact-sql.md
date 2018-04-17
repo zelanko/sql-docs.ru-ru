@@ -1,16 +1,16 @@
 ---
-title: "sp_OACreate (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_OACreate (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OACreate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36d46482582d877241d5ec621896d8aa4206fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Аргументы  
  *Идентификатор ProgID*  
- Программный идентификатор (ProgID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"***OLEComponent***.** *Объекта***"**  
+ Программный идентификатор (ProgID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"***OLEComponent***. ***Объект***"**  
   
  *OLEComponent* — это имя компонента сервера OLE-автоматизации и *объекта* — имя OLE-объекта. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейса.  
   
@@ -61,7 +61,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *objecttoken* **выходных данных**  
  Токен, возвращенный объект, а должен быть локальной переменной типа данных **int**. Токен объекта идентифицирует созданный OLE-объект и используется в вызовах других хранимых процедур OLE-автоматизации.  
   
- *контекст*  
+ *Контекст*  
  Указывает контекст выполнения, в котором запускается созданный OLE-объект. Если аргумент указан, то его значение должно быть одним из следующих:  
   
  **1** = только внутрипроцессный (.dll) OLE-сервер.  
@@ -89,7 +89,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Созданный OLE-объект автоматически уничтожается по завершении пакета инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -129,8 +129,8 @@ END;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [OLE-автоматизация хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [OLE Automation хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Параметр конфигурации сервера процедуры автоматизации OLE](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

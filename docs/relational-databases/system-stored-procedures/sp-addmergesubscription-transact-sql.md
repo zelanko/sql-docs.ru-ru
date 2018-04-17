@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergesubscription (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addmergesubscription (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5db2e319393afd6d3751b5eeb6ee58fd4d84fd6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc7b47a0253b47e9c8e1a75131ae3003fce2ac33
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **"***subscriber_type***"**  
  Тип подписчика. *subscriber_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**локальный** (по умолчанию)|Подписчик известен только издателю.|  
-|**глобальные**|Подписчик известен всем серверам.|  
+|**Глобальные**|Подписчик известен всем серверам.|  
   
  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях локальные подписки называются клиентскими подписками, а глобальные подписки — серверными подписками.  
   
@@ -197,9 +197,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Возможно разрешение конфликтов в интерактивном режиме для всех статей, которые позволяют разрешение конфликтов в интерактивном режиме. *use_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
  [  **@merge_job_name=** ] **"***merge_job_name***"**  
- *@merge_job_name*  Аргумент является устаревшим и не может быть задано. *merge_job_name* — **sysname**, значение по умолчанию NULL.  
+ *@merge_job_name* Аргумент является устаревшим и не может быть задано. *merge_job_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@hostname** =] **"***hostname***"**  
+ [ **@hostname**=] **"***hostname***"**  
  Переопределяет значение, возвращаемое [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
@@ -211,21 +211,21 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Замечания  
  **sp_addmergesubscription** используется в репликации слиянием.  
   
- Когда **sp_addmergesubscription** выполняется членом **sysadmin** предопределенной роли сервера для создания принудительной подписки задание агента слияния неявно создается и запускается под [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента Учетная запись службы. Рекомендуется выполнять [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и укажите учетные данные учетной записи Windows различия, зависящие от агента для  **@job_login**  и  **@job_password** . Дополнительные сведения см. в статье [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Когда **sp_addmergesubscription** выполняется членом **sysadmin** предопределенной роли сервера для создания принудительной подписки задание агента слияния неявно создается и запускается под [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента Учетная запись службы. Рекомендуется выполнять [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и укажите учетные данные учетной записи Windows различия, зависящие от агента для **@job_login** и **@job_password**. Дополнительные сведения см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addmergesubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

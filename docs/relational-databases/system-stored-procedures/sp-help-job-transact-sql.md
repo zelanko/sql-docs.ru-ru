@@ -1,16 +1,16 @@
 ---
-title: "sp_help_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e195e4fb851b1b301b1ccac9501ae5be107e0689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +59,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+>  Для просмотра конкретного задания, либо *job_id* или *job_name* должен быть указан.  Пропускают как *job_id* и *job_name* для возврата сведений обо всех заданиях.
   
- [ **@job_aspect =**] **'***job_aspect***'**  
+ [  **@job_aspect =**] **"***job_aspect***"**  
  Отображаемое задание атрибута. *job_aspect* — **varchar(9)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -76,16 +76,16 @@ sp_help_job { [ @job_id = ] job_id
 |**ALL**|Сведения об аспекте задания|  
 |**JOB**|Сведения о задании|  
 |**РАСПИСАНИЯ**|Сведения о расписании|  
-|**STEPS**|Сведения об шаге задания|  
+|**ДЕЙСТВИЯ**|Сведения об шаге задания|  
 |**ЦЕЛЕВЫЕ ОБЪЕКТЫ**|Сведения о цели|  
   
  [ **@job_type =**] **'***job_type***'**  
  Тип заданий, включаемых в отчет. *job_type* — **varchar(12)**, значение по умолчанию NULL. *job_type* может быть **ЛОКАЛЬНОГО** или **МНОГОСЕРВЕРНОЙ**.  
   
- [ **@owner_login_name =**] **'***login_name***'**  
+ [  **@owner_login_name =**] **"***login_name***"**  
  Имя входа владельца задания. *login_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **"***подсистемы***"**  
  Имя подсистемы. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
   
  [  **@category_name =**] **"***категории***"**  
@@ -94,7 +94,7 @@ sp_help_job { [ @job_id = ] job_id
  [  **@enabled =**] *включена*  
  Номер, указывающий, для каких заданий отображаются сведения — включенных или отключенных. *включить* — **tinyint**, значение по умолчанию NULL. **1** указывает на включенные задания и **0** — на отключенные.  
   
- [ **@execution_status =**] *status*  
+ [  **@execution_status =**] *состояния*  
  Состояние выполнения заданий. *состояние* — **int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -107,16 +107,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Приостановленные.|  
 |**7**|Выполняющие завершающие действия.|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
+ [  **@date_comparator =**] **"***date_comparison***"**  
  Оператор сравнения для использования в сравнениях *date_created* и *date_modified*. *date_comparison* — **char(1)**и может быть =, \<, или >.  
   
- [ **@date_created =**] *date_created*  
+ [  **@date_created =**] *date_created*  
  Дата создания задания. *date_created*— **datetime**, значение по умолчанию NULL.  
   
- [ **@date_last_modified =**] *date_modified*  
+ [  **@date_last_modified =**] *date_modified*  
  Дата последнего изменения задания. *date_modified* — **datetime**, значение по умолчанию NULL.  
   
- [ **@description =**] **'***description_pattern***'**  
+ [  **@description =**] **"***description_pattern***"**  
  Описание задания. *description_pattern* — **nvarchar(512)**, значение по умолчанию NULL. *description_pattern* может содержать символы-шаблоны SQL Server для сравнения с шаблоном.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -130,7 +130,7 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
 |**originating_server**|**nvarchar(30)**|Имя сервера, от которого поступило задание.|  
 |**name**|**sysname**|Имя задания.|  
-|**включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
+|**Включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
 |**Описание**|**nvarchar(512)**|Описание задания.|  
 |**start_step_id**|**int**|Идентификатор шага задания, с которого должно начаться выполнение.|  
 |**Категория**|**sysname**|Категория задания.|  
@@ -158,7 +158,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Число шагов в задании.|  
 |**has_schedule**|**int**|Число назначенных запусков задания в расписании.|  
 |**has_target**|**int**|Число целевых серверов в задании.|  
-|**type**|**int**|Тип задания.<br /><br /> 1 = Локальное задание.<br /><br /> **2** = Multiserver job.<br /><br /> **0** = задание не имеет целевых серверов.|  
+|**type**|**int**|Тип задания.<br /><br /> 1 = Локальное задание.<br /><br /> **2** = многосерверное задание.<br /><br /> **0** = задание не имеет целевых серверов.|  
   
  Если *job_id* или *job_name* указано, **sp_help_job** возвращает следующие дополнительные результирующие наборы для шагов задания, расписания и целевых серверов задания.  
   
@@ -196,12 +196,12 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Идентификатор расписания (уникальный среди всех заданий).|  
 |**schedule_name**|**sysname**|Имя расписания (уникально только для данного задания).|  
-|**включен**|**int**|Расписание активна (**1**) или нет (**0**).|  
+|**Включен**|**int**|Расписание активна (**1**) или нет (**0**).|  
 |**freq_type**|**int**|Значение, указывающее, как должно выполняться задание:<br /><br /> **1** = однократно<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно, относительно **freq_interval**<br /><br /> **64** = выполнять, когда **SQLServerAgent** запуске службы.|  
-|**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**Int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**int**|Число **freq_subday_type** периодов должно пройти между выполнениями задания. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**int**|Запланированные задания **freq_interval** в каждом месяце. Дополнительные сведения см. в разделе [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**Int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_interval**|**int**|Число **freq_subday_type** периодов должно пройти между выполнениями задания. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|Запланированные задания **freq_interval** в каждом месяце. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_recurrence_factor**|**int**|Число месяцев между выполнениями задания по расписанию.|  
 |**active_start_date**|**int**|Дата начала выполнения задания.|  
 |**active_end_date**|**int**|Дата завершения выполнения задания.|  

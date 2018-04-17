@@ -2,7 +2,7 @@
 title: sys.dm_exec_query_parallel_workers (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: d320796103853ab4cf0724d1157e0d926ecdc1e0
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71b120e4cbc759f41f59bede066b75a7737bad2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/05/2018
   
 |Название|Тип данных|Описание|  
 |----------|---------------|-----------------|  
-|**node_id**|**int**|Идентификатор узла NUMA.|  
+|**NODE_ID**|**int**|Идентификатор узла NUMA.|  
 |**scheduler_count**|**int**|Количество планировщиков на данном узле.|  
 |**max_worker_count**|**int**|Максимальное число рабочих процессов для параллельных запросов.|  
 |**reserved_worker_count**|**int**|Число рабочих процессов, зарезервированной с помощью параллельных запросов, а также число основных рабочих процессов, используемых всеми запросами.| 

@@ -1,16 +1,16 @@
 ---
-title: "sp_enum_proxy_for_subsystem (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_enum_proxy_for_subsystem (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf94c94aed1f43e747703d5f82a7b842252dafef
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8551a807fd916c80909e281c8ddd6bc785315573
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@proxy_id** = ] *proxy_id*  
+ [ **@proxy_id** =] *proxy_id*  
  Идентификационный номер учетной записи-посредника, о которой необходимо вывести сведения. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **"***proxy_name***"**  
  Имя учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_name* — **sysname**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [ **@subsystem_id** = ] *subsystem_id*  
+ [ **@subsystem_id** =] *subsystem_id*  
  Идентификационный номер подсистемы, о которой необходимо вывести сведения. *Subsystem_id* — **int**, значение по умолчанию NULL. Либо *subsystem_id* или *subsystem_name* может быть указан.  
   
- [ **@subsystem_name** = ] **'***subsystem_name***'**  
+ [ **@subsystem_name** =] **"***subsystem_name***"**  
  Имя подсистемы, о которой необходимо вывести сведения. *Subsystem_name* — **sysname**, значение по умолчанию NULL. Либо *subsystem_id* или *subsystem_name* может быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -74,7 +74,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения о всех прокси-серверы для всех подсистем экземпляра.  
   
  Если предоставлен идентификатор или имя прокси-сервера, **sp_enum_proxy_for_subsystem** выдает список подсистем, прокси-сервер имеет доступ к. Если предоставлен идентификатор или имя подсистемы, **sp_enum_proxy_for_subsystem** список учетных записей-посредников, имеющих доступ к данной подсистеме.  

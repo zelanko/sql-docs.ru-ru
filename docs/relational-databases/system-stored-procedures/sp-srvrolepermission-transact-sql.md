@@ -1,16 +1,16 @@
 ---
-title: "sp_srvrolepermission (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_srvrolepermission (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_srvrolepermission_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_srvrolepermission
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2cf4b670588739a7c6232b27bf6a592ef82daaa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: dd00d53e435c7b22a84d40cfee5af8dff302ec11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@srvrolename =** ] **"***роли***"**  
+ [  **@srvrolename =** ] **"***роль***"**  
  Имя предопределенной роли сервера, для которой добавляются разрешения. *роль* — **sysname**, значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**sysadmin**|Системные администраторы|  
 |**securityadmin**|Администраторы безопасности.|  
@@ -68,7 +68,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Имя предопределенной роли сервера|  
 |**Разрешение**|**sysname**|Разрешение, связанное с **ServerRole**|  
@@ -78,8 +78,8 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
  **Sysadmin** предопределенной роли сервера, имеет разрешения всех других предопределенных ролей сервера.  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий запрос возвращает разрешения, связанные с предопределенной ролью сервера `sysadmin`.  
@@ -89,11 +89,11 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Безопасность хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpsrvrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

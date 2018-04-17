@@ -1,16 +1,16 @@
 ---
-title: "sys.security_policies (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.security_policies (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - sys.security_policies catalog view
 - security_policies catalog view
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e30a903e31ce8ba7951f9756a8fd258375fb8e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6b588dcf21742dac41c9501bf165f7f9df04da62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,16 +54,16 @@ ms.lasthandoff: 11/21/2017
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Дата создания политики безопасности в формате UTC.|  
 |modify_date|**datetime**|Дата последнего изменения политики безопасности в формате UTC.|  
-|is_ms_shipped|**bit**|Всегда значение false.|  
-|is_enabled|**bit**|Состояние спецификации политики безопасности.<br /><br /> 0 = отключен<br /><br /> 1 = включен|  
-|is_not_for_replication|**bit**|Политика была создана с параметром NOT FOR REPLICATION.|  
-|uses_database_collation|**bit**|Использует те же параметры сортировки, что и база данных.|  
-|is_schemabinding_enabled|**bit**|Состояние предложения SCHEMABINDING для политики безопасности:<br /><br /> 0 или NULL = включено<br /><br /> 1 = отключено|  
+|is_ms_shipped|**бит**|Всегда значение false.|  
+|is_enabled|**бит**|Состояние спецификации политики безопасности.<br /><br /> 0 = отключен<br /><br /> 1 = включен|  
+|is_not_for_replication|**бит**|Политика была создана с параметром NOT FOR REPLICATION.|  
+|uses_database_collation|**бит**|Использует те же параметры сортировки, что и база данных.|  
+|is_schemabinding_enabled|**бит**|Состояние предложения SCHEMABINDING для политики безопасности:<br /><br /> 0 или NULL = включено<br /><br /> 1 = отключено|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Участники **ALTER ANY SECURITY POLICY** разрешение имеют доступ ко всем объектам в этом представлении каталога, а также все, кто имеет **VIEW DEFINITION** в объекте.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   
  [sys.security_predicates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   

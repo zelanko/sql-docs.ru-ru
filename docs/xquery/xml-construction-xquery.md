@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>Построение XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Другие прямые конструкторы XML  
  В конструкторах для обработки инструкций и комментариев XML используется тот же синтаксис, что и в соответствующих конструкциях XML. Имеется также поддержка вычисляемых конструкторов для текстовых узлов, но они используются в основном в языке XML DML для построения текстовых узлов.  
   
- **Примечание** пример использования конструктора явно задаваемых текстовых узлов см. в разделе в указанном примере в [Вставить &#40; Язык XML DML &#41; ](../t-sql/xml/insert-xml-dml.md).  
+ **Примечание** пример использования конструктора явно задаваемых текстовых узлов см. в разделе в указанном примере в [вставить &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  В следующем запросе созданный XML-документ содержит элемент, два атрибута, комментарий и инструкцию по обработке. Обратите внимание на запятую перед <`FirstLocation`>, которая используется из-за построения последовательности.  
   
@@ -677,7 +677,7 @@ where ProductModelID=7
   
 -   вычисляемые конструкторы комментариев.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения XQuery](../xquery/xquery-expressions.md)  
   
   

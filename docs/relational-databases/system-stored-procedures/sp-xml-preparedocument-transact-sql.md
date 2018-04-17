@@ -1,16 +1,16 @@
 ---
-title: "sp_xml_preparedocument (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_xml_preparedocument (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xml_preparedocument_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86d05a3148d84622fb454bd83d25fee7875c1eb5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 911d6dd9613803aff79187a22f4ebf6bc0b7a4cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,15 +76,15 @@ OUTPUT
 >  **sp_xml_preparedocument** может обрабатывать только текст или нетипизированный XML. Если значение экземпляра, передающееся в качестве входного параметра, уже является типизированным XML, его сначала необходимо привести к новому нетипизированному экземпляру XML или к строке, после чего его можно передавать в качестве входного параметра. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
- Указывает объявления пространств имен, которые используются в выражениях XPath строк и столбцов в OPENXML. *xpath_namespaces* является текстовым параметром: **char**, **nchar**, **varchar**, **nvarchar**, **текста** , **ntext** или **xml**.  
+ Указывает объявления пространств имен, которые используются в выражениях XPath строк и столбцов в OPENXML. *xpath_namespaces* является текстовым параметром: **char**, **nchar**, **varchar**, **nvarchar**, **текста**, **ntext** или **xml**.  
   
  Значение по умолчанию —  **\<корневой xmlns:mp = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* предоставляет URI пространств имен для префиксов, используемых в выражениях XPath в OPENXML посредством XML-документа правильного формата. *xpath_namespaces* объявляет префикс, который должен использоваться для обращения к пространству имен **urn: schemas-microsoft-com: XML-metaprop**; таким образом предоставляются метаданные о проанализированных элементах XML. Хотя с помощью данного приема можно переопределить префикс пространства имен для пространства имен метасвойства, это пространство имен не будет потеряно. Префикс **mp** все еще действует для **urn: schemas-microsoft-com: XML-metaprop** даже в том случае, если *xpath_namespaces* не содержит такого объявления.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или >0 (неуспешное завершение)  
   
-## <a name="permissions"></a>Permissions  
- Необходимо быть членом роли **public** .  
+## <a name="permissions"></a>Разрешения  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -159,10 +159,11 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [XML хранимые процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ <br>[Код XML, хранимый Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[Системные хранимые Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

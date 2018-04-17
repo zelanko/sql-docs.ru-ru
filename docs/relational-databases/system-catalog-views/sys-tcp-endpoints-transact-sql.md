@@ -1,16 +1,16 @@
 ---
-title: "sys.tcp_endpoints (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.tcp_endpoints (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.tcp_endpoints
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2be15d96b5ab7274688c34303ccf1603064dce9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e84df434200116d36445033a7a729e60ac8b11af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   Содержит по одной строке для каждой из конечных точек TCP, имеющихся в системе. Конечные точки, которые описаны в документах **sys.tcp_endpoints** представляют собой объекты для предоставления или отмены прав доступа на соединение. Отображаемые сведения о портах и IP-адресах не используются для настройки протоколов и могут не соответствовать фактической конфигурации протоколов. Для просмотра и настройки протоколов следует использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**< унаследованные столбцы >**||Наследует столбцы из [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**port**|int|Номер порта, который прослушивается конечной точкой. Не допускает значение NULL.|  
@@ -62,11 +62,11 @@ LEFT JOIN sys.dm_exec_connections AS dec
    ON des.session_id = dec.session_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Представления каталога конечных точек &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [Представления каталога конечных точек &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 title: sp_addmergepublication (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,10 +99,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@sync_mode =** ] **"***sync_mode***"**  
  Режим начальной синхронизации подписчиков на публикацию. *sync_mode* — **nvarchar(10)**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**собственный** (по умолчанию)|Производит выходные данные программы массового копирования всех таблиц.|  
-|**символ**|Производит выходные данные программы массового копирования всех таблиц в символьном режиме. Требуется для поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] и не-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.|  
+|**character**|Производит выходные данные программы массового копирования всех таблиц в символьном режиме. Требуется для поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] и не-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.|  
   
  [  **@allow_push =** ] **"***allow_push***"**  
  Указывает, можно ли создать принудительные подписки для конкретной публикации. *allow_push* — **nvarchar(5)**, значение по умолчанию TRUE, разрешающее принудительные подписки на публикацию.  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@use_partition_groups =** ] **"***use_partition_groups***"**  
  Указывает, что для оптимизации процесса синхронизации должны использоваться предварительно вычисляемые секции. *use_partition_groups* — **nvarchar(5)**, и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**true**|Публикация использует предварительно вычисляемые секции.|  
 |**false**|Публикация не использует предварительно вычисляемые секции.|  
@@ -211,7 +211,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@publication_compatibility_level =** ] *backward_comp_level*  
  Указывает обратную совместимость публикации. *backward_comp_level* — **nvarchar(6)**, и может принимать одно из следующих значений:  
   
-|Значение|Version|  
+|Значение|Версия|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -245,12 +245,12 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@retention_period_unit =** ] **"***retention_period_unit***"**  
  Указывает единицы срока хранения, установленного *хранения*. *retention_period_unit* — **nvarchar(10)**, и может принимать одно из следующих значений.  
   
-|Значение|Version|  
+|Значение|Версия|  
 |-----------|-------------|  
 |**день** (по умолчанию)|Срок хранения указан в днях.|  
-|**Неделя**|Срок хранения указан в неделях.|  
-|**месяц**|Срок хранения указан в месяцах.|  
-|**год**|Срок хранения указан в годах.|  
+|**week**|Срок хранения указан в неделях.|  
+|**month**|Срок хранения указан в месяцах.|  
+|**year**|Срок хранения указан в годах.|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  Задает число изменений, которые содержатся в поколении. Поколение — это набор изменений, переданных издателю или подписчику. *generation_leveling_threshold* — **int**, значение по умолчанию 1000.  
@@ -264,7 +264,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_logging =** ] **"***conflict_logging***"**  
  Определяет место хранения записей конфликта. *conflict_logging* — **nvarchar(15)**, и может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**издатель**|Конфликтующие записи хранятся на издателе.|  
 |**подписчик**|Конфликтующие записи хранятся на подписчике, вызвавшем конфликт. Не поддерживается подписчиками [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
@@ -283,19 +283,19 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Для [!INCLUDE[ssEW](../../includes/ssew-md.md)] подписчиков, значение *alternate_snapshot_folder* используется, только если значение *snapshot_in_default_folder* — **false**.  
   
- С включенной репликацией DDL (*replicate_ddl***= 1**) для публикации, чтобы произвести не относящиеся к репликации изменения публикации, [sp_changemergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) вначале необходимо выполнить для установки *replicate_ddl* для **0**. После выполнения нереплицируемых инструкций DDL, **sp_changemergepublication** может выполняться для включения репликации DDL.  
+ С включенной репликацией DDL (* replicate_ddl ***= 1**) для публикации, чтобы произвести не относящиеся к репликации изменения публикации, [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)вначале необходимо выполнить для установки *replicate_ddl* для **0**. После выполнения нереплицируемых инструкций DDL, **sp_changemergepublication** может выполняться для включения репликации DDL.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addmergepublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

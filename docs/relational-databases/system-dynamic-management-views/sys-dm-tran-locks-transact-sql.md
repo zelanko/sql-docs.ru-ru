@@ -2,7 +2,7 @@
 title: sys.dm_tran_locks (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: HT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -204,10 +205,10 @@ ms.lasthandoff: 04/05/2018
 |Ресурс|Формат|Описание|  
 |--------------|------------|-----------------|  
 |DATABASE|Неприменимо|Идентификатор базы данных уже доступен в **resource_database_id** столбца.|  
-|FILE|<file_id>|Идентификатор файла, представляемого данным ресурсом.|  
+|FILE|< file_id >|Идентификатор файла, представляемого данным ресурсом.|  
 |OBJECT|< object_id >|Идентификатор объекта, представляемого данным ресурсом. Этот объект может быть любой объект из списка **sys.objects**, не только таблица.|  
 |PAGE|<file_id>:<page_in_file>|Представляет файл и идентификатор страницы, представляемые данным ресурсом.|  
-|KEY|<hash_value>|Представляет хэш ключевых столбцов из строки, представляемой данным ресурсом.|  
+|KEY|< hash_value >|Представляет хэш ключевых столбцов из строки, представляемой данным ресурсом.|  
 |EXTENT|<file_id>:<page_in_files>|Представляет файл и идентификатор экстента, представляемые данным ресурсом. Идентификатор экстента совпадает с идентификатором первой страницы этого экстента.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Представляет идентификатор страницы и идентификатор строки, представленной данным ресурсом. Обратите внимание на то, что, если идентификатор связанного объекта имеет значение 99, этот ресурс представляет одну из восьми областей памяти смешанных страниц первой IAM-страницы в цепочке IAM.|  
 |APPLICATION|\<DbPrincipalId >:\<до 32 символов > :(< hash_value >)|Представляет идентификатор участника базы данных, используемого для определения области действия ресурса блокировки этого приложения. Также включает до 32 символов из строки ресурса, соответствующего ресурсу блокировок для этого приложения. В некоторых случаях из полной строки, больше не являющейся доступной, могут отображаться только 2 символа. Это происходит только во время восстановления базы данных для блокировок приложений, которые вызываются заново как часть процесса восстановления. Это хэш-значение представляет собой хэш-код полной строки ресурса, соответствующего ресурсу блокировки данного приложения.|  

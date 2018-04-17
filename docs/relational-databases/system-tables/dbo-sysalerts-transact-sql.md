@@ -1,16 +1,16 @@
 ---
-title: "dbo.sysalerts (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: dbo.sysalerts (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 10/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysalerts
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7565ee20e5fdec3a94c413b8204629ce6ee2f48d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 271452f516e231e22140664c049dacdaea5257a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор предупреждения.|  
 |**name**|**sysname**|Имя предупреждения.|  
-|**event_source**|**nvarchar(100)**|Источник события: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**event_source**|**Nvarchar(100)**|Источник события: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Зарезервировано для последующего использования.|  
 |**event_id**|**int**|Зарезервировано для последующего использования.|  
 |**message_id**|**int**|Определяемые пользователем идентификатор сообщения или ссылка на **sysmessages** сообщение, вызвавшее это предупреждение.|  
 |**severity**|**int**|Серьезность события, вызвавшего это предупреждение.|  
-|**включен**|**tinyint**|Состояние предупреждения:<br /><br /> **0** = отключено.<br /><br /> **1** = включен.|  
+|**Включен**|**tinyint**|Состояние предупреждения:<br /><br /> **0** = отключено.<br /><br /> **1** = включен.|  
 |**delay_between_responses**|**int**|Время ожидания между отправкой уведомлений для этого предупреждения (в секундах).|  
 |**last_occurrence_date**|**int**|Дата последнего возникновения предупреждения.|  
 |**last_occurrence_time**|**int**|Время последнего возникновения предупреждения.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 |**notification_message**|**nvarchar(512)**|Дополнительные сведения, отправляемые вместе с предупреждением.|  
 |**include_event_description**|**tinyint**|Битовая маска, определяющая ли описание события отправляется по электронной почте, пейджеру или команды Net send. См. диаграмму ниже значений.|  
 |**database_name**|**nvarchar(512)**|База данных, в которой должно произойти предупреждение, чтобы оно сработало.|  
-|**event_description_keyword**|**nvarchar(100)**|Шаблон, с которым должна совпасть ошибка для срабатывания этого предупреждения.|  
+|**event_description_keyword**|**Nvarchar(100)**|Шаблон, с которым должна совпасть ошибка для срабатывания этого предупреждения.|  
 |**occurrence_count**|**int**|Количество раз, когда возникало этого предупреждение.|  
 |**count_reset_date**|**int**|Число дней (date) будут сброшены **0**.|  
 |**count_reset_time**|**int**|Время суток количество будут сброшены **0**.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/03/2018
 |**performance_condition**|**nvarchar(512)**|Зарезервировано.|  
 |**category_id**|**int**|Зарезервировано.|  
   
- ## <a name="remarks"></a>Remarks
+ ## <a name="remarks"></a>Замечания
 
 В следующей таблице показаны значения битовой маски include_event_description. Десятичное значение возвращается dbo.sysalerts. 
 

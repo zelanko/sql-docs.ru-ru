@@ -1,16 +1,16 @@
 ---
-title: "sp_dropsubscription (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dropsubscription (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43185571b06705011346dc08ded48e587a624311
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 85d2d9188f84d4d2dac6167180013d1e659de3de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [  **@article=** ] **"***статьи***"**  
  Имя статьи. *статья* — **sysname**, значение по умолчанию NULL. Если **все**, указан подписки на все статьи для каждой публикации и подписчика будут удалены. Используйте **все** для публикаций, которые допускают немедленное обновление.  
   
- [  **@subscriber=** ] **"***подписаться*r**"**  
+ [  **@subscriber=** ] **"***подписаться*r**" **  
  Имя подписчика, подписки которого будут удалены. *подписчик* — **sysname**, не имеет значения по умолчанию. Если **все**, удаляются все подписки для всех подписчиков.  
   
  [  **@destination_db=** ] **"***destination_db***"**  
@@ -80,13 +80,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или пользователя, создавшего подписки могут выполнять процедуру **sp_dropsubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

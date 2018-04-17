@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_cryptographic_provider_sessions (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_cryptographic_provider_sessions (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_sessions
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b60590005ab185f4f03256a0e3845d9a4a61bee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5ef45b73870f777c283481818e9e5e27cd6a6aa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +59,16 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Идентификационный номер поставщика служб шифрования.|  
 |**session_handle**|**varbytes(8)**|Дескриптор сеанса с криптографической защитой.|  
-|**удостоверение**|**nvarchar(128)**|Идентификатор, используемый для проверки подлинности поставщика служб шифрования.|  
-|**spid**|**short**|Идентификатор SPID сеанса для соединения. Дополнительные сведения см. в разделе [@@SPID &#40; Transact-SQL &#41; ](../../t-sql/functions/spid-transact-sql.md).|  
+|**Удостоверение**|**nvarchar(128)**|Идентификатор, используемый для проверки подлинности поставщика служб шифрования.|  
+|**spid**|**короткий**|Идентификатор SPID сеанса для соединения. Дополнительные сведения см. в статье [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Sys.dm_cryptographic_provider_sessions** представление доступно public для текущего соединения. Чтобы просмотреть все криптографические соединения, необходимо иметь **УПРАВЛЕНИЯ** разрешений сервера.  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

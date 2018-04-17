@@ -1,16 +1,16 @@
 ---
-title: "sp_kill_filestream_non_transacted_handles (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb1054ec1ce9bab7311417e109ac0cece16c9c88
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c6f91b4c4483facda94d5aea74b422aa4704b6c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>FileStream и FileTable - sp_kill_filestream_non_transacted_handles
+# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Закрывает нетранзакционные дескрипторы файлов для данных FileTable.  
@@ -43,7 +43,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_таблицы*  
+ *table_name*  
  Имя таблицы, в которой следует закрыть нетранзакционные дескрипторы.  
   
  Можно передать *table_name* без *handle_id* чтобы закрыть все открытые нетранзакционные дескрипторы для FileTable.  
@@ -51,7 +51,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  Можно передать значение NULL для значения *table_name* закрыть все открытые нетранзакционные дескрипторы для всех таблиц Filetable в текущей базе данных. Значением по умолчанию является NULL.  
   
  *handle_id*  
- Дополнительный код отдельного дескриптора, который будет закрыт. Вы можете получить *handle_id* из [sys.dm_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) динамическое административное представление. Каждый идентификатор уникален в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При указании *handle_id*, то также необходимо предоставить значение для *table_name*.  
+ Дополнительный код отдельного дескриптора, который будет закрыт. Вы можете получить *handle_id* из [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) динамическое административное представление. Каждый идентификатор уникален в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При указании *handle_id*, то также необходимо предоставить значение для *table_name*.  
   
  Можно передать значение NULL для значения *handle_id* чтобы закрыть все открытые нетранзакционные дескрипторы для FileTable, заданные *table_name*. Значением по умолчанию является NULL.  
   
@@ -67,7 +67,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="metadata"></a>Метаданные  
- Сведения об открытых нетранзакционных дескрипторов файлов, запросите динамическое административное представление [sys.dm_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ Сведения об открытых нетранзакционных дескрипторов файлов, запросите динамическое административное представление [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ## <a name="security"></a>безопасность  
   
@@ -103,5 +103,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)  
-  
+ [FileStream и FileTable динамические административные представления (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+ <br>[FileStream и представления каталога FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+ <br>[sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   

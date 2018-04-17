@@ -1,16 +1,16 @@
 ---
-title: "syscollector_execution_log (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: syscollector_execution_log (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5beb35aa769b1c4755481a187c765fa62068ae2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7cf0ba566294c5a89db0e67d0d55a37abf228a17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |package_id|**uniqueidentifier**|Определяет набор элементов сбора или пакет, создавший данную запись журнала. Допускает значение NULL.|  
 |package_name|**nvarchar(4000)**|Имя пакета, сформировавшего этот журнал. Допускает значение NULL.|  
 |package_execution_id|**uniqueidentifier**|Содержит ссылку на таблицу журнала служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Допускает значение NULL.|  
-|failure_message|**nvarchar(2048)**|Если набор элементов сбора или пакет завершился с ошибкой, содержит самое последнее сообщение об ошибке для данного компонента. Допускает значение NULL. Чтобы получить более подробные сведения об ошибке, используйте [fn_syscollector_get_execution_details &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) функции.|  
+|failure_message|**nvarchar(2048)**|Если набор элементов сбора или пакет завершился с ошибкой, содержит самое последнее сообщение об ошибке для данного компонента. Допускает значение NULL. Чтобы получить более подробные сведения об ошибке, используйте [fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) функции.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для роли dc_operator.  

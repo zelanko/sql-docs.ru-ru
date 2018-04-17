@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscriber (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_addsubscriber (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48dba20940cff922fa3bdacd78471d57fbec7707
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364f88ae30fa71cd5f2a39dea897252b967d8228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,15 +75,15 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@type=**] *типа*  
  Тип подписчика. *Тип* — **tinyint**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**0** (по умолчанию)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Подписчика|  
+|**0** (по умолчанию)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Подписчик|  
 |**1**|Сервер источника данных ODBC|  
 |**2**|База данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Поставщик OLE DB|  
   
  [  **@login=**] **"***входа***"**  
- Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Имя входа* — **sysname**, значение по умолчанию NULL.  
+ Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь задается в соответствии с подписками, при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
@@ -141,7 +141,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Относительный интервал частоты. Этот параметр используется при *frequency_type* равно **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Первая|  
 |**2**|Вторая|  
@@ -213,7 +213,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@encrypted_password=**] *encrypted_password*  
  Этот параметр является устаревшим и предоставляется для обеспечения обратной совместимости, только на *encrypted_password* любое значение, но **0** приведет к ошибке.  
   
- [  **@publisher** =] **"***издатель***"**  
+ [ **@publisher**=] **"***издатель***"**  
  Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -229,14 +229,14 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
  **sp_addsubscriber** записывает [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) в таблицу **распространения** базы данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_addsubscriber**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

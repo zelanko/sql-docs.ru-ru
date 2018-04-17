@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdb (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpdb (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdb
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,30 +54,30 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя базы данных.|  
 |**db_size**|**nvarchar(13)**|Общий размер базы данных.|  
 |**Владелец**|**sysname**|Владелец базы данных, таких как **sa**.|  
-|**DBID**|**smallint**|Идентификатор базы данных.|  
-|**создан**|**nvarchar(11)**|Дата создания базы данных.|  
-|**status**|**nvarchar(600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Нелогические параметры перечислены с соответствующими значениями в виде *option_name*=*значение*.<br /><br /> Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**dbid**|**smallint**|Идентификатор базы данных.|  
+|**Создан**|**nvarchar(11)**|Дата создания базы данных.|  
+|**status**|**nvarchar(600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Нелогические параметры перечислены с соответствующими значениями в виде *option_name*=*значение*.<br /><br /> Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 или 90.|  
   
  Если *имя* указан, существует дополнительный результирующий набор, который показывает распределение файлов для указанной базы данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|Логическое имя файла.|  
-|**Идентификатор файла**|**smallint**|Идентификатор файла.|  
+|**fileid**|**smallint**|Идентификатор файла.|  
 |**Имя файла**|**nchar(260)**|Имя файла в операционной системе (физическое имя файла).|  
-|**файловая группа**|**nvarchar(128)**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
+|**filegroup**|**nvarchar(128)**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
 |**size**|**nvarchar(18)**|Размер файла в мегабайтах.|  
 |**параметр MaxSize**|**nvarchar(18)**|Определяет максимальный размер, до которого может вырасти файл. Значение UNLIMITED в этом поле означает, что файл может расти, пока диск не будет заполнен.|  
 |**Увеличение размера**|**nvarchar(18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
 |**Использование**|**varchar(9)**|Применение файла. Для файла данных, значение равно **«данные»** и файла журнала, оно **только для журнала**.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Состояние** столбец результирующего набора отчетов, какие параметры заданы в значение ON в базе данных. Все параметры базы данных не сообщает о **состояние** столбца. Чтобы просмотреть полный список текущих параметров базы данных, используйте **sys.databases** представления каталога.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -102,14 +102,14 @@ EXEC sp_helpdb;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.filegroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

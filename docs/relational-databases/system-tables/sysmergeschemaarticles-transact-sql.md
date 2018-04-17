@@ -1,16 +1,16 @@
 ---
-title: "sysmergeschemaarticles (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmergeschemaarticles (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemaarticles system table
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13a3104b8f457cf4c9d223630739e3cf6eb76ee8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be0e14898e488592e8c0dcdbf40b53b6e678a6a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Осуществляет мониторинг статей со схемой для механизма репликации слиянием. Эта таблица хранится в базах данных публикации и подписки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя статьи со схемой в публикации слиянием.|  
 |**type**|**tinyint**|Тип статьи со схемой, который может иметь одно из следующих значений:<br /><br /> **0x20** = хранимая процедура схемы статьи.<br /><br /> **0x40** = статьи со схемой представление или индексированное представление статьи со схемой.|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 |**destination_object**|**sysname**|Имя целевого объекта в базе данных подписки. Это значение применяется только к статьям со схемой, таким как хранимые процедуры, представления и пользовательские функции.|  
 |**destination_owner**|**sysname**|Владелец объекта в базе данных подписки, если это не **dbo**.|  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

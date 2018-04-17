@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_help_operator (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_help_operator (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 48495576db891a8acbd944578f45bfa5267fb9c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@operator_name=** ] **'***operator_name***'**  
+ [  **@operator_name=** ] **"***operator_name***"**  
  Имя оператора. *operator_name* — **sysname**. Если *operator_name* — не указано, возвращаются сведения обо всех операторах.  
   
- [ **@operator_id=** ] *operator_id*  
+ [  **@operator_id=** ] *operator_id*  
  Идентификатор оператора, о котором запрашиваются сведения. *operator_id*— **int**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -67,11 +67,11 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификационный номер оператора.|  
 |**name**|**sysname**|Имя оператора.|  
-|**включен**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = нет|  
-|**email_address**|**nvarchar(100)**|Адрес электронной почты оператора.|  
+|**Включен**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**email_address**|**Nvarchar(100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата, когда оператор получил последнее уведомление по электронной почте.|  
 |**last_email_time**|**int**|Время, когда оператор получил последнее уведомление по электронной почте.|  
-|**pager_address**|**nvarchar(100)**|Адрес пейджера оператора.|  
+|**pager_address**|**Nvarchar(100)**|Адрес пейджера оператора.|  
 |**last_pager_date**|**int**|Дата, когда оператор получил последнее уведомление по пейджеру.|  
 |**last_pager_time**|**int**|Время, когда оператор получил последнее уведомление по пейджеру.|  
 |**weekday_pager_start_time**|**int**|Время начала периода, в течение которого оператор доступен для уведомлений по пейджеру в рабочие дни.|  
@@ -81,12 +81,12 @@ sp_help_operator
 |**sunday_pager_start_time**|**int**|Время начала периода, в течение которого оператор доступен для уведомлений по пейджеру по воскресеньям.|  
 |**sunday_pager_end_time**|**int**|Время окончания периода, в течение которого оператор доступен для уведомлений по пейджеру по воскресеньям.|  
 |**pager_days**|**tinyint**|Битовая маска (**1** = воскресенье, **64** = суббота) дней недели, указывающее, когда оператор доступен для уведомлений по пейджеру.|  
-|**netsend_address**|**nvarchar(100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
+|**netsend_address**|**Nvarchar(100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
 |**last_netsend_date**|**int**|Дата, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Хранимая процедура sp_help_operator** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -113,9 +113,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

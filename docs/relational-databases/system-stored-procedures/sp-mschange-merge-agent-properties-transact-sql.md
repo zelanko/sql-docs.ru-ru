@@ -2,7 +2,7 @@
 title: sp_MSchange_merge_agent_properties (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3563086e662ceb1dbe5cb8e8ea5b96b0c9430cc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 421b8dc45dff0124f7bc9b6ce9471102fb7b1917
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  В данной таблице описаны свойства задания агента слияния, которые можно изменить, и ограничения на значения этих свойств.  
   
-|Свойство|Значение|Description|  
+|property|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**Описание**||Краткое описание подписки.|  
 |**merge_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
@@ -98,11 +98,11 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  Если издатель запущен на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) для изменения свойств задания агента слияния, синхронизирующего принудительную подписку, выполняется на распространителе.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_addmergepushsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

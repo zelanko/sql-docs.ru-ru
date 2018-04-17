@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsubscriptionerrors (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpsubscriptionerrors (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 547faae8cb0b175a1608a8abab752b730fbec564
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7631912fbf9862a74f5bebdaf1fa6c7449205614
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**time**|**datetime**|Время появления ошибки.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Идентификатор типа источника ошибки.|  
-|**source_name**|**nvarchar(100)**|Имя источника ошибки.|  
+|**source_name**|**Nvarchar(100)**|Имя источника ошибки.|  
 |**error_code**|**sysname**|Код ошибки.|  
 |**текст_ошибки**|**ntext**|Сообщение об ошибке.|  
 |**xact_seqno**|**varbinary(16)**|Регистрационный номер транзакции в журнале, запущенной во время ошибки выполнения пакета. Это последовательный номер журнала транзакций, содержащего первую транзакцию в пакете, выполненном с ошибкой. Он используется только агентами распространителя.|  
@@ -86,11 +86,11 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Замечания  
  **sp_helpsubscriptionerrors** используется с моментальных снимков и репликации транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_helpsubscriptionerrors**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "процедура sp_indexoption (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: процедура sp_indexoption (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_indexoption
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2cfe32d5260c2c6e26feb52fbb985ac2ec4db79f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/02/2018
  Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически делает выбор уровня блокировки: страница, строка, таблица. Необязательно задавать эти параметры вручную. **процедура sp_indexoption** предназначена для опытных пользователей, которые знают о конкретных типах блокировки.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Вместо этого используйте [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Вместо этого используйте [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  [  **@OptionName =**] **"***option_name***"**  
  Имя параметра индекса. *option_name* — **varchar(35)**, не имеет значения по умолчанию. *option_name* может иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Если TRUE, то допустимы блокировки строк при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки строки. Если FALSE, то блокировка строк не используется. Значение по умолчанию — TRUE.|  
 |**AllowPageLocks**|Если TRUE, то допустимы блокировки страниц при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки страниц. Если FALSE, то блокировка страниц не используется. Значение по умолчанию — TRUE.|  
@@ -72,7 +72,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или больше чем 0 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  XML-индексы не поддерживаются. Если указаны XML-индексы, или имя таблицы указано без имени индекса, и таблица содержит XML-индекс, то инструкция завершается ошибкой. Чтобы задать эти параметры, используйте [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) вместо него.  
   
  Чтобы отобразить текущую строку и на страницы свойств, используйте [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) или [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.  
@@ -148,7 +148,7 @@ WHERE OBJECT_NAME (object_id) = N'DatabaseLog';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

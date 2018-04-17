@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_enable_table (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sp_cdc_enable_table (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43e2866c70c60e8b7c7b7f1eaffabebf53a98ebe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sys.sp_cdc_enable_table
   
  Если не указано имя является производным от имени схемы источника и имени исходной таблицы в формате *schemaname_sourcename*. *capture_instance* не может превышать 100 символов и должно быть уникальным в базе данных. Ли указания *capture_instance* усекаются любые пробелы в правой части строки.  
   
- Исходная таблица не может иметь более двух экземпляров системы отслеживания. Дополнительные сведения см. в разделе [sys.sp_cdc_help_change_data_capture &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ Исходная таблица не может иметь более двух экземпляров системы отслеживания. Дополнительные сведения см. в разделе [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  Показывает, должна ли быть включена поддержка запросов сетевых изменений для данного экземпляра системы отслеживания. *supports_net_changes* — **бит** значение по умолчанию 1, если таблица имеет первичный ключ или таблица имеет уникальный индекс, который был идентифицирован с помощью @index_name параметра. В противном случае данный параметр по умолчанию принимает значение 0.  
@@ -90,7 +90,7 @@ sys.sp_cdc_enable_table
   
  Если *supports_net_changes* имеет значение 1, *index_name* должен быть указан, или исходная таблица должна иметь определен первичный ключ.  
   
- [  **@index_name =** ] **"***index_name*"  
+ [  **@index_name =** ] **"*** имя_индекса*"  
  Имя уникального индекса, используемого для уникальной идентификации строк в исходной таблице. *index_name* — **sysname** и может иметь значение NULL. Если указано, *index_name* должно быть допустимым уникальным индексом в исходной таблице. Если *index_name* указан, то указанные столбцы индекса имеют приоритет над любой первичными ключевыми столбцами в качестве уникального идентификатора строки для таблицы.  
   
  [  **@captured_column_list =** ] **"***captured_column_list***"**  
@@ -100,9 +100,9 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* приведен список разделенных запятыми имен столбцов. Отдельные имена столбцов могут быть заключены в двойные кавычки ("") или квадратные скобки ([]). Если имя столбца содержит внедренную запятую, то его необходимо заключать в кавычки.  
   
- *captured_column_list* не может содержать следующих зарезервированных имен столбцов: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $operation**, и **__ $update_mask**.  
+ *captured_column_list* не может содержать следующих зарезервированных имен столбцов: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $ Операция**, и **__ $update_mask**.  
   
- [  **@filegroup_name =** ] **"***имя_файловой_группы***"**  
+ [  **@filegroup_name =** ] **"***filegroup_name***"**  
  Файловая группа, используемая для хранения таблицы изменений, созданной для экземпляра системы отслеживания. *filegroup_name* — **sysname** и может иметь значение NULL. Если указано, *filegroup_name* должен быть определен в текущей базе данных. Если значение равно NULL, то используется файловая группа, заданная по умолчанию.  
   
  Для хранения системы отслеживания информации об изменениях рекомендуется создать отдельную файловую группу.  
@@ -135,7 +135,7 @@ sys.sp_cdc_enable_table
 > [!NOTE]  
 >  При включении системы отслеживания информации об изменениях для таблицы агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должен быть запущен. Однако процесс отслеживания не является процессом журнала транзакций и сохраняет записи в таблицу изменений, если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущен.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **db_owner** предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -171,11 +171,11 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.sp_cdc_disable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [CDC.fn_cdc_get_all_changes_ &#60; capture_instance &#62;  &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [CDC.fn_cdc_get_net_changes_ &#60; capture_instance &#62; &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [CDC.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [CDC.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

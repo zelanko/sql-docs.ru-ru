@@ -1,16 +1,16 @@
 ---
-title: "sp_sequence_get_range (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_sequence_get_range (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/08/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad7851a091b531c0f13980023e22f4f2d545163b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -57,34 +58,34 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@sequence_name** = ] **N**'*sequence*'  
+ [ **@sequence_name** =] **N**"*последовательность*"  
  Имя объекта последовательности. Схема является необязательной. *sequence_name* — **nvarchar(776)**.  
   
- [ **@range_size** = ] *range_size*  
- Количество получаемых из последовательности значений. **@range_size**— **bigint**.  
+ [ **@range_size** =] *range_size*  
+ Количество получаемых из последовательности значений. **@range_size** — **bigint**.  
   
- [ **@range_first_value** = ] *range_first_value*  
- Выходной параметр возвращает первое (минимальное или максимальное) значение объекта последовательности, используемое для вычисления запрошенного диапазона. **@range_first_value**— **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
+ [ **@range_first_value** =] *range_first_value*  
+ Выходной параметр возвращает первое (минимальное или максимальное) значение объекта последовательности, используемое для вычисления запрошенного диапазона. **@range_first_value** — **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
   
  [ **@range_last_value** = ] *range_last_value*  
- Необязательный выходной параметр возвращает последнее значение запрашиваемого диапазона. **@range_last_value**— **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
+ Необязательный выходной параметр возвращает последнее значение запрашиваемого диапазона. **@range_last_value** — **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
   
- [ **@range_cycle_count** = ] range_cycle_count  
- Необязательный выходной параметр возвращает количество циклов объекта последовательности, которое потребовалось для возврата запрошенного диапазона. **@range_cycle_count**— **int**.  
+ [ **@range_cycle_count** =] range_cycle_count  
+ Необязательный выходной параметр возвращает количество циклов объекта последовательности, которое потребовалось для возврата запрошенного диапазона. **@range_cycle_count** — **int**.  
   
- [  **@sequence_increment**  =] *sequence_increment*  
- Необязательный выходной параметр возвращает приращение объекта последовательности, которое использовалось для вычисления запрошенного диапазона. **@sequence_increment**— **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
+ [ **@sequence_increment** =] *sequence_increment*  
+ Необязательный выходной параметр возвращает приращение объекта последовательности, которое использовалось для вычисления запрошенного диапазона. **@sequence_increment** — **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
   
- [ **@sequence_min_value** = ] *sequence_min_value*  
- Необязательный выходной параметр возвращает минимальное значение объекта последовательности. **@sequence_min_value**— **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
+ [ **@sequence_min_value** =] *sequence_min_value*  
+ Необязательный выходной параметр возвращает минимальное значение объекта последовательности. **@sequence_min_value** — **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
   
- [ **@sequence_max_value** = ] *sequence_max_value*  
- Необязательный выходной параметр возвращает максимальное значение объекта последовательности. **@sequence_max_value**— **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
+ [ **@sequence_max_value** =] *sequence_max_value*  
+ Необязательный выходной параметр возвращает максимальное значение объекта последовательности. **@sequence_max_value** — **sql_variant** с тем же базовым типом, что и объект последовательности, которая используется в запросе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  sp_sequence_get_rangeis в sys. Схема и можно обращаться как sys.sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Циклические последовательности  
@@ -195,10 +196,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание ПОСЛЕДОВАТЕЛЬНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER ПОСЛЕДОВАТЕЛЬНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [Удалите ПОСЛЕДОВАТЕЛЬНОСТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [СЛЕДУЮЩЕЕ значение для &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE (Transact-SQL)](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR (Transact-SQL)](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   
