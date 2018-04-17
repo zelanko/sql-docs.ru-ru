@@ -1,16 +1,16 @@
 ---
-title: "syscollector_config_store (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: syscollector_config_store (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_config_store_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b637834db24c769284380f8d6edde923143f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 61c692aa5b41218b44f392b21107fb63e2b6c1c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для представления или членства в предопределенных ролях базы данных dc_operator, dc_proxy или dc_admin.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Список доступных свойств фиксирован, а их значения могут быть изменены только с помощью соответствующей хранимой процедуры. В этой таблице описываются свойства, которые доступны через данное представление.  
   
 |Имя свойства|Описание|  
 |-------------------|-----------------|  
 |CacheDirectory|Имя каталога в файловой системе, в которой сборщик данных хранит временную информацию.<br /><br /> Если указано значение NULL, то используется временный каталог [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|CacheWindow|Указывает политику хранения данных для каталога кэша для передач данных с ошибками.<br /><br /> -1 = сохранять данные после всех передач с ошибками.<br /><br /> 0 = не сохранять данные из передач данных с ошибками.<br /><br /> *n*= Сохранять данные о  *n*  предыдущих неудавшихся передач, где  *n*  > = 1.<br /><br /> Воспользуйтесь хранимой процедурой sp_syscollector_set_cache_window для изменения этого значения.|  
+|CacheWindow|Указывает политику хранения данных для каталога кэша для передач данных с ошибками.<br /><br /> -1 = сохранять данные после всех передач с ошибками.<br /><br /> 0 = не сохранять данные из передач данных с ошибками.<br /><br /> *n* = сохранять данные из *n* предыдущих неудавшихся передач, где *n* > = 1.<br /><br /> Воспользуйтесь хранимой процедурой sp_syscollector_set_cache_window для изменения этого значения.|  
 |CollectorEnabled|Указывает состояние сборщика данных.<br /><br /> 0 = отключен<br /><br /> 1 = включен<br /><br /> Значение данного свойства можно изменить с помощью хранимой процедуры sp_syscollector_enable_collector или sp_syscollector_disable_collector.|  
 |MDWDatabase|Имя хранилища данных управления. Используйте хранимую процедуру sp_syscollector_set_warehouse_database_name для изменения этого значения.|  
 |MDWInstance|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором расположено хранилище данных управления. Используйте хранимую процедуру sp_syscollector_set_warehouse_instance_name для изменения этого значения.|  

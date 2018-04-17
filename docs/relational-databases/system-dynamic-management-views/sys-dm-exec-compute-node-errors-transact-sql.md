@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_compute_node_errors (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_compute_node_errors (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_COMPUTE_NODE_ERRORS_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d7114f34dd261ce35a9213ad19090dd67a186a0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3cbcdfdcd34f0477e6485705905861840bd0a183
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -44,9 +45,9 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Уникальный числовой идентификатор, связанный с ошибкой.|Уникален в пределах всех ошибок запросов в системе|  
 |источник|**nvarchar(255)**|Описание источника потока или процесса||  
-|type|**nvarchar(255)**|Тип ошибки.||  
+|Тип|**nvarchar(255)**|Тип ошибки.||  
 |create_time|**datetime**|Время возникновения ошибки||  
-|compute_node_id|**int**|Идентификатор определенного вычислительных узлов|В разделе compute_node_id из [sys.dm_exec_compute_nodes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|**int**|Идентификатор определенного вычислительных узлов|В разделе compute_node_id из [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|Идентификатор запроса PolyBase, если таковые имеются.||  
 |spid|**int**|Идентификатор сеанса, SQL Server||  
 |thread_id|**int**|Числовой идентификатор потока, в котором возникла ошибка.||  
@@ -55,6 +56,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>См. также  
  [PolyBase, устранение неполадок с помощью динамических административных представлений](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления &#40; относящиеся к базе данных Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

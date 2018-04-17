@@ -1,15 +1,15 @@
 ---
-title: "На выполнение подготовленной | Документы Microsoft"
-ms.custom: 
+title: На выполнение подготовленной | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deferred statement preparation
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cedfb3926904af0a9d7393a1ff896c3c2f08a61f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f8650a69f3fef94e0b0344bc27a36ced79a3a924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-execution"></a>Подготовленное выполнение
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +54,6 @@ ms.lasthandoff: 01/25/2018
  Некоторые ранние ODBC-приложения используется **SQLPrepare** любое время [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) был использован. **SQLBindParameter** не требуется использовать **SQLPrepare**, он может использоваться с **SQLExecDirect**. Например, использовать **SQLExecDirect** с **SQLBindParameter** для получения кода возврата или выходных параметров хранимой процедуры, которая имеет только один раз. Не используйте **SQLPrepare** с **SQLBindParameter** если та же инструкция будет выполняться несколько раз.  
   
 ## <a name="see-also"></a>См. также:  
- [Выполнение инструкции &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [Выполнение инструкции & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "Фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-value (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: 'Фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-value (SQLXML 4.0) | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16f6ae44bce9828525e10c49604ab224bc402446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. **SQL: Limit-поле** и **SQL: Limit-значение** заметки используются для идентификации столбца базы данных, содержащего ограничивающие значения и для указания конкретного предельного значения, используемые для фильтрации данных возвращается.  
+  Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. **SQL: Limit-поле** и **SQL: Limit-значение** заметки используются для идентификации столбца базы данных, содержащего ограничивающие значения и для указания конкретного предельного значения, используемые для фильтрации данных возвращается.  
   
  **SQL: Limit-поле** заметка используется для определения столбца, содержащего предельное значение; это разрешено для каждого сопоставленного элемента или атрибута.  
   
@@ -313,9 +314,9 @@ ms.lasthandoff: 02/12/2018
     ```  
   
 ## <a name="see-also"></a>См. также  
- [&#40; float и real Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar и nvarchar &#40; Transact-SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar и nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [С помощью аннотированные схемы XSD в запросах &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [С помощью аннотированные схемы XSD в запросах &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

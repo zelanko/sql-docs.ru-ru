@@ -1,16 +1,16 @@
 ---
-title: "Введение в схемы XSD с заметками (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: Введение в схемы XSD с заметками (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Введение в схемы XSD с заметками (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Можно создавать представления схем XML реляционных данных при помощи языка XSD. Затем можно выполнять запросы к этим представлениям при помощи языка XPath (XML Path). Это аналогично созданию представлений с помощью инструкции CREATE VIEW с последующим указанием запросов SQL к представлению.  
+  Можно создавать представления схем XML реляционных данных при помощи языка XSD. Затем можно выполнять запросы к этим представлениям при помощи языка XPath (XML Path). Это аналогично созданию представлений с помощью инструкции CREATE VIEW с последующим указанием запросов SQL к представлению.  
   
  Схема XML описывает структуру XML-документа, а также описывает различные ограничения на данные, содержащиеся в документе. При задании запросов XPath по схеме структура возвращаемого XML-документа определяется согласно схеме, по которой выполняется запрос XPath.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/12/2018
 </xsd:schema>  
 ```  
   
- **\<Xsd: schema >** элемент является производным от спецификации пространства имен XML-схемы в http://www.w3.org/2001/XMLSchema.  
+  **\<Xsd: schema >** элемент является производным от спецификации пространства имен XML-схемы в http://www.w3.org/2001/XMLSchema.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Заметки к схеме XSD  
  Можно использовать схему XSD с заметками, которые описывают сопоставление с базой данных, запрашивают базу данных, а затем возвращают результаты в форме XML-документа. Заметки служат для сопоставления схемы XSD с таблицами и столбцами базы данных. Можно указывать запросы XPath к представлениям XML, созданным на основе схемы XSD, для запроса базы данных и получения результатов в виде XML.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/12/2018
  Префикс пространства имен может быть произвольным. В этой документации **sql** префикс используется для задания пространства имен заметок и для отличия заметок данного пространства имен от заметок других пространств имен.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Пример схемы XSD с заметками  
- В следующем примере схема XSD состоит из  **\<Person.Contact >** элемента. **\<Сотрудника >** элемент имеет **ContactID** атрибута и  **\<FirstName >** и  **\< LastName >** дочерних элементов:  
+ В следующем примере схема XSD состоит из  **\<Person.Contact >** элемента.  **\<Сотрудника >** элемент имеет **ContactID** атрибута и  **\<FirstName >** и  **\< LastName >** дочерних элементов:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -126,18 +127,18 @@ ms.lasthandoff: 02/12/2018
 ## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
--   XML Schema Part 0: Введение, рекомендация W3C (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Учебник, W3C рекомендации ()http://www.w3.org/TR/xmlschema-0/)  
   
--   Схема XML, часть 1: Структуры, рекомендация W3C (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Структуры, W3C рекомендации ()http://www.w3.org/TR/xmlschema-1/)  
   
--   Схема XML, часть 2: типы данных, рекомендация консорциума W3C (http://www.w3.org/TR/xmlschema-2/)  
+-   Схема XML, часть 2: типы данных, W3C (рекомендацииhttp://www.w3.org/TR/xmlschema-2/)  
   
--   Язык XPath (http://www.w3.org/TR/xpath)  
+-   FOR XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   Преобразования XSLT (http://www.w3.org/TR/xslt)  
+-   (XSL-преобразования (XSLT)http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности аннотированной схемы &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Схемы XDR с заметками &#40; не рекомендуется в SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Вопросы безопасности схемы с заметками &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Схемы XDR с заметками &#40;является устаревшим в SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

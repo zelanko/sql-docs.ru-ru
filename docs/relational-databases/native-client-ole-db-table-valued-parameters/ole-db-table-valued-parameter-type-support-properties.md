@@ -1,29 +1,30 @@
 ---
-title: "Поддержка типов табличное значение параметра OLE DB (свойства) | Документы Microsoft"
-ms.custom: 
+title: Поддержка типов табличное значение параметра OLE DB (свойства) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365ed52a0ea01d2ec62c001eda9de5ec9874c4de
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cacd878bed63696eee40d42e6854c73c6235c73a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Поддержка типов параметров OLE DB, возвращающих табличные значения (свойства)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/25/2018
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &AMP;#124; DBPROPVAL_UP_DELETE &AMP;#124; DBPROPVAL_UP_INSERT|  
   
 ## <a name="property-sets"></a>Наборы свойств  
  Эти наборы свойств поддерживают параметры с табличным значением.  
@@ -99,11 +100,11 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_PARAM_TYPE_TYPENAME|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_BSTR<br /><br /> Описание: Потребители используют это свойство для получения или задания имени типа возвращающего табличное значение параметра.<br /><br /> Это свойство также может использоваться с определяемыми пользователем типами данных CLR.<br /><br /> Это свойство можно указать по желанию, чтобы передать имя табличного типа для возвращающего табличное значение параметра (если при вызове команды применяется синтаксис ODBC). Для нерегламентированных параметризованных запросов SQL это свойство является обязательным.|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_BSTR<br /><br /> Описание: Потребители используют это свойство для получения или задания имени схемы возвращающего табличное значение параметра.<br /><br /> Это свойство также может использоваться с определяемыми пользователем типами данных CLR.|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|Только для чтения R Чтение и запись:<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_BSTR<br /><br /> Описание: Потребители используют это свойство для получения имени каталога возвращающего табличное значение параметра.<br /><br /> Это свойство также может использоваться с определяемыми пользователем типами данных CLR. Задание этого свойства является ошибкой; все табличные типы, определяемые пользователем, должны находиться в той же базе данных, что и использующие их возвращающие табличное значение параметры.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_UI2 &#124; ТО ЕСТЬ VT_ARRAY<br /><br /> Описание: Потребители используют это свойство для указания набор столбцов в наборе строк должны рассматриваться как значения по умолчанию. Значения для этих столбцов не передаются. При получении данных из потребительского объекта набора строк поставщик не требует привязки для этих столбцов.<br /><br /> Каждый элемент массива должен быть порядковым номером столбца в объекте набора строк. Если переданы недопустимые порядковые номера, это приведет к ошибке времени выполнения.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_UI2 &#124; ТО ЕСТЬ VT_ARRAY<br /><br /> Описание: Это свойство используется потребителем, чтобы предоставить указание для сервера для указания сортировки упорядочиваются данные столбцов. Поставщик не проводит никакой проверки и предполагает, что потребитель выполняет существующую спецификацию. Сервер использует это свойство для проведения оптимизации.<br /><br /> Информация об упорядочивании каждого столбца представлена парой элементов массива. Первый элемент пары — номер столбца. Второй элемент пары равен 1, если сортировка проводится по возрастанию, и 2, если по убыванию.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_UI2 &#124; VT_ARRAY<br /><br /> Описание: Потребители используют это свойство для указания набор столбцов в наборе строк должны рассматриваться как значения по умолчанию. Значения для этих столбцов не передаются. При получении данных из потребительского объекта набора строк поставщик не требует привязки для этих столбцов.<br /><br /> Каждый элемент массива должен быть порядковым номером столбца в объекте набора строк. Если переданы недопустимые порядковые номера, это приведет к ошибке времени выполнения.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R Чтение и запись: чтение и запись<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Тип: VT_UI2 &#124; VT_ARRAY<br /><br /> Описание: Это свойство используется потребителем, чтобы предоставить указание для сервера для указания сортировки упорядочиваются данные столбцов. Поставщик не проводит никакой проверки и предполагает, что потребитель выполняет существующую спецификацию. Сервер использует это свойство для проведения оптимизации.<br /><br /> Информация об упорядочивании каждого столбца представлена парой элементов массива. Первый элемент пары — номер столбца. Второй элемент пары равен 1, если сортировка проводится по возрастанию, и 2, если по убыванию.|  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка типов табличное значение параметра OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Использование возвращающих табличные значения параметры &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Использование возвращающих табличные значения параметры & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

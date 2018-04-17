@@ -1,16 +1,16 @@
 ---
-title: "bcp_setcolfmt | Документы Microsoft"
-ms.custom: 
+title: bcp_setcolfmt | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_setcolfmt
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 874c1231997c04069c2f508f5a7529a8950eb261
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,13 +76,13 @@ RETCODE bcp_setcolfmt (
  *pValue*  
  Является указателем на значение, связанное со *свойством*. Это позволяет установить отдельно каждое свойство формата столбца.  
   
- *cbvalue*  
+ *cbValue*  
  Длина буфера свойств, в байтах.  
   
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эта функция заменяет функцию **bcp_colfmt** . Вся функциональность **bcp_colfmt** реализована в функции **bcp_setcolfmt** . Дополнительно реализована поддержка параметров сортировки столбца. Рекомендуется устанавливать следующие атрибуты формата столбца в данной последовательности:  
   
  BCP_FMT_SERVER_COL  
@@ -115,9 +116,9 @@ RETCODE bcp_setcolfmt (
  [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) функцию можно использовать для сохранения спецификации формата.  
   
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>Поддержка функции bcp_setcolfmt для улучшенной даты и функций времени  
- Типы, используемые со свойством BCP_FMT_TYPE для типов даты и времени, в том, как указано в [изменения массового копирования для улучшенной даты и времени типы &#40; OLE DB и ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Типы, используемые со свойством BCP_FMT_TYPE для типов даты и времени, в том, как указано в [изменения массового копирования для улучшенной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Дополнительные сведения см. в разделе [даты и времени усовершенствования &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [даты и времени усовершенствования & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

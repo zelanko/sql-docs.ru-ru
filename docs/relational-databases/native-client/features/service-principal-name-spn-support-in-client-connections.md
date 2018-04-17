@@ -1,15 +1,15 @@
 ---
-title: "Поддержка имени участника-службы (SPN) в клиентских соединениях | Документы Microsoft"
-ms.custom: 
+title: Поддержка имени участника-службы (SPN) в клиентских соединениях | Документы Microsoft
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0670bbb967a10d2d14750f2a32a321cc912fce
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9281aae9e4e6aef2a48c0f99362689512613b405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 
   Начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], поддержка имен участников-служб (SPN) была расширена для поддержки взаимной проверки подлинности по всем протоколам. В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], имена участников-служб поддерживались только для протокола Kerberos по протоколу TCP при по умолчанию имени участника-службы для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляр был зарегистрирован с помощью Active Directory.  
   
- Имена участников-служб используются протоколом проверки подлинности для определения учетной записи, в котором [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запускается экземпляр. Если учетная запись экземпляра известна, то можно использовать проверку подлинности Kerberos для взаимной проверки подлинности клиентом и сервером. Если учетная запись экземпляра неизвестна, то используется только проверка подлинности NTLM, которая обеспечивает проверку подлинности клиента сервером. В настоящее время [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент выполняет преобразование проверки подлинности, получая имя участника-службы из экземпляра имени и свойств сетевого подключения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]попытаются зарегистрировать имена участников-служб при запуске, или они могут быть зарегистрированы вручную. Однако регистрация завершится ошибкой, если учетная запись, которая пытается зарегистрировать имена участников-служб, не имеет достаточных прав доступа.  
+ Имена участников-служб используются протоколом проверки подлинности для определения учетной записи, в котором [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запускается экземпляр. Если учетная запись экземпляра известна, то можно использовать проверку подлинности Kerberos для взаимной проверки подлинности клиентом и сервером. Если учетная запись экземпляра неизвестна, то используется только проверка подлинности NTLM, которая обеспечивает проверку подлинности клиента сервером. В настоящее время [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент выполняет преобразование проверки подлинности, получая имя участника-службы из экземпляра имени и свойств сетевого подключения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] попытаются зарегистрировать имена участников-служб при запуске, или они могут быть зарегистрированы вручную. Однако регистрация завершится ошибкой, если учетная запись, которая пытается зарегистрировать имена участников-служб, не имеет достаточных прав доступа.  
   
- Учетные записи домена и компьютера автоматически регистрируются в Active Directory. Их можно использовать в качестве имен участников-служб, или же администраторы могут определить собственные имена участников-служб. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Безопасная проверка подлинности стала более управляемой и надежной благодаря возможности клиента напрямую указать имя участника-службы для использования.  
+ Учетные записи домена и компьютера автоматически регистрируются в Active Directory. Их можно использовать в качестве имен участников-служб, или же администраторы могут определить собственные имена участников-служб. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Безопасная проверка подлинности стала более управляемой и надежной благодаря возможности клиента напрямую указать имя участника-службы для использования.  
   
 > [!NOTE]  
 >  Указанное клиентским приложением имя участника-службы используется только в том случае, если соединение устанавливается с использованием встроенной безопасности Windows.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/25/2018
  Поведение нового соединения реализуется клиентом, поэтому оно не зависит от версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Связанные серверы и делегирование  
- При создании связанных серверов,  **@provstr**  параметр [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) может использоваться для указания сервера и резервным имена участников-служб. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в строках соединения клиента: проще и надежнее установить соединения, использующие проверку подлинности Kerberos.  
+ При создании связанных серверов, **@provstr** параметр [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) может использоваться для указания сервера и резервным имена участников-служб. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в строках соединения клиента: проще и надежнее установить соединения, использующие проверку подлинности Kerberos.  
   
  Делегирование со связанными серверами требует проверки подлинности Kerberos.  
   
@@ -111,9 +112,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Синтаксис ODBC и OLE DB для поддержки имен участников-служб  
  Сведения о синтаксисе см. в следующих разделах.  
   
--   [Имена участника-службы &#40; Имена участников-служб &#41; в клиентских подключений &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Имена участника-службы &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Имена участника-службы &#40; Имена участников-служб &#41; в клиентских подключений &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Имена участника-службы &#40;имена участников-служб&#41; в клиентских соединениях &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Дополнительные сведения об образцах приложений, которые демонстрируют эту функцию, см. в разделе [Образцы программирования для данных SQL Server](http://msftdpprodsamples.codeplex.com/).  
   

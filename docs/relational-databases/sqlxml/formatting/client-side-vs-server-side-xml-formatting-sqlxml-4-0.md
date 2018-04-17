@@ -1,16 +1,16 @@
 ---
-title: "Сравнение запроса XPath на стороне клиента и Форматирование серверные XML (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: Сравнение запроса XPath на стороне клиента и Форматирование серверные XML (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Сравнение запроса XPath на стороне клиента и Форматирование XML-кода на сервере (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-В этом разделе описываются основные различия между форматированием XML-кода в SQLXML на стороне клиента и на стороне сервера.  
+  В этом разделе описываются основные различия между форматированием XML-кода в SQLXML на стороне клиента и на стороне сервера.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Запросы к нескольким наборам строк не поддерживаются при форматировании на стороне клиента  
  Запросы, создающие несколько наборов строк, не поддерживаются при использовании форматирования XML-кода на стороне клиента. Например, предположим, что имеется виртуальный каталог, в котором определено форматирование на стороне клиента. Рассмотрим этот образец шаблона, который имеет две инструкции SELECT в  **\<sql:query >** блока:  
@@ -221,8 +222,8 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 -   При указании **client-side-xml = «1»** (true) в шаблоне, запрашивается форматирование XML на стороне клиента. В этом случае можно указать предложение FOR XML NESTED. При указании FOR XML AUTO форматирование XML-кода происходит на серверной стороне хотя **client-side-xml = «1»** указанные в шаблоне.  
   
 ## <a name="see-also"></a>См. также  
- [FOR XML вопросы безопасности &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [Форматирование XML на стороне клиента &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [Форматирование XML на стороне сервера &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [Вопросы безопасности FOR XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Форматирование XML на стороне клиента &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [Форматирование XML на стороне сервера &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

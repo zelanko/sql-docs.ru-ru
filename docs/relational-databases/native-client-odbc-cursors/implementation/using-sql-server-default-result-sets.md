@@ -1,15 +1,15 @@
 ---
-title: "Результирующие наборы по умолчанию SQL Server с помощью | Документы Microsoft"
-ms.custom: 
+title: Результирующие наборы по умолчанию SQL Server с помощью | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea597efcb35428b65bb47a25e84e7790905c526a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5c5b7458ad4d1a80b7dc93d58d90ed35317ee502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sql-server-default-result-sets"></a>Использование результирующих наборов по умолчанию в SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);
   
  Каждый раз, когда эти атрибуты имеют значения по умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] результирующий набор по умолчанию. Результирующие наборы по умолчанию могут использоваться для любой инструкции SQL, поддерживаемой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и являются самым эффективным методом передачи всего результирующего набора клиенту.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]улучшенную поддержку нескольких активных результирующих наборов (MARS); Теперь приложения могут иметь более одного активного результирующего набора в расчете на соединение. По умолчанию режим MARS не включен.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] улучшенную поддержку нескольких активных результирующих наборов (MARS); Теперь приложения могут иметь более одного активного результирующего набора в расчете на соединение. По умолчанию режим MARS не включен.  
   
  До версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] принимаемые по умолчанию результирующие наборы не поддерживали несколько активных инструкций для одного соединения. После выполнения инструкции SQL для соединения сервер не принимает команд от клиента в этом соединении до тех пор, пока не будут обработаны все строки результирующего набора. Исключение составляют запросы на отмену оставшейся части результирующего набора. Для отмены оставшейся части частично обработанного результирующего набора, вызовите [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) или [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) с *fOption* параметр должен иметь значение SQL_CLOSE. Чтобы завершить частично обработанного результирующего набора и тестирования на наличие другой результирующий набор, вызовите [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md). Если приложение ODBC пытается выполнить команду над дескриптором соединения до полной обработки результирующего набора по умолчанию, вызов приводит к возникновению ошибки SQL_ERROR и вызов **SQLGetDiagRec** возвращает:  
   

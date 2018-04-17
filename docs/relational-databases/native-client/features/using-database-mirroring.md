@@ -1,15 +1,15 @@
 ---
-title: "Использование зеркального отображения базы данных | Документы Microsoft"
-ms.custom: 
+title: Использование зеркального отображения базы данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63e362b186725b5e9adf15721fcfd4154be3148d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5b7bdad805cf9ebcfead0df42cd847db741f41ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вместо него.  
   
- Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не требуется писать дополнительный код или выполнять другие действия после настройки для базы данных.  
+ Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не требуется писать дополнительный код или выполнять другие действия после настройки для базы данных.  
   
  Зеркальное отображение базы данных, реализованное отдельно для каждой базы данных, хранит копию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] рабочей базы данных на резервном сервере. Это или «горячий», или «теплый» резервный сервер, в зависимости от конфигурации и состояния сеанса зеркального отображения базы данных. Сервер горячей замены поддерживает быструю отработку отказа без потери зафиксированных транзакций, а «горячий» резервный сервер поддерживает принудительное обслуживание (с возможной потерей данных).  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  При указании имен зеркальных баз данных можно использовать псевдонимы.  
   
 > [!NOTE]  
->  Сведения о начальных попытках соединения и повторного соединения с зеркальной базой данных см. в разделе [подключение клиентов к сеансу зеркального отображения базы данных &#40; SQL Server &#41; ](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Сведения о начальных попытках соединения и повторного соединения с зеркальной базой данных см. в разделе [подключение клиентов к сеансу зеркального отображения базы данных &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Замечания по программированию  
  Если сервер, на котором размещается основная база данных, дает сбой, в ответ на вызовы API клиентское приложение получает ошибки, которые указывают на потерю соединения с базой данных. Если это происходит, все незафиксированные изменения в базе данных теряются и выполняется откат текущей транзакции. При этом приложение должно закрыть соединение (или освободить объект источника данных) и вновь его открыть. Соединение прозрачно перенаправляется на зеркальную базу данных, которая к этому моменту выступает в роли основного сервера.  

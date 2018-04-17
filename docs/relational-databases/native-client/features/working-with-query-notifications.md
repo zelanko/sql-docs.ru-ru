@@ -1,15 +1,15 @@
 ---
-title: "Работа с уведомлениями о запросах | Документы Microsoft"
-ms.custom: 
+title: Работа с уведомлениями о запросах | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], query notifications
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6405ed5efa051a7b8c5bb7865b9f2a469c640592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: faeff47d5daeeb46601020f4e3e31a4c4086386d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
  Уведомления отправляются только один раз. Чтобы получать постоянные уведомления об изменении данных, необходимо создавать новую подписку после обработки каждого уведомления путем повторного выполнения запроса.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственные клиентские приложения обычно получают уведомления при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) используется для чтения уведомлений из очереди, связанной со службой, указанных в параметрах уведомлений.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственные клиентские приложения обычно получают уведомления при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) используется для чтения уведомлений из очереди, связанной со службой, указанных в параметрах уведомлений.  
   
 > [!NOTE]  
 >  В запросах необходимо указывать имена таблиц, для которых требуется отправлять уведомления, например `dbo.myTable`. Имена таблиц должны состоять из двух частей. Подписка будет недействительной в случае использования трех- или четырехкомпонентных имен.  

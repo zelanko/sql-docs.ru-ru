@@ -1,31 +1,32 @@
 ---
-title: "График архитектуры SQL | Документы Microsoft"
-ms.custom: 
+title: График архитектуры SQL | Документы Microsoft
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 40a1cf05c5c17be3c11d25cd5e8792eb504c2fa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-graph-architecture"></a>График архитектуры SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -105,20 +106,20 @@ ms.lasthandoff: 03/19/2018
 Неявные столбцы в таблице узлов  
 |Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |столбец внутреннего graph_id  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |Идентификатор столбца внешних узлов  |
+|graph_id_\<hex_string > |bigint |1  |столбец внутреннего graph_id  |
+|$node_id_\<hex_string > |NVARCHAR   |0  |Идентификатор столбца внешних узлов  |
 
 Неявные столбцы в краевой таблицы  
 |Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |столбец внутреннего graph_id  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |Идентификатор столбца внешнего края  |
+|graph_id_\<hex_string > |bigint |1  |столбец внутреннего graph_id  |
+|$edge_id_\<hex_string > |NVARCHAR   |0  |Идентификатор столбца внешнего края  |
 |from_obj_id_\<hex_string>  |INT    |1  |внутренний узел из объекта с идентификатором  |
 |from_id_\<hex_string>  |bigint |1  |Внутренняя из graph_id узла  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |внешние из идентификатор узла  |
+|$from_id_\<hex_string > |NVARCHAR   |0  |внешние из идентификатор узла  |
 |to_obj_id_\<hex_string>    |INT    |1  |Внутренний идентификатор объекта узла  |
 |to_id_\<hex_string>    |bigint |1  |Внутренний узел graph_id  |
-|$to_id_\<hex_string>   |NVARCHAR   |0  |внешние идентификатор узла  |
+|$to_id_\<hex_string >   |NVARCHAR   |0  |внешние идентификатор узла  |
  
 ### <a name="system-functions"></a>Системные функции
 Будут добавлены следующие встроенные функции. Это поможет пользователям извлекать данные из созданных столбцов. Обратите внимание, что эти методы не будет проверять входные данные пользователя. Если пользователь указывает недопустимый `sys.node_id` извлекают подходящую часть и возврат его в метод. Например, будет использоваться OBJECT_ID_FROM_NODE_ID `$node_id` качестве входных данных и возвращает идентификатор object_id таблицы, принадлежит данный узел. 

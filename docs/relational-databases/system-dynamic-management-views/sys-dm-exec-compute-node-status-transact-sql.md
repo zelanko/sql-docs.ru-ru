@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_compute_node_status (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_compute_node_status (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODE_STATUS_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f898f754f0b39b0f5746d8ed076c75d26354bccd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ed4f5716742670074e0307ba8d3dd364645c709
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|Уникален в пределах кластера масштабируемых независимо от типа.|  
 |process_id|**int**|||  
-|process_name|**nvarchar(255)**|Логическое имя узла.|Любая строка соответствующей длины.|  
+|имя_процесса|**nvarchar(255)**|Логическое имя узла.|Любая строка соответствующей длины.|  
 |allocated_memory|**bigint**|Общий объем выделенной памяти на данном узле.||  
 |available_memory|**bigint**|Общий объем памяти на данном узле.||  
 |process_cpu_usage|**bigint**|Общий процесс ЦП, в тактах.||  
@@ -59,6 +60,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>См. также  
  [PolyBase, устранение неполадок с помощью динамических административных представлений](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления &#40; относящиеся к базе данных Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

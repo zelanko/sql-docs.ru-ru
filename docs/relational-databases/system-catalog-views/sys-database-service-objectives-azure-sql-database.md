@@ -23,11 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: edde7e88247c0cb8ad05264e4d589258868909ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/05/2018
 |-----------------|---------------|-----------------|  
 |database_id|int|Идентификатор базы данных, уникальное внутри экземпляра сервера базы данных SQL Azure. Joinable с [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Уровень обслуживания для базы данных или хранилища данных: **основные**, **Стандартная**, **Premium**, **общего назначения**,  **Критический для бизнеса**, или **хранилища данных**.|  
-|service_objective|sysname|Ценовой категории базы данных. Если база данных находится в пуле эластичных, возвращает **ElasticPool**.<br /><br /> На **основные** уровня возвращает **основные**.<br /><br /> Одной базы данных в уровень обслуживания standard возвращает текущих допустимых значений для этого уровня.<br /><br /> Одной базы данных в уровня premium возвращает текущих допустимых значений для этого уровня службы.<br /><br />Одной базы данных на уровне службы общего назначения возвращает текущих допустимых значений для этого уровня службы.<br /><br />Одной базы данных на уровне службы важными бизнес возвращает текущих допустимых значений для этого уровня службы.<br /><br /> Хранилище данных SQL возвращает текущих допустимых значений для хранилища данных SQL.|  
+|значение service_objective|sysname|Ценовой категории базы данных. Если база данных находится в пуле эластичных, возвращает **ElasticPool**.<br /><br /> На **основные** уровня возвращает **основные**.<br /><br /> Одной базы данных в уровень обслуживания standard возвращает текущих допустимых значений для этого уровня.<br /><br /> Одной базы данных в уровня premium возвращает текущих допустимых значений для этого уровня службы.<br /><br />Одной базы данных на уровне службы общего назначения возвращает текущих допустимых значений для этого уровня службы.<br /><br />Одной базы данных на уровне службы важными бизнес возвращает текущих допустимых значений для этого уровня службы.<br /><br /> Хранилище данных SQL возвращает текущих допустимых значений для хранилища данных SQL.|  
 |elastic_pool_name|sysname|Имя [эластичного пула](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , к которой принадлежит базе данных. Возвращает **NULL** при одной базы данных или warehoue данных базы данных.|  
   
 ## <a name="permissions"></a>Разрешения  

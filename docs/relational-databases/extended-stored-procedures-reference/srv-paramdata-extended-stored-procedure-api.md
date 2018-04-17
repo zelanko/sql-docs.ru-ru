@@ -1,16 +1,16 @@
 ---
-title: "srv_paramdata (интерфейс API расширенных хранимых процедур) | Документы Майкрософт"
-ms.custom: 
+title: srv_paramdata (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramdata
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5837ecf48a6e97f5408d86f20b39e057285d64b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
  Возвращает значение параметра вызова удаленной хранимой процедуры. Эта функция заменена функцией **srv_paraminfo**.  
   
@@ -62,7 +62,7 @@ n
  Номер параметра. Первый параметр имеет номер 1.  
   
 ## <a name="returns"></a>Возвращает  
- Указатель на значение параметра. Если значение *n*-го параметра равно NULL, не существует никакого *n*-го параметра или удаленной хранимой процедуры, то возвращается значение NULL. Если значением параметра является строка, она не может завершаться нулевым байтом. Используйте функцию **srv_paramlen**, чтобы определить длину строки.  
+ Указатель на значение параметра. Если *n*-й параметр равен NULL, не *n*-го параметра или удаленной хранимой процедуры возвращается значение NULL. Если значением параметра является строка, она не может завершаться нулевым байтом. Используйте функцию **srv_paramlen**, чтобы определить длину строки.  
   
  Если параметр принадлежит к одному из типов данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то эта функция возвращает указанные ниже значения. В данных указателя показано, является ли этот указатель допустимым для типа данных (VP), NULL или не применимым (N/A), а также содержимое тех данных, на которые он указывает.  
   
@@ -79,7 +79,7 @@ n
   
  \* Данные не завершаются нулевым байтом; при отсечении данных >255 символов предупреждение не выдается.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если известно имя параметра, то с помощью функции **srv_paramnumber** можно возвратить его номер. Используйте функцию **srv_paramlen**, чтобы определить, имеет ли параметр значение NULL.  
   
  Когда удаленная хранимая процедура вызывается с параметрами, то эти параметры могут быть переданы либо по имени, либо по позиции (без указания имени). Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC вызывается и при возникновении ошибки, однако он действует так, как будто параметры не были переданы, и функция **srv_rpcparams** возвращает значение 0.  
@@ -87,7 +87,7 @@ n
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

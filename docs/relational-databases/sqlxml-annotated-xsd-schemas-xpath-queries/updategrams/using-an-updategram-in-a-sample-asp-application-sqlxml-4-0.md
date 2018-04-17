@@ -1,36 +1,37 @@
 ---
-title: "С помощью диаграммы обновления в образце приложения ASP (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: С помощью диаграммы обновления в образце приложения ASP (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ASP applications [SQLXML]
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81fae23978380765fdebc8868538fb4328dce4e1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3af64957b63f377038eca09b55245f1822f16d66
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Использование диаграммы обновления в образце приложения ASP (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Это приложение Active Server Pages (ASP) позволяет обновлять сведения о заказчике, содержащиеся в таблице Person.Contact базы данных-образца AdventureWorks Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Приложение выполняет следующие действия.  
+  Это приложение Active Server Pages (ASP) позволяет обновлять сведения о заказчике, содержащиеся в таблице Person.Contact базы данных-образца AdventureWorks Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Приложение выполняет следующие действия.  
   
 -   Запрашивает у пользователя идентификатор контактного лица.  
   
@@ -167,6 +168,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности диаграмм обновления &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
