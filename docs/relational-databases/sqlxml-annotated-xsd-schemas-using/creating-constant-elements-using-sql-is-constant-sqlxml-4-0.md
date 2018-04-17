@@ -1,16 +1,16 @@
 ---
-title: "Создание постоянных элементов при помощи sql: является константа (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: 'Создание постоянных элементов при помощи sql: является константа (SQLXML 4.0) | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a4557495db906f4f13a5b5346c11047166002df
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ff5fac71ef48053e57ae3410adfadb3a2b46cbe7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Создание постоянных элементов при помощи sql:is-constant (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Чтобы указать постоянный элемент — то есть элемент в схеме XSD, который не сопоставляется любой таблицы базы данных или столбца, можно использовать **sql: является константа** заметки. Эта заметка имеет логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false. **Sql: является константа** заметки, которые можно задать для элемента, который не поддерживает какие-либо атрибуты. Если она задана для элемента, имеющего значение true (или 1), то этот элемент не будет сопоставлен с базой данных, но будет по-прежнему отображаться в XML-документе.  
+  Чтобы указать постоянный элемент — то есть элемент в схеме XSD, который не сопоставляется любой таблицы базы данных или столбца, можно использовать **sql: является константа** заметки. Эта заметка имеет логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false. **Sql: является константа** заметки, которые можно задать для элемента, который не поддерживает какие-либо атрибуты. Если она задана для элемента, имеющего значение true (или 1), то этот элемент не будет сопоставлен с базой данных, но будет по-прежнему отображаться в XML-документе.  
   
  **Sql: является константа** заметки можно использовать для:  
   

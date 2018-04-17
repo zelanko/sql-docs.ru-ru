@@ -1,16 +1,16 @@
 ---
-title: "sys.database_connection_stats (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.database_connection_stats (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,23 +23,24 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 0ab4255a4c13199a445335eef491ca0986ab3287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] базы данных **подключения** события, предоставляя общие сведения о базе данных успешных и неудачных подключений. Дополнительные сведения о событиях подключения см. в разделе типы событий в [sys.event_log &#40; База данных Azure SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] базы данных **подключения** события, предоставляя общие сведения о базе данных успешных и неудачных подключений. Дополнительные сведения о событиях подключения см. в разделе типы событий в [sys.event_log &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Статистика|Тип|Description|  
+|Статистика|Тип|Описание|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time и end_time интервала  
- Событие включается в интервал статистической обработки при возникновении события *на* или *после***start_time** и *перед*  **end_time** для этого интервала. Например, событие, которое происходит точно в `2012-10-30 19:25:00.0000000`, будет включено только во второй интервал, показанный ниже.  
+ Событие включается в интервал статистической обработки при возникновении события *на* или *после *** start_time** и *перед *** end_time** для этого интервала. Например, событие, которое происходит точно в `2012-10-30 19:25:00.0000000`, будет включено только во второй интервал, показанный ниже.  
   
 ```  
   
@@ -80,13 +81,13 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Исключенные ошибки  
  Это представление может содержать не все сведения о подключениях и ошибках:  
   
--   Это представление содержит не все [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ошибки, которые могут возникнуть только указанные в типы событий в базы данных [sys.event_log &#40; База данных Azure SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Это представление содержит не все [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ошибки, которые могут возникнуть только указанные в типы событий в базы данных [sys.event_log &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Если в центре обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] возникла ошибка компьютера, в таблице событий может отсутствовать небольшой объем данных логического сервера.  
   
 -   Если IP-адрес заблокирован через DoSGuard, события подключения с этого IP-адреса не могут собираться и не будут отображаться в этом представлении.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователи, имеющие разрешение на доступ к **master** базы данных имеют доступ только для чтения к этому представлению.  
   
 ## <a name="example"></a>Пример  
@@ -98,7 +99,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок базы данных Azure SQL для Windows](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

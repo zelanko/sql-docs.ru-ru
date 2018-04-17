@@ -1,30 +1,31 @@
 ---
-title: "Возвращающие табличные значения параметров (ODBC) | Документы Microsoft"
-ms.custom: 
+title: Возвращающие табличные значения параметров (ODBC) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddf538c325283ad20c0e75ee73c49799fe890404
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdc6a4c4e48dbb9c1d42d751493e3e6356da9678
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/24/2018
 
   Поддержка в ODBC возвращающих табличное значение параметров позволяет клиентским приложениям с большей эффективностью передавать параметризованные данные на сервер за счет передачи нескольких строк в ходе одного вызова.  
   
- Сведения о возвращающих табличные значения параметров на сервере см. в разделе [использование возвращающих табличные значения параметры &#40; компонент Database Engine &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Сведения о возвращающих табличные значения параметров на сервере см. в разделе [использование возвращающих табличные значения параметров &#40;СУБД&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  В ODBC существует два способа передачи на сервер возвращающих табличное значение параметров.  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/24/2018
  Описывает, как следует выполнять типичные задачи.  
   
 ## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Возвращающие табличные значения параметры &#40; Собственный клиент SQL Server &#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Собственный клиент SQL Server &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Возвращающие табличные значения параметров &#40;собственный клиент SQL Server&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

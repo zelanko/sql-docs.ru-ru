@@ -1,30 +1,31 @@
 ---
-title: "SQLSetStmtAttr | Документы Microsoft"
-ms.custom: 
+title: SQLSetStmtAttr | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ccde3758ee43b69112e9d91bdaa7c26f2be01dd5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 01/24/2018
   
  Дополнительные сведения см. в разделе [метаданные возвращающего табличное значение параметра для подготовленных инструкций](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>Поддержка разреженных столбцов функцией SQLSetStmtAttr  
- SQLSetStmtAttr можно использовать для задания атрибута SQL_SOPT_SS_NAME_SCOPE. Дополнительные сведения см. в разделе SQL_SOPT_SS_NAME_SCOPE, далее в этом разделе. Дополнительные сведения о разреженных столбцах см. в разделе [Поддержка разреженных столбцов &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ SQLSetStmtAttr можно использовать для задания атрибута SQL_SOPT_SS_NAME_SCOPE. Дополнительные сведения см. в разделе SQL_SOPT_SS_NAME_SCOPE, далее в этом разделе. Дополнительные сведения о разреженных столбцах см. в разделе [Поддержка разреженных столбцов &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="statement-attributes"></a>Атрибуты инструкции  
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие атрибуты инструкций, специфичные для драйвера.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/24/2018
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  Атрибут SQL_SOPT_SS_CURSOR указывает, будет ли драйвер использовать для курсоров специфичные для данного драйвера параметры настройки производительности. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) не допускается, если эти параметры заданы. Значение по умолчанию равно SQL_CO_OFF. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|*ValuePtr* value|Описание|  
+|*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|По умолчанию. Отключает быстрые однопроходные, только для чтения курсоры и автоматическую выборку, включает **SQLGetData** на курсоры однопроходный, только для чтения. Если атрибут SQL_SOPT_SS_CURSOR_OPTIONS имеет значение SQL_CO_OFF, тип курсора не изменится. То есть быстрый однопроходный курсор останется быстрым однопроходным курсором. Чтобы изменить тип курсора, приложение должно установить курсор другого типа с помощью **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Обеспечивает быстрый однопроходный, только для чтения курсоры, отключает **SQLGetData** на курсоры однопроходный, только для чтения.|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/24/2018
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  Атрибут SQL_SOPT_SS_DEFER_PREPARE определяет подготовленных немедленно или откладывается инструкцию **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) или [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) выполняется. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 и более ранних версиях это свойство не учитывается (подготовка не откладывается). Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|*ValuePtr* value|Описание|  
+|*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
 |SQL_DP_ON|По умолчанию. После вызова метода [SQLPrepare, функция](http://go.microsoft.com/fwlink/?LinkId=59360), Подготовка инструкции откладывается до **SQLExecute** вызывается или операции над метасвойством (**SQLDescribeCol** или **SQLDescribeParam**) выполняется.|  
 |SQL_DP_OFF|Инструкция подготавливается как можно скорее **SQLPrepare** выполняется.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/24/2018
   
  Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|*ValuePtr* value|Описание|  
+|*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|По умолчанию. Драйвер ODBC не использует настройки локали на клиенте при преобразовании данных в денежном формате, формате даты и времени в строковые данные.|  
 |SQL_RE_ON|Драйвер ODBC использует настройки локали на клиенте при преобразовании данных в денежном формате, формате даты и времени в символьные данные.|  
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/24/2018
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  Атрибут SQL_SOPT_SS_TEXTPTR_LOGGING переключает занесение операций к столбцам, содержащим **текст** или **изображения** данные. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|*ValuePtr* value|Описание|  
+|*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Отключает ведение журнала операций с **текст** и **изображения** данные.|  
 |SQL_TL_ON|По умолчанию. Ведение журнала операций с **текст** и **изображения** данные.|  
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/24/2018
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  В результирующем наборе атрибут SQL_SOPT_SS_HIDDEN_COLUMNS предоставляет столбцы, скрытые в инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. По умолчанию драйвер не предоставляет доступ к этим столбцам. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|*ValuePtr* value|Описание|  
+|*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|По умолчанию. Столбцы FOR BROWSE в результирующем наборе скрыты.|  
 |SQL_HC_ON|Обеспечивает доступ к столбцам FOR BROWSE.|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/24/2018
   
  Атрибут SQL_SOPT_SS_NAME_SCOPE принадлежит к типу SQLULEN.  
   
-|*ValuePtr* value|Описание|  
+|*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|По умолчанию.<br /><br /> При использовании возвращающих табличное значение параметров этот атрибут указывает, что нужно возвратить метаданные реально существующих таблиц.<br /><br /> При использовании разреженных столбцах, SQLColumns будет возвращать только те столбцы, которые не являются членами разреженного **column_set**.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Указывает, что приложению требуются метаданные для табличного типа, а не для реально существующих таблиц (функции работы с каталогами должны возвращать метаданные для табличных типов). Затем приложение передает TYPE_NAME табличное значение параметра как *TableName* параметра.|  

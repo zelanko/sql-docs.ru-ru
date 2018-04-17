@@ -1,16 +1,16 @@
 ---
-title: "По умолчанию элементы сопоставления XSD-атрибуты для столбцов таблицы (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: По умолчанию элементы сопоставления XSD-атрибуты для столбцов таблицы (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XSD schemas [SQLXML], mapping attributes and elements
@@ -29,26 +29,27 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8307e0810ba9cfd55336287cae38526e91845b34
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2fb1d00e1ec69ede259af652c6d463084ba0501c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-По умолчанию элемент сложного типа в аннотированной схеме XSD сопоставляется с одноименной таблицей (представлением) в указанной базе данных, а элемент или атрибут простого типа — с одноименным столбцом этой таблицы.  
+  По умолчанию элемент сложного типа в аннотированной схеме XSD сопоставляется с одноименной таблицей (представлением) в указанной базе данных, а элемент или атрибут простого типа — с одноименным столбцом этой таблицы.  
   
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Указание сопоставления по умолчанию  
- В этом примере в схеме XSD не задано никаких заметок. **\<Person.Contact >** элемент имеет сложный тип и поэтому по умолчанию сопоставляется с таблицей Person.Contact в базе данных AdventureWorks. Все атрибуты (ContactID, FirstName, LastName)  **\<Person.Contact >** элемента относятся к простому типу и по умолчанию сопоставляются столбцам с теми же именами в таблице Person.Contact.  
+ В этом примере в схеме XSD не задано никаких заметок.  **\<Person.Contact >** элемент имеет сложный тип и поэтому по умолчанию сопоставляется с таблицей Person.Contact в базе данных AdventureWorks. Все атрибуты (ContactID, FirstName, LastName)  **\<Person.Contact >** элемента относятся к простому типу и по умолчанию сопоставляются столбцам с теми же именами в таблице Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>Б. Сопоставление XML-элемента со столбцом базы данных  
- Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию. **\<Person.Contact >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем в базе данных. Элементы  **\<FirstName >** и  **\<LastName >** и **EmployeeID** атрибут относятся к простому типу и, таким образом, сопоставляются с столбцы с одинаковыми именами. Единственная разница между этим и предыдущим примером заключается в том, что для сопоставления полей FirstName и LastName используются элементы.  
+ Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию.  **\<Person.Contact >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем в базе данных. Элементы  **\<FirstName >** и  **\<LastName >** и **EmployeeID** атрибут относятся к простому типу и, таким образом, сопоставляются с столбцы с одинаковыми именами. Единственная разница между этим и предыдущим примером заключается в том, что для сопоставления полей FirstName и LastName используются элементы.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -153,7 +154,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>В. Сопоставление XML-элемента со столбцом типа данных XML  
- Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию. **\<Production.ProductModel >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем в базе данных. **ProductModelID** атрибут имеет простой тип и, следовательно, сопоставляются со столбцами с теми же именами. Единственное различие между этим и предыдущих примерах это  **\<инструкции >** элемент сопоставляется со столбцом, который использует **xml** тип данных с помощью **xsd: anyType** типа.  
+ Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию.  **\<Production.ProductModel >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем в базе данных. **ProductModelID** атрибут имеет простой тип и, следовательно, сопоставляются со столбцами с теми же именами. Единственное различие между этим и предыдущих примерах это  **\<инструкции >** элемент сопоставляется со столбцом, который использует **xml** тип данных с помощью **xsd: anyType** типа.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -212,7 +213,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности аннотированной схемы &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Вопросы безопасности схемы с заметками &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [Поддержка типов данных XML в SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

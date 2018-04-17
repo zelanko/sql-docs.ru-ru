@@ -1,16 +1,16 @@
 ---
-title: "Исключение элементов схемы из XML-документа с помощью sql: сопоставленный | Документы Microsoft"
-ms.custom: 
+title: 'Исключение элементов схемы из XML-документа с помощью sql: сопоставленный | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -25,20 +25,21 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ccb3a9d274191ef11c031872062b07e5058acf54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Исключение элементов схемы из XML-документа с помощью sql: сопоставлен
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если вы хотите создать элемент в схеме XSD, не соответствует любой таблицы базы данных (представления) или столбец, и не фигурирующий в XML, можно указать **sql: сопоставленный** заметки.  
+  В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если вы хотите создать элемент в схеме XSD, не соответствует любой таблицы базы данных (представления) или столбец, и не фигурирующий в XML, можно указать **sql: сопоставленный** заметки.  
   
  **Sql: сопоставленный** заметки особенно полезен, если схему нельзя изменять или если схема используется для проверки XML из других источников и еще содержит данные, которые не хранятся в базе данных. **Sql: сопоставленный** заметки отличается от **sql: является константа** тем, что несопоставленные элементы и атрибуты в XML-документе не отображаются.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/12/2018
   
  При сопоставлении этой схемы XSD с таблицей Person.Contact в базе данных AdventureWorks **sql: сопоставленный** указано на **HomeAddress** атрибут, поскольку таблица Employees не хранятся дома адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию. **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию.  **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -112,6 +113,6 @@ ms.lasthandoff: 02/12/2018
  Обратите внимание, что ContactID, FirstName и LastName присутствуют, но не HomeAddress, поскольку в схеме сопоставления задано значение 0 для **sql: сопоставленный** атрибута.  
   
 ## <a name="see-also"></a>См. также  
- [По умолчанию осуществляется сопоставление элементов и атрибутов таблиц и столбцов &#40; XSD SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [По умолчанию осуществляется сопоставление элементов и атрибутов с таблицами и столбцами XSD &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

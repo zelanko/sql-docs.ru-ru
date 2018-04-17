@@ -1,29 +1,30 @@
 ---
-title: "Преобразования, выполняемые с сервера клиенту | Документы Microsoft"
-ms.custom: 
+title: Преобразования, выполняемые с сервера клиенту | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d336c8e61a51967c84535bac977f2cd85fbcf570
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1913574b817d21eb896618161a1618424665a72f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,6 +72,6 @@ ms.lasthandoff: 01/25/2018
 |13|Строка анализируется как литерал ISO и преобразуется в целевой тип. Если попытка оказалась неудачной, то строка анализируется как литерал даты OLE (который также содержит компоненты времени) и преобразуется из даты OLE (DBTYPE_DATE) в целевой тип. Строка должна соответствовать синтаксису литералов типа datetime, за исключением случаев, когда назначением является DBTYPE_DATE или DBTYPE_DBTIMESTAMP. В этом случае для успешного завершения синтаксического анализа формата ISO допускаются литералы типа datetime или time. Условием успешного синтаксического анализа OLE является соответствие строки синтаксису, распознаваемому OLE. Если не удалось выполнить синтаксический анализ строки, то устанавливается значение DBSTATUS_E_CANTCONVERTVALUE. Если значения каких-либо компонентов выходят за пределы диапазона, то устанавливается значение DBSTATUS_E_DATAOVERFLOW.|  
   
 ## <a name="see-also"></a>См. также  
- [Привязки и преобразования &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [Привязки и преобразования &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

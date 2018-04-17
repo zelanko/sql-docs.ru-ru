@@ -1,16 +1,16 @@
 ---
-title: "Общие сведения о диаграммах обновления (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: Общие сведения о диаграммах обновления (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -25,27 +25,28 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Общие сведения о диаграммах обновления (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Можно изменить (вставки, обновления или удаления) базы данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из существующего XML-документа с помощью диаграммы обновления или OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] функции.  
+  Можно изменить (вставки, обновления или удаления) базы данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из существующего XML-документа с помощью диаграммы обновления или OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] функции.  
   
  Функция OPENXML изменяет базу данных, разделяя существующий XML-документ и формируя набор строк, который можно передавать инструкциям INSERT, UPDATE и DELETE. С помощью функции OPENXML операции выполняются непосредственно с таблицами базы данных. Поэтому использование функции OPENXML является наиболее оптимальным вариантом во всех случаях, когда поставщики наборов строк, например таблицы, могут быть источниками.  
   
  Диаграммы обновления, подобно функции OPENXML, позволяют вставлять, обновлять и удалять данные в базе данных. Однако диаграммы обновления работают не с таблицами, а с XML-представлениями, создаваемыми аннотированной XSD-схемой (или XDR-схемой); например, обновления применяются к XML-представлению, созданному сопоставляемой схемой. Схема сопоставления в свою очередь содержит данные, необходимые для сопоставления XML-элементов и атрибутов с соответствующими таблицами и столбцами базы данных. Диаграмма обновления использует эти данные сопоставления, чтобы выполнить обновление таблиц и столбцов базы данных.  
   
 > [!NOTE]  
->  Настоящая документация предназначена для тех, кто знаком с шаблонами и поддержкой схем сопоставления в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [введение в аннотированные схемы XSD &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Для приложений прежних версий, которые используют XDR, в разделе [аннотированные схемы XDR &#40; устарел в SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Настоящая документация предназначена для тех, кто знаком с шаблонами и поддержкой схем сопоставления в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [введение в аннотированные схемы XSD & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Для приложений прежних версий, которые используют XDR, в разделе [аннотированные схемы XDR &#40;в SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Обязательные пространства имен в диаграмме обновления  
  Ключевые слова в диаграмме обновления, такие как  **\<синхронизации >**,  **\<перед >**, и  **\<после >**, существующие в **urn: schemas-microsoft-com: XML-диаграмма обновления** пространства имен. Префикс пространства имен может быть произвольным. В этой документации **updg** обозначает префикс **диаграмма обновления** пространства имен.  
@@ -68,10 +69,10 @@ ms.lasthandoff: 02/12/2018
   
  Следующие определения описывают роль каждого блока.  
   
- **\<before>**  
+ **\<Прежде чем >**  
  Определяет текущее состояние (называемое также «исходным состоянием») экземпляра записи.  
   
- **\<after>**  
+ **\<После >**  
  Определяет новое состояние изменяемых данных.  
   
  **\<sync>**  
@@ -110,7 +111,7 @@ ms.lasthandoff: 02/12/2018
   
  Если диаграмма обновления выполняет сложное обновление (например, вставку записей в несколько таблиц на основе связь родитель потомок, указанный в схеме сопоставления), необходимо явно задать схему сопоставления с помощью  **Схема сопоставления** атрибут, для которого выполняется диаграмма обновления.  
   
- Диаграмма обновления является шаблоном, поэтому заданный в ней путь для схемы сопоставления зависит от расположения файла шаблона (является относительным). Дополнительные сведения см. в разделе [указание схемы с заметками сопоставления в диаграмме обновления &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Диаграмма обновления является шаблоном, поэтому заданный в ней путь для схемы сопоставления зависит от расположения файла шаблона (является относительным). Дополнительные сведения см. в разделе [указание схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="element-centric-and-attribute-centric-mapping-in-updategrams"></a>Элементная и атрибутивная модель сопоставления в диаграммах обновления  
  При сопоставлении по умолчанию (когда сопоставляемая схема не указывается в диаграмме обновления), элементы диаграммы обновления сопоставляются с таблицами и дочерними элементами (в случае элементной модели сопоставления), а атрибуты сопоставляются со столбцами (в случае атрибутивной модели сопоставления).  
@@ -180,6 +181,6 @@ ms.lasthandoff: 02/12/2018
 -   с помощью команды OLE DB.  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности диаграмм обновления &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

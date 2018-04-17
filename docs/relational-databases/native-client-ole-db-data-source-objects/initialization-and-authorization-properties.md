@@ -1,15 +1,15 @@
 ---
-title: "Свойства инициализации и авторизации | Документы Microsoft"
-ms.custom: 
+title: Свойства инициализации и авторизации | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - authorization [OLE DB]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, authorization properties
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5c2658d15a374a4cd971eb0236d5a45dca2c9752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Свойства инициализации и авторизации
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_INIT_ENCRYPT|Тип: VT_BOOL<br /><br /> R Чтение и запись: чтение и запись<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Для шифрования данных, передаваемых по сети, необходимо присвоить свойству SSPROP_INIT_ENCRYPT имеет значение VARIANT_TRUE.<br /><br /> Если включено принудительное шифрование протокола, то шифрование данных производится всегда, независимо от значения SSPROP_INIT_ENCRYPT. Если оно отключено, а для свойства SSPROP_INIT_ENCRYPT задано значение VARIANT_TRUE, то шифрование будет выполняться.<br /><br /> Если шифрование протокола отключено, а для свойства SSPROP_INIT_ENCRYPT задано значение VARIANT_FALSE, то шифрование не будет выполняться.|  
 |SSPROP_INIT_FAILOVERPARTNER|Тип: VT_BSTR<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Описание: Определяет имя участника отработки отказа для зеркального отображения базы данных. Является свойством инициализации и может быть задано только перед инициализацией. После инициализации оно будет возвращать имя партнера по обеспечению отработки отказа (если есть), возвращенное сервером-источником.<br /><br /> Это позволяет смарт-приложениям кэшировать последний определенный сервер резервного копирования, однако они должны учитывать, что данные обновляются только при первом установлении соединения (или при возобновлении, при наличии пула) и могут устареть в случае длительных соединений.<br /><br /> После установления соединения приложение может запросить этот атрибут, чтобы идентифицировать партнера по обеспечению отработки отказа. Если сервер-источник не имеет партнера по обеспечению отработки отказа, то это свойство вернет пустую строку. Дополнительные сведения см. в разделе [использование зеркального отображения базы данных](../../relational-databases/native-client/features/using-database-mirroring.md).|  
 |SSPROP_INIT_FILENAME|Тип: VT_BSTR<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Описание: Задает имя первичного файла присоединяемой базы данных. Эта база данных присоединяется и становится для соединения базой данных по умолчанию. Перед использованием свойства SSPROP_INIT_FILENAME необходимо указать имя базы данных в свойстве инициализации DBPROP_INIT_CATALOG. Если имя базы данных не существует, то выполняется поиск имени первичного файла, указанного в свойстве SSPROP_INIT_FILENAME, и присоединяется база данных с именем, указанным в свойстве DBPROP_INIT_CATALOG. Если база данных уже была присоединена, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ее снова не присоединяет.|  
-|SSPROP_INIT_MARSCONNECTION|Тип: VT_BOOL<br /><br /> R Чтение и запись: чтение и запись<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Определяет, разрешены для соединения нескольких активные результирующие наборы (MARS). Перед установлением соединения с базой данных этот параметр должен быть установлен в значение true. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов &#40; Режим MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|Тип: VT_BOOL<br /><br /> R Чтение и запись: чтение и запись<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Определяет, разрешены для соединения нескольких активные результирующие наборы (MARS). Перед установлением соединения с базой данных этот параметр должен быть установлен в значение true. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов & #40; Режим MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|Тип: VT_BSTR<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Описание: Сетевой адрес сервера, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указанного в свойстве DBPROP_INIT_DATASOURCE.|  
 |SSPROP_INIT_NETWORKLIBRARY|Тип: VT_BSTR<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Описание: Имя сетевой библиотеки (DLL), используемый для обмена данными с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не должно включать путь или расширение DLL.<br /><br /> Значение по умолчанию можно настроить с помощью средства настройки клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Примечание: Только TCP и именованные каналы поддерживаются этим свойством. Если указан префикс, то это приведет к образованию двойного префикса и вызовет ошибку, поскольку это свойство создает префиксы внутри себя.|  
 |SSPROP_INIT_PACKETSIZE|Тип: VT_I4<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Описание: Размер сетевого пакета в байтах. Значение свойства «размер пакета» должно находиться в диапазоне от 512 до 32 767. По умолчанию для поставщика OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] свойство «размер сетевого пакета» имеет значение 4 096.|  
@@ -94,6 +95,6 @@ Server=MyServer;UID=MyUserName;
  Список ключевых слов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента в разделе [с помощью ключевых слов строки подключения с собственным клиентом SQL Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Объекты источника данных &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Объекты источника данных & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

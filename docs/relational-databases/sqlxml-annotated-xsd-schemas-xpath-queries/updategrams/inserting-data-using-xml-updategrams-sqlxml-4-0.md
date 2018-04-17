@@ -1,16 +1,16 @@
 ---
-title: "Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -36,20 +36,21 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Диаграмма обновления обозначает операцию вставки, если экземпляр записи появляется в  **\<после >** блок, но отсутствует в соответствующем  **\<перед >** блока. В этом случае диаграмма обновления вставляет запись в  **\<после >** блок в базу данных.  
+  Диаграмма обновления обозначает операцию вставки, если экземпляр записи появляется в  **\<после >** блок, но отсутствует в соответствующем  **\<перед >** блока. В этом случае диаграмма обновления вставляет запись в  **\<после >** блок в базу данных.  
   
  Ниже приведен формат диаграммы обновления для операции вставки:  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ## <a name="before-block"></a>\<Прежде чем > блока  
- **\<Перед >** можно опустить блок для операции вставки. Если необязательный **схемы сопоставления** атрибут не указан,  **\<ElementName >** , указанный в диаграмме обновления, соответствует таблице базы данных и дочерние элементы или атрибуты сопоставляются со столбцы в таблице.  
+  **\<Перед >** можно опустить блок для операции вставки. Если необязательный **схемы сопоставления** атрибут не указан,  **\<ElementName >** , указанный в диаграмме обновления, соответствует таблице базы данных и дочерние элементы или атрибуты сопоставляются со столбцы в таблице.  
   
 ## <a name="after-block"></a>\<После > блока  
  Можно указать одну или несколько записей в  **\<после >** блока.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 02/12/2018
  Если  **\<после >** блок не предоставляет значение для определенного столбца, в диаграмме обновления используется значение по умолчанию, который указан в схеме с заметками (если схема была указана). Если схема не задает значение по умолчанию для столбца, то диаграмма обновления не задает никакие явные значения для этого столбца и, вместо этого назначает [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значение по умолчанию (Если указано) к этому столбцу. Если не существует значения по умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и столбец допускает значение NULL, то диаграмма обновления задает для столбца значение NULL. Если столбец не имеет значения по умолчанию и не допускает значение NULL, команда завершается ошибкой и диаграмма обновления возвращает ошибку. Необязательный **updg: returnid** атрибут используется для возвращения значения идентификатора, созданного системой при добавлении записи в таблице со столбцом типа IDENTITY.  
   
 ## <a name="updgid-attribute"></a>Атрибут updg:id  
- Если диаграмма обновления только добавляет записи, диаграмма обновления не требуется **updg: ID** атрибута. Дополнительные сведения о **updg: ID**, в разделе [обновление данных с помощью диаграмм обновления XML &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Если диаграмма обновления только добавляет записи, диаграмма обновления не требуется **updg: ID** атрибута. Дополнительные сведения о **updg: ID**, в разделе [обновление данных с помощью диаграмм обновления XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Атрибут updg:at-identity  
  Если диаграмма обновления вставляет запись в таблицу со столбцом типа IDENTITY, она может зафиксировать назначенное системой значение с помощью необязательного **updg: на удостоверения** атрибута. Диаграмма обновления может потом использовать это значение в последующих операциях. При выполнении диаграммы обновления можно вернуть значение идентификатора, который создается путем указания **updg: returnid** атрибута.  
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/12/2018
   
  При использовании примеров диаграмм обновления необходимо учитывать следующие моменты.  
   
--   В большинстве примеров используется сопоставление по умолчанию (то есть в диаграмме обновления схема сопоставления не задана). Дополнительные примеры диаграмм обновления, которые используются схемы сопоставления см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   В большинстве примеров используется сопоставление по умолчанию (то есть в диаграмме обновления схема сопоставления не задана). Дополнительные примеры диаграмм обновления, которые используются схемы сопоставления см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   В большинстве примеров задействован образец базы данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Все обновления применяются к таблицам в этой базе данных.  
   
@@ -418,7 +419,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Дополнительные примеры диаграмм обновления, который указывает схему сопоставления см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Дополнительные примеры диаграмм обновления, который указывает схему сопоставления см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ##### <a name="to-test-the-updategram"></a>Тестирование диаграммы обновления  
   
@@ -734,6 +735,6 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности диаграмм обновления &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

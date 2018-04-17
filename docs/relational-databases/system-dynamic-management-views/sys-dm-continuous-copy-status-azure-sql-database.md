@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_continuous_copy_status (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_continuous_copy_status (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34d840580edb8bb15f4af379575bc0f24b44edcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 2e54262b107b7bf028f4bf3c6dd3fe803ca6b9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Разрешения  
  Для получения данных, требуется членство в **db_owner** роли базы данных. Пользователь dbo, члены **dbmanager** роли базы данных и имя входа sa можно запрашивать данное представление также.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Sys.dm_continuous_copy_status** представление создается в **ресурсов** базы данных и отображается во всех базах данных, включая логической базе данных master. Однако запрос этого представления для логической базы данных master возвращает пустой набор.  
   
  Если связь непрерывного копирования прекращается в базе данных строк для этой базы данных в **sys.dm_continuous_copy_status** представление исчезает.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/03/2018
  Как **sys.dm_database_copies** представление, **sys.dm_continuous_copy_status** отражает состояние связи непрерывного копирования, в котором базы данных является либо источника или активной базы данных-получателя . В отличие от **sys.dm_database_copies**, **sys.dm_continuous_copy_status** содержит несколько столбцов, содержащих подробные сведения об операциях и производительности. Эти столбцы содержат **last_replication**, и **replication_lag_sec**...  
   
 ## <a name="see-also"></a>См. также  
- [sys.dm_database_copies &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Активная Георепликация хранимых процедур &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [sys.dm_database_copies &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Активная Георепликация хранимых процедур &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

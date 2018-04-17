@@ -1,16 +1,16 @@
 ---
-title: "Задание связей с помощью SQL: Relationship (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: 'Задание связей с помощью SQL: Relationship (SQLXML 4.0) | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -31,20 +31,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048b90bb17952147d254e0dc89a28dc58fe9532c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Элементы в XML-документе могут участвовать в связях. Элементы могут иметь иерархическую вложенность, и между ними могут быть заданы связи ID, IDREF или IDREFS.  
+  Элементы в XML-документе могут участвовать в связях. Элементы могут иметь иерархическую вложенность, и между ними могут быть заданы связи ID, IDREF или IDREFS.  
   
  Например, в схеме XSD  **\<клиента >** элемент содержит  **\<порядок >** дочерних элементов. При сопоставлении схемы в базе данных AdventureWorks,  **\<клиента >** элемент сопоставляется с таблицей Sales.Customer и  **\<порядок >** элемент сопоставляется Таблица Sales.SalesOrderHeader. Базовые таблицы Sales.Customer и Sales.SalesOrderHeader связаны, так как заказчики размещают заказы. CustomerID в таблице Sales.SalesOrderHeader представляет собой внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Можно установить эти связи между соответствующими элементами схемы с помощью **SQL: Relationship** заметки.  
   
@@ -64,10 +65,10 @@ ms.lasthandoff: 02/12/2018
  **Parent**  
  Задает родительскую связь (таблицу). Это необязательный атрибут. Если он не указан, то имя родительской таблицы будет получено из дочерней иерархии в документе. Если схема указывает две иерархии родители потомки, использующие одну  **\<SQL: Relationship >** , но разные родительские элементы, не указан родительский атрибут в  **\<sql: связь >**. Эти сведения будут получены из иерархии в схеме.  
   
- **parent-key**  
+ **родительский ключ**  
  Указывает родительский ключ для родителя. Если родительский ключ состоит из нескольких столбцов, то они должны быть перечислены через пробелы. Между значениями, заданными для ключа, состоящего из нескольких столбцов, и соответствующего дочернего ключа, существует позиционное сопоставление.  
   
- **Child**  
+ **Дочерний**  
  Задает дочернюю связь (таблицу).  
   
  **child-key**  
@@ -84,11 +85,11 @@ ms.lasthandoff: 02/12/2018
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Определение заметки sql:relationship для элемента  
- Включает в себя следующей схеме XSD с заметками  **\<клиента >** и  **\<порядок >** элементов. **\<Порядок >** элемент является дочерним для элемента  **\<клиента >** элемента.  
+ Включает в себя следующей схеме XSD с заметками  **\<клиента >** и  **\<порядок >** элементов.  **\<Порядок >** элемент является дочерним для элемента  **\<клиента >** элемента.  
   
  В схеме **SQL: Relationship** заметка указывается для  **\<порядок >** дочерний элемент. Сама связь определяется в  **\<xsd:appinfo >** элемента.  
   
- **\<Связь >** элемент определяет CustomerID в таблице Sales.SalesOrderHeader как внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Поэтому заказы, принадлежащие заказчику, отображаются как дочерний элемент,  **\<клиента >** элемента.  
+  **\<Связь >** элемент определяет CustomerID в таблице Sales.SalesOrderHeader как внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Поэтому заказы, принадлежащие заказчику, отображаются как дочерний элемент,  **\<клиента >** элемента.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -392,9 +393,9 @@ ms.lasthandoff: 02/12/2018
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>Г. Задание sql:relationship для нескольких элементов  
  В этом примере Аннотированная схема XSD содержит  **\<клиента >**,  **\<порядок >**, и  **\<OrderDetail >** элементы.  
   
- **\<Порядок >** элемент является дочерним для элемента  **\<клиента >** элемента. **\<SQL: Relationship >** указано на  **\<порядок >** дочернего элемента; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы из  **\<клиента >**.  
+  **\<Порядок >** элемент является дочерним для элемента  **\<клиента >** элемента. **\<SQL: Relationship >** указано на  **\<порядок >** дочернего элемента; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы из  **\<клиента >**.  
   
- **\<Порядок >** элемент включает в себя  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** указано на  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы,  **\<Order >**  элемент.  
+  **\<Порядок >** элемент включает в себя  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** указано на  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы, **\<Order >** элемент.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

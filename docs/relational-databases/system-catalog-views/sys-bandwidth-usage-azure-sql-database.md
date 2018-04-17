@@ -1,16 +1,16 @@
 ---
-title: "sys.bandwidth_usage (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.bandwidth_usage (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b61df6847269b609ba6a474b0ad87a355d5abe9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,16 +46,16 @@ ms.lasthandoff: 11/21/2017
   
  **Sys.bandwidth_usage** представление содержит следующие столбцы.  
   
-|Column Name|Description|  
+|Column Name|Описание|  
 |-----------------|-----------------|  
 |**time**|Время (час) использования пропускной полосы. Строки в этом представлении указаны для каждого часа. Например, 2009-09-19 02:00:00.000 означает, что пропускная способность использовалась 19 сентября 2009 г. c 02:00 до 03:00.|  
 |**database_name**|Имя базы данных, использовавшей полосу пропускания.|  
 |**Направление**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящие: Данные, которые перемещаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Исходящий трафик: Данные, которые перемещаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**класс**|Класс полосы пропускания, которая была использована. Одно из следующих значений.<br />Внутренние: Данные, которые перемещаются внутри платформы Azure.<br />Внешние: Данные, которые перемещаются из платформы Azure.<br /><br /> Этот класс возвращается только в том случае, если база данных участвует в связи непрерывного копирования между регионами ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. Дополнительные сведения см. в подразделе "Замечания" далее в этой статье.|  
+|**class**|Класс полосы пропускания, которая была использована. Одно из следующих значений.<br />Внутренние: Данные, которые перемещаются внутри платформы Azure.<br />Внешние: Данные, которые перемещаются из платформы Azure.<br /><br /> Этот класс возвращается только в том случае, если база данных участвует в связи непрерывного копирования между регионами ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. Дополнительные сведения см. в подразделе "Замечания" далее в этой статье.|  
 |**time_period**|Период времени, происходило потребление — пиковой или непиковое время. The Peak time is based on the region in which the server was created. Например, если сервер был создан в регионе «US_Northwest», параметр Peak определяется как время от 10:00 до 18:00. по тихоокеанскому времени.|  
-|**количество**|Объем использованной полосы пропускания в килобайтах (КБ).|  
+|**Количество**|Объем использованной полосы пропускания в килобайтах (КБ).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление доступно только в **master** базы данных для имени входа субъекта серверного уровня.  
   
 ## <a name="remarks"></a>Замечания  

@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e77bcfcfd4e27981f63fd2802fd6b76c18fe1f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: c7c1d272d3bcbfd85002624b15a69bd2bc31e0e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,12 +48,12 @@ ms.lasthandoff: 04/08/2018
 |**start_time**|**datetime2**|Время в формате UTC, указывающее начало отчетного интервала интервал 15 секунд.|  
 |**end_time**|**datetime2**|Время в формате UTC, указывающее конец отчетного интервала интервал 15 секунд.|  
 |**elastic_pool_name**|**nvarchar(128)**|Имя пула эластичных баз данных.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Среднее использование вычислительной среды в процентах от предела пула.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Среднее использование операций ввода-вывода в процентах от предела для пула.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Среднее использование ресурсов записи в процентах от предела пула.|  
-|**avg_storage_percent**|**decimal(5,2)**|Среднее использование хранилища в процентах от предела хранилища пула.|  
-|**max_worker_percent**|**decimal(5,2)**|Максимальная одновременных рабочих процессов (запросов) в процентах от предела для пула.|  
-|**max_session_percent**|**decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела для пула.|  
+|**avg_cpu_percent**|**Decimal(5,2)**|Среднее использование вычислительной среды в процентах от предела пула.|  
+|**avg_data_io_percent**|**Decimal(5,2)**|Среднее использование операций ввода-вывода в процентах от предела для пула.|  
+|**avg_log_write_percent**|**Decimal(5,2)**|Среднее использование ресурсов записи в процентах от предела пула.|  
+|**avg_storage_percent**|**Decimal(5,2)**|Среднее использование хранилища в процентах от предела хранилища пула.|  
+|**max_worker_percent**|**Decimal(5,2)**|Максимальная одновременных рабочих процессов (запросов) в процентах от предела для пула.|  
+|**max_session_percent**|**Decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела для пула.|  
 |**elastic_pool_dtu_limit**|**int**|Текущее max эластичного пула DTU значение параметра этот пул эластичных БД в течение этого интервала.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Текущий max эластичного пула предельный размер хранилища для этот пул эластичных БД в мегабайтах в течение этого интервала.|  
   
@@ -85,6 +86,6 @@ ORDER BY end_time DESC;
  [Tame взрывоподобный рост эластичных баз данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [Создание и управление ими пул эластичных баз данных базы данных SQL (Предварительная версия)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [sys.resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [sys.dm_db_resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

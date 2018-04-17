@@ -1,16 +1,16 @@
 ---
-title: "Примеры массовой загрузки XML (SQLXML 4.0) | Документы Microsoft"
-ms.custom: 
+title: Примеры массовой загрузки XML (SQLXML 4.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -34,20 +34,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Примеры массовой загрузки XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Следующие примеры демонстрируют функцию массовой загрузки XML в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Каждый из примеров предоставляет собой схему XSD и эквивалентную ей схему XDR.  
+  Следующие примеры демонстрируют функцию массовой загрузки XML в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Каждый из примеров предоставляет собой схему XSD и эквивалентную ей схему XDR.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Скрипт массового загрузчика (ValidateAndBulkload.vbs)  
  Следующий скрипт на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) загружает XML-документа в XML DOM; проверяет его на соответствие схеме и, если документ является верным, выполняет массовую загрузку XML-документ в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы. Этот скрипт можно использовать с каждым из примеров, которые ссылаются на него далее в этом разделе.  
@@ -390,7 +391,7 @@ End Function
 </xsd:schema>  
 ```  
   
- Схема задает  **\<порядок >** элемент с  **\<продукта >** дочерний элемент. **\<Порядок >** элемент сопоставляется с таблицей Ord и  **\<продукта >** элемент сопоставляется таблице Product в базе данных. Определенная на  **\<продукта >** элемент определяет связь m: n, представленной в таблице OrderDetail. (в заказ может входить множество продуктов, а продукт может входить во множество заказов).  
+ Схема задает  **\<порядок >** элемент с  **\<продукта >** дочерний элемент.  **\<Порядок >** элемент сопоставляется с таблицей Ord и  **\<продукта >** элемент сопоставляется таблице Product в базе данных. Определенная на  **\<продукта >** элемент определяет связь m: n, представленной в таблице OrderDetail. (в заказ может входить множество продуктов, а продукт может входить во множество заказов).  
   
  При массовой загрузке XML-документа с этой схемой записи добавляются к таблицам Ord, Product и OrderDetail.  
   

@@ -1,32 +1,33 @@
 ---
-title: "Общие сведения об SMO | Документы Microsoft"
-ms.custom: 
+title: Общие сведения об SMO | Документы Microsoft
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b8fc017c4005021ca22350feb8c6e19a869b5bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Объекты управления (SMO) представляют собой объекты, предназначенных для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Объекты управления (SMO) представляют собой объекты, предназначенных для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
   
  К примеру, для удовлетворения потребностей новых пользователей, а также с целью сокращения издержек на подготовку персонала может возникнуть необходимость упрощения пользовательских приложений, выполняющих задачи управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может возникнуть необходимость в создании специализированных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в создании приложения для формирования индексов и наблюдения за их эффективностью. Кроме того, приложение SMO можно использовать для бесшовной интеграции аппаратных или программных компонентов от независимых поставщиков в приложение управления базами данных.  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 01/12/2018
   
 -   Изоляция моментальных снимков и управление версиями на уровне строк для повышения параллелизма. Дополнительные сведения см. в разделе [работа с изоляцией моментального снимка](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40; SQL Server &#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) и [использование схем XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) и [XML-схем с помощью](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Базы данных моментальных снимков, позволяющие создавать копии баз данных только для чтения.  
   
 -   Поддержка компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] обмена информацией на основе сообщений. Дополнительные сведения см. в разделе [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Поддержка синонимов для множества имен объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [синонимы &#40; компонент Database Engine &#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Поддержка синонимов для множества имен объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [синонимы &#40;СУБД&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   Управление компонентом Database Mail, которое позволяет создавать серверы электронной почты, профили электронной почты и учетные записи электронной почты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   

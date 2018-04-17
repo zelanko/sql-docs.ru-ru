@@ -1,29 +1,30 @@
 ---
-title: "Поля дескриптора для столбцов, составляющих табличное значение параметра | Документы Microsoft"
-ms.custom: 
+title: Поля дескриптора для столбцов, составляющих табличное значение параметра | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0001cdd0d2295196aa565876f8a380142ad2552
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fe475668bf81f56fa874d9b5add51d7132b3954b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,18 +32,18 @@ ms.lasthandoff: 01/24/2018
 
   Поля дескриптора табличное значение параметра, описанные в этом разделе оперирует [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) и [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) с дескриптором (дескриптора параметра реализации IPD).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  SQL_DESC_AUTO_UNIQUE_VALUE используется для параметров, возвращающих табличные значения, и других компонентов.  
   
 |Имя атрибута|Тип|Описание|  
 |--------------------|----------|-----------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE указывает, что этот столбец является столбцом идентификаторов.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Эти сведения можно использовать для оптимизации производительности, но приложения не требуется устанавливать это свойство для столбцов идентификаторов.|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE указывает, что этот столбец является столбцом идентификаторов.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Эти сведения можно использовать для оптимизации производительности, но приложения не требуется устанавливать это свойство для столбцов идентификаторов.|  
   
  Следующие атрибуты добавляются к параметрам всех типов в дескрипторе параметра приложения (APD) и дескрипторе параметра реализации (IPD).  
   
 |Имя атрибута|Тип|Описание|  
 |--------------------|----------|-----------------|  
-|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE указывает, что этот столбец является вычисляемым.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Эти сведения можно использовать для оптимизации производительности, но приложение не обязано устанавливать его для вычисляемых столбцов.<br /><br /> Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  
+|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE указывает, что этот столбец является вычисляемым.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Эти сведения можно использовать для оптимизации производительности, но приложение не обязано устанавливать его для вычисляемых столбцов.<br /><br /> Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE указывает, что столбец возвращающих табличное значение параметров является частью уникального ключа. Это может повысить производительность запросов. Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  
 |SQL_CA_SS_COLUMN_SORT_ORDER|SQLSMALLINT|Указывает порядок сортировки столбца возвращающих табличное значение параметров. Это может повысить производительность запросов. Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения. Возможные значения. <br />**SQL_SS_ASCENDING_ORDER**<br />**SQL_SS_DESCENDING_ORDER**<br />**SQL_SS_ORDER_UNSPECIFIED**<br /><br /> Значения, отличные от **SQL_SS_ASCENDING_ORDER** и **SQL_SS_DESCENDING_ORDER** выдана ошибка с **SQLSTATE HY024** и сообщение «Недопустимое значение атрибута», рассматриваются как **значения SQL_SS_ORDER_UNSPECIFIED**, который является значением по умолчанию для этого атрибута.|  
 |SQL_CA_SS_COLUMN_SORT_ORDINAL|SQLSMALLINT|Указывает порядковый номер столбца параметра, возвращающего табличное значение, в наборе столбцов, которые определяют сквозной порядковый номер для параметра, возвращающего табличное значение. Это может повысить производительность запросов. Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения. Порядковые номера сортировки начинаются с 1. Значение 0 (устанавливаемое по умолчанию) указывает, что столбец параметра, возвращающего табличное значение, не упорядочен.|  
@@ -53,6 +54,6 @@ ms.lasthandoff: 01/24/2018
  Если для столбца, возвращающего табличное значение параметра, установлен атрибут SQL_CA_SS_COL_HAS_DEFAULT_VALUE, то SQL_DESC_DATA_PTR для этого столбца должен быть равен null. В противном случае SQLExecute или SQLExecDirect вернет значение SQL_ERROR. Будет создана диагностическая запись с кодом SQLSTATE = 07S01 и сообщением «недопустимое использование параметра по умолчанию для параметра \<p >, столбец \<c >», где \<p > имеет порядковый номер параметра и \<c > — Порядковый номер столбца.  
   
 ## <a name="see-also"></a>См. также  
- [Возвращающие табличные значения параметры &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [Возвращающие табличные значения параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -1,29 +1,30 @@
 ---
-title: "Обновление приложения от собственного клиента SQL Server 2005 | Документы Microsoft"
-ms.custom: 
+title: Обновление приложения от собственного клиента SQL Server 2005 | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +34,12 @@ ms.lasthandoff: 01/25/2018
   
  При обновлении с компонентов доступа к данным MDAC к собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут возникнуть определенные изменения в работе. Дополнительные сведения см. в разделе [обновление приложения для собственного клиента SQL Server с компонентами MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент версии 9.0, поставляемых с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент версии 10.0, поставляемых с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 10.5 поставляется в составе [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поставляется в составе [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент версии 9.0, поставляемых с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент версии 10.0, поставляемых с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 10.5 поставляется в составе [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поставляется в составе [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
 |Изменения в поведении собственного клиента SQL Server, начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Описание|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB дополняет данные только до заданного масштаба.|Для выполнения преобразований, где преобразованные данные передаются на сервер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) дополняет данные только до максимальной длины завершающими нулями **datetime** значения. Собственный клиент SQL Server версии 9.0 дополнял данные до 9 разрядов.|  
-|Проверьте ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) реализуется требование OLE DB для *bScale* в ICommandWithParameter::SetParameterInfo будет присвоено точность в долях секунды для структуры DBTYPE_DBTIMESTAMP.|  
+|Проверьте ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) реализуется требование OLE DB для *bScale* в ICommandWithParameter::SetParameterInfo будет присвоено точность в долях секунды для структуры DBTYPE_DBTIMESTAMP.|  
 |**Sp_columns** хранимая процедура возвращает сейчас **«NO»** вместо **«NO»** применительно к столбцу is_nullable.|Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент версии 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]), **sp_columns** хранимая процедура возвращает сейчас **«NO»** вместо **«NO»** для к столбцу is_nullable .|  
 |SQLSetDescRec, SQLBindCol и SQLBindParameter теперь обеспечивают проверку согласованности.|До появления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент версии 10.0, параметр SQL_DESC_DATA_PTR не приводит к проверку согласованности для любого типа дескриптора в SQLSetDescRec, SQLBindCol и SQLBindParameter.|  
 |SQLCopyDesc теперь проверяет согласованность дескрипторов.|До появления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент версии 10.0, SQLCopyDesc не проверку согласованности при для конкретной записи был задан параметр sql_desc_data_ptr.|  

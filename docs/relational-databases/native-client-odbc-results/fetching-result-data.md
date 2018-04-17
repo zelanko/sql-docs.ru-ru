@@ -1,15 +1,15 @@
 ---
-title: "Выборка итоговых данных | Документы Microsoft"
-ms.custom: 
+title: Выборка итоговых данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLFetchScroll function
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1514a1309ea6a88e2d9c449ed9dbf15f99388227
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8f1c828f3e63e3167a0685f450e318055a9b71fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-result-data"></a>Выборка итоговых данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,6 +71,6 @@ ms.lasthandoff: 01/25/2018
  Эта оптимизация может применяться в приложениях, чтобы не **текст**, **ntext**, или **изображения** данные отображаются во время как пользователь прокручивает курсор вверх-вниз. Когда пользователь выделяет строку, приложение может вызвать **SQLGetData** для получения **текст**, **ntext**, или **изображения** данные. Это экономит передачу **текст**, **ntext**, или **изображения** данные для строк пользователь не выбрал и может сэкономить передачу очень больших объемов данных.  
   
 ## <a name="see-also"></a>См. также  
- [Результаты обработки &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   
