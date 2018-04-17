@@ -1,16 +1,16 @@
 ---
-title: "APPLOCK_MODE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: APPLOCK_MODE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_MODE_TSQL
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6b5c0a0879580e5c1e084259b61ff206d49c896
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7a43cdaab7b944aeb4af4ced1345447d03e3a29a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает режим блокировки, полученный владельцем блокировки на конкретный ресурс приложения. APPLOCK_MODE представляет собой функцию блокировки приложения, работающую в текущей базе данных. Областью блокировок приложений является база данных.
+Эта функция возвращает режим блокировки, полученный владельцем блокировки на конкретный ресурс приложения. Функция блокировки приложения APPLOCK_MODE действует в текущей базе данных. База данных является областью блокировок приложений.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>Аргументы  
 '*database_principal*'  
-Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Вызывающий эту функцию участник должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner, чтобы успешно выполнить вызов этой функции.
+Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Для успешного вызова функции вызывающий ее объект должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner.
   
 '*resource_name*'  
 Имя ресурса блокировки, указанное клиентским приложением. Приложение должно гарантировать уникальность имени ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *resource_name* имеет тип **nvarchar(255)** и не имеет значения по умолчанию. Аргумент *resource_name* сравнивается в двоичном режиме с учетом регистра символов независимо от параметров сортировки текущей базы данных.
@@ -61,7 +61,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 **nvarchar(32)**
   
 ## <a name="return-value"></a>Возвращаемое значение
-Возвращает режим блокировки, полученный владельцем блокировки на конкретный ресурс приложения. Режим блокировки может принимать следующие значения.
+Возвращает режим блокировки, полученный владельцем блокировки на конкретный ресурс приложения. Режим блокировки может принимать следующие значения:
   
 ||||  
 |-|-|-|  
@@ -69,7 +69,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**Монопольно**||  
   
-*Этот режим блокировки представляет собой сочетание других режимов и не может быть явным образом получен при помощи процедуры sp_getapplock.
+* Этот режим блокировки представляет собой сочетание других режимов и не может быть явным образом получен процедурой sp_getapplock.
   
 ## <a name="function-properties"></a>Свойства функции
 **Nondeterministic**
@@ -79,7 +79,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 **Nonparallelizable**
   
 ## <a name="examples"></a>Примеры  
-Два пользователя (пользователь А и пользователь Б) с отдельными сеансами запускают следующую последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Два пользователя (пользователь А и пользователь Б) с отдельными сеансами запускают приведенную ниже последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 Пользователь А запускает:
   

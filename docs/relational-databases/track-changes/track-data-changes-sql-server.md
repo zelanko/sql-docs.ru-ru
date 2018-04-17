@@ -1,16 +1,16 @@
 ---
-title: "Отслеживание изменений данных (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Отслеживание изменений данных (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 99a8b9bc80dc23ab4d67d72acdb507447d8e9433
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Capture"></a> Change Data Capture  
  Система отслеживания измененных данных регистрирует в журнале данные об изменении пользовательских таблиц, отслеживая как сам факт DML-изменений, так и фактически измененные данные. Изменения отслеживаются с помощью асинхронного процесса, который считывает журнал транзакций и слабо влияет на систему.  
   
- Как показано на следующем рисунке, изменения в пользовательской таблице записываются в соответствующих таблицах изменений. Эти таблицы изменений обеспечивают журнальное представление изменений, распределенных во времени. Функции [системы отслеживания измененных данных](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md), предоставляемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обеспечивают простую систематическую обработку сведений об изменениях.  
+ Как показано на следующем рисунке, изменения в пользовательской таблице записываются в соответствующих таблицах изменений. Эти таблицы изменений обеспечивают журнальное представление изменений, распределенных во времени. Функции [отслеживания измененных данных](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md), предоставляемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обеспечивают простую систематическую обработку данных об изменениях.  
   
  ![Блок-схема фиксации изменений данных](../../relational-databases/track-changes/media/cdcart1.gif "Блок-схема фиксации изменений данных")  
   

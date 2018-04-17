@@ -18,16 +18,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: af185275ebb9a886b929f0b91b12a46ad6d30c8b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ ms.lasthandoff: 03/22/2018
 >  Если для сегментов дуги даются значения Z, они должны совпадать для всех точек сегмента дуги. Только в этом случае они могут быть приняты в качестве ввода. Например: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` принимается, но `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` не принимается.  
 
 ### <a name="linestring-and-circularstring-comparison"></a>Сравнение типов LineString и CircularString  
-На следующей диаграмме показаны одинаковые равнобедренные треугольники (треугольник A для определения треугольника использует сегменты линии, а треугольник B — сегменты дуги).  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) В этом примере показано, как сохранить эти равнобедренные треугольники с помощью экземпляра **LineString** и экземпляра **CircularString**:  
+В следующем примере показано, как сохранить одинаковые равнобедренные треугольники с помощью экземпляра **LineString** и экземпляра **CircularString**:  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -129,17 +127,13 @@ SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-Этот фрагмент выдаст следующие результаты:  
+Этот фрагмент выдает следующие результаты:  
 ```
 LS LengthCS Length
 5.65685…6.28318…
 ```
 
-На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает **LineString**`@g1`, а синяя линия — **CircularString**`@g2`):  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-Как показано на рисунке выше, объекты **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем объекты **LineString** . Объекты**CircularString** полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты**LineString** хорошо подходят для хранения линейных границ, например городского квартала.  
+Экземпляры **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем экземпляры **LineString**. Объекты**CircularString** полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты**LineString** хорошо подходят для хранения линейных границ, например городского квартала.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Сравнение типов LineString и CompoundCurve  
 В следующем примере кода показано, как одна и та же фигура сохраняется с помощью экземпляров **LineString** и **CompoundCurve** :

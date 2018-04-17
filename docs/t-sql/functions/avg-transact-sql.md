@@ -1,16 +1,16 @@
 ---
-title: "AVG (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: AVG (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVG_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 40240e2c06055d61eb047c319349f4869b9979df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1d242be45c89ed55d5a1dfed3753676c90e314f3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает среднее арифметическое группы значений. Значения NULL пропускаются.
+Эта функция возвращает среднее арифметическое группы значений. Значения NULL она не учитывает.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ ALL
 Применяет агрегатную функцию ко всем значениям. ALL является параметром по умолчанию.
   
 DISTINCT  
-Указывает на то, что функция AVG будет выполнена только для одного экземпляра каждого уникального значения, независимо от того, сколько раз встречается это значение.
+Указывает на то, что функция AVG выполняется только для одного уникального экземпляра каждого значения, независимо от того, сколько раз встречается это значение.
   
 *expression*  
 [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**. Агрегатные функции и вложенные запросы не допускаются.
@@ -63,7 +63,7 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**
 *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Аргумент *order_by_clause* является обязательным. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-Тип возвращаемого значения определяется типом вычисленного результата выражения *expression*.
+Тип возвращаемого значения определяется типом вычисленного результата *выражения*.
   
 |Результат выражения|Возвращаемый тип|  
 |---|---|
@@ -78,14 +78,14 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**
 ## <a name="remarks"></a>Remarks  
 Если тип данных *expression* является типом данных-псевдонимом, тип возвращаемого значения также является типом данных-псевдонимом. Однако если базовый тип данных типа данных-псевдонима может повышаться, например из **tinyint** в **int**, возвращаемое значение будет иметь повышенный тип данных, а не тип данных-псевдоним.
   
-Функция AVG () вычисляет среднее арифметическое набора значений, выполняя деление суммы этих значений на число значений, не равных NULL. Если сумма превышает максимальное значение для типа данных возвращаемого значения, будет возвращена ошибка.
+Функция AVG () вычисляет среднее арифметическое набора значений, выполняя деление суммы этих значений на число значений, не равных NULL. Если сумма превышает максимальное значение для типа данных возвращаемого значения, AVG() возвратит ошибку.
   
 AVG — это детерминированная функция, если она используется без предложений OVER и ORDER BY. Она не детерминирована при использовании с предложениями OVER и ORDER BY. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. Использование функций SUM и AVG для вычислений  
-В следующем примере вычисляются среднее количество часов отпуска и сумма часов больничных, которые использовали вице-президенты компании [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Каждая из этих агрегатных функций создает одно сводное значение для всех извлеченных строк. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+В этом примере вычисляется среднее количество часов отпуска и сумма часов отсутствия по болезни, которые использовали вице-президенты компании [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Каждая из этих агрегатных функций создает одно сводное значение для всех извлеченных строк. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT AVG(VacationHours)AS 'Average vacation hours',   
@@ -105,7 +105,7 @@ Average vacation hours       Total sick leave hours
 ```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>Б. Использование функций SUM и AVG в предложении GROUP BY  
-При использовании с предложением `GROUP BY` каждая агрегатная функция создает одно значение для каждой группы вместо всей таблицы. В следующем примере создается итоговое значение для каждой территории продаж в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Итог содержит средний бонус, полученный продавцами по каждой территории, и сумму продаж за текущий год для каждой территории.
+При использовании с предложением `GROUP BY` каждая агрегатная функция создает одно значение, охватывающее каждую группу, а не одно значение для всей таблицы. В следующем примере создается итоговое значение для каждой территории сбыта в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Итог содержит средний бонус, полученный продавцами по каждой территории, и сумму продаж за текущий год для каждой территории.
   
 ```sql
 SELECT TerritoryID, AVG(Bonus)as 'Average bonus', SUM(SalesYTD) as 'YTD sales'  
@@ -135,7 +135,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### <a name="c-using-avg-with-distinct"></a>В. Использование функции AVG с ключевым словом DISTINCT  
-Следующая инструкция возвращает среднюю справочную цену на продукцию из базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. При указании DISTINCT в расчете учитываются только уникальные значения.
+Эта инструкция возвращает среднюю ориентировочную цену на продукцию из базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. При использовании DISTINCT в расчете учитываются только уникальные значения.
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -152,7 +152,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>Г. Использование функции AVG без ключевого слова DISTINCT  
-Без ключевого слова DISTINCT функция `AVG` находит среднюю справочную цену всех продуктов в таблице `Product` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], учитывая и все повторяющиеся значения.
+Без ключевого слова DISTINCT функция `AVG` находит среднюю ориентировочную цену всех продуктов в таблице `Product` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], учитывая и все повторяющиеся значения.
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -206,7 +206,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```  
   
-В этом примере предложение OVER не включает в себя предложение PARTITION BY. Это означает, что функция будет применяться для всех строк, возвращаемых запросом. Предложение ORDER BY, указанное в предложении OVER, определяет логический порядок применения функции AVG. Запрос возвращает скользящее среднее значение продаж за год для всех территорий, указанных в предложении WHERE. Предложение ORDER BY, указанное в инструкции SELECT, определяет порядок отображения строк запроса.
+В этом примере предложение OVER не включает в себя предложение PARTITION BY. Это означает, что функция будет применяться для всех строк, возвращаемых запросом. Предложение ORDER BY, указанное в предложении OVER, определяет логический порядок применения функции AVG. Запрос возвращает скользящее среднее значение продаж за год для всех территорий, указанных в предложении WHERE. Предложение ORDER BY, указанное в инструкции SELECT, определяет порядок, в котором эта инструкция отображает строки запроса.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

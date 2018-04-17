@@ -1,16 +1,16 @@
 ---
-title: "ASIN (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ASIN (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19cffa5a72ded3ac274fd032fd97a664bd57c09c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает угол в радианах, синус которого задан как выражение типа **float**. Это так называемый арксинус.
+Функция, возвращающая угол в радианах, синус которого задан выражением **float**. Это так называемый **арксинус**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *float_expression*  
-Является [выражением](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или другого типа, который может быть неявно преобразован в тип float со значением от –1 до 1. Значения вне этого диапазона возвращают NULL и сообщают об ошибке домена.
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип float. Допустимо только значение в диапазоне от –1,00 до 1,00. Значения вне этого диапазона возвращают NULL, при этом ASIN сообщает об ошибке домена.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **float**
   
 ## <a name="examples"></a>Примеры  
-В приведенном ниже примере принимается выражение **float** и возвращается ASIN указанного угла.
+В этом примере принимается выражение **float** и возвращается ASIN указанного угла.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -96,13 +96,13 @@ The ASIN of the angle is: 0.147811
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-В приведенном ниже примере возвращается арксинус 1,00.
+Этот пример возвращает арксинус значения 1,00.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-В приведенном ниже примере возвращается ошибка, так как запрашивается арксинус значения вне допустимого диапазона.
+Этот пример возвращает ошибку, так как запрашивается арксинус значения вне допустимого диапазона.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  

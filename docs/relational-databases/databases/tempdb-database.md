@@ -1,16 +1,16 @@
 ---
-title: "База данных tempdb | Документация Майкрософт"
-description: "В этой статье приводятся подробные сведения о настройке и использовании базы данных tempdb в SQL Server и базе данных SQL Azure."
+title: База данных tempdb | Документация Майкрософт
+description: В этой статье приводятся подробные сведения о настройке и использовании базы данных tempdb в SQL Server и базе данных SQL Azure.
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>База данных tempdb
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Системная база данных **tempdb** — это глобальный ресурс, доступный всем пользователям, подключенным к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL. База данных tempdb служит для хранения следующих объектов:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Системная база данных **tempdb** — это глобальный ресурс, доступный всем пользователям, подключенным к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL. База данных tempdb служит для хранения следующих объектов:  
   
 - Временные **пользовательские объекты**, созданные явно, такие как глобальные или локальные временные таблицы и индексы, временные хранимые процедуры, табличные переменные, таблицы, возвращаемые функциями с табличными значениями, и курсоры.  
 - **Внутренние объекты**, созданные ядром СУБД. К ним относятся следующие объекты.
@@ -105,6 +106,9 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="tempdb-database-in-sql-database"></a>База данных tempdb в базе данных SQL
 
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>Размеры базы данных tempdb для уровней служб на основе DTU
+
 |SLO|Максимальный размер файла данных Tempdb (МБ)|Число файлов данных tempdb|Максимальный размер данных tempdb (МБ)|
 |---|---:|---:|---:|
 |Basic|14,225|1|14,225|
@@ -128,6 +132,9 @@ ms.lasthandoff: 01/18/2018
 |Эластичные пулы уровня "Базовый" (все конфигурации DTU)|14,225|12|170,700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Размеры базы данных tempdb для уровней служб на основе виртуальных ядер
+
+См. пределы для ресурсов на основе виртуальных ядер](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## <a name="restrictions"></a>Ограничения  
  В базе данных **tempdb** нельзя выполнить следующие операции.  

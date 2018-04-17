@@ -1,16 +1,16 @@
 ---
-title: "ALTER INDEX (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/24/2017
+title: ALTER INDEX (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -200,7 +200,7 @@ ALTER INDEX { index_name | ALL }
 > [!WARNING]
 >  Более подробные сведения об операциях с индексами, которые можно выполнить в сети, см. в разделе [Рекомендации по операциям с индексами в сети](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Если ключевое слово ALL указывается вместе с PARTITION = *partition_number*, то все индексы должны быть выровнены. Следовательно, они секционируются на основе эквивалентных функций секционирования. При использовании ключевого слова ALL вместе с PARTITION все индексные секции с одинаковым аргументом *partition_number* будут перестроены или реорганизованы. Дополнительные сведения о секционированных индексах см. в разделе [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Если ключевое слово ALL указывается вместе с PARTITION = *partition_number*, то все индексы должны быть выровнены. Следовательно, они секционируются на основе эквивалентных функций секционирования. При использовании ключевого слова ALL вместе с PARTITION все индексные секции с одинаковым аргументом *partition_number* будут перестроены или реорганизованы. Дополнительные сведения о секционированных индексах см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  *database_name*  
  Имя базы данных.  
@@ -256,7 +256,7 @@ PARTITION
    
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- SORT_IN_TEMPDB, MAXDOP и DATA_COMPRESSION — параметры, которые могут быть указаны при перестроении одиночной секции (PARTITION = *n*). XML-индексы не могут быть указаны в операции перестроения одиночной секции.  
+ SORT_IN_TEMPDB, MAXDOP и DATA_COMPRESSION — параметры, которые могут быть указаны при перестроении одиночной секции (PARTITION = *n*). XML-индексы не могут быть указаны в операции перестроения одиночной секции.  
   
  DISABLE  
  Помечает индекс как отключенный и недоступный для использования компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Любой индекс может быть отключен. Определение отключенного индекса остается в системном каталоге без базовых индексных данных. Отключение кластеризованного индекса блокирует доступ пользователя к данным базовой таблицы. Чтобы активировать индекс, следует использовать инструкцию ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING. Дополнительные сведения см. в разделах [Отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md) и [Включение индексов и ограничений](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+ Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]
 >  Хотя параметр MAXDOP синтаксически поддерживается для всех индексов XML, для пространственного или первичного XML-индекса инструкция ALTER INDEX в настоящее время использует только один процессор.  
@@ -513,7 +513,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  Рекомендации по использованию COMPRESSION_DELAY см. в разделе о работе с индексами columnstore для получения операционной аналитики в реальном времени.  
   
  DATA_COMPRESSION  
- Задает режим сжатия данных для указанного индекса, номера секции или диапазона секций. Существуют следующие параметры выбора.  
+ Задает режим сжатия данных для указанного индекса, номера секции или диапазона секций. Существуют следующие варианты выбора.  
   
  None  
  Индекс или заданные секции не сжимаются. Это не относится к индексам columnstore.  
@@ -742,7 +742,7 @@ ABORT
 > [!NOTE]
 > Команда DDL выполняется вплоть до завершения, приостанавливается или завершается ошибкой. Если команда приостанавливается, возникнет ошибка, указывающая на приостановку операции и невозможность завершения создания индекса. Дополнительные сведения о текущем состоянии индекса можно получить из [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Как и в случае выше, при сбое также будет выведено сообщение об ошибке. 
 
- Дополнительные сведения см. в статье [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+ Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).  
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY с операциями с индексами в режиме "в сети"  
   
@@ -757,7 +757,7 @@ ABORT
   
  Чтобы изменить параметры, характерные для пространственного индекса (такие как BOUNDING_BOX или GRID), необходимо либо применить инструкцию CREATE SPATIAL INDEX с параметром DROP_EXISTING = ON, либо удалить пространственный индекс и создать новый. Пример см. в разделе [CREATE SPATIAL INDEX (Transact-SQL)](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-## <a name="data-compression"></a>Data Compression  
+## <a name="data-compression"></a>Сжатие данных  
  Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
  Чтобы оценить, как изменение параметров сжатия PAGE и ROW повлияет на таблицу, индекс или секцию, используйте хранимую процедуру [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
@@ -765,8 +765,8 @@ ABORT
 На секционированные индексы налагаются следующие ограничения.  
   
 -   Если при использовании `ALTER INDEX ALL ...` у таблицы есть невыровненные индексы, изменить настройку сжатия отдельной секции невозможно.  
--   Инструкция ALTER INDEX \<index> ... Инструкция REBUILD PARTITION ... производит перестроение указанной секции индекса.  
--   Инструкция ALTER INDEX \<index> ... Инструкция REBUILD WITH ... производит перестроение всех секций индекса.  
+-   Инструкция ALTER INDEX \<index> ... REBUILD PARTITION ... производит перестроение указанной секции индекса.  
+-   Инструкция ALTER INDEX \<index> ... REBUILD WITH ... производит перестроение всех секций индекса.  
   
 ## <a name="statistics"></a>Статистика  
  При применении инструкции **ALTER INDEX ALL...** к таблице происходит обновление только тех статистических данных, которые связаны с индексами. Автоматические или созданные вручную статические данные таблицы (вместо индекса) не обновляются.  
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>В. Сжатие всех разностных групп строк OPEN и CLOSED в columnstore  
  **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Команда REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) сжимает каждую разностную группу строк OPEN и CLOSED в columnstore как сжатую группу строк. При этом очищаются дельта-хранилища и все строки принудительно сжимаются в columnstore. Это особенно полезно после выполнения множества операций вставки, так как они хранят строки в одном или нескольких дельта-хранилищах.  
+ Команда REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) сжимает каждую разностную группу строк OPEN и CLOSED в columnstore как сжатую группу строк. При этом очищается хранилище deltastore и все строки принудительно сжимаются в columnstore. Это особенно полезно после выполнения множества операций вставки, так как они хранят строки в одном или нескольких разностных группах строк.  
   
  REORGANIZE объединяет группы строк для заполнения групп строк до максимального числа строк \<= 1 024 576. Таким образом, при сжатии всех групп строк OPEN и CLOSED у вас не будет большого количества сжатых групп строк, содержащих небольшое количество строк. Чтобы сократить размер в сжатом виде и повысить производительность запросов, группы строк следует заполнить как можно плотнее.  
   

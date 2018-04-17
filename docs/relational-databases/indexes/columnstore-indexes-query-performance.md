@@ -1,28 +1,28 @@
 ---
-title: "Производительность запросов по индексам columnstore | Документы Майкрософт"
-ms.custom: 
+title: Производительность запросов по индексам columnstore | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: 
+caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8c18a2198e32bae0427ea286a64998ab546e3ac
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 08222b4c7af5a62040f808bee56f181ed25149dd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>Производительность запросов по индексам columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/12/2018
 |top sort||нет|нет|да||    
 |window aggregates||Н/Д|Н/Д|да|Новый оператор в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹ Применимо к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ¹Применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], уровням [!INCLUDE[ssSDS](../../includes/sssds-md.md)] "Премиум", "Стандартный" — S3 и выше, всем уровням "Виртуальное ядро", а также [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Включение статических вычислений    
  Обычно для выполнения статистических вычислений требуется извлечь соответствующие строки с узла SCAN и вычислить значения в пакетном режиме. Несмотря на то, что в этом случае обеспечивается высокая производительность, в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] операцию статистического вычисления можно включить на узле SCAN, чтобы значительно повысить производительность статистических вычислений на основе пакетного режима. При этом должны соблюдаться указанные далее условия. 

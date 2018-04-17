@@ -1,4 +1,4 @@
----
+﻿---
 title: sys.dm_tran_locks (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/30/2017
@@ -29,7 +29,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
 ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/05/2018
 ---
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/05/2018
   
  Несколько курсоров, существующих в одном сеансе, неразличимы и обрабатываются как одна сущность.  
   
- Распределенные транзакции, не связанные со значением идентификатора сеанса, являются потерянными, и им назначается значение идентификатора сеанса, равное -2. Дополнительные сведения см. в разделе [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Распределенные транзакции, не связанные со значением идентификатора сеанса, являются потерянными, и им назначается значение идентификатора сеанса, равное -2. Дополнительные сведения см. в разделе [KILL & #40; Transact-SQL & #41; ](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>Подробности ресурса  
  В следующей таблице перечислены ресурсы, которые представлены в **resource_associated_entity_id** столбца.  
