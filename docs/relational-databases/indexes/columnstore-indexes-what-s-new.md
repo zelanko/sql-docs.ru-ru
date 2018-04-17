@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   Сводка функций индексов columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и для последних выпусков [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровне Premium для базы данных SQL и уровне Standard (S3 и более поздние версии). Для SQL Server (2016 с пакетом обновления 1 (SP1) и более поздних версий) индексы columnstore доступны во всех выпусках. Для SQL Server (2016 с пакетом обновления 1 (SP1) и более ранних версий) индексы columnstore доступны только в выпуске Enterprise Edition.
+ > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровнях "Премиум" для базы данных SQL, уровнях "Стандартный" (S3 и более поздние версии) и всех уровнях "Виртуальное ядро". Для SQL Server (2016 с пакетом обновления 1 (SP1) и более поздних версий) индексы columnstore доступны во всех выпусках. Для SQL Server (2016 с пакетом обновления 1 (SP1) и более ранних версий) индексы columnstore доступны только в выпуске Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В следующей таблице перечислены основные функции для индексов columnstore и продукты, в которых они доступны.  
@@ -119,7 +119,8 @@ ms.lasthandoff: 03/22/2018
   
 ### <a name="limitations"></a>Ограничения  
   
--   Инструкция MERGE отключена, если индекс сбалансированного дерева определен в кластеризованном индексе columnstore.  
+
+  
 -   Для таблиц в памяти индекс columnstore должен включать все столбцы; индекс columnstore не может включать отфильтрованное условие.  
 -   Для таблиц в памяти запросы к индексу columnstore выполняются только в режиме взаимодействия, а не в собственном режиме в памяти. Поддерживается параллельное выполнение.  
   

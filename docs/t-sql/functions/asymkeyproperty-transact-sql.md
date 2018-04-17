@@ -1,16 +1,16 @@
 ---
-title: "ASYMKEYPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ASYMKEYPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает свойства асимметричного ключа.
+Эта функция возвращает свойства асимметричного ключа.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,7 +46,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>Аргументы  
 *Key_ID*  
-Идентификатор Key_ID асимметричного ключа в базе данных. Чтобы найти значение Key_ID, если известно только имя ключа, используйте функцию ASYMKEY_ID. Аргумент *Key_ID* имеет тип данных **int**.
+Идентификатор Key_ID асимметричного ключа в базе данных. Чтобы найти значение Key_ID, если известно только имя ключа, используйте функцию ASYMKEY_ID. *Key_ID* имеет тип данных **int**.
   
 **'**algorithm_desc**'**  
 Указывает, что в выходных данных возвращается описание алгоритма асимметричного ключа. Доступно только для асимметричных ключей, созданных с помощью модуля расширенного управления ключами.
@@ -61,7 +61,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 **sql_variant**
   
 ## <a name="permissions"></a>Разрешения  
-Требует некоторых разрешений асимметричного ключа, а также подтверждения разрешения вызывающей стороны на VIEW с этим асимметричным ключом.
+Необходимы подходящие разрешения на асимметричный ключ, а также для вызывающей стороны не должно быть запрещено разрешение VIEW на этот асимметричный ключ. Дополнительные сведения о разрешениях для асимметричных ключей см. в разделе [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
 В следующем примере возвращаются свойства асимметричного ключа с идентификатором Key_ID 256.
@@ -80,7 +80,7 @@ GO
 [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)  
 [VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
-[Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+[Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
 [sys.asymmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [Представления каталога безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
 [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)  

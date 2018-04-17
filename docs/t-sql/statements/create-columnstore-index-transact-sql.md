@@ -1,16 +1,16 @@
 ---
-title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -153,7 +153,7 @@ COMPRESSION_DELAY = **0** | *delay* [ Minutes ]
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Применимо к: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие параметры выбора.   
+Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие варианты выбора.   
 COLUMNSTORE  
    COLUMNSTORE является значением по умолчанию и задает сжатие с использованием самого эффективного сжатия columnstore. Это обычный вариант.  
   
@@ -176,7 +176,7 @@ ON
    **"**default**"**  
    Чтобы создать индекс для файловой группы по умолчанию, используйте значение default или [ default ].  
   
-   Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. QUOTED_IDENTIFIER по умолчанию равен ON. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+   Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. QUOTED_IDENTIFIER по умолчанию равен ON. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 Создайте выполняемый в памяти некластеризованный индекс columnstore в таблице rowstore, хранимой в виде кучи или кластеризованного индекса. Индекс может иметь условие фильтрации и не должен включать все столбцы базовой таблицы. Индекс columnstore требует достаточно места для хранения копии данных. Он может обновляться и обновляется по мере изменения базовой таблицы. Некластеризованный индекс columnstore в кластеризованном индексе допускает аналитику в реальном времени.  
@@ -221,7 +221,7 @@ COMPRESSION_DELAY = **0** | \<delay>[Minutes]
    Задает нижнюю границу периода, в течение которого строка должна оставаться в разностной группе строк, прежде чем сможет переместиться в сжатую группу строк. Например, клиент может запросить возможность сжатия строки в формат хранения по столбцам, если она остается неизменной в течение 120 минут. Для индекса columnstore в таблицах на диске мы не отслеживаем время вставки или обновления строки, вместо этого мы используем время закрытия разностной группы строк для получения сведений о строке. Значение по умолчанию — 0 минут. Строка переносится в хранилище по столбцам, когда в разностной группе строк накопится 1 миллион строк и она будет помечена как закрытая.  
   
 DATA_COMPRESSION  
-   Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие параметры выбора.  
+   Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие варианты выбора.  
 COLUMNSTORE  
    Применимо к: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. COLUMNSTORE является значением по умолчанию и задает сжатие с использованием самого эффективного сжатия columnstore. Это обычный вариант.  
   
@@ -260,7 +260,7 @@ ON
 **"**default**"**  
 Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
-Слово «default» в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"**default**"** или ON **[**default**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"**default**"** или ON **[**default**]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
@@ -277,7 +277,7 @@ ON
 - Операция INSERT, UPDATE, DELETE или MERGE изменяет данные в отфильтрованном индексе.  
 - Отфильтрованный индекс используется оптимизатором запросов для создания плана запроса.  
   
-    |Задание параметров|Обязательное значение|Значение сервера по умолчанию|Default<br /><br /> Значение OLE DB и ODBC|Default<br /><br /> Значение DB-Library|  
+    |Параметры SET|Обязательное значение|Значение сервера по умолчанию|По умолчанию<br /><br /> Значение OLE DB и ODBC|По умолчанию<br /><br /> Значение DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -320,13 +320,13 @@ ON
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (область применения: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и база данных SQL Azure с ценовой категорией "премиум", только в кластеризованных индексах columnstore)   
+-   nvarchar(max) (применяется к [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и уровню "Премиум", уровню "Стандартный" (S3 и выше) и всем уровням предложений виртуальных ядер только в кластеризованных индексах columnstore)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max) (область применения: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и база данных SQL Azure с ценовой категорией "премиум", только в кластеризованных индексах columnstore)
+-   varchar(max) (применяется к [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и уровню "Премиум", уровню "Стандартный" (S3 и выше) и всем уровням предложений виртуальных ядер только в кластеризованных индексах columnstore)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max) (область применения: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и база данных SQL Azure с ценовой категорией "премиум", только в кластеризованных индексах columnstore)
+-   varbinary (max) (применяется к [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и базе данных SQL Azure на уровне "Премиум", уровне "Стандартный" (S3 и выше) и всех уровнях предложений виртуальных ядер только в кластеризованных индексах columnstore)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (область применения: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздние версии)
   
@@ -349,7 +349,7 @@ ON
 -   Не может быть изменено с использованием инструкции **ALTER INDEX**. Чтобы изменить некластеризованный индекс, следует удалить и повторно создать индекс columnstore. Инструкция **ALTER INDEX** позволяет отключить и перестроить индекс columnstore.  
 -   Не может быть создано с использованием ключевого слова **INCLUDE**.  
 -   Нельзя включать ключевые слова **ASC** и **DESC** для сортировки индексов. Индексы columnstore упорядочены в соответствии с алгоритмами сжатия. В результате сортировки можно потерять многие преимущества в производительности.  
--   Нельзя включать столбцы больших объектов (LOB) типа nvarchar(max), varchar(max) и varbinary(max) в некластеризованные индексы columnstore. Только кластеризованные индексы columnstore поддерживают типы больших объектов, начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и базы данных SQL Azure с ценовой категорией "премиум". Обратите внимание, что предыдущие версии не поддерживают типы больших объектов в кластеризованных и некластеризованных индексах columnstore.
+-   Нельзя включать столбцы больших объектов (LOB) типа nvarchar(max), varchar(max) и varbinary(max) в некластеризованные индексы columnstore. Только кластеризованные индексы columnstore поддерживают типы больших объектов, начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и базы данных SQL Azure на уровне "Премиум", уровне "Стандартный" (S3 и выше) и всех уровнях предложений виртуальных ядер. Обратите внимание, что предыдущие версии не поддерживают типы больших объектов в кластеризованных и некластеризованных индексах columnstore.
 
 
  **Индексы columnstore нельзя использовать вместе со следующими функциями:**  

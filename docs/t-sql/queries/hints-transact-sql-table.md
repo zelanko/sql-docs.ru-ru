@@ -1,16 +1,16 @@
 ---
-title: "Табличные указания (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: Табличные указания (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>Табличные указания (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/25/2018
 > [!CAUTION]  
 >  Поскольку оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно выбирает наилучший план выполнения запроса, подсказки рекомендуется использовать только опытным разработчикам и администраторам баз данных в качестве последнего средства.  
   
- **Область применения:**  
+ **Применимо к:**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  Следующие табличные указания допускаются как с ключевым словом WITH, так и без него: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT и NOEXPAND. Если такие табличные указания указываются без ключевого слова WITH, подсказки следует задавать отдельно. Пример:  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  Если подсказка указана с другим параметром, ее необходимо указывать с ключевым словом WITH:  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  Разделение подсказок пробелами, а не с помощью запятых, является устаревшей возможностью. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
  NOEXPAND  
- Указывает, что при обработке запроса оптимизатором запросов никакие индексированные представления не расширяются для доступа к базовым таблицам. Оптимизатор запросов обрабатывает представление так же, как и таблицу с кластеризованным индексом. Аргумент NOEXPAND применяется только для индексированных представлений. Дополнительные сведения см. в подразделе «Примечания».  
+ Указывает, что при обработке запроса оптимизатором запросов никакие индексированные представления не расширяются для доступа к базовым таблицам. Оптимизатор запросов обрабатывает представление так же, как и таблицу с кластеризованным индексом. Аргумент NOEXPAND применяется только для индексированных представлений. Дополнительные сведения см. в подразделе "Примечания".  
   
  INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  Синтаксис INDEX() указывает имя или идентификатор одного или более индексов, используемых при обработке инструкции оптимизатором запросов. Альтернативный синтаксис «INDEX =» позволяет задать отдельное значение индекса. Для каждой таблицы можно задать только одно указание индекса.  
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |В сочетании с подсказкой INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Оптимизатор запросов будет использовать при доступе к таблице или представлению через указанный индекс только операции поиска по индексу.|  
 |Параметризация посредством указания индекса и столбцов индекса|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|Оптимизатор запросов будет использовать при выполнении поиска по указанной таблице или представлению индексу как минимум указанные столбцы индекса.|  
   
- При использовании указания FORCESEEK (с указанием параметров индексов или без них) руководствуйтесь следующими рекомендациями.  
+При использовании указания FORCESEEK (с указанием параметров индексов или без них) руководствуйтесь следующими рекомендациями.  
   
 -   Указание может задаваться как табличное указание или как указание запроса. Дополнительные сведения об указаниях запроса см. в разделе [Указания запроса (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   Если из-за подсказки FORCESEEK план не был найден, возвращается ошибка 8622.  
   
- Если FORCESEEK указывается с параметрами индекса, то действуют следующие ограничения и рекомендации.  
+Если FORCESEEK указывается с параметрами индекса, то действуют следующие ограничения и рекомендации.  
   
 -   Указание нельзя задать для таблицы, которая является целевой для инструкции INSERT, UPDATE или DELETE.  
   
@@ -240,7 +240,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 -   Для секционированных индексов столбец секционирования, неявно добавляемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не может быть задаваться в указании FORCESEEK.  
   
 > [!CAUTION]  
->  Указание FORCESEEK с параметрами ограничивает число планов, которые могут быть использованы оптимизатором, в отличие от указания FORCESEEK без параметров. Из-за этого может чаще возникать ошибка «Невозможно сформировать план». В будущих выпусках внутренние изменения оптимизатора могут привести к увеличению числа этих планов.  
+>  Указание FORCESEEK с параметрами ограничивает число планов, которые могут быть использованы оптимизатором, в отличие от указания FORCESEEK без параметров. Из-за этого может чаще возникать ошибка "Невозможно сформировать план". В будущих выпусках внутренние изменения оптимизатора могут привести к увеличению числа этих планов.  
   
  FORCESCAN  
  Это указание, введенное в SQL Server 2008 R2 с пакетом обновления 1 (SP1), указывает оптимизатору запросов, что в качестве пути доступа к упоминаемой таблице или представлению следует использовать только операцию просмотра индекса. Указание FORCESCAN может оказаться полезным в тех запросах, где оптимизатор недооценивает число затрагиваемых строк и выбирает операцию поиска, а не просмотра. В этом случае объем памяти, выделенный для данной операции, будет недостаточным, что повлияет на производительность запроса.  
@@ -347,11 +347,11 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Равнозначен аргументу HOLDLOCK. Накладывает дополнительные ограничения на совмещаемую блокировку: удерживает ее до завершения транзакции вместо снятия блокировки сразу после того, как таблица или страница данных больше не требуется, независимо от того, завершена ли транзакция. Просмотр выполняется с той же семантикой, что и транзакция, запущенная на уровне изоляции SERIALIZABLE. Дополнительные сведения об уровнях изоляции см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  SNAPSHOT  
-**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Доступ к таблице, оптимизированной для памяти, выполняется с изоляцией SNAPSHOT. SNAPSHOT может использоваться только с таблицами, оптимизированными для памяти (не с дисковыми таблицами). Дополнительные сведения см. в разделе [Введение в таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -359,7 +359,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
  SPATIAL_WINDOW_MAX_CELLS = *целое число*  
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает максимальное количество ячеек, используемых для тесселяции геометрического или географического объекта. *number* — значение от 1 до 8192.  
   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>Подсказки отфильтрованного индекса  
  Отфильтрованный индекс можно использовать в качестве табличной подсказки, но, если он не распространяется на все выбранные запросом строки, оптимизатор запросов выдаст ошибку 8622. Далее приводится пример недопустимого указания отфильтрованного индекса. В примере создается отфильтрованный индекс `FIBillOfMaterialsWithComponentID`, который затем используется как подсказка индекса для инструкции SELECT. Предикат отфильтрованного индекса содержит строки данных для ComponentID со значениями 533, 324 и 753. Предикат запроса также содержит строки данных для ComponentID со значениями 533, 324 и 753, но расширяет результирующий набор на ComponentID со значениями 855 и 924, которые отсутствуют в отфильтрованном индексе. Поэтому оптимизатор запросов не может использовать указание отфильтрованного индекса и формирует ошибку 8622. Дополнительные сведения см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>Б. Использование указания FORCESEEK для указания операции поиска в индексе  
  В следующем примере показано использование указания FORCESEEK без указания индекса, предписывающее оптимизатору запросов выполнять операцию поиска в индексе для таблицы `Sales.SalesOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

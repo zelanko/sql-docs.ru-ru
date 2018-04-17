@@ -1,22 +1,22 @@
----
-title: "Руководство по архитектуре страниц и экстентов | Документация Майкрософт"
-ms.custom: 
+﻿---
+title: Руководство по архитектуре страниц и экстентов | Документация Майкрософт
+ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 
+caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
