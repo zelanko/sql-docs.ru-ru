@@ -2,7 +2,7 @@
 title: Функция SQLPoolConnect | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd862492513daceda364205d965b1d00e6cb649f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 130c39d4aab986b5053192d2fe2c548e89ccef2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlpoolconnect-function"></a>Функция SQLPoolConnect
 **Соответствия**  
@@ -68,7 +68,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>Диагностика  
  Аналогично [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) для любых входных об ошибке проверки, за исключением того, что будет использоваться диспетчер драйверов **HandleType** из SQL_HANDLE_DBC_INFO_TOKEN и **обработки** из *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Диспетчер драйверов гарантирует, что родительский HENV handle *hDbc* и *hDbcInfoToken* совпадают.  
   
  В отличие от [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), имеется не *DriverCompletion* аргумент Предлагайте пользователям вводить сведения о соединении. Диалоговое окно запросов запрещена в сценарии регулирования количества запросов.  
@@ -83,7 +83,7 @@ SQLRETURN  SQLPoolConnect(
   
  Включить sqlspi.h для разработки драйвера ODBC.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Организация пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Разработка драйвера ODBC с поддержкой пула подключений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

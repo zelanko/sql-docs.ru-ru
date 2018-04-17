@@ -1,15 +1,16 @@
 ---
-title: "Неподдерживаемые функции и команды Visual FoxPro | Документы Microsoft"
-ms.custom: 
+title: Неподдерживаемые функции и команды Visual FoxPro | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Неподдерживаемые Visual FoxPro команд и функций (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены FoxPro команд и функций, которые не поддерживаются драйвером ODBC для Visual FoxPro, но поддерживаемых Microsoft® Visual FoxPro.  
@@ -38,8 +39,8 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|# #UNDEF DEFINE...|#IF... #ENDIF-директива препроцессора|#IFDEF &#124; #IFNDEF|  
-|#INCLUDE-директива препроцессора|: Оператор разрешения области|! Команда (см. &#124; выполнить! Команда)|  
+|# #UNDEF DEFINE...|#IF... #ENDIF-директива препроцессора|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE-директива препроцессора|: Оператор разрешения области|! Команды (в разделе ВЫПОЛНЕНИЯ &#124; ! Команда)|  
 |? &#124; ?? Command|??? Command|\ &#124; \\\ Команды|  
 |@ ... ПОЛЕ команды|@ ... Класс команды|@ ... Команда «Очистить»|  
 |@ ... Изменение — изменить поля команды|@ ... ЗАЛИВКА команды|@ ... GET|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 12/21/2017
 |ПЕРЕИМЕНУЙТЕ команду СОЕДИНЕНИЯ|ПЕРЕИМЕНОВАНИЕ таблицы команды|ВОССТАНОВЛЕНИЕ из команды|  
 |Команда ОТЧЕТОВ|REQUERY-функция)|ВОССТАНОВИТЬ ОКНО-команда|  
 |МАКРОС команды RESTORE|ЭКРАН команды RESTORE|Функция RGBSCHEME)|  
-|Команда RESUME|Функция RGB)|ВЫПОЛНИТЬ &#124;! Command|  
+|Команда RESUME|Функция RGB)|ЗАПУСТИТЕ &AMP;#124; ! Command|  
 |Команда RMDIR|Функция ROW)||  
 |Команда функции RunScript МАРКЕРА|Функция RDLEVEL)||  
   

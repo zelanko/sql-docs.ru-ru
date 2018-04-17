@@ -1,39 +1,40 @@
 ---
-title: "Внешние соединения | Документы Microsoft"
-ms.custom: 
+title: Внешние соединения | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f217b7392b4db968e612f58b264e17f921a40aae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a350621a056226653a2f9906dbf3931dfdfccec6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-joins"></a>Внешние соединения
 ODBC поддерживает SQL-92 слева, правое и полное внешнее соединение синтаксис. Escape-последовательность для внешних соединений  
   
- **{oj** *внешнего соединения***}**  
+ **{oj** *внешнего-соединения ***}**  
   
  где *внешнего соединения* —  
   
- *ссылка на таблицу* {**влево &#124; ПРАВО &#124; FULL} OUTER JOIN** {*ссылка на таблицу* &#124; *внешнего соединения*} **ON** *условия поиска*  
+ *ссылка на таблицу* {**влево &#124; ПРАВО &#124; полный} ВНЕШНЕГО СОЕДИНЕНИЯ** {*ссылка на таблицу* &#124; *внешнего соединения*} **ON**  *условия поиска*  
   
  *ссылка на таблицу* позволяет задать имя таблицы и *условие поиска* указывает условие соединения между *ссылки на таблицу*.  
   

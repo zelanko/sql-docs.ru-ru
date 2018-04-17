@@ -1,35 +1,35 @@
 ---
-title: "Объект SqlPipe | Документы Microsoft"
-ms.custom: 
+title: Объект SqlPipe | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom result sets [CLR integration]
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: 
+caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5db45b3c67fcf865214ad422662acfb80bab293e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eeeb65173b29ab5e0e441789d1c0033a2a59b369
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlpipe-object"></a>Объект SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]обычным было написание хранимой процедуры (или расширенной хранимой процедуры), которая отправляет результаты или выдает выходные параметры вызывающему клиенту.  
+  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]обычным было написание хранимой процедуры (или расширенной хранимой процедуры), которая отправляет результаты или выдает выходные параметры вызывающему клиенту.  
   
  В хранимой процедуре [!INCLUDE[tsql](../../includes/tsql-md.md)] любая инструкция **SELECT** , которая возвращает ноль или более строк, отправляет результаты в «канал» подключенного вызывающего.  
   

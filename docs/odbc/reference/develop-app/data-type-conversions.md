@@ -1,15 +1,16 @@
 ---
-title: "Преобразование типов данных | Документы Microsoft"
-ms.custom: 
+title: Преобразование типов данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], conversions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversions"></a>Преобразование типов данных
 Данные могут преобразовываться из одного типа в другой на одном из четырех раз: когда данные передаются из переменной одного приложения в другую (C по C) при отправке данных в переменную приложения к параметру инструкции (для SQL C), при возврате данных в столбец результирующего набора в переменную приложения (SQL в C), а при передаче данных из столбца источника данных на другой (SQL на SQL).  

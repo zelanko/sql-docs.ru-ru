@@ -1,24 +1,17 @@
 ---
 title: Что&#39;новые возможности служб SQL Server Machine Learning | Документы Microsoft
-ms.date: 03/17/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 07c21de29f41826d1314f92f77fd9277f84cb0e7
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности служб SQL Server машины обучения 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,10 +26,10 @@ ms.lasthandoff: 04/04/2018
 
 | Выпуск | Обновления компонентов |
 |---------|---------------|
-| CU 4 | Пакет обновления и исправления ошибок, но это не новая функция объявлений. |
-| CU 3 | Python модели сериализации в revoscalepy, с помощью [rx_serialize_model функция](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Оценки собственного](sql-native-scoring.md) плюс усовершенствования [оценки в реальном времени](real-time-scoring.md). С оценки в базе данных, пропускная способность — миллиона строк в секунду, с помощью R-модели. В этом обновлении оценки в реальном времени и оценки собственного обеспечивают более высокую производительность в одной строки и массовой оценки. Собственный оценки использует функцию T-SQL для быстрой оценки может выполняться в любом выпуске SQL Server, даже в Linux. Функция требует без установки R или дополнительной настройки. Это означает обучения модели в другом месте, сохраните его в SQL Server и затем выполнять количественную оценку без вызова R. Дополнительные сведения о методологиях оценки см. в разделе [выполнении оценки в реальном времени или собственного оценки](r/how-to-do-realtime-scoring.md). |
-| CU 2 | Пакет обновления и исправления ошибок, но это не новая функция объявлений. |
-| CU 1 | В revoscalepy, добавляет rx_create_col_info для возвращения сведений о схеме из источника данных SQL Server, аналогично [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) для R. <br/><br/>Усовершенствования [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) для поддержки параллельных сценариях с использованием `RxLocalParallel` контекста вычислений.|
+| НАКОПИТЕЛЬНЫМ ОБНОВЛЕНИЕМ 4 | Пакет обновления и исправления ошибок, но это не новая функция объявлений. |
+| НАКОПИТЕЛЬНЫМ ПАКЕТОМ ОБНОВЛЕНИЯ 3 | Python модели сериализации в revoscalepy, с помощью [rx_serialize_model функция](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Оценки собственного](sql-native-scoring.md) плюс усовершенствования [оценки в реальном времени](real-time-scoring.md). С оценки в базе данных, пропускная способность — миллиона строк в секунду, с помощью R-модели. В этом обновлении оценки в реальном времени и оценки собственного обеспечивают более высокую производительность в одной строки и массовой оценки. Собственный оценки использует функцию T-SQL для быстрой оценки может выполняться в любом выпуске SQL Server, даже в Linux. Функция требует без установки R или дополнительной настройки. Это означает обучения модели в другом месте, сохраните его в SQL Server и затем выполнять количественную оценку без вызова R. Дополнительные сведения о методологиях оценки см. в разделе [выполнении оценки в реальном времени или собственного оценки](r/how-to-do-realtime-scoring.md). |
+| НАКОПИТЕЛЬНЫМ ПАКЕТОМ ОБНОВЛЕНИЯ 2 | Пакет обновления и исправления ошибок, но это не новая функция объявлений. |
+| НАКОПИТЕЛЬНЫМ ПАКЕТОМ ОБНОВЛЕНИЯ 1 | В revoscalepy, добавляет rx_create_col_info для возвращения сведений о схеме из источника данных SQL Server, аналогично [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) для R. <br/><br/>Усовершенствования [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) для поддержки параллельных сценариях с использованием `RxLocalParallel` контекста вычислений.|
 | Начальный выпуск |[**Интеграция Python для аналитики в базе данных**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>[Revoscalepy](python/what-is-revoscalepy.md) пакет является эквивалентом Python RevoScaleR. Можно создавать модели Python для линейной и логистической регрессии, деревья принятия решений, повышенных деревьев и случайные леса, все параллельно и способны выполнялась в контекстах удаленных вычислений. Данный пакет поддерживает использование нескольких источников данных и контекстах удаленных вычислений. Специалист по анализу данных или разработчик могут выполнять код Python на удаленный экземпляр SQL Server, для просмотра данных или моделей создаются без перемещения данных. <br/><br/>[Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) пакет является эквивалентом Python MicrosoftML R-пакет.<br/><br/>T-SQL и Python интеграция через [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Может вызывать любой код Python, с помощью этой хранимой процедуры. Эта инфраструктура безопасности обеспечивает развертывание корпоративного уровня Python моделей и сценариев, которые могут вызываться из приложения с помощью простой хранимой процедуры. Повышение производительности достигается путем потоковой передачи данных из SQL в процессы Python и параллелизации кольцо MPI. <br/><br/>T-SQL можно использовать [PREDICT](../t-sql/queries/predict-transact-sql.md) функцию для выполнения [оценки собственного](sql-native-scoring.md) на предварительно обученной модели, которая ранее была сохранена в требуемый двоичный формат.|
 | Начальный выпуск | [**MicrosoftML (R)** ](using-the-microsoftml-package.md) содержит состояние современных машинного обучения алгоритмы и преобразование данных, может быть контекстах удаленных вычислений масштабированный или запускаться в. Алгоритмы включают настраиваемые глубоких нейронных сетей, деревья принятия решений быстрого и леса принятия решений, линейной регрессии и логистической регрессии. |
 | Начальный выпуск | [**Предварительно обученной модели** ](r/install-pretrained-models-sql-server.md) для распознавания изображений и анализ мнений положительные отрицательные. Эти модели используются для создания прогнозов на ваших данных. |

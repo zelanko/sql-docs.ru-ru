@@ -1,25 +1,17 @@
 ---
-title: Ввода в эксплуатацию кода R (Machine Services обучения) | Документы Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Ввода в эксплуатацию кода R в службах SQL Server Machine Learning | Документы Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Ввода в эксплуатацию кода R (обучения Machine Services)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>Приступая к работе с код R в SQL Server
 
-В большинстве случаев интеграцию машины обучению означало широко запись для поддержки интеграции и производительности. Тем не менее перемещение кода Python и R в рабочей среде гораздо проще в службах обучения Майкрософт машины, поскольку код может выполняться в SQL Server и вызывать с помощью хранимых процедур. Можно продолжать использовать знакомые средства и не требуется устанавливать среду разработки R. 
+В большинстве случаев интеграцию машины обучению означало широко запись для поддержки интеграции и производительности. Тем не менее перемещение кода Python и R в рабочей среде гораздо проще в службах обучения машины SQL Server, поскольку код может выполняться в SQL Server и вызывать с помощью хранимых процедур. Можно продолжать использовать знакомые средства и не требуется устанавливать среду разработки R. 
 
 Дополнительные сведения о базовом синтаксисе см. в разделе:
 

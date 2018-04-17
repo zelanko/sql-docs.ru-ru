@@ -1,15 +1,16 @@
 ---
-title: "SQL, чтобы интервалы год месяц C: | Документы Microsoft"
-ms.custom: 
+title: 'SQL, чтобы интервалы год месяц C: | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 680143b9cc20b910e65218bfe222bd43654bcb21
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c54f671d1cb7fbf5ab0f0be6ca5f47ea9281fd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL, чтобы интервалы год месяц C:
 Идентификаторы типа данных ODBC SQL interval год месяц следующие:  
@@ -41,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 |Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH []<br /><br /> SQL_C_INTERVAL_YEAR []<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH []|Часть поля не усекаются замыкающие<br /><br /> В конце поля часть усечена<br /><br /> Начальные точность целевого объекта недостаточно велик для хранения данных из источника|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|Интервал точность была одним полем и преобразован без усечения данных<br /><br /> Интервал точность была отдельное поле и усеченное всего<br /><br /> Точность интервала не был одного поля|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Длина данных в байтах<br /><br /> Размер типа данных C|н/д<br /><br /> 22003<br /><br /> 22015|  
-_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Байтовая длина данных > *BufferLength*|data<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 22003|  
-|SQL_C_CHAR|Длина байтов символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Длина символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH []<br /><br /> SQL_C_INTERVAL_YEAR []<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH []|Часть поля не усекаются замыкающие<br /><br /> В конце поля часть усечена<br /><br /> Начальные точность целевого объекта недостаточно велик для хранения данных из источника|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|Интервал точность была одним полем и преобразован без усечения данных<br /><br /> Интервал точность была отдельное поле и усеченное всего<br /><br /> Точность интервала не был одного поля|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Длина данных в байтах<br /><br /> Размер типа данных C|н/д<br /><br /> 22003<br /><br /> 22015|  
+_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Байтовая длина данных > *BufferLength*|Данные <br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 22003|  
+|SQL_C_CHAR|Длина байтов символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Длина символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
   
  [] типа год месяц интервалом типа SQL можно преобразовать в любой тип C интервал месяца года.  
   

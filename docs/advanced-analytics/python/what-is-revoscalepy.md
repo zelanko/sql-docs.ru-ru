@@ -1,28 +1,22 @@
 ---
-title: Знакомство с revoscalepy | Документы Microsoft
-ms.custom: ''
-ms.date: 10/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Введение в пакет revoscalepy Python в машинном обучении SQL Server | Документы Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>Знакомство с приложением revoscalepy
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>Знакомство с приложением revoscalepy в SQL Server машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy** представляет собой новую библиотеку, предоставляемых корпорацией Майкрософт для поддержки распределенных вычислений удаленных вычислений контексты и высокопроизводительных алгоритмов для Python.
+**revoscalepy** предоставляется корпорацией Майкрософт для поддержки распределенных вычислений удаленных вычислений контексты и высокопроизводительных алгоритмов для разработчиков Python новой библиотеки Python.
 
 Он основан на **RevoScaleR** пакет R, который был предоставлен в Microsoft R Server и SQL Server R Services и предполагается предоставляют те же функциональные возможности:
 
@@ -53,7 +47,7 @@ ms.lasthandoff: 04/04/2018
 
 + [revoscalepy для Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [microsoftml для Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Microsoftml для Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### <a name="data-types-data-sources-and-compute-contexts"></a>Типы данных, источники данных и контекстов вычислений
 

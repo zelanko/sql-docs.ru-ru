@@ -2,7 +2,7 @@
 title: Функция SQLCancelHandle | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,13 +20,13 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3760400f23b558c27cd70a3ecd288171cbd56534
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7abc9f9d515a77de67ecafc0e4193e055383f1b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcancelhandle-function"></a>Функция SQLCancelHandle
 **Соответствия**  
@@ -65,7 +65,7 @@ SQLRETURN SQLCancelHandle(
   
  В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLCancelHandle** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |HY000|Общая ошибка|Произошла ошибка, для которой было нет определенных SQLSTATE и для которого был определен SQLSTATE не зависит от реализации. Сообщение об ошибке, возвращенные [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) в аргументе  *\*MessageText* буфера описывает ошибку и его причины.|  
@@ -113,7 +113,7 @@ SQLRETURN SQLCancelHandle(
 |---------------------------|---------|  
 |Отмена функции работающего асинхронно на дескриптор инструкции, Отмена функцию в инструкцию, которая требует данные или Отмена функции, работающей на инструкцию в другом потоке.|[Функция SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

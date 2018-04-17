@@ -2,7 +2,7 @@
 title: Функция SQLRemoveTranslator | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b076c209964110d2253681d97252ece25610ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6eef32c1e9a1497294cfbfddda0449423c2c04a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovetranslator-function"></a>Функция SQLRemoveTranslator
 **Соответствия**  
@@ -62,7 +62,7 @@ BOOL SQLRemoveTranslator(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLRemoveTranslator** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Установщик Общие ошибки|Произошла ошибка для которого нет ошибок определенного установщика.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Компонент не найден в реестре|Программа установки не удалось удалить сведения транслятор, поскольку не существует в реестре или не найден в реестре.|  

@@ -1,15 +1,16 @@
 ---
-title: "Интерфейсы на уровне вызова | Документы Microsoft"
-ms.custom: 
+title: Интерфейсы на уровне вызова | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 253a322e200f0da9046f5928385c5892265cbc19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="call-level-interfaces"></a>Интерфейсы уровня вызова
 Последний способ отправки инструкций SQL в СУБД — через интерфейс уровня вызова (CLI). Интерфейс уровня вызова предоставляет библиотеку функций СУБД, которые могут быть вызваны приложением. Таким образом вместо того чтобы без затруднений SQL с другим языком программирования, интерфейс уровня вызова аналогична стандартных библиотек, которые большинство программистов привыкшим использования, таких как строки, ввода-вывода или математических библиотек в примечании C., СУБД, которые поддерживают embedded SQL уже имеется интерфейс уровня вызова, вызовы, для которого создаются средством предварительной компиляции. Тем не менее эти вызовы являются недокументированные возможности и могут быть изменены без предварительного уведомления.  

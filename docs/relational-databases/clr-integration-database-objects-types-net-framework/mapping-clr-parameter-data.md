@@ -1,15 +1,15 @@
 ---
-title: "Сопоставление данных о параметрах CLR | Документы Microsoft"
-ms.custom: 
+title: Сопоставление данных о параметрах CLR | Документы Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,60 +28,60 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , типы данных эквивалентов в среде (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **System.Data.SqlTypes** пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
+  В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , типы данных эквивалентов в среде (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **System.Data.SqlTypes** пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
   
 ||||  
 |-|-|-|  
 |**Тип данных SQL Server**|Тип (в System.Data.SqlTypes or Microsoft.SqlServer.Types)|**Тип данных CLR (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64, допускающие значения NULL\<Int64 >**|  
-|**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**binary**|**SqlBytes, SqlBinary**|**Byte]**|  
 |**бит**|**SqlBoolean**|**Логический, допускающие значения NULL\<логическое >**|  
 |**char**|Нет|Нет|  
 |**курсор**|Нет|Нет|  
 |**date**|**SqlDateTime**|**DateTime, допускающий значение NULL\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**DateTime, допускающий значение NULL\<DateTime >**|  
 |**datetime2**|Нет|**DateTime, допускающий значение NULL\<DateTime >**|  
-|**DATETIMEOFFSET**|**None**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
-|**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
+|**DATETIMEOFFSET**|**None**|**DateTimeOffset, допускающие значения NULL\<DateTimeOffset >**|  
+|**decimal**|**SqlDecimal**|**Decimal, допускающий значение NULL\<десятичное число >**|  
 |**float**|**SqlDouble**|**Двойное, допускающие значения NULL\<Double >**|  
 |**geography**|**SqlGeography**<br /><br /> **SqlGeography** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|Нет|  
 |**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|Нет|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** определяется в Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=52676).|Нет|  
 |**image**|Нет|Нет|  
 |**int**|**SqlInt32**|**Int32, допускающие значения NULL\<Int32 >**|  
-|**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
-|**nchar**|**SqlChars, SqlString**|**Строка, Char]**|  
+|**money**|**SqlMoney**|**Decimal, допускающий значение NULL\<десятичное число >**|  
+|**nchar**|**SqlChars SqlString**|**Строка, Char]**|  
 |**ntext**|Нет|Нет|  
-|**numeric**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
-|**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** лучше подходит для передачи данных и доступа, и **SQLString** лучше подходит для выполнения строковых операций.|**Строка, Char]**|  
-|**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, строки, Char [], Nullable\<char >**|  
-|**real**|**SqlSingle** (диапазон **SqlSingle**, однако больше, чем **реальные**)|**Single, Nullable\<Single>**|  
-|**rowversion**|Нет|**Byte[]**|  
+|**numeric**|**SqlDecimal**|**Decimal, допускающий значение NULL\<десятичное число >**|  
+|**nvarchar**|**SqlChars SqlString**<br /><br /> **SQLChars** лучше подходит для передачи данных и доступа, и **SQLString** лучше подходит для выполнения строковых операций.|**Строка, Char]**|  
+|**nvarchar(1), nchar(1)**|**SqlChars SqlString**|**Char, строки, Char [], Nullable\<char >**|  
+|**real**|**SqlSingle** (диапазон **SqlSingle**, однако больше, чем **реальные**)|**Единый, допускающие значения NULL\<один >**|  
+|**rowversion**|Нет|**Byte]**|  
 |**smallint**|**SqlInt16**|**Int16, допускающие значения NULL\<Int16 >**|  
-|**smallmoney**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**smallmoney**|**SqlMoney**|**Decimal, допускающий значение NULL\<десятичное число >**|  
 |**sql_variant**|Нет|**Объект**|  
 |**table**|Нет|Нет|  
 |**text**|Нет|Нет|  
 |**time**|Нет|**Интервал времени, допускающие значения NULL\<TimeSpan >**|  
 |**timestamp**|Нет|Нет|  
-|**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
+|**tinyint**|**SqlByte**|**Байт, допускающий значение NULL\<байтов >**|  
 |**uniqueidentifier**|**SqlGuid**|**Идентификатор GUID, допускающих значение NULL\<Guid >**|  
 |**Определяемые пользователем type(UDT)**|Нет|Тот же класс связывается с определяемым пользователем типом данных в той же сборке или в зависимой сборке.|  
-|**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
+|**varbinary**|**SqlBytes, SqlBinary**|**Byte]**|  
+|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**байт, Byte [], Nullable\<байтов >**|  
 |**varchar**|Нет|Нет|  
 |**xml**|**SqlXml**|Нет|  
   
@@ -117,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Тип данных CLR (SQL Server)**|**Тип данных SQL Server**|  
-|**Decimal**|smallmoney|  
+|**Десятичное число**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Decimal**|money|  
+|**Десятичное число**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

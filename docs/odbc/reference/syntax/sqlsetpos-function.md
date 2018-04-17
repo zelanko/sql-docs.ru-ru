@@ -2,7 +2,7 @@
 title: Функция SQLSetPos | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 310adbb9cc67ffe6982ca6838285ffe4967ab7c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetpos-function"></a>Функция SQLSetPos
 **Соответствия**  
@@ -86,7 +86,7 @@ SQLRETURN SQLSetPos(
   
  Для всех этих SQLSTATE, которые могут возвращать значение SQL_SUCCESS_WITH_INFO или SQL_ERROR (за исключением SQLSTATE 01xxx), возвращается SQL_SUCCESS_WITH_INFO, если в одной или нескольким, но не для всех строк многострочные операции происходит ошибка, и возвращается значение SQL_ERROR, если произошла ошибка Операция одной строки.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01001|Конфликт операции с курсором|*Операции* аргумент имеет SQL_DELETE или SQL_UPDATE и ни одной строки или более чем одной строке, удалении или обновлении. (Дополнительные сведения об обновлениях для более чем одной строке см. в описании SQL_ATTR_SIMULATE_CURSOR *атрибута* в **SQLSetStmtAttr**.) (Функция возвращает значение SQL_SUCCESS_WITH_INFO).<br /><br /> *Операции* аргумент имеет SQL_DELETE или SQL_UPDATE, и операция не выполнена из-за оптимистичного параллелизма. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -385,6 +385,6 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 |Задание нескольких полей дескриптора|[Функция SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |С помощью атрибута инструкции|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -3,7 +3,7 @@ title: Автоматической настройки | Документы Micr
 description: Дополнительные сведения об автоматической настройки в SQL Server и базы данных SQL Azure
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -75,6 +76,8 @@ ms.lasthandoff: 04/05/2018
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически обнаруживает все возможные плана Выбор регрессию план, который должен использоваться вместо неверный план.
 При [!INCLUDE[ssde_md](../../includes/ssde_md.md)] применяется последний известный хороший план, автоматически осуществляет мониторинг производительности принудительного плана. Если принудительный план не лучше, чем регрессионных плана, новый план будет unforced и [!INCLUDE[ssde_md](../../includes/ssde_md.md)] компилируется новый план. Если [!INCLUDE[ssde_md](../../includes/ssde_md.md)] проверяет лучше, чем регрессионных принудительного плана, принудительного плана будут храниться до перекомпиляции (например, при следующей смене статистики или схемы) в случае лучше, чем регрессионных плана.
 
+Примечание: Все планы автоматически принудительно сделать не persit при перезапуске экземпляра SQL Server.
+
 ### <a name="enabling-automatic-plan-choice-correction"></a>Включение автоматического плана вариант исправления
 
 Вы можете отдельно для каждой базы данных включить автоматическую настройку и указать, что при ухудшении производительности после изменения плана следует принудительно использовать последний известный эффективный план. Автоматическая настройка включается с помощью следующей команды.
@@ -94,7 +97,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], можно найти с помощью системных представлений хранилища запросов регрессию при выборе плана. В [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает и отображает потенциальных регрессию при выборе плана и рекомендуемые действия, которые должны применяться в [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) представления. В представлении отображаются сведения о проблему, важность проблемы и сведения, например указанный запрос, идентификатор регрессионных плана, идентификатор, используемый для сравнения, в качестве базового плана и [!INCLUDE[tsql_md](../../includes/tsql_md.md)] инструкцию, которая может выполняться по устранению проблема.
 
-| type | description | datetime | score | подробности | … |
+| Тип | description | datetime | score | подробности | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Изменено с 4 мс на 14 мс времени ЦП | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Изменено с 37 ms 84 мс времени ЦП | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -142,6 +145,8 @@ FROM sys.dm_db_tuning_recommendations
 `estimated_gain` Представляет предполагаемое количество секунд, которые будут сохраняться при рекомендуемые план будет выполняться вместо текущего плана. Рекомендуемые плана должно быть принудительно вместо текущий план, если прибыли больше 10 секунд. Если имеются дополнительные ошибки (например, истечение времени ожидания или прерванных выполнений) в текущем плане, чем в рекомендуемую планирования, столбец `error_prone` будет присвоено значение `YES`. План вероятность возникновения ошибки еще одна причина, почему рекомендуется плана должно быть принудительно вместо текущей.
 
 Несмотря на то что [!INCLUDE[ssde_md](../../includes/ssde_md.md)] предоставляет все данные, необходимые для идентификации регрессию при выборе плана; непрерывный мониторинг и устранение проблем с производительностью может быть трудоемким процессом. Автоматической настройки упрощает этот процесс намного проще.
+
+Примечание: Данные в данном DMV не сохраняется после перезапуска экземпляра SQL Server.
 
 ## <a name="automatic-index-management"></a>Индекс автоматического управления
 

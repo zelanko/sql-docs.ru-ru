@@ -2,7 +2,7 @@
 title: Функция SQLProcedureColumns | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c509d2e02535a7bb30a167eba3ee1f93c70c234
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns, функция
 **Соответствия**  
@@ -68,7 +68,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength1*  
  [Вход] Длина в символах **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Вход] Строка, шаблон поиска для процедуры имена схем. Если драйвер поддерживает схемы для некоторых процедур, но не для других пользователей, например, когда драйвер получает данные из различных DBMS, пустая строка ("») обозначает этих процедур, у которых нет схемы.  
   
  Если атрибут инструкции SQL_ATTR_METADATA_ID задано значение SQL_TRUE, *SchemaName* рассматривается как идентификатор и его регистр не имеет значения. Если это значение SQL_FALSE, *SchemaName* имеет значение аргумента шаблона; он интерпретируется буквально и его регистр имеет значения.  
@@ -98,7 +98,7 @@ SQLRETURN SQLProcedureColumns(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLProcedureColumns** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение sql_handle_stmt и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLProcedureColumns** и описание каждого из них в контексте этой функции; описания SQLSTATE, возвращаемых драйвером предшествует нотации «(DM)» Диспетчер. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |08S01|Сбой связи|Сбой в канале связи между драйвером и источника данных, к которому был подключен драйвер перед обработкой функции было завершено.|  
@@ -196,6 +196,6 @@ SQLRETURN SQLProcedureColumns(
 |Выборка блока данных или прокрутке результирующего набора|[Функция SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Возвращает список процедур в источнике данных|[Функция SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

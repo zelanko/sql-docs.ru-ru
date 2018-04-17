@@ -2,7 +2,7 @@
 title: SQLGetConnectOption (драйвер ODBC для Visual FoxPro) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41fdb44589b0a788591b6d31ee8ff03de965cd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d00ae529d6dacc001b29cc97da8fcf1d987caaa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  В следующей таблице описаны только те аргументы, поведение, характерное для драйвера ODBC для Visual FoxPro реализация **SQLGetConnectOption**.  
   
-|*fOption*|Remarks|  
+|*fOption*|Замечания|  
 |---------------|-------------|  
 |SQL_AUTOCOMMIT|При выборе SQL_AUTOCOMMIT_OFF ваше приложение должно явно фиксации или отката транзакции с [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); драйвер ODBC для Visual FoxPro не фиксирует автоматически выполнении инструкции после завершения. Драйвер начать транзакцию, при выполнении инструкции.|  
 |SQL_CURRENT_QUALIFIER|Может быть полное доменное имя базы данных (.dbc-файл) или полный путь к каталогу, содержащему ноль или более таблиц (расширением DBF-файлы).|  

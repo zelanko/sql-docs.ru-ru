@@ -1,26 +1,17 @@
 ---
-title: Сценарии обработки и анализа данных и шаблоны решений | Документы Microsoft
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: Сценарии обработки и анализа данных и шаблоны решений (SQL Server машинного обучения) | Документы Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии обработки и анализа данных и шаблоны решений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="fraud-detection"></a>обнаружение мошенничества;
 
-[Шаблон обнаружения мошенничества (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Шаблон обнаружения мошенничества (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **Что:** возможность обнаружения мошеннических транзакций важна для электронной коммерции. Во избежание потери взимания предприятиям необходимо быстро определить транзакции, которые были внесены с помощью инструментов украденного оплаты или учетные данные. При обнаружении мошеннических операций компании обычно принимают меры, блокируя определенные счета как можно скорее, чтобы предотвратить дальнейшие убытки. В этом сценарии вы узнаете, как используются данные из транзакции покупки по в Интернете для идентификации скорее всего, мошенничество.
 

@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services tutorial занятие 4: Создание связей | Документы Microsoft"
-description: "Описывает создание связей в проект учебника по службам Analysis Services."
+title: 'Analysis Services tutorial занятие 4: Создание связей | Документы Microsoft'
+description: Описывает создание связей в проект учебника по службам Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 2776649b049254e27851a9d4ce95e8d6dea81067
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: eedbdf50d33e7aed380cfb98b3cdf85d7ea9a3f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-relationships"></a>Создавать связи
 
@@ -78,11 +79,11 @@ ms.lasthandoff: 02/20/2018
 
 Обратите внимание, в представлении диаграммы, стрелки, звездочку и число строк, которые показывают связи между таблицами.
 
-![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![как lesson4 строки](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 Стрелка показывает направление фильтра. Звездочка указывает, что эта таблица *много* стороне отношения количества элементов, и показывает, что эта таблица *один* стороны связи. Если нужно изменить связь. Например можно изменить направление фильтрации отношение или количество элементов, дважды щелкните по линии связи, чтобы открыть диалоговое окно Изменение связи.
 
-![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![как изменить lesson4](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Эти функции предназначены для моделирования данных и выходит за рамки данного руководства. Дополнительные сведения см. в разделе [двунаправленные кросс-фильтры для табличных моделей в службах Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/20/2018
 
     Появится сплошная линия, показывающая создана активная связь между **OrderDate** столбца в **продажи через Интернет** таблицы и **даты** столбца в **даты** таблицы. 
   
-      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![AS-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > При создании связи, количества элементов и фильтр направление между первичной таблицей и связанной таблицей поиска выбирается автоматически.  

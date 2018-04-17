@@ -1,29 +1,17 @@
 ---
 title: Построение модели R и сохранить в SQL Server | Документы Microsoft
-ms.custom: ''
-ms.date: 07/14/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 71ad6a35d28a3d7975f03e6b7e7589ffee4e18ca
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: c580cc3a6e5fefd7882d4fc58f6eacd6d9999f71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Построение модели R и сохранить в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,12 +44,12 @@ ms.lasthandoff: 04/04/2018
      <br/>*Число допустимых наблюдений: 17068*
      <br/>*Число отсутствующих наблюдений: 0*
      <br/>*-2\*LogLikelihood: 23540.0602 (остаточные отклонение на 17063 степеней свободы)*
-     <br/>*Coefficients:*
+     <br/>*Коэффициенты:*
      <br/>*Значение z оценки средней квадратической Значение ошибки z Pr (> | z |)*
      <br/>*(Перехват) - 2.509e-03 3.223e-02-0.078 0.93793*
      <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23E-07 \*\*\**
      <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786 \*\**
-     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06 \*\*\**
      <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302 \*\**
      <br/>*---*
      <br/>*Коды значимости:  0 "\*\*\*" 0,001 "\*\*" 0,01 "\*" 0,05 "." 0.1 ‘ ’ 1*

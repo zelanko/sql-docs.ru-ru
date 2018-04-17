@@ -1,15 +1,16 @@
 ---
-title: "Атрибут соответствия | Документы Microsoft"
-ms.custom: 
+title: Атрибут соответствия | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 335fc5f60e47be26a9e394bdd632c1301f507ac8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a2116a8a1bfcd042924d3dbe695036aeed136222
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attribute-conformance"></a>Соответствие атрибутов
 Следующая таблица указывает уровень соответствия каждого атрибута среды ODBC, это не определен правильно.  
   
-|Компонент|Уровень соответствия|  
+|Функция|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  Следующая таблица указывает уровень соответствия каждого атрибута соединения ODBC, где это является правильно определенным.  
   
-|Компонент|Уровень соответствия|  
+|Функция|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Основные сведения|  
 |АТРИБУТУ SQL_ATTR_ASYNC_ENABLE|Уровень 1 и уровень 2 [1]|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  Следующая таблица указывает уровень соответствия каждого атрибута инструкции ODBC, где это является правильно определенным.  
   
-|Компонент|Уровень соответствия|  
+|Функция|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Основные сведения|  
 |SQL_ATTR_APP_ROW_DESC|Основные сведения|  

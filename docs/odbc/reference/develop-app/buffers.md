@@ -1,15 +1,16 @@
 ---
-title: "Буферы | Документы Microsoft"
-ms.custom: 
+title: Буферы | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - input buffers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffers"></a>Буферы
 Буфер является любая память приложения, используемый для передачи данных между приложением и драйвер. Например, буферы приложения может быть связан с, или *связаны с* результирующего набора столбцов с **SQLBindCol**. Каждая строка выбирается, данные возвращаются для каждого столбца в буфер. *Входные буферы* используются для передачи данных из приложения для драйвера. *Выходные буферы* используются для возврата данных с помощью драйвера в приложение.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  Эти буферы обычно представлены парами. *Буферы данных* , используется для передачи данных, а *буфер длины/индикатора* используются для передачи длину данных в буфере данных или специальное значение, например SQL_NULL_DATA, который указывает, что данные имеют значение NULL. Длина данных в буфере данных отличается от длины буфера данных, сам. На следующем рисунке показана связь между буфер данных и буфер длины/индикатора.  
   
- ![Буфер данных и длина &#47; буфера индикатора](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![Буфер данных и длина&#47;буфера индикатора](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  Буфер длины/индикатора требуется всякий раз, когда буфер данных содержит данные переменной длины, например символьных или двоичных данных. Если буфер данных содержит данные фиксированной длины, например структуру целое число или дату буфер длины/индикатора требуется только для передачи значения индикатора, так как длина данных уже известна. Если приложение использует буфер длины/индикатора с фиксированной длиной данных, драйвер пропускает любой длины, переданный в него.  
   

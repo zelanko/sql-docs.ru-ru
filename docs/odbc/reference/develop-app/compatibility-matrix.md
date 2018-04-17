@@ -1,15 +1,16 @@
 ---
-title: "Матрица совместимости с | Документы Microsoft"
-ms.custom: 
+title: Матрица совместимости с | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a7fac17ed685680e71b329388e192ec1c9f97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compatibility-matrix"></a>Таблица совместимости
 В следующей таблице описаны совместимости типов приложений и драйверов, заданные ранее в этом разделе.  
@@ -74,5 +75,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>С помощью SQLCancelHandle в приложения совместимы с всех диспетчеров драйверов  
  Поскольку [функция SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) не поддерживается в диспетчерах драйвера, выпущенных до Windows 7, приложения не удается загрузить в более ранних версиях Windows, если он вызывает **SQLCancelHandle** напрямую. Для работы со всеми версиями диспетчеров драйверов и использовать **SQLCancelHandle** на новые версии Windows, приложение должно вызывать **SQLCancelHandle** косвенно с помощью **LoadLibrary** и **GetProcAddress.**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Новые возможности ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

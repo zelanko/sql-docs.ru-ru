@@ -1,36 +1,28 @@
 ---
 title: Привязка компонентов обучения машины на сервере SQL Server серверу обучения Майкрософт машины | Документы Microsoft
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Привязка компонентов обучения машины на сервере SQL Server серверу обучения Майкрософт машины
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье объясняется процесс _привязки_, который можно использовать для обновления машинного обучения компоненты, используемые в SQL Server. Процесс привязки блокирует сервер в последовательность обновления на основе выпусков сервера Machine обучения, вместо того чтобы использовать SQL Server выпуска и расписание обновления.
+В этой статье объясняется процесс *привязки* (в базе данных) экземпляр служб SQL Server машины обучения или SQL Server R Services обучения машины Microsoft Server с целью обновления пакетов R и Python на быстрее последовательность выпусков. 
 
-> [!IMPORTANT]
-> Необходимо использовать этот процесс обновления, если вы хотите получать обновления в составе обновления SQL Server. При установке нового пакета обновлений или исправлений компонентов обучения машины всегда автоматически обновляются до последней версии. Использовать только _привязки_ обработки, если вы хотите обновить компоненты в управляемом темпе быстрее, чем предоставленные выпусками SQL Server.
+Процесс привязки изменяет механизм обновления службы. Без привязки версии пакетов R и Python, обновляются только при установке пакета обновления или накопительного пакета обновления (CU). С использованием привязки, более новые версии пакета могут применяться к экземпляру, независимо от расписания CU выпуска.
 
-Если в любой момент остановить обновление по расписанию машины обучения сервера должно _отменить привязку_ экземпляра, как описано в [в этом разделе](#bkmk_Unbind)и удалите сервер машины обучения.
+Привязки затрагивает только компоненты экземпляра компонента database engine, не экземпляра компонента database engine сам машинного обучения или R. Он применяется только к экземпляру (в базе данных). Установка (автономный) не существует в области.
+
+Если в любое время, чтобы восстановить для обслуживания SQL Server для машинного обучения компонентов, вы можете _отменить привязку_ экземпляра, как описано в [в этом разделе](#bkmk_Unbind)и удалите сервер обучения машины.
 
 **Применяется к:** служб R SQL Server 2016, SQL Server 2017 г машинного обучения служб
 

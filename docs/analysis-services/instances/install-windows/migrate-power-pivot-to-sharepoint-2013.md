@@ -1,27 +1,27 @@
 ---
-title: "Перенос Power Pivot для SharePoint 2013 | Документы Microsoft"
-ms.custom: 
+title: Перенос Power Pivot для SharePoint 2013 | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Перенос Power Pivot в SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,32 +38,20 @@ ms.lasthandoff: 01/29/2018
 |Подготовка фермы SharePoint 2013|Резервное копирование, копирование и восстановление баз данных.|Подключение баз данных содержимого|Перенос расписаний [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Центр администрирования SharePoint<br /><br /> Windows PowerShell|Страницы приложения SharePoint<br /><br /> Windows PowerShell|  
   
- **В этом разделе:**  
+##  <a name="bkmk_prepare_sharepoint2013"></a>Подготовка фермы SharePoint 2013  
   
--   [1) Подготовка фермы SharePoint 2013](#bkmk_prepare_sharepoint2013)  
-  
--   [2) Резервное копирование, копирование и восстановление баз данных](#bkmk_backup_restore)  
-  
--   [3) Подготовка веб-приложений и присоединение баз данных содержимого](#bkmk_prepare_mount_databases)  
-  
--   [4) Обновление расписаний Power Pivot](#bkmk_upgrade_powerpivot_schedules)  
-  
--   [Дополнительные ресурсы](#bkmk_additional_resources)  
-  
-##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Подготовка фермы SharePoint 2013  
-  
-1.  > [!TIP]  
+  > [!TIP]  
     >  Просмотр метода проверки подлинности, для которого настроены существующие веб-приложения. В веб-приложениях для SharePoint 2013 по умолчанию применяется проверка подлинности на основе утверждений. Веб-приложения SharePoint 2010, настроенные для проверки подлинности в классическом режиме, требуют дополнительных действий при переносе баз данных из SharePoint 2010 в SharePoint 2013. Если веб-приложения настроены для проверки подлинности в классическом режиме, см. документацию по продукту SharePoint 2013.  
   
-2.  Установка новой фермы SharePoint Server 2013  
+1.  Установка новой фермы SharePoint Server 2013  
   
-3.  Установите экземпляр сервера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+2.  Установите экземпляр сервера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Запустите пакет установки [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** на каждом сервере в ферме SharePoint. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
+3.  Запустите пакет установки [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** на каждом сервере в ферме SharePoint. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
-5.  В центре администрирования SharePoint 2013 настройте приложение служб Excel для использования сервера служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint, созданного на предыдущем шаге. Дополнительные сведения см. в разделе «Настройка базовой интеграции служб Analysis Services с SharePoint» [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  В центре администрирования SharePoint 2013 настройте приложение служб Excel для использования сервера служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint, созданного на предыдущем шаге. Дополнительные сведения см. в разделе «Настройка базовой интеграции служб Analysis Services с SharePoint» [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-##  <a name="bkmk_backup_restore"></a> 2) Резервное копирование, копирование и восстановление баз данных  
+##  <a name="bkmk_backup_restore"></a>Резервное копирование, копирование и восстановление баз данных  
  Процесс "Обновление с переподключением баз данных SharePoint" представляет собой последовательность шагов для архивации, копирования и восстановления баз данных содержимого и приложения службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] на ферме SharePoint 2013.  
   
 1.  **Перевод базы данных в режим только чтения.** В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных и выберите пункт **Свойства**. На странице **Параметры** установите значение свойства **База данных доступна только для чтения** , равное **True**.  
@@ -76,8 +64,8 @@ ms.lasthandoff: 01/29/2018
   
 5.  **Перевод базы данных в режим доступа для чтения и записи.** Задайте для параметра **База данных доступна только для чтения** значение **False**.  
   
-##  <a name="bkmk_prepare_mount_databases"></a> 3) Подготовка веб-приложений и присоединение баз данных содержимого  
- Более подробное описание следующих процедур см. в разделе [Обновление базы данных с SharePoint 2010 на SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+##  <a name="bkmk_prepare_mount_databases"></a>Подготовка веб-приложений и присоединение баз данных содержимого  
+ Более подробное описание следующих процедур см. в разделе [обновление баз данных SharePoint 2010 до SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Перевод баз данных в режим «вне сети».**  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 01/29/2018
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     Дополнительные сведения см. в разделе [Подключение или отключение баз данных содержимого (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
+     Дополнительные сведения см. в разделе [присоединения или отсоединения баз данных содержимого (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
   
      **Состояние после завершения этого шага.**  После завершения операции подключения пользователи могут видеть файлы, которые присутствовали в старой базе данных содержимого. Поэтому пользователи могут видеть и открывать книги в библиотеке документов.  
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/29/2018
   
 2.  **Отсутствие PowerPivot.Files** . Возникновение ошибок, связанных с отсутствием библиотек DLL [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , указывает, что не выполнена установка **spPowerPivot.msi** или для настройки [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] не использовался инструмент настройки [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
-##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) Обновление расписаний Power Pivot  
+##  <a name="bkmk_upgrade_powerpivot_schedules"></a>Обновление расписаний Power Pivot  
  Этот раздел содержит описание и параметры для переноса расписаний [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Изменение расписания — двухэтапный процесс. Сначала настройте приложение службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для использования перенесенной базы данных приложения службы. После этого необходимо выбрать один из двух вариантов переноса расписания.  
   
  **Настройка приложения службы на использование перенесенной базы данных приложения службы.**  
@@ -176,9 +164,9 @@ ms.lasthandoff: 01/29/2018
   
 -   [Обновление книг и запланированное обновление данных (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
--   [Общие сведения о процессе обновления SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Общие сведения о процессе обновления до SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Подготовительные меры очистки перед обновлением до версии SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Подготовительные меры очистки перед обновлением до SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Обновление баз данных SharePoint 2010 до SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   

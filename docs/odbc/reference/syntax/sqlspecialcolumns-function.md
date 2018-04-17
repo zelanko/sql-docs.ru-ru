@@ -2,7 +2,7 @@
 title: Функция SQLSpecialColumns | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns, функция
 **Соответствия**  
@@ -80,7 +80,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength1*  
  [Вход] Длина в символах **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Вход] Имя схемы для таблицы. Если драйвер поддерживает схемы для некоторых таблиц, но не для других пользователей, например, когда драйвер получает данные из различных DBMS, пустая строка ("») обозначает этих таблиц, у которых нет схемы. *SchemaName* не может содержать строку шаблона поиска.  
   
  Если атрибут инструкции SQL_ATTR_METADATA_ID задано значение SQL_TRUE, *SchemaName* рассматривается как идентификатор и его регистр не имеет значения. Если это значение SQL_FALSE, *SchemaName* — обычный аргумент; он интерпретируется буквально и его регистр имеет значения.  
@@ -88,7 +88,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength2*  
  [Вход] Длина в символах **SchemaName*.  
   
- *Имя_таблицы*  
+ *TableName*  
  [Вход] Имя таблицы. Этот аргумент не может быть пустым указателем. *TableName* не может содержать строку шаблона поиска.  
   
  Если атрибут инструкции SQL_ATTR_METADATA_ID задано значение SQL_TRUE, *TableName* рассматривается как идентификатор и его регистр не имеет значения. Если это значение SQL_FALSE, *TableName* — обычный аргумент; он интерпретируется буквально и его регистр имеет значения.  
@@ -118,7 +118,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLSpecialColumns** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLSpecialColumns** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |08S01|Сбой связи|Сбой в канале связи между драйвером и источника данных, к которому был подключен драйвер перед обработкой функции было завершено.|  
@@ -204,6 +204,6 @@ SQLRETURN SQLSpecialColumns(
 |Выборка блока данных или прокрутке результирующего набора|[Функция SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Возврат столбцов первичного ключа|[Функция SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

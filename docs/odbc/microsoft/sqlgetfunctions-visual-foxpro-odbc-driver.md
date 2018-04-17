@@ -2,7 +2,7 @@
 title: SQLGetFunctions (драйвер ODBC для Visual FoxPro) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feae201ca72f241fe2ad18023d4686985203c89d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46227b813a6798a2fac36e87a91e0e8dc8061a50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -38,24 +38,24 @@ ms.lasthandoff: 12/21/2017
   
  Драйвер ODBC для Visual FoxPro поддерживает функции всех основных компонентов ODBC API и уровня 1. Следующая таблица указывает, поддерживает ли драйвер определенной функции уровня 2.  
   
-|*Компонент*|Поддерживается|  
+|*Функция*|Поддерживается|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|нет|  
-|SQL_API_SQLCOLUMNPRIVELEGES|нет|  
+|SQL_API_SQLBROWSECONNECT|Нет|  
+|SQL_API_SQLCOLUMNPRIVELEGES|Нет|  
 |SQL_API_SQLDATASOURCES|Да|  
-|SQL_API_SQLDESCRIBEPARAM|нет|  
+|SQL_API_SQLDESCRIBEPARAM|Нет|  
 |SQL_API_SQLDRIVERS|Да|  
 |SQL_API_SQLEXTENDEDFETCH|Да|  
-|SQL_API_SQLFOREIGNKEYS|нет|  
+|SQL_API_SQLFOREIGNKEYS|Нет|  
 |SQL_API_SQLMORERESULTS|Да|  
-|SQL_API_SQLNATIVESQL|нет|  
+|SQL_API_SQLNATIVESQL|Нет|  
 |SQL_API_SQLNUMPARAMS|Да|  
 |SQL_API_SQLPARAMOPTIONS|Да|  
 |SQL_API_SQLPRIMARYKEYS|Да|  
-|SQL_API_SQLPROCEDURECOLUMNS|нет|  
-|SQL_API_SQLPROCEDURES|нет|  
+|SQL_API_SQLPROCEDURECOLUMNS|Нет|  
+|SQL_API_SQLPROCEDURES|Нет|  
 |SQL_API_SQLSETPOS|Да|  
 |SQL_API_SQLSETSCROLLOPTIONS|Да|  
-|SQL_API_SQLTABLEPRIVILEGES|нет|  
+|SQL_API_SQLTABLEPRIVILEGES|Нет|  
   
  Дополнительные сведения см. в разделе [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) в *справочнике программиста ODBC*.

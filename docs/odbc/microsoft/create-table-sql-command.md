@@ -2,7 +2,7 @@
 title: Создание таблицы - команда SQL | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table---sql-command"></a>Создание таблицы - команда SQL
 Создает таблицу, имеющий указанные поля.  
@@ -53,7 +53,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Создание таблицы &#124; DBF *TableName1*  
+ СОЗДАТЬ ТАБЛИЦУ &#124; DBF *TableName1*  
  Задает имя создаваемой таблицы. Параметры таблицы и DBF идентичны.  
   
  ИМЯ *LongTableName*  
@@ -140,7 +140,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ИЗ МАССИВА *ArrayName*  
  Указывает имя существующего массива, содержимое которых имя, тип, точность и масштаб для каждого поля в таблице. Содержимое массива может быть определен с **AFIELDS**функция ().  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Новая таблица открывается в минимально доступной рабочей области и может осуществляться с помощью псевдонима. Новая таблица открыт в монопольном режиме, независимо от текущего значения параметра УСТАНОВИТЬ МОНОПОЛЬНУЮ.  
   
  Если база данных открыта и не включать бесплатные предложения, новая таблица добавлена в базу данных. Не удается создать новую таблицу с тем же именем, как таблицы в базе данных.  
@@ -172,7 +172,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Например если вы хотите создать временную таблицу, следует создать таблицу, прежде чем начать транзакцию, для которой требуются. Если включить инструкцию CREATE TABLE в пакете SQL, который требуется транзакция, драйвер возвращает сообщение об ошибке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER TABLE - команда SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [Поддерживаемые типы данных (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [Вставка - команды SQL](../../odbc/microsoft/insert-sql-command.md)   

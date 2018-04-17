@@ -2,7 +2,7 @@
 title: Функция SQLDataSources | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6de6bf96c05925e9044be5955036cd9c663501a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatasources-function"></a>Функция SQLDataSources
 **Соответствия**  
@@ -94,7 +94,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDataSources** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType*установленным в значение sql_handle_env и *обработки* из *EnvironmentHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDataSources** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|(DM) диспетчера драйверов, определяемые информационное сообщение. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|(DM) буфер \* *ServerName* не был достаточно велик, чтобы вернуть имя источника данных завершено. Таким образом имя усечено. Длина имени источника данных возвращается в \* *NameLength1Ptr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) буфер \* *описание* не был достаточно велик, возвращается описание завершения драйвера. Таким образом описание был усечен. Длина описания источника данных неусеченный возвращается в **NameLength2Ptr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -124,6 +124,6 @@ SQLRETURN SQLDataSources(
 |Соединение с источником данных, используется поле строки или диалоговое окно соединения|[Функция SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Возврат описания драйверов и атрибуты|[Функция SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

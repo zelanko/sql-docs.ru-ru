@@ -1,31 +1,32 @@
 ---
-title: "Изменения поведения и драйверы ODBC 3.x | Документы Microsoft"
-ms.custom: 
+title: Изменения поведения и драйверы ODBC 3.x | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sql_attr_odbc_version [ODBC]
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fe50cf12ce72ad3da5f9f2cb1f180d5875ef875
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Изменения поведения и драйверы ODBC 3.x
 Атрибут среды SQL_ATTR_ODBC_VERSION Указывает драйверу ли он должен достичь ODBC 2. *x* поведение или ODBC 3*.x* поведение. Как задать атрибут среды SQL_ATTR_ODBC_VERSION зависит от приложения. ODBC 3*.x* приложений необходимо вызвать **SQLSetEnvAttr** для установки этого атрибута после вызова они **SQLAllocHandle** выделить дескриптор среды и до вызова  **SQLAllocHandle** для выделения дескриптора соединения. Если они не сделано, диспетчер драйверов возвращает SQLSTATE HY010 (функция ошибка последовательности) при последнем вызове функции **SQLAllocHandle**.  

@@ -1,30 +1,31 @@
 ---
-title: "Минимальную грамматику SQL | Документы Microsoft"
-ms.custom: 
+title: Минимальную грамматику SQL | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3186090eb2c912f9d0e683210b00674d65f6e6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-minimum-grammar"></a>Минимальную грамматику SQL
 В этом разделе описывается минимальный синтаксис SQL, драйвер ODBC должен поддерживать. Синтаксис, описанный в этом разделе — это подмножество запись уровня синтаксиса SQL-92.  
@@ -67,15 +68,15 @@ ms.lasthandoff: 12/21/2017
   
  *Инструкция* :: = *-инструкция create table*  
   
- &#124; *поиск delete оператор*  
+ &#124;*поиск delete оператор*  
   
- &#124; *инструкции drop таблица*  
+ &#124;*инструкции drop таблица*  
   
- &#124; *инструкции insert*  
+ &#124;*инструкции insert*  
   
- &#124; *инструкцией select*  
+ &#124;*инструкцией select*  
   
- &#124; *поиск обновления инструкции*  
+ &#124;*поиск обновления инструкции*  
   
  *Поиск обновления оператор*  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  ЗАДАТЬ *идентификатор столбца* = {*выражение* &#124; NULL}  
   
- [, *идентификатор столбца* = {*выражение* &#124; ЗНАЧЕНИЕ NULL}]...  
+ [, *идентификатор столбца* = {*выражение* &#124; NULL}]...  
   
  [ГДЕ *условие поиска*]  
   

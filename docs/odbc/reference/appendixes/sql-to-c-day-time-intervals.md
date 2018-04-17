@@ -1,15 +1,16 @@
 ---
-title: "SQL на C: интервалы времени день | Документы Microsoft"
-ms.custom: 
+title: 'SQL на C: интервалы времени день | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], day-time intervals
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b7952543ea1a014555b1227336355a2d6c31563
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9df3ee4fdd01d5296e547bb445f3e4e47cee3561
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL, чтобы интервалы времени дня C:
 Идентификаторы типов данных ODBC SQL интервал времени дня следующие:  
@@ -55,11 +56,11 @@ ms.lasthandoff: 12/21/2017
   
 |Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|Все типы интервала C времени дня|Часть поля не усекаются замыкающие<br /><br /> В конце поля часть усечена<br /><br /> Начальные точность целевого объекта недостаточно велик для хранения данных из источника|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных<br /><br /> Длина данных<br /><br /> Не определено.|н/д<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|Интервал точность была одним полем и преобразован без усечения данных<br /><br /> Точность интервал был одним полем и усечение долей<br /><br /> Интервал точность была отдельное поле и усеченное всего<br /><br /> Точность интервала не был одного поля|data<br /><br /> Усеченные данные<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Длина данных<br /><br /> Длина данных<br /><br /> Размер типа данных C|н/д<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Байтовая длина данных > *BufferLength*|data<br /><br /> Не определено.|Длина данных<br /><br /> Не определено.|н/д<br /><br /> 22003|  
-|SQL_C_CHAR|Длина байтов символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
-_C_WCHAR|Длина символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|data<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
+|Все типы интервала C времени дня|Часть поля не усекаются замыкающие<br /><br /> В конце поля часть усечена<br /><br /> Начальные точность целевого объекта недостаточно велик для хранения данных из источника|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных<br /><br /> Длина данных<br /><br /> Не определено.|н/д<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|Интервал точность была одним полем и преобразован без усечения данных<br /><br /> Точность интервал был одним полем и усечение долей<br /><br /> Интервал точность была отдельное поле и усеченное всего<br /><br /> Точность интервала не был одного поля|Данные <br /><br /> Усеченные данные<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Длина данных<br /><br /> Длина данных<br /><br /> Размер типа данных C|н/д<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Байтовая длина данных > *BufferLength*|Данные <br /><br /> Не определено.|Длина данных<br /><br /> Не определено.|н/д<br /><br /> 22003|  
+|SQL_C_CHAR|Длина байтов символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
+_C_WCHAR|Длина символьной < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) < *BufferLength*<br /><br /> Число цифр в целом (в отличие от доли) > = *BufferLength*|Данные <br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
   
  [] A дневное время интервалом типа SQL можно преобразовать в любой день интервала C тип.  
   

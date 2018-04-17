@@ -1,15 +1,16 @@
 ---
-title: "Прокручиваемые курсоры и транзакции изоляции | Документы Microsoft"
-ms.custom: 
+title: Прокручиваемые курсоры и транзакции изоляции | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68517f733dcb10f75669341bdef861b035b79a72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Прокручиваемые курсоры и транзакции изоляции
 В следующей таблице перечислены факторы, управляющие видимостью изменений.  
@@ -46,17 +47,17 @@ ms.lasthandoff: 12/21/2017
 |Type\action курсора|Самообслуживания|Владельцем<br /><br /> TXN|Другую<br /><br /> TXN<br /><br /> (RU[a])|Другую<br /><br /> TXN<br /><br /> (RC[a])|Другую<br /><br /> TXN<br /><br /> (RR[a])|Другую<br /><br /> TXN<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Статические|||||||  
-|Insert|Может быть [b]|нет|нет|нет|нет|нет|  
-|Update|Может быть [b]|нет|нет|нет|нет|нет|  
-|DELETE|Может быть [b]|нет|нет|нет|нет|нет|  
+|Insert|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
+|Update|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
+|Delete|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
 |Управляемый набором ключей|||||||  
-|Insert|Может быть [b]|нет|нет|нет|нет|нет|  
-|Update|Да|Да|Да|Да|нет|нет|  
-|DELETE|Может быть [b]|Да|Да|Да|нет|нет|  
+|Insert|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
+|Update|Да|Да|Да|Да|Нет|Нет|  
+|Delete|Может быть [b]|Да|Да|Да|Нет|Нет|  
 |Динамический|||||||  
-|Insert|Да|Да|Да|Да|Да|нет|  
-|Update|Да|Да|Да|Да|нет|нет|  
-|DELETE|Да|Да|Да|Да|нет|нет|  
+|Insert|Да|Да|Да|Да|Да|Нет|  
+|Update|Да|Да|Да|Да|Нет|Нет|  
+|Delete|Да|Да|Да|Да|Нет|Нет|  
   
  [] буквы в круглые скобки указывают уровень изоляции транзакции, содержащей курсор; уровень изоляции, другие транзакции (в которой изменения) не имеет значения.  
   

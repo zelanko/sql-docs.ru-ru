@@ -2,7 +2,7 @@
 title: Представляет собой ответ ODBC? | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4fffe02b0e000750792bc71654bbc59becf0f087
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="is-odbc-the-answer"></a>Представляет собой ответ ODBC?
 Прежде чем исследовать вопрос взаимодействия, рассмотрим следующий вопрос: приложение должно использовать ODBC вообще? Это может показаться странным вопрос в руководстве для ODBC, но это, на самом деле правильный запрос. ODBC не предназначалась для полной замены базы данных в собственном API-интерфейсов, а также была разработана для предоставления доступа к базе данных во всех случаях. Он был разработан для обеспечения общий интерфейс для баз данных и предназначена для освобождения разработчики приложений от необходимости изучения и поддерживать ссылки на несколько баз данных.  

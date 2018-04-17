@@ -2,7 +2,7 @@
 title: Поддержка транзакций | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87749f1401ebd435e32537bee2d721d013339ad7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-support"></a>Поддержка транзакций
 Степень поддержки транзакций, определяемым драйвером. ODBC предназначен для реализации для одного пользователя или рабочего стола, базы данных, не требуется управлять несколько обновлений к его данным. Кроме того некоторые базы данных, поддерживающие транзакции будет поддерживаться только инструкции языка обработки данных (DML) SQL; Существуют ограничения или семантика специальные транзакций по использованию языка определения данных (DDL), когда транзакция активна. То есть может быть поддержку транзакций для нескольких одновременных обновления таблиц, но не для изменения числа и определения таблиц во время транзакции.  

@@ -2,7 +2,7 @@
 title: Функция SQLBindParameter | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>Функция SQLBindParameter
 **Соответствия**  
@@ -101,7 +101,7 @@ SQLRETURN SQLBindParameter(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLBindParameter** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLBindParameter** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |07006|Нарушение атрибута ограниченного типа данных|Тип данных, определенный *ValueType* не удается преобразовать аргумент в тип данных, определяемый *ParameterType* аргумент. Обратите внимание, что эта ошибка может быть возвращено **SQLExecDirect**, **SQLExecute**, или **SQLPutData** во время выполнения, а не по **SQLBindParameter**.|  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  Если *ParameterNumber* в вызове **SQLBindParameter** больше, чем значение SQL_DESC_COUNT, **SQLSetDescField** вызывается, чтобы увеличить значение SQL_DESC_ ЧИСЛО для *ParameterNumber*.  
   
 ## <a name="inputoutputtype-argument"></a>Аргумент InputOutputType  
- *InputOutputType* аргумент задает тип параметра. Этот аргумент задает поле SQL_DESC_PARAMETER_TYPE в IPD. Все параметры в инструкции SQL, которые не вызывают процедуры, такие как **вставить** инструкций, *ввода**параметры*. Параметры в вызове процедуры могут быть входными, ввода вывода или выходных параметров. (Приложение вызывает **SQLProcedureColumns** для определения типа параметра в вызове процедуры; предполагается, что параметры, тип которого невозможно определить находятся входных параметров.)  
+ *InputOutputType* аргумент задает тип параметра. Этот аргумент задает поле SQL_DESC_PARAMETER_TYPE в IPD. Все параметры в инструкции SQL, которые не вызывают процедуры, такие как **вставить** инструкций, *ввода ** параметры*. Параметры в вызове процедуры могут быть входными, ввода вывода или выходных параметров. (Приложение вызывает **SQLProcedureColumns** для определения типа параметра в вызове процедуры; предполагается, что параметры, тип которого невозможно определить находятся входных параметров.)  
   
  *InputOutputType* аргумент является одним из следующих значений:  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      После выполнения инструкции, драйвер возвращает данные для параметра в приложение, если *ParameterValuePtr* и *StrLen_or_IndPtr* аргументы являются оба указатели null в этом случае драйвер отбрасывает выходное значение. Если источник данных не возвращает значение выходного параметра, драйвер задает **StrLen_or_IndPtr* буфера на SQL_NULL_DATA.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM. Указывает, должны передаваться входным или выходным параметром. **SQLGetData** могут считывать значения параметра в частях. *BufferLength* пропускается, так как длина буфера будет определяться при вызове **SQLGetData**. Значение *StrLen_or_IndPtr* буфер должен содержать SQL_DEFAULT_PARAM, SQL_NULL_DATA, значение SQL_DATA_AT_EXEC или результат макрос SQL_LEN_DATA_AT_EXEC. Параметр должен быть привязан как параметр данных времени выполнения (DAE) на входе, если будут передаваться в выходных данных. *ParameterValuePtr* может иметь любое значение указателя, отличных от null, будет возвращено функцией **SQLParamData** как пользовательского маркера, значение которого был передан с *ParameterValuePtr* для обоих входных данных и выходных данных. Дополнительные сведения см. в разделе [получение выходных параметров с помощью метода SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM. Указывает, должны передаваться входным или выходным параметром. **SQLGetData** могут считывать значения параметра в частях. *BufferLength* пропускается, так как длина буфера будет определяться при вызове **SQLGetData**. Значение *StrLen_or_IndPtr* буфер должен содержать SQL_DEFAULT_PARAM, SQL_NULL_DATA, значение SQL_DATA_AT_EXEC или результат макрос SQL_LEN_DATA_AT_EXEC. Параметр должен быть привязан как параметр данных времени выполнения (DAE) на входе, если будут передаваться в выходных данных. *ParameterValuePtr* может иметь любое значение указателя, отличных от null, будет возвращено функцией **SQLParamData** как пользовательского маркера, значение которого был передан с *ParameterValuePtr* как для входных и выходные данные. Дополнительные сведения см. в разделе [получение выходных параметров с помощью метода SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 -   SQL_PARAM_OUTPUT_STREAM. То же, как SQL_PARAM_INPUT_OUTPUT_STREAM для выходного параметра. **StrLen_or_IndPtr* во входных данных учитывается.  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|Во входных данных учитывается.|Потоковые выходные данные|*ParameterValuePtr* может иметь любое значение указателя, в которой будут возвращаться **SQLParamData** как пользовательского маркера, значение которого был передан с *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) или SQL_DATA_AT_EXEC|Ввода в части и связанного буфер вывода|*ParameterValuePtr* адрес выходного буфера также вернет **SQLParamData** как пользовательского маркера, значение которого был передан с *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|Не SQL_LEN_DATA_AT_EXEC (*len*) или SQL_DATA_AT_EXEC|Ввод привязанным буфера и выходного буфера привязанного|*ParameterValuePtr* адрес Общий буфер ввода вывода.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) или SQL_DATA_AT_EXEC|Входной в части и потоковые выходные данные|*ParameterValuePtr* может быть любой указатель отличное от null значение, которое будет возвращено функцией **SQLParamData** как пользовательского маркера, значение которого был передан с *ParameterValuePtr* для обоих Ввод и вывод.|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) или SQL_DATA_AT_EXEC|Входной в части и потоковые выходные данные|*ParameterValuePtr* может быть любой указатель отличное от null значение, которое будет возвращено функцией **SQLParamData** как пользовательского маркера, значение которого был передан с *ParameterValuePtr* для обоих входных данных и выходных данных.|  
   
 > [!NOTE]  
 >  Драйвер необходимо решить, какие типы SQL допустимы в том случае, если приложение привязывает выходного или параметра ввода вывода, как передавать их потоком. Диспетчер драйверов не будет формировать ошибку для недопустимого типа SQL.  
@@ -591,7 +591,7 @@ int main() {
 |Указание нескольких значений параметра|[Функция SQLParamOptions](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |Отправка данных параметра во время выполнения|[Функция SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Получение выходных параметров с помощью метода SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

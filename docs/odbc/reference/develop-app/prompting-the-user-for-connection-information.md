@@ -1,15 +1,16 @@
 ---
-title: "Запрашивая разрешения пользователя для сведений о соединении | Документы Microsoft"
-ms.custom: 
+title: Запрашивая разрешения пользователя для сведений о соединении | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Запрашивая разрешения пользователя для сведений о подключении
 Если приложение использует **SQLConnect** и его необходимо запрашивать у пользователя сведения о соединении, например имя пользователя и пароль, он должен сделать это сам. Это позволяет приложению контролировать его «вид», он может вынудить приложение содержит код для конкретного драйвера. Это происходит, когда приложение должно запрашивать у пользователя сведения о соединении с драйвером. Это представляет невозможно ситуации для универсальных приложений, которые предназначены для работы с всех драйверов, включая драйверы, которые не существуют, если приложение создано.  

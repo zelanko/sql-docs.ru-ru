@@ -2,7 +2,7 @@
 title: Функция ConfigTranslator | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b0c064453d84d10037eb1360c20b2fab8ecb1d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a415d5c1a650f4a5c9b40373cf74f41f0c9fc5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configtranslator-function"></a>Функция ConfigTranslator
 **Соответствия**  
@@ -62,7 +62,7 @@ BOOL ConfigTranslator(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **ConfigTranslator** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение передается буфера установщика ошибок с помощью вызова **SQLPostInstallerError**и может быть получен путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Недопустимый дескриптор окна|*HwndParent* аргумент имеет недопустимый или NULL.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|Ошибка драйвера или преобразователь|Ошибка драйвера, для которого нет определенных ошибок установщика ODBC. *SzError* аргумента в вызове **SQLPostInstallerError** функция должна содержать сообщении об ошибке драйвера.|  

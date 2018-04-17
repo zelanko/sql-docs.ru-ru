@@ -1,38 +1,39 @@
 ---
-title: "Привязка на уровне столбца | Документы Microsoft"
-ms.custom: 
+title: Привязка на уровне столбца | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-wise-binding"></a>Привязка на уровне столбца
 При использовании привязки на уровне столбца, приложение привязывает один или два или в некоторых случаях три, массива для каждого столбца, для которого требуется возвращаемых данных. Первый массив содержит значения данных, а второй массив содержит буфер длины/индикатора. Индикаторы и значения длины могут храниться в отдельных буферов, задав поля дескриптора SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR в разные значения; Если это сделано, привязывается третий массив. Каждый массив содержит столько же элементов как строк в наборе строк.  
   
  Приложение объявляет, что используется привязка на уровне столбцов с атрибутом инструкции SQL_ATTR_ROW_BIND_TYPE, который определяет тип привязки для буферов набора строк, в отличие от параметра набор буферов. Драйвер возвращает данные для каждой строки в последовательных элементов каждого массива. На следующем рисунке, на уровне столбца работает привязка.  
   
- ![Столбец &#45; статистику привязки для трех столбцов](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Столбец&#45;статистику привязки для трех столбцов](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
  Например следующий код связывает 10-элементные массивы столбцы OrderID, менеджер по продажам и состояние:  
   

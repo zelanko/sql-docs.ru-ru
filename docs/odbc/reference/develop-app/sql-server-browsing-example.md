@@ -1,31 +1,32 @@
 ---
-title: "Просмотр примера SQL Server | Документы Microsoft"
-ms.custom: 
+title: Просмотр примера SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC], example
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc6687becdb9f76a02ee10f87347033f746d3955
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-browsing-example"></a>Пример обозревателя SQL Server
 В следующем примере показан способ **SQLBrowseConnect** может использоваться для просмотра подключения, доступные с драйвером для SQL Server. Во-первых приложение запрашивает дескриптора соединения:  
@@ -82,7 +83,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- Драйвер возвращает строку окончательного подключения не содержит понятных имен после каждого ключевого слова, а также содержать необязательные ключевые слова не определяется приложением. Приложение может использовать эту строку с **SQLDriverConnect** для повторного подключения к источнику данных для текущего дескриптора соединения (после отключения) или для подключения к источнику данных в дескрипторе другое подключение. Пример:  
+ Драйвер возвращает строку окончательного подключения не содержит понятных имен после каждого ключевого слова, а также содержать необязательные ключевые слова не определяется приложением. Приложение может использовать эту строку с **SQLDriverConnect** для повторного подключения к источнику данных для текущего дескриптора соединения (после отключения) или для подключения к источнику данных в дескрипторе другое подключение. Например:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

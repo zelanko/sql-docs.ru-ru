@@ -2,7 +2,7 @@
 title: Функция SQLExtendedFetch | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlextendedfetch-function"></a>Функция SQLExtendedFetch
 **Соответствия**  
@@ -81,7 +81,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLExtendedFetch** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLError**. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLExtendedFetch** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное. При возникновении ошибки для одного столбца, **SQLGetDiagField** не может быть вызван с *DiagIdentifier* из SQL_DIAG_COLUMN_NUMBER определение столбца, произошла ошибка, и  **SQLGetDiagField** не может быть вызван с *DiagIdentifier* из SQL_DIAG_ROW_NUMBER, чтобы определить строки, содержащей этот столбец.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Строка или двоичные данные, возвращаемые для столбца привело к усечению непустых символьных или двоичных данных от NULL. Если он был строковое значение, было усечено справа. Если он был числовое значение, был усечен дробную часть числа.  (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -147,6 +147,6 @@ SQLRETURN SQLExtendedFetch(
 |Позиционирование курсора, обновление данных в наборе строк или удаления данных в результирующем наборе|[Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |С помощью атрибута инструкции|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

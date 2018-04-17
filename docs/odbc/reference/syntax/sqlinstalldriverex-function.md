@@ -2,7 +2,7 @@
 title: Функция SQLInstallDriverEx | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4179bf04131f256c5a37cb01c079035a569a07af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>Функция SQLInstallDriverEx
 **Соответствия**  
@@ -92,7 +92,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLInstallDriverEx** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Установщик Общие ошибки|Произошла ошибка для которого нет ошибок определенного установщика.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Недопустимый буфер длины|*LpszPathOut* аргумент не может быть достаточно большим, чтобы содержать выходной путь. Буфер содержит путь к усечению.<br /><br /> *CbPathOutMax* аргумент было равно 0, и *fRequest* был ODBC_INSTALL_COMPLETE.|  
@@ -106,9 +106,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Комментарии  
  *LpszDriver* аргумент является список атрибутов в форме пар «ключевое слово значение». Каждая пара заканчивается нулевым байтом, и завершается нулевым байтом весь список. (То есть две пустые байты отмечающий конец списка.) Этот список имеет следующий формат:  
   
- *драйвер desc*  **\\** 0Driver**=***имя файла драйвера DLL*  **\\** 0 [установки**=***имя файла DLL установки***\\**0]  
+ *драйвер desc* **\\**0Driver**=***имя файла драйвера DLL***\\**0 [установки **= ***имя файла DLL установки***\\**0]  
   
- [*драйвер attr ключевое_слово1***=***значение1***\\**0] [*драйвер attr ключевое_слово2*   **=**  *value2***\\**0]...  **\\** 0  
+ [*драйвер attr ключевое_слово1***=***value1 ***\\**0] [*драйвер attr ключевое_слово2***=*** value2 ***\\**0]... **\\**0  
   
  где \0 является нулевым байтом и *драйвер attr keywordn* является любое ключевое слово атрибута драйвера. Ключевые слова должны располагаться в указанном порядке. Например предположим, что драйвер для файлов форматированный текст имеет отдельный драйвер и установки библиотеки DLL и можно использовать файлы с расширениями txt и CSV. *LpszDriver* аргумент для этого драйвера может выглядеть следующим образом:  
   

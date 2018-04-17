@@ -2,7 +2,7 @@
 title: Функция SQLPutData | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfe33eb04b4948dcba85aa2d9549c301eb65c8a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData, функция
 **Соответствия**  
@@ -74,7 +74,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLPutData** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLPutData** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Строка или двоичные данные, возвращаемые для выходного параметра привело к усечению непустых символьных или двоичных данных от NULL. Если он был строковое значение, было усечено справа. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -106,7 +106,7 @@ SQLRETURN SQLPutData(
  Если **SQLPutData** вызывается при попытке отправки данных для параметра в инструкции SQL, она может возвращать любой SQLSTATE, которые могут быть возвращены, функция, вызываемая для выполнения инструкции (**SQLExecute** или **SQLExecDirect**). Если он вызывается при попытке отправки данных для столбца, обновляемых или добавлены с классом **SQLBulkOperations** или обновлением с использованием **SQLSetPos**, она может возвращать любой SQLSTATE, которые могут быть возвращены с  **SQLBulkOperations** или **SQLSetPos**.  
   
 ## <a name="comments"></a>Комментарии  
- **SQLPutData** может вызываться для предоставления данных во время выполнения для двух целей: данные параметр для использования в вызове **SQLExecute** или **SQLExecDirect**, или столбец данных для использования в том случае, если строка обновить или добавить вызов **SQLBulkOperations** или обновляется путем вызова **SQLSetPos**.  
+ **SQLPutData** может вызываться для предоставления данных во время выполнения для двух целей: данные параметр для использования в вызове **SQLExecute** или **SQLExecDirect**, или столбец данных, используемый при обновлении строки или добавлены с помощью вызова **SQLBulkOperations** или обновляется путем вызова **SQLSetPos**.  
   
  Если приложение вызывает **SQLParamData** , чтобы определить, какие данные необходимо отправлять, драйвер возвращает индикатор, приложение может использовать, чтобы определить, какие данные параметра для отправки или где находятся данные столбца. Он также возвращает значение SQL_NEED_DATA, что является признаком к приложению, он должен вызывать **SQLPutData** для отправки данных. В *DataPtr* аргумент **SQLPutData**, приложение передает указатель на буфер, содержащий данные для параметра или столбца.  
   
@@ -290,6 +290,6 @@ int main() {
 |Выполнения подготовленной инструкции SQL|[Функция SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Возвращает следующий параметр для отправки данных|[Функция SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -2,7 +2,7 @@
 title: Команда УНИКАЛЬНЫЙ НАБОР | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ba0921d2bfab8911d129ac4d1430e6d8d9bd6fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0e73315f1dca11f4b43d743e0b9dd3feb31bbab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-unique-command"></a>УНИКАЛЬНЫЙ команды SET
 Указывает, хранятся ли записи с повторяющимися значениями ключей в файле индекса.  
@@ -43,5 +43,5 @@ SET UNIQUE ON | OFF
  OFF  
  (По умолчанию). Указывает, что записи с повторяющимися значениями ключей будут включены в файл индекса.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Индексный файл сохраняет его ЗАДАТЬ УНИКАЛЬНЫЙ параметр выполните повторную ИНДЕКСАЦИЮ. Дополнительные сведения см. в разделе [ИНДЕКСА](../../odbc/microsoft/index-command.md).

@@ -2,7 +2,7 @@
 title: Функция ConfigDriver | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1697b7e697760afee2b62c49bd24c2ab22c9201d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56825fd24bd452365d5c3279c6aa68db83bd2470
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configdriver-function"></a>Функция ConfigDriver
 **Соответствия**  
@@ -90,7 +90,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **ConfigDriver** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение передается буфера установщика ошибок с помощью вызова **SQLPostInstallerError** его можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Недопустимый дескриптор окна|*HwndParent* недопустимый аргумент.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Недопустимый тип запроса|*FRequest* аргумент не является одним из следующих:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Параметр драйвера была меньше или равно ODBC_CONFIG_DRIVER_MAX.|  

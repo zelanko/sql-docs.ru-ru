@@ -1,15 +1,16 @@
 ---
-title: "Фиксации и отката транзакций | Документы Microsoft"
-ms.custom: 
+title: Фиксации и отката транзакций | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Фиксации и отката транзакций
 Для фиксации или отката транзакции в режиме ручной фиксации, приложение вызывает **SQLEndTran**. Драйверы для СУБД, которые обычно поддерживают транзакции реализуют эту функцию, выполнив **ЗАФИКСИРОВАТЬ** или **ОТКАТА** инструкции. Диспетчер драйверов не вызывает **SQLEndTran** когда соединение находится в режиме автоматической фиксации; он просто возвращает SQL_SUCCESS, даже если приложение попытается выполнить откат транзакции. Так как драйверы для СУБД, которые не поддерживают транзакции всегда находятся в режиме автоматической фиксации, они могут либо реализовать **SQLEndTran** возвращает SQL_SUCCESS не выполняя никаких действий или реализует его вообще.  

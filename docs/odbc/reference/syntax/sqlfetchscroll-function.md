@@ -2,7 +2,7 @@
 title: Функция SQLFetchScroll | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Функция SQLFetchScroll
 **Соответствия**  
@@ -90,7 +90,7 @@ SQLRETURN SQLFetchScroll(
   
  Для всех этих SQLSTATE, которые могут возвращать значение SQL_SUCCESS_WITH_INFO или SQL_ERROR (за исключением SQLSTATE 01xxx), возвращается SQL_SUCCESS_WITH_INFO, если в одной или нескольким, но не для всех строк многострочные операции происходит ошибка, и возвращается значение SQL_ERROR, если произошла ошибка Операция одной строки.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Строка или двоичные данные, возвращаемые для столбца привело к усечению непустых символьных или двоичных данных от NULL. Если он был строковое значение, было усечено справа.|  
@@ -200,8 +200,8 @@ SQLRETURN SQLFetchScroll(
 |*(До запуска и FetchOffset > 0) ИЛИ (после окончания и FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart и FetchOffset < = 0*|*Перед запуском*|  
 |*CurrRowsetStart = 1 и FetchOffset < 0*|*Перед запуском*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 и &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Перед запуском*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 и &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Перед запуском*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*После окончания*|  
 |*После окончания и FetchOffset > = 0*|*После окончания*|  
@@ -218,8 +218,8 @@ SQLRETURN SQLFetchScroll(
 |Условие|Первая строка новый набор строк|  
 |---------------|-----------------------------|  
 |*FetchOffset < 0 и &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 и &#124; FetchOffset &#124; > LastResultRow и &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Перед запуском*|  
-|*FetchOffset < 0 и &#124; FetchOffset &#124; > LastResultRow и &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 и &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Перед запуском*|  
+|*FetchOffset < 0 и &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Перед запуском*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*После окончания*|  
@@ -263,7 +263,7 @@ SQLRETURN SQLFetchScroll(
   
  Если курсор определяет строки, добавленные в результирующий набор или удаляет строки, удаленные из результирующего набора, он отображается, как если бы он обнаруживает эти изменения только в том случае, если он выбирает данные. Это включает случай при **SQLFetchScroll** вызывается с FetchOrientation SQL_FETCH_RELATIVE и FetchOffset, равным 0, чтобы повторно извлечь тот же набор строк, но не включает так, при вызове SQLSetPos присвоено SQL_ fOption ОБНОВЛЕНИЕ. В последнем случае обновляются данные в буферы строк, но не refetched и удаленные строки не удаляются из результирующего набора. Таким образом при вставке в текущем наборе строк или удалены из строки, курсор не изменяет буферы строк. Вместо этого обнаруженных изменений при выборке любому набору строк, ранее включить удаленную строку, и теперь включает вставленной строки.  
   
- Пример:  
+ Например:  
   
 ```  
 // Fetch the next rowset.  
@@ -370,6 +370,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Позиционирование курсора, обновление данных в наборе строк или удаления данных в результирующем наборе|[Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |С помощью атрибута инструкции|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

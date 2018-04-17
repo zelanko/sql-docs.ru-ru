@@ -2,7 +2,7 @@
 title: SQLDrivers, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad4afa4a54b63b759b03774f77ed7ec0371ff931
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13a9290f18c46b776afe9ab2b17c839ea6fdf6a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers, функция
 **Соответствия**  
@@ -90,7 +90,7 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDrivers** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_HANDLE_ENV и *обработки* из *EnvironmentHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDrivers** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|(DM) диспетчера драйверов, определяемые информационное сообщение. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|(DM) буфер \* *DriverDescription* не был достаточно велик, возвращается описание завершения драйвера. Таким образом описание был усечен. Длина описания полный драйвер возвращается в \* *DescriptionLengthPtr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) буфер \* *DriverAttributes* не был достаточно велик, чтобы получить полный список пар «атрибут-значение». Таким образом список был усечен. Длина неусеченный списка пар «атрибут-значение», возвращается в **AttributesLengthPtr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -128,6 +128,6 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 |Возврат имен источников данных|[Функция SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)|  
 |Соединение с источником данных, используется поле строки или диалоговое окно соединения|[Функция SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

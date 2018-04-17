@@ -1,15 +1,16 @@
 ---
-title: "Параметры Программная установка для драйвера dBASE | Документы Microsoft"
-ms.custom: 
+title: Параметры Программная установка для драйвера dBASE | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -17,25 +18,25 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79bf64c2f577935b26dcb64b93e7f3567924291b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 517d7053b651c6698e8b8ded7901d9dbcf1168f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Параметры Программная установка для драйвера dBASE
-|Параметр|Description|Метод|  
+|Параметр|Описание|Метод|  
 |------------|-----------------|------------|  
 |Приблизительное число строк|Определяет, округляются ли статистика размер таблицы. Этот параметр применяется ко всем источникам данных, использующие драйвер ODBC.|Чтобы задать этот параметр динамически, используйте **СТАТИСТИКИ** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Порядок сортировки|Последовательность, в которой отсортированы поля.<br /><br /> Последовательность может быть: ASCII (по умолчанию) или International.|Чтобы задать этот параметр динамически, используйте **COLLATINGSEQUENCE** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Имя источника данных|Имя, идентифицирующее источник данных, например Payroll или службу.|Чтобы задать этот параметр динамически, используйте **DSN** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |база данных|Можно настроить источник данных Microsoft Access, без выбора или создания базы данных. Если база данных не предоставляется при установке, пользователям будет предложено выбрать файл базы данных при подключении к источнику данных.|Чтобы задать этот параметр динамически, используйте **DBQ** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
-|Description|Необязательное описание данных в источнике данных; Например «привлекает даты, журнал зарплат и текущий Обзор всех сотрудников.»|Чтобы задать этот параметр динамически, используйте **описание** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
+|Описание|Необязательное описание данных в источнике данных; Например «привлекает даты, журнал зарплат и текущий Обзор всех сотрудников.»|Чтобы задать этот параметр динамически, используйте **описание** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Монопольно|Если **монопольного** установлен, базы данных будут открыты в монопольном режиме и может осуществляться одновременно только одним пользователем. Повышение производительности достигается, когда оно работает в режиме монопольного доступа.|Чтобы задать этот параметр динамически, используйте **МОНОПОЛЬНОГО** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Время ожидания страницы|Указывает период времени, в десятые доли секунды, страницы (если не используется), остаются в буфере перед удалением. Значение по умолчанию — 600 десятые доли секунды (60 секунд). Этот параметр применяется ко всем источникам данных, использующие драйвер ODBC.<br /><br /> Время ожидания страницы не может быть 0, из-за задержки, обусловленные. Время ожидания страницы не может быть меньше специфические задержку, даже если параметр времени ожидания страницы имеет значение ниже этого значения.|Чтобы задать этот параметр динамически, используйте **PAGETIMEOUT** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Только для чтения|Определяет базу данных только для чтения.|Чтобы задать этот параметр динамически, используйте **READONLY** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  

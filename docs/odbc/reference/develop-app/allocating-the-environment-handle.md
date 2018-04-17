@@ -1,15 +1,16 @@
 ---
-title: "Выделение дескриптора среды | Документы Microsoft"
-ms.custom: 
+title: Выделение дескриптора среды | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-the-environment-handle"></a>Выделение дескриптора среды
 Первая задача для любого приложения ODBC является загрузка диспетчера драйверов; как это можно сделать зависит от операционной системы. Например, на компьютере под управлением Microsoft® Windows NT® Server или Windows 2000 Server, Windows NT Workstation или Windows 2000 Professional или Microsoft Windows 95/98 приложения либо ссылки на библиотеку диспетчера драйверов или вызовы  **LoadLibrary** для загрузки библиотеки DLL диспетчера драйверов.  
   
  Следующей задачей, которая должна выполняться, прежде чем приложение может вызывать любой другой функции ODBC, является инициализировать среду ODBC и выделить дескриптор среды, как показано ниже:  
   
-1.  Приложение объявляет переменную типа SQLHENV. Затем он вызывает **SQLAllocHandle** и передает адрес этой переменной и параметр SQL_HANDLE_ENV. Пример:  
+1.  Приложение объявляет переменную типа SQLHENV. Затем он вызывает **SQLAllocHandle** и передает адрес этой переменной и параметр SQL_HANDLE_ENV. Например:  
   
     ```  
     SQLHENV henv1;  

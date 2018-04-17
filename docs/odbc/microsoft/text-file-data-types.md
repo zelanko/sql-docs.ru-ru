@@ -1,15 +1,16 @@
 ---
-title: "Типы данных текстового файла | Документы Microsoft"
-ms.custom: 
+title: Типы данных текстового файла | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], data types
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c946e2d253ae80e0fe0ccbb97dba5994c9c1d386
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-file-data-types"></a>Типы данных текстового файла
 Следующая таблица показывает, как текстовые типы данных сопоставляются с типами данных ODBC SQL. Обратите внимание, что не все типы данных ODBC SQL поддерживаются драйвером ODBC текста.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Ниже приведены ограничения на типы данных Text.  
   
-|Тип данных|Description|  
+|Тип данных|Описание|  
 |---------------|-----------------|  
 |CHAR|Создание столбца данных типа CHAR нулевое или неизвестной длины фактически возвращает 255-битовый столбец.<br /><br /> В файлах с разделителями столбца данных типа CHAR могут или не может иметь разделители двойных кавычек в начале и конце; в файлах фиксированной длины не используются двойные кавычки в качестве разделителей.|  
 |DATETIME|ММ-дд-гг (например, 01-17-92)<br /><br /> МММ-дд-гг (например, янв-17-92)<br /><br /> ДД ммм гг (например, 17-Jan-92)<br /><br /> ГГГГ-мм-дд (например, 1992-01-17)<br /><br /> ГГГГ-мм-дд (например, 1992-Jan-17)<br /><br /> Смешанный разделителями не допускаются в пределах таблицы.<br /><br /> Text ISAM форматирует поля DATETIME в формате Европы или США, в зависимости от международных параметров в панели управления Windows.|  

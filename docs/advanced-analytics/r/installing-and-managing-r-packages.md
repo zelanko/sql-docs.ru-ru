@@ -1,26 +1,17 @@
 ---
 title: Библиотеки пакета для машинного обучения на сервере SQL Server по умолчанию | Документы Microsoft
-ms.custom: ''
-ms.date: 02/19/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 97dc375dcee9dab2eb38c568b410e8ea2084842f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 64b085c2314e4c97694e91924cb15d43315143e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-package-libraries-for-machine-learning-on-sql-server"></a>Библиотеки пакета для машинного обучения на сервере SQL Server по умолчанию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +80,7 @@ ms.lasthandoff: 04/04/2018
 |------|------|------|
 | SQL Server RTM 2017 г.| 3.5.2| New: revoscalepy|
 | обновление через сервер обучения машины 9.2.1 сентября 2017 г.| Anaconda 4.2| обновления для revoscalepy |
-| SQL Server 2017 CU3| Anaconda 4.2| обновления для revoscalepy |
+| CU3 SQL Server 2017 г.| Anaconda 4.2| обновления для revoscalepy |
 
 Помимо библиотеки кода Python Стандартная установка включает образцы данных, модульных тестов и сценариев.
 

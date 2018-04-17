@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services tutorial дополнительного занятия: неоднородные иерархии | Документы Microsoft"
-description: "Описывает способы устранения неоднородные иерархии из учебника служб Analysis Services."
+title: 'Analysis Services tutorial дополнительного занятия: неоднородные иерархии | Документы Microsoft'
+description: Описывает способы устранения неоднородные иерархии из учебника служб Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: ebadf3498d7047873bfcd79099a02c387618367e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 224e0661a4f4c25592ad326f3e0ce3980e3602b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Дополнительного занятия - неоднородные иерархии
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 02/20/2018
 
 В этом дополнительном занятии устранить распространенные проблемы при повороте на иерархии, которые содержат пустые значения (члены) на различных уровнях. Например организация которой менеджеры высокого уровня координируют менеджеров отделов и не менеджеров подчиненных. Или географические иерархии, состоящие из страны, региона и города, которые включают города без родительского штата или провинции, например Вашингтон о. к., Ватикан. Если пустые элементы иерархии, часто заканчиваются на разных или без выравнивания, уровни.
 
-![as-lesson-detail-ragged-hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
+![AS-Lesson-Detail-ragged-hierarchies-TABLE](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
 Табличные модели на уровне совместимости 1400 имеют дополнительный **скрыть элементы** свойство для иерархии. **По умолчанию** предполагается нет пустой членов на любом уровне. **Скрыть пустые элементы** позволяет исключить пустые элементы из иерархии, при добавлении в сводную таблицу или отчет.  
   
@@ -55,8 +56,8 @@ ms.lasthandoff: 02/20/2018
     | Таблица 1           | Столбец       | Направление фильтра   | Таблица 2     | Столбец      | Активен |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
     | FactResellerSales | OrderDateKey | По умолчанию            | DimDate     | Дата        | Да    |
-    | FactResellerSales | DueDate      | По умолчанию            | DimDate     | Дата        | нет     |
-    | FactResellerSales | ShipDateKey  | По умолчанию            | DimDate     | Дата        | нет     |
+    | FactResellerSales | DueDate      | По умолчанию            | DimDate     | Дата        | Нет     |
+    | FactResellerSales | ShipDateKey  | По умолчанию            | DimDate     | Дата        | Нет     |
     | FactResellerSales | ProductKey   | По умолчанию            | DimProduct  | ProductKey  | Да    |
     | FactResellerSales | EmployeeKey  | К обеим таблицам | DimEmployee | EmployeeKey | Да    |
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 02/20/2018
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
 
-    **Level1** 
+    **LEVEL1** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],1,1)) 
     ```
@@ -92,7 +93,7 @@ ms.lasthandoff: 02/20/2018
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],4,1)) 
     ```
 
-    **Level5** 
+    **Уровень 5** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
@@ -109,7 +110,7 @@ ms.lasthandoff: 02/20/2018
 
 9.  В **полей сводной таблицы**, добавьте **организации** иерархии из **DimEmployee** таблицы, к **строк**и  **ResellerTotalSales** относительно **FactResellerSales** таблицы, к **значения**.
 
-    ![as-lesson-detail-ragged-hierarchies-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
+    ![AS-Lesson-Detail-ragged-hierarchies-PivotTable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
 
     Как видно в сводной таблице, иерархии отображаются строки, которые остаются неровными. Существует множество строк, в которой отображаются пустые элементы.
 
@@ -119,11 +120,11 @@ ms.lasthandoff: 02/20/2018
 
 2.  В **свойства** > **скрыть элементы**выберите **скрыть пустые элементы**. 
 
-    ![as-lesson-detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
+    ![AS-Lesson-Detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
 
 3.  В Excel обновите сводную таблицу. 
 
-    ![as-lesson-detail-ragged-hierarchies-pivottable-refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
+    ![AS-Lesson-Detail-ragged-hierarchies-PivotTable-Refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
 
     Теперь все выглядит гораздо лучше!
 

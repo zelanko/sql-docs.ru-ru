@@ -1,15 +1,16 @@
 ---
-title: "Даты, времени и интервала функции | Документы Microsoft"
-ms.custom: 
+title: Даты, времени и интервала функции | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], time functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-date-and-interval-functions"></a>Функции даты, времени и интервалов
 В следующей таблице перечислены функций даты и времени, которые включены в набор скалярные функции ODBC. Приложение может определить, какие функции даты и времени поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_TIMEDATE_FUNCTIONS.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  CURRENT_DATE, CURRENT_TIME и CURRENT_TIMESTAMP timedate скалярные функции были добавлены в ODBC 3.0 в соответствии со стандартом SQL-92.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |**(CURRENT_DATE)** (ODBC 3.0)|Возвращает текущую дату.|  
 |**CURRENT_TIME [(** *точность_в_секундах* **)]** (ODBC 3.0)|Возвращает текущее время. *Точность_в_секундах* аргумент определяет секунды значения типа возвращаемого значения.|  

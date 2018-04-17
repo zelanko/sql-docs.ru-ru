@@ -1,15 +1,15 @@
 ---
-title: "Регистрация определяемых пользователем типов в SQL Server | Документы Microsoft"
-ms.custom: 
+title: Регистрация определяемых пользователем типов в SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -35,20 +35,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58838ffa846a8b7e6ebaf18e155817c64cf0cb9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Регистрация определяемых пользователем типов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Чтобы использовать в определяемых пользователем типов (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо зарегистрировать его. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+  Чтобы использовать в определяемых пользователем типов (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо зарегистрировать его. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Использование среды Visual Studio для развертывания определяемых пользователем типов  
  Самым простым способом развертывания определяемого пользователем типа является использование среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Однако для более сложных сценариев развертывания и большей гибкости используется язык [!INCLUDE[tsql](../../includes/tsql-md.md)], как описано далее в этом разделе.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/09/2018
 5.  Из **построения** последовательно выберите пункты **развернуть**. Эта команда регистрирует сборку и создает тип в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Использование Transact-SQL для развертывания определяемых пользователем типов  
- Синтаксис CREATE ASSEMBLY языка [!INCLUDE[tsql](../../includes/tsql-md.md)] используется для регистрации сборки в базе данных, в которой требуется использование определяемого пользователем типа. Он хранится внутри системных таблиц базы данных, а во внешней файловой системе. Если определяемый пользователем тип зависит от внешних сборок, их тоже необходимо загрузить в базу данных. Инструкция CREATE TYPE используется для создания определяемого пользователем типа в базе данных, в которой он будет использоваться. Дополнительные сведения см. в разделе [CREATE ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md) и [создать тип &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Синтаксис CREATE ASSEMBLY языка [!INCLUDE[tsql](../../includes/tsql-md.md)] используется для регистрации сборки в базе данных, в которой требуется использование определяемого пользователем типа. Он хранится внутри системных таблиц базы данных, а во внешней файловой системе. Если определяемый пользователем тип зависит от внешних сборок, их тоже необходимо загрузить в базу данных. Инструкция CREATE TYPE используется для создания определяемого пользователем типа в базе данных, в которой он будет использоваться. Дополнительные сведения см. в разделе [CREATE ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/create-assembly-transact-sql.md) и [создать тип & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>Использование инструкции CREATE ASSEMBLY  
  Инструкция CREATE ASSEMBLY регистрирует сборку в базе данных, в которой требуется использование определяемого пользователем типа. После регистрации сборки она не имеет зависимостей.  
@@ -99,7 +99,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  Синтаксис CREATE TYPE также используется для создания собственных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных псевдонима типов и предназначен для замены **sp_addtype** как средство создания псевдонимов типов данных. Некоторые из дополнительных аргументов в синтаксисе CREATE TYPE служат для создания определяемых пользователем типов и неприменимы для создания псевдонимов типов данных (например базового типа).  
   
- Дополнительные сведения см. в разделе [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Дополнительные сведения см. в разделе [CREATE TYPE & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Пример  
  Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция создает **точки** типа. EXTERNAL NAME указывается с помощью синтаксиса имен двух частей из *AssemblyName*. *UDTName*.  
@@ -154,7 +154,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  После создания определяемого пользователем типа в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы не можете его изменить, хотя можно изменить сборку, на которой основан этот тип. В большинстве случаев необходимо удалить из базы данных определяемый пользователем тип с помощью инструкции DROP TYPE языка [!INCLUDE[tsql](../../includes/tsql-md.md)], внести изменения в базовую сборку и загрузить ее повторно с помощью инструкции ALTER ASSEMBLY. Затем необходимо повторно создать определяемый пользователем тип и зависимые объекты.  
   
 ### <a name="example"></a>Пример  
- Инструкция ALTER ASSEMBLY используется после внесения изменений в исходный код сборки определяемого пользователем типа и ее повторной компиляции. Она копирует DLL-файл на сервер и выполняет повторную привязку к новой сборке. Полный синтаксис см. в разделе [ALTER ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ Инструкция ALTER ASSEMBLY используется после внесения изменений в исходный код сборки определяемого пользователем типа и ее повторной компиляции. Она копирует DLL-файл на сервер и выполняет повторную привязку к новой сборке. Полный синтаксис см. в разделе [ALTER ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  Следующая инструкция ALTER ASSEMBLY языка [!INCLUDE[tsql](../../includes/tsql-md.md)] повторно загружает сборку Point.dll из указанного места на диске.  
   
@@ -184,7 +184,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Идентификационный номер каждого из объектов, первый объект, связанный с данной **assembly_id** присваивается значение 1. Если существует несколько объектов, связанных с тем же **assembly_id**, то каждое последующее **file_id** значение увеличивается на 1.  
   
- **content**  
+ **Содержимое**  
  Шестнадцатеричное представление сборки или файла.  
   
  Можно использовать функцию CAST или CONVERT для преобразования содержимого **содержимого** столбца для чтения текст. Следующий запрос преобразует содержимое файла Point.cs в доступный для чтения текст, используя для ограничения результирующего набора до одной строки имя в предложении WHERE.  

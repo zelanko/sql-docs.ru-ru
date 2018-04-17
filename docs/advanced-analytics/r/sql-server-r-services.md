@@ -1,23 +1,17 @@
 ---
 title: SQL Server машинного обучения и служб R (в базе данных) | Документы Microsoft
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: a610ff9393f502070cca28af84418b20c90e13cc
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server машинного обучения и служб R (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +100,7 @@ SQL Server 2016 — R только. SQL Server 2017 поддерживает R 
 
 + **revoscalepy**. Эта библиотека Python, доступных в SQL Server 2017 г реализует наиболее популярных функций в RevoScaleR, например контекстах удаленных вычислений и многие алгоритмы, которые поддерживают распределенную обработку.
 
-**Resources**
+**Ресурсы**
 
 + [Пример производительности](../../advanced-analytics/r/performance-case-study-r-services.md)
 + [R и оптимизация данных](../../advanced-analytics/r/r-and-data-optimization-r-services.md)
@@ -127,7 +121,7 @@ SQL Server 2016 — R только. SQL Server 2017 поддерживает R 
 + Настройка параметров безопасности и блокировка пакетов, используемые конкретной задачи
 + Включение ресурсами (требуется выпуск Enterprise edition)
 
-**Resources**
+**Ресурсы**
 
 + [Управление ресурсами для R](resource-governance-for-r-services.md)
 + [Управление пакетами R для SQL Server](r-package-management-for-sql-server-r-services.md)

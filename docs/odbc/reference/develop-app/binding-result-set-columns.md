@@ -1,30 +1,31 @@
 ---
-title: "Привязка результирующих столбцов набора | Документы Microsoft"
-ms.custom: 
+title: Привязка результирующих столбцов набора | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-result-set-columns"></a>Столбцы привязки результирующего набора
 Приложения можно привязать как любого числа столбцов результирующего набора, по своему выбору, включая привязки вообще нет столбцов. При выборке строки данных, драйвер возвращает данные для привязанных столбцов в приложение. Является ли приложение выполняет привязку всех столбцов в результирующем наборе зависит от приложения. Например приложений, создающих отчеты обычно имеют фиксированный формат; такие приложения создать результирующий набор, содержащий все столбцы, используемые в отчете и затем привязать и получения данных для всех этих столбцов. Приложения, отображающие экраны с данными, иногда разрешить пользователю решить, какие столбцы для отображения; такие приложения создать результирующий набор, содержащий все столбцы, пользователь может требуется, но привязать и извлечения данных только для тех столбцов, выбранного пользователем.  

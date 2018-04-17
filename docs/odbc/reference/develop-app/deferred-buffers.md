@@ -1,30 +1,31 @@
 ---
-title: "Отложенное буферы | Документы Microsoft"
-ms.custom: 
+title: Отложенное буферы | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buffers [ODBC], deferred
 - deferred buffers [ODBC]
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cbe554b72bf971e6b589b936cd6901ef5fa59a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5273f48c96039e543e24c2945cd5cda14d352e6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deferred-buffers"></a>Отложенное буферов
 Объект *отложенное буфера* — один, значение которого используется в некоторый момент *после* указывается в вызове функции. Например **SQLBindParameter** используется для связи, или *привязать,* буфера данных параметра в инструкции SQL. Приложение указывает номер параметра и передает адрес, длина в байтах и тип буфера. Драйвер сохраняет эти сведения, но не проверяет содержимое буфера. Позже когда приложение выполняет инструкцию, драйвер возвращает сведения и использует его для получения данных параметра и отправлять их в источник данных. Таким образом откладывается ввода данных в буфере. Из-за отложенного буферы указаны в одной функции и использовать в другом, это приложению программирования ошибок освободить отложенное буфера, если драйвер еще ожидает, что он существует; Дополнительные сведения см. в разделе [распределение и освобождение буферы](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)далее в этом разделе.  

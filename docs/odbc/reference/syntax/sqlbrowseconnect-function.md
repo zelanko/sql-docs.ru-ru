@@ -2,7 +2,7 @@
 title: Функция SQLBrowseConnect | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Функция SQLBrowseConnect
 **Соответствия**  
@@ -118,7 +118,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Аргумент InConnectionString  
  Обзор запроса строки подключения имеет следующий синтаксис:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *Строка подключения* :: = *атрибута*[`;`] &#124; *атрибута* `;` *строка подключения*;<br>
  *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
  *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
  *attribute-value* ::= *character-string*<br>
@@ -133,11 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Аргумент OutConnectionString  
  Обзор результирующей строки соединения является списком атрибутов соединения. Атрибут соединения состоит из ключевого слова атрибута и соответствующее значение атрибута. Обзор результирующей строки подключения имеет следующий синтаксис:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *Строка подключения* :: = *атрибута*[`;`] &#124; *атрибута* `;` *строки подключения*<br>
  *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *списка значений атрибута* :: = *символьной строки* [`:`*локализованные символьная строка*] &#124; *символьной строки* [`:` *локализованные символьная строка*] `,` *списка значений атрибута*<br>
   
  где *символьной строки* и *локализованные символьная строка* иметь ноль или более символов; *идентификатор* и *локализованные идентификатор* имеют один или несколько символов. *ключевое слово атрибут* не учитывает регистр; и *значение атрибута* может учитываться регистр. Из-за соединения строки инициализации файл грамматики, ключевые слова, идентификаторы локализованные и значения атрибутов, содержать символы **[] {} (),? \*=! @** следует избегать. Из-за грамматики в сведениях о системе, ключевые слова и имена источников данных не может содержать обратную косую черту (\\) символов.  
   

@@ -2,7 +2,7 @@
 title: Функция SQLWriteFileDSN | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 973c27fb58411e0fd3ddc482a0a8cbee3d929ee8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2984c14d1a3fd7f912ca3e71ba33f05e92fe2061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlwritefiledsn-function"></a>Функция SQLWriteFileDSN
 **Соответствия**  
@@ -70,7 +70,7 @@ BOOL SQLWriteFileDSN(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLWriteFileDSN** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Установщик Общие ошибки|Произошла ошибка для которого нет ошибок определенного установщика.|  
 |ODBC_ERROR_INVALID_PATH|Путь установки недопустимый|Путь к имени файла, указанного в *lpszFileName* недопустимый аргумент.|  

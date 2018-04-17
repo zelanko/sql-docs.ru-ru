@@ -1,31 +1,32 @@
 ---
-title: "Escape-последовательности ODBC в | Документы Microsoft"
-ms.custom: 
+title: Escape-последовательности ODBC в | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08ee3939b280ba284f0387d3ccfd4c2db0bf0a1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="escape-sequences-in-odbc"></a>Escape-последовательности ODBC
 Ряд возможностей языка, например внешние соединения и вызовы скалярных функций, обычно реализуются СУБД. Тем не менее синтаксисов для этих функций как правило зависящие от СУБД, даже если стандартный синтаксис определяются различные стандарты тела. По этой причине ODBC определяет управляющие последовательности, которые содержат стандартный синтаксис для следующих возможностей языка:  
@@ -48,11 +49,11 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Escape-последовательность опознается и анализируется драйверами, которые заменены СУБД синтаксису escape-последовательности. Дополнительные сведения о синтаксис escape-последовательности см. в разделе [Escape-последовательности ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) в грамматику SQL приложение C:.  
   
 > [!NOTE]  
->  В ODBC 2. *x*, это был стандартный синтаксис escape-последовательности: **--(\*поставщика (***название поставщика***), продукта (** *название продукта***)***расширения*  **\*)--**  
+>  В ODBC 2. *x*, это был стандартный синтаксис escape-последовательности: **--(\*поставщика (***название поставщика***), продукта (***название продукта***) *** расширения*  **\*)--**  
 >   
 >  Помимо этот синтаксис сокращенный синтаксис был определен в форме: **{***расширения***}**  
 >   

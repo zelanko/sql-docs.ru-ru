@@ -1,15 +1,16 @@
 ---
-title: "Типы данных Paradox | Документы Microsoft"
-ms.custom: 
+title: Типы данных Paradox | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cee6fd6f7b13b10a59047964ba0d344ba13b8381
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="paradox-data-types"></a>Типы данных Paradox
 Драйвера ODBC Paradox Paradox типы данных сопоставляются с типами данных ODBC SQL. В следующей таблице перечислены все типы данных Paradox и показаны типы данных, которые они сопоставляются с ODBC SQL.  
@@ -59,11 +60,11 @@ ms.lasthandoff: 12/21/2017
   
  Ниже приведены ограничения на типы данных Paradox.  
   
-|Тип данных|Description|  
+|Тип данных|Описание|  
 |---------------|-----------------|  
 |БУКВЕННО-ЦИФРОВОЙ|Создание буквенно-ЦИФРОВЫХ столбца равно нулю или неизвестной длины фактически возвращает столбец 255 байт.|  
 |BYTES|При вставке значения NULL в двоичного столбца с помощью драйвера Paradox5 он меняется на 0.|  
 |LONG|Максимальное значение отрицательное, поддерживаются драйвером Paradox для типа данных Long в Paradox 5. *x* не -2 ^ 31 (-2147483648), как она должна быть, так как Long сопоставляется данных ODBC, введите SQL_INTEGER. Максимальное значение отрицательное, поддерживаемое для длительных является фактически -2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Если значение вставляемых в столбец отметки времени драйвером Paradox, то впоследствии, полученных из столбца, возвращенного значения могут отличаться от вставленное значение по мере 1 секунды из-за округления.|  
+|TIMESTAMP|Если значение вставляемых в столбец отметки времени драйвером Paradox, то впоследствии, полученных из столбца, возвращенного значения могут отличаться от вставленное значение по мере 1 секунды из-за округления.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).

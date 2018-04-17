@@ -1,31 +1,32 @@
 ---
-title: "Диалоговое окно установки Visual FoxPro ODBC | Документы Microsoft"
-ms.custom: 
+title: Диалоговое окно установки Visual FoxPro ODBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d9a21f344687878d1a5b63073f1e23078386868
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Диалоговое окно установки Visual FoxPro ODBC
 **Установки Visual FoxPro ODBC** диалоговое окно позволяет добавить или изменить источник данных Visual FoxPro.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  **Имя источника данных**  
  Введите имя, которое будет использоваться для источника данных.  
   
- **Описание**  
+ **Description**  
  Введите описание для источника данных.  
   
  **Тип базы данных**  
@@ -72,7 +73,7 @@ strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Удален**  
+ **удален**  
  Определяет, возвращаются ли строки, помечаются как удаленные. Также можно выбрать этот параметр в строке подключения, переданный как в следующем коде:  
   
 ```  

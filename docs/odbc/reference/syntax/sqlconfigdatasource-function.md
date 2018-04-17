@@ -2,7 +2,7 @@
 title: Функция SQLConfigDataSource | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f2c33bc5c946331057486719750086a1f962924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource, функция
 **Соответствия**  
@@ -86,7 +86,7 @@ BOOL SQLConfigDataSource(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLConfigDataSource** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Установщик Общие ошибки|Произошла ошибка для которого нет ошибок определенного установщика.|  
 |ODBC_ERROR_INVALID_HWND|Недопустимый дескриптор окна|*HwndParent* аргумент имеет недопустимый или NULL.|  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** возвращает FALSE, если не удается найти или загрузить DLL-файлов установки или если пользователь отменяет диалоговым окном. В противном случае он возвращает состояние, полученное от **ConfigDSN**.  
   
- **SQLConfigDataSource** сопоставляет системный DSN *fRequest*s, чтобы пользовательский DSN *fRequest*s (ODBC_ADD_SYS_DSN для ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN и ODBC_REMOVE_SYS _DSN для значение ODBC_REMOVE_DSN). Чтобы различать пользователей и системных имен DSN **SQLConfigDataSource** задает установщик, режим конфигурации согласно следующей таблице. Перед возвратом, **SQLConfigDataSource** восстанавливает режим конфигурации BOTHDSN. **ConfigDSN** (реализован с помощью драйверов) должен вызывать **SQLWriteDSNToIni** и **SQLWritePrivateProfileString** для поддержки системный DSN. Дополнительные сведения см. в разделе [ConfigDSN функция](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** сопоставляет системный DSN *fRequest*s, чтобы пользовательский DSN *fRequest*s (ODBC_ADD_SYS_DSN для ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN и ODBC_REMOVE_SYS_ DSN значение ODBC_REMOVE_DSN). Чтобы различать пользователей и системных имен DSN **SQLConfigDataSource** задает установщик, режим конфигурации согласно следующей таблице. Перед возвратом, **SQLConfigDataSource** восстанавливает режим конфигурации BOTHDSN. **ConfigDSN** (реализован с помощью драйверов) должен вызывать **SQLWriteDSNToIni** и **SQLWritePrivateProfileString** для поддержки системный DSN. Дополнительные сведения см. в разделе [ConfigDSN функция](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*fRequest*|Режим конфигурации|  
 |----------------|------------------------|  

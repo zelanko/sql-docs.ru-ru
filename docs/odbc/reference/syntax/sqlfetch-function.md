@@ -2,7 +2,7 @@
 title: SQLFetch, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch, функция
 **Соответствия**  
@@ -60,7 +60,7 @@ SQLRETURN SQLFetch(
   
  Для всех этих SQLSTATE, которые могут возвращать значение SQL_SUCCESS_WITH_INFO или SQL_ERROR (за исключением SQLSTATE 01xxx), возвращается SQL_SUCCESS_WITH_INFO, если в одной или нескольким, но не для всех строк многострочные операции происходит ошибка, и возвращается значение SQL_ERROR, если произошла ошибка Операция одной строки.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Строка или двоичные данные, возвращаемые для столбца привело к усечению непустых символьных или двоичных данных от NULL. Если он был строковое значение, было усечено справа.|  
@@ -183,7 +183,7 @@ SQLRETURN SQLFetch(
   
  Следующие значения возвращаются в массив состояния строк.  
   
-|Значение массива строки состояния|Description|  
+|Значение массива строки состояния|Описание|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|Строка была успешно получен и не изменились с момента последней загрузки из этого результирующего набора.|  
 |SQL_ROW_SUCCESS_WITH_INFO|Строка была успешно получен и не изменились с момента последней загрузки из этого результирующего набора. Однако предупреждение был возвращен о строке.|  
@@ -275,6 +275,6 @@ SQLRETURN SQLFetch(
 |Возвращает число результирующих столбцов набора|[Функция SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Подготовка инструкции для выполнения|[Функция SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -2,7 +2,7 @@
 title: Функция SQLGetData | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>Функция SQLGetData
 **Соответствия**  
@@ -102,7 +102,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetData** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLGetData** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Не все данные для указанного столбца *Col_or_Param_Num*, может быть получен в рамках одного вызова функции. SQL_NO_TOTAL или длину данных, оставшихся в указанном столбце до текущего вызова к **SQLGetData** возвращается в \* *StrLen_or_IndPtr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).<br /><br /> Дополнительные сведения об использовании нескольких вызовов **SQLGetData** один столбец, в разделе «Комментарии».|  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync** не был вызван для завершения предыдущей асинхронной операции на этот дескриптор.|Если предыдущего вызова функции с дескриптором возвращает SQL_STILL_EXECUTING и уведомлений в режиме **SQLCompleteAsync** должен вызываться для этого после обработки и выполнения операции с дескриптором.|  
   
 ## <a name="comments"></a>Комментарии  
- **SQLGetData** возвращает данные в указанном столбце. **SQLGetData** может вызываться только в том случае, если выбраны один или несколько строк из результирующего набора по **SQLFetch**, **SQLFetchScroll**, или **SQLExtendedFetch** . Если данные переменной длины слишком велико, должны быть возвращены в рамках одного вызова **SQLGetData** (из-за ограничений в приложение), **SQLGetData** можно получить в частях. Можно привязать некоторые столбцы в строки и вызова **SQLGetData** для других пользователей, несмотря на то что некоторые ограничения. Дополнительные сведения см. в разделе [получения длинных данных](../../../odbc/reference/develop-app/getting-long-data.md).  
+ **SQLGetData** возвращает данные в указанном столбце. **SQLGetData** может вызываться только в том случае, если выбраны один или несколько строк из результирующего набора по **SQLFetch**, **SQLFetchScroll**, или **SQLExtendedFetch**. Если данные переменной длины слишком велико, должны быть возвращены в рамках одного вызова **SQLGetData** (из-за ограничений в приложение), **SQLGetData** можно получить в частях. Можно привязать некоторые столбцы в строки и вызова **SQLGetData** для других пользователей, несмотря на то что некоторые ограничения. Дополнительные сведения см. в разделе [получения длинных данных](../../../odbc/reference/develop-app/getting-long-data.md).  
   
  Дополнительные сведения об использовании **SQLGetData** с потоковых выходных параметров, в разделе [получение выходных параметров с помощью метода SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
@@ -277,7 +277,7 @@ if (retcode == SQL_SUCCESS) {
 |Отправка данных параметра во время выполнения|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Позиционирование курсора, обновление данных в наборе строк или удаления данных в наборе строк|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Получение выходных параметров с помощью метода SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

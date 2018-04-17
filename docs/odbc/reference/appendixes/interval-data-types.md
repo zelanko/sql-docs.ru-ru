@@ -1,15 +1,16 @@
 ---
-title: "Типы данных интервала | Документы Microsoft"
-ms.custom: 
+title: Типы данных интервала | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - second intervals [ODBC]
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interval-data-types"></a>Типы данных интервала
 Интервал определяется как разница между двумя значениями даты и времени. Интервалы времени выражаются в одном из двух способов. Один является *год месяц* интервала, который выражает интервалы в лет и целое число месяцев. Другой подход — *дневное время* интервала, который выражает интервалы в днях, минуты и секунды. Эти два типа интервалов отличаются друг от друга и не может одновременно, так как месяцев может иметь различное количество дней.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  Существует 13 интервальных типов данных SQL и 13 интервальных типов данных C. Каждый из типов данных C интервал использует ту же структуру SQL_INTERVAL_STRUCT, для хранения данных интервала. (Дополнительные сведения см. следующий раздел, [C интервал структуры](../../../odbc/reference/appendixes/c-interval-structure.md).) Дополнительные сведения о типах данных SQL см. в разделе [типов данных SQL](../../../odbc/reference/appendixes/sql-data-types.md); см. Дополнительные сведения о типах данных C, [типы данных C](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Идентификатор типа|Class|Description|  
+|Идентификатор типа|Class|Описание|  
 |---------------------|-----------|-----------------|  
 |MONTH|Месяц года|Число месяцев между двумя датами.|  
 |YEAR|Месяц года|Число лет между двумя датами.|  

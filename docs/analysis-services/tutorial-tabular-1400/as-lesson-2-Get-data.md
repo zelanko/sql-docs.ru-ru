@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services tutorial занятие 2: получение данных | Документы Microsoft"
-description: "Описывает, как для получения и импорта данных в проекте служб Analysis Services."
+title: 'Analysis Services tutorial занятие 2: получение данных | Документы Microsoft'
+description: Описывает, как для получения и импорта данных в проекте служб Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 1fd06f563581d42764b5b6f29b3c22d8129f9160
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3dd8c6e562fa1c792ff5bf9c117b687f8d77475b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data"></a>Получение данных
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/20/2018
   
     Будет запущен **получение данных**, которое помогает выполнить соединение с источником данных. Если вы не видите обозревателе табличной модели в **обозревателе решений**, дважды щелкните **Model.bim** чтобы открыть модель в конструкторе. 
     
-    ![as-lesson2-getdata](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
+    ![как getdata занятие 2](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
   
 2.  Получить данные, нажмите кнопку **базы данных** > **базы данных SQL Server** > **Connect**.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/20/2018
 
 4.  При появлении запроса введите учетные данные, необходимо указать учетные данные, которые службы Analysis Services использует для подключения к источнику данных при импорте и обработке данных. В **режим олицетворения**выберите **олицетворить учетную запись**, затем введите учетные данные и нажмите кнопку **Connect**. Рекомендуется использовать учетную запись, в которой срок действия пароля не ограничен.
 
-    ![as-lesson2-account](../tutorial-tabular-1400/media/as-lesson2-account.png)
+    ![как счет занятие 2](../tutorial-tabular-1400/media/as-lesson2-account.png)
   
     > [!NOTE]  
     > Использование другой пользовательской учетной записи и пароля Windows обеспечивает наиболее безопасный метод подключения к источнику данных.
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/20/2018
   
 6.  В навигаторе, установите флажок напротив следующих таблиц: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, и **FactInternetSales**.  
 
-    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![как-занятие 2 выберите таблиц](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Редактор запросов открывается после нажатия кнопки ОК. В следующем разделе выберите только данные, которые требуется импортировать.
 
@@ -80,14 +81,14 @@ ms.lasthandoff: 02/20/2018
   
 2.  Множественный выбор, (Ctrl + щелчок мышью) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, а затем щелкните правой кнопкой мыши и выберите команду **удалить столбцы**. 
 
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![как занятие 2 remove-"столбцы"](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Поскольку значения для этих столбцов не являются актуальными для анализа интернет-продаж, нет необходимости их импортировать. Удалить ненужные столбцы модели меньшего размера и делает более эффективным.  
 
     > [!TIP]
     > Если допущена ошибка, можно создать резервную копию, удалив шаг в **ПРИМЕНЕННЫХ ДЕЙСТВИЙ**.   
     
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![как занятие 2 remove-"столбцы"](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Отфильтруйте оставшиеся таблицы, удалив следующие столбцы в каждой таблице:  
@@ -151,7 +152,7 @@ ms.lasthandoff: 02/20/2018
   
 1.  Просмотрите выбранные параметры. Если все выглядит правильно, нажмите кнопку **импорта**. Обработка данных диалоговое окно показывает состояние данные, импортированные из вашего источника данных в базу данных рабочей области.
   
-    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![как успех занятие 2](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  Щелкните **Закрыть**.  
 

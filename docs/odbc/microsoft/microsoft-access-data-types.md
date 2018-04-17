@@ -1,15 +1,16 @@
 ---
-title: "Типы данных Microsoft Access | Документы Microsoft"
-ms.custom: 
+title: Типы данных Microsoft Access | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8faac619846998c1be7bc0577761b94bf6dc27ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-access-data-types"></a>Типы данных Microsoft Access
 В следующей таблице показаны типы данных Microsoft Access, типы данных, используемые для создания таблиц и типы данных ODBC SQL.  
@@ -66,12 +67,12 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
   
  Ниже приведены ограничения на типы данных Microsoft Access.  
   
-|Тип данных|Description|  
+|Тип данных|Описание|  
 |---------------|-----------------|  
 |BINARY, VARBINARY и VARCHAR|Создание столбца BINARY, VARBINARY или VARCHAR нулевое или неизвестной длины фактически возвращает 510-байтовый столбец.|  
 |BYTE|Несмотря на то, что поле номера доступа Microsoft с основании итогового, равно БАЙТОВ без знака, отрицательное значение могут вставляться в поле при использовании драйвера Microsoft Access.|  
 |CHAR, VARCHAR и LONGVARCHAR|Символьного литерала могут содержать любой символ ANSI (1-255 в десятичном формате). Используйте две стоящие рядом одинарные кавычки ("") для представления символ одинарной кавычки (').<br /><br /> Процедуры следует использовать для передачи символьных данных при использовании специальных символов в символьный столбец типа данных.|  
-|DATE|Значения дат должен с разделителями в соответствии с форматом даты канонические ODBC или разделитель даты и времени («#»). В противном случае Microsoft Access будет рассматривать значение как арифметического выражения и не будет создавать предупреждения или ошибки.<br /><br /> Например, «5 марта 1996» должны быть представлены как дата {d ' 1996-03-05 "} или #03/05/&#1996; в противном случае если только для отправки 03/05/1993 Microsoft Access значения этой как 3, разделенное на деления 5 на 1996. Это значение выполняет округление до целого числа 0, и поскольку нулевого дня сопоставляет 1899-12-31, это дата, используемая.<br /><br /> Знак вертикальной черты (&#124;) не может использоваться в значении даты, даже если они заключены обратно в кавычки.|  
+|DATE|Значения дат должен с разделителями в соответствии с форматом даты канонические ODBC или разделитель даты и времени («#»). В противном случае Microsoft Access будет рассматривать значение как арифметического выражения и не будет создавать предупреждения или ошибки.<br /><br /> Например, «5 марта 1996» должны быть представлены как дата {d ' 1996-03-05 "} или #03/05/1996 #; в противном случае если только для отправки 03/05/1993 Microsoft Access значения этой как 3, разделенное на деления 5 на 1996. Это значение выполняет округление до целого числа 0, и поскольку нулевого дня сопоставляет 1899-12-31, это дата, используемая.<br /><br /> Знак вертикальной черты (&#124;) не может использоваться в значении даты, даже если они заключены обратно в кавычки.|  
 |GUID|Тип данных ограничивается Microsoft Access 4.0.|  
 |NUMERIC|Тип данных ограничивается Microsoft Access 4.0.|  
   

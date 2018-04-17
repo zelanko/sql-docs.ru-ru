@@ -1,31 +1,32 @@
 ---
-title: "Явное типов данных функции преобразования | Документы Microsoft"
-ms.custom: 
+title: Явное типов данных функции преобразования | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e86113ed304bc0876ce961e4c8691f53e9065d1b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicit-data-type-conversion-function"></a>Явный тип функции преобразования
 Явного преобразования типов данных задается в рамках определения типов данных SQL.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  Формат **преобразовать** функции:  
   
- **ПРЕОБРАЗОВАНИЕ (** *value_exp*, *data_type***)**  
+ **ПРЕОБРАЗОВАНИЕ (** *value_exp*, *data_type ***)**  
   
  Функция возвращает значение, заданное параметром *value_exp* преобразовать в указанный *data_type*, где *data_type* является одним из следующих ключевых слов:  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  Синтаксис ODBC функцию преобразования типа явные данных не поддерживает спецификацию преобразования формата. Если спецификация явную форматов поддерживается в источнике данных, драйвер должен задавать значение по умолчанию или реализации спецификации формата.  
   
- Аргумент *value_exp* может быть имя столбца, результат другой скалярной функцией или numeric или строка литерала. Пример:  
+ Аргумент *value_exp* может быть имя столбца, результат другой скалярной функцией или numeric или строка литерала. Например:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

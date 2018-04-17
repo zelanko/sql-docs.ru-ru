@@ -1,31 +1,32 @@
 ---
-title: "Привязка на уровне строки | Документы Microsoft"
-ms.custom: 
+title: Привязка на уровне строки | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>Привязка на уровне строки
 Если используется привязка на уровне строки, приложение определяет структуру, содержащую один или два, или в некоторых случаях трех элементов для каждого столбца, для которого требуется возвращаемых данных. Первый элемент содержит значение данных, а второй элемент содержит буфер длины/индикатора. Индикаторы и значения длины могут храниться в отдельных буферов, задав поля дескриптора SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR в разные значения; Если это сделать, эта структура содержит третьего элемента. Затем приложение выделяет массив эти структуры, который содержит число элементов, как строк в наборе строк.  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  где строки пронумерованы от 1 до размера набора строк. (Один вычитается из номер строки, так как в языке C индексации массива начинается с нуля.) Ниже показано, как на уровне строки работает привязки. Как правило в структуре включаются только те столбцы, которые будут действовать. Структура может содержать поля, не связанными с последующим набора столбцов. Столбцы могут размещаться в структуре в любом порядке, но отображаются в последовательном порядке для ясности.  
   
- ![Показывает строку &#45; статистику привязки](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Отображает строку&#45;статистику привязки](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  Например следующий код создает структуру элементов, в которой возвращаются данные для столбцов OrderID, менеджер по продажам и состояния и длины/индикаторы столбцов менеджеров по продажам и состояние. Он выделяет 10 из этих структур и связывает их со столбцами OrderID, менеджер по продажам и состояние.  
   

@@ -1,15 +1,16 @@
 ---
-title: "Курсоры | Документация Майкрософт"
-ms.custom: 
+title: Курсоры | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - forward-only cursors [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursors"></a>Курсоры
 Приложение извлекает данные с *курсор*. Курсор отличается от результирующего набора: результирующий набор — это набор строк, удовлетворяющих условиям поиска, в то время как курсора — это программное обеспечение, возвращает эти строки в приложение. Имя *курсора,* применительно к базам данных, возможно, исходящее от мигающий указатель на компьютере терминала. Так же, как этого курсора указывает текущую позицию на экране и где отображается Далее типизированного слова, курсора на результирующем наборе указывает текущее положение в результирующем наборе, и какие строки будут возвращены рядом.  

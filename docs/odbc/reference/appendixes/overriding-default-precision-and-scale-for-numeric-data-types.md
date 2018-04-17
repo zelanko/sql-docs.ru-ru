@@ -1,15 +1,16 @@
 ---
-title: "Переопределение по умолчанию точность и масштаб для числовых типов данных | Документы Microsoft"
-ms.custom: 
+title: Переопределение по умолчанию точность и масштаб для числовых типов данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2be244dd3ad258ab3fa6b5679e5989d8a08778e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56b6c9d61c811517ccc089f424622967c81cd123
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Переопределение по умолчанию точность и масштаб для числовых типов данных
 Если поле SQL_DESC_TYPE в Отменить равно SQL_C_NUMERIC, с помощью вызова **SQLBindCol** или **SQLSetDescField**, поле SQL_DESC_SCALE в Отменить имеет значение 0, и задано поле SQL_DESC_PRECISION с точностью по умолчанию, определяемым драйвером. Это также имеет значение true, если поле SQL_DESC_TYPE в APD равно SQL_C_NUMERIC, с помощью вызова **SQLBindParameter** или **SQLSetDescField**. Это верно для входных данных, ввода вывода или выходных параметров.  

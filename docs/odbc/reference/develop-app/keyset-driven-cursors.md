@@ -1,30 +1,31 @@
 ---
-title: "Управляемые набором ключей курсоры | Документы Microsoft"
-ms.custom: 
+title: Управляемые набором ключей курсоры | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acc3a757493c935d5b37c278eb77b9b849f85873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="keyset-driven-cursors"></a>Управляемые набором ключей курсоры
 Курсор, управляемый набором ключей находится в диапазоне от статического и динамического курсора в ее способности обнаруживать изменения. Как статический курсор он не всегда обнаруживает изменения в членство и порядок результирующего набора. Как динамический курсор обнаруживать изменения значений строк в результирующем наборе (в зависимости от уровня изоляции транзакции, задаваемое при помощи атрибута SQL_ATTR_TXN_ISOLATION соединения).  

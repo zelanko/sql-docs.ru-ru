@@ -1,30 +1,31 @@
 ---
-title: "СОЗДАТЬ индекс для Paradox | Документы Microsoft"
-ms.custom: 
+title: СОЗДАТЬ индекс для Paradox | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef256444ea5fe613b92c6d504e9fb972325803ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-for-paradox"></a>СОЗДАТЬ индекс для Paradox
 Используется синтаксис инструкции CREATE INDEX для драйвера ODBC Paradox.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 -   *Имя индекса* аргумент для первичного индекса должен быть таким же, как имя базовой таблицы, как того требует Paradox.  
   
- Если ключевое слово **UNIQUE** — этот параметр опущен, драйвер ODBC Paradox создает неуникальный индекс. Это состоит из двух файлов Paradox вторичного индекса, с именем *имя таблицы*. X *nn*  и *имя таблицы*. Y*nn*, где  *nn*  номер столбца в таблице. Неуникальные индексы могут быть следующие ограничения:  
+ Если ключевое слово **UNIQUE** — этот параметр опущен, драйвер ODBC Paradox создает неуникальный индекс. Это состоит из двух файлов Paradox вторичного индекса, с именем *имя таблицы*. X*nn* и *имя таблицы*. Y*nn*, где *nn* номер столбца в таблице. Неуникальные индексы могут быть следующие ограничения:  
   
 -   Перед созданием неуникальный индекс для таблицы первичный индекс должен существовать для этой таблицы.  
   
