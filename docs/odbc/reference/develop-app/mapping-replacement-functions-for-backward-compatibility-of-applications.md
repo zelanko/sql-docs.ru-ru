@@ -1,15 +1,16 @@
 ---
-title: "Сопоставление замены функций для обеспечения совместимости приложений — ODBC | Документы Microsoft"
-ms.custom: 
+title: Сопоставление замены функций для обеспечения совместимости приложений — ODBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Сопоставление замены функций для обеспечения обратной совместимости приложений
 ODBC 3*.x* приложения при работе с ODBC 3*.x* диспетчера драйверов будет работать для ODBC 2. *x* при условии, что используются не новые возможности драйвера. Оба дублирование функциональные возможности и изменения поведения тем не менее, влиять на который ODBC 3. *x* приложение работает на ODBC 2. *x* драйвера. При работе с ODBC 2. *x* драйвера, диспетчер драйверов сопоставляет следующие ODBC 3. *x* функций, которые произвели замену одного или нескольких ODBC 2. *x* функции, в соответствующие ODBC 2. *x* функции.  

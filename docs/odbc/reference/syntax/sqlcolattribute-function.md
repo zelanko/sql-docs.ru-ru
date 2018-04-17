@@ -2,7 +2,7 @@
 title: Функция SQLColAttribute | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute-function"></a>Функция SQLColAttribute
 **Соответствия**  
@@ -101,7 +101,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLColAttribute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType*значение sql_handle_stmt и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLColAttribute** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Буфер \* *CharacterAttributePtr* не был достаточно велик, чтобы вернуть значение всю строку, поэтому строковое значение усечено. Длина неусеченный строковое значение возвращается в **StringLengthPtr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -136,7 +136,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3. *x* драйвер должен возвращать значение для каждого поля дескриптора. Если поле дескриптора не применяется к источнику драйвера или данных, и если не указано иное, драйвер возвращает 0 в \* *StringLengthPtr* или пустая строка в **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>Обратная совместимость  
  ODBC 3. *x* функция **SQLColAttribute** заменяет устаревшие ODBC 2. *x* функция **SQLColAttributes**. При сопоставлении **SQLColAttributes** для **SQLColAttribute** (когда ODBC 2. *x* при работе с ODBC 3. *x* драйверов), сопоставление и **SQLColAttribute** для **SQLColAttributes** (когда ODBC 3. *x* при работе с ODBC 2. *x* драйверов), диспетчер драйверов либо передается значение *FieldIdentifier* , сопоставляет его с новым значением или возвращает ошибку, как показано ниже:  
   
 > [!NOTE]  
@@ -152,7 +152,7 @@ SQLRETURN SQLColAttribute (
   
  В следующей таблице перечислены дескрипторов типов, возвращаемых **SQLColAttribute**. Тип для *NumericAttributePtr* значения — **SQLLEN \*** .  
   
-|*FieldIdentifier*|Сведения<br /><br /> возвращается в|Description|  
+|*FieldIdentifier*|Сведения<br /><br /> возвращается в|Описание|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, если столбец является столбцом с автоматическим приращением.<br /><br /> Значение SQL_FALSE, если столбец не является столбцом с автоматическим приращением или не является числом.<br /><br /> Это поле является действительным для числовых данных только столбцы типа. Приложение может вставлять значение в строку, содержащую столбец автоприращения, но обычно не удается обновить значения в столбце.<br /><br /> После вставки в столбец автоинкремента уникальное значение вставляется в столбец во время операции вставки. Приращение не определен, но данные, определяемые источником. Приложение не следует предполагать, что столбца autoincrement начиная с любой определенной точке или шагом на любой определенное значение.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|Имя базового столбца для результирующего набора столбцов. Если имя базового столбца не существует (как в случае столбцы, которые являются выражениями), эта переменная содержит пустую строку.<br /><br /> Эти сведения возвращаются из поля записи SQL_DESC_BASE_COLUMN_NAME IRD, предназначенного только для чтения поле.|  
@@ -311,7 +311,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Образец программы ODBC](../../../odbc/reference/sample-odbc-program.md)

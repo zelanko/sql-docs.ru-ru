@@ -1,15 +1,16 @@
 ---
-title: "Преобразования состояний | Документы Microsoft"
-ms.custom: 
+title: Преобразования состояний | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="state-transitions"></a>Переходы состояния
 ODBC определяет дискретных *состояния* для каждой среды, для каждого подключения и каждой инструкции. Например, среда имеет три состояния: свободен (в которой выделяется среда не), выделенное (в которой выделяется среды, но подключения не выделяются) и (в котором среды и одно или несколько соединений, соединение выделить). Соединение имеет семь возможные состояния; операторы имеют 13 возможных состояний.  

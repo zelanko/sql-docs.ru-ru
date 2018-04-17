@@ -1,15 +1,16 @@
 ---
-title: "Типы данных C | Документы Microsoft"
-ms.custom: 
+title: Типы данных C | Документы Microsoft
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], C data types
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-data-types"></a>Типы данных C
 Типы данных ODBC C указывают тип данных C буферов, используемых для хранения данных в приложении.  
@@ -39,22 +40,22 @@ ms.lasthandoff: 12/21/2017
   
 |Идентификатор типа C|Определение типа ODBC C|Тип C|  
 |-----------------------|--------------------|------------|  
-|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
-|SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j]|SQLSMALLINT|короткое целочисленное|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|короткое целочисленное число без знака|  
+|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
+|SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
+|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT [j]|SQLUSMALLINT|unsigned short int|  
 |SQL_C_SLONG [j]|SQLINTEGER|длинное целочисленное|  
-|SQL_C_ULONG [j]|SQLUINTEGER|длинное целочисленное число без знака|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
+|SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|char без знака|  
 |SQL_C_STINYINT [j]|SQLSCHAR|char со знаком|  
 |SQL_C_UTINYINT [j]|SQLCHAR|char без знака|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|без знака _int64 [h]|  
-|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
+|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
 |SQL_C_BOOKMARK [i]|ЗАКЛАДКА|unsigned long int [d]|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
+|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |Все типы данных C интервал|SQL_INTERVAL_STRUCT|В разделе [C интервал структуры](../../../odbc/reference/appendixes/c-interval-structure.md) подраздел, далее в этом приложении.|  
   
  **Идентификатор типа C** SQL_C_TYPE_DATE [c]  
@@ -161,5 +162,5 @@ struct tagSQLGUID {
   
 -   [64-разрядные целочисленные структуры](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных C в ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

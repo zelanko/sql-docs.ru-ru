@@ -1,15 +1,15 @@
 ---
-title: "Использование System.Transactions | Документы Microsoft"
-ms.custom: 
+title: Использование System.Transactions | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 67ccba900d3aa22b5aad79e6112fbc8695298e85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-systemtransactions"></a>Использование System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Пространство имен **System.Transactions** предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Класс **System.Transactions.TransactionScope** делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока **Complete** , перед тем, как выйти из него, необходимо вызвать метод **TransactionScope**. Когда выполнение программы покидает блок кода, вызывается метод **Dispose** , что вызывает прерывание транзакции, если не поддерживается метод **Complete** . При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  
+  Пространство имен **System.Transactions** предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Класс **System.Transactions.TransactionScope** делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока **Complete** , перед тем, как выйти из него, необходимо вызвать метод **TransactionScope**. Когда выполнение программы покидает блок кода, вызывается метод **Dispose** , что вызывает прерывание транзакции, если не поддерживается метод **Complete** . При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  
   
  Рекомендуется использовать блок **using** , чтобы гарантировать вызов метода **Dispose** для объекта **TransactionScope** при выходе из блока **using** . Неудачная попытка зафиксировать или откатить незавершенные транзакции может значительно снизить производительность, поскольку время ожидания по умолчанию для объекта **TransactionScope** составляет одну минуту. Если инструкция **using** не используется, необходимо явно выполнить все действия в блоке **Try** и вызвать метод **Dispose** в блоке **Finally** .  
   

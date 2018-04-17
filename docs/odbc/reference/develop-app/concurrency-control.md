@@ -1,30 +1,31 @@
 ---
-title: "Управление параллелизмом | Документы Microsoft"
-ms.custom: 
+title: Управление параллелизмом | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab0a0838c2bac6359452d3870cf3d3c7d8b472d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="concurrency-control"></a>Управление параллелизмом
 *Параллелизм* является возможность использовать те же данные одновременно две операции и транзакции изоляции обычно появилась снижению степени параллелизма. Это так, как уровень изоляции транзакции обычно реализуется блокировки строк, и как дополнительные строки будут заблокированы, меньшее количество транзакций может быть выполнено без ее блокировки временно в заблокированной строке. Хотя снижению степени параллелизма признается обычно является компромиссом для более высоких уровней изоляции транзакций, необходимых для поддержания целостности базы данных, он может стать проблемой в интерактивных приложений с высокой чтение и запись действия, которое использовать курсоры.  

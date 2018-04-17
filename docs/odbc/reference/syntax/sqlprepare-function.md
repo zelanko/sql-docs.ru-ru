@@ -2,7 +2,7 @@
 title: Функция SQLPrepare | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>Функция SQLPrepare
 **Соответствия**  
@@ -66,7 +66,7 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLPrepare** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLPrepare** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01S02|Значение параметра изменено|Атрибут указанного оператора недопустимый из-за условий работы реализации, поэтому был временно заменены примерно такое же значение. (**SQLGetStmtAttr** может вызываться для определения временно подставляемого значения.) Заменяющее значение допустимо для *StatementHandle* до закрытия курсора. Атрибуты инструкции, которые могут быть изменены представляют собой: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE атрибута SQL_ATTR_KEYSET_SIZE значения SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -86,7 +86,7 @@ SQLRETURN SQLPrepare(
 |42S11|Индекс уже существует|\**StatementText* содержится **CREATE INDEX** инструкции и индекс с указанным именем уже существует.|  
 |42S12|Индекс не найден|\**StatementText* содержится **DROP INDEX** инструкции и индекс с указанным именем не существует.|  
 |42S21|Столбец уже существует|\**StatementText* содержится **ALTER TABLE** инструкции и столбец, указанный в **добавить** предложения не является уникальным или идентифицирует существующего столбца в базовой таблице.|  
-|42S22|Столбец не найден|\**StatementText* содержится **CREATE INDEX** инструкции и один или несколько столбцов, имена, указанные в списке столбцов не существует.<br /><br /> \**StatementText* содержится **GRANT** или **ОТОЗВАТЬ** оператор и с определенным названием столбца не существует.<br /><br /> \**StatementText* содержится **ВЫБЕРИТЕ**, **удаление**, **вставить**, или **обновление** инструкции и указанного столбца Имя не существует.<br /><br /> \**StatementText* содержится **CREATE TABLE** инструкции и столбец, указанный в ограничении (ссылка на таблицу отличный от созданном) не существует.|  
+|42S22|Столбец не найден|\**StatementText* содержится **CREATE INDEX** инструкции и один или несколько столбцов, имена, указанные в списке столбцов не существует.<br /><br /> \**StatementText* содержится **GRANT** или **ОТОЗВАТЬ** оператор и с определенным названием столбца не существует.<br /><br /> \**StatementText* содержится **ВЫБЕРИТЕ**, **удаление**, **вставить**, или **обновление** оператор и с определенным названием столбца не существует.<br /><br /> \**StatementText* содержится **CREATE TABLE** инструкции и столбец, указанный в ограничении (ссылка на таблицу отличный от созданном) не существует.|  
 |HY000|Общая ошибка|Произошла ошибка, для которой было нет определенных SQLSTATE и для которого был определен SQLSTATE не зависит от реализации. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
 |HY001|Ошибка выделения памяти|Драйверу не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
 |HY008|Операция отменена|Асинхронная обработка была включена для *StatementHandle*. Функция был вызван, и до выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle*, и затем вызова функции еще раз на *StatementHandle*.<br /><br /> Функция был вызван, и до выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle* из другого потока в многопоточные приложения.|  
@@ -136,6 +136,6 @@ SQLRETURN SQLPrepare(
 |Возвращает число строк, затронутых инструкцией|[Функция SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |Имя курсора|[Функция SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,51 +1,35 @@
 ---
-title: "Свойства строки подключения (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
+title: Свойства строки подключения (службы Analysis Services) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Свойства строки подключения (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
+  В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
   
  Разработчики, которые создают пользовательские строки подключения в коде приложений, могут найти более подробный список в документации по API-интерфейсам для клиента ADOMD.NET: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- Свойства, описанные в этом разделе, используются клиентскими библиотеками служб Analysis Services, ADOMD.NET, объектами AMO и поставщиком OLE DB для служб Analysis Services. Большинство свойств строки подключения можно использовать со всеми тремя клиентскими библиотеками. Исключения приведены в описании.  
-  
- Этот раздел включает следующие подразделы:  
-  
- [Часто применяемые параметры соединения](#bkmk_common)  
-  
- [Проверка подлинности и безопасность](#bkmk_auth)  
-  
- [Специальные параметры](#bkmk_special)  
-  
- [Зарезервировано для использования в будущем.](#bkmk_reserved)  
-  
- [Примеры строк подключения](#bkmk_examples)  
-  
- [Форматы строк подключения, используемые в службах Analysis Services](#bkmk_supportedstrings)  
-  
- [Шифрование строк соединения](#bkmk_encrypt)  
+ Свойства, описанные в этом разделе, используются клиентскими библиотеками служб Analysis Services, ADOMD.NET, объектами AMO и поставщиком OLE DB для служб Analysis Services. Большинство свойств строки подключения можно использовать со всеми тремя клиентскими библиотеками. Исключения приведены в описании.
   
 > [!NOTE]  
 >  Если при задании свойств одно и то же свойство было задано дважды, то в строке подключения используется последнее.  
@@ -195,7 +179,7 @@ ms.lasthandoff: 02/15/2018
   
  Чтобы зашифровать и защитить данные строки подключения, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют API-интерфейс защиты данных.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют отдельный ключ шифрования для шифрования данных строки подключения каждой из баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают этот ключ при создании базы данных и шифруют данные из строки соединения на основании стартовой учетной записи входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . При запуске служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зашифрованный ключ для каждой из баз данных считывается, расшифровывается и сохраняется. Затем службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют соответствующий расшифрованный ключ для расшифровки строки подключения к источнику данных, когда службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо подключиться к источнику данных.  
+ Службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют отдельный ключ шифрования для шифрования данных строки подключения каждой из баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают этот ключ при создании базы данных и шифруют данные из строки соединения на основании стартовой учетной записи входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . При запуске служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зашифрованный ключ для каждой из баз данных считывается, расшифровывается и сохраняется. Затем службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют соответствующий расшифрованный ключ для расшифровки строки подключения к источнику данных, когда службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо подключиться к источнику данных.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   

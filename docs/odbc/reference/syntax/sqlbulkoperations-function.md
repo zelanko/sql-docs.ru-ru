@@ -2,7 +2,7 @@
 title: Функция SQLBulkOperations | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1872238d5e017ef8b6bd3fbfb2dc185051fc3557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: efc1d363d11982e0732fc50ca66a665520b59c39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbulkoperations-function"></a>Функция SQLBulkOperations
 **Соответствия**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBulkOperations(
   
  Для всех этих SQLSTATE, которые могут возвращать значение SQL_SUCCESS_WITH_INFO или SQL_ERROR (за исключением SQLSTATE 01xxx), возвращается SQL_SUCCESS_WITH_INFO, если в одной или нескольким, но не для всех строк многострочные операции происходит ошибка, и возвращается значение SQL_ERROR, если произошла ошибка Операция одной строки.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Правый усечение данных строки|*Операции* аргумент был SQL_FETCH_BY_BOOKMARK и строка или двоичные данные, возвращаемые для столбца или столбцов с типом данных SQL_C_CHAR и SQL_C_BINARY привело к усечению непустых символьных или двоичных данных от NULL.|  
@@ -467,6 +467,6 @@ int main() {
 |Позиционирование курсора, обновление данных в наборе строк или удаления данных в наборе строк|[Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |С помощью атрибута инструкции|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

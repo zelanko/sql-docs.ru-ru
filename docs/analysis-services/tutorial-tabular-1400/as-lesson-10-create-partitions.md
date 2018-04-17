@@ -1,15 +1,15 @@
 ---
-title: "Занятие учебника Analysis Services 10: Создание разделов | Документы Microsoft"
-description: "Описывает, как создать секции в проект учебника по службам Analysis Services."
+title: 'Занятие учебника Analysis Services 10: Создание разделов | Документы Microsoft'
+description: Описывает, как создать секции в проект учебника по службам Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 417bcbe36a49c44bcb5c8297968e6595d1ed3d91
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitions"></a>Создание секций
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 02/20/2018
 
 6.  В диалоговом окне фильтров строк в **отображает строки, где: OrderDate**, оставьте **после или равно**и введите в поле date **1/1/2010**. Оставить **и** оператор выбран, выберите **перед**, введите в поле date **1 1 сентября**и нажмите кнопку **ОК**.
 
-    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![как lesson10-фильтр строк](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Обратите внимание в редакторе запросов, в ПРИМЕНЕННЫХ ДЕЙСТВИЙ появиться еще один шаг, с именем отфильтрованные строки. Этот фильтр является выбор только даты заказов из 2010.
 
@@ -120,7 +121,7 @@ ms.lasthandoff: 02/20/2018
   
     Откроется диалоговое окно **Обработка данных** со сведениями обработки для каждой секции. Обратите внимание, что для каждой секции передается различное количество строк. Каждая секция включает только те строки для года, указанного в предложении WHERE в инструкции SQL. По завершении обработки закройте диалоговое окно "Обработка данных".  
   
-    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![как lesson10-процесса — завершение](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Дальнейшие действия
 

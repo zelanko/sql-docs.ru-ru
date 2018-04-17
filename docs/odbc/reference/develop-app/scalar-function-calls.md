@@ -2,7 +2,7 @@
 title: Скалярная функция вызывает | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>Вызовы скалярных функций
 Скалярные функции возвращают значение для каждой строки. Например скалярная функция абсолютное значение числового столбца в качестве аргумента принимает и возвращает абсолютное значение каждого значения в столбце. Escape-последовательность для вызова скалярной функции  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  Для максимальной совместимости приложения должны использовать **преобразовать** скалярную функцию, чтобы убедиться в том, что скалярная функция является требуемого типа. **Преобразовать** функция преобразует данные из одного типа данных SQL в указанный тип данных SQL. Синтаксис **преобразовать** функция  
   
- **ПРЕОБРАЗОВАНИЕ (** *value_exp* **,** *data_type***)**  
+ **ПРЕОБРАЗОВАНИЕ (** *value_exp* **,** *data_type ***)**  
   
  где *value_exp* является имя столбца, в результате другой скалярной функции или значение литерала и *data_type* ключевое слово, которое соответствует **#define** имя, используемое по Идентификатор типа данных SQL, как определено в [типы данных приложение D:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Например, следующая инструкция SQL использует **преобразовать** функции, чтобы убедиться в том, что выходные данные **функция CURDATE** функция — это дата, вместо данных отметки времени или символ:  
   

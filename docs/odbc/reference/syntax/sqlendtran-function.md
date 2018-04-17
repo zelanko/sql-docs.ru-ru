@@ -2,7 +2,7 @@
 title: Функция SQLEndTran | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>Функция SQLEndTran
 **Соответствия**  
@@ -71,7 +71,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLEndTran** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с соответствующими *HandleType*и *обработки*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLEndTran** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |08003|Соединение не открыто|(DM) *HandleType* был SQL_HANDLE_DBC и *обработки* не находился в подключенном состоянии.|  
@@ -115,7 +115,7 @@ SQLRETURN SQLEndTran(
   
  Если значение SQL_CURSOR_ROLLBACK_BEHAVIOR или SQL_CURSOR_COMMIT_BEHAVIOR — SQL_CB_DELETE, **SQLEndTran** закрывает и удаляет все открытые курсоры во все отчеты, связанные с подключением и отменяет все ожидающие результаты. **SQLEndTran** оставляет любая инструкция, в выделенное состояние (неподготовленных); приложения можно повторно использовать их для последующих запросов SQL или вызвать **SQLFreeStmt** или **SQLFreeHandle** с *HandleType* значение sql_handle_stmt для их освобождения.  
   
- Если значение SQL_CURSOR_ROLLBACK_BEHAVIOR или SQL_CURSOR_COMMIT_BEHAVIOR — SQL_CB_CLOSE, **SQLEndTran** закрывает все открытые курсоры для всех инструкций, связанный с подключением. **SQLEndTran** оставляет любая инструкция, присутствующих в подготовленном состоянии; приложение может вызвать **SQLExecute** для инструкции, связанные с подключением, без предварительного вызова функции **SQLPrepare** .  
+ Если значение SQL_CURSOR_ROLLBACK_BEHAVIOR или SQL_CURSOR_COMMIT_BEHAVIOR — SQL_CB_CLOSE, **SQLEndTran** закрывает все открытые курсоры для всех инструкций, связанный с подключением. **SQLEndTran** оставляет любая инструкция, присутствующих в подготовленном состоянии; приложение может вызвать **SQLExecute** для инструкции, связанные с подключением, без предварительного вызова функции **SQLPrepare**.  
   
  Если значение SQL_CURSOR_ROLLBACK_BEHAVIOR или SQL_CURSOR_COMMIT_BEHAVIOR — SQL_CB_PRESERVE, **SQLEndTran** не влияет на открытые курсоры, связанные с подключением. Курсоры остаются в строке, они, на который указывает до вызова **SQLEndTran**.  
   
@@ -159,7 +159,7 @@ SQLRETURN SQLEndTran(
 |Освобождение дескриптора|[Функция SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Освобождение дескриптора инструкции|[Функция SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

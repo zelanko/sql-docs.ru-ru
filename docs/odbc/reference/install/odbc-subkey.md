@@ -1,36 +1,37 @@
 ---
-title: "Подраздел ODBC | Документы Microsoft"
-ms.custom: 
+title: Подраздел ODBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - registry entries for data sources [ODBC], ODBC subkey
 - subkeys [ODBC], ODBC subkey
 - ODBC subkey [ODBC]
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf33666d0bf8c02b91b26d94f72ec2883e4cba9d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a78553cbf67f4056ac50db78b0249189f2e27f26
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-subkey"></a>Подраздел ODBC
 Параметры трассировки ODBC определенные значения в подразделе ODBC. Эти параметры задаются через «трассировка» диалогового окна Администратор источников данных ODBC, отображаемого элементом **SQLManageDataSources**. Подраздел ODBC является необязательным. Формат этих значений является, как показано в следующей таблице.  
   
-|Имя|Тип данных|data|  
+|Название|Тип данных|Данные |  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
 |TraceFile|REG_SZ|*путь файла трассировки*|  

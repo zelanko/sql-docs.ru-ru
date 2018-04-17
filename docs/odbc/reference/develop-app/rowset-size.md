@@ -1,15 +1,16 @@
 ---
-title: "Размер набора строк | Документы Microsoft"
-ms.custom: 
+title: Размер набора строк | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rowset size [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-size"></a>Размер набора строк
 Размер набора строк зависит от приложения. На экране приложений часто выполните одно из двух стратегий. Первой задачей является установить размер набора строк на число строк, отображаемых на экране; Если пользователь изменяет размер экрана, приложение соответственным образом изменяет размер набора строк. Второй — для установки размера набора строк больше, например 100, что уменьшает количество вызовов к источнику данных. Приложение локально прокручивается в наборе строк, если это возможно и извлекает новых строк только в том случае, когда он выполняет прокрутку вне набора строк.  
@@ -38,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **SQLFetch** и **SQLFetchScroll** использовать размер набора строк во время вызова, чтобы определить количество строк для выборки. Тем не менее **SQLFetchScroll** с *FetchOrientation* SQL_FETCH_NEXT смещен курсор на основе строк, состоящего из предыдущей выборке и затем извлекает набор строк, в соответствии с размером набора строк.  
   
--   **SQLSetPos** использует размер набора строк, которая действует на предшествующий ему вызов **SQLFetch** или **SQLFetchScroll**, так как **SQLSetPos** работает на набор строк, которое уже было задано. **SQLSetPos** также получают новый размер набора строк при **SQLBulkOperations** был вызван после изменения размера набора строк.  
+-   **SQLSetPos** использует размер набора строк, которая действует на предшествующий ему вызов **SQLFetch** или **SQLFetchScroll**, так как **SQLSetPos** обрабатывает набор строк уже задано. **SQLSetPos** также получают новый размер набора строк при **SQLBulkOperations** был вызван после изменения размера набора строк.  
   
 -   **SQLBulkOperations** использует размер набора строк в силе во время вызова, так как он выполняет операции с таблицей, независимо от любого извлеченных строк.

@@ -2,7 +2,7 @@
 title: ВЫБЕРИТЕ - команда SQL | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>ВЫБЕРИТЕ - команда SQL
 Извлекает данные из одной или нескольких таблиц.  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  Объект *вложенный запрос*, в следующих аргументах, является выбор в инструкцию SELECT и должен быть заключен в круглые скобки. Может иметь более двух вложенных запросов на том же уровне (не вложенные) в предложении WHERE. (См. Этот раздел аргументов). Вложенные запросы могут содержать несколько условий соединения.  
   
- [Все &#124; DISTINCT] [*псевдоним*.] *Select_Item* [AS *Column_Name*] [, [*псевдоним*.] *Select_Item* [AS *Column_Name*]...]  
+ [Все &#124; DISTINCT]   [*Псевдоним*.] *Select_Item* [AS *Column_Name*] [, [*псевдоним*.] *Select_Item* [AS *Column_Name*]...]  
  Предложение SELECT задает поля, констант и выражений, которые отображаются в результатах запроса.  
   
  По умолчанию все отображаются все строки в результатах запроса.  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* имя временной таблицы, указанной в *таблицы*. Если указан локальный псевдоним, необходимо использовать локальный псевдоним вместо имени таблицы в инструкции SELECT. Локальный псевдоним не влияет на среду Visual FoxPro.  
   
- ГДЕ *условия JoinCondition* [AND *условия JoinCondition* ...]    [И &#124; ИЛИ *FilterCondition* [и &#124; ИЛИ *FilterCondition* ...]]  
+ ГДЕ *условия JoinCondition* [AND *условия JoinCondition* ...]    [AND &#124; или *FilterCondition* [AND &#124; или *FilterCondition* ...]]  
  Сообщает Visual FoxPro для включения записи в результатах запроса. ГДЕ необходим для получения данных из нескольких таблиц.  
   
  *Условия JoinCondition* определяет поля, связывающие таблицы в предложении FROM. При включении нескольких таблиц в запросе необходимо указать условие соединения для каждой таблицы после первого.  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Когда условие фильтра включает все, это поле должно удовлетворять условиям сравнения для всех значений, созданных вложенный запрос перед ее записью включается в результаты запроса.  
   
- **Пример 4** *сравнения FieldName* любой &#124; НЕКОТОРЫЕ (*вложенный запрос*)  
+ **Пример 4** *сравнения FieldName* ANY &#124; SOME (*вложенный запрос*)  
   
  `company < ANY ;`  
   
@@ -278,7 +278,7 @@ WHERE customer.cust_id NOT IN ;
   
  Результаты запроса отображаются неупорядоченных, если заказ не указан вместе с ORDER BY.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  SELECT является команду SQL, который встроен в компонент Visual FoxPro, как и любые другие команды Visual FoxPro. При использовании ВЫБЕРИТЕ, чтобы представлять запрос, Visual FoxPro интерпретирует запрос и получает указанные данные из таблиц. Можно создать запрос SELECT из в окне командной строки или программы Visual FoxPro (как и любые другие команды Visual FoxPro).  
   
 > [!NOTE]  
@@ -287,7 +287,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Драйвер примечания  
  Когда приложение отправляет инструкция ODBC SQL SELECT с источником данных, драйвер ODBC для Visual FoxPro преобразует команды в Visual FoxPro ВЫБЕРИТЕ команду без преобразования, если команда содержит escape-последовательность ODBC. Элементы, заключенные в escape-последовательности ODBC преобразуются в синтаксисе Visual FoxPro. Дополнительные сведения об использовании ODBC escape-последовательности см. в разделе [функции даты и времени](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) и в *Справочник по программированию ODBC Microsoft*, в разделе [Escape-последовательности ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОЗДАНИЕ ТАБЛИЦЫ - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   

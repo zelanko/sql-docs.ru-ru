@@ -1,15 +1,16 @@
 ---
-title: "Режим автоматической фиксации | Документы Microsoft"
-ms.custom: 
+title: Режим автоматической фиксации | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 046b9a0ec140404418b7b868f2061cbabf7b0d3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="auto-commit-mode"></a>Режим автоматической фиксации
 *В режиме автоматической фиксации* каждой операции базы данных является транзакцией, которая фиксируется при выполнении. Этот режим подходит для многих реальных транзакций, состоящих из одной инструкции SQL. Нет необходимости разделять или указать завершения этих транзакций. В базах данных без поддержки транзакций режим автоматической фиксации имеет единственный поддерживаемый режим. В таких базах данных инструкции фиксируются, когда они выполняются, и нет возможности отката; они таким образом всегда находятся в режиме автоматической фиксации.  

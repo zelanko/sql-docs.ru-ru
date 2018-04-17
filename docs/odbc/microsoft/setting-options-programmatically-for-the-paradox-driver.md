@@ -1,15 +1,16 @@
 ---
-title: "Установка параметров программными средствами для драйвера Paradox | Документы Microsoft"
-ms.custom: 
+title: Установка параметров программными средствами для драйвера Paradox | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7c881a428d279c4136d3d2422afc6cc79d9d502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b74f549b8950c2395ead577d96c15ad3e35a82f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Настройка параметров программным образом с целью драйвера Paradox
-|Параметр|Description|Метод|  
+|Параметр|Описание|Метод|  
 |------------|-----------------|------------|  
 |Каталог|Задает целевой каталог.|Чтобы задать этот параметр динамически, используйте **его значения** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Порядок сортировки|Последовательность, в которой отсортированы поля.<br /><br /> Последовательность может быть ASCII (по умолчанию), международного, Шведский финский или датский норвежский.|Чтобы задать этот параметр динамически, используйте **COLLATINGSEQUENCE** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Description|Необязательное описание данных в источнике данных; Например «привлекает даты, журнал зарплат и текущий Обзор всех сотрудников.»|Чтобы задать этот параметр динамически, используйте **описание** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Описание|Необязательное описание данных в источнике данных; Например «привлекает даты, журнал зарплат и текущий Обзор всех сотрудников.»|Чтобы задать этот параметр динамически, используйте **описание** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Монопольно|Если **монопольного** установлен, базы данных будут открыты в монопольном режиме и может осуществляться одновременно только одним пользователем. Повышение производительности достигается при работе в режиме монопольного доступа.|Чтобы задать этот параметр динамически, используйте **МОНОПОЛЬНОГО** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Тип сети|Стиль доступа к сети, используемый при доступе к данным Paradox: либо «3.*x*» для Paradox 3. *x* или «4. *x*» для Paradox 4. *x* или 5. *x*. Можно присвоить значение «3. *x*» или «4. *x*"Если версия Paradox 4. *x* или 5. *x*; Если версия Paradox 3. *x*, необходимо выбрать «3. *x*».|Чтобы задать этот параметр динамически, используйте **PARADOXNETSTYLE** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Время ожидания страницы|Указывает период времени, в десятых долях секунды страницы (если не используется), остаются в буфере до удаления. Значение по умолчанию — 600 десятые доли секунды (60 секунд). Этот параметр применяется ко всем источникам данных, использующие драйвер ODBC.<br /><br /> Время ожидания страницы не может быть 0, из-за задержки, обусловленные. Время ожидания страницы не может быть меньше специфические задержку, даже если параметр времени ожидания страницы имеет значение ниже этого значения.|Чтобы задать этот параметр динамически, используйте **PAGETIMEOUT** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  

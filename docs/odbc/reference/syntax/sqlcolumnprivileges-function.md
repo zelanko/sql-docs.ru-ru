@@ -2,7 +2,7 @@
 title: Функция SQLColumnPrivileges | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5058ae7c097858469db0aad57509f013e68db7ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 419bb70737c37e8cb47e53f7b1179d46b68582fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumnprivileges-function"></a>Функция SQLColumnPrivileges
 **Соответствия**  
@@ -68,7 +68,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength1*  
  [Вход] Длина в символах **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Вход] Имя схемы. Если драйвер поддерживает схемы для некоторых таблиц, но не для других пользователей, например, когда драйвер получает данные из различных DBMS, пустая строка ("») обозначает этих таблиц, у которых нет схемы. *SchemaName* не может содержать строку шаблона поиска.  
   
  Если атрибут инструкции SQL_ATTR_METADATA_ID задано значение SQL_TRUE, *SchemaName* рассматривается как идентификатор. Если это значение SQL_FALSE, *SchemaName* — обычный аргумент; он интерпретируется буквально и его регистр имеет значения.  
@@ -76,7 +76,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength2*  
  [Вход] Длина в символах **SchemaName*.  
   
- *Имя_таблицы*  
+ *TableName*  
  [Вход] Имя таблицы. Этот аргумент не может быть пустым указателем. *TableName* не может содержать строку шаблона поиска.  
   
  Если атрибут инструкции SQL_ATTR_METADATA_ID задано значение SQL_TRUE, *TableName* рассматривается как идентификатор и его регистр не имеет значения. Если это значение SQL_FALSE, *TableName* — обычный аргумент; он интерпретируется буквально и его регистр имеет значения.  
@@ -98,7 +98,7 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLColumnPrivileges** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение sql_handle_stmt и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLColumnPrivileges** и описание каждого из них в контексте этой функции; описания SQLSTATE, возвращаемых драйвером предшествует нотации «(DM)» Диспетчер. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |08S01|Сбой связи|Сбой в канале связи между драйвером и источника данных, к которому был подключен драйвер перед обработкой функции было завершено.|  
@@ -167,6 +167,6 @@ SQLRETURN SQLColumnPrivileges(
 |Возвращение права доступа для таблицы или таблиц|[Функция SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
 |Возвращает список таблиц в источнике данных|[Функция SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

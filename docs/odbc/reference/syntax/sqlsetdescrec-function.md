@@ -2,7 +2,7 @@
 title: Функция SQLSetDescRec | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, функция
 **Соответствия**  
@@ -96,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLSetDescRec** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_DESC и *обработки* из *DescriptorHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLSetDescRec** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |07009|Недопустимый индекс дескриптора|*RecNumber* аргумент было задано значение 0 и *DescriptorHandle* называют дескриптор IPD.<br /><br /> *RecNumber* аргумент был меньше 0.<br /><br /> *RecNumber* аргумент был больше, чем максимальное количество столбцов или параметров, которые источник данных может поддерживать, и *DescriptorHandle* аргумент был APD, IPD или Отменить.<br /><br /> *RecNumber* аргумент, равное 0 и *DescriptorHandle* аргумент называют неявным образом выделенный APD. (Эта ошибка возникает с дескриптором явно выделенного приложения, так как неизвестно, является ли дескриптор явно выделенного приложения APD или Отменить до времени выполнения.)|  
@@ -166,6 +166,6 @@ SQLRETURN SQLSetDescRec(
 |Получение нескольких полей дескриптора|[Функция SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Задание полей одного дескриптора|[Функция SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

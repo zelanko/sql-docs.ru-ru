@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services tutorial дополнительного занятия: строки детализации | Документы Microsoft"
-description: "Описывает, как создать выражение строки детализации в учебнике служб Analysis Services."
+title: 'Analysis Services tutorial дополнительного занятия: строки детализации | Документы Microsoft'
+description: Описывает, как создать выражение строки детализации в учебнике служб Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 7efcdc724792656a917b95892ed699bc57590ce7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd138f17df94b94cbe51869b9e364bbd544509f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Дополнительного занятия - строки детализации
 
@@ -43,11 +44,11 @@ ms.lasthandoff: 02/20/2018
   
 2.  В **полей сводной таблицы**, добавьте **InternetTotalSales** мер из таблицы FactInternetSales **значения**, **CalendarYear** из таблицы DimDate **столбцы**, и **EnglishCountryRegionName** для **строк**. Теперь сводной таблицы обеспечивает сводных результатов от InternetTotalSales меры по области и года. 
 
-    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
+    ![как занятия подробности строки-сводной таблицы](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
 3. В сводной таблице дважды щелкните сводное значение для года, а имя области. Здесь мы дважды щелкнули Австралия и 2014 года. Новый лист открывается, содержащая данные, но не полезных данных.
 
-    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
+    ![как занятия подробности строки-сводной таблицы](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
 Что мы хотим видеть здесь является таблицей, содержащей столбцы и строки данных, которые влияют на результат статистической обработки мер InternetTotalSales. Чтобы сделать это, можно добавить выражение строки детализации как свойство меры.
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 02/20/2018
 
 2. В **свойства** > **выражение строки детализации**, нажмите кнопку редактора, чтобы открыть редактор DAX.
 
-    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
+    ![как занятия подробности строки эллипса](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. В редакторе DAX введите следующее выражение:
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 02/20/2018
 
 4. В Excel удалить лист, созданной на шаге 3, а затем дважды щелкните это статистическое выражение. На этот раз со свойством выражение строки детализации, определенные для меры, новый лист открывается с гораздо более полезными данными.
 
-    ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
+    ![как занятия подробности строки detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
 5. Повторное развертывание модели.
 

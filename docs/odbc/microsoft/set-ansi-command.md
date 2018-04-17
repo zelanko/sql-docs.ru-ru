@@ -2,7 +2,7 @@
 title: Команды SET ANSI | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef87baef7367068b5a22225f3bb9b4c3e1783ca6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 358dceb034106eed23632bf0c08c425a0a98cf9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansi-command"></a>Команды SET ANSI
 Определяет способ между строки разной длины сравнения с =-оператор в командах Visual FoxPro SQL.  
@@ -57,12 +57,12 @@ SET ANSI ON | OFF
   
  Результатом является значение True (. Если SET ANSI отключен, так как T.) процедура сравнения останавливается после «Tom».  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  SET ANSI определяет ли более короткой двух строк дополняется пробелы при сравнении строк SQL. SET ANSI не оказывает влияния на ==-оператор; При использовании оператора ==, более короткая строка дополняется всегда пустые значения для сравнения.  
   
 ## <a name="string-order"></a>Строка заказа  
  В командах SQL порядок слева направо между двумя строками в сравнении не irrelevantswitching строку с одной стороны, = или ==-оператор на другую не влияет на результат сравнения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ - команда SQL](../../odbc/microsoft/select-sql-command.md)   
  [Команда SET EXACT](../../odbc/microsoft/set-exact-command.md)

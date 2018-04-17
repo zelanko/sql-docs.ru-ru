@@ -2,7 +2,7 @@
 title: SQLExecute, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: def8205423e1f79045cb54e80cf9bc33c4d8246d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecute-function"></a>SQLExecute, функция
 **Соответствия**  
@@ -58,7 +58,7 @@ SQLRETURN SQLExecute(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLExecute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLExecute** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01001|Конфликт операции с курсором|Подготовленной инструкции, связанные с *StatementHandle* автономной позиционированные обновления или удаления инструкции, и ни одной строки или более одной строки были обновлены или удалены. (Дополнительные сведения об обновлениях для более чем одной строке см. в описании SQL_ATTR_SIMULATE_CURSOR *атрибута* в **SQLSetStmtAttr**.)<br /><br /> (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecute(
 |01007|Не предоставлено право доступа|Подготовленной инструкции, связанные с *StatementHandle* было **GRANT** инструкции и пользователь не может предоставляться указанного прав доступа.|  
 |01S02|Значение параметра изменено|Атрибут указанного оператора недопустимый из-за условий работы реализации, поэтому был временно заменены примерно такое же значение. (**SQLGetStmtAttr** может вызываться для определения временно подставляемого значения.) Заменяющее значение допустимо для *StatementHandle* до закрытия курсора, после чего атрибут инструкции восстанавливает прежнее значение. Атрибуты инструкции, которые могут быть изменены представляют собой: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, атрибута SQL_ATTR_KEYSET_SIZE, значения SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT и SQL_ATTR_SIMULATE_CURSOR. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01S07|Частичное усечение|Данные возвращаются для ввода вывода или выходной параметр был усечен таким образом, что дробная часть числовой тип данных был усечен или усеченные дробной части числа компонент тип данных времени, отметка времени или интервала времени.<br /><br /> (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
-|07002|Неправильное поле COUNT|Число параметров, указанных в **SQLBindParameter** меньше, чем число параметров в инструкции SQL, содержащейся в \* *StatementText*.<br /><br /> **SQLBindParameter** был вызван с *ParameterValuePtr* значение является пустым указателем, *StrLen_or_IndPtr* не присвоено значение SQL_NULL_DATA или значение SQL_DATA_AT_EXEC, а  *InputOutputType* не заданы для SQL_PARAM_OUTPUT, поэтому указанное число параметров в **SQLBindParameter** превышает число параметров в инструкции SQL, содержащейся в **StatementText*.|  
+|07002|Неправильное поле COUNT|Число параметров, указанных в **SQLBindParameter** меньше, чем число параметров в инструкции SQL, содержащейся в \* *StatementText*.<br /><br /> **SQLBindParameter** был вызван с *ParameterValuePtr* значение является пустым указателем, *StrLen_or_IndPtr* не присвоено значение SQL_NULL_DATA или значение SQL_DATA_AT_EXEC, и *InputOutputType*  не заданы для SQL_PARAM_OUTPUT, поэтому указанное число параметров в **SQLBindParameter** превышает число параметров в инструкции SQL, содержащейся в **StatementText* .|  
 |07006|Нарушение атрибута ограниченного типа данных|Значение определяется *ValueType* аргумент в **SQLBindParameter** для связанных параметров не удалось преобразовать в тип данных, определяемый *ParameterType*аргумент в **SQLBindParameter**.<br /><br /> Возвращаемое значение данных для параметра, привязанный как SQL_PARAM_INPUT_OUTPUT или SQL_PARAM_OUTPUT не удалось преобразовать в тип данных, определяемый *ValueType* аргумент в **SQLBindParameter**.<br /><br /> (Если не удается преобразовать значения данных для одной или нескольких строк, но один или несколько строк, возвращенных успешно, эта функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |07007|Нарушение значение параметра @restricted|Тип параметра SQL_PARAM_INPUT_OUTPUT_STREAM используется только для параметра, который отправляет и получает данные в частях. Входной буфер связанного недопустимо для данного типа параметра.<br /><br /> Эта ошибка возникает, когда тип параметра является SQL_PARAM_INPUT_OUTPUT и когда \* *StrLen_or_IndPtr* указано в **SQLBindParameter** не равен SQL_NULL_DATA, SQL_DEFAULT_ PARAM, SQL_LEN_DATA_AT_EXEC(len) или значению SQL_DATA_AT_EXEC.|  
 |07S01|Недопустимое использование параметра по умолчанию|Задайте значение параметра с **SQLBindParameter**был SQL_DEFAULT_PARAM и соответствующий параметр не является параметром для вызова процедуры канонические ODBC.|  
@@ -151,6 +151,6 @@ SQLRETURN SQLExecute(
 |Имя курсора|[Функция SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
 |С помощью атрибута инструкции|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

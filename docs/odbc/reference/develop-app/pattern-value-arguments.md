@@ -1,31 +1,32 @@
 ---
-title: "Значения аргументов шаблона | Документы Microsoft"
-ms.custom: 
+title: Значения аргументов шаблона | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4959b329f855028cedc99f7c43ef889754baecda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pattern-value-arguments"></a>Значения аргументов шаблона
 Функции несколько аргументов в каталоге, например *TableName* аргумент в **SQLTables**, поддерживает шаблоны из поиска. Эти аргументы принять шаблонов поиска, если атрибут инструкции SQL_ATTR_METADATA_ID имеет значение SQL_FALSE; Это идентификатор аргументы, которые не принимают шаблону поиска, если этот атрибут имеет значение SQL_TRUE.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  Escape-символ извлекается с параметром SQL_SEARCH_PATTERN_ESCAPE в **SQLGetInfo**. Он должен указываться перед любой символ подчеркивания, знак процента или escape-символ в аргумент, который принимает шаблонов поиска должна стоять как литерал. В следующей таблице приведены примеры.  
   
-|Шаблон поиска|Description|  
+|Шаблон поиска|Описание|  
 |--------------------|-----------------|  
 |%A %|Все идентификаторы, содержащий букву A|  
 |ABC_|Все идентификаторы четыре символа, начиная с ABC|  

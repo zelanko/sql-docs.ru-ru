@@ -1,15 +1,16 @@
 ---
-title: "Основные функции уровня API (драйвер ODBC для Oracle) | Документы Microsoft"
-ms.custom: 
+title: Основные функции уровня API (драйвер ODBC для Oracle) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Функции API-Интерфейс уровня ядра (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|Отменяет обработку на дескриптор инструкции hstmt. В некоторых случаях Oracle не допускает отмены выполнения инструкции. Это означает, что выполнение инструкции будет продолжаться до Oracle завершает процесс, после чего результаты инструкции отменяются драйвером ODBC для Oracle.|  
 |**SQLColAttributes**|Возвращает сведения о дескрипторе для столбца в результирующем наборе. Сведения о дескрипторе возвращается как символьная строка, зависящие от дескриптора 32-разрядное значение или является целым числом.|  
 |**SQLConnect**|Подключается к источнику данных. Чтобы использовать проверку подлинности Oracle операционной системы, укажите «/» как *szUID* параметр и «» как *szAuthStr* параметра.|  
-|**SQLDescribeCol**|Возвращает имя, тип, точность, масштаб и допустимость значений NULL столбца данного результата. **Примечание:****SQLDescribeCol** отчеты в виде SQL_VARCHAR вычисляемых столбцов.|  
+|**SQLDescribeCol**|Возвращает имя, тип, точность, масштаб и допустимость значений NULL столбца данного результата. **Примечание:****SQLDescribeCol** отчеты в виде SQL_VARCHAR вычисляемых столбцов.  |  
 |**SQLDisconnect**|Закрывает соединение. Если включен пул соединений для совместно используемой среде, и приложение вызывает **SQLDisconnect** для подключения в этой среде, соединение возвращается в пул подключений и по-прежнему доступен для других компонентов, с помощью одной общей среде.|  
 |**SQLError**|Возвращает ошибки или состояния сведения о последней ошибке. Драйвер поддерживает стека или список ошибок, которые могут быть возвращены для *hstmt*, *hdbc*, и *henv* аргументы, в зависимости от того, как вызов **SQLError**  выполняется. Ошибка очереди очищается после каждой инструкции. Обычно получает сообщение об ошибке Oracle, а в противном случае значение будет пустым.|  
 |**SQLExecDirect**|Выполняет инструкцию SQL новый, аннулируется. Драйвер использует текущие значения переменных маркера параметра, если все параметры существуют в инструкции. Если на таблицу, представление или имена полей содержат пробелы, заключите имена кавычка после метки. Например, если база данных содержит таблицу с именем *My Table* и поле *Мое поле*, заключите каждый элемент идентификатора следующим образом:<br /><br /> ВЫБЕРИТЕ \`таблицы\`. \`Мои Field1\`, \`Таблицы\`.\` Мои Field2\` FROM \`таблицу "|  

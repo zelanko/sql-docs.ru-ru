@@ -1,15 +1,16 @@
 ---
-title: "Диспетчер драйверов &#39; s роль в процессе подключения | Документы Microsoft"
-ms.custom: 
+title: Диспетчер драйверов&#39;s роли в процессе подключения | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Диспетчер драйверов &#39; s роль в процессе подключения
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Диспетчер драйверов&#39;s роли в процессе подключения
 Помните, что приложения не вызывают функции драйверов напрямую. Вместо этого они вызывают функции диспетчера драйверов с тем же именем, и диспетчер драйверов вызывает функции драйвера. Как правило это происходит почти мгновенно. Например, приложение вызывает **SQLExecute** диспетчера драйверов и после нескольких проверок ошибок, диспетчер драйверов вызывает **SQLExecute** в драйвере.  
   
  Процесс подключения отличается. Когда приложение вызывает **SQLAllocHandle** параметры SQL_HANDLE_ENV и SQL_HANDLE_DBC, функция выделяет обрабатывает только диспетчера драйверов. Диспетчер драйверов вызывает эту функцию в драйвере, потому что не знает, какой драйвер для вызова. Аналогично Если приложение передает дескриптор подключения не подключенными к **SQLSetConnectAttr** или **SQLGetConnectAttr**только диспетчера драйверов выполняет функцию. Он сохраняет или получает значение атрибута из соединения обработки и возвращает SQLSTATE 08003 (соединение не открыто), при получении значения для атрибута не задано и для ODBC, который не определяет значение по умолчанию.  

@@ -1,29 +1,22 @@
 ---
-title: Установить новые пакеты Python на сервере SQL Server | Документы Microsoft
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology:
-- r-services
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Установить новые пакеты Python для машинного обучения SQL Server | Документы Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: dbf91e37bde5e648113ce2040f695fd41047808d
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установить новые пакеты Python на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье описывается установка новые пакеты Python в экземпляре 2017 г. SQL Server.
+В этой статье описывается установка новые пакеты Python в экземпляре служб SQL Server 2017 г машины обучения.
 
 Как правило Установка новых пакетов аналогична в стандартной среде Python. Однако некоторые дополнительные действия требуются, если сервер не подключен к Интернету.
 

@@ -2,7 +2,7 @@
 title: УДАЛИТЬ - команда SQL | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c7f9e8124146bc2e1c9e966ab0794cba0aea2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete---sql-command"></a>Удаление - команды SQL
 Помечает записи для удаления.  
@@ -45,12 +45,12 @@ DELETE FROM [DatabaseName!]TableName
   
  *Имя базы данных.* Указывает имя базы данных, содержащую таблицу, если содержащая базу данных не базы данных, указанной в источнике данных. Необходимо включить имя базы данных, содержащую таблицу, если база данных не является база данных, указанная с источником данных. Включить в разделители восклицательный знак (!), имя базы данных и имя таблицы.  
   
- ГДЕ *FilterCondition1*[и &#124; ИЛИ *FilterCondition2*...]  
+ ГДЕ *FilterCondition1*[AND &#124; или *FilterCondition2*...]  
  Указывает, что Visual FoxPro пометить определенные записи для удаления.  
   
  *FilterCondition* указывает критерии, которые должны удовлетворять записи помечена для удаления. Можно включить столько условий фильтрации, сколько требуется, подключив их с AND или оператор OR. Оператор NOT можно использовать и для отмены значения логического выражения, или можно использовать **пустой**() для проверки пустого поля.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если НАБОР УДАЛЕН имеет значение ON, помеченные на удаление записи игнорируются все команды, включающие области.  
   
  Удалите - SQL, использующая блокировки записей, когда несколько записей для удаления в таблицах открыт для общего доступа. Это уменьшает конфликты записи в многопользовательских ситуациях, но может привести к снижению производительности. Для максимальной производительности откройте таблицу для монопольного использования.  
@@ -58,5 +58,5 @@ DELETE FROM [DatabaseName!]TableName
 ## <a name="driver-remarks"></a>Драйвер примечания  
  Когда приложение отправляет инструкции ODBC SQL DELETE в источнике данных, драйвер ODBC для Visual FoxPro преобразует команды в команды Visual FoxPro DELETE без трансляции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Команда SET DELETED](../../odbc/microsoft/set-deleted-command.md)

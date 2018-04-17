@@ -1,15 +1,15 @@
 ---
-title: "Пользовательские требования к типам | Документы Microsoft"
-ms.custom: 
+title: Пользовательские требования к типам | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 20e395dbd298fe0b808a847443481c150ba5be3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Создание определяемых пользователем типов - требования
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Необходимо сделать ряд важных технических вопросов, при создании определяемого пользователем типа (UDT), должны быть установлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В большинстве случаев рекомендуется создавать определяемый пользователем тип как структуру, хотя можно создавать его и в виде класса. Чтобы определяемый пользователем тип можно было зарегистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его определение должно соответствовать спецификациям на создание определяемого пользователем типа.  
+  Необходимо сделать ряд важных технических вопросов, при создании определяемого пользователем типа (UDT), должны быть установлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В большинстве случаев рекомендуется создавать определяемый пользователем тип как структуру, хотя можно создавать его и в виде класса. Чтобы определяемый пользователем тип можно было зарегистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его определение должно соответствовать спецификациям на создание определяемого пользователем типа.  
   
 ## <a name="requirements-for-implementing-udts"></a>Требования к реализации определяемого пользователем типа  
  Чтобы определяемый пользователем тип работал в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его определение должно удовлетворять следующим условиям.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/09/2018
  **IsByteOrdered**  
  Объект **логическое** значение, определяющее, каким образом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проводит двоичные сравнения значений определяемого пользователем ТИПА.  
   
- **IsFixedLength**  
+ **IsFixedLength атрибута**  
  Указывает, имеют ли все экземпляры данного определяемого пользователем типа одинаковую длину.  
   
  **MaxByteSize**  

@@ -2,7 +2,7 @@
 title: Функция SQLGetTypeInfo | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4afbb9ce8ffce9ca1eb4cea099d11f6cf92ebb80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-function"></a>Функция SQLGetTypeInfo
 **Соответствия**  
@@ -65,7 +65,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetTypeInfo** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL _HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLGetTypeInfo** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01S02|Значение параметра изменено|Атрибут указанного оператора недопустимый из-за условий работы реализации, поэтому был временно заменены примерно такое же значение. (Вызов **SQLGetStmtAttr** для определения временно подставляемого значения.) Заменяющее значение допустимо для *StatementHandle* до закрытия курсора. Атрибуты инструкции, которые могут быть изменены представляют собой: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, атрибута SQL_ATTR_KEYSET_SIZE, значения SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT и SQL_ATTR_SIMULATE_CURSOR. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -118,7 +118,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** не может возвратить все типы данных. Например драйвер не может возвратить определяемым пользователем типам данных. Приложения могут использовать любой допустимый тип данных, независимо от того, он возвращается в виде **SQLGetTypeInfo**. Типы данных, возвращенных **SQLGetTypeInfo** поддерживаемые источника данных. Они предназначены для использования в инструкции языка определения данных (DDL). Драйверы может возвращать результирующий набор данных с помощью типов данных, отличных от типов, возвращаемых **SQLGetTypeInfo**. При создании результирующего набора функции каталога, драйвер может использовать тип данных, который не поддерживается источником данных.  
   
-|Имя столбца|столбцом<br /><br /> number|Тип данных|Комментарии|  
+|Имя столбца|Столбец<br /><br /> number|Тип данных|Комментарии|  
 |-----------------|-----------------------|---------------|--------------|  
 |ФУНКЦИЯ TYPE_NAME (ODBC 2.0)|1|Varchar not NULL|Имя типа данных зависит от источника данных; Например «CHAR()», «VARCHAR()», «MONEY», «ДЛИННОЕ VARBINARY» или «() CHAR FOR BIT DATA». Приложения должны использовать это имя в **CREATE TABLE** и **ALTER TABLE** инструкции.|  
 |ТИП ДАННЫХ (ODBC 2.0)|2|Smallint, не NULL|Тип данных SQL. Это может быть тип данных SQL драйвера или тип данных ODBC SQL. Для типов данных даты-времени или интервала этот столбец возвращает имя четкими данных (например, SQL_TYPE_TIME или SQL_INTERVAL_YEAR_TO_MONTH). Список допустимых типов данных ODBC SQL см. в разделе [типов данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) в типах данных приложение D:. Сведения о типах данных драйвера SQL см. в документации драйвера.|  
@@ -153,6 +153,6 @@ SQLRETURN SQLGetTypeInfo(
 |Выборка одной строки или блока данных в направлении только вперед|[Функция SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |Возврат сведений о драйверу или источнику данных|[Функция SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

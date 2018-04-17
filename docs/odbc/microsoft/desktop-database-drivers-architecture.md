@@ -1,31 +1,32 @@
 ---
-title: "Архитектура драйверов для настольных баз данных | Документы Microsoft"
-ms.custom: 
+title: Архитектура драйверов для настольных баз данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>Архитектура драйверов для настольных баз данных
 Эти драйверы предназначены для использования в Microsoft Windows 95 и более поздних версиях или Windows NT 4.0 и Windows 2000. Поддерживаются только 32-разрядных приложений, в Windows 95 или более поздней версии; 16-разрядных и 32-разрядные приложения, поддерживаются в Windows NT 4.0 и Windows 2000.  
@@ -37,13 +38,13 @@ ms.lasthandoff: 12/21/2017
   
  Архитектура приложения/драйвера в Windows 95 или более поздней версии не:  
   
- ![Приложение &#47; архитектура драйвера: Windows 95 и более поздних](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![Приложение&#47;архитектура драйвера: Windows 95 и более поздних](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  Использовать эти драйверы с 16-разрядных приложений в Windows 95 не поддерживается.  
   
  Архитектура приложения/драйвера в Windows NT 4.0 и Windows 2000 является:  
   
- ![Приложение &#47; архитектура драйвера: NT 4.0 и Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![Приложение&#47;архитектура драйвера: NT 4.0 и Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  Системной базы данных двухуровневая драйверы являются. В двухуровневой конфигурации драйвер не выполняет процесс синтаксический анализ, проверка, оптимизация и выполнения запроса. Вместо этого Microsoft Jet выполняет эти задачи. Он обрабатывает вызовы ODBC API и выступает в качестве компонента SQL engine. Microsoft Jet стала целочисленные, неотделимыми часть драйверов: он поставляется вместе с драйверами и хранится вместе с драйверами, даже если никакое другое приложение использует его.  
   

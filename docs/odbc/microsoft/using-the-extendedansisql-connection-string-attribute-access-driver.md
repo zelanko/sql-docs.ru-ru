@@ -1,31 +1,32 @@
 ---
-title: "С помощью атрибута строки соединения ExtendedAnsiSQL | Документы Microsoft"
-ms.custom: 
+title: С помощью атрибута строки соединения ExtendedAnsiSQL | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], ExtendedAnsiSql
 - extendedANSISQL [ODBC]
 - extendedANSISQL [ODBC], about ExtendedAnsiSQL
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3908aaa9cc9e36895fd22fa2cd9179142aaaf3b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e1abd62f873d785b968cc02ea678b845e930c367
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>С помощью ExtendedAnsiSQL атрибут строки соединения (драйвер доступа)
 Jet 4.0 содержит несколько новых возможностей, которые не включены по умолчанию в ODBC драйверов базы данных версии 4.0. Чтобы воспользоваться преимуществами этих новых функций, приложение будет необходимо задать новый атрибут соединения, Добавление нового атрибута в строку подключения или установить атрибут в имени DSN. Атрибут называется ExtendedAnsiSQL и относится только к Microsoft ODBC системной базы данных драйверы 4.0 и более поздних версий.  

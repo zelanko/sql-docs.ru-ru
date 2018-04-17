@@ -1,30 +1,31 @@
 ---
-title: "Ограничения имени столбца | Документы Microsoft"
-ms.custom: 
+title: Ограничения имени столбца | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91fe107bf25d2ec2702778475af9f366af22a120
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7d51f87a2fbb3552dd323469d60bd50c7bab7f22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-name-limitations"></a>Ограничения имени столбца
 Имена столбцов могут содержать любые допустимые символы (например, пробелы). Если имена столбцов содержать любые символы, кроме буквы, цифры и знаки подчеркивания, имя должны быть разделены заключать в обратной кавычки (').  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  При использовании драйвера dBASE символов больше 127 значение ASCII преобразуются в символы подчеркивания.  
   
- При использовании драйвера Microsoft Excel, если имена столбцов, они должны быть в первой строке. Имя, которое будет использоваться в Microsoft Excel «!» символов должны заключаться в обратной кавычки ('). «!» Символ преобразуется в символ «$», так как «!» символ не допускается в имени ODBC, даже в том случае, если имя заключено в кавычки назад. Все остальные символы Microsoft Excel допустимый (за исключением знака вертикальной черты (&#124;;)) можно использовать в имени столбца, включая пробелы. Идентификатор с разделителем должен использоваться для имени столбца Microsoft Excel для включения пробел. Имена столбцов Неизвестная заменяется драйвер созданные имена, например, «Col1» для первого столбца.  
+ При использовании драйвера Microsoft Excel, если имена столбцов, они должны быть в первой строке. Имя, которое будет использоваться в Microsoft Excel «!» символов должны заключаться в обратной кавычки ('). «!» Символ преобразуется в символ «$», так как «!» символ не допускается в имени ODBC, даже в том случае, если имя заключено в кавычки назад. Все остальные символы Microsoft Excel допустимый (за исключением знака вертикальной черты (&#124;)) можно использовать в имени столбца, включая пробелы. Идентификатор с разделителем должен использоваться для имени столбца Microsoft Excel для включения пробел. Имена столбцов Неизвестная заменяется драйвер созданные имена, например, «Col1» для первого столбца.  
   
  Знак вертикальной черты (&#124;) нельзя использовать в имени столбца ли имя заключено в кавычки назад, или нет.  
   

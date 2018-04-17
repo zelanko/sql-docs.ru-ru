@@ -1,24 +1,17 @@
 ---
 title: Новые возможности служб SQL Server машины обучения | Документы Майкрософт
-ms.date: 03/07/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: ''
-ms.openlocfilehash: 77642fa794493a98c56be70f4615f6401e48b3c5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Новые возможности служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,8 +35,8 @@ ms.lasthandoff: 04/04/2018
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Функции в этих библиотеках являются наиболее широко используемых. Преобразования данных и манипуляции, формирование сводных статистических данных, визуализации и моделирования и анализа в различных форматах, находятся в этих библиотеках. Кроме того функции в этих библиотеках автоматически распределять рабочую нагрузку между доступных ядер для параллельной обработки, возможность работать с фрагментами данных, которые являются скоординированы и не управляется Вычислительное ядро. |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Отрасли алгоритмов машинного обучения для featurization изображения, проблем классификации и многое другое. |
-| [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Построении или выполнении запроса многомерных Выражений в R-сценария.
-| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Функции для помещения R-скриптов в T-SQL хранимой процедуры, регистрация хранимой процедуры в базе данных и запуск хранимой процедуры из среды разработки R.
+| [OlapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Построении или выполнении запроса многомерных Выражений в R-сценария.
+| [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Функции для помещения R-скриптов в T-SQL хранимой процедуры, регистрация хранимой процедуры в базе данных и запуск хранимой процедуры из среды разработки R.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | В основном используется в установке отличные от SQL Server обучения машины, такие как [(автономный) версии](r/r-server-standalone.md). Этот пакет можно используйте для развертывания и размещения веб-служб, построение топологии масштабирования выделенных веб-службы с и вычислительных узлов, переключаться между локальным и удаленным сеансы, выполнять диагностику и многое другое. Для установки (в базе данных), использовать этот пакет в количества клиентов: например, для доступа к веб-службы на удаленном сервере исключительно для выполнения только службы обучения машины рабочих нагрузок. |
 
 Переносимость пользовательский код R и Python осуществляется через распространения пакета и переводчикам, встроенные в нескольких продуктов. Те же пакеты, которые поставляются в SQL Server также доступны в нескольких других продуктов и служб Майкрософт, включая отличные от SQL версия, называемая [Microsoft Server обучения машины](https://docs.microsoft.com/machine-learning-server/). Включить свободного клиентов, включающих нашей интерпретаторов R и Pyton [клиент Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) и [библиотеки Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).

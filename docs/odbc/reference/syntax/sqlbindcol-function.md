@@ -2,7 +2,7 @@
 title: SQLBindCol, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol, функция
 **Соответствия**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  Можно также указать расширенный тип данных C. Дополнительные сведения см. в разделе [типы данных C в ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
- [Отложенные вход/выход] Указатель на буфер данных для привязки к столбцу. **SQLFetch** и **SQLFetchScroll** возвращают данные в этом буфере. **SQLBulkOperations** возвращает данные в этом буфера при *операции* — SQL_FETCH_BY_BOOKMARK; он извлекает данные из этого буфера при *операции* SQL_ADD или SQL_UPDATE_BY_BOOKMARK . **SQLSetPos** возвращает данные в этом буфера при *операции* — SQL_REFRESH; он извлекает данные из этого буфера при *операции* — SQL_UPDATE.  
+ [Отложенные вход/выход] Указатель на буфер данных для привязки к столбцу. **SQLFetch** и **SQLFetchScroll** возвращают данные в этом буфере. **SQLBulkOperations** возвращает данные в этом буфера при *операции* — SQL_FETCH_BY_BOOKMARK; он извлекает данные из этого буфера при *операции* SQL_ADD или SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** возвращает данные в этом буфера при *операции* — SQL_REFRESH; он извлекает данные из этого буфера при *операции* — SQL_UPDATE.  
   
  Если *TargetValuePtr* является указателем null, драйвер отменяет привязку буфер данных для столбца. Приложение можно разорвать связи все столбцы, вызвав **SQLFreeStmt** с параметром SQL_UNBIND. Приложение можно отменить привязку буфер данных для столбца, но по-прежнему буфер длины/индикатора, привязанное к столбцу, если *TargetValuePtr* аргумента в вызове **SQLBindCol** является пустым указателем, но *StrLen_or_IndPtr* аргумент является допустимым значением.  
   
@@ -120,7 +120,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLBindCol** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLBindCol** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |07006|Нарушение атрибута ограниченного типа данных|(DM) *ColumnNumber* аргумент было равно 0 и *TargetType* аргумент не SQL_C_BOOKMARK или SQL_C_VARBOOKMARK.|  
@@ -242,7 +242,7 @@ SQLRETURN SQLBindCol(
   
  Когда формула переменные определяются, как описано в следующей таблице.  
   
-|Переменная|Description|  
+|Переменная|Описание|  
 |--------------|-----------------|  
 |*Адрес привязки*|Для буферов данных, адрес, указанный с *TargetValuePtr* аргумент в **SQLBindCol**.<br /><br /> Буфер длины/индикатора, адрес, указанный с *StrLen_or_IndPtr* аргумент в **SQLBindCol**. Дополнительные сведения см. в разделе «Примечания» в разделе «Дескрипторы и SQLBindCol».<br /><br /> Если привязан адрес равен 0, возвращаемое значение данных, даже если адрес, вычисленную по формуле предыдущих имеет ненулевое значение.|  
 |*Смещение привязки*|Если используется привязка, с помощью атрибута инструкции SQL_ATTR_ROW_BIND_OFFSET_PTR указано значение, по адресу.<br /><br /> Если используется привязка на уровне столбца или значение атрибута инструкции SQL_ATTR_ROW_BIND_OFFSET_PTR является пустым указателем, *смещение привязки* имеет значение 0.|  
@@ -387,6 +387,6 @@ int main() {
 |Извлечение всех или части столбца данных|[Функция SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Возвращает число результирующих столбцов набора|[Функция SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

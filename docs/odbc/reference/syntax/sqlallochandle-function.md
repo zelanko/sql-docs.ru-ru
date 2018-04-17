@@ -2,7 +2,7 @@
 title: SQLAllocHandle, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a864d1fd8255983ebd0a7d58661ca6afc1bf6b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle, функция
 **Соответствия**  
@@ -92,7 +92,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLAllocHandle** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с соответствующими *HandleType* и *обработки* присвоено значение *InputHandle*. SQL_SUCCESS_WITH_INFO (но не SQL_ERROR) могут быть возвращены для *OutputHandle* аргумент. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLAllocHandle** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |08003|Соединение не открыто|(DM) *HandleType* аргумент имеет значение SQL_HANDLE_STMT или SQL_HANDLE_DESC, но указано соединение с *InputHandle* аргумент не был открыт. Процесс подключения должна быть выполнена успешно (и необходимо открыть подключение) драйвер выделить дескриптор или инструкции обработки.|  
@@ -195,6 +195,6 @@ SQLRETURN SQLAllocHandle(
 |Установка атрибута среды|[Функция SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |С помощью атрибута инструкции|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

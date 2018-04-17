@@ -2,7 +2,7 @@
 title: Описания параметров | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b90b71a5e327e894329ca8474e8edff5740d8826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f746b7df2ac3ef4de73e54c6d78df02e0c64ec34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="describing-parameters"></a>Описания параметров
 **SQLBindParameter** имеет аргументы, описывающие параметр: его тип SQL, точность и масштаб. Драйвер использует эти сведения или *метаданных,* для преобразования значения параметра типа, необходимые источнику данных. На первый взгляд может показаться, драйвер находится в более высокую позицию знать метаданные параметров, чем приложения; в конце концов драйвер можно легко определить метаданные для результирующего набора столбцов. Оказывается, это не так. Во-первых большинство источников данных предоставляет возможности для драйвера обнаружить метаданные параметров. Во-вторых, большинство приложений уже известны метаданных.  

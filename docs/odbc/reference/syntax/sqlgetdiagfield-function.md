@@ -2,7 +2,7 @@
 title: Функция SQLGetDiagField | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Функция SQLGetDiagField
 **Соответствия**  
@@ -224,7 +224,7 @@ n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOM
 |*определения перевода*|«СОЗДАНИЕ ПРЕОБРАЗОВАНИЯ»|SQL_DIAG_CREATE_TRANSLATION|  
 |*Обновление располагается инструкции*|«ДИНАМИЧЕСКОЕ ОБНОВЛЕНИЕ КУРСОРА»|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Поиск обновления оператор*|«ОБНОВЛЕНИЕ WHERE»|SQL_DIAG_UPDATE_WHERE|  
-|Неизвестно|*пустая строка*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Неизвестно|*Пустая строка*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>Последовательность записей состояния  
  Состояние записи располагаются в последовательности, на основе номера строки и тип диагностики. Диспетчер драйверов определяет окончательный порядок, в котором для возвращения состояния записи, которые создает. Драйвер определяет окончательный порядок, в котором для возвращения состояния записи, которые создает.  
@@ -262,6 +262,6 @@ n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOM
 |---------------------------|---------|  
 |Получение нескольких полей структуры диагностических данных|[Функция SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

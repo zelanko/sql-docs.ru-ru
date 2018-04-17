@@ -2,7 +2,7 @@
 title: Команда SET COLLATE | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b8820aed48e6b809d9d6b9c6795c2dcc13c5e270
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-collate-command"></a>COLLATE команды SET
 Указывает порядок сортировки для символьных полей в последующих индексирования и операции сортировки.  
@@ -75,10 +75,10 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  ЗАДАТЬ COLLATE позволяет указать порядок таблиц, содержащих диакритические знаки для любой из поддерживаемых языков. Изменение параметра ЗАДАТЬ COLLATE не влияет на порядок сортировки, ранее открывавшихся индексов. Visual FoxPro автоматически сохраняет существующие индексы, предоставляя возможность создавать много различных типов индексов, даже для одного поля.  
   
  Например если индекс создается с ЗАДАТЬ COLLATE присвоено общие и ЗАДАТЬ COLLATE параметр изменяется после испанский язык, индекс сохраняет общие параметры сортировки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диалоговое окно настройки ODBC для Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

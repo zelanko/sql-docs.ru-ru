@@ -2,7 +2,7 @@
 title: SQLFreeHandle, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle, функция
 **Соответствия**  
@@ -81,7 +81,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLFreeHandle** возвращает значение SQL_ERROR, соответствующее значение SQLSTATE может быть получен из структуры данных диагностики для дескриптора, **SQLFreeHandle** попытка освободить, но не удалось. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLFreeHandle** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |HY000|Общая ошибка|Произошла ошибка, для которой было нет определенных SQLSTATE и для которого был определен SQLSTATE не зависит от реализации. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
 |HY001|Ошибка выделения памяти|Драйвер не удалось выделить память, который необходим для поддержки выполнения или завершения функции.|  
@@ -125,7 +125,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="code-example"></a>Пример кода  
  Дополнительные примеры кода, в разделе [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) и [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 // SQLFreeHandle.cpp  
@@ -187,7 +187,7 @@ int main() {
 |Отмена обработки инструкции|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Имя курсора|[Функция SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Образец программы ODBC](../../../odbc/reference/sample-odbc-program.md)

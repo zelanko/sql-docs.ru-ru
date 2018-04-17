@@ -1,30 +1,31 @@
 ---
-title: "Использование 16-разрядных приложений с 32-разрядными драйверами | Документы Microsoft"
-ms.custom: 
+title: Использование 16-разрядных приложений с 32-разрядными драйверами | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Использование 16-разрядных приложений с 32-разрядными драйверами
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Architecture  
  На следующем рисунке показано, как 16-разрядных приложений с 32-разрядной драйверами. Между диспетчером драйвера 16-разрядных и 32-разрядные драйверы являются универсальными, преобразование библиотеки DLL, для преобразования 16-разрядных вызовов ODBC для 32-разрядных вызовов ODBC.  
   
- ![Как 16-45 — разрядных приложений в связи с 32-45; разрядные драйверы](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![Как 16&#45;взаимодействия разрядных приложений с 32&#45;разрядные драйверы](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
 >  Каждый раз, когда это 16-разрядное приложение взаимодействует с 32-разрядный драйвер, 32-разрядный диспетчер драйверов всегда возвращает значение «2.0» как используемая версия ODBC поддерживается драйвером.  
@@ -45,14 +46,14 @@ ms.lasthandoff: 12/21/2017
   
  Ниже показано, как 16-разрядное приложение вызывает DLL-файлов установки 32-разрядного драйвера. Между 16-разрядный установщик DLL и 32-разрядный драйвер DLL-файлов установки является универсальным Создание библиотеки DLL, которая преобразует вызовы 16-разрядный установщик DLL библиотеки DLL вызывает 32-разрядный установщик.  
   
- ![Как 16-45; бит приложение вызывает 32 &#45; бит DLL-файлов установки драйвера](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Как 16&#45;бит приложение вызывает 32&#45;бит DLL-файлов установки драйвера](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
  В Windows on Windows (преобразование 16-разрядное на 32-разрядные) дополнительной Создание библиотеки DLL с именем Ds32gt.dll преобразует 16-разрядного аргумента значения, переданные через 32-разрядной установке DLL обратно 16-разрядное.  
   
 ## <a name="components"></a>Components  
  Компонент ODBC SDK MDAC 2.8 с пакетом обновления 1 включает следующие файлы для выполнения 16-разрядных приложений с 32-разрядными драйверами. Эти компоненты находятся в каталоге \Redist.  
   
-|Имя файла|Description|  
+|Имя файла|Описание|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16-разрядное универсального преобразования DLL-Библиотека ODBC|  
 |Odbc32gt.dll|32-разрядное универсального преобразования DLL-Библиотека ODBC|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  Кроме того требуются следующие файлы, а также диспетчер драйверов ODBC 2.10 16-разрядное, которые не являются частью ODBC 3.51 и должен быть установлен с 16-разрядное приложение.  
   
-|Имя файла|Description|  
+|Имя файла|Описание|  
 |---------------|-----------------|  
 |ODBC.dll|16-разрядный диспетчер драйверов|  
 |Odbcinst.dll|16-разрядный установщик DLL|  

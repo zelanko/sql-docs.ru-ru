@@ -2,7 +2,7 @@
 title: Причины создания ODBC? | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82e2bd742d4736e75e5bfa3d6437304a32b289ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="why-was-odbc-created"></a>Причины создания ODBC?
 Исторически компании используется один СУБД. Все базы данных access была выполнена через клиентскую часть этой системы или приложения, написанные для работы исключительно с этой системой. Тем не менее увеличился использования компьютеров и дополнительные компьютерного оборудования и программного обеспечения стали доступны, для получения различных СУБД запущен компаний. Были много причин: купил была дешевые, каков был быстрым, люди, какие они уже знали, какая была последней на рынке, что лучше всего работает для одного приложения. Другие причины были реорганизации и слияния, где отделов, которые ранее имели один СУБД получил несколько.  

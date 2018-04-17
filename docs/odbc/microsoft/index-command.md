@@ -2,7 +2,7 @@
 title: ИНДЕКС команды | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1a3cd65cf38079a6d6c23cd08f371841a0463f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b989e45c8a3779108316358d34df472103a71676
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-command"></a>ИНДЕКС команды
 Создает файл индекса для отображения и доступа к записям таблицы в логическом порядке.  
@@ -97,7 +97,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  ДРУГ К ДРУГУ  
  Сохраняет открывайте ранее открывавшихся индекса. Если не указан в предложении друг к ДРУГУ при создании индекса файл или файлы для таблицы с ИНДЕКСОМ, закрываются все файлы индекса, ранее открывавшихся (за исключением структурных составной индекс).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Записи в таблицу, которая имеет файл индекса отображаются и в порядке, указанном в выражении индекса. Физический порядок записей в таблице не изменяется файлом индекс.  
   
 ## <a name="index-types"></a>Типы индексов  
@@ -122,7 +122,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  При использовании определяемой пользователем функции в выражении индекса Visual FoxPro должен иметь возможность найти определяемой пользователем функции. Когда Visual FoxPro создает индекс, выражения индекса сохраняется в файле индекса, но только ссылку на определяемую пользователем функцию включена в выражение индекса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER TABLE - команда SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [Удаление ТЕГА команды](../../odbc/microsoft/delete-tag-command.md)   
  [COLLATE команды SET](../../odbc/microsoft/set-collate-command.md)   

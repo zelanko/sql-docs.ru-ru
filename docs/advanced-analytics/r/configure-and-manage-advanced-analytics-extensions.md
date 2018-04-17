@@ -1,27 +1,19 @@
 ---
-title: Дополнительные параметры конфигурации для службы обучения машины | Документы Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Расширенная конфигурация для служб SQL Server Machine Learning | Документы Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5fc4e661f68a23ff2a954b832463eb60c7449057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>Дополнительные параметры конфигурации для службы обучения машины
+# <a name="advanced-configuration-options-for-sql-server-machine-learning-services"></a>Дополнительные параметры конфигурации для служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Это статье описаны изменения, выполненные после установки, чтобы изменить конфигурацию среды выполнения внешнего скрипта и других служб, связанных с машинного обучения в SQL Server.

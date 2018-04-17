@@ -1,36 +1,37 @@
 ---
-title: "Журнал драйверов для настольных баз данных | Документы Microsoft"
-ms.custom: 
+title: Журнал драйверов для настольных баз данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], history
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dfa1dc1b533c9e40175e9a3d29dc872344bd664
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f753260ad83582e3b9dfa7f9901af72082a3abe9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Журнал драйверов для настольных баз данных
 В следующей таблице показаны журнал версий драйверов базы данных.  
   
-|Version|Дата выпуска|Description|  
+|Версия|Дата выпуска|Описание|  
 |-------------|------------------|-----------------|  
 |1.0|Август 1993|Использовать обработчик запросов SIMBA, созданных PageAhead программного обеспечения. SIMBA полученных вызовов ODBC и инструкций SQL, обработать их в устанавливаемый ISAM вызовы Microsoft Jet, а затем вызывает слоя диспетчеризации Microsoft Jet ISAM для загрузки и вызовов соответствующего устанавливаемого драйвера ISAM.|  
 |2.0|Декабрь 1994|При использовании ODBC 2.0, который значительно расширен функции ODBC. Значительное изменение в версии 2.0 была замены, базы данных Microsoft Jet SIMBA обработчик запросов. С ядром базы данных Microsoft Jet драйверов базы данных гораздо более тесно интегрирован с Microsoft Jet устанавливаемые драйверы ISAM и технологии Microsoft Access. Значительные улучшения были:<br /><br /> — Встроенная поддержка Прокручиваемые курсоры.<br />— Встроенная поддержка внешние соединения, обновить и разнородных соединения и транзакции.<br />-32-разрядные версии драйверов для Microsoft Windows NT.|  

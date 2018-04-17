@@ -1,31 +1,32 @@
 ---
-title: "Извлечение параметров вывода с помощью SQLGetData | Документы Microsoft"
-ms.custom: 
+title: Извлечение параметров вывода с помощью SQLGetData | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Извлечение параметров вывода с помощью SQLGetData
 Перед ODBC 3.8 приложения только удалось получить выходные параметры запроса с привязанного выходного буфера. Однако трудно выделять очень большой буфер, если размер значения параметра очень большой (например, крупное изображение). ODBC 3.8 вводит новый способ получить выходные параметры в части. Теперь можно вызвать приложение **SQLGetData** с небольшим буфером несколько раз, чтобы получить значения параметра большого объема. Это похоже на извлечение больших столбцов данных.  
@@ -274,5 +275,5 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры инструкции](../../../odbc/reference/develop-app/statement-parameters.md)

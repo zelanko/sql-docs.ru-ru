@@ -2,7 +2,7 @@
 title: SQLDescribeCol, функция | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol, функция
 **Соответствия**  
@@ -104,7 +104,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDescribeCol** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType*значение sql_handle_stmt и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDescribeCol** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Буфер \* *ColumnName* не был достаточно велик, чтобы вернуть имя весь столбец, поэтому имя столбца было усечено. Длина имени столбца неусеченный возвращается в **NameLengthPtr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -123,7 +123,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|В режиме асинхронное уведомление отключена опроса|При использовании модели уведомление опроса отключен.|  
 |IM018|**SQLCompleteAsync** не был вызван для завершения предыдущей асинхронной операции на этот дескриптор.|Если предыдущего вызова функции с дескриптором возвращает SQL_STILL_EXECUTING и уведомлений в режиме **SQLCompleteAsync** должен вызываться для этого после обработки и выполнения операции с дескриптором.|  
   
- **SQLDescribeCol** может возвращать любой SQLSTATE, которые могут быть возвращены с **SQLPrepare** или **SQLExecute** при вызове после **SQLPrepare** и перед  **SQLExecute**в зависимости от того, когда источник данных принимает инструкции SQL, связанные с дескриптором инструкции.  
+ **SQLDescribeCol** может возвращать любой SQLSTATE, которые могут быть возвращены с **SQLPrepare** или **SQLExecute** при вызове после **SQLPrepare** и перед **SQLExecute**в зависимости от того, когда источник данных принимает инструкции SQL, связанные с дескриптором инструкции.  
   
  Для повышения производительности приложение не должно вызывать **SQLDescribeCol** перед выполнением инструкции.  
   
@@ -146,6 +146,6 @@ SQLRETURN SQLDescribeCol(
 |Возвращает число результирующих столбцов набора|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Подготовка инструкции для выполнения|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

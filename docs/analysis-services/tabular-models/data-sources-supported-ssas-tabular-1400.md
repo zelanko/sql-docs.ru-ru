@@ -8,11 +8,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: d153a2ca638c2ab70e147d22d5755e70ab5aba06
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Источники данных поддерживается в SQL Server Analysis Services табличной модели 1400
 
@@ -31,12 +32,12 @@ Azure Analysis Services. в разделе [источники данных, п�
 |---------|---------|---------|
 |Azure SQL Database     |   Да      |    Да      |
 |Хранилище данных SQL Azure     |   Да      |   Да       |
-|хранилище BLOB-объектов Azure.     |   Да       |    нет      |
-|Хранилище таблиц Azure    |   Да       |    нет      |
-|DB Azure Cosmos      |  Да        |  нет        |
-|Хранилище Озера данных Azure     |   Да       |    нет      |
-|Azure HDInsight HDFS     |     Да     |   нет       |
-|Azure HDInsight Spark (бета-версия)     |   Да       |   нет       |
+|хранилище BLOB-объектов Azure.     |   Да       |    Нет      |
+|Хранилище таблиц Azure    |   Да       |    Нет      |
+|DB Azure Cosmos      |  Да        |  Нет        |
+|Хранилище Озера данных Azure     |   Да       |    Нет      |
+|Azure HDInsight HDFS     |     Да     |   Нет       |
+|Azure HDInsight Spark (бета-версия)     |   Да       |   Нет       |
 ||||
 
 **Поставщик**   
@@ -67,10 +68,10 @@ Azure Analysis Services. в разделе [источники данных, п�
 |Документ JSON     | 
 |Строки из двоичного файла     | 
 |База данных MySQL     | 
-|База данных PostgreSQL    | Да | нет
-|SAP HANA   | Да | нет
-|SAP Business Warehouse    | Да | нет
-|База данных Sybase     | Да | нет
+|База данных PostgreSQL    | Да | Нет
+|SAP HANA   | Да | Нет
+|SAP Business Warehouse    | Да | Нет
+|База данных Sybase     | Да | Нет
 |||
 
 |Файл  |  

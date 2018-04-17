@@ -2,7 +2,7 @@
 title: ALTER TABLE - команда SQL | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9897be4d0e594c82aa872f904d500bd1216d40f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - команда SQL
 Программно изменяет структуру таблицы.  
@@ -83,7 +83,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth* и *nPrecision* для D, G, I, L, M, P, T и Y игнорируются типов. По умолчанию *nPrecision* является ноль (без десятичных разрядов), если *nPrecision* не включено для типов B "," F "или" N.  
   
- NULL &#124; НЕ NULL  
+ NULL | NOT NULL  
  Разрешает или запрещает значения null в поле.  
   
  Если опустить NULL и NOT NULL, текущее значение параметра SET NULL определяет, допустимы ли значения null в поле. Однако если опустить NULL и NOT NULL и включать первичный ключ или УНИКАЛЬНЫЙ предложения, текущее значение параметра SET NULL игнорируется и поле не является значение NULL по умолчанию.  
@@ -187,7 +187,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Указывает, что Visual FoxPro позволяет вносить изменения в структуру таблицы. Эти изменения могут нарушить целостность данных в таблице. По умолчанию Visual FoxPro предотвращает внесение изменений, которые нарушают целостность данных в таблице ALTER TABLE. Включить NOVALIDATE, чтобы переопределить это поведение по умолчанию.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  ALTER TABLE может использоваться для изменения структуры таблицы, который не был добавлен в базу данных. Однако если включают по умолчанию, FOREIGN KEY, PRIMARY KEY, ссылки или предложений SET при изменении свободного таблицы Visual FoxPro возникает ошибка.  
   
  ALTER TABLE может перестроить таблицу, создав новый заголовок таблицы и добавления записей в заголовке таблицы. Например изменения типа или ширина поля может привести к таблице, чтобы перестроить.  
@@ -198,6 +198,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  При изменении таблицы в базе данных, инструкция ALTER TABLE - SQL требует монопольного использования базы данных. Чтобы открыть базу данных для монопольного использования, входят ЭКСКЛЮЗИВНОЕ ОТКРОЙТЕ базы данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание таблицы - команда SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Команда INDEX](../../odbc/microsoft/index-command.md)

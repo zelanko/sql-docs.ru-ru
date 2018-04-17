@@ -2,7 +2,7 @@
 title: Была результирующий набор, созданный? | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7222a9dcbbf7c979dd46ff554fab5988bcfada4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="was-a-result-set-created"></a>Была результирующий набор, созданный?
 В большинстве случаев разработчики приложений знать, будет ли создавать результирующий набор инструкций, который выполняет свое приложение. Это происходит, если приложение использует жестко запрограммированных инструкциях SQL, написанной программистом. Он ситуация обычно возникает, когда приложение инструкций SQL во время выполнения: программист может легко включить код, который помечает ли **ВЫБЕРИТЕ** инструкции или **вставить** , инструкция такую же структуру. В некоторых ситуаций программист не знает, возможно ли инструкция будет создать результирующий набор. Это значение true, если приложение позволяет пользователю вводить и выполнять инструкции SQL. Он также имеет значение true, если приложение создает инструкцию во время выполнения для выполнения процедуры.  

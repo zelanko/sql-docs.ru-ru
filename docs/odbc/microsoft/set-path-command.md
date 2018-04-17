@@ -2,7 +2,7 @@
 title: Команда SET PATH | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 695325b486b485aabc8c28ec439d74cfdaf16fff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-path-command"></a>ПУТЬ команды SET
 Указывает путь для поиска файлов. Дополнительные сведения см.  
@@ -40,7 +40,7 @@ SET PATH TO [Path]
  ДЛЯ [ *путь*]  
  Указывает каталог, который требуется Visual FoxPro для поиска. Используйте запятую или точку с запятой для разделения каталогов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  ЗАДАЙТЕ путь можно указать пути поиска для других программ Visual FoxPro, которые можно вызывать хранимые процедуры. ЗАДАЙТЕ путь не изменит путь источника данных, который вы указали для подключения.  
   
  Выдавать ЗАДАТЬ путь без *путь* для восстановления путь к каталогу по умолчанию или папку.  
@@ -56,7 +56,7 @@ SET PATH TO [Path]
   
  Если вы хотите создать, выберите или обновления таблиц в каталоге, отличном от указанного источника данных, укажите полный путь к файлу с вашей команды.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диалоговое окно установки Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   

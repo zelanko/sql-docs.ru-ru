@@ -1,15 +1,15 @@
 ---
-title: "Занятие учебника служб анализа 1: Создание нового проекта табличной модели | Документы Microsoft"
-description: "Описывает, как создать новый проект учебника по службам Analysis Services."
+title: 'Занятие учебника служб анализа 1: Создание нового проекта табличной модели | Документы Microsoft'
+description: Описывает, как создать новый проект учебника по службам Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 6b8d24a31ade8fe621ef2a71b932e87c13211451
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-tabular-model-project"></a>Создание нового проекта табличной модели
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/23/2018
       
 6.  В **уровень совместимости**выберите **2017 / Azure служб аналитики SQL Server (1400)**.   
  
-    ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
+    ![как tmd занятия 1](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
     Если вы не видите 2017 / Azure служб аналитики SQL Server (1400) в поле со списком уровня совместимости, вы не используете последнюю версию SQL Server Data Tools. Инструкции по получению последней версии см. в разделе [Установка SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
       
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/23/2018
   
 После создания проекта, он открывается в Visual Studio. С правой стороны в **обозреватель табличной модели**, можно отобразить дерево объектов в модели. Поскольку данные еще не импортированы, они пустые. Щелкнуть правой кнопкой мыши папку объекта для выполнения операций, аналогично строки меню. При пошаговом выполнении этого учебника используется обозреватель табличной модели для перехода различных объектов в проекте модели.
 
-![as-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
+![как времени занятия 1](../tutorial-tabular-1400/media/as-lesson1-tme.png)
 
 Нажмите кнопку **обозревателе решений** вкладки. Здесь вы увидите вашей **Model.bim** файла. Если вы не видите окно конструктора влево (пустое окно с вкладкой Model.bim) в **обозревателе решений**в разделе **AW Internet Sales проекта**, дважды щелкните **Model.bim** файла. Файл Model.bim содержит метаданные для проекта модели. 
 

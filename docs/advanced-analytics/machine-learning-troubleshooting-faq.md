@@ -1,25 +1,17 @@
 ---
-title: "Устранение неполадок и вопросы и ответы для машинного обучения в SQL Server | Документы Microsoft"
-ms.custom: 
-ms.date: 03/16/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: Устранение неполадок и вопросы и ответы для машинного обучения в SQL Server | Документы Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 5b9a5c6497781ef67d9d2ef9b9032a4d9ee250e5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 80d153baed382c95c85793e1605b700c2719e13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>Устранение неполадок машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +47,7 @@ ms.lasthandoff: 03/21/2018
 + [Установка служб R SQL Server 2016 (в базе данных)](install/sql-r-services-windows-install.md)
 + [Установка сервера SQL Server 2016R (автономный)](install/sql-r-standalone-windows-install.md)
 + [Программа установки командной строки](install/sql-ml-component-commandline-install.md)
-+ [Автономной установки (без Интернет)](install/sql-ml-component-install-without-internet-access.md)
++ [Автономная установка (без Интернета)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>Конфигурация
 

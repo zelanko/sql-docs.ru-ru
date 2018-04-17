@@ -1,6 +1,6 @@
 ---
-title: "Настройка SQL Server AlwaysOn группы доступности в Windows и Linux | Документы Microsoft"
-description: "Настройка группы доступности SQL Server с репликами в Windows и Linux."
+title: Настройка SQL Server AlwaysOn группы доступности в Windows и Linux | Документы Microsoft
+description: Настройка группы доступности SQL Server с репликами в Windows и Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -8,18 +8,19 @@ ms.date: 01/31/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 280e0e9534fa29042e20c0a8a965abe62f0d2d51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Настройка SQL Server группы доступности AlwaysOn в Windows и Linux (кросс платформенных)
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/13/2018
    >[!TIP]
    >При проверке этого решения в Azure, установите оба сервера в той же группе, чтобы убедиться, что они должны быть разделены в центре обработки данных доступности. 
 
-   Включение групп доступности
+   **Включение групп доступности**
 
    Инструкции см. в разделе [Включение и отключение всегда групп доступности (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 

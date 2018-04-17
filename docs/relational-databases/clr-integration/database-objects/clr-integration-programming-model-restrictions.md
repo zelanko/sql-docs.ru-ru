@@ -1,15 +1,15 @@
 ---
-title: "Ограничения модели программирования интеграции со средой CLR | Документы Microsoft"
-ms.custom: 
+title: Ограничения модели программирования интеграции со средой CLR | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Ограничения модели программирования на основе интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-При построении управляемой хранимой процедуры или другой управляемый объект базы данных, существуют выполняет определенные проверки программного кода [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , следует учитывать. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]проверяет сборку управляемого кода при первой регистрации в базе данных с помощью **CREATE ASSEMBLY** инструкции, а также во время выполнения. Управляемый код проверяется также во время выполнения, поскольку в сборке могут быть кодовые пути, фактически не достижимые во время выполнения.  Благодаря этому достигается гибкость при регистрации сборок сторонних производителей, поскольку сборка не блокируется из-за наличия в ней «небезопасного» кода, предназначенного для выполнения в клиентской среде, но никогда не выполняющегося во внутрипроцессной среде CLR. Требования, которым должен удовлетворять управляемого кода зависят от того, является ли сборка регистрируется как **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE**, **SAFE** являются самыми строгими и перечислены ниже.  
+  При построении управляемой хранимой процедуры или другой управляемый объект базы данных, существуют выполняет определенные проверки программного кода [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , следует учитывать. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверяет сборку управляемого кода при первой регистрации в базе данных с помощью **CREATE ASSEMBLY** инструкции, а также во время выполнения. Управляемый код проверяется также во время выполнения, поскольку в сборке могут быть кодовые пути, фактически не достижимые во время выполнения.  Благодаря этому достигается гибкость при регистрации сборок сторонних производителей, поскольку сборка не блокируется из-за наличия в ней «небезопасного» кода, предназначенного для выполнения в клиентской среде, но никогда не выполняющегося во внутрипроцессной среде CLR. Требования, которым должен удовлетворять управляемого кода зависят от того, является ли сборка регистрируется как **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE**, **SAFE** являются самыми строгими и перечислены ниже.  
   
  Кроме ограничений, которые распространяются на сборки управляемого кода, им также предоставляются права доступа к коду. Среда CLR поддерживает модель безопасности, называемую управлением доступом для кода (CAS). В этой модели разрешения предоставляются сборкам на основе идентификатора кода. **БЕЗОПАСНЫЙ**, **EXTERNAL_ACCESS**, и **UNSAFE** сборки имеют различные разрешения CAS. Дополнительные сведения см. в разделе [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   

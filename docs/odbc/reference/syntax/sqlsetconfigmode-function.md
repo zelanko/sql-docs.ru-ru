@@ -2,7 +2,7 @@
 title: Функция SQLSetConfigMode | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b9305a4b9cbbf8ce7316d1c3eccf71115e5f0fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f2765f94ec7e925fd0132a4bf4475a2c31bfc311
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconfigmode-function"></a>Функция SQLSetConfigMode
 **Соответствия**  
@@ -64,7 +64,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLSetConfigMode** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
-|*\*pfErrorCode*|Ошибка|Description|  
+|*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|Недопустимый параметр последовательности|*WConfigMode* ODBC_USER_DSN, ODBC_SYSTEM_DSN или ODBC_BOTH_DSN не содержал аргумент.|  
   

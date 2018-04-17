@@ -1,31 +1,32 @@
 ---
-title: "C в SQL: метка времени | Документы Microsoft"
-ms.custom: 
+title: 'C в SQL: метка времени | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9577b649d2812ad087728b7849637f872d4a84b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be38d6accb796666a62324e7a6fd5aefcfa0f372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-to-sql-timestamp"></a>C в SQL: отметка времени
 Идентификатор для типа данных ODBC C timestamp является:  
@@ -46,6 +47,6 @@ ms.lasthandoff: 12/21/2017
   
  Сведения о какие значения являются допустимыми в структуре SQL_C_TIMESTAMP см. в разделе [типы данных C](../../../odbc/reference/appendixes/c-data-types.md)ранее в этом приложении.  
   
- При преобразовании данных C отметки времени в символьные данные SQL, результирующий символьных данных находится в «*гггг*-*мм*-*дд* *hh*:*мм*:*ss*[. *f...* ]» формата.  
+ При преобразовании данных C отметки времени в символьные данные SQL, результирующий символьных данных находится в «*гггг*-*мм*-*дд* *hh*:*мм*:*ss*[.*f...*]» формата.  
   
  Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных timestamp C и предполагает, что размер типа данных timestamp C размер буфера данных. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.

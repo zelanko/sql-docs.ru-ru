@@ -1,15 +1,16 @@
 ---
-title: "Выбор данных источника или драйвер | Документы Microsoft"
-ms.custom: 
+title: Выбор данных источника или драйвер | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Выбор данных источника или драйвер
 Источник данных или драйвер, используемых приложением иногда жестко закодирована в приложении. Например, пользовательское приложение, созданное отделом Системам для передачи данных из одного источника данных в другой будет содержать имена этих источников данных, приложение просто не будет работать с другими источниками данных. Другой пример — вертикальная приложения, например, что используется для ввода заказа. Такое приложение всегда использует же источник данных, с предварительно определенной схемой известные приложением.  

@@ -2,7 +2,7 @@
 title: Функция SQLSetDescField | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>Функция SQLSetDescField
 **Соответствия**  
@@ -86,7 +86,7 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLSetDescField** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_HANDLE_DESC и *обработки* из *DescriptorHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLSetDescField** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01S02|Значение параметра изменено|Драйвер не поддерживает значение, указанное в  *\*ValuePtr* (если *ValuePtr* был указателем) или значение в *ValuePtr* (если *ValuePtr*  был целочисленное значение), или  *\*ValuePtr* недопустим из-за условий работы реализации, поэтому драйвер заменены примерно такое же значение. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  В следующей таблице описывается инициализация поля заголовка.  
   
-|Имя поля заголовка|Тип|Чтение-запись|Default|  
+|Имя поля заголовка|Тип|Чтение-запись|По умолчанию|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ОТМЕНИТЬ: R APD: R IRD: R IPD: R|Отменить: SQL_DESC_ALLOC_AUTO для неявных или SQL_DESC_ALLOC_USER для явного<br /><br /> APD: SQL_DESC_ALLOC_AUTO для неявных или SQL_DESC_ALLOC_USER для явного<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|Отменить: Чтения или APD: IRD для чтения и записи: неиспользуемые IPD: неиспользуемые|Отменить: APD [1]: [1] IRD: неиспользуемые IPD: неиспользуемые|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ОТМЕНИТЬ: ДЛЯ ЧТЕНИЯ И ЗАПИСИ
   
  Инициализация поля записи определяется, как показано в следующей таблице.  
   
-|Имя поля записи|Тип|Чтение-запись|Default|  
+|Имя поля записи|Тип|Чтение-запись|По умолчанию|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|Отменить: Неиспользуемые APD: неиспользуемые IRD: R IPD: неиспользуемые|Отменить: Неиспользуемые APD: неиспользуемые IRD: D IPD: неиспользуемые|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|Отменить: Неиспользуемые APD: неиспользуемые IRD: R IPD: неиспользуемые|Отменить: Неиспользуемые APD: неиспользуемые IRD: D IPD: неиспользуемые|  
@@ -553,6 +553,6 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |Получение нескольких полей дескриптора|[Функция SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Задание нескольких полей дескриптора|[Функция SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)

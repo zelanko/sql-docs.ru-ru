@@ -1,30 +1,31 @@
 ---
-title: "Системные функции | Документы Microsoft"
-ms.custom: 
+title: Системные функции | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79cbe8677ba4401fb779dc9765d639b1d86a0f5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9005b533f6fdad687b98530aecfbbcdff3807fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-functions"></a>Системные функции
 В следующей таблице перечислены системные функции, включенные в набор скалярные функции ODBC. Путем вызова **SQLGetInfo** с *типу информации* из SQL_SYSTEM_FUNCTIONS, приложение может определить, какие системные функции поддерживаются драйвером.  
@@ -35,8 +36,8 @@ ms.lasthandoff: 12/21/2017
   
  Возвращаемые значения представлены в виде типов данных ODBC.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |**БАЗЫ ДАННЫХ ()** (ODBC 1.0)|Возвращает имя базы данных, соответствующий дескриптор соединения. (Имя базы данных можно получить, вызвав **SQLGetConnectOption** с параметром SQL_CURRENT_QUALIFIER.)|  
-|**IFNULL (** *exp*,*значение***)** (ODBC 1.0)|Если *exp* имеет значение null, *значение* возвращается. Если *exp* не равно null, *exp* возвращается. Тип данных или типы *значение* должен быть совместим с типом данных *exp*.|  
+|**IFNULL (** *exp*,*значение ***)** (ODBC 1.0)|Если *exp* имеет значение null, *значение* возвращается. Если *exp* не равно null, *exp* возвращается. Тип данных или типы *значение* должен быть совместим с типом данных *exp*.|  
 |**(ПОЛЬЗОВАТЕЛЬ)** (ODBC 1.0)|Возвращает имя пользователя в СУБД. (Имя пользователя можно получить посредством **SQLGetInfo** , указав тип данных: SQL_USER_NAME.) Это может отличаться от имени входа.|

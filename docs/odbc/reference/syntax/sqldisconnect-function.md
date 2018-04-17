@@ -2,7 +2,7 @@
 title: Функция SQLDisconnect | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d210614a32c2dd8190c37777d3ac06a99756156
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8df2fbbfb4aa41b5618f16d95cbcf41bd19bd28f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldisconnect-function"></a>Функция SQLDisconnect
 **Соответствия**  
@@ -58,7 +58,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDisconnect** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_DBC и *обработки* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDisconnect** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01002|Отключить ошибки|Произошла ошибка во время отключения. Однако отключение успешно. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -100,6 +100,6 @@ SQLRETURN SQLDisconnect(
 |Выполнение операции фиксации или отката|[Функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|  
 |Освобождение дескриптора соединения|[Функция SQLFreeConnect](../../../odbc/reference/syntax/sqlfreeconnect-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,30 +1,31 @@
 ---
-title: "Ограничения по григорианскому календарю | Документы Microsoft"
-ms.custom: 
+title: Ограничения по григорианскому календарю | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ac773945c5c138ab6834aa7914d4028d1d5e156
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36cbe4802912e2497408498b32e48f8f201479f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Ограничения григорианского календаря
 Типы данных даты и даты и времени, а также конечные поля типов данных интервала должны соответствовать ограничениям по григорианскому календарю. Ниже приведены эти ограничения.  
@@ -37,6 +38,6 @@ ms.lasthandoff: 12/21/2017
   
 -   Значение из поля минуты должно быть в диапазоне от 0 до 59 включительно.  
   
--   Для конечные поле секунд типа данных interval, значение в поле секунд должно быть от 0 до 59.9 (*n*), включительно, где  *n*  число цифр в точность в долях секунды.  
+-   Для конечные поле секунд типа данных interval, значение в поле секунд должно быть от 0 до 59.9 (*n*), включительно, где *n* число цифр в точность в долях секунды.  
   
--   В поле секунд конечные типов данных даты и времени значение в поле секунд должно быть между 0 и 61.9 (*n*), включительно, где  *n*  указывает количество «9» цифры, а для параметра  *n*  имеет точность в долях секунды. (До двух корректировочных секунд для синхронизации времени sidereal позволяет диапазон секунд).
+-   В поле секунд конечные типов данных даты и времени значение в поле секунд должно быть между 0 и 61.9 (*n*), включительно, где *n* указывает количество цифр «9» и значение *n*  имеет точность в долях секунды. (До двух корректировочных секунд для синхронизации времени sidereal позволяет диапазон секунд).

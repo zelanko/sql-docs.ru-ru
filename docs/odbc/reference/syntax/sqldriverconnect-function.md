@@ -2,7 +2,7 @@
 title: Функция SQLDriverConnect | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>Функция SQLDriverConnect
 **Соответствия**  
@@ -104,7 +104,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDriverConnect** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *fHandleType*установленным в значение sql_handle_stmt и *hHandle* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDriverConnect** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Буфер \* *OutConnectionString* не был достаточно велик, чтобы возвращать строке все соединения, поэтому строка соединения была усечена. Длина строки неусеченный соединение возвращается в **StringLength2Ptr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -153,13 +153,13 @@ SQLRETURN SQLDriverConnect(
   
  *Строка подключения* :: = *пустой строки*[;] &#124; *атрибута*[;] &#124; *атрибута*; *строки подключения*  
   
- *пустой строки* :: =*атрибута* :: = *ключевое слово атрибут*=*значение атрибута* &#124; ДРАЙВЕР = [{}]*значение атрибута*[}]  
+ *пустой строки* :: =*атрибута* :: = *ключевое слово атрибут*=*значение атрибута* &#124; ДРАЙВЕР = [{}] *значение атрибута*[}]  
   
  *Ключевое слово атрибут* :: = DSN &#124; UID &#124; PWD &#124; *-определенные атрибут-ключевое слово driver*  
   
- *значение атрибута* :: = *символьной строки*  
+ *attribute-value* ::= *character-string*  
   
- *определенные атрибут-ключевое слово Driver* :: = *идентификатор*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  где *символьной строки* имеет ноль или более символов; *идентификатор* имеет один или несколько символов. *ключевое слово атрибут* не учитывает регистр; *значение атрибута* может учитываться регистр; и значение **DSN** ключевое слово не состоит из одних пробелов.  
   
@@ -175,7 +175,7 @@ SQLRETURN SQLDriverConnect(
   
 |Ключевое слово|Описание значения атрибута|  
 |-------------|---------------------------------|  
-|**ИМЯ ИСТОЧНИКА ДАННЫХ**|Имя источника данных, возвращенный **SQLDataSources** или диалоговом окне Источники данных из **SQLDriverConnect**.|  
+|**DSN**|Имя источника данных, возвращенный **SQLDataSources** или диалоговом окне Источники данных из **SQLDriverConnect**.|  
 |**FILEDSN**|Имя файла DSN с будут построены строку подключения для источника данных. Эти источники данных, называются файловых источников данных.|  
 |**ДРАЙВЕР**|Описание драйвера, возвращаемое функцией **SQLDrivers** функции. Например Rdb или SQL Server.|  
 |**UID**|Идентификатор пользователя.|  
@@ -373,6 +373,6 @@ int main() {
 |Освобождение дескриптора|[Функция SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Присвоение атрибуту соединения|[Функция SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

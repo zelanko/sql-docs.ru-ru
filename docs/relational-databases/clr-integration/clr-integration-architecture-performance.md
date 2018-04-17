@@ -1,35 +1,35 @@
 ---
-title: "Производительность интеграции со средой CLR | Документы Microsoft"
-ms.custom: 
+title: Производительность интеграции со средой CLR | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: 
+caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 285df1ab327617437fa9edf32f21b84b2499e0ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Архитектура интеграции со средой CLR - производительность
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе рассматриваются некоторые варианты, которые повышают производительность [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция с [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework общеязыковая среда выполнения (CLR).  
+  В этом разделе рассматриваются некоторые варианты, которые повышают производительность [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция с [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework общеязыковая среда выполнения (CLR).  
   
 ## <a name="the-compilation-process"></a>Процесс компиляции  
  Во время компиляции выражения SQL, если встречается ссылка на управляемую процедуру [!INCLUDE[msCoName](../../includes/msconame-md.md)] создается заглушка на промежуточном языке (MSIL). Заглушка содержит программный код для упаковки параметров процедуры из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среду CLR, вызова функции и возвращения результата. Этот связующий код основан на типе параметра и его направлении (входной, выходной, передача по ссылке).  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/09/2018
 >  Не рекомендуется разрабатывать новые расширенные хранимые процедуры, поскольку эта функциональная возможность устарела.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Собственная сериализация для определяемых пользователем типов  
- Определяемые пользователем типы (UDT) представляют собой механизм расширения скалярной системы типов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]реализован формат сериализации для UDT — **Format.Native**. Во время компиляции исследуется структура типа, а затем создается код MSIL, настраиваемый для данного конкретного определения типа.  
+ Определяемые пользователем типы (UDT) представляют собой механизм расширения скалярной системы типов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализован формат сериализации для UDT — **Format.Native**. Во время компиляции исследуется структура типа, а затем создается код MSIL, настраиваемый для данного конкретного определения типа.  
   
  Собственная сериализация используется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Сериализация, определяемая пользователем, вызывает для сериализации метод, указанный автором типа. **Format.Native** сериализации следует использовать при возможности для повышения производительности.  
   

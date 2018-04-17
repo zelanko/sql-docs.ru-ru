@@ -1,30 +1,31 @@
 ---
-title: "С помощью 32-разрядных приложений с 32-разрядными драйверами | Документы Microsoft"
-ms.custom: 
+title: С помощью 32-разрядных приложений с 32-разрядными драйверами | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 008f948580057fdaa6e59802fd6fa8395140b735
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>С помощью 32-разрядных приложений с 32-разрядными драйверами
 Можно запустить 32-разрядных приложений с 32-разрядными драйверами. 32-разрядные приложения и 32-разрядные драйверы используют API-интерфейса Win32®.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Architecture  
  На следующем рисунке показано, как 32-разрядным приложениям взаимодействовать с 32-разрядными драйверами. Приложение вызывает 32-разрядного диспетчера драйверов, который в свою очередь вызывает 32-разрядные драйверы.  
   
- ![Как 32-45 — разрядных приложений в связи с 32-45; разрядные драйверы](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![Как 32&#45;взаимодействия разрядных приложений с 32&#45;разрядные драйверы](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
 >  Не используйте преобразования 32-разрядный установщик DLL на WindowsNT или Windows 2000. Несмотря на то, что он имеет то же имя файла как 32-разрядный установщик библиотеки DLL, это разные библиотеки DLL.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="components"></a>Components  
  Компонент ODBC включает следующие файлы для запуска 32-разрядных приложений с 32-разрядными драйверами. Эти компоненты находятся в каталоге \Redist.  
   
-|Имя файла|Description|  
+|Имя файла|Описание|  
 |---------------|-----------------|  
 |Odbc32.dll|32-разрядный диспетчер драйверов|  
 |Odbccp32.dll|32-разрядный установщик DLL|  

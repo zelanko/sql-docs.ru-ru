@@ -1,15 +1,15 @@
 ---
-title: "Занятие 5 учебника служб Analysis: Создание вычисляемых столбцов | Документы Microsoft"
-description: "Описывает, как создать вычисляемые столбцы в проект учебника по службам Analysis Services."
+title: 'Занятие 5 учебника служб Analysis: Создание вычисляемых столбцов | Документы Microsoft'
+description: Описывает, как создать вычисляемые столбцы в проект учебника по службам Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: daed9d78d8b88bcf8088d8b19b4a34ba3a9f16c0
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 50a1094bc35a68a6c5b73d47cfc7f3b910a1afef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-calculated-columns"></a>Создание вычисляемых столбцов
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/20/2018
   
 5.  Переименовать этот столбец в **MonthCalendar**. 
 
-    ![as-lesson5-newcolumn](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
+    ![как newcolumn lesson5](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
   
 MonthCalendar вычисляемый столбец содержит сортируемое имя для месяца.  
   
@@ -131,7 +132,7 @@ DayOfWeek вычисляемый столбец содержит сортиру�
 
 4.  Переименуйте столбец в **Маржа**.  
  
-      ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
+      ![как newmargin lesson5](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       
     Вычисляемый столбец поле используется для анализа маржи для каждой продажи.  
   

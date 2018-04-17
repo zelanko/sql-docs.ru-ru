@@ -1,32 +1,32 @@
 ---
-title: "Приложение б. таблицы перехода состояний ODBC | Документы Microsoft"
-ms.custom: 
+title: Приложение б. таблицы перехода состояний ODBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Приложение б. таблицы перехода состояний ODBC
 В таблицах в этом приложении показано, как функции ODBC вызывают переходы среды, подключения, инструкции и дескриптора состояний. Состояние среды, подключения, инструкции и дескриптора обычно указывает, когда можно вызывать функции, использующие соответствующий тип дескриптора (среды, соединения, оператор или дескриптор). Состояния среды, подключения, инструкции и дескриптора перекрываться примерно, как показано на следующем рисунке. Например точное совпадение подключение состояния C5 и C6 и инструкция подтверждает, что S1 через S12 является данных зависит от источника, с момента начала транзакции в различные моменты времени в разных источниках данных и зависит от состояния дескриптор D1i (неявно выделить дескриптор) на состоянии инструкции, с которой связан дескриптор при этом состояние D1e (явно выделить дескриптор) — независимо от состояния любого оператора. Описание каждого состояния см. в разделе [среда переходит](../../../odbc/reference/appendixes/environment-transitions.md), [переходы подключения](../../../odbc/reference/appendixes/connection-transitions.md), [переходы инструкции](../../../odbc/reference/appendixes/statement-transitions.md), и [переходы дескриптора ](../../../odbc/reference/appendixes/descriptor-transitions.md)далее в этом приложении.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/20/2018
   
 |E0<br /><br /> Не выделено|E1<br /><br /> Выделенные|E2<br /><br /> Соединение|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|E0|(HY010)|  
+|(СИСТЕМЫ)|E0|(HY010)|  
   
  Если **SQLFreeHandle** вызывается в состоянии среды E0 с *HandleType* значение SQL_HANDLE_ENV, диспетчер драйверов возвращает SQL_INVALID_HANDLE. Если метод вызывается в состоянии E1 с *HandleType* значение SQL_HANDLE_ENV, среде перемещает E0 состояние, если функция завершается успешно и остается в состоянии E1, если функция завершается с ошибкой. Если метод вызывается в состоянии E2 с *HandleType* значение SQL_HANDLE_ENV, диспетчер драйверов всегда возвращает значение SQL_ERROR и SQLSTATE HY010 (функция ошибка последовательности) и среды остается в состоянии E2.  
   

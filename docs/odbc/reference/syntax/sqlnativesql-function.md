@@ -2,7 +2,7 @@
 title: Функция SQLNativeSql | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0a18b6575d403c44fb8aa546a4ce90d3a99e6b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnativesql-function"></a>Функция SQLNativeSql
 **Соответствия**  
@@ -80,7 +80,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLNativeSql** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* установленным в значение sql_handle_stmt и *обработки* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLNativeSql** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Description|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
 |01004|Строка справа усечение данных|Буфер \* *OutStatementText* не был достаточно велик, чтобы вернуть всю строку SQL, поэтому SQL строка была усечена. Длина строки неусеченный SQL возвращается в **TextLength2Ptr*. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
@@ -130,6 +130,6 @@ SELECT int2 (empid) FROM employee
 ## <a name="related-functions"></a>Связанные функции  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

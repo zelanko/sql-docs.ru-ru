@@ -1,27 +1,28 @@
 ---
-title: "Уведомление о завершении асинхронной функции | Документы Microsoft"
-ms.custom: 
+title: Уведомление о завершении асинхронной функции | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbccf95ca62f3a77618f36f69523e28e5d85c17a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e5b0c8ceb6924171e304f3bc14d3c0438baa3306
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Уведомление о завершении асинхронной функции
 В Windows 8 SDK ODBC добавлен механизм для уведомления приложения при завершении асинхронной операции, который мы будем называть «уведомления о завершении». (См. [асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) для получения дополнительной информации.) В этом разделе рассматриваются некоторые вопросы для разработчиков драйвера.  
@@ -41,5 +42,5 @@ ms.lasthandoff: 12/21/2017
   
  Диспетчер драйверов вызывает исходную функцию снова после драйвер выполняет обратный вызов. Диспетчер драйверов может использовать поток, не это поток приложения или драйвера потока. Если драйвер использует некоторые сведения, связанные с потоком (например, маркер или пользователь идентификатором безопасности), драйвер должен сохранить необходимые сведения в первоначальном вызове асинхронных и используйте сохраненное значение перед всю асинхронную операцию Завершает. Как правило только **SQLDriverConnect**, **SQLConnect**, или **SQLBrowseConnect** должны использовать такого рода сведения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

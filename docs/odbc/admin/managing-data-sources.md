@@ -1,15 +1,16 @@
 ---
-title: "Управление источниками данных | Документы Microsoft"
-ms.custom: 
+title: Управление источниками данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-data-sources"></a>Управление источниками данных
 После установки драйвера ODBC из программы установки драйвера для него можно определить один или несколько источников данных. Имя источника данных (DSN) необходимо предоставить уникальное описание данных. например *заработной платы* или *расчеты*. Пользовательских и системных источников данных, определенных для все установленные драйверы, перечислены в **DSN пользователя** или **системный DSN** вкладках **администратор источников данных ODBC**диалоговое окно. Файловые источники данных в заданном каталоге, перечислены в **файловый DSN** вкладке; каталог, который будет отображаться вводится в **папка** поле **файловый DSN** вкладку.  
@@ -45,7 +46,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Источник данных связывает конкретный драйвер ODBC с данными, которые необходимо получить доступ к до этого драйвера. Например можно создать источник данных для использования dBASE драйвер ODBC для доступа к файлы dBASE, в конкретный каталог на жестком диске или на сетевом диске. Администратор источников данных ODBC можно добавить, изменить и удалить источники данных, как описано в следующей таблице.  
   
-|Действие|Description|  
+|Действие|Описание|  
 |------------|-----------------|  
 |Добавление источников данных|Можно добавить несколько источников данных, каждый из них связывание драйвер с данными, которым требуется доступ с помощью этого драйвера. Присвойте имя, однозначно определяющее этот источник данных для каждого источника данных. Например при создании источника данных для набора dBASE файлы, содержащие сведения о клиенте, может имя источника данных «Customers». Приложения обычно отображают имена источников данных для могут выбирать пользователи.<br /><br /> Добавление источника данных несколько отличается от добавления пользователя или системные источники данных. Дополнительные сведения см. файл справки администратор источников данных ODBC.|  
 |Изменение источников данных|В зависимости от требований может оказаться необходимо повторно настроить источники данных. Вы можете сбросить параметры, нажав кнопку **Настройка** в любое диалоговое окно установки драйвера.|  
@@ -53,5 +54,5 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Дополнительные сведения о файловых источников данных см. в разделе [подключение источников данных с помощью файла](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) или [SQLDriverConnect, функция](../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администратор источников данных ODBC](../../odbc/admin/odbc-data-source-administrator.md)
