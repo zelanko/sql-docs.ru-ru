@@ -1,4 +1,4 @@
----
+﻿---
 title: sys.dm_tran_locks (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/30/2017
