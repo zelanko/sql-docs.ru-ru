@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_sql_referenced_entities (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
   
 -   функции секционирования  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -76,7 +77,7 @@ sys.dm_sql_referenced_entities (
   
  *schema_name.referencing_entity_name* — **nvarchar(517)**.  
   
- *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
+ *< Referencing_class >* :: = {ОБЪЕКТА | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  Класс заданной ссылающейся сущности. В одной инструкции может быть указан только один класс.  
   
  *< referencing_class >* — **nvarchar(60)**.  
@@ -86,7 +87,7 @@ sys.dm_sql_referenced_entities (
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|Идентификатор столбца, если ссылающаяся сущность является столбцом; в противном случае — 0. Не допускает значение NULL.|  
-|referenced_server_name|**sysname**|Имя сервера упоминаемой сущности.<br /><br /> Этот столбец заполняется для межсерверных зависимостей, которые создаются путем задания допустимого четырехкомпонентного имени. Сведения о многокомпонентных именах см. в разделе [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Имеет значение NULL для не привязанных к схеме зависимостей, в которых сущность упоминается без указания четырехкомпонентного имени.<br /><br /> Имеет значение NULL для привязанных к схеме сущностей, поскольку они должны находиться в той же базе данных и таким образом могут быть определены только с помощью двух частей (*схема.объект*) имя.|  
+|referenced_server_name|**sysname**|Имя сервера упоминаемой сущности.<br /><br /> Этот столбец заполняется для межсерверных зависимостей, которые создаются путем задания допустимого четырехкомпонентного имени. Сведения о многокомпонентных именах см. в разделе [синтаксические обозначения Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Имеет значение NULL для не привязанных к схеме зависимостей, в которых сущность упоминается без указания четырехкомпонентного имени.<br /><br /> Имеет значение NULL для привязанных к схеме сущностей, поскольку они должны находиться в той же базе данных и таким образом могут быть определены только с помощью двух частей (*схема.объект*) имя.|  
 |referenced_database_name|**sysname**|Имя базы данных упоминаемой сущности.<br /><br /> Этот столбец заполняется для межбазовых и межсерверных ссылок, которые задаются путем указания допустимого трехкомпонентного или четырехкомпонентного имени.<br /><br /> Имеет значение NULL для не привязанных к схеме ссылок, задаваемых с помощью однокомпонентного или двухкомпонентного имени.<br /><br /> Имеет значение NULL для привязанных к схеме сущностей, поскольку они должны находиться в той же базе данных и таким образом могут быть определены только с помощью двух частей (*схема.объект*) имя.|  
 |referenced_schema_name|**sysname**|Схема, которой принадлежит упоминаемая сущность.<br /><br /> Имеет значение NULL для не привязанных к схеме ссылок, в которых сущность упоминается без указания имени схемы.<br /><br /> Никогда не принимает значение NULL для привязанных к схеме ссылок.|  
 |referenced_entity_name|**sysname**|Имя упоминаемой сущности. Не допускает значение NULL.|  
@@ -119,7 +120,7 @@ sys.dm_sql_referenced_entities (
   
  Возвращает ошибку 2020, когда не удается разрешить зависимости столбца. Эта ошибка не препятствует возврату запросом зависимостей на уровне объектов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Данная функция может выполняться в контексте любой базы данных и осуществляет отображение списка сущностей, ссылающихся на триггер DDL уровня сервера.  
   
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
@@ -128,22 +129,22 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
 |Просмотр|Да|Да|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимая процедура **|Да|Да|  
-|Хранимая процедура CLR|нет|Да|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] определяемая пользователем функция|Да|Да|  
-|Определяемая пользователем функция CLR|нет|Да|  
-|Триггер CLR (DML и DDL)|нет|нет|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML|Да|нет|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня базы данных|Да|нет|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня сервера|Да|нет|  
-|Расширенные хранимые процедуры|нет|Да|  
-|Очередь|нет|Да|  
-|Синоним|нет|Да|  
-|Тип (псевдоним и определяемый пользователем тип данных CLR)|нет|Да|  
-|Коллекция схем XML|нет|Да|  
-|Функция секционирования|нет|Да|  
+|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
+|Хранимая процедура CLR|Нет|Да|  
+|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|Определяемая пользователем функция CLR|Нет|Да|  
+|Триггер CLR (DML и DDL)|Нет|Нет|  
+|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|Нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|Нет|  
+|Расширенные хранимые процедуры|Нет|Да|  
+|Очередь|Нет|Да|  
+|Синоним|Нет|Да|  
+|Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
+|Коллекция схем XML|Нет|Да|  
+|Функция секционирования|Нет|Да|  
   
- \*Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекция XML-схем в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
+ \* Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекция XML-схем в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   

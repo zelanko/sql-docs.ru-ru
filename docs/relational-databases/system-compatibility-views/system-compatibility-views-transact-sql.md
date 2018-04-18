@@ -1,16 +1,16 @@
 ---
-title: "Системные представления совместимости (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Системные представления совместимости (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d05a2c3c720b1acbd806f2898c9bf160083aa70
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee12b89d5a8162edc4eedcdbc86e4aa7550e1977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Системные представления совместимости (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ ms.lasthandoff: 02/09/2018
 |**usertype**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**таблицу sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
-|**grantor**|**таблицу sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**UID**|**sysobjects**|**sys.objects**|  
+|**UID**|**таблицу sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**Объект, предоставляющий разрешение**|**таблицу sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**UID**|**systypes**|**sys.types**|  
+|**UID**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  При обращении к базе данных пользователя, системные таблицы, которые были объявлены как устаревшие в SQL Server 2000 (такие как **syslanguages** или **syscacheobjects**), теперь привязан к представлению обратной совместимости в **sys** схемы. С тех пор как системные таблицы SQL Server 2000 устарели для многих версий, данное изменение не считается критическим изменением.  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Сопоставление системных таблиц с системными представлениями &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

@@ -24,13 +24,13 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Сравнение операторов XQuery с XML-данными
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
 -   Операторы общего сравнения (=,! =, \<, >, \<=, > =)  
   
- Дополнительные сведения об этих операторах см. в разделе [выражения сравнения &#40; XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ Дополнительные сведения об этих операторах см. в разделе [выражения сравнения &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-general-operators"></a>A. Использование общих операторов  
  Этот запрос иллюстрирует использование общих операторов, применяемых к последовательностям, а также при сравнении последовательностей. Этот запрос извлекает последовательность телефонных номеров для каждого заказчика из **AdditionalContactInfo** столбец **контакт** таблицы. Далее эта последовательность сравнивается с последовательностью двух телефонных номеров (111-111-1111, 222-2222).  
   
- В запросе используется  **=**  оператор сравнения. Каждый узел последовательности справа от  **=**  оператор сравнивается с каждым узлом последовательности слева. При совпадении узлов сравнение узлов получает **TRUE**. Затем оно конвертируется в тип данных int и сравнивается с 1, а запрос возвращает идентификатор заказчика.  
+ В запросе используется **=** оператор сравнения. Каждый узел последовательности справа от **=** оператор сравнивается с каждым узлом последовательности слева. При совпадении узлов сравнение узлов получает **TRUE**. Затем оно конвертируется в тип данных int и сравнивается с 1, а запрос возвращает идентификатор заказчика.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -100,9 +100,9 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Так как оба операнда **eq** оператор представляют собой атомарные значения, в запросе используется оператор значений. Тот же запрос можно написать с помощью общего оператора сравнения (  **=**  ).  
+ Так как оба операнда **eq** оператор представляют собой атомарные значения, в запросе используется оператор значений. Тот же запрос можно написать с помощью общего оператора сравнения ( **=** ).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  

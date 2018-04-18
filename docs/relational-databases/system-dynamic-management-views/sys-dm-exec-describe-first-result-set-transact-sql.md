@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_describe_first_result_set (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 203db81a3bf752b071ee63453330ac08fc9db8a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Эта функция динамического управления принимает [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции в качестве параметра и описывает метаданные первого результирующего набора полученной инструкции.  
   
- **sys.dm_exec_describe_first_result_set** имеет то же определение результирующего набора как [sys.dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) и похож на [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set** имеет то же определение результирующего набора как [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) и похож на [sp_ describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,7 +56,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  *@params*  
  @params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)**.  
   
- Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в @params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет в инструкции не содержит параметров, @params не требуется. Значением по умолчанию для этого аргумента является NULL.  
+ Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, означающий определения дополнительных параметров. Каждый параметр, указанный в инструкции должен быть определен в @params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет в инструкции не содержит параметров, @params не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
  *@include_browse_information*  
  Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
@@ -88,7 +89,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_case_sensitive**|**бит**|Возвращает значение 1, если столбец относится к строковому типу с учетом регистра. В противном случае возвращается значение 0.|  
 |**is_fixed_length_clr_type**|**бит**|Возвращает значение 1, если столбец относится к типу CLR с фиксированной длиной. В противном случае возвращается значение 0.|  
 |**source_server**|**sysname**|Имя сервера происхождения (в случае происхождения от удаленного сервера). Имя дается так, как оно отображается в представлении sys.servers. Возвращает NULL, если столбец поступает с локального сервера или если невозможно определить, с какого сервера он поступил. Заполняется только при запросе просмотра информации.|  
-|**source_database**|**sysname**|Имя исходной базы данных, возвращаемое столбцом этого результата. Возвращает NULL, если не удалось определить базу данных. Заполняется только при запросе просмотра информации.|  
+|**база_данных_источник**|**sysname**|Имя исходной базы данных, возвращаемое столбцом этого результата. Возвращает NULL, если не удалось определить базу данных. Заполняется только при запросе просмотра информации.|  
 |**source_schema**|**sysname**|Имя исходной схемы, возвращаемое столбцом в этом результате. Возвращает NULL, если не удалось определить схему. Заполняется только при запросе просмотра информации.|  
 |**source_table**|**sysname**|Имя исходной таблицы, возвращаемое столбцом в этом результате. Возвращает NULL, если не удалось определить таблицу. Заполняется только при запросе просмотра информации.|  
 |**source_column**|**sysname**|Имя исходного столбца, возвращаемое результирующим столбцом. Возвращает NULL, если не удалось определить столбец. Заполняется только при запросе просмотра информации.|  
@@ -107,8 +108,8 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|Содержит целое число, представляющее возвращаемую ошибку. Соответствует error_type_desc. См. список под замечаниями.|  
 |**error_type_desc**|**nvarchar(60)**|Содержит короткую строку в верхнем регистре, представляющую возвращаемую ошибку. Сопоставляется с error_type. См. список под замечаниями.|  
   
-## <a name="remarks"></a>Remarks  
- Эта функция использует тот же алгоритм, что **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+## <a name="remarks"></a>Замечания  
+ Эта функция использует тот же алгоритм, что **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  В следующей таблице содержится список типов ошибок и их описания  
   
@@ -132,7 +133,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Требуется разрешение на выполнение @tsql аргумент.  
   
 ## <a name="examples"></a>Примеры  
- Дополнительные примеры из раздела [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) может быть адаптирован для использования **sys.dm_exec_describe_first_result_set**.  
+ Дополнительные примеры из раздела [sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) может быть адаптирован для использования **sys.dm_exec_describe_first_result_set**.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Возврат сведений об отдельной инструкции Transact-SQL  
  Следующий код возвращает сведения о результатах инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -1,16 +1,16 @@
 ---
-title: "sp_stop_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_stop_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1276a936bece39cc875e5f80e8da5465f51bb4ee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 337eae0e521ded36eb49b02b56dcee51e9e2343c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя останавливаемого задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Идентификационный номер останавливаемого задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
  [ **@originating_server =**] **'***master_server***'**  
@@ -72,7 +72,7 @@ sp_stop_job
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_stop_job** отправляет сигнал об остановке в базу данных. Некоторые процессы можно остановить немедленно и некоторые должен достичь стабильного точка (или точку входа для пути кода), прежде чем их можно остановить. Для завершения некоторых длительных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], таких как BACKUP, RESTORE, и некоторых команд DBCC может потребоваться много времени. Когда они выполняются, может занять некоторое время, прежде чем задание будет отменено. Остановка задания приведет к регистрации записи «Задание отменено» в журнале заданий.  
   
  Если задание в данный момент выполняет этап типа **CmdExec** или **PowerShell**, выполняемый процесс (например, MyProgram.exe) принудительно завершается раньше времени. Преждевременное завершение может привести к непредсказуемому поведению, например файлы, используемые процессом, могут остаться открытыми. Следовательно **sp_stop_job** следует использовать только в экстренных ситуациях, если задание содержит шаги типа **CmdExec** или **PowerShell**.  

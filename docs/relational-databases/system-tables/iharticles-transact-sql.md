@@ -1,16 +1,16 @@
 ---
-title: "IHarticles (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: IHarticles (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c13f239978f42e899bc7d909b33bf70ce837c19
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f6d2f9b3bba59f44246d60cd35cdea8d8706989
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="definition"></a>Определение  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|Столбец идентификаторов, в котором хранится уникальный идентификатор статьи.|  
 |**name**|**sysname**|Имя, ассоциированное со статьей, уникальное внутри публикации.|  
@@ -70,15 +70,15 @@ ms.lasthandoff: 11/21/2017
 |**del_scripting_proc**|**int**|Этот столбец не используется и включен только в том, чтобы сделать [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление **IHarticles** совместимо с [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление, используемое для статей (SQL Server [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**upd_scripting_proc**|**int**|Этот столбец не используется и включен только в том, чтобы сделать [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление **IHarticles** совместимо с [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление, используемое для статей (SQL Server [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**custom_script**|**int**|Этот столбец не используется и включен только в том, чтобы сделать [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление **IHarticles** совместимо с [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление, используемое для статей (SQL Server [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**fire_triggers_on_snapshot**|**bit**|Этот столбец не используется и включен только в том, чтобы сделать [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление **IHarticles** совместимо с [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление, используемое для статей (SQL Server [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**fire_triggers_on_snapshot**|**бит**|Этот столбец не используется и включен только в том, чтобы сделать [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление **IHarticles** совместимо с [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) представление, используемое для статей (SQL Server [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**instance_id**|**int**|Определяет текущий экземпляр журнала статьи для опубликованной таблицы.|  
-|**use_default_datatypes**|**bit**|Указывает, использует ли статья сопоставления типов данных по умолчанию; значение **1** указывает, что используются сопоставления типов данных по умолчанию.|  
+|**use_default_datatypes**|**бит**|Указывает, использует ли статья сопоставления типов данных по умолчанию; значение **1** указывает, что используются сопоставления типов данных по умолчанию.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

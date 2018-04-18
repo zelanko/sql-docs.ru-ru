@@ -1,16 +1,16 @@
 ---
-title: "sys.geo_replication_links (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sys.geo_replication_links (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 10/18/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5eb8f74023e90966200aca7603b82f685e0eb9db
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: e76e6ca34e8fbde351808b983df62b765f5609e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 |роль|**tinyint**|Роль георепликации, один из:<br /><br /> 0 = primary. Database_id ссылается на базы данных-источника в партнерстве географической репликации.<br /><br /> 1 = получателя.  Database_id ссылается на базы данных-источника в партнерстве географической репликации.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Вторичный тип, один из:<br /><br /> 0 = Нет. База данных-получатель до перехода на другой ресурс недоступен.<br /><br /> 1 = только для чтения. База данных-получатель доступен только для клиентских подключений с ApplicationIntent = ReadOnly.<br /><br /> 2= все. База данных-получатель доступен для любого клиентского соединения.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|нет<br /><br /> все<br /><br /> Только для чтения|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Нет<br /><br /> все<br /><br /> Только для чтения|  
   
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно только в **master** базы данных для имени входа субъекта серверного уровня.  
@@ -72,7 +73,7 @@ FROM sys.geo_replication_links;
   
 ## <a name="see-also"></a>См. также  
  [CREATE DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.dm_operation_status &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [sys.dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

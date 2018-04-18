@@ -2,7 +2,7 @@
 title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-tables
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f2078f3894d5db7c398b2470b4a3625320e948
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/21/2017
   
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Регистрационный номер транзакции в журнале (LSN), связанный с фиксацией транзакции изменения.<br /><br /> Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN фиксации. Например, если операция удаления в исходной таблице удаляет две строки, таблица изменений будет содержать две строки с одинаковым **__ $start_lsn** значение.|  
 |**__ $end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] этот столбец всегда имеет значение NULL.|  
 |**__$seqval**|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  
 |**__$operation**|**int**|Определяет операцию языка обработки данных (DML), связанную с изменением. Возможен один из следующих вариантов.<br /><br /> 1 = удаление<br /><br /> 2 = вставка<br /><br /> 3 = обновление (старые значения)<br /><br /> Перед выполнением инструкции обновления в данных столбца содержатся эти значения строк.<br /><br /> 4 = обновление (новые значения)<br /><br /> После выполнения инструкции обновления в данных столбца содержатся эти значения строк.|  
 |**__$update_mask**|**varbinary(128)**|Битовая маска, основанная на порядковых номерах измененных столбцов в таблице изменений.|  
-|*\<отслеживаемых столбцов исходной таблицы >*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
+|*\<отслеживаемые столбцы исходной таблицы>*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
 |**__ $command_id** |**int** |Отслеживает порядок операций в рамках транзакции. |  
   
 ## <a name="remarks"></a>Замечания  
@@ -88,8 +88,8 @@ ms.lasthandoff: 11/21/2017
   
  Для операций вставки и удаления устанавливаются все биты в маске обновления. Для операций обновления маска обновления как в старой строке обновления, так и в новой меняется, чтобы отразить столбцы, изменившиеся во время обновления.  
   
-## <a name="see-also"></a>См. также:  
- [sys.sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

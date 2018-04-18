@@ -1,15 +1,15 @@
 ---
-title: "sp_rxPredict | Документы Microsoft"
-ms.custom: 
+title: sp_rxPredict | Документы Microsoft
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -22,18 +22,18 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cef37349cd363ad7baea6300f3d236eefafd0046
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Создает на основе хранимых модели прогнозируемое значение.
 
-Предоставляет оценки на моделей машинного обучения в близком к реальному времени. `sp_rxPredict`Хранимая процедура, предоставленные как оболочка для `rxPredict` функционировать в [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) и [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Он записывается в C + и оптимизирован для оценки операций. Он поддерживает обе R или Python машинного обучения моделей.
+Предоставляет оценки на моделей машинного обучения в близком к реальному времени. `sp_rxPredict` Хранимая процедура, предоставленные как оболочка для `rxPredict` функционировать в [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) и [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Он записывается в C + и оптимизирован для оценки операций. Он поддерживает обе R или Python машинного обучения моделей.
 
 **Этот раздел относится к**:  
 - SQL Server 2017  
@@ -60,7 +60,7 @@ sp_rxPredict  ( @model, @input )
 Возвращается столбец оценки, а также любые сквозные столбцы из источника входных данных.
 Дополнительные столбцы, например доверительный интервал оценки, может быть возвращено, если алгоритм поддерживает создание таких значений.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 
 Чтобы включить использование хранимой процедуры, необходимо включить SQLCLR в экземпляре.
 
@@ -76,7 +76,7 @@ sp_rxPredict  ( @model, @input )
 - Сервер Microsoft машинного обучения  
 - SQL Server R Services 2016 при обновлении экземпляра служб R на сервере Microsoft R 9.1.0 или более поздней версии  
 
-### <a name="supported-algorithms"></a>Поддерживаются алгоритмы
+### <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
 Список поддерживаемых алгоритмов см. в разделе [в режиме реального времени оценки](../../advanced-analytics/real-time-scoring.md).
 
@@ -98,9 +98,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Помимо допустимый SQL-запрос, входные данные по  *@inputData*  должен включать столбцы, которые совместимы со столбцами в модели хранимой.
+Помимо допустимый SQL-запрос, входные данные по *@inputData* должен включать столбцы, которые совместимы со столбцами в модели хранимой.
 
-`sp_rxPredict`поддерживает только следующие типы столбцов .NET: double, float, short, ushort, long, ulong и string. Может потребоваться отфильтровать неподдерживаемых типов в качестве входных данных перед его использованием для оценки в режиме реального времени. 
+`sp_rxPredict` поддерживает только следующие типы столбцов .NET: double, float, short, ushort, long, ulong и string. Может потребоваться отфильтровать неподдерживаемых типов в качестве входных данных перед его использованием для оценки в режиме реального времени. 
 
   Сведения о соответствующих типов SQL см. в разделе [сопоставление типов SQL-CLR](https://msdn.microsoft.com/library/bb386947.aspx) или [сопоставления данных о параметрах CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

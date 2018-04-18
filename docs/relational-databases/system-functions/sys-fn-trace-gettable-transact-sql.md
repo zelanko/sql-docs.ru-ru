@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_trace_gettable (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.fn_trace_gettable (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 461807f1d79032c85316551adb5229d02aa67b06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ fn_trace_gettable ( 'filename' , number_files )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- '*filename*'  
+ "*filename*"  
  Указывает первый считываемый файл трассировки. *Имя файла* — **nvarchar(256)**, не имеет значения по умолчанию.  
   
  *number_files*  
  Указывает число считываемых файлов продолжения. Это число включает и файл, указанный в *filename*. *number_files* — **int**.  
   
-## <a name="remarks"></a>Remarks  
- Если *number_files* указывается как **по умолчанию**, **fn_trace_gettable** считывает файлы продолжения, пока не достигнет конца трассировки. **fn_trace_gettable** возвращает таблицу, содержащую все столбцы, допустимые для указанной трассировки. Дополнительные сведения см. в разделе [sp_trace_setevent &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+## <a name="remarks"></a>Замечания  
+ Если *number_files* указывается как **по умолчанию**, **fn_trace_gettable** считывает файлы продолжения, пока не достигнет конца трассировки. **fn_trace_gettable** возвращает таблицу, содержащую все столбцы, допустимые для указанной трассировки. Дополнительные сведения см. в разделе [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Имейте в виду, что функция fn_trace_gettable не будет загружать файлы продолжения (Если этот параметр указан с помощью *number_files* аргумент) которых имя исходного файла трассировки завершается подчеркиванием и числовым значением. (Это не относится к подчеркиваниям и числам, которые автоматически добавляются, когда выполняется переключение на файл продолжения.) В качестве временного решения можно переименовать файлы трассировки, исключив подчеркивания из имени исходного файла. Например, если исходный файл имеет имя **Trace_Oct_5.trc** и файл продолжения имеет имя **Trace_Oct_5_1.trc**, можно переименовать файлы **TraceOct5.trc** и  **TraceOct5_1.trc**.  
   
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [Хранимая процедура sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  

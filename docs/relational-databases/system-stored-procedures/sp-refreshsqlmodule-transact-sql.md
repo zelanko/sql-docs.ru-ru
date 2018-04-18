@@ -1,16 +1,16 @@
 ---
-title: "sp_refreshsqlmodule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_refreshsqlmodule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a95c2e905efa377edb83fd82a104758853b18271
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0a5979dd6b797ced4b4785fedd068671ae9e05f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  Любые подписи, связанные с объектом, удаляются при выполнении **sp_refreshsqlmodule**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  При ссылке объекта на модуль необходимо разрешение ALTER, а при использовании модулем определяемых пользователем типов данных CLR и коллекций схем XML на них требуется разрешение REFERENCES. Если указанный модуль является триггером DDL уровня базы данных, то для текущей базы данных требуется разрешение ALTER ANY DATABASE DDL TRIGGER. Если указанный модуль является триггером DDL уровня сервера, необходимо разрешение CONTROL SERVER.  
   
  Кроме того, для модулей, определенных при помощи предложения EXECUTE AS, на указанном участнике необходимо разрешение IMPERSONATE. Обычно обновление объекта не изменяет его участника EXECUTE AS, если модуль не был определен при помощи предложения EXECUTE AS USER, и имя пользователя участника не является результатом пользователя, отличного от пользователя в момент создания модуля.  
@@ -176,8 +177,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_refreshview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.internal_tables (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.internal_tables (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.internal_tables
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc5ab8560914be149128c55f563bc9e5b422d4d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9f0f30bc972bf0af35d582b908da6e163917b965
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.lasthandoff: 11/21/2017
  Данные внутренних таблиц недоступны для пользователей, а их схема является жесткой и неизменной. Невозможно ссылаться на имена внутренних таблиц в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, нельзя выполнить инструкцию SELECT \* FROM  *\<sys.internal_table_name >*. Однако можно обращаться с запросами к представлениям каталогов для просмотра метаданных внутренних таблиц.  
   
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Тип внутренней таблицы:<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (например, пространственный индекс)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**|  
 |**internal_type_desc**|**nvarchar(60)**|Описание типа внутренней таблицы:<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
 |**parent_ID**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages** = **object_id** очереди<br /><br /> **xml_index_nodes** = **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map** = **object_id** полнотекстового индекса<br /><br /> **query_notification**, или **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** таблицы, которые включено отслеживание таблицы = **change_tracking**|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 |**lob_data_space_id**|**int**|Ненулевое значение — идентификатор пространства данных (файловая группа или схема секционирования), хранящего данные больших объектов (LOB) для этой таблицы.|  
 |**filestream_data_space_id**|**int**|Зарезервировано для последующего использования.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Замечания  
@@ -180,8 +180,8 @@ WHERE internal_type_desc = 'SERVICE_BROKER_MAP';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Объект представления каталога &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

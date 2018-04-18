@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_catalog (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_fulltext_catalog (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_catalog_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3dc2f734fd22d937c403dd63071e17430742ab3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3a247eaed97236d1605aada894c6ba3fa7c228bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  Имя полнотекстового каталога. Имена каталогов должны быть уникальными для каждой базы данных. *fulltext_catalog_name* — **sysname**.  
   
- [ **@action=**] **'***action***'**  
+ [  **@action=**] **"***действия***"**  
  Действие, которое должно быть выполнено. *Действие* — **varchar(20)**, и может принимать одно из следующих значений.  
   
 > [!NOTE]  
@@ -69,10 +70,10 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Остановить**|Останавливает заполнение индекса для *fulltext_catalog_name*. Если каталог не существует, появится сообщение об ошибке. Если заполнение уже остановлено, предупреждение не отображается.|  
 |**Перестроить**|Перестраивает *fulltext_catalog_name*. Во время перестроения каталога существующий каталог удаляется, а на его месте создается новый каталог. Все таблицы, содержащие ссылки полнотекстового индексирования, сопоставляются с новым каталогом. Перестроение сбрасывает полнотекстовые метаданные в системных таблицах базы данных.<br /><br /> Если отслеживание изменений отключено, то перестроение не приводит к повторному заполнению вновь созданного полнотекстового каталога. В этом случае для повторного заполнения выполните **sp_fulltext_catalog** с **start_full** или **start_incremental** действия.|  
   
- [ **@path=**] **'***root_directory***'**  
+ [  **@path=**] **"***root_directory***"**  
  — Корневой каталог (не полный физический путь) для **создания** действия. *root_directory* — **nvarchar(100)** и имеет значение по умолчанию NULL, которое указывает на использование расположения по умолчанию, заданное при установке. Это подкаталог Ftdata в каталоге Mssql; Например, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Указанный каталог должен находиться на локальном диске, его имя не может состоять только из одной буквы диска, и путь к этому каталогу не может быть относительным. Сетевые, съемные, гибкие диски и UNC-пути не поддерживаются. Полнотекстовые каталоги можно создавать на локальных жестких дисках, связанных с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **@path**Допустим, только если *действия* — **создания**. Для действий, отличных от **создания** (**остановить**, **Перестроить**и так далее),  **@path**  должен иметь значение NULL или опустить.  
+ **@path** Допустим, только если *действия* — **создания**. Для действий, отличных от **создания** (**остановить**, **Перестроить**и так далее), **@path** должен иметь значение NULL или опустить.  
   
  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является виртуальным сервером кластера, то указанный каталог должен находиться на общем диске с ресурсами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если @path не указан, расположение папки по умолчанию полнотекстовый каталог находится на общем диске в каталоге, который был указан при установке виртуального сервера.  
   
@@ -82,10 +83,10 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Start_full** действие используется для создания моментального снимка полнотекстовых данных в *fulltext_catalog_name*. **Start_incremental** действие используется для повторного индексирования измененных строк в базе данных. Добавочное заполнение может применяться только в том случае, если в таблице есть столбец типа **timestamp**. Если таблицы в полнотекстовый каталог не содержит столбец типа **timestamp**, то выполняется полное заполнение.  
   
- Полнотекстовый каталог и данные индекса хранятся в файлах в отдельной папке. Полнотекстовый каталог создается как вложенный каталог для каталога, указанного в  **@path**  или в каталоге полнотекстовый каталог по умолчанию сервера при  **@path**  не указано. Имя папки полнотекстового каталога формируется таким образом, чтобы оно было уникальным в пределах сервера. Следовательно, для всех папок полнотекстовых каталогов сервера можно использовать общий путь.  
+ Полнотекстовый каталог и данные индекса хранятся в файлах в отдельной папке. Полнотекстовый каталог создается как вложенный каталог для каталога, указанного в **@path** или в каталоге полнотекстовый каталог по умолчанию сервера при **@path** не указано. Имя папки полнотекстового каталога формируется таким образом, чтобы оно было уникальным в пределах сервера. Следовательно, для всех папок полнотекстовых каталогов сервера можно использовать общий путь.  
   
 ## <a name="permissions"></a>Разрешения  
  Вызывающий объект должен быть членом **db_owner** роли. В зависимости от запрашиваемых действий вызывающего объекта не должны быть запрещены разрешения ALTER или CONTROL (который **db_owner** имеет) на целевой полнотекстового каталога.  
@@ -143,9 +144,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [FULLTEXTCATALOGPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY & #40; Transact-SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Полнотекстовый поиск](../../relational-databases/search/full-text-search.md)  

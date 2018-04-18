@@ -3,7 +3,7 @@ title: sys.dm_db_tuning_recommendations (Transact-SQL) | Документы Micr
 description: Поиск потенциальных проблем с производительностью и рекомендуемые исправления в SQL Server и базы данных SQL Azure
 ms.custom: ''
 ms.date: 07/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -29,11 +29,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4f783c82d92aa0837ea9fbb90f9b3d2afc8c8d
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: fc933666e31c45fc78fb6d303ca1e7d3b5874d55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_СУБД\_рекомендации (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -46,21 +47,21 @@ ms.lasthandoff: 04/05/2018
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | Уникальное имя рекомендации. |
 | **type** | **nvarchar(4000)** | Имя параметра автоматической настройки, созданного рекомендация, например, `FORCE_LAST_GOOD_PLAN` |
-| **reason** | **nvarchar(4000)** | Причина, почему был предоставлен этой рекомендации. |
+| **Причина** | **nvarchar(4000)** | Причина, почему был предоставлен этой рекомендации. |
 | **Допустимые\_с момента** | **datetime2** | Эта рекомендация впервые был создан. |
-| **last\_refresh** | **datetime2** | Время последнего создания этой рекомендации. |
+| **последние\_обновления** | **datetime2** | Время последнего создания этой рекомендации. |
 | **state** | **nvarchar(4000)** | Документ JSON, описывающий состояние рекомендаций. Доступны следующие поля:<br />-   `currentValue` -Текущее состояние в рекомендацию.<br />-   `reason` — Константа, которая описывает, почему рекомендуется в текущем состоянии.|
 | **—\_исполняемый\_действие** | **бит** | 1 = рекомендации могут быть выполнены в базе данных через [!INCLUDE[tsql_md](../../includes/tsql_md.md)] сценария.<br />0 = рекомендаций не может быть выполнена для базы данных (например: рекомендации только или возвращенной информации) |
-| **is\_revertable\_action** | **бит** | 1 = автоматически отслеживания и вернуть ядром СУБД рекомендации.<br />0 = рекомендаций не может автоматически отслеживать и отменены. Большинство &quot;исполняемый&quot; действия будут &quot;revertable&quot;. |
-| **execute\_action\_start\_time** | **datetime2** | Дата, когда применяется рекомендации. |
-| **execute\_action\_duration** | **time** | Длительность выполнения действия. |
-| **execute\_action\_initiated\_by** | **nvarchar(4000)** | `User` = Пользователь вручную принудительно плана в рекомендацию. <br /> `System` = Система автоматически применить рекомендации. |
-| **execute\_action\_initiated\_time** | **datetime2** | Дата применения рекомендаций. |
-| **revert\_action\_start\_time** | **datetime2** | Дата, когда была отменена, рекомендации. |
+| **—\_revertable\_действия** | **бит** | 1 = автоматически отслеживания и вернуть ядром СУБД рекомендации.<br />0 = рекомендаций не может автоматически отслеживать и отменены. Большинство &quot;исполняемый&quot; действия будут &quot;revertable&quot;. |
+| **выполнение\_действия\_запустить\_времени** | **datetime2** | Дата, когда применяется рекомендации. |
+| **выполнение\_действия\_длительность** | **time** | Длительность выполнения действия. |
+| **выполнение\_действия\_инициировал\_по** | **nvarchar(4000)** | `User` = Пользователь вручную принудительно плана в рекомендацию. <br /> `System` = Система автоматически применить рекомендации. |
+| **выполнение\_действия\_инициировал\_времени** | **datetime2** | Дата применения рекомендаций. |
+| **вернуть\_действия\_запустить\_времени** | **datetime2** | Дата, когда была отменена, рекомендации. |
 | **вернуть\_действия\_длительность** | **time** | Длительность действия revert. |
-| **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User` = Пользователь вручную unforced рекомендуемые плана. <br /> `System` = Система автоматически возвращается рекомендации. |
-| **revert\_action\_initiated\_time** | **datetime2** | Дата, когда была отменена, рекомендации. |
-| **score** | **int** | Предполагаемое значение и влияние этой рекомендации по 0-100 масштаб (чем больше тем лучше) |
+| **вернуть\_действия\_инициировал\_по** | **nvarchar(4000)** | `User` = Пользователь вручную unforced рекомендуемые плана. <br /> `System` = Система автоматически возвращается рекомендации. |
+| **вернуть\_действия\_инициировал\_времени** | **datetime2** | Дата, когда была отменена, рекомендации. |
+| **Оценка** | **int** | Предполагаемое значение и влияние этой рекомендации по 0-100 масштаб (чем больше тем лучше) |
 | **Подробные сведения** | **nvarchar(max)** | Документ JSON, который содержит дополнительные сведения о рекомендации. Доступны следующие поля:<br /><br />`planForceDetails`<br />-    `queryId` -запрос\_идентификатор регрессионных запросов.<br />-    `regressedPlanId` -plan_id регрессионных плана.<br />-   `regressedPlanExecutionCount` -Обнаружено число выполнений запроса с планом регрессионных перед регрессии.<br />-    `regressedPlanAbortedCount` -Число обнаружены ошибки во время выполнения регрессионных плана.<br />-    `regressedPlanCpuTimeAverage` -Среднее время ЦП, использованных запросом регрессионных до обнаружения регрессии.<br />-    `regressedPlanCpuTimeStddev` -Обнаружена стандартное отклонение время ЦП, затраченное на выполнение запроса регрессионных перед регрессии.<br />-    `recommendedPlanId` -plan_id плана, обязательно.<br />-   `recommendedPlanExecutionCount`— Число выполнений запроса с планом, обязательно до обнаружения регрессии.<br />-    `recommendedPlanAbortedCount` -Число обнаружены ошибки во время выполнения с планом, обязательно.<br />-    `recommendedPlanCpuTimeAverage` -Среднее время ЦП, затраченное на выполнение запроса, выполняться в плане, должно быть принудительно (вычисляется до обнаружения Регрессия).<br />-    `recommendedPlanCpuTimeStddev` Обнаружена стандартное отклонение время ЦП, затраченное на выполнение запроса регрессионных перед регрессии.<br /><br />`implementationDetails`<br />-  `method` -Метод, который следует использовать для устранения регрессии. Значение всегда равно `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] скрипт, который должен быть выполнен для принудительного плана, рекомендуется. |
   
 ## <a name="remarks"></a>Замечания  
@@ -119,5 +120,5 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
  [Автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON Support](../../relational-databases/json/index.md)
+ [Поддержка JSON](../../relational-databases/json/index.md)
  

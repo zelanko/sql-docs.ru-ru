@@ -1,16 +1,16 @@
 ---
-title: "sysschemaarticles (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysschemaarticles (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sysschemaarticles system table
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa29325540bbf30c69a46990a9fa473ca6cff84b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf1d947752f37b6868ea3e777b2f51b4a515c9cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отслеживает статьи, содержащие только схему, для публикаций транзакций и публикаций моментальных снимков. Эта таблица хранится в базе данных публикации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Идентификатор статьи.|  
 |**creation_script**|**nvarchar(255)**|Путь и имя скрипта схемы статьи, используемого для создания целевых таблиц.|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 |**schema_option**|**binary(8)**|Битовая маска параметра формирования схемы для данной статьи. Задает автоматическое создание хранимой процедуры в целевой базе данных для всех синтаксисов CALL/MCALL/XCALL; может быть побитовой логической суммой одного или нескольких следующих значений:<br /><br /> **0x00** = отключает сценарии агента моментальных снимков и использует *creation_script*.<br /><br /> **0x01** = формирует инструкции создания объектов (CREATE TABLE, CREATE PROCEDURE и т. д.). Это значение по умолчанию для статей хранимых процедур.<br /><br /> **0x02** = формирует пользовательскую хранимую процедуру для статьи, в том случае, если они определены.<br /><br /> **0x10** = формирует соответствующий кластеризованный индекс.<br /><br /> **0x20** = преобразует типы пользовательских данных в базовые типы данных.<br /><br /> **0x40**= создает соответствующие некластеризованные индексы.<br /><br /> **0x80**= включает для первичных ключей объявления ссылочной целостности.<br /><br /> **0x73** = формирует инструкцию CREATE TABLE, создает кластеризованные и некластеризованные индексы, преобразует типы пользовательских данных в базовые типы данных и формирует скрипты пользовательская хранимая процедура должна быть применена на подписчике. Это значение по умолчанию для всех статей, за исключением статей хранимых процедур.<br /><br /> **0x100**= реплицирует пользовательские триггеры для статьи таблицы, если они определены.<br /><br /> **0x200**= реплицирует ограничения внешнего ключа. Если таблица, указанная в ссылке, не является частью публикации, все ограничения внешнего ключа для опубликованной таблицы не будут реплицированы.<br /><br /> **0x400**= Реплицирует проверочные ограничения.<br /><br /> **0x800**= реплицирует значения по умолчанию.<br /><br /> **0x1000**= реплицирует параметры сортировки на уровне столбцов.<br /><br /> **0x2000**= реплицирует расширенные свойства, связанные с исходным объектом опубликованной статьи.<br /><br /> **0x4000**= реплицирует уникальные ключи, если они определены для статьи таблицы.<br /><br /> **0x8000**= реплицирует первичные и уникальные ключи для статьи таблицы как ограничения при помощи инструкции ALTER TABLE.|  
 |**dest_owner**|**sysname**|Владелец таблицы в целевой базе данных.|  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

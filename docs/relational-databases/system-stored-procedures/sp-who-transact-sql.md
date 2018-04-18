@@ -1,16 +1,16 @@
 ---
-title: "sp_who (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_who (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_who_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99f8ff7ccfee468c0e9b3598167d6d9823e2bd61
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a46a146e022eb7ce0caa0cdb28579580bc789e93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ] **"***входа***"** | *идентификатор сеанса*  |  **«ACTIVE»**  
+ [  **@loginame =** ] **"***входа***"** | *идентификатор сеанса* | **«ACTIVE»**  
  Используется для фильтрации результирующего набора.  
   
  *Имя входа* — **sysname** определяет процессы, принадлежащие конкретному имени входа.  
@@ -63,17 +63,17 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_who** возвращает результирующий набор со следующими сведениями.  
   
-|Столбец|Data type|Description|  
+|Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
-|**Идентификатор SPID**|**smallint**|Идентификатор сеанса.|  
-|**ECID**|**smallint**|Идентификатор контекста выполнения заданного потока, связанный с определенным идентификатором сеанса.<br /><br /> ECID = {0 1, 2, 3,...  *n* }, где 0 всегда представляет главный или родительский поток, а {1, 2, 3,...  *n* } представляет подпроцессы.|  
-|**status**|**nchar(30)**|Состояние процесса. Возможные значения:<br /><br /> **Неактивные**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбрасывает сеанс.<br /><br /> **под управлением**. В сеансе выполняются один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов &#40; Режим MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **фон**. В сеансе выполняется фоновая задача, например обнаружение взаимоблокировок.<br /><br /> **откат**. В сеансе выполняется откат транзакций.<br /><br /> **Ожидание**. В сеансе ожидается освобождение потока исполнителя.<br /><br /> **готов к запуску**. Задачи сеанса находятся в очереди исполнителей планировщика, ожидая времени такта.<br /><br /> **spinloop**. Задачи сеанса ожидают освобождения взаимоблокировки.<br /><br /> **Приостановить**. Сеанс ожидает завершения события, например операции ввода-вывода.|  
+|**spid**|**smallint**|Идентификатор сеанса.|  
+|**ECID**|**smallint**|Идентификатор контекста выполнения заданного потока, связанный с определенным идентификатором сеанса.<br /><br /> ECID = {0 1, 2, 3,... *n*}, где 0 всегда представляет главный или родительский поток, а {1, 2, 3,... *n*} представляет подпроцессы.|  
+|**status**|**nchar(30)**|Состояние процесса. Возможные значения:<br /><br /> **Неактивные**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбрасывает сеанс.<br /><br /> **Под управлением**. В сеансе выполняются один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов & #40; Режим MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **фон**. В сеансе выполняется фоновая задача, например обнаружение взаимоблокировок.<br /><br /> **откат**. В сеансе выполняется откат транзакций.<br /><br /> **Ожидание**. В сеансе ожидается освобождение потока исполнителя.<br /><br /> **готов к запуску**. Задачи сеанса находятся в очереди исполнителей планировщика, ожидая времени такта.<br /><br /> **spinloop**. Задачи сеанса ожидают освобождения взаимоблокировки.<br /><br /> **Приостановить**. Сеанс ожидает завершения события, например операции ввода-вывода.|  
 |**loginame**|**nchar(128)**|Имя входа, связанное со специфическим процессом.|  
 |**Имя узла**|**nchar(128)**|Имя узла или компьютера для каждого процесса.|  
 |**blk**|**char(5)**|Идентификатор сеанса для блокирующего процесса, если такой существует. В противном случае значение этого столбца — 0.<br /><br /> Если транзакция, связанная с данным идентификатором сеанса, заблокирована потерянной распределенной транзакцией, этот столбец возвратит -2 для блокирующей потерянной транзакции.|  
 |**DBName**|**nchar(128)**|База данных, используемая процессом.|  
-|**cmd**|**nchar(16)**|Команда компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] (инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], внутренний процесс компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и так далее), выполняющаяся для процесса.|  
-|**идентификатор_запроса**|**int**|Идентификатор для запросов, запущенных в определенном сеансе.|  
+|**Cmd**|**nchar(16)**|Команда компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] (инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], внутренний процесс компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и так далее), выполняющаяся для процесса.|  
+|**request_id**|**int**|Идентификатор для запросов, запущенных в определенном сеансе.|  
   
  При параллельной обработке подпроцессы создаются для определенного идентификатора сеанса. Главный поток обозначается как `spid = <xxx>` и `ecid =0`. Другие подпроцессы имеют одинаковый `spid = <xxx>`, но с **ecid** > 0.  
   
@@ -84,7 +84,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  Запрос **is_user_process** столбец sys.dm_exec_sessions для отделения системных процессов от пользовательских процессов.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение VIEW SERVER STATE на сервер для просмотра всех выполняющихся сеансов на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Иначе пользователь сможет увидеть только текущий сеанс.  
   
 ## <a name="examples"></a>Примеры  
@@ -127,9 +127,9 @@ EXEC sp_who '10' --specifies the process_id;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

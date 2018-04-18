@@ -1,7 +1,7 @@
-# [Драйвер OLE DB для SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [Программирование драйвера OLE DB для SQL Server](oledb-driver-for-sql-server-programming.md)
 
 # Конкретные аспекты
-## [Драйвер OLE DB для SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [Создание драйвера OLE DB для приложений SQL Server+](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [Объекты источника данных OLE DB +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [Команды +](../../oledb/ole-db-commands/commands.md)
 ## [Наборы строк +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [Интерфейсы +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [Инструкции +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [Поддержка FILESTREAM (OLE DB)](filestream-support-ole-db.md)
-# [Определяемые пользователем типы данных больших значений CLR (OLE DB)](large-clr-user-defined-types-ole-db.md)
-# [Поддержка набора строк схемы (OLE DB)](schema-rowset-support-ole-db.md)
+# [Большие определяемые пользователем типы данных CLR](large-clr-user-defined-types-ole-db.md)
+# [Поддержка набора строк схемы](schema-rowset-support-ole-db.md)
 # [Наборы строк схемы — поддержка распределенных запросов](schema-rowsets-distributed-query-support.md)
 # [Наборы строк схемы — набор строк LINKEDSERVERS](schema-rowsets-linkedservers-rowset.md)
-# [Имена субъекта-службы в клиентских соединениях (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [Поддержка разреженных столбцов (OLE DB)](sparse-columns-support-ole-db.md)
+# [Имена субъектов-служб в клиентских соединениях](service-principal-names-spns-in-client-connections-ole-db.md)
+# [Поддержка разреженных столбцов](sparse-columns-support-ole-db.md)
 # [Вызов хранимых процедур](stored-procedures-calling.md)
 # [Выполнение хранимых процедур](stored-procedures-running.md)
 # [Хранимые процедуры](stored-procedures.md)

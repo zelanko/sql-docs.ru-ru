@@ -1,16 +1,16 @@
 ---
-title: "Core.sp_create_snapshot (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Core.sp_create_snapshot (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1b0ff5c71ec0516b51040c157eb517fcd0402ca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*аргумент collection_set_uid*"  
  Имеет значение GUID для набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier** без значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*аргумент collector_type_uid*"  
  Идентификатор GUID для типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** без значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collector_types в базе данных msdb.  
   
  [ @machine_name=] '*имя_компьютера*"  
@@ -66,16 +66,16 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @named_instance=] '*именованный_экземпляр*"  
  Имя экземпляра набора элементов сбора. *именованный_экземпляр* — **sysname**, и не имеет значения по умолчанию.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  Уникальный идентификатор, соответствующий журналу событий набора элементов сбора на сервере, который собирал данные. *log_id* — **bigint** без значения по умолчанию. Для получения значения для *log_id*, запросите представление dbo.syscollector_execution_log в базе данных msdb.  
   
- [ @snapshot_id = ] *snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  Уникальный идентификатор для строки, вставляемой в представление core.snapshots. *snapshot_id* — **int** и возвращается как OUTPUT.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Каждый раз, когда пакет передачи начинает загружать данные в хранилище управляющих данных, исполняемый компонент сборщика данных вызывает функцию core.sp_create_snapshot.  
   
  Эта процедура проверяет следующее:  

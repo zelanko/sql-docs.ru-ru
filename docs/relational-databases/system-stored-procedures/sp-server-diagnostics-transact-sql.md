@@ -1,16 +1,16 @@
 ---
-title: "sp_server_diagnostics (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_server_diagnostics (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a3bd7cf97a37e2e01cb1d593ee1370c3d5430162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@repeat_interval**  =] **"***repeat_interval_in_seconds***"**  
+ [ **@repeat_interval** =] **"***repeat_interval_in_seconds***"**  
  Указывает интервал времени, с которым хранимая процедура повторно выполняется для отправки сведений о работоспособности.  
   
  *repeat_interval_in_seconds* — **int** по умолчанию 0. Допустимыми значениями для параметра являются 0 и любые значения, которые больше или равны 5. Чтобы вернуть полные данные, хранимая процедура должна работать не менее 5 секунд. Минимальное значение для выполнения хранимой процедуры в режиме повтора равно 5 секундам.  
@@ -64,7 +64,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Результирующие наборы  
 **sp_server_diagnostics** возвращает следующую информацию  
   
-|столбцом|Data type|Description|  
+|Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
 |**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра на уровне компонента, или для группы доступности Always On:<br /><br /> instance<br /><br /> Always On: группа|  
@@ -87,7 +87,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<Имя группы доступности >**: собирает данные для указанной группы доступности (если component_type = «всегда на: AvailabilityGroup»).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
@@ -248,7 +248,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

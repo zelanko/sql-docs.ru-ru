@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_resource_governor_workload_groups (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_resource_governor_workload_groups (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588bbcb915873ba8a121432a83579b5877df8454
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1836223ec409b0b10b66e6b5df298b52029b6575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |queued_request_count|**int**|Текущее количество запросов, помещенных в очередь. Не допускает значение NULL.|  
 |total_cpu_limit_violation_count|**bigint**|Совокупное количество запросов, превышающих предельное значение, заданное для ЦП. Не допускает значение NULL.|  
 |total_cpu_usage_ms|**bigint**|Совокупное использование ЦП, в миллисекундах, для группы рабочей нагрузки. Не допускает значение NULL.|  
-|max_request_cpu_time_ms|**bigint**|Максимальное использование ЦП, в миллисекундах, для отдельного запроса. Не допускает значение NULL.<br /><br /> **Примечание:** это измеряемое значение, в отличие от request_max_cpu_time_sec, которое является значением настраиваемого параметра. Дополнительные сведения см. в разделе [класс событий превышает пороговое значение ЦП](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|max_request_cpu_time_ms|**bigint**|Максимальное использование ЦП, в миллисекундах, для отдельного запроса. Не допускает значение NULL.<br /><br /> **Примечание:** это измеряемое значение, в отличие от request_max_cpu_time_sec, которое является значением настраиваемого параметра. Дополнительные сведения см. в разделе [Класс событий CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**int**|Текущее количество заблокированных задач. Не допускает значение NULL.|  
 |total_lock_wait_count|**bigint**|Совокупное количество возникших ожиданий блокировок. Не допускает значение NULL.|  
 |total_lock_wait_time_ms|**bigint**|Совокупная продолжительность блокировки в миллисекундах. Не допускает значение NULL.|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 02/03/2018
 |max_dop|**int**|Максимальная степень параллелизма для группы рабочей нагрузки. Для значения по умолчанию 0 используются глобальные параметры. Не допускает значение NULL.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть сохраненные метаданные конфигурации, используйте представление каталога sys.resource_governor_workload_groups.  
   
  При выполнении инструкции ALTER RESOURCE GOVERNOR RESET STATISTICS успешно следующие счетчики сбрасываются: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_ cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count и max_request_grant_memory_kb. statistics_start_time задаются текущей системной даты и времени, другие счетчики сбрасываются в нуль (0).  

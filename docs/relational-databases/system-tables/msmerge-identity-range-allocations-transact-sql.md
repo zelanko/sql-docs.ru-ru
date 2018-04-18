@@ -1,16 +1,16 @@
 ---
-title: "MSmerge_identity_range_allocations (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: MSmerge_identity_range_allocations (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,31 +22,31 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5ad628c5f839c64d88c54e777aca7e0bc52b7e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d40c9b6fa376e4a6903d1d06a735b365e9ef4541
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_identity_range_allocations** таблица используется для отслеживания назначений диапазонов идентификаторов для издателей и подписчиков, для опубликованных статей. Эта таблица хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
 |**publisher_db**|**nvarchar(128)**|Имя базы данных публикации.|  
-|**публикации**|**nvarchar(128)**|Имя публикации.|  
-|**в статье**|**nvarchar(128)**|Имя статьи.|  
+|**Публикации**|**nvarchar(128)**|Имя публикации.|  
+|**В статье**|**nvarchar(128)**|Имя статьи.|  
 |**подписчик**|**nvarchar(128)**|Имя подписчика.|  
 |**subscriber_db**|**nvarchar(128)**|Имя базы данных подписки.|  
-|**is_pub_range**|**bit**|Показывает, назначен ли диапазон идентификаторов издателю.|  
+|**is_pub_range**|**бит**|Показывает, назначен ли диапазон идентификаторов издателю.|  
 |**ranges_allocated**|**tinyint**|Число назначенных диапазонов идентификаторов.|  
 |**range_begin**|**numeric(38)**|Начальное значение диапазона.|  
 |**range_end**|**numeric(38)**|Конечное значение диапазона.|  
@@ -55,8 +55,8 @@ ms.lasthandoff: 11/21/2017
 |**max_used**|**numeric(38)**|Наибольшее использованное значение идентификатора.|  
 |**time_of_allocation**|**datetime**|Время назначения.|  
   
-## <a name="see-also"></a>См. также:  
- [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

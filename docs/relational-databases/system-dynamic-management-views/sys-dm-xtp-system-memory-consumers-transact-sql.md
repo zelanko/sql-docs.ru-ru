@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_xtp_system_memory_consumers (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_system_memory_consumers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 05770068882759cd3fa9d92f047853eb41dae520
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Внутренний идентификатор потребителя памяти.|  
 |memory_consumer_type|**int**|Целое число, представляющее тип потребителя памяти с помощью одного из следующих значений:<br /><br /> 0 — он не должен отображаться. Суммирует использование памяти для двух или более потребителей.<br /><br /> 1 — АССОЦИАТИВНОГО: Отслеживает потребление памяти для резервного блока памяти системы.<br /><br /> 2 - VARHEAP: Отслеживает потребление памяти для кучи переменной длины.<br /><br /> 4 - пул страниц ввода-ВЫВОДА: отслеживает потребление памяти для системного пула страниц, используемых для операций ввода-ВЫВОДА.|  
-|memory_consumer_type_desc|**nvarchar(16)**|Описание типа потребителя памяти.<br /><br /> 0 — он не должен отображаться.<br /><br /> 1 — LOOKASIDE<br /><br /> 2 — VARHEAP<br /><br /> 4 — PGPOOL|  
+|memory_consumer_type_desc|**nvarchar(16) в формате**|Описание типа потребителя памяти.<br /><br /> 0 — он не должен отображаться.<br /><br /> 1 — LOOKASIDE<br /><br /> 2 — VARHEAP<br /><br /> 4 — PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP: <br />Системная куча. Общее назначение. В настоящее время используется только для выделения рабочих элементов сборки мусора.<br />-ИЛИ-<br />Куча резервного блока памяти. Используется резервными блоками памяти, когда количество элементов в списке достигает определенного предела (обычно около 5000 элементов).<br /><br /> PGPOOL: Для системы ввода-ВЫВОДА пулы существует — три разного размера пула страниц системы 4 КБ, 64K системного пула страниц и пул страниц 256 КБ.|  
 |lookaside_id|**bigint**|Идентификатор поставщика конкретных потоков локальной памяти резервного блока.|  
 |pagepool_id|**bigint**|Идентификатор поставщика памяти пула страниц локального потока.|  
@@ -113,6 +113,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления таблиц, оптимизированных для памяти &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

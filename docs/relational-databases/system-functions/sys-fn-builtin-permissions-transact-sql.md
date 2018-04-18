@@ -1,16 +1,16 @@
 ---
-title: "функция sys.fn_builtin_permissions (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: функция sys.fn_builtin_permissions (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_builtin_permissions
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5cfc7b073644f2f780d7af7811cf55056de212ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Эквивалентен DEFAULT.  
   
- **'**<securable_class>**'**  
+ **"**< securable_class >**"**  
  При вызове с именем одного из защищаемых классов, функция sys.fn_builtin_permissions возвращает все разрешения, относящиеся к классу. Аргумент < securable_class > является строковым литералом, требующий кавычек. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
@@ -82,7 +83,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Параметры сортировки сервера|Описание защищаемого класса.|  
 |permission_name|**nvarchar(60)**|Параметры сортировки сервера|Имя разрешения.|  
-|type|**varchar(4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
+|Тип|**varchar(4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
 |covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на данный класс, который содержит в себе другие разрешения данного класса.|  
 |parent_class_desc|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя родительского класса, который содержит текущий класс.|  
 |parent_covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на родительский класс, который содержит в себе другие разрешения класса.|  
@@ -169,7 +170,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -248,7 +249,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF|REFERENCES|CERTIFICATE|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -272,7 +273,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|CERTIFICATE|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -299,7 +300,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -328,20 +329,14 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Функция с табличным значением `sys.fn_builtin_permissions` выдает копию стандартной иерархии разрешений. Такая иерархия включает в себя покрытие разрешений. `DEFAULT` Результирующий набор описывает направленный ациклический график иерархии разрешений, частью которого является корневой (класс = SERVER, разрешение = CONTROL SERVER).  
   
  Функция `sys.fn_builtin_permissions` не принимает связанные параметры.  
   
  Функция `sys.fn_builtin_permissions` возвращает пустой набор, если вызвана с недопустимым именем класса.  
  
-На следующей схеме показаны разрешения и их связи друг с другом. Некоторые из разрешений более высокого уровня (например, `CONTROL SERVER`) указаны несколько раз.   
- 
-![Разрешения для ядра СУБД](../../relational-databases/security/media/database-engine-permissions.PNG) 
-
->[!NOTE]
-> Рисунок в этой статье слишком мал для чтения. Загрузить плакат разрешения ядра базы данных из [ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster).  
-   
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
@@ -371,10 +366,10 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ## <a name="see-also"></a>См. также  
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [Создание СХЕМЫ &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP СХЕМЫ &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

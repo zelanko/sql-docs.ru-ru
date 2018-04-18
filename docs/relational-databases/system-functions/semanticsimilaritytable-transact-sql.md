@@ -1,16 +1,16 @@
 ---
-title: "semanticsimilaritytable (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: semanticsimilaritytable (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ed174cb128d87ed23871f46de3c67e01217a2f88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|Идентификатор столбца, в котором исходный документ использовался при поиске подобных документов.<br /><br /> Способы извлечения имени столбца по идентификатору столбца и идентификатора столбца по имени см. в описании функций COL_NAME и COLUMNPROPERTY.|  
 |**matched_column_id**|**int**|Идентификатор столбца, в котором был найден сходный документ.<br /><br /> Способы извлечения имени столбца по идентификатору столбца и идентификатора столбца по имени см. в описании функций COL_NAME и COLUMNPROPERTY.|  
 |**matched_document_key**|**\***<br /><br /> Этот ключ соответствует типу уникального ключа в исходной таблице.|Значение уникального ключа полнотекстового и семантического извлечения для документа или строки, которые оказались подобными документу, указанному в запросе.|  
-|**score**|**REAL**|Относительное значение подобия этого документа по отношению ко всем другим подобным документам.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где чем выше показатель, тем больше соответствие, а 1.0 — идеальный показатель.|  
+|**Оценка**|**REAL**|Относительное значение подобия этого документа по отношению ко всем другим подобным документам.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где чем выше показатель, тем больше соответствие, а 1.0 — идеальный показатель.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Дополнительные сведения см. в разделе [поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

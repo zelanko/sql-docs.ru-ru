@@ -1,16 +1,16 @@
 ---
-title: "процедура sp_getapplock (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: процедура sp_getapplock (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +62,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  После того как произойдет блокировка приложения, только первые 32 символа могут быть получены в виде обычного текста; остаток будет хэширован.  
   
  [ @LockMode=] '*lock_mode*"  
- Надо ли получить режим блокировки для указанного ресурса. *lock_mode* — **nvarchar(32)** и нет значения по умолчанию. Значение может быть одним из следующих: **Shared**, **обновление**, **IntentShared**, **IntentExclusive**, или **монопольного** .  
+ Надо ли получить режим блокировки для указанного ресурса. Аргумент *lock_mode* имеет тип **nvarchar(32)** и не имеет значения по умолчанию. Значение может быть одним из следующих: **Shared**, **обновление**, **IntentShared**, **IntentExclusive**, или **монопольного** .  
   
  [ @LockOwner=] '*lock_owner*"  
- Владелец данной блокировки, который является *lock_owner* значение при запросе блокировки. *lock_owner* — **nvarchar(32)**. Значение может быть **транзакции** (по умолчанию) или **сеанса**. Когда *lock_owner* значение — **транзакции**, по умолчанию или явно указан, процедура sp_getapplock должна выполняться из транзакции.  
+ Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Когда *lock_owner* значение — **транзакции**, по умолчанию или явно указан, процедура sp_getapplock должна выполняться из транзакции.  
   
  [ @LockTimeout=] '*значение*"  
  Значение времени ожидания блокировки (в миллисекундах). Значение по умолчанию является таким же, как значение, возвращенное@LOCK_TIMEOUT. Значение 0 следует указывать, чтобы при отсутствии немедленного ответа на запрос он возвращал ошибку, а не дожидался блокировки.  
@@ -142,7 +143,7 @@ GO
   
  Используйте динамическое административное представление sys.dm_tran_locks или системную хранимую процедуру sp_lock, чтобы получить сведения о блокировке, или используйте приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для отслеживания блокировок.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -169,9 +170,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_table (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_fulltext_table (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,10 +56,10 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@tabname=**] **'***qualified_table_name***'**  
+ [  **@tabname=**] **"***таблицы не собирались***"**  
  Имя таблицы, состоящее из одной или двух частей. Таблица должна существовать в текущей базе данных. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
   
- [ **@action=**] **'***action***'**  
+ [  **@action=**] **"***действия***"**  
  Действие, которое должно быть выполнено. *Действие* — **nvarchar(50)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -88,7 +89,7 @@ sp_fulltext_table
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  После деактивации полнотекстового индекса для конкретной таблицы существующий полнотекстовый индекс остается до следующего полного заполнения; Тем не менее, этот индекс не используется из-за [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] блокирует запросы к деактивированным таблицам.  
   
  Если таблица активирована вновь, но индекс не заполняется снова, старый индекс доступен для запросов к остававшимся, но не новым столбцам, для которых включено полнотекстовое индексирование. Данные из удаленных столбцов используются в запросах поиска по всем столбцам полнотекстового индекса.  
@@ -141,9 +142,9 @@ GO
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Full-Text Search и семантический поиск хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

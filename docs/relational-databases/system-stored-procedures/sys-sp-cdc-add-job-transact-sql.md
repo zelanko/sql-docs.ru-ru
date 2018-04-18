@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_add_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sp_cdc_add_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_add_job_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f9816967ff9cc8824f4f231a268b203f1c70c92
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58f17196962c2ca05ebf1c2e56ce78621dbb9ac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,17 +61,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  [  **@start_job=** ] *start_job*  
  Флаг, показывающий, следует ли запускать задание сразу после его добавления. *start_job* — **бит** значение по умолчанию 1.  
   
- [  **@maxtrans**  ] = *max_trans*  
+ [ **@maxtrans** ] = *max_trans*  
  Максимальное количество транзакций, обрабатываемое в каждом цикле просмотра. *max_trans* — **int** значение по умолчанию 500. Указываемое значение должно быть положительным целым числом.  
   
  *max_trans* допустим только для заданий записи.  
   
- [  **@maxscans**  ]  **=**  *max_scans*  
+ [ **@maxscans** ] **= *** max_scans*  
  Максимальное количество циклов просмотра, выполняемых для извлечения всех строк из журнала. *max_scans* — **int** значение по умолчанию 10.  
   
  *max_scan* допустим только для заданий записи.  
   
- [  **@continuous**  ]  **=**  *непрерывного*  
+ [ **@continuous** ] **= *** непрерывной*  
  Указывает, должно ли задание отслеживания выполняться постоянно (1) или только один раз (0). *непрерывные* — **бит** значение по умолчанию 1.  
   
  Когда *непрерывного* = 1, [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) задания просматривает журнал и обрабатывает до (*max_trans* \* *max_scans*) транзакции. Задание ожидает в течение указанного количества секунд в *интервал_опроса* перед началом следующего просмотра журнала.  
@@ -80,12 +80,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *непрерывные* допустим только для заданий записи.  
   
- [  **@pollinginterval**  ]  **=**  *интервал_опроса*  
+ [ **@pollinginterval** ] **= *** интервал_опроса*  
  Число секунд между циклами просмотра журнала. *интервал_опроса* — **bigint** значение по умолчанию 5.  
   
  *интервал_опроса* допустимо только для захвата заданий при *непрерывного* имеет значение 1. Если значение указано, то оно не может быть отрицательным или превышать 24 часа. Если указано значение 0, то пауза между операциями просмотра журналов отсутствует.  
   
- [  **@retention**  ]  **=**  *хранения*  
+ [ **@retention** ] **= *** хранения*  
  Число минут, в течение которого строки данных об изменениях необходимо хранить в таблицах изменений. *хранения* — **bigint** значение по умолчанию 4320 (72 часа). Максимальное значение составляет 52494800 (100 лет). Указываемое значение должно быть положительным целым числом.  
   
  *хранения* допустим только для заданий очистки.  
@@ -104,11 +104,11 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Так как задания очистки и отслеживания создаются по умолчанию, данная хранимая процедура используется только в тех случаях, когда задание необходимо повторно создать после выполнения явного удаления.  
   
- Имя задания **cdc.** *< имя_базы_данных >***_cleanup** или **cdc.** *< имя_базы_данных >***_capture**, где *< имя_базы_данных >* имя текущей базы данных. Если задание с таким именем уже существует, к имени добавляется с периодом (**.**) и уникальным идентификатором, например: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Имя задания **cdc. ***< имя_базы_данных >***_cleanup** или **cdc. ***< имя_базы_данных >***_capture**, где *< имя_базы_данных >* имя текущей базы данных. Если задание с таким именем уже существует, к имени добавляется с периодом (**.**) и уникальным идентификатором, например: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Для просмотра текущей конфигурации задания очистки или отслеживания, используйте [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Чтобы изменить конфигурацию задания, используйте [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **db_owner** предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -135,9 +135,9 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [dbo.cdc_jobs &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

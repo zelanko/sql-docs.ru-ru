@@ -1,8 +1,8 @@
 ---
-title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
+title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1623d485132881e7d4df61926dc425257e3113b3
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 56d7c18f3523481343ff3c5c43b130ee04d93dd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  [  **@size=** ] **"*** размер* **"**  
  Задает начальный размер файла. *размер* — **nvarchar(20)**, значение по умолчанию NULL. Укажите целое число (без дробной части). Для указания единицы измерения размера файла (мегабайт или килобайт) можно использовать суффиксы МБ и КБ. По умолчанию — MБ. Минимальное значение размера файла — 512 КБ. Если *размер* не указан, значение по умолчанию — 1 МБ.  
   
- [ **@maxsize=** ] **'***max_size* **'**  
+ [  **@maxsize=** ] **"*** max_size* **"**  
  Максимальный размер, до которого может увеличиться размер файла. *max_size* — **nvarchar(20)**, значение по умолчанию NULL. Укажите целое число (без дробной части). Для указания единицы измерения размера файла (мегабайт или килобайт) можно использовать суффиксы МБ и КБ. По умолчанию — MБ.  
   
  Если *max_size* не указан, файл будет увеличиваться до заполнения диска. Журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows предупреждает администратора, если диск заполнен почти полностью.  

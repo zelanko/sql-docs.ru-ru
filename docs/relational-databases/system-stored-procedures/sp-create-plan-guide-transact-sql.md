@@ -2,7 +2,7 @@
 title: sp_create_plan_guide (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,14 +78,14 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  Указывает, что структура плана применяется к любым запросам, параметризированным в форме, заданной в *statement_text*. Если указан TEMPLATE только PARAMETERIZATION {FORCED | Указание ПРОСТОГО} запроса могут быть указаны в @hints параметра. Дополнительные сведения о структуры планов TEMPLATE см. в разделе [укажите параметризации запросов с помощью планов](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [@module_or_batch =]{ N'[ *schema_name*. ] *object_name*"| N'*batch_text*"| NULL}  
+ [@module_or_batch =] {N'[ *schema_name*. ] *object_name*"| N'*batch_text*"| NULL}  
  Указывает имя объекта, в котором *statement_text* появляется, и текст пакета, в котором *statement_text* отображается. Текст пакета не может содержать инструкцию USE*базы данных* инструкции.  
   
  Структура плана совпадала с пакетом, переданным из приложения *batch_tex*t должно быть предоставлено в том же формате, символ к символу, в котором он передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются. Дополнительные сведения см. в разделе «Примечания».  
   
  [*schema_name*.] *object_name* указывает имя [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимая процедура, скалярная функция, функция из нескольких инструкций табличное или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML, который содержит *statement_text*. Если *имя_схемы* не указан, *schema_name* используется схема текущего пользователя. Если указано значение NULL и @type = «SQL», значение @module_or_batch присвоено значение @stmt. Если @type = "ШАБЛОНА**"**, @module_or_batch должен иметь значение NULL.  
   
- [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ [ @params =] {N' *@parameter_name data_type* [,*.. .n* ]' | NULL}  
  Указывает определения всех параметров, внедренных в *statement_text*. @params применяется, только если одно из следующих установлено значение true:  
   
 -   @type = 'SQL' или 'TEMPLATE'. Если «ШАБЛОН» @params не должен иметь значение NULL.  
@@ -94,11 +94,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *@parameter_name data_type* должны быть указаны в формате, точное оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо с помощью процедуры sp_executesql или отправки после параметризации. Дополнительные сведения см. в разделе «Примечания». Если пакет не содержит параметров, необходимо указать значение NULL. Размер @params ограничивается только доступной памяти на сервере.  
   
- [@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
+ [@hints =] {N'OPTION (*query_hint* [,*.. .n* ])' | N'*XML_showplan*"| NULL}  
  N'OPTION (*query_hint* [,*.. .n* ])  
  Указывает предложение OPTION, чтобы присоединить к запросу, который соответствует @stmt. @hints должен синтаксически совпадает с предложением OPTION инструкции SELECT и может содержать любую допустимую последовательность указаний запроса.  
   
- N'*XML_showplan*'  
+ N'*XML_showplan*"  
  План запроса в формате XML для применения в качестве указания.  
   
  Значение аргумента XML_showplan рекомендуется присвоить переменной, иначе каждый символ одиночной кавычки необходимо предварять дополнительным символом одиночной кавычки. См. пример Д.  

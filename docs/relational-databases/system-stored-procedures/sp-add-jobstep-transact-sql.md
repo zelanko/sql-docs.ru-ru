@@ -1,16 +1,16 @@
 ---
-title: "sp_add_jobstep (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_add_jobstep (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-caps.latest.revision: 
+caps.latest.revision: 80
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c757a3d30bae1e95a8bf7d862daf0e1f0cf6138b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5f3210cc635396eb391baa30cc7aa2ab85a73bfb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,27 +66,27 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =** ] *job_id*  
+ [  **@job_id =** ] *job_id*  
  Идентификационный номер задания, к которому добавляется этап. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **"***job_name***"**  
  Имя задания, к которому добавляется этап. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@step_id =** ] *step_id*  
+ [  **@step_id =** ] *step_id*  
  Порядковый идентификационный номер для шага задания. Идентификационные номера этапа начинаются на **1** и увеличиваются без разрывов. Если этап вставляется в существующую последовательность, порядковые номера меняются автоматически. Значение указывается в том случае, если *step_id* не указан. *step_id*— **int**, значение по умолчанию NULL.  
   
- [ **@step_name =** ] **'***step_name***'**  
+ [  **@step_name =** ] **"***step_name***"**  
  Имя шага этапа. *step_name*— **sysname**, не имеет значения по умолчанию.  
   
- [ **@subsystem =** ] **'***subsystem***'**  
+ [  **@subsystem =** ] **"***подсистемы***"**  
  Подсистема, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы агента для выполнения *команда*. *Подсистема* — **nvarchar(40)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|"**ACTIVESCRIPTING**"|Активный скрипт.<br /><br /> **\*\*Важные\*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|"**ACTIVESCRIPTING**"|Активный скрипт.<br /><br /> **\*\* Важные \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |"**CMDEXEC**"|Команда операционной системы или исполняемая программа.|  
 |"**РАСПРОСТРАНЕНИЯ**"|Задание агента распространения репликации.|  
 |"**МОМЕНТАЛЬНОГО СНИМКА**"|Задание агента моментальных снимков репликации.|  
@@ -96,8 +96,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |"**ANALYSISQUERY**"|Запрос служб Analysis Services (многомерное выражение, расширения интеллектуального анализа данных).|  
 |"**ANALYSISCOMMAND**"|Команда служб Analysis Services (XML для аналитики).|  
 |"**Dts**"|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выполнение пакетов служб|  
-|'**PowerShell**'|Скрипт PowerShell|  
-|"**TSQL**" (по умолчанию)|[!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция|  
+|"**PowerShell**"|Скрипт PowerShell|  
+|"**TSQL**" (по умолчанию)|инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
  [  **@command=** ] **"***команда***"**  
  Для выполнения команды **SQLServerAgent** через *подсистемы*. *команда* — **nvarchar(max)**, значение по умолчанию NULL. Агент SQL Server выполняет замену токенов, что обеспечивает такую же гибкость, что и переменные при написании программ.  
@@ -117,10 +117,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@additional_parameters=** ] **"***параметры***"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Параметры* — **ntext**, значение по умолчанию NULL.  
   
- [ **@cmdexec_success_code =** ] *code*  
+ [  **@cmdexec_success_code =** ] *кода*  
  Значение, возвращаемое **CmdExec** командой подсистемы, чтобы указать, что *команда* выполнена успешно. *код*— **int**, значение по умолчанию **0**.  
   
- [ **@on_success_action=** ] *success_action*  
+ [  **@on_success_action=** ] *success_action*  
  Операция, выполняемая в случае успешного завершения этапа. *success_action*— **tinyint**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
@@ -130,10 +130,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *on_success_step_id*|  
   
- [ **@on_success_step_id =** ] *success_step_id*  
+ [  **@on_success_step_id =** ] *success_step_id*  
  Идентификатор шага данного задания, для выполнения, если выполнение этапа завершится успешно и *success_action*— **4**. *success_step_id*— **int**, значение по умолчанию **0**.  
   
- [ **@on_fail_action=** ] *fail_action*  
+ [  **@on_fail_action=** ] *fail_action*  
  Действие, которое необходимо выполнить, если шаг завершился с ошибкой. *fail_action*— **tinyint**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
@@ -143,7 +143,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *on_fail_step_id*|  
   
- [ **@on_fail_step_id=** ] *fail_step_id*  
+ [  **@on_fail_step_id=** ] *fail_step_id*  
  Идентификатор шага данного задания, для выполнения, если шаг завершился с ошибкой и *fail_action*— **4**. *fail_step_id*— **int**, значение по умолчанию **0**.  
   
  [ **@server =**] **'***server***'**  
@@ -152,22 +152,22 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@database_name=** ] **"***базы данных***"**  
  Имя базы данных, в которой выполняется шаг [!INCLUDE[tsql](../../includes/tsql-md.md)]. *База данных* — **sysname**, значение по умолчанию NULL, в этом случае **master** используется база данных. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Для шага задания ActiveX *базы данных* имя языка скриптов, который используется в этапе.  
   
- [ **@database_user_name=** ] **'***user***'**  
+ [  **@database_user_name=** ] **"***пользователя***"**  
  Имя учетной записи пользователя, которая используется при выполнении шага [!INCLUDE[tsql](../../includes/tsql-md.md)]. *пользователь* — **sysname**, значение по умолчанию NULL. Когда *пользователя* имеет значение NULL, этап выполняется в контексте пользователя владельца задания на *базы данных*.  Агент SQL Server включит этот параметр только в случае, если владелец задания — член роли SQL Server sysadmin. Если это так, то данный шаг Transact-SQL будет выполнен в контексте данного имени пользователя SQL Server. Если владелец задания не является системным администратором SQL Server, то шаг Transact-SQL всегда будет выполняться в контексте имени входа, которому принадлежит это задание и @database_user_name параметр будет игнорироваться.  
   
- [ **@retry_attempts=** ] *retry_attempts*  
+ [  **@retry_attempts=** ] *retry_attempts*  
  Число повторных попыток, предпринимаемых при завершении данного шага с ошибкой. *retry_attempts*— **int**, значение по умолчанию **0**, который указывает на отсутствие повторных попыток.  
   
- [ **@retry_interval=** ] *retry_interval*  
+ [  **@retry_interval=** ] *интервал_повтора*  
  Время ожидания в минутах между попытками повтора. *интервал_повтора*— **int**, значение по умолчанию **0**, которое указывает **0**-минутный интервал.  
   
- [ **@os_run_priority =** ] *run_priority*  
+ [  **@os_run_priority =** ] *run_priority*  
  Зарезервировано.  
   
- [ **@output_file_name=** ] **'***file_name***'**  
+ [  **@output_file_name=** ] **"***имя_файла***"**  
  Имя файла, в котором будут сохранены выходные данные этого шага. *имя_файла*— **nvarchar(200)**, значение по умолчанию NULL. *имя_файла*может включать один или несколько токенов, перечисленных в разделе *команда*. Этот параметр действителен только с командами, запущенными [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] подсистем.  
   
- [ **@flags=** ] *flags*  
+ [  **@flags=** ] *флаги*  
  Параметр, который управляет поведением. *флаги* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -180,10 +180,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|Записать все выходные данные в журнал заданий.|  
 |**64**|Создать событие Windows для использования в качестве сигнала для прерывания шага задания Cmd.|  
   
- [ **@proxy_id** = ] *proxy_id*  
+ [ **@proxy_id** =] *proxy_id*  
  Идентификационный номер учетной записи-посредника, в качестве которой выполняется шаг задания. *proxy_id* — тип **int**, значение по умолчанию NULL. Если не *proxy_id* указано, не *proxy_name* указано и не *имя_пользователя* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **"***proxy_name***"**  
  Имя учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_name* — тип **sysname**, значение по умолчанию NULL. Если не *proxy_id* указано, не *proxy_name* указано и не *имя_пользователя* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -192,7 +192,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_add_jobstep** должна запускаться из **msdb** базы данных.  
   
  Среда SQL Server Management Studio обеспечивает простой и наглядный способ управления заданиями и рекомендуется для создания инфраструктуры заданий и управления ей.  
@@ -236,10 +236,10 @@ GO
 ## <a name="see-also"></a>См. также  
  [Просмотр или изменение заданий](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

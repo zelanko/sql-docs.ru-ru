@@ -1,16 +1,16 @@
 ---
-title: "sysmail_update_principalprofile_sp (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmail_update_principalprofile_sp (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 21479f5ae60a12165bcda38702f540dd3746fa2f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@principal_id** = ] *principal_id*  
+ [ **@principal_id** =] *principal_id*  
  Идентификатор пользователя базы данных или роли в **msdb** базы данных для изменения взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* должен быть указан.  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+ [ **@principal_name** =] **"***principal_name***"**  
  Имя пользователя базы данных или роли в **msdb** базы данных для обновления взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* может быть указан.  
   
- [ **@profile_id** = ] *profile_id*  
+ [ **@profile_id** =] *profile_id*  
  Идентификатор профиля для изменения взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **"***profile_name***"**  
  Имя профиля для изменения взаимосвязи. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@is_default** = ] **'***is_default***'**  
+ [ **@is_default** =] **"***is_default***"**  
  Является ли данный профиль профилем по умолчанию для пользователя базы данных. Пользователь базы данных может иметь только один профиль по умолчанию. *is_default* — **бит**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -69,12 +69,12 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Данная хранимая процедура изменяется в зависимости от того, является ли заданный профиль профилем по умолчанию для пользователя базы данных. Пользователь базы данных может иметь только один личный профиль по умолчанию.  
   
  Когда имя участника взаимосвязи является **открытый** или идентификатор участника для сопоставления **0**, то хранимая процедура изменяет открытый профиль. Может быть только один открытый (public) профиль по умолчанию.  
   
- Когда  **@is_default**  — "**1**' и участник связан с более чем одним профилем, то заданный профиль становится профилем по умолчанию для участника. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
+ Когда **@is_default** — "**1**' и участник связан с более чем одним профилем, то заданный профиль становится профилем по умолчанию для участника. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
   
  Хранимая процедура **sysmail_update_principalprofile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
   
@@ -107,6 +107,6 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Компонент Database Mail хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

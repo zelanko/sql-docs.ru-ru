@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_sessions (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_exec_sessions (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_sessions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: 
+caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/20/2018
 |client_version|**int**|Версия TDS-протокола интерфейса, который используется клиентом для подключения к серверу. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |client_interface_name|**nvarchar(32)**|Имя библиотеки или драйвер, используемый клиентом для обмена данными с сервером. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |security_id|**varbinary(85)**|Идентификатор безопасности Microsoft Windows, связанный с именем входа. Не допускает значение NULL.|  
-|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя входа, под которой выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности имени входа или имени пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
+|login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], под которым выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности имени входа или имени пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
 |nt_domain|**nvarchar(128)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Домен Windows для клиента, если во время сеанса применяется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
 |nt_user_name|**nvarchar(128)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Имя пользователя Windows для клиента, если во время сеанса используется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
 |status|**nvarchar(30)**|Состояние сеанса. Возможные значения:<br /><br /> **Под управлением** -в данный момент выполняется один или несколько запросов<br /><br /> **В ждущем режиме** -в данный момент запросы не выполняются.<br /><br /> **Неактивные** — сеанс был сброшен из-за пулы соединений и теперь находится в состоянии, предшествующем регистрации.<br /><br /> **Preconnect** — сеанс находится в классификаторе регулятора ресурсов.<br /><br /> Не допускает значение NULL.|  
@@ -85,8 +86,8 @@ ms.lasthandoff: 02/20/2018
 |deadlock_priority|**int**|Значение параметра DEADLOCK_PRIORITY для данного сеанса. Не допускает значение NULL.|  
 |row_count|**bigint**|Количество строк, возвращенных сеансом на текущий момент времени. Не допускает значение NULL.|  
 |prev_error|**int**|Идентификатор последней ошибки, возвращенной в данном сеансе. Не допускает значение NULL.|  
-|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Идентификатор безопасности Windows, связанный с параметром original_login_name. Не допускает значение NULL.|  
-|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя входа, которую использует клиент создал данный сеанс. Это может быть имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшее проверку подлинности, имя пользователя домена Windows, прошедшее проверку подлинности, или пользователь автономной базы данных. Обратите внимание, что после первоначального соединения для сеанса может быть выполнено много неявных или явных переключений контекста. Например если [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) используется. Не допускает значение NULL.|  
+|original_security_id|**varbinary(85)**|Идентификатор безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, связанный с параметром original_login_name. Не допускает значение NULL.|  
+|original_login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с помощью которого клиент создал данный сеанс. Это может быть имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшее проверку подлинности, имя пользователя домена Windows, прошедшее проверку подлинности, или пользователь автономной базы данных. Обратите внимание, что после первоначального соединения для сеанса может быть выполнено много неявных или явных переключений контекста. Например если [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) используется. Не допускает значение NULL.|  
 |last_successful_logon|**datetime**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Время последнего успешного входа в систему для имени original_login_name до запуска текущего сеанса.|  
 |last_unsuccessful_logon|**datetime**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Время последнего неуспешного входа в систему для имени original_login_name до запуска текущего сеанса.|  
 |unsuccessful_logons|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число неуспешных попыток входа в систему для имени original_login_name между временем last_successful_logon и временем login_time.|  
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/20/2018
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требует `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлено в `master` базы данных. 
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Когда **включено соответствие стандарту common criteria** включен параметр конфигурации сервера, Статистика входа отображается в следующих столбцах.  
   
 -   last_successful_logon  
@@ -190,7 +191,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

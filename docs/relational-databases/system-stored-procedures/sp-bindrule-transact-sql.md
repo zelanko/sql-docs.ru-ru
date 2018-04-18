@@ -1,16 +1,16 @@
 ---
-title: "sp_bindrule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_bindrule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindrule_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 969ce21685f6a63bbab3e629fbf657710133a67e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: af3a7f2e9d0c891cd416db9eb5449e21e3b8aa06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/27/2017
   Привязывает правило к столбцу или к псевдониму типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Используйте[ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md) вместо него. Ограничения CHECK создаются с помощью ключевого слова CHECK [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) инструкции.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте[ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md) вместо него. Ограничения CHECK создаются с помощью ключевого слова CHECK [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) инструкции.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +56,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
  Имя правила, создаваемого инструкцией CREATE RULE. *правило* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
  [  **@objname=**] **"***object_name***"**  
- Таблица и столбец или тип данных псевдонима, к которым будет привязано правило. Правило не может быть привязано к **текст**, **ntext**, **изображения**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемого пользователем типа CLR или **timestamp**столбца. Правило не может быть привязано к вычисляемому столбцу.  
+ Таблица и столбец или тип данных псевдонима, к которым будет привязано правило. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
   
  *object_name* — **nvarchar(776)** без значения по умолчанию. Если *object_name* — это имя одной части, оно рассматривается как псевдоним типа данных. Если имя двух- или трехкомпонентное, оно рассматривается как таблица и столбец; в случае неудачи разрешения имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы типа данных псевдонима наследуют *правило* Если правило привязано к столбцу напрямую.  
   
@@ -80,7 +81,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  При привязке правила к столбцу, соответствующие сведения добавляются в **sys.columns** таблицы. При привязке правила к псевдониму типа данных, соответствующие сведения добавляются в **sys.types** таблицы.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы привязать правило к столбцу таблицы, необходимо разрешение ALTER на таблицу. Чтобы привязать правило к псевдониму типа данных, необходимо разрешение CONTROL на псевдоним типа данных или разрешение ALTER на схему, к которой принадлежит тип.  
   
 ## <a name="examples"></a>Примеры  
@@ -126,12 +127,12 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
- [УДАЛИТЬ правило &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

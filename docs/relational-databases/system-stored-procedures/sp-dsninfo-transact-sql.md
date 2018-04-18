@@ -1,16 +1,16 @@
 ---
-title: "sp_dsninfo (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_dsninfo (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4882ce3dd87c60f4fceaeb2b770c8879fadf3b78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aa1403655e8ad134f8d214cffcecf916c881bb40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@infotype =**] **"***Тип_информации***"**  
  Возвращаемый тип информации. Если *Тип_информации* не указан или если указано значение NULL, возвращаются все типы информации. *Тип_информации* — **varchar(128)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**: DBMS_NAME**|Указывает имя поставщика источника данных.|  
 |**DBMS_VERSION**|Указывает версию источника данных.|  
@@ -72,7 +72,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**] *dso_type*  
  Тип источника данных. *dso_type* — **int**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Источник данных ODBC|  
 |**3**|OLE DB, источник данных|  
@@ -82,21 +82,21 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Тип данных**|**nvarchar(64)**|Типы данных, например: DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
-|**Значение**|**nvarchar(512)**|Значение связанного типа данных.|  
+|**Value**|**nvarchar(512)**|Значение связанного типа данных.|  
   
 ## <a name="remarks"></a>Замечания  
  **sp_dsninfo** используется во всех типах репликации.  
   
  **sp_dsninfo** извлекает ODBC или OLE DB для источника данных, показывает, является ли база данных может использоваться для репликации или запросы.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_dsninfo**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_enumdsn &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

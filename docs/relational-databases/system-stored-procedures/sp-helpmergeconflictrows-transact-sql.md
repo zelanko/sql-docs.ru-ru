@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergeconflictrows (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpmergeconflictrows (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1658eea769d134222e673269084511ae1222057
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию  **%** . Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например если **MSmerge_conflict_Customers** таблица имеет конфликтующие строки для **WA** и **ЦС** публикаций, передав имя публикации **ЦС**  извлекает конфликты, которые относятся к **ЦС** публикации.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например если **MSmerge_conflict_Customers** таблица имеет конфликтующие строки для **WA** и **ЦС** публикаций, передав имя публикации **ЦС**  извлекает конфликты, которые относятся к **ЦС** публикации.  
   
  [  **@conflict_table=**] **"***conflict_table***"**  
- Имя таблицы конфликтов. *conflict_table* — **sysname**, не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицам конфликтов присваиваются имена форматов с помощью  **MSmerge_conflict_*публикации*_*статьи***, с одной таблицей для каждой опубликованной статьи.  
+ Имя таблицы конфликтов. *conflict_table* — **sysname**, не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицам конфликтов присваиваются имена форматов с помощью **MSmerge_conflict_*публикации*_*статье *** с одной таблицей для каждой публикации статья.  
   
  [  **@publisher=**] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
@@ -68,7 +68,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_helpmergeconflictrows** возвращает результирующий набор, состоящий из структуры базовой таблицы и следующих дополнительных столбцов.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|Источник конфликта.|  
 |**conflict_type**|**int**|Код, указывающий тип конфликта.<br /><br /> **1** = конфликт обновления: конфликт обнаружен на уровне строк.<br /><br /> **2** = конфликт обновления столбца: конфликт обнаружен на уровне столбца.<br /><br /> **3** = обновление удаление побеждает в конфликте с: конфликт разрешен удалением.<br /><br /> **4** = Wins удалить в конфликте с обновлением: удаленный идентификатор rowguid, которая уступает в конфликте, записывается в данную таблицу.<br /><br /> **5** = Вставка не удалось отправить: выполнение вставки со стороны подписчика не может быть применена на издателе.<br /><br /> **6** = Вставка не удалось загрузить: insert от издателя не может быть применена на подписчике.<br /><br /> **7** = удалить не удалось отправить: не удалось загрузить удаления со стороны подписчика на издатель.<br /><br /> **8** = удалить не удалось загрузить: не удалось загрузить удаления со стороны издателя на подписчик.<br /><br /> **9** = обновить не удалось отправить: обновления на подписчике не может быть применена на издателе.<br /><br /> **10** = обновить не удалось загрузить: обновления на стороне издателя оказалось невозможным подписчику.<br /><br /> **12** = логической записи обновления Wins Delete: удаленная логическая запись, которая уступает в конфликте, записывается в данную таблицу.<br /><br /> **13** = логической записи конфликтов вставить обновления: вставка в логическую запись конфликтует с обновлением.<br /><br /> **14** = логической записи удалить Wins в конфликте с обновлением: обновленная логическая запись, которая уступает в конфликте, записывается в данную таблицу.|  
@@ -83,11 +83,11 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Замечания  
  **sp_helpmergeconflictrows** используется в репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных и **replmonitor** в базе данных распространителя могут выполнять процедуру **sp_helpmergeconflictrows**.  
   
-## <a name="see-also"></a>См. также:  
- [Просмотреть сведения о конфликтах для публикаций слиянием &#40; Программирование репликации Transact-SQL &#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+## <a name="see-also"></a>См. также  
+ [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

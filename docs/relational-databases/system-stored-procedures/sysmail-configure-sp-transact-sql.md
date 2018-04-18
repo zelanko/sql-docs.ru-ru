@@ -1,16 +1,16 @@
 ---
-title: "sysmail_configure_sp (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmail_configure_sp (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 934f108783b76e070a15723543cafae59b80b705
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 91e53d75d3cf0b39e44d8832b7f629426f530beb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@parameter_name** = ] **'***parameter_name***'**  
+ [**@parameter_name** =] **"***parameter_name***"**  
  Имя параметра, которое необходимо изменить.  
   
- [**@parameter_value** = ] **'***parameter_value***'**  
+ [**@parameter_value** =] **"***parameter_value***"**  
  Новое значение параметра.  
   
- [ **@description**  =] **"***описание***"**  
+ [**@description** =] **"***описание***"**  
  Описание параметра.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -63,7 +63,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Компонент Database Mail использует следующие параметры:  
   
 ||||  
@@ -74,7 +74,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DatabaseMailExeMinimumLifeTime*|Минимальное время в секундах, в течение которого остается активным процесс внешней почты. Когда компонент Database Mail рассылает большое количество сообщений, необходимо увеличить это значение, чтобы поддержать этот компонент в активном состоянии и избежать дополнительной нагрузки из-за частых остановок и запусков.|**600**|  
 |*DefaultAttachmentEncoding*|Кодировка для вложений электронной почты, используемая по умолчанию.|MIME|  
 |*MaxFileSize*|Максимальный размер вложения в байтах.|**1000000**|  
-|*ProhibitedExtensions*|Разделенный запятыми список расширений файлов, которые невозможно отправить в виде вложений в сообщение электронной почты.|**exe,dll,vbs,js**|  
+|*ProhibitedExtensions*|Разделенный запятыми список расширений файлов, которые невозможно отправить в виде вложений в сообщение электронной почты.|**exe, dll, vbs, js**|  
 |*LoggingLevel*|Укажите, какие сообщения записываются в журнал компонента Database Mail. Одно из следующих цифровых значений:<br /><br /> 1 — Обычный режим. Регистрируются только ошибки.<br /><br /> 2 — Расширенный режим. Регистрируются ошибки, предупреждения и информационные сообщения.<br /><br /> 3 — Подробный режим. Регистрируются ошибки, предупреждения, информационные сообщения, сообщения об успешном выполнении и дополнительные внутренние сообщения. Используйте данный режим для диагностики.|**2**|  
   
  Хранимая процедура **sysmail_configure_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
@@ -103,7 +103,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_help_configure_sp &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
- [Компонент Database Mail хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
+ [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

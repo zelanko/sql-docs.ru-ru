@@ -2,7 +2,7 @@
 title: sys.dm_db_file_space_usage (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65be93c18aed0f9c03ea781ee7de3069c4e99698
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75bc2c0256697c030fa369487407483de63c0c62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/05/2018
 |total_page_count|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее число страниц в файле.|  
 |allocated_extent_page_count|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее количество страниц в несвободных экстентах файла.|  
 |unallocated_extent_page_count|**bigint**|Общее количество страниц в свободных экстентах файла.<br /><br /> Неиспользованные страницы в размещенные экстенты не включаются.|  
-|version_store_reserved_page_count|**bigint**|Общее количество страниц в однородных экстентах, размещенных для хранилища версий. Страницы хранилища версий никогда не размещаются из смешанных экстентов.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Дополнительные сведения см. в разделе [sys.dm_tran_version_store &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
+|version_store_reserved_page_count|**bigint**|Общее количество страниц в однородных экстентах, размещенных для хранилища версий. Страницы хранилища версий никогда не размещаются из смешанных экстентов.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Дополнительные сведения см. в разделе [sys.dm_tran_version_store & #40; Transact-SQL & #41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
 |user_object_reserved_page_count|**bigint**|Общее количество страниц, выделенных из однородных экстентов для пользовательских объектов в базе данных. Неиспользуемые страницы из распределенного экстента включаются в счет.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Можно использовать столбец total_pages в [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) каталога представлению для возврата счетчика зарезервированных страниц каждой единицы размещения в объекте пользователя. Однако учтите, что столбец total_pages включает IAM-страницы.|  
 |internal_object_reserved_page_count|**bigint**|Общее количество страниц в однородном экстенте, размещенных для внутренних объектов в файле. Неиспользуемые страницы из распределенного экстента включаются в счет.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Не существует представления каталога или объекта DMO, возвращающего счетчик страниц каждого внутреннего объекта.|  
 |mixed_extent_page_count|**bigint**|Общее количество размещенных и освобожденных страниц в размещенном смешанном экстенте. Смешанный экстент содержит страницы, размещенные для различных объектов. Этот счетчик включает все IAM-страницы в файле.|

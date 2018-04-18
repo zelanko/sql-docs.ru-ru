@@ -1,16 +1,16 @@
 ---
-title: "sp_article_validation (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_article_validation (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed9bf6e4375c3b7afb18ffa938ae29e8d1e9e48e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8bfe42f440f6311bf9a2badc368b8fd13811c91e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@full_or_fast=**] *full_or_fast*  
  Метод, применяемый для подсчета числа строк. *full_or_fast* — **tinyint**, и может принимать одно из следующих значений.  
   
-|**Значение**|**Description**|  
+|**Value**|**Description**|  
 |---------------|---------------------|  
 |**0**|Выполняет полный подсчет при помощи функции COUNT(*).|  
 |**1**|Выполняет быстрый подсчет из **sysindexes.rows**. Подсчет строк в **sysindexes** быстрее, чем подсчет строк в фактической таблице. Тем не менее **sysindexes** обновляется, и количество строк может оказаться неточным.|  
@@ -86,7 +86,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@reserved=**] *зарезервированные*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@publisher** =] **"***издатель***"**  
+ [ **@publisher**=] **"***издатель***"**  
  Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -100,14 +100,14 @@ sp_article_validation [ @publication = ] 'publication'
   
  **sp_article_validation** вызывает проверки сбор сведений о указанной статьи и отправляет запрос на проверку в журнал транзакций. Когда агент распространителя получает этот запрос, он сравнивает сведения для проверки, указанные в запросе, с таблицей подписчика. Результаты проверки отображаются в мониторе репликации и в виде предупреждений агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только пользователи, имеющие разрешение SELECT ALL на исходную таблицу для проверяемой статьи, можно выполнить **sp_article_validation**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проверка реплицированных данных](../../relational-databases/replication/validate-replicated-data.md)   
- [sp_marksubscriptionvalidation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

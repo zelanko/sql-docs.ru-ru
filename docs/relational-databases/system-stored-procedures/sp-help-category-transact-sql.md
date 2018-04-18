@@ -1,16 +1,16 @@
 ---
-title: "sp_help_category (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_category (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7e013914fea52e8325acdb76d4aee10d7edd9ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@class=**] **'***class***'**  
+ [  **@class=**] **"***класс***"**  
  Класс, о котором запрашиваются сведения. *Класс* — **varchar(8)**, со значением по умолчанию **задания**. *Класс* может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -58,34 +58,34 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ПРЕДУПРЕЖДЕНИЯ**|Выдает сведения о категории предупреждений.|  
 |**ОПЕРАТОР**|Выдает сведения о категории операторов.|  
   
- [ **@type=** ] **'***type***'**  
+ [  **@type=** ] **"***типа***"**  
  Тип категории, для которой запрашиваются сведения. *Тип* — **varchar(12)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**ЛОКАЛЬНЫЕ**|Категория локальных заданий.|  
+|**LOCAL**|Категория локальных заданий.|  
 |**MULTI-СЕРВЕРА**|Категория многосерверных заданий.|  
 |**NONE**|Категория для класса, отличного от **задания**.|  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **"***имя***"**  
  Имя категории, для которой запрашиваются сведения. *имя* — **sysname**, значение по умолчанию NULL.  
   
- [ **@suffix=** ] *suffix*  
+ [  **@suffix=** ] *суффикс*  
  Указывает, является ли **category_type** столбца в результирующем наборе является Идентификатором или именем. *суффикс* — **бит**, значение по умолчанию **0**. **1** показывает **category_type** как имя, и **0** показано, как идентификатор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Когда  **@suffix**  — **0**, **sp_help_category** возвращает следующий результирующий набор:  
+ Когда **@suffix** — **0**, **sp_help_category** возвращает следующий результирующий набор:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Идентификатор категории|  
-|**category_type**|**tinyint**|Тип категории:<br /><br /> **1** = локальная<br /><br /> **2** = Multiserver<br /><br /> **3** = нет|  
+|**category_type**|**tinyint**|Тип категории:<br /><br /> **1** = локальная<br /><br /> **2** = Многосерверная<br /><br /> **3** = нет|  
 |**name**|**sysname**|Имя категории|  
   
- Когда  **@suffix**  — **1**, **sp_help_category** возвращает следующий результирующий набор:  
+ Когда **@suffix** — **1**, **sp_help_category** возвращает следующий результирующий набор:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -93,7 +93,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Тип категории. Один из **ЛОКАЛЬНОГО**, **МНОГОСЕРВЕРНОЙ**, или **NONE**|  
 |**name**|**sysname**|Имя категории|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_help_category** должна запускаться из **msdb** базы данных.  
   
  Если никакие аргументы не указаны, результирующий набор содержит сведения обо всех категориях заданий.  
@@ -137,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

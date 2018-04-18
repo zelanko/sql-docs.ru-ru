@@ -2,7 +2,7 @@
 title: sys.dm_os_wait_stats (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ GO
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
 
-|type |Описание| 
+|Тип |Описание| 
 |-------------------------- |--------------------------| 
 |ABR |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -793,7 +794,7 @@ GO
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Имеет место в процессе синхронизации кэша статей репликации. В процессе таких ожиданий средство чтения журнала репликаций простаивает, а DDL-инструкции к опубликованной таблице блокируются.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Имеет место в процессе синхронизации данных о версии схемы репликации. Это состояние имеет место в случаях, когда DDL-инструкции выполняются над реплицируемым объектом, а средство чтения журнала создает или использует схему с управлением версиями на основе вхождения DDL.| 
+|REPL_SCHEMA_ACCESS |Имеет место в процессе синхронизации данных о версии схемы репликации. Это состояние имеет место в случаях, когда DDL-инструкции выполняются над реплицируемым объектом, а средство чтения журнала создает или использует схему с управлением версиями на основе вхождения DDL. Состязание может отображаться на этот тип ожидания, если имеется много опубликованных баз данных на один издатель при репликации транзакций и очень активных опубликованных баз данных.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

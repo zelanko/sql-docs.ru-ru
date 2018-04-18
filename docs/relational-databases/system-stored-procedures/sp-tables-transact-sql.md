@@ -1,16 +1,16 @@
 ---
-title: "sp_tables (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_tables (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95a0bae2722c519cea3e1dac14c633fe582ed5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,9 +64,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущий пользователь является владельцем таблицы с указанным именем, возвращаются ее столбцы. Если пользователь не указан, а текущий пользователь не является владельцем таблицы с заданным именем, процедура ищет таблицу с заданным именем, которая принадлежит владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
  [  **@table_qualifier=** ] **"***квалификатор***"**  
- Имя квалификатора таблицы. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор***.** *владельца***.** *имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+ Имя квалификатора таблицы. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор***.*** владелец***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
- [ **,** [  **@table_type=** ] **«"***тип***"**, **"**типа **'"** ]  
+ [ **,** [  **@table_type=** ] **«"***тип***"**, **"**типа**"»** ]  
  Список значений, разделенных запятой, в котором представлены сведения обо всех таблицах с указанными табличными типами. К ним относятся **таблицы**, **SYSTEMTABLE**, и **ПРЕДСТАВЛЕНИЕ**. *Тип* — **varchar(100)**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -79,7 +80,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Имя квалификатора таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. Это поле может иметь значение NULL.|  
 |**TABLE_OWNER**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
@@ -94,7 +95,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  **sp_tables** эквивалентно **SQLTables** в ODBC. Возвращенные результаты сортируются по **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**, и **TABLE_NAME**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
 ## <a name="examples"></a>Примеры  
@@ -118,7 +119,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>В. Возврат списка объектов, к которым можно выполнять запросы в текущем окружении  
  Следующий пример возвращает список объектов, которые могут быть запросами в текущем окружении.  
@@ -139,8 +140,8 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.synonyms &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

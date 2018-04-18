@@ -1,16 +1,16 @@
 ---
-title: "sp_help_jobstep (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_jobstep (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f091fbfa1183b2decb8628984dd730ac4cd2ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@job_id =**] **'***job_id***'**  
  Идентификационный номер задачи, для которого возвращаются сведения о задании. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@step_id =**] *step_id*  
+ [  **@step_id =**] *step_id*  
  Идентификатор этапа задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **"***step_name***"**  
  Имя шага задания. *step_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@suffix =**] *suffix*  
+ [  **@suffix =**] *суффикс*  
  Флаг, указывающий, является ли текстовое описание добавляется к **флаги** столбца в выходных данных. *суффикс*— **бит**, по умолчанию **0**. Если *суффикс* — **1**, то добавляется описание.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -90,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Максимальное количество повторных попыток выполнения команды (в случае сбоев).|  
 |**retry_interval**|**int**|Интервал (в минутах) между повторными попытками.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**nvarchar(200)**|Файл, в команду, выполнение которой следует записывать вывод ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
+|**output_file_name**|**Nvarchar(200)**|Файл, в команду, выполнение которой следует записывать вывод ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
 |**last_run_outcome**|**int**|Результат последнего запуска этапа:<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = Повтор<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность этапа в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число повторов команды при последнем запуске этапа.|  
@@ -98,7 +98,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Время начала последнего выполнения этапа.|  
 |**proxy_id**|**int**|Учетная запись-посредник для шага задания.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_help_jobstep** в **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -142,7 +142,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   

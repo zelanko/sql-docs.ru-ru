@@ -1,16 +1,16 @@
 ---
-title: "sp_lock (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_lock (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_lock_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_lock
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c3aab77a72b27d3e461ef4f68377897c5545051
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 353ddc7d2972c5cda150768379e39c5eb5757bac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Сообщает сведения о блокировках.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Для получения сведений о блокировках в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используйте [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) динамическое административное представление.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Для получения сведений о блокировках в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], используйте [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) динамическое административное представление.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,29 +60,29 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- **Sp_lock** результирующий набор содержит по одной строке на каждую блокировку, заданных в  **@spid1**  и  **@spid2**  параметров. Если ни одна из  **@spid1**  , ни  **@spid2**  задан, результирующий набор блокировки для всех сеансов в настоящее время активны в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ **Sp_lock** результирующий набор содержит по одной строке на каждую блокировку, заданных в **@spid1** и **@spid2** параметров. Если ни одна из **@spid1** , ни **@spid2** задан, результирующий набор блокировки для всех сеансов в настоящее время активны в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Идентификатор SPID**|**smallint**|Числовой идентификатор сеанса компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для процесса, запрашивающего блокировку.|  
-|**DBID**|**smallint**|Числовой идентификатор базы данных, в которой удерживается блокировка. Для идентификации базы данных можно использовать функцию DB_NAME().|  
+|**spid**|**smallint**|Числовой идентификатор сеанса компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для процесса, запрашивающего блокировку.|  
+|**dbid**|**smallint**|Числовой идентификатор базы данных, в которой удерживается блокировка. Для идентификации базы данных можно использовать функцию DB_NAME().|  
 |**ObjId**|**int**|Числовой идентификатор объекта, на который удерживается блокировка. Для идентификации объекта можно использовать функцию OBJECT_NAME() в связанной базе данных. Значение 99 является особым, и означает блокировку на одной из системных страниц, используемых для записи распределенных страниц в базе данных.|  
 |**IndId**|**smallint**|Числовой идентификатор индекса, для которого удерживается блокировка.|  
 |**Тип**|**nchar(4)**|Типы блокировки:<br /><br /> RID = Блокировка на одну строку в таблице, задаваемой идентификатором строки (RID — row ID);<br /><br /> KEY = Блокировка внутри индекса, которая защищает диапазон ключей в сериализуемых транзакциях;<br /><br /> PAG = Блокировка данных или индексной страницы;<br /><br /> EXT = Блокировка на экстент.<br /><br /> TAB = Блокировка на целую таблицу, включая все данные и индексы;<br /><br /> DB = Блокировка на базу данных;<br /><br /> FIL = Блокировка на файл базы данных;<br /><br /> APP = Блокировка на ресурс приложения;<br /><br /> MD = Блокировка на метаданные или данные о каталоге;<br /><br /> HBT = Блокировка на кучу или индекс сбалансированного дерева (B-Tree). Эти сведения неполные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> AU = Блокировка на единицу распределения (allocation unit). Эти сведения неполные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Ресурс**|**nchar(32)**|Значение, определяющее блокируемый ресурс. Формат значения зависит от типа ресурса определяемого в **тип** столбца:<br /><br /> **Тип** значение: **ресурсов** значение<br /><br /> RID: Идентификатор в формате fileid: pagenumber: rid, где fileid определяет файл, содержащий страницу, pagenumber определяет страницу, содержащую строку, а rid определяет заданную строку на странице. fileid соответствует **file_id** столбца в **sys.database_files** представления каталога.<br /><br /> КЛЮЧ: Шестнадцатеричное число, используются внутренними механизмами [!INCLUDE[ssDE](../../includes/ssde-md.md)].<br /><br /> PAG: Число в формате fileid: pagenumber, где fileid определяет файл, содержащий страницу, а pagenumber определяет страницу.<br /><br /> EXT: Число, определяющее первую страницу в экстенте. Число в формате fileid:pagenumber.<br /><br /> ВКЛАДКА: Сведения не предоставляются, так как таблица уже определена в **ObjId** столбца.<br /><br /> База данных: Сведения не предоставляются, так как база данных уже определена в **dbid** столбца.<br /><br /> FIL: Идентификатор файла, который соответствует **file_id** столбца в **sys.database_files** представления каталога.<br /><br /> Приложение: Уникальный идентификатор блокируемого ресурса приложения. В формате DbPrincipleId:\<первыми двумя до 16 символов строки ресурса >\<значение хэша >.<br /><br /> MD: зависит от типа ресурса. Дополнительные сведения см. в описании **resource_description** столбца в [sys.dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br /><br /> HBT: Сведения не предоставляются. Используйте **sys.dm_tran_locks** динамическому административному представлению вместо него.<br /><br /> Австралия: Сведения не предоставляются. Используйте **sys.dm_tran_locks** динамическому административному представлению вместо него.|  
+|**Ресурс**|**nchar(32)**|Значение, определяющее блокируемый ресурс. Формат значения зависит от типа ресурса определяемого в **тип** столбца:<br /><br /> **Тип** значение: **ресурсов** значение<br /><br /> RID: Идентификатор в формате fileid: pagenumber: rid, где fileid определяет файл, содержащий страницу, pagenumber определяет страницу, содержащую строку, а rid определяет заданную строку на странице. fileid соответствует **file_id** столбца в **sys.database_files** представления каталога.<br /><br /> КЛЮЧ: Шестнадцатеричное число, используются внутренними механизмами [!INCLUDE[ssDE](../../includes/ssde-md.md)].<br /><br /> PAG: Число в формате fileid: pagenumber, где fileid определяет файл, содержащий страницу, а pagenumber определяет страницу.<br /><br /> EXT: Число, определяющее первую страницу в экстенте. Число в формате fileid:pagenumber.<br /><br /> ВКЛАДКА: Сведения не предоставляются, так как таблица уже определена в **ObjId** столбца.<br /><br /> База данных: Сведения не предоставляются, так как база данных уже определена в **dbid** столбца.<br /><br /> FIL: Идентификатор файла, который соответствует **file_id** столбца в **sys.database_files** представления каталога.<br /><br /> Приложение: Уникальный идентификатор блокируемого ресурса приложения. В формате DbPrincipleId:\<первыми двумя до 16 символов строки ресурса >\<значение хэша >.<br /><br /> MD: зависит от типа ресурса. Дополнительные сведения см. в описании **resource_description** столбца в [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br /><br /> HBT: Сведения не предоставляются. Используйте **sys.dm_tran_locks** динамическому административному представлению вместо него.<br /><br /> Австралия: Сведения не предоставляются. Используйте **sys.dm_tran_locks** динамическому административному представлению вместо него.|  
 |**Режим**|**nvarchar(8)**|Запрашиваемый режим блокировки. Возможны следующие варианты:<br /><br /> NULL = Блокировки нет. Играет роль заполнителя.<br /><br /> Sch-S = Блокировка стабильности схемы. Заверяет, что элемент схемы, такой как таблица или индекс, не будет удален до тех пор, пока сеанс связи удерживает блокировку стабильности схемы на данный элемент схемы.<br /><br /> Sch-М = Блокировка изменения схемы. Должен поддерживаться любым сеансом связи, во время которого предполагается изменить схему данного ресурса. Заверяет, что другие сеансы не имеют ссылок на обозначенный объект.<br /><br /> S = Коллективная блокировка. Удерживающему сеансу предоставлен коллективный доступ к ресурсу.<br /><br /> U = Блокировка обновления. Указывает блокировку обновления, полученную на ресурсы, которые со временем могут быть обновлены. Используется для предотвращения общей формы взаимоблокировки, которая возникает, когда множество сеансов блокируют ресурсы для потенциального обновления в последующее время;<br /><br /> X = Монопольная блокировка. Удерживающему сеансу предоставлен исключительный доступ к ресурсу.<br /><br /> IS = Блокировка с намерением коллективного доступа. Указывает намерение поместить блокировки типа S на некоторые подчиненные ресурсы в иерархии блокировок.<br /><br /> IU = Блокировка с намерением обновления. Указывает намерение поместить блокировки типа U на некоторые подчиненные ресурсы в иерархии блокировок.<br /><br /> IX = Блокировка с намерением монопольного доступа. Указывает намерение поместить блокировки типа X на некоторые подчиненные ресурсы в иерархии блокировок.<br /><br /> SIU = Коллективная блокировка с намерением обновления. Указывает коллективный доступ к ресурсу с намерением получения блокировок обновления на подчиненные ресурсы в иерархии блокировок.<br /><br /> SIX = Коллективная блокировка с намерением монопольного доступа. Указывает коллективный доступ к ресурсу с намерением получения монопольных блокировок на подчиненные ресурсы в иерархии блокировок.<br /><br /> UIX = Блокировка обновления с намерением монопольного доступа. Указывает блокировку обновления ресурса с намерением получения монопольных блокировок на подчиненные ресурсы в иерархии блокировок.<br /><br /> BU = Блокировка массового обновления. Используется для массовых операций.<br /><br /> RangeS_S = Блокировка разделяемого диапазона ключей и разделяемых ресурсов. Указывает на последовательный просмотр диапазона.<br /><br /> RangeS_U = Блокировка разделяемого диапазона ключей и обновляемых ресурсов. Указывает на последовательное сканирование обновления.<br /><br /> RangeI_N = Блокировка вставляемого диапазона ключей и NULL-ресурсов. Используется для проверки диапазонов, перед тем как вставить новый ключ в индекс.<br /><br /> RangeI_S = блокировка преобразования диапазона ключей. Создается перекрытием блокировок RangeI_N и S;<br /><br /> RangeI_U = Блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и U;<br /><br /> RangeI_X = Блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и X;<br /><br /> RangeX_S = блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и RangeS_S.<br /><br /> RangeX_U = Блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и RangeS_U.<br /><br /> RangeX_X = Блокировка монопольного диапазона ключей и монопольных ресурсов. Блокировка диалога, используемая во время обновления ключа в диапазоне.|  
 |**Состояние**|**nvarchar(5)**|Состояние запроса блокировки:<br /><br /> CNVRT: Блокировка, преобразованная в другом режиме, но преобразование заблокирован другим процессом, удерживающим блокировку в конфликтном режиме.<br /><br /> Предоставление прав: Блокировка получена.<br /><br /> Ожидание: Блокировка заблокирована другим процессом, удерживающим блокировку в конфликтном режиме.|  
   
 ## <a name="remarks"></a>Замечания  
  Пользователи могут управлять блокировкой операций чтения следующим образом.  
   
--   Используя SET TRANSACTION ISOLATION LEVEL для указания уровня блокировки для сеанса. Синтаксис и ограничения см. в разделе [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+-   Используя SET TRANSACTION ISOLATION LEVEL для указания уровня блокировки для сеанса. Синтаксис и ограничения см. в разделе [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Использование табличных указаний блокировки, чтобы задать уровень блокировки для индивидуальной ссылки на таблицу в предложении FROM. Синтаксис и ограничения см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Использование табличных указаний блокировки, чтобы задать уровень блокировки для индивидуальной ссылки на таблицу в предложении FROM. Синтаксис и ограничения см. в разделе [табличные подсказки &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Все распределенные транзакции, не связанные с сеансом, являются потерянными транзакциями. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] назначает всем потерянным транзакциям значение SPID равное -2, что упрощает выявление блокирующих распределенных транзакций. Дополнительные сведения см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW SERVER STATE.  
   
 ## <a name="examples"></a>Примеры  
@@ -107,14 +107,14 @@ EXEC sp_lock 53;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.dm_tran_locks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [Db_name &#40; Transact-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)   
- [KILL &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.dm_tran_locks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [DB_NAME (Transact-SQL)](../../t-sql/functions/db-name-transact-sql.md)   
+ [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)   
+ [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)   
+ [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.dm_os_tasks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys.dm_os_threads &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  
+ [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  
   
   

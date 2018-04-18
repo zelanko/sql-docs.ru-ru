@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_maintenance_plan_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_delete_maintenance_plan_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_maintenance_plan_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_maintenance_plan_job
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd3e8c20bb7d093bd57a924ab2914b6ff12b8051
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8c2b0691e7faae6238dd3c61fade76220fb6c3b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **"***plan_id***"**  
  Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
  [ **@job_id =**] **'***job_id***'**  
@@ -61,7 +61,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_delete_maintenance_plan_job** должна запускаться из **msdb** базы данных.  
   
  Если все задания удалены из плана обслуживания, рекомендуется выполнить процедуру **sp_delete_maintenance_plan_db** для удаления из плана оставшихся баз данных.  
@@ -78,6 +78,6 @@ EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC'
   
 ## <a name="see-also"></a>См. также  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [План обслуживания базы данных хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

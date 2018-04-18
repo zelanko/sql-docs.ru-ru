@@ -2,7 +2,7 @@
 title: sp_bindefault (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name* может содержать квадратные скобки **[]** как идентификаторы с разделителями. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **"***аргумента futureonly_flag***"**  
  Используется только в случае, если значение по умолчанию привязывается к псевдониму типа данных. *Аргумент futureonly_flag* — **varchar(15)** значение по умолчанию NULL. Если значение этого параметра **futureonly**, существующие столбцы этого типа данных не могут наследовать новое значение по умолчанию. Этот аргумент никогда не используется при привязке значения по умолчанию к столбцу. Если *аргумента futureonly_flag* имеет значение NULL, новое значение по умолчанию привязывается ко всем столбцам с псевдонимом типа данных, в настоящее время имеют по умолчанию или используют существующее значение по умолчанию псевдонима типа данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

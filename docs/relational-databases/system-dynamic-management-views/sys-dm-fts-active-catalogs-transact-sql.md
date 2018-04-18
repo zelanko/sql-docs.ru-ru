@@ -2,7 +2,7 @@
 title: sys.dm_fts_active_catalogs (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4cf1900b52953f296a931f40f850b94a1243158
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8104491ddcdf6c63e872da7a70374f8475cb1a62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/05/2018
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, содержащей активный полнотекстовый каталог.|  
 |**catalog_id**|**int**|Идентификатор активного полнотекстового каталога.|  
-|**memory_address**|**varbinary(8)**|Адрес буферов памяти, выделенных для операции заполнения, относящейся к полнотекстовому каталогу.|  
+|**адрес_памяти**|**varbinary(8)**|Адрес буферов памяти, выделенных для операции заполнения, относящейся к полнотекстовому каталогу.|  
 |**name**|**nvarchar(128)**|Имя активного полнотекстового каталога.|  
 |**is_paused**|**бит**|Указывает, было ли приостановлено заполнение активного полнотекстового каталога.|  
 |**status**|**int**|Текущее состояние полнотекстового каталога. Это может быть:<br /><br /> 0 = инициализация<br /><br /> 1 = готовность<br /><br /> 2 = пауза<br /><br /> 3 = временная ошибка<br /><br /> 4 = необходимость повторного подключения<br /><br /> 5 = выключение<br /><br /> 6 = приостановлен для резервного копирования<br /><br /> 7 = резервное копирование осуществлено через каталог<br /><br /> 8 = каталог поврежден|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/05/2018
 |**manual_population_count**|**int**|Количество таблиц с выполняющимся заполнением вручную для этого полнотекстового каталога.|  
 |**full_incremental_population_count**|**int**|Количество таблиц с выполняющимся полным или добавочным заполнением для этого полнотекстового каталога.|  
 |**row_count_in_thousands**|**int**|Оценка числа строк (в тысячах) в полнотекстовых индексах этого полнотекстового каталога.|  
-|**is_importing**|**бит**|Указывает, выполняется ли в настоящее время импорт полнотекстового каталога:<br /><br /> 1 = выполняется импорт каталога.<br /><br /> 2 = импорт каталога не выполняется.|  
+|**is_importing впервые**|**бит**|Указывает, выполняется ли в настоящее время импорт полнотекстового каталога:<br /><br /> 1 = выполняется импорт каталога.<br /><br /> 2 = импорт каталога не выполняется.|  
   
 ## <a name="remarks"></a>Замечания  
  Столбец is_importing впервые впервые появился в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  

@@ -2,7 +2,7 @@
 title: sp_posttracertoken (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedur+I741es
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79102a0a4c9e0b2122b23f01a7e7808c0d610967
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b020aa95aa4f07732843cf360048e63f1d99f7cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,8 @@ sp_posttracertoken [ @publication = ] 'publication'
  [ **@publication**=] **"***публикации***"**  
  Имя публикации, для которой измеряется задержка. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@tracer_token_id=** ] *tracer_token_id***выходных данных**  
- Идентификатор вставляемого трассировочного токена. *tracer_token_id* — **int** значение по умолчанию NULL и является ВЫХОДНЫМ параметром. Это значение может использоваться для выполнения [sp_helptracertokenhistory &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) или [sp_deletetracertokenhistory &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) без предварительного выполнения [sp_helptracertokens &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+ [  **@tracer_token_id=** ] *tracer_token_id *** выходных данных**  
+ Идентификатор вставляемого трассировочного токена. *tracer_token_id* — **int** значение по умолчанию NULL и является ВЫХОДНЫМ параметром. Это значение может использоваться для выполнения [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) или [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) без выполнения [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
  [  **@publisher=** ] **"***издатель***"**  
  Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL и не должен быть задан для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -68,7 +68,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>См. также  

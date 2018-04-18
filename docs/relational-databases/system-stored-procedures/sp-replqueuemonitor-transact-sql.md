@@ -1,16 +1,16 @@
 ---
-title: "sp_replqueuemonitor (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_replqueuemonitor (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd29cdd9e22873dd7d10db99078f25ce7e15d55f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d996f735cb105215deb6de44cc56533a42fe6c3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher**  =] **"***издатель***"**  
+ [ **@publisher** =] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. На этом сервере должна быть настроена публикация. Значение NULL означает для всех издателей.  
   
- [  **@publisherdb**  =] **"***publisher_db***"** ]  
+ [ **@publisherdb** =] **"***publisher_db***"** ]  
  Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Значение NULL означает для всех баз данных публикаций.  
   
- [  **@publication**  =] **"***публикации***"** ]  
+ [ **@publication** =] **"***публикации***"** ]  
  Имя публикации. *Публикация*— **sysname**, значение по умолчанию NULL. Значение NULL означает для всех публикаций.  
   
- [  **@tranid**  =] **"***tranid***"** ]  
+ [ **@tranid** =] **"***tranid***"** ]  
  Идентификатор транзакции. *tranid*— **sysname**, значение по умолчанию NULL. Значение NULL означает для всех транзакций.  
   
  [**@queuetype=** ] **"***queuetype***"** ]  
@@ -77,10 +77,10 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Замечания  
  **sp_replqueuemonitor** используется в репликации моментальных снимков или репликации транзакций, использующей очередь обновляемых подписок. Сообщения очереди, не содержащие команд SQL или являющиеся частью команды SQL, не отображаются.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_replqueuemonitor**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

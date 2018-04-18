@@ -1,16 +1,16 @@
 ---
-title: "sp_table_validation (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_table_validation (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ sp_table_validation [ @table = ] 'table'
  Если агент распространителя выполняет **sp_table_validation**, указывает ли агент распространителя завершен немедленно после завершения проверки. *shutdown_agent* — **бит**, значение по умолчанию **0**. Если **0**, агент репликации не завершает работу. Если **1**, возникает ошибка 20578, а агент репликации получает сигнал завершить. Этот параметр учитывается при **sp_table_validation** выполняется непосредственно пользователем.  
   
  [  **@table_name =**] *имя_таблицы*  
- Табличное имя представления, используемого для выходных сообщений. *имя_таблицы* — **sysname**, значение по умолчанию  **@table** .  
+ Табличное имя представления, используемого для выходных сообщений. *имя_таблицы* — **sysname**, значение по умолчанию **@table**.  
   
- [  **@column_list** =] **"***column_list***"**  
+ [ **@column_list**=] **"***column_list***"**  
  Список столбцов, которые должны использоваться в функции проверки контрольной суммы. *column_list* — **nvarchar(4000)**, значение по умолчанию NULL. Включает проверку статей слияния для указания списка столбцов, в который не входят вычисляемые столбцы или столбцы с отметками времени.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -105,14 +105,14 @@ sp_table_validation [ @table = ] 'table'
   
  Значения с плавающей запятой большой вероятностью создают различия контрольной суммы, если символьное **bcp** использовался, что происходит, если публикация имеет не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков. Это связано с минимальными и неизбежными различиями в точности при преобразовании в символьный режим и из символьного режима.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения **sp_table_validation**, необходимо иметь разрешения SELECT для проверяемой таблицы.  
   
-## <a name="see-also"></a>См. также:  
- [Контрольная сумма &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Контрольная сумма &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

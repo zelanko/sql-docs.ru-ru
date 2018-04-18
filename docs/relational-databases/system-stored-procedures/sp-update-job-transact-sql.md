@@ -1,16 +1,16 @@
 ---
-title: "sp_update_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_update_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Идентификатор обновляемого задания. *Аргумент job_id*— **uniqueidentifier**.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **"***job_name***"**  
  Имя задания. *job_name*— **nvarchar(128)**.  
   
 > **Примечание:** либо *job_id* или *job_name* должно быть указано, но не оба аргумента одновременно.  
   
- [ **@new_name =**] **'***new_name***'**  
+ [  **@new_name =**] **"***новое_имя***"**  
  Новое имя задания. *новое_имя*— **nvarchar(128)**.  
   
  [  **@enabled =**] *включена*  
@@ -80,13 +80,13 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@description =**] **"***описание***"**  
  Описание задания. *Описание* — **nvarchar(512)**.  
   
- [ **@start_step_id =**] *step_id*  
+ [  **@start_step_id =**] *step_id*  
  Идентификатор первого этапа, выполняемого в ходе задания. *step_id*— **int**.  
   
  [  **@category_name =**] **"***категории***"**  
  Категория задания. *Категория*— **nvarchar(128)**.  
   
- [ **@owner_login_name =**] **'***login***'**  
+ [  **@owner_login_name =**] **"***входа***"**  
  Имя входа, которое владеет заданием. *Имя входа*— **nvarchar(128)** только члены **sysadmin** предопределенной роли сервера могут менять владельца задания.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
@@ -108,25 +108,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [ **@notify_level_page =**] *page_level*  
  Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level*— **int**. *page_level*использует те же значения, как *eventlog_level*.  
   
- [ **@notify_email_operator_name =**] **'***operator_name***'**  
+ [  **@notify_email_operator_name =**] **"***operator_name***"**  
  Имя оператора, которому отправляется сообщение электронной почты при *email_level* достигается. *имя_электронной_почты* — **nvarchar(128)**.  
   
- [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
+ [  **@notify_netsend_operator_name =**] **"***netsend_operator***"**  
  Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)**.  
   
- [ **@notify_page_operator_name =**] **'***page_operator***'**  
+ [  **@notify_page_operator_name =**] **"***page_operator***"**  
  Имя оператора, которому отправляется страница. *page_operator* — **nvarchar(128)**.  
   
  [ **@delete_level =**] *delete_level*  
  Указывает, когда необходимо удалить задание. *delete_value*— **int**. *delete_level*использует те же значения, как *eventlog_level*.  
   
- [ **@automatic_post =**] *automatic_post*  
+ [  **@automatic_post =**] *automatic_post*  
  Зарезервировано.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_update_job** должна запускаться из **msdb** базы данных.  
   
  **sp_update_job** изменяет только те параметры, для которых параметр заданы значения. Если параметр пропущен, сохраняется текущая настройка.  

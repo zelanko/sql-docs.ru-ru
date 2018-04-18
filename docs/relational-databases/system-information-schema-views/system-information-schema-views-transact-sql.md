@@ -1,16 +1,16 @@
 ---
-title: "Представления информационной схемы системы (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Представления информационной схемы системы (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-information-schema-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,19 +21,19 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 361e6385eb14d6ea3ae2826c1b8aa184c167e50a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 13c8c27fc41e567bd7fab020b537a6d0b8d081f7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Представления информационной схемы системы (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Представление информационной схемы является одним из способов получения метаданных, которые предоставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Представления информационной схемы обеспечивают внутренний, системный, не зависящий от таблиц обзор метаданных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Представления информационной схемы позволяют приложениям правильно работать, несмотря на значительные изменения, внесенные в базовые системные таблицы. Представления информационной схемы, включенные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], соответствуют стандартному определению ISO для INFORMATION_SCHEMA.  
   
@@ -44,8 +44,8 @@ ms.lasthandoff: 11/21/2017
   
 |Имя SQL Server|Соответствует эквивалентному стандартному имени SQL|  
 |---------------------|-----------------------------------------------|  
-|База данных|Каталог|  
-|схема|схема|  
+|база данных|Каталог|  
+|Схема|Схема|  
 |Объект|Объект|  
 |определяемый пользователем тип данных|Домен|  
   
@@ -75,8 +75,8 @@ WHERE TABLE_NAME = N'Product';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Системные представления &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+## <a name="see-also"></a>См. также  
+ [Системные представления &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

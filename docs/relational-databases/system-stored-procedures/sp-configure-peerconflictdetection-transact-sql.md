@@ -1,8 +1,8 @@
 ---
-title: sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs
+title: sp_configure_peerconflictdetection (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fed4cb47795554df26deb08f496edba86b5a4d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a3a79fda8a5fa7ce29713e9c47ab8d136f24c1ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication=] '*publication*'  
+ [ @publication=] '*публикации*"  
  Имя публикации, для которой должна быть выполнена настройка обнаружения конфликтов. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [ @action=] '*действия*"  
@@ -61,23 +61,23 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**enable**|Включает обнаружение конфликтов применительно к публикации.|  
-|**disable**|Отключает обнаружение конфликтов применительно к публикации.|  
+|**Включить**|Включает обнаружение конфликтов применительно к публикации.|  
+|**Отключить**|Отключает обнаружение конфликтов применительно к публикации.|  
 |NULL (по умолчанию)||  
   
- [ @originator_id= ] *originator_id*  
+ [ @originator_id=] *originator_id*  
  Указывает идентификатор в одноранговой топологии. *originator_id* — **int**, значение по умолчанию NULL. Этот идентификатор используется для обнаружения конфликтов, если *действия* равно **включить**. Задайте положительное, ненулевое значение идентификатора, которое никогда не использовалось в топологии. Список использованных идентификаторов запросите в системной таблице [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
  [ @conflict_retention=] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*' ]  
+ [ @continue_onconflict=] '*continue_onconflict*"]  
  Определяет, продолжает ли агент распространителя обрабатывать изменения после обнаружения конфликта. *continue_onconflict* — **nvarchar(5)** со значением по умолчанию FALSE.  
   
 > [!CAUTION]  
 >  Рекомендуется использовать значение по умолчанию FALSE. Если присвоить этому аргументу значение TRUE, агент распространителя будет пытаться обеспечить конвергентность данных в топологии, применяя конфликтующую строку из узла с наибольшим значением идентификатора инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local= ] '*local*'  
+ [ @local=] '*локального*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @timeout=] *время ожидания*  

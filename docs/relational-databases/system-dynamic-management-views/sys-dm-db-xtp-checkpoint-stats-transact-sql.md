@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_xtp_checkpoint_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3fe44cb92654807147c96cd4becc1a3489ae3081
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,10 +45,10 @@ ms.lasthandoff: 02/03/2018
 SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]существенно отличается от более поздних версий и рассматриваются ниже в разделе, в [SQL Server 2014](#bkmk_2014).**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] существенно отличается от более поздних версий и рассматриваются ниже в разделе, в [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]и более поздние версии  
- В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, начиная с версии  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздние версии  
+ В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, начиная с версии **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
@@ -89,7 +90,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|Объем данных, который был сериализован. |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, для  **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
+ В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, для **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
@@ -113,6 +114,6 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
  Необходимо разрешение `VIEW DATABASE STATE` на сервере.  
   
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления таблиц, оптимизированных для памяти &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

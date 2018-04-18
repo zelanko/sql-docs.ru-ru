@@ -1,16 +1,16 @@
 ---
-title: "sp_mergecleanupmetadata (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_mergecleanupmetadata (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f13d51e68d864410bab57b2723fd2e89cac18dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication =** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию  **%** , которого очищаются метаданные для всех публикаций. При явном указании публикации она должна существовать.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, которого очищаются метаданные для всех публикаций. При явном указании публикации она должна существовать.  
   
  [  **@reinitialize_subscriber =** ] **"***подписчика***"**  
  Указывает, необходимо ли повторно инициализировать подписчик. *подписчик* — **nvarchar(5)**, может быть **TRUE** или **FALSE**, значение по умолчанию **TRUE**. Если **TRUE**, подписки помечаются для повторной инициализации. Если **FALSE**, не помечены для повторной инициализации подписки.  
@@ -65,9 +65,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 > [!NOTE]  
 >  Если имеется несколько публикаций в базе данных, и один из этих публикаций использует бесконечный срок хранения публикации (**@retention**=**0**), выполнение  **sp_mergecleanupmetadata** не очищает метаданные для базы данных отслеживания изменений репликации слиянием. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности.  
   
- При выполнении хранимой процедуры, можно выбрать повторную инициализацию подписчиков, задав  **@reinitialize_subscriber**  параметр **TRUE** (по умолчанию) или **FALSE**. Если **sp_mergecleanupmetadata** выполняется с  **@reinitialize_subscriber**  равным **TRUE**, моментальный снимок применяется на подписчике, даже если подписка была создана без исходного моментального снимка (например, если данные моментального снимка и схема были вручную применены или уже существовали на подписчике). Значение параметра равно **FALSE** следует использовать с осторожностью, так как при публикации повторно не инициализируется, необходимо убедиться, что синхронизации данных на издателе и подписчике.  
+ При выполнении хранимой процедуры, можно выбрать повторную инициализацию подписчиков, задав **@reinitialize_subscriber** параметр **TRUE** (по умолчанию) или **FALSE**. Если **sp_mergecleanupmetadata** выполняется с **@reinitialize_subscriber** равным **TRUE**, моментальный снимок применяется на подписчике, даже если подписка была создана без исходного моментального снимка (например, если данные моментального снимка и схема были вручную применены или уже существовали на подписчике). Значение параметра равно **FALSE** следует использовать с осторожностью, так как при публикации повторно не инициализируется, необходимо убедиться, что синхронизации данных на издателе и подписчике.  
   
- Независимо от значения  **@reinitialize_subscriber** , **sp_mergecleanupmetadata** завершится неудачей, если выполняются процессы слияния, пытающиеся передать изменения на издатель или переиздающий подписчик на время вызова хранимой процедуры.  
+ Независимо от значения **@reinitialize_subscriber**, **sp_mergecleanupmetadata** завершится неудачей, если выполняются процессы слияния, пытающиеся передать изменения на издатель или переиздающий подписчик на время вызова хранимой процедуры.  
   
  **Выполнение процедуры sp_mergecleanupmetadata с @reinitialize_subscriber = TRUE:**  
   
@@ -121,14 +121,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_mergecleanupmetadata**.  
   
  Для использования данной хранимой процедуры на издателе должен использоваться [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Подписчики должны работать под управлением либо [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 с пакетом обновления 2.  
   
-## <a name="see-also"></a>См. также:  
- [MSmerge_genhistory &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

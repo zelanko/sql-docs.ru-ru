@@ -1,16 +1,16 @@
 ---
-title: "sp_register_custom_scripting (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_register_custom_scripting (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16274b71d1ce14b2a143e5d6ce723bcb64cbaebd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b0f249f4c70ec6892ca6cb576dad0d70c60527b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@type**  =] **"***тип***"**  
+ [ **@type** =] **"***типа***"**  
  Тип регистрируемой пользовательской хранимой процедуры или скрипта. *Тип* — **varchar(16)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**Вставка**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
-|**обновление**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
-|**удалить**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
+|**insert**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
+|**Обновление**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
+|**delete**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
 |**custom_script**|Скрипт, выполняющийся в конце триггера языка DDL.|  
   
- [  **@value** =] **"***значение***"**  
+ [ **@value**=] **"***значение***"**  
  Имя хранимой процедуры или имя и полностью определенный путь к файлу скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] для регистрации. *значение* — **nvarchar(1024)**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
@@ -67,10 +67,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  Когда значение *тип* является **custom_script**, имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] Ожидался файл сценария. В противном случае *значение* должно быть именем регистрируемой хранимой процедуры.  
   
- [  **@publication** =] **"***публикации***"**  
+ [ **@publication**=] **"***публикации***"**  
  Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. *Публикация* — **sysname**, значение по умолчанию **NULL**.  
   
- [  **@article** =] **"***статьи***"**  
+ [ **@article**=] **"***статьи***"**  
  Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. *статья* — **sysname**, значение по умолчанию **NULL**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -81,10 +81,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  Эта хранимая процедура должна выполняться до внесения изменений в схему реплицируемой таблицы. Дополнительные сведения об использовании этой хранимой процедуры см. в разделе [повторное создание пользовательских процедур транзакций для отражения изменений схем](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных могут выполнять **sp_ register_custom_scripting**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_unregister_custom_scripting &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

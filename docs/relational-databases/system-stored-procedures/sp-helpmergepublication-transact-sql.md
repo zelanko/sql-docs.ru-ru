@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergepublication (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpmergepublication (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e346c8555438ba3c8a26772c2f130ae0a4bed48
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication  **=**  ] **"***публикации***"**  
- Имя публикации. *Публикация*— **sysname**, значение по умолчанию  **%** , который возвращает сведения обо всех публикациях слиянием в текущей базе данных.  
+ [ @publication **=** ] **"***публикации***"**  
+ Имя публикации. *Публикация*— **sysname**, значение по умолчанию **%**, который возвращает сведения обо всех публикациях слиянием в текущей базе данных.  
   
- [ @found  **=**  ] **"***найти***"** выходных данных  
+ [ @found **=** ] **"***найти***"** выходных данных  
  Флаг для указания возвращаемых строк. *найти*— **int** и является ВЫХОДНЫМ параметром, значение по умолчанию NULL. **1** указывает, что публикация найдена. **0** указывает, что публикация не найдена.  
   
- [ @publication_id  **=** ] **"***publication_id***"** выходных данных  
+ [ @publication_id **=**] **"***publication_id***"** выходных данных  
  Идентификационный номер публикации. *publication_id* — **uniqueidentifier** и является ВЫХОДНЫМ параметром, значение по умолчанию NULL.  
   
- [ @reserved  **=** ] **"***зарезервированные***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*зарезервированные* — **nvarchar(20)**, значение по умолчанию NULL.  
+ [ @reserved **=**] **"***зарезервированные***"**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *зарезервированные* — **nvarchar(20)**, значение по умолчанию NULL.  
   
- [ @publisher  **=**  ] **"***издатель***"**  
+ [ @publisher **=** ] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [@publisher_db  **=**  ] **"***publisher_db***"**  
+ [@publisher_db **=** ] **"***publisher_db***"**  
  Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -90,12 +90,12 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_jobid|**binary(16)**|Идентификатор задания агента моментальных снимков. Для получения записи задания моментального снимка в [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) системной таблицы, необходимо преобразовать шестнадцатеричное значение в **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Указывает, разрешена ли публикация через Интернет. Если **1**, файлы синхронизации для публикации помещаются в `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` каталога. Пользователю необходимо создать каталог для протокола FTP. Если **0**, публикация не включена для доступа к Интернету.|  
 |dynamic_filter|**int**|Указывает, используется ли параметризованный фильтр строк. **0** означает параметризованный фильтр строк не используется.|  
-|has_subscription|**bit**|Указывает, имеет ли публикация хотя бы одну подписку. **0** означает в настоящее время нет подписок на эту публикацию.|  
-|snapshot_in_default_folder|**bit**|Указывает, хранятся ли файлы моментальных снимков в папке по умолчанию.<br /><br /> Если **1**, файлы моментальных снимков находятся в папке по умолчанию.<br /><br /> Если **0**, файлы моментальных снимков хранятся в расположении, указанном в **alt_snapshot_folder**. Это место может находиться на другом сервере, на сетевом диске или на съемном носителе (например на CD-ROM или на съемном диске). Сохранить файлы моментальных снимков можно также на FTP сайте, чтобы подписчик мог впоследствии их загрузить.<br /><br /> Примечание: Этот параметр может иметь значение true и по-прежнему иметь место **alt_snapshot_folder** параметра. Такое сочетание указывает, что файлы моментальных снимков хранятся как в месте размещения по умолчанию, так и в альтернативных местах размещения.|  
+|has_subscription|**бит**|Указывает, имеет ли публикация хотя бы одну подписку. **0** означает в настоящее время нет подписок на эту публикацию.|  
+|snapshot_in_default_folder|**бит**|Указывает, хранятся ли файлы моментальных снимков в папке по умолчанию.<br /><br /> Если **1**, файлы моментальных снимков находятся в папке по умолчанию.<br /><br /> Если **0**, файлы моментальных снимков хранятся в расположении, указанном в **alt_snapshot_folder**. Это место может находиться на другом сервере, на сетевом диске или на съемном носителе (например на CD-ROM или на съемном диске). Сохранить файлы моментальных снимков можно также на FTP сайте, чтобы подписчик мог впоследствии их загрузить.<br /><br /> Примечание: Этот параметр может иметь значение true и по-прежнему иметь место **alt_snapshot_folder** параметра. Такое сочетание указывает, что файлы моментальных снимков хранятся как в месте размещения по умолчанию, так и в альтернативных местах размещения.|  
 |alt_snapshot_folder|**nvarchar(255)**|Указывает местоположение альтернативной папки для моментального снимка.|  
 |pre_snapshot_script|**nvarchar(255)**|Задает указатель **.sql** файл, который агент слияния выполняет до запуска любых реплицируемых объектов скрипты при применении моментального снимка на подписчике.|  
 |post_snapshot_script|**nvarchar(255)**|Задает указатель **.sql** агент слияния выполняет после всех других файлов скриптов и объектов репликации во время начальной синхронизации данных были применены.|  
-|compress_snapshot|**bit**|Указывает, что моментальный снимок, записываемый **alt_snapshot_folder** расположение сжимается в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB.|  
+|compress_snapshot|**бит**|Указывает, что моментальный снимок, записываемый **alt_snapshot_folder** расположение сжимается в [!INCLUDE[msCoName](../../includes/msconame-md.md)] формате CAB.|  
 |ftp_address|**sysname**|Сетевой адрес службы FTP распространителя. Указывает расположение файлов моментальных снимков публикации, которые требуются агенту слияния.|  
 |ftp_port|**int**|Номер порта службы FTP распространителя. **ftp_port** имеет значение по умолчанию **21**. Указывает расположение файлов моментальных снимков публикации, которые требуются агенту слияния.|  
 |ftp_subdirectory|**nvarchar(255)**|Указывает расположение файлов моментальных снимков, которые требуются агенту слияния, если моментальный снимок доставляется при помощи FTP.|  
@@ -106,22 +106,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_synctoalternate|**int**|Показывает, допустимо ли для данного издателя наличие альтернативного участника синхронизации. Значение **0** означает, что участник синхронизации не разрешено.|  
 |validate_subscriber_info|**nvarchar(500)**|Выводит список функций, с помощью которых возвращаются сведения о подписчике, и проверяет правильность критериев параметризованной фильтрации строк на подписчике. Позволяет убедиться в том, что данные в каждом слиянии секционированы согласованным образом.|  
 |backward_comp_level|**int**|Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] С ПАКЕТОМ ОБНОВЛЕНИЯ 1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] С ПАКЕТОМ ОБНОВЛЕНИЯ 2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_activedirectory|**bit**|Указывает, опубликованы ли сведения о публикации в Active Directory. Значение **0** означает сведения о публикации не доступен из Active Directory.<br /><br /> Этот аргумент устарел и поддерживается только для обратной совместимости скриптов. Сведения о публикации больше не могут быть добавлены в Active Directory.|  
+|publish_to_activedirectory|**бит**|Указывает, опубликованы ли сведения о публикации в Active Directory. Значение **0** означает сведения о публикации не доступен из Active Directory.<br /><br /> Этот аргумент устарел и поддерживается только для обратной совместимости скриптов. Сведения о публикации больше не могут быть добавлены в Active Directory.|  
 |max_concurrent_merge|**int**|Число параллельных процессов слияния. Если **0**, неограниченное число параллельных процессов слияния в любой момент времени.|  
 |max_concurrent_dynamic_snapshots|**int**|Максимальное количество параллельных сеансов моментальных снимков фильтрованных данных, которые могут выполняться для публикации слиянием. Если **0**, не ограничено максимальное количество сеансов моментальных снимков отфильтрованных данных, одновременно выполняемых для публикации в любой момент времени.|  
 |use_partition_groups|**int**|Определяет, используются ли предварительно вычисляемые секции. Значение **1** означает, что предварительно вычисляемые секции используются.|  
 |num_of_articles|**int**|Количество статей в публикации.|  
 |replicate_ddl|**int**|Указывает, реплицируются ли изменения схемы для опубликованных таблиц. Значение **1** означает, что изменения схемы реплицируются.|  
 |publication_number|**smallint**|Номер, присвоенный этой публикации.|  
-|allow_subscriber_initiated_snapshot|**bit**|Определяет, могут ли подписчики инициировать процесс создания моментальных снимков отфильтрованных данных. Значение **1** означает, что подписчики могут инициировать процесс создания моментального снимка.|  
-|allow_web_synchronization|**bit**|Определяет, разрешена ли для публикации веб-синхронизация. Значение **1** означает, что веб-синхронизация разрешена.|  
+|allow_subscriber_initiated_snapshot|**бит**|Определяет, могут ли подписчики инициировать процесс создания моментальных снимков отфильтрованных данных. Значение **1** означает, что подписчики могут инициировать процесс создания моментального снимка.|  
+|allow_web_synchronization|**бит**|Определяет, разрешена ли для публикации веб-синхронизация. Значение **1** означает, что веб-синхронизация разрешена.|  
 |web_synchronization_url|**nvarchar(500)**|URL-адрес в Интернете, используемый для веб-синхронизации.|  
-|allow_partition_realignment|**bit**|Указывает, отсылаются ли подписчику операции удаления, когда изменение строки на издателе приводит к изменению секции. Значение **1** означает, что операции удаления отсылаются подписчику.  Дополнительные сведения см. в разделе [sp_addmergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
+|allow_partition_realignment|**бит**|Указывает, отсылаются ли подписчику операции удаления, когда изменение строки на издателе приводит к изменению секции. Значение **1** означает, что операции удаления отсылаются подписчику.  Дополнительные сведения см. в разделе [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
 |retention_period_unit|**tinyint**|Определяет единицу измерения для указания срока хранения. Может иметь одно из следующих значений:<br /><br /> **0** = сутки;<br /><br /> **1** = Неделя<br /><br /> **2** = Месяц<br /><br /> **3** = Год|  
-|has_downloadonly_articles|**bit**|Указывает, являются ли какие-либо из статей публикации статьями, предназначенными только для загрузки. Значение **1** означает, что статьи только для загрузки.|  
+|has_downloadonly_articles|**бит**|Указывает, являются ли какие-либо из статей публикации статьями, предназначенными только для загрузки. Значение **1** означает, что статьи только для загрузки.|  
 |decentralized_conflicts|**int**|Указывает, сохраняются ли на подписчике записи, вызвавшие конфликт. Значение **0** показывает конфликтные записи не хранятся на подписчике. Значение 1 означает, что записи, вызвавшие конфликтную ситуацию, сохраняются на подписчике.|  
 |generation_leveling_threshold|**int**|Задает число изменений, которые содержатся в поколении. Поколение — это набор изменений, переданных издателю или подписчику|  
-|automatic_reinitialization_policy|**bit**|Указывает, передаются ли изменения с подписчика перед автоматической повторной инициализацией. Значение **1** указывает, что изменения передаются с подписчика перед автоматической повторной инициализацией. Значение 0 означает, что изменения не передаются перед автоматической повторной инициализацией.|  
+|automatic_reinitialization_policy|**бит**|Указывает, передаются ли изменения с подписчика перед автоматической повторной инициализацией. Значение **1** указывает, что изменения передаются с подписчика перед автоматической повторной инициализацией. Значение 0 означает, что изменения не передаются перед автоматической повторной инициализацией.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -129,17 +129,17 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Замечания  
  Процедура sp_helpmergepublication используется в репликации слиянием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Члены списка доступа к публикации могут выполнять для нее процедуру sp_helpmergepublication. Члены предопределенной роли базы данных db_owner в базе данных публикации могут выполнять процедуру sp_helpmergepublication для получения сведений обо всех публикациях.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_helpmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-helpmergepublication-_1.sql)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

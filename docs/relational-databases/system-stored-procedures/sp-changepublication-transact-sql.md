@@ -1,16 +1,16 @@
 ---
-title: "sp_changepublication (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_changepublication (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f05323e102e4f68d7281dd517eaee00abfcdcdc7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8db735195ad0667944ca3e3710e629791662fd7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   
-|Свойство|Значение|Description|  
+|property|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|На данную публикацию могут создаваться анонимные подписки и *immediate_sync* также должен быть **true**. Невозможно изменить для одноранговых публикаций.|  
 ||**false**|На данную публикацию нельзя создавать анонимные подписки. Невозможно изменить для одноранговых публикаций.|  
@@ -85,7 +85,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Sub wins**|Политика устранения конфликтов, возникающих при обновлении подписчиков, при которой преимущество имеет подписчик. Это свойство можно изменить только при отсутствии активных подписок. Не поддерживается для издателей Oracle.|  
 |**conflict_retention**||**int** , указывающее срок хранения конфликтов в днях. Значение по умолчанию — 14 суток. **0** означает, что очистка конфликтных записей необходимо. Не поддерживается для издателей Oracle.|  
 |**Описание**||Необязательная запись описания публикации.|  
-|**enabled_for_het_sub**|**true**|Позволяет публикации поддерживать подписчиков, не являющихся подписчиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** нельзя изменить, если существуют подписки на публикацию. Необходимо выполнить [хранимых процедур репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) соблюдать следующие требования перед установкой **enabled_for_het_sub** значение true:<br /> - **allow_queued_tran** должно быть **false**.<br /> - **allow_sync_tran** должно быть **false**.<br /> Изменение **enabled_for_het_sub** для **true** может изменить существующие параметры публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**enabled_for_het_sub**|**true**|Позволяет публикации поддерживать подписчиков, не являющихся подписчиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** нельзя изменить, если существуют подписки на публикацию. Необходимо выполнить [хранимых процедур репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) соблюдать следующие требования перед установкой **enabled_for_het_sub** значение true:<br /> - **allow_queued_tran** должно быть **false**.<br /> - **allow_sync_tran** должно быть **false**.<br /> Изменение **enabled_for_het_sub** для **true** может изменить существующие параметры публикации. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Публикация не поддерживает подписчиков, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|Публикация через Интернет разрешена, поэтому для передачи файлов моментальных снимков подписчику может быть использован протокол FTP. Файлы синхронизации для публикации помещаются в следующем каталоге: C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* не может иметь значение NULL. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Публикация через Интернет не разрешена. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -106,20 +106,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||Указывает расположение файла скрипта на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], который агент распространителя запускает перед применением всех остальных скриптов и данных объектов репликации во время исходной синхронизации.|  
 |**publish_to_ActiveDirectory**|**true**|Этот аргумент устарел и поддерживается только для обратной совместимости скриптов. Больше нельзя добавлять данные публикации в службу [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Удаляет сведения о публикации из службы Active Directory.|  
-|**queue_type**|**SQL**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство можно изменить только при отсутствии активных подписок.<br /><br /> Примечание: Поддержка с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений прекратила работу. При указании значения **msmq** для *значение* приводит к ошибке.|  
-|**repl_freq**|**непрерывные**|Публикует выход всех транзакций, основанных на журнале.|  
-||**моментальный снимок**|Публикует только запланированные события синхронизации.|  
+|**queue_type**|**sql**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство можно изменить только при отсутствии активных подписок.<br /><br /> Примечание: Поддержка с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений прекратила работу. При указании значения **msmq** для *значение* приводит к ошибке.|  
+|**repl_freq**|**Непрерывные**|Публикует выход всех транзакций, основанных на журнале.|  
+||**Моментальный снимок**|Публикует только запланированные события синхронизации.|  
 |**replicate_ddl**|**1**|Реплицируются инструкции языка определения данных (DDL), которые выполняются на издателе. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Репликация инструкций DDL не производится. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Невозможно отключить репликацию изменений схемы при использовании одноранговой репликации.|  
 |**replicate_partition_switch**|**true**|Инструкции ALTER TABLE…SWITCH, которые выполняются по отношению к опубликованной базе данных, должны реплицироваться на подписчики. Этот параметр действителен, только если *allow_partition_switch* имеет значение TRUE. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
 ||**false**|Инструкции ALTER TABLE…SWITCH не должны реплицироваться на подписчики.|  
-|**хранения**||**int** представляющее срок хранения в часах, действия подписки. Если подписка не активна в течение указанного срока хранения, она удаляется.|  
+|**Хранения**||**int** представляющее срок хранения в часах, действия подписки. Если подписка не активна в течение указанного срока хранения, она удаляется.|  
 |**snapshot_in_defaultfolder**|**true**|Файлы моментального снимка сохранены в папке для моментальных снимков по умолчанию. Если *alt_snapshot_folder*также указано, файлы моментальных снимков хранятся в альтернативном месте и по умолчанию.|  
 ||**false**|Файлы моментальных снимков хранятся в расположении, указанном в *alt_snapshot_folder*.|  
-|**status**|**активный**|Данные публикации становятся доступными подписчику сразу после создания публикации. Не поддерживается для издателей Oracle.|  
+|**status**|**Активный**|Данные публикации становятся доступными подписчику сразу после создания публикации. Не поддерживается для издателей Oracle.|  
 ||**Неактивные**|Данные публикации недоступны подписчику сразу после создания публикации. Не поддерживается для издателей Oracle.|  
-|**sync_method**|**собственный**|При синхронизации подписок выполняется массовое копирование таблиц в собственном режиме.|  
-||**символ**|При синхронизации подписок выполняется массовое копирование таблиц в символьном режиме.|  
+|**sync_method**|**native**|При синхронизации подписок выполняется массовое копирование таблиц в собственном режиме.|  
+||**character**|При синхронизации подписок выполняется массовое копирование таблиц в символьном режиме.|  
 ||**Параллельные**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 ||**Concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**taskid**||Это свойство устарело и больше не поддерживается.|  
@@ -138,7 +138,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0** указывает, что изменения в статье не вызывают повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   - **1** означает, что изменения в статье приводят существующую подписку для повторной инициализации и дает разрешение произвести повторную инициализацию подписки.  
   
-[  **@publisher**  =] **"***издатель***"**  
+[ **@publisher** =] **"***издатель***"**  
  Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
   
   > [!NOTE]  
@@ -174,14 +174,14 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_changepublication](../../relational-databases/replication/codesnippet/tsql/sp-changepublication-tra_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changepublication**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

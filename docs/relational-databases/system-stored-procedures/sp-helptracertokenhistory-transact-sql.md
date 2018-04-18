@@ -1,16 +1,16 @@
 ---
-title: "sp_helptracertokenhistory (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helptracertokenhistory (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ad9a67f66222ff87753056ea1b27b2ad83e6e8d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1763672f446560e06686c46af3cc060045500ed8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  Имя публикации, в которую была вставлена запись трассировочного токена. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@tracer_id=** ] *tracer_id*  
- Идентификатор трассировочного токена в [MStracer_tokens &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) таблицы, для которых сведения возвращаются из журнала. *tracer_id* — **int**, не имеет значения по умолчанию.  
+ Идентификатор трассировочного токена в [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) таблицы, для которых сведения возвращаются из журнала. *tracer_id* — **int**, не имеет значения по умолчанию.  
   
  [  **@publisher=** ] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
@@ -66,7 +66,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|Количество секунд между фиксированием записи трассировочного токена у издателя и фиксированием записи у распространителя.|  
 |**подписчик**|**sysname**|Имя подписчика, получившего трассировочный токен.|  
@@ -80,18 +80,18 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>Замечания  
  **sp_helptracertokenhistory** используется в репликации транзакций.  
   
- Выполнение [sp_helptracertokens &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) для получения списка трассировочных токенов для публикации.  
+ Выполнение [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) для получения списка трассировочных токенов для публикации.  
   
  Значение NULL в результирующем наборе означает, что статистика задержек не может быть определена. Причина этого в том, что трассировочный токен не был получен распространителем или одним из подписчиков.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных в базе данных публикации или **db_owner** базы данных или  **replmonitor** роли в базе данных распространителя могут выполнять процедуру **sp_helptracertokenhistory**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

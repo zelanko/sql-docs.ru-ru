@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_xe_sessions (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_xe_sessions (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_sessions_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9198b8ac568f33591ee934458dbd1a58c2e71cbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.lasthandoff: 02/03/2018
 |address|**varbinary(8)**|Адрес памяти сеанса. адрес является уникальным в локальной системе. Не допускает значение NULL.|  
 |имя|**nvarchar(256)**|Имя сеанса. имя является уникальным в локальной системе. Не допускает значение NULL.|  
 |pending_buffers|**int**|Число полных буферов, ожидающих обработки. Не допускает значение NULL.|  
-|total_regular_buffers|**int**|Общее число обычных буферов, связанных с сеансом. Не допускает значение NULL.<br /><br /> Примечание: Используются обычные буферы большую часть времени. Размер этих буферов достаточен для размещения многих событий. Обычно в сеансе будут использоваться три или более буферов. Число обычных буферов определяется сервером автоматически, основываясь на секционировании памяти, заданном через параметр MEMORY_PARTITION_MODE. Размер обычных буферов равен значению параметра MAX_MEMORY (значение по умолчанию = 4 Мб), разделенному на число буферов. Дополнительные сведения о MEMORY_PARTITION_MODE и MAX_MEMORY параметрах см. в разделе [CREATE EVENT SESSION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Общее число обычных буферов, связанных с сеансом. Не допускает значение NULL.<br /><br /> Примечание: Используются обычные буферы большую часть времени. Размер этих буферов достаточен для размещения многих событий. Обычно в сеансе будут использоваться три или более буферов. Число обычных буферов определяется сервером автоматически, основываясь на секционировании памяти, заданном через параметр MEMORY_PARTITION_MODE. Размер обычных буферов равен значению параметра MAX_MEMORY (значение по умолчанию = 4 Мб), разделенному на число буферов. Дополнительные сведения о MEMORY_PARTITION_MODE и MAX_MEMORY параметрах см. в разделе [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Размер обычного буфера в байтах. Не допускает значение NULL.|  
-|total_large_buffers|**int**|Общее число больших буферов. Не допускает значение NULL.<br /><br /> Примечание: Большие буферы используются, когда событие больше обычного буфера. Они выделяются специально в этих целях. Большие буферы выделяются в начале сеанса события, их размер определяется параметром MAX_EVENT_SIZE. Дополнительные сведения о параметре MAX_EVENT_SIZE см. в разделе [CREATE EVENT SESSION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_large_buffers|**int**|Общее число больших буферов. Не допускает значение NULL.<br /><br /> Примечание: Большие буферы используются, когда событие больше обычного буфера. Они выделяются специально в этих целях. Большие буферы выделяются в начале сеанса события, их размер определяется параметром MAX_EVENT_SIZE. Дополнительные сведения о параметре MAX_EVENT_SIZE см. в разделе [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Размер большого буфера в байтах. Не допускает значение NULL.|  
 |total_buffer_size|**bigint**|Общий размер буфера памяти, использованного для хранения событий для сеанса (в байтах). Не допускает значение NULL.|  
 |buffer_policy_flags|**int**|Битовая карта, которая показывает поведение буферов событий сеанса в том случае, когда все буферы полны и происходит новое событие. Не допускает значение NULL.|  

@@ -1,16 +1,16 @@
 ---
-title: "sp_reinitmergepullsubscription (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_reinitmergepullsubscription (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d6f906cf3335079618629c03cc5503debd9a519
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4ec51ae6cffe1ebc95212c5a77e16be344577164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher**  =] **"***издатель***"**  
+ [ **@publisher** =] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, по умолчанию ALL.  
   
- [  **@publisher_db**  =] **"***publisher_db***"**  
+ [ **@publisher_db** =] **"***publisher_db***"**  
  Имя базы данных издателя. *publisher_db* — **sysname**, по умолчанию ALL.  
   
- [  **@publication**  =] **"***публикации***"**  
+ [ **@publication** =] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, по умолчанию ALL.  
   
- [  **@upload_first**  =] **"***upload_first***"**  
+ [ **@upload_first** =] **"***upload_first***"**  
  Показывает, будут ли изменения на подписчике переданы перед повторной инициализацией подписки. *upload_first* — **nvarchar(5)**, значение по умолчанию FALSE. Если **true**, перед повторной инициализацией подписки передаются изменения. Если **false**, изменения не передаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -75,10 +75,10 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_reinitmergepullsubscription**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,16 +1,16 @@
 ---
-title: "semanticsimilaritydetailstable (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: semanticsimilaritydetailstable (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69d13d3b16d1b58062cd93dc18e2f20f3fd01b42
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 376c644ebeab414cc9f3cf93a56b449f2669be5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 |Column_name|Тип|Описание|  
 |------------------|----------|-----------------|  
-|**keyphrase**|**NVARCHAR**|Ключевая фраза, обуславливающая подобие между исходным документом и сопоставляемым документом.|  
-|**score**|**REAL**|Относительное значение для этой ключевой фразы относительно всех других ключевых фраз, которые обуславливают подобие двух документов между собой.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где более высокие значения соответствуют большему весу, а 1.0 — показатель идеального совпадения.|  
+|**ключевой фразы**|**NVARCHAR**|Ключевая фраза, обуславливающая подобие между исходным документом и сопоставляемым документом.|  
+|**Оценка**|**REAL**|Относительное значение для этой ключевой фразы относительно всех других ключевых фраз, которые обуславливают подобие двух документов между собой.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где более высокие значения соответствуют большему весу, а 1.0 — показатель идеального совпадения.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Дополнительные сведения см. в разделе [поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

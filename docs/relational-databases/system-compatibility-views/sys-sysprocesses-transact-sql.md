@@ -1,16 +1,16 @@
 ---
-title: "sys.sysprocesses (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sysprocesses (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprocesses_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 56a8fecff1c129a210766fa4820ee90a11ff2dbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентификатор сеанса.|  
+|spid|**smallint**|Идентификатор сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |kpid|**smallint**|Идентификатор потока Windows.|  
 |blocked|**smallint**|Идентификатор сеанса, блокирующего данный запрос. Если этот столбец содержит значение NULL, то запрос не блокирован или сведения о сеансе блокировки недоступны (или не могут быть идентифицированы).<br /><br /> -2 = Блокирующий ресурс принадлежит потерянной распределенной транзакции.<br /><br /> -3 = Блокирующий ресурс принадлежит отложенной транзакции восстановления.<br /><br /> -4 = Идентификатор сеанса владельца кратковременной блокировки не может быть определен из-за внутренних переходов состояния кратковременной блокировки.|  
 |waittype|**binary(2)**|Зарезервировано.|  
@@ -60,11 +60,11 @@ ms.lasthandoff: 02/09/2018
 |last_batch|**datetime**|Время последнего вызова удаленной хранимой процедуры или инструкции EXECUTE клиентским процессом.|  
 |ecid|**smallint**|Идентификатор контекста выполнения используется с целью идентифицировать подпроцессы, действующие от имени одного процесса, уникальным образом.|  
 |open_tran|**smallint**|Количество транзакций, открытых для данного процесса.|  
-|status|**nchar(30)**|Состояние идентификатора процесса. Возможные значения:<br /><br /> **Неактивные**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбрасывает сеанс.<br /><br /> **под управлением** = сеанс запущен один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов &#40; Режим MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **фон** = сеанса запущена фоновая задача, например обнаружение взаимоблокировок.<br /><br /> **откат** = сеанс имеет отката транзакции в процессе.<br /><br /> **Ожидание** = сеанс ожидает доступности рабочего потока.<br /><br /> **готов к запуску** = задача в сеансе находится в очереди исполнителей планировщика, ожидая времени такта.<br /><br /> **spinloop** = задача сеанса ожидает освобождения объекта взаимоблокировки.<br /><br /> **Приостановить** = сеанс ожидает события, например ввода-вывода для завершения.|  
+|status|**nchar(30)**|Состояние идентификатора процесса. Возможные значения:<br /><br /> **Неактивные**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбрасывает сеанс.<br /><br /> **под управлением** = сеанс запущен один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. в разделе [с помощью нескольких активных результирующих наборов & #40; Режим MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **фон** = сеанса запущена фоновая задача, например обнаружение взаимоблокировок.<br /><br /> **откат** = сеанс имеет отката транзакции в процессе.<br /><br /> **Ожидание** = сеанс ожидает доступности рабочего потока.<br /><br /> **готов к запуску** = задача в сеансе находится в очереди исполнителей планировщика, ожидая времени такта.<br /><br /> **spinloop** = задача сеанса ожидает освобождения объекта взаимоблокировки.<br /><br /> **Приостановить** = сеанс ожидает события, например ввода-вывода для завершения.|  
 |sid|**binary(86)**|Идентификатор GUID для этого пользователя.|  
 |hostname|**nchar(128)**|Имя рабочей станции.|  
 |program_name|**nchar(128)**|Имя приложения.|  
-|hostprocess|**nchar(10)**|Идентификационный номер процесса рабочей станции.|  
+|hostprocess|**nchar(10) в формате**|Идентификационный номер процесса рабочей станции.|  
 |cmd|**nchar(16)**|Команда, выполняемая в данный момент.|  
 |nt_domain|**nchar(128)**|Домен Windows для клиента, если применяется проверка подлинности Windows или доверительное соединение.|  
 |nt_username|**nchar(128)**|Имя пользователя Windows для процесса, если применяется проверка подлинности Windows или доверительное соединение.|  
@@ -77,12 +77,12 @@ ms.lasthandoff: 02/09/2018
 |stmt_end|**int**|Конечное смещение текущей инструкции SQL для заданной sql_handle.<br /><br /> -1 = текущая инструкция переходит к концу результатов, возвращаемому функцией fn_get_sql для заданной sql_handle.|  
 |request_id|**int**|Идентификатор запроса. Применяется для идентификаций запросов, выполняемых в текущем сеансе.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если пользователь имеет разрешение VIEW SERVER STATE на сервере, он увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае пользователь увидит только текущий сеанс.  
   
 ## <a name="see-also"></a>См. также  
- [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Сопоставление системных таблиц с системными представлениями &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

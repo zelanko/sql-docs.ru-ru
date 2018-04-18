@@ -1,16 +1,16 @@
 ---
-title: "sp_add_log_shipping_alert_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_add_log_shipping_alert_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_alert_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_alert_job
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f35b1b1993a7bba16e72ac8c99bcb9d8b8f1caa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ce375a9c8786b897f17b9b03fbc5ae679e7ed5c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@alert_job_id =** ] *alert_job_id* OUTPUT  
+ [  **@alert_job_id =** ] *alert_job_id* выходных данных  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентификатор задания предупреждения доставки журналов задания агента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -56,7 +56,7 @@ sp_add_log_shipping_alert_job
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_add_log_shipping_alert_job** должна запускаться из **master** базы данных на сервере мониторинга.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -72,7 +72,7 @@ EXEC sp_add_log_shipping_alert_job;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

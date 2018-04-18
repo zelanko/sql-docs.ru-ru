@@ -2,7 +2,7 @@
 title: sp_add_job (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: baa693e0765a8796a4f6fbed3284d440f5a1327d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@category_id =** ] *category_id*  
  Независимый от языка механизм указания категории задания. *category_id*— **int**, значение по умолчанию NULL.  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **"***входа***"**  
  Имя входа, которое владеет заданием. *Имя входа*— **sysname**, значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены **sysadmin** предопределенной роли сервера можно задать или изменить значение для **@owner_login_name**. Если пользователи, не являющиеся членами из **sysadmin** роли задать или изменить значение **@owner_login_name**, происходит сбой выполнения этой хранимой процедуры, и возвращается сообщение об ошибке.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -95,7 +95,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_level_email =** ] *email_level*  
  Значение, указывающее, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**, значение по умолчанию **0**, не отправлять никогда. *email_level*использует те же значения, как *eventlog_level*.  
   
- [ **@notify_level_netsend =** ] *netsend_level*  
+ [  **@notify_level_netsend =** ] *netsend_level*  
  Значение, указывающее, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**, значение по умолчанию **0**, не отправлять никогда. *netsend_level* использует те же значения, как *eventlog_level*.  
   
  [  **@notify_level_page =** ] *page_level*  

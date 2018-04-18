@@ -1,16 +1,16 @@
 ---
-title: "sp_help_fulltext_tables_cursor (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_fulltext_tables_cursor (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_tables_cursor
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables_cursor
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf322f96f6190e2a08f7c584e74574b84e20d88
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81629e8075d85ec04bdd980f741b4ae82b706af8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   Использует курсор для возврата списка таблиц, которые зарегистрированы для полнотекстового индексирования.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте новую **sys.fulltext_indexes** представления каталога. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте новую **sys.fulltext_indexes** представления каталога. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +52,13 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@cursor_return=** ] *@cursor_variable* OUTPUT  
+ [  **@cursor_return=** ] *@cursor_variable* ВЫХОДНЫХ ДАННЫХ  
  Выходная переменная типа **курсор**. Этот курсор является динамическим, прокручиваемым и доступным только для чтения.  
   
- [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
+ [  **@fulltext_catalog_name=** ] **"***fulltext_catalog_name***"**  
  Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового, связанные с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждого полнотекстового индексированного таблицы, связанной с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указано, возвращается строка, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
   
- [ **@table_name=**] **'***table_name***'**  
+ [  **@table_name=**] **"***table_name***"**  
  Одно- или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *имя_таблицы* — **nvarchar(517)**, значение по умолчанию NULL. Если только *table_name* указано, только строки, относящиеся к *table_name* возвращается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -68,7 +69,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Владелец таблицы. Это имя пользователя базы данных, создавшего таблицу.|  
-|**TABLE_NAME**|**sysname**|Имя таблицы.|  
+|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Индекс, налагающий ограничение UNIQUE на столбец, помеченный как уникальный ключевой столбец.|  
 |**FULLTEXT_KEY_COLID**|**int**|Идентификатор столбца уникального индекса, задаваемого параметром FULLTEXT_KEY_NAME.|  
 |**FULLTEXT_INDEX_ACTIVE**|**int**|Указывает, можно ли использовать в запросах столбцы, помеченные для полнотекстового индексирования в этой таблице.<br /><br /> 0 = неактивно.<br /><br /> 1= активно.|  
@@ -98,7 +99,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_fulltext_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [sp_fulltext_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

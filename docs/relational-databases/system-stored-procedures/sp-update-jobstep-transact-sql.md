@@ -2,7 +2,7 @@
 title: sp_update_jobstep (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =**] *job_id*  
+ [  **@job_id =**] *job_id*  
  Идентификатор задания, которому принадлежит шаг. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL. Либо *job_id* или *job_name* должно быть указано, но не оба аргумента одновременно.  
   
  [  **@job_name =**] **"***job_name***"**  
@@ -89,7 +89,7 @@ sp_update_jobstep
  [  **@additional_parameters =**] **"***параметры***"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@cmdexec_success_code =**] *success_code*  
+ [  **@cmdexec_success_code =**] *success_code*  
  Значение, возвращаемое **CmdExec** командой подсистемы, чтобы указать, что *команда* выполнена успешно. *success_code* — **int**, значение по умолчанию NULL.  
   
  [  **@on_success_action =**] *success_action*  
@@ -105,7 +105,7 @@ sp_update_jobstep
  [  **@on_success_step_id =**] *success_step_id*  
  Идентификационный номер шага данного задания, для выполнения, если шаг завершился успешно и *success_action* — **4**. *success_step_id* — **int**, значение по умолчанию NULL.  
   
- [ **@on_fail_action =**] *fail_action*  
+ [  **@on_fail_action =**] *fail_action*  
  Действие, которое необходимо выполнить, если шаг завершился с ошибкой. *fail_action* — **tinyint**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
@@ -115,7 +115,7 @@ sp_update_jobstep
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *fail_step_id **.*|  
   
- [ **@on_fail_step_id =**] *fail_step_id*  
+ [  **@on_fail_step_id =**] *fail_step_id*  
  Идентификационный номер шага данного задания, для выполнения, если шаг завершился с ошибкой и *fail_action* — **4**. *fail_step_id* — **int**, значение по умолчанию NULL.  
   
  [ **@server =**] **'***server***'**  
@@ -127,13 +127,13 @@ sp_update_jobstep
  [  **@database_user_name =**] **"***пользователя***"**  
  Имя учетной записи пользователя, которая используется при выполнении шага [!INCLUDE[tsql](../../includes/tsql-md.md)]. *пользователь*— **sysname**, значение по умолчанию NULL.  
   
- [ **@retry_attempts =**] *retry_attempts*  
+ [  **@retry_attempts =**] *retry_attempts*  
  Число повторных попыток, предпринимаемых при завершении данного шага с ошибкой. *retry_attempts*— **int**, значение по умолчанию NULL.  
   
  [ **@retry_interval =**] *retry_interval*  
  Время ожидания в минутах между попытками повтора. *интервал_повтора* — **int**, значение по умолчанию NULL.  
   
- [ **@os_run_priority =**] *run_priority*  
+ [  **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@output_file_name =**] **"***имя_файла***"**  
@@ -143,7 +143,7 @@ sp_update_jobstep
   
  **@output_file_name = ' '**  
   
- [ **@flags =**] *flags*  
+ [  **@flags =**] *флаги*  
  Параметр, контролирующий поведение. *флаги* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -154,10 +154,10 @@ sp_update_jobstep
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
 |**16**|Записать журнал в таблицу (добавить к существующему журналу).|  
   
- [ **@proxy_id**= ] *proxy_id*  
+ [ **@proxy_id**=] *proxy_id*  
  Идентификатор учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* — тип **int**, значение по умолчанию NULL. Если не *proxy_id* указано, не *proxy_name* указано и не *имя_пользователя* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **"***proxy_name***"**  
  Имя учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_name* — тип **sysname**, значение по умолчанию NULL. Если не *proxy_id* указано, не *proxy_name* указано и не *имя_пользователя* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

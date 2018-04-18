@@ -1,16 +1,16 @@
 ---
-title: "sp_filestream_force_garbage_collection (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_filestream_force_garbage_collection (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b567ffa4ac9b56074742999c602914ebe7d3934d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>FileStream и FileTable - sp_filestream_force_garbage_collection
+# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Принудительно запускает сборщик мусора FILESTREAM, который удаляет все ненужные файлы FILESTREAM.  
@@ -56,7 +56,7 @@ sp_filestream_force_garbage_collection
 >  *DBName* — **sysname**. Если он не указан, предполагается текущая база данных.  
   
  **@filename** = *logical_file_name*  
- Обозначает логическое имя контейнера FILESTREAM, в котором будет запущен сборщик мусора. **@filename**является необязательным. Если логическое имя файла не указан, сборщик мусора освобождает все контейнеры FILESTREAM в указанной базе данных.  
+ Обозначает логическое имя контейнера FILESTREAM, в котором будет запущен сборщик мусора. **@filename** является необязательным. Если логическое имя файла не указан, сборщик мусора освобождает все контейнеры FILESTREAM в указанной базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
   
@@ -76,7 +76,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Указывает число подлежащих сборке мусора элементов FILESTREAM (файлов и каталогов), для которых сборка в данном контейнере не была выполнена. Это может произойти по разным причинам, включая следующие.<br /><br /> Файлы закреплены, так как еще не создана резервная копия журналов или контрольной точки.<br /><br /> Файлы относятся к модели восстановления FULL или BULK_LOGGED.<br /><br /> Существует длительно выполняющаяся активная транзакция.<br /><br /> Задание чтения журнала репликации не выполнена. См. в техническом документе [хранилище FILESTREAM в SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) для получения дополнительной информации.|  
 |*last_collected_xact_seqno*|Возвращает последний соответствующий номер последовательности LSN, до которого для файлов была выполнена сборка мусора в указанном контейнере FILESTREAM.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Явным образом запускает задачу сборщика мусора FILESTREAM для указанной базы данных (и контейнера FILESTREAM). Файлы, которые больше не требуются, удаляются процессом сборки мусора. Время, необходимое на выполнение этой операции, зависит от объема данных FILESTREAM в базе данных или контейнере, а также от объема операций DML, произведенных в последнее время над данными FILESTREAM. Хотя эта операция может выполняться и при режиме работы базы данных в сети, но в таком случае производительность базы данных может понизиться, так как во время сборки мусора выполняются различные операции ввода-вывода.  
   
 > [!NOTE]  
@@ -113,6 +113,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранилище FILESTREAM в SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156)  
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Таблицы Filetable](../../relational-databases/blob/filetables-sql-server.md)
+<br>[FileStream и FileTable динамические административные представления (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[FileStream и представления каталога FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

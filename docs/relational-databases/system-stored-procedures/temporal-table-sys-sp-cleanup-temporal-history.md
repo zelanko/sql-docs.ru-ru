@@ -1,30 +1,31 @@
 ---
-title: "sys.sp_cleanup_temporal_history | Документы Microsoft"
-ms.custom: 
+title: sys.sp_cleanup_temporal_history | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
 ms.service: sql-database
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: 
+caps.latest.revision: 4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1539ae456b1159cf4fdd458948a905171e3d33aa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 463565c898ca351ea5b891a60b5b80aefd57c540
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="temporal-table---sysspcleanuptemporalhistory"></a>Временная таблица - sys.sp_cleanup_temporal_history
+# <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,11 +47,11 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 Имя схемы, принадлежит какой текущей темпоральной таблицы
 
-*row_count_var* [OUTPUT]
+*row_count_var* [выход]
 
 Выходной параметр, возвращающий число удаленных строк. Если таблица журнала имеет кластеризованный индекс columnstore, будет возвращать этот параметр всегда имеет значение 0.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 Эта хранимая процедура может использоваться только с помощью темпоральных таблиц, имеют ограниченное указан срок хранения.
 Используйте эту хранимую процедуру только в том случае, если необходимо немедленно очистить все устаревшие строки из таблицы журнала. Вы должны знать, что он может иметь значительное влияние на базу данных журнала и подсистемы ввода-вывода, как оно удаляет все подходящие строки в той же транзакции. 
 

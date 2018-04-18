@@ -1,16 +1,16 @@
 ---
-title: "sysmail_update_account_sp (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sysmail_update_account_sp (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 
+caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 997e21d11225709d1ec716b7bda03b93cea6ea48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@account_id** = ] *account_id*  
+ [ **@account_id** =] *account_id*  
  Идентификатор обновляемой учетной записи. *account_id* — **int**, значение по умолчанию NULL. Хотя бы один из *account_id* или *account_name* должен быть указан. Если указаны оба аргумента, процедура изменяет имя учетной записи.  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **"***account_name***"**  
  Имя обновляемой учетной записи. *account_name* — **sysname**, значение по умолчанию NULL. Хотя бы один из *account_id* или *account_name* должен быть указан. Если указаны оба аргумента, процедура изменяет имя учетной записи.  
   
- [ **@email_address** = ] **'***email_address***'**  
+ [ **@email_address** =] **"***email_address***"**  
  Новый адрес электронной почты для отправки сообщений. Этот адрес должен быть адресом электронной почты Интернета. Имя сервера в адресе принадлежит серверу, который используется компонентом Database Mail для отправки почты от имени этой учетной записи. *email_address* — **nvarchar(128)**, значение по умолчанию NULL.  
   
- [ **@display_name** = ] **'***display_name***'**  
+ [ **@display_name** =] **"***display_name***"**  
  Новое отображаемое имя, используемое для сообщений электронной почты, отправляемых от имени этой учетной записи. *display_name* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
- [ **@replyto_address** = ] **'***replyto_address***'**  
+ [ **@replyto_address** =] **"***replyto_address***"**  
  Новый адрес для использования в заголовке «Обратный адрес» сообщений электронной почты, отправляемых от имени этой учетной записи. *replyto_address* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
- [  **@description**  =] **"***описание***"**  
+ [ **@description** =] **"***описание***"**  
  Новое описание для учетной записи. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
   
  [ **@mailserver_name** = ] **'***server_name***'**  
@@ -83,28 +83,28 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@mailserver_type** = ] **'***server_type***'**  
  Новый тип почтового сервера. *server_type* — **sysname**, не имеет значения по умолчанию. Только значение **'SMTP'** поддерживается.  
   
- [ **@port** = ] *port_number*  
+ [ **@port** =] *номер_порта*  
  Новый номер порта почтового сервера. *номер_порта* — **int**, не имеет значения по умолчанию.  
   
- [ **@timeout** = ] **'***timeout***'**  
+ [ **@timeout** =] **"***время ожидания***"**  
  Параметр времени ожидания для SmtpClient.Send при отправке единственного сообщения электронной почты. *Время ожидания* — **int** в секундах, по умолчанию.  
   
- [ **@username** = ] **'***username***'**  
+ [ **@username** =] **"***username***"**  
  Новое имя пользователя для входа на почтовый сервер. *Имя пользователя* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@password** = ] **'***password***'**  
+ [ **@password** =] **"***пароль***"**  
  Новый пароль для входа на почтовый сервер. *пароль* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@use_default_credentials** = ] use_default_credentials  
- Указывает, отправлять ли почту на сервер SMTP с использованием учетных данных службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет тип bit и значение по умолчанию отсутствует. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, компонент Database Mail использует  **@username**  и  **@password**  для проверки подлинности на SMTP-сервере. Если  **@username**  и  **@password**  имеют значение NULL, то будет использоваться анонимная проверка подлинности. Перед указанием этого аргумента следует проконсультироваться с администратором SMTP  
+ [ **@use_default_credentials** =] use_default_credentials  
+ Указывает, отправлять ли почту на сервер SMTP с использованием учетных данных службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет тип bit и значение по умолчанию отсутствует. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, компонент Database Mail использует **@username** и **@password** для проверки подлинности на SMTP-сервере. Если **@username** и **@password** имеют значение NULL, то будет использоваться анонимная проверка подлинности. Перед указанием этого аргумента следует проконсультироваться с администратором SMTP  
   
- [ **@enable_ssl** = ] enable_ssl  
+ [ **@enable_ssl** =] enable_ssl  
  Указывает, шифрует ли компонент Database Mail соединение с помощью протокола SSL. Используйте этот аргумент, если требуется поддержка протокола SSL для SMTP-сервера. **enable_ssl** имеет тип bit и значение по умолчанию отсутствует.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если указаны имя учетной записи и идентификатор учетной записи, то хранимая процедура изменяет имя учетной записи наряду с изменением данных учетной записи. Изменение имени учетной записи может быть полезно для исправления ошибок в имени учетной записи.  
   
  Хранимая процедура **sysmail_update_account_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
@@ -158,6 +158,6 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создайте учетную запись электронной почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Компонент Database Mail хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

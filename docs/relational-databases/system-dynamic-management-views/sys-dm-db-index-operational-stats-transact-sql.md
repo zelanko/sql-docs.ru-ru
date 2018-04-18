@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_index_operational_stats (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ed586d131f7cca843f3b43605496ab2c1ab02fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/03/2018
  Индексы с оптимизацией для памяти в данном DMV не отображаются.    
     
 > [!NOTE]    
->  **sys.dm_db_index_operational_stats** не возвращает сведения об индексах оптимизированных для памяти. Сведения об использовании индекса, оптимизированного для памяти см. в разделе [sys.dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **sys.dm_db_index_operational_stats** не возвращает сведения об индексах оптимизированных для памяти. Сведения об использовании индекса, оптимизированного для памяти см. в разделе [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
         
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -91,7 +92,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|Идентификатор базы данных.|    
 |**object_id**|**int**|Идентификатор таблицы или представления.|    
 |**index_id**|**int**|Идентификатор индекса или кучи.<br /><br /> 0 = куча;|    
-|**hobt_id**|**bigint**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор кучи данных или сбалансированного дерева строк, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не является внутренней columnstore строк.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор кучи данных или сбалансированного дерева строк, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не является внутренней columnstore строк.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).|    
 |**leaf_insert_count**|**bigint**|Совокупное количество вставок конечного уровня.|    
 |**leaf_delete_count**|**bigint**|Совокупное количество удалений конечного уровня. leaf_delete_count увеличивается только для удаленных записей, которые не помечены как фантомных записей, сначала. Для удаленных записей, которые являются синхронизирован. во-первых **leaf_ghost_count** вместо увеличивается.|    
@@ -134,7 +135,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Количество страниц, которые были оценены как пригодные для сжатия на уровне страницы для конкретных секций таблицы, индекса или индексированного представления. Включает несжатые страницы, поскольку это не привело бы к значительной экономии. Всегда 0 для индекса columnstore.|    
 |**page_compression_success_count**|**bigint**|Количество страниц данных, которые были сжаты с помощью сжатия PAGE для конкретной секции таблицы, индекса или индексированного представления. Всегда 0 для индекса columnstore.|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Замечания    
  Этот объект DMO не принимает коррелированные параметры из CROSS APPLY и OUTER APPLY.    
     
  Можно использовать **sys.dm_db_index_operational_stats** для отслеживания продолжительности ожидания пользователями на чтение или запись в таблицы, индекса или секции и определения таблиц или индексов, которые появляются много операций ввода-вывода или горячей времени зоны.    
@@ -181,12 +182,12 @@ sys.dm_db_index_operational_stats (
  Значение в столбцах **lob_fetch_in_pages** и **lob_fetch_in_bytes** может быть больше нуля для некластеризованных индексов, содержащих один или несколько столбцов LOB как включенные столбцы. Дополнительные сведения см. в статье [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). Аналогичным образом, значения в столбцах **row_overflow_fetch_in_pages** и **row_overflow_fetch_in_bytes** может быть больше 0 для некластеризованных индексов, если индекс содержит столбцы, которые могут быть принудительно отправлены вне строки.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Переустановка счетчиков в кэше метаданных    
- Данные, возвращенные **sys.dm_db_index_operational_stats** существует только при условии, что объект кэша метаданных, представляющий кучу или индекс доступен. Эти данные не являются постоянными и не согласованы на уровне транзакций. Это означает, что эти счетчики не позволяют определить факт использования индекса или время, когда индекс применялся последний раз. Сведения об этом см. в разделе [sys.dm_db_index_usage_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ Данные, возвращенные **sys.dm_db_index_operational_stats** существует только при условии, что объект кэша метаданных, представляющий кучу или индекс доступен. Эти данные не являются постоянными и не согласованы на уровне транзакций. Это означает, что эти счетчики не позволяют определить факт использования индекса или время, когда индекс применялся последний раз. Сведения об этом см. в разделе [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
     
  Значения для каждого столбца устанавливаются в нуль всякий раз, когда метаданные для кучи или индекса заносятся в кэш метаданных, и статистические данные накапливаются, пока объект кэша не удаляется из кэша метаданных. Поэтому активная куча или индекс будут, вероятно, всегда иметь эти метаданные в кэше, и совокупные значения количества могут отражать активность с момента последнего запуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Метаданные для менее активной кучи или индекса будут перемещаться в кэш и из него по мере их использования. В результате метаданные могут иметь или не иметь действительных значений. Удаление индекса приведет к удалению соответствующих статистических данных из памяти, и они больше не будут передаваться функцией. При других DDL-операциях с индексом может произойти обнуление статистических данных.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Использование системных функций для указания значений параметров    
- Можно использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] функции [DB_ID](../../t-sql/functions/db-id-transact-sql.md) и [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) для указания значения для *database_id* и *object_id* параметры. Однако передавая значения, которые не допустимы для этих функций, можно получить неожиданные результаты. Всегда следует проверять, что функции DB_ID и OBJECT_ID возвращают допустимый идентификатор. Дополнительные сведения см. в разделе «Примечания» в [sys.dm_db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ Можно использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] функции [DB_ID](../../t-sql/functions/db-id-transact-sql.md) и [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) для указания значения для *database_id* и *object_id* параметры. Однако передавая значения, которые не допустимы для этих функций, можно получить неожиданные результаты. Всегда следует проверять, что функции DB_ID и OBJECT_ID возвращают допустимый идентификатор. Дополнительные сведения см. в разделе «Примечания» в [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## <a name="permissions"></a>Разрешения    
  Необходимы следующие разрешения:    
@@ -201,7 +202,7 @@ sys.dm_db_index_operational_stats (
     
  Запрет разрешения VIEW DATABASE STATE запрещает всем объектам в базе данных быть возвращаемыми, независимо от любых разрешений CONTROL, предоставленных на определенные объекты. Кроме того, если шаблон базы данных @*database_id*= указано значение NULL, эта база данных пропускается.    
     
- Дополнительные сведения см. в разделе [динамические административные представления и функции &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
+ Дополнительные сведения см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
     
 ## <a name="examples"></a>Примеры    
     
@@ -209,7 +210,7 @@ sys.dm_db_index_operational_stats (
  В следующем примере возвращаются сведения по всем индексам и секциям таблицы `Person.Address` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Выполнение этого запроса требует как минимум разрешения CONTROL на таблицу `Person.Address`.    
     
 > [!IMPORTANT]    
->  При использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] функций DB_ID и OBJECT_ID для возврата значения параметра необходимо убедиться в правильности возвращаемого идентификатора. Если имя базы данных или объекта не может быть найдено, например если база данных или объект не существуют или неправильно записаны, то обе функции возвратят значение NULL. **Sys.dm_db_index_operational_stats** функция интерпретирует NULL как значение шаблона, указывающего все базы данных или всех объектов. Так как эта операция может быть непреднамеренной, примеры в этом разделе демонстрируют безопасный способ определения идентификаторов базы данных и объекта.    
+>  При использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] функций DB_ID и OBJECT_ID для возврата значения параметра необходимо убедиться в правильности возвращаемого идентификатора. Если имя базы данных или объекта не может быть найдено, например если база данных или объект не существуют или неправильно записаны, то обе функции возвратят значение NULL. Функция **sys.dm_db_index_operational_stats** интерпретирует значение NULL как значение шаблона, соответствующее всем базам данных или все объектам. Так как эта операция может быть непреднамеренной, примеры в этом разделе демонстрируют безопасный способ определения идентификаторов базы данных и объекта.    
     
 ```    
 DECLARE @db_id int;    
@@ -247,9 +248,9 @@ GO
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

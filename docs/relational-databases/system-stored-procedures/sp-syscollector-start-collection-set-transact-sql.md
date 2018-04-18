@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_start_collection_set (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_syscollector_start_collection_set (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54381b4d9b0baab7d9b726fd209a3cfb598fb8e1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 67ac114cfdbcea9cf8585b6eb76cfa4467919529
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@collection_set_id =** ] *collection_set_id*  
+ [  **@collection_set_id =** ] *collection_set_id, чтобы выделить*  
  Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** со значением по умолчанию NULL. *collection_set_id, чтобы выделить* должно иметь значение, если *имя* имеет значение NULL.  
   
  [  **@name =** ] "*имя*"  
@@ -59,7 +59,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Функция sp_syscollector_create_collection_set должна выполняться в контексте системной базы данных msdb, а агент SQL Server должен быть включен.  
   
  Эта процедура завершится с ошибкой при выполнении для набора элементов сбора, для которого нет расписания. Если набор сбора не имеет расписания (так как его сбора установлен режим без кэширования, например), используйте [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) хранимую процедуру для запуска набора сбора.  

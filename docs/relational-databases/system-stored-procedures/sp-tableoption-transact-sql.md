@@ -1,16 +1,16 @@
 ---
-title: "sp_tableoption (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_tableoption (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +59,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*"  
  Название параметра таблицы. *option_name* — **varchar(35)**, без значения по умолчанию NULL. *option_name* может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |table lock on bulk load|Если отключено (по умолчанию), то процесс массовой загрузки в пользовательских таблицах получает блокировку строк. Если включено, то процесс массовой загрузки в пользовательских таблицах получает блокировку массовых обновлений.|  
 |блокировка вставки строк|Больше не поддерживается.<br /><br /> Этот параметр не влияет на свойства блокировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включается только для совместимости существующих скриптов и процедур.|  
 |text in row|При значении OFF или 0 (отключено по умолчанию) текущее поведение не меняется и в строке отсутствует блок больших двоичных объектов (BLOB).<br /><br /> Если указано и @OptionValue имеет значение ON (включено) или является целым числом от 24 до 7 000, то новые **текст**, **ntext**, или **изображения** непосредственно в строке данных хранятся строки. Все существующие BLOB (большой двоичный объект: **текст**, **ntext**, или **изображения** данных) будет изменен на формат text in row при обновлении значения BLOB-ОБЪЕКТОВ. Дополнительные сведения см. в подразделе «Примечания».|  
-|large value types out of row|1 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** и хранения столбцов больших определяемых пользователем типов (UDT) в таблице вне строки, с 16-байтовым указателем корня.<br /><br /> 0 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** и большие значения UDT хранятся непосредственно в строке данных, вплоть до предела 8000 байт и при условии, что значение помещается в записи. Если значение не умещается в записи, то указатель хранится в строке, а все остальное хранится вне строки в области хранения объектов LOB. имеет значение по умолчанию 0.<br /><br /> Больших определяемых пользователем типов (UDT) применяется к: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Используйте параметр TEXTIMAGE_ON [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) для указания расположения для хранения типов данных большого размера. |  
-|формат хранения vardecimal|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Значения TRUE, ON или 1 означают, что для указанной таблицы включен формат хранения vardecimal. Значения FALSE, OFF или 0 означают, что для таблицы не включен формат хранения vardecimal. Формат хранения vardecimal можно включить только в том случае, если включен формат хранения vardecimal базы данных с помощью [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях **vardecimal** формат хранения является устаревшим. Вместо этого используйте сжатие ROW. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md). имеет значение по умолчанию 0.|  
+|large value types out of row|1 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** и хранения столбцов больших определяемых пользователем типов (UDT) в таблице вне строки, с 16-байтовым указателем корня.<br /><br /> 0 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** и большие значения UDT хранятся непосредственно в строке данных, вплоть до предела 8000 байт и при условии, что значение помещается в записи. Если значение не умещается в записи, то указатель хранится в строке, а все остальное хранится вне строки в области хранения объектов LOB. Значение по умолчанию — 0.<br /><br /> Больших определяемых пользователем типов (UDT) применяется к: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Используйте параметр TEXTIMAGE_ON [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) для указания расположения для хранения типов данных большого размера. |  
+|формат хранения vardecimal|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Значения TRUE, ON или 1 означают, что для указанной таблицы включен формат хранения vardecimal. Значения FALSE, OFF или 0 означают, что для таблицы не включен формат хранения vardecimal. Формат хранения vardecimal можно включить только в том случае, если включен формат хранения vardecimal базы данных с помощью [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях **vardecimal** формат хранения является устаревшим. Вместо этого используйте сжатие ROW. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md). Значение по умолчанию — 0.|  
   
  [ @OptionValue =] '*значение*"  
  Является ли *option_name* включен (TRUE, ON или 1) или выключен (FALSE, OFF или 0). *значение* — **varchar(12)**, не имеет значения по умолчанию. *значение* регистр не учитывается.  
@@ -85,7 +86,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row доступен;  
   
--   Длина строки не превышает предел, заданный в@OptionValue  
+-   Длина строки не превышает предел, заданный в @OptionValue  
   
 -   в строке данных достаточно места.  
   
@@ -109,7 +110,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  При преобразовании существующего столбец типа данных LOB (text, ntext или image) для типов больших значений малого и среднего (varchar(max), nvarchar(max), или varbinary(max)) и большинство инструкций не ссылаются на столбцы большого типа значения в вашей среде, рассмотрите возможность Изменение **large_value_types_out_of_row** для **1** для получения оптимальной производительности. Когда **large_value_types_out_of_row** изменяется значение параметра, существующие varchar(max), nvarchar(max), varbinary(max) и XML-значения, не преобразуются сразу. Хранилище строк изменяется, так как они в последующем обновляются. Любые новые значения, которые добавляются в таблицу, хранятся согласно действующему параметру таблицы. Для немедленного получения результатов, либо создать копию данных и затем снова заполните таблицу после изменения **large_value_types_out_of_row** Установка или обновление каждого столбца типы больших значений малого и среднего на самого себя, чтобы хранилище строки фактически изменяется с параметром таблицы. Рассмотрим перестройку индексов в таблице после обновления или повторного заполнения для сжатия таблицы. 
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы выполнить процедуру sp_tableoption, требуется разрешение ALTER на таблицу.  
   
 ## <a name="examples"></a>Примеры  
@@ -139,10 +140,10 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
    'vardecimal storage format', 'ON';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 title: sp_columns (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +66,7 @@ sp_columns [ @table_name = ] object
  [  **@column_name=**] *столбца*  
  Является отдельным столбцом и используется в том случае, когда нужен только один столбец информации каталога. *столбец* — **nvarchar(384)**, значение по умолчанию NULL. Если *столбца* — не указано, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *столбца* представляет имя столбца, как указано в **syscolumns** таблицы. Поиск совпадений по шаблону поддерживается. Для максимальной совместимости клиент шлюза должен использовать только стандартное согласование SQL-92 (символы-шаблоны % и _).  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **@ODBCVer=**] *Аргумент ODBCVer*  
  Версия используемого протокола ODBC. *Аргумент ODBCVer* — **int**, значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Различия в поведении между версиями 2 и 3, в разделе ODBC **SQLColumns** спецификации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -78,14 +79,14 @@ sp_columns [ @table_name = ] object
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Имя квалификатора объекта. Это поле может иметь значение NULL.|  
 |**TABLE_OWNER**|**sysname**|Имя владельца объекта. Это поле всегда возвращает значение.|  
-|**TABLE_NAME**|**sysname**|Имя объекта. Это поле всегда возвращает значение.|  
+|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя объекта. Это поле всегда возвращает значение.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца **TABLE_NAME** возвращается. Это поле всегда возвращает значение.|  
-|**DATA_TYPE**|**smallint**|Целочисленный код типа данных ODBC. Если этот тип данных не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Собственное имя типа данных возвращается в **TYPE_NAME** столбца.|  
+|**ТИП ДАННЫХ**|**smallint**|Целочисленный код типа данных ODBC. Если этот тип данных не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Собственное имя типа данных возвращается в **TYPE_NAME** столбца.|  
 |**TYPE_NAME**|**sysname**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
 |**PRECISION**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** столбец имеет десятичную форму.|  
 |**LENGTH**|**int**|Размер данных переноса. <sup>1</sup>|  
 |**МАСШТАБ**|**smallint**|Число цифр справа от десятичной запятой.|  
-|**RADIX**|**smallint**|Основание системы счисления числовых типов данных.|  
+|**ОСНОВАНИЕ СИСТЕМЫ СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления числовых типов данных.|  
 |**ДОПУСКАЮЩИЕ ЗНАЧЕНИЯ NULL**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
 |**ПРИМЕЧАНИЯ**|**varchar(254)**|Это поле всегда возвращает значение NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Значение столбца по умолчанию.|  

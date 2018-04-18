@@ -1,16 +1,16 @@
 ---
-title: "sys.database_principals (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.database_principals (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 10/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_principals catalog view
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f742ceebbb7c996f5e1a1d09e78352d26d10a37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d6d3cd64336d3374e74e5df05310e2e337ded062
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает по одной строке для каждого субъекта безопасности в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя участника, уникальное в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника, уникальный в пределах базы данных.|  
@@ -49,17 +50,17 @@ ms.lasthandoff: 11/21/2017
 |**modify_date**|**datetime**|Время последнего изменения участника.|  
 |**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. Владельцем всех участников, кроме ролей баз данных **dbo**.|  
 |**ИД безопасности**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
-|**is_fixed_role**|**bit**|Если значение равно 1, в данной строке представляется запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
+|**is_fixed_role**|**бит**|Если значение равно 1, в данной строке представляется запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0: без проверки подлинности<br />1: проверка подлинности экземпляра<br />2: проверка подлинности базы данных<br />3: проверка подлинности Windows|  
 |**authentication_type_desc**|**nvarchar(60)**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> NONE: Проверка подлинности<br />ЭКЗЕМПЛЯР: Проверка подлинности экземпляра<br />База данных: Проверка подлинности базы данных<br />WINDOWS: Проверка подлинности Windows|  
 |**default_language_name**|**sysname**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает язык по умолчанию для участника.|  
 |**default_language_lcid**|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает код языка по умолчанию для участника.|  
-|**allow_encrypted_value_modifications**|**bit**|**Применяется к**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать данные, зашифрованные с помощью постоянного шифрования между таблицами или базами данных, без расшифровки данных. Значение по умолчанию — OFF. |      
+|**allow_encrypted_value_modifications**|**бит**|**Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать данные, зашифрованные с помощью постоянного шифрования между таблицами или базами данных, без расшифровки данных. Значение по умолчанию — OFF. |      
   
 ## <a name="remarks"></a>Замечания  
  *PasswordLastSetTime* свойства доступны во всех поддерживаемых конфигурациях сервера SQL Server, но другие свойства доступны только в случае, если SQL Server работает на Windows Server 2003 или более поздней версии и CHECK_POLICY и CHECK_ Истечение срока действия будут включены. В разделе [политика паролей](../../relational-databases/security/password-policy.md) для получения дополнительной информации.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Любой пользователь может видеть собственное имя пользователя, пользователей системы и предопределенные роли базы данных. Для просмотра данных других пользователей требуется разрешение ALTER ANY USER или разрешение на доступ к данным пользователя. Для просмотра определяемых пользователем ролей необходимо иметь разрешение ALTER ANY ROLE или быть членом роли.  
   
 ## <a name="examples"></a>Примеры  
@@ -94,7 +95,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: перечисление всех разрешений участников базы данных  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
@@ -126,7 +127,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

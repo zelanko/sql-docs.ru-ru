@@ -1,16 +1,16 @@
 ---
-title: "sp_help_downloadlist (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_downloadlist (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c768ab8d8908d6c62805539e3fb811cee293da55
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b891780620de40d8541b7fc42e100b575e6ad7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификационный номер задания, для которого возвращаются сведения. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***job_name***"**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -67,32 +67,32 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**DEFECT**|Серверная операция, запрашивающая целевой сервер для отключения от образца **SQLServerAgent** службы.|  
+|**ДЕФЕКТ**|Серверная операция, запрашивающая целевой сервер для отключения от образца **SQLServerAgent** службы.|  
 |**DELETE**|Операция задания, удаляющая все задание.|  
 |**INSERT**|Операция задания, вставляющая все задание или обновляющая существующее задание. Эта операция включает все шаги и расписания задания, если возможно.|  
-|**RE-ENLIST**|Серверная операция, вызывающая повторную отсылку многосерверному домену целевым сервером его сведений о прикреплении, включая интервал опроса и часовой пояс. Целевой сервер также перезагружает **MSXOperator** сведения.|  
+|**ПРИКРЕПИТЬ СНОВА**|Серверная операция, вызывающая повторную отсылку многосерверному домену целевым сервером его сведений о прикреплении, включая интервал опроса и часовой пояс. Целевой сервер также перезагружает **MSXOperator** сведения.|  
 |**SET-POLL**|Серверная операция, устанавливающая интервал в секундах для опроса многосерверного домена целевыми серверами. Если указано, *значение* интерпретируется как требуемое значение интервала и может иметь значение от **10** для **28800**.|  
 |**ЗАПУСК**|Операция задания, запрашивающая начало выполнения задания.|  
-|**STOP**|Операция задания, запрашивающая прекращение выполнения задания.|  
-|**SYNC-TIME**|Серверная операция, вызывающая синхронизацию системных часов целевого сервера с многосерверным доменом. Это дорогостоящая операция, поэтому ее не стоит выполнять регулярно.|  
+|**ОСТАНОВИТЬ**|Операция задания, запрашивающая прекращение выполнения задания.|  
+|**ВО ВРЕМЯ СИНХРОНИЗАЦИИ**|Серверная операция, вызывающая синхронизацию системных часов целевого сервера с многосерверным доменом. Это дорогостоящая операция, поэтому ее не стоит выполнять регулярно.|  
 |**UPDATE**|Операция задания, обновляющая только **sysjobs** сведения для задания, а не шаги задания или расписания. Автоматически вызывается **sp_update_job**.|  
   
- [ **@object_type=** ] **'***object_type***'**  
- Тип объекта для указанного задания. *object_type* — **varchar(64)**, значение по умолчанию NULL. *object_type* может быть JOB или SERVER. Дополнительные сведения о допустимых *object_type*значения, в разделе [sp_add_category &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ [  **@object_type=** ] **"***object_type***"**  
+ Тип объекта для указанного задания. *object_type* — **varchar(64)**, значение по умолчанию NULL. *object_type* может быть JOB или SERVER. Дополнительные сведения о допустимых *object_type*значения, в разделе [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
- [ **@object_name=** ] **'***object_name***'**  
+ [  **@object_name=** ] **"***object_name***"**  
  Имя объекта. *object_name* — **sysname**, значение по умолчанию NULL. Если *object_type* имеет значение JOB, *object_name*является именем задания. Если *object_type*является СЕРВЕРОМ, *object_name*— это имя сервера.  
   
  [ **@target_server=** ] **'***target_server***'**  
  Имя целевого сервера. *целевой_сервер* — **nvarchar(128)**, значение по умолчанию NULL.  
   
- [ **@has_error=** ] *has_error*  
+ [  **@has_error=** ] *has_error*  
  Будет ли задание подтверждать ошибки. *has_error* — **tinyint**, и значение по умолчанию NULL, которое указывает, нет ошибки будут подтверждаться. **1** указывает, что все ошибки будут подтверждаться.  
   
- [ **@status=** ] *status*  
+ [  **@status=** ] *состояния*  
  Состояние каждого задания. *состояние* — **tinyint**, значение по умолчанию NULL.  
   
- [ **@date_posted=** ] *date_posted*  
+ [  **@date_posted=** ] *date_posted*  
  Дата и время, для которых все записи, сделанные во время или после обозначенного времени и даты, должны быть включены в результирующий набор. *date_posted* — **datetime**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

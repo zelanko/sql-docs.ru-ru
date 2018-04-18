@@ -1,16 +1,16 @@
 ---
-title: "sp_start_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_start_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89cf8ae7b00aa917d626fd47070835690b56e1f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***job_name***"**  
  Имя запускаемого задания. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. *job_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификационный номер запускаемого задания. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
  [ **@error_flag=** ] *error_flag*  
@@ -64,10 +64,10 @@ sp_start_job
  [ **@server_name=** ] **'***server_name***'**  
  Имя целевого сервера, на котором запускается задание. *имя_сервера* — **nvarchar(128)**, значение по умолчанию NULL. *имя_сервера* должен быть один из целевых серверов, к которым в настоящее время нацелено задания.  
   
- [ **@step_name=** ] **'***step_name***'**  
+ [  **@step_name=** ] **"***step_name***"**  
  Имя этапа, с которого начинается выполнение задания. Применяется только к локальным заданиям. *step_name* — **sysname**, значение по умолчанию NULL  
   
- [ **@output_flag=** ] *output_flag*  
+ [  **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -76,7 +76,7 @@ sp_start_job
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эта хранимая процедура находится в **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -106,7 +106,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

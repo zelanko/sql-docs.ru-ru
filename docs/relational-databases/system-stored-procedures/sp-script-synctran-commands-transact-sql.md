@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_script_synctran_commands (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_script_synctran_commands (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0897995f56614edcef86b9b7bb63c168d774108c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e8e724f9a787d54f1143472f5823cd5b34962eb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>Хранимая процедура sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication**  =] **"***публикации***"**  
+ [ **@publication** =] **"***публикации***"**  
  Имя публикации, для которой создается скрипт. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article**  =] **"***статьи***"**  
+ [ **@article** =] **"***статьи***"**  
  Имя статьи, для которой создается скрипт. *статья* — **sysname**, значение по умолчанию **все**, определяющий все статьи включаются в скрипт.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -64,12 +64,12 @@ sp_script_synctran_commands [@publication = ] 'publication'
   
  **sp_addqueued_artinfo** используется для очереди обновляемых подписок.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_script_synctran_commands**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_addsynctriggers &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

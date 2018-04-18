@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_enable_db (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.sp_cdc_enable_db (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_enable_db_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b4dfd41cd9ae452fb3ce7924e215372de7768bb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a58145b85de6f7dd4468d8de71459fe5d95ef0c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sys.sp_cdc_enable_db
   
  Процедура sys.sp_cdc_enable_db создает объекты отслеживания измененных данных, действующие в области базы данных, включая таблицы метаданных и триггеры DDL. Он также создает схему cdc и пользователя базы данных cdc и устанавливает для записи базы данных в столбец is_cdc_enabled [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представление 1 каталога.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует членства в предопределенной роли сервера sysadmin.  
   
 ## <a name="examples"></a>Примеры  
@@ -76,7 +76,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.sp_cdc_disable_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

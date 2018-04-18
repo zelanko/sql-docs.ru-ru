@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_sql_referencing_entities (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_sql_referencing_entities
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9508681edc0d105e776dd5b580f6385bdb0d93a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 02/03/2018
   
 -   триггеры DDL уровня сервера.  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,29 +103,29 @@ sys.dm_sql_referencing_entities (
   
  Возвращает ошибку, если заданная упоминаемая сущность является пронумерованной хранимой процедурой.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
 |Просмотр|Да|Да|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимая процедура **|Да|Да|  
-|Хранимая процедура CLR|нет|Да|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] определяемая пользователем функция|Да|Да|  
-|Определяемая пользователем функция CLR|нет|Да|  
-|Триггер CLR (DML и DDL)|нет|нет|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML|Да|нет|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня базы данных|Да|нет|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня сервера|Да|нет|  
-|Расширенные хранимые процедуры|нет|Да|  
-|Очередь|нет|Да|  
-|Синоним|нет|Да|  
-|Тип (псевдоним и определяемый пользователем тип данных CLR)|нет|Да|  
-|Коллекция схем XML|нет|Да|  
-|Функция секционирования|нет|Да|  
+|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
+|Хранимая процедура CLR|Нет|Да|  
+|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|Определяемая пользователем функция CLR|Нет|Да|  
+|Триггер CLR (DML и DDL)|Нет|Нет|  
+|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|Нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|Нет|  
+|Расширенные хранимые процедуры|Нет|Да|  
+|Очередь|Нет|Да|  
+|Синоним|Нет|Да|  
+|Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
+|Коллекция схем XML|Нет|Да|  
+|Функция секционирования|Нет|Да|  
   
- \*Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекция XML-схем в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
+ \* Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекция XML-схем в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   

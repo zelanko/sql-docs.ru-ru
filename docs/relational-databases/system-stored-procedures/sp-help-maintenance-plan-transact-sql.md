@@ -1,16 +1,16 @@
 ---
-title: "sp_help_maintenance_plan (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_maintenance_plan (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5669438c159010e1b5011418df913c3c2743aff
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1a949b24851a4cb5a2a7bcfec8fb9ad4730f3efe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **"***plan_id***"**  
  Задает идентификатор плана обслуживания. *plan_id* — **UNIQUEIDENTIFIER**. Значение по умолчанию — NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -72,7 +72,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|Имя удаленного сервера, на который может быть записан хронологический отчет.|  
 |**max_remote_history_rows**|**int**|Максимальное количество строк, выделенное в системной таблице на удаленном сервере, куда может быть записан хронологический отчет.|  
 |**user_defined_1**|**int**|Значение по умолчанию — NULL.|  
-|**user_defined_2**|**nvarchar(100)**|Значение по умолчанию — NULL.|  
+|**user_defined_2**|**Nvarchar(100)**|Значение по умолчанию — NULL.|  
 |**user_defined_3**|**datetime**|Значение по умолчанию — NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Значение по умолчанию — NULL.|  
   
@@ -80,7 +80,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
-|**database_name**|Имя всех баз данных, связанных с планом обслуживания. *database_name* — **sysname**.|  
+|**database_name**|Имя всех баз данных, связанных с планом обслуживания. Аргумент *database_name* имеет тип **sysname**.|  
   
 ### <a name="job-table"></a>Таблица Job  
   
@@ -88,7 +88,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Идентификатор всех заданий, связанных с планом обслуживания. *Аргумент job_id* — **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_help_maintenance_plan** в **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -104,6 +104,6 @@ EXECUTE   sp_help_maintenance_plan
   
 ## <a name="see-also"></a>См. также  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [План обслуживания базы данных хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Документы Microsoft"
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Документы Microsoft
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_xtp_checkpoint_files
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fff8a7cff566b555c0cc28ff6e60c67815956738
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 507a42fbb349ce9dca17d3221fe3b001dffe4bbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Отображает сведения о файлах контрольных точек, включая размер файла, физическое местоположение и идентификатор транзакции.  
   
-> **Примечание:** для текущей контрольной точки, которая не была закрыта, столбце "состояние" s`ys.dm_db_xtp_checkpoint_files` будет UNDER CONSTRUCTION для новых файлов. Контрольная точка закрывается автоматически при наличии достаточных рост журнала транзакций с момента последней контрольной точки или выполнении `CHECKPOINT` команда ([контрольной ТОЧКИ &#40; Transact-SQL &#41; ](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **Примечание:** для текущей контрольной точки, которая не была закрыта, столбце "состояние" s`ys.dm_db_xtp_checkpoint_files` будет UNDER CONSTRUCTION для новых файлов. Контрольная точка закрывается автоматически при наличии достаточных рост журнала транзакций с момента последней контрольной точки или выполнении `CHECKPOINT` команда ([контрольной ТОЧКИ &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
  Оптимизированные для памяти файловой группе внутренним образом использует только для добавления файлов для хранения вставленные и удаленные строки для таблиц в памяти. Существует два типа файлов. Файл данных содержит вставленные строки, а разностный файл содержит ссылки на удаленные строки. 
   
@@ -46,12 +47,12 @@ ms.lasthandoff: 02/03/2018
   
  Дополнительные сведения см. в разделе [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий  
- В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, начиная с версии  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
+##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздние версии  
+ В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, начиная с версии **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединения с file_id в [sys.database_files &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединения с file_id в [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Идентификатор GUID контейнера, в который входит файл корень, данных или разностных. Соединения с file_guid в таблице sys.database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|Идентификатор GUID файла контрольных точек.|  
 |relative_file_path|**nvarchar(256)**|Путь к файлу относительно контейнера сопоставлен.|  
@@ -70,14 +71,14 @@ ms.lasthandoff: 02/03/2018
 |end_checkpoint_id|**bigint**|Идентификатор конечного контрольной точки.|  
 |last_updated_checkpoint_id|**bigint**|Идентификатор последней контрольной точки, обновить этот файл.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > ШИФРУЕТСЯ КЛЮЧОМ 1<br /><br /> 2 = > ШИФРОВАНИЕ С КЛЮЧОМ 2. Допустимо только для активных файлов.|  
+|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; ШИФРУЕТСЯ КЛЮЧОМ 1<br /><br /> 2 = &GT; ШИФРОВАНИЕ С КЛЮЧОМ 2. Допустимо только для активных файлов.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, для  **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
+ В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, для **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединения с file_id в [sys.database_files &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединения с file_id в [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Идентификатор GUID контейнера, частью которого является файл данных или разностный файл.|  
 |checkpoint_file_id|**GUID**|Идентификатор файла данных или разностного файла.|  
 |relative_file_path|**nvarchar(256)**|Путь к файлу данных или разностному файлу относительно расположения контейнера.|  
@@ -128,6 +129,6 @@ ORDER BY state, file_type
 
   
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления таблиц, оптимизированных для памяти &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

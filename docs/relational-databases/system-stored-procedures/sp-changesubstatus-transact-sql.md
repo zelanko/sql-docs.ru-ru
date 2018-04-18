@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubstatus (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_changesubstatus (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fb31421c8f9398e259b41f652d13a5ff8d565b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f38f61bdb7fe29846b9776e5b9c89dee6c52feda
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,20 +74,20 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию  **%** . Если *публикации* не указан, влияют на все публикации.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если *публикации* не указан, влияют на все публикации.  
   
  [  **@article=**] **"***статьи***"**  
- Имя статьи. Оно должно быть уникальным для публикации. *статья* — **sysname**, значение по умолчанию  **%** . Если *статьи* не указан, влияют на все статьи.  
+ Имя статьи. Оно должно быть уникальным для публикации. *статья* — **sysname**, значение по умолчанию **%**. Если *статьи* не указан, влияют на все статьи.  
   
  [  **@subscriber=**] **"***подписчика***"**  
- Имя подписчика, состояние которого подлежит изменению. *подписчик* — **sysname**, значение по умолчанию  **%** . Если *подписчика* не указано, состояние изменяется для всех подписчиков на указанную статью.  
+ Имя подписчика, состояние которого подлежит изменению. *подписчик* — **sysname**, значение по умолчанию **%**. Если *подписчика* не указано, состояние изменяется для всех подписчиков на указанную статью.  
   
  [  **@status =**] **"***состояние***"**  
  Состояние подписки в **syssubscriptions** таблицы. *состояние* — **sysname**, без значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**активный**|Подписчик синхронизирован и получает данные.|  
+|**Активный**|Подписчик синхронизирован и получает данные.|  
 |**Неактивные**|Запись о подписчике существует, но подписка отсутствует.|  
 |**Подписка**|Подписчик запрашивает данные, но еще не синхронизирован.|  
   
@@ -95,7 +95,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Прежнее состояние подписки. *previous_status* — **sysname**, значение по умолчанию NULL. Этот параметр позволяет изменять любые подписки, для которых этот статус, тем самым возможным выполнение групповых функций в определенном наборе подписок (например возвращение всем активным подпискам **подписка**).  
   
  [  **@destination_db=**] **"***destination_db***"**  
- Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию  **%** .  
+ Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию **%**.  
   
  [  **@frequency_type=**] *frequency_type*  
  Частота запуска задачи распространения по расписанию. *frequency_type* — **int**, значение по умолчанию NULL.  
@@ -164,25 +164,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_server_name* любое значение, отличное от NULL, приведет к ошибке.  
   
- [  **@dts_package_name** =] **"***dts_package_name***"**  
+ [ **@dts_package_name**=] **"***dts_package_name***"**  
  Указывает имя пакета служб DTS. *dts_package_name* — **sysname**, значение по умолчанию NULL. Например, пакет с именем **DTSPub_Package** следует указать `@dts_package_name = N'DTSPub_Package'`.  
   
- [  **@dts_package_password** =] **"***dts_package_password***"**  
+ [ **@dts_package_password**=] **"***dts_package_password***"**  
  Указывает пароль на пакет. *dts_package_password* — **sysname** значение по умолчанию NULL, при которой указывает, что свойство пароля должно быть оставлено без изменений.  
   
 > [!NOTE]  
 >  У пакета служб DTS должен быть пароль.  
   
- [  **@dts_package_location** =] *dts_package_location*  
+ [ **@dts_package_location**=] *dts_package_location*  
  Указывает местоположение пакета. *dts_package_location* — **int**, значение по умолчанию **0**. Если **0**, что пакет находится на распространителе. Если **1**, что пакет находится на подписчике. Расположение пакета может быть **распространителя** или **подписчика**.  
   
- [  **@skipobjectactivation** =] *skipobjectactivation*  
+ [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **"***distribution_job_name***"**  
  Имя задания распространения. *distribution_job_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher** =] **"***издатель***"**  
+ [ **@publisher**=] **"***издатель***"**  
  Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -196,14 +196,14 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  **sp_changesubstatus** изменяет состояние подписчика в **syssubscriptions** таблицы с измененным состоянием. При необходимости, он изменяет состояние статьи в **sysarticles** таблицы для указания активности или неактивности. При необходимости устанавливает флаг репликации или отключить **sysobjects** для реплицируемой таблицы.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных, или создатель подписки могут выполнять процедуру **sp_changesubstatus**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

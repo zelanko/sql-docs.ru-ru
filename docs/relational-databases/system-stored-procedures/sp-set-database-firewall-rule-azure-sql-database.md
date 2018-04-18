@@ -1,16 +1,16 @@
 ---
-title: "sp_set_database_firewall_rule (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sp_set_database_firewall_rule (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_database_firewall_rule
 - firewall_rules, setting database rules
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c83057218c015eb9d3488ea730e507ab795ddade
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 33ba0433400c5848cc3e96dd0afad6e8c402660d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address**  =] '*start_ip_address*"  
  Самый маленький IP-адрес в диапазоне параметра брандмауэра на уровне базы данных. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к экземпляру служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`. *start_ip_address* — **varchar(50)** без значения по умолчанию.  
   
- [ **@end_ip_address**  =] '*end_ip_address*"  
+ [**@end_ip_address** =] '*end_ip_address*"  
  Самый большой IP-адрес в диапазоне параметра брандмауэра на уровне базы данных. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к экземпляру служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`. *end_ip_address* — **varchar(50)** без значения по умолчанию.  
   
  В следующей таблице показаны поддерживаемые аргументы и параметры в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -69,8 +70,8 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
  При добавлении параметра брандмауэра уровня базы данных, в котором начальный и конечный IP-адреса равны `0.0.0.0`, разрешить доступ к базе данных в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера из любого ресурсов Azure. Укажите значение *имя* параметр, который поможет запомнить предназначение параметра брандмауэра.  
   
-## <a name="permissions"></a>Permissions  
- Требуется **УПРАВЛЕНИЯ** разрешения в базе данных.  
+## <a name="permissions"></a>Разрешения  
+ Требуется разрешение **CONTROL** для базы данных.  
   
 ## <a name="examples"></a>Примеры  
  Следующий код создает параметр брандмауэра уровня базы данных `Allow Azure` , разрешающий доступ к базе данных из Azure.  
@@ -92,11 +93,11 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Брандмауэр базы данных Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [Как: Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40; База данных Azure SQL &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40; База данных Azure SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40; База данных Azure SQL &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [sp_set_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_detach_db (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_detach_db (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 09/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@dbname =** ] **'***database_name***'**  
+ [  **@dbname =** ] **"***имя_базы_данных***"**  
  Имя отсоединяемой базы данных. *database_name* — **sysname** значение со значением по умолчанию NULL.  
   
- [ **@skipchecks =** ] **'***skipchecks***'**  
+ [  **@skipchecks =** ] **"***параметром skipchecks***"**  
  Указывает, выполнять или нет инструкцию UPDATE STATISTIC. *параметром skipchecks* — **nvarchar(10)** значение со значением по умолчанию NULL. Чтобы пропустить инструкции UPDATE STATISTICS, укажите **true**. Чтобы явно запустить инструкцию UPDATE STATISTICS, укажите **false**.  
   
  По умолчанию инструкция UPDATE STATISTICS запускается для обновления информации о данных в таблицах и индексах. Выполнение UPDATE STATISTICS имеет смысл для тех баз данных, которые планируется переместить на постоянные носители информации.  
   
- [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
+ [  **@keepfulltextindexfile=** ] **"***Значение аргумента KeepFulltextIndexFile***"**  
  Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *Значение аргумента KeepFulltextIndexFile* — **nvarchar(10)** значение по умолчанию **true**. Если *значение аргумента KeepFulltextIndexFile* — **false**, все файлы полнотекстового индекса, связанный с базой данных и метаданные полнотекстового индекса удаляются, если она доступна только для чтения. Если значение равно NULL или **true**, связанного с полнотекстовым поиском хранятся метаданные.  
   
 > [!IMPORTANT]  
->  **@keepfulltextindexfile**  Параметр будет удален в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
+>  **@keepfulltextindexfile** Параметр будет удален в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -72,11 +72,11 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При отсоединении базы данных все метаданные удаляются. Если база данных была база данных по умолчанию для учетной записи входа, **master** становится базой данных по умолчанию.  
   
 > [!NOTE]  
->  Сведения о просмотре базы данных по умолчанию для всех учетных записей см. в разделе [sp_helplogins &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). При наличии необходимых разрешений можно использовать [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) для назначения новой базы данных по умолчанию для имени входа.  
+>  Сведения о просмотре базы данных по умолчанию для всех учетных записей см. в разделе [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). При наличии необходимых разрешений можно использовать [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) для назначения новой базы данных по умолчанию для имени входа.  
   
 ## <a name="restrictions"></a>Ограничения  
  Невозможно отсоединить базу данных, если выполняется одно из следующих условий:  

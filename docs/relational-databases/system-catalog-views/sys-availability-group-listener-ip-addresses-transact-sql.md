@@ -1,16 +1,16 @@
 ---
-title: "sys.availability_group_listener_ip_addresses (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sys.availability_group_listener_ip_addresses (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - availability_group_listener_ip_addresses
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5635c066dc3cc420cd6a7f2392d79bd6ef162c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 04266782711b0825e0766d9ea1edfd8f0d0ddce7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**nvarchar(36)**|GUID ресурса в отказоустойчивой кластеризации Windows Server (WSFC).|  
-|**ip_address**|**nvarchar(48)**|Настроенный виртуальный IP-адрес прослушивателя группы доступности. Возвращает один адрес IPv4 или IPv6.|  
+|**IP-адрес**|**nvarchar(48)**|Настроенный виртуальный IP-адрес прослушивателя группы доступности. Возвращает один адрес IPv4 или IPv6.|  
 |**ip_subnet_mask**|**nvarchar(15)**|Настроенная маска подсети IP для адреса IPv4, если он имеется, заданная для прослушивателя группы доступности.<br /><br /> NULL = подсеть IPv6|  
 |**is_dhcp**|**бит**|Указывает, настраивается ли IP-адрес по DHCP, одно из следующих значений:<br /><br /> 0 = IP-адрес не настраивается по DHCP.<br /><br /> 1 = IP-адрес настраивается по DHCP.|  
 |**network_subnet_ip**|**nvarchar(48)**|IP-адрес подсети, задающий подсеть, к которой принадлежит IP-адрес.|  

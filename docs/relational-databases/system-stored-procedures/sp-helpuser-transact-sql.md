@@ -1,16 +1,16 @@
 ---
-title: "sp_helpuser (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpuser (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpuser
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dcf314d52fd7d20dae8ad8ddb163a331a89d52c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2dbb61c94223346f69009522795986b3e6f67e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>Результирующие наборы  
  В следующей таблице показаны результирующий набор, если ни одна учетная запись пользователя, ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пользователя Windows, указанных в *security_account*.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Пользователи текущей базы данных.|  
 |**RoleName**|**sysname**|Роли, к которым **UserName** принадлежит.|  
@@ -70,24 +70,24 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  В следующей таблице приведен результирующий набор для случая, когда не задана учетная запись пользователя, а в текущей базе данных существуют псевдонимы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Имена входа, назначенные пользователям текущей базы данных.|  
 |**UserNameAliasedTo**|**sysname**|Имя пользователя текущей базы данных, которому присвоено данное имя входа.|  
   
  В следующей таблице показаны результирующий набор, если роль указан для *security_account*.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Role_name**|**sysname**|Имя роли в текущей базе данных.|  
+|**role_name**|**sysname**|Имя роли в текущей базе данных.|  
 |**Role_id**|**smallint**|Идентификатор роли в текущей базе данных.|  
 |**Users_in_role**|**sysname**|Член роли в текущей базе данных.|  
-|**Идентификатор пользователя**|**smallint**|Идентификатор пользователя для члена роли.|  
+|**идентификатор пользователя**|**smallint**|Идентификатор пользователя для члена роли.|  
   
 ## <a name="remarks"></a>Замечания  
  Чтобы просмотреть сведения о членстве в ролях базы данных, используйте [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Чтобы просмотреть сведения о членстве в ролях сервера, используйте [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)и для отображения сведений об объектах уровня сервера, используйте [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
  Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -115,8 +115,8 @@ EXEC sp_helpuser 'dbo';
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Безопасность хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

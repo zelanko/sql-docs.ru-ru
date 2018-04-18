@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_cursor_list (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_cursor_list (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a01fabe88b8e38c9495ebd349c6251fa2388fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Формат курсора, возвращаемого хранимой процедурой sp_cursor_list. Формат курсора такой же, как и формат, возвращаемый хранимой процедурой sp_describe_cursor.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Имя, используемое для ссылки на курсор. Если ссылка на курсор осуществлялась по имени, приведенном в инструкции DECLARE CURSOR, то имя ссылки и имя курсора одинаковы. Если ссылка на курсор осуществлялась при помощи переменной, именем ссылки является имя переменной курсора.|  
 |cursor_name|**sysname**|Имя курсора из инструкции DECLARE CURSOR. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если курсор создан с помощью присваивания переменной курсора, **cursor_name** возвращает имя переменной курсора.  В предыдущих версиях этот выходной столбец возвращает имя, сформированное системой.|  
@@ -94,7 +94,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Используйте процедуру sp_describe_cursor_columns для описания атрибутов результирующего набора, возвращаемого курсором. Процедура sp_describe_cursor_tables используется для получения отчета по базовым таблицам, на которые ссылается курсор. процедура sp_describe_cursor сообщает те же сведения, как и процедура sp_cursor_list, но только для определенного курсора.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение по умолчанию принадлежит роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -136,7 +136,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

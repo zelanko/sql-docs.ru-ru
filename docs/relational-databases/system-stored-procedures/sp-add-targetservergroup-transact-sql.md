@@ -1,16 +1,16 @@
 ---
-title: "sp_add_targetservergroup (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_add_targetservergroup (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_targetservergroup
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetservergroup
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56fe13d82aa4c846ba49f546e1d767446c204547
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4652ed71dc559550b8341063b612e93cd67b5805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@name=**] **'***name***'**  
+ [  **@name=**] **"***имя***"**  
  Имя создаваемой серверной группы. *имя* — **sysname**, не имеет значения по умолчанию. *имя* не может содержать запятые.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -55,7 +55,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Группы целевых серверов обеспечивают простой способ поиска задания в коллекции целевых серверов. Дополнительные сведения см. в разделе [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -76,7 +76,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

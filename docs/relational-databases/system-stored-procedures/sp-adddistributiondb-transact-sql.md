@@ -1,16 +1,16 @@
 ---
-title: "sp_adddistributiondb (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_adddistributiondb (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6657074bade1db3cb050d6ca0c33e358d05e5f0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *базы данных "*  
  Имя создаваемой базы данных распространителя. *База данных* — **sysname**, не имеет значения по умолчанию. Если указанная база данных существует и не помечена как база данных распространителя, то устанавливаются объекты, необходимые для включения распространения, и база данных помечается как база данных распространителя. Если указанная база данных уже включена как база данных распространителя, то возвращается сообщение об ошибке.  
   
- [  **@data_folder=**] **"***data_folder"*  
+ [  **@data_folder=**] **"*** data_folder"*  
  Имя каталога для хранения файла данных в базе данных распространителя. *data_folder* — **nvarchar(255)**, значение по умолчанию NULL. Если аргумент имеет значение NULL, то используется каталог данных для текущего экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, «`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`»).  
   
  [  **@data_file=**] **"***data_file***"**  
@@ -94,7 +94,7 @@ sp_adddistributiondb [ @database= ] 'database'
  Режим безопасности, используемый для подключения к распространителю. *security_mode* — **int**, значение по умолчанию 1. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. **1** задает встроенную проверку подлинности Windows.  
   
  [  **@login=**] **"***входа***"**  
- Имя входа, которое используется при подключении к распространителю для создания базы данных распространителя. Требуется, если *security_mode* равно **0**. *Имя входа* — **sysname**, значение по умолчанию NULL.  
+ Имя входа, которое используется при подключении к распространителю для создания базы данных распространителя. Требуется, если *security_mode* равно **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [  **@password=**] **"***пароль***"**  
  Пароль, используемый при подключении к распространителю. Требуется, если *security_mode* равно **0**. *пароль* — **sysname**, значение по умолчанию NULL.  
@@ -177,13 +177,13 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_adddistributiondb**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Настройка распространения](../../relational-databases/replication/configure-distribution.md)  

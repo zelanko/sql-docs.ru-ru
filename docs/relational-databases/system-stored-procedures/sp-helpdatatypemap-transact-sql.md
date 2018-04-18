@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdatatypemap (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helpdatatypemap (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d22a2c19f5824ef0a1cb5e0a145afd72492289df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e594c9b1d13730df2ccc93bf04d0348a5d2175b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,42 +52,42 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@source_dbms** =] **"***source_dbms***"**  
+ [ **@source_dbms**=] **"***source_dbms***"**  
  Это имя СУБД, с которой сопоставлены типы данных. *source_dbms* — **sysname**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Источником является база данных Oracle.|  
   
- [  **@source_version** =] **"***source_version***"**  
+ [ **@source_version**=] **"***source_version***"**  
  Версия продукта исходной СУБД. *source_version*— **varchar(10)**, и если не указан, сопоставления типов данных для всех версий исходной СУБД возвращаются. Позволяет фильтровать результирующий набор по типу данных по версии исходной СУБД.  
   
- [  **@source_type** =] **"***source_type***"**  
+ [ **@source_type**=] **"***source_type***"**  
  Тип данных, приведенный в списке исходной СУБД. *source_type* — **sysname**, и если не указан, возвращаются сопоставления для всех типов данных в исходной СУБД. Позволяет фильтровать результирующий набор по типу данных исходной СУБД.  
   
- [  **@destination_dbms**  =] **"***destination_dbms***"**  
+ [ **@destination_dbms** =] **"***destination_dbms***"**  
  Название целевой СУБД. *destination_dbms* — **sysname**, и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Целевая база данных — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Целевой является база данных Oracle.|  
 |**DB2**|Целевой является база данных IBM DB2.|  
 |**SYBASE**|Целевой является база данных Sybase.|  
   
- [  **@destination_version** =] **"***destination_version***"**  
+ [ **@destination_version**=] **"***destination_version***"**  
  Версия продукта целевой СУБД. *destination_version*— **varchar(10)**, и если не указан, возвращаются сопоставления для всех версий целевой СУБД. Позволяет фильтровать результирующий набор по типу данных по версии целевой СУБД.  
   
- [  **@destination_type** =] **"***destination_type***"**  
+ [ **@destination_type**=] **"***destination_type***"**  
  Тип данных, приведенных в списке целевой СУБД. *destination_type*— **sysname**, и если не указан, возвращаются сопоставления для всех типов данных в целевой СУБД. Позволяет фильтровать результирующий набор по типу данных целевой СУБД.  
   
- [  **@defaults_only** =] *defaults_only*  
+ [ **@defaults_only**=] *defaults_only*  
  Показывает, что возвращаются только сопоставления типов данных по умолчанию. *defaults_only* — **бит**, значение по умолчанию **0**. **1** означает, что сопоставления типов только данные по умолчанию возвращаются. **0** , значение по умолчанию и все данные определяемого пользователем типа сопоставления означает возвращаются.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**mapping_id**|Идентифицирует сопоставление типа данных.|  
 |**source_dbms**|Название и номер версии исходной СУБД.|  
@@ -104,11 +104,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
  Если указанное сочетание исходной и целевой СУБД не поддерживается, **sp_helpdatatypemap** возвращает пустой результирующий набор.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера на распространителе или члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_helpdatatypemap**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_getdefaultdatatypemapping &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

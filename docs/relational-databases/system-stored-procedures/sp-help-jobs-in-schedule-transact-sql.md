@@ -1,16 +1,16 @@
 ---
-title: "sp_help_jobs_in_schedule (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_help_jobs_in_schedule (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 586e93481bf8f107901555c41dc36c524e5b5ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@schedule_id =** ] *schedule_id*  
+ [  **@schedule_id =** ] *schedule_id*  
  Идентификатор расписания, о котором необходимо вывести сведения. *schedule_id* — **int**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **"***schedule_name***"**  
  Имя расписания, о котором необходимо вывести сведения. *schedule_name* — **sysname**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -65,7 +65,7 @@ sp_help_jobs_in_schedule
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
 |**originating_server**|**nvarchar(30)**|Имя сервера, от которого поступило задание.|  
 |**name**|**sysname**|Имя задания.|  
-|**включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
+|**Включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
 |**Описание**|**nvarchar(512)**|Описание задания.|  
 |**start_step_id**|**int**|Идентификатор шага задания, с которого должно начаться выполнение.|  
 |**Категория**|**sysname**|Категория задания.|  
@@ -93,9 +93,9 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Число шагов в задании.|  
 |**has_schedule**|**int**|Число назначенных запусков задания в расписании.|  
 |**has_target**|**int**|Число целевых серверов в задании.|  
-|**type**|**int**|Тип задания:<br /><br /> **1** = локальное задание.<br /><br /> **2** = Multiserver job.<br /><br /> **0** = задание не имеет целевых серверов.|  
+|**type**|**int**|Тип задания:<br /><br /> **1** = локальное задание.<br /><br /> **2** = многосерверное задание.<br /><br /> **0** = задание не имеет целевых серверов.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эта процедура заносит в список сведения о заданиях, присоединенных к указанному расписанию.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -124,10 +124,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [процедуру sp_detach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [процедуру sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

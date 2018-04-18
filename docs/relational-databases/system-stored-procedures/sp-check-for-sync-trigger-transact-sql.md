@@ -1,16 +1,16 @@
 ---
-title: "sp_check_for_sync_trigger (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_check_for_sync_trigger (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 586498365ee695ee5dc92252af47ad7706e1adfb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38dfc81498173fe6024095889d06d222d4d98201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [ **@trigger_op =** ] "*trigger_output_parameters*" выходные данные  
  Указывает, будет ли выходной параметр возвращать тип вызывающего триггера. *trigger_output_parameters* — **char(10)** и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Модули**|триггер INSERT|  
 |**UPD**|триггер UPDATE|  
@@ -65,7 +65,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  Указывает место выполнения хранимой процедуры. *fonpublisher* — **бит**, значение по умолчанию 0. Если значение равно 0, тогда выполнение происходит на подписчике, а если 1, то выполнение происходит на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 показывает, что вызов происходит внутри контекста немедленно обновляющегося триггера, а тип триггера записывается в  *@trigger_op* .  
+ 0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 показывает, что вызов происходит внутри контекста немедленно обновляющегося триггера, а тип триггера записывается в *@trigger_op*.  
   
 ## <a name="remarks"></a>Замечания  
  **sp_check_for_sync_trigger** используется в репликации моментальных снимков и репликации транзакций.  
@@ -95,10 +95,10 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  **sp_check_for_sync_trigger** хранимая процедура может выполняться в любой пользователь, обладающий разрешениями SELECT в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) системного представления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

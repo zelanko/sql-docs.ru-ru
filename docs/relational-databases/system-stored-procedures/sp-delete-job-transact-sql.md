@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_job (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_delete_job (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id=** ] *job_id*  
+ [  **@job_id=** ] *job_id*  
  Идентификатор удаляемого задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***job_name***"**  
  Имя удаляемого задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -61,7 +61,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@originating_server=** ] **'***server***'**  
  Для внутреннего использования.  
   
- [ **@delete_history=** ] *delete_history*  
+ [  **@delete_history=** ] *delete_history*  
  Указывает, следует ли удалить журнал задания. *delete_history* — **бит**, значение по умолчанию **1**. Когда *delete_history* — **1**, журнала заданий для задания удаляются. Когда *delete_history* — **0**, журнал заданий не удаляется.  
   
  Обратите внимание, что если задание удалено, данные журнала не удаляются данные предыстории для задания не будут отображаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал заданий агента графический пользовательский интерфейс, но эти данные по-прежнему будет находиться в **sysjobhistory**в таблицу **msdb** базы данных.  
@@ -75,10 +75,10 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Remarks  
- **@originating_server**  Аргумент зарезервирован для внутреннего использования.  
+## <a name="remarks"></a>Замечания  
+ **@originating_server** Аргумент зарезервирован для внутреннего использования.  
   
- **@delete_unused_schedule**  Аргумент обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенные к любое задание. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы сохранить расписания, не прикреплено к заданию, необходимо задать значение **0** как  **@delete_unused_schedule**  аргумент.  
+ **@delete_unused_schedule** Аргумент обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенные к любое задание. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы сохранить расписания, не прикреплено к заданию, необходимо задать значение **0** как **@delete_unused_schedule** аргумент.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   

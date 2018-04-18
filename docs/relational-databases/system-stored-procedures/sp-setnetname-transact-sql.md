@@ -1,16 +1,16 @@
 ---
-title: "sp_setnetname (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_setnetname (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e9f439854cc1d3af3ca5db09981f2eba2af7a4f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2a0cc53bb8b4ef3c5c12c7154edc57b02c07a656
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetnetname-transact-sql"></a>Хранимая процедура sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@server= "** *сервера* **"**  
+ **@server = "** *сервера* **"**  
  Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Только одну строку в **sys.servers** уже должен существовать для использования этой *сервера*. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- **@netname= "** *имя_сети* **"**  
+ **@netname = "** *имя_сети* **"**  
  Сетевое имя компьютера, на который направляются вызовы удаленных хранимых процедур. *имя_сети* — **sysname**, не имеет значения по умолчанию.  
   
  Это имя должно совпадать с именем компьютера [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и может содержать символы, использование которых в качестве идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено.  
@@ -80,7 +80,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  С помощью **sp_setnetname** для переключения связанного сервера обратно на локальный сервер не поддерживается. Серверы, которые описаны таким образом, не могут участвовать в распределенной транзакции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** и **setupadmin** предопределенных ролей сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -94,10 +94,10 @@ EXEC sp_setnetname 'Win_1','Win-1';
 EXEC Win_1.master.dbo.sp_who;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Компонент Database Engine хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

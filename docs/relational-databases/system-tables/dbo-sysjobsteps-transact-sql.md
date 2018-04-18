@@ -2,7 +2,7 @@
 title: dbo.sysjobsteps (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-tables
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f29d3ef22b724abc095da01ea5eef70aa9c447dd
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 1c044af6f1e6af5b8338dc200bd1041ba062614a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/10/2018
 |**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**step_id**|**int**|Идентификатор этапа в задании.|  
 |**step_name**|**sysname**|Имя шага задания.|  
-|**subsystem**|**nvarchar(40)**|Имя подсистемы, используемой агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения шага задания.|  
+|**Подсистема**|**nvarchar(40)**|Имя подсистемы, используемой агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения шага задания.|  
 |**команда**|**nvarchar(max)**|Команда для выполнения по **подсистемы**.|  
 |**flags**|**int**|Зарезервировано.|  
 |**additional_parameters**|**ntext**|Зарезервировано.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/10/2018
 |**retry_attempts**|**int**|Число попыток повтора при неуспешном завершении шага.|  
 |**retry_interval**|**int**|Время ожидания между попытками повтора.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**nvarchar(200)**|Имя файла, в котором выходные данные этапа, сохраняется **подсистемы** является TSQL, PowerShell или **CmdExec ***.*|  
+|**output_file_name**|**Nvarchar(200)**|Имя файла, в котором выходные данные этапа, сохраняется **подсистемы** является TSQL, PowerShell или **CmdExec ***.*|  
 |**last_run_outcome**|**int**|Результат предыдущего выполнения шага задания.<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = Повтор<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность (ччммсс) шага в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число попыток повтора в ходе последнего выполнения шага задания.|  

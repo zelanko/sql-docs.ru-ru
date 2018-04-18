@@ -2,7 +2,7 @@
 title: sys.dm_exec_cached_plans (Transact-SQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc2cbcac0dee3b509cc499d340aa2adef20ba2bf
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e6ffcabac501e0821024b5d57cf9df9d53afd0a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/05/2018
 |size_in_bytes|**int**|Число байтов, занимаемых объектом кэша.|  
 |memory_object_address|**varbinary(8)**|Адрес памяти кэшированной записи. Это значение можно использовать с [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) чтобы проанализировать распределение памяти кэшированного плана и с [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)для определения затрат на кэширование записи.|  
 |cacheobjtype|**nvarchar(34)**|Тип объекта в кэше. Значение может быть одним из следующих:<br /><br /> Compiled Plan (скомпилированный план)<br /><br /> Compiled Plan Stub (заглушка скомпилированного плана)<br /><br /> Parse Tree (дерево синтаксического анализа)<br /><br /> Extended Proc (расширенные процедуры)<br /><br /> CLR Compiled Func (скомпилированная функция CLR)<br /><br /> CLR Compiled Proc (скомпилированная процедура CLR)|  
-|objtype|**nvarchar(16)**|Тип объекта. Ниже приведены возможные значения и их соответствующие описания.<br /><br /> Proc: Хранимая процедура<br />Подготавливается: Подготовленная инструкция<br />Adhoc: нерегламентированного запроса. Ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] отправляемым как языковые события с помощью **osql** или **sqlcmd** вместо виде удаленных вызовов процедур.<br />ReplProc: Фильтр процедура репликации<br />Триггер: триггер<br />Представления: представление<br />По умолчанию: по умолчанию<br />UsrTab: Пользовательская таблица<br />SysTab: Системная таблица<br />Проверка: ПРОВЕРОЧНОЕ ограничение<br />Правило: правило|  
+|objtype|**nvarchar(16) в формате**|Тип объекта. Ниже приведены возможные значения и их соответствующие описания.<br /><br /> Proc: Хранимая процедура<br />Подготавливается: Подготовленная инструкция<br />Adhoc: нерегламентированного запроса. Ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] отправляемым как языковые события с помощью **osql** или **sqlcmd** вместо виде удаленных вызовов процедур.<br />ReplProc: Фильтр процедура репликации<br />Триггер: триггер<br />Представления: представление<br />По умолчанию: по умолчанию<br />UsrTab: Пользовательская таблица<br />SysTab: Системная таблица<br />Проверка: ПРОВЕРОЧНОЕ ограничение<br />Правило: правило|  
 |plan_handle|**varbinary(64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать со следующими функциями динамического управления:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Идентификатор пула ресурсов, для которого подсчитывается использование памяти для плана.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  

@@ -1,16 +1,16 @@
 ---
-title: "xp_cmdshell (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: xp_cmdshell (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_cmdshell
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bb3fcd3cba2be225c4c45514b2dcbc021683c0db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,9 +88,9 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- Дополнительные сведения см. в разделе [sp_xp_cmdshell_proxy_account &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ Дополнительные сведения см. в разделе [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Поскольку пользователи-злоумышленники иногда пытаются повысить свои полномочия с помощью **xp_cmdshell**, **xp_cmdshell** отключена по умолчанию. Используйте **sp_configure** или **управления на основе политик** для его включения. Дополнительные сведения см. в разделе [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  При первом включении **xp_cmdshell** требуется разрешение CONTROL SERVER для выполнения и процесса Windows, созданных **xp_cmdshell** имеет тот же контекст безопасности, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Учетной записи службы часто имеет больше разрешений, чем требуется для работы, выполняемой процессом, созданные **xp_cmdshell**. Чтобы улучшить безопасность, доступ к **xp_cmdshell** должна быть ограничена только привилегированным пользователям.  
@@ -177,10 +177,10 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Общие расширенные хранимые процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Параметр конфигурации сервера «xp_cmdshell»](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

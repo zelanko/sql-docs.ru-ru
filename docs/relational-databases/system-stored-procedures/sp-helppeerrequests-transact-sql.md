@@ -1,16 +1,16 @@
 ---
-title: "sp_helppeerrequests (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_helppeerrequests (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d2ea35c01385de46ded538c98faf701e34d3892
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c5266359d366acad62f7ef5e4def8c176ea12682
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения обо всех запросах состояния, полученных участниками в топологии репликации одноранговая сеть, где эти запросы были инициированы выполнением [sp_requestpeerresponse &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в любой публикуемой базе данных в топологии. Эта хранимая процедура выполняется в базе данных публикации при участии издателя в топологии одноранговой репликации. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+  Возвращает сведения обо всех запросах состояния, полученных участниками в топологии репликации одноранговая сеть, где эти запросы были инициированы выполнением [sp_requestpeerresponse &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) на любом этапе База данных, опубликованной в топологии. Эта хранимая процедура выполняется в базе данных публикации при участии издателя в топологии одноранговой репликации. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,18 +47,18 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication** =] **"***публикации***"**  
+ [ **@publication**=] **"***публикации***"**  
  Имя публикации в одноранговой топологии, для которой были отправлены запросы состояния. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@description** =] **"***описание***"**  
- Значение, которое можно использовать для идентификации запросов состояния, что позволяет фильтровать возвращенные ответы на основании пользовательской информации, предоставленной при вызове [sp_requestpeerresponse &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Описание* — **nvarchar(4000)**, значение по умолчанию  **%** . По умолчанию возвращается информация обо всех запросах состояния публикации. Этот параметр используется для возврата только тех запросов состояния с описанием соответствующих значению, переданному в *описание*, где сопоставлении строк символов с помощью [как &#40; Transact-SQL &#41; ](../../t-sql/language-elements/like-transact-sql.md) предложения.  
+ [ **@description**=] **"***описание***"**  
+ Значение, которое можно использовать для идентификации запросов состояния, который дает возможность позволяет фильтровать возвращенные ответы на основе пользовательской информации, предоставленной при вызове [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Описание* — **nvarchar(4000)**, значение по умолчанию **%**. По умолчанию возвращается информация обо всех запросах состояния публикации. Этот параметр используется для возврата только тех запросов состояния с описанием соответствующих значению, переданному в *описание*, где сопоставлении строк символов с помощью [как &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)предложения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор запроса.|  
-|**публикации**|**sysname**|Имя публикации, запрос состояния которой был отправлен.|  
+|**Публикации**|**sysname**|Имя публикации, запрос состояния которой был отправлен.|  
 |**sent_date**|**datetime**|Дата и время отправления запроса состояния.|  
 |**Описание**|**nvarchar(4000)**|Пользовательская информация, которую можно использовать для идентификации запросов состояния.|  
   
@@ -70,11 +70,11 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
  **sp_helppeerrequests** используется при восстановлении базы данных, опубликованной в топологии одноранговая сеть.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_helppeerrequests**.  
   
-## <a name="see-also"></a>См. также:  
- [sp_deletepeerrequesthistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerresponses &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

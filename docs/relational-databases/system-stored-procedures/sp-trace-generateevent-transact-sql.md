@@ -1,16 +1,16 @@
 ---
-title: "Хранимая процедура sp_trace_generateevent (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: Хранимая процедура sp_trace_generateevent (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f02fbb7e401740f6720fd8a654a38f3a9408e07
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 74240040ca9fec751c34efa397f119d4231e7898
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_trace_generateevent [ @eventid = ] event_id
  [ **@userinfo**= ] **'***user_info***'**  
  Необязательное, определяемое пользователем имя для идентификации сеанса событий. *user_info* — **nvarchar(128)**, значение по умолчанию NULL.  
   
- [ **@userdata**= ] *user_data*  
+ [ **@userdata**=] *user_data*  
  Необязательные, указываемые пользователем данные события. *user_data* — **varbinary(8000)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -70,7 +70,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|Указанное событие недопустимо. Возможно, событие не существует или не соответствует ни одной хранимой процедуре.|  
 |**13**|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Хранимая процедура sp_trace_generateevent** выполняет многие действия, ранее выполнявшиеся **xp_trace_\***  расширенные хранимые процедуры. Используйте **sp_trace_generateevent** вместо **xp_trace_generate_event**.  
   
  Могут быть использованы идентификаторы только пользовательских событий с **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] активирует ошибку при использовании идентификационных номеров других событий.  
