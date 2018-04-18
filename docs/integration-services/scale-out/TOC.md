@@ -9,4 +9,5 @@
 # [Изменение учетной записи для ведения журнала масштабного развертывания](change-logdb-account.md)
 # [Управление сертификатами для Scale Out](deal-with-certificates-in-ssis-scale-out.md)
 # [Высокий уровень доступности для Scale Out](scale-out-support-for-high-availability.md)
+# [Обеспечение доступности с помощью экземпляра отказоустойчивого кластера SQL Server](scale-out-failover-cluster-instance.md)
 # [Устранение неполадок Scale Out](troubleshooting-scale-out.md)
