@@ -1,16 +1,16 @@
 ---
-title: "CHANGETABLE (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: CHANGETABLE (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ CHANGETABLE (
   
  При значении NULL возвращаются все отслеживаемые изменения.  
   
- *значение last_sync_version* следует проверить, чтобы убедиться, что это не слишком старый, так как некоторые или все данные изменений могут быть очищены истечении срока хранения, настроенной для базы данных. Дополнительные сведения см. в разделе [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) и [ALTER параметры SET базы данных &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *значение last_sync_version* следует проверить, чтобы убедиться, что это не слишком старый, так как некоторые или все данные изменений могут быть очищены истечении срока хранения, настроенной для базы данных. Дополнительные сведения см. в разделе [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) и [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ВЕРСИЯ *таблицы*, {< primary_key_values >}  
  Возвращает информацию о последнем изменении указанной строки. Значения первичного ключа должны идентифицировать строку. <primary_key_values> определяет столбцы первичного ключа и указывает значения. Имена первичных ключевых столбцов могут быть указаны в любом порядке.  
@@ -84,7 +85,7 @@ CHANGETABLE (
  *Value*  
  Значение первичного ключа. Если существует несколько первичных ключевых столбцов, значения должен быть указан в том же порядке следования столбцов в *column_name* списка.  
   
- [КАК] *table_alias* [(*псевдоним_столбца* [,...*n* ] ) ]  
+ [КАК] *table_alias* [(*псевдоним_столбца* [,... *n* ])]  
  Задает имена для результатов, возвращаемых функцией CHANGETABLE.  
   
  *table_alias*  
@@ -93,7 +94,7 @@ CHANGETABLE (
  *column_alias*  
  Необязательный псевдоним столбца или список псевдонимов столбцов, возвращаемых функцией CHANGETABLE. Обеспечивает возможность настройки имен столбцов в случае, если в результатах присутствуют повторяющиеся имена.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **table**  
   
 ## <a name="return-values"></a>Возвращаемые значения  
@@ -105,7 +106,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Значение версии, связанное с последним изменением в строке|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Значения версии, связанные с последней операцией вставки.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Задает тип изменения:<br /><br /> **U** = блокировка обновления<br /><br /> **I** = Insert<br /><br /> **D** = удаление|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Задает тип изменения:<br /><br /> **U** = блокировка обновления<br /><br /> **Я** = Вставка<br /><br /> **D** = удаление|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Содержит список столбцов, измененных после last_sync_version (базовой версии). Обратите внимание, что вычисляемые столбцы никогда не указаны как измененный.<br /><br /> Принимает значение NULL, если выполняется любое из следующих условий.<br /><br /> Отслеживание изменений столбцов не включено.<br /><br /> Операция представляет собой операцию вставки или удаления.<br /><br /> Все ключевые столбцы, не являющиеся первичными, были обновлены одной операцией. Это двоичное значение не следует интерпретировать непосредственно. Используйте для его интерпретации [CHANGE_TRACKING_IS_COLUMN_IN_MASK()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, при необходимости можно указать с помощью [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) предложения как часть инструкции INSERT, UPDATE или DELETE.|  
 |\<значение первичного ключевого столбца >|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
@@ -119,7 +120,7 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, который указывается дополнительно с использованием предложения WITH как часть инструкции INSERT, UPDATE или DELETE.|  
 |\<значение первичного ключевого столбца >|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Функция CHANGETABLE обычно используется в предложении FROM запроса, как если бы она была таблицей.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -221,6 +222,6 @@ WHERE
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

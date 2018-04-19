@@ -1,16 +1,16 @@
 ---
-title: "sp_execute_remote (база данных SQL Azure) | Документы Microsoft"
-ms.custom: 
+title: sp_execute_remote (база данных SQL Azure) | Документы Microsoft
+ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_execute_remote
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: d681bdeafa6fc39a01a41f067bf9cec7a809add6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
 ## <a name="arguments"></a>Аргументы  
  [ @data_source_name =] *источнику данных*  
- Определяет источник внешних данных, где выполнена инструкция. В разделе [СОЗДАНИЯ ВНЕШНЕГО источника данных &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). Внешний источник данных может иметь тип «СУРБД» или «SHARD_MAP_MANAGER».  
+ Определяет источник внешних данных, где выполнена инструкция. В разделе [СОЗДАНИЯ ВНЕШНЕГО источника данных &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Внешний источник данных может иметь тип «СУРБД» или «SHARD_MAP_MANAGER».  
   
  [ @stmt=] *инструкции*  
  Строка в Юникоде, содержащий [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакета. @stmt должен быть константой или переменной в Юникоде. Более сложные выражения Юникода, например объединение двух строк с помощью оператора +, недопустимы. Символьные константы недопустимы. Если константа в Юникоде указывается, она должна начинаться с префикса **N**. Например, константа Юникода **N 'sp_who'** является допустимым, а символьная константа **'sp_who'** не является. Размер строки ограничивается только доступной серверу баз данных памятью. На 64-разрядных серверах размер строки ограничен 2 ГБ, максимальный размер **nvarchar(max)**.  
@@ -62,8 +63,8 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Каждый параметр, включенный в аргумент @stmt, должен иметь соответствующую запись в списке определений параметров @params и в списке значений параметров.  
   
- [ @params=] N'@*parameter_name ** data_type* [,... *n* ] '  
- Строка, содержащая определения всех параметров, внедренных в @stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в @stmtmust определяться в @params. Если инструкция или пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в аргументе @stmt не содержат параметров, @params может отсутствовать. Этот аргумент по умолчанию принимает значение NULL.  
+ [ @params=] N'@*parameter_name ** data_type* [,... *n* ] "  
+ Строка, содержащая определения всех параметров, внедренных в @stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, означающий определения дополнительных параметров. Каждый параметр, указанный в @stmtmust определяться в @params. Если инструкция или пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в аргументе @stmt не содержат параметров, @params может отсутствовать. Этот аргумент по умолчанию принимает значение NULL.  
   
  [ @param1=] '*значение1*"  
  Значение для первого параметра, определенного в строке параметров. Это значение может быть константой или переменной в Юникоде. Каждому параметру, указанному в @stmt, должно соответствовать значение. Если инструкция или пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в @stmt не содержат параметров, список значений может отсутствовать.  
@@ -78,16 +79,16 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Возвращает результирующий набор из первой инструкции SQL.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение `ALTER ANY EXTERNAL DATA SOURCE`  
+ Требуется разрешение `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  `sp_execute_remote` параметры должны вводиться в определенном порядке, как описано в разделе "синтаксис" выше. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
- `sp_execute_remote` ведет себя как [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) отношении пакетов и область имен. Выполнение инструкции Transact-SQL или пакета в sp_execute_remote  *@stmt*  не компилируются до выполнения инструкции sp_execute_remote.  
+ `sp_execute_remote` ведет себя как [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) отношении пакетов и область имен. Выполнение инструкции Transact-SQL или пакета в sp_execute_remote *@stmt* не компилируются до выполнения инструкции sp_execute_remote.  
   
  `sp_execute_remote` добавляет дополнительный столбец с именем «$ShardName», содержащее имя удаленной базы данных, созданных строки результирующего набора.  
   
- `sp_execute_remote` можно использовать аналогично [sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` можно использовать аналогично [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
 ### <a name="simple-example"></a>Простой пример  

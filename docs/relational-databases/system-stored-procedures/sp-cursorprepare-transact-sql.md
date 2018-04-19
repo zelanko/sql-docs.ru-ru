@@ -1,16 +1,16 @@
 ---
-title: "sp_cursorprepare (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: sp_cursorprepare (Transact-SQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b588770141c5d5593ef209e190203354c0ae4891
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1134a3edbbbf1a838207a122e43bbafb5ac0e18b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  *prepared_handle* затем передается процедуре sp_cursorexecute для открытия курсора. Когда дескриптор создан, он существует до выхода пользователя из системы или до тех пор, пока не будет явным образом удален с помощью процедуры sp_cursorunprepare.  
   
- *params*  
+ *Params*  
  Указывает параметризованные инструкции. *Params* определение переменных подставляется вместо маркеров параметров в инструкции. *params* является обязательным параметром, который вызывает для **ntext**, **nchar**, или **nvarchar** входного значения. Если инструкция не параметризована, необходимо ввести значение NULL.  
   
 > [!NOTE]  
@@ -68,14 +68,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *Параметры*  
  Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. *Параметры* требуются следующие **int** входного значения.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Параметр прокрутки. *scrollopt* является необязательным параметром требует одного из следующих **int** входных значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -97,7 +97,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* является необязательным параметром требует одного из следующих **int** входных значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (прежнее название — LOCKCC)|  
@@ -125,12 +125,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>Примеры  
  Когда *stmt* параметризован и *scrollopt* значение PARAMETERIZED_STMT равно ON, имеет следующий формат строки:  
   
- {  *\<имя локальной переменной >**\<тип данных >* } [ ,...*n* ]  
+ {  *\<имя локальной переменной > **\<тип данных >* } [,...*n* ]  
   
-## <a name="see-also"></a>См. также:  
- [sp_cursorexecute &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
