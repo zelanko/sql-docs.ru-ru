@@ -1,34 +1,35 @@
 ---
-title: "Класс событий SP:Recompile | Документация Майкрософт"
-ms.custom: 
+title: Класс событий SP:Recompile | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f56543d46915673c51e1626d669f473416aed01f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bb54befe1e768f21298ee1417057b2d01976cbee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-События класса SP:Recompile указывают на то, что хранимая процедура, триггер или пользовательская функция были перекомпилированы. Перекомпиляции, о которых сообщают события этого класса, производятся на уровне инструкций.  
+  События класса SP:Recompile указывают на то, что хранимая процедура, триггер или пользовательская функция были перекомпилированы. Перекомпиляции, о которых сообщают события этого класса, производятся на уровне инструкций.  
   
  Трассировать повторные компиляции на уровне инструкций предпочтительнее с помощью класса событий SQL:StmtRecompile. Класс событий SP:Recompile использовать не рекомендуется. Дополнительные сведения см. в статье [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  
   

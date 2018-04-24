@@ -1,15 +1,16 @@
 ---
-title: "Сетевая конфигурация сервера SQL Server | Документы Майкрософт"
-ms.custom: 
+title: Сетевая конфигурация сервера SQL Server | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-network-configuration"></a>Сетевая конфигурация сервера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задачи настройки сети для сервера включают активацию протоколов, изменение порта или канала, используемого протоколом, настройку шифрования, настройку службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отображение или скрытие компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети и регистрацию имени участника на уровне сервера. Обычно изменять сетевую конфигурацию сервера не требуется. Проводить перенастройку сетевых протоколов сервера следует только в случае особых требований сети.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Задачи сетевой конфигурации сервера включают активацию протоколов, изменение порта или канала, используемого протоколом, настройку шифрования, настройку службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , отображение или скрытие компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети и регистрацию имени участника-службы сервера. Обычно изменять сетевую конфигурацию сервера не требуется. Проводить перенастройку сетевых протоколов сервера следует только в случае особых требований сети.  
   
  Настройка сети для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]применялась программа Server Network Utility, которая поставлялась вместе с ними.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/18/2018
  При настройке на динамические порты порт, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может меняться при каждом запуске. При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через брандмауэр необходимо открыть порт, используемый компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует настраивать компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на использование определенного порта, что позволит настроить брандмауэр так, чтобы он разрешал связь с сервером. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Изменение именованного канала  
- Можно настроить протокол именованного канала на прослушивание определенного именованного канала. По умолчанию экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] прослушивает канал \\\\.\pipe\sql\query для экземпляра по умолчанию и \\\\.\pipe\MSSQL$*\<имя_экземпляра>*\sql\query для именованного экземпляра. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может прослушивать только один именованный канал, но при желании можно изменить имя канала на другое. Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет клиентам определить канал при подключении. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания альтернативного канала (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Можно настроить протокол именованного канала на прослушивание определенного именованного канала. По умолчанию экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] прослушивает канал \\\\.\pipe\sql\query для экземпляра по умолчанию и \\\\.\pipe\MSSQL$*\<имя_экземпляра>* \sql\query для именованного экземпляра. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может прослушивать только один именованный канал, но при желании можно изменить имя канала на другое. Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет клиентам определить канал при подключении. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания альтернативного канала (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Принудительное шифрование  
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно настроить так, чтобы требовать шифрования во время связи с клиентскими приложениями. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

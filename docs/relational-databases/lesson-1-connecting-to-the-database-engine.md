@@ -1,28 +1,28 @@
 ---
-title: "Занятие 1. Подключение к ядру СУБД | Документация Майкрософт"
-ms.custom: 
+title: Занятие 1. Подключение к ядру СУБД | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
  — Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
 
 ### <a name="basic-tools"></a>Основные средства
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)]. Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS предоставляется для бесплатного скачивания из [Центра загрузки Майкрософт](https://msdn.microsoft.com/library/mt238290.aspx). Последнюю версию можно использовать с более старыми версиями [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)] . Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS предоставляется для бесплатного скачивания из [Центра загрузки Майкрософт](https://msdn.microsoft.com/library/mt238290.aspx). Последнюю версию можно использовать с более старыми версиями [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/09/2018
 1.  Войдите в Windows как член группы «Администраторы» и откройте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  В диалоговом окне **Соединения с сервером** нажмите кнопку **Отмена**.  
 3.  Если компонент «Зарегистрированные серверы» не отображается, в меню **Вид** выберите пункт **Зарегистрированные серверы**.
-4.  Выбрав компонент **Ядро СУБД** на панели инструментов "Зарегистрированные серверы", разверните компонент **Ядро СУБД**, щелкните правой кнопкой мыши пункт **Группы локальных серверов**, наведите указатель на пункт **Задачи**и выберите пункт **Зарегистрировать локальные серверы**. Отобразятся все экземпляры компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , установленные на компьютере. Экземпляр по умолчанию безымянный и отображается как имя компьютера. Именованный экземпляр отображается как имя компьютера, за которым следует обратная косая черта (\\), а затем имя экземпляра. Для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] имя экземпляра — *<имя_компьютера>*\sqlexpress, если имя не было изменено в процессе установки.  
+4.  Выбрав компонент **Ядро СУБД** на панели инструментов "Зарегистрированные серверы", разверните компонент **Ядро СУБД**, щелкните правой кнопкой мыши пункт **Группы локальных серверов**, наведите указатель на пункт **Задачи**и выберите пункт **Зарегистрировать локальные серверы**. Отобразятся все экземпляры компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , установленные на компьютере. Экземпляр по умолчанию безымянный и отображается как имя компьютера. Именованный экземпляр отображается как имя компьютера, за которым следует обратная косая черта (\\), а затем имя экземпляра. Для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] имя экземпляра — *<имя_компьютера>* \sqlexpress, если имя не было изменено в процессе установки.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Подтверждение того, что компонент ядра СУБД запущен
 

@@ -1,16 +1,16 @@
 ---
-title: "Редактор запросов ядра СУБД (среда SQL Server Management Studio) | Документация Майкрософт"
-ms.custom: 
+title: Редактор запросов ядра СУБД (среда SQL Server Management Studio) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.tsqlquery.f1
@@ -25,19 +25,21 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aba0786e713acd4ec90c958e21cbe22ff421ed32
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Редактор запросов компонента Database Engine (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет создавать и запускать скрипты, содержащие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Этот редактор также поддерживает запуск скриптов, содержащих команды **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет создавать и запускать скрипты, содержащие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот редактор также поддерживает запуск скриптов, содержащих команды **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Справка F1 по Transact-SQL  
  Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает связь с разделом справки для определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] при нажатии клавиши F1. Чтобы сделать это, выделите имя инструкции Transact-SQL и нажмите клавишу F1. После этого средство поиска справки выполнит поиск раздела, имеющего атрибут справки F1, соответствующий выделенной строке.  

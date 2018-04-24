@@ -1,8 +1,8 @@
 ---
 title: Целевые объекты для расширенных событий в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ CREATE EVENT SESSION [event_counter_1]
 
 - Выбранное вами имя файла используется системой в качестве префикса, к которому добавляется длинное целое число на основе даты и времени, за которым следует расширение XEL.
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > База данных SQL Azure поддерживает назначение **event_file**, однако только в том случае, если для вывода в хранилище Azure используется большой двоичный объект. База данных SQL не может сохранять выходные данные событий в файле на локальном жестком диске.
+>
 > Пример кода **event_file** для базы данных SQL (и управляемого экземпляра базы данных SQL) см. в разделе [Код назначения файла событий для расширенных событий в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION с целевым объектом **event_file**

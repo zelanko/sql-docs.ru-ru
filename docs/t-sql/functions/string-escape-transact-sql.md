@@ -1,16 +1,16 @@
 ---
-title: "STRING_ESCAPE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: STRING_ESCAPE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STRING_ESCAPE
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STRING_ESCAPE function
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f850839d54f5a1e4d58277524b1f2d35b56c7b4e
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f60f27384f55002fb3f56817707aee3a69c26614
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ STRING_ESCAPE( text , type )
  *type*  
  Правила экранирования, которые будут применены. В настоящее время поддерживается значение `'json'`.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Текст **nvarchar(max)** с экранированными специальными и управляющими символами. В настоящее время с помощью функции **STRING_ESCAPE** можно экранировать только специальные символы JSON, представленные в таблицах ниже.  
   
 |Специальный символ|Закодированная последовательность|  

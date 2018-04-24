@@ -1,16 +1,16 @@
 ---
-title: "Управление форматированием кода | Документация Майкрософт"
-ms.custom: 
+title: Управление форматированием кода | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -29,19 +29,21 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96141b7eb166d6ffd8e082890ce005a0cc52c650
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39aa0603bd5932c9b36185abacc56cc01e2aff19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-code-formatting"></a>управлять форматированием кода
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В редакторе можно форматировать код с помощью отступов, скрытия текста, URL-адресов и т. д. Можно также выполнять автоматическое форматирование кода с помощью интеллектуальных отступов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  В редакторе можно форматировать код отступами, скрывать текст, вводить URL-адреса и т. д. Можно также выполнять автоматическое форматирование кода с помощью интеллектуальных отступов.  
   
 ## <a name="indenting"></a>Отступы  
  Возможны три разных стиля расстановки отступов. Можно указать, сколько пробелов должно входить в один отступ или табуляцию, а также какие символы редактор будет использовать при расстановке отступов: табуляции или пробелы.  

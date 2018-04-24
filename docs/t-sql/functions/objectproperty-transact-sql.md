@@ -1,16 +1,16 @@
 ---
-title: "OBJECTPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: OBJECTPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OBJECTPROPERTY
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-caps.latest.revision: 
+caps.latest.revision: 81
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34a522a15c9069ddf0da083ad107ea464b0587a1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3bbf6ff574ffe6c9f538b47d87664889b36665d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +85,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|Триггер|Триггер отключен.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |ExecIsTriggerNotForRepl|Триггер|Триггер определен как NOT FOR REPLICATION.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |ExecIsUpdateTrigger|Триггер|Триггер UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsWithNativeCompilation|Процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Процедура компилируется в собственном коде.<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**|  
+|ExecIsWithNativeCompilation|Процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Процедура компилируется в собственном коде.<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**|  
 |HasAfterTrigger|Таблица, представление|Таблица или представление с триггером AFTER.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |HasDeleteTrigger|Таблица, представление|Таблица или представление с триггером DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |HasInsertTrigger|Таблица, представление|Таблица или представление с триггером INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
@@ -93,7 +94,7 @@ OBJECTPROPERTY ( id , property )
 |IsAnsiNullsOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], таблица, триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Указывается, что для параметра ANSI NULLS таблицы задано ON. Это означает, что результатом всех сравнений со значением NULL является UNKNOWN. Эта настройка относится ко всем выражениям в определении таблицы, включая вычисляемые столбцы и ограничения, в течение всего времени существования таблицы.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsCheckCnst|Любой объект области схемы|Ограничение CHECK.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsConstraint|Любой объект области схемы|Ограничение CHECK, DEFAULT или FOREIGN KEY единственного столбца на столбце или таблице.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsDefault|Любой объект области схемы|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Привязанное значение по умолчанию:<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsDefault|Любой объект области схемы|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Привязанное значение по умолчанию:<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsDefaultCnst|Любой объект области схемы|Ограничение DEFAULT:<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsDeterministic|Функция, представление|Свойство детерминизма функции или представления.<br /><br /> 1 = детерминированная<br /><br /> 0 = недетерминированная|  
 |IsEncrypted|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], таблица, триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Указывает, что исходный текст инструкции модуля был преобразован в запутанный формат. Результат запутывания не виден непосредственно ни в одном представлении каталога [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Пользователи, не имеющие доступа к системным таблицам или файлам баз данных, не могут получить текст, подвергнутый запутыванию. Однако этот текст будет доступен пользователям, которые имеют либо доступ к системным таблицам через [порт DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md), либо непосредственный доступ к файлам баз данных. Кроме того, пользователь, имеющий возможность подключить отладчик к серверному процессу, сможет получить исходный текст процедуры из памяти во время выполнения.<br /><br /> 1 = зашифрована<br /><br /> 0 = не зашифрована<br /><br /> Базовый тип данных: **int**|  
@@ -112,57 +113,57 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Любой объект области схемы|Привязанное правило.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsScalarFunction|Компонент|Скалярная функция.<br /><br /> 1 = скалярная функция<br /><br /> 0 = нескалярная функция|  
 |IsSchemaBound|Функция, представление|Привязанная к схеме функция или представление, созданные с помощью SCHEMABINDING.<br /><br /> 1 = привязана к схеме<br /><br /> 0 = не привязана к схеме.|  
-|IsSystemTable|Table|Системная таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsTable|Table|Таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsSystemTable|Таблица|Системная таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsTable|Таблица|Таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsTableFunction|Компонент|Функция с табличным значением.<br /><br /> 1 = функция с табличным значением<br /><br /> 0 = функция не с табличным значением|  
 |IsTrigger|Любой объект области схемы|Триггер.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsUniqueCnst|Любой объект области схемы|Ограничение UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsUserTable|Table|Пользовательская таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsView|Просмотр|Представление.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsUserTable|Таблица|Пользовательская таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsView|Представление|Представление.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |OwnerId|Любой объект области схемы|Владелец объекта.<br /><br /> **Примечание**. Владелец схемы необязательно является владельцем объекта. Например, дочерние объекты (такие, у которых аргумент *parent_object_id* не равен NULL) всегда возвращают в качестве родителя один и тот же идентификатор владельца.<br /><br /> Nonnull = идентификатор пользователя базы данных владельца объекта.|  
-|TableDeleteTrigger|Table|У таблицы есть триггер DELETE.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
-|TableDeleteTriggerCount|Table|В таблице имеется указанное число триггеров DELETE.<br /><br /> >0 = количество триггеров DELETE.|  
-|TableFullTextMergeStatus|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Определяет, участвует ли в настоящий момент полнотекстовый индекс для таблицы в процессе слияния.<br /><br /> 0 = для таблицы отсутствует полнотекстовый индекс, либо индекс не находится в процессе слияния.<br /><br /> 1 = полнотекстовый индекс находится в процессе слияния.|  
-|TableFullTextBackgroundUpdateIndexOn|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> В таблице имеется включенный полнотекстовый индекс фонового обновления (отслеживание автозамен).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextCatalogId|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор полнотекстового каталога, в котором находятся данные полнотекстового индекса для таблицы.<br /><br /> Не 0 = идентификатор полнотекстового каталога, связанный с уникальным индексом, идентифицирующим строки в полнотекстовой индексированной таблице.<br /><br /> 0 = таблица не имеет полнотекстового индекса.|  
-|TableFulltextChangeTrackingOn|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Для таблицы включено полнотекстовое отслеживание изменений.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество строк, обработанных с начала полнотекстового индексирования. В таблице, которая индексируется для полнотекстового поиска, все столбцы одной строки рассматриваются как часть единого индексируемого документа.<br /><br /> 0 = отсутствие активного сканирования или полнотекстовое индексирование закончено.<br /><br /> > 0 = один из следующих вариантов (А или Б): А) Количество документов, обработанных с использованием операций вставки или обновления с начала полного, добавочного или ручного заполнения с отслеживанием изменений. Б) Число строк, обработанных операциями вставки или обновления с момента включения отслеживания изменений при фоновом заполнении индекса обновления, изменения схемы полнотекстового индекса, повторного построения полнотекстового каталога, перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и т. д.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.<br /><br /> Это свойство не обеспечивает наблюдение за удаленными строками или их подсчет.|  
-|TableFulltextFailCount|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество строк, для которых полнотекстовый поиск не выявил индекса.<br /><br /> 0 = Заполнение завершено.<br /><br /> > 0 = один из следующих вариантов (А или Б): А) Количество документов, не индексированных с начала заполнения отслеживания изменений полного, постепенного или ручного обновления. Б) Для отслеживания изменений с индексацией фонового обновления — число строк, которые не проиндексированы с начала или перезапуска заполнения. Это может быть вызвано изменением схемы, перестроением каталога, перезапуском сервера и т. д.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.|  
-|TableFulltextItemCount|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество строк, для которых было успешно выполнено полнотекстовое индексирование.|  
-|TableFulltextKeyColumn|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор столбца, связанного с уникальным индексом одного столбца, который участвует в определении полнотекстового индекса:<br /><br /> 0 = таблица не имеет полнотекстового индекса.|  
-|TableFulltextPendingChanges|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество ожидающих отслеженных изменений к обработке.<br /><br /> 0 = Отслеживание изменений не включено.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.|  
-|TableFulltextPopulateStatus|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Бездействует.<br /><br /> 1 = Производится полное заполнение.<br /><br /> 2 = Производится добавочное заполнение.<br /><br /> 3 = Выполняется распространение отслеженных изменений.<br /><br /> 4 = выполняется индексирование фонового обновления (например автоматическое отслеживание изменений).<br /><br /> 5 = Полнотекстовое индексирование приостановлено, или не хватает ресурсов на его выполнение.|  
-|TableHasActiveFulltextIndex|Table|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Таблица имеет активный полнотекстовый индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasCheckCnst|Table|Таблица имеет ограничение CHECK.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasClustIndex|Table|Таблица имеет кластеризованный индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasDefaultCnst|Table|Таблица имеет ограничение DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasDeleteTrigger|Table|У таблицы есть триггер DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasForeignKey|Table|Таблица имеет ограничение FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasForeignRef|Table|На таблицу есть ссылки по ограничению FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasIdentity|Table|Таблица содержит столбец идентификаторов.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasIndex|Table|Таблица имеет индекс какого-либо типа.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasInsertTrigger|Table|Объект имеет триггер INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasNonclustIndex|Table|Таблица содержит некластеризованный индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasPrimaryKey|Table|Таблица содержит первичный ключ.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasRowGuidCol|Table|Таблица содержит свойство ROWGUIDCOL для столбца **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasTextImage|Table|Таблица содержит столбец **text**, **ntext** или **image**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasTimestamp|Table|Таблица содержит столбец **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasUniqueCnst|Table|Таблица имеет ограничение UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasUpdateTrigger|Table|Объект содержит триггер UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasVarDecimalStorageFormat|Table|Для таблицы включен формат хранения **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableInsertTrigger|Table|Таблица содержит триггер INSERT.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
-|TableInsertTriggerCount|Table|В таблице имеется указанное число триггеров INSERT.<br /><br /> >0 = количество триггеров INSERT.|  
-|TableIsFake|Table|Таблица реально не существует. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] материализует ее внутренним образом по запросу.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableIsLockedOnBulkLoad|Table|Таблица заблокирована в связи с **bcp** или заданием BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableIsMemoryOptimized|Table|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Таблица, оптимизированная для памяти<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**<br /><br /> Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
-|TableIsPinned|Table|Таблица закреплена для хранения в кэше данных.<br /><br /> 0 = False.<br /><br /> Эта функция не поддерживается в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и в более поздних версиях.|  
-|TableTextInRowLimit|Table|Максимальное количество байтов, допустимое для текста в строке.<br /><br /> 0, если не установлен параметр текст в строке.|  
-|TableUpdateTrigger|Table|Таблица содержит триггер UPDATE.<br /><br /> > 1 = идентификатор первого триггера указанного типа.|  
-|TableUpdateTriggerCount|Table|В таблице имеется указанное число триггеров UPDATE.<br /><br /> >0 = количество триггеров UPDATE.|  
-|TableHasColumnSet|Table|Таблица содержит набор столбцов.<br /><br /> 0 = False.<br /><br /> 1 = True<br /><br /> Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Table|**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Задает тип таблицы:<br /><br /> 0 = нетемпоральная таблица;<br /><br /> 1 = таблица журнала для таблицы с управлением версиями;<br /><br /> 2 = темпоральная таблица с управлением версиями.|  
+|TableDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
+|TableDeleteTriggerCount|Таблица|В таблице имеется указанное число триггеров DELETE.<br /><br /> >0 = количество триггеров DELETE.|  
+|TableFullTextMergeStatus|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Определяет, участвует ли в настоящий момент полнотекстовый индекс для таблицы в процессе слияния.<br /><br /> 0 = для таблицы отсутствует полнотекстовый индекс, либо индекс не находится в процессе слияния.<br /><br /> 1 = полнотекстовый индекс находится в процессе слияния.|  
+|TableFullTextBackgroundUpdateIndexOn|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> В таблице имеется включенный полнотекстовый индекс фонового обновления (отслеживание автозамен).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextCatalogId|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор полнотекстового каталога, в котором находятся данные полнотекстового индекса для таблицы.<br /><br /> Не 0 = идентификатор полнотекстового каталога, связанный с уникальным индексом, идентифицирующим строки в полнотекстовой индексированной таблице.<br /><br /> 0 = таблица не имеет полнотекстового индекса.|  
+|TableFulltextChangeTrackingOn|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Для таблицы включено полнотекстовое отслеживание изменений.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextDocsProcessed|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество строк, обработанных с начала полнотекстового индексирования. В таблице, которая индексируется для полнотекстового поиска, все столбцы одной строки рассматриваются как часть единого индексируемого документа.<br /><br /> 0 = отсутствие активного сканирования или полнотекстовое индексирование закончено.<br /><br /> > 0 = один из следующих вариантов (А или Б): А) Количество документов, обработанных с использованием операций вставки или обновления с начала полного, добавочного или ручного заполнения с отслеживанием изменений. Б) Число строк, обработанных операциями вставки или обновления с момента включения отслеживания изменений при фоновом заполнении индекса обновления, изменения схемы полнотекстового индекса, повторного построения полнотекстового каталога, перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и т. д.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.<br /><br /> Это свойство не обеспечивает наблюдение за удаленными строками или их подсчет.|  
+|TableFulltextFailCount|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество строк, для которых полнотекстовый поиск не выявил индекса.<br /><br /> 0 = Заполнение завершено.<br /><br /> > 0 = один из следующих вариантов (А или Б): А) Количество документов, не индексированных с начала заполнения отслеживания изменений полного, постепенного или ручного обновления. Б) Для отслеживания изменений с индексацией фонового обновления — число строк, которые не проиндексированы с начала или перезапуска заполнения. Это может быть вызвано изменением схемы, перестроением каталога, перезапуском сервера и т. д.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.|  
+|TableFulltextItemCount|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество строк, для которых было успешно выполнено полнотекстовое индексирование.|  
+|TableFulltextKeyColumn|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор столбца, связанного с уникальным индексом одного столбца, который участвует в определении полнотекстового индекса:<br /><br /> 0 = таблица не имеет полнотекстового индекса.|  
+|TableFulltextPendingChanges|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество ожидающих отслеженных изменений к обработке.<br /><br /> 0 = Отслеживание изменений не включено.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.|  
+|TableFulltextPopulateStatus|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Бездействует.<br /><br /> 1 = Производится полное заполнение.<br /><br /> 2 = Производится добавочное заполнение.<br /><br /> 3 = Выполняется распространение отслеженных изменений.<br /><br /> 4 = выполняется индексирование фонового обновления (например автоматическое отслеживание изменений).<br /><br /> 5 = Полнотекстовое индексирование приостановлено, или не хватает ресурсов на его выполнение.|  
+|TableHasActiveFulltextIndex|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Таблица имеет активный полнотекстовый индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasCheckCnst|Таблица|Таблица имеет ограничение CHECK.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasClustIndex|Таблица|Таблица имеет кластеризованный индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasDefaultCnst|Таблица|Таблица имеет ограничение DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasForeignKey|Таблица|Таблица имеет ограничение FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasForeignRef|Таблица|На таблицу есть ссылки по ограничению FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasIdentity|Таблица|Таблица содержит столбец идентификаторов.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasIndex|Таблица|Таблица имеет индекс какого-либо типа.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasInsertTrigger|Таблица|Объект имеет триггер INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasNonclustIndex|Таблица|Таблица содержит некластеризованный индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasPrimaryKey|Таблица|Таблица содержит первичный ключ.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasRowGuidCol|Таблица|Таблица содержит свойство ROWGUIDCOL для столбца **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasTextImage|Таблица|Таблица содержит столбец **text**, **ntext** или **image**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasTimestamp|Таблица|Таблица содержит столбец **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasUniqueCnst|Таблица|Таблица имеет ограничение UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasUpdateTrigger|Таблица|Объект содержит триггер UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasVarDecimalStorageFormat|Таблица|Для таблицы включен формат хранения **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableInsertTrigger|Таблица|Таблица содержит триггер INSERT.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
+|TableInsertTriggerCount|Таблица|В таблице имеется указанное число триггеров INSERT.<br /><br /> >0 = количество триггеров INSERT.|  
+|TableIsFake|Таблица|Таблица реально не существует. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] материализует ее внутренним образом по запросу.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableIsLockedOnBulkLoad|Таблица|Таблица заблокирована в связи с **bcp** или заданием BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableIsMemoryOptimized|Таблица|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Таблица, оптимизированная для памяти<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**<br /><br /> Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
+|TableIsPinned|Таблица|Таблица закреплена для хранения в кэше данных.<br /><br /> 0 = False.<br /><br /> Эта функция не поддерживается в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и в более поздних версиях.|  
+|TableTextInRowLimit|Таблица|Максимальное количество байтов, допустимое для текста в строке.<br /><br /> 0, если не установлен параметр текст в строке.|  
+|TableUpdateTrigger|Таблица|Таблица содержит триггер UPDATE.<br /><br /> > 1 = идентификатор первого триггера указанного типа.|  
+|TableUpdateTriggerCount|Таблица|В таблице имеется указанное число триггеров UPDATE.<br /><br /> >0 = количество триггеров UPDATE.|  
+|TableHasColumnSet|Таблица|Таблица содержит набор столбцов.<br /><br /> 0 = False.<br /><br /> 1 = True<br /><br /> Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|  
+|TableTemporalType|Таблица|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Задает тип таблицы:<br /><br /> 0 = нетемпоральная таблица;<br /><br /> 1 = таблица журнала для таблицы с управлением версиями;<br /><br /> 2 = темпоральная таблица с управлением версиями.|  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
 ## <a name="exceptions"></a>Исключения  

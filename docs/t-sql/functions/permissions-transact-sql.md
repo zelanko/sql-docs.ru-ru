@@ -1,16 +1,16 @@
 ---
-title: "PERMISSIONS (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: PERMISSIONS (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PERMISSIONS_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1d8b8fff2313559c2a076ed761d0792fafd5001
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f785ca7ad10263ed83503ad24fe905212a30dd54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  **'** *column* **'**  
  Необязательное имя столбца, для которого возвращаются данные о разрешениях. Имя столбца должно быть допустимым в таблице, указанной в аргументе *objectid*.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
@@ -97,7 +97,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
 |8|0x8|INSERT|  
-|16|0x10|Delete|  
+|16|0x10|DELETE|  
 |32|0x20|EXECUTE (только процедуры)|  
 |4096|0x1000|SELECT ANY (по крайней мере один столбец)|  
 |8192|0x2000|UPDATE ANY|  

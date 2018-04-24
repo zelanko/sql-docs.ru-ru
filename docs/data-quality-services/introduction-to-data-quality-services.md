@@ -15,18 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2b0004068581d06c516c711565d811cc1736b55
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 84373ec49b5342a4e975f26ab474d4420190a686
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Общие сведения о службах Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Решение по обеспечению качества данных, предоставляемое [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), позволяет диспетчеру данных или ИТ-специалисту поддерживать качество данных и обеспечивать их пригодность к бизнес-использованию. DQS — это решение на основе знаний, которое обеспечивает автоматизированные и интерактивные способы управления целостностью и качеством источников данных. DQS позволяет обнаруживать знания о данных, строить наборы знаний и управлять ими. Затем эти знания вы можете использовать для выполнения очистки, сопоставления и профилирования данных. Также вы можете использовать облачные службы поставщиков эталонных данных в проекте качества данных DQS.  
   
 ##  <a name="BusinessNeed"></a> Потребность бизнеса в DQS  

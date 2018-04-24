@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f4473d85c67071ce862915a16d48ac14a2a6e02
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 91d23c2a47abceb095e8784839ff9121f450ff97
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain"></a>Создание домена
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   В этом разделе описывается, как создать домен в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Значения в домене являются семантическим представлением данных в поле. Дополнительные сведения о доменах см. в разделе [Управление доменом](../data-quality-services/managing-a-domain.md).  
   
  Существуют следующие два способа создания нового домена. Первый — на этапе сопоставления действий по обнаружению знаний, в процессе анализа образца данных для добавления набора знаний в новую или существующую базу знаний. Второй — в ходе действий по управлению доменами, когда вместо изменения существующего домена вы создаете новый.  

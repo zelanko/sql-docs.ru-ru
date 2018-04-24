@@ -1,16 +1,16 @@
 ---
-title: "Определение и изменение параметризованного фильтра строк для статьи публикации слиянием | Документация Майкрософт"
-ms.custom: 
+title: Определение и изменение параметризованного фильтра строк для статьи публикации слиянием | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - modifying filters, parameterized row
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25e02f17df0a17ac500eb4549f564b1b1f5f6200
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f459ae77584f5598ce5c71b3040f8bb2ecaa223d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Определение и изменение параметризованного фильтра строк для статьи публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/08/2018
         SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
         ```  
   
-    -   Текст по умолчанию изменять нельзя. Введите предложение фильтра после ключевого слова WHERE, используя стандартный синтаксис SQL. Параметризованный фильтр включает вызов функции системы **HOST_NAME()** и/или **SUSER_SNAME()**либо пользовательской функции, которая ссылается на одну или обе эти функции. Ниже приведен пример полного выражения для параметризованного фильтра строк:  
+    -   Текст по умолчанию изменять нельзя. Введите предложение фильтра после ключевого слова WHERE, используя стандартный синтаксис SQL. Параметризованный фильтр включает вызов функции системы **HOST_NAME()** и/или **SUSER_SNAME()** либо пользовательской функции, которая ссылается на одну или обе эти функции. Ниже приведен пример полного выражения для параметризованного фильтра строк:  
   
         ```  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  

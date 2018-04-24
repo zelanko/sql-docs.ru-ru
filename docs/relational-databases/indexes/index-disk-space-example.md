@@ -1,16 +1,16 @@
 ---
-title: "Пример использования места на диске для индекса | Документация Майкрософт"
-ms.custom: 
+title: Пример использования места на диске для индекса | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - online index disk space
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 
+caps.latest.revision: 30
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04b3917ece9134d66a055e0d5b2daf68d901153d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 471fb85a2168d26e507ccbc759b85ba157bc589d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-disk-space-example"></a>Пример места на диске для индекса
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Каждый раз, когда создается, перестраивается или удаляется индекс, требуется место на диске как для старых (исходных), так и для новых (целевых) структур в соответствующих файлах и файловых группах. Место, занимаемое старой структурой, не освобождается до тех пор, пока транзакция создания индекса не будет зафиксирована. Может также потребоваться дополнительное временное место на диске для операций сортировки. Дополнительные сведения см. в статье [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
+  Каждый раз, когда создается, перестраивается или удаляется индекс, требуется место на диске как для старых (исходных), так и для новых (целевых) структур в соответствующих файлах и файловых группах. Место, занимаемое старой структурой, не освобождается до тех пор, пока транзакция создания индекса не будет зафиксирована. Может также потребоваться дополнительное временное место на диске для операций сортировки. Дополнительные сведения см. в статье [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  В этом примере будут определены потребности в месте на диске для создания кластеризованного индекса.  
   

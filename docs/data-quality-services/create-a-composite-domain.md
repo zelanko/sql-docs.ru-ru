@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d358802cd5500359b4132e6db6868485e317773
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8edd709f2a753d75c5208b82ac8cd6d885d83db6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-composite-domain"></a>Создание составного домена
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   В этом разделе описывается, как создать составной домен в базе знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов, применимых к одному полю данных. Дополнительные сведения о составных доменах см. в разделе [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md).  
   
  Существуют два способа создания нового составного домена. Первый — на этапе сопоставления действий по обнаружению знаний, в процессе анализа образца данных для добавления набора знаний в новую или существующую базу знаний. Второй — в ходе действий по управлению доменами, когда вместо изменения существующего домена вы создаете новый. Чтобы создать составной домен, необходимо предварительно создать не менее двух отдельных доменов, которые будут добавляться в составной домен. При создании нового составного домена доступны только предварительно созданные отдельные домены, которые еще не добавлены к существующим составным доменам. Отдельный домен можно добавить только к одному составному домену. Составной домен невозможно добавить в другой составной домен.  

@@ -1,16 +1,16 @@
 ---
-title: "Примеры: использование инструкции OPENXML | Документация Майкрософт"
-ms.custom: 
+title: 'Примеры: использование инструкции OPENXML | Документация Майкрософт'
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+  Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Примеры  
  При получении данных шаблон *rowpattern* используется для определения узлов в XML-документе, которые определяют строки. Кроме того, шаблон *rowpattern* выражен на языке шаблонов XPath, который используется в реализации языка XPath в MSXML. Например, если шаблон заканчивается элементом или атрибутом, то строка создается для каждого узла элемента или атрибута, который выбран шаблоном *rowpattern*.  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   параметр *flags* имеет значение **1**, которое указывает на сопоставление с использованием атрибутивной модели; В результате XML-атрибуты сопоставляются со столбцами в наборе строк, определенном в элементе *SchemaDeclaration*;  
   
--   в элементе *SchemaDeclaration* предложения WITH имена столбцов **oid** и **amount** в наборе строк совпадают с соответствующими именами XML-атрибутов. Поэтому параметр *ColPattern* не указывается. Для столбца **comment** в наборе строк функция XPath **text()**задается в виде параметра *ColPattern*. Это перезаписывает сопоставление с использованием атрибутивной модели, заданное в параметре *flags*, и столбец содержит строку конечных значений содержимого элемента.  
+-   в элементе *SchemaDeclaration* предложения WITH имена столбцов **oid** и **amount** в наборе строк совпадают с соответствующими именами XML-атрибутов. Поэтому параметр *ColPattern* не указывается. Для столбца **comment** в наборе строк функция XPath **text()** задается в виде параметра *ColPattern*. Это перезаписывает сопоставление с использованием атрибутивной модели, заданное в параметре *flags*, и столбец содержит строку конечных значений содержимого элемента.  
   
  Затем инструкция SELECT извлекает все столбцы из набора строк, предоставленного инструкцией OPENXML:  
   

@@ -1,35 +1,36 @@
 ---
-title: "Переупорядочение данных в иерархической таблице с применением иерархических методов | Документация Майкрософт"
-ms.custom: 
+title: Переупорядочение данных в иерархической таблице с применением иерархических методов | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3d15df3ae3bf757b54e2e4d48c55b94285540d9
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: 90d149080610093800061aa0107691dee1972330
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Занятие 2.4. Переупорядочение данных в иерархической таблице с применением иерархических методов
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Реорганизация иерархии — это распространенная задача обслуживания. В этой задаче в первую очередь переместим одну строку в новую позицию в иерархии с помощью инструкции UPDATE с методом [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) . Затем переместим все поддерево в новое место.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Реорганизация иерархии — это распространенная задача обслуживания. В этой задаче в первую очередь переместим одну строку в новую позицию в иерархии с помощью инструкции UPDATE с методом [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) . Затем переместим все поддерево в новое место.  
   
 Метод `GetReparentedValue` имеет два аргумента. В первом аргументе описывается та часть иерархии, которая будет изменена. Например, если в иерархии **/1/4/2/3/** необходимо изменить сегмент **/1/4/** так, чтобы в результате получилась иерархия **/2/1/2/3/**, в которой последние два узла (**2/3/**) остались бы без изменений, необходимо указать в качестве первого аргумента изменяемые узлы (**/1/4/**). Второй аргумент предоставляет новый уровень иерархии; для этого примера это **/2/1/**. Эти два аргумента не обязаны содержать одинаковое число уровней.  
   

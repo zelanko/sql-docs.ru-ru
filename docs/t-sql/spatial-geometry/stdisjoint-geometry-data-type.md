@@ -1,16 +1,16 @@
 ---
-title: "STDisjoint (тип данных geometry) | Документы Майкрософт"
-ms.custom: 
+title: STDisjoint (тип данных geometry) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDisjoint_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STDisjoint (geometry Data Type)
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8257a4a8d3e73d3afd59f9d0774ecc5fb055428f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 75a276b228aa9e78c88e99b8a6ade43361ed46ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
  *other_geometry*  
  Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STDisjoint()`.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Тип возвращаемых данных CLR: **SqlBoolean**  

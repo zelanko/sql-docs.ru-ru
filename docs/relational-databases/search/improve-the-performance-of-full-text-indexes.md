@@ -1,16 +1,16 @@
 ---
-title: "Улучшение производительности полнотекстовых индексов | Документация Майкрософт"
-ms.custom: 
+title: Улучшение производительности полнотекстовых индексов | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance [SQL Server], full-text search
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a3255ca28229a171f65a0e64ef553d7d0a80333f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/13/2018
 Ниже перечислены переменные части в именах файла журнала сканирования.
 -   <**DatabaseID**> — идентификатор базы данных. <**dbid**> является пятизначным числом с нулями в начале.  
 -   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. <**catid**> является пятизначным числом с нулями в начале.  
--   <**n**> — целое число, свидетельствующее о существовании одного журнала или нескольких журналов обхода контента одного полнотекстового каталога.  
+-   <**n**> — целое число, свидетельствующее о существовании одного или нескольких журналов сканирования одного полнотекстового каталога.  
   
  Например, `SQLFT0000500008.2` является файлом журнала сканирования для базы данных с идентификатором базы данных 5 и идентификатором полнотекстового каталога 8. Двойка в конце имени файла показывает, что этой паре базы данных и каталога соответствуют два файла журналов сканирования.  
 
@@ -143,7 +144,7 @@ ms.lasthandoff: 02/13/2018
 |x64|*F* = *число диапазонов сканирования* * 10 * 8|*M* = *T* − *F* − 500|  
 
 **Примечания о формулах**
-1.  Если параллельно выполняется несколько полных заполнений, то требования к памяти fdhost.exe для каждого из них следует вычислять отдельно, как *F1*, *F2*и т. д. Затем вычислить *M* как *T***–** sigma**(***F*i**)**.  
+1.  Если параллельно выполняется несколько полных заполнений, то требования к памяти fdhost.exe для каждого из них следует вычислять отдельно, как *F1*, *F2*и т. д. Затем вычислить *M* как *T***–** sigma **(***F*i**)**.  
 2.  500 МБ — это ориентировочный объем памяти, необходимый другим процессам в системе. Если система выполняет дополнительную работу, то это значение следует соответствующим образом увеличить.  
 3.  .*ism_size* равно 8 МБ для платформ x64.  
   

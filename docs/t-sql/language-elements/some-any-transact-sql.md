@@ -1,16 +1,16 @@
 ---
-title: "SOME | ANY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: SOME | ANY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a79c7a06edb70b694481e4c30b0244ebd39e2ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Тип данных возвращаемого столбца должен совпадать с типом данных аргумента *scalar_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
- **Логическое значение**  
+ **Boolean**  
   
 ## <a name="result-value"></a>Значение результата  
- При использовании ключевого слово SOME или ANY значение **TRUE** возвращается, если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*), где *x* является одним из значений набора из одного столбца; иначе возвращается значение **FALSE**.  
+ При использовании ключевого слово SOME или ANY значение **TRUE** возвращается, если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression ***,*** x*), где *x* является одним из значений набора из одного столбца; иначе возвращается значение **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
- Для ключевого слова SOME необходим аргумент *scalar_expression*, чтобы провести непосредственное сравнение по крайней мере одного значения, возвращенного вложенным запросом. Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, то при значении *scalar_expression* = SOME (subquery) для выражения *scalar_express*, равного 2, будет возвращаться TRUE. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
+ Для ключевого слова SOME необходим аргумент *scalar_expression*, чтобы провести непосредственное сравнение по крайней мере одного значения, возвращенного вложенным запросом. Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, то при значении *scalar_expression* = SOME (subquery) для выражения *scalar_express*, равного 2, будет возвращаться TRUE. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
   
 ## <a name="examples"></a>Примеры  
   

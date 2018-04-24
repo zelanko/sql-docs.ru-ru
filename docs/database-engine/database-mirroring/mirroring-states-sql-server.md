@@ -1,15 +1,16 @@
 ---
-title: "Состояния зеркального отображения (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Состояния зеркального отображения (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - states [SQL Server], database mirroring
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - SUSPENDED state
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 014784893728eb72edd754e270330e287fa8d364
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b3e6fce93fb28ab1a0323ac26d3168c44c009cbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mirroring-states-sql-server"></a>Состояния зеркального отображения (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Во время сеанса зеркального отображения база данных всегда находится в определенном состоянии (*состояние зеркального отображения*). Состояние базы данных отражает состояние соединения, поток данных и различия между данными, которые имеются у участников. Сеанс зеркального отображения базы данных принимает такое же состояние, что и у основной базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Во время сеанса зеркального отображения база данных всегда находится в определенном состоянии ( *состояние зеркального отображения*). Состояние базы данных отражает состояние соединения, поток данных и различия между данными, которые имеются у участников. Сеанс зеркального отображения базы данных принимает такое же состояние, что и у основной базы данных.  
   
  На всем протяжении сеанса зеркального отображения базы данных экземпляры сервера контролируют друг друга. Состояние зеркального отображения используется участниками для наблюдения за базой данных. Основная и зеркальная базы данных всегда находятся в одинаковом состоянии, за исключением состояния PENDING_FAILOVER. При наличии в сеансе следящего сервера он контролируется каждым из участников при помощи его состояния соединения (CONNECTED или DISCONNECTED).  
   

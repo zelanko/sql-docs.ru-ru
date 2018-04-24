@@ -1,16 +1,16 @@
 ---
-title: "INDEXPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: INDEXPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INDEXPROPERTY
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7099b3e11259d59c18ff6c5d8f591beca70846f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b632f46999c70ec1d4653def8ec2a29112435ce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,16 +68,16 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|Статистики были сформированы параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = True<br /><br /> 0 = False или XML-индекс.|  
 |**IsClustered**|Кластеризованный индекс.|1 = True<br /><br /> 0 = False или XML-индекс.|  
 |**IsDisabled**|Индекс отключен.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsFulltextKey**|Индекс является ключом для полнотекстового и семантического индексирования таблицы.|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsFulltextKey**|Индекс является ключом для полнотекстового и семантического индексирования таблицы.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsHypothetical**|Индекс является гипотетическим и не может использоваться напрямую в качестве пути доступа к данным. Гипотетические индексы содержат статистики уровня столбца и управляются и используются помощником по настройке ядра СУБД.|1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsPadIndex**|Индекс задает пространство, которое должно оставаться открытым на каждом внутреннем узле.|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsPageLockDisallowed**|Значение блокировки страницы, установленное параметром ALLOW_PAGE_LOCKS инструкции ALTER INDEX.|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Блокировка страниц запрещена;<br /><br /> 0 = Блокировка страниц разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsRowLockDisallowed**|Значение блокировки строк, установленное параметром ALLOW_ROW_LOCKS инструкции ALTER INDEX.|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Блокировка строк запрещена;<br /><br /> 0 = Блокировка строк разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsPadIndex**|Индекс задает пространство, которое должно оставаться открытым на каждом внутреннем узле.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.|  
+|**IsPageLockDisallowed**|Значение блокировки страницы, установленное параметром ALLOW_PAGE_LOCKS инструкции ALTER INDEX.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Блокировка страниц запрещена;<br /><br /> 0 = Блокировка страниц разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsRowLockDisallowed**|Значение блокировки строк, установленное параметром ALLOW_ROW_LOCKS инструкции ALTER INDEX.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Блокировка строк запрещена;<br /><br /> 0 = Блокировка строк разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsStatistics**|Аргумент *index_or_statistics_name* является статистикой, созданной инструкцией CREATE STATISTICS или параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = True<br /><br /> 0 = False или XML-индекс.|  
 |**IsUnique**|Индекс является уникальным.|1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsColumnstore**|Оптимизированный для памяти xVelocity индекс columnstore.|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|**IsColumnstore**|Оптимизированный для памяти xVelocity индекс columnstore.|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False.|  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
 ## <a name="exceptions"></a>Исключения  

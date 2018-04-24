@@ -1,16 +1,16 @@
 ---
-title: "Типы money и smallmoney (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: Типы money и smallmoney (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - money_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - values [SQL Server], monetary
 - currency [SQL Server]
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c9c66d9934618b1b8b21b0d4dcb0a234ff94731f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 301438a7168705c28f2846a41129f888ac5881db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>Типы money и smallmoney (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |Тип данных|Диапазон|Память|  
 |---|---|---|
 |**money**|От –922,337,203,685,477.5808 до 922,337,203,685,477.5807 (от –922,337,203,685,477.58<br />до 922,337,203,685,477.58 в Informatica.  В Informatica поддерживается только два десятичных знака, а не четыре)|8 байт|  
-|**smallmoney**|От -214 748,3648 до 214 748,3647|4 байта|  
+|**smallmoney**|От -214 748,3648 до 214 748,3647|4 байта|  
   
 Типы данных **money** и **smallmoney** имеют точность до одной десятитысячной денежной единицы, которую они представляют. В Informatica типы данных **money** и **smallmoney** имеют точность до одной сотой денежной единицы, которую они представляют.
   

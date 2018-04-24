@@ -1,16 +1,16 @@
 ---
-title: "IDENT_CURRENT (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: IDENT_CURRENT (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENT_CURRENT
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - identity columns, current value
 - IDENT_CURRENT function
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9e303b59af41301be2b171c9b6a917dfad6139dc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 07f0552417a98556efcd9f3085133f47de99121d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identcurrent-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ IDENT_CURRENT( 'table_name' )
  *имя_таблицы*  
  Имя таблицы, что значение идентификатора возвращается. Аргумент *table_name* имеет тип **varchar** и не имеет значения по умолчанию.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **numeric(38,0)**  
   
 ## <a name="exceptions"></a>Исключения  
@@ -145,7 +145,7 @@ SELECT IDENT_CURRENT('t7');
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
+ [@@IDENTITY (Transact-SQL)](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY (Transact-SQL)](../../t-sql/functions/scope-identity-transact-sql.md)   
  [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)   
  [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)   

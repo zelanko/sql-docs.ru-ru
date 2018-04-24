@@ -1,30 +1,31 @@
 ---
-title: "Создание связей по внешнему ключу | Документация Майкрософт"
-ms.custom: 
+title: Создание связей по внешнему ключу | Документация Майкрософт
+ms.custom: ''
 ms.date: 07/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0c32e0619071db25adadeb7c34065c6c0319fd7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -98,7 +99,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Создание внешнего ключа в новой таблице  
 ####  <a name="using-transact-sql"></a>Использование Transact-SQL   
     
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
     
 2.  На стандартной панели выберите пункт **Создать запрос**.    
     
@@ -120,7 +121,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>Создание внешнего ключа в существующей таблице 
 #### <a name="using-transasct-sql"></a>Использование Transasct-SQL   
     
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
     
 2.  На стандартной панели выберите пункт **Создать запрос**.    
     

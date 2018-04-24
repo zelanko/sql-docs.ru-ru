@@ -2,7 +2,7 @@
 title: CREATE ROUTE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -34,11 +34,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef29633b2585a139fdd9e009458f36f38f00c56
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e7a5ce5ef3bb5376111f8c52bcc1c855acd46aa3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -73,7 +74,7 @@ WITH
  Представляет предложения, которые определяют создаваемый маршрут.  
   
  SERVICE_NAME = **'***service_name***'**  
- Указывает имя удаленной службы, находящейся по этому маршруту. Значение *service_name* должно точно совпадать с именем, используемым удаленной службой. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия значению *service_name*. Другими словами, при сравнении учитывается регистр и не применяются текущие параметры сортировки. Если аргумент SERVICE_NAME опущен, этот маршрут соответствует любому имени службы, но имеет более низкий приоритет, чем маршрут с аргументом SERVICE_NAME. Маршрут с именем службы **'SQL/ServiceBroker/BrokerConfiguration'** — это маршрут к службе уведомления конфигурации брокера. В маршруте к этой службе может не указываться экземпляр компонента Service Broker.  
+ Указывает имя удаленной службы, находящейся по этому маршруту. Значение *service_name* должно точно совпадать с именем, используемым удаленной службой. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия значению *service_name*. Другими словами, при сравнении учитывается регистр и не применяются текущие параметры сортировки. Если аргумент SERVICE_NAME опущен, этот маршрут соответствует любому имени службы, но имеет более низкий приоритет, чем маршрут с аргументом SERVICE_NAME. Маршрут с именем службы **'SQL/ServiceBroker/BrokerConfiguration'**  — это маршрут к службе уведомления конфигурации брокера. В маршруте к этой службе может не указываться экземпляр компонента Service Broker.  
   
  BROKER_INSTANCE = **'***broker_instance_identifier***'**  
  Указывает базу данных, в которой расположена целевая служба. Параметр *broker_instance_identifier* должен являться идентификатором экземпляра брокера для удаленной базы данных. Этот идентификатор можно получить, выполнив следующий запрос в выбранной базе данных:  

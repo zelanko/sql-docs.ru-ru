@@ -1,16 +1,16 @@
 ---
-title: "SET ANSI_NULL_DFLT_ON (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - null values [SQL Server], overriding
 - overriding default nullability
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82532accfe14729a0e3ccbfa7bd3f1b55d2aaa01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3fdfea19618ca9dc27d2e222699f3d208c3148e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +76,7 @@ SET ANSI_NULL_DFLT_ON ON
   
  Настройка SET ANSI_NULL_DFLT_ON не используется при создании таблиц с помощью инструкции SELECT INTO.  
   
- Чтобы просмотреть текущее значение параметра для этого параметра, выполните следующий запрос.  
+ Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
   
 ```  
 DECLARE @ANSI_NULL_DFLT_ON VARCHAR(3) = 'OFF';  
@@ -85,7 +86,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показаны результаты применения `SET ANSI_NULL_DFLT_ON` с обоими значениями для параметра базы данных **ANSI null default**.  

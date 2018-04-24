@@ -1,16 +1,16 @@
 ---
-title: "Требования и ограничения для коллекций схем XML на сервере | Документация Майкрософт"
-ms.custom: 
+title: Требования и ограничения для коллекций схем XML на сервере | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identifiers [XML schema collections]
@@ -27,20 +27,20 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 
+caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 572dfdb21216110b62f9b8ddcd88d21cdb2fce4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Требования и ограничения для коллекций XML-схем на сервере
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Язык определения XML-схем (XSD) имеет некоторые ограничения при проверке правильности столбцов SQL, использующих тип данных **xml** . В следующей таблице содержатся подробные сведения об этих ограничениях и рекомендации по изменению XSD-схемы, таким образом, чтобы обеспечить возможность работы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Темы данного раздела содержат дополнительные сведения об определенных ограничениях и рекомендации по работе с ними.  
+  Язык определения XML-схем (XSD) имеет некоторые ограничения при проверке правильности столбцов SQL, использующих тип данных **xml** . В следующей таблице содержатся подробные сведения об этих ограничениях и рекомендации по изменению XSD-схемы, таким образом, чтобы обеспечить возможность работы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Темы данного раздела содержат дополнительные сведения об определенных ограничениях и рекомендации по работе с ними.  
   
 |Элемент|Ограничение|  
 |----------|----------------|  
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/12/2018
 |**\<xsd:include>**|В настоящее время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, отклоняются сервером.<br /><br /> Чтобы обойти это ограничение, можно предварительно обработать XML-схемы, содержащие директиву **\<xsd:include>**, чтобы скопировать и объединить содержимое всех включенных схем в единую схему для передачи на сервер. Дополнительные сведения см. в разделе [Предварительная обработка схемы для слияния включаемых схем](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>**, **\<xsd:keyref>** и **\<xsd:unique>**|В настоящее время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает эти относящиеся к XSD ограничения для обеспечения уникальности или установки ключей и ссылок на ключи. Схемы XML, содержащие эти элементы, не могут быть зарегистрированы.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. Сведения о другом способе обновления схем см. в разделе [Элемент &#60;xsd:redefine&#62;](../../relational-databases/xml/the-xsd-redefine-element.md).|  
-|Значения **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для простых типов, имеющих секундные компоненты, отличные от **xs:time** и **xs:dateTime**, поддерживается точность только до миллисекунд, а для компонентов **xs:time** и **xs:dateTime** — точность до 100 наносекунд. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] накладывает ограничения на все распознанные перечисления простых типов XSD.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает использование значения NaN в объявлениях **\<xsd:simpleType>**.<br /><br /> Дополнительные сведения см. в разделе[Значения для объявлений &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md).|  
+|Значения **\<xsd:simpleType>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для простых типов, имеющих секундные компоненты, отличные от **xs:time** и **xs:dateTime**, поддерживается точность только до миллисекунд, а для компонентов **xs:time** и **xs:dateTime**— точность до 100 наносекунд. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] накладывает ограничения на все распознанные перечисления простых типов XSD.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает использование значения NaN в объявлениях **\<xsd:simpleType>**.<br /><br /> Дополнительные сведения см. в разделе[Значения для объявлений &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md).|  
 |**xsi:schemaLocation** и **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пропускает эти атрибуты, если они присутствуют в данных экземпляра XML, вставленных в столбец или переменную с типом данных **xml** .|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает типы, полученные из **xs:QName** , которые используют элемент ограничения XML-схемы.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает в качестве элемента-члена типы объединений с **xs:QName** .<br /><br /> Дополнительные сведения см. в разделе [Тип xs:QName](../../relational-databases/xml/the-xs-qname-type.md).|  
 |Добавление элементов к существующей группе замещения|Нельзя добавить элементы в существующую группу замещения в коллекции XML-схем. Группа замещения в схеме XML ограничена в том, что главный элемент и все члены этого элемента должны быть определены в одной инструкции {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  

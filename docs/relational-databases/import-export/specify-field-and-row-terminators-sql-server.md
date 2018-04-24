@@ -1,16 +1,16 @@
 ---
-title: "Определение признаков конца поля и строки (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Определение признаков конца поля и строки (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/20/2018
         >  После интерактивного заполнения всех полей в команде **bcp** появится запрос на сохранение введенных ответов для каждого поля в файле форматирования в формате, отличном от XML. Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Рекомендации по использованию признаков конца полей и строк  
- В некоторых ситуациях для данных типа **char** или **nchar** имеет смысл использовать признаки конца поля, Например:  
+ В некоторых ситуациях для данных типа **char** или **nchar** имеет смысл использовать признаки конца поля, Пример:  
   
 -   Для столбца данных, содержащего значение NULL в файле данных, который будет импортирован в программу, не распознающую сведения о длине префикса.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  Команда **bcp** поддерживает следующие параметры.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**-c**|Указывает, что поля данных должны загружаться как символьные данные.|  
 |**-t** `,`|Задает запятую (,) в качестве признака конца поля.|  
@@ -133,7 +134,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Признаки конца в файле форматирования могут быть определены как для отдельных полей, так и для всего файла данных при помощи квалификаторов, приведенных в следующей таблице.  
   
-    |Квалификатор|Описание|  
+    |Квалификатор|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***признак_конца_поля***'**|Задает признак конца поля, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \t (символ табуляции).|  
     |ROWTERMINATOR **='***признак_конца_строки***'**|Задает признак конца строки, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \n (символ перевода строки).|  
@@ -174,9 +175,9 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>Б. Задание признаков конца в интерактивном режиме с помощью инструкции BULK INSERT  
  В следующем примере производится массовый импорт файла данных `Department-c-t.txt` инструкцией `BULK INSERT` , которая использует квалификаторы, показанные в следующей таблице.  
   
-|Параметр|Attribute|  
+|Параметр|attribute|  
 |------------|---------------|  
-|DATAFILETYPE **='**char**'**|Указывает, что поля данных должны загружаться как символьные данные.|  
+|DATAFILETYPE **='** char **'**|Указывает, что поля данных должны загружаться как символьные данные.|  
 |FIELDTERMINATOR **='**`,`**'**|Задает запятую (`,`) в качестве признака конца поля.|  
 |ROWTERMINATOR **='**`\n`**'**|Задает в качестве признака конца строки символ перевода строки.|  
   

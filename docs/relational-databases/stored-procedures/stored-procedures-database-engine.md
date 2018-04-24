@@ -1,35 +1,36 @@
 ---
-title: "Хранимые процедуры (ядро СУБД) | Документация Майкрософт"
-ms.custom: 
+title: Хранимые процедуры (ядро СУБД) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3923972ec113d0f7f1b5906eeab6d1c85f04d0f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures-database-engine"></a>Хранимые процедуры (компонент Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Хранимая процедура в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это группа из одной или нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или ссылка на метод [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR. Процедуры аналогичны конструкциям в других языках программирования, поскольку обеспечивают следующее:  
+  Хранимая процедура в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это группа из одной или нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или ссылка на метод [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR. Процедуры аналогичны конструкциям в других языках программирования, поскольку обеспечивают следующее:  
   
 -   обрабатывают входные параметры и возвращают вызывающей программе значения в виде выходных параметров;  
   

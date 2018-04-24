@@ -1,36 +1,36 @@
 ---
-title: "Удаленное хранилище больших двоичных объектов (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Удаленное хранилище больших двоичных объектов (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 331cb2ea2826eec7bebba7d67ad5def405f2085e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 17e31835f3d901ad4cb20fffa8d15af060988140
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Удаленное хранилище больших двоичных объектов (RBS) — это дополнительный компонент, позволяющий администраторам баз данных хранить большие двоичные объекты в отдельных хранилищах вместо хранения непосредственно на основном сервере базы данных.  
+  Удаленное хранилище больших двоичных объектов (RBS) для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это дополнительный компонент, позволяющий администраторам баз данных хранить большие двоичные объекты в отдельных хранилищах вместо хранения непосредственно на основном сервере базы данных.  
   
  Хранилище RBS включено в установочный носитель [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , но не устанавливается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -237,6 +237,6 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
   
 ## <a name="see-also"></a>См. также:  
 [Удаленное хранилище больших двоичных объектов и группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
+ [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   

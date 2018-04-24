@@ -1,16 +1,16 @@
 ---
-title: "Определение и изменение фильтра соединения между статьями публикации слиянием | Документация Майкрософт"
-ms.custom: 
+title: Определение и изменение фильтра соединения между статьями публикации слиянием | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - modifying filters, join
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0ad590f14e8a9c774c9108028a58fa5a7ff008e
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/08/2018
   
     -   Если решено применить конструктор, то для создания инструкции соединения используйте столбцы в сетке (**Сопряжение**, **Фильтруемый столбец таблицы**, **Оператор**и **Столбец соединяемой таблицы**).  
   
-         Каждый столбец в сетке содержит раскрывающийся список для выбора двух столбцов и оператора (**=**, **<>**, **<=**, **\<**, **>=**, **>**и **like**). Результаты выводятся в текстовом поле **Предварительный просмотр** . Если в соединении участвует более двух столбцов, выберите логику (AND или OR) из столбца **Сопряжение** , а затем введите еще два столбца и оператор.  
+         Каждый столбец в сетке содержит раскрывающийся список для выбора двух столбцов и оператора (**=**, **<>**, **<=**, **\<**, **>=**, **>** и **like**). Результаты выводятся в текстовом поле **Предварительный просмотр** . Если в соединении участвует более двух столбцов, выберите логику (AND или OR) из столбца **Сопряжение** , а затем введите еще два столбца и оператор.  
   
     -   Если нужно написать инструкцию вручную, введите ее в текстовом поле **Инструкция соединения** . Используйте списки **Столбцы фильтруемой таблицы** и **Столбцы соединяемой таблицы** , перетягивая из них поля в текстовое поле **Инструкция соединения** .  
   

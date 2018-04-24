@@ -1,32 +1,32 @@
 ---
-title: "computed_column_definition (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: computed_column_definition (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: faff7cbb4f4eec1cf68601805d0dbbe1a3a84b3e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ column_name AS computed_column_expression
     >  Так как каждая строка в таблице может иметь различные значения для столбцов, используемых для вычисляемого столбца, то вычисляемый столбец может не иметь повторяющихся значений в разных строках.  
   
 PERSISTED  
- Указывает, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет физически хранить вычисляемые значения в таблице и обновлять их при изменении любого столбца, от которого зависит вычисляемый столбец. Пометка вычисляемого столбца признаком PERSISTED позволяет создать индекс на детерминистическом, но не точном вычисляемом столбце. Дополнительные сведения см. в разделе [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Все вычисляемые столбцы, используемые в столбцах секционирования секционированной таблицы, должны быть явно помечены как PERSISTED. Если указан параметр PERSISTED, значение *computed_column_expression* должно быть детерминированным.  
+ Указывает, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет физически хранить вычисляемые значения в таблице и обновлять их при изменении любого столбца, от которого зависит вычисляемый столбец. Пометка вычисляемого столбца признаком PERSISTED позволяет создать индекс на детерминистическом, но не точном вычисляемом столбце. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md). Все вычисляемые столбцы, используемые в столбцах секционирования секционированной таблицы, должны быть явно помечены как PERSISTED. Если указан параметр PERSISTED, значение *computed_column_expression* должно быть детерминированным.  
 NULL | NOT NULL  
  Указывает, допустимы ли для столбца значения NULL. Предложение NULL не является ограничением в строгом смысле слова, но может быть указано так же, как и NOT NULL. Ограничение NOT NULL может быть указано для вычисляемых столбцов только в случае, если одновременно указан параметр PERSISTED.  
   
@@ -132,7 +132,7 @@ ON UPDATE { **NO ACTION** }
  Указывает, какая операция совершается над строками в таблице, когда эти строки имеют ссылочную связь, а строка родительской таблицы, на которую указывает ссылка, обновляется. Если указано NO ACTION, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вызывает ошибку и откатывает операцию обновления строки таблицы Vendor, если на нее ссылается хотя бы одна строка таблицы ProductVendor.  
   
 NOT FOR REPLICATION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Может быть определено для ограничений FOREIGN KEY и CHECK. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.  
   
@@ -143,12 +143,12 @@ CHECK
  Логическое выражение, возвращающее значения TRUE или FALSE. Выражение не может содержать ссылку на псевдоним типа данных.  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент "default" или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Это идентификатор файловой группы, используемой по умолчанию, который должен быть ограничен, как например в выражении ON "default" или ON [default]. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Это идентификатор файловой группы, используемой по умолчанию, который должен быть ограничен, как например в выражении ON "default" или ON [default]. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  Каждое ограничение PRIMARY KEY и UNIQUE создает индекс. Число ограничений UNIQUE и PRIMARY KEY не может вызвать превышение предельного количества индексов в таблице (999 некластеризованных и 1 кластеризованный).  

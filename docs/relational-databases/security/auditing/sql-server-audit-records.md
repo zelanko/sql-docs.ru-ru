@@ -1,66 +1,67 @@
 ---
-title: "Записи подсистемы аудита SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Записи подсистемы аудита SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9b78d8f726e89b0807ea04bfb52f3732226741c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee9a108347a7c480ff0986de2e9041e3eb3a5805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет выполнять аудит событий и групп событий на уровне сервера и уровне базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет выполнять аудит событий и групп событий на уровне сервера и уровне базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Аудит содержит ноль или более элементов действия аудита, записываемых в *цель*аудита. Цель аудита может быть двоичным файлом, журналом событий приложений Windows или журналом событий безопасности Windows. Записи, переданные в цель, могут содержать элементы, описанные в приведенной ниже таблице.  
   
-|Имя столбца|Описание|Тип|Доступна всегда|  
+|Имя столбца|Description|Тип|Доступна всегда|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Дата-время срабатывания действия, доступного для аудита.|**datetime2**|Да|  
 |**sequence_no**|Отслеживает последовательность записей в одной записи аудита, слишком большой, чтобы уместиться в буфере записи для аудитов.|**int**|Да|  
 |**action_id**|Идентификатор действия.<br /><br /> Совет. Для использования значения **action_id** в качестве предиката его следует преобразовать из строки символов в числовое значение. Дополнительные сведения см. в статье [Фильтрация подсистемы аудита SQL Server по предикату action_id / class_type](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Да|  
 |**succeeded**|Указывает, была ли проверка разрешений для действия, инициировавшего событие аудита, пройдена успешно. |**bit**<br /> –1 = успешное завершение. <br />0 = неуспешное завершение.|Да|  
-|**permission_bitmask**|Когда применимо, отображаются предоставленные, запрещенные или отмененные разрешения.|**bigint**|Нет|  
-|**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|**bit** <br />–1 = True <br />0 = False.|Нет|  
+|**permission_bitmask**|Когда применимо, отображаются предоставленные, запрещенные или отмененные разрешения.|**bigint**|нет|  
+|**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|**bit** <br />–1 = True <br />0 = False.|нет|  
 |**session_id**|Идентификатор сеанса, в котором произошло событие.|**int**|Да|  
 |**server_principal_id**|Идентификатор контекста имени входа, в котором выполнено действие.|**int**|Да|  
-|**database_principal_id**|Идентификатор контекста пользователя базы данных, в котором выполнено действие.|**int**|Нет|  
-|**object_ id**|Основной идентификатор сущности, над которой произведен аудит. Этот идентификатор может принадлежать следующим объектам:<br /><br /> объекты серверов;<br /><br /> базы данных<br /><br /> объекты базы данных<br /><br /> объекты схемы;|**int**|Нет|  
+|**database_principal_id**|Идентификатор контекста пользователя базы данных, в котором выполнено действие.|**int**|нет|  
+|**object_ id**|Основной идентификатор сущности, над которой произведен аудит. Этот идентификатор может принадлежать следующим объектам:<br /><br /> объекты серверов;<br /><br /> базы данных<br /><br /> объекты базы данных<br /><br /> объекты схемы;|**int**|нет|  
 |**target_server_principal_id**|Участник на уровне сервера, к которому применимо действие, доступное для аудита.|**int**|Да|  
-|**target_database_principal_id**|Участник базы данных, к которому применимо действие, доступное для аудита.|**int**|Нет|  
+|**target_database_principal_id**|Участник базы данных, к которому применимо действие, доступное для аудита.|**int**|нет|  
 |**class_type**|Тип доступной для аудита сущности, для которой проводится аудит.|**varchar(2)**|Да|  
 |**session_server_principal_name**|Участник сервера для данного сеанса.|**sysname**|Да|  
 |**server_principal_name**|Текущее имя входа.|**sysname**|Да|  
 |**server_principal_sid**|Идентификатор безопасности текущего имени входа.|**varbinary**|Да|  
-|**database_principal_name**|Текущий пользователь.|**sysname**|Нет|  
-|**target_server_principal_name**|Целевое имя входа действия.|**sysname**|Нет|  
-|**target_server_principal_sid**|Идентификатор безопасности целевого имени входа.|**varbinary**|Нет|  
-|**target_database_principal_name**|Целевой пользователь действия.|**sysname**|Нет|  
+|**database_principal_name**|Текущий пользователь.|**sysname**|нет|  
+|**target_server_principal_name**|Целевое имя входа действия.|**sysname**|нет|  
+|**target_server_principal_sid**|Идентификатор безопасности целевого имени входа.|**varbinary**|нет|  
+|**target_database_principal_name**|Целевой пользователь действия.|**sysname**|нет|  
 |**server_instance_name**|Имя экземпляра сервера, где проводился аудит. Используется стандартный формат «компьютер\экземпляр».|**nvarchar(120)**|Да|  
-|**database_name**|Контекст базы данных, в котором выполнялось действие.|**sysname**|Нет|  
-|**schema_name**|Контекст схемы, в котором выполнялось действие.|**sysname**|Нет|  
-|**object_name**|Имя сущности, для которой проводился аудит. Это имя может принадлежать следующим объектам:<br /><br /> объекты серверов;<br /><br /> базы данных<br /><br /> объекты базы данных<br /><br /> объекты схемы;<br /><br /> инструкция TSQL (если имеется)|**sysname**|Нет|  
-|**инструкция**|инструкция TSQL (если имеется)|**nvarchar(4000)**|Нет|  
-|**additional_information**|Любые дополнительные сведения о событии хранятся в виде XML.|**nvarchar(4000)**|Нет|  
+|**database_name**|Контекст базы данных, в котором выполнялось действие.|**sysname**|нет|  
+|**schema_name**|Контекст схемы, в котором выполнялось действие.|**sysname**|нет|  
+|**object_name**|Имя сущности, для которой проводился аудит. Это имя может принадлежать следующим объектам:<br /><br /> объекты серверов;<br /><br /> базы данных<br /><br /> объекты базы данных<br /><br /> объекты схемы;<br /><br /> инструкция TSQL (если имеется)|**sysname**|нет|  
+|**инструкция**|инструкция TSQL (если имеется)|**nvarchar(4000)**|нет|  
+|**additional_information**|Любые дополнительные сведения о событии хранятся в виде XML.|**nvarchar(4000)**|нет|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Некоторые действия имеют незаполненное значение в столбце, так как оно может быть неприменимо к действию.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранит 4 000 символов данных для символьных полей в записи аудита. Если значения **additional_information** и **statement** , возвращенные из действия, доступного для аудита, возвращают более 4000 символов, то столбец **sequence_no** используется для записи нескольких записей в отчет аудита для одного действия аудита, чтобы зарегистрировать эти данные. Применяется следующая обработка.  

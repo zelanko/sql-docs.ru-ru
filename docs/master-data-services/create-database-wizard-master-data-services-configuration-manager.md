@@ -1,32 +1,35 @@
 ---
-title: "Мастер создания баз данных (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт"
-ms.custom: 
+title: Мастер создания баз данных (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a788de09b69515f8313fc20a6b5953312feec611
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0af64bce7d8afc29fc9187d617351f62e550c610
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Мастер создания базы данных (диспетчер конфигурации служб Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   **Мастер создания базы данных** используется для создания базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="database-server"></a>Сервер базы данных  
@@ -40,7 +43,7 @@ ms.lasthandoff: 03/05/2018
 |**Пароль**|Укажите пароль для этой учетной записи пользователя:<br /><br /> Если **Тип проверки подлинности** — это **Текущий пользователь — встроенная безопасность**, поле **Пароль** доступно только для чтения, и для подключения используются учетные данные из учетной записи указанного пользователя Windows.<br /><br /> Если **Тип проверки подлинности** — это **Учетная запись SQL Server**, поле **Пароль** доступно для ввода и в нем необходимо указать пароль, связанный с указанной учетной записью пользователя.|  
 |**Проверка соединения**|Проверьте, может ли указанная учетная запись пользователя подключиться к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и есть ли у нее разрешение на создание базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для этого экземпляра. Если не нажимать кнопку **Проверить подключение**, соединение будет проверено после нажатия кнопки **Далее**.|  
   
-## <a name="database"></a>база данных  
+## <a name="database"></a>База данных  
  Укажите имя базы данных и параметры сортировки для новой базы данных. Параметры сортировки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляют свойства, управляющие правилами сортировки, учета регистра и диакритических знаков в данных. Параметры сортировки, используемые с символьными типами данных, такими как char или varchar, указывают кодовую страницу и соответствующие символы, которые могут быть представлены для данного типа данных. Дополнительные сведения о параметрах сортировки баз данных см. в разделе [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).  
   
 |Имя элемента управления|Description|  

@@ -1,31 +1,33 @@
 ---
-title: "Открытие редактора (среда SQL Server Management Studio) | Документация Майкрософт"
-ms.custom: 
+title: Открытие редактора (среда SQL Server Management Studio) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4684627b8a5ababe02fee239e444b4ad35879acc
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a97be4e5f33e387f2046cf2674b5a57cda7cf0e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается, как открыть редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)], редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  В этом разделе описывается, как открыть редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Перед началом  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] поддерживает четыре редактора: редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для редактирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , редакторы многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX) для редактирования скриптов на этих языках, а также редактор XML для аналитики (XML/A) для редактирования скриптов XML/A или XML-файлов. Любой из этих редакторов также может использоваться для изменения текстовых файлов.  

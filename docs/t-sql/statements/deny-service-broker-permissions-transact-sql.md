@@ -1,16 +1,16 @@
 ---
-title: "DENY, запрет разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DENY, запрет разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dba4c9e45e527abd1022c2fb8f0b7f577da7e018
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY, запрет разрешений компонента Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,16 +80,16 @@ DENY permission  [ ,...n ] ON
  Указывает службу, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
- Задает участника, для которого запрещается разрешение, — Это может быть:  
+ Задает участника, для которого запрещается разрешение. Это может быть:  
   
--   Пользователь базы данных  
--   Роль базы данных  
--   Роль приложения  
--   Пользователь базы данных, сопоставленный имени входа Windows  
--   Пользователь базы данных, сопоставленный группе Windows  
--   Пользователь базы данных, сопоставленный сертификату  
--   Пользователь базы данных, сопоставленный асимметричному ключу  
--   Пользователь базы данных, не сопоставленный серверу-участнику  
+-   пользователь базы данных;  
+-   роль базы данных;  
+-   роль приложения;  
+-   пользователь базы данных, сопоставленный с именем входа Windows;  
+-   пользователь базы данных, сопоставленный с группой Windows;  
+-   пользователь базы данных, сопоставленный с сертификатом;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с сервером-участником.  
   
 CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
@@ -97,14 +97,14 @@ CASCADE
 *denying_principal*  
  Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения. Это может быть:  
   
--   Пользователь базы данных  
--   Роль базы данных  
--   Роль приложения  
--   Пользователь базы данных, сопоставленный имени входа Windows  
--   Пользователь базы данных, сопоставленный группе Windows  
--   Пользователь базы данных, сопоставленный сертификату  
--   Пользователь базы данных, сопоставленный асимметричному ключу  
--   Пользователь базы данных, не сопоставленный серверу-участнику  
+-   пользователь базы данных;  
+-   роль базы данных;  
+-   роль приложения;  
+-   пользователь базы данных, сопоставленный с именем входа Windows;  
+-   пользователь базы данных, сопоставленный с группой Windows;  
+-   пользователь базы данных, сопоставленный с сертификатом;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с сервером-участником.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -165,7 +165,7 @@ CASCADE
  Требует разрешения CONTROL по контрактам, типам сообщений, привязкам удаленной службы, маршрутам или службам компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. При использовании предложения AS указанный участник должен быть владельцем защищаемого объекта, разрешения на который для него запрещаются.  
   
 ## <a name="see-also"></a>См. также:  
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)  

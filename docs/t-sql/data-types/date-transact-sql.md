@@ -1,16 +1,16 @@
 ---
-title: "date (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: date (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - date_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - date data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bc3d838c81ea8d973cff90e2e57e4bfd8b443f69
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e42e51775c4967522561385af19e67fbe2fd3899
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,73 +107,7 @@ ms.lasthandoff: 11/21/2017
 |**datetimeoffset**|ГГГГ-ММ-ДД чч:мм:сс[.ннннннн] [+&#124;-]чч:мм|SQL_WVARCHAR или SQL_VARCHAR|DBTYPE_WSTR или DBTYPE_STR|Java.sql.String|String или SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Преобразование данных типа Date и Time
-При преобразовании в типы данных даты и времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отвергает все значения, которые он не распознает как значения даты или времени. Сведения об использовании функций CAST и CONVERT c данными типов даты и времени см. в статье [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).
-  
-Преобразование в **time(n)** завершается сбоем, и появляется сообщение об ошибке 206: "Конфликт типов операндов: date несовместим с time".
-  
-При преобразовании в **datetime** дата копируется, а для компонента времени устанавливается значение 00:00:00.000. Следующий код демонстрирует результаты преобразования значения `date` в значение `datetime`.  
-  
-```sql
-DECLARE @date date= '12-10-25';  
-DECLARE @datetime datetime= @date;  
-  
-SELECT @date AS '@date', @datetime AS '@datetime';  
-  
---Result  
---@date      @datetime  
------------- -----------------------  
---2025-12-10 2025-12-10 00:00:00.000  
---  
---(1 row(s) affected)  
-```  
-  
-Если при преобразовании в **smalldatetime** значение типа **date** находится в диапазоне значений [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), компонент даты копируется, а для компонента времени устанавливается значение 00:00:00. Если значение типа **date** находится за пределами диапазона значений **smalldatetime**, появляется сообщение об ошибке 242: "Преобразование типа данных **date** в тип данных **smalldatetime** привело к выходу значения за пределы диапазона", и значению **smalldatetime** присваивается значение NULL. Следующий код демонстрирует результаты преобразования значения `date` в значение `smalldatetime`.
-  
-```sql
-DECLARE @date date= '1912-10-25';  
-DECLARE @smalldatetime smalldatetime = @date;  
-  
-SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';  
-  
---Result  
---@date      @smalldatetime  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00  
---  
---(1 row(s) affected)  
-```  
-  
-При преобразовании в **datetimeoffset(n)** дата копируется, а для времени устанавливается значение 00:00.0000000 +00:00. Следующий код демонстрирует результаты преобразования значения `date` в значение `datetimeoffset(3)`.
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetimeoffset datetimeoffset(3) = @date;  
-  
-SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';  
-  
---Result  
---@date      @datetimeoffset  
------------- ------------------------------  
---1912-10-25 1912-10-25 00:00:00.000 +00:00  
---  
---(1 row(s) affected)  
-```  
-  
-При преобразовании в **datetime2(n)** компонент даты копируется, а для компонента времени устанавливается значение 00:00:00.00 независимо от значения (n). Следующий код демонстрирует результаты преобразования значения `date` в значение `datetime2(3)`.
-  
-```sql
-DECLARE @date date = '1912-10-25';  
-DECLARE @datetime2 datetime2(3) = @date;  
-  
-SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';  
-  
---Result  
---@date      @datetime2(3)  
------------- -----------------------  
---1912-10-25 1912-10-25 00:00:00.00  
---  
---(1 row(s) affected)  
-```  
+При преобразовании в типы данных даты и времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отвергает все значения, которые он не распознает как значения даты или времени. Сведения об использовании функций CAST и CONVERT c данными типов даты и времени см. в статье [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Преобразование даты в другие типы данных даты и времени
 В этом разделе описывается, что происходит при преобразовании типа данных **date** в другие типы даты и времени.

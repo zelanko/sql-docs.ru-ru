@@ -1,16 +1,16 @@
 ---
-title: "GetReparentedValue (ядро СУБД) | Документы Майкрософт"
-ms.custom: 
+title: GetReparentedValue (ядро СУБД) | Документы Майкрософт
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Reparent_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - Reparent [Database Engine]
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0b054e9651cce9a486d4acf9e997a601114e98a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 53ab8916cc04b66f44d1c72127e16f356e222516
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 *newRoot*  
 Идентификатор **hierarchyid**, представляющий узел, которым будет заменен раздел *oldRoot* текущего узла при перемещении узла.
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
 **Возвращаемый тип SQL Server:hierarchyid**
   
 **Возвращаемый тип CLR:SqlHierarchyId**

@@ -2,7 +2,7 @@
 title: Создание статистики | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: statistics
@@ -26,11 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 791e92681938ee0b198f3f6524354e7412ae371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-statistics"></a>Создание статистики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +39,11 @@ ms.lasthandoff: 04/10/2018
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для создания статистики используются:**  
   
@@ -60,9 +61,9 @@ ms.lasthandoff: 04/10/2018
   
 -   Удалить, переименовать или изменить определение столбца таблицы, определенного в предикате отфильтрованной статистики, нельзя.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Пользователь должен быть владельцем таблицы или индексированного представления либо членом одной из следующих ролей: предопределенная роль сервера **sysadmin** , предопределенная роль базы данных **db_owner** или предопределенная роль базы данных **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/10/2018
      **Идентификатор**  
      Если флажок установлен, обозначает столбец идентификаторов.  
   
-     **Allow Nulls**  
+     **Разрешить значения NULL**  
      Указывает, допускает ли столбец значения NULL.  
   
      **Добавить**  
@@ -109,10 +110,10 @@ ms.lasthandoff: 04/10/2018
      **Удалить**  
      Удалите выбранный столбец из сетки статистики.  
   
-     **Вверх**  
+     **вверх**  
      Переместите выбранный столбец ближе к началу сетки статистики. Расположение в сетке может существенно влиять на ценность статистики.  
   
-     **Переместить вниз**  
+     **вниз**  
      Переместить выбранный столбец ближе к концу сетки статистики.  
   
      **Последнее обновление статистики по этим столбцам:**  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/10/2018
      На странице **Фильтр** в диалоговом окне **Создание статистики по таблице***имя_таблицы* отображается указанное ниже свойство.  
   
      **Критерий фильтра**  
-     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  В диалоговом окне **Создание статистики по таблице***имя_таблицы* на странице **Общее** нажмите кнопку **Добавить**.  
   
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-create-statistics"></a>Создание статистики  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

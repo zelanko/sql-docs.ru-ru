@@ -1,16 +1,16 @@
 ---
-title: "Создание пользователя базы данных | Microsoft Docs"
-ms.custom: 
+title: Создание пользователя базы данных | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.user.securables.f1
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2fce0eac03c6b1c68d1b6bb91637135c3bf8f13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  Как субъектам безопасности, пользователям могут предоставляться разрешения. Областью действия пользователя является база данных. Для подключения к определенной базе данных на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]имя входа должно быть сопоставлено с пользователем базы данных. Разрешения внутри базы данных предоставляются и запрещаются для пользователя базы данных, а не имени входа.  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение **ALTER ANY USER** на базу данных.  
   
 ##  <a name="SSMSProcedure"></a> Создание пользователя с использованием SSMS  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Разверните базу данных, в которой создается новый пользователь базы данных.  
   
-3.  Щелкните правой кнопкой мыши папку **Безопасность** , выберите пункт **Создать**, а затем **Пользователь**.  
+3.  Щелкните правой кнопкой мыши папку **Безопасность**, выберите пункт **Создать**, а затем **Пользователь**.  
   
 4.  В диалоговом окне **Пользователь базы данных — создать** , на странице **Общие** выберите один из следующих типов пользователей из списка **Тип пользователя** :  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
      Укажите сертификат для пользователя базы данных. Вместо этого можно щелкнуть многоточие **(…)** и открыть диалоговое окно **Выбор сертификата** . **Имя сертификата** доступно, если выбрать элемент **Пользователь, сопоставленный с сертификатом** в списке **Тип пользователя** .  
   
      **Имя асимметричного ключа**  
-     Введите ключ для пользователя базы данных. Вместо этого можно щелкнуть многоточие **(…)** , чтобы открыть диалоговое окно **Выбор асимметричного ключа** . **Имя асимметричного ключа** доступно, если выбрать элемент **Пользователь, сопоставленный с асимметричным ключом** в списке **Тип пользователя** .  
+     Введите ключ для пользователя базы данных. Вместо этого можно щелкнуть многоточие **(…)**, чтобы открыть диалоговое окно **Выбор асимметричного ключа**. **Имя асимметричного ключа** доступно, если выбрать элемент **Пользователь, сопоставленный с асимметричным ключом** в списке **Тип пользователя** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -143,12 +144,12 @@ ms.lasthandoff: 11/21/2017
      **Многоточие (…)**  
      Нажмите многоточие **(…)** рядом с полем **Значение** , чтобы открыть диалоговое окно **Значение для расширенного свойства** . Введите или просмотрите значение расширенного свойства в этом более просторном окне. Дополнительные сведения см. в разделе [Диалоговое окно «Значение для расширенного свойства»](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Delete**  
+     **Удаление**  
      Удаляет выбранное расширенное свойство.  
   
 ##  <a name="TsqlProcedure"></a> Создание пользователя с использованием T-SQL  
     
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На **стандартной** панели выберите **Создать запрос**.  
   
@@ -168,7 +169,7 @@ ms.lasthandoff: 11/21/2017
  Дополнительные сведения см. в статье [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md) (в ней приведены дополнительные примеры [!INCLUDE[tsql](../../../includes/tsql-md.md)]).  
   
 ## <a name="see-also"></a>См. также:  
- [Участники (компонент Database Engine)](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Субъекты (ядро СУБД)](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Создание имени для входа](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   

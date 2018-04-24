@@ -1,16 +1,16 @@
 ---
-title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: SET QUOTED_IDENTIFIER (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUOTED_IDENTIFIER_TSQL
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - ISO delimited identifiers rules
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 207cf23523a315a0a4a4bc923ae9e52d7b82f8b0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 252947a607e85ace9a787f76881c490944274f86
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +61,7 @@ SET QUOTED_IDENTIFIER ON
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Если параметру SET QUOTED_IDENTIFIER присвоено значение ON, то идентификаторы можно заключать в двойные кавычки и литералы должны быть разделены одинарными кавычками. Если параметру SET QUOTED_IDENTIFIER присвоено значение OFF, то идентификаторы нельзя заключать в кавычки и должны учитываться все правила [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Литералы могут разделяться как одинарными, так и двойными кавычками.  
+ Если параметру SET QUOTED_IDENTIFIER присвоено значение ON, то идентификаторы можно заключать в двойные кавычки и литералы должны быть разделены одинарными кавычками. Если параметру SET QUOTED_IDENTIFIER присвоено значение OFF, то идентификаторы нельзя заключать в кавычки и должны учитываться все правила [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md). Литералы могут разделяться как одинарными, так и двойными кавычками.  
   
  Если параметру SET QUOTED_IDENTIFIER присвоено значение ON (по умолчанию), то все строки, разделенные двойными кавычками, рассматриваются как идентификаторы объектов. Такие образом, заключенные в кавычки идентификаторы не должны удовлетворять правилам языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Они могут быть зарезервированными ключевыми словами, а также могут содержать символы, обычно запрещенные для идентификаторов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Выражения со строками-литералами нельзя заключать в двойные кавычки; для этих целей необходимо использовать одинарные кавычки. Если одинарная кавычка (**'**) является частью строки литерала, то она может быть представлена двумя одинарными кавычками (**"**). Если в именах объектов базы данных используются зарезервированные ключевые слова, то параметру SET QUOTED_IDENTIFIER должно быть присвоено значение ON.  
   
@@ -93,7 +94,7 @@ SET QUOTED_IDENTIFIER ON
   
  Параметр QUOTED_IDENTIFIER не влияет на разделение идентификаторов с помощью квадратных скобок **[** и **]**.  
   
- Чтобы просмотреть текущее значение параметра для этого параметра, выполните следующий запрос.  
+ Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
   
 ```  
 DECLARE @QUOTED_IDENTIFIER VARCHAR(3) = 'OFF';  

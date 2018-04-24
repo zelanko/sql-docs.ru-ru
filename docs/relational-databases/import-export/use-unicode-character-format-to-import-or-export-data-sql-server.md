@@ -1,31 +1,32 @@
 ---
-title: "Использование символьного формата Юникода для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Использование символьного формата Юникода для импорта или экспорта данных (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 09/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6a9afc3b92d4de54b166e56c745e28898937c59
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 168797b37247a0309d09b80960e2ae5089e7d51b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,7 +148,7 @@ Notepad D:\BCP\myWidechar.fmt
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
 ### **Использование bcp и символьного формата Юникода для экспорта данных**<a name="bcp_widechar_export"></a>
-Параметр**-w** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
+Параметр **-w** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 
@@ -156,7 +157,7 @@ NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
 ### **Использование bcp и символьного формата Юникода для импорта данных без файла форматирования**<a name="bcp_widechar_import"></a>
-Параметр**-w** и команда **IN** .  В командной строке введите следующие команды:
+Параметр **-w** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidechar;"
@@ -168,7 +169,7 @@ REM Review results is SSMS
 ```
 
 ### **Использование bcp и символьного формата Юникода для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_widechar_import_fmt"></a>
-Параметры**-w** и **-f** switches и **IN** commи.  Так как этот пример включает bcp, файл форматирования, символ Юникода, а первое поле данных в файле данных не содержит символы, потребуется использовать обходной путь.  См. раздел [Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования](#special_considerations)выше.  Файл данных `myWidechar.bcp` будет изменен: в него будет добавлена дополнительная фиктивная запись, которая затем будет пропущена по параметру `-F 2` .
+Параметры **-w** и **-f** switches и **IN** commи.  Так как этот пример включает bcp, файл форматирования, символ Юникода, а первое поле данных в файле данных не содержит символы, потребуется использовать обходной путь.  См. раздел [Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования](#special_considerations)выше.  Файл данных `myWidechar.bcp` будет изменен: в него будет добавлена дополнительная фиктивная запись, которая затем будет пропущена по параметру `-F 2` .
 
 В командной строке введите следующие команды и внесите требуемые изменения:
 ```

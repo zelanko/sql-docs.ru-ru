@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 69b7f5a369330a6dd961926189f465f6eea7e81a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   В этом разделе описывается импорт домена из файла .dqs в существующую базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Файл данных .dqs создается путем экспорта домена или базы знаний из приложения [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Файл данных .dqs зашифрован, поэтому его нельзя просмотреть.  
   
  Использование файла данных .dqs для экспорта домена из одной базы знаний и последующего его импорта в другую базу знаний упрощает процесс создания набора знаний, экономя время и усилия. Это обеспечивает возможность совместного использования домена и набора знаний из него, что позволяет сэкономить время. Импортировать можно один отдельный домен или один составной домен (содержащий несколько отдельных доменов). Файл DQS, содержащий один домен, включает все сведения о домене, включая свойства домена, значения и сведения о правилах, кроме сведений о сопоставляемых ссылочных данных. Файл DQS, содержащий составной домен, включает все сведения составного домена, в том числе все данные отдельных доменов, которые входят в составной домен, а также свойства, отношения значений и правила составного домена, кроме сопоставленных ссылочных данных. Будут импортированы опубликованные и неопубликованные данные.  

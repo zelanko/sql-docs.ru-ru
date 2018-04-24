@@ -1,32 +1,35 @@
 ---
-title: "Диалоговое окно \"Создание веб-сайта\" (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Создание веб-сайта" (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cbb31101e60f32070abdde870fb7dfcd2c497b9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: c46c77c3dd090110531d3fcc2aabda9855e82329
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Диалоговое окно «Создание веб-сайта» (диспетчер конфигурации служб Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Используйте диалоговое окно **Создание веб-сайта** для создания нового веб-сайта на локальном компьютере. При создании веб-сайта в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]сайт добавляется в службы IIS на локальном компьютере с корневым приложением, настроенным как веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Также создается новый пул приложений, и веб-приложение помещается в него.  
   
 ## <a name="web-site"></a>Веб-сайт  

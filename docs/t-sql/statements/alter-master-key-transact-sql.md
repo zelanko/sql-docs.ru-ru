@@ -1,16 +1,16 @@
 ---
-title: "ALTER MASTER KEY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER MASTER KEY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER MASTER KEY
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - service master key [SQL Server], modifying
 - DROP ENCRYPTION BY SERVICE MASTER KEY phrase
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0e664b594017b7131553869d1696708eae3b52b0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dd368861f50e41a32e89163fca125e12e3034c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -106,7 +107,7 @@ ALTER MASTER KEY <alter_option>
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] использует для защиты главного ключа службы и главного ключа базы данных алгоритм шифрования AES. AES — это новый алгоритм шифрования, отличный от алгоритма 3DES, используемого в более ранних версиях. После обновления экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] необходимо заново сформировать главный ключ службы и главный ключ базы данных, чтобы обновить главные ключи до алгоритма AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md).  
   
- Если используется аргумент FORCE, повторное создание ключей продолжается даже в случае, если главный ключ недоступен или сервер не может расшифровать все зашифрованные закрытые ключи. Если главный ключ открыть невозможно, используется инструкция [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) для восстановления главного ключа из резервной копии. Аргумент FORCE следует использовать только в случае, если главный ключ получить невозможно или, при неудачной попытке расшифровки Данные, зашифрованные только недоступным ключом, будут потеряны.  
+ Если используется аргумент FORCE, повторное создание ключей продолжается даже в случае, если главный ключ недоступен или сервер не может расшифровать все зашифрованные закрытые ключи. Если главный ключ открыть невозможно, используется инструкция [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) для восстановления главного ключа из резервной копии. Аргумент FORCE следует использовать только в случае, если главный ключ получить невозможно или при неудачной попытке расшифровки. Данные, зашифрованные только недоступным ключом, будут потеряны.  
   
  Фраза DROP ENCRYPTION BY SERVICE MASTER KEY позволяет отменить шифрование главного ключа базы данных с помощью главного ключа службы.  
   

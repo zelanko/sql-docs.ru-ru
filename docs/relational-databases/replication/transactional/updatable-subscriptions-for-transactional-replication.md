@@ -1,16 +1,16 @@
 ---
-title: "Обновляемые подписки для репликации транзакций | Документация Майкрософт"
-ms.custom: 
+title: Обновляемые подписки для репликации транзакций | Документация Майкрософт
+ms.custom: ''
 ms.date: 07/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], updatable
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4922de0c287e5263163f56d151455fea9a836f9
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d33ebae50e932efe39bd062d96ab1af46f2e2969
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Обновляемые подписки для репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 03/08/2018
   
 -   Подписчики не могут обновлять или вставлять значения **text**, **ntext** или **image** , поскольку невозможно выполнить считывание из вставленных или удаленных таблиц внутри триггеров, отслеживающих изменения репликации. Аналогично подписчики не могут обновлять или вставлять значения **text** или **image** с помощью **WRITETEXT** или **UPDATETEXT** , поскольку данные перезаписываются издателем. Вместо этого можно секционировать столбцы **text** и **image** в отдельную таблицу и изменить две таблицы в пределах транзакции.  
   
-     Чтобы обновить большие объекты на подписчике, используйте типы данных **varchar(max)**, **nvarchar(max)**и **varbinary(max)** вместо типов данных **text**, **ntext**и **image** соответственно.  
+     Чтобы обновить большие объекты на подписчике, используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** вместо типов данных **text**, **ntext**и **image** соответственно.  
   
 -   Обновления уникальных ключей (включая первичные ключи), создающие дубликаты (например, обновление вида `UPDATE <column> SET <column> =<column>+1` ), не допускаются и будут отклонены из-за нарушения уникальности. Это связано с тем, что SET-обновления, выполненные на подписчике, распространяются репликацией в виде отдельных инструкций **UPDATE** для каждой затронутой строки.  
   

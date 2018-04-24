@@ -1,32 +1,32 @@
 ---
-title: "Свойства издателя — издатель, подписчики | Документация Майкрософт"
-ms.custom: 
+title: Свойства издателя — издатель, подписчики | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.configdistwizard.pubproperties.subscribers.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 552d2bd6-13f9-4876-b8f1-89adb242ef70
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81a64ad4ed8991838b5f0c22a29769de278fa018
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: e2270762397f2f420a3c189132ee5ba2db416d1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>Свойства издателя — издатель, подписчики
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/08/2018
   
 ## <a name="options"></a>Параметры  
  **Подписчики**  
- Сетка свойств **Подписчики** отображает подписчиков, для которых включено получение данных из публикаций на данном издателе. Нажмите кнопку свойств**(...)**рядом с подписчиком для просмотра и установки дополнительных свойств.  
+ Сетка свойств **Подписчики** отображает подписчиков, для которых включено получение данных из публикаций на данном издателе. Нажмите кнопку свойств **(...)** рядом с подписчиком для просмотра и установки дополнительных свойств.  
   
  **Добавить**  
  Нажмите кнопку **Добавить** для добавления подписчика, а затем выберите пункт **Добавить подписчик SQL Server** или **Добавить подписчик, отличный от подписчика SQL Server**.  

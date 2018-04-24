@@ -1,16 +1,16 @@
 ---
-title: "Заполнение полнотекстовых индексов | Документация Майкрософт"
-ms.custom: 
+title: Заполнение полнотекстовых индексов | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index populations [full-text search]
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
+  Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
   
 ##  <a name="types"></a> Types of population  
 Полнотекстовый индекс поддерживает следующие типы заполнения:
@@ -195,7 +196,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      Эта страница используется для создания расписания задания агента SQL Server, которое запускает добавочное заполнение базовой таблицы или индексированного представления полнотекстового индекса, а также для управления таким расписанием.  
 
-     Существуют следующие параметры выбора.  
+     Существуют следующие варианты выбора.  
   
     -   Чтобы **создать** новое расписание, щелкните **Создать**.  
   
@@ -225,7 +226,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 Ниже перечислены переменные части в именах файла журнала сканирования.
 -   <**DatabaseID**> — идентификатор базы данных. <**dbid**> является пятизначным числом с нулями в начале.  
 -   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. <**catid**> является пятизначным числом с нулями в начале.  
--   <**n**> — целое число, свидетельствующее о существовании одного журнала или нескольких журналов обхода контента одного полнотекстового каталога.  
+-   <**n**> — целое число, свидетельствующее о существовании одного или нескольких журналов сканирования одного полнотекстового каталога.  
   
  Например, `SQLFT0000500008.2` является файлом журнала сканирования для базы данных с идентификатором базы данных 5 и идентификатором полнотекстового каталога 8. Двойка в конце имени файла показывает, что этой паре базы данных и каталога соответствуют два файла журналов сканирования.  
 

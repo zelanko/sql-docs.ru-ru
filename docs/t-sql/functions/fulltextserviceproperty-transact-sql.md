@@ -1,16 +1,16 @@
 ---
-title: "FULLTEXTSERVICEPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXTSERVICEPROPERTY_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fef0f88dae810c78aed8133164699734cd92993f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 628d60b9b32847cfe6063d4a65e019e5af099454
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**LoadOSResources**|Указывает, зарегистрированы ли средства разбиения по словам и фильтры операционной системы и используются ли они с этим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию это свойство отключено, чтобы предотвратить случайные изменения поведения в результате применения обновлений к операционной системе (ОС). Разрешение использования ресурсов ОС обеспечивает доступ к ресурсам для языков и типов документов, зарегистрированных со службой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Indexing Service, но ресурс специально для данного экземпляра не установлен. Если разрешена загрузка ресурсов ОС, следует убедиться в том, что ресурсы ОС представляют собой надежные подписанные двоичные файлы; в противном случае, если параметру **VerifySignature** присвоено значение 1, они не могут быть загружены.<br /><br /> 0 = использовать только фильтры и средства разбиения по словам, характерные для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = загрузить фильтры и средства разбиения по словам из операционной системы.|  
 |**VerifySignature**|Указывает, только ли подписанные двоичные файлы загружаются службой поиска [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search Service. По умолчанию загружаются только доверенные, подписанные двоичные файлы.<br /><br /> 0 = не проверять наличие подписи у двоичных файлов.<br /><br /> 1 = убедиться, что загружаются только доверенные, подписанные двоичные файлы.|  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
 ## <a name="examples"></a>Примеры  

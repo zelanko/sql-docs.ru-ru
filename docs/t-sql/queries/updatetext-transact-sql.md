@@ -1,16 +1,16 @@
 ---
-title: "UPDATETEXT (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: UPDATETEXT (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATETEXT
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4d7c7a51daeba116e695ba9cae797f0d69c70cf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: be77fa4aba2ef2a6fb45ce209846b825a487e837
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Обновляет существующее поле типа **text**, **ntext** или **image**. Используйте UPDATETEXT только для изменения части столбца типа **text**, **ntext** или **image**. Используйте WRITETEXT для обновления и замены всего поля типа **text**, **ntext** или **image**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого пользуйтесь типами данных большого объема и предложением **.**WRITE инструкции [UPDATE](../../t-sql/queries/update-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого пользуйтесь типами данных большого объема и предложением **.** WRITE инструкции [UPDATE](../../t-sql/queries/update-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Имя обновляемой таблицы и столбца типа **text**, **ntext** или **image**. Имена таблиц и имена столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *dest_text_ptr*  
- Значение текстового указателя (возвращается функцией TEXTPTR), который указывает на обновляемые данные типа **text**, **ntext** или **image**. Значение *dest_text_ptr* должно иметь тип **binary(**16**)**.  
+ Значение текстового указателя (возвращается функцией TEXTPTR), который указывает на обновляемые данные типа **text**, **ntext** или **image**. Значение *dest_text_ptr* должно иметь тип **binary(** 16 **)**.  
   
  *insert_offset*  
  Начальная позиция для обновления. Отсчет начинает с нуля. Для столбцов типа **text** или **image** *insert_offset* является числом байтов, которые необходимо пропустить с начала существующего столбца перед вставкой новых данных. Для столбцов типа **ntext** *insert_offset* является числом символов (каждый символ **ntext** занимает 2 байта). Существующие данные типа **text**, **ntext** или **image**, начиная с этой начальной позиции (отсчет начинается с нуля), сдвигаются вправо, чтобы освободить место для новых данных. При значении 0 новые данные вставляются в начало существующих данных. Если значение равно NULL, новые данные добавляются в конец существующих.  

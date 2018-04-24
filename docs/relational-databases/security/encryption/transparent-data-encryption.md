@@ -1,16 +1,16 @@
 ---
-title: "Прозрачное шифрование данных (TDE) | Документация Майкрософт"
-ms.custom: 
+title: Прозрачное шифрование данных (TDE) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 
+caps.latest.revision: 75
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dc91fd8963b438902ee29ffb64d6cac0bb2d2f9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 014bf3a80c499d5efc296eb623c976a4d48d2205
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 
   *Прозрачное шифрование данных* (TDE) позволяет шифровать файлы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]и [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] ; это называется шифрованием хранящихся данных. Чтобы защитить базу данных, можно принять ряд мер предосторожности, например спроектировать систему безопасности, проводить шифрование конфиденциальных ресурсов и поместить серверы базы данных под защиту брандмауэра. Однако если будет похищен физический носитель (например, диск или ленты резервной копии), злоумышленник может легко восстановить или подключить базу данных и получить доступ к данным. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
   
- Функция прозрачного шифрования данных выполняет шифрование и дешифрование ввода-вывода в реальном времени для файлов данных и журналов. При шифровании используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, где можно получить к нему доступ при восстановлении. Ключ шифрования базы данных является симметричным ключом, защищенным сертификатом, который хранится в базе данных master на сервере, или асимметричным ключом, защищенным модулем расширенного управления ключами. Функция прозрачного шифрования данных защищает "неактивные" данные, то есть файлы данных и журналов. Благодаря ей обеспечивается соответствие требованиям различных законов, постановлений и рекомендаций, действующих в разных отраслях. Это позволяет разработчикам программного обеспечения шифровать данные с помощью алгоритмов шифрования AES и 3DES, не меняя существующие приложения.  
+ Функция прозрачного шифрования данных выполняет шифрование и дешифрование ввода-вывода в реальном времени для файлов данных и журналов. При шифровании используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных для доступности при восстановлении. Ключ шифрования базы данных является симметричным ключом, защищенным сертификатом, который хранится в базе данных master на сервере, или асимметричным ключом, защищенным модулем расширенного управления ключами. Функция прозрачного шифрования данных защищает "неактивные" данные, то есть файлы данных и журналов. Благодаря ей обеспечивается соответствие требованиям различных законов, постановлений и рекомендаций, действующих в разных отраслях. Это позволяет разработчикам программного обеспечения шифровать данные с помощью алгоритмов шифрования AES и 3DES, не меняя существующие приложения.  
   
 > [!IMPORTANT]  
 >  Функция прозрачного шифрования данных не обеспечивает шифрование каналов связи. Дополнительные сведения о способах шифрования данных, передаваемых по каналам связи, см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  **Сведения, применимые к [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] версии 12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , вам необходимо расшифровать ее, переместить, а затем повторно включить TDE в целевой [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Пошаговые инструкции по прозрачному шифрованию данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]можно найти в разделе [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] версии 12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , вам необходимо расшифровать ее, переместить, а затем повторно включить TDE в целевой [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Пошаговые инструкции по прозрачному шифрованию данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] см. в разделе [Прозрачное шифрование данных в Базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Сведения, применимые к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -131,7 +132,7 @@ GO
   
 |Представление каталога или динамическое административное представление|Назначение|  
 |---------------------------------------------|-------------|  
-|[sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Представление каталога со сведениями о базе данных.|  
+|[sys.databases (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Представление каталога со сведениями о базе данных.|  
 |[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Представление каталога с сертификатами из базы данных.|  
 |[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)|Динамическое административное представление со сведениями о ключах шифрования, используемых в базе данных, и состоянии шифрования базы данных.|  
   
@@ -230,7 +231,7 @@ GO
  Системная база данных tempdb будет шифроваться, если с помощью TDE шифруется любая другая база данных в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Это может влиять на производительность незашифрованных баз данных в том же экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о системной базе данных tempdb см. в разделе [База данных tempdb](../../../relational-databases/databases/tempdb-database.md).  
   
 ### <a name="transparent-data-encryption-and-replication"></a>Прозрачное шифрование данных и репликация  
- Репликация данных не выполняется автоматически в зашифрованном виде из базы данных с включенным TDE. Необходимо отдельно включить TDE, если нужно защитить базы данных распространителя и подписчика. При репликации моментальных снимков и начальном распределении данных для репликации транзакций и репликации слиянием данные могут храниться в незашифрованных промежуточных файлах, например файлах BCP.  Во время репликации транзакций или репликации слиянием шифрование можно включить для защиты каналов связи. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+ Репликация данных не выполняется автоматически в зашифрованном виде из базы данных с включенным TDE. Необходимо отдельно включить TDE, если нужно защитить базы данных распространителя и подписчика. При репликации моментальных снимков и начальном распределении данных для репликации транзакций и репликации слиянием данные могут храниться в незашифрованных промежуточных файлах, например файлах BCP.  Во время репликации транзакций или репликации слиянием шифрование можно включить для защиты каналов связи. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Прозрачное шифрование данных и данные FILESTREAM  
  Данные FILESTREAM не шифруются, даже если включено прозрачное шифрование данных.  
@@ -241,7 +242,7 @@ GO
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Прозрачное шифрование данных и In-Memory OLTP  
  Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. В [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE. В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE, однако файлы в файловой группе MEMORY_OPTIMIZED_DATA не шифруются.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Перемещение базы данных, защищаемой прозрачным шифрованием, в другой экземпляр SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
  [Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
  [Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
@@ -252,7 +253,7 @@ GO
  [Шифрование SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)  
  [Ключи шифрования базы данных и SQL Server &#40;ядро СУБД&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Центр обеспечения безопасности для Базы данных Azure SQL и ядра СУБД SQL Server](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   

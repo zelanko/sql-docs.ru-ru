@@ -1,16 +1,16 @@
 ---
-title: "CREATE BROKER PRIORITY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE BROKER PRIORITY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE BROKER PRIORITY
@@ -28,16 +28,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9503c441d1c57bf84e27b6190b1afc751be8861e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ FOR CONVERSATION
  SET  
  Задает критерий для определения применимости приоритета к заданному диалогу. Если указано, SET должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL. Если аргумент SET не указан, устанавливаются значения по умолчанию для всех трех критериев.  
   
- CONTRACT_NAME = {*ContractName* | **ANY**}  
+ CONTRACT_NAME = {*ContractName* | **ANY**}  
  Указывает имя контракта, который будет использоваться в качестве критерия, определяющего применимость приоритета к диалогу. Аргумент *ContractName* — это идентификатор компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который должен указывать имя контракта в текущей базе данных.  
   
  *ContractName*  
@@ -80,7 +80,7 @@ FOR CONVERSATION
   
  Значение по умолчанию — ANY.  
   
- LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
+ LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
  *LocalServiceName* — это идентификатор [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Должно быть указано имя службы в текущей базе данных.  
@@ -97,7 +97,7 @@ FOR CONVERSATION
   
  Значение по умолчанию — ANY.  
   
- REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
  *RemoteServiceName* — это литерал типа **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -114,7 +114,7 @@ FOR CONVERSATION
   
  Значение по умолчанию — ANY.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Указывает приоритет, который назначается любой конечной точке диалога, использующей контракты и службы, указанные в приоритете диалога. Аргумент *PriorityValue* должен быть целочисленным литералом в диапазоне от 1 (наименьший приоритет) до 10 (наибольший приоритет). Значение по умолчанию — 5.  
   
 ## <a name="remarks"></a>Remarks  
