@@ -1,16 +1,16 @@
 ---
-title: "Настройка видимости метаданных | Документация Майкрософт"
-ms.custom: 
+title: Настройка видимости метаданных | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
@@ -22,19 +22,21 @@ helpviewer_keywords:
 - database metadata [SQL Server]
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 10d93d94543bca50d57aee2647e28fadd16064a4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: df71c443adb1e598ddc083a97eb568f0fb3d90ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata-visibility-configuration"></a>Настройка видимости метаданных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Видимость метаданных ограничивается защищаемыми объектами, которыми пользователь владеет или на которые пользователю предоставлено разрешение. Например, следующий запрос возвращает строку, если пользователю было предоставлено разрешение SELECT или INSERT на таблицу `myTable`.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Видимость метаданных ограничивается защищаемыми объектами, которыми пользователь владеет или на которые пользователю предоставлено разрешение. Например, следующий запрос возвращает строку, если пользователю было предоставлено разрешение SELECT или INSERT на таблицу `myTable`.  
   
 ```  
 SELECT name, object_id  
@@ -50,7 +52,7 @@ GO
   
 |||  
 |-|-|  
-|представлений каталога;|Хранимые процедуры компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** | Документация Майкрософт|  
+|Представления каталога|Хранимые процедуры компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** | Документация Майкрософт|  
 |Метаданные, предоставляющие встроенные функции|Представления информационной схемы|  
 |представлений совместимости;|Расширенные свойства|  
   

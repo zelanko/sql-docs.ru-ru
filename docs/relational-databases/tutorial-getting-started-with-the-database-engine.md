@@ -1,16 +1,16 @@
 ---
-title: "Учебник. Начало работы с ядром СУБД | Документация Майкрософт"
-ms.custom: 
+title: Учебник. Начало работы с ядром СУБД | Документация Майкрософт
+ms.custom: ''
 ms.date: 06/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - tutorials [connecting]
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 01e1907fcc032528f0badb8ff4fe30e8e2f6cf85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Учебник. Приступая к работе с компонентом Database Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/09/2018
   
 Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], и делает это по-другому. Чтобы установить [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], см. статью [Скачивание SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы установить [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], см. статью [Скачивание SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

@@ -1,35 +1,36 @@
 ---
-title: "Управление полнотекстовым поиском и наблюдение за ним для экземпляра сервера | Документация Майкрософт"
-ms.custom: 
+title: Управление полнотекстовым поиском и наблюдение за ним для экземпляра сервера | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 99cd4d96616ad820eaef4660316e051e55e56b18
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи.  
+  С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи.  
   
 -   Задачи управления системой, например управление службой средства запуска FDHOST (MSSQLFDLauncher), повторный запуск процесса узла управляющей программы фильтрации при изменении учетных данных учетной записи службы, настройка свойств полнотекстового поиска на уровне сервера и создание резервных копий полнотекстовых каталогов. На уровне сервера, к примеру, можно указать язык полнотекстового поиска по умолчанию, отличающийся от языка экземпляра сервера по умолчанию.  
   

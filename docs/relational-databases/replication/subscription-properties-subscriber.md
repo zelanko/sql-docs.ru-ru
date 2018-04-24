@@ -1,32 +1,33 @@
 ---
-title: "Свойства подписки — подписчик | Документация Майкрософт"
-ms.custom: 
+title: Свойства подписки — подписчик | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newsubwizard.subproperties.subscriber.f1
 helpviewer_keywords:
 - Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb2d94f889cd593e07331f19fd09ef29d94479b8
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2ae857f2686b1b41e9d235902ed4ed9826083b70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="subscription-properties---subscriber"></a>Свойства подписки — подписчик
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 03/08/2018
   
 ## <a name="options-for-merge-subscriptions"></a>Параметры для подписок на публикации слиянием  
  **Определение секции (HOST_NAME)**  
- Для публикации, использующей параметризованные фильтры, репликация слиянием во время синхронизации вычисляет одну из двух системных функций (или обе, если фильтр ссылается на обе функции), чтобы определить данные, которые должен получить подписчик: **SUSER_SNAME()** или **HOST_NAME()**. По умолчанию функция **HOST_NAME()** возвращает имя компьютера, на котором выполняется агент слияния, но это значение может быть переопределено в мастере создания подписки. Дополнительные сведения о параметризованных фильтрах и переопределении функции **HOST_NAME()**см. в разделе [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Для публикации, использующей параметризованные фильтры, репликация слиянием во время синхронизации вычисляет одну из двух системных функций (или обе, если фильтр ссылается на обе функции), чтобы определить данные, которые должен получить подписчик: **SUSER_SNAME()** или **HOST_NAME()**. По умолчанию функция **HOST_NAME()** возвращает имя компьютера, на котором выполняется агент слияния, но это значение может быть переопределено в мастере создания подписки. Дополнительные сведения о параметризованных фильтрах и переопределении функции **HOST_NAME()** см. в разделе [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Тип подписки** и **Приоритет**  
  Указывается, является ли подписка клиентской или серверной (после создания подписки этот параметр изменить невозможно). Серверные подписки могут повторно публиковать данные другим подписчикам, и для них может быть назначен приоритет для разрешения конфликтов.  

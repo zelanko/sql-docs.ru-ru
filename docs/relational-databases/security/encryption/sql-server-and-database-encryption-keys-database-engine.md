@@ -1,33 +1,34 @@
 ---
-title: "Ключи шифрования базы данных и SQL Server (ядро СУБД) | Документация Майкрософт"
-ms.custom: 
+title: Ключи шифрования базы данных и SQL Server (ядро СУБД) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d640b7fc6ce4aa49b19dac142d9fcfa1d412993
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
   
  Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. Симметричный ключ создается во время инициализации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , при первом запуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот ключ используется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для шифрования конфиденциальных данных, которые хранятся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Открытые и закрытые ключи создаются операционной системой и используются для защиты симметричного ключа. Пара из открытого и закрытого ключей создается для каждого экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который сохраняет конфиденциальные данные в базе данных.  
   
@@ -67,14 +68,14 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  Если любой доступ к описанным выше ключам потерян, будет потерян доступ к объектам, соединениям и данным, защищенным этими ключами. Можно восстановить главный ключ службы, как описано в приведенных ссылках, или вернуться к первоначальной системе шифрования, чтобы восстановить доступ. Не существует аварийного способа восстановления доступа.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
  Дано краткое объяснение главного ключа службы и рекомендации.  
   
- [Расширенное управление ключами &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
+ [Расширенное управление ключами (EKM)](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Объясняется, как использовать сторонние системы управления ключами с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Создание резервной копии главного ключа службы](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Восстановление главного ключа службы](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
  [Создание идентичных симметричных ключей на двух серверах](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
- [Enable TDE on SQL Server Using EKM (Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами)](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+ [Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
  [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "DENY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DENY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DENY
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - denying permissions [SQL Server]
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 78bf8698ac1b567abdf4ec0d340d972e2e33002f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 189e284c23492f87c71d4bc54f0bf313f137effa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -169,7 +170,7 @@ AS в данной инструкции не дает возможность о�
 |Группа доступности|[DENY, запрет разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
 |Сертификат|[DENY, запрет разрешений на сертификат (Transact-SQL)](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
 |Контракт|[DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|база данных|[DENY, запрет разрешений на базу данных (Transact-SQL)](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|База данных|[DENY, запрет разрешений на базу данных (Transact-SQL)](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
 |Учетные данные для базы данных|[DENY, запрет разрешений на учетные данные для базы данных (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
 |Конечная точка|[DENY, запрет разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |Полнотекстовый каталог|[DENY, запрет разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
@@ -177,12 +178,12 @@ AS в данной инструкции не дает возможность о�
 |Компонент|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Имя входа|[DENY, запрет разрешений участника на уровне сервера (Transact-SQL)](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
 |Тип сообщений|[DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Object|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Объект|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Очередь|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Привязка удаленной службы|[DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Role|[DENY, запрет разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|Роль|[DENY, запрет разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Маршрут|[DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|схема|[DENY, запрет разрешений на схему (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
+|Схема|[DENY, запрет разрешений на схему (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |Список свойств поиска|[DENY, запрет разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
 |Сервер|[DENY, запрет разрешений на сервере (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
 |Служба|[DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
@@ -190,10 +191,10 @@ AS в данной инструкции не дает возможность о�
 |Симметричный ключ|[DENY, запрет разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
 |Синоним|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Системные объекты|[DENY, запрет разрешений на системный объект (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
-|Table|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Таблица|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Тип|[DENY, запрет разрешений на тип (Transact-SQL)](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
 |Пользователь|[DENY, запрет разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Просмотр|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Представление|[DENY, запрет разрешений на объект (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Коллекция схем XML|[DENY, запрет разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>См. также:  

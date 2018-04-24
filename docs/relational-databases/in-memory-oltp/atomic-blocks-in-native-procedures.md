@@ -1,28 +1,29 @@
 ---
-title: "Атомарные блоки | Документация Майкрософт"
-ms.custom: 
+title: Атомарные блоки | Документация Майкрософт
+ms.custom: ''
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 
+caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f70a9c85cf6a4341f6c92674a046bff11c7a077a
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9de66b8e731dace74876ba1fd6371d33e376c0a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Атомарные блоки в собственных процедурах
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -142,7 +143,7 @@ GO
 |Обязательный параметр|Description|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Поддерживаются значения **SNAPSHOT**, **REPEATABLEREAD**и **SERIALIZABLE**.|  
-|**LANGUAGE**|Определяет форматы даты и времени и системных сообщений. Все языки и псевдонимы в [sys.syslanguages &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)поддерживаются.|  
+|**LANGUAGE**|Определяет форматы даты и времени и системных сообщений. Все языки и псевдонимы в [sys.syslanguages & #40; Transact-SQL & #41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)поддерживаются.|  
   
  Следующие параметры являются необязательными.  
   

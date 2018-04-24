@@ -1,16 +1,16 @@
 ---
-title: "Страница \"Разрешения\" или \"Защищаемые объекты\" | Документация Майкрософт"
-ms.custom: 
+title: Страница "Разрешения" или "Защищаемые объекты" | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.permissions.f1
@@ -19,19 +19,21 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a8f26b252efab2f41c086049a988a41f440099a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Страница **Разрешения** или **Защищаемые объекты** используется для просмотра или установки разрешений для защищаемых объектов. Эта страница может быть открыта из нескольких мест. Содержимое страницы может немного измениться в зависимости от того, как открыта страница и ее содержимого. Верхняя сетка страницы может быть заполнена при открытии страницы или может быть пустой. Нажмите кнопку **Поиск**для добавления элементов в верхнюю сетку. Выберите элемент в верхней сетке, затем установите нужные разрешения на вкладке **Явное** . Чтобы увидеть суммарные разрешения, используйте вкладку **Действующие** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Страница **Разрешения** или **Защищаемые объекты** используется для просмотра или установки разрешений для защищаемых объектов. Эта страница может быть открыта из нескольких мест. Содержимое страницы может немного измениться в зависимости от того, как открыта страница и ее содержимого. Верхняя сетка страницы может быть заполнена при открытии страницы или может быть пустой. Нажмите кнопку **Поиск**для добавления элементов в верхнюю сетку. Выберите элемент в верхней сетке, затем установите нужные разрешения на вкладке **Явное** . Чтобы увидеть суммарные разрешения, используйте вкладку **Действующие** .  
   
  Для понимания возможных сочетаний защищаемых объектов и участников см. специальные синтаксические ссылки для защищаемых объектов в разделе [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в статье [Securables](../../relational-databases/security/securables.md).  
   

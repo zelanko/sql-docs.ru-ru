@@ -1,33 +1,35 @@
 ---
-title: "Перенос конфиденциальных данных с помощью функции постоянного шифрования | Документация Майкрософт"
-ms.custom: 
+title: Перенос конфиденциальных данных с помощью функции постоянного шифрования | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fa13b882639b0b23d937c479eec6b2a29aa34ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3e3e9a41fca762ae1303be0f451cbdc4e33e6c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Перенос конфиденциальных данных с помощью функции постоянного шифрования
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Чтобы во время операций массового копирования загружать зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS**. Этот параметр предназначен для средств устаревших версий сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , выпущенных до выпуска [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (например, bcp.exe), или для сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию постоянного шифрования. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ Чтобы во время операций массового копирования загрузить зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Этот параметр предназначен для средств устаревших версий сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , выпущенных до выпуска [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (например, bcp.exe), или для сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию постоянного шифрования. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>Параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  Команды [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) и [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) имеют параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Если задано значение ON (значение по умолчанию — OFF), этот параметр отключает проверки шифрованных метаданных на сервере в операциях массового копирования, что позволяет пользователю массово копировать зашифрованные данные из одной таблицы или базы данных в другую и при этом не расшифровывать данные.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="bulk-loading-of-encrypted-data"></a>Массовая загрузка зашифрованных данных  
 Загружайте зашифрованные данные с помощью такого процесса:  
 
-1.  Присвойте параметру значение ON для пользователя в базе данных, в которую массово копируются данные. Например:  
+1.  Присвойте параметру значение ON для пользователя в базе данных, в которую массово копируются данные. Пример:  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 
 2.  Подключившись, как этот пользователь, запустите приложение или средство массового копирования. (Если приложение использует драйвер клиента с включенным постоянным шифрованием, убедитесь, что строка подключения для источника данных не содержит параметр **column encryption setting=enabled** , который оставляет зашифрованными данные, извлеченные из зашифрованных столбцов. Дополнительные сведения см. в разделе [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Постоянное шифрование (разработка клиентских приложений)).  
   
-3.  Снова задайте для параметра ALLOW_ENCRYPTED_VALUE_MODIFICATIONS значение OFF. Например:  
+3.  Снова задайте для параметра ALLOW_ENCRYPTED_VALUE_MODIFICATIONS значение OFF. Пример:  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  

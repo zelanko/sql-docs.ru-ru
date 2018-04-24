@@ -1,16 +1,16 @@
 ---
-title: "column_definition (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: column_definition (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50bda05bd0487a60e9a909500be2ea3d65fed92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40b95f6475239b533811526025dedf3055b5c09b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,7 +126,7 @@ DOCUMENT
  Определяет, что каждый экземпляр типа данных **xml** в *column_name* может включать в себя только один элемент верхнего уровня. Аргумент DOCUMENT применим только к данным типа **xml** и может быть указан только в том случае, если одновременно указан аргумент *xml_schema_collection*.  
   
  *xml_schema_collection*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применим только к типу данных **xml** для коллекции схем XML, связанной с этим типом. Перед помещением столбца **xml** в схему она должна быть создана в базе данных при помощи инструкции [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -181,12 +182,12 @@ IDENTITY
  Значение приращения, добавляемое к значению столбца предыдущей строки для получения значения столбца новой строки.  
   
 NOT FOR REPLICATION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Может быть задано для свойства IDENTITY. Если это предложение задано для свойства IDENTITY, то значения в столбцах идентификаторов не увеличиваются при выполнении агентами репликации операций по вставке строк.  
   
 ROWGUIDCOL  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Показывает, что столбец является столбцом глобального уникального идентификатора строки. ROWGUIDCOL может быть назначен только для столбца **uniqueidentifier**, и только один столбец **uniqueidentifier** в таблице может быть объявлен как столбец ROWGUIDCOL. ROWGUIDCOL не может быть назначен столбцам с типами, определенными пользователем.  
   

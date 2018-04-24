@@ -1,16 +1,16 @@
 ---
-title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
@@ -25,11 +25,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d7d610008b17db9fdec1e33b1577e38a3d9f3a9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a9c2b79abb9cc9664df1a573cb1daf61a359f4ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -199,7 +200,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 **BLOB_STORAGE**   
 Только для массовых операций: `LOCATION` должно быть действительным URL-адресом хранилища BLOB-объектов Azure или контейнера. Не помещайте **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`.   
-Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в [этой статье](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Пример доступа к хранилищу BLOB-объектов см. в примере Ж инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Пример доступа к хранилищу BLOB-объектов см. в примере Ж инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
@@ -467,8 +468,8 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>К. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure.   
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
-Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в [этой статье](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
+Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (

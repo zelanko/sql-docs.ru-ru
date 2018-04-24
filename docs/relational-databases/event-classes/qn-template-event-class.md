@@ -1,34 +1,35 @@
 ---
-title: "Класс событий QN:Template | Документация Майкрософт"
-ms.custom: 
+title: Класс событий QN:Template | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2169d940b03d317493f3894c42e24307c324d952
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 343f80e278b2974afa2b252bab97bcb124de0799
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qntemplate-event-class"></a>Класс событий QN: Template
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Событие QN:Template возвращает данные о внутреннем использовании шаблонов запросов. Шаблоны запросов представляют собой механизм, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] применяет для рассылки определений запроса, о котором будут распространяться уведомления. Эти шаблоны создаются одновременно с таблицами параметров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает событие этого типа, когда шаблон запроса создается, применяется или разрушается.  
+  Событие QN:Template возвращает данные о внутреннем использовании шаблонов запросов. Шаблоны запросов представляют собой механизм, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] применяет для рассылки определений запроса, о котором будут распространяться уведомления. Эти шаблоны создаются одновременно с таблицами параметров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает событие этого типа, когда шаблон запроса создается, применяется или разрушается.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Столбцы данных класса событий QN:Template  
   

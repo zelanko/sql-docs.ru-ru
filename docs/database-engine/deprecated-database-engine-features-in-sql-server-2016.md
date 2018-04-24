@@ -2,7 +2,7 @@
 title: Нерекомендуемые функции ядра СУБД в SQL Server 2016 | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-engine
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 785a3740d27b57bc4aee02f3cfccfd22b95d987f
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f062de9b5ace5629a4c6b2a5eb2660727b802092
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Типы данных|Синтаксис**timestamp** для типа данных **rowversion** .|Синтаксис типа данных**rowversion** .|timestamp|158|  
 |Типы данных|Возможность вставлять значения NULL в столбцы типа **timestamp** .|Используйте вместо этого DEFAULT.|INSERT NULL в столбцах TIMESTAMP.|179|  
 |Типы данных|Параметр таблицы «text in row».|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row»|9|  
-|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)**и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
+|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
 |Управление базами данных|sp_attach_db<br /><br /> sp_attach_single_file_db|Инструкция CREATE DATABASE с параметром FOR ATTACH. Чтобы перестроить несколько файлов журнала, если один или более файлов изменили расположение, используйте параметр FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Объекты базы данных|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|Ключевое слово DEFAULT в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Объекты базы данных.|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  

@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Audit Add Login to Server Role | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Audit Add Login to Server Role | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Add Login to Server Role event class
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bddd27fba0db8cee9bc4459930deb5c044895a1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 593e7ed3002f6eb1170acdd2f19fce44d20e6277
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **Audit Add Login to Server Role** имеет место всякий раз, когда имя входа добавляется к предопределенной роли сервера или удаляется из нее. Этот класс событий используется для хранимых процедур **sp_addsrvrolemember** и **sp_dropsrvrolemember** .  
+  Класс событий **Audit Add Login to Server Role** имеет место всякий раз, когда имя входа добавляется к предопределенной роли сервера или удаляется из нее. Этот класс событий используется для хранимых процедур **sp_addsrvrolemember** и **sp_dropsrvrolemember** .  
   
 ## <a name="audit-add-login-to-server-role-event-class-data-columns"></a>Столбцы данных класса событий Audit Add Login to Server Role  
   

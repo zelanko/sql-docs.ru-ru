@@ -1,16 +1,16 @@
 ---
-title: "SUSER_SNAME (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: SUSER_SNAME (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SNAME_TSQL
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 177c7802c3a9c7ca7fadbb279c0be35fd57af820
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 974c880a2d8d99c1a8f37d3b2af0b13b41efebc3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +59,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
  Необязательный номер идентификатора безопасности имени входа. Аргумент *server_user_sid* имеет тип **varbinary(85)**. Аргумент *server_user_sid* может быть идентификационным номером безопасности любого имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Если аргумент *server_user_sid* не указан, будут возвращены сведения о текущем пользователе. Если параметр содержит слово NULL, то возвращается NULL.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
@@ -153,7 +154,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [SUSER_SID (Transact-SQL)](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)  
   

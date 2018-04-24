@@ -1,16 +1,16 @@
 ---
-title: "Справка F1 проводника служебной программы | Документация Майкрософт"
-ms.custom: 
+title: Справка F1 проводника служебной программы | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 195806725d74efb689c14200529d6dafc6a17316
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Следующие разделы описывают функциональные возможности служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и связанные с ней операции.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В следующих разделах описываются функциональные возможности служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и связанные с ней операции.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Панель мониторинга программ (служебная программа SQL Server)
  Чтобы просмотреть данные на панели мониторинга служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите верхний узел дерева обозревателя программ, который называется "Utility<Имя_UCP>\\(Имя_компьютера\UCP)". На панели мониторинга отображаются сводка и подробные данные всех управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и всех приложений уровня данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы обновить данные на панели мониторинга, щелкните правой кнопкой мыши верхний узел в дереве обозревателя программ и выберите команду **Обновить**.  
@@ -468,7 +469,7 @@ ms.lasthandoff: 01/18/2018
  Дополнительные сведения см. в статье [Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
  
-**Вкладка "Безопасность"** — на этой вкладке отображаются имена входа с разрешениями н администрирование или чтение из точки управления служебной программой (UCP).  
+**Вкладка "Безопасность"**  — на этой вкладке отображаются имена входа с разрешениями н администрирование или чтение из точки управления служебной программой (UCP).  
   
  Выберите имена входа из UCP, которые будут добавлены к роли чтения данных служебной программы.  
  Права доступа роли чтения данных служебной программы позволяют учетной записи пользователя выполнять следующие задачи.  
@@ -484,7 +485,7 @@ ms.lasthandoff: 01/18/2018
  Чтобы стать администратором служебной программы, необходимо обладать правами доступа sysadmin для экземпляра SQL Server. Чтобы добавлять или изменять учетные записи пользователей для пункта управления программой (UCP) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте обозреватель объектов в среде SSMS для добавления пользователей в список имен входа сервера для экземпляра пункта управления программой (UCP) в SQL Server. Дополнительные сведения см. в статье [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md).  
   
  
-**Вкладка "Хранилище данных"** — отображает подробные сведения о конфигурации хранилища данных управления служебными программами.  
+**Вкладка "Хранилище данных"**  — отображает подробные сведения о конфигурации хранилища данных управления служебными программами.  
   
  Хранение данных  
  Укажите период хранения данных для сведений об использовании, собранных для управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Срок хранения по умолчанию — 1 год. Минимальное значение — 1 месяц. Максимальное поддерживаемое значение — 2 года.  

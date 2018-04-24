@@ -1,33 +1,33 @@
 ---
-title: "Полнотекстовый поиск | Документация Майкрософт"
-ms.custom: 
-ms.date: 07/29/2016
-ms.prod: sql-non-specified
+title: Полнотекстовый поиск | Документация Майкрософт
+ms.custom: ''
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
+ms.technology: database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="full-text-search"></a>Компонент Full-text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
 Полнотекстовый поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] позволяет пользователям и приложениям выполнять полнотекстовые запросы к символьным данным в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
 ## <a name="basic-tasks"></a>Основные задачи
@@ -139,7 +139,7 @@ ms.lasthandoff: 02/13/2018
 ###  <a name="indexing"></a> Процесс полнотекстового индексирования  
  При инициации заполнения полнотекстового индекса (который также называют «сканированием») средство полнотекстового поиска помещает большие пакеты данных в память и оповещает управляющую программу полнотекстовой фильтрации. Управляющая программа выполняет фильтрацию и разбиение по словам, а также преобразует конвертированные данные в инвертированный список слов. Затем средство полнотекстового поиска запрашивает конвертированные данные из списка слов, удаляет стоп-слова и сохраняет списки слов в виде пакета в один или несколько инвертированных индексов.  
   
- При индексировании данных, хранящихся в столбце типа **varbinary(max)** или **image** , фильтр, реализующий интерфейс **IFilter** , извлекает текст в соответствии с заданным для этих данных форматом файлов, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. В некоторых случаях для работы компонентов-фильтров необходимо, чтобы данные типов **varbinary(max)**или **image** были записаны в папку filterdata, а не принудительно отправлены в память.  
+ При индексировании данных, хранящихся в столбце типа **varbinary(max)** или **image** , фильтр, реализующий интерфейс **IFilter** , извлекает текст в соответствии с заданным для этих данных форматом файлов, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. В некоторых случаях для работы компонентов-фильтров необходимо, чтобы данные типов **varbinary(max)** или **image** были записаны в папку filterdata, а не принудительно отправлены в память.  
   
  Одним из этапов обработки собранных текстовых данных является их анализ средством разбиения по словам, которое разделяет текст на отдельные токены, или ключевые слова. Язык, используемый при разметке, задается на уровне столбца или может быть определен компонентом-фильтром по данным типа **varbinary(max)**, **image**или **xml** .  
   

@@ -1,15 +1,15 @@
 ---
-title: "Выбор языка при создании полнотекстового индекса | Документация Майкрософт"
-ms.custom: 
+title: Выбор языка при создании полнотекстового индекса | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - languages [full-text search]
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8727bb46905582bb8959dfa9bfc658e4ac0d2bab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Выбор языка при создании полнотекстового индекса
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 02/13/2018
   При создании полнотекстового индекса необходимо указать язык уровня столбца для индексируемого столбца. В полнотекстовых запросах к столбцу будут использоваться [средства разбиения по словам и парадигматические модули](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) указанного языка. При выборе языка столбца в процессе создания полнотекстового индекса следует учитывать несколько факторов. Они связаны со способом, которым текст размечается на лексемы и затем индексируется средством полнотекстового поиска.  
   
 > [!NOTE]  
->  Чтобы указать язык уровня столбца для столбца полнотекстового индекса, следует при указании столбца использовать предложение LANGUAGE *language_term*. Дополнительные сведения см. в разделах [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md) и [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
+>  Чтобы указать язык уровня столбца для столбца полнотекстового индекса, следует при указании столбца использовать предложение LANGUAGE *language_term*. Дополнительные сведения см. в разделах [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md) и [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
 ##  <a name="langsupp"></a> Поддержка языка в полнотекстовом поиске  
  В данном разделе приведены основные сведения о средствах разбиения по словам и парадигматических модулях, а также обсуждаются методы использования полнотекстовым поиском кодов языков уровня столбцов.  

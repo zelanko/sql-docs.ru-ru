@@ -1,16 +1,16 @@
 ---
-title: "Использование программы sqlcmd | Документация Майкрософт"
-ms.custom: 
+title: Использование программы sqlcmd | Документация Майкрософт
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
+caps.latest.revision: 50
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)], а также для автоматизации задач скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , а также для автоматизации задач скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] . Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
   
 -   Пользователь вводит инструкции на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] точно так же, как при работе в командной строке. Результаты выводятся в окно командной строки. Чтобы открыть окно командной строки, введите "cmd" в поле поиска Windows и выберите пункт **Командная строка**. В окне командной строки введите **sqlcmd** и необходимые параметры. Полный перечень параметров, поддерживаемых программой **sqlcmd**, см. в разделе [Программа sqlcmd](../../tools/sqlcmd-utility.md).  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 01/24/2018
   
  В приглашении **sqlcmd** можно вводить как инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , так и команды **sqlcmd** , например **GO** и **EXIT**. Каждая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] помещается в буфер, называемый кэш инструкций. После ввода команды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и нажатия клавиши ВВОД эти инструкции отправляются на сервер **GO** . Чтобы выйти из **sqlcmd**, введите **EXIT** или **QUIT** в начале новой строки.  
   
- Чтобы очистить кэш инструкций, введите **:RESET**. Ввод **^C** ведет к выходу из **sqlcmd** . Кроме того, с помощью команды**^C** можно останавливать выполнение кэша инструкций после запуска команды **GO** .  
+ Чтобы очистить кэш инструкций, введите **:RESET**. Ввод **^C** ведет к выходу из **sqlcmd** . Кроме того, с помощью команды **^C** можно останавливать выполнение кэша инструкций после запуска команды **GO** .  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] , введенные во время интерактивного сеанса, можно изменить с помощью ввода команды **:ED** и приглашения **sqlcmd** . Откроется редактор, и после изменения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и закрытия редактора измененная инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] появится в окне командной строки. Введите **GO** для запуска измененной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

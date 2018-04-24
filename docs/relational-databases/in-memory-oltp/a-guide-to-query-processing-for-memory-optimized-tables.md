@@ -1,28 +1,29 @@
 ---
-title: "Руководство по обработке запросов к таблицам, оптимизированных для памяти | Документация Майкрософт"
-ms.custom: 
+title: Руководство по обработке запросов к таблицам, оптимизированных для памяти | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cd928cf473b85d4062465da8534df91c271e44eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +270,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Этот оператор используется как для встроенных функций, так и для преобразований типов. Не все функции и преобразования типов поддерживаются в хранимых процедурах, скомпилированных в собственном коде.|  
 |Соединение вложенными циклами|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops — единственный оператор соединения, который поддерживается в хранимых процедурах, скомпилированных в собственном коде. Все планы, которые содержат соединения, будут использовать оператор Nested Loops, даже если план одного и того же запроса, выполненного как интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)] , содержит хэш-соединение или соединение слиянием.|  
 |Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  

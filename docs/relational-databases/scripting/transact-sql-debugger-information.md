@@ -1,16 +1,16 @@
 ---
-title: "Сведения отладчика Transact-SQL | Документация Майкрософт"
-ms.custom: 
+title: Сведения отладчика Transact-SQL | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff61f3cc84829372e305ffe40aefff870531679
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Сведения отладчика Transact-SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Каждый раз, когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], с текущим состоянием выполнения можно ознакомиться с помощью различных окон отладчика.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Каждый раз когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , с текущим состоянием выполнения можно ознакомиться при помощи различных окон отладчика.  
   
 ## <a name="debugger-windows"></a>Окна отладчика  
  В режиме отладки внизу основного окна среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отладчик открывает два окна. Все сведения отладчика отображаются в этих двух окнах. В каждом окне отладчика есть вкладки, определяющие, какой набор сведений отображается в данном окне. В левом окне отладчика есть вкладки **Локальные значения**, **Просмотр значений1**, **Просмотр значений2**, **Просмотр значений3**и **Просмотр значений4** . В правом окне отладчика есть вкладки **Стек вызовов**, **Потоки**, **Точки останова**, **Окно команд**и **Вывод** .  

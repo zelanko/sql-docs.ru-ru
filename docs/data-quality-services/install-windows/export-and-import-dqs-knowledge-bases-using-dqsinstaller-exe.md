@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8060994f8f7da132b848150f1c005140b9eba2c6
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4145ef8b52e5d1a2c0610550ffe7cf40766a2906
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Для существующей установки DQS все базы знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] вы можете экспортировать в файл резервной копии DQS (DQSB) одновременно, а затем использовать файл DQSB для одновременного импорта всех баз знаний на другой сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] посредством запуска файла DQSInstaller.exe из командной строки. Дополнительные сведения о запуске DQSInstaller.exe из командной строки см. в подразделе [Run DQSInstaller.exe from Command Prompt](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) раздела [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
  Эта функция позволяет создать резервную копию *всех* баз знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] одновременно без необходимости экспортировать каждую из баз знаний в DQS-файл по отдельности с помощью [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Аналогичным образом вы можете импортировать *все* базы знаний из файла резервной копии на другой сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] одновременно, не импортируя каждую из баз знаний по отдельности из DQS-файла с помощью [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Это особенно полезно при создании и восстановлении резервных копий баз знаний, когда выполняется удаление сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] на одном компьютере и его повторная установка на другом компьютере. Все базы знаний в существующей установке [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] несложно экспортировать в файл резервной копии DQS (.dqsb), а затем импортировать все базы знаний из файла резервной копии после установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] на другом компьютере.  

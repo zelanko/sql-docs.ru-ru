@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: ''
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0958845553a92f18e64c5fd39a3a62229bf9ed7b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cd936e2ceeba5b2b20f922bbd6a59d430c44de4b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Обнаружение набора знаний
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   В этом разделе описывается создание базы знаний посредством обнаружения набора знаний. В процессе обнаружения службы [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) анализируют данные из образца данных источника данных посредством автоматизированного процесса и добавляют обнаруженные знания в базу знаний. Эти наборы знаний можно изменять и расширять на шаге **Управление значениями домена** действия обнаружения набора знаний или в действии управления доменами.  
   
  Обнаружение знаний — это управляемый мастером процесс из трех шагов, каждый из которых обязателен для выполнения.  

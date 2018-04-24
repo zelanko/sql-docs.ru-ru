@@ -1,16 +1,16 @@
 ---
-title: "DBCC CHECKTABLE (Transact-SQL) | Документы Майкрософт"
+title: DBCC CHECKTABLE (Transact-SQL) | Документы Майкрософт
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 
+caps.latest.revision: 89
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 495a31fc5f95cd5e3a81e5c14dd6dc469de66d6a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e93755c4eda0f95cdf62add5594b66f2b5944043
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ DATA_PURITY
 MAXDOP  
  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
  
- Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     
  > [!NOTE]  
  > Если значение MAXDOP равно нулю, то сервер выбирает максимальную степень параллелизма.  
@@ -178,7 +178,7 @@ MAXDOP
 Например, если столбец таблицы типа **varbinary(max)** использует атрибут FILESTREAM, инструкция DBCC CHECKTABLE проверит, находятся ли файлы и каталоги файловой системы в сопоставлении один к одному со столбцами, строками и значениями строк таблицы. DBCC CHECKTABLE может исправить повреждения при задании параметра REPAIR_ALLOW_DATA_LOSS. При восстановлении повреждений FILESTREAM инструкция DBCC удаляет все строки таблиц, в которых отсутствуют данные файловой системы, а также все каталоги и файлы, которые не сопоставлены строкам, столбцам и значениям столбцов в таблицах.
     
 ## <a name="checking-objects-in-parallel"></a>Проверка объектов в параллельном режиме    
-По умолчанию инструкция DBCC CHECKTABLE выполняет проверку объектов параллельно. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается точно так же, как и для параллельных запросов. Чтобы ограничить максимальное число процессоров, доступных для проверки DBCC, используйте процедуру [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+По умолчанию инструкция DBCC CHECKTABLE выполняет проверку объектов параллельно. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается точно так же, как и для параллельных запросов. Чтобы ограничить максимальное число процессоров, доступных для проверки DBCC, используйте процедуру [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 Параллельную проверку можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]    

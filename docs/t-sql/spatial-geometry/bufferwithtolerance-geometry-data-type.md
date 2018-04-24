@@ -1,16 +1,16 @@
 ---
-title: "BufferWithTolerance (тип данных geometry) | Документы Майкрософт"
-ms.custom: 
+title: BufferWithTolerance (тип данных geometry) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cb8520351369dad761862132211b5222c52e3ae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 941eb7f9cdf39475631b8ab45789cd2082ad3084
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
  *relative*  
  Значение типа **bit**, указывающее значение *tolerance*: относительное или абсолютное. Если задано значение TRUE или 1, то используется относительная погрешность, которая вычисляется как произведение параметра *tolerance* и диаметра ограничивающего прямоугольника экземпляра. Если этот аргумент имеет значение FALSE или 0, то погрешность является абсолютной, а значение *tolerance* задает максимальное абсолютное отклонение от идеальной буферной дистанции для возвращаемого линейного приближения.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Тип возвращаемых данных CLR: **SqlGeometry**  
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/25/2018
  Ошибкой между теоретическим и вычисляемым буфером является max(tolerance, extents \* 1.E-7), где погрешность является значением параметра *tolerance*. Дополнительные сведения об экстентах см. в статье [Справочник по методам типа данных geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается экземпляр `Point`, и метод `BufferWithTolerance()` производит получение приблизительного буфера вокруг этого экземпляра.  
+ В следующем примере создается экземпляр `Point`, а метод `BufferWithTolerance()` получает приблизительный буфер вокруг этого экземпляра.  
   
 ```  
 DECLARE @g geometry;  

@@ -1,33 +1,34 @@
 ---
-title: "Помощник по настройке ядра СУБД | Документация Майкрософт"
-ms.custom: 
+title: Помощник по настройке ядра СУБД | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9a0f6d0921c4d530c8ed1b46264d933c46678140
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Помощник по настройке ядра СУБД [!INCLUDE[msCoName](../../includes/msconame-md.md)] анализирует базы данных и составляет рекомендации по оптимизации производительности запросов. Помощник по настройке ядра СУБД можно использовать для выбора и создания оптимальных наборов индексов, индексированных представлений и секций таблицы, не обладая экспертным уровнем понимания структуры баз данных или внутренних процессов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Помощник по настройке ядра СУБД позволяет выполнять следующие задачи.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Помощник по настройке ядра СУБД [!INCLUDE[msCoName](../../includes/msconame-md.md)] анализирует базы данных и составляет рекомендации по оптимизации производительности запросов. Помощник по настройке ядра СУБД можно использовать для выбора и создания оптимальных наборов индексов, индексированных представлений и секций таблицы, не обладая экспертным уровнем понимания структуры баз данных или внутренних процессов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Помощник по настройке ядра СУБД позволяет выполнять следующие задачи.  
   
 -   Устранение неполадок производительности конкретного проблемного запроса  
   

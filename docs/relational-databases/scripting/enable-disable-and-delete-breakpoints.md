@@ -1,31 +1,33 @@
 ---
-title: "Включение, отключение и удаление точек останова | Документация Майкрософт"
-ms.custom: 
+title: Включение, отключение и удаление точек останова | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c78a83bbf85641580f05d08af7272bce554bff2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 82cbf67f24c7be67a18d969dc2c76df30a590674
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Включение, отключение и удаление точек останова
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова**. Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова** . Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
   
 ## <a name="the-breakpoints-window"></a>Окно точек останова  
  В окне **Точки останова** приводятся такие сведения, как строка кода, в которой расположена точка останова. Кроме того, в окне **Точки останова** можно удалять, отключать и включать точки останова. Дополнительные сведения об окне **Точки останова** см. в разделе [Точки останова Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  

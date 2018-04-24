@@ -1,32 +1,35 @@
 ---
-title: "Диалоговое окно \"Создание профиля и учетной записи Database Mail\" | Документы Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Создание профиля и учетной записи Database Mail" | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99221347b323c5353d681c372865616083bdbd5b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b8236629b5c5f8477894cb7ee91238009e7ed6b6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Используйте диалоговое окно **Создание профиля и учетной записи компонентов Database Mail** для создания профиля компонента Database Mail и учетной записи компонента Database Mail для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Этот профиль будет использоваться для уведомления пользователей и групп по электронной почте, когда результаты проверки бизнес-правил будут отрицательными.  
   
 ## <a name="database-mail-profile-and-account"></a>Профиль и учетная запись компонента Database Mail  

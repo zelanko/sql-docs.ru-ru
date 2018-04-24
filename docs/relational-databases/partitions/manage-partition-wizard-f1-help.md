@@ -1,16 +1,16 @@
 ---
-title: "Справка F1 мастера управления секциями | Документация Майкрософт"
-ms.custom: 
+title: Справка F1 мастера управления секциями | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.managepartition.createjob.f1
@@ -26,19 +26,20 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1d25abe9ddb3fbea1646d4b94c6e83fbe44ad2fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Справка F1 мастера управления секциями
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Мастер управления секциями** используется для изменения существующих секционированных таблиц и управления ими с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Мастер управления секциями** используется для управления и изменения существующих секционированных таблиц с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Запуск мастера управления секциями  
   

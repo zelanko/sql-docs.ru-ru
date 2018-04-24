@@ -1,16 +1,16 @@
 ---
-title: "DATEDIFF_BIG (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DATEDIFF_BIG (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c8228f0db3e37fe3bf6425d60fd4f9067e92220
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 173daacfd95ec63789dde878e960d5a8b820a27c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе *datepart*, за период времени, указанный в аргументах *startdate* и *enddate*.
   
-Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -84,7 +84,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 Возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе datepart, за период времени, заданный аргументами startdate и enddate.
 -   Каждое выражение *datepart* и его краткие формы возвращают одно и то же значение.  
   
-Если возвращенное значение выходит за границы диапазона типа **bigint** (от –9 223 372 036 854 775 808 до +9 223 372 036 854 775 807), возвращается ошибка. Для единицы измерения **millisecond** максимальная разница между значениями *startdate* и *enddate* составляет 24 дня, 20 часов, 31 минуту и 23,647 секунды. Для единицы измерения **second** максимальная разница составляет 68 лет.
+Если возвращенное значение выходит за границы диапазона типа **bigint** (от –9 223 372 036 854 775 808 до +9 223 372 036 854 775 807), возвращается ошибка. Для единицы измерения **millisecond** максимальная разница между значениями *startdate* и *enddate* составляет 24 дня, 20 часов, 31 минуту и 23,647 секунды. Для **секунды** максимальная разница составляет 68 лет.
   
 Если обоим аргументам *startdate* и *enddate* присвоено только значение времени, а аргумент *datepart* не содержит значения времени *datepart*, то возвращается значение 0.
   

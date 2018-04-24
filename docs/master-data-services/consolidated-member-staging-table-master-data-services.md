@@ -1,33 +1,36 @@
 ---
-title: "Промежуточная таблица консолидированных элементов (службы Master Data Services) | Документы Майкрософт"
-ms.custom: 
+title: Промежуточная таблица консолидированных элементов (службы Master Data Services) | Документы Майкрософт
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-caps.latest.revision: 
+caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e664d89020ea04c5de20a0c2918a00d28f64c06
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ff8df95741c15a2b71369262873aaefe55ee8f02
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Промежуточная таблица консолидированных элементов (службы Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Промежуточная таблица консолидированных элементов (stg.name_Consolidated) используется в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для создания, обновления, деактивации и удаления консолидированных элементов. Ее также можно использовать для обновления значений атрибутов консолидированных элементов.  
   
 ##  <a name="TableColumns"></a> Столбцы таблицы  

@@ -1,16 +1,16 @@
 ---
-title: "Использование таблиц inserted и deleted | Документация Майкрософт"
-ms.custom: 
+title: Использование таблиц inserted и deleted | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserted tables
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 297a59dd264361ece94525f1f8a046a0cccf2dad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
+  Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
   
  В триггерах DML таблицы inserted и deleted в основном используются для выполнения следующих операций.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]  
 >  Если действия триггера зависят от числа строк, данные в которых были изменены, воспользуйтесь проверками (например, проверкой параметра @@ROWCOUNT) при изменении данных в нескольких строках (инструкции INSERT, DELETE или UPDATE с инструкцией SELECT), а затем предпринимайте соответствующие действия.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext**или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)**, **nvarchar(max)**и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext**или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Примеры использования таблицы inserted в триггере для выполнения бизнес-правил**  
   

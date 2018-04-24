@@ -1,16 +1,16 @@
 ---
-title: "ALTER WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регулятор ресурсов создает внутренние группы и группы «по умолчанию».  
   
- Параметр "default" должен заключаться в кавычки ("") или квадратные скобки ([]), если используется с инструкцией ALTER WORKLOAD GROUP (во избежание конфликта с системным зарезервированным словом DEFAULT). Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Параметр "default" должен заключаться в кавычки ("") или квадратные скобки ([]), если используется с инструкцией ALTER WORKLOAD GROUP (во избежание конфликта с системным зарезервированным словом DEFAULT). Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 > В стандартных группах рабочей нагрузки и пулах ресурсов используются имена со строчными буквами, такие как «default». Это необходимо учитывать при работе с серверами, где параметры сортировки учитывают регистр символов. Серверы, параметры сортировки которых не учитывают регистр (например, SQL_Latin1_General_CP1_CI_AS), будут рассматривать строки «default» и «Default» как одинаковые.  
@@ -145,7 +145,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  USING { *pool_name* | "**default**" }  
  Связывает группу рабочей нагрузки с определяемым пользователем пулом ресурсов, идентифицируемым по значению *pool_name*, в результате чего группа рабочей нагрузки помещается в пул ресурсов. Если значение *pool_name* не предоставлено либо если не использован аргумент USING, группа рабочей нагрузки помещается в стандартный пул по умолчанию в Resource Governor.  
   
- Параметр "default" должен заключаться в кавычки ("") или квадратные скобки ([]), если используется с инструкцией ALTER WORKLOAD GROUP (во избежание конфликта с системным зарезервированным словом DEFAULT). Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ Параметр "default" должен заключаться в кавычки ("") или квадратные скобки ([]), если используется с инструкцией ALTER WORKLOAD GROUP (во избежание конфликта с системным зарезервированным словом DEFAULT). Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 >  В параметре "default" учитывается регистр.  

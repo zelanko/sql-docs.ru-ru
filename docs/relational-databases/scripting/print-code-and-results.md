@@ -1,16 +1,16 @@
 ---
-title: "Печать кода и результатов | Документация Майкрософт"
-ms.custom: 
+title: Печать кода и результатов | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d1f662f0911234962948fe9e68123aaf06e5fd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d198072951c81ab11c3258aab0be4bfb0d4c9819
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="print-code-and-results"></a>Печать кода и результаты
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При печати запроса или файла выделенные цветом элементы печатаются в заданном цвете, если принтер поддерживает цветную печать и она разрешена в настройках принтера.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  При печати запроса или файла выделенные цветом элементы печатаются в заданном цвете, если принтер поддерживает цветную печать и она разрешена в настройках принтера.  
   
  Однако шрифт и цвет текста в редакторе и напечатанном тексте могут различаться. В меню **Сервис** выберите **Параметры**. На вкладке **Среда**щелкните **Шрифты и цвета**, а затем выберите шрифты и цвета для элементов, отображаемых в редакторе, а также шрифты и цвета, применяемые при печати. Так как эти настройки могут различаться, результат вывода может отличаться от отображаемого в редакторе.  
   

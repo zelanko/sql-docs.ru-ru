@@ -1,16 +1,16 @@
 ---
-title: "Роли уровня сервера | Документация Майкрософт"
-ms.custom: 
+title: Роли уровня сервера | Документация Майкрософт
+ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.Security.NT_AUTHORITY.SYSTEM
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a095d9f3e7839a2f3cfa14a2bf49790776f0cd1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7c77f856173a581fbab9d462af15279b5cc983a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="fixed-server-level-roles"></a>Предопределенные роли уровня сервера  
  В следующей таблице представлены предопределенные роли уровня сервера и их возможности.  
   
-|Предопределенная роль уровня сервера|Описание|  
+|Предопределенная роль уровня сервера|Description|  
 |------------------------------|-----------------|  
 |**sysadmin**|Члены предопределенной роли сервера **sysadmin** могут выполнять любые действия на сервере.|  
 |**serveradmin**|Элементы предопределенной роли сервера **serveradmi** могут изменять параметры конфигурации на уровне сервера, а также выключать сервер.|  
@@ -83,7 +84,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Работа с ролями уровня сервера  
  В следующей таблице описаны команды, представления и функции, предназначенные для работы с ролями уровня сервера.  
   
-|Компонент|Тип|Описание|  
+|Компонент|Тип|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Метаданные|Возвращает список ролей уровня сервера.|  
 |[sp_helpsrvrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Метаданные|Возвращает сведения о членах роли уровня сервера.|  
@@ -95,7 +96,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[CREATE SERVER ROLE (Transact-SQL)](../../../t-sql/statements/create-server-role-transact-sql.md)|Command|Создает определяемую пользователем роль сервера.|  
 |[ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md)|Command|Изменяет членство в роли сервера или изменяет имя определяемой пользователем роли сервера.|  
 |[DROP SERVER ROLE (Transact-SQL)](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|Удаляет определяемую пользователем роль сервера.|  
-|[Функция IS_SRVROLEMEMBER (Transact-SQL)](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Функция|Определяет членство роли сервера.|  
+|[Функция IS_SRVROLEMEMBER (Transact-SQL)](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Компонент|Определяет членство роли сервера.|  
   
 ## <a name="see-also"></a>См. также:  
  [Роли уровня базы данных](../../../relational-databases/security/authentication-access/database-level-roles.md)   

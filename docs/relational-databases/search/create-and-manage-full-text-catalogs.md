@@ -1,31 +1,32 @@
 ---
-title: "Создание полнотекстовых каталогов и управление ими | Документация Майкрософт"
-ms.custom: 
+title: Создание полнотекстовых каталогов и управление ими | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b3e98a00fd7f165fbd5c83b7149a8e63505116e3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 52ec4860676f445e775ff90048bd091329510cc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ GO
   
 3.  Щелкните правой кнопкой мыши имя полнотекстового каталога, который необходимо перестроить, и выберите **Перестроить**.  
   
-4.  На вопрос **Удалить полнотекстовый каталог и перестроить его?**нажмите кнопку **ОК**.  
+4.  На вопрос **Удалить полнотекстовый каталог и перестроить его?** нажмите кнопку **ОК**.  
   
 5.  В диалоговом окне **Перестроить полнотекстовый каталог** нажмите кнопку **Закрыть**.  
    
@@ -107,7 +108,7 @@ GO
   
 3.  Выберите **Перестроить все**.  
   
-4.  В ответ на запрос **Удалить все полнотекстовые каталоги и перестроить их?**нажмите кнопку **ОК**.  
+4.  В ответ на запрос **Удалить все полнотекстовые каталоги и перестроить их?** нажмите кнопку **ОК**.  
   
 5.  В диалоговом окне **Перестроить все полнотекстовые каталоги** нажмите **Закрыть**.  
   

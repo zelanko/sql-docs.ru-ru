@@ -1,16 +1,16 @@
 ---
-title: "COLUMNPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: COLUMNPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLUMNPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61ac858e029848ef59978669112de3db7c068f67
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c26df937a654289c6a5313631a612bfbd386cc6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ COLUMNPROPERTY ( id , column , property )
 |**UsesAnsiTrim**|ANSI_PADDING был установлен как ON, если таблица была создана впервые. Это свойство применимо только к столбцам или параметрам типа **char** или **varchar**.|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsSparse**|Столбец является разреженным столбцом. Дополнительные сведения см. в статье [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsColumnSet**|Столбец представляет собой набор столбцов. Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Введенные значения недопустимы.|  
-|**GeneratedAlwaysType**|Значение столбца, созданное системой. Соответствует **sys.columns.generated_always_type**|**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = создается не всегда<br /><br /> 1 = создается всегда как начало строки<br /><br /> 2 = создается всегда как конец строки|  
-|**IsHidden**|Значение столбца, созданное системой. Соответствует **sys.columns.is_hidden**|**Область применения**: начиная с [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = не скрытый<br /><br /> 1 = скрытый|  
+|**GeneratedAlwaysType**|Значение столбца, созданное системой. Соответствует **sys.columns.generated_always_type**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = создается не всегда<br /><br /> 1 = создается всегда как начало строки<br /><br /> 2 = создается всегда как конец строки|  
+|**IsHidden**|Значение столбца, созданное системой. Соответствует **sys.columns.is_hidden**|**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = не скрытый<br /><br /> 1 = скрытый|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных
  **int**  

@@ -1,16 +1,16 @@
 ---
-title: "REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d5b63ac2544ee9ad866e431f602a9b39e22c56d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  Если участник обладает указанным разрешением без параметра GRANT, будет отменено само разрешение.  
   
  *permission*  
- Указывает разрешение, которое может быть отменено для защищаемого объекта компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ Указывает разрешение, которое может быть отменено для защищаемого объекта компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  CONTRACT **::***contract_name*  
  Указывает контракт, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
@@ -87,21 +87,21 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *database_principal*  
  Задает участника, у которого отменяется разрешение. *database_principal* может быть одним из следующих:  
   
--   Пользователь базы данных  
+-   пользователь базы данных;  
   
--   Роль базы данных  
+-   роль базы данных;  
   
--   Роль приложения  
+-   роль приложения;  
   
--   Пользователь базы данных, сопоставленный имени входа Windows  
+-   пользователь базы данных, сопоставленный с именем входа Windows;  
   
--   Пользователь базы данных, сопоставленный группе Windows  
+-   пользователь базы данных, сопоставленный с группой Windows;  
   
--   Пользователь базы данных, сопоставленный сертификату  
+-   пользователь базы данных, сопоставленный с сертификатом;  
   
--   Пользователь базы данных, сопоставленный асимметричному ключу  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   Пользователь базы данных, не сопоставленный серверу-участнику  
+-   пользователь базы данных, не сопоставленный с сервером-участником.  
   
  CASCADE  
  Показывает, что отменяемое разрешение также отменяется для других участников, для которых оно было предоставлено или запрещено данным участником.  
@@ -112,21 +112,21 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  AS *revoking_principal*  
  Указывает участника, от которого участник, выполняющий данный запрос, получает право на отмену разрешения. В качестве *участника_дающего_право_на_отмену_разрешения* может быть указан один из следующих участников:  
   
--   Пользователь базы данных  
+-   пользователь базы данных;  
   
--   Роль базы данных  
+-   роль базы данных;  
   
--   Роль приложения  
+-   роль приложения;  
   
--   Пользователь базы данных, сопоставленный имени входа Windows  
+-   пользователь базы данных, сопоставленный с именем входа Windows;  
   
--   Пользователь базы данных, сопоставленный группе Windows  
+-   пользователь базы данных, сопоставленный с группой Windows;  
   
--   Пользователь базы данных, сопоставленный сертификату  
+-   пользователь базы данных, сопоставленный с сертификатом;  
   
--   Пользователь базы данных, сопоставленный асимметричному ключу  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   Пользователь базы данных, не сопоставленный серверу-участнику  
+-   пользователь базы данных, не сопоставленный с сервером-участником.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -190,7 +190,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
  [DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

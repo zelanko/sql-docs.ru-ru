@@ -1,34 +1,35 @@
 ---
-title: "Класс событий CursorExecute | Документация Майкрософт"
-ms.custom: 
+title: Класс событий CursorExecute | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorExecute event class
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d93f12bc5aa56b08b5cb2c8a5ee7c80f6b352665
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61efcf8cb65306c3d25b9cceef6215aa4a47a227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **CursorExecute** описывает события выполнения курсоров, возникающие в курсорах API. События выполнения курсоров возникают при создании и заполнении курсора компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием плана выполнения, созданного событием подготовки курсоров.  
+  Класс событий **CursorExecute** описывает события выполнения курсоров, возникающие в курсорах API. События выполнения курсоров возникают при создании и заполнении курсора компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием плана выполнения, созданного событием подготовки курсоров.  
   
  Включите класс событий **CursorExecute** в трассировки, фиксирующие производительность курсоров. Если класс событий **CursorExecute** включен в трассировку, объем служебных данных зависит от того, как часто курсоры используются в базе данных при трассировке. Если курсоры используются активно, трассировка может существенно снизить производительность.  
   

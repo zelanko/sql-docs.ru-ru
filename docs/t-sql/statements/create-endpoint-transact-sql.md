@@ -1,16 +1,16 @@
 ---
-title: "CREATE ENDPOINT (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE ENDPOINT (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENDPOINT
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 
+caps.latest.revision: 135
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec23f963b501a6067d7884de378eee8260ca96ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=***listenerPort*  
  Указывает номер порта протокола TCP/IP, прослушиваемого компонентом Service Broker на предмет соединений. По соглашению используется порт 4022, но допустим любой порт от 1024 до 32767.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
  Указывает IP-адрес, с которым конечная точка будет ожидать соединения. По умолчанию значение установлено в ALL. Это значит, что средство прослушивания примет соединение с любым верным IP-адресом.  
   
  Если зеркальное отображение базы данных настраивается с использованием IP-адреса, а не полного имени домена (`ALTER DATABASE SET PARTNER = partner_IP_address` или `ALTER DATABASE SET WITNESS = witness_IP_address`), необходимо указать `LISTENER_IP =IP_address` вместо `LISTENER_IP=ALL` при создании конечных точек зеркального отображения.  
@@ -275,7 +275,7 @@ FOR DATABASE_MIRRORING (
 -   пользователями или группами, которым предоставлено разрешение CONNECT на конечную точку.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в разделе [GRANT, предоставление разрешений конечной точке (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="example"></a>Пример  
   

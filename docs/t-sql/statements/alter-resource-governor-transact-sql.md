@@ -1,16 +1,16 @@
 ---
-title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER RESOURCE GOVERNOR
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: 
+caps.latest.revision: 49
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e2f672982778249cf5bc7329a8bc371b95407ed4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,14 +94,14 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  Чтобы любые изменения конфигурации вступили в силу, необходимо вызвать инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
  Регистрирует функцию классификации, указанную *schema_name.function_name*. Эта функция классифицирует каждый новый сеанс и назначает запросы сеанса в группу рабочей нагрузки. При использовании значения NULL новые сеансы автоматически назначаются в группу рабочей нагрузки по умолчанию.  
   
  RESET STATISTICS  
  Сбрасывает статистику всех групп рабочей нагрузки и пулов ресурсов. Дополнительные сведения см. в разделах [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) и [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Устанавливает максимальное число поставленных в очередь операций ввода-вывода для тома диска. Эти операции ввода-вывода могут быть операциями чтения или записи любого размера.  Максимальное значение для MAX_OUTSTANDING_IO_PER_VOLUME равно 100. Это значение не в процентах. Этот параметр предназначен для подстройки управление ресурсами ввода-вывода к характеристикам ввода-вывода дискового тома. Рекомендуется поэкспериментировать с различными значениями и ознакомиться с использованием калибровочного средства наподобие IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) или SQLIO (не рекомендуется), чтобы определить максимальное значение для имеющейся подсистемы хранения. Данный параметр предоставляет проверку безопасности на уровне системы, позволяющую SQL Server соответствовать минимальному числу операций ввода-вывода в секунда для пулов ресурсов, даже если в других пулах значение MAX_IOPS_PER_VOLUME неограниченно. Дополнительные сведения о параметре MAX_IOPS_PER_VOLUME см. в разделе [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   

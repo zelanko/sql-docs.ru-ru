@@ -1,16 +1,16 @@
 ---
-title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MIN_ACTIVE_ROWVERSION
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MIN_ACTIVE_ROWVERSION function [Transact-SQL]
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 954b013f9329f98043673d58b62a5a171335fb51
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6080dde652a6ff06354a1bab350366b53d05e150
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 MIN_ACTIVE_ROWVERSION  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает значение **binary(8)**.  
   
 ## <a name="remarks"></a>Remarks  
@@ -142,7 +142,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [@@DBTS &#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
+ [@@DBTS (Transact-SQL)](../../t-sql/functions/dbts-transact-sql.md)   
  [rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)  
   
   

@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e8894e78e95eb69cba639b4d60825982244ab9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 94db4c27897da2ebbd399d7946085b15f5f7b68d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   В этом разделе описано создание связей на основе термина для домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связь на основе термина (TBR) позволяет исправить термин, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, вы можете задать связь на основе термина, которая изменяет термин «Inc.» на «Incorporated». Термин «Inc.» будет заменяться при каждом его появлении в домене. Экземпляры «Contoso, Inc.» будут заменяться на «Contoso, Incorporated», и эти два значения станут рассматриваться как точные синонимы.  
   
  Для использования связей на основе термина необходимо подготовить список пар «Значение/исправить на», такие как «Inc.» и «Incorporated» или «Senior» и «Sr.». Использование связи на основе термина позволяет заменять термин по всему домену, не задавая вручную отдельные значения домена как синонимы. Вы можете указывать, что значение исправлено, даже если это значение не было обнаружено ранее при обнаружении знаний. Если преобразование с помощью связи на основе термина делает два значения идентичными, службы DQS создают между ними синонимическую связь (процесс обнаружения знаний) или связь исправления (процесс исправления данных).  

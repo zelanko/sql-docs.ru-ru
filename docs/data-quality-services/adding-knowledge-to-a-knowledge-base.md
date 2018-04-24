@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50aa4f48ea862facd6863d59f47128f0376a4e12
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c4d005d535e73ab633b97fc7202a1ebad3817a51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Добавление знаний в базу знаний
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   В этом разделе описываются способы, которыми можно добавить знания в базу знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Прежде чем приступать к работе со службами DQS, необходимо получить набор знаний о данных. Для этого необходимо построить и поддерживать базу знаний служб DQS, а также пополнять ее наборами знаний, связанными с соответствующими типами источников данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
   
  База знаний содержит домены данных, связанные с источником данных. Для каждого домена данных в базе знаний служб DQS (DQKB) хранятся идентифицированные термины, орфографические ошибки, правила проверки и бизнес-правила, а также справочные данные, которые могут использоваться для выполнения действий со службами DQS на источнике данных. В службах DQS эти знания используются для выявления неправильных или недопустимых данных, либо для сопоставления.  

@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Plan Guide Successful | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Plan Guide Successful | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Plan Guide Successful event class
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf687c1bb8ef94f4af34a9e64ebbb72fe5dec590
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5a46c563ed506762f82fc52dd23c23d93e55ebe8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий Plan Guide Successful показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно создал план выполнения для запроса или пакета, который содержал структуру плана. Событие возникает, когда выполняются следующие условия.  
+  Класс событий Plan Guide Successful показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно создал план выполнения для запроса или пакета, который содержал структуру плана. Событие возникает, когда выполняются следующие условия.  
   
 -   Уже выполняется пакет или модуль, совпадающий с пакетом или модулем в определении структуры плана.  
   
