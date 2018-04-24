@@ -1,27 +1,21 @@
 ---
-title: Загрузка данных со службами Integration Services
-author: barbkess
-ms.author: barbkess
+title: Загрузка с помощью службы Integration Services — параллельное хранилище данных | Документы Microsoft
+description: Предоставляет информации о развертывании и ссылки для загрузки данных в хранилища параллельных данных (PDW) с помощью пакетов служб SQL Server Integration Services (SSIS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>Загрузка данных со службами Integration Services
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Загрузка данных со службами Integration Services для параллельного хранилища данных
 Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS).  
   
 <!-- MISSING LINKS
@@ -156,7 +150,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>Примеры  
   
-### <a name="Walkthrough"></a>A. Простой нагрузочный из неструктурированного файла  
+### <a name="Walkthrough"></a>. Простой нагрузочный из неструктурированного файла  
 Следующий пример демонстрирует использование служб Integration Services для загрузки данных неструктурированного файла в SQL Server PDW Appliance нагрузки простых данных.  В этом примере предполагается, что службы Integration Services уже установлен на клиентском компьютере, и SQL Server PDW назначения установлено, как описано выше.  
   
 В этом примере мы будет загружена в `Orders` таблицы, которая имеет следующая инструкция DDL. `Orders` Таблица является частью `LoadExampleDB` базы данных.  

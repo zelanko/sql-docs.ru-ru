@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Audit Login GDR | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Audit Login GDR | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Login GDR event class
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c151cb15d32b0e5f53d49164db6831050cb1b050
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1d10730b5bce67c2438d7ca8ca7de9e9feffa400
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **Audit Login GDR** срабатывает при каждом добавлении или удалении права учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Этот класс событий относится к хранимым процедурам **sp_grantlogin**, **sp_revokelogin**и **sp_denylogin** .  
+  Класс событий **Audit Login GDR** срабатывает при каждом добавлении или удалении права учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Этот класс событий относится к хранимым процедурам **sp_grantlogin**, **sp_revokelogin**и **sp_denylogin** .  
   
  В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот класс событий может быть удален. Вместо этого рекомендуется использовать класс событий **Audit Server Principal Management** .  
   

@@ -1,33 +1,22 @@
 ---
-title: Элементы языка T-SQL - аналитика платформы системы Parallel Data Warehouse | Документы Microsoft
-author: barbkess
-ms.author: barbkess
+title: Элементы языка T-SQL - Parallel Data Warehouse | Документы Microsoft
+description: Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
-services: sql-data-warehouse
-documentationcenter: NA
-editor: ''
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: fc6d1b69896ffeef0402d0b359f3b978bf43d961
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="language-elements"></a>Элементы языка
-Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Элементы языка T-SQL для параллельного хранилища данных
+Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
 
 ## <a name="core-elements"></a>Корневые элементы
 * [синтаксические обозначения](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -38,7 +27,7 @@ ms.lasthandoff: 04/06/2018
 * [Константы](../t-sql/data-types/constants-transact-sql.md)
 * [Типы данных](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
+* [Выражения](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Инструкции по решению свойство IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -219,7 +208,7 @@ ms.lasthandoff: 04/06/2018
 * [SYSTEM_USER](../t-sql/functions/system-user-transact-sql.md)
 * [SYSUTCDATETIME](../t-sql/functions/sysutcdatetime-transact-sql.md)
 * [TAN](../t-sql/functions/tan-transact-sql.md)
-* [TERTIARY_WEIGHTS](../t-sql/functions/collation-functions-tertiary-weights-transact-sql.md)
+* [ФУНКЦИЯ TERTIARY_WEIGHTS](../t-sql/functions/collation-functions-tertiary-weights-transact-sql.md)
 * [TIMEFROMPARTS](../t-sql/functions/timefromparts-transact-sql.md)
 * [TODATETIMEOFFSET](../t-sql/functions/todatetimeoffset-transact-sql.md)
 * [TYPE_ID](../t-sql/functions/type-id-transact-sql.md)

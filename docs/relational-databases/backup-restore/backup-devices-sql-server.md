@@ -2,7 +2,7 @@
 title: Устройства резервного копирования (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -33,11 +33,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 45ff0eb0fb8129ce38664540e2168ff92d5f84f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/10/2018
   
  TO DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Пример:  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -89,7 +89,7 @@ GO
   
  FROM DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Например,  
   
 ```sql  
 RESTORE DATABASE AdventureWorks2012   
@@ -125,7 +125,7 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Указание имени в формате UNC  
  Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\***имя_системы***\\***имя_общего_ресурса***\\***путь***\\***имя_файла*.  
   
- Например:  
+ Пример:  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -155,7 +155,7 @@ GO
   
  TO TAPE **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Пример:  
   
 ```sql  
 BACKUP LOG AdventureWorks2012   
@@ -272,7 +272,7 @@ GO
   
 -   [Удаление устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [SQL Server, объект Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   

@@ -1,16 +1,16 @@
 ---
-title: "Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio) | Документация Майкрософт"
-ms.custom: 
+title: Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.reporthistory.calendar.f1
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing reports
 - reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 537ccf1648d36229ead7680826f63d081663c998
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f0876f2150f70ace06aa0253814a4f8e6ea3a277
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-После настройки хранилища данных управления можно просмотреть отчет набора элементов сбора в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для наборов сбора системных данных, устанавливаемых вместе с SQL Server, предоставляются отчеты. Содержимое этих отчетов:  
+  После настройки хранилища данных управления можно просмотреть отчет набора элементов сбора в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для наборов сбора системных данных, устанавливаемых вместе с SQL Server, предоставляются отчеты. Содержимое этих отчетов:  
   
 -   Сводка по использованию дискового пространства.  
   

@@ -1,28 +1,22 @@
 ---
-title: Получить и настроить резервный сервер для APS PDW
-author: barbkess
-ms.author: barbkess
+title: Приобретать и настраивать резервное копирование сервера - Parallel Data Warehouse | Документы Microsoft
+description: В этой статье описывается настройка системы Windows не является специализированным как резервный сервер для использования с функциями резервного копирования и восстановления в Analytics Platform System (APS) и параллельные хранилища данных (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Настройка системы Windows не является специализированным как резервный сервер для использования во время резервного копирования и восстановления компонентов в Analytics Platform System (APS) и SQL Server Parallel данных хранилища (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>Получить и настроить резервный сервер
-В этом разделе описывается настройка системы Windows не является специализированным как резервный сервер для использования с функциями резервного копирования и восстановления в Analytics Platform System (APS) и SQL Server Parallel данных хранилища (PDW).  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Получить и настроить резервный сервер для параллельного хранилища данных
+В этой статье описывается настройка системы Windows не является специализированным как резервный сервер для использования с функциями резервного копирования и восстановления в Analytics Platform System (APS) и параллельные хранилища данных (PDW).  
   
   
 ## <a name="Basics"></a>Основы резервное копирование сервера  

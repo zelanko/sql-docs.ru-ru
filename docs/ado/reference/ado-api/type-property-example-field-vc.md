@@ -1,32 +1,32 @@
 ---
-title: "Введите пример свойства (поля) (VC ++) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Введите пример свойства (поля) (VC ++) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d50cc9fb72a1ac9ba30bc2903fc553d7574736c2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf37a8f168579ed4cebfd155503e25dae52498f0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства типа (поле) (VC ++)
 В этом примере демонстрируется [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства выводится имя константы, соответствующее значению **тип** всех [поле](../../../ado/reference/ado-api/field-object.md) объекты в ***Сотрудников*** таблицы. Функция FieldType необходим для выполнения этой процедуры.  
@@ -171,7 +171,7 @@ void PrintComError(_com_error &e) {
  **Тип: adVarChar**  
  **Имя: job_id**  
  **Тип: adSmallInt**  
- **Name: job_lvl**  
+ **Имя: job_lvl**  
  **Тип: adUnsignedTinyInt**  
  **Имя: pub_id**  
  **Тип: adChar**  

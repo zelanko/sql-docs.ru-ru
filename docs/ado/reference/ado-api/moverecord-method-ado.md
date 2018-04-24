@@ -1,17 +1,17 @@
 ---
-title: "Метод MoveRecord (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод MoveRecord (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::MoveRecord
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a626e6f86d2e44fed972f8043b556d233fdf1d17
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3c6361dca137a27c5b54149fd400ee5cd29d9160
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="moverecord-method-ado"></a>Метод MoveRecord (ADO)
 Перемещает сущности, представленной [записи](../../../ado/reference/ado-api/record-object-ado.md) в другое место.  
@@ -56,13 +56,13 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Параметры*  
  Необязательно. Объект [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) значение, определяющее по умолчанию **adMoveUnspecified**. Задает поведение данного метода.  
   
- *Async*  
+ *Асинхронный*  
  Необязательно. Объект **логическое** значением, которое при **True**, указывает этой операции должен быть асинхронным.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект **строка** значение. Как правило, значение *назначения* возвращается. Тем не менее возвращаемое точное значение зависит от поставщика.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значения *источника* и *назначения* не должна одинаковы; в противном случае возникает ошибка времени выполнения. По крайней мере имена сервера, путь и ресурс должны отличаться.  
   
  Для файлов, перемещенных с помощью службу публикации в Интернете, этот метод обновляет все гипертекстовые ссылки в файлах, перемещается в случае, если не указано иначе *параметры*. Этот метод завершается ошибкой, если *назначения* указывает существующий объект (например, файл или каталог), если не **adMoveOverWrite** указано.  

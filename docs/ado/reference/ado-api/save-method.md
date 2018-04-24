@@ -1,17 +1,17 @@
 ---
-title: "Метод Save | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод Save | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 389fdbe66dc8136e50f244e18af523afefb7c463
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="save-method"></a>Save-метод
 Сохраняет [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в файле или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -47,7 +47,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  Необязательно. Объект [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) значение, указывающее формат, в котором **записей** должен быть сохранен (XML или ADTG). Значение по умолчанию — **adPersistADTG**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  [Метод Save](../../../ado/reference/ado-api/save-method.md) метод можно вызывать только для открытого **записей**. Используйте [метода Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) способ восстановления более поздней версии **записей** из *назначения*.  
   
  Если [свойство фильтра](../../../ado/reference/ado-api/filter-property.md) свойство действует для **записей**, то сохраняются только те строки, которые доступны в фильтре. Если **набора записей** имеет иерархическую структуру, затем текущий дочерний элемент **набора записей** и его дочерние элементы сохраняются, включая родительскую **набора записей**. Если метод Save дочернего **записей** является именем, дочерним элементом, а также все его дочерние элементы сохраняются, но не является родительским.  

@@ -1,15 +1,16 @@
 ---
-title: "Возможные неполадки при зеркальном отображении базы данных | Документы Майкрософт"
-ms.custom: 
+title: Возможные неполадки при зеркальном отображении базы данных | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time-out period [SQL Server database mirroring]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34c337fa0808e00cde09e1805983e82e2dd40977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] К сбою во время сеанса зеркального отображения базы данных могут привести различные физические неисправности, ошибки операционной системы или ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сеанс зеркального отображения базы данных не выполняет активных проверок компонентов, на которые опирается процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли быть не замечены, для зеркального отображения базы данных реализован собственный механизм ожидания. По истечении времени ожидания для зеркального отображения базы данных предполагается, что произошел сбой и объявляется *кратковременная ошибка*. Однако некоторые ошибки, которые возникают на уровне экземпляра SQL Server, не превышают времени ожидания зеркального отображения и поэтому не обнаруживаются.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  К сбою во время сеанса зеркального отображения базы данных могут привести различные физические неисправности, ошибки операционной системы или ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сеанс зеркального отображения базы данных не выполняет активных проверок компонентов, на которые опирается процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли быть не замечены, для зеркального отображения базы данных реализован собственный механизм ожидания. По истечении времени ожидания для зеркального отображения базы данных предполагается, что произошел сбой и объявляется *кратковременная ошибка*. Однако некоторые ошибки, которые возникают на уровне экземпляра SQL Server, не превышают времени ожидания зеркального отображения и поэтому не обнаруживаются.  
   
 > [!IMPORTANT]  
 >  Ошибки баз данных, кроме ошибок в зеркальной базе данных, невозможно выявить в сеансе зеркального отображения базы данных. Более того, весьма проблематично будет обнаружить сбой диска данных, если только база данных не перезапускается вследствие такого сбоя.  

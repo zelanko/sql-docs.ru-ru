@@ -1,31 +1,31 @@
 ---
-title: "Доступ к строк в иерархических записей | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Доступ к строк в иерархических записей | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7767fdbd933884116c77a67d1930171edf8a878
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Доступ к строк в иерархических записей (например)
 В следующем примере показано шаги, необходимые для доступа к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -75,4 +75,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>См. также
- [Обзор формирования данных](../../../ado/guide/data/data-shaping-overview.md) [поле объекта](../../../ado/reference/ado-api/field-object.md) [поля коллекции (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [грамматики формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md) [службы для формирования данных Microsoft OLE DB (ADO поставщиком услуг)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [необходимые поставщики данных формировать](../../../ado/guide/data/required-providers-for-data-shaping.md) [фигуры в предложении APPEND](../../../ado/guide/data/shape-append-clause.md) [Фигуры в целом команды](../../../ado/guide/data/shape-commands-in-general.md) [предложение COMPUTE фигуры](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic для приложений функций](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Обзор формирования данных](../../../ado/guide/data/data-shaping-overview.md) [поле объекта](../../../ado/reference/ado-api/field-object.md) [поля коллекции (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [грамматики формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft службы формирования данных для OLE DB (Поставщик службы ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [необходимые поставщики данных формировать](../../../ado/guide/data/required-providers-for-data-shaping.md) [фигуры в предложении APPEND](../../../ado/guide/data/shape-append-clause.md) [формирование команд в Общие](../../../ado/guide/data/shape-commands-in-general.md) [предложение COMPUTE фигуры](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic для приложений функций](../../../ado/guide/data/visual-basic-for-applications-functions.md)

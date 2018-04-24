@@ -1,29 +1,22 @@
 ---
-title: Импорт пакета управления SCOM для PDW (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Импорт пакета управления SCOM - система платформы аналитики | Документы Microsoft
+description: Выполните следующие действия для импорта пакетов управления System Center Operations Manager (SCOM) Analytics Platform System (APS). Необходимые пакеты управления для отслеживания Parallel Data Warehouse из SCOM.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: 6
-ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e60d87ae58b0804a0a7296f8b489df7441683c5b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="import-the-scom-management-pack-for-pdw"></a>Импорт пакета управления SCOM для PDW
-Выполните следующие действия для импорта пакетов управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления требуются для наблюдения за SQL Server PDW из SCOM.  
+# <a name="import-the-scom-management-pack---analytics-platform-system"></a>Импорт пакета управления SCOM - система платформы аналитики
+Выполните следующие действия для импорта пакетов управления System Center Operations Manager (SCOM) Analytics Platform System (APS). Необходимые пакеты управления для отслеживания Parallel Data Warehouse из SCOM. 
   
 ## <a name="BeforeBegin"></a>Перед началом  
 **Предварительные требования**  
@@ -76,11 +69,11 @@ System Center Operations Manager 2007 R2 должны быть установл�
   
 4.  Нажмите кнопку **Установить**.  
   
-    ![Click Install](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Нажмите "установить"](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Щелкните **Закрыть**.  
   
-    ![Click Close](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
+    ![Нажмите кнопку Закрыть](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>Следующий шаг  
 Импортированных пакетов управления, перейти к следующему шагу: [настройки SCOM для монитора Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md).  

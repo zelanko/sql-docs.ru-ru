@@ -1,31 +1,31 @@
 ---
-title: "Использование ADO с языками сценариев | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Использование ADO с языками сценариев | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование ADO с языки сценариев
 В среде скриптов ADO позволяет предоставлять данные посредством скриптов на стороне сервера. В этом случае ADO базового поставщика OLE DB, он использует, и другие компоненты, необходимые для ссылки на хранилище данных установлены на сервере под управлением служб Internet Information Services (IIS). С помощью Active Server Pages (ASP), ADO — это компонент, на которые ссылается скрипт, который можно создать HTML, например. Это содержимое HTML могут передаваться через протокол HTTP для веб-браузер клиента. С помощью скриптов, веб-страницы могут отправлять действия обратно серверных скриптов, позволяя обновить, проходят через или просматривать определенные данные.  
@@ -35,17 +35,17 @@ ms.lasthandoff: 02/09/2018
 |Объект|Безопасно для создания сценариев?|  
 |------------|-------------------------|  
 |Соединение ADO|Да|  
-|Команды ADO|нет|  
-|Параметр ADO|нет|  
+|Команды ADO|Нет|  
+|Параметр ADO|Нет|  
 |Набор записей ADO|Да|  
 |Записей ADO|Да|  
 |Поток ADO|Да|  
-|Ошибка ADO|нет|  
-|Каталог ADOX|нет|  
-|Набор ячеек ADOX|нет|  
+|Ошибка ADO|Нет|  
+|Каталог ADOX|Нет|  
+|Набор ячеек ADOX|Нет|  
 |DataControl служб удаленных рабочих СТОЛОВ|Да|  
 |Пространство данных служб удаленных рабочих СТОЛОВ|Да|  
-|DataFactory служб удаленных рабочих СТОЛОВ|нет|  
+|DataFactory служб удаленных рабочих СТОЛОВ|Нет|  
   
  В следующей таблице перечислены поставщики, включенные с Windows DAC или MDAC и указывает, является ли они безопасные для использования.  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 02/09/2018
 |Фигурная|Да|  
 |Сохранение|Да|  
 |Remote|Да|  
-|Поставщик OLE DB для SQL Server (SQLOLEDB)|нет|  
-|Поставщик OLE DB для ODBC (MSDASQL)|нет|  
+|Поставщик OLE DB для SQL Server (SQLOLEDB)|Нет|  
+|Поставщик OLE DB для ODBC (MSDASQL)|Нет|  
   
 ## <a name="odbc-data-sources"></a>Источники данных ODBC  
  Примечательным отличием между кодом ADO, сценариев и не сценариев является источник данных ODBC, если. Для приложений, отличных от сценариев можно создать пользовательское имя DSN в администраторе источников данных ODBC. Для сценариев, выполняющихся в службах IIS необходимо создать системный DSN; в противном случае скрипты не распознает созданный источник данных. Это относится к любой сценариев приложения ADO, используя поставщик Microsoft OLE DB для ODBC через Microsoft IIS.  

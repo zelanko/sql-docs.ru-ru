@@ -1,15 +1,16 @@
 ---
-title: "Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfe05c5095d83cdf0963a6e3a7c04687462e4092
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2c1de2d64be3cb0850ba7e410ba1edb1deb9f019
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  Клиентские запросы на подключение приложения автоматически перенаправляются на новый активный узел, используя то же имя виртуальной сети (VNN).  
   
- FCI находится в сети, если его базовый кластер WSFC находится в исправном состоянии (большая часть узлов кворума WSFC доступны в качестве целей автоматического перехода на другой ресурс). Когда кластер WSFC теряет кворум из-за сбоя аппаратной части, программного обеспечения, сети или неверной настройки кворума, весь кластер WSFC вместе с FCI выводится из сети. Для этого незапланированного сценария отработки отказа требуется вмешательство пользователя, который должен переустановить кворум для оставшихся доступных узлов, чтобы вернуть кластер WSFC и FCI обратно в сеть. Дополнительные сведения см. в разделе [Режимы кворума и конфигурация голосования WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+ FCI находится в сети, если его базовый кластер WSFC находится в исправном состоянии (большая часть узлов кворума WSFC доступны в качестве целей автоматического перехода на другой ресурс). Когда кластер WSFC теряет кворум из-за сбоя аппаратной части, программного обеспечения, сети или неверной настройки кворума, весь кластер WSFC вместе с FCI выводится из сети. Для этого незапланированного сценария отработки отказа требуется вмешательство пользователя, который должен переустановить кворум для оставшихся доступных узлов, чтобы вернуть кластер WSFC и FCI обратно в сеть. Дополнительные сведения см. в статье [Режимы кворума и конфигурация голосования WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ### <a name="predictable-failover-time"></a>Прогнозируемое время отработки отказа  
  В зависимости от того, когда экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в последний раз выполнил операцию контрольной точки, в кэше буфера может быть достаточное число «грязных» страниц. Последующая отработка отказа длится столько, сколько потребуется времени для записи оставшихся «грязных» страниц на диск, что может увеличить время отработки отказа непредсказуемым образом. Начиная с [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]FCI может использовать косвенные контрольные точки для регулирования числа "грязных" страниц, хранимых в кэше буфера. Несмотря на то что это занимает дополнительные ресурсы при нормальной рабочей нагрузке, время отработки отказа становится более прогнозируемым и регулируемым. Это очень полезно, когда в соглашении об уровне обслуживания в организации указана цель времени восстановления (RTO) для решения высокого уровня доступности. Дополнительные сведения о косвенных контрольных точках см. в разделе [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt).  

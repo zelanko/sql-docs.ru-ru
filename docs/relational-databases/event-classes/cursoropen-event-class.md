@@ -1,34 +1,35 @@
 ---
-title: "Класс событий CursorOpen | Документация Майкрософт"
-ms.custom: 
+title: Класс событий CursorOpen | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a817a292004057b10b07422c4b5e4b94d5d8bf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7691aa24d4034bb5f931cdabfb0ec7d11b2e70e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **CursorOpen** описывает события открытия курсора, которые происходят в курсорах API-интерфейса. События открытия курсора происходят, когда [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] определяет инструкцию SQL, которая должна быть связана с курсором или параметрами курсора, и заполняет курсор.  
+  Класс событий **CursorOpen** описывает события открытия курсора, которые происходят в курсорах API-интерфейса. События открытия курсора происходят, когда [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] определяет инструкцию SQL, которая должна быть связана с курсором или параметрами курсора, и заполняет курсор.  
   
  Включите класс событий **CursorOpen** в трассировках, которые регистрируют производительность курсоров. Когда класс событий **CursorOpen** включается в трассировку, дополнительные расходы, связанные с регистрацией событий, зависят от частоты использования курсоров во время трассировки. Если курсоры используются активно, трассировка может существенно снизить производительность.  
   

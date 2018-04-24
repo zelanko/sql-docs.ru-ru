@@ -1,35 +1,35 @@
 ---
-title: "Зеркальное отображение и репликация баз данных (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Зеркальное отображение и репликация баз данных (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6926dc82d79a8afb001afb9d1e9d9437d76fadc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Зеркальное отображение и репликация баз данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Зеркальное отображение базы данных может использоваться совместно с репликацией для повышения доступности базы данных публикации. В зеркальном отображении базы данных участвуют две копии одной базы данных, которые обычно расположены на разных компьютерах. В любой момент только одна копия базы данных доступна клиентам. Эта копия называется основной базой данных. Обновления, вносимые клиентами в основную базу данных, применяются к другой копии базы данных, называемой зеркальной базой данных. Зеркальное отображение включает применение к зеркальной базе данных журнала транзакций всех вставок, обновлений или удалений, выполненных в основной базе данных.  
+  Зеркальное отображение базы данных может использоваться совместно с репликацией для повышения доступности базы данных публикации. В зеркальном отображении базы данных участвуют две копии одной базы данных, которые обычно расположены на разных компьютерах. В любой момент только одна копия базы данных доступна клиентам. Эта копия называется основной базой данных. Обновления, вносимые клиентами в основную базу данных, применяются к другой копии базы данных, называемой зеркальной базой данных. Зеркальное отображение включает применение к зеркальной базе данных журнала транзакций всех вставок, обновлений или удалений, выполненных в основной базе данных.  
   
  Переход репликации на зеркальную базу данных полностью поддерживается для баз данных публикации, с ограниченной поддержкой для баз данных подписки. Зеркальное отображение баз данных не поддерживается для базы данных распространителя. Сведения о восстановлении базы данных распространителя или базы данных подписки без перенастройки репликации см. в статье [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
   

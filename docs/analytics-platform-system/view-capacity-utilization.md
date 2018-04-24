@@ -1,34 +1,27 @@
 ---
-title: Использование емкости представление (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Просмотреть использование емкости в Analytics Platform System | Документы Microsoft
+description: Просмотр использования емкости в Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>Просмотр использования емкости
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Просмотр использования емкости в система платформы аналитики
 В этом разделе описывается просмотр степень использования производительности в SQL Server PDW appliance.  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Чтобы просмотреть использование ресурсов с помощью консоли администрирования  
 Чтобы просмотреть пространство, используемое, откройте консоль администрирования и нажмите кнопку **хранения** вкладки. Отсутствует **хранения** вкладке регион PDW и регион HDI.  
   
-![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![Хранилище консоли администрирования PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Чтобы просмотреть использование ресурсов с помощью запросов  
 Чтобы понять, если узел работает в условиях нехватки места на, система мониторинга работоспособности SQL Server PDW уже отслеживает свободное пространство для всех томов в каждом узле.  

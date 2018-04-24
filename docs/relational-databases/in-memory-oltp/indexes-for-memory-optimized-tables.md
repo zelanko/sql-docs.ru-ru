@@ -1,28 +1,29 @@
 ---
-title: "Индексы для оптимизированных для памяти таблиц | Документация Майкрософт"
-ms.custom: 
+title: Индексы для оптимизированных для памяти таблиц | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: in-memory-oltp
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 324adcddd631ed4096c8a35d179555592b3e3b5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Индексы для оптимизированных для памяти таблиц
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/12/2018
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] действует ограничение в 8 индексов на таблицу, оптимизированную для памяти, или тип таблицы. Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] больше не применяются ограничения числа индексов для таблиц, оптимизированных для памяти, и типов таблиц.
+> В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] действует ограничение в 8 индексов на таблицу, оптимизированную для памяти, или тип таблицы. Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] больше не применяются ограничения числа индексов для таблиц, оптимизированных для памяти, и типов таблиц.
   
 ### <a name="code-sample-for-syntax"></a>Пример кода для синтаксиса  
   

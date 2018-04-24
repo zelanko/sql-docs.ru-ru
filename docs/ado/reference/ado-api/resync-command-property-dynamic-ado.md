@@ -1,31 +1,31 @@
 ---
-title: "Повторная синхронизация команды свойство динамические (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Повторная синхронизация команды свойство динамические (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43e3b1fdebfeb24233e36324f1225868353d25a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8b3434c97e9548d5b37326a967f540f5f6d3a073
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Повторная синхронизация команды свойство динамические (ADO)
 Указывает команду, предоставленные пользователем строкой, которую [Resync](../../../ado/reference/ado-api/resync-method.md) проблем метода для обновления данных в таблице, указанной в [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) динамических свойств.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** равное командной строки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект является результат операции СОЕДИНЕНИЯ, выполняется на нескольких базовых таблицах. Зависит от строк, затронутых *AffectRecords* параметр [Resync](../../../ado/reference/ado-api/resync-method.md) метод. Стандартные **Resync** метод выполняется в том случае, если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и **Resync команда** свойства не установлены.  
   
  Строка команды **Resync команда** свойство параметризированную команду или хранимую процедуру, которая однозначно определяет строку, на время обновления и возвращает одну строку, содержащую одно и то же количество и порядок столбцов в виде строки таблицы, обновляются. Командная строка содержит параметр для каждого столбца первичного ключа в **уникальной таблицы**; в противном случае возвращается ошибка во время выполнения. Параметры автоматически заполняется значений первичного ключа из строки для обновления.  

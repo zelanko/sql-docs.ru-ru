@@ -1,28 +1,29 @@
 ---
-title: "Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт"
-ms.custom: 
+title: Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ce3e55ae9fb1194e853a4f6a04714faa32e003d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,19 +64,19 @@ ms.lasthandoff: 02/12/2018
 -   псевдонимы имен и столбцов (с помощью синтаксиса AS или =);  
 
 -   скалярные вложенные запросы;
-    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются скалярные подзапросы.
 
 -   предложение TOP*;  
 
 -   SELECT DISTINCT  
-    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживается оператор DISTINCT.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION и UNION ALL
-    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются операторы UNION и UNION ALL.
 
 -   присвоение значений переменных.  
@@ -87,11 +88,11 @@ ms.lasthandoff: 02/12/2018
 -   FROM \<скомпилированные_в_собственном_коде_встроенные_функции_с_табличными_значениями>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN и INNER JOIN;
-    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживается оператор JOINS.
 
 -   вложенные запросы `[AS] table_alias`. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md). 
-    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются подзапросы.
 
 Предложение WHERE:  
@@ -100,7 +101,7 @@ ms.lasthandoff: 02/12/2018
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются операторы OR/NOT/IN/EXISTS.
 
 
@@ -156,7 +157,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE  
 
--   Delete  
+-   DELETE  
 
 -   предложение WHERE поддерживается вместе с инструкциями UPDATE и DELETE.  
 
@@ -197,7 +198,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
 ##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
@@ -208,7 +209,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY.  
@@ -218,7 +219,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
 -   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  

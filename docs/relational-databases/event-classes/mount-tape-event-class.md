@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Mount Tape | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Mount Tape | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15fc3c9dff46fc655525feaa604eb8e5a1326e55
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 57c0a02d3d6aec3695e7383fd8100def8f4e194c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий Mount Tape происходит при получении запроса на монтирование ленты. Используйте данный класс событий для отслеживания запросов монтирования ленты и их успешного или неуспешного завершения.  
+  Класс событий Mount Tape происходит при получении запроса на монтирование ленты. Используйте данный класс событий для отслеживания запросов монтирования ленты и их успешного или неуспешного завершения.  
   
 ## <a name="mount-tape-event-class-data-columns"></a>Столбцы данных класса событий Mount Tape  
   

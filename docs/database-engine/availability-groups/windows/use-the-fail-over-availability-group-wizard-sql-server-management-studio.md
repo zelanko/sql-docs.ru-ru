@@ -1,16 +1,16 @@
 ---
-title: "Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio) | Документы Майкрософт"
-ms.custom: 
+title: Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.failoverwizard.connecttoreplicas.f1
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8d7a9a047bb1f60ea5e9c1d91d823af30ca35ff
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2581521a6bad67cf0f0556eb56975a47c904e498
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Использование мастера отработки отказа группы доступности (Среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описано выполнение планового перехода на другой ресурс вручную или принудительный переход на другой ресурс вручную (принудительная отработка отказа) в группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Если переход выполняется на вторичную реплику, находящуюся в состоянии SYNCHRONIZED, мастер выполнит плановый переход на другой ресурс вручную (без потери данных). Если переход выполняется на вторичную реплику, находящуюся в состоянии UNSYNCHRONIZED или NOT SYNCHRONIZING, мастер выполнит принудительный переход на другой ресурс вручную, который также называется *принудительная отработка отказа* (с возможной потерей данных). При использовании обеих этих форм перехода на другой ресурс вручную вторичная реплика, с которой установлено подключение, переводится в роль первичной. В настоящее время при выполнении планового перехода на другой ресурс вручную прежняя первичная реплика принимает роль вторичной. После принудительной отработки отказа, когда прежняя первичная реплика переходит в режим «в сети» она принимает роль вторичной.  
+  В этом разделе описано выполнение планового перехода на другой ресурс вручную или принудительный переход на другой ресурс вручную (принудительная отработка отказа) в группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Если переход выполняется на вторичную реплику, находящуюся в состоянии SYNCHRONIZED, мастер выполнит плановый переход на другой ресурс вручную (без потери данных). Если переход выполняется на вторичную реплику, находящуюся в состоянии UNSYNCHRONIZED или NOT SYNCHRONIZING, мастер выполнит принудительный переход на другой ресурс вручную, который также называется *принудительная отработка отказа* (с возможной потерей данных). При использовании обеих этих форм перехода на другой ресурс вручную вторичная реплика, с которой установлено подключение, переводится в роль первичной. В настоящее время при выполнении планового перехода на другой ресурс вручную прежняя первичная реплика принимает роль вторичной. После принудительной отработки отказа, когда прежняя первичная реплика переходит в режим «в сети» она принимает роль вторичной.  
 
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Перед первым выполнением запланированного перехода на другой ресурс вручную ознакомьтесь с пунктом "Перед началом" в разделе [Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  

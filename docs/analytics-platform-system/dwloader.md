@@ -1,27 +1,21 @@
 ---
-title: dwloader загрузчик командной строки для параллельного хранилища данных
-author: barbkess
-ms.author: barbkess
+title: dwloader загрузчика командной строки - Parallel Data Warehouse | Документы Microsoft
+description: dwloader является средством командной строки параллельного хранилища данных (PDW), который загружает строки таблицы в пакетном режиме в существующую таблицу.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader** параллельного хранилища данных (PDW) средство командной строки, загружающий строк таблицы в пакетном режиме в существующую таблицу.'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader загрузчика командной строки
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader загрузчик командной строки для параллельного хранилища данных
 **dwloader** параллельного хранилища данных (PDW) средство командной строки, загружающий строк таблицы в пакетном режиме в существующую таблицу. При загрузке строк, можно добавить все строки в конец таблицы (*режим добавления* или *режиме fastappend*), будет добавлена новая строка и обновлять существующие строки (*режиме upsert*), или удалить все существующие строки перед загрузкой и затем вставить все строки в пустую таблицу (*перезагрузить режим*).  
   
 **Процесс загрузки данных**  
@@ -148,7 +142,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+**-S *** target_appliance*  
 Указывает SQL Server PDW устройством, которое будет получать загруженных данных.  
   
 *Для соединения Infiniband*, *target_appliance* указывается как < имя устройства >-SQLCTL01. Чтобы настроить это подключение, в разделе [настройки сетевых адаптеров InfiniBand](configure-infiniband-network-adapters.md).  
@@ -215,7 +209,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-fh** *number_header_rows*  
 Количество строк, чтобы пропустить в начале *source_data_file_name*. Значение по умолчанию равно 0.  
   
-<variable_length_column_options>  
+< variable_length_column_options >  
 Параметры для *source_data_file_name* с символами столбцов переменной длины. По умолчанию *source_data_file_name* содержит символы ASCII в столбцы с переменной длиной.  
   
 Для ASCII-файлов значения NULL, представляются последовательное размещение разделители. Например, в файле с разделителями канала ("|»), указывается значение NULL «||». В файле с разделителями запятыми, указывается значение NULL «,,». Кроме того **-E** (--emptyStringAsNull) должен быть указан параметр. Дополнительные сведения о -E см. ниже.  
@@ -230,7 +224,7 @@ For more information about this install option, see [Install dwloader Command-Li
 |--------|--------------------|-----------------|  
 |Вкладка|\t|0x09|  
 |Возврат каретки (CR)|\r|0x0d|  
-|Перевод строки (LF)|\n|0x0a|  
+|Перевод строки (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
 |Запятая|','|0x2c|  
 |Двойная кавычка|\\"|0x22|  

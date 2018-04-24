@@ -1,34 +1,34 @@
 ---
-title: "Установка порогов предупреждений | Документы Майкрософт"
-ms.custom: 
+title: Установка порогов предупреждений | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 68e3835e69e5091d8fefd570035cadb0ba5b6d17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-warning-thresholds"></a>Установка порогов предупреждений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Это диалоговое окно позволяет разрешить и настроить один или несколько пороговых значений предупреждений для базы данных, выбранной в дереве навигации диалогового окна **Монитор зеркального отображения баз данных** .  
+  Это диалоговое окно позволяет разрешить и настроить один или несколько пороговых значений предупреждений для базы данных, выбранной в дереве навигации диалогового окна **Монитор зеркального отображения баз данных** .  
   
  В этом диалоговом окне предпринимается попытка подключиться к обоим экземплярам сервера. Эти соединения устанавливаются асинхронно. Диалоговое окно показывает состояние соединения каждого сервера-участника. Если сервер-участник не подключен, можно нажать кнопку **Соединить**.  
   

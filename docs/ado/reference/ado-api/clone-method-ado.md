@@ -1,17 +1,17 @@
 ---
-title: "Clone-метод (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Clone-метод (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset20::Clone
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db5785a40527f4f85558961068d2cb67eeabbfbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6b3914edd6127a76903f52c0c186c28e533ce4b1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="clone-method-ado"></a>Метод clone (ADO)
 Создает дубликат [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта из существующего **записей** объекта. При необходимости указывает точную копию только для чтения.  
@@ -53,7 +53,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  Необязательно. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **клон** повторяющийся метод, чтобы создать несколько **записей** объектов, особенно в том случае, если вы хотите поддерживать более чем одна текущая запись в заданном наборе записей. С помощью **клон** метод является более эффективным, чем создание и открытие нового **записей** объект, который использует то же определение оригинала.  
   
  [Фильтра](../../../ado/reference/ado-api/filter-property.md) свойства исходного **записей**, если таковая имеется, не будет применяться клон. Задать **фильтра** нового **записей** для фильтрации результатов. Самый простой способ скопировать все существующие **фильтра** значения — присвоить это напрямую, как показано ниже.  
@@ -76,17 +76,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |Событие|Запускаются в клоны?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|нет|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|нет|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|нет|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Нет|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Нет|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Нет|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Да|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|нет|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Нет|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Да|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|нет|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Нет|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Да|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Да|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|нет|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|нет|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Нет|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Нет|  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

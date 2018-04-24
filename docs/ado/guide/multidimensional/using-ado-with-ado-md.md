@@ -1,30 +1,30 @@
 ---
-title: "Использование ADO с ADO MD | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Использование ADO с ADO MD | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3761a5553b13dc65a15862c5e9b27cdc5634b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4b99d78262909123157cdcd60cc14dc95e9115c0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-ado-md"></a>Использование ADO с ADO MD
 ADO и ADO MD, связанных, но отдельных объектные модели. ADO предоставляет объекты для соединения с источниками данных, выполнения команд, получение табличных данных и схеме метаданных в табличном формате и просматривать сведения об ошибке поставщика. ADO MD предоставляет объекты для получения многомерных данных и просмотр метаданных в многомерной схемой.  

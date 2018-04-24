@@ -2,7 +2,7 @@
 title: Журнал зеркального отображения базы данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f8d4d344a8901fcfcf6caa537d4b3fbc6b6891ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-history"></a>Журнал зеркального отображения базы данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно используется для просмотра журнала состояния зеркального отображения для зеркально отображаемой базы данных в указанном экземпляре сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Это диалоговое окно используется для просмотра журнала о состоянии зеркального отображения для зеркально отображаемой базы данных на указанном экземпляре сервера.  
   
  **Наблюдение за зеркальным отображением базы данных с помощью среды SQL Server Management Studio**  
   

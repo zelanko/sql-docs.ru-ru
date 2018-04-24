@@ -1,16 +1,16 @@
 ---
-title: "Уровни серьезности ошибок ядра СУБД | Документация Майкрософт"
-ms.custom: 
+title: Уровни серьезности ошибок ядра СУБД | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -19,24 +19,25 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f48f4b4b774538f9ca388e8a8fbaf1e0f9b1aded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-error-severities"></a>Степени серьезности ошибок компонента Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если ошибка возникла в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], серьезность ошибки указывает на тип проблемы, с которой столкнулся сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Если ошибка возникла в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], серьезность ошибки указывает на тип проблемы, с которой столкнулся сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Уровни серьезности  
  В следующей таблице описаны уровни серьезности ошибок, формируемых компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Степень серьезности|Описание|  
+|Степень серьезности|Description|  
 |--------------------|-----------------|  
 |0-9|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не формирует системные ошибки с уровнем серьезности от 0 до 9.|  
 |10|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Для обеспечения совместимости компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перед возвратом сведений об ошибке в вызвавшее приложение преобразует уровень серьезности 10 в уровень 0.|  

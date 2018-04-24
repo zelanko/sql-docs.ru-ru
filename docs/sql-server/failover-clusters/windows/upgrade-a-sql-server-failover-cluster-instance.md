@@ -1,34 +1,36 @@
 ---
-title: "Обновление экземпляра отказоустойчивого кластера SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Обновление экземпляра отказоустойчивого кластера SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 10/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b2b516e71d14bc8615505c22f1317255925ba5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Обновление экземпляра отказоустойчивого кластера SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до новой версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], нового пакета обновления или накопительного пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также установку нового пакета обновлений или накопительного пакета обновлений Windows на все узлы отказоустойчивых кластеров по-отдельности. При этом время простоя будет ограничено только переходом на другой ресурс вручную (или двумя такими переходами при восстановлении на первичную реплику).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при установке новой версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновлений Windows или накопительного пакета обновлений Windows отдельно на все отказоустойчивые кластеры. Это позволяет сократить время простоя до одной операции перехода на другой ресурс вручную (или двух таких операций, если нужно перейти на исходную первичную реплику).  
   
  Обновление операционной системы Windows, в которой размещен отказоустойчивый кластер, не поддерживается для операционных систем, предшествующих [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Сведения об обновлении узла кластера под управлением [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] или более поздней версии см. в разделе [Выполнение последовательного обновления](#perform-a-rolling-upgrade-or-update).  
   
@@ -46,9 +48,9 @@ ms.lasthandoff: 12/05/2017
   
     -   Изменение выпуска отказоустойчивого кластера ограничено определенными сценариями. Дополнительные сведения см. в статье [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
--   При обновлении отказоустойчивого кластера время простоя ограничивается временем отработки отказа и временем, необходимым для обновления запускаемых скриптов. При соблюдении процесса последовательного обновления, описанного ниже, и выполнении всех предварительных условий для всех узлов до начала процедуры обновления время простоя сводится к минимуму. Обновление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   При обновлении отказоустойчивого кластера время простоя ограничивается временем отработки отказа и временем, необходимым для обновления запускаемых скриптов. При соблюдении процесса последовательного обновления, описанного ниже, и выполнении всех предварительных условий для всех узлов до начала процедуры обновления время простоя сводится к минимуму. Обновление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Составление и тестирование плана обновления ядра СУБД](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед установкой ознакомьтесь со следующими важными сведениями.  
   
 -   [Обновления поддерживаемых версий и выпусков](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Например, невозможно напрямую обновить экземпляр отказоустойчивого кластера SQL Server 2005 до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или обновить отказоустойчивый кластер, запущенный в [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  

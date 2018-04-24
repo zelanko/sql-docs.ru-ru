@@ -1,36 +1,36 @@
 ---
-title: "Хранилище данных управления | Документация Майкрософт"
-ms.custom: 
+title: Хранилище данных управления | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a5184f3e59dc3e592b73696b3ebaba994a53211c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  
+  Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  
   
  Инфраструктура сборщика данных определяет планы выполнения заданий и планы обслуживания, необходимые для реализации политик хранения, определенных администратором базы данных.  
   

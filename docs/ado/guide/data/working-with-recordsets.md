@@ -1,30 +1,30 @@
 ---
-title: "Работа с наборами записей | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Работа с наборами записей | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>Работа с наборами записей
 **Записей** объект имеет встроенные функции, которые позволяют изменить порядок данных в результирующем наборе для поиска конкретной записи на основе критериев, которые предоставляются и даже для оптимизации этих операций поиска с помощью индексов. Эти возможности доступны для использования зависит от поставщика и в некоторых случаях — например, [индекс](../../../ado/reference/ado-api/index-property.md) свойство — Структура самого источника данных.  
@@ -94,7 +94,7 @@ ms.lasthandoff: 02/09/2018
   
 -   *FieldName* должно быть допустимым именем поля из **записей**. Если имя содержит пробелы, необходимо заключить имя в квадратные скобки.  
   
--   *Оператор* должен быть одним из следующих:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , или **как**.  
+-   *Оператор* должен быть одним из следующих: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, или **как**.  
   
 -   *Значение* является значением, с которым нужно будет сравнить значения полей (например, `'Smith'`, `#8/24/95#`, `12.345`, или `$50.00`). Использовать одинарные кавычки (') со строками и символов (`#`) с датами. Для чисел можно использовать десятичного разделителя, знак доллара и экспоненциальное представление чисел. Если *оператор* — **как**, *значение* можно использовать подстановочные знаки. Только звездочка (\*) и знак процента (%) подстановочные знаки разрешены, и они должны быть последним символом в строке. *Значение* не может иметь значение null.  
   

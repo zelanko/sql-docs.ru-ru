@@ -1,16 +1,16 @@
 ---
-title: "Столбец события ObjectType Trace | Документация Майкрософт"
-ms.custom: 
+title: Столбец события ObjectType Trace | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server event classes, Object Type column values
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c18a4ccff2675b000f56fc11c20143fa5e9ed399
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Столбец события трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
+  Столбец события трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
   
 ## <a name="object-type-column-values"></a>Значения столбца Object Type  
   
@@ -48,11 +49,11 @@ ms.lasthandoff: 02/12/2018
 |8278|Просмотр|  
 |8280|Расширенная хранимая процедура|  
 |16724|Триггер CLR|  
-|16964|база данных|  
-|16975|Object|  
+|16964|База данных|  
+|16975|Объект|  
 |17222|Полнотекстовый каталог|  
 |17232|Хранимая процедура CLR|  
-|17235|схема|  
+|17235|Схема|  
 |17475|Учетные данные|  
 |17491|Событие DDL|  
 |17741|Событие управления|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 02/12/2018
 |19283|ObfusKey|  
 |19521|Имя входа асимметричного ключа|  
 |19523|Имя входа сертификата|  
-|19538|Role|  
+|19538|Роль|  
 |19539|Имя входа SQL|  
 |19543|Имя входа Windows|  
 |20034|Привязка удаленной службы|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 02/12/2018
 |21587|Статистика|  
 |21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользователь|  
 |22099|Служба компонента Service Broker|  
-|22601|Указатель|  
+|22601|Индекс |  
 |22604|Имя входа сертификата|  
 |22611|XML-схема|  
 |22868|Тип|  

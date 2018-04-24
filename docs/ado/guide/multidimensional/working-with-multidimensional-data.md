@@ -1,35 +1,35 @@
 ---
-title: "Работа с многомерными данными | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Работа с многомерными данными | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-multidimensional-data"></a>Работа с многомерными данными
 Объект *ячеек* результат запроса многомерных данных. Он состоит из коллекции осей, обычно не более четырех осей и обычно только два или три. *Оси* — это коллекция элементов из одного или нескольких измерений, который используется для поиска или фильтровать значения, определенного в кубе.  
   
- Объект *позиции* — точка вдоль оси. Для каждой оси, состоящий из одного измерения их позиций представляют собой подмножество элементов измерения. Если ось состоит из нескольких измерений, то каждая позиция имеет составного объекта, имеющего  *n*  части where  *n*  число измерений, ориентированного на этой оси. Каждая часть позиции является членом из одного составного измерения.  
+ Объект *позиции* — точка вдоль оси. Для каждой оси, состоящий из одного измерения их позиций представляют собой подмножество элементов измерения. Если ось состоит из нескольких измерений, то каждая позиция имеет составного объекта, имеющего *n* части where *n* число измерений, ориентированного на этой оси. Каждая часть позиции является членом из одного составного измерения.  
   
  Например если Geography и Product измерения из куба, содержащего данные о продажах ориентированы относительно оси x набора ячеек, положение на этой оси может содержать элементы «США» и «Компьютеры». В этом примере определить положение по оси x, необходимо, элементы каждого измерения ориентированы относительно оси.  
   

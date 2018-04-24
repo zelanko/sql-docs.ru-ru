@@ -1,6 +1,6 @@
 ---
-title: "Настройка параметров SQL Server в Linux | Документы Microsoft"
-description: "В этой статье описывается использование средства mssql conf для настройки параметров 2017 г. SQL Server в Linux."
+title: Настройка параметров SQL Server в Linux | Документы Microsoft
+description: В этой статье описывается использование средства mssql conf для настройки параметров 2017 г. SQL Server в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql conf
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/21/2018
 | [Локаль](#lcid) | Назначение локали для SQL Server для использования. |
 | [Ограничение памяти](#memorylimit) | Задайте ограничение памяти для SQL Server. |
 | [TCP-порт](#tcpport) | Измените номер порта, где SQL Server прослушивает соединения. |
-| [TLS](#tls) | Настройка безопасности на транспортном уровне. |
+| [ПРОТОКОЛ TLS](#tls) | Настройка безопасности на транспортном уровне. |
 | [Флаги трассировки](#traceflags) | Задайте флаги трассировки, которую планируется использовать службу. |
 
 > [!TIP]
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> Включить агент SQL Server
 
-**Sqlagent.enabled** установка включает [агента SQL Server](sql-server-linux-run-sql-server-agent-job.md). Агент SQL Server отключен по умолчанию.
+**Sqlagent.enabled** установка включает [агента SQL Server](sql-server-linux-run-sql-server-agent-job.md). Агент SQL Server отключен по умолчанию. Если **sqlagent.enabled** отсутствует в файле параметров mssql.conf SQL Server внутренне предполагается, что агент SQL Server включен.
 
 Чтобы изменить эти параметры, выполните следующие действия:
 
@@ -359,8 +359,8 @@ ms.lasthandoff: 02/21/2018
     |-----|-----|
     | **Mini** | Мини — это наименьший тип файла дампа. Он использует сведения о системе Linux для определения потоков и модулей в процессе. Дамп содержит только стеки потоков среды узла и модулей. Он не содержит ссылки на память, косвенные или глобальных переменных. |
     | **miniplus** | MiniPlus аналогична mini, но он включает дополнительную память. Он поддерживает внутренних SQLPAL и хост-среды, добавление следующих областей памяти дампа:</br></br> -Различные globals</br> -Всю память сверх 64 ТБ</br> -Все имена регионов **/proc/$ pid и сопоставлений**</br> -Память косвенных из потоков и стеками</br> -Сведения о потоке</br> -Связанные Teb элемента и его Peb</br> -Сведения о модуле</br> -VMM и VAD дерева |
-    | **filtered** | Отфильтрованные использует основе вычитания разработки, где всю память в процессе будет включен, если не исключены явным образом. Структура понимает внутренних SQLPAL и среде узла, за исключением некоторых регионах из дампа.
-    | **full** | Полный дамп процесса завершения, включающий все области находится в **/proc/$ pid и сопоставлений**. Это не управляется **coredump.captureminiandfull** параметр. |
+    | **Фильтрация** | Отфильтрованные использует основе вычитания разработки, где всю память в процессе будет включен, если не исключены явным образом. Структура понимает внутренних SQLPAL и среде узла, за исключением некоторых регионах из дампа.
+    | **Полный** | Полный дамп процесса завершения, включающий все области находится в **/proc/$ pid и сопоставлений**. Это не управляется **coredump.captureminiandfull** параметр. |
 
 ## <a id="dbmail"></a> Настроить почтовый профиль по умолчанию базы данных для SQL Server в Linux
 
@@ -474,12 +474,12 @@ sudo systemctl restart mssql-server
 
 |Параметр |Описание |
 |--- |--- |
-|**network.forceencryption** |Если значение равно 1, затем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] заставляет все соединения, должны быть зашифрованы. По умолчанию этого параметра равно 0. |
-|**network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/certs/mssql.pem` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlskey** |Абсолютный путь к закрытому ключу файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/private/mssql.key` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlsprotocols** |Список разделенных запятыми из какой TLS протоколы допускаемым сервером SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] всегда пытается согласовать надежный протокол разрешенных. Если клиент не поддерживает любой допустимый протокол [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отклоняет попытки подключения.  Для обеспечения совместимости по умолчанию (1.2, 1.1, 1.0) разрешены все поддерживаемые протоколы.  Если клиенты поддерживает TLS 1.2, корпорация Майкрософт рекомендует, позволяя только TLS 1.2. |
-|**network.tlsciphers** |Указывает, какие шифры допускаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для TLS. Эта строка должен быть отформатирован в [OpenSSL в формате списка шифра](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Как правило нет необходимости менять этот параметр. <br /> По умолчанию допускаются следующие шифров: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
-| **network.kerberoskeytabfile** |Путь к файлу keytab Kerberos |
+|**Network.ForceEncryption** |Если значение равно 1, затем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] заставляет все соединения, должны быть зашифрованы. По умолчанию этого параметра равно 0. |
+|**Network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/certs/mssql.pem` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlskey** |Абсолютный путь к закрытому ключу файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/private/mssql.key` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlsprotocols** |Список разделенных запятыми из какой TLS протоколы допускаемым сервером SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] всегда пытается согласовать надежный протокол разрешенных. Если клиент не поддерживает любой допустимый протокол [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отклоняет попытки подключения.  Для обеспечения совместимости по умолчанию (1.2, 1.1, 1.0) разрешены все поддерживаемые протоколы.  Если клиенты поддерживает TLS 1.2, корпорация Майкрософт рекомендует, позволяя только TLS 1.2. |
+|**Network.tlsciphers** |Указывает, какие шифры допускаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для TLS. Эта строка должен быть отформатирован в [OpenSSL в формате списка шифра](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Как правило нет необходимости менять этот параметр. <br /> По умолчанию допускаются следующие шифров: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| **Network.kerberoskeytabfile** |Путь к файлу keytab Kerberos |
 
 Пример использования параметров TLS см. в разделе [шифрование соединений с SQL Server в Linux](sql-server-linux-encrypted-connections.md).
 

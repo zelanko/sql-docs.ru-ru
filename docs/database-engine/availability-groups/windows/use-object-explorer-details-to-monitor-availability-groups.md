@@ -2,7 +2,7 @@
 title: Использование области "Сведения обозревателя объектов" для отслеживания групп доступности | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -24,14 +24,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0ca1b9266bd24bd8b6a276fa1ca85f90d0d2893f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Использование области "Сведения обозревателя объектов" для отслеживания групп доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано использование области **Подробные сведения обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для мониторинга существующих групп доступности AlwaysOn, реплик доступности и баз данных доступности, а также управления ими.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В этом разделе описано использование панели **Подробности обозревателя проектов** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для мониторинга существующих групп доступности AlwaysOn, реплик доступности и баз данных доступности и управления ими.  
   
 > [!NOTE]  
 >  Сведения об использовании панели "Подробности обозревателя проектов" см. в разделе [Панель "Подробности обозревателя проектов"](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47).  

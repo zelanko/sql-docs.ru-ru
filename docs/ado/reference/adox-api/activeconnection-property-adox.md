@@ -1,17 +1,17 @@
 ---
-title: "Свойство ActiveConnection (ADOX) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство ActiveConnection (ADOX) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Catalog::put_ActiveConnection
@@ -24,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44d7173ddce5577cdb62a4208ed005d7e40daad8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5658a2185ded4386f41e4c801d051181d2fde0cb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activeconnection-property-adox"></a>Свойство ActiveConnection (ADOX)
 Указывает ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, к которому [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) принадлежит.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Наборы **подключения** объекта или **строка** содержится определение для подключения. Возвращает активное **подключения** объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение по умолчанию — пустая ссылка на объект.  
   
 ## <a name="applies-to"></a>Объект применения  

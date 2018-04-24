@@ -1,17 +1,17 @@
 ---
-title: "Метод AddNew (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод AddNew (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::AddNew
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cee18a3fe0997243308dbb3bf71620ba5920adb6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="addnew-method-ado"></a>Метод AddNew (ADO)
 Создает новую запись для обновляемых [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -41,7 +41,7 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *recordset*  
+ *Набор записей*  
  Объект **записей** объекта.  
   
  *FieldList*  
@@ -50,7 +50,7 @@ recordset.AddNew FieldList, Values
  *Значения*  
  Необязательно. Одно значение или массив значений для поля в новой записи. Если *списка полей* является массивом, *значения* также должен быть массивом с тем же число членов; в противном случае возникает ошибка. Порядок полей имен должен соответствовать порядку значений полей в каждом массиве.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **AddNew** метод для создания и инициализации новой записи. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод с **adAddNew** ( [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) значение) для проверки, сможете ли вы добавить записи в текущий **записей**объекта.  
   
  После вызова метода **AddNew** метод, новая запись становится текущей записью и остаются актуальными после вызова метода [обновление](../../../ado/reference/ado-api/update-method.md) метод. Так как новая запись добавляется к **записей**, вызов **MoveNext** следующее обновление переместит за пределами **записей**, позволяя **конца файла**  Значение true. Если **записей** объект не поддерживает закладки, не смогут получить доступ к новой записи после перемещения в другую запись. В зависимости от типа курсора, может потребоваться вызвать [Requery](../../../ado/reference/ado-api/requery-method.md) метод для предоставления специальных возможностей новой записи.  

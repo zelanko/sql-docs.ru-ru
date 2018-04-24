@@ -1,35 +1,36 @@
 ---
-title: "Мониторинг приложений уровня данных | Документация Майкрософт"
-ms.custom: 
+title: Мониторинг приложений уровня данных | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8bfc10f588c868693eb0d24308730a618db9df7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b6a0e42322db6ffc2e76c5ab316ce572db171f72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-data-tier-applications"></a>Наблюдение за приложениями уровня данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Наблюдение за приложениями уровня данных (DAC) может осуществляться из **проводника служебной программы** или **обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), наряду с системными представлениями и таблицами. Кроме того, для наблюдения за всеми объектами базы данных, содержащейся в DAC, могут применяться стандартные методы наблюдения за базой данных и компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Наблюдение за приложениями уровня данных (DAC) может осуществляться из **обозревателя программ** или **обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) наряду с системными представлениями и таблицами. Кроме того, для наблюдения за всеми объектами базы данных, содержащейся в DAC, могут применяться стандартные методы наблюдения за базой данных и компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Если приложение уровня данных развертывается на управляемом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], то сведения о развернутом приложении уровня данных будут включены в служебную программу SQL Server при следующей отправке набора элементов сбора программы из экземпляра в точку управления служебной программой. После этого можно получать основные сведения о работоспособности приложения уровня данных с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **проводника служебной программы**.  

@@ -1,17 +1,17 @@
 ---
-title: "Свойство Version (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство Version (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::GetVersion
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f79774c39e3ba3a877329867664d6ab1b303532d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cd82ffede79d5b62d98951ace3e9c51494758035
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-property-ado"></a>Свойство Version (ADO)
 Указывает номер версии ADO.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строка** значение, которое указывает версию.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **версии** номер версии реализации ADO возвращаемое свойство.  
   
  Версия поставщика могут быть использованы как динамических свойств в [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  

@@ -1,31 +1,31 @@
 ---
-title: "Объекты ADO и интерфейсы | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Объекты ADO и интерфейсы | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a9888255ff5560cf432b29850b1104f5470df9a6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>Объекты ADO и интерфейсы
 Для представления связей между этими объектами [объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -45,9 +45,9 @@ ms.lasthandoff: 02/09/2018
 |[Поле](../../../ado/reference/ado-api/field-object.md)|Представляет столбец данных с общим типом данных.|  
 |[Параметр](../../../ado/reference/ado-api/parameter-object.md)|Представляет параметр или аргумент, связанный с **команда** объекта, основанного на параметризованный запрос или хранимую процедуру.<br /><br /> **Параметр** объект не является безопасным для создания сценариев.|  
 |[Свойство](../../../ado/reference/ado-api/property-object-ado.md)|Представляет динамический характеристику объекта ADO, определенной поставщиком.|  
-|[Record](../../../ado/reference/ado-api/record-object-ado.md)|Представляет строку **записей**, каталог или файл в файловой системе. **Записи** объекта безопасные для использования.|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Представляет набор записей из базовой таблицы или результаты выполнения команды. В любой момент **записей** объект ссылается только на одну запись в набор, что текущая запись.<br /><br /> **Записей** объекта безопасные для использования.|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Представляет двоичный поток данных.<br /><br /> **Поток** объекта безопасные для использования.|  
+|[Запись](../../../ado/reference/ado-api/record-object-ado.md)|Представляет строку **записей**, каталог или файл в файловой системе. **Записи** объекта безопасные для использования.|  
+|[Набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)|Представляет набор записей из базовой таблицы или результаты выполнения команды. В любой момент **записей** объект ссылается только на одну запись в набор, что текущая запись.<br /><br /> **Записей** объекта безопасные для использования.|  
+|[Поток](../../../ado/reference/ado-api/stream-object-ado.md)|Представляет двоичный поток данных.<br /><br /> **Поток** объекта безопасные для использования.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

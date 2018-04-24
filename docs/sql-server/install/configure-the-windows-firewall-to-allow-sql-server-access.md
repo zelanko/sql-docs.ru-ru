@@ -1,16 +1,16 @@
 ---
-title: "Настройка брандмауэра Windows для разрешения доступа к SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Настройка брандмауэра Windows для разрешения доступа к SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Firewall ports
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -314,7 +314,7 @@ ms.lasthandoff: 02/09/2018
   
     2.  В командной строке введите **netstat -n -a**.  
   
-         Элемент **-n** служебная программа **netstat** выводит адреса и номера портов активных подключений TCP в числовом виде. При наличии параметра **-a** служебная программа **netstat** выводит порты TCP и UDP, которые прослушиваются компьютером.  
+         При наличии параметра **-n** служебная программа **netstat** выводит адреса и номера портов активных подключений TCP в числовом виде. При наличии параметра **-a** служебная программа **netstat** выводит порты TCP и UDP, которые прослушиваются компьютером.  
   
 -   Служебную программу **PortQry** можно использовать для вывода состояния портов TCP/IP (прослушивается, не прослушивается, фильтруется). В состоянии фильтрации порт может либо прослушиваться, либо не прослушиваться. Это состояние указывает, что программа не получила ответа от порта. Служебную программу **PortQry** можно скачать из [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=28590).  
   

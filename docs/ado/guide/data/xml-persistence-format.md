@@ -1,37 +1,37 @@
 ---
-title: "Формат сохраняемости XML | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Формат сохраняемости XML | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 832f79408a348ef0e0aa40075214357d147f2644
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e477478ca6f5ef416086fc9ae1b91c8c2e5cf124
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-persistence-format"></a>Формат хранения XML
 ADO использует кодировку UTF-8 для XML-потока, он сохранится.  
   
  Формат ADO XML разбивается на два раздела, раздел схемы, следуют секции данных. Ниже приведен пример XML-файла для таблицы «Поставщики» из базы данных Northwind. Обсуждаются различные части XML следующий пример.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

@@ -1,22 +1,22 @@
 ---
-title: "Настройка Stretch Database для таблицы | Документация Майкрософт"
-ms.custom: 
+title: Настройка Stretch Database для таблицы | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -44,8 +44,7 @@ ms.lasthandoff: 02/09/2018
  >   [!NOTE]
  > Если позднее вы решите отключить Stretch Database, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure.
  
-##  <a name="EnableWizardTable">
-            </a> Настройка Stretch Database для таблицы в с помощью мастера  
+##  <a name="EnableWizardTable"></a> Настройка Stretch Database для таблицы в с помощью мастера  
  **Запуск мастера**  
  1.  В среде SQL Server Management Studio в обозревателе объектов выберите таблицу, для которой нужно включить перенос.  
   
@@ -71,8 +70,7 @@ ms.lasthandoff: 02/09/2018
  **Результаты**  
  Просмотрите результаты операции.  
   
-##  <a name="EnableTSQLTable">
-            </a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
+##  <a name="EnableTSQLTable"></a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
  Вы можете настроить Stretch Database для существующей таблицы либо создать новую таблицу, для которой уже настроена Stretch Database. Обе операции можно выполнить с помощью Transact-SQL.  
   
 ### <a name="options"></a>Параметры  

@@ -1,37 +1,37 @@
 ---
-title: "Преобразования XSLT | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Преобразования XSLT | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7dc90399ec31c921bfebbd342bbc082365dc238d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d235ea5208f5c4cbf98f7f5664b1a3b3666b9207
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-transformations"></a>Преобразования XSLT
 Преобразования XSLT можно применять к созданным XML, преобразовать его в другой формат. Основные сведения о формате XML в ADO помогает в разработке XSLT-шаблонов, которые можно преобразовать его в форме более удобной для пользователей.  
   
  Например вы знаете, что каждой строки набора записей сохраняется как элемент z: строк внутри элемента rs: данные. Аналогичным образом каждое поле Recordset сохраняется как пары атрибут значение для этого элемента.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Следующий скрипт XSLT может применяться к код XML, показанный в предыдущем разделе преобразовать его в HTML-таблицы для отображения в браузере:  
   
 ```  

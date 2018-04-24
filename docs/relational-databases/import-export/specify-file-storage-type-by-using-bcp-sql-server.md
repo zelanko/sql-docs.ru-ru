@@ -1,16 +1,16 @@
 ---
-title: "Указание типа хранилища файлов с помощью программы bcp (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Указание типа хранилища файлов с помощью программы bcp (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f8a92798377339913711e20c952ea0148cae2f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Указание типа файлового хранилища с помощью программы bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 03/20/2018
     |**tinyint**|**t[inyint]**|  
     |**money**|**m[oney]**|  
     |**smallmoney**|**M**|  
-    |**бит**|**b[it]**|  
+    |**bit**|**b[it]**|  
     |**uniqueidentifier**|**u**|  
     |**sql_variant**|**V[ariant]**|  
     |**timestamp**|**x**|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 03/20/2018
 |**tinyint**|SQLTINYINT|  
 |**money**|SQLMONEY|  
 |**smallmoney**|SQLMONEY4|  
-|**бит**|SQLBIT|  
+|**bit**|SQLBIT|  
 |**uniqueidentifier**|SQLUNIQUEID|  
 |**sql_variant**|SQLVARIANT|  
 |**timestamp**|SQLBINARY|  

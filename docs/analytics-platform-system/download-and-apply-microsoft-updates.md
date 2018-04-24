@@ -1,28 +1,21 @@
 ---
-title: Загрузить и установить обновления Microsoft (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Загрузить обновления Майкрософт — Analytics Platform System | Документы Microsoft
+description: В этом разделе описывается, как загрузить обновления из каталога Центра обновления Майкрософт для Windows Server Update Services (WSUS), и применять эти обновления к серверам appliance Analytics Platform System. Центр обновления Майкрософт установит все необходимые обновления для Windows и SQL Server. На виртуальной машине VMM устройства установлены службы WSUS.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>Загрузить и установить обновления Майкрософт
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Загрузки и установки обновлений Microsoft Analytics Platform System
 В этом разделе описывается, как загрузить обновления из каталога Центра обновления Майкрософт для Windows Server Update Services (WSUS), и применять эти обновления к серверам appliance Analytics Platform System. Центр обновления Майкрософт установит все необходимые обновления для Windows и SQL Server. На виртуальной машине VMM устройства установлены службы WSUS.  
   
 ## <a name="TOP"></a>Перед началом  

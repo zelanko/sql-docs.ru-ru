@@ -1,31 +1,31 @@
 ---
-title: "Адрес кнопки навигации книги | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Адрес кнопки навигации книги | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211e05c548d38ad364e8a7daa85f280e8ca62414
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ffad07e0672672bef56ff1d4914219a44b50b2f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-navigation-buttons"></a>Адрес книги кнопки навигации
 Адресная книга приложение отображает кнопки навигации в нижней части веб-страницы. Можно использовать кнопки навигации для просмотра данных в сетке отображается HTML, выбирая первой или последней строк данных или рядом с выделенной строки.  

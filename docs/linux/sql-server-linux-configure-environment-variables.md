@@ -1,6 +1,6 @@
 ---
-title: "Настройка параметров SQL Server с переменными среды | Документы Microsoft"
-description: "В этой статье описывается использование переменных среды для настройки определенных параметров 2017 г. SQL Server в Linux."
+title: Настройка параметров SQL Server с переменными среды | Документы Microsoft
+description: В этой статье описывается использование переменных среды для настройки определенных параметров 2017 г. SQL Server в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
@@ -53,6 +53,7 @@ ms.lasthandoff: 02/21/2018
 | **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например включить 'true' и 'false' отключена. По умолчанию агент отключен.  |
 | **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. |
 | **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. |
+| **MSSQL_ERROR_LOG_FILE** | Задает расположение файлов журнала ошибок. |
 
 
 ## <a name="example-initial-setup"></a>Пример: начальная настройка

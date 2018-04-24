@@ -1,32 +1,32 @@
 ---
-title: "Формирование предложение COMPUTE | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Формирование предложение COMPUTE | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-compute-clause"></a>Предложение COMPUTE фигуры
 Предложение COMPUTE фигуры приводит к возникновению ошибки родительского **набора записей**, столбцы которых состоят из ссылки на дочерние **набора записей**; является необязательным, содержимое которых главе, новые возможности, или вычисляемых столбцов, столбцов или результат выполнения статистические функции на дочернем **записей** или ранее фигурные **записей**; и любых столбцов с дочернего **набора записей** перечисленные в необязательное предложение.  
@@ -42,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Описание  
  Существуют следующие части этого предложения.  
   
- *child-command*  
+ *команда*  
  Состоит из одной из следующих:  
   
 -   Команда запроса внутри фигурных скобок («{}»), возвращает дочерний элемент **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
@@ -53,10 +53,10 @@ SHAPE child-command [AS] child-alias
   
 -   Таблица ключевого слова, за которым следует имя таблицы в поставщике данных.  
   
- *child-alias*  
+ *дочерние псевдоним*  
  Псевдоним, использованные для обращения к **записей** возвращенных *дочерний command.* *Дочерних псевдоним* является обязательным в списке столбцов в предложении COMPUTE и определяет отношение между родительским и дочерним **записей** объектов.  
   
- *appended-column-list*  
+ *добавлен столбец список-*  
  Список, в котором каждый элемент определяет столбец в создан родительский элемент. Каждый элемент содержит столбец, новый столбец, вычисляемый столбец или значение, являющееся результатом агрегатной функции на дочернем **записей**.  
   
  *grp-field-list*  

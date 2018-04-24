@@ -1,17 +1,17 @@
 ---
-title: "Параметры события | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Параметры события | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Error parameter [ADO]
 - Object parameter [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-parameters"></a>Параметры события
 Каждый обработчик событий имеет состояние параметр, управляющий обработчик события. Для завершения событий этот параметр используется для указания на успешное или неуспешное выполнение операции, который создал событие. Наиболее полная события также имеют параметр ошибки для предоставления сведений о любой ошибки, возможно, произошло и один или несколько параметров объекта, которые ссылаются на объекты ADO, используемые для выполнения операции. Например [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) событий включает параметры объекта **команда**, **записей**, и **подключения** объектов связанный с событием. В следующем примере Microsoft Visual Basic®, можно увидеть командной, pRecordset и pConnection объекты, представляющие **команда**, **записей**, и **подключения** объекты, которые используются в **Execute** метод.  

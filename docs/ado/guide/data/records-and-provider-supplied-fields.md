@@ -1,31 +1,31 @@
 ---
-title: "Записи и поля поставщик предоставил | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Записи и поля поставщик предоставил | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fbde4c56512a93113e583f906d812e93f8b9e921
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>Записи и поля поставщик предоставил
 При [запись](../../../ado/reference/ado-api/record-object-ado.md) объект открыт, его источник может быть текущей строки открытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютный URL-адрес или относительный URL-адрес в сочетании с открытым [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта .  
@@ -73,8 +73,8 @@ ms.lasthandoff: 02/09/2018
 |RESOURCE_CONTENTCLASS|AdVarWChar|Указывает тип MIME документа, указывающее формат, например «`text/html`».|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Указывает язык, в которой хранится содержимое.|  
 |RESOURCE_CREATIONTIME|adFileTime|Только для чтения. Указывает на структуру FILETIME, содержащую время создания ресурса. Время указывается в формате общего скоординированного времени (UTC).|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|Только для чтения. Указывает на структуру FILETIME, содержащий время последнего доступа к ресурсу. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|Только для чтения. Указывает на структуру FILETIME содержит время последней операции записи ресурса. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
+|RESOURCE_LASTACCESSTIME|adFileTime|Только для чтения. Указывает на структуру FILETIME, содержащий время последнего доступа к ресурсу. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
+|RESOURCE_LASTWRITETIME|adFileTime|Только для чтения. Указывает на структуру FILETIME содержит время последней операции записи ресурса. Время представлено в формате UTC. Члены FILETIME равны нулю, если поставщик не поддерживает этот элемент времени.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Только для чтения. Указывает размер ресурса по умолчанию потока в байтах.|  
 |RESOURCE_ISCOLLECTION|adBoolean|Только для чтения. Значение true, если ресурс находится в коллекции, например каталог. Значение false, если ресурс является простой файл.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|Значение true, если ресурс является структурированный документ. Значение false, если ресурс не является структурированный документ. Это может быть коллекция или простой файл.|  

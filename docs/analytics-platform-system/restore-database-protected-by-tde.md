@@ -1,27 +1,21 @@
 ---
-title: Восстановление базы данных, защищаемую прозрачным Шифрованием в параллельное хранилище данных
-author: barbkess
-ms.author: barbkess
+title: Восстановление базы данных, защищаемую прозрачным Шифрованием - Parallel Data Warehouse | Документы Microsoft
+description: Выполните следующие действия для восстановления базы данных, который зашифрован с применением прозрачного шифрования данных в аналитику платформы системы Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Восстановление базы данных, зашифрованного с помощью прозрачного шифрования данных, выполните следующие действия.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>Восстановление базы данных, защищаемую прозрачным Шифрованием
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Восстановление базы данных, защищаемую прозрачным Шифрованием в Parallel Data Warehouse
 Восстановление базы данных, зашифрованного с помощью прозрачного шифрования данных, выполните следующие действия.  
   
 [С помощью прозрачного шифрования данных](transparent-data-encryption.md#using-tde) пример содержит код, включить прозрачное шифрование данных на `AdventureWorksPDW2012` базы данных. Следующий код этого примера продолжается путем создания резервной копии базы данных на устройстве исходного Analytics Platform System (APS) и восстановления сертификата и базы данных на разные устройства.  

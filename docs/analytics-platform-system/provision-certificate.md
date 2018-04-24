@@ -1,27 +1,21 @@
 ---
-title: Сертификат PDW подготовки (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Подготовка - сертификата Analytics Platform System | Документы Microsoft
+description: Подготовка сертификата в Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Подготовка сертификата PDW страницы аналитика платформы System Configuration Manager импортирует или удаляет сертификат, используемый PDW.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82907692bbba3ad92e796e8ecc8bb99e3141cb1a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>Подготовка сертификата PDW
+# <a name="certificate-provisioning-in-analytics-platform-system"></a>Подготовка сертификата в система платформы аналитики
 **Подготовка сертификата PDW** страница Analytics Platform System**Configuration Manager** импортирует или удаляет сертификат, используемый PDW. 
 
 Использование, сертификат для шифрования соединения может помочь безопасного обмена данными с узла управления через клиенты SQL Server, средства, использующие драйверы SQL Server PDW [консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md), и загружает служб Integration Services. 

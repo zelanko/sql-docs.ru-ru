@@ -1,28 +1,21 @@
 ---
-title: Настройка Windows Server Update Services (WSUS) (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Настройка служб WSUS - система платформы аналитики | Документы Microsoft
+description: Эти инструкции пошаговые инструкции по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Настройка Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в система платформы аналитики
 Эти инструкции пошаговые инструкции по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System. Необходимо настроить службы WSUS, перед применением обновлений программного обеспечения с устройством. На виртуальной машине VMM устройства уже установлена служба WSUS.  
   
 Дополнительные сведения о настройке служб WSUS см. в разделе [руководство по установке служб WSUS пошаговое](http://go.microsoft.com/fwlink/?LinkId=202417) на веб-сайт WSUS. После настройки WSUS, в разделе [загрузки и применения обновлений Майкрософт &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) для запуска обновления.  

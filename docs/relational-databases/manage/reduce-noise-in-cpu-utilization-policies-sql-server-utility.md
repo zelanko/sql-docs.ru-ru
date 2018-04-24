@@ -1,33 +1,34 @@
 ---
-title: "Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.UE.ReduceNoise.F1
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a391598d304ce2566d35b806e2a9894a81555b50
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 18d7c0d9db15cdbcfa8adf02de6b4febaa99c5bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы сократить число неважных записей в отчетах и нежелательных нарушений в политиках использования ресурсов служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], применяются следующие стратегии.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Чтобы сократить число неважных записей в отчетах и нежелательных нарушений в политиках использования ресурсов программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , применяются следующие стратегии.  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>Как часто параметр загрузки процессора должен превышать пороговое значение, чтобы программа сообщила о его перегрузке?  
  Оценочный период и допуск на процент нарушений настраиваются с помощью параметров вкладки **Политика** на узле **Администрирование программ** в обозревателе программ. Для изменения политик воспользуйтесь соответствующим ползунком справа от описания политики, затем нажмите кнопку **Применить**. Можно также восстановить значения по умолчанию или отменить изменения с помощью кнопок в нижней части экрана.  

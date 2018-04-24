@@ -1,31 +1,31 @@
 ---
-title: "С помощью закладок | Документы Microsoft"
-ms.prod: sql-non-specified
+title: С помощью закладок | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a8da466d7fb1cc988df297dee72d80ed19fed44
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c2d4036cbe8205a4dd25c5a1f97ec490b20afa20
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-bookmarks"></a>С помощью закладок
 Часто полезно для возврата непосредственно на определенную запись после перемещаться **записей** без необходимости прокрутки всех записей и сравнения значений. Например, при попытке выполнить поиск записи с помощью **найти** поиска, но метод не возвращает записи, вы автоматически оказываетесь на любом конце **записей**. Если поставщик поддерживает их, чтобы отметить место перед использованием может использоваться закладки **найти** метод, поэтому можно вернуться к папке. Закладка представляет **Variant** введите значение, которое однозначно определяет запись в **записей** объекта.  
