@@ -1,30 +1,30 @@
 ---
-title: "Обновление SQL Server с помощью мастера установки (программа установки) | Документы Майкрософт"
-ms.custom: 
+title: Обновление SQL Server с помощью мастера установки (программа установки) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: 
+caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d440b57b66caecaff4381d00da36173dd0e6eb92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
 
@@ -121,7 +121,7 @@ ms.lasthandoff: 02/09/2018
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
-     **Примечание по безопасности** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   

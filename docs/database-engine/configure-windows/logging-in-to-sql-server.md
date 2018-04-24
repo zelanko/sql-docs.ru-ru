@@ -1,15 +1,16 @@
 ---
-title: "Вход в систему SQL Server | Документы Майкрософт"
-ms.custom: 
+title: Вход в систему SQL Server | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server, logging in
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9afd0526acb2531222828a104a81096a29846342
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 918c10f9fc0527619e9eaa239ffe9b83f0820dbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Войти в систему в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Войти в систему на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
   
  При входе на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью графического средства администрирования, такого как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], пользователю предлагается ввести имя сервера, имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и, при необходимости, пароль. Если вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляется с проверкой подлинности Windows, то каждый раз при обращении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]вводить имя входа SQL Server не нужно. Вместо этого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для автоматического входа в систему. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в смешанном режиме (проверка подлинности[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows) и пользователь входит в систему с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо указать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль. По возможности используйте аутентификацию Windows.  
   

@@ -1,17 +1,17 @@
 ---
-title: "Open-метод (запись ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Open-метод (запись ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::raw_Open
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e20982964185f3e72d2f867050d78cb541869606
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-method-ado-record"></a>Метод Open (ADO запись)
 Открывает существующий [запись](../../../ado/reference/ado-api/record-object-ado.md) объект или создает новый элемент, представленный **записи**, таких как файл или каталог.  
@@ -62,7 +62,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Пароль*  
  Необязательно. Объект **строка** значение, содержащее пароль, если это требуется, проверяет *UserName*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  *Источник* может быть:  
   
 -   URL-АДРЕС. Если протокол для URL-адрес http, будет вызван поставщика Интернета по умолчанию. Если URL-адрес указывает на узел, содержащий исполняемый скрипт (такие как. ASP-странице), **записи** , содержащий источник вместо выполненной открытии содержимое по умолчанию. Используйте *параметры* аргумент, чтобы изменить это поведение.  

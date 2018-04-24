@@ -1,29 +1,22 @@
 ---
-title: Настройка подключения к PolyBase для внешних данных (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Настройка подключения к PolyBase - система платформы аналитики | Документы Microsoft
+description: В этой статье описывается настройка PolyBase в параллельное хранилище данных для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилище больших двоичных объектов и параллельного хранилища данных с помощью PolyBase.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Настройка подключения к PolyBase для внешних данных
-В этой статье описывается настройка PolyBase в SQL Server PDW для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. С помощью PolyBase для запуска запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилища BLOB-объектов Azure и SQL Server PDW.  
+В этой статье описывается настройка PolyBase в параллельное хранилище данных для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. Для выполнения запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилище больших двоичных объектов и параллельного хранилища данных с помощью PolyBase.  
   
 ### <a name="to-configure-connectivity"></a>Для настройки подключения  
   

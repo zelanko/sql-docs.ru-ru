@@ -1,15 +1,16 @@
 ---
-title: "Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения | Документы Майкрософт"
-ms.custom: 
+title: Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring database mirroring [SQL Server]
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01d279d30860e0e10cf3a76b447aaec245541fcc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d7c4f7584e5a8f3313d57d9f5d445a8221f082e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе содержатся сведения о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которых можно настраивать пороговые значения предупреждений и управлять ими для зеркального отображения базы данных. Это можно сделать с помощью монитора зеркального отображения баз данных или хранимых процедур **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**и **sp_dbmmonitordropalert** . В этом разделе содержатся также сведения о настройке предупреждений о событиях зеркального отображения баз данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В этом разделе содержатся сведения о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которых можно настраивать пороговые значения предупреждений и управлять ими для зеркального отображения базы данных. Это можно сделать с помощью монитора зеркального отображения баз данных или хранимых процедур **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**и **sp_dbmmonitordropalert** . В этом разделе содержатся также сведения о настройке предупреждений о событиях зеркального отображения баз данных.  
   
  После того как установлено наблюдение в зеркальной базе данных, системный администратор может настроить пороговые значения предупреждений по нескольким метрикам производительности, а также предупреждения для этих и других событий зеркального отображения базы данных.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
      Основные сведения об интерфейсе монитора зеркального отображения баз данных см. в разделе [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md). Сведения о запуске монитора зеркального отображения базы данных см. в разделе [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md).  
   
--   Системные хранимые процедуры.  
+-   Системные хранимые процедуры  
   
      Следующий набор системных хранимых процедур позволяет администратору устанавливать пороговые значения предупреждений и управлять ими в зеркальной базе данных одного из участников.  
   

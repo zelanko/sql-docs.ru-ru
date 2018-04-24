@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_1418 | Документация Майкрософт"
-ms.custom: 
+title: MSSQLSERVER_1418 | Документация Майкрософт
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 1418 (Database Engine error)
 ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25a3929528105498c89344a9999812053c1bbed7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d8f9d175a2bc67a7d888b8005065e7019bcded02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver1418"></a>MSSQLSERVER_1418
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,5 +107,5 @@ ms.lasthandoff: 11/21/2017
 [SERVERPROPERTY (Transact-SQL)](~/t-sql/functions/serverproperty-transact-sql.md)  
 [Указание сетевого адреса сервера (зеркальное отображение базы данных)](~/database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
 [sys.database_mirroring_endpoints (Transact-SQL)](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
-[Устранение неполадок в конфигурации зеркального отображения базы данных (SQL Server)](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+[Диагностика конфигурации зеркального отображения базы данных (SQL Server)](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   

@@ -1,28 +1,21 @@
 ---
-title: Отслеживать оповещения устройства (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Отслеживать оповещения appliance - система платформы аналитики | Документы Microsoft
+description: Отслеживать оповещения устройства в Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: 14
-ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="track-appliance-alerts"></a>Отслеживать оповещения устройства
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Отслеживать оповещения устройства в система платформы аналитики
 В этом разделе описывается использование консоли администрирования и системных представлений для отслеживания оповещений в в SQL Server PDW appliance.  
   
 ## <a name="to-track-appliance-alerts"></a>Чтобы отслеживать устройства предупреждения  

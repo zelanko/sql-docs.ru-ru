@@ -1,33 +1,34 @@
 ---
-title: "Параметры сортировки автономной базы данных | Документация Майкрософт"
-ms.custom: 
+title: Параметры сортировки автономной базы данных | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 11828773d88f1ff303fd4e34f76ea1e2fb9ccac4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contained-database-collations"></a>Параметры сортировки автономной базы данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На порядок сортировки и семантику сравнения текстовых данных влияют различные свойства, в том числе учет регистра, учет диакритических знаков и используемый базовый язык. Эти характеристики выражаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством выбора параметров сортировки для данных. Подробное обсуждение параметров сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  На порядок сортировки и семантику сравнения текстовых данных влияют различные свойства, в том числе учет регистра, учет диакритических знаков и используемый базовый язык. Эти характеристики выражаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством выбора параметров сортировки для данных. Подробное обсуждение параметров сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Параметры сортировки применяются не только к данным, хранящимся в пользовательских таблицах, но и ко всему тексту, обрабатываемому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая метаданные, временные объекты, имена переменных и т. д. Обработка таких объектов в автономных и неавтономных базах данных различается. Это изменение коснется небольшого числа пользователей и обеспечит независимость и единообразие экземпляров. При этом возможны некоторые затруднения, а также проблемы в сеансах, которые обращаются и к автономным и к неавтономным базам данных.  
   

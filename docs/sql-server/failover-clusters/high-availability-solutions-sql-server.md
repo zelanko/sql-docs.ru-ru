@@ -1,15 +1,16 @@
 ---
-title: "Решения высокого уровня доступности (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Решения высокого уровня доступности (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: "84"
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7af2a4035d3c528189cca77a4506e98db1acd93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2e8a25e4cca326edaa40fb850f8b5deed0a175bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="high-availability-solutions-sql-server"></a>Решения высокого уровня доступности (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.    
     
    
 >  **Примечание.** Хотите узнать, какие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают определенное решение высокой доступности? См. подраздел "Высокий уровень доступности (всегда ВКЛ)" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/05/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько вариантов обеспечения высокого уровня доступности сервера или базы данных. Существуют следующие режимы обеспечения высокого уровня доступности.    
     
 *  Экземпляры отказоустойчивого кластера AlwaysOn    
- В рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.    
+ В рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.    
     
  Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).    
     

@@ -1,29 +1,22 @@
 ---
-title: Конфигурация часового пояса устройства (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Настройте часовой пояс - система платформы аналитики | Документы Microsoft
+description: Страница часовой пояс позволяет задать часовой пояс для всех узлов на устройстве Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cea9eeb9-fe05-4e65-b229-539de02ab20a
-caps.latest.revision: 18
-ms.openlocfilehash: cb03dd9b766c92e92b329f1e0c9daedb7cd56703
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6a17ef4e77f9703a285f1e232077582e4441f293
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-time-zone-configuration"></a>Конфигурация часового пояса устройства
-**Часовой пояс** страница позволяет задать часовой пояс для всех узлов на устройстве SQL Server PDW.  
+# <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Конфигурация часового пояса устройства - система платформы аналитики
+**Часовой пояс** страница позволяет задать часовой пояс для всех узлов на устройстве Analytics Platform System (APS).  
   
 ## <a name="to-set-the-time-zone"></a>Задайте часовой пояс  
   
@@ -37,7 +30,7 @@ ms.lasthandoff: 04/06/2018
   
 5.  Перезапустите службы устройства с помощью **состояние служб** страницы в Configuration Manager. Если планируется также изменить права доступа, это можно сделать перед перезапуском устройства.  
   
-![DWConfig Appliance Time](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
+![Время устройств DWConfig](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
 ## <a name="see-also"></a>См. также  
 [Запустите диспетчер конфигурации &#40;система платформы аналитики&#41;](launch-the-configuration-manager.md)  

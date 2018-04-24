@@ -1,28 +1,21 @@
 ---
-title: Топология устройства (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Топология устройства - система платформы аналитики | Документы Microsoft
+description: Отображает сводную информацию на весь Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cd92c07e-4cee-4657-b23a-ed80bee07089
-caps.latest.revision: 4
-ms.openlocfilehash: c25767a922199b3f3af337d4720dfe611be162eb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9691da25c866e51e901aad1960b712b59fbd522b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-topology"></a>Топология устройства
+# <a name="appliance-topology---analytics-platform-system"></a>Топология устройства - система платформы аналитики
 Отображает сводную информацию на весь Analytics Platform System.  
   
 Разверните элементы этого раздела, чтобы настроить сведения, применимые ко всей устройства. Выберите топологию хранилища параллельных данных или топологии HDInsight разделы для настройки сведения, относящиеся к только что области устройства.  

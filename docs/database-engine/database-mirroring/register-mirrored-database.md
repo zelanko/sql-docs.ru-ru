@@ -1,34 +1,34 @@
 ---
-title: "Регистрация зеркальной базы данных | Документы Майкрософт"
-ms.custom: 
+title: Регистрация зеркальной базы данных | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2cc26c426fc85a704c2b474fa2115a5772be10ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-mirrored-database"></a>Регистрация зеркальной базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Используйте это диалоговое окно для регистрации одной или нескольких баз данных на данном экземпляре сервера посредством добавления базы или баз данных к монитору зеркального отображения баз данных. Когда база данных добавлена, монитор зеркального отображения баз данных локально кэширует сведения о базе данных, ее участниках и о возможностях соединения с участниками.  
+  Используйте это диалоговое окно для регистрации одной или нескольких баз данных на данном экземпляре сервера посредством добавления базы или баз данных к монитору зеркального отображения баз данных. Когда база данных добавлена, монитор зеркального отображения баз данных локально кэширует сведения о базе данных, ее участниках и о возможностях соединения с участниками.  
   
 > [!IMPORTANT]  
 >  Пользователь, являющийся членом предопределенной роли сервера **sysadmin** на экземпляре основного сервера, но не являющийся им на экземпляре зеркального сервера, может просмотреть только состояние экземпляра основного сервера.  

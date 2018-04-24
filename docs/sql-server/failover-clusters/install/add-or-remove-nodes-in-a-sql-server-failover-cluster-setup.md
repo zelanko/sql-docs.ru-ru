@@ -1,15 +1,16 @@
 ---
-title: "Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки) | Документация Майкрософт"
-ms.custom: 
+title: Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a002c082e151787580c73b3a9da3a4e1c641441c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9da0d18f86ed1a764295663cb3bf251ec0723fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью данной процедуры осуществляется управление узлами в существующем экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  С помощью данной процедуры осуществляется управление узлами в существующем экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Для обновления или удаления отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо обладать правами локального администратора с разрешением на вход в систему в качестве службы на всех узлах отказоустойчивого кластера. Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/05/2017
   
 9. На странице «Конфигурация сервера: учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-     **Примечание по безопасности** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
+     **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   

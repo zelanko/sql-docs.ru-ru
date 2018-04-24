@@ -1,31 +1,31 @@
 ---
-title: "Коды ошибок в службах IIS | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Коды ошибок в службах IIS | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcffff281bcd3f537dcf696e5a2ff374ebe56e54
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f8049c588ff230a5f9339bb932af10e9f9fe65eb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Коды ошибок для удаленных данных службы в службах IIS
 В следующей таблице перечислены коды ошибок Microsoft® Internet Information Services (IIS), которые связаны с использованием удаленной службы данных. Положительное десятичное трансляции низкий два байта, показаны отрицательное десятичное преобразование кода ошибки переполнения и шестнадцатеричных значений.

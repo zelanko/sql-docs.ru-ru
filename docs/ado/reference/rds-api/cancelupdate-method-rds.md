@@ -1,31 +1,31 @@
 ---
-title: "Метод CancelUpdate (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод CancelUpdate (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2698cc4ae822f80bfafc16813d61f8c5ea4ca5bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0fcfca6a612abc9462f64e547041a85e0a2a75ae
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cancelupdate-method-rds"></a>Метод CancelUpdate (RDS)
 Отменяет все изменения, внесенные в текущем или новом строку из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -44,7 +44,7 @@ DataControl.CancelUpdate
  *DataControl*  
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Служба курсора для OLE DB сохраняет как копия исходных значений и кэш изменений. При вызове **CancelUpdate**кэша изменений задается равным пустой и любые связанные элементы управления, обновляются с исходными данными.  
   
 ## <a name="applies-to"></a>Объект применения  

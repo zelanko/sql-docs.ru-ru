@@ -1,33 +1,33 @@
 ---
-title: "Поставщик Microsoft OLE DB для службы Microsoft Active Directory | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Поставщик Microsoft OLE DB для службы Microsoft Active Directory | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик Microsoft OLE DB для службы Microsoft Active Directory
 Поставщик интерфейсы службы Active Directory (ADSI) позволяет ADO для подключения к службам каталогов разнородных через ADSI. Это дает приложения ADO доступ только для чтения в каталоге служб Microsoft Windows NT 4.0 и Microsoft Windows 2000, помимо любой совместимый с LDAP службы каталогов и Novell Directory Services. Сам интерфейс ADSI основан на модель поставщика, чтобы в случае нового обеспечивающий доступ поставщика в другой каталог приложения ADO будет получить к ним доступ без проблем. Поставщик является поставщиком ADSI свободнопоточный и Юникод.  
@@ -86,7 +86,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Поставщик не поддерживает вызовы хранимых процедур и имена простую таблицу (например, [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) всегда будет иметь свойство **adCmdText**). См. в документации интерфейсы служб Active Directory более полное описание элементов текста команды.  
   
 ## <a name="recordset-behavior"></a>Поведение набора записей  
@@ -102,12 +102,12 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|только для чтения|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|чтение/запись|  
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
+|[Закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)|чтение/запись|  
+|[cacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|всегда **adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **как таковые**|  
-|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|  
+|[КОНЕЦ ФАЙЛА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|  
 |[Фильтр](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|чтение/запись|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|недоступно|  
@@ -123,14 +123,14 @@ objectClass='user' AND objectCategory='Person'"
   
 |Метод|Доступны?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|нет|  
-|[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|нет|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|нет|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Нет|  
+|[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Нет|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|  
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Да|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|  
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
+|[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|  
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
@@ -138,11 +138,11 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Да|  
 |[Открытие](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Да|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Да|  
+|[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Да|  
+|[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|  
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|нет|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|Нет|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|  
   
  Дополнительные сведения о ADSI и подробной информации о поставщике обратитесь к документации интерфейсы служб Active Directory или посетите ADSI веб-странице.  
   

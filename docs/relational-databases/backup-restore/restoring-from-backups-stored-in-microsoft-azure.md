@@ -1,31 +1,32 @@
 ---
-title: "Восстановление из резервных копий, сохраненных в Microsoft Azure | Документация Майкрософт"
-ms.custom: 
+title: Восстановление из резервных копий, сохраненных в Microsoft Azure | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48c5dccb0f90048123c15b637374b358097a16de
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a29eee6fa9fc2b2fb9ce7558bfa871fcd781063
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Восстановление из резервных копий в Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе представлены вопросы восстановления базы данных с помощью резервной копии в хранилище BLOB-объектов Windows Azure. Это относится к резервным копиям, созданным либо с помощью резервного копирования SQL Server на URL-адрес, либо с помощью служб [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В данном разделе представлены вопросы восстановления базы данных с помощью резервной копии в службе хранилища больших двоичных объектов Windows Azure. Это относится к резервным копиям, созданным либо с помощью резервного копирования SQL Server на URL-адрес, либо с помощью служб [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Рекомендуется ознакомиться с этим разделом, если у вас есть резервные копии в службе хранилища больших двоичных объектов Windows Azure, которые планируется восстановить. После этого изучите разделы, описывающие процедуру восстановления базы данных. Она аналогична для локальных резервных копий и резервных копий в Azure.  
   

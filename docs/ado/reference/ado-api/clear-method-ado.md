@@ -1,17 +1,17 @@
 ---
-title: "Clear-метод (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Clear-метод (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Errors::raw_Clear
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clear method [ADO]
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b843c14580d792dac671dfa198d23444829db78d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b1e19263664607c1237d00b17523b492d4be013d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="clear-method-ado"></a>Метод Clear (ADO)
 Удаляет все [ошибка](../../../ado/reference/ado-api/error-object.md) объектов из [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
 Errors.Clear  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **снимите** метод [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции, чтобы удалить все существующие [ошибка](../../../ado/reference/ado-api/error-object.md) объекты из коллекции. При возникновении ошибки ADO автоматически очищает **ошибки** коллекцию и заполняет его с **ошибка** объекты, основанные на новую ошибку.  
   
  Некоторые свойства и методы возвращают предупреждения, которые отображаются в виде **ошибка** объекты в **ошибки** коллекции, но не остановить выполнение программы. Перед вызовом метода [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) методы [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта; [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) задана объекта; или [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство **записей** , вызовите **снимите**метод **ошибки** коллекции. Таким образом, можно прочитать [число](../../../ado/reference/ado-api/count-property-ado.md) свойство **ошибки** коллекцию для проверки возникли предупреждения.  

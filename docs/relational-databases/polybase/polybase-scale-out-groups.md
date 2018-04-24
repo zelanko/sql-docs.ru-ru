@@ -1,36 +1,36 @@
 ---
-title: "Масштабируемые группы PolyBase | Документация Майкрософт"
-ms.custom: 
+title: Масштабируемые группы PolyBase | Документация Майкрософт
+ms.custom: ''
 ms.date: 05/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 
+caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e20ca5840b78e36e31f80247f77686135db489f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-scale-out-groups"></a>Масштабируемые группы PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Обработка больших наборов данных в Hadoop или хранилище BLOB-объектов Azure автономным экземпляром SQL Server с PolyBase может сопровождаться снижением производительности. Группы PolyBase позволяют создавать кластеры экземпляров SQL Server для обработки больших наборов данных из внешних источников данных (например, Hadoop или хранилища BLOB-объектов Azure), используя возможности масштабирования. Это помогает повысить производительность запросов.  
+  Обработка больших наборов данных в Hadoop или хранилище BLOB-объектов Azure автономным экземпляром SQL Server с PolyBase может сопровождаться снижением производительности. Группы PolyBase позволяют создавать кластеры экземпляров SQL Server для обработки больших наборов данных из внешних источников данных (например, Hadoop или хранилища BLOB-объектов Azure), используя возможности масштабирования. Это помогает повысить производительность запросов.  
   
  См. разделы [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) и [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   

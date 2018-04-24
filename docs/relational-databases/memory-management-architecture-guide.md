@@ -2,7 +2,7 @@
 title: Руководство по архитектуре управления памятью | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -21,11 +21,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a623c59bbc78503c7cf6bcbf190ed342763727c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,10 +95,10 @@ ms.lasthandoff: 04/10/2018
 |Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Одностраничные выделения|Да|Да, объединяются в выделения страниц "Любой размер"|
-|Многостраничные выделения|Нет|Да, объединяются в выделения страниц "Любой размер"|
-|Выделения CLR|Нет|Да|
-|Память стеков потоков|Нет|Нет|
-|Прямые выделения из Windows|Нет|Нет|
+|Многостраничные выделения|нет|Да, объединяются в выделения страниц "Любой размер"|
+|Выделения CLR|нет|Да|
+|Память стеков потоков|нет|нет|
+|Прямые выделения из Windows|нет|нет|
 
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделять больше памяти, чем указано в значении "Макс. памяти сервера". Это поведение может возникать, если значение ***Общая память сервера (КБ)*** уже достигло параметра ***Целевая память сервера (КБ)*** (как указано в параметре "Макс. памяти сервера"). Если из-за фрагментации памяти недостаточно смежных областей свободной памяти для соответствия требованиям многостраничных запросов памяти (больше 8 КБ), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может превысить объем вместо отклонения запроса памяти. 
 
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/10/2018
 
 |Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Одностраничные выделения|Нет|Нет, объединяется в выделения страниц "Любой размер"|
+|Одностраничные выделения|нет|Нет, объединяется в выделения страниц "Любой размер"|
 |Многостраничные выделения|Да|Нет, объединяется в выделения страниц "Любой размер"|
 |Выделения CLR|Да|Да|
 |Память стеков потоков|Да|Да|
@@ -282,7 +283,7 @@ FROM sys.dm_os_process_memory;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] совместим с архитектурой неоднородного доступа к памяти (NUMA) и хорошо работает на оборудовании NUMA без дополнительной настройки. С ростом тактовой частоты и количества процессоров становится труднее сократить время задержки памяти, необходимой для использования дополнительной производительности системы. Для устранения этого недостатка поставщики оборудования применяют большие кэши третьего уровня, но это является всего лишь полумерой. Архитектура NUMA обеспечивает масштабируемое решение для этой проблемы. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] позволяет использовать преимущество компьютеров на основе NUMA без необходимости изменять что-либо в приложении. Дополнительные сведения см. в статье [Как настроить сервер SQL Server на использование программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 [Параметры конфигурации сервера «Server Memory»](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Считывание страниц](../relational-databases/reading-pages.md)   
 [Запись страниц](../relational-databases/writing-pages.md)   

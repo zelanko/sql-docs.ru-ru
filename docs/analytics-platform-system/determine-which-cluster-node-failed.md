@@ -1,29 +1,22 @@
 ---
-title: Определить, какой из узлов кластера, сбой (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Определить узел кластера не удалось - система платформы аналитики | Документы Microsoft
+description: В этой статье описывается определить имя узла Analytics Platform System (APS), который завершился ошибкой после возникновения сбоя кластера, и было активировано предупреждение отказоустойчивого кластера. В ходе устранения неполадок отказоустойчивого кластера необходимо определить имя узла, который не удалось выполнить перед обращение в корпорацию Майкрософт, чтобы помочь решить проблему.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>Определите, какой узел кластера не удалось
-Описывается, как определить имя узла SQL Server PDW, произошла ошибка после возникновения сбоя кластера, и было активировано предупреждение отказоустойчивого кластера. В ходе устранения неполадок отказоустойчивого кластера необходимо определить имя узла, который не удалось выполнить перед обращение в корпорацию Майкрософт, чтобы помочь решить проблему.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Определить, какой кластер сбой узла для система платформы аналитики
+Описывается, как определить имя узла Analytics Platform System (APS), который завершился ошибкой после возникновения сбоя кластера, и было активировано предупреждение отказоустойчивого кластера. В ходе устранения неполадок отказоустойчивого кластера необходимо определить имя узла, который не удалось выполнить перед обращение в корпорацию Майкрософт, чтобы помочь решить проблему.  
   
 ## <a name="Background"></a>Фон  
 Для обеспечения высокой доступности в SQL Server PDW узел элемента управления и вычислительные узлы настроены как активный или пассивный компоненты отказоустойчивых кластеров Windows. Если активный сервер не отвечает на запросы критических системных, пассивный сервер при сбое и выполняет функции сервера, который не удалось.  

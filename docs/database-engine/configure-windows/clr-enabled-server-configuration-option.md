@@ -1,31 +1,31 @@
 ---
-title: "Параметр конфигурации сервера \"clr enabled\" | Документы Майкрософт"
-ms.custom: 
+title: Параметр конфигурации сервера "clr enabled" | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88454574613cf705a3aa209b7d3aaec616a292a4
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: ad74b3e7ff107c9c263ede72cccd182d87d4e97d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Параметр конфигурации сервера «clr enabled»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ RECONFIGURE;
 ## <a name="see-also"></a>См. также:  
  [Параметр конфигурации сервера «использование упрощенных пулов»](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Параметр конфигурации сервера «использование упрощенных пулов»](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)  
   
   

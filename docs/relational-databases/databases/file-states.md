@@ -1,16 +1,16 @@
 ---
-title: "Состояния файла | Документация Майкрософт"
-ms.custom: 
+title: Состояния файла | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring file state [SQL Server]
@@ -31,19 +31,21 @@ helpviewer_keywords:
 - displaying filegroup states
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d7bc331185c97dc72f11de6441570a267af0157
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 31805d4e577e72a8648c3f66b8725c97c9af815a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-states"></a>Состояния файла
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состояние файла базы данных поддерживается независимо от состояния базы данных. Файл всегда находится в одном определенном состоянии, таком как ONLINE или OFFLINE. Чтобы просмотреть текущее состояние файла, используйте представление каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Если база данных находится в состоянии вне сети, то состояние файлов можно просмотреть в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]состояние файла базы данных поддерживается независимо от состояния базы данных. Файл всегда находится в одном определенном состоянии, таком как ONLINE или OFFLINE. Чтобы просмотреть текущее состояние файла, используйте представление каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Если база данных находится в состоянии вне сети, то состояние файлов можно просмотреть в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
  Состояние файлов в файловой группе определяет доступность всей файловой группы. Чтобы файловая группа была доступна, необходимо, чтобы все файлы в файловой группе находились в режиме в сети. Чтобы просмотреть текущее состояние файловой группы, используйте представление каталога [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Попытка получить доступ к файловой группе, которая находится в режиме вне  сети, с помощью инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] приводит к ошибке. При построении планов запросов для инструкций SELECT оптимизатор запросов избегает некластеризованных индексов и индексированных представлений, принадлежащих файловым группам вне сети, чтобы разрешить успешное выполнение инструкций. Однако если файловая группа, находящаяся в режиме вне  сети, содержит кучу или кластеризованный индекс целевой таблицы, инструкция SELECT не будет выполнена. Кроме того, любая инструкция INSERT, UPDATE или DELETE, изменяющая таблицу с любым индексом в файловой группе, находящихся в режиме вне  сети, также не будет выполнена.  
   

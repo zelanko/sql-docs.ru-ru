@@ -1,6 +1,6 @@
 ---
 title: Участие в работе над документацией по SQL Server | Документы Майкрософт
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a id="githubui"></a> Редактирование в браузере
 
-Ниже приводятся общие инструкции по внесению небольших правок в содержимое по SQL Server в браузере. Полностью этот процесс описан в статье [Рабочий процесс для участников GitHub: незначительные или эпизодические изменения](https://docs.microsoft.com/contribute/contribute/light-workflow).
+Ниже приводятся общие инструкции по внесению небольших правок в содержимое по SQL Server в браузере. Полностью этот процесс описан в статье [Рабочий процесс для участников GitHub: незначительные или эпизодические изменения](https://docs.microsoft.com/contribute/light-workflow).
 
 1. В любой статье, в том числе в этой, справа есть кнопка **Изменить**. Найдите статью, которую нужно изменить, и нажмите кнопку **Изменить**, чтобы приступить к работе.
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/19/2018
    ![Кнопка "Изменить"](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > Для редактирования статьи необходимо выполнить вход в GitHub. Если у вас нет учетной записи GitHub, см. статью [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/contribute/get-started-setup-github). После создания учетной записи GitHub необходимо подтвердить свой адрес электронной почты, прежде чем вы сможете редактировать статьи.
+   > Для редактирования статьи необходимо выполнить вход в GitHub. Если у вас нет учетной записи GitHub, см. статью [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/get-started-setup-github). После создания учетной записи GitHub необходимо подтвердить свой адрес электронной почты, прежде чем вы сможете редактировать статьи.
 
 1. Отредактируйте статью в браузере. Все статьи написаны в разметке Markdown. Если вам нужна помощь по работе с Markdown, ознакомьтесь с [основами Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). Вы также можете посмотреть, как разметка Markdown преобразовывается для просмотра в опубликованных статьях.
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
    ![Создание запроса на вытягивание](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-Дальнейшие указания будут приводиться в комментариях к запросу на вытягивание. Полное описание процесса и дополнительные сведения можно найти в [руководстве для участников](https://docs.microsoft.com/contribute/contribute/light-workflow).
+Дальнейшие указания будут приводиться в комментариях к запросу на вытягивание. Полное описание процесса и дополнительные сведения можно найти в [руководстве для участников](https://docs.microsoft.com/contribute/light-workflow).
 
 ## <a id="tools"></a> Локальное редактирование с помощью средств
 
@@ -73,10 +74,10 @@ ms.lasthandoff: 03/19/2018
 
 Сведения об использовании этого метода см. в следующих статьях:
 
-- [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [Установка средств для создания содержимого](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [Локальная настройка репозитория Git для документации](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [Установка средств для создания содержимого](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [Локальная настройка репозитория Git для документации](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/full-workflow)
 
 Если вы отправляете запрос на вытягивание со значительными изменениями, вы получите в GitHub комментарий с просьбой отправить **Лицензионное соглашение на участие (CLA)**. Прежде чем ваш запрос на вытягивание будет принят, необходимо заполнить веб-форму.
 

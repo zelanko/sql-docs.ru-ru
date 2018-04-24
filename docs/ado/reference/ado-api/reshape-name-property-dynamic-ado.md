@@ -1,31 +1,31 @@
 ---
-title: "Изменить имя свойства динамические (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Изменить имя свойства динамические (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Изменить имя свойства динамические (ADO)
 Указывает имя для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строка** значение, представляющее имя **записей**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Имена сохраняются во время соединения, или пока не **записей** закрыт.  
   
  **Изменить имя** свойство предназначено для использования с функцией повторного формирования [службы Microsoft Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) поставщика услуг. Имена должны быть уникальными для участия в повторного формирования.  

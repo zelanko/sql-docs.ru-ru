@@ -2,7 +2,7 @@
 title: Свойства сервера (страница "Прочие параметры сервера") | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a15ed54489890a17059330ea88e906ad6778e095
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d9bc9624cbadb66eeea1f4ef366fdebe76b30811
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---misc-server-settings-page"></a>Свойства сервера (страница "Прочие параметры сервера")
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница используется для просмотра или изменения параметров сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Эта страница используется для просмотра или изменения установок сервера.  
   
 ## <a name="options"></a>Параметры  
  **Язык по умолчанию для пользователей**  

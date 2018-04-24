@@ -1,28 +1,21 @@
 ---
-title: Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным (APS)
-author: barbkess
-ms.author: barbkess
+title: Использовать DNS-сервер пересылки в Analytics Platform System | Документы Microsoft»
+description: Используйте DNS-сервер пересылки для разрешения имен DNS не является специализированным в Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным в система платформы аналитики
 DNS-сервер пересылки можно настроить на узлах доменных служб Active Directory (***appliance_domain *-AD01** и ***appliance_domain *-AD02**) вашего устройства Analytics Platform System, чтобы разрешить сценарии и приложения для доступа к внешним серверам.  
   
 ## <a name="ResolveDNS"></a>С помощью DNS-сервер пересылки  

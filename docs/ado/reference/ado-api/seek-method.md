@@ -1,17 +1,17 @@
 ---
-title: "Способа | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Способа | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset21::Seek
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af29a65772019a31c495fedc546b204e98455809
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 11fe64054cef55d1098c293f5acc0ade4540f74c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seek-method"></a>Метод поиска
 Выполняет поиск индекса [записей](../../../ado/reference/ado-api/recordset-object-ado.md) быстро найти строку, соответствующем заданным значениям и изменяет текущую позицию строки для этой строки.  
@@ -47,7 +47,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  Объект [SeekEnum](../../../ado/reference/ado-api/seekenum.md) значение, которое указывает тип сравнения между столбцами индекса и соответствующие *KeyValues*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **Seek** в сочетании с [индекс](../../../ado/reference/ado-api/index-property.md) свойства, если базовый поставщик поддерживает индексы на **записей** объекта. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** метод, чтобы определить, поддерживает ли базовый поставщик **Seek**и **Supports(adIndex)** метод, чтобы определить, поддерживает ли поставщик индексов. (Например, [поставщик OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Seek** и **индекс**.)  
   
  Если **Seek** может не найти нужную строку ошибки не возникает и строка располагается в конце **записей**. Задать **индекс** свойства в нужный индекс перед выполнением этого метода.  

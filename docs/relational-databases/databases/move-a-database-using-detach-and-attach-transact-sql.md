@@ -1,16 +1,16 @@
 ---
-title: "Перенос базы данных с помощью функций отсоединения и присоединения (Transact-SQL) | Документация Майкрософт"
-ms.custom: 
+title: Перенос базы данных с помощью функций отсоединения и присоединения (Transact-SQL) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database attaching [SQL Server]
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca93272f5b9bf043c3a7cb0ed9a8c0a07bc1e853
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4518130fe722bedbd19d4c5ef653fbc5c1f091e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описывается перемещение отсоединенной базы данных в другое местоположение и ее повторное присоединение к тому же или другому экземпляру сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако рекомендуется переносить базы данных с помощью процедуры запланированного переноса ALTER DATABASE, а не путем отсоединения и присоединения. Дополнительные сведения см. в статье [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
+  В этом разделе описывается перемещение отсоединенной базы данных в другое местоположение и ее повторное присоединение к тому же или другому экземпляру сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако рекомендуется переносить базы данных с помощью процедуры запланированного переноса ALTER DATABASE, а не путем отсоединения и присоединения. Дополнительные сведения см. в статье [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
 >  Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код.  

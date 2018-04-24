@@ -1,33 +1,34 @@
 ---
-title: "Свойства базы данных (страница \"Хранилище запросов\") | Документация Майкрософт"
-ms.custom: 
+title: Свойства базы данных (страница "Хранилище запросов") | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/09/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7d65de7c2c53b3f1ad6530197386201ceca682a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-query-store-page"></a>Свойства базы данных (страница хранилища запросов)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  
 |-|  

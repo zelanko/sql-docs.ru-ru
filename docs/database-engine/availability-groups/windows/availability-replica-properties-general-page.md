@@ -2,7 +2,7 @@
 title: Свойства реплики доступности (страница "Общие") | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44df0c5a019f46b2a085dc1fbfeb85148439cd85
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7604d8688669ded8bfa496924cb87f581f23fb79
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="availability-replica-properties-general-page"></a>Свойства реплики доступности (страница «Общие»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте это диалоговое окно для просмотра свойств реплики доступности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Используйте это диалоговое окно для просмотра свойств реплики доступности.  
   
 ## <a name="task-list"></a>Список задач  
  **Просмотр свойств реплики доступности**  

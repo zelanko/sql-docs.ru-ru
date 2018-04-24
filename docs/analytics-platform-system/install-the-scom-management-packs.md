@@ -1,28 +1,21 @@
 ---
-title: Установить пакеты управления SCOM (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Установить пакеты управления SCOM - система платформы аналитики | Документы Microsoft
+description: Выполните следующие действия, чтобы загрузить и установить пакеты управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления требуются для наблюдения за SQL Server PDW из SCOM.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ab3985d8-0a71-4b28-9d28-9886ae2a110f
-caps.latest.revision: 16
-ms.openlocfilehash: 2f05a947f09940fc1dd676ec6ca316863f567a7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 163ab893074e171decb573d876c5f98334437985
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="install-the-scom-management-packs"></a>Установить пакеты управления SCOM
+# <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Установить пакеты управления SQL Server Operations Manager (SCOM) для система платформы аналитики
 Выполните следующие действия, чтобы загрузить и установить пакеты управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления требуются для наблюдения за SQL Server PDW из SCOM.  
   
 ## <a name="BeforeBegin"></a>Перед началом  

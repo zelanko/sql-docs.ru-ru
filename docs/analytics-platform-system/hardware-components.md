@@ -1,27 +1,21 @@
 ---
-title: Компоненты оборудования системы платформы аналитики
-author: barbkess
-ms.author: barbkess
+title: Компоненты оборудования - система платформы аналитики | Документы Microsoft
+description: Analytics Platform System (APS) используются масштабируемые компоненты, поэтому вы можете приобрести нужный объем обработки и хранения в соответствии с бизнес-требований. При заказе APS потребуется сочетание этих основных компонентов оборудования.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Analytics Platform System (APS) используются масштабируемые компоненты, поэтому вы можете приобрести нужный объем обработки и хранения в соответствии с бизнес-требований.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
-caps.latest.revision: 17
-ms.openlocfilehash: 4b972c4b926463a67588c4ee41ed0157da7cdc80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9bb7b67a896164fe29611da2091e02c700c46970
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-hardware-components"></a>Компоненты оборудования системы платформы аналитики
+# <a name="hardware-components-for-analytics-platform-system"></a>Компоненты оборудования для система платформы аналитики
 
 Analytics Platform System (APS) используются масштабируемые компоненты, поэтому вы можете приобрести нужный объем обработки и хранения в соответствии с бизнес-требований. При заказе APS потребуется сочетание этих основных компонентов оборудования. Поставщики оборудования могут используют разные соглашения об именовании или имеют дополнительные компоненты.  
  

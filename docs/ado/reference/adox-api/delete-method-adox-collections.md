@@ -1,17 +1,17 @@
 ---
-title: "Удаление метода (ADOX коллекций) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Удаление метода (ADOX коллекций) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Views::Delete
@@ -33,16 +33,16 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4efe8d4528d0085d2bef7f97bf9b1958be208547
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fae857efe446eeea07db56481f0e1b5a5998fde6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-method-adox-collections"></a>Удаление метода (ADOX коллекций)
 Удаляет объект из коллекции.  
@@ -58,7 +58,7 @@ Collection.Delete Name
  *Название*  
  Объект **Variant** , указывающий имя или порядковый номер (индекс) удаляемого объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если произойдет ошибка *имя* не существует в коллекции.  
   
  Для [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) и [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) коллекций, ошибка возникает, если поставщик не поддерживает удаление таблиц или пользователей, соответственно. Для [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) и [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекций, **удалить** завершится ошибкой, если поставщик не поддерживает сохранение команды.  

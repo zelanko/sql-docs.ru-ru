@@ -1,38 +1,38 @@
 ---
-title: "Запись объекта (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Запись объекта (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Record
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa00ab893549eee36bc1d1b0e858c7bc326fb83b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 13a2c7e684488b10368d30c27253ca2c746b63a0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="record-object-ado"></a>Объект записи (ADO)
 Представляет строку из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или поставщик данных или объект, возвращенный поставщиком частично структурированными данными, таких как файл или каталог.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объект **запись** представляет одну строку данных и имеет некоторые общие сходства с одной строки **записей**. В зависимости от возможностей вашего поставщика **запись** объектов могут быть возвращены непосредственно от поставщика, а не одной строки **записей**, — например, когда SQL-запрос, который выбирает только одну строку выполнена. Или **запись** объекта можно получить непосредственно из **записей** объекта. Или **записи** могут быть возвращены непосредственно от поставщика в частично структурированные данные, такие как Microsoft Exchange поставщика OLE DB.  
   
  Можно просмотреть поля, связанные с **запись** объекта посредством [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции на **записи** объекта. ADO позволяет столбцов, возвращающих табличные значения объекта и включая **записей**, **SafeArray**и скалярных значений в **поля** коллекцию **записи** объекты.  

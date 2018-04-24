@@ -1,33 +1,33 @@
 ---
-title: "Свойство CharSet (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство CharSet (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::Charset
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43d23eda107933ab659324de412db0e101f8da00
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e02e5f26973d45b2bd4e73813824559784c9c4c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="charset-property-ado"></a>Свойство CharSet (ADO)
 Указывает кодировку, в которой содержимое текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) преобразования для хранения в внутренний буфер **поток** объекта.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** которого присвоено значение, указывающее знак содержимое **поток** будут преобразованы. Значение по умолчанию — **Юникода**. Допустимые значения: типичные строк, передаваемых через интерфейс как Интернет имена наборов символов (например, «iso-8859-1», «Windows-1252"и т. д). Список имен набор символов, которые заведомо системой см. подраздел HKEY_CLASSES_ROOT\MIME\Database\Charset в реестре Windows.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В текстовом **поток** объект текстовые данные хранятся в набор знаков, указанных в **Charset** свойство. Значение по умолчанию — Unicode. **Charset** свойство используется для преобразования данных, поступающих на **поток** или ближайшие из **поток**. Например если **поток** содержит данные ISO-8859-1, и что данные копируются в тип BSTR, **поток** объекта будет преобразовать данные в Юникоде. То же самое будет наблюдаться и в обратной ситуации.  
   
  Для открытого **поток**, текущий [позиции](../../../ado/reference/ado-api/position-property-ado.md) должно быть в начале **поток** (0), чтобы можно было задать **Charset**.  

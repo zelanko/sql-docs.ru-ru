@@ -1,17 +1,17 @@
 ---
-title: "Событие WillConnect (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Событие WillConnect (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - WillConnect
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f80b08a53784a215d58d7f36697207f4d8c3c942
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6cbf1f81a692fd7dd2b751a516ff2ad99a79ef8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="willconnect-event-ado"></a>Событие WillConnect (ADO)
 **WillConnect** событие вызывается до начала соединения.  
@@ -43,10 +43,10 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ConnectionString*  
+ *connectionString*  
  Объект **строка** , содержащий сведения о соединении для ожидания соединения.  
   
- *UserID*  
+ *Идентификатор пользователя*  
  Объект **строка** , содержащий имя пользователя для ожидания соединения.  
   
  *Пароль*  
@@ -65,7 +65,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  [Подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов, для которого применяется это уведомление о событии. Изменения параметров **подключения** по **WillConnect** обработчик событий не повлияет **соединения**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Когда **WillConnect** вызове *ConnectionString*, *UserID*, *пароль*, и *параметры* параметры устанавливаются значения, заданные в операции, вызвавшего это событие (Ожидание подключения) и может быть изменено до завершения события. **WillConnect** может вернуть запрос отмены ожидающих соединений.  
   
  При отмене этого события **ConnectComplete** будет вызываться с его *adStatus* равным **adStatusErrorsOccurred**.  

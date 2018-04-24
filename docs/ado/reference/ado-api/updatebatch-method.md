@@ -1,17 +1,17 @@
 ---
-title: "Метод UpdateBatch | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод UpdateBatch | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8e57895a558021b9ea363b5af8f7c853cc286778
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="updatebatch-method"></a>Метод UpdateBatch
 Записывает все ожидающие пакетных обновлений на диск.  
@@ -47,7 +47,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  Необязательно. Объект **логическое** значение, указывающее ли изменения, как указано в [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство, должна быть зафиксирована. Если это значение равно **True**, **состояние** свойства каждой записи остается неизменным после завершения обновления.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **UpdateBatch** метод при изменении **записей** объекта в пакетный режим обновления для передачи все изменения, внесенные в **записей** объекта в основной базе данных.  
   
  Если **записей** объект поддерживает обновление пакета, можно кэшировать внесение нескольких изменений в одну или несколько записей локально до вызова **UpdateBatch** метод. При изменении текущей записи или добавления новой записи, при вызове **UpdateBatch** метода ADO будет автоматически вызывать [обновление](../../../ado/reference/ado-api/update-method.md) метод, чтобы сохранить все ожидающие изменения для текущей записи, прежде чем передает пакет изменений к поставщику. Следует использовать пакетного обновления с набором ключей или статическом курсоре только.  

@@ -1,34 +1,36 @@
 ---
-title: "Зеркальное отображение и моментальные снимки баз данных (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Зеркальное отображение и моментальные снимки баз данных (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b51e1ad9f6789480165ece1d97f43d447a5b7a65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Зеркальное отображение и моментальные снимки баз данных (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Преимущество зеркальной базы данных проявляется в возможности использовать ее для разгрузки при ведении отчетов. Чтобы использовать зеркальную базу данных для выполнения отчетов, можно создавать моментальные снимки базы данных и направлять запросы клиентских соединений к самому позднему снимку. Моментальный снимок базы данных представляет собой статичный, доступный только для чтения, согласованный по транзакциям моментальный снимок состояния базы данных-источника на момент создания снимка. Для создания моментального снимка в зеркальной базе данных, эта база данных должна быть в синхронизированном состоянии зеркального отображения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Преимущество зеркальной базы данных проявляется в возможности использовать ее для разгрузки при формировании отчетов. Чтобы использовать зеркальную базу данных для выполнения отчетов, можно создавать моментальные снимки базы данных и направлять запросы клиентских соединений к самому позднему снимку. Моментальный снимок базы данных представляет собой статичный, доступный только для чтения, согласованный по транзакциям моментальный снимок состояния базы данных-источника на момент создания снимка. Для создания моментального снимка в зеркальной базе данных, эта база данных должна быть в синхронизированном состоянии зеркального отображения.  
   
  В отличие от самой зеркальной базы данных, моментальный снимок базы данных доступен клиентам. Пока зеркальный сервер соединен с основным сервером, можно направлять запрашивающих отчеты клиентов на подключение к моментальному снимку. Имейте в виду, что так как моментальный снимок базы данных является статичным, новые данные недоступны. Чтобы относительно новые данные были доступными для пользователей, необходимо периодически создавать новый моментальный снимок базы данных, а приложения должны устанавливать входящие клиентские соединения с наиболее поздним снимком.  
   

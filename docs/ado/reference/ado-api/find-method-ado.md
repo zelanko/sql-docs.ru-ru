@@ -1,17 +1,17 @@
 ---
-title: "Find-метод (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Find-метод (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find-метод (ADO)
 Поиск [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для строки, который удовлетворяет указанным критериям. При необходимости можно указать направление поиска, начальную строку и смещение от начала строки. При соблюдении заданных условий текущей позиции строки имеет значение на найдено записи; в противном случае — значение позиции (начала или конца) из **записей**.  
@@ -53,7 +53,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Запуск*  
  Необязательно. Объект **Variant** закладка, которая действует как начальная позиция для поиска.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Только один столбец имени могут быть указаны в *критерии*. Этот метод не поддерживает поиск нескольких столбцов.  
   
  Оператор сравнения в *критерии* может быть "**>**«(больше),»**\<**» (меньше), «=» (равно), «> =» (больше или равно) «< =» (меньше или равно) (не равно), «<>» или «мне нравится» (соответствие шаблону).  

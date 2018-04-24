@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, объект транзакции | Документация Майкрософт"
-ms.custom: 
+title: SQL Server, объект транзакции | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a243c4d72daa8ee228d164a7675f8b5c1eab4896
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
   
  Если база данных допускает уровень изоляции моментальных снимков, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен поддерживать записи об изменениях всех строк в базе данных. Каждый раз при изменении строки копия строки в состоянии, предшествующем изменению, записывается в хранилище версий строк в базе данных **tempdb**. Многие счетчики в объекте **Transaction** также можно применять для мониторинга размера и скорости роста хранилища версий строк в базе данных **tempdb**.  
   

@@ -1,15 +1,16 @@
 ---
-title: "Создание нового отказоустойчивого кластера SQL Server (программа установки) | Документация Майкрософт"
-ms.custom: 
+title: Создание нового отказоустойчивого кластера SQL Server (программа установки) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 581129c04f1348b0fd66a9a5064c923324365d65
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1553c7584ec6d90bcefbbdabf7c44788830740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Создание нового отказоустойчивого кластера SQL Server (программа установки)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Не выполняйте программу установки на активном узле для управления другими узлами.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Не выполняйте программу установки на активном узле для управления другими узлами.  
   
  В зависимости от того, каким образом кластеризованы узлы, отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настраивается следующим образом.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/05/2017
   
  Дополнительные сведения об установке служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в отказоустойчивом кластере Windows см. в разделе [Кластеризация служб SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед началом установки следует ознакомиться со следующими разделами электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Планирование установки SQL Server](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -401,7 +403,7 @@ ms.lasthandoff: 12/05/2017
   
 19. После установки на странице **Завершение** будет приведена ссылка на файл сводного журнала установки и даны другие важные примечания. Чтобы завершить процесс установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , нажмите кнопку **Готово**. После этого шага все узлы, подготовленные для одного и того же отказоустойчивого кластера, становятся частью готового отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  **Настройка новой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** — чтобы уменьшить уязвимую контактную зону системы, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по выбору устанавливает и активирует ключевые службы и функции. Дополнительные сведения см. в разделе [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Дополнительные сведения о размещении файлов журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  

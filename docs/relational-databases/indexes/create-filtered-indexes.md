@@ -2,7 +2,7 @@
 title: Создание отфильтрованных индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -24,13 +24,14 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a82b906e15ced291ab440f8c4f87bc307dc6b624
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2acce5cc1c77167b3ea2f9565b481782364d0b78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-filtered-indexes"></a>Create Filtered Indexes
+# <a name="create-filtered-indexes"></a>Создание отфильтрованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается создание фильтруемого индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Фильтруемый индекс — это оптимизированный некластеризованный индекс, особенно подходящий для запросов, осуществляющих выборку из хорошо определенного подмножества данных. Он использует предикат фильтра для индексирования части строк в таблице. Хорошо спроектированный фильтруемый индекс позволяет повысить производительность запросов, а также снизить затраты на обслуживание и хранение индексов по сравнению с полнотабличными индексами.  
@@ -51,13 +52,13 @@ ms.lasthandoff: 04/10/2018
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Вопросы проектирования](#Design)  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание фильтруемого индекса с использованием следующих средств:**  
   
@@ -101,10 +102,10 @@ ms.lasthandoff: 04/10/2018
 
 - Просмотрите обязательные параметры SET для отфильтрованных индексов в синтаксисе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** . Для изменения выражения отфильтрованного индекса используйте инструкцию CREATE INDEX WITH DROP_EXISTING.  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**. Для изменения выражения отфильтрованного индекса используйте инструкцию CREATE INDEX WITH DROP_EXISTING.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-create-a-filtered-index"></a>Создание фильтруемого индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>Обеспечение использования фильтруемого индекса в SQL-запросе  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

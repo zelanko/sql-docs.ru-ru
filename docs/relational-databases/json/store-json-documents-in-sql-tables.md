@@ -1,29 +1,29 @@
 ---
-title: "Хранение документов JSON в SQL Server или базе данных SQL | Microsoft Docs"
+title: Хранение документов JSON в SQL Server или базе данных SQL | Microsoft Docs
 ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+ms.assetid: ''
+caps.latest.revision: ''
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9042b6cf7cb7298e5f327ab96c77cf625eee3872
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9dfb96a67a6356a0c220b852b48db9541eda8959
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Хранение документов JSON в SQL Server или базе данных SQL
 SQL Server и база данных SQL Azure имеют собственные функции JSON, позволяющие анализировать документы JSON с помощью стандартного языка SQL. Теперь вы можете хранить документы JSON в SQL Server или базе данных SQL и запрашивать данные JSON так же, как в базе данных NoSQL. Эта статья описывает возможности хранения документов JSON в SQL Server или базе данных SQL.

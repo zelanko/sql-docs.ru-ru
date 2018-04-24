@@ -1,17 +1,17 @@
 ---
-title: "Свойство точности (ADOX) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство точности (ADOX) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Column::put_Precision
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADOX]
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b27fa294315704dc0f7f7b86db061f1094491412
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 790f4dafda40218e40c9fd88826838814177e72b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="precision-property-adox"></a>Свойство точности (ADOX)
 Указывает, максимальная точность значений данных в [столбца](../../../ado/reference/adox-api/column-object-adox.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **длинные** значение, максимальная точность значений данных в столбце при [тип](../../../ado/reference/adox-api/type-property-column-adox.md) свойство имеет числовой тип. **Точность** игнорируется для всех других типов данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение по умолчанию равно нулю (**0**).  
   
  Это свойство доступно только для чтения для [столбца](../../../ado/reference/adox-api/column-object-adox.md) объектов уже добавлен в коллекцию.  

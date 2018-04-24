@@ -1,31 +1,31 @@
 ---
-title: "Определение того, что поддерживается | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Определение того, что поддерживается | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], Supports method
 - Supports method [ADO]
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31d9ca56af28416f68555511a3d4a8439d370200
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 94c8f6c2f03fff3706f20982ac43237a52092bad
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="determining-what-is-supported"></a>Определение того, что поддерживается
 **Поддерживает** метод используется для определения, является ли заданное **записей** объект поддерживает функциональные возможности определенного типа. Он имеет следующий синтаксис:  
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Поддерживает** метод возвращает логическое значение, указывающее, поддерживает ли поставщик все функции, определяемым аргументом CursorOptions. Можно использовать **поддерживает** метод, чтобы определить, какие функциональные возможности **записей** поддерживает. Если **записей** объект поддерживает функции, соответствующей константы, в *CursorOptions*, **поддерживает** возвращает **True**. В противном случае он возвращает **False**.  
   
  С помощью **поддерживает** метод, можно проверить возможность **записей** объект для добавления новых записей, использование закладок, используйте **найти** используйте прокрутку, используйте  **Индекс** свойство и для выполнения пакетных обновлений. Полный список констант и их значений см. в разделе [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  

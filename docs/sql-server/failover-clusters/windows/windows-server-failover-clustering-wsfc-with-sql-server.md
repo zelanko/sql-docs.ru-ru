@@ -1,16 +1,16 @@
 ---
-title: "Отказоустойчивая кластеризация Windows Server с использованием SQL Server | Документы Майкрософт"
-ms.custom: 
+title: Отказоустойчивая кластеризация Windows Server с использованием SQL Server | Документы Майкрософт
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1a0a35efc021adae73035bb98a62f2b3edd9291d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server с SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-*Отказоустойчивый кластер Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
+  *Отказоустойчивый кластер Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
   
    
 ##  <a name="TermsAndDefs"></a> Термины и определения  
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/23/2018
  Ресурс кластера  
  Физическая или логическая сущность, которая может принадлежать узлу, которую можно переводить в режимы «в сети» и «вне сети», перемещать между узлами и которой можно управлять как объектом кластера. Ресурс кластера может принадлежать одновременно только одному узлу.  
   
- Role  
+ Роль  
  Коллекция ресурсов кластера, управляемая как единый объект кластера и предоставляющая определенные функциональные возможности. Для SQL Server ролью будет группа доступности AlwaysOn или экземпляр отказоустойчивого кластера AlwaysOn. Роль содержит все ресурсы кластера, необходимые для роли группы доступности или экземпляра отказоустойчивого кластера. Отработка отказа и восстановление размещения всегда выполняются в контексте ролей. Роль экземпляра отказоустойчивого кластера содержит ресурс IP-адреса, ресурс сетевого имени и ресурсы SQL Server. Роль группы доступности содержит ресурс группы доступности, а также, если настроен прослушиватель, ресурсы сетевого имени и IP-адреса. 
 
  Ресурс сетевого имени  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/23/2018
  Дополнительные сведения см. в статье [Failover Clustering Overview — Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)(Обзор отказоустойчивой кластеризации — Windows Server).  
   
 ##  <a name="AlwaysOnWsfcTech"></a> Технологии SQL Server AlwaysOn и WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* — это новое решение высокого уровня доступности и аварийного восстановления с использованием WSFC. Компоненты AlwaysOn представляют собой интегрированные, гибкие решения, повышающие доступность приложений, окупаемость вложений в оборудование и упрощающее развертывание систем высокого уровня доступности и управление ими.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* — это новое решение высокого уровня доступности и аварийного восстановления с использованием WSFC. Компоненты AlwaysOn представляют собой интегрированные, гибкие решения, повышающие доступность приложений, окупаемость вложений в оборудование и упрощающее развертывание систем высокого уровня доступности и управление ими.  
   
  Экземпляры [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и экземпляры отказоустойчивого кластера AlwaysOn используют технологию платформы WSFC и регистрируют компоненты в качестве ресурсов кластера WSFC.  Связанные ресурсы объединяются в *роль*, которую можно сделать зависимой от других ресурсов кластера WSFC. Затем кластер WSFC сможет выявлять необходимость в перезапуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (и сигнализировать об этой необходимости), а также автоматически выполнять отработку отказа с переходом на другой серверный узел в кластере WSFC.  
   

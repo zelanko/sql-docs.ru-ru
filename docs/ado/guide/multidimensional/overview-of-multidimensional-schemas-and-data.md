@@ -1,30 +1,30 @@
 ---
-title: "Общие сведения о многомерных схем и данных | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Общие сведения о многомерных схем и данных | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 061c8df1aff59c97df54a973491d333858288fd4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схем и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о схемах многомерные  
@@ -65,15 +65,15 @@ Hamburg, Munich, Stuttgart}
   
  Каждый уровень имеет набор элементов, как показано ниже:  
   
--   Мира`= {All}`  
+-   Мира `= {All}`  
   
--   Континенты`= {North America, Europe}`  
+-   Континенты `= {North America, Europe}`  
   
--   Странах`= {Canada, USA, UK, Germany}`  
+-   Странах `= {Canada, USA, UK, Germany}`  
   
--   Области`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Области `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Городов`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Городов `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Члены  
  Элементы на конечном уровне иерархии не имеющие дочерних элементов и элементов на корневом уровне не имеют родительского объекта. Все другие члены имеют по крайней мере один родительский элемент и по крайней мере один дочерний. Например частичное обход дерева иерархии в измерении «География» дает следующие родительско дочерних отношений:  

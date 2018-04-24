@@ -1,32 +1,32 @@
 ---
-title: "Поставщик Microsoft OLE DB для Oracle | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Поставщик Microsoft OLE DB для Oracle | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for Oracle
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 71ce9defd8d06a220da3c3f74c439d8a4a7ecc84
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Поставщик Microsoft OLE DB для Oracle Обзор
 > [!IMPORTANT]
@@ -74,7 +74,7 @@ MSDAORA
 |**Дескриптор окна**|Указывает дескриптор окна для использования для запроса дополнительных сведений.|
 |**Идентификатор локали**|Указывает уникальный 32-разрядное число (например, 1033), указывающее параметры, связанные с языком пользователя. Эти параметры указывают способ форматирования даты и времени, элементы сортируются в алфавитном порядке, строки сравниваются и так далее.|
 |**Службы OLE DB**|Указывает битовую маску, которая указывает службы OLE DB, чтобы включить или отключить.|
-|**Prompt**|Указывает, следует ли запрашивать пользователя во время установления соединения.|
+|**строки**|Указывает, следует ли запрашивать пользователя во время установления соединения.|
 |**Расширенные свойства**|Строка, содержащая поставщика, расширенные сведения о соединении. Это свойство используется только для подключения к конкретному поставщику данных, которые не может быть описан через механизм свойства.|
 
 ## <a name="see-also"></a>См. также

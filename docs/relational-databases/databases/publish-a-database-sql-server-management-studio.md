@@ -1,31 +1,32 @@
 ---
-title: "Публикация базы данных (среда SQL Server Management Studio) | Документация Майкрософт"
-ms.custom: 
+title: Публикация базы данных (среда SQL Server Management Studio) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75c8ba6edd0aed89854e62f66b2011927fb4879e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: df4757b69eeb025149cdd8a160e64abb87f0a682
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Публикация базы данных (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Мастер формирования и публикации скриптов** служит для публикации всей базы данных или отдельных ее объектов в поставщике услуг размещения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Мастер формирования и публикации скриптов** служит для публикации всей базы данных или отдельных ее объектов на поставщике услуг размещения.  
   
 > [!NOTE]  
 >  Функциональные возможности, использование которых описано в этом разделе, раньше обеспечивал мастер публикации базы данных. В мастер формирования и публикации скриптов также было добавлено средство публикации, а мастер публикации базы данных больше не поддерживается.  

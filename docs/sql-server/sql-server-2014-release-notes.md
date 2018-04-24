@@ -2,9 +2,8 @@
 title: Заметки о выпуске SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: ''
@@ -12,16 +11,17 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: ''
+caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0eb2f0de2a013ae801330aee9154b764964868db
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 727798fd3cc320f90586f476e4ee43f0a1867f3f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -366,7 +366,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Дополнительные сведения:**  
   
@@ -381,7 +381,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Дополнительные сведения:**  
   

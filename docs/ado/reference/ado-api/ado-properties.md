@@ -1,31 +1,31 @@
 ---
-title: "Свойства ADO | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойства ADO | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 919d3573a0d5b1178d24af3befd553a39b3c0d3a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-properties"></a>Свойства ADO
 |||  
@@ -37,12 +37,12 @@ ms.lasthandoff: 02/09/2018
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Указывает фактическую длину значения поля.|  
 |[Атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md)|Указывает один или несколько характеристик объекта.|  
 |[BOF и конца файла](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** указывает, что положение текущей записи перед первой записью в объекте набора записей.<br /><br /> **EOF** указывает, что положение текущей записи после последней записи в объект набора записей.|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Указывает закладка, которая однозначно определяет текущую запись в **записей** объекта или задает текущую запись **записей** объект для записи, определяемый допустимую закладку.|  
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Указывает количество записей из **записей** объекта, которые локально кэшируются в памяти.|  
+|[Закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)|Указывает закладка, которая однозначно определяет текущую запись в **записей** объекта или задает текущую запись **записей** объект для записи, определяемый допустимую закладку.|  
+|[cacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Указывает количество записей из **записей** объекта, которые локально кэшируются в памяти.|  
 |[Глава](../../../ado/reference/ado-api/chapter-property-ado.md)|Возвращает или задает поставщика OLE DB **главе** объекта из/в **ADORecordsetConstruction** объекта.|  
 |[Набор символов](../../../ado/reference/ado-api/charset-property-ado.md)|Указывает кодировку, в которой содержимое текстового **поток** должны преобразовываться.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Указывает поток, используемый в качестве входного для **команда** объекта.|  
-|[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Показывает, что текст команды должна быть выдан для поставщика.|  
+|[commandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Показывает, что текст команды должна быть выдан для поставщика.|  
 |[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Указывает время ожидания при выполнении команды перед прекращением попытки и созданием ошибки.|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Указывает тип **команда** объекта.|  
 |[Свойство ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Указывает сведения, используемые для установления соединения с источником данных.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Указывает расположение службы курсора.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Указывает тип курсора, используемого в **записей** объекта.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Указывает имя элемента данных, которые будут извлечены из объекта, на который указывает **DataSource** свойство.|  
-|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Указывает объект, содержащий данные для представления в виде **записей** объекта.|  
+|[Источник данных](../../../ado/reference/ado-api/datasource-property-ado.md)|Указывает объект, содержащий данные для представления в виде **записей** объекта.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Указывает базу данных по умолчанию для **подключения** объекта.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Показывает объем данных **поле** объекта.|  
 |[Description](../../../ado/reference/ado-api/description-property.md)|Описывает **ошибка** объекта.|  
@@ -71,9 +71,9 @@ ms.lasthandoff: 02/09/2018
 |[Режим](../../../ado/reference/ado-api/mode-property-ado.md)|Указывает имеющиеся права на изменение данных в **подключения**, **запись**, или **поток** объекта.|  
 |[Название](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Указывает код ошибки поставщика для какого-либо **ошибка** объекта.|  
-|[Number](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет **ошибка** объекта.|  
+|[Номер](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет **ошибка** объекта.|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Указывает шкалу числовых значений в **параметр** или **поле** объекта.|  
-|[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Указывает значение **поле** , состоянии, предшествующем в записи были сделаны изменения.|  
+|[originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Указывает значение **поле** , состоянии, предшествующем в записи были сделаны изменения.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Показывает, сколько страниц данных **записей** содержит объект.|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Указывает, сколько записей представляют одну страницу в **записей**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Задает контейнер OLE DB **строки** объекта на **ADORecordConstruction** объекта, чтобы родительские строки преобразуются в ADO **записи** объекта.|  
@@ -83,8 +83,8 @@ ms.lasthandoff: 02/09/2018
 |[Подготовить](../../../ado/reference/ado-api/prepared-property-ado.md)|Указывает, следует ли сохранять скомпилированную версию перед выполнением команды.|  
 |[Поставщик](../../../ado/reference/ado-api/provider-property-ado.md)|Указывает имя поставщика для **подключения** объекта.|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Указывает количество записей в **записей** объекта.|  
-|[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Указывает тип **записи** объекта.|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Возвращает или задает поставщика OLE DB **строки** объекта из/в **ADORecordConstruction** объекта.|  
+|[Типом записи](../../../ado/reference/ado-api/recordtype-property-ado.md)|Указывает тип **записи** объекта.|  
+|[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Возвращает или задает поставщика OLE DB **строки** объекта из/в **ADORecordConstruction** объекта.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Возвращает или задает поставщика OLE DB **RowPosition** объекта из/в **ADORecordsetConstruction** объекта.|  
 |[Функции набора строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Возвращает или задает поставщика OLE DB **строк** объекта из/в **ADORecordsetConstruction** объекта.|  
 |[Источник (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Указывает имя объекта или приложения, вызвавшего ошибку.|  

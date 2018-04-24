@@ -1,17 +1,17 @@
 ---
-title: "Open-метод (поток ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Open-метод (поток ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_Open
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b104e04c81fce3fce5cb25d175602f1b339e9ac1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 12d39ecbeaf22785ab20e488787e2a5350160d18
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-method-ado-stream"></a>Метод Open (поток ADO)
 Открывает [поток](../../../ado/reference/ado-api/stream-object-ado.md) для работы потоков двоичных или текстовых данных.  
@@ -56,7 +56,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *Пароль*  
  Необязательно. Объект **строка** значение, содержащее пароль, при необходимости, обращается к **поток** объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Когда **запись** объект передается как параметр источника *UserID* и *пароль* параметры не используются, так как доступ к **записи** объекта уже доступна. Аналогичным образом [режим](../../../ado/reference/ado-api/mode-property-ado.md) из **запись** передается объект **поток** объекта. Когда *источника* не указан, **поток** открыть не содержит данных и имеет [размер](../../../ado/reference/ado-api/size-property-ado-stream.md) нуль (0). Во избежание потери данных, записываемых это **поток** при **поток** — закрыто, Сохранить **поток** с [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) или [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) методов, или сохранить его в другое расположение в памяти.  
   
  *OpenOptions* значение **adOpenStreamFromRecord** определяет содержимое *источника* параметр должен быть уже открытого **запись**объекта. Поведение по умолчанию — обрабатывать *источника* как URL-адрес, указывающий на узел в древовидной структуре, например файл. Открытие потока по умолчанию, связанные с этим узлом.  

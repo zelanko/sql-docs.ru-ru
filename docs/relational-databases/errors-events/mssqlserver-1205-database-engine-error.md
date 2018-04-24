@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_1205 | Документация Майкрософт"
-ms.custom: 
+title: MSSQLSERVER_1205 | Документация Майкрософт
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9351a3040a2e4f362b00d647a72989a8877973
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a3bab64d23dfa8e865061183d9565b96606b45ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |Текст сообщения|Транзакция (с идентификатором процесса %d) вызвала взаимоблокировку ресурсов %.*ls с другим процессом и была выбрана в качестве жертвы для ее разрешения. Запустите транзакцию повторно.|  
   
 ## <a name="explanation"></a>Объяснение  
-Доступ к ресурсам осуществляется отдельными транзакциями в конфликтном порядке, что приводит к взаимоблокировке. Например:  
+Доступ к ресурсам осуществляется отдельными транзакциями в конфликтном порядке, что приводит к взаимоблокировке. Пример:  
   
 -   Транзакция1 обновляет строку **Таблица1.Строка1**, а транзакция2 в то же время обновляет строку **Таблица2.Строка2**.  
   

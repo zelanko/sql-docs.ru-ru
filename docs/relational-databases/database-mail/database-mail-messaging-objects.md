@@ -1,16 +1,16 @@
 ---
-title: "Объекты обмена сообщениями компонента Database Mail | Документация Майкрософт"
-ms.custom: 
+title: Объекты обмена сообщениями компонента Database Mail | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8de888cea76c64cf8c5356b68ac8d852bd46bd1f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 61b20e832a847566390ab4e430ff5cc87a0178ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mail-messaging-objects"></a>Объекты обмена сообщениями компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Для размещения компонента Database Mail используется база данных обслуживания почты **msdb** . Она содержит хранимые процедуры и объекты обмена сообщениями компонента Database Mail. Используя входящий в среду Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] мастер настройки компонента Database Mail, можно активировать компонент Database Mail, создавать и администрировать профили и учетные записи и настраивать параметры компонента Database Mail.  
+  Для размещения компонента Database Mail используется база данных обслуживания почты **msdb** . Она содержит хранимые процедуры и объекты обмена сообщениями компонента Database Mail. Используя входящий в среду Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] мастер настройки компонента Database Mail, можно активировать компонент Database Mail, создавать и администрировать профили и учетные записи и настраивать параметры компонента Database Mail.  
   
 ##  <a name="ComponentsAndConcepts"></a> Объекты в базе данных **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **msdb** . Однако компонент Database Mail не пользуется сетевыми возможностями компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Поэтому для использования компонента Database Mail пользователи не должны создавать конечную точку компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Для взаимодействия с [!INCLUDE[vstecado](../../includes/vstecado-md.md)] внешний процесс компонента Database Mail использует стандартное соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

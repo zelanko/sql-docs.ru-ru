@@ -1,33 +1,35 @@
 ---
-title: "Страница \"Указание параметров группы доступности\" (мастер создания группы доступности/мастер добавления базы данных) | Документы Майкрософт"
-ms.custom: 
+title: Страница "Указание параметров группы доступности" (мастер создания группы доступности/мастер добавления базы данных) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.newagwizard.specifyagname.f1
 - sql13.swb.adddatabasewizard.specifyagname.f1
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c12b2607c1f1ecd50d61e2b73646b040a2bbc338
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dde55d128d66641cfbd0de72794dbad4ec8f6b92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-availability-group-options-page"></a>Страница "Указание параметров группы доступности"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описываются параметры страницы **Указание имени группы доступности**. Эта тема относится как к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] , так и к [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В этом разделе описываются параметры страницы **Указание имени группы доступности** . Эта тема относится как к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] , так и к [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Указание параметров группы доступности  
  **Имя группы доступности**  

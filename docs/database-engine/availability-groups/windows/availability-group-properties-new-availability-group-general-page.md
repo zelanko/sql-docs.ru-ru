@@ -2,7 +2,7 @@
 title: 'Свойства группы доступности: создание группы доступности (страница "Общие") | Документы Майкрософт'
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43306a76937572c93f01642e5943d24a141690b6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 152930a0726bcbf7543e518f5a66aa030a695858
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Свойства группы доступности: создание группы доступности (страница "Общие")
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приведенные в этом разделе сведения относятся к вкладке **Общие** диалоговых окон **Создание группы доступности** и **Свойства группы доступности**.  Диалоговое окно **Создание группы доступности** позволяет создать новую группу доступности, не прибегая к использованию [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Диалоговое окно **Свойства группы доступности** позволяет просматривать и изменять конфигурацию существующей группы доступности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Приведенные в этом разделе сведения относятся к вкладке **Общие** диалоговых окон **Создание группы доступности** и **Свойства группы доступности** .  Диалоговое окно **Создание группы доступности** позволяет создать новую группу доступности, не прибегая к использованию [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Диалоговое окно **Свойства группы доступности** позволяет просматривать и изменять конфигурацию существующей группы доступности.  
   
  **Просмотр свойств группы доступности**  
   

@@ -16,18 +16,20 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 60efe21b9417e0efe7301472f8b9777b1d1f8a91
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd577dfbabfe8d4aa989fc2da0f1751310c3d0dc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-samples"></a>Образцы SQL
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Расположение образцов баз данных и образцы кода для продуктов Microsoft SQL.
 
 ## <a name="sql-samples-repository"></a>Репозиторий примеров SQL
+
 Примеры кода для продуктов SQL находятся в [образцы Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) репозитории GitHub. В каждом примере содержится файл сведений, в которой описывается запуск и использование образца. Основной файл README для образцов репозитория объясняется, как принять участие. 
 
 Примеры и шаблоны лицензируются в рамках лицензии MIT. См. в файле license.txt в корневом каталоге.

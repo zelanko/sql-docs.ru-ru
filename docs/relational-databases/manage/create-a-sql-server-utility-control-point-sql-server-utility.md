@@ -1,16 +1,16 @@
 ---
-title: "Создание точки управления служебной программой SQL Server (служебная программа SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Создание точки управления служебной программой SQL Server (служебная программа SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.create.ucp.validation.F1
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff6b20dc866c6d4e7b7ebf9bf21ccf6ae883a474
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 10239fb4654e478daf792084bdc9241ec1260001
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Предприятие может использовать множество служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может контролировать множество экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложений уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  На предприятии может работать несколько служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может управлять несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  
   
  Точка управления служебной программой выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
   

@@ -1,32 +1,32 @@
 ---
-title: "Получение результирующих наборов в потоки | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Получение результирующих наборов в потоки | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34f1cc4730f984427d207162694c68e3641be575
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 16d1518d2ddbe5accc6b55fdc0b778a6381e1a5f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Получение результирующих наборов в потоки
 Вместо получения результатов в традиционных **записей** объекта ADO вместо этого можно получить результаты запроса в поток. ADO **поток** объекта (или другие объекты, которые поддерживают COM **IStream** интерфейса, таких как ASP **запроса** и **ответ** объектов ) можно использовать для хранения этих результатов. Эта возможность применяется для получения результатов в формате XML. С SQL Server например, XML-результатов могут быть возвращены несколькими способами, например с помощью предложения FOR XML с помощью запроса SELECT языка SQL или с помощью запроса XPath.  
@@ -185,5 +185,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Замечания  
  На этом этапе XML передан в браузере клиента, и она готова для отображения. Для этого с помощью VBScript на стороне клиента для привязки XML-документ с экземпляром DOM и циклически каждого дочернего узла, для построения списка продуктов в формате HTML.

@@ -1,33 +1,34 @@
 ---
-title: "Изменение определения для политики исправности ресурсов (служебная программа SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Изменение определения для политики исправности ресурсов (служебная программа SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cec210a329c442240451cce7cec04dba9fafd9c0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e26a19d6a054353a903681b340c55c2e9e167f86
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Изменение определения политики исправности ресурсов (служебная программа SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как изменить определение политики исправности ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем изменять политику использования ресурсов в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо создать точку управления служебной программой (UCP). Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В этом разделе описано, как изменить определение политики исправности ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем изменять политику использования ресурсов в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо создать точку управления служебной программой (UCP). Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Для приложений уровня данных и управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно настроить политики использования ресурсов программы. Политика использования ресурсов может быть задана глобально для всех приложений уровня данных и управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо ее можно задать индивидуально для отдельных приложений уровня данных и управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Кроме того, можно реализовывать глобальные политики и задавать собственные определения политик для отдельных приложений уровня данных или управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

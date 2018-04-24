@@ -1,17 +1,17 @@
 ---
-title: "Выполнить метод (команда ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Выполнить метод (команда ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8eaf057d8ac52d1d1664bafd9304fe1f92ab0ae2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-command"></a>Выполнить метод (команда ADO)
 Выполняет запрос, инструкции SQL или хранимой процедуры, указанной в [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [объект команды](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -56,7 +56,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  Используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности путем минимизации внутренней обработки. Если **adExecuteStream** был указан параметр **adAsyncFetch** и **adAsynchFetchNonBlocking** игнорируются. Не используйте **CommandTypeEnum** значения **adCmdFile** или **adCmdTableDirect** с **Execute**. Эти значения можно использовать только как параметры с [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  С помощью **Execute** метод **команда** выполняется запрос, указанный в объект **CommandText** свойство или **CommandStream** свойство объекта.  
   
  Результаты возвращаются в **записей** (по умолчанию) или в виде потока двоичных данных. Чтобы получить двоичный поток, задайте **adExecuteStream** в *параметры*, затем указать поток, задав **Command.Properties («поток вывода»)**. ADO **поток** можно указать объект мог получать результаты, или другой объект потока, например объект ответа службы IIS могут быть указаны. Если поток не был указан перед вызовом **Execute** с **adExecuteStream**, возникает ошибка. Позиция в потоке при возврате из **Execute** зависит от поставщика.  

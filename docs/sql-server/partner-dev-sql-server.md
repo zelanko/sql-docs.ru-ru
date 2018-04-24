@@ -1,32 +1,33 @@
 ---
-title: "Партнеры по разработке SQL Server | Документация Майкрософт"
-description: "Списки сторонних партнеров, предлагающих решения по разработке для сервера."
+title: Партнеры по разработке SQL Server | Документация Майкрософт
+description: Списки сторонних партнеров, предлагающих решения по разработке для сервера.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-development-partners"></a>Партнеры по разработке SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В отрасли доступно множество передовых средств для разработки решений баз данных SQL Server.  В этой статье указаны партнеры корпорации Майкрософт, которые предлагают решения по разработке для Microsoft SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В отрасли доступно множество передовых средств для разработки решений баз данных SQL Server.  В этой статье указаны партнеры корпорации Майкрософт, которые предлагают решения по разработке для Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Наши партнеры по разработке
 | Партнер | Description | Ссылки |

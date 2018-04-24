@@ -1,32 +1,32 @@
 ---
-title: "Поставщик Microsoft OLE DB для Microsoft Jet | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Поставщик Microsoft OLE DB для Microsoft Jet | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet provider for OLE DB [ADO]
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 253de8c53055269efb6a9e15c9d9a5ca940606e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Поставщик Microsoft OLE DB для Microsoft Jet Обзор
 Поставщик OLE DB для Microsoft Jet позволяет ADO для доступа к базам данных Microsoft Jet.

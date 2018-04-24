@@ -1,31 +1,32 @@
 ---
-title: "Использование проводника служебной программы для управления служебной программой SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Использование проводника служебной программы для управления служебной программой SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c5714ee80d2c95fd89d2acf9e63f7784195e902
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Использование проводника служебных программ для управления служебной программой SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов с представлением в виде дерева в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов в служебной программе представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде дерева. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Создание пункта управления программой  
  Перед использованием программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать пункт управления программой. Дополнительные сведения см. в статье [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) или [Создание точки управления служебной программой SQL Server (служебная программа SQL Server Utility)](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  

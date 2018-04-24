@@ -1,34 +1,35 @@
 ---
-title: "Класс событий TM: Rollback Tran Starting | Документация Майкрософт"
-ms.custom: 
+title: 'Класс событий TM: Rollback Tran Starting | Документация Майкрософт'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8266e76eeb20ea7dbf3adf0fc3f1d18d68712a5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fbdaa2af379f346ffc6b678b712cdcca1e73c597
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>Класс событий TM: Rollback Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий "TM:Rollback Tran Starting" указывает на начало выполнения запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
+  Класс событий "TM:Rollback Tran Starting" указывает на начало выполнения запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Rollback Tran Starting  
   

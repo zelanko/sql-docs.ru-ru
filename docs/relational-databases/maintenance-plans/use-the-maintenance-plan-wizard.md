@@ -1,16 +1,16 @@
 ---
-title: "Использование мастера планов обслуживания | Документация Майкрософт"
+title: Использование мастера планов обслуживания | Документация Майкрософт
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ag.maintwiz.integrity.f1
@@ -37,19 +37,20 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e0aa3d178355e9b50ad381f3ef3517aabce8c78f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Использование мастера планов обслуживания
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью мастера планов обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Мастер планов обслуживания создает план обслуживания, который может регулярно выполняться агентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это позволяет выполнять различные задачи администрирования базы данных, включая резервное копирование, проверки целостности базы данных или обновление статистики базы данных через указанные интервалы времени.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью мастера планов обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Мастер планов обслуживания создает план обслуживания, который может регулярно выполняться агентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это позволяет выполнять различные задачи администрирования базы данных, включая резервное копирование, проверки целостности базы данных или обновление статистики базы данных через указанные интервалы времени.  
     
  
 ##  <a name="Restrictions"></a> Ограничения  

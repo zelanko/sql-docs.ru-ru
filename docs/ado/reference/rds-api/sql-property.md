@@ -1,30 +1,30 @@
 ---
-title: "Свойство SQL | Документы Microsoft"
+title: Свойство SQL | Документы Microsoft
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 967d1176417a0f8acbdbdfbcea7aad24b804fade
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-property"></a>Свойство SQL
 Указывает строку запроса, используемую для получения [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -43,13 +43,13 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *QueryString*  
+ *Строка запроса*  
  Объект **строка** значение, содержащее допустимый запрос данных SQL.  
   
  *DataControl*  
  Объектную переменную, которая представляет **RDS. DataControl** объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Как правило, это инструкции SQL (с помощью диалекта сервера базы данных), такие как `"Select * from NewTitles"`. Чтобы обеспечить соответствие и обновить точно записей, обновляемых запрос должен содержать поля, отличный от Длинное двоичное поле или вычисляемого поля.  
   
  **SQL** свойство является необязательным, если пользовательских серверных бизнес-объект получает данные для клиента.  

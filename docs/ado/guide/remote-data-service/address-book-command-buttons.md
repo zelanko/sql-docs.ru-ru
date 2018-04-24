@@ -1,31 +1,31 @@
 ---
-title: "Адрес книги кнопки | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Адрес книги кнопки | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 531e10f28850e6da6f9863cb5f06e253793b1dee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05c3a221f32b7c9921746a13cc3c20d8244a3ff8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-command-buttons"></a>Адрес книги кнопки
 Адресная книга приложение включает следующие кнопки:  
@@ -78,7 +78,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Когда `DC1.SubmitChanges` выполняет, пакеты сведения об обновлении удаленной службы данных и отправляет его на сервер по протоколу HTTP. Обновление отдельных; Если часть обновления завершается неудачно, никакие изменения выполняется и возвращается сообщение о состоянии. `DC1.Refresh`не является обязательным после **SubmitChanges** с удаленной службой данных, но это гарантирует свежими данными.  
+ Когда `DC1.SubmitChanges` выполняет, пакеты сведения об обновлении удаленной службы данных и отправляет его на сервер по протоколу HTTP. Обновление отдельных; Если часть обновления завершается неудачно, никакие изменения выполняется и возвращается сообщение о состоянии. `DC1.Refresh` не является обязательным после **SubmitChanges** с удаленной службой данных, но это гарантирует свежими данными.  
   
 ## <a name="cancel-changes-button"></a>Кнопка "Отмена"  
  Щелкнув **Отмена изменений** активирует процедуру VBScript Cancel_OnClick Sub, который выполняет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод.  

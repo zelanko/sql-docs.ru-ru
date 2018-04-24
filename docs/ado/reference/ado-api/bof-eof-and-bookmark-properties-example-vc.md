@@ -1,17 +1,17 @@
 ---
-title: "BOF EOF и пример свойства закладки (VC ++) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: BOF EOF и пример свойства закладки (VC ++) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483c759639f623ea1f37b74b1cc60ebd22cf1ca7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 89252c7e318bc80a08734bc18b0f304e99393d43
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF EOF и пример свойства закладки (VC ++)
 Первая функция в этом примере используется [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства для отображения сообщения, если пользователь пытается перейти на первую или последнюю запись [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство, чтобы позволить пользователю флаг записи в **записей** и вернуться к нему позднее.  

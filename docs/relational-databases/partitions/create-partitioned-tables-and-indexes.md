@@ -1,16 +1,16 @@
 ---
-title: "Создание секционированных таблиц и индексов | Документация Майкрософт"
-ms.custom: 
+title: Создание секционированных таблиц и индексов | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.createpartition.progress.f1
@@ -31,19 +31,21 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df57d6fa660d806b38deb6730dd2152099873f15
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0abc49c1884a0516bc9e0b46b0f4d879ccbacfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Создание секционированных таблиц и индексов
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Вы можете создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Можно создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
   
  Создание секционированной таблицы или индекса обычно включает четыре этапа:  
   
@@ -269,7 +271,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-create-a-partitioned-table"></a>Создание секционированной таблицы  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

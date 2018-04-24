@@ -1,33 +1,33 @@
 ---
-title: "Свойство EditMode | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство EditMode | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::EditMode
 helpviewer_keywords:
 - EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 759d8891929bf546d9dc81f66367c866b23c6e6c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d64f1ea25b8febe0ca9c474f76642cf1f74a9302
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="editmode-property"></a>Свойство EditMode
 Указывает состояние редактирования текущей записи.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  ADO поддерживает редактирования буфера, связанное с текущей записью. Это свойство указывает ли были внесены изменения в этот буфер или ли создана новая запись. Используйте **EditMode** свойства, чтобы определить состояние редактирования текущей записи. Можно проверить для ожидающих изменений, если был прерван процесс редактирования и определить, следует ли использовать [обновление](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод.  
   
  В *режим немедленного обновления* **EditMode** свойства сбрасывается до **как таковые** после успешного вызова **обновление** вызывается метод . При вызове [удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md) не удаляет успешно записи или записи в источнике данных (например, из-за нарушения ссылочной целостности), [записей](../../../ado/reference/ado-api/recordset-object-ado.md) остается в режиме редактирования (**EditMode** = **adEditInProgress**). Таким образом **CancelUpdate** должен вызываться перед перемещением текущей записи (например, с [переместить](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), или [закрыть](../../../ado/reference/ado-api/close-method-ado.md) ).  

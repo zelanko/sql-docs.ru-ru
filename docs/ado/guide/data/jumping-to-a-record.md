@@ -1,31 +1,31 @@
 ---
-title: "Переход к записи | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Переход к записи | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f458006db74ce8701f0ceb6a0b227771d941eea0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f8c106af02d632e6709bde2c9fe6033392ea44e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="jumping-to-a-record"></a>Переход к записи
 [Переместить](../../../ado/reference/ado-api/move-method-ado.md) метода можно перемещаться вперед или назад в **записей** указанное число записей, используя следующий синтаксис:  
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/09/2018
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Переместить** метод поддерживается на всех **записей** объектов.  
   
  Если *NumRecords* аргумент больше нуля, положение текущей записи перемещается вперед (ближе к концу **записей**). Если *NumRecords* меньше нуля, положение текущей записи выполняется перемещение назад (к началу **записей**).  

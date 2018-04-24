@@ -1,17 +1,17 @@
 ---
-title: "Выполнить метод (соединение ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Выполнить метод (соединение ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05d1df49596da99bc98fba9cef7999772ea78f40
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-connection"></a>Выполнить метод (соединение ADO)
 Выполняет указанный запрос, инструкции SQL, хранимая процедура или поставщика текста.  
@@ -45,7 +45,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Возвращает [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) ссылку на объект.  
   
 #### <a name="parameters"></a>Параметры  
- *CommandText*  
+ *commandText*  
  Объект **строка** значение, содержащее инструкцию SQL, хранимая процедура, URL-адрес или поставщика текста для выполнения. **При необходимости**, имена таблиц можно использовать только, если поставщик является поставщиком SQL виду. Для примера Если имя таблицы «Заказчики» используется, ADO автоматически вставляет стандартный синтаксис SQL Select для формирования и передачи «ВЫБЕРИТЕ * из заказчики» как [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкции для поставщика.  
   
  *RecordsAffected*  
@@ -60,7 +60,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Не используйте значения CommandTypeEnum adCmdFile или adCmdTableDirect с Execute. Эти значения можно использовать только как параметры с [метода Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery-метод](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  С помощью **Execute** метод [объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) объекта выполняет любой запрос, который передается методу в качестве аргумента CommandText для указанного подключения. Если аргумент CommandText указывает, возвращающей строки запроса, все результаты, приводит к возникновению ошибки выполнения хранятся в новый **записей** объекта. Если команда не является возвращать результаты (например, запрос SQL UPDATE) поставщик возвращает **ничего** , пока параметр **adExecuteNoRecords** указан; в противном случае выполняется возвращает Закрыто **записей**.  
   
  Возвращенный **записей** объект всегда является только для чтения, однонаправленный курсор. При необходимости **записей** объекта с более широкими функциональными возможностями, сначала создайте **записей** объекта с параметрами нужное свойство, а затем использовать **записей** объекта [ Open-метод (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод для выполнения запроса и возвращения требуемого типа курсора.  

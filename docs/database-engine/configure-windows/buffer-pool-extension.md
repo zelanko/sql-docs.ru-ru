@@ -1,30 +1,32 @@
 ---
-title: "Расширение буферного пула | Документы Майкрософт"
-ms.custom: 
+title: Расширение буферного пула | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4ffff5a902f7758e901301cc733b1260ef4d5dd6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Преимущества расширения буферного пула  
  Главное назначение базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — хранение и поиск данных, поэтому интенсивное использование операций дискового ввода-вывода — это основное свойство компонента Database Engine. Так как дисковые операции ввода-вывода могут потреблять много ресурсов и требовать относительно длительного времени для выполнения, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] особое внимание уделено рациональному использованию операций ввода-вывода. Буферный пул служит основным источником размещения памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Управление буфером — это ключевой компонент в достижении этой рациональности. Компонент управления буферами состоит из двух механизмов: диспетчера буферов для доступа к страницам баз данных и их обновления и буферного пула для сокращения операций файлового ввода-вывода базы данных.  

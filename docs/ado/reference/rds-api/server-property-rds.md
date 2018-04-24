@@ -1,32 +1,32 @@
 ---
-title: "Свойства сервера (RDS) | Документы Microsoft"
+title: Свойства сервера (RDS) | Документы Microsoft
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - RDS::IBindMgr21::Server
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ae8ddff340e42428db9fe852bbcd2b9d2bba4d34
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="server-property-rds"></a>Свойства сервера (RDS)
 Указывает протокол, имя и обмен данными службы Internet Information Services (IIS).  
@@ -122,7 +122,7 @@ DataControl.Server=""
  *DataControl*  
  Объектную переменную, которая представляет **RDS. DataControl** объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Сервер находится где **RDS. DataControl** обработки запроса (то есть запрос или обновление). По умолчанию, все запросы обрабатываются [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта, [MSDFMAP. Обработчик](../../../ado/guide/remote-data-service/datafactory-customization.md) компонента, и [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) файлу на указанном сервере. Следует помнить, что при изменении серверов для согласования параметров в старой и новой **MSDFMAP. INI** файлов. Проблемы совместимости может привести к запросы, которые завершаются успешно на одном сервере сбой на другом. Если свойство установлено в пустую строку «», эти объекты будут использоваться на локальном компьютере.  
   
 ## <a name="applies-to"></a>Объект применения  

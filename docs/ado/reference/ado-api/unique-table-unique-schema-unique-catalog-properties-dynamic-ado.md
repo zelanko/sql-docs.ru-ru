@@ -1,33 +1,33 @@
 ---
-title: "Элемент управления изменений в таблице базового набора записей (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Элемент управления изменений в таблице базового набора записей (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Unique Table property [ADO]
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f62e184e4a51d82fc0b0369444ce78a9b2619039
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3a0fa10cb6b747a00c130c01d3883728be0e1be4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Уникальной таблицы, уникальную схему уникальный каталога динамические свойства (ADO)
 Позволяет точно управления изменения определенной базовой таблицей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) , была создана с помощью операции СОЕДИНЕНИЯ на нескольких базовых таблицах.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, представляющее имя таблицы, схемы или каталога.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Требуемый базовой таблицы однозначно идентифицируется его каталога, схемы и имена таблиц. Когда **уникальной таблицы** свойство задано, значения **уникальную схему** или **уникальный каталог** свойства используются для поиска в базовой таблице. Он предназначен, но не является обязательным, одной или обеих **уникальную схему** и **уникальный каталог** задать свойства перед **уникальной таблицы** свойству.  
   
  Первичный ключ **уникальной таблицы** рассматривается как первичный ключ всей **записей**. Это ключ, используемый для любого метода, требующие первичный ключ.  

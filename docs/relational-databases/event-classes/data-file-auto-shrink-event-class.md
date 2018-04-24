@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Data File Auto Shrink | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Data File Auto Shrink | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data File Auto Shrink event class
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca97f272a4dc24c7e1f610ef33bbd1242cfa2242
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7698674a0f6973bbd7b16b7c7d4d45cbc1a2c6d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **Data File Auto Shrink** сообщает, что файл данных был сжат. Это событие не происходит при сжатии файла данных, вызванном выполнением инструкции ALTER DATABASE. Включайте класс событий **Data File Auto Shrink** в трассировки, отслеживающие изменение размера файла данных.  
+  Класс событий **Data File Auto Shrink** сообщает, что файл данных был сжат. Это событие не происходит при сжатии файла данных, вызванном выполнением инструкции ALTER DATABASE. Включайте класс событий **Data File Auto Shrink** в трассировки, отслеживающие изменение размера файла данных.  
   
  Вызываемая включением класса событий **Data File Auto Shrink** в трассировку дополнительная нагрузка незначительна, если сжатие файла данных не происходит часто.  
   

@@ -1,33 +1,35 @@
 ---
-title: "Запуск SQL Server в однопользовательском режиме | Документы Майкрософт"
-ms.custom: 
+title: Запуск SQL Server в однопользовательском режиме | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e809d7098ed244ddf14331c310de8ce92f77fb7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aa6389e65f5c92d3a5c07c13909db4bb65a754f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При определенных обстоятельствах экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно запустить в однопользовательском режиме (используется **параметр запуска -m**). Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Для обоих этих действий необходим запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  При определенных обстоятельствах экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно запустить в однопользовательском режиме (используется **параметр запуска -m**). Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Для обоих этих действий необходим запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.  
   
  После запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме каждый член локальной группы администраторов на компьютере сможет подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от имени члена предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/18/2018
  [Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

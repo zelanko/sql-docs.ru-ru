@@ -1,30 +1,32 @@
 ---
-title: "Установка отказоустойчивого кластера SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Установка отказоустойчивого кластера SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 045f941ca5f5de2703bbd315f862ecf2c1985902
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b01ae5041d57ef4f7937c0d1efbb61e8271d104a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Установка отказоустойчивого кластера SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы установить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо создать и настроить экземпляр отказоустойчивого кластера, запустив программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Чтобы установить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо создать и настроить экземпляр отказоустойчивого кластера, запустив программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installing-a-failover-cluster"></a>Установка отказоустойчивого кластера  
  Чтобы установить отказоустойчивый кластер, необходимо использовать учетную запись домена с разрешениями локального администратора с правом входа в качестве службы и действовать в составе операционной системы на всех узлах отказоустойчивого кластера. Чтобы установить отказоустойчивый кластер с помощью программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , нужно выполнить следующие шаги.  

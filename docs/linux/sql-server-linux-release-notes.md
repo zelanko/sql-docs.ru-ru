@@ -4,7 +4,7 @@ description: В этой статье содержатся заметки о в�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/04/2018
+ms.date: 04/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e768322cf8dc33e9d8995012f87088902c2e705
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -49,12 +49,13 @@ ms.lasthandoff: 04/05/2018
 
 | Выпуск | Версия | Дата выпуска |
 |-----|-----|-----|
-| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
-| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
+| [CU6](#CU6) | 14.0.3025.34 | 4 2018 |
+| [CU5](#CU5) | 14.0.3023.8 | 3 2018 |
+| [CU4](#CU4) | 14.0.3022.28 | 2 2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
-| [GA](#GA) | 14.0.1000.169 | 10-2017 |
+| [ГЛОБАЛЬНЫЙ АДМИНИСТРАТОР](#GA) | 14.0.1000.169 | 10-2017 |
 
 ## <a id="cuinstall"></a> Как установить накопительные пакеты обновления
 
@@ -66,6 +67,20 @@ ms.lasthandoff: 04/05/2018
 - [Установить пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU6"></a> CU6 (апрель 2018)
+
+Это 2017 г. SQL Server выпуска накопительного пакета обновления 6 (CU6). Версия ядра SQL Server для этого выпуска, 14.0.3025.34. Сведения о исправления и улучшения в этом выпуске см. в разделе [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вне сети или вручную можно загрузить пакеты RPM и Debian с информацией в таблице ниже:
+
+| Пакет | версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3025.34-3 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3025.34-3 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3025.34-3 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU5"></a> CU5 (март 2018)
 

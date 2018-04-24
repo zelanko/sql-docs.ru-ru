@@ -1,31 +1,31 @@
 ---
-title: "Метод Execute21 (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод Execute21 (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0eb7764c01ee7ae8cfd5cb27371dd9d5fa390b2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute21-method-rds"></a>Метод Execute21 (RDS)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2.1.  
@@ -41,13 +41,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ConnectionString*  
+ *connectionString*  
  Строка, используемая для подключения к поставщику OLE DB, где запрос будет отправлен для выполнения. Если обработчик указана с помощью *HandlerString*, его можно изменить или заменить строку подключения.  
   
  *HandlerString*  
  Строка определяет обработчик для использования с этого выполнения. Строка состоит из двух частей. Первая часть содержит имя обработчика для использования (ProgID). Во второй части строки содержит аргументы, передаваемые обработчику. Способ интерпретации строки аргументов — конкретных обработчик. Эти две части разделяются запятой в строке первого экземпляра (несмотря на то, что аргументы строка может содержать дополнительные запятые). Аргументы являются необязательными.  
   
- *QueryString*  
+ *Строка запроса*  
  Команда в язык команд, поддерживаемых поставщиком OLE DB, указанные в строке подключения. Для поставщиков, основанных на SQL, он может содержать [!INCLUDE[tsql](../../../includes/tsql_md.md)] команды инструкции, но для поставщиков, отличных от SQL (например, MSDataShape) это может быть [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкция запроса.  
   
  Кроме того Если используется обработчик (настоятельно рекомендуется использовать обработчик), обработчик можно изменить или заменить указанное здесь значение. Например, обработчик обычно заменяет *QueryString* со строкой запроса из его INI-файла. По умолчанию используется файл Msdfmap.ini.  
@@ -76,7 +76,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Значение типа variant, содержащий безопасный массив определений параметров. Если *GetInfo* параметр был указан в *lExecuteOptions*, этот параметр используется для возврата определения параметров, полученные от поставщика OLE DB. В противном случае этот параметр может быть пустым.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Аргумент MSDFMAP.dll интерпретирует как направление использования sample.ini для проверки строк соединения и запроса.  
   
 > [!NOTE]

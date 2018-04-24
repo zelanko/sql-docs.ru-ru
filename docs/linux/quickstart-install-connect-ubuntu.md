@@ -1,6 +1,6 @@
 ---
-title: "Приступая к работе с SQL Server 2017 г. на Ubuntu | Документы Microsoft"
-description: "Краткого руководства показано, как установить на Ubuntu 2017 г. SQL Server, а затем создать и запросов к базе данных с помощью sqlcmd."
+title: Приступая к работе с SQL Server 2017 г. на Ubuntu | Документы Microsoft
+description: Краткого руководства показано, как установить на Ubuntu 2017 г. SQL Server, а затем создать и запросов к базе данных с помощью sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fd3b175cd8440d17da0f341cd13f65bb044f45a0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство: Установка SQL Server и создать базу данных на Ubuntu
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2018
 
 Необходимо иметь компьютер Ubuntu 16.04 с **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Ubuntu на компьютере, перейдите к [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). Можно также создать Ubuntu виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Чтобы установить Ubuntu на компьютере, перейдите к [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Можно также создать Ubuntu виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > В настоящее время [подсистемы Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве целевого объекта установки.
@@ -96,29 +96,45 @@ ms.lasthandoff: 02/24/2018
 
 Чтобы создать базу данных, необходимо подключиться с помощью средства, можно выполнить инструкции Transact-SQL на сервере SQL Server. Следующие шаги установки средства командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
 
-1. Импортируйте ключи GPG общедоступный репозиторий:
+Выполните следующие действия для установки **mssql средства** на Ubuntu. 
+
+1. Импорт ключей GPG общедоступный репозиторий.
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Регистрация репозитория Microsoft Ubuntu:
+1. Регистрация репозитория Ubuntu корпорации Майкрософт.
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Обновление списка источников и выполните команду установки пакета разработчика unixODBC:
+1. Обновление списка источников и выполните команду установки пакета разработчика unixODBC.
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install -y mssql-tools unixodbc-dev
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-1. Для удобства добавьте `/opt/mssql-tools/bin/` для вашей **путь** переменной среды. Это позволяет запустить средства без указания полного пути. Выполните следующие команды для изменения **путь** для интерактивной и не-сеансы входа в систему и сеансов входа:
+   > [!Note] 
+   > Для обновления до последней версии **mssql средства** выполните следующие команды:
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
+
+   Чтобы сделать **sqlcmd и bcp** доступны в оболочке bash для сеансов входа изменения вашей **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   Чтобы сделать **sqlcmd и bcp** доступен в оболочке bash для интерактивной и не-сеансы входа в систему, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
+
+   ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```

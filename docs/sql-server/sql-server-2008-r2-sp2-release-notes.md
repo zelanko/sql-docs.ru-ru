@@ -1,33 +1,32 @@
 ---
-title: "Заметки о выпуске SQL Server 2008 R2 с пакетом обновления 2 (SP2) | Документация Майкрософт"
-ms.prod: sql-server
+title: Заметки о выпуске SQL Server 2008 R2 с пакетом обновления 2 (SP2) | Документация Майкрософт
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 08d28567a1984cae1fe5d563312caf656a31b438
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] В этих заметках о выпуске содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2). Эти заметки о выпуске относятся ко всем выпускам SQL Server 2008 R2 с пакетом обновления 2 (SP2) и доступны только в сети. Этот документ периодически обновляется.  
+# <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этих заметках о выпуске содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2). Эти заметки о выпуске относятся ко всем выпускам SQL Server 2008 R2 с пакетом обновления 2 (SP2) и доступны только в сети. Этот документ периодически обновляется.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0. Новые возможности пакета обновления 2 (SP2)  
 Добавлено динамическое административное представление **sys.dm_db_stats_properties**. С помощью этих динамических административных представлений можно определять статистические свойства указанной таблицы или индексированного представления из текущей базы данных. Например, это динамическое административное представление возвращает количество строк, которые были отобраны, и количество шагов в гистограмме.  
@@ -67,6 +66,6 @@ ms.lasthandoff: 11/20/2017
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0. Известные проблемы, исправленные в этом пакете обновления  
 Полный список ошибок и известных проблем, исправленных в этом пакете обновления, см. в следующей [статье базы знаний](http://support.microsoft.com/kb/2630455).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Как определить версию и выпуск SQL Server](http://support.microsoft.com/kb/321185)  
   

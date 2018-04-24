@@ -22,11 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f46b6e05f402d43688ae6c11b821e7cea58b0a9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: eeeb066b7d8daeef9c22ccfffe5514cab8502e64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-job-category"></a>Создание категории заданий
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +41,11 @@ ms.lasthandoff: 04/10/2018
   
 **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
     [Ограничения](#Restrictions)  
   
-    [Безопасность](#Security)  
+    [безопасность](#Security)  
   
 -   **Для создания категории заданий используется:**  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-create-a-job-category"></a>Создание категории заданий  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

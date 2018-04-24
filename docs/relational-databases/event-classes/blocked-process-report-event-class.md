@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Blocked Process Report | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Blocked Process Report | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 96b2dd7107ce1b7de95dd74df895d22e5dfab82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
+  Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
   
  Пороговое значение и частота создания отчетов в параметре **blocked process threshold** настраиваются с помощью хранимой процедуры **sp_configure** ; значение параметра может задаваться в секундах. По умолчанию отчеты о заблокированных процессах не создаются. Дополнительные сведения о настройке параметра **blocked process threshold** см. в разделе [Параметр конфигурации сервера "blocked process threshold"](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
@@ -55,6 +56,6 @@ ms.lasthandoff: 02/12/2018
   
 ## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

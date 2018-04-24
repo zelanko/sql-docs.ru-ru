@@ -1,31 +1,31 @@
 ---
-title: "Служба Microsoft курсора для OLE DB (компонент Service ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Служба Microsoft курсора для OLE DB (компонент Service ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 17bf332ec692bbcaaafaaf5a491d47b360064f56
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Службы Microsoft курсора OLE DB Обзор
 Служба курсора для OLE DB дополняет поддержки курсорных функций поставщиков данных. В результате пользователь понимает относительно однообразного функции из всех поставщиков данных.
@@ -74,7 +74,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[Изменить имя](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Указывает имя **записей**. Может быть на которые имеются ссылки в текущем или последующих, формирования команды данных.|
 |[Команда синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает пользовательские командной строки, который используется [Resync](../../../ado/reference/ado-api/resync-method.md) метод при [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) действует свойство.|
 |[Уникальный каталог](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя базы данных, содержащей таблицы, указанной в **уникальной таблицы** свойство.|
-|[Unique Schema](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя владельца таблицы, на которые ссылается **уникальной таблицы** свойство.|
+|[Уникальной схемы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя владельца таблицы, на которые ссылается **уникальной таблицы** свойство.|
 |[Уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя одной таблицы в **записей** создан из нескольких таблиц, которые можно изменить путем вставки, обновления или удаления.|
 |Обновление критериев (DBPROP_ADC_UPDATECRITERIA)|Указывает, какие поля в **ГДЕ** предложения используются для обработки конфликтов, происходящих во время обновления.|
 |[Обновить повторной синхронизации](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Указывает ли **Resync** метод неявно вызывается после [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод (и его поведение), когда **уникальной таблицы** действует свойство.|

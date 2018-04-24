@@ -1,16 +1,16 @@
 ---
-title: "Создание структуры плана | Документация Майкрософт"
-ms.custom: 
+title: Создание структуры плана | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.designer.newplanguide.f1
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9baac19391b76e916bd317f3836cde0d083432fa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: cbe01f5eb685eb435712ab600397bb3b0b6066bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-plan-guide"></a>Создание структуры плана
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Структуры планов влияют на оптимизацию запросов путем присоединения к ним указаний запросов или фиксированного плана запроса. В структуре плана указывается оператор, который нужно оптимизировать, и либо предложение OPTION, которое содержит указания запросов, которые будут использоваться, либо специальный план запроса, который используется для оптимизации запроса. Когда запрос выполняется, оптимизатор запросов сопоставляет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана и либо присоединяет условие OPTION к запросу в процессе выполнения, либо использует указанный план запроса.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Структура плана влияет на оптимизацию запросов путем присоединения указаний запросов или фиксированного плана запросов к ним. В структуре плана указывается оператор, который нужно оптимизировать, и либо предложение OPTION, которое содержит указания запросов, которые будут использоваться, либо специальный план запроса, который используется для оптимизации запроса. Когда запрос выполняется, оптимизатор запросов сопоставляет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана и либо присоединяет условие OPTION к запросу в процессе выполнения, либо использует указанный план запроса.  
 
 Структура плана применяет к запросу фиксированный план запроса и/или указания запросов.
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 01/18/2018
   
 ##  <a name="TsqlProcedure"></a> Создание структуры плана с использованием T-SQL  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

@@ -1,34 +1,27 @@
 ---
-title: Состояние работоспособности монитора устройства (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Монитор работоспособности устройства - система платформы аналитики
+description: Как отслеживать состояние устройства система платформы аналитики с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>Монитор состояния работоспособности устройства
-В этом разделе объясняется, как осуществлять мониторинг состояния SQL Server PDW устройства с помощью консоли администрирования, или путем непосредственного запроса SQL Server PDW динамические административные представления.  
+В этой статье объясняется, как осуществлять мониторинг состояния устройства система платформы аналитики с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Чтобы отслеживать состояние устройства  
 Системный администратор может использовать консоли администрирования или SQL Server PDW динамические административные представления (DMV), для получения полную иерархию узлов, компоненты и программного обеспечения. Следующая диаграмма представляет общее понимание компонентов, которые отслеживает SQL Server PDW.  
   
-![Monitoring overview](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Обзор монитора](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>Мониторинг состояния компонента с помощью консоли администрирования  
 Чтобы получить состояние компонента с помощью консоли администрирования.  
