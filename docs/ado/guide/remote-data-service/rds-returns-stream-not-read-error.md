@@ -1,30 +1,30 @@
 ---
-title: "RDS возвращает &quot;поток чтения не&quot; ошибка | Документы Microsoft"
-ms.prod: sql-non-specified
+title: RDS возвращает &quot;поток чтения не&quot; ошибка | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a14606f5ac503494159a70129e13b53b51758e72
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d197487ed4d7e46d8e89b968c8fff4bcd9b80784
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS возвращает &quot;поток чтения не&quot; ошибки
 «Объект потока не удалось прочитать, так как он пуст или текущее положение находится в конце потока. Для потоков с пустым задайте текущую позицию в свойства Position. Чтобы определить, является ли пустой поток, проверьте свойство размера.»  

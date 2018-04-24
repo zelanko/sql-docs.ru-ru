@@ -1,28 +1,22 @@
 ---
-title: Резервное копирование и загрузка оборудованию для APS PDW
-author: barbkess
-ms.author: barbkess
+title: Резервное копирование и загрузка оборудование — параллельное хранилище данных
+description: Для развертывания хранилища решения на Analytics Platform System (APS) с помощью параллельного хранилища данных (PDW) конца в конец данных, необходимо создать план резервного копирования в хранилище данных и загрузку данных. Используйте для получения и настройки резервного копирования и загрузку серверов, отвечающие требованиям организации.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Для развертывания хранилища решения на Analytics Platform System (APS) с SQL Server Parallel данных хранилища (PDW) начала до конца данных, необходимо создать план резервного копирования в хранилище данных и загрузку данных.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: 9
-ms.openlocfilehash: 8979b0d7b14f3e6b3de2834fdc800c5281d057ad
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4d7f7b6b4edea9dacab7287a7936b7fd87fd7973
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-and-loading-hardware-overview"></a>Резервное копирование и загрузка оборудованию
-Для развертывания хранилища решения на Analytics Platform System (APS) с SQL Server Parallel данных хранилища (PDW) начала до конца данных, необходимо создать план резервного копирования в хранилище данных и загрузку данных. Используйте для получения и настройки резервного копирования и загрузку серверов, отвечающие требованиям организации.  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Резервное копирование и загрузка оборудованию - Parallel Data Warehouse
+Для развертывания хранилища решения на Analytics Platform System (APS) с помощью параллельного хранилища данных (PDW) конца в конец данных, необходимо создать план резервного копирования в хранилище данных и загрузку данных. Используйте для получения и настройки резервного копирования и загрузку серверов, отвечающие требованиям организации.  
   
 ## <a name="acquire-and-configure-backup-servers"></a>Приобретать и настраивать резервных серверов  
 ![Процесс резервного копирования](media/backup-process.png "процесс резервного копирования")  

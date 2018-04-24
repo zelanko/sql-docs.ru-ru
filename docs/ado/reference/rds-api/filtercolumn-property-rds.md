@@ -1,31 +1,31 @@
 ---
-title: "Свойство FilterColumn (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство FilterColumn (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62e04ee49313e60dd7f474ed38e179b0ca084ddf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 12f723990d0901f6c2f7bcc61655200d83ef67e4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filtercolumn-property-rds"></a>Свойство FilterColumn (RDS)
 Указывает столбец, в котором для оценки критериев фильтра.  
@@ -47,7 +47,7 @@ DataControl.FilterColumn = String
  *Строковые значения*  
  Объект **строка** значение, указывающее столбец, в котором для оценки критериев фильтра. Указанные в критерии фильтра [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md) свойство.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и **FilterColumn**свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критериев поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. [Сброс](../../../ado/reference/rds-api/reset-method-rds.md) метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
 ## <a name="applies-to"></a>Объект применения  

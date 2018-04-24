@@ -1,17 +1,17 @@
 ---
-title: "MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - MoveLast method [RDS]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e1896722849690331e88a4b426a6491bb19ee8c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9a8a6e449e9d3765c0b1bb5df289c2eb7eb6a5bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS)
 Переходит к первой, последней, следующей или предыдущей записи в указанном [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -47,7 +47,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Можно использовать **переместить** методы с **RDS. DataControl** объектов для перемещения по записям данных в элементах управления с привязкой к данным на веб-странице. Предположим, например, можно отобразить **записей** в путем привязки к сетке **RDS. DataControl** объекта. Затем можно включить First, Last, Далее и назад кнопок, которые пользователь может щелкнуть для перемещения к первой, последней, далее, или предыдущей записи показанные **записей**. Это делается путем вызова **MoveFirst**, **MoveLast**, **MoveNext**, и **MovePrevious** методы **RDS. DataControl** объекта с помощью процедур onClick кнопки First, Last, Далее и назад, соответственно. [Адресная книга примере](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) показано, как это сделать.  
   
 ## <a name="applies-to"></a>Объект применения  

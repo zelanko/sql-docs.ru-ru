@@ -1,35 +1,35 @@
 ---
-title: "Восстановление базы данных из моментального снимка | Документация Майкрософт"
-ms.custom: 
+title: Восстановление базы данных из моментального снимка | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 73937db1d92e704085af59291d04bd557ccdc3d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-При повреждении данных в базе данных в сети в некоторых случаях вместо восстановления базы данных из резервной копии будет уместно восстановить базу данных из моментального снимка базы данных, соответствующего времени, предшествующему повреждению. Например, с помощью возврата базы данных можно устранить такую серьезную недавнюю ошибку пользователя, как удаление таблицы. Однако все изменения данных, внесенные после создания моментального снимка, будут утеряны.  
+  При повреждении данных в базе данных в сети в некоторых случаях вместо восстановления базы данных из резервной копии будет уместно восстановить базу данных из моментального снимка базы данных, соответствующего времени, предшествующему повреждению. Например, с помощью возврата базы данных можно устранить такую серьезную недавнюю ошибку пользователя, как удаление таблицы. Однако все изменения данных, внесенные после создания моментального снимка, будут утеряны.  
   
 -   **Перед началом работы**  
   

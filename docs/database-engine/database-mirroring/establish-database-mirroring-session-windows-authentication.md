@@ -2,7 +2,7 @@
 title: Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e4fc8470f88e41444f4d30578c32c3f5c2c32ad
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0c8403912f2d64cfdaa9f911bc765789ea1e5ecc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/18/2018
     > [!IMPORTANT]  
     >  При создании конечной точки мастер настройки безопасности зеркального отображения баз данных всегда использует проверку подлинности Windows. Прежде чем использовать мастер совместно с проверкой подлинности на основе сертификатов, конечные точки на каждом экземпляре сервера должны быть настроены на их использование. Кроме этого, все поля диалогового окна **Учетные записи служб** мастера должны остаться пустыми. Дополнительные сведения о создании конечных точек, настроенных на использование сертификатов, см. в разделе [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
-6.  При необходимости можно изменить режим работы. Доступность определенных режимов работы зависит от того, был ли указан TCP-адрес для свидетеля. Существуют следующие параметры выбора.  
+6.  При необходимости можно изменить режим работы. Доступность определенных режимов работы зависит от того, был ли указан TCP-адрес для свидетеля. Существуют следующие варианты выбора.  
   
     |Параметр|Следящий сервер|Объяснение|  
     |------------|--------------|-----------------|  

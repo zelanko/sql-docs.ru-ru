@@ -1,34 +1,36 @@
 ---
-title: "Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9c0a87d4229aa94cf30ddc61394656377456eea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13c6e85b191619c61c4a38ffabf4db6f3310af39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] И [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], и экземпляры отказоустойчивого кластера (FCI) в режиме AlwaysOn используют платформу отказоустойчивых кластеров Windows Server (WSFC).  В WSFC для мониторинга общей исправности кластера и обеспечения максимальной отказоустойчивости на уровне узлов используется подход, основанный на кворуме. Для проектирования, эксплуатации и устранения неполадок решений высокого уровня доступности режима AlwaysOn и решений аварийного восстановления требуется отличное знание режимов кворума WSFC и конфигурации голосования узлов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  И [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , и экземпляры отказоустойчивого кластера (FCI) в режиме AlwaysOn используют платформу отказоустойчивых кластеров Windows Server (WSFC).  В WSFC для мониторинга общей исправности кластера и обеспечения максимальной отказоустойчивости на уровне узлов используется подход, основанный на кворуме. Для проектирования, эксплуатации и устранения неполадок решений высокого уровня доступности режима AlwaysOn и решений аварийного восстановления требуется отличное знание режимов кворума WSFC и конфигурации голосования узлов.  
   
  **В этом разделе:**  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Настройка параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Настройка параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   

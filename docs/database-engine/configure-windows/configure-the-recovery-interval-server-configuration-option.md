@@ -1,16 +1,16 @@
 ---
-title: "Настройка параметра конфигурации сервера recovery interval | Документы Майкрософт"
-ms.custom: 
+title: Настройка параметра конфигурации сервера recovery interval | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring recovery interval [SQL Server]
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - maximum number of minutes per database recovery
 - recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b0a1dbf1feb63abf2aa8128ecd3c9eb9e843ee0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 02f5d23de260516e09cdca66db2ede49d35f5b10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Настройка параметра конфигурации сервера recovery interval
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ GO
  [Изменение целевого времени восстановления базы данных (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Параметр конфигурации сервера "show advanced options"](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   

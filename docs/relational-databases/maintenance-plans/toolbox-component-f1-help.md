@@ -1,35 +1,36 @@
 ---
-title: "Справка F1 для компонента \"Область элементов\" | Документация Майкрософт"
-ms.custom: 
+title: Справка F1 для компонента "Область элементов" | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3b4a0a7f0aa62e57968fac4d2ca94d50c8ac5218
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В окне **Панель элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В окне**Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
   
  Значки окна**Область элементов** можно перетаскивать, копировать и вставлять в редакторы кода или размещать в областях конструирования в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

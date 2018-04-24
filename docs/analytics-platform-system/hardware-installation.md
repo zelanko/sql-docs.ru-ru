@@ -1,29 +1,22 @@
 ---
-title: Установка оборудования (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Установка оборудования - система платформы аналитики | Документы Microsoft
+description: В этой статье описывается перемещение, распакуйте и установите оборудование для вашего устройства SQL Server PDW. В этой статье носит исключительно информационный характер и помогут вам понять процесс. Вашим устройством необходимо распаковать, установить и проверить перед переворачиваются вам. Требуется участие пользователя клиента для элементов, таких как данные центру доступ, электропитания и Ethernet-подключения.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
-caps.latest.revision: 17
-ms.openlocfilehash: 24236e525efbc96c7e263a293f2a27582d700929
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-installation"></a>Установка оборудования
-В этом разделе описывается перемещение, распакуйте и установите оборудование для вашего устройства SQL Server PDW. В этом разделе носит исключительно информационный характер и помогут вам понять процесс. Вашим устройством необходимо распаковать, установить и проверить перед переворачиваются вам. Требуется участие пользователя клиента для элементов, таких как данные центру доступ, электропитания и Ethernet-подключения.  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Монтаж оборудования устройства система платформы аналитики
+В этой статье описывается перемещение, распакуйте и установите оборудование для вашего устройства SQL Server PDW. В этой статье носит исключительно информационный характер и помогут вам понять процесс. Вашим устройством необходимо распаковать, установить и проверить перед переворачиваются вам. Требуется участие пользователя клиента для элементов, таких как данные центру доступ, электропитания и Ethernet-подключения.  
   
 ## <a name="BeforeMoving"></a>Прежде чем перемещать все компоненты из приемки загрузки  
 Выполните следующие задачи, прежде чем перемещать, распаковки или все компоненты устройства в стойку.  

@@ -1,38 +1,38 @@
 ---
-title: "Измерение объекта (ADO MD) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Измерение объекта (ADO MD) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Dimension
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e4818afd2bbf7392385c3516be1d762266cd2b60
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dimension-object-ado-md"></a>Объект измерения (ADO MD)
 Представляет одно из измерений многомерного куба, содержащего иерархии на один или несколько элементов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  С коллекциями и свойствами **измерения** объекта, можно сделать следующее:  
   
 -   Определить **измерения** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  

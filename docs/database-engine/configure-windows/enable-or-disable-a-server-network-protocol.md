@@ -1,16 +1,16 @@
 ---
-title: "Включение или отключение сетевого протокола сервера | Документы Майкрософт"
-ms.custom: 
+title: Включение или отключение сетевого протокола сервера | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
@@ -23,26 +23,26 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8245d396dac75dc09fdc3ae6bab41d582ef1c790
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  
+  Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  
   
 > [!IMPORTANT]  
 >  Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] для группы BUILTIN\Users добавляется имя входа. Благодаря этому все прошедшие проверку подлинности пользователи компьютера получают доступ к экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] как члены роли public. Имя входа группы BUILTIN\Users можно удалить, чтобы ограничить доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] только пользователям компьютера, у которых есть отдельные имена входа, или членам других групп Windows с именами входа.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] для версий с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по [!INCLUDE[sssql14](../../includes/sssql14-md.md)] по умолчанию поддерживают только TLS 1.0 и SSL 3.0. Если применить другой протокол (например, TLS 1.1 или TLS 1.2), изменив протокол на уровне операционной системы SChannel, то подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может завершиться ошибкой, если не установлено соответствующее обновление для поддержки TLS 1.1 и 1.2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое указано <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">здесь</a>. Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)] все выпуски SQL Server поддерживают TLS 1.2 без установки дополнительных обновлений.
+>  Поставщики данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] для версий с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по [!INCLUDE[sssql14](../../includes/sssql14-md.md)] по умолчанию поддерживают только TLS 1.0 и SSL 3.0. Если применить другой протокол (например, TLS 1.1 или TLS 1.2), изменив протокол на уровне операционной системы SChannel, то подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может завершиться ошибкой, если не установлено соответствующее обновление для поддержки TLS 1.1 и 1.2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое указано <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">здесь</a>. Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)] все выпуски SQL Server поддерживают TLS 1.2 без установки дополнительных обновлений.
   
  **В этом разделе**  
   

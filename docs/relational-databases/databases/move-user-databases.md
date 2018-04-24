@@ -2,7 +2,7 @@
 title: Перемещение пользовательских баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: databases
@@ -27,19 +27,20 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb72a2d6947406c8fc14d40571ada79151668422
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ad1c38643e1717e26d36d83cc98183dd45f1742
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-user-databases"></a>Перемещение пользовательских баз данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет переносить в новое место файлы данных, журнала и полнотекстового каталога пользовательской базы данных. Новое место указывается с помощью предложения FILENAME инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Этот метод подходит для перемещения файлов базы данных в пределах одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для переноса базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другой сервер применяются операции [резервного копирования и восстановления](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) или [отключения и подключения](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]позволяет переносить в новое место файлы данных, журнала и полнотекстового каталога пользовательской базы данных; новое место указывается при помощи предложения FILENAME инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Этот метод подходит для перемещения файлов базы данных в пределах одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для переноса базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другой сервер применяются операции [резервного копирования и восстановления](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) или [отключения и подключения](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
 ## <a name="considerations"></a>Замечания  
  Чтобы обеспечить целостность работы пользователей и приложений при перемещении базы данных на другой экземпляр сервера, необходимо повторно создать некоторые или все метаданные базы данных. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  

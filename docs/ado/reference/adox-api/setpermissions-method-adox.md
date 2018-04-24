@@ -1,17 +1,17 @@
 ---
-title: "Метод SetPermissions (ADOX) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод SetPermissions (ADOX) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - User25::SetPermissions
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7987ce08f242421d2c84766c575e4867e7e1b8c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3bcc44011a880f05489be5cc1fcf5e398629d01d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
 Задает разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) на объект.  
@@ -55,13 +55,13 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Права*  
  Объект **длинные** значение, которое может быть битовой маской из одного или нескольких [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) констант, которые указывает права на установку.  
   
- *Inherit*  
+ *Наследование*  
  Необязательно. Объект **длинные** значение может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, которые указывает, каким образом объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
   
  *ObjectTypeId*  
  Необязательно. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* равно **adPermObjProviderSpecific**; в противном случае он не используется.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если поставщик не поддерживает назначении прав доступа для групп пользователей, произойдет ошибка.  
   
 > [!NOTE]

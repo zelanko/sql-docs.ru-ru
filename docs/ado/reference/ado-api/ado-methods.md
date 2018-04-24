@@ -1,31 +1,31 @@
 ---
-title: "Методы ADO | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Методы ADO | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a2b180e8886931819dafe089e9012dcaa578694
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-methods"></a>Методы ADO
 |||  
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 |[Delete (коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Удаляет объект из **параметры** коллекции.|  
 |[Удаление (Коллекция полей ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Удаляет объект из **поля** коллекции.|  
 |[Delete (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Удаление текущей записи или группы записей.|  
-|[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Удаление файла или каталога и всех его подкаталогах.|  
+|[Макрокоманду УдалитьЗапись](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Удаление файла или каталога и всех его подкаталогах.|  
 |[Воспользуйтесь командой (ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Выполняет запрос, инструкции SQL или хранимой процедуры, указанной в **CommandText** свойство.|  
 |[Выполнение (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Выполняет указанный запрос, инструкции SQL, хранимая процедура или поставщика текста.|  
 |[Найти](../../../ado/reference/ado-api/find-method-ado.md)|Поиск **записей** для строки, который удовлетворяет указанным критериям.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/09/2018
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Возвращает **записей** , строки которого представляют файлы и подкаталоги в каталоге, представленный этим **записи**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Возвращает все или часть, содержимое большие текстовые или двоичные данные **поле** объекта.|  
 |[Метод GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Извлекает объект базового источника данных OLE DB из поставщик Data Shape.|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Возвращает множество записей, имеющих **записей** объект в массив.|  
+|[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Возвращает множество записей, имеющих **записей** объект в массив.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Возвращает **записей** как строка.|  
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Загружает содержимое существующего файла в **поток**.|  
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Перемещает позицию в текущей записи **записей** объекта.|  
@@ -72,19 +72,19 @@ ms.lasthandoff: 02/09/2018
 |[Чтение](../../../ado/reference/ado-api/read-method.md)|Считывает указанное число байтов из **поток** объекта.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Считывает указанное количество символов из текстового **поток** объекта.|  
 |[Обновить](../../../ado/reference/ado-api/refresh-method-ado.md)|Обновляет объекты в коллекции объектов, доступных из и относящиеся к поставщику.|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Обновляет данные в **записей** объекта путем повторного выполнения запроса, на котором основан объект.|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Обновляет данные в текущем **записей** объекта, или **поля** коллекцию **записи** объекта из базы данных.|  
+|[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Обновляет данные в **записей** объекта путем повторного выполнения запроса, на котором основан объект.|  
+|[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Обновляет данные в текущем **записей** объекта, или **поля** коллекцию **записи** объекта из базы данных.|  
 |[Сохранить](../../../ado/reference/ado-api/save-method.md)|Сохраняет **записей** в файле или **поток** объекта.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Сохраняет двоичное содержимое **поток** в файл.|  
 |[Поиск](../../../ado/reference/ado-api/seek-method.md)|Выполняет поиск индекса **записей** быстро найти строку, соответствующем заданным значениям и изменяет текущую позицию строки для этой строки.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Задает позицию конца потока.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Пропускает один всей строки, при чтении текстового потока.|  
-|[Stat](../../../ado/reference/ado-api/stat-method.md)|Возвращает статистические данные об открытом потоке.|  
+|[stat](../../../ado/reference/ado-api/stat-method.md)|Возвращает статистические данные об открытом потоке.|  
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Определяет, является ли заданное **записей** объект поддерживает функциональные возможности определенного типа.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Сохраняет любые изменения, внесенные в текущей строке **записей** объекта, или **поля** коллекцию **записи** объекта.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Записывает все ожидающие пакетных обновлений на диск.|  
-|[Write](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в **поток** объекта.|  
-|[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку в **поток** объекта.|  
+|[Записи](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в **поток** объекта.|  
+|[Инструкция WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку в **поток** объекта.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

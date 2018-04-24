@@ -1,31 +1,33 @@
 ---
-title: "Изменение схемы секционирования | Документация Майкрософт"
-ms.custom: 
+title: Изменение схемы секционирования | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49eb5705e77b8ebe69af42addd95d9d59abdb082
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5771e6c8c760782139be66a0128eac2804325cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-a-partition-scheme"></a>Изменение схемы секционирования
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Можно изменить схему секционирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Можно изменить схему секционирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  
   
  **В этом разделе**  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 ####  <a name="Permissions"></a> Permissions  
  Для выполнения инструкции ALTER PARTITION SCHEME необходимы следующие разрешения.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
   
 -   Разрешение CONTROL или ALTER на базу данных, в которой была создана схема секционирования.  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-modify-a-partition-scheme"></a>Изменение схемы секционирования  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

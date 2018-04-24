@@ -1,31 +1,31 @@
 ---
-title: "Метод CreateObject (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод CreateObject (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 355c56509e8c06b0d687e5d6164cf0e7c4abe93c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (RDS)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервер пакеты и выполняет маршалинг данные заглушки стороне сервера для взаимодействия с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в работе компонента без прокси-серверы используются, и предоставляется только указатель на объект.  
@@ -47,16 +47,16 @@ ms.lasthandoff: 02/09/2018
  *Объект*  
  Объектную переменную, результатом которого является объект, это тип, заданный в *ProgID*.  
   
- *DataSpace*  
+ *Пространство данных*  
  Объектную переменную, которая представляет [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объект, используемый для создания экземпляра объекта.  
   
- *ProgID*  
+ *Идентификатор progID*  
  Объект **строка** значение, содержащее программный идентификатор, указывающий серверные бизнес-объект, реализующий приложения бизнес-правила.  
   
  *awebsrvr* или *computername*  
  Объект **строка** значение, представляющее URL-адрес, идентифицирующий Internet Information Services (IIS) веб-сервере, где создается экземпляр бизнес-объекта сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  *Протокол HTTP* — стандартные веб-протокол; *HTTPS* — безопасное веб-протокол. Используйте *протокол DCOM* при выполнении локальной сети без HTTP. *В процессе* протоколом является локальной библиотеки динамической компоновки (DLL); он не использует сеть.  
   
 ## <a name="applies-to"></a>Объект применения  

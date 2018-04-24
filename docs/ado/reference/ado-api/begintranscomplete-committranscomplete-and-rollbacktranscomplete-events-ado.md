@@ -1,17 +1,17 @@
 ---
-title: "События BeginTrans CommitTrans, RollbackTrans (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: События BeginTrans CommitTrans, RollbackTrans (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CommitTransComplete
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bc471f7a401d42e2ae11462d526d0686da0d49
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05a5809043ca348d78c1d73cb362c8b2f99efc7c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete и RollbackTransComplete события (ADO)
 Эти события будет вызван после указанной операции в [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта завершает выполнение.  
@@ -69,7 +69,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  **Подключения** объекта, для которого возникает данное событие.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В Visual C++ несколькими **подключений** могут совместно использовать одинаковые метода обработчика событий. Метод использует возвращенное **подключения** объектом, чтобы определить, какой из объектов, вызвавшее событие.  
   
  Если [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойству **adXactCommitRetaining** или **adXactAbortRetaining**, начинает новую транзакцию после фиксации или отката транзакции. Используйте **BeginTransComplete** пропустить все события, но первое событие начала транзакции.  

@@ -2,7 +2,7 @@
 title: Рекомендации по защите автономных баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: databases
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: b2a6fbef3631d3eae7cc19bfe13757e63b792af7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Рекомендации по обеспечению безопасности автономных баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Отказ в обслуживании через параметр AUTO_CLOSE  
  Не настраивайте автономную базу данных на автоматическое закрытие. Если закрыть базу данных, ее открытие для проверки подлинности пользователя будет связано с потреблением дополнительных ресурсов, что может стать объектом атаки типа «отказ в обслуживании».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
  [Миграция на частично автономную базу данных](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

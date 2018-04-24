@@ -1,16 +1,16 @@
 ---
-title: "Диагностическое соединение для администраторов баз данных | Документы Майкрософт"
-ms.custom: 
+title: Диагностическое соединение для администраторов баз данных | Документы Майкрософт
+ms.custom: ''
 ms.date: 10/16/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 
+caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7fc87fdb7516679ad50c237f81d9aec2c4e06515
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/23/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] делает все возможное для успешного установления выделенного административного соединения, но в чрезвычайных ситуациях это может не дать результата.  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>Соединение с помощью выделенного административного соединения  
  По умолчанию, соединение разрешено только из клиента, запущенного на сервере. Сетевые подключения не разрешаются, пока они не настроены с помощью хранимой процедуры sp_configure с параметром [remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  

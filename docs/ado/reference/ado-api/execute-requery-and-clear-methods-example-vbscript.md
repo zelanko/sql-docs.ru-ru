@@ -1,17 +1,17 @@
 ---
-title: "Выполнение и Requery снимите примере методы (VBScript) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Выполнение и Requery снимите примере методы (VBScript) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6e2075c65913de0bcfd10944de46a74fc60feb7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b5f7a213825b56e212d97ce9b8ab2277da54ce5e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Выполнение и Requery снимите примере методы (VBScript)
 В этом примере демонстрируется **Execute** при запуске с оба метода [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  

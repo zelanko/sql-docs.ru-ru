@@ -1,31 +1,31 @@
 ---
-title: "Объекты ADO MD | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Объекты ADO MD | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9967930e6ee7ff1310a1ea331fb972f93d902f88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a4638fb38c73766b02b3c6ef1768093c6ed63ca8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-md-objects"></a>Объекты ADO MD
 |||  
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/09/2018
 |[Оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Представляет позиционные или оси фильтра набора ячеек, содержащий выбранные элементы из одного или нескольких измерений.|  
 |[Каталог](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Сведения многомерной схемой (т. е кубы и базового измерения, иерархии, уровни и элементы) поставщикам многомерных данных (MDP).|  
 |[Ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Представляет данные на пересечении координаты по осям, содержащихся в наборе ячеек.|  
-|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Представляет результаты многомерного запроса. Представляет коллекцию ячеек, выбранных из кубов или других наборов ячеек.|  
+|[Набор ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Представляет результаты многомерного запроса. Представляет коллекцию ячеек, выбранных из кубов или других наборов ячеек.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Представляет куб из многомерной схемой, содержащий набор связанных измерений.|  
 |[Измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Представляет одно из измерений многомерного куба, содержащего иерархии на один или несколько элементов.|  
 |[Иерархия](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Представляет один из способов того, в котором элементы измерения могут статистическую обработку или «накоплены.» Измерение может быть статистически вычислена вдоль одной или нескольких иерархий.|  

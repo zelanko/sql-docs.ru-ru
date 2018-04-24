@@ -1,15 +1,16 @@
 ---
-title: "Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - role switching [SQL Server]
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d7fd6b11ab5fd2ab494e34aa7421b9b1afafb17c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В контексте сеанса зеркального отображения базы данных роли основного и зеркального серверов обычно взаимозаменяемы посредством так называемого *переключения ролей*. Во время переключения ролей зеркальный сервер играет роль *партнера по обеспечению отработки отказа* для основного сервера, принимая роль основного сервера и переводя свою копию базы данных в оперативное состояние в качестве новой основной базы данных. Когда бывший основной сервер входит в строй, он принимает роль зеркального, и его база данных становится новой зеркальной базой данных. Возможно многократное переключение ролей либо в ответ на многочисленные ошибки, либо в целях администрирования.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В контексте сеанса зеркального отображения базы данных роли основного и зеркального серверов обычно взаимозаменяемы посредством так называемого *переключения ролей*. Во время переключения ролей зеркальный сервер играет роль *партнера по обеспечению отработки отказа* для основного сервера, принимая роль основного сервера и переводя свою копию базы данных в оперативное состояние в качестве новой основной базы данных. Когда бывший основной сервер входит в строй, он принимает роль зеркального, и его база данных становится новой зеркальной базой данных. Возможно многократное переключение ролей либо в ответ на многочисленные ошибки, либо в целях администрирования.  
   
 > [!NOTE]  
 >  Подразумевается, что рабочие режимы зеркального отображения базы данных знакомы. Дополнительные сведения см. в статье [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  

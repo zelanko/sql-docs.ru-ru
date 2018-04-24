@@ -1,34 +1,36 @@
 ---
-title: "Настройка параметров свойства FailureConditionLevel | Документация Майкрософт"
-ms.custom: 
+title: Настройка параметров свойства FailureConditionLevel | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82cac1585f51fedbdf008be6b8ed1e0d3ae1c9f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cc2b9c92f30af507ec9750e74a8ee3a3af331af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Настройка параметров свойства FailureConditionLevel
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Свойство FailureConditionLevel служит для задания для экземпляра отказоустойчивого кластера FCI в группе AlwaysOn условий отработки отказа или перезапуска. Изменения значения этого свойства вступают в силу немедленно, без перезапуска службы отказоустойчивого кластера Windows Server или ресурса отказоустойчивого кластера SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Свойство FailureConditionLevel служит для задания для экземпляра отказоустойчивого кластера FCI в группе AlwaysOn условий отработки отказа или перезапуска. Изменения значения этого свойства вступают в силу немедленно, без перезапуска службы отказоустойчивого кластера Windows Server или ресурса отказоустойчивого кластера SQL Server.  
   
 -   **Перед началом работы**  [параметры свойства FailureConditionLevel](#Restrictions), [безопасность](#Security)  
   
--   **Настройка параметров свойства FailureConditionLevel с помощью** [PowerShell](#PowerShellProcedure), [диспетчера отказоустойчивости кластеров](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует разрешения ALTER SETTINGS и VIEW SERVER STATE.  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
@@ -88,7 +90,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
  С помощью инструкции [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] можно задать значение свойства FailureConditionLevel.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  Следующий пример назначает свойству FailureConditionLevel значение 0, которое указывает, что при любых условиях сбоя отработка отказа или перезапуск не будет выполняться автоматически.  
   
 ```  

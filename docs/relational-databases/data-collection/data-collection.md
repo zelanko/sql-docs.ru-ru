@@ -1,36 +1,36 @@
 ---
-title: "Сбор данных | Документация Майкрософт"
-ms.custom: 
+title: Сбор данных | Документация Майкрософт
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "Сбор данных"
+- Сбор данных
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6ef12bf3c2032a47d69e3f809443bd1bde4671ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-collection"></a>Сбор данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Сборщик данных является компонентом [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , который собирает различные наборы данных. Сбор данных выполняется постоянно или по расписанию, назначенному пользователем. Собранные данные сборщик данных сохраняет в реляционной базе данных, называемой хранилищем данных управления.  
+  Сборщик данных является компонентом [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , который собирает различные наборы данных. Сбор данных выполняется постоянно или по расписанию, назначенному пользователем. Собранные данные сборщик данных сохраняет в реляционной базе данных, называемой хранилищем данных управления.  
   
 ## <a name="what-is-data-collector"></a>Что такое сборщик данных 
  Сборщик данных является базовым компонентом платформы сбора данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и средств, предоставляемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он предоставляет единую централизованную точку сбора данных со всех серверов баз данных и приложений. Эта точка сбора может получать данные из множества источников и не ограничена сбором данных о производительности, в отличие от трассировки SQL.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/12/2018
 ## <a name="concepts"></a>Основные понятия  
  Сборщик данных интегрирован с агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и широко их использует. Поэтому перед началом работы со сборщиком данных необходимо изучить основные понятия, связанные с этими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для планирования и запуска заданий сбора. Обратите внимание на следующие основные понятия:  
+ Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для планирования и запуска заданий сбора. Обратите внимание на следующие основные понятия:  
   
 -   Задание  
   
@@ -60,11 +60,11 @@ ms.lasthandoff: 02/12/2018
   
  Дополнительные сведения см. в разделе [Задачи автоматизированного администрирования (SQL Server Agent)](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) используются для выполнения пакетов, собирающих данные от отдельных поставщиков данных. Следует ознакомиться со следующими инструментами и понятиями служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) используется для выполнения пакетов, которые собирают данные от отдельных поставщиков данных. Следует ознакомиться со следующими инструментами и понятиями служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет  
+-   Пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] конфигурация пакета  
+-   конфигурация пакета служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md).  
   

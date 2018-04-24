@@ -1,16 +1,16 @@
 ---
-title: "Связанные серверы (ядро СУБД) | Документация Майкрософт"
-ms.custom: 
+title: Связанные серверы (ядро СУБД) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: linked-servers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8aed4c3bc881a4d2e6481c2c1e9d46de8e304d2a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5315b49fafc6c720626bed1dccd646d7e81faac9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linked-servers-database-engine"></a>Связанные серверы (компонент Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Настройте связанный сервер, чтобы включить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения команд в источниках данных OLE DB вне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно связанные серверы настроены на включение компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , включающей таблицы в другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или другом продукте для работы с базами данных, например Oracle. В качестве связанных серверов можно настроить источники данных OLE DB многих типов, в том числе [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access и Excel. Концепция связанных серверов имеет следующие преимущества.  
+  Настройте связанный сервер, чтобы включить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения команд в источниках данных OLE DB вне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно связанные серверы настроены на включение компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , включающей таблицы в другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или другом продукте для работы с базами данных, например Oracle. В качестве связанных серверов можно настроить источники данных OLE DB многих типов, в том числе [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access и Excel. Концепция связанных серверов имеет следующие преимущества.  
   
 -   Возможность доступа к данным за пределами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

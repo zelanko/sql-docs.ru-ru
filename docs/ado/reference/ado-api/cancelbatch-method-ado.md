@@ -1,17 +1,17 @@
 ---
-title: "Метод CancelBatch (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод CancelBatch (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_CancelBatch
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e01ed9e58695af606d02a156aa83854746be83d0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 12d91ee03d21f7855a99ef7b66b45e40e7c43566
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cancelbatch-method-ado"></a>Метод CancelBatch (ADO)
 Отменяет ожидающие пакетного обновления.  
@@ -44,7 +44,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  Необязательно. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **CancelBatch** повлияет на метод.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **CancelBatch** метод, чтобы отменить все имеющиеся обновления в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в пакетном режиме обновления. Если **записей** находится в режиме немедленного обновления, вызов **CancelBatch** без **adAffectCurrent** приводит к ошибке.  
   
  Если изменения применяются к текущей записи или добавляются новые записи, при вызове **CancelBatch**, сначала вызывает ADO [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод, чтобы отменить изменения в кэше. После этого все ожидающие изменения в **записей** отменяются.  

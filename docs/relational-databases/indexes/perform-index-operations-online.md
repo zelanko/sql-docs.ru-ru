@@ -1,31 +1,32 @@
 ---
-title: "Выполнение операций с индексами в сети | Документация Майкрософт"
-ms.custom: 
+title: Выполнение операций с индексами в сети | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.technology: dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index online operations [SQL Server]
 - online index operations
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-caps.latest.revision: 
+caps.latest.revision: 32
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 351514dddb4e1491465192e1e535ec104d578a95
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e0fbec00b860dd510cddd767d8c8b09720588528
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="perform-index-operations-online"></a>Выполнение операции с индексами в сети
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>Создание, перестроение и удаление индекса в режиме «в сети»  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

@@ -1,17 +1,17 @@
 ---
-title: "Свойство Status (поле ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство Status (поле ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Field::Status
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb695fae69ace4e65fea116ad125bb79f414a820
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d8554902e965fc58ea4bc83a97512944ed146a9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="status-property-ado-field"></a>Свойство Status (ADO поле)
 Указывает состояние [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) значение. Значение по умолчанию — **adFieldOK**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="record-field-status"></a>Статус поля записи  
  Изменяет значение **поле** объекта в коллекции полей [запись](../../../ado/reference/ado-api/record-object-ado.md) объекта кэшируются до объекта [обновление](../../../ado/reference/ado-api/update-method.md) вызывается метод. В этот момент, если изменение значения поля вызвала ошибку, OLE DB вызывает ошибку **DB_E_ERRORSOCCURRED** (2147749409). Свойство Status любого **поле** объекты в **поля** коллекции, который вызвал ошибку будет находиться в диапазоне от [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) описывающая причину проблема.  

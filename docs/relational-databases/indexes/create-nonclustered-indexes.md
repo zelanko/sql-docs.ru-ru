@@ -1,16 +1,16 @@
 ---
-title: "Создание некластеризованных индексов | Документация Майкрософт"
-ms.custom: 
+title: Создание некластеризованных индексов | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: 
+caps.latest.revision: 41
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fa2f52d326ae38533c2c493db91e4b6a1597f491
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 01ad2fc13ed2fba75e4c5971f06b59708868f659
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/23/2018
   
 -   **Ограничения UNIQUE**  
   
-     При создании ограничения UNIQUE создается уникальный некластеризованный индекс. Он нужен, чтобы принудительно применять ограничение UNIQUE по умолчанию. Если кластеризованный индекс в таблице еще не создан, то можно указать уникальный кластеризованный индекс. Дополнительные сведения см. в статье [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+     При создании ограничения UNIQUE создается уникальный некластеризованный индекс. Он нужен, чтобы принудительно применять ограничение UNIQUE по умолчанию. Если кластеризованный индекс в таблице еще не создан, то можно указать уникальный кластеризованный индекс. Дополнительные сведения см. в статье [Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Индекс, не зависящий от ограничения**  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Создание некластеризованного индекса для таблицы  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

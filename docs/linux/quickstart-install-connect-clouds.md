@@ -1,22 +1,22 @@
 ---
-title: "Приступая к работе с 2017 г. SQL Server в облаке | Документы Microsoft"
-description: "Краткого руководства показано, как выполнять 2017 г. SQL Server в Linux в облаке по своему усмотрению."
+title: Приступая к работе с 2017 г. SQL Server в облаке | Документы Microsoft
+description: Краткого руководства показано, как выполнять 2017 г. SQL Server в Linux в облаке по своему усмотрению.
 author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.component: 
+ms.component: ''
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.assetid: ''
+ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Краткое руководство: Запуск 2017 г. SQL Server в облаке
 

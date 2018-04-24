@@ -1,28 +1,21 @@
 ---
-title: Сброс пароля (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Сброс пароля — Analytics Platform System | Документы Microsoft
+description: Страница сброса пароля позволяет изменить пароль для учетной записи администратора, используемой Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: 26
-ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="password-reset"></a>Сброс пароля
+# <a name="password-reset---analytics-platform-system"></a>Сброс пароля — система платформы аналитики
 **Сброса пароля** страница позволяет изменить пароль для учетной записи администратора, используемой Analytics Platform System.  
   
 > [!WARNING]  
@@ -39,7 +32,7 @@ ms.lasthandoff: 04/06/2018
 > [!IMPORTANT]  
 > Для устройства обновление 1, **Configuration Manager** неправильно изменяется пароль локального администратора учетных записей по всему PDW Виртуальной машины. Если это необходимо, обратитесь в CSS для получения дополнительных инструкций.  
   
-**sa**  
+**SA**  
 **Sa** входа в SQL Server. **sa** является членом **sysadmin** предопределенной роли сервера и является администратором SQL Server. Пароль **sa** входа также можно изменить с помощью **ALTER LOGIN** инструкции.  
   
 ## <a name="password-requirements"></a>Требования к паролю  
@@ -58,7 +51,7 @@ ms.lasthandoff: 04/06/2018
   
     Изменения, внесенные в эти учетные записи не влияют на всех активных сеансов, но будут применены при следующем входе для каждого пользователя.  
   
-    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![Пароль SQL Server DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>См. также  
 [Задать пароль администратора для входа в систему узлов AD в режиме восстановления служб каталогов &#40;DSRM&#41; &#40;система платформы аналитики&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  

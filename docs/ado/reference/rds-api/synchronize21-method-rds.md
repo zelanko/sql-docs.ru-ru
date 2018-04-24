@@ -1,30 +1,30 @@
 ---
-title: "Метод Synchronize21 (RDS) | Документы Microsoft"
+title: Метод Synchronize21 (RDS) | Документы Microsoft
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c973d97465963ba865bb768569bf70f70366a1b9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad5f94fb96fc7ff8095ad88aee0d8bf335206472
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="synchronize21-method-rds"></a>Метод Synchronize21 (RDS)
 Синхронизировать заданного набора записей с базой данных, указанной в строке подключения для использования с ADO 2.1.  
@@ -40,7 +40,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ConnectionString*  
+ *connectionString*  
  Строка, используемая для подключения к поставщику OLE DB, где запрос будет отправлен. Если используется обработчик, обработчик можно изменить или заменить строку подключения.  
   
  *HandlerString*  
@@ -63,7 +63,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Значение variant, применяемое для возврата безопасный массив состояния строк для строк, затронутых при синхронизации. Не задается, если задан ни один из следующих параметров синхронизации: *RefreshWithUpdate*, *обновление* и *RefreshConflicts*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Затем Msdfmap.dll интерпретирует аргумент как направление использования sample.ini для проверки строк соединения и запроса.  
   
 > [!NOTE]

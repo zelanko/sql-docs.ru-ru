@@ -1,28 +1,21 @@
 ---
-title: Конфигурация брандмауэра PDW (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Настройка брандмауэра PDW — Analytics Platform System | Документы Microsoft
+description: Страница брандмауэра SQL Server PDW Configuration Manager позволяет включить или отключить правила брандмауэра, которые разрешают или запрещают доступ к конкретным портам на устройстве, Analytics Platform System.
+aauthor: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>Конфигурация брандмауэра PDW
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Параллельные хранилища данных конфигурации брандмауэра, в Analytics Platform System
 **Брандмауэра** страница SQL Server PDW Configuration Manager позволяет включить или отключить правила брандмауэра, которые разрешают или запрещают доступ к конкретным портам на устройстве, Analytics Platform System.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Управление портами и правила брандмауэра для узлы устройств  
@@ -35,20 +28,20 @@ ms.lasthandoff: 04/06/2018
   
 4.  Нажмите кнопку **применить** для сохранения изменений.  
   
-![DWConfig Appliance PDW Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
+![Брандмауэр PDW DWConfig](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   
 ## <a name="external-ports"></a>Внешние порты  
 Для клиентских подключений, поступающих от за пределами PDW открыты следующие порты.  
   
 |Назначение|Порт №|Узлы|  
 |-----------|-----------|---------|  
-|Доступ клиентов SQL PDW (TDS)|17001|CTL|  
-|Загрузчик клиентского доступа (dwloader & служб SSIS)|8001|CTL|  
+|Доступ клиентов SQL PDW (TDS)|17001|СПИСОК ДОВЕРИЯ СЕРТИФИКАТОВ|  
+|Загрузчик клиентского доступа (dwloader & служб SSIS)|8001|СПИСОК ДОВЕРИЯ СЕРТИФИКАТОВ|  
 |Удаленного доступа к рабочему столу|3389|СПИСОК ДОВЕРИЯ СЕРТИФИКАТОВ, CMP|  
-|BinaryLoaderDataChannel служб SSIS|16551|CTL|  
+|BinaryLoaderDataChannel служб SSIS|16551|СПИСОК ДОВЕРИЯ СЕРТИФИКАТОВ|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL-шифрованием подключений (для внутренней связи, для доступа к консоли администрирования и доступ к службам кластера HDInsight)|443|Все узлы|  
-|SQL Server PDW нагрузки управлений - учетные данные Windows|8002|CTL|  
+|SQL Server PDW нагрузки управлений - учетные данные Windows|8002|СПИСОК ДОВЕРИЯ СЕРТИФИКАТОВ|  
 |_Kerberos|88|AD01 и AD02,|  
 |_фильтры|389|AD01 и AD02|  
   

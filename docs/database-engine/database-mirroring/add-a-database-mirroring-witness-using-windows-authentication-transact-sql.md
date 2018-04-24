@@ -1,36 +1,36 @@
 ---
-title: "Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5909ba97271614b39e0b899a257f62c1658cfe09
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ac2992afd40c4890c5fe54da83d2a8528aedd4b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Чтобы настроить следящий сервер для базы данных, ее владелец назначает экземпляру компонента Database Engine роль следящего сервера. Экземпляр следящего сервера может быть запущен на том же компьютере, что и экземпляры основного или зеркального серверов, но это значительно уменьшает надежность автоматической отработки отказа.  
+  Чтобы настроить следящий сервер для базы данных, ее владелец назначает экземпляру компонента Database Engine роль следящего сервера. Экземпляр следящего сервера может быть запущен на том же компьютере, что и экземпляры основного или зеркального серверов, но это значительно уменьшает надежность автоматической отработки отказа.  
   
  Настоятельно рекомендуется размещать следящий сервер на отдельном компьютере. Указанный сервер может быть задействован в нескольких одновременных сеансах зеркального отображения базы данных с одними и теми же или разными участниками. В некоторых сеансах указанный сервер может быть участником, в некоторых — следящим сервером.  
   

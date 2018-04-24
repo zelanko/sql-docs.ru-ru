@@ -1,30 +1,30 @@
 ---
-title: "Минимизация использования пространства журнала файла | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Минимизация использования пространства журнала файла | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccad217647f8aa2f7bde912f12914055d0f65808
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b333875afe103eb0438b567666e54c9985c51997
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="minimizing-log-file-space-usage"></a>Минимизация использования пространства для файла журнала
 Файл журнала может быстро заполнить (таким образом, остановка работы сервера) при наличии большого объема действий на базе данных Microsoft SQL Server. Можно задать файл журнала **Truncate на контрольной точке** позволяет значительно увеличить ресурсы файла журнала для базы данных.  

@@ -1,27 +1,21 @@
 ---
-title: Конфигураций оборудования (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Конфигурации оборудования - система платформы аналитики | Документы Microsoft
+description: Оборудования устройства Analytics Platform System (APS) спроектирован с масштабируемых единиц, чтобы купить нужный объем обработки и хранения в соответствии с бизнес-требований. Устройства масштабируется хранилища для параллельного хранилища данных из нескольких терабайт более 6 петабайт данных.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Оборудование Analytics Platform System (APS) спроектирован с масштабируемых единиц, чтобы купить нужный объем обработки и хранения в соответствии с бизнес-требований.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>Конфигурации оборудования
+# <a name="hardware-configurations---analytics-platform-system"></a>Конфигурации оборудования - система платформы аналитики
 Оборудование Analytics Platform System (APS) спроектирован с масштабируемых единиц, чтобы купить нужный объем обработки и хранения в соответствии с бизнес-требований. Устройство масштабирует хранилища для SQL Server Parallel данных Wareouse (PDW) из нескольких терабайт для более 6 петабайт данных.  
   
 ## <a name="contents"></a>Содержание  

@@ -1,26 +1,19 @@
 ---
-title: Мгновенная инициализация конфигурации (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Настройка мгновенную инициализацию файлов - система платформы аналитики | Документы Microsoft
+description: Настройте мгновенную инициализацию файлов на Analytics Platform System. Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: 20
-ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>Мгновенная инициализация конфигурации
 Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных. Установка флажка, чтобы включить мгновенную инициализацию файлов улучшит производительность SQL Server PDW. Тем не менее если это представляет угрозу безопасности за вас бизнеса, затем оставьте поле флажок снят.  
@@ -58,7 +51,7 @@ ms.lasthandoff: 04/06/2018
   
 5.  Повторите действия, описанные выше, как может потребоваться **добавить разрешение для учетной записи резервной копии** удаление **выполнения задач по обслуживанию томов** разрешение.  
   
-![DWConfig Appliance PDW Instant File Initialization](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![Инициализация устройств DWConfig PDW момент файла](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
 Дополнительные сведения о быстрой инициализации файлов см. в разделе [быстрой инициализации файлов](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx).  
   

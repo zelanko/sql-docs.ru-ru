@@ -1,34 +1,36 @@
 ---
-title: "Следящий сервер зеркального отображения базы данных | Документы Майкрософт"
-ms.custom: 
+title: Следящий сервер зеркального отображения базы данных | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81c8212ce3e85c15e6015e64474b50be394f7869
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 931607fe4617c362f8b2d8db3d936c2a9d272b30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для поддержки автоматического перехода на другой ресурс сеанс зеркального отображения базы данных должен быть настроен в режиме высокой безопасности, а также должен присутствовать третий экземпляр сервера, называемый *следящим сервером*. Следящий сервер это дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющий зеркальному серверу в сеансе режима высокой безопасности определить, следует ли начать процедуру автоматической отработки отказа. В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Для поддержки автоматической отработки отказа сеанс зеркального отображения базы данных должен быть настроен на использование режима высокой безопасности, а также должен присутствовать третий экземпляр, называемый *следящим сервером*. Следящий сервер это дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющий зеркальному серверу в сеансе режима высокой безопасности определить, следует ли начать процедуру автоматической отработки отказа. В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  
   
 > [!NOTE]  
 >  В режиме высокой производительности следящий сервер может неблагоприятно повлиять на доступность ресурсов. Если для сеанса зеркального отображения базы данных настроен следящий сервер, то основной сервер должен быть подключен по крайней мере к одному из двух других экземпляров сервера — зеркальному или следящему серверу. В противном случае база данных становится недоступной, а принудительное восстановление службы невозможным, при этом могут быть потеряны данные. Таким образом, в режиме высокой производительности настоятельно рекомендуется всегда поддерживать параметр WITNESS в значении OFF. Дополнительные сведения о том, каким образом следящий сервер влияет на режим высокой производительности, см. в разделе [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  

@@ -1,34 +1,35 @@
 ---
-title: "Класс событий CursorRecompile | Документация Майкрософт"
-ms.custom: 
+title: Класс событий CursorRecompile | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0ee637a8fa29bb999ca30d30e5626b199103fa2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 843a78d9dfa3df8c9e752830626d9f3d4b8b72bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **CursorRecompile** описывает события перекомпилирования курсора, происходящие в курсорах API. События перекомпиляции курсора происходят, когда компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] перекомпилирует курсор Transact-SQL из-за изменения схемы.  
+  Класс событий **CursorRecompile** описывает события перекомпилирования курсора, происходящие в курсорах API. События перекомпиляции курсора происходят, когда компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] перекомпилирует курсор Transact-SQL из-за изменения схемы.  
   
  Класс событий **CursorRecompile** рекомендуется включать в трассировки, отслеживающие производительность курсоров. Когда класс событий **CursorRecompile** включается в трассировку, уровень дополнительных накладных расходов, вызываемых этим, зависит от частоты использования курсоров в базе данных в течение трассировки. Если курсоры используются активно, трассировка может существенно снизить производительность.  
   

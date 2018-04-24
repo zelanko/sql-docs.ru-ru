@@ -1,32 +1,32 @@
 ---
-title: "Абсолютные и относительные URL-адреса | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Абсолютные и относительные URL-адреса | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - relative URLs [ADO]
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д*.*  
@@ -48,7 +48,7 @@ URL-адрес указывает расположение целевого об
  *путь*  
  Задает последовательность приведет к целевой каталоги. Если *ресурсов* — этот параметр опущен, целевой объект — последнего каталога в *путь*.  
   
- *resource*  
+ *Ресурс*  
  Если включен, *ресурсов* является целевым, а обычно совпадает с именем файла. Возможно, она *простой файл* один двоичный поток байтов, содержащий или *структурированный документ* содержащий один или несколько систем хранения данных, так и двоичные потоки байтов.  
   
 ## <a name="url-scheme-registration"></a>Регистрация URL-адреса схемы  

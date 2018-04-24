@@ -1,29 +1,23 @@
 ---
-title: Сообщения об ошибках (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Сообщения об ошибках - Parallel Data Warehouse | Документы Microsoft
+description: Параллельные хранилища данных (PDW) ошибок регистрации ошибок и проблем, обнаруженных компонентов PDW и может также включать ошибок SQL Server в PDW. Эти сообщения об ошибках использовать единый синтаксис для предоставления сведений. Основные сведения о этот синтаксис дает возможность определять и устранять неполадки.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>сообщения об ошибках
-Сообщения об ошибках SQL Server PDW регистрации ошибок и проблем, обнаруженных компонентов SQL Server PDW, а также может содержать ошибки SQL Server в SQL Server PDW. Эти сообщения об ошибках использовать единый синтаксис для предоставления сведений. Основные сведения о этот синтаксис дает возможность обнаружения и устранения неполадок в SQL Server PDW.  
+# <a name="error-messages-in-parallel-data-warehouse"></a>Сообщения об ошибках в Parallel Data Warehouse
+
+Параллельные хранилища данных (PDW) ошибок регистрации ошибок и проблем, обнаруженных компонентов PDW и может также включать ошибок SQL Server в PDW. Эти сообщения об ошибках использовать единый синтаксис для предоставления сведений. Основные сведения о этот синтаксис дает возможность обнаружения и устранения неполадок в SQL Server PDW.  
   
 ## <a name="Basics"></a>Основы сообщений ошибки  
 Сообщения об ошибках, возвращаемых имеют одинаковый синтаксис.  

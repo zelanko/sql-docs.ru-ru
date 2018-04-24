@@ -1,15 +1,16 @@
 ---
-title: "Отслеживание групп доступности (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: Отслеживание групп доступности (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4510a528afc92850a9cb96c597a29dea33949873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для мониторинга групп доступности и реплик доступности, а также связанных баз данных с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предусмотрен набор представлений каталога, динамических административных представлений и свойств сервера. С помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT можно использовать представления для отслеживания групп доступности, их реплик и баз данных. Сведения, возвращаемые по данной группе доступности, зависят от наличия подключения к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная или вторичная реплика.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Для мониторинга групп доступности и реплик доступности, а также связанных баз данных с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предусмотрен набор представлений каталога, динамических административных представлений и свойств сервера. С помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT можно использовать представления для отслеживания групп доступности, их реплик и баз данных. Сведения, возвращаемые по данной группе доступности, зависят от наличия подключения к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная или вторичная реплика.  
   
 > [!TIP]  
 >  Многие из этих представлений можно объединять с помощью их столбцов ID, что позволяет возвращать сведения из нескольких представлений в одном запросе.  

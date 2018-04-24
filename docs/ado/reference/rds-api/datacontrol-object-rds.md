@@ -1,17 +1,17 @@
 ---
-title: "Объект DataControl (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Объект DataControl (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>Объект DataControl (RDS)
 Привязывает запрос данных [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для одного или нескольких элементов управления (например, текстовое поле, элемент управления DataGrid или поле со списком) для отображения **записей** данных на веб-странице.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Идентификатор класса для **RDS. DataControl** BD96C556 65A3 - 11 D 0-983A-00C04FC29E33 является объект.  
   
 > [!NOTE]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/09/2018
  Все свойства в **RDS. DataControl** являются необязательными, так как настраиваемые бизнес-объекты можно заменить их функциональность.  
   
 > [!NOTE]
->  При выполнении запроса для нескольких результатов только первые [записей](../../../ado/reference/ado-api/recordset-object-ado.md) возвращается. Если требуется несколько результирующих наборов, назначьте каждому свой собственный **DataControl**. Пример запроса для нескольких результатов может выглядеть следующим образом:`"Select * from Authors, Select * from Topics"`  
+>  При выполнении запроса для нескольких результатов только первые [записей](../../../ado/reference/ado-api/recordset-object-ado.md) возвращается. Если требуется несколько результирующих наборов, назначьте каждому свой собственный **DataControl**. Пример запроса для нескольких результатов может выглядеть следующим образом: `"Select * from Authors, Select * from Topics"`  
   
  Добавление «DFMode = 20;» в строке подключения при использовании **RDS. DataControl** объекта может повысить производительность сервера, при обновлении данных. Этот параметр **RDSServer.DataFactory** объект на сервере использует режим менее ресурсоемки. Тем не менее следующие функции будут недоступны в этой конфигурации.  
   

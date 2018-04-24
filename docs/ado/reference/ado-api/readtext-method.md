@@ -1,17 +1,17 @@
 ---
-title: "Метод ReadText | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод ReadText | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e26f365d2b25bab878f0a8b9a321240d7c8ee347
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2557106f3a4560181465dbd6f21fcb65bd5db0b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное число символов из текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -47,7 +47,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>Возвращаемое значение  
  **ReadText** метод считывает указанное число символов, всю строку или весь поток из **поток** объекта и возвращает результирующую строку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если *NumChar* остается больше числа символов в потоке, возвращаются только символов, оставшихся. Чтение строки заполнено в соответствии с длиной, определяемой *NumChar*. Если нет доступных для чтения символов, возвращается значение типа variant, значение которого равно null. **ReadText** не может использоваться для чтения в обратном направлении.  
   
 > [!NOTE]

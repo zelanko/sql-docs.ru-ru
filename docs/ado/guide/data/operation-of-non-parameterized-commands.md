@@ -1,31 +1,31 @@
 ---
-title: "Операции без параметров команд | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Операции без параметров команд | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a025cf381bdf5a51cb825294bf5a5399fc033b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Операции без параметров команд
 Команды, без параметров, выполняются все команды поставщика и **наборы записей** создаются во время выполнения команды. Если команда выполняется синхронно, все **наборы записей** будет полностью заполнен. Если был выбран режим асинхронное заполнение, заполненных состояние **наборы записей** будет зависеть от режима заполнения и размера **наборы записей**.  

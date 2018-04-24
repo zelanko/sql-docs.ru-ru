@@ -1,6 +1,6 @@
 ---
 title: Отфильтровать свойства | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>Свойства фильтра
 Указывает фильтр для данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/22/2018
   
 -   Объект [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) значение.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 
 Используйте **фильтра** свойство, чтобы выборочно отсеять записей в **записей** объекта. Отфильтрованные **записей** становится текущий курсор. Другие свойства, которые возвращают значения на основе текущего **курсор** повреждены, таких как [AbsolutePosition свойство (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage свойство (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), и [PageCount свойство (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Установка **фильтра** конкретных новое значение свойства перемещает текущей записи к первой записи, которая удовлетворяет новое значение.
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/22/2018
   
 -   На все поля таблицы с ключами несколько были внесены изменения.  
   
-В следующей таблице приведены результаты **adFilterPendingRecords** в различных сочетаниях фильтрации и изменения. В левом столбце приведены возможные изменения. Можно внести изменения на любое поле ключом, на поле ключа в таблице ключом является одним или на любом из таблицы с ключами несколько ключевых полей. В верхней строке отображается критерий фильтрации. Фильтрация может основываться на любое поле различаемых ключевое поле в таблицу с ключами одним или любом ключевых полей в таблице с ключами несколько. Пересекающиеся ячейки отображают результаты. Объект  **+**  плюс означает, что применение **adFilterPendingRecords** приводит к пустым **записей**. Объект  **-**  знак «минус» означает пустой **записей**.  
+В следующей таблице приведены результаты **adFilterPendingRecords** в различных сочетаниях фильтрации и изменения. В левом столбце приведены возможные изменения. Можно внести изменения на любое поле ключом, на поле ключа в таблице ключом является одним или на любом из таблицы с ключами несколько ключевых полей. В верхней строке отображается критерий фильтрации. Фильтрация может основываться на любое поле различаемых ключевое поле в таблицу с ключами одним или любом ключевых полей в таблице с ключами несколько. Пересекающиеся ячейки отображают результаты. Объект **+** плюс означает, что применение **adFilterPendingRecords** приводит к пустым **записей**. Объект **-** знак «минус» означает пустой **записей**.  
   
 ||Не ключи|Один ключ|Несколько ключей|
 |-|--------------|----------------|-------------------|

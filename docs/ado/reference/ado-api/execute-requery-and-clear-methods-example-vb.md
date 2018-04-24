@@ -1,17 +1,17 @@
 ---
-title: "Выполнение и Requery снимите примере методы (Visual Basic) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Выполнение и Requery снимите примере методы (Visual Basic) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1549486e1dc4efc0325f935ce80d25627aeb72df
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b35a5d1428876c92472908218be87f2e03b7ad02
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Выполнение и Requery снимите примере методы (Visual Basic)
 В этом примере демонстрируется **Execute** при запуске с оба метода [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ( **Ошибки** коллекции осуществляется через **подключения** объект [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство [записей](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  

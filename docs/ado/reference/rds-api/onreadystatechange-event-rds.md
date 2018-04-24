@@ -1,31 +1,31 @@
 ---
-title: "onReadyStateChange событий (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: onReadyStateChange событий (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - onReadyStateChange event [ADO]
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2641f28169199907fdfb66771a3a8e86ff1a86e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1422d6187a86c8d2908c8ed6976f730cf6c80d71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange событий (RDS)
 **OnReadyStateChange** событий вызывается всякий раз, когда значение [состояние готовности](../../../ado/reference/rds-api/readystate-property-rds.md) изменения свойств.  
@@ -43,7 +43,7 @@ onReadyStateChange
 #### <a name="parameters"></a>Параметры  
  Нет.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Состояние готовности** свойство отражает ход выполнения [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) как асинхронно, он извлекает данные в его [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. Используйте **onReadyStateChange** событий для отслеживания изменений в **состояние готовности** свойство всякий раз, когда они встречаются. Это более эффективно, чем периодической проверки наличия значения свойства.  
   
 ## <a name="applies-to"></a>Объект применения  

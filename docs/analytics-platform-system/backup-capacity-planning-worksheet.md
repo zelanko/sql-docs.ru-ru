@@ -1,27 +1,21 @@
 ---
-title: Планирование мощности листа резервного сервера (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Резервное копирование сервера планирования емкости - Parallel Data Warehouse | Документы Microsoft
+description: Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения параллельного хранилища данных резервной копии базы данных операций и восстановления. Используется для создания плана для приобретения новых или подготовки существующих резервных серверов.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения резервного копирования базы данных SQL Server PDW операций и восстановления.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
-caps.latest.revision: 6
-ms.openlocfilehash: 1548d284f78043e5f878bafe9922480fe762dbfe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 500bebab375a0d0b94032a1855af3844bc2e6fa7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-server-capacity-planning-worksheet"></a>Лист планирования емкости резервное копирование сервера
+# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Резервное копирование сервера емкости лист планирования - Parallel Data Warehouse
 Этот лист планирования емкости поможет вам определить требования для резервного копирования сервера для выполнения резервного копирования базы данных SQL Server PDW операций и восстановления. Используется для создания плана для приобретения новых или подготовки существующих резервных серверов.  
   
 Этот лист — в дополнение к инструкциям [приобретать и настраивать резервное копирование сервера](acquire-and-configure-backup-server.md).  

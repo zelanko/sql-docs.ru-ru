@@ -1,16 +1,16 @@
 ---
-title: "Обновить метод (RDS) | Документы Microsoft"
+title: Обновить метод (RDS) | Документы Microsoft
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Refresh
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26182bb5f3ec1d60b66e5c16bf403a1f427c8b87
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 89e9088aeec78213f7da9a79ba78255de4b94b97
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="refresh-method-rds"></a>Обновить метод (RDS)
 Вызывает повторный запрос источника данных, указанного в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойств и обновления результатов запроса.  
@@ -47,7 +47,7 @@ DataControl.Refresh
  *DataControl*  
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Необходимо задать [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [сервера](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства, прежде чем использовать **обновление** метод. Все элементы управления с привязкой к данным на форму, связанную с **RDS. DataControl** объекта будет отражать нового набора записей. Все предшествующие [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект будет освобожден, а все несохраненные изменения будут отменены. **Обновление** метод автоматически делает первую запись текущей записи.  
   
  Рекомендуется вызывать **обновление** метод периодически при работе с данными. Если извлечение данных и оставить его на клиентский компьютер на некоторое время, вполне вероятно, станут устаревшими. Это возможно, что любые изменения, внесенные завершится ошибкой, так как кто-то другой могли измениться, запись и отправил изменения, прежде чем.  

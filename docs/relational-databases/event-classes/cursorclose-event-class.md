@@ -1,34 +1,35 @@
 ---
-title: "Класс событий CursorClose | Документация Майкрософт"
-ms.custom: 
+title: Класс событий CursorClose | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35763a70260b8d542ca290c91a27cb9e290ecbb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd9435c4e5eccff10877e1b645abfd96d1887520
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorclose-event-class"></a>CursorClose, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-События класса Cursor Close возникают, когда компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] закрывает и освобождает курсор. Класс событий **CursorClose** описывает события закрытия курсора, которые возникают в интерфейсе прикладных программ (API) курсоров. События этого класса возникают при закрытии инструкции курсора [!INCLUDE[tsql](../../includes/tsql-md.md)] через интерфейсы ODBC, OLE DB или DB-Library.  
+  События класса Cursor Close возникают, когда компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] закрывает и освобождает курсор. Класс событий **CursorClose** описывает события закрытия курсора, которые возникают в интерфейсе прикладных программ (API) курсоров. События этого класса возникают при закрытии инструкции курсора [!INCLUDE[tsql](../../includes/tsql-md.md)] через интерфейсы ODBC, OLE DB или DB-Library.  
   
  Рекомендуется включать класс событий **CursorClose** в трассировки, регистрирующие производительность работы курсоров. Объем дополнительной нагрузки зависит от частоты, с которой курсоры используются в базе данных во время трассировки. Если курсоры используются интенсивно, трассировка может привести к значительному снижению производительности.  
   

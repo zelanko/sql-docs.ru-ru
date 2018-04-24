@@ -1,28 +1,29 @@
 ---
-title: "Индексы columnstore. Руководство по проектированию | Документы Майкрософт"
-ms.custom: 
+title: Индексы columnstore. Руководство по проектированию | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/1/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c2b3c604d5da223b651b8467b126878653fae294
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Руководство по проектированию индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/12/2018
   
 *   Устранение необходимости использования отдельного хранилища данных. В большинстве случаев в компаниях транзакции выполняются в таблице rowstore и данные загружаются в отдельное хранилище для выполнения анализа. Для многих рабочих нагрузок можно исключить процесс загрузки и устранить необходимость использования отдельного хранилища данных, создав некластеризованный индекс columnstore в транзакционных таблицах.
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предлагает несколько стратегий выполнения этого сценария. Они очень просты, так как вы можете включить некластеризованный индекс columnstore, не изменяя приложение OLTP. 
+  В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предусмотрено несколько стратегий выполнения этого сценария. Они очень просты, так как вы можете включить некластеризованный индекс columnstore, не изменяя приложение OLTP. 
 
 Чтобы добавить дополнительные вычислительные ресурсы, необходимо выполнить анализ на вторичной реплике для чтения, позволяющей отделить обработку транзакционной и аналитической рабочей нагрузки. 
 

@@ -1,16 +1,16 @@
 ---
-title: "Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 
+caps.latest.revision: 95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3ad4a8ebfdf4d894f137a41eb72d32302edea194
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Чтобы подключиться к сеансу зеркального отображения базы данных, клиент может использовать либо программу собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо поставщика данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если эти поставщики доступа к данным настроены для использования базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , то они поддерживают зеркальное отображение базы данных. Дополнительные сведения о замечаниях по программированию при использовании зеркальной базы данных см. в разделе [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Кроме того, текущий экземпляр основного сервера должен быть доступен, и имя входа клиента должно быть создано на экземпляре сервера. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Клиентские соединения с сеансом зеркального отображения базы данных не задействуют экземпляр следящего сервера, если он существует.  
+  Чтобы подключиться к сеансу зеркального отображения базы данных, клиент может использовать либо программу собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо поставщика данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если эти поставщики доступа к данным настроены для использования базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , то они поддерживают зеркальное отображение базы данных. Дополнительные сведения о замечаниях по программированию при использовании зеркальной базы данных см. в разделе [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Кроме того, текущий экземпляр основного сервера должен быть доступен, и имя входа клиента должно быть создано на экземпляре сервера. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Клиентские соединения с сеансом зеркального отображения базы данных не задействуют экземпляр следящего сервера, если он существует.  
   
   
 ##  <a name="InitialConnection"></a> Установка первоначального соединения с сеансом зеркального отображения базы данных  
@@ -216,7 +216,7 @@ Server=123.34.45.56,4724;
  Повторное подключение напоминает первоначальное, в строке соединения которого указано имя партнера по обеспечению отработки отказа. Если первая попытка соединения завершается неудачно, соединение поочередно пытается подключиться к исходному имени участника и имени партнера по обеспечению отработки отказа, пока не произойдет соединение клиента с основным сервером или не истечет время ожидания поставщика доступа к данным.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент проверяет, подключился ли он к экземпляру основного сервера, но не проверяет, является ли этот экземпляр участником экземпляра сервера, заданного в качестве имени первоначального участника в строке подключения.  
+>  Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет, подключился ли он к экземпляру основного сервера, но не проверяет, является ли этот экземпляр участником экземпляра сервера, заданного в качестве имени первоначального участника в строке подключения.  
   
  Если соединение использует протокол TCP/IP, алгоритм повторного соединения определяет количество времени, отведенного на подключение при каждой попытке.  
   

@@ -1,16 +1,16 @@
 ---
-title: "Основные сведения об ошибках ядра СУБД | Документация Майкрософт"
-ms.custom: 
+title: Основные сведения об ошибках ядра СУБД | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server], about errors
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - errors [SQL Server]
 - Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbd10231e195d22b227589d704ce166eb44c0c26
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdd35c45e3e6828a9faf1da3ee78236791de372d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-database-engine-errors"></a>Основные сведения об ошибках компонента Database Engine
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ошибки, возникшие в компоненте [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], имеют атрибуты, описанные в приведенной ниже таблице.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Ошибки, возникшие в компоненте [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , имеют атрибуты, описанные в следующей таблице.  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Номер ошибки|Каждое сообщение имеет уникальный номер ошибки.|  
 |Строка сообщения об ошибке|Сообщение об ошибке содержит диагностические сведения о причине ошибки. Многие сообщения об ошибках имеют подстановочные переменные, в которые заносятся сведения, например имя объекта, вызвавшего ошибку.|  
@@ -66,7 +68,7 @@ SELECT
 ## <a name="see-also"></a>См. также:  
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
+ [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)   
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   

@@ -1,6 +1,6 @@
 ---
 title: Метод NextRecordset (ADO) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - NextRecordset
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4e0e38fc9c01a65916d7979fddfae929d43acf1
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 8fa92f2d14f270f31a44e3512b78b905debbc90c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="nextrecordset-method-ado"></a>Метод NextRecordset (ADO)
 Очищает текущий [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта и возвращает следующий **записей** с помощью перемещения через ряд команд.  
@@ -51,7 +51,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 > [!NOTE]
 >  Этот параметр только возвращает число записей, затронутых операцией; Возвращает количество записей в инструкции select, используемый для создания **записей**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **NextRecordset** метод для возврата результатов инструкция комплексной команды в следующую команду или хранимую процедуру, которая возвращает несколько результатов. При открытии **записей** объекта, основанного на инструкция комплексной команды (например, «ВЫБЕРИТЕ \* из таблицы table1; ВЫБЕРИТЕ \* из table2») с помощью [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод [команда](../../../ado/reference/ado-api/command-object-ado.md) или [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод **набора записей**, ADO выполняет только первая команда и возвращает результаты в *записей*. Чтобы открыть результаты последующих команд в инструкции, вызовите **NextRecordset** метод.  
   
  При условии, что имеются дополнительные результаты и **записей** содержит составные операторы не отключается или переданы через границы процессов **NextRecordset** метод будет продолжать вернуть **записей** объектов. Если команды, возвращающей строки выполняется успешно, но данные не возвращаются, возвращенный **записей** объекта будут открыты, но не пустой. Тест для этого случая путем проверки, что [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства являются оба **True**. Если команда не возвращает строк выполняется успешно, возвращенный **записей** объект будет закрыт, это можно проверить путем проверки [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство **записей**. Если нет дополнительных результатов *записей* будет присвоено *ничего не*.  

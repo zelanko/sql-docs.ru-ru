@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Политика отработки отказа для экземпляров отказоустойчивого кластера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI зависит от возможностей базовой службы WSFC по обнаружению сбоев. Поэтому порядок отработки отказа для FCI определяется двумя механизмами: собственными функциями WSFC и функциями, добавленными в процессе установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
  Ознакомьтесь со статьей [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), поскольку эта системная хранимая процедура играет важную роль в уровнях условий сбоя.  
   
-|Level|Условие|Описание|  
+|Level|Условие|Description|  
 |-----------|---------------|-----------------|  
 |0|Без автоматической отработки отказа или перезапуска|Указывает, что при любых условиях сбоя отработка отказа или перезапуск не будет выполняться автоматически. Этот уровень предназначен только для обслуживания системы.|  
 |1|Отработка отказа или перезапуск при отключении сервера|Указывает, что при возникновении одного из следующих условий будет выполнен перезапуск или отработка отказа.<br /><br /> Служба SQL Server остановлена.|  

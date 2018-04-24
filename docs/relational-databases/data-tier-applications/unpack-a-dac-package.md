@@ -1,16 +1,16 @@
 ---
-title: "Распаковка пакета DAC | Документация Майкрософт"
-ms.custom: 
+title: Распаковка пакета DAC | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wizard [DAC], unpack
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - How to [DAC], unpack
 - unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84728faa46ca75d50b44e8047ce962bda4d415fc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9cd9253e5bf8a84a4e4a40bc3518cff2d63d4a1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы распаковать скрипты и файлы из пакета приложения уровня данных (DAC), используйте диалоговое окно "Распаковка приложения уровня данных". Скрипты и файлы помещаются в папку, где их можно просмотреть перед тем, как использовать пакет для развертывания приложения уровня данных в рабочей системе. Кроме того, содержимое одного приложения уровня данных можно сравнить с содержимым другого пакета, распакованного в другую папку.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Чтобы распаковать скрипты и файлы из пакета приложения уровня данных (DAC), используйте диалоговое окно «Распаковка приложения уровня данных». Скрипты и файлы помещаются в папку, где их можно просмотреть перед тем, как использовать пакет для развертывания приложения уровня данных в рабочей системе. Кроме того, содержимое одного приложения уровня данных можно сравнить с содержимым другого пакета, распакованного в другую папку.  
   
 1.  **Перед началом работы:**  [безопасность](#Security)  
   

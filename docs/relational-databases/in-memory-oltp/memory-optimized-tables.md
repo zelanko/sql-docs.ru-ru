@@ -1,33 +1,34 @@
 ---
-title: "Оптимизированные для памяти таблицы | Документация Майкрософт"
-ms.custom: 
+title: Оптимизированные для памяти таблицы | Документация Майкрософт
+ms.custom: ''
 ms.date: 12/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-caps.latest.revision: 
+caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35719f81571bd58c96d9f451cab3caf0d09a459a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59f6595f60d4c835ad050bfbf56e107eb0fb48b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="memory-optimized-tables"></a>Таблицы, оптимизированные для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Операции OLTP в памяти повышают производительность OLTP-приложений благодаря эффективному, оптимизированному для памяти доступу к данным, собственной компиляции бизнес-логики и алгоритмам без кратковременной блокировки. Функциональность OLTP-операций в памяти обеспечивается оптимизированными для памяти таблицами и табличными типами, а также собственной компиляцией хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] для эффективного доступа к этим таблицам.  
+  Операции OLTP в памяти[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повышают производительность OLTP-приложений благодаря эффективному, оптимизированному для памяти доступу к данным, собственной компиляции бизнес-логики и алгоритмам без кратковременной блокировки. Функциональность OLTP-операций в памяти обеспечивается оптимизированными для памяти таблицами и табличными типами, а также собственной компиляцией хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] для эффективного доступа к этим таблицам.  
   
  Дополнительные сведения об оптимизированных для памяти таблицах см. в разделах:  
   

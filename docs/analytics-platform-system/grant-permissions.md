@@ -1,26 +1,22 @@
 ---
-title: Предоставить разрешения
-author: barbkess
-ms.author: barbkess
+title: Разрешения GRANT T-SQL — Parallel Data Warehouse | Документы Microsoft
+description: Разрешения GRANT T-SQL для операций базы данных в Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>Предоставить разрешения
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Разрешения GRANT T-SQL для параллельного хранилища данных
+Разрешения GRANT T-SQL для операций базы данных в Parallel Data Warehouse.
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>Предоставление разрешений для отправки запросов к базе данных
 В этом разделе содержатся инструкции по предоставлению разрешений ролям базы данных и пользователей для запроса данных на SQL Server PDW appliance.  
@@ -252,4 +248,4 @@ GO
 [СОЗДАНИЕ ИМЕНИ ВХОДА](../t-sql/statements/create-login-transact-sql.md)  
 [СОЗДАНИЕ ПОЛЬЗОВАТЕЛЯ](../t-sql/statements/create-user-transact-sql.md)  
 [СОЗДАНИЕ РОЛИ](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+[Нагрузки](load-overview.md)  

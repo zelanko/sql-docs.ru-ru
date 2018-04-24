@@ -2,7 +2,7 @@
 title: Создание кластеризованных индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -24,26 +24,27 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f7aa0ca2f5ea1ffe7ec54cc6279fbf5f1218f8c0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1f07f4b94d6ddc1607c70e4bf921d0986e57b99d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-clustered-indexes"></a>Create Clustered Indexes
+# <a name="create-clustered-indexes"></a>Создание кластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Кластеризованные индексы для таблиц можно создать с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. За некоторыми исключениями, каждая таблица должна иметь кластеризованный индекс. Кроме того, что кластеризованный индекс повышает производительность запросов, его можно перестраивать или переорганизовывать по запросу, управляя фрагментацией таблицы. Кластеризованный индекс может быть также создан для представления. (Кластеризованные индексы определены в разделе [Описания кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Стандартные реализации](#Implementations)  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для создания кластеризованного индекса для таблицы используется:**  
   
@@ -78,10 +79,10 @@ ms.lasthandoff: 04/10/2018
   
 -   Ключ кластеризованного индекса не может включать в себя столбцы **varchar** , для которых существуют данные в единице размещения ROW_OVERFLOW_DATA. Если кластеризованный индекс создается для столбца типа **varchar** и существующие данные располагаются в единице размещения IN_ROW_DATA, то все последующие операции вставки или обновления для данного столбца, выталкивающие данные за пределы строки, будут завершаться ошибкой. Для получения сведений о таблицах, которые могут содержать превышающие размер страницы данные строки, используется функция динамического управления [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -127,7 +128,7 @@ ms.lasthandoff: 04/10/2018
   
 #### <a name="to-create-a-clustered-index"></a>Создание кластеризованного индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

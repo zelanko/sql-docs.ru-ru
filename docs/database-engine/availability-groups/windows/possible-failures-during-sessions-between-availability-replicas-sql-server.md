@@ -1,34 +1,36 @@
 ---
-title: "Возможные сбои во время сеансов между репликами доступности (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Возможные сбои во время сеансов между репликами доступности (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting [SQL Server], HADR
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 644a3e05f20c1aecc1ef768410e5f3d13486b5bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Возможные сбои во время сеансов между репликами доступности (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Физические неисправности, неполадки операционной системы или проблемы с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут привести к сбою сеанса между двумя репликами доступности. Реплика доступности не выполняет регулярных проверок компонентов, которые использует процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли бы быть не замечены, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] реализован собственный механизм времени ожидания сеанса. Указывает интервал времени ожидания сеанса в секундах. Данный интервал времени ожидания — это максимальное время, в течение которого экземпляр сервера ожидает получение сообщения PING от другого экземпляра перед тем, как сделать вывод о том, что другой экземпляр отключен. По истечении времени ожидания сеанса между двумя репликами доступности эти реплики доступности предполагают наличие сбоя и объявляют о *программной ошибке*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Физические неисправности, неполадки операционной системы или проблемы с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут привести к сбою сеанса между двумя репликами доступности. Реплика доступности не выполняет регулярных проверок компонентов, которые использует процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли бы быть не замечены, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] реализован собственный механизм времени ожидания сеанса. Указывает интервал времени ожидания сеанса в секундах. Данный интервал времени ожидания — это максимальное время, в течение которого экземпляр сервера ожидает получение сообщения PING от другого экземпляра перед тем, как сделать вывод о том, что другой экземпляр отключен. По истечении времени ожидания сеанса между двумя репликами доступности эти реплики доступности предполагают наличие сбоя и объявляют о *программной ошибке*.  
   
 > [!IMPORTANT]  
 >  Сбои в базах данных, отличных от баз данных-источников, не обнаруживаются. Более того, весьма проблематично будет обнаружить сбой диска данных, если только вследствие такого сбоя база данных не перезапускается.  

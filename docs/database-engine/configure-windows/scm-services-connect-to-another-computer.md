@@ -1,34 +1,34 @@
 ---
-title: "Подключение к другому компьютеру (диспетчер конфигурации SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Подключение к другому компьютеру (диспетчер конфигурации SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8e4014206abb4c84201724744ec30f1f39f4243
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 992b1cb431091e2eda20bfb8951abd6199b06873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Службы SCM. Подключение к другому компьютеру
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.  
+  В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.  
   
 > [!NOTE]  
 >  Некоторые действия не могут выполняться с помощью Configuration Manager при удаленном подключении.  

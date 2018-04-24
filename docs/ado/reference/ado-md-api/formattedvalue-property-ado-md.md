@@ -1,17 +1,17 @@
 ---
-title: "Свойство FormattedValue (ADO MD) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Свойство FormattedValue (ADO MD) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Cell::FormattedValue
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FormattedValue property [ADO MD]
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0250690adc967205f87fb71c33ef8c424a28a841
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee4d44027b4bf6ec5a71efd98d8e4bd71ff6b103
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="formattedvalue-property-ado-md"></a>Свойство FormattedValue (ADO MD)
 Указывает форматированный вывод [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) значение.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строка** и доступно только для чтения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **FormattedValue** , чтобы получить значение форматированный вывод [значение](../../../ado/reference/ado-md-api/value-property-ado-md.md) свойство [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) объекта. Например, если значение ячейки было 1056.87 и представить это значение суммы в долларах **FormattedValue** бы 1,056.87 $.  
   
 ## <a name="applies-to"></a>Объект применения  

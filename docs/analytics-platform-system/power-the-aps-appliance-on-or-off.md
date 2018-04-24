@@ -1,28 +1,21 @@
 ---
-title: Питание устройства APS или отключить (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Питание устройства и отключение - система платформы аналитики | Документы Microsoft
+description: Power устройство или отключите для система платформы аналитики
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>Питание устройства APS и отключение
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power устройство или отключите для система платформы аналитики
 В этом разделе описывается включение и отключение вашей Systemappliance платформы Analytics, выполнение параллельного хранилища данных и при необходимости выполнения зоной HDInsight питания. Используйте этот раздел при перемещении устройства система платформы аналитики или для управления питанием на устройство после разрушительного сбоя.  
   
 Включение и выключение питания устройства не является таким же, как запуск и остановка служб устройства. Сведения по этой теме см. в разделе [состояние служб PDW &#40;Analytics Platform System&#41;](pdw-services-status.md). Сведения о включением или отключением параллельного хранилища данных SQL Server 2008 см. в файле справки параллельное хранилище данных SQL Server 2008. Сведения о включением или отключением SQL Server 2012 AU1 или AU2 параллельного хранилища данных см. в файле справки для этих версий.  

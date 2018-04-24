@@ -1,16 +1,16 @@
 ---
-title: "Запуск и использование помощника по настройке ядра СУБД | Документация Майкрософт"
-ms.custom: 
+title: Запуск и использование помощника по настройке ядра СУБД | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dta.workload.f1
@@ -22,19 +22,20 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8decab3a7a2bece72e381a2c1efc579e914df82c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Инициализация помощника по настройке ядра СУБД  
  При первом использовании помощника по настройке ядра СУБД его должен инициализировать пользователь, имеющий предопределенную роль сервера **sysadmin** . Это связано с тем, что для поддержки операций настройки в базе данных **msdb** необходимо создать несколько системных таблиц. Инициализация также помогает пользователям, являющимся членами предопределенной роли базы данных **db_owner** , настраивать рабочие нагрузки для таблиц в принадлежащих им базах данных.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/18/2018
 
       ||  
       |-|  
-      |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+      |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
   
 -   Использовать кэш планов в качестве рабочей нагрузки. Это позволяет не создавать рабочую нагрузку вручную. Дополнительные сведения см. далее в подразделе [Настройка базы данных](#Tune) .  

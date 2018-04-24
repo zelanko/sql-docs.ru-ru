@@ -1,17 +1,17 @@
 ---
-title: "Число свойств (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Число свойств (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Error::Number
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6a98f38098d936ea6c2eee03b28d969f1c0e506
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da237c11b1053e97aea58d1a0c9035013dccc9e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="number-property-ado"></a>Свойство номера (ADO)
 Указывает число, которое однозначно определяет [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **длинные** значение, которое может соответствовать одному из [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) константы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте **номер** свойства, чтобы определить, какая ошибка произошла. Значение свойства — уникальный номер, соответствующий условия возникновения ошибки.  
   
  [Ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции возвращает значение HRESULT в шестнадцатеричном формате (например, 0x80004005) или значение long (например, 2147467259). Эти значения HRESULT может быть инициировано базовых компонентов, таких как OLE DB или даже OLE сам. Дополнительные сведения об этих значений см. в разделе [ошибок (OLE DB)](http://msdn.microsoft.com/en-us/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) в [Справочник программиста OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  

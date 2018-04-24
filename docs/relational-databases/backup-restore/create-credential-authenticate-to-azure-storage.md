@@ -1,33 +1,34 @@
 ---
-title: "Создание учетных данных — аутентификация в хранилище Azure | Документация Майкрософт"
-ms.custom: 
+title: Создание учетных данных — аутентификация в хранилище Azure | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3df7cdfdd5ac69eeed14bb97d176ae4497f73cee
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2227e361efc83c16dbfc3c76e75af5ef5fdb208a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Создание учетных данных — проверка подлинности в хранилище Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы создать учетные данные SQL, воспользуйтесь диалоговым окном **Резервное копирование по URL-адресу — создать учетные данные**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Чтобы создать новые учетные данные SQL, воспользуйтесь диалоговым окном **Резервное копирование по URL-адресу — создать учетные данные** .  
   
  При создании учетных данных с помощью этого диалогового окна необходимо предоставить сертификат управления Windows Azure, добавленный в локальное хранилище сертификатов, или профиль публикации, загруженный на компьютер для проверки подписки и сведений об учетной записи хранения.  
   

@@ -1,33 +1,33 @@
 ---
-title: "Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ChangePassword method [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04b09bd74a1bdd56fb91b83c6bf36b68365f59bb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2c233eea6416050a350a1349d1e037facfb183d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic)
 В этом примере демонстрируется [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) метод [группы](../../../ado/reference/adox-api/groups-collection-adox.md), а также [Append](../../../ado/reference/adox-api/append-method-adox-users.md) метод [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) путем добавления новых [Группы](../../../ado/reference/adox-api/group-object-adox.md) и новый [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в системе. Новый **группы** добавляется к **группы** коллекции нового **пользователя**. Следовательно, новый **пользователя** добавляется **группы**. Кроме того [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) метод используется для указания **пользователя** пароль.  

@@ -1,31 +1,32 @@
 ---
-title: "Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N | Документация Майкрософт"
-ms.custom: 
+title: Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f44b4ff58ecef4ea1b7da5c9ceb7673368af194
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d24f8c39d4ab76c7887fb100a6235a1a8d775279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Windows Server 2016 поддерживает устройства NVDIMM-N, которые обеспечивают высочайшую скорость операций ввода-вывода. Одним из привлекательных способов применения таких устройств является организация кэша обратной записи для обеспечения низкой задержки при записи. В этом разделе описывается, как настроить зеркальное дисковое пространство с зеркальным кэшем обратной записи NVDIMM-N в качестве виртуального устройства для хранения журнала транзакций SQL Server. Если вы также хотите использовать его для хранения таблиц или иных данных, вы можете добавить в пул носителей больше дисков или создать несколько пулов для обеспечения изоляции.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Windows Server 2016 поддерживает устройства NVDIMM-N, которые обеспечивают высочайшую скорость операций ввода-вывода. Одним из привлекательных способов применения таких устройств является организация кэша обратной записи для обеспечения низкой задержки при записи. В этом разделе описывается, как настроить зеркальное дисковое пространство с зеркальным кэшем обратной записи NVDIMM-N в качестве виртуального устройства для хранения журнала транзакций SQL Server. Если вы также хотите использовать его для хранения таблиц или иных данных, вы можете добавить в пул носителей больше дисков или создать несколько пулов для обеспечения изоляции.  
   
  Чтобы просмотреть видео, посвященное использованию этой технологии, на канале Channel 9, перейдите на страницу [Использование энергонезависимой памяти (NVDIMM-N) в качестве блочного хранилища в Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466).  
   

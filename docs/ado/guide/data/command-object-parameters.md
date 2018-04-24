@@ -1,30 +1,30 @@
 ---
-title: "Параметры объекта команд | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Параметры объекта команд | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d55af0ad3553a9129ff9e54308b68b14a622c154
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-object-parameters"></a>Параметры объекта Command
 Предыдущие теме, обсуждаемой [создания и выполнения простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Использовать более интересные [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта показан в следующем примере, в котором параметризованные команды SQL. Это изменение позволяет повторно использовать команду, передав другое значение для параметра каждый раз. Так как [подготовленных свойство](../../../ado/reference/ado-api/prepared-property-ado.md) свойство **команды** , присваивается значение **true**, ADO потребуется поставщика для компиляции команды, указанной в [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) перед его выполнением в первый раз. Она также сохраняет скомпилированный команды в памяти. Это замедляет выполнение команды немного при первом запуске он выполняется из-за служебные данные, необходимые для подготовки, но результаты в каждый раз, после этого вызывается команда повысить производительность. Таким образом следует подготовить команды только в том случае, если они будут использоваться более одного раза.  

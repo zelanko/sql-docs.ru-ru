@@ -1,17 +1,17 @@
 ---
-title: "Сортировать свойства | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Сортировать свойства | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::get_Sort
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93be03c62c7950e2cd41a3ab5b56670c2e70b11c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a6f1652861f7b057105a198b36ab7bb0e4d98eb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sort-property"></a>Свойство сортировки
 Указывает один или несколько имен полей, на котором [записей](../../../ado/reference/ado-api/recordset-object-ado.md) отсортирован, ли каждое поле сортируется в порядке возрастания или убывания.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, указывающее поле имена в **записей** по которому выполняется сортировка. Имя каждого разделены точкой с запятой, а также обязательно следует пробел и ключевое слово **ASC**, которой сортирует по возрастанию, поле или **DESC**, который сортирует поля в порядке убывания. По умолчанию если нет ключевого слова не указан, поле сортируется по возрастанию.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для этого свойства требуется [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству будет присвоено **adUseClient**. Временный индекс создается для каждого поля, указанного в **сортировки** свойства, если индекс еще не существует.  
   
  Операция сортировки эффективна, так как данные не переупорядочить физически, а просто осуществляется в порядке, заданном индексом.  

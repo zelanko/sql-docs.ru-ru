@@ -1,16 +1,16 @@
 ---
-title: "Возможности и задачи служебной программы SQL Server | Документация Майкрософт"
-ms.custom: 
+title: Возможности и задачи служебной программы SQL Server | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2e1a99ba452c1f923cfe9ae8dfaf59b33d96ab92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Функции и задачи служебной программы SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для клиентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важным требованием является возможность управления средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целом. В этом выпуске для удовлетворения такого требования используется концепция управления приложениями и многосерверной средой, реализованная в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важным требованием является возможность управления средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целом. В этом выпуске для удовлетворения такого требования используется концепция управления приложениями и многосерверной средой, реализованная в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Преимущества служебной программы SQL Server  
  Программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] моделирует сущности организации, связанные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в унифицированном представлении. Контрольные точки обозревателя и проводника служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) предоставляют администраторам целостное представление о работоспособности ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для этого используется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , служащий точкой управления служебной программой (UCP). Благодаря сочетанию сводных и подробных данных, представленных в пункте управления программой для политик избыточной и недостаточной загрузки, а также для различных ключевых параметров, появляется возможность объединения и простого определения перегруженных ресурсов. Политики исправности являются настраиваемыми и позволяют изменить заданные в них верхние и нижние пороговые значения использования ресурсов. Можно изменять глобальные политики наблюдения или настраивать индивидуальные политики наблюдения для каждой сущности, управляемой в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -1,31 +1,31 @@
 ---
-title: "Адрес объекта привязки к данным книги | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Адрес объекта привязки к данным книги | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 353e086d8350364a07486eba2334c76b470237db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-data-binding-object"></a>Объект привязки данных адресной книги
 Адресная книга приложение использует [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта привязывать данные из базы данных SQL Server для визуального объекта (в данном случае таблице DHTML) на странице приложения клиента HTML. Использует управляемую событиями логику программы VBScript [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) для:  
@@ -67,7 +67,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|При использовании HTTP присваивается имя компьютера сервера, предшествующим `http://`.|  
+|[СЕРВЕР](../../../ado/reference/rds-api/server-property-rds.md)|При использовании HTTP присваивается имя компьютера сервера, предшествующим `http://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Предоставляет сведения о соединении, необходимые для **RDS. DataControl** для подключения к SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Задает или возвращает строку запроса, используемый для получения [записей](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   

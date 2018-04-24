@@ -1,17 +1,17 @@
 ---
-title: "Метод OpenSchema | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод OpenSchema | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf2b79bc39ff1f376801b5df6c24a768067a53b9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c613ec5782f0bb9d2df0bbd1fa5990343fc8cada
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -53,7 +53,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  Идентификатор GUID схемы поставщика запросов, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *QueryType* равно **adSchemaProviderSpecific**; в противном случае он не используется.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **OpenSchema** метод возвращает описательные сведения об источнике данных, например, таблицы в источнике данных столбцы в таблицах, и поддерживаемые типы данных.  
   
  *QueryType* аргумент имеет значение GUID, которое указывает, возвращаются столбцы (схемы). Спецификация OLE DB содержит полный список схем.  

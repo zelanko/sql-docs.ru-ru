@@ -1,15 +1,16 @@
 ---
-title: "Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности | Документы Майкрософт"
-ms.custom: 
+title: Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - flexible failover policy
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 486be04f76c4a8b3cb017a2cbd1e6ac73942aeb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Гибкая политика перехода на другой ресурс предоставляет детальное управление условиями, которые могут вызвать [автоматический переход на другой ресурс](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Гибкая политика отработки отказа предоставляет гранулярное управление условиями, которые могут вызвать [автоматический переход на другой ресурс](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
   
  Гибкая политика отработки отказа группы доступности определяется уровнем условий сбоя и пороговым значением времени ожидания проверки работоспособности. При обнаружении, что группа доступности превысила уровень условий сбоя или пороговое значение проверки времени ожидания работоспособности, DLL-ресурс группы доступности ответит WSFC-кластеру. После этого WSFC-кластер инициирует автоматический переход на вторичную реплику.  
   

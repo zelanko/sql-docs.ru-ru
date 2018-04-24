@@ -1,32 +1,32 @@
 ---
-title: "Формирование предложении APPEND | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Формирование предложении APPEND | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-append-clause"></a>Предложение APPEND фигуры
 В предложении APPEND фигуры команда добавляет столбец или столбцы для **записей**. Часто эти столбцы — это столбцы главе, относящихся к дочерним **записей**.  
@@ -40,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Описание  
  Существуют следующие части этого предложения.  
   
- *parent-command*  
+ *родительский команда*  
  Ноль или один из следующих (можно опустить *родительской команды* полностью):  
   
 -   Команда поставщика заключены в фигурные скобки («{}»), которая возвращает **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
@@ -49,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Таблица ключевого слова, за которым следует имя таблицы в поставщике данных.  
   
- *parent-alias*  
+ *родительский псевдоним*  
  Необязательный псевдоним, который ссылается на родительский **записей**.  
   
- *column-list*  
+ *Список столбцов*  
  Один или несколько из следующих действий:  
   
 -   Столбца со статистическим выражением.  
@@ -71,8 +71,8 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
- *child-recordset*  
+## <a name="remarks"></a>Замечания  
+ *дочерних записей*  
  -   Команда поставщика заключены в фигурные скобки («{}»), которая возвращает **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
   
 -   Другая команда фигуры, внедренных в круглые скобки.  
@@ -81,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Таблица ключевого слова, за которым следует имя таблицы в поставщике данных.  
   
- *child-alias*  
+ *дочерние псевдоним*  
  Псевдоним, относящийся к дочернему **записей**.  
   
- *parent-column*  
+ *родительский столбец*  
  Столбец в **записей** возвращенных *родительской команды.*  
   
- *child-column*  
+ *дочерний столбец*  
  Столбец в **записей** возвращенных *команда дочерние*.  
   
  *Номер param*  
  В разделе [работы параметризованных команд](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *chapter-alias*  
+ *Глава псевдоним*  
  Псевдоним, который ссылается на столбец добавляется к родительскому элементу.  
   
 > [!NOTE]
@@ -102,7 +102,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  Предложение после ДОБАВЛЕНИЯ ключевое слово представляет собой список, где каждое предложение разделены точкой с запятой и определяет другой столбец для добавления к родительскому элементу.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При создании поставщика команд из введенных пользователем данных в команде ФИГУРЫ ФИГУРЫ обрабатывает предоставленное пользователем команды поставщика как непрозрачная строка и передать их точно поставщика. Например в следующую команду ФИГУРЫ  
   
 ```  

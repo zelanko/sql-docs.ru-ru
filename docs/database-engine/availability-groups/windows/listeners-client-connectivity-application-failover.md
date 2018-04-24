@@ -2,7 +2,7 @@
 title: Прослушиватели, подключение клиентов и отработка отказа приложений | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: ''
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 21197cd149762c34f8f44a1050a979458d6f7045
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Прослушиватели, подключение клиентов и отработка отказа приложений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе содержатся сведения о клиентских компонентах [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и функциях переключения приложений.  
+  В этом разделе содержатся сведения о клиентских компонентах [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и функциях переключения приложений.  
   
 > [!NOTE]  
 >  В большинстве стандартных конфигураций прослушивателей первый прослушиватель группы доступности можно создать просто с помощью инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] или командлетов PowerShell. Дополнительные сведения см. в подразделе [Связанные задачи](#RelatedTasks)далее в этом разделе.  
@@ -226,7 +226,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

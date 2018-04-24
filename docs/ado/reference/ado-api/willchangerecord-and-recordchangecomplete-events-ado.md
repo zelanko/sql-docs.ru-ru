@@ -1,17 +1,17 @@
 ---
-title: "WillChangeRecord и RecordChangeComplete события (ADO) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: WillChangeRecord и RecordChangeComplete события (ADO) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - RecordChangeComplete
 - Recordset::WillChangeRecord
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 314df047b5d155f2605c3fa9c98151687d57c297
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1c20f1af76f7852cf4b91c2ea140ab6135ca6669
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord и RecordChangeComplete события (ADO)
 **WillChangeRecord** событие вызывается перед одной или нескольких записей (строк) [записей](../../../ado/reference/ado-api/recordset-object-ado.md) изменения. **RecordChangeComplete** событие вызывается после одного или более записи изменения.  
@@ -67,7 +67,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  Объект **записей** объекта. **Записей** для возникновения этого события.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объект **WillChangeRecord** или **RecordChangeComplete** событие может происходить первого поля, измененные в строку из-за следующих **записей** операции: [ Обновление](../../../ado/reference/ado-api/update-method.md), [удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), и [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Значение **записей** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) определяет, какие операции вызывают возникновения событий.  
   
  Во время **WillChangeRecord** событий, **записей** [фильтра](../../../ado/reference/ado-api/filter-property.md) свойству **adFilterAffectedRecords**. Это свойство нельзя изменить во время обработки события.  

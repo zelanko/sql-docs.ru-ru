@@ -1,34 +1,35 @@
 ---
-title: "Класс событий Exchange Spill | Документация Майкрософт"
-ms.custom: 
+title: Класс событий Exchange Spill | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542f3a89a81184fe78375fb987f6d7ceb9f7281f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e9b8847a3bbbbeb85a3b27d8bd225eb8eb96bb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Класс событий **Exchange Spill** показывает, что буфер связи в параллельном плане запроса временно записан в базу данных **tempdb** . Это происходит редко и только если план запроса содержит несколько просмотров диапазона.  
+  Класс событий **Exchange Spill** показывает, что буфер связи в параллельном плане запроса временно записан в базу данных **tempdb** . Это происходит редко и только если план запроса содержит несколько просмотров диапазона.  
   
  Как правило, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , формирующий такие просмотры диапазонов, содержит много операторов BETWEEN, каждый из которых выбирает диапазон строк из таблицы или индекса. Другой способ получить несколько диапазонов — использовать такое выражение, как (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Кроме того, планы запросов должны выполнять просмотр этих диапазонов исключительно в упорядоченном виде либо из-за наличия предложения ORDER BY в T.a, либо из-за того, что итератор плана обрабатывает кортежи строго в порядке сортировки.  
   

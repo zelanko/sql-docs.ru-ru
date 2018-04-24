@@ -1,31 +1,31 @@
 ---
-title: "Однопроходные курсоры | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Однопроходные курсоры | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84ab8335e94adecf130fd2301f697a02eceee37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 90ca5c097080d09276bc66754264fcf6ada658ea
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="forward-only-cursors"></a>Однопроходные курсоры
 Обычно по умолчанию используется тип курсора, вызывается курсора однонаправленные (или без прокрутки), можно переместить только вперед по результирующему набору. Однонаправленный курсор не поддерживает прокрутку (возможность перемещаться вперед и назад в результирующем наборе); он поддерживает только выборки строк от начала до конца результирующего набора. С помощью некоторых однонаправленные курсоры (таких как библиотеки курсоров SQL Server), что все insert, update и delete инструкции внесенные текущим пользователем (или зафиксированные другими пользователями), влияющих на строки результирующего набора, отображаются как строки, выбранные. Так как курсор не может быть прокручен назад, однако изменений, сделанных в строках в базе данных после получения строки, не видны через курсор.  

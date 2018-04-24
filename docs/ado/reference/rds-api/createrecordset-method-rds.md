@@ -1,17 +1,17 @@
 ---
-title: "Метод CreateRecordset (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Метод CreateRecordset (RDS) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl::CreateRecordset
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6a829dcd85ef873060f99e5302ccc94ac407f33b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="createrecordset-method-rds"></a>Метод CreateRecordset (RDS)
 Создает пустой, отключен [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -63,7 +63,7 @@ object.CreateRecordset(ColumnInfos)
   
  Набор столбцов массивов, затем группируются в массив, который определяет **записей**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Серверные бизнес-объекта, можно заполнить итоговый **записей** данными из не - поставщик данных OLE DB, такие как операционной системой файл содержащего биржевых котировок.  
   
  В следующей таблице перечислены [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значений, поддерживаемых **CreateRecordset** метод. Номер, указанный — это номер ссылки, используемый для определения полей.  
@@ -99,7 +99,7 @@ object.CreateRecordset(ColumnInfos)
 |Переменная|**adVarChar**|200||  
 |Переменная|**adLongVarChar**|201|200|  
 |Переменная|**adWChar**|130||  
-|Переменная|**adVarWChar**|202|130|  
+|Переменная|**AdVarWChar**|202|130|  
 |Переменная|**adLongVarWChar**|203|130|  
 |Переменная|**adBinary**|128||  
 |Переменная|**adVarBinary**|204||  

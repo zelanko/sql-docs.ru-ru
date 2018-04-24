@@ -1,23 +1,19 @@
 ---
-title: Новые возможности Analytics Platform System — хранилища данных с горизонтальным масштабированием
-author: happynicolle
-ms.author: nicw;barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: Новые возможности Analytics Platform System — хранилища данных с горизонтальным масштабированием | Документы Microsoft
 description: В разделе новые возможности Microsoft® Analytics Platform System масштабирования на локальном устройстве, на котором размещена MPP SQL Server Parallel Data Warehouse.
-ms.date: 11/28/2016
-ms.topic: article
-ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4beb44ac45d95aa0338dc9dc0be0796a223d3243
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Новые возможности 2016 системы платформы аналитики, масштабируемого хранилища данных MPP
 В разделе новые возможности в Microsoft® Analytics Platform System (APS) 2016 последнее обновление устройства для масштабирования на локальном устройстве, на котором размещена MPP SQL Server Parallel Data Warehouse. 
@@ -58,7 +54,7 @@ APS 2016 поддерживает эти улучшения совместимо
 
 ### <a name="additional-functions"></a>Дополнительные функции
 
-- [NEWID()][]
+- [ФУНКЦИИ NEWID()][]
 - [RAND()][]
 
 ## <a name="polybasehadoop-enhancements"></a>Усовершенствования PolyBase/Hadoop
@@ -114,7 +110,7 @@ APS 2016 поддерживает эти улучшения совместимо
 [CHECKSUM()]:https://msdn.microsoft.com/library/ms189788.aspx
 [BINARY_CHECKSUM()]:https://msdn.microsoft.com/library/ms173784.aspx
 [HAS_PERMS_BY_NAME()]:https://msdn.microsoft.com/library/ms189802.aspx
-[NEWID()]:https://msdn.microsoft.com/library/ms190348.aspx
+[ФУНКЦИИ NEWID()]:https://msdn.microsoft.com/library/ms190348.aspx
 [RAND()]:https://msdn.microsoft.com/library/ms177610.aspx
 
 

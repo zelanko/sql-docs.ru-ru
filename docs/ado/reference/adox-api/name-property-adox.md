@@ -1,17 +1,17 @@
 ---
-title: "Имя свойства (ADOX) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Имя свойства (ADOX) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Table::PutName
@@ -44,16 +44,16 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10e899d43bd2990bff5724d87b4deefffd559090
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfe07a96ffe8ae42b511ea26e0f7d33b4ccc7295
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Имена не обязательно должны быть уникальными в пределах коллекции.  
   
  **Имя** свойство является чтение и запись на [столбца](../../../ado/reference/adox-api/column-object-adox.md), [группы](../../../ado/reference/adox-api/group-object-adox.md), [ключ](../../../ado/reference/adox-api/key-object-adox.md), [индекс](../../../ado/reference/adox-api/index-object-adox.md), [ Таблица](../../../ado/reference/adox-api/table-object-adox.md), и [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объектов. **Имя** свойство доступно только для чтения на [каталога](../../../ado/reference/adox-api/catalog-object-adox.md), [процедура](../../../ado/reference/adox-api/procedure-object-adox.md), и [представление](../../../ado/reference/adox-api/view-object-adox.md) объектов.  

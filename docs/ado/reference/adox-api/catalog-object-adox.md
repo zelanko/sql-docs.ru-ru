@@ -1,38 +1,38 @@
 ---
-title: "Каталога объектов (ADOX) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Каталога объектов (ADOX) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Catalog
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d8f47b63022f481c5ed102bcc9e97f5fa563aea
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ca653196f3f56508351d376ba48b4e7f737439b7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="catalog-object-adox"></a>Объект каталога (ADOX)
 Содержит коллекции ([таблиц](../../../ado/reference/adox-api/tables-collection-adox.md), [представления](../../../ado/reference/adox-api/views-collection-adox.md), [пользователей](../../../ado/reference/adox-api/users-collection-adox.md), [группы](../../../ado/reference/adox-api/groups-collection-adox.md), и [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md)), описания каталога схемы источника данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Вы можете изменить **каталога** объекта путем добавления или удаления объектов или изменения существующих объектов. Некоторые поставщики могут не поддерживать все **каталога** объектов или могут поддерживать только для просмотра сведений о схеме.  
   
  С помощью свойств и методов **каталога** объекта, вы можете:  

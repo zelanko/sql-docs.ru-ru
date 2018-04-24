@@ -1,35 +1,36 @@
 ---
-title: "Задача \"Выполнение инструкции T-SQL\" (план обслуживания) | Документация Майкрософт"
-ms.custom: 
+title: Задача "Выполнение инструкции T-SQL" (план обслуживания) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.tsql.f1
 helpviewer_keywords:
 - Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a507e5599faec3047ec861e8c72d618b33c27bdf
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: eaf5f4d70e39bc43c9785f76ef0f3910e4b0a3cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Задача «Выполнение инструкции T-SQL» (план обслуживания)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для настройки своего плана обслуживания путем добавления в него выбранных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте диалоговое окно **Задача "Выполнение инструкции T-SQL"**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Для настройки своего плана обслуживания путем добавления выбранных инструкций **к этому плану используйте диалоговое окно** Задача "Выполнение инструкции T-SQL" [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="options"></a>Параметры  
  **Соединение**  

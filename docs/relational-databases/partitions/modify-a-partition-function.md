@@ -1,31 +1,33 @@
 ---
-title: "Изменение функции секционирования | Документация Майкрософт"
-ms.custom: 
+title: Изменение функции секционирования | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 230f3f3b1e33d50761bef9305cf8f19de1a826e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-a-partition-function"></a>Изменение функции секционирования
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Вы можете изменить способ секционирования таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем увеличения или уменьшения указанного числа секций с шагом 1 в функции секционирования секционированной таблицы или индекса с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление секции осуществляется путем разбиения существующей секции на две и переопределением границ новых секций. Удаление секции происходит путем слияния двух секций в одну на границе. Это действие повторно заполняет одну секцию и оставляет другую незаполненной.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Вы можете изменить способ секционирования таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем увеличения или уменьшения указанного числа секций с шагом 1 в функции секционирования секционированной таблицы или индекса при помощи [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление секции осуществляется путем разбиения существующей секции на две и переопределением границ новых секций. Удаление секции происходит путем слияния двух секций в одну на границе. Это действие повторно заполняет одну секцию и оставляет другую незаполненной.  
   
 > [!CAUTION]  
 >  Несколько таблиц или индексов могут использовать одинаковую функцию секционирования. При изменении функции секционирования затрагиваются все таблицы и индексы в одной транзакции. Проверьте зависимости функции секционирования перед внесением изменений.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/18/2018
 ####  <a name="Permissions"></a> Permissions  
  Для выполнения инструкции ALTER PARTITION FUNCTION может использоваться одно из перечисленных ниже разрешений.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
   
 -   Разрешение CONTROL или ALTER в базе данных, в которой была создана функция секционирования.  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Разбиение одной секции на две  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -120,7 +122,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>Слияние двух секций в одну  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

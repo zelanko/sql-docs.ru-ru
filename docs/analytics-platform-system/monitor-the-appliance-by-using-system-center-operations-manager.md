@@ -1,29 +1,22 @@
 ---
-title: Монитор устройств с помощью System Center Operations Manager (APS)
-author: barbkess
-ms.author: barbkess
+title: Монитор с SCOM - система платформы аналитики | Документы Microsoft
+description: System Center Operations Manager (SCOM) используется для мониторинга устройства Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Мониторинг устройства с помощью System Center Operations Manager
-Здесь описывается, как использовать System Center Operations Manager для наблюдения за SQL Server PDW и HDInsight.  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Монитор с System Center Operations Manager — система платформы аналитики
+System Center Operations Manager (SCOM) используется для мониторинга устройства Analytics Platform System (APS).
   
 ## <a name="before-you-begin"></a>Перед началом  
   
@@ -33,7 +26,7 @@ ms.lasthandoff: 04/06/2018
   
 2.  Должен быть установлен собственный клиент SQL Server 2008 R2 или SQL Server 2012 Native Client.  
   
-3.  Пакеты управления для наблюдения за SQL Server PDW и HDInsight должен быть установлен, импортированные и настроенные. Используйте следующие инструкции для выполнения следующих задач.  
+3.  Пакеты управления для наблюдения за SQL Server PDW и HDInsight должен быть установлен, импортированные и настроенные. Используйте следующие статьи инструкции для выполнения следующих задач.  
   
     -   [Установить пакеты управления SCOM &#40;система платформы аналитики&#41;](install-the-scom-management-packs.md)  
   
@@ -53,7 +46,7 @@ ms.lasthandoff: 04/06/2018
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Устройства  
-Устройства будут которой можно найти в настоящее время обнаруженных и отслеживаемых SQL Server PDW устройств в вашей среде. Если устройство не отображаться здесь и создания соединения ODBC для него, затем может существовать проблема с вашей учетной записью PDWWatcher. Если они отображаются как «Неотслеживаемые» может существовать проблема с вашей учетной записью PDWMonitor. Наберитесь терпения SCOM не вносит изменения в режиме реального времени, но периодически проверяет новые приложения для мониторинга и периодически отправляет запросы на устройства для наблюдения.  
+Устройства будут которой можно найти в настоящее время обнаруженных и отслеживаемых SQL Server PDW устройств в вашей среде. Если устройство не отображаться здесь и создания соединения ODBC для него, затем может существовать проблема с вашей учетной записью PDWWatcher. Если они отображаются как «Наблюдение не ведется», может существовать проблема с вашей учетной записью PDWMonitor. Наберитесь терпения, так как SCOM не вносит изменения в режиме реального времени, но периодически проверяет новые приложения для мониторинга и периодически отправляет запросы на устройства для наблюдения.  
   
 ![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   

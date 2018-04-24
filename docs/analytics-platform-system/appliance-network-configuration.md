@@ -1,36 +1,29 @@
 ---
-title: Сетевая конфигурация устройства (система платформы аналитики)
-author: barbkess
-ms.author: barbkess
+title: Сетевая конфигурация устройства - система платформы аналитики | Документы Microsoft
+description: Устройство Analytics Platform System (APS) строится и настроен исправление набор IP-адресов на протяжении всех серверов и соответствующие устройства из фабричной установки Оборудования. При доставке устройства необходимо изменить конфигурацию IP-адрес внешнего (Ethernet) обращаться для соответствия требованиям центра данных определенного клиента.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>Сетевая конфигурация устройства
-SQL Server PDW appliance строится и настроен исправление набор IP-адресов на протяжении всех серверов и соответствующие устройства из фабричной установки Оборудования. При доставке устройства необходимо изменить конфигурацию IP-адрес внешнего (Ethernet) обращаться для соответствия требованиям центра данных определенного клиента.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Сетевая конфигурация устройства для система платформы аналитики
+Устройство Analytics Platform System (APS) строится и настроен исправление набор IP-адресов на протяжении всех серверов и соответствующие устройства из фабричной установки Оборудования. При доставке устройства необходимо изменить конфигурацию IP-адрес внешнего (Ethernet) обращаться для соответствия требованиям центра данных определенного клиента.  
   
 > [!NOTE]  
 > PDW V1 требуется 8 внешние IP (*клиента с выходом*) адреса для обеспечения возможности внешнего подключения для каждого элемента управления в стойке узлов. 2012 PDW (V2) расширенного сетевого взаимодействия, предоставляя все компоненты устройства извне через IP-адресов. Такой подход обеспечивает надежность уменьшения затрат и повысить гибкость и расширяет возможности перемещения данных, загрузки данных и интеграции Hadoop. Число IP-адресов, которые требуется зависит от числа узлов в устройстве, а также наличие функций, таких как HDInsight. Для размещения этого большего размера блока IP-адреса, клиент должен настроить отдельную подсеть для PDW. В этой подсети будет достаточно адресного пространства (до 250 адреса) для размещения компонентов до 5 стеллажей PDW.  
   
 **Сетевая конфигурация** страница позволяет просматривать внешний параметры сети для узлов на устройстве Analytics Platform System. Эта страница доступна только для чтения.  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![Сеть устройств DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Чтобы обновить конфигурацию сети на устройстве  
 Изменить, изменив IP-адреса домена структуры, рабочая нагрузка домена и доменов HDInsight **AplianceInfo.xml** файл и затем запустить программу установки. Эта операция выполняется в автономном режиме. HDInsight (при его наличии) и PDW областей останавливается автоматически при изменении IP-адреса.  
