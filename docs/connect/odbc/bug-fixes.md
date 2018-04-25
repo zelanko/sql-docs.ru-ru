@@ -2,7 +2,7 @@
 title: Список ошибок, исправленных | Документы Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Список ошибок, исправленных
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2018
 - Исправлена ошибка 22003 сбой в SQLGetData, если размер буфера, переданного в меньше второго, а затем извлекаемых данных (Windows)
 - Исправлена усеченное ADAL ошибок
 - Исправлена ошибка редких на 32-разрядной версии Windows, при преобразовании значение с плавающей запятой в целое число
-- Устранена проблема, где бы Вставка double в десятичное поле с постоянным шифрованием на ошибки усечения не возвращают данные
+- Устранена проблема, где Вставка double в десятичное поле с постоянным шифрованием на вернет ошибку усечение данных
 - Исправлено в установщик MacOS предупреждение
 - Фиксированный отправку неверном состоянии для SQL Server при попытке восстановления сеанса, если устойчивость подключений и организации пулов соединений оба включены, вызывая сеанса для удаления с сервера
 

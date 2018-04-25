@@ -1,32 +1,33 @@
 ---
-title: "Образец асинхронного выполнения (метод уведомления) | Документы Microsoft"
-ms.custom: 
+title: Образец асинхронного выполнения (метод уведомления)
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62d8485bec26053efd84891407255eeba2103492
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e971ee6725f27afcd8f8b9c8accdd37176f1cf6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Образец асинхронного выполнения (метод уведомления)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  В примерах кода в этом разделе демонстрируется использование [асинхронное выполнение (метод уведомления)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  В примерах кода в этой статье показано, как использовать [](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)асинхронное выполнение (метод уведомления).  
   
  Эта функция использует асинхронное уведомление, чтобы открыть пять подключений и выполняет один запрос на инструкцию для каждого подключения.  
   
