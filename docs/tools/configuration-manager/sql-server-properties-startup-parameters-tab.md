@@ -1,26 +1,26 @@
 ---
-title: "Свойства SQL Server (вкладка «Параметры запуска») | Документы Microsoft"
-ms.custom: 
+title: Свойства SQL Server (вкладка «Параметры запуска») | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/03/2018
 ---
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/03/2018
  Чтобы удалить параметр, выберите его и нажмите кнопку **Удалить**.  
   
 ## <a name="parameter-format"></a>Формат параметров  
- Не вводите разделитель между параметрами. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager обеспечивает следующие требования к параметрам.  
+ Не вводите разделитель между параметрами. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют следующие требования к параметрам.  
   
 -   Начальные и конечные пробелы любого параметра запуска отсекаются.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
   
 |Параметр|Краткое описание|  
 |---------------|-----------------------|  
-|-m|Запускает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.|  
+|-M|Запускает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.|  
 |-T1204|Возвращает ресурсы и типы блокировки, участвующие во взаимоблокировке и текущую команду, на которую влияет взаимоблокировка.|  
 |-T1224|Отключает укрупнение блокировок на основе количества блокировок.|  
 |-T3608|Запрещает автоматический запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и восстановление любых баз данных, кроме базы данных master.|  

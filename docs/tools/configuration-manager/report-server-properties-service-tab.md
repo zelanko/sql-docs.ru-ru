@@ -1,26 +1,26 @@
 ---
-title: "Свойства сервера (вкладка «службы») отчета | Документы Microsoft"
-ms.custom: 
+title: Свойства сервера (вкладка «службы») отчета | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b55a991a48bcae34cea1bfbc834d7a6e6891c786
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/03/2018
 ---
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
  **Состояние**  
  Указывает, была ли служба запущена, остановлена или отключена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   
