@@ -1,7 +1,7 @@
 ---
 title: Среда SQL Server Management Studio (SSMS) — журнал изменений | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,6 @@ ms.lasthandoff: 04/08/2018
    - поддержка заданий агента SQL;
    - поддержка связанных серверов.
 - Дополнительные сведения об управляемых экземплярах можно найти [здесь](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
-
 
 Обозреватель объектов:
 - Добавлены параметры, отключающие принудительное заключение имен в скобки при перетаскивании из обозревателя объектов в окно запроса. (Предложения пользователей [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) и [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051).)
@@ -109,7 +108,8 @@ Database Mail:
 
 ### <a name="known-issues"></a>Известные проблемы
 
-- Существует известная проблема, когда SSMS 17.6 аварийно завершает работу при настройке расписания в плане обслуживания.
+> [!WARNING]
+> Существует известная проблема, из-за которой среда SSMS 17.6 работает нестабильно и происходит ее сбой при использовании [планов обслуживания](../relational-databases/maintenance-plans/maintenance-plans.md). Если вы используете планы обслуживания, не устанавливайте SSMS 17.6. Если вы уже установили версию 17.6 и эта проблема вас коснулась, перейдите на более раннюю версию SSMS 17.5. 
 
 ## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
 

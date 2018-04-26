@@ -1,30 +1,30 @@
 ---
-title: "Stretch Database | Документация Майкрософт"
-ms.custom: 
+title: Stretch Database | Документация Майкрософт
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,9 +50,9 @@ ms.lasthandoff: 02/09/2018
  Обеспечьте себе душевное спокойствие, безопасно разместив наиболее важные приложения в облаке. Постоянное шифрование SQL Server обеспечивает шифрование данных на ходу. Безопасность на уровне строк и другие дополнительные функции безопасности SQL Server также работают с Stretch Database, защищая ваши данные.  
   
 ## <a name="what-does-stretch-database-do"></a>Что делает Stretch Database?  
- После того как вы включите Stretch Database для экземпляра SQL Server, базы данных и как минимум одной таблицы, она начнет переносить статистические данные в Azure без предупреждения.  
+ После того как вы включите Stretch Database для экземпляра SQL Server, базы данных и, как минимум, одной таблицы, она начнет автоматически переносить статистические данные в Azure.  
   
--   Если холодные данные хранятся в отдельной таблице, эту таблицу можно перенести целиком.  
+-   Если холодные данные хранятся в отдельной таблице, эту таблицу можно перенести полностью.  
   
 -   Если таблица содержит как горячие, так и холодные данные, строки для переноса можно выбрать с помощью функции фильтров.
 

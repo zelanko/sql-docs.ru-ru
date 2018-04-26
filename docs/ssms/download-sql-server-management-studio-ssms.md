@@ -1,7 +1,7 @@
 ---
 title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4343fe350d541a04b5aad44df457d09f69af3bcb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,6 +50,9 @@ SSMS 17.x — последняя версия *SQL Server Management Studio*, 
 **[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.6 (обновление с версии 17.x до 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> Существует известная проблема, из-за которой среда SSMS 17.6 работает нестабильно и происходит ее сбой при использовании [планов обслуживания](../relational-databases/maintenance-plans/maintenance-plans.md). Если вы используете планы обслуживания, не устанавливайте SSMS 17.6. Если вы уже установили версию 17.6 и эта проблема вас коснулась, перейдите на более раннюю версию SSMS 17.5. 
 
 **Сведения о версии**
 
@@ -161,13 +164,9 @@ SSMS 17.6 — это новейшая версия SQL Server Management Studi
 
 ## <a name="feedback"></a>Отзывы
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## <a name="see-also"></a>См. также:
 
@@ -175,3 +174,5 @@ SSMS 17.6 — это новейшая версия SQL Server Management Studi
 - [Документация по SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Дополнительные обновления и пакеты обновления](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

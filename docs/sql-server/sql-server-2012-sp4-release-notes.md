@@ -1,10 +1,8 @@
 ---
 title: Заметки о выпуске пакетов обновления к SQL Server 2012 | Документы Майкрософт
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: supportability
 ms.custom: ''
 ms.date: 2/26/2018
 ms.reviewer: ''
@@ -12,16 +10,16 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0aa6379b2d0a0675c0ebc999e3fcee603d5b5fb
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: c89264e120ce67a814d102f0306f74e06c3d79f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Заметки о выпуске пакетов обновления к SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +150,7 @@ ms.lasthandoff: 02/27/2018
 3.  Щелкните **Коллекция PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Для использования PowerPivot для Excel с Excel 2013 необходимо использовать надстройку, установленную с Excel  
-**Проблема.** Начиная с Office 2010, PowerPivot для Excel представляет собой отдельную надстройку, которую можно скачать по адресу [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx). Ее можно также загрузить из [центра загрузки Майкрософт](http://www.microsoft.com/download/details.aspx?id=29074). Обратите внимание, что для скачивания доступны две версии надстройки PowerPivot. Одна из них поставляется с SQL Server 2008 R2, а вторая — с SQL Server 2012. Но для Оffice 2013 PowerPivot для Excel поставляется с Оffice и устанавливается при установке Excel. Версии PowerPivot для Excel 2010 в SQL Server 2008 R2 и SQL Server 2012 несовместимы с Excel 2013, но все равно можно установить PowerPivot для Excel 2010 на клиентском компьютере, если есть необходимость эксплуатировать Excel 2010 параллельно с Excel 2013. Другими словами, могут сосуществовать 2 версии Excel, а вместе с ними соответствующие надстройки PowerPivot.  
+**Проблема:** начиная с Office 2010, PowerPivot для Excel представляет собой отдельную надстройку, которую можно скачать по адресу [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx). Ее можно также загрузить из [центра загрузки Майкрософт](http://www.microsoft.com/download/details.aspx?id=29074). Обратите внимание, что для скачивания доступны две версии надстройки PowerPivot. Одна из них поставляется с SQL Server 2008 R2, а вторая — с SQL Server 2012. Но для Оffice 2013 PowerPivot для Excel поставляется с Оffice и устанавливается при установке Excel. Версии PowerPivot для Excel 2010 в SQL Server 2008 R2 и SQL Server 2012 несовместимы с Excel 2013, но все равно можно установить PowerPivot для Excel 2010 на клиентском компьютере, если есть необходимость эксплуатировать Excel 2010 параллельно с Excel 2013. Другими словами, могут сосуществовать&2; версии Excel, а вместе с ними соответствующие надстройки PowerPivot.  
   
 **Решение.** Чтобы использовать PowerPivot для Excel 2013, необходимо включить надстройку COM. В Excel 2013 выберите **Файл** | **Параметры** | **Надстройки**. В раскрывающемся списке выберите **Управление** , а затем щелкните **Надстройки COM** и нажмите кнопку **Перейти**. В окне **Надстройки COM**выберите **Microsoft Office PowerPivot для Microsoft Excel 2013** и нажмите кнопку **ОК**.  
   
@@ -183,9 +181,9 @@ ms.lasthandoff: 02/27/2018
 **Решение.** Установите пакет установщика PowerPivot для SharePoint 2013 (**spPowerPivot.msi**) на сервере SharePoint Server 2013. Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Пакет дополнительных компонентов можно загрузить из центра загрузки [!INCLUDE[msCoName](../includes/msconame-md.md)] по ссылке [Пакет дополнительных компонентов SQL Server 2012 с пакетом обновления 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>После планового обновления данных листы Power View в книге PowerPivot удаляются  
-**Проблема.**В надстройке PowerPivot для SharePoint при использовании **планового обновления данных** для книги с Power View удаляются все листы Power View.  
+**Проблема.** В надстройке PowerPivot для SharePoint при использовании **планового обновления данных** для книги с Power View удаляются все листы Power View.  
   
-**Решение.**Чтобы использовать **Scheduled Data Refresh** с книгами Power View, создайте книгу PowerPivot, представляющую собой просто модель данных. Создайте отдельную книгу с листами Excel и листами Power View, ссылающимися на книгу PowerPivot с моделью данных. Обновление данных можно планировать только для книги PowerPivot с моделью данных.  
+**Решение.** Чтобы использовать **Scheduled Data Refresh** с книгами Power View, создайте книгу PowerPivot, представляющую собой просто модель данных. Создайте отдельную книгу с листами Excel и листами Power View, ссылающимися на книгу PowerPivot с моделью данных. Обновление данных можно планировать только для книги PowerPivot с моделью данных.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   

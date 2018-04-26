@@ -1,40 +1,42 @@
 ---
-title: "Ограничения вычислительной емкости для разных выпусков SQL Server | Microsoft Docs"
-ms.custom: 
+title: Ограничения вычислительной емкости для разных выпусков SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Ограничения вычислительной емкости для разных выпусков SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта статья приводит ограничения емкости вычислительных ресурсов в различных выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и описывает отличия в их работе в физических и виртуальных средах, содержащих процессоры с технологией Hyper-Threading.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Эта статья приводит ограничения емкости вычислительных ресурсов в различных выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и описывает отличия в их работе в физических и виртуальных средах, содержащих процессоры с технологией Hyper-Threading.  
   
  ![Сопоставление с ограничениями вычислительной мощности](../sql-server/media/compute-capacity-limits.gif "Сопоставление с ограничениями вычислительной мощности")  
   
  Эта таблица поясняет обозначения из предыдущей схемы.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0..1|Ноль или один|  
 |1|Ровно один|  
@@ -85,9 +87,9 @@ ms.lasthandoff: 12/05/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Максимальная емкость вычислительных ресурсов для одного экземпляра ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Максимальная емкость вычислительных ресурсов для одного экземпляра (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: лицензирование по числу ядер\*|Максимум, поддерживаемый операционной системой|Максимум, поддерживаемый операционной системой|  
-|Разработчик|Максимум, поддерживаемый операционной системой|Максимум, поддерживаемый операционной системой|  
-|Standard Edition|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 24 ядер|  
+|Enterprise Edition: лицензирование по числу ядер\*|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|  
+|Разработчик|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|  
+|Standard|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 24 ядер|  
 |Express|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
 
 \*Выпуск Enterprise Edition с лицензированием по схеме "сервер + клиентские лицензии (CAL)" поддерживает не более 20 ядер на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. (Такая модель лицензирования недоступна для новых соглашений.) В модели лицензирования по числу ядер никаких ограничений нет.  
@@ -98,11 +100,12 @@ ms.lasthandoff: 12/05/2017
   
 Если вам важна производительность каждого отдельного виртуального процессора, возможно, технологию Hyper-Threading имеет смысл отключить. Вы можете включить или отключить для процессора технологию Hyper-Threading в параметрах BIOS. Но чаще всего влияние на производительность всех выполняемых на сервере рабочих нагрузок оказывают операции, областью действия которых является весь сервер. В таких случаях имеет смысл отделить рабочие нагрузки, запускаемые в виртуальных средах, от нагрузок, которые лучше работают в операционных системах на базе физических сред, где технология Hyper-Threading дает им существенный прирост производительности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Выпуски и компоненты SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Спецификации максимальной емкости для SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Быстрая установка SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

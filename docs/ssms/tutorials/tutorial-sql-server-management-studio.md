@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Учебники по SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ ms.lasthandoff: 03/22/2018
   
 - [Учебник. Подключение и отправка запроса к SQL Server с помощью SQL Server Management Studio](connect-query-sql-server.md)
 
-    В этом разделе вы узнаете, как подключиться к экземпляру SQL Server. Вы также ознакомитесь с некоторыми основными командами Transact-SQL (T-SQL) для создания базы данных и выполнения запросов к ней. 
+    Из этого учебника вы узнаете, как подключиться к экземпляру SQL Server. Вы также ознакомитесь с некоторыми основными командами Transact-SQL (T-SQL) для создания базы данных и выполнения запросов к ней. 
 
 - [Учебник. Написание скриптов для объектов в SSMS](scripting-ssms.md)
 
-    В этом разделе вы узнаете, как создавать скрипты для различных объектов в среде SSMS, включая базы данных и запросы. 
+    Из этого учебника вы узнаете, как создавать скрипты для различных объектов в среде SSMS, включая базы данных и запросы. 
 
 - [Учебник. Использование шаблонов в SSMS](templates-ssms.md)
    
-    В этом разделе вы узнаете, как работать с готовыми шаблонами в среде SSMS. 
+    Из этого учебника вы узнаете, как работать с готовыми шаблонами в среде SSMS. Шаблоны — это малоизвестный компонент, в котором хранится ряд фрагментов кода Transact-SQL для разных задач администрирования баз данных. 
 
 - [Учебник. Конфигурация SSMS](ssms-configuration.md)
 
-    В этом разделе приводятся основные сведения о настройке среды SSMS. 
+    Из этого учебника вы узнаете основы настройки среды SSMS, например изменение структуры среды. В нем также описываются разные компоненты SSMS. 
   
 
 - [Учебник: дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)
 
-    В этом разделе вы получите дополнительные советы и рекомендации по использованию среды SSMS. В учебнике рассматриваются следующие темы:
+    Из этого учебника вы получите дополнительные советы и рекомендации по использованию среды SSMS. Учебник включает следующее:
     - закомментирование и раскомментирование текста;
     - добавление отступов в тексте;
     - фильтрация объектов в обозревателе объектов;
