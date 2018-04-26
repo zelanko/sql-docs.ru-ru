@@ -29,8 +29,10 @@
 #### [Топологии для веб-синхронизации](topologies-for-web-synchronization.md)  
 ### [Настройка сервера IIS для веб-синхронизации](configure-iis-for-web-synchronization.md)  
 ### [Настройка сервера IIS 7 для веб-синхронизации](configure-iis-7-for-web-synchronization.md)  
+
 ## [Настройка распространения](configure-distribution.md)  
 ### [Настройка публикации и распространения](configure-publishing-and-distribution.md)  
+### [Настройка распространения в группе доступности](configure-distribution-availability-group.md)
 ### [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Отключение публикации и распространения](disable-publishing-and-distribution.md)  
 ### [Разрешение применения репликации для базы данных (среда SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Указание расположения моментальных снимков по умолчанию (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Настройка срока хранения распространения для публикаций транзакций (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Настройка срока хранения журнала (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [Подписка на публикации](subscribe-to-publications.md)  
 ### [Создание подписки по запросу](create-a-pull-subscription.md)  
 ### [Создание принудительной подписки](create-a-push-subscription.md)  

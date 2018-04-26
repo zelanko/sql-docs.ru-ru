@@ -1,26 +1,27 @@
 ---
-title: "Поддержка Azure Active Directory в SQL Server Data Tools (SSDT) | Документация Майкрософт"
-ms.custom: 
+title: Поддержка Azure Active Directory в SQL Server Data Tools (SSDT) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Поддержка Azure Active Directory в SQL Server Data Tools (SSDT)
 
@@ -64,7 +65,7 @@ SQL Server Data Tools предоставляет несколько методо
 - *Интерактивная проверка подлинности Active Directory* поддерживается только при подключении к базе данных Azure SQL. Она не поддерживается для SQL Server (в локальной среде или на виртуальной машине) или хранилища данных SQL Azure.
 - *Интерактивная проверка подлинности Active Directory* не поддерживается в диалоговом окне подключения в *обозревателе сервера*. Вам нужно подключиться к *обозревателю объектов SQL Server* с помощью SSDT.
 - Интеграция единого входа с текущей учетной записью Visual Studio, которая использовалась для входа, не поддерживается для SSDT.
-- Пакет SQLPackage.exe, установленный в каталоге Extensions во время установки Visual Studio, не предназначен для использования в этом расположении. Чтобы использовать SQLpackage.exe с AAD перейдите по адресу https://www.microsoft.com/en-us/download/details.aspx?id=55088. 
+- Пакет SQLPackage.exe, установленный в каталоге Extensions во время установки Visual Studio, не предназначен для использования в этом расположении. Чтобы использовать SQLpackage.exe с AAD, перейдите по адресу https://www.microsoft.com/en-us/download/details.aspx?id=55088 
 - SSDT Data Compare не поддерживается для проверки подлинности AAD, включая новый метод проверки подлинности.  
 
 

@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
 
@@ -138,10 +139,10 @@ ms.lasthandoff: 03/22/2018
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] использует предопределенные роли базы данных **SQLAgentUserRole**, **SQLAgentReaderRole**и **SQLAgentOperatorRole** в базе данных **msdb** для управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для пользователей, не входящих в предопределенную роль сервера **sysadmin** . Помимо этих предопределенных ролей базы данных, подсистемы и учетные записи-посредники позволяют администраторам базы данных гарантировать, что каждый шаг задания выполняется с минимальными разрешениями, необходимыми для выполнения задачи.  
   
 ### <a name="roles"></a>Роли  
-Доступ к агенту **имеют члены предопределенных ролей базы данных**SQLAgentUserRole **,**SQLAgentReaderRole **и** SQLAgentOperatorRole **в базе данных**msdb **, а также члены предопределенной роли сервера** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Пользователь, не принадлежащий ни к одной из этих ролей, не может использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения о ролях, используемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
+Доступ к агенту **имеют члены предопределенных ролей базы данных**SQLAgentUserRole **,** SQLAgentReaderRole **и** SQLAgentOperatorRole **в базе данных**msdb **, а также члены предопределенной роли сервера** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Пользователь, не принадлежащий ни к одной из этих ролей, не может использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения о ролях, используемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Подсистемы  
-Подсистема — это предопределенный объект, который содержит функции, доступные шагу задания. Каждая учетная запись-посредник имеет доступ к одной или нескольким подсистемам. Подсистемы обеспечивают безопасность, поскольку разграничивают доступ учетных записей-посредников к функциям. Каждый шаг задания выполняется в контексте учетной записи-посредника, за исключением этапов задания [!INCLUDE[tsql](../../includes/tsql_md.md)] . [!INCLUDE[tsql](../../includes/tsql_md.md)] , применяйте команду EXECUTE AS, чтобы задать контекст безопасности для шага задания.  
+Подсистема — это предопределенный объект, который содержит функции, доступные шагу задания. Каждая учетная запись-посредник имеет доступ к одной или нескольким подсистемам. Подсистемы обеспечивают безопасность, поскольку разграничивают доступ учетных записей-посредников к функциям. Каждый шаг задания выполняется в контексте учетной записи-посредника, за исключением этапов задания [!INCLUDE[tsql](../../includes/tsql_md.md)] . На этапах задания [!INCLUDE[tsql](../../includes/tsql_md.md)] применяйте команду EXECUTE AS, чтобы задать контекст безопасности для владельца задания.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяет подсистемы, перечисленные в следующей таблице:  
   

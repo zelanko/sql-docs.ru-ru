@@ -1,27 +1,29 @@
 ---
-title: "Data-Tier Application Framework. Условия лицензирования | Документация Майкрософт"
-ms.custom: 
+title: Data-Tier Application Framework. Условия лицензирования | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e1984a2e71de0a605346d23b0b99ac8a7aed0afb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework. Условия лицензирования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +85,7 @@ ms.lasthandoff: 12/21/2017
     -   передавать программное обеспечение или настоящее соглашение любому стороннему лицу или  
     -   использовать программное обеспечение для предоставления коммерческих услуг размещения ПО.  
       
-4.  **УВЕДОМЛЕНИЯ ТРЕТЬИХ ЛИЦ.** Программное обеспечение может содержать код сторонних производителей, который в соответствии с условиями, предусмотренными настоящим соглашением, предоставляет вам корпорация Майкрософт, а не третьи лица. Уведомления о коде любых сторонних производителей (при наличии) включены только в информационных целях. Кроме того, лицензии на сторонние сценарии, ссылки на которые либо вызовы которых производятся из данного программного обеспечения, предоставляют сторонние компании, владеющие этим кодом, а не корпорация Майкрософт. См. условия использования ASP.NET Ajax CDN: http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **УВЕДОМЛЕНИЯ ТРЕТЬИХ ЛИЦ.** Программное обеспечение может содержать код сторонних производителей, который в соответствии с условиями, предусмотренными настоящим соглашением, предоставляет вам корпорация Майкрософт, а не третьи лица. Уведомления о коде любых сторонних производителей (при наличии) включены только в информационных целях. Кроме того, лицензии на сторонние скрипты, ссылки на которые либо вызовы которых производятся из этого программного обеспечения, предоставляются сторонними компаниями, владеющими таким кодом, а не корпорацией Майкрософт. См. условия использования ASP.NET Ajax CDN: http://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **РЕЗЕРВНАЯ КОПИЯ.** Вы можете сделать одну резервную копию программного обеспечения. Эту копию можно использовать только для переустановки программного обеспечения.  
   
