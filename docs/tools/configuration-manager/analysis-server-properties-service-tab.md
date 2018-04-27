@@ -2,7 +2,7 @@
 title: Свойства сервера анализа данных (вкладка «службы») | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a262eb84e3264fd1ac4b6a58435344ef7f2fbbe7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8b64ee7547429868c711a468474be7c571c4f494
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analysis-server-properties-service-tab"></a>Свойства сервера анализа данных (вкладка «Службы»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Эта служба представляет собой службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Она должна быть запущена для правильной работы служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] . Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
+  Эта служба представляет собой службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Она должна быть запущена для правильной работы служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] . Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
   
 ## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  

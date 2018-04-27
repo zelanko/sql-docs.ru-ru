@@ -2,7 +2,7 @@
 title: Свойства агента SQL Server (вход в систему) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f74928db1958fbb8ec607bac83b45612a6129e46
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b312d870902f9a6b997da325a819b5a8caccc3e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Свойства агента SQL Server (вкладка «Вход в систему»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Используйте вкладку **Вход** диалогового окна **Свойства агента SQL Server** , чтобы указать учетную запись, используемую службой « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент», а также выполнить запуск или остановку службы. Изменение пароля учетной записи вступает в силу немедленно, без перезапуска службы.  
+  Используйте вкладку **Вход** диалогового окна **Свойства агента SQL Server** , чтобы указать учетную запись, используемую службой « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент», а также выполнить запуск или остановку службы. Изменение пароля учетной записи вступает в силу немедленно, без перезапуска службы.  
   
 > [!NOTE]  
 >  При изменении имени учетной записи, используемой службой в кластеризованном экземпляре, новая учетная запись должна быть членом группы домена, заданной во время установки изменяемой службы, или же текущий пользователь должен иметь разрешение на добавление членов в эту группу. Если нет разрешения на изменение состава группы, свяжитесь с администратором домена.  

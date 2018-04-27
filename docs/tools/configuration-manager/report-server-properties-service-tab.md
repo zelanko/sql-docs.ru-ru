@@ -2,7 +2,7 @@
 title: Свойства сервера (вкладка «службы») отчета | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55a991a48bcae34cea1bfbc834d7a6e6891c786
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 1087d6a3919959a4d66a151d882d95e7785e7ead
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="report-server-properties-service-tab"></a>Свойства сервера отчетов (вкладка «Службы»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Это служба сервера отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения свойств, выделенные светло-серым цветом, с помощью этого приложения изменить нельзя.  
+  Это служба сервера отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения свойств, выделенные светло-серым цветом, с помощью этого приложения изменить нельзя.  
   
 ## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  

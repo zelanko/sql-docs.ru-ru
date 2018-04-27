@@ -2,7 +2,7 @@
 title: Фильтрация событий в трассировке (приложение SQL Server Profiler) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6d6716cfcdf8bd6ce495f8aefe0e0df34fddb1c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: d5623c5f93c01a8b3fac2d34152d14283f289f18
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>фильтровать события в трассировке (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтры ограничивают сбор событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
   
  Фильтры для определений трассировки добавляются на вкладке **Выбор событий** в диалоговом окне **Свойства трассировки** или **Свойства шаблона трассировки** .  
   

@@ -2,7 +2,7 @@
 title: Свойства SQL Server (вход в систему) | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e12e87d3135f88e04dc159e7433ade959625daf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: b440ac7faf5634134e8bd50654c0ccf699e949a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
+  Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
   
 > [!NOTE]  
 >  При изменении имени учетной записи, используемой службой в кластеризованном экземпляре, новая учетная запись должна быть членом группы домена, заданной во время установки изменяемой службы, или же текущий пользователь должен иметь разрешение на добавление членов в эту группу. Если нет разрешения на изменение состава группы, свяжитесь с администратором домена.  

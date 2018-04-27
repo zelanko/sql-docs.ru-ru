@@ -2,7 +2,7 @@
 title: Конфигурация SQL Native Client 11.0 | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -20,15 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b49f2efcee75e737d6caeacc752999203c2358af
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c6a770329b502311f95951931f9e960abd8a6436
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-native-client-110-configuration"></a>Конфигурация собственного клиента SQL 11.0
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-В этом разделе содержатся разделы справки F1 диалоговых окон модуля **Конфигурация собственного клиента SQL Server** в диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является сетевой библиотекой, при помощи которой клиентские компьютеры подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  В этом разделе содержатся разделы справки F1 диалоговых окон модуля **Конфигурация собственного клиента SQL Server** в диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является сетевой библиотекой, при помощи которой клиентские компьютеры подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Настройки, установленные в конфигурации собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используются на компьютере, на котором запущена программа клиента. Если настройки выполняются на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], они затрагивают только те клиентские программы, которые работают на сервере.  
   
