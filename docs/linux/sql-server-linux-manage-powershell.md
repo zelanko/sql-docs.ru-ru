@@ -1,25 +1,25 @@
 ---
-title: "Управление SQL Server в Linux с помощью PowerShell | Документы Microsoft"
-description: "Это статье представлен обзор использования PowerShell в Windows с помощью SQL Server в Linux."
+title: Управление SQL Server в Linux с помощью PowerShell | Документы Microsoft
+description: Это статье представлен обзор использования PowerShell в Windows с помощью SQL Server в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server в Linux
 
@@ -76,7 +76,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 - Создайте экземпляр класса [сервера](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) объекта
 - Подключиться к **сервера** и отобразить несколько свойств
 
-Не забудьте заменить  **\<your_server_instance\>**  с IP-адрес или имя узла экземпляра 2017 г. SQL Server в Linux.
+Не забудьте заменить **\<your_server_instance\>** с IP-адрес или имя узла экземпляра 2017 г. SQL Server в Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ HostDistribution : Ubuntu
 - Используйте **Get SqlErrorLog** журналы, чтобы соединиться с экземпляром 2017 г. SQL Server в Linux и получает ошибку с момента **за вчерашний день**
 - Выходные данные для **Out-GridView** командлета
 
-Не забудьте заменить  **\<your_server_instance\>**  с IP-адрес или имя узла экземпляра 2017 г. SQL Server в Linux.
+Не забудьте заменить **\<your_server_instance\>** с IP-адрес или имя узла экземпляра 2017 г. SQL Server в Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

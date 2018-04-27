@@ -2,7 +2,7 @@
 title: Выполнить оценку миграции SQL Server (данных помощник по миграции) | Документы Microsoft
 ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c23f8d37e7af9daad2af78164a21adbe8c613a3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe0447cf841eb5b45526d3a8fd1099c84ad4113c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>Оценка миграции SQL Server
 Следующие пошаговые инструкции помогают выполнять первой оценку по переходу на SQL Server в локальной среде, SQL Server на виртуальной Машине Azure или база данных SQL Azure с помощью помощника по миграции данных.

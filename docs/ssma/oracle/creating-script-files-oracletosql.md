@@ -1,31 +1,32 @@
 ---
-title: "Создание файлов скрипта (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Создание файлов скрипта (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Script File Creation, Configuring Oracle Console Settings
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087bde0aca02a1101cb1914a69e0d5982d294732
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-oracletosql"></a>Создание файлов скрипта (OracleToSQL)
 В первую очередь перед запуском приложения консоли SSMA для создания файла сценария и при необходимости создания файла значение переменной и файла подключения сервера.  
@@ -349,14 +350,14 @@ ms.lasthandoff: 12/21/2017
 -   **Максимальное попыток подключения:** Если установленное соединение времени ожидания или останавливается из-за сбоя сети, сервер необходимо повторно подключить. Попыток повторного соединения разрешено более **5** повторных попыток, после чего консоль автоматически выполняет повторное подключение. Средство автоматическое переподключение уменьшает вашей трудозатраты в повторным выполнением скрипта.  
   
 ## <a name="server-connection-parameters"></a>Параметры подключения сервера  
-Параметры подключения сервера можно определить в файле скрипта или в файле соединения сервера. Обратитесь к [Создание файлы подключения Server &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) более подробные сведения.  
+Параметры подключения сервера можно определить в файле скрипта или в файле соединения сервера. Обратитесь к [Создание файлов подключения сервера &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) более подробные сведения.  
   
 ## <a name="script-commands"></a>Команды скриптов  
 Файл скрипта содержит последовательность команд рабочего процесса миграции в формате XML. SSMA консольное приложение обрабатывает миграции порядке команды отображаются в файле скрипта.  
   
 Например, иерархия следующим образом типовых данных миграцию в конкретную таблицу в базе данных Oracle: схема -&gt; таблицы.  
   
-При выполнении всех команд в файле скрипта SSMA консольное приложение завершает работу и возвращает элемент управления для пользователя. Содержимое файла скрипта, больше или меньше статический с сведения о переменных, содержащихся в [Создание файлов значение переменной &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) или в отдельном разделе в файлах скриптов для значений переменных.  
+При выполнении всех команд в файле скрипта SSMA консольное приложение завершает работу и возвращает элемент управления для пользователя. Содержимое файла скрипта, больше или меньше статический с сведения о переменных, содержащихся в [Создание файлов значение переменной &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) или в отдельном разделе в файлах скриптов для значений переменных.  
   
 **Пример:**  
   
@@ -397,14 +398,14 @@ ms.lasthandoff: 12/21/2017
   
 Шаблоны (файлы) можно выполнять после изменения параметров, отображаемых в ней для релевантности.  
   
-Полный список команд сценария можно найти в [выполнении консоли SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Полный список команд сценария можно найти в [выполнение консоли SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="script-file-validation"></a>Проверка файла скрипта  
 Пользователь может легко проверить свой файл скрипта соответствие файлу определения схемы **«O2SSConsoleScriptSchema.xsd»** доступны в папке «Схемы».  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [Создание переменной значение файлов &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
+Следующий шаг в работе консоли — [Создание переменной значение файлов &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[Создание файлов значение переменной &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Создание файлов значение переменной &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

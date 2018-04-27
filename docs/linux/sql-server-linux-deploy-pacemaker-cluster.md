@@ -1,24 +1,24 @@
 ---
-title: "Развертывание кластера Pacemaker для SQL Server для Linux | Документы Microsoft"
-description: "Этот учебник показывает, как для развертывания кластера Pacemaker для SQL Server в Linux."
+title: Развертывание кластера Pacemaker для SQL Server для Linux | Документы Microsoft
+description: Этот учебник показывает, как для развертывания кластера Pacemaker для SQL Server в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 10560a49c334f1b65800fb9a21ce4f0116a42536
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Развертывание кластера Pacemaker для SQL Server в Linux
 
@@ -123,7 +123,7 @@ Pacemaker сам использует пользователем, созданн
 ## <a name="create-the-pacemaker-cluster"></a>Создание кластера Pacemaker 
 В этом разделе приведены инструкции по созданию и настройке кластера для каждого распределения Linux.
 
-RHEL
+**RHEL**
 
 1. Разрешить узлы
    
@@ -205,7 +205,7 @@ RHEL
 > - Если вы не будете использовать [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агента для доставки журналов или любое другое использование его нужно установить, поэтому пакета *mssql-server-agent* можно пропустить.
 > - Дополнительные пакеты для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) и [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] службы Integration Services (*mssql сервер является*), не являются требуется для обеспечения высокой доступности, либо на экземпляре отказоустойчивого Кластера или группе Доступности.
 
-RHEL
+**RHEL**
 
 ```bash
 sudo yum install mssql-server-ha mssql-server-agent

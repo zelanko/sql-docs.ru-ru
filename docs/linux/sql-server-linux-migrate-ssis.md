@@ -1,25 +1,25 @@
 ---
-title: "Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS | Документы Microsoft"
-description: "В этой статье описывается SQL Server Integration Services (SSIS) для компьютеров Linux."
+title: Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS | Документы Microsoft
+description: В этой статье описывается SQL Server Integration Services (SSIS) для компьютеров Linux.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 08f4b4870e604d1e8ce601594c63920a320d5911
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 03/02/2018
     or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
-## <a name="design-packages"></a>Проектировать пакеты
+## <a name="design-packages"></a>Проектирование пакетов
 
 **Подключения к источникам данных ODBC**. С помощью служб SSIS на Linux CTP-версии 2.1 обновления и более поздних версий пакетов служб SSIS можно использовать подключения ODBC в Linux. Эта функциональность была протестирована с SQL Server и драйверы MySQL ODBC, но также требуются для работы с любой драйвер ODBC Юникода, отслеживающее спецификации ODBC. Во время разработки укажите имя источника данных или строку подключения для подключения к данным ODBC; Можно также использовать проверку подлинности Windows. Дополнительные сведения см. в разделе [записи блога Представляем поддержка ODBC в Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 

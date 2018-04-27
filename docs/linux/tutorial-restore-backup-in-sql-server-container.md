@@ -1,24 +1,24 @@
 ---
-title: "Восстановление базы данных SQL Server в Docker | Документы Microsoft"
-description: "Этот учебник показывает способ восстановления резервной копии базы данных SQL Server в новый контейнер Linux Docker."
+title: Восстановление базы данных SQL Server в Docker | Документы Microsoft
+description: Этот учебник показывает способ восстановления резервной копии базы данных SQL Server в новый контейнер Linux Docker.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ad11495a927d5ca37e15cb872a200a55beb93b35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнер Linux Docker
 
@@ -35,16 +35,16 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="prerequisites"></a>предварительные требования
 
-* Подсистема docker 1.8 + для какого-либо поддерживается дистрибутив Linux или Docker для Mac и Windows. Дополнительные сведения см. в разделе [установить Docker](https://docs.docker.com/engine/installation/).
-* Минимум 2 ГБ места на диске
-* Минимум 2 ГБ ОЗУ
-* [Требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
+* Docker Engine 1.8+ на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
+* Не менее 2 ГБ места на диске
+* Не менее 2 ГБ ОЗУ
+* [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
-## <a name="pull-and-run-the-container-image"></a>По запросу, а затем запускать образ контейнера
+## <a name="pull-and-run-the-container-image"></a>Извлечение и запуск образа контейнера
 
 1. Откройте терминал bash на Linux или Mac или сеанс PowerShell с повышенными правами в Windows.
 
-1. Образ контейнера Linux 2017 г. SQL Server по запросу из Docker Hub.
+1. Извлеките образ контейнера Linux с SQL Server 2017 из центра Docker.
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux:2017-latest
@@ -76,9 +76,9 @@ ms.lasthandoff: 02/13/2018
     Эта команда создает контейнер 2017 г. SQL Server с выпуска Developer edition (по умолчанию). Порт SQL Server **1433** предоставляется на узле в качестве порта **1401**. Необязательный `-v sql1data:/var/opt/mssql` параметр создает контейнер томов данных с именем **sql1ddata**. Используется для хранения данных, созданный на сервере SQL Server.
 
    > [!NOTE]
-   > Процесс запуска выпусков SQL Server производства в контейнерах немного отличается. Дополнительные сведения см. в разделе [запуска производства образы контейнеров](sql-server-linux-configure-docker.md#production). Если вы используете те же имена контейнеров и порты, пошаговым руководством по-прежнему работает с контейнерами в рабочей среде.
+   > Процесс запуска выпусков SQL Server производства в контейнерах немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production). Если вы используете те же имена контейнеров и порты, пошаговым руководством по-прежнему работает с контейнерами в рабочей среде.
 
-1. Чтобы просмотреть в контейнеры Docker, используйте `docker ps` команды.
+1. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
     ```bash
     sudo docker ps -a
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/13/2018
     docker ps -a
     ```
  
-1. Если **состояние** столбце отображается состояние **копирование**, затем SQL Server работает в контейнере и прослушивается порт, указанный в **ПОРТЫ** столбца. Если **состояние** столбца отображается контейнер к SQL Server **завершил работу**, см. [Устранение неполадок конфигурации руководства](sql-server-linux-configure-docker.md#troubleshooting).
+1. Если в столбце **STATUS** (состояние) отображается состояние **Up** (запущен), то SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```
    $ sudo docker ps -a
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/13/2018
    941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
-## <a name="change-the-sa-password"></a>Измените пароль учетной записи SA
+## <a name="change-the-sa-password"></a>Смена пароля администратора
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

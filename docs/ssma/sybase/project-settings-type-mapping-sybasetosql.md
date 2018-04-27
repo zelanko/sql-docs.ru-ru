@@ -2,7 +2,7 @@
 title: Параметры (сопоставление типов) проекта (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры (сопоставление типов) проекта (SybaseToSQL)
 На странице сопоставление типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Sybase адаптивной Server Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
@@ -69,41 +69,41 @@ ms.lasthandoff: 04/06/2018
 |**бит**|**бит**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**переменной типа char [\*... 8000]**|**varchar[\*]**|  
+|**переменной типа char [\*... 8000]**|**varchar [\*]**|  
 |**переменной типа char [8001..\*]**|**varchar(max)**|  
-|**char [\*... 8000]**|**char[\*]**|  
-|**char[8001..\*;]**|**varchar(max)**|  
+|**char [\*... 8000]**|**char [\*]**|  
+|**char [8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**Изменение символа**|**varchar**|  
-|**символ varying [\*... 8000]**|**varchar[\*]**|  
+|**символ varying [\*... 8000]**|**varchar [\*]**|  
 |**символ varying [8001..\*]**|**varchar(max)**|  
-|**символ [\*... 8000]**|**char[\*]**|  
-|**character[8001..\*]**|**varchar(max)**|  
+|**символ [\*... 8000]**|**char [\*]**|  
+|**символ [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
 |**dec**|**decimal**|  
-|**dec[\*..\*]**|**decimal[\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**DEC [\*... \*]**|**Decimal [\*]**|  
+|**DEC [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**decimal[\*..\*]**|**decimal[\*]**|  
-|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**число двойной точности**|**float[53]**|  
-|**float**|**float[53]**|  
-|**число с плавающей запятой [\*... 15]**|**float[24]**|  
-|**число с плавающей запятой [16..\*]**|**float[53]**|  
+|**Decimal [\*... \*]**|**Decimal [\*]**|  
+|**Decimal [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
+|**число двойной точности**|**число с плавающей запятой [53]**|  
+|**float**|**число с плавающей запятой [53]**|  
+|**число с плавающей запятой [\*... 15]**|**число с плавающей запятой [24]**|  
+|**число с плавающей запятой [16..\*]**|**число с плавающей запятой [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
-|**longsysname**|**nvarchar[255]**|  
+|**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**Национальный char**|**nchar**|  
-|**Национальный char [\*... 4000]**|**nchar[\*]**|  
+|**Национальный char [\*... 4000]**|**nchar [\*]**|  
 |**Национальный char переменной**|**nvarchar**|  
 |**Национальный char переменной [\*... 4000]**|**nvarchar [\*]**|  
 |**Национальный char переменной [4001..\*]**|**nvarchar(max)**|  
 |**Национальный char [4001..\*]**|**nvarchar(max)**|  
 |**символов национального алфавита**|**nchar**|  
-|**национальных символов [\*... 4000]**|**nchar[\*]**|  
+|**национальных символов [\*... 4000]**|**nchar [\*]**|  
 |**национальных символов [4001..\*]**|**nvarchar(max)**|  
 |**изменение символов национального алфавита**|**nvarchar**|  
 |**изменение символов национального алфавита [\*... 4000]**|**nvarchar [\*]**|  
@@ -115,34 +115,34 @@ ms.lasthandoff: 04/06/2018
 |**nchar переменной**|**nvarchar**|  
 |**nchar varying [\*... 4000]**|**nvarchar [\*]**|  
 |**nchar varying [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*... 4000]**|**nchar[\*]**|  
-|**nchar[4001..\*]**|**nvarchar(max)**|  
+|**nchar [\*... 4000]**|**nchar [\*]**|  
+|**nchar [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numeric[\*..\*]**|**numeric[\*]**|  
-|**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
+|**числовые [\*... \*]**|**числовые [\*]**|  
+|**числовые [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*... 4000]**|**nvarchar [\*]**|  
-|**nvarchar[4001..\*]**|**nvarchar(max)**|  
-|**real**|**float[24]**|  
+|**nvarchar [4001..\*]**|**nvarchar(max)**|  
+|**real**|**число с плавающей запятой [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar[128]**|  
-|**sysname[\*..\*]**|**nvarchar[255]**|  
+|**sysname**|**nvarchar [128]**|  
+|**sysname [\*... \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
-|**time**|**time[3]**|  
+|**time**|**время [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar переменной**|**nvarchar**|  
 |**различные unichar [\*... 4000]**|**nvarchar [\*]**|  
 |**unichar переменной [4001..\*]**|**nvarchar(max)**|  
-|**unichar [\*... 4000]**|**nchar[\*]**|  
-|**unichar[4001..\*]**|**nvarchar(max)**|  
+|**unichar [\*... 4000]**|**nchar [\*]**|  
+|**unichar [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar[\*..4000]**|**nvarchar [\*]**|  
-|**univarchar[4001..\*]**|**nvarchar(max)**|  
+|**univarchar [\*... 4000]**|**nvarchar [\*]**|  
+|**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**без знака bigint**|**numeric[20][0]**|  
 |**Целочисленное число без знака**|**bigint**|  
 |**smallint без знака**|**int**|  
@@ -151,6 +151,6 @@ ms.lasthandoff: 04/06/2018
 |**varbinary [\*... 8000]**|**varbinary [\*]**|  
 |**varbinary [8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*... 8000]**|**varchar[\*]**|  
-|**varchar[8001..\*]**|**varchar(max)**|  
+|**varchar [\*... 8000]**|**varchar [\*]**|  
+|**varchar [8001..\*]**|**varchar(max)**|  
   

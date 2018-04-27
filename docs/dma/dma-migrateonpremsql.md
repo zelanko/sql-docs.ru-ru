@@ -2,7 +2,7 @@
 title: Миграция на локальном сервере SQL Server (помощник по миграции) | Документы Microsoft
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c578625f9dac8b242dcd6d06fcf60925dd5b02c2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>Миграция в локальной среде SQL Server с помощью помощника по миграции данных
 
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 
 1. Просмотрите подробные сведения о миграции входа сохраненный файл и проверьте изменения.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Помощник по миграции данных (DMA).](../dma/dma-overview.md)
 

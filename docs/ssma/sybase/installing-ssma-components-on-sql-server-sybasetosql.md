@@ -2,7 +2,7 @@
 title: Установка компонентов SSMA на SQL Server (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2532575dcfeaff0b75520ef1a104db0281bbc9b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Установка компонентов SSMA на SQL Server (SybaseToSQL)
 Помимо установки SSMA, для использования сервера миграцию данных, необходимо установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эти компоненты включают пакет расширения SSMA, поддерживающей переноса данных и поставщики Sybase, чтобы включить возможность подключения сервера к серверу.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/06/2018
   
 -   **stop_agent_process**  
   
-Каждый раз при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] задания агента. Эти задания называются **ssma_syb данных миграции пакета {GUID}**и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] узел агента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в папку «задания».  
+Каждый раз при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] задания агента. Эти задания называются **ssma_syb данных миграции пакета {GUID}** и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] узел агента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в папку «задания».  
   
 ## <a name="sybase-providers"></a>Поставщики Sybase  
 При переносе данных из ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]выполняет миграцию данных SQL Azure, напрямую между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure. Он не проходит через SSMA, так как это может замедлить процесс переноса данных.  

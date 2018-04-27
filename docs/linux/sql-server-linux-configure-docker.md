@@ -1,25 +1,25 @@
 ---
-title: "Параметры конфигурации для 2017 г. SQL Server на Docker | Документы Microsoft"
-description: "Возможность использования различных способов использования и взаимодействия с образами контейнеров 2017 г. SQL Server в Docker. Это включает сохранение, копирование файлов и устранения неполадок."
+title: Параметры конфигурации для 2017 г. SQL Server на Docker | Документы Microsoft
+description: Возможность использования различных способов использования и взаимодействия с образами контейнеров 2017 г. SQL Server в Docker. Это включает сохранение, копирование файлов и устранения неполадок.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: 7212b1a0a5e6322a33046d09edd091c257ff6b44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/27/2018
       docker login
       ```
 
-   1. Далее необходимо для получения бесплатной разработчик образ контейнера в хранилище Docker. Последовательно выберите пункты [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), нажмите кнопку **продолжить извлечение**и следуйте инструкциям.
+   1. Далее необходимо для получения бесплатной разработчик образ контейнера в хранилище Docker. Последовательно выберите пункты [ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux), нажмите кнопку **продолжить извлечение**и следуйте инструкциям.
 
    1. Просмотрите требования и процедуры [краткое руководство](quickstart-install-connect-docker.md). Однако имеются два отличия. Необходимо получить изображение **хранилище/microsoft/mssql-server-linux:\<имя тега\>**  магазине Docker. При этом необходимо указать производственного выпуска с **MSSQL_PID** переменной среды. Приведенный ниже показано, как выполнять последний образ контейнера 2017 г. SQL Server Enterprise Edition:
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/27/2018
 
 Можно соединиться с экземпляром SQL Server на компьютере Docker с помощью любого внешнего средства macOS, Windows или Linux, поддерживающее подключения SQL. Некоторые общие средства включают:
 
-- [sqlcmd](sql-server-linux-setup-tools.md)
+- [программа sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md);
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-develop-use-ssms.md);
 

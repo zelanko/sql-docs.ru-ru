@@ -1,31 +1,32 @@
 ---
-title: "Работа с файлами скриптов образца консоли (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Работа с файлами скриптов образца консоли (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Sample Console Script Files, ServersConnectionFileSample.xml
 - Sample Console Script Files, SqlStatementConversionSample.xml
 - Sample Console Script Files,VariableValueFileSample.xml
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ed17f63dedb91eb41eea2cc991771daf35af48fc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71096d59164c9e6245bdac91a6a64665c256c89d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Работа с файлами скриптов образца консоли (OracleToSQL)
 Несколько файлов образец предоставляется вместе с продуктом использования и справочник по пользовательскому. Этот раздел описывает способ легко настроить эти сценарии, в соответствии с потребностями пользователя.  
@@ -49,11 +50,11 @@ ms.lasthandoff: 12/21/2017
   
     -   Пользователь может подключиться к базе данных требуется, просто изменив значения требуемых исходных и определения целевого сервера. В приведенном примере все значения были предоставлены значения как переменных, которые доступны в **VariableValueFileSample.xml**.  Другие параметры соединения можно удалить из файла соединения пользователя рабочего сервера.  
   
-    -   Дополнительные сведения о подключении к исходным и целевым сервером см. в разделе [Создание файлы подключения Server &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) .  
+    -   Дополнительные сведения о подключении к исходным и целевым сервером см. в разделе [Создание файлов подключения сервера &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) .  
   
 -   **VariableValueFileSample.xml:** файлы скриптов, все переменные, которые были использованы в образец консоли и `ServersConnectionFileSample.xml` были сортируются в этот файл. Чтобы выполнить примеры сценариев консоли, он просто заменить образец переменной значения с пользователем определенных областей и передать этот файл в качестве дополнительного аргумента командной строки вместе с файлом сценария.  
   
-    Дополнительные сведения о файле значения переменных см. в разделе [Создание переменной значение файлов &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
+    Дополнительные сведения о файле значения переменных см. в разделе [Создание переменной значение файлов &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
 -   **AssessmentReportGenerationSample.xml:** этот образец позволяет пользователю создавать XML-отчета оценки, который может использоваться пользователем для анализа прежде чем он начнет преобразование и перенос данных.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
     Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `generate-assessment-report` 4 пример команды консоли образца файла скрипта.  
   
-    Дополнительные сведения о создании отчетов см. в разделе [создания отчетами &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
+    Дополнительные сведения о создании отчетов см. в разделе [создания отчетами &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
   
     > [!NOTE]  
     > -   Убедитесь, что аргумент командной строки файла значение переменной передается в консольном приложении и VariableValueFileSample.xml обновляется пользователя, указанного значения.  
@@ -86,9 +87,9 @@ ms.lasthandoff: 12/21/2017
   
     Сопоставление схемы базы данных-источника в целевую схему.  
   
-    **Attribute**  
+    **Атрибут**  
   
-    -   `source-schema:`Указывает, требуется для преобразования базы данных-источника.  
+    -   `source-schema:` Указывает, требуется для преобразования базы данных-источника.  
   
     -   `sql-server-schema`: Указывает, перемещаются в целевой базе данных  
   
@@ -100,9 +101,9 @@ ms.lasthandoff: 12/21/2017
   
     -   Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `convert-schema` 4 пример команды консоли образца файла скрипта.  
   
-    **Attribute**  
+    **Атрибут**  
   
-    `object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
+    `object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в `object-name`  
   
     **Имя команды**  
   
@@ -112,9 +113,9 @@ ms.lasthandoff: 12/21/2017
   
     -   Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `synchronize-target` 3 пример команды консоли образца файла скрипта.  
   
-    **Attribute**  
+    **Атрибут**  
   
-    `object-name:`Укажите базы данных sql server / объекта имя, которое требуется создать. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
+    `object-name:` Укажите базы данных sql server / объекта имя, которое требуется создать. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в `object-name`  
   
     **Имя команды**  
   
@@ -124,12 +125,12 @@ ms.lasthandoff: 12/21/2017
   
     -   Если пользователь имеет для оценки нескольких объектов и баз данных, он может указать несколько `metabase-object` узлов, как показано в `migrate-data` команды пример 2 файла скрипта образец консоли.  
   
-    **Attribute**  
+    **Атрибут**  
   
-    `object-name:`Указывает базы данных-источника или имя, которое требуется для переноса таблиц. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
+    `object-name:` Указывает базы данных-источника или имя, которое требуется для переноса таблиц. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в `object-name`  
   
-## <a name="see-also"></a>См. также:  
-[Создание файлов значение переменной &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
-[Создание файлов подключения сервера &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-[Создание отчетов &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Создание файлов значение переменной &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[Создание файлов подключения сервера &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+[Создание отчетов &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   

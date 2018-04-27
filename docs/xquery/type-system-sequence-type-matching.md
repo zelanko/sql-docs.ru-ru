@@ -1,16 +1,16 @@
 ---
-title: "Сопоставление типов последовательности | Документы Microsoft"
-ms.custom: 
+title: Сопоставление типов последовательности | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Система - типов сопоставление типов последовательности
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   Может возникнуть необходимость выяснить, является ли результат выражения XML-элементом или узлом атрибута с заданным именем и типом.  
   
- Для сопоставления типов элементов последовательности можно использовать логический оператор `instance of`. Дополнительные сведения о `instance of` выражение, в разделе [выражения SequenceType &#40; XQuery &#41; ](../xquery/sequencetype-expressions-xquery.md).  
+ Для сопоставления типов элементов последовательности можно использовать логический оператор `instance of`. Дополнительные сведения о `instance of` выражение, в разделе [выражения SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Сравнение типов атомарных значений, возвращенных выражением  
  Определить тип значения в последовательности может понадобиться в том случае, если выражение возвращает последовательность атомарных значений. В следующем примере показано использование синтаксиса типа последовательности для определения типа атомарного значения, возвращаемого выражением.  
@@ -442,6 +442,6 @@ RETURN
 -   Явные запросы для **xsi: Type** или **xsi: nil** не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
- [Система типов &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Система типов &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

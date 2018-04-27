@@ -1,25 +1,25 @@
 ---
-title: "Новые возможности для SQL Server 2017 г. для Linux | Документы Microsoft"
-description: "В данной статье описываются новые возможности для 2017 г. SQL Server в Linux."
+title: Новые возможности для SQL Server 2017 г. для Linux | Документы Microsoft
+description: В данной статье описываются новые возможности для 2017 г. SQL Server в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: a0a92f4061bcc82384348344e30bd3436052ed38
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности для 2017 г. SQL Server в Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/24/2018
 В этой статье описываются основные функции и службы, доступные для ОС Linux 2017 г. SQL Server.
 
 > [!NOTE]
-> Помимо этих возможностей в этой статье накопительные обновления выпускаются с регулярными интервалами после выпуска общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске CU см. в разделе [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Загрузка пакетов и известных проблемах см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+> Помимо этих возможностей в этой статье накопительные обновления выпускаются с регулярными интервалами после выпуска общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске CU см. в разделе [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Загрузка пакетов и известных проблемах см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
 

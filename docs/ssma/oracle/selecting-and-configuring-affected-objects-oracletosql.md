@@ -1,30 +1,31 @@
 ---
-title: "Выбор и настройка затронутые объекты (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Выбор и настройка затронутые объекты (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d212f53d9cdd366ec6105ca6d44b345112d2f4fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Выбор и настройка затронутые объекты (OracleToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 Если тест-инженер SSMA не может проверить любые из этих объектов, вы увидите ссылку с меткой **некоторые из выделенных объектов содержат ошибки** в дереве объектов. Щелкните эту ссылку для просмотра причины, почему не удается сравнить эти объекты и снимите флажок не тот объект.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Таблица  
 Вкладка «таблица» содержит представление сетки выбранную таблицу. Сетка содержит следующие сведения о выбранной таблицы.  
   
 -   Имя столбца  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Правило  
   
--   Default  
+-   По умолчанию  
   
 -   Идентификатор  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="sql"></a>SQL  
 Вкладка «SQL» содержит «создание таблицы» SQL из выбранной таблицы.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Данные   
 Вкладка "данные" отображает данные в выбранную таблицу.  
   
 ## <a name="properties"></a>Свойства  
@@ -113,10 +114,10 @@ ms.lasthandoff: 12/21/2017
 Вы можете изменить эти инструкции SELECT для предоставления пользовательской проверки. Чтобы сохранить изменения в Oracle и в инструкции SQL Server, используйте **применить** кнопок в исходной и целевой SQL, соответственно.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Настройка порядка вызовов &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[Настройка порядка вызовов &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Завершение подготовки тестового случая &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[Выполнение тестовых случаев &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Тестирование миграции объектов базы данных &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Завершение подготовки тестовый случай &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Выполнение тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Тестирование перенесенные объекты базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,25 +1,25 @@
 ---
-title: "Приступая к работе с 2017 г. SQL Server в Red Hat Enterprise Linux | Документы Microsoft"
-description: "Краткого руководства показано, как установить 2017 г. SQL Server в Red Hat Enterprise Linux, а затем создать и запросов к базе данных с помощью sqlcmd."
+title: Приступая к работе с 2017 г. SQL Server в Red Hat Enterprise Linux | Документы Microsoft
+description: Краткого руководства показано, как установить 2017 г. SQL Server в Red Hat Enterprise Linux, а затем создать и запросов к базе данных с помощью sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 145f829b3baf5392ed3d6ed93db43b01603b9b8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство: Установка SQL Server и создать базу данных в Red Hat
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2018
 
 Необходимо иметь RHEL 7.3 или 7.4 машину с **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Red Hat Enterprise Linux на компьютере, перейдите к [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать RHEL виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
+Чтобы установить Red Hat Enterprise Linux на компьютере, перейдите к [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать RHEL виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
 
 Другие требования к системе см. в разделе [требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
 

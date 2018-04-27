@@ -1,9 +1,9 @@
 ---
-title: Быстрый доступ к аналитики и общие задачи в SQL Operations Studio (preview) | Документы Microsoft
-description: Сведения по отображению информативные мини-приложения в SQL Operations Studio (preview).
+title: Быстрый доступ к аналитики и общие задачи в Studio операций SQL (Предварительная версия) | Документы Microsoft
+description: Сведения по отображению информативные мини-приложения в Studio операций SQL (Предварительная версия).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Панели мониторинга в[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Панели мониторинга в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Чтобы просмотреть панель мониторинга, щелкните правой кнопкой мыши сервер или базу данных и выбрать **управление**.
 
@@ -107,11 +107,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="sample-insight-action-definition"></a>Пример определения действия подробные сведения
 
-```"actions"{}```Определяет действие подробные сведения. Действия могут быть определены по определенной области, например ```"server"```, ```"database"``` и т. д и [!INCLUDE[name-sos](../includes/name-sos-short.md)] передает сведения о текущем соединении контекст действия. 
+```"actions"{}``` Определяет действие подробные сведения. Действия могут быть определены по определенной области, например ```"server"```, ```"database"``` и т. д и [!INCLUDE[name-sos](../includes/name-sos-short.md)] передает сведения о текущем соединении контекст действия. 
 
-Например, при запуске действия восстановления для базы данных WideWorldImporters, ```"database": "${Database}"``` указывает определения для передачи ```Database``` значение столбца в результатах запроса, для операции восстановления. Затем запускается операции восстановления базы данных. ```"types"```— это массив json и несколько действий, которые могут быть перечислены в массиве. По сути, оно становится контекстного меню в диалоговом окне сведений анализ этого пользователя щелкните и выполнение действия. 
+Например, при запуске действия восстановления для базы данных WideWorldImporters, ```"database": "${Database}"``` указывает определения для передачи ```Database``` значение столбца в результатах запроса, для операции восстановления. Затем запускается операции восстановления базы данных. ```"types"``` — это массив json и несколько действий, которые могут быть перечислены в массиве. По сути, оно становится контекстного меню в диалоговом окне сведений анализ этого пользователя щелкните и выполнение действия. 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]Предварительный просмотр 0.17.1 включил «backup», «восстанавливается», «создать запрос» и «новый-базы данных» как типы действий.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] Предварительный просмотр 0.17.1 включил «backup», «восстанавливается», «создать запрос» и «новый-базы данных» как типы действий.
 
 ```json
 "details": {

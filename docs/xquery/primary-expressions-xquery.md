@@ -1,16 +1,16 @@
 ---
-title: "Первичные выражения (XQuery) | Документы Microsoft"
-ms.custom: 
+title: Первичные выражения (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6ee901d54e5cf68eb5de1e20c448289eab83dbfb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="primary-expressions-xquery"></a>Первичные выражения (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  Строковый литерал также может содержать символьную ссылку, XML-ссылку на символ Юникода, определяемую десятичным или шестнадцатеричным элементом кода. Например, знак евро может быть представлена символьной ссылкой «&\#8364;».  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует XML версии 1.0 в качестве основы для синтаксического анализа.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует XML версии 1.0 в качестве основы при синтаксическом анализе.  
   
 ### <a name="examples"></a>Примеры  
  Следующие примеры иллюстрируют применение литералов, а также ссылок на сущности и символы.  
@@ -191,6 +191,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   Импорт функций не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
- [Построение XML &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [Построение XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   
