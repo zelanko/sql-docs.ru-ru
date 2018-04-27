@@ -1,16 +1,16 @@
 ---
-title: "Управление пакетами (службы SSIS) | Документы Майкрософт"
-ms.custom: 
+title: Управление пакетами (службы SSIS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef5f56d09d34fa2688fe46fdf6d7983af4e9e1f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
   Управление пакетами включает в себя операции мониторинга, управления, импорта и экспорта пакетов.  
@@ -181,7 +181,7 @@ ms.lasthandoff: 01/25/2018
   
     -   Чтобы выполнить экспорт в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите **SQL Server** , затем определите сервер и выберите режим проверки подлинности. При выборе проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] укажите имя пользователя и пароль.  
   
-         Нажмите кнопку обзора **(…)**и разверните папку **Пакеты служб SSIS** , чтобы выбрать папку, в которую нужно сохранить пакет. При необходимости измените имя пакета по умолчанию и нажмите кнопку **ОК**.  
+         Нажмите кнопку обзора **(…)** и разверните папку **Пакеты служб SSIS** , чтобы выбрать папку, в которую нужно сохранить пакет. При необходимости измените имя пакета по умолчанию и нажмите кнопку **ОК**.  
   
     -   Чтобы выполнить экспорт в файловую систему, выберите параметр **Файловая система** .  
   

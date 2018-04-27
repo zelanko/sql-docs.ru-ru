@@ -1,33 +1,35 @@
 ---
-title: "Диалоговое окно \"Сохранить скрипт изменений\" (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Сохранить скрипт изменений" (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.generatechangescript
 - vdtsql.chm:65544
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33081b924b39c921304ed2de2648cea202d0c96a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5424e012ce7f326bf774a969c5a2aba97d0a3834
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>Диалоговое окно "Сохранить скрипт изменений" (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно показывает скрипт [!INCLUDE[tsql](../../includes/tsql_md.md)] изменений, сделанных со времени последнего сохранения таблицы. Оно также позволяет сохранить скрипт в текстовом файле в выбранном местоположении.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Это диалоговое окно показывает скрипт [!INCLUDE[tsql](../../includes/tsql_md.md)] изменений, сделанных со времени последнего сохранения таблицы. Оно также позволяет сохранить скрипт в текстовом файле в выбранном местоположении.  
   
 Открыть это диалоговое окно также можно после совершения несохраненных изменений таблицы в конструкторе таблиц. В меню **Конструктор таблиц** выберите пункт **Создать скрипт изменения**.  
   

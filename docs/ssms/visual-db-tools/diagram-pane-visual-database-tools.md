@@ -1,15 +1,16 @@
 ---
-title: "Панель диаграмм (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Панель диаграмм (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d0b1ab935d8f6af9390131a0813468bbcdd0732
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 62fbb6619719adb82bfd0de041077cc65b7aa6db
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Панель диаграммы (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  
   
 На панели диаграммы допускается:  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/17/2018
   
 |Значок|Тип объекта|  
 |--------|---------------|  
-|![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi1.gif "Значок визуальных инструментов для баз данных")|Table|  
+|![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi1.gif "Значок визуальных инструментов для баз данных")|Таблица|  
 |![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi2.gif "Значок визуальных инструментов для баз данных")|Запрос или представление|  
 |![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi3.gif "Значок визуальных инструментов для баз данных")|Связанная таблица|  
 |![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dvudficon.gif "Значок визуальных инструментов для баз данных")|Определяемая пользователем функция|  

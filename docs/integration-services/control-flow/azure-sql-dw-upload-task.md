@@ -2,7 +2,7 @@
 title: Задача отправки информации в хранилище данных SQL Azure | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: control-flow
@@ -16,16 +16,16 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: bff2df8d44cf8406a507fb764cb409f766f15bab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
 **Задача отправки информации в хранилище данных SQL Azure** позволяет отправить локальные данные в таблицу хранилища данных SQL Azure с использованием пакета SSIS. В настоящее время в качестве формата исходного файла данных поддерживается текст с разделителями в кодировке UTF-8. В процессе передачи реализован эффективный подход PolyBase, описанный в статье [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Стратегии и подходы, реализованные в процессе загрузки информации в хранилище данных SQL Azure). В частности, данные сначала будут переданы в хранилище BLOB-объектов Azure и лишь затем в хранилище данных SQL Azure. Поэтому для использования этой задачи требуется учетная запись хранилища BLOB-объектов Azure.
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/20/2018
 -----|-----------
 LocalDirectory|Указывает локальный каталог с файлами данных для отправки.
 Рекурсивно|Указывает, выполнять ли рекурсивный поиск в подкаталогах.
-FileName|Указывает фильтр имен для выбора файлов с определенным именем. Пример: при указании MySheet\*.xls\* будут выбраны такие файлы, как MySheet001.xls и MySheetABC.xlsx.
+FileName|Указывает фильтр имен для выбора файлов с определенным именем. Пример: при указании MySheet*.xls\* будут выбраны такие файлы, как MySheet001.xls и MySheetABC.xlsx.
 RowDelimiter|Указывает символы, обозначающие конец строки.
 ColumnDelimiter|Указывает символы, обозначающие конец столбца. Пример: &#124; (вертикальная черта), \t (табуляция), ' (одинарная кавычка), " (двойная кавычка) и 0x5c (обратная косая черта).
 IsFirstRowHeader|Указывает, содержит ли первая строка каждого файла данных названия столбцов, а не фактические данные.

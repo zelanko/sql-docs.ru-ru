@@ -1,16 +1,16 @@
 ---
-title: "Преобразование \"Медленно изменяющееся измерение\" | Документы Майкрософт"
-ms.custom: 
+title: Преобразование "Медленно изменяющееся измерение" | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c9dc7013eb987c04417088a0b36af24684edb0d6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>преобразование «Медленно изменяющееся измерение»
   Преобразование «Медленно изменяющееся измерение» согласует обновление и вставку записей в таблицы измерения хранилища данных. Например, это преобразование можно использовать для настройки выходов преобразования, которые вставляют и обновляют записи в таблице DimProduct базы данных [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] данными из таблицы Production.Products OLTP-базы данных.  

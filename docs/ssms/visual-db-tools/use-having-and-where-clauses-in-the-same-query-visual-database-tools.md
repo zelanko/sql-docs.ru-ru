@@ -1,15 +1,16 @@
 ---
-title: "Использование предложения HAVING и WHERE в одном запросе | Документация Майкрософт"
-ms.custom: 
+title: Использование предложения HAVING и WHERE в одном запросе | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 417bc39cf328ef9af8877553da8db4039d23e5f8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В некоторых экземплярах может понадобиться исключить отдельные строки из групп (с использованием предложения WHERE) до того, как применять условие к группе как к целому (с использованием предложения HAVING).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В некоторых экземплярах может понадобиться исключить отдельные строки из групп (с использованием предложения WHERE) до того, как применять условие к группе как к целому (с использованием предложения HAVING).  
   
 Предложение HAVING подобно предложению WHERE, но применимо только к целым группам (то есть к строкам в результирующем наборе, представляющим собой группы), тогда как предложение WHERE применимо к отдельным строкам. В запросе могут содержаться оба предложения: WHERE и HAVING. В этом случае:  
   

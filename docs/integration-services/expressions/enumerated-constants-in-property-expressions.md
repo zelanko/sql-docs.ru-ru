@@ -1,16 +1,16 @@
 ---
-title: "Перечислимые константы в выражениях свойств | Документы Майкрософт"
-ms.custom: 
+title: Перечислимые константы в выражениях свойств | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4d4b92c64b1c4bf1e55f096081d769734b4f628f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
   Если выражения свойств включают в себя значения из списка элементов-перечислителей, эти выражения должны использовать числовое значение элементов-перечислителей вместо понятного имени элемента. Например, если выражение устанавливает свойство **LoggingMode** , необходимо использовать числовое значение 2 вместо понятного имени «Запрещено».  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
 |Понятное имя в перечислении DTSPackageType|Числовое значение|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|По умолчанию|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
 |Понятное имя в перечислении DTSPriorityClass|Числовое значение|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|По умолчанию|0|  
 |AboveNormal|1|  
 |Нормальный|2|  
 |BelowNormal|3|  
@@ -512,8 +512,8 @@ ms.lasthandoff: 01/25/2018
   
 |Понятное имя в перечислении ObjectType|Числовое значение|  
 |---------------------------------|-------------------|  
-|Table|0|  
-|Просмотр|1|  
+|Таблица|0|  
+|Представление|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Задача «Создание резервной копии базы данных»  
@@ -535,7 +535,7 @@ ms.lasthandoff: 01/25/2018
   
 |Понятное имя в перечислении BackupTaskType|Числовое значение|  
 |-------------------------------------|-------------------|  
-|база данных|0|  
+|База данных|0|  
 |Files|1|  
 |Журнал|2|  
   
@@ -571,8 +571,8 @@ ms.lasthandoff: 01/25/2018
   
 |Понятное имя в перечислении StatisticsTarget|Числовое значение|  
 |---------------------------------------|-------------------|  
-|столбцом|1|  
-|Указатель|2|  
+|Столбец|1|  
+|Индекс |2|  
 |All|3|  
   
 ##  <a name="CommonProperties"></a> Общие свойства  

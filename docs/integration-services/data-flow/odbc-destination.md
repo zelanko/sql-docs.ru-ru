@@ -1,16 +1,16 @@
 ---
-title: "Назначение ODBC | Документы Майкрософт"
-ms.custom: 
+title: Назначение ODBC | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
@@ -18,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 265df43e7f376621e1f5dde6f6911be3eecf38b4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
   Назначение ODBC выполняет массовую загрузку данных в таблицы базы данных с поддержкой ODBC. Назначение ODBC использует диспетчер соединений ODBC для подключения к источнику данных.  
@@ -158,7 +158,7 @@ ms.lasthandoff: 02/15/2018
 #### <a name="inputoutput"></a>Ввод-вывод  
  Просмотр имени источника данных.  
   
-#### <a name="column"></a>столбцом  
+#### <a name="column"></a>Столбец  
  Не используется.  
   
 #### <a name="error"></a>Ошибка  

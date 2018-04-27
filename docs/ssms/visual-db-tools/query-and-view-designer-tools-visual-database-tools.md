@@ -1,15 +1,16 @@
 ---
-title: "Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.querydesigner
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], components
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7dfecc428309240485cbd05b4b4da95c65e0a04b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 46301b8538b1d2c7eec7b1523c18bdba21fb9a33
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При конструировании запроса, представления, встроенной функции или хранимой процедуры, состоящей из одной инструкции, окно конструктора состоит из четырех панелей: панель диаграмм, область критериев, панель "SQL" и панель результатов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+При конструировании запроса, представления, встроенной функции или хранимой процедуры, состоящей из одной инструкции, окно конструктора состоит из четырех панелей: панель диаграмм, область критериев, панель «SQL» и панель результатов.  
   
 ![Конструктор запросов](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "Конструктор запросов")  
   

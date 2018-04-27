@@ -1,15 +1,16 @@
 ---
-title: "Запросы с соединениями (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Запросы с соединениями (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dcdc5f6af6c47c7f100a48f899fe4a86c402d735
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Запросы с соединениями (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Результат запроса может содержать данные из нескольких таблиц или табличных объектов. Чтобы соединить данные из нескольких возвращающих табличное значение объектов, используется оператор SQL JOIN.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Результат запроса может содержать данные из нескольких таблиц или табличных объектов. Чтобы соединить данные из нескольких возвращающих табличное значение объектов, используется оператор SQL JOIN.  
   
 Сведения о создании запросов с использованием нескольких таблиц см. в следующих разделах.  
   

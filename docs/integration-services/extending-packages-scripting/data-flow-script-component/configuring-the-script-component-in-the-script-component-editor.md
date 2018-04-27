@@ -1,15 +1,15 @@
 ---
-title: "Настройка компонента скрипта в редакторе компонента скрипта | Документы Майкрософт"
-ms.custom: 
+title: Настройка компонента скрипта в редакторе компонента скрипта | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d26f0f9d2959a226912771312705a4dbece363fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e026337f4140820d1a1368081ac9f647ee5ebfe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Настройка компонента скрипта в редакторе компонента скрипта
   Прежде чем приступать к написанию пользовательского кода в компоненте скрипта, необходимо выбрать тип компонента потока данных, который должен быть создан (источник, преобразование или назначение), а затем настроить метаданные и свойства компонента в окне **Редактор преобразования "скрипт"**.  

@@ -2,7 +2,7 @@
 title: Параметры ("Среда" — "Справка" — "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dc0345c6f41952682df010ed9f643a21e8c49829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="options-environment---help---general-page"></a>Параметры ("Среда" — "Справка" — страница "Общие")
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В диалоговом окне **Параметры** можно выбрать наборы документации, а также отображение разделов внутри среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] либо в отдельном внешнем окне. Чтобы открыть это диалоговое окно, в меню **Сервис** выберите команду **Параметры** , в узле **Среда** разверните элемент **Справка** , а затем щелкните элемент **Общие**.  
+# <a name="options-environment---help---general-page"></a>Параметры ("Среда" — "Справка" — "Общие")
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В диалоговом окне **Параметры** можно выбрать наборы документации, а также выбрать отображение разделов внутри среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] либо в отдельном внешнем окне. Чтобы открыть это диалоговое окно, в меню **Сервис** выберите команду **Параметры** , в узле **Среда** разверните элемент **Справка** , а затем щелкните элемент **Общие**.  
   
 > [!NOTE]  
 > Изменения параметров на этой странице вступят в силу только после перезапуска среды.  

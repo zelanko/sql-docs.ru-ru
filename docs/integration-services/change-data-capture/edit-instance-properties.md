@@ -1,28 +1,28 @@
 ---
-title: "Изменение свойств экземпляра | Документы Майкрософт"
-ms.custom: 
+title: Изменение свойств экземпляра | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba04041ff88617c249184201805023c215f8d649
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: edb6857dcfe667c4ac1d038c93ed6ed536e34756
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-instance-properties"></a>Изменение свойств экземпляра
   Редактор свойств используется для внесения изменений в экземпляр CDC после создания начальной конфигурации. В редакторе свойств можно выполнять следующие операции.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
      Можно также щелкнуть правой кнопкой мыши на левой панели и выбрать команду **Свойства**.  
   
-### <a name="or"></a>или  
+### <a name="or"></a>OR  
   
 1.  На левой панели консоли конструктора CDC выберите службу, с которой вы работаете.  
   

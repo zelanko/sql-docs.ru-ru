@@ -2,7 +2,7 @@
 title: Добавление пользовательского отчета в среду Management Studio | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b682c71e77188ea46cea5f85590953c17d61bda
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 851380829c416fe728d2a8bb74dd2d1fc1004f07
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Добавление пользовательского отчета в среду Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В данном разделе описывается процесс создания простого отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)], который сохраняется как файл в формате RDL, а затем добавляется в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в качестве пользовательского отчета. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] могут создавать разнообразные сложные отчеты. Чтобы создать отчет по материалам этого раздела, на компьютере необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] . Для запуска пользовательского отчета с помощью среды [!INCLUDE[ssRS](../../includes/ssrs_md.md)] устанавливать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] службы [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]не обязательно.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В данном разделе описывается процесс создания простого отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] , который сохраняется как файл в формате RDL, а затем добавляется в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в качестве пользовательского отчета. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] могут создавать разнообразные сложные отчеты. Чтобы создать отчет по материалам этого раздела, на компьютере необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] . Для запуска пользовательского отчета с помощью среды [!INCLUDE[ssRS](../../includes/ssrs_md.md)] устанавливать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] службы [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]не обязательно.  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>Создание простого отчета, сохраняемого в файле в формате RDL  

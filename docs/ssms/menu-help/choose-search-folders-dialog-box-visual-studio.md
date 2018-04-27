@@ -2,7 +2,7 @@
 title: Диалоговое окно "Выбор папок поиска" (Visual Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8777f992c6081b13c86a3f916d65ccc6be9be571
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Позволяет собирать, сохранять и исправлять собственные именованные наборы папок поиска, а также задавать порядок поиска в них. Чтобы отобразить это диалоговое окно, нажмите кнопку **Обзор (...)** под раскрывающимся списком **Папка** в окне "Найти в файлах" или "Заменить в файлах", "Найти и заменить".  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Позволяет собирать, сохранять и исправлять собственные именованные наборы папок поиска, а также задавать порядок поиска в них. Чтобы отобразить это диалоговое окно, нажмите кнопку **Обзор (...)** под раскрывающимся списком **Папка** в окне "Найти в файлах" или "Заменить в файлах", "Найти и заменить".  
   
 Добавьте папки в список **Выбранные папки** , введите имя этого набора папок в поле **Набор папок** и нажмите кнопку **Применить** для сохранения. Эту пользовательскую область поиска затем можно выбирать по имени из раскрывающихся списков **Папка** окон **Найти в файлах** и **Заменить в файлах**. Чтобы удалить пользовательский набор папок из списков **Папка** , выберите его имя в поле **Набор папок** и нажмите кнопку **Удалить**.  
   

@@ -1,15 +1,16 @@
 ---
-title: "Конструкторы визуальных инструментов для баз данных | Документация Майкрософт"
-ms.custom: 
+title: Конструкторы визуальных инструментов для баз данных | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [SQL Server]
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], designers
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2837ff14b83af7aaec007fee657440778cef5895
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tool-designers"></a>Конструкторы визуальных инструментов для баз данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Визуальные инструменты для баз данных представляют собой сочетание средств проектирования, которые можно использовать для работы с источниками данных. С их помощью можно создавать запросы, конструировать и менять структуру базы данных и обновлять данные. В число этих средств входят конструктор диаграмм баз данных, конструктор таблиц и конструктор запросов и представлений.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Визуальные инструменты для баз данных представляют собой сочетание средств проектирования, которые можно использовать для работы с источниками данных. С их помощью можно создавать запросы, конструировать и менять структуру базы данных и обновлять данные. В число этих средств входят конструктор диаграмм баз данных, конструктор таблиц и конструктор запросов и представлений.  
   
 ## <a name="properties-window"></a>Окно «Свойства»  
 Аналогичное окно доступно не только в визуальных инструментах для баз данных, но именно здесь можно вносить многие изменения. В этом окне показаны свойства текущего выбранного элемента (например, таблицы), которые можно изменять (все, начиная от имени свойства и заканчивая параметрами сортировки столбца). Некоторые свойства можно просматривать в окне «Свойства», но менять их нужно другими средствами.  

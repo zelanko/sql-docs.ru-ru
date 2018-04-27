@@ -1,28 +1,28 @@
 ---
-title: "Службы Integration Services (SSIS) в кластере | Документы Майкрософт"
-ms.custom: 
+title: Службы Integration Services (SSIS) в кластере | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e76d8815ad02797233c8daada93fc54e5433d106
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Службы Integration Services (SSIS) в кластере
   Кластеризация служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не рекомендуется, так как службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не являются кластеризованными, не ориентируются на использование кластеров и не поддерживают отработку отказа между узлами кластера. Следовательно, в кластерной среде службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] должны быть установлены и запущены в качестве изолированной службы на каждом узле кластера.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **При отработке отказа не происходит повторного запуска выполняющихся пакетов.**
     
-    Восстановление после ошибок пакетов можно произвести, перезапустив пакеты с контрольных точек. Перезапуск с контрольных точек можно производить и без настройки службы в качестве ресурса кластера. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+    Восстановление после ошибок пакетов можно произвести, перезапустив пакеты с контрольных точек. Перезапуск с контрольных точек можно производить и без настройки службы в качестве ресурса кластера. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 -   Если служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] была настроена в группе ресурсов, отличной от группы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то будет невозможно использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] на клиентских компьютерах для управления пакетами, хранящимися в базе данных msdb. В этом двухшаговом сценарии служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не может делегировать учетные данные.  
   

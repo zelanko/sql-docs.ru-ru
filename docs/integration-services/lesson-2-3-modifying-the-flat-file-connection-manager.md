@@ -1,30 +1,30 @@
 ---
-title: "Шаг 3. Изменение диспетчера соединений с неструктурированными файлами | Документы Майкрософт"
-ms.custom: 
+title: Шаг 3. Изменение диспетчера соединений с неструктурированными файлами | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c447e50a05b1b705690262f322bd1ceeeee72868
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9d5d5e3f02596ac8c973608d7acf8b09c7ea1366
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Занятие 2-3. Изменение диспетчера соединений с неструктурированными файлами
 В этом задании требуется модифицировать диспетчер соединений с неструктурированными файлами, созданный и настроенный на занятии 1. При создании диспетчера соединений неструктурированных файлов он был настроен на статическую загрузку отдельного файла. Чтобы диспетчер соединений с неструктурированными файлами мог последовательно загружать файлы, необходимо изменить свойство ConnectionString диспетчера соединений таким образом, чтобы он принимал пользовательскую переменную `User:varFileName`, содержащую путь к файлу, который должен быть загружен в процессе выполнения.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-configure-the-flat-file-connection-manager-to-use-a-variable-for-the-connection-string"></a>Настройка диспетчера соединений с неструктурированными файлами для использования переменной в качестве строки соединения  
   
-1.  На панели **Диспетчеры соединений** щелкните правой кнопкой мыши **Образец источника данных "неструктурированный файл"**и выберите пункт **Свойства**.  
+1.  На панели **Диспетчеры соединений** щелкните правой кнопкой мыши **Образец источника данных "неструктурированный файл"** и выберите пункт **Свойства**.  
   
 2.  В окне свойств щелкните в пустой ячейке **Выражения**, а затем нажмите кнопку с многоточием **(…)**.  
   

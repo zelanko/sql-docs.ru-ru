@@ -1,34 +1,36 @@
 ---
-title: "Отмена изменений, внесенных в запросы (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Отмена изменений, внесенных в запросы (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reverting queries
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5412ede653f8bd6eb67091dd4ebc532b1d7f1b19
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 230445e105f24623cf5b049a5d07eed5c6177311
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="discard-changes-made-to-queries-visual-database-tools"></a>Отмена изменения, выполненных в запросе (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Изменения в определении запроса можно отменить перед сохранением. После того, как они сохранены, их нельзя вернуть в прежнее состояние.  
+# <a name="discard-changes-made-to-queries-visual-database-tools"></a>Отмена изменения, внесенных в запросы (визуальные инструменты для баз данных)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Изменения в определении запроса можно отменить перед сохранением. После того, как они сохранены, их нельзя вернуть в прежнее состояние.  
   
 > [!NOTE]  
 > Чтобы отменить изменения, внесенные в значения на панели «Результаты», нажмите клавишу ESC прежде, чем указатель мыши покинет запись. Если после перемещения указателя из записи выдается уведомление о том, что изменения не будут внесены в базу данных, можно также нажать клавишу ESC, чтобы вернуться к прежнему значению.  

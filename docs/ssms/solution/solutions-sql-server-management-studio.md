@@ -1,15 +1,16 @@
 ---
-title: "Решения (среда SQL Server Management Studio) | Документация Майкрософт"
-ms.custom: 
+title: Решения (среда SQL Server Management Studio) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 750f883102935cee98018c899860073341df259e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>Решения (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] — это коллекция, которая состоит из одного или нескольких связанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] — это набор из одного или нескольких взаимосвязанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
   
 ## <a name="solution-overview"></a>Общие сведения о решении  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] может использоваться как платформа для разработки скриптов для компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Используйте редакторы кода [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] для разработки скриптов и запросов для реляционных и многомерных баз данных, а также для создания наборов взаимосвязанных скриптов и запросов.  

@@ -1,31 +1,31 @@
 ---
-title: "Соединение с базой данных Access | Документы Майкрософт"
-ms.custom: 
+title: Соединение с базой данных Access | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d82334ca4c5b5efb1d956c8d3a8afe901fc94f83
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-access-database"></a>Подключение к базе данных Access
   Чтобы привязать пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] к источнику данных Microsoft Office Access, нужны диспетчер соединений OLE DB и поставщик данных. Выбор поставщика данных зависит от версии Access, в которой был создан источник данных.  

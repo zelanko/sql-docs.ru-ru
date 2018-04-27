@@ -1,7 +1,7 @@
 ---
 title: Заметки о выпуске SQL Server 2008 R2 с пакетом обновления 2 (SP2) | Документация Майкрософт
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
@@ -18,11 +18,11 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 08d28567a1984cae1fe5d563312caf656a31b438
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e8e39fb903504fb319f29f6eaaeb223159c9e3f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ ms.lasthandoff: 04/18/2018
 |Отсутствует 64-разрядная установка SQL Server 2008 R2 Management Studio|Установка среды SQL Server 2008 R2 Management Studio, включая пакет обновления 2 (SP2)|SQLManagementStudio_x64_ENU.exe [по этой ссылке](http://go.microsoft.com/fwlink/p/?LinkId=251791) для установки бесплатного выпуска среды SQL Server 2008 R2 с пакетом обновления 2 (SP2) Management Studio Express Edition|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2. Неудачное завершение программы установки, если файл SQAGTRES.dll заблокирован другим процессом  
-**Проблема.**Программа установки SQL Server может завершить работу с этой ошибкой: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` . Первопричиной ошибки является то, что файл C:\Windows\system32\SQAGTRES.DLL заблокирован другим процессом и программе установки не удалось обновить его.  
+**Проблема.** Программа установки SQL Server может завершить работу с этой ошибкой: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` . Первопричиной ошибки является то, что файл C:\Windows\system32\SQAGTRES.DLL заблокирован другим процессом и программе установки не удалось обновить его.  
   
-**Решение.**Переименуйте указанный выше файл, указав временное имя, такое как C:\Windows\system32\SQAGTRES_old.DLL, а затем нажмите кнопку "Повтор" в окне сообщения об ошибке установки. Это даст возможность программе установки продолжить работу. После перезагрузки можно удалить временный файл C:\Windows\system32\SQAGTRES_old.DLL.  
+**Решение.** Переименуйте указанный выше файл, указав временное имя, такое как C:\Windows\system32\SQAGTRES_old.DLL, а затем нажмите кнопку "Повтор" в окне сообщения об ошибке установки. Это даст возможность программе установки продолжить работу. После перезагрузки можно удалить временный файл C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0. Известные проблемы, исправленные в этом пакете обновления  
 Полный список ошибок и известных проблем, исправленных в этом пакете обновления, см. в следующей [статье базы знаний](http://support.microsoft.com/kb/2630455).  

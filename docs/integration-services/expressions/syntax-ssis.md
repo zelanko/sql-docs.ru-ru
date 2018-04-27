@@ -1,31 +1,31 @@
 ---
-title: "Синтаксис (службы SSIS) | Документы Майкрософт"
-ms.custom: 
+title: Синтаксис (службы SSIS) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28dc10cc407a41e8ba2ec594fdacbe293dbe53a1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ca475ed0b09541d379d227dff4df4fcc129a8e1d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
   Синтаксис выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] похож на синтаксис языков C и C#. Выражения содержат элементы, такие как идентификаторы (столбцы и переменные), литералы, операторы и функции. В этом разделе обобщаются особые требования синтаксиса средства оценки выражений с точки зрения различных элементов выражений.  

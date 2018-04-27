@@ -2,7 +2,7 @@
 title: Предопределенные роли базы данных агента SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 11d507fb3b06da834f585834c394112a75e864c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0315832b3ed7bbd16929e4384c9bdf40c13fbe85
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Предопределенные роли базы данных агента SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
   
 Члены роли**SQLAgentOperatorRole** имеют дополнительные разрешения на локальные задания и расписания. Они могут выполнять, останавливать или запускать все локальные задания, они могут удалять журнал заданий для любого локального задания на сервере. Они также могут включать и выключать все локальные задания и расписания на сервере. Для включения и выключения локальных заданий или расписаний члены этой роли должны использовать хранимые процедуры **sp_update_job** и **sp_update_schedule**. Члены роли **@enabled** могут указывать только параметры, задающие имя задания или расписания, либо идентификатор и параметр **SQLAgentOperatorRole**. Если они задают какие-либо другие параметры, выполнение хранимой процедуры завершается с ошибкой. Члены роли**SQLAgentOperatorRole** не могут изменять владельцев заданий для получения доступа к не принадлежащим им заданиям.  
   
-В обозревателе объектов среды **членам роли**SQLAgentOperatorRole **видны узлы**Задания **,**Предупреждения **,** Операторы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] и **Учетные записи-посредники**. Членам этой роли не доступен только узел **Журналы ошибок** .  
+В обозревателе объектов среды **членам роли**SQLAgentOperatorRole **видны узлы**Задания **,** Предупреждения **,** Операторы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] и **Учетные записи-посредники**. Членам этой роли не доступен только узел **Журналы ошибок** .  
   
 > [!IMPORTANT]  
 > При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  

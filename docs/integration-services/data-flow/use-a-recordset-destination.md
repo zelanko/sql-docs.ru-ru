@@ -1,30 +1,30 @@
 ---
-title: "Использование назначения \"Набора записей\" | Документы Майкрософт"
-ms.custom: 
+title: Использование назначения "Набора записей" | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d081c9a89e8a72dea2b09771b7ab548f032a25b4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-a-recordset-destination"></a>использовать назначение «Набор записей»
   Назначение «Набор записей» не сохраняет данные во внешнем источнике данных. Наоборот, назначение "Набор записей" сохраняет данные в памяти в наборе записей, который хранится в переменной пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , относящейся к типу данных **Object** . После сохранения данных назначением «Набор записей», как правило, используется контейнер «цикл по каждому элементу» с перечислителем ADO по каждой строке для обработки одной строки набора записей за раз. Перечислитель ADO по каждой строке сохраняет значение из каждого столбца текущей строки в отдельной переменной пакета. Затем настроенные в контейнере «цикл по каждому элементу» задания считывают эти значения из переменных и выполняют с ними ряд действий.  
@@ -160,7 +160,7 @@ ms.lasthandoff: 01/25/2018
   
     5.  Для параметра **MessageSourceType**выберите значение **Прямой ввод**.  
   
-5.  На странице **Выражения** окна **Редактор задачи "Отправка почты"**нажмите кнопку с многоточием (**…**), чтобы открыть **Редактор выражений свойств**.  
+5.  На странице **Выражения** окна **Редактор задачи "Отправка почты"** нажмите кнопку с многоточием (**…**), чтобы открыть **Редактор выражений свойств**.  
   
 6.  В **Редакторе выражений свойств**введите следующие данные.  
   

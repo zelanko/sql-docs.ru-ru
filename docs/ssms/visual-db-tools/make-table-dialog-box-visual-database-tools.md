@@ -1,33 +1,35 @@
 ---
-title: "Диалоговое окно \"Создание таблицы\" (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Создание таблицы" (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7c6efce5afa21a2caa06d3fb9edf6922e7c2db4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 100c44c88675484720e4b3d75197f3d24fef6e93
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Диалоговое окно «Создание таблицы» (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] позволяет присвоить имя созданной таблице, в которую копируются строки. Это диалоговое окно появляется при изменении типа запроса на MAKE TABLE. Чтобы изменить тип запроса, в меню **Конструктор запросов** выберите пункт **Тип изменения**, а затем щелкните **Создать таблицу**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Позволяет присвоить имя созданной таблице, в которую копируются строки. Это диалоговое окно появляется при изменении типа запроса на MAKE TABLE. Чтобы изменить тип запроса, в меню **Конструктор запросов** выберите пункт **Тип изменения**, а затем щелкните **Создать таблицу**.  
   
 ## <a name="options"></a>Параметры  
 **Имя таблицы**  

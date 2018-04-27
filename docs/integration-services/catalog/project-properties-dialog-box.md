@@ -1,31 +1,31 @@
 ---
-title: "Диалоговое окно \"Свойства проекта\" | Документация Майкрософт"
-ms.custom: 
+title: Диалоговое окно "Свойства проекта" | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 663312637cef120825522b4dad36f0623a8f872a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2392b67968953d70c119c412fa6629afc0a318a4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-properties-dialog-box"></a>Диалоговое окно свойств проекта
   Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляет собой единицу развертывания. Каждый проект может содержать пакеты, параметры и ссылки на среду. Проект является защищаемым объектом и может определять разрешения для участников базы данных. При повторном развертывании проекта предыдущая версия проекта может быть сохранена в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

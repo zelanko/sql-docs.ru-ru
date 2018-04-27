@@ -1,15 +1,16 @@
 ---
-title: "Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0baf031eb2757f9df899c871f983e231b3f96e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 87611561dda34af615da24a7879d6390916d06cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При создании агрегированных запросов [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) делает некоторые предположения для создания правильного статистического запроса. Например, если при создании статистического запроса помечается столбец данных для вывода, конструктор запросов и представлений автоматически включает этот столбец в предложение GROUP BY, чтобы в итоговых результатах случайно не было отображено содержимое отдельной строки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) делает некоторые предположения для создания правильного статистического запроса. Например, если при создании статистического запроса помечается столбец данных для вывода, конструктор запросов и представлений автоматически включает этот столбец в предложение GROUP BY, чтобы в итоговых результатах случайно не было отображено содержимое отдельной строки.  
   
 ## <a name="using-group-by"></a>Параметр «Группировать по»  
 Конструктор запросов и представлений использует следующие правила для работы со столбцами:  

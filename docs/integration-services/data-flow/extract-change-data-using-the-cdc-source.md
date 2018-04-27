@@ -1,28 +1,28 @@
 ---
-title: "Извлечение информации об изменениях данных с помощью источника CDC | Документы Майкрософт"
-ms.custom: 
+title: Извлечение информации об изменениях данных с помощью источника CDC | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 545f7593878688f8b0d792410e363c738460fd90
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f1029b8cb6b6757075e22e614948c3f89e50ef7b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Извлечение информации об изменениях данных с помощью источника CDC
   Чтобы можно было добавить и настроить источник CDC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и задачу «Управление CDC».  

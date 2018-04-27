@@ -1,15 +1,15 @@
 ---
-title: "Создание кода пользовательской задачи | Документы Майкрософт"
-ms.custom: 
+title: Создание кода пользовательской задачи | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d23a210af0a19b81c583304984ae439e411037b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0bca77ce19974ed789773654322a04531f0ee113
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="coding-a-custom-task"></a>Создание кода пользовательской задачи
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.Task>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
@@ -177,7 +177,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Содержит переменные, доступные для задачи. Переменные используются задачами через свойство VariableDispenser, а не напрямую. Свойство VariableDispenser осуществляет блокировку и разблокирование переменных, а также предотвращает взаимоблокировки или перезаписи.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Содержит методы, вызываемые задачей для вызова событий в обработчике среды выполнения.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Содержит методы и свойства, используемые задачей для внесения записей в журнал событий.|  
-|Object|Содержит объект транзакции (при наличии такового), частью которого является контейнер. Это значение передается в качестве параметра методу <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> объекта <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Объект|Содержит объект транзакции (при наличии такового), частью которого является контейнер. Это значение передается в качестве параметра методу <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> объекта <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Обеспечение обратной связи при выполнении  
  Задачи упаковывают свой код в блоки **try/catch**, чтобы предотвратить возникновение исключений в подсистеме среды выполнения. Таким образом, гарантируется, что выполнение пакета будет завершено, и не произойдет неожиданной остановки. Однако обработчик среды выполнения предоставляет и другие механизмы обработки ошибок, которые могут возникать во время выполнения задачи. К ним относится выдача сообщений об ошибках и предупреждений, возвращение значения из структуры <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, выдача сообщений, возвращение значения <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> и раскрытие сведений о результатах выполнения задачи с помощью свойства <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  

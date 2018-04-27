@@ -2,7 +2,7 @@
 title: Параметры ("Среда" — "Справка" — "В сети") | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a985f6e2796708bcea47178380974d18895218d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f8bcf43802b4963d9bd843a6976280037a9f72d0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-environment---help---online-page"></a>Параметры ("Среда" — "Справка" — страница "В сети")
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  
   
 **Проверить при загрузке содержимого справки**  
 Определяет источники справки и порядок их просмотра при использовании справки F1.  

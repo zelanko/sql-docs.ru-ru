@@ -2,7 +2,7 @@
 title: Свойства объектов (столбцов) с табличными значениями (визуальные инструменты для баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72f33dceec5940d9b34aa9f7e2c44b4b903d4211
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 76843a03de3223aa1f64ccb1ab012f4b9093a157
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="table-valued-object-column-properties-visual-database-tools"></a>Свойства табличного объекта (столбца) (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Эти свойства отображаются при выборе столбца в табличном объекте на панели **Диаграмма** конструктора запросов и представлений.  
+# <a name="table-valued-object-column-properties-visual-database-tools"></a>Свойства объектов (столбцов) с табличными значениями (визуальные инструменты для баз данных)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Эти свойства отображаются при выборе столбца в табличном объекте на панели **Диаграмма** конструктора запросов и представлений.  
   
 > [!NOTE]  
 > Свойства в данном разделе сгруппированы по категориям, а не по алфавиту.  

@@ -1,16 +1,16 @@
 ---
-title: "Преобразование \"Аудит\" | Документы Майкрософт"
-ms.custom: 
+title: Преобразование "Аудит" | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 31083ad4c5868fdc6b98095e90ef82c6cd8637af
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»
   Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="system-variables"></a>Системные переменные  
  В приведенной ниже таблице описаны системные переменные, применяемые в преобразовании «Аудит».  
   
-|Системная переменная|Указатель|Description|  
+|Системная переменная|Индекс |Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|Идентификатор GUID, определяющий экземпляр выполнения пакета.|  
 |**PackageID**|1|Уникальный идентификатор пакета.|  

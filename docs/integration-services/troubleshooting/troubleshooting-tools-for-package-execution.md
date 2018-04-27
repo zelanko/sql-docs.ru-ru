@@ -1,16 +1,16 @@
 ---
-title: "Инструменты устранения неполадок с выполнением пакетов | Документы Майкрософт"
-ms.custom: 
+title: Инструменты устранения неполадок с выполнением пакетов | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ac15ea4e6c42c5f299303a9d2335563e819cc98c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  **Создайте родительскую таблицу, в которой регистрируется каждое выполнение пакета**. В этой родительской таблице предусматривается одна строка для каждого выполнения пакета, а идентификатор ExecutionID используется для связи с дочерними записями в таблице журналов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Для создания новой строки и регистрации времени начала можно использовать задачу «Выполнение SQL». Затем при завершении пакета можно обновить строку временем окончания, продолжительностью и состоянием;  
   
-    2.  **Добавьте к потоку данных данные аудита**. Преобразование «Аудит» можно использовать для добавления к строкам в потоке данных сведений о выполнении пакета, который создал или изменил каждую строку. Преобразование «Аудит» предоставляет девять разделов сведений, в том числе PackageName и ExecutionInstanceGUID. Дополнительные сведения см. в разделе [преобразование «Аудит»](../../integration-services/data-flow/transformations/audit-transformation.md). Если в каждую строку в целях аудита требуется включить пользовательские данные, их можно добавить с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Преобразование «Производный столбец»](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Добавьте к потоку данных данные аудита**. Преобразование «Аудит» можно использовать для добавления к строкам в потоке данных сведений о выполнении пакета, который создал или изменил каждую строку. Преобразование «Аудит» предоставляет девять разделов сведений, в том числе PackageName и ExecutionInstanceGUID. Дополнительные сведения см. в разделе [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Если в каждую строку в целях аудита требуется включить пользовательские данные, их можно добавить с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Рассмотрите возможность захвата данных счетчика строк**. Создайте отдельную таблицу для данных счетчика строк, в которой каждый экземпляр выполнения пакета определяется идентификатором ExecutionID. Используйте преобразование «Счетчик строк» для сохранения числа строк в последовательность переменных в критических точках потока данных. После окончания потока данных используйте задачу «Выполнение SQL» для вставки этой последовательности значений в строку таблицы для последующего анализа и отчета.  
   

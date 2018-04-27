@@ -1,15 +1,16 @@
 ---
-title: "Настройка объема сведений, отображаемых в диаграммах | Документация Майкрософт"
-ms.custom: 
+title: Настройка объема сведений, отображаемых в диаграммах | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database diagrams [SQL Server], information displayed
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - customizing database diagram information [SQL Server]
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a602df15084244af0b5437726b5a087079112b1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4b940de9eb31387cfa521c40170520c3a4700fe9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При добавлении таблицы в диаграмму базы данных эта таблица появляется вместе с рядом отображаемых свойств. Количество отображаемых сведений можно задать в меню вариаций или создавать пользовательский набор свойств.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+При добавлении таблицы в диаграмму базы данных эта таблица появляется вместе с рядом отображаемых свойств. Количество отображаемых сведений можно задать в меню вариаций или создавать пользовательский набор свойств.  
   
 Возможные варианты:  
   

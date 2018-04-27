@@ -2,7 +2,7 @@
 title: Разрешения конечного элемента (службы Master Data Services) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -24,11 +24,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f53b15609a806c2814cce4e2767db8158aefcf5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 93267daf8957c8c731d03ac03b647f9411c46396
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
 
@@ -70,8 +70,8 @@ ms.lasthandoff: 04/18/2018
   
 |Имя|Код|Подкатегория (Обновление)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Горные велосипеды|  
-|Mountain-100|BK-M201|{5} Горные велосипеды|  
+|Mountain-100|BK-M101|{5} Mountain Bikes|  
+|Mountain-100|BK-M201|{5} Mountain Bikes|  
   
  В **обозревателе**можно обновить любое значение атрибута в столбце "Subcategory". Если у пользователя нет разрешения для атрибута, атрибут не отображается.  
   

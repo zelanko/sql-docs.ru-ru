@@ -2,7 +2,7 @@
 title: Настройка брандмауэра Windows для разрешения доступа к SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **netsh**  
   
-     Средство **netsh.exe** позволяет администратору настраивать компьютеры с ОС Windows и наблюдать за ними из командной строки или с помощью пакетного файла**.** При использовании средства **netsh** вводимые команды направляются соответствующим помощникам, которые выполняют их. Помощник представляет собой файл библиотеки DLL, которая расширяет функциональность средства **netsh** , предоставляя возможности настройки, мониторинга и поддержки других служб, служебных программ или протоколов. Все операционные системы, поддерживающие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , имеют модуль поддержки брандмауэра. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] также содержит расширенный помощник брандмауэра **advfirewall**. В этой статье не приводятся сведения об использовании **netsh**. Однако многие из описанных параметров конфигурации можно настроить с помощью средства **netsh**. Например, выполните в командной строке следующий скрипт, чтобы открыть TCP-порт 1433:  
+     Средство **netsh.exe** позволяет администратору настраивать компьютеры с ОС Windows и наблюдать за ними из командной строки или с помощью пакетного файла **.** При использовании средства **netsh** вводимые команды направляются соответствующим помощникам, которые выполняют их. Помощник представляет собой файл библиотеки DLL, которая расширяет функциональность средства **netsh** , предоставляя возможности настройки, мониторинга и поддержки других служб, служебных программ или протоколов. Все операционные системы, поддерживающие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , имеют модуль поддержки брандмауэра. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] также содержит расширенный помощник брандмауэра **advfirewall**. В этой статье не приводятся сведения об использовании **netsh**. Однако многие из описанных параметров конфигурации можно настроить с помощью средства **netsh**. Например, выполните в командной строке следующий скрипт, чтобы открыть TCP-порт 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

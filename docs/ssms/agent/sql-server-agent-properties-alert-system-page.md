@@ -2,7 +2,7 @@
 title: Свойства агента SQL Server (страница "Система предупреждений") | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 460783993c1404a99240ca621cb681a72bd65487
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e32156fa07f94b86d2ade4eadae6dd450761eef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Свойства агента SQL Server (страница «Система предупреждений»)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/16/2018
 Данный раздел позволяет включить токены шагов заданий, которые могут использоваться в заданиях, выполняемых предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения о токенах шагов заданий см. в разделе [Использование токенов в шагах задания](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
-> Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. К этим токенам относятся: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)**и **$(A-MSG)**.  
+> Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. К этим токенам относятся: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** и **$(A-MSG)**.  
 >   
 > При необходимости использовать эти токены перед их включением убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   

@@ -1,33 +1,35 @@
 ---
-title: "Проблемы развития базы данных (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Проблемы развития базы данных (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [SQL Server], multuser database changes
 - database evolution [SQL Server]
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 045f97b1914339665b2f507ee3f04bd8a6346918
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 91b191ae088eca7f79b3b66d8075a5fdc59f7e5f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Проблемы развития базы данных (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При изменении структуры развернутой базы данных необходимо следить, чтобы изменения были совместимы с существующими данными и структурой базы данных. Возможно, необходимо будет принять особые меры при выполнении следующих изменений:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+При изменении структуры развернутой базы данных необходимо следить, чтобы изменения были совместимы с существующими данными и структурой базы данных. Возможно, необходимо будет принять особые меры при выполнении следующих изменений:  
   
 -   **Добавление ограничения**. При добавлении ограничения может оказаться, что в базе данных уже содержатся данные, которые не удовлетворяют добавляемому ограничению. При попытке сохранить ограничение [диалоговое окно "Уведомления после сохранения" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/post-save-notifications-dialog-box-visual-database-tools.md) сообщает, что не удалось создать ограничение в базе данных. Чтобы принудительно принять новое ограничение в базе данных, можно снять флажок **Проверять существующие данные при создании**.  
   

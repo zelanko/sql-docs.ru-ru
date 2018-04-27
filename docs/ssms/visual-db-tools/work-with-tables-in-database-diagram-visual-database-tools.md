@@ -1,15 +1,16 @@
 ---
-title: "Работа с таблицами в схемах базы данных (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Работа с таблицами в схемах базы данных (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database diagrams [SQL Server], tables
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - tables [SQL Server], database diagrams
 - database diagrams [SQL Server], Table Designer
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 369cb096dae1804087d4a7bbcd50c10f975f59d6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4475ece1df9aaf9c30a6652322a522842524e3a5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно изменять и создавать таблицы баз данных либо в конструкторе таблиц, либо в конструкторе диаграмм баз данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Можно изменять и создавать таблицы баз данных либо в конструкторе таблиц, либо в конструкторе диаграмм баз данных.  
   
 > [!NOTE]  
 > Если таблица опубликована для репликации, то изменения схемы следует проводить при помощи инструкции языка Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) или объектов SMO. При изменении схемы с помощью конструктора таблиц или конструктора диаграмм баз данных конструктор пытается удалить и затем вновь создать таблицу. Но поскольку удалять опубликованные объекты нельзя, изменения схемы не будут применены.  

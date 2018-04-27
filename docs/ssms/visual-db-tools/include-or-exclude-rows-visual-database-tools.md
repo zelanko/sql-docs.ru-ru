@@ -1,15 +1,16 @@
 ---
-title: "Включение или исключение строк (визуальные инструменты для баз данных) | Документация Майкрософт"
-ms.custom: 
+title: Включение или исключение строк (визуальные инструменты для баз данных) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - row included in search [SQL Server]
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 020bbbcbae62267966e9fb020e3dc0f668cc977f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ef4d16bbe897efaacb4deb6a47e977689eb1877f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Включение или исключение строк (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Чтобы ограничить число строк, возвращаемых запросом SELECT, создайте условия поиска или критерии фильтрации. В языке SQL условия поиска появляются в предложении инструкций WHERE или, если запрос статистический, в предложении HAVING.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Чтобы ограничить число строк, возвращаемых запросом SELECT, создают условия поиска или критерии фильтрации. В языке SQL условия поиска появляются в предложении инструкций WHERE или, если запрос статистический, в предложении HAVING.  
   
 > [!NOTE]  
 > Можно также использовать условия поиска, чтобы задать, какие строки будут изменены запросами обновления, вставки результатов и значений, удаления или создания таблиц.  

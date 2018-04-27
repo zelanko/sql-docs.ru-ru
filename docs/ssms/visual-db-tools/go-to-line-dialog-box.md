@@ -2,7 +2,7 @@
 title: Диалоговое окно "Переход к строке" | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,12 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0c8037b7900a9b6f049daa4221e62aaf44d1eed
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 88fa060c8b3cfe8c5a03a7fcb4cf299bcd1c3ce2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="go-to-line-dialog-box"></a>Диалоговое окно «Переход к строке»
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Чтобы перейти в нужное место в окне редактора кода, введите номер строки и нажмите кнопку **ОК**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Чтобы перейти в нужное место в окне редактора кода, введите номер строки и нажмите кнопку **ОК**.  
   

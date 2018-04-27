@@ -1,30 +1,30 @@
 ---
-title: "Шаг 2. Активация и настройка конфигураций пакетов | Документы Майкрософт"
-ms.custom: 
+title: Шаг 2. Активация и настройка конфигураций пакетов | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 05badd9b5954f079adab16d57b9c428d6c733db7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5–2. Активация и настройка конфигураций пакетов
 В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использоваться для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства **Directory** контейнера "цикл по каждому элементу". Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
   
 9. В списке **Свойство**окна **Редактор выражений свойств** выберите значение **Каталог**.  
   
-10. В поле **Выражение** нажмите кнопку с многоточием**(…)**.  
+10. В поле **Выражение** нажмите кнопку с многоточием **(…)**.  
   
 11. В окне **Построитель выражений**раскройте папку "Переменные" и перетащите переменную **User::varFolderName** в поле **Выражение** .  
   

@@ -1,30 +1,30 @@
 ---
-title: "Шаг 2. Запуск мастера установки пакета | Документы Майкрософт"
-ms.custom: 
+title: Шаг 2. Запуск мастера установки пакета | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 39d8b83d8cac317648cbc1d1ec24635c399432f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Занятие 3–2. Запуск мастера установки пакета
 В этой задаче мастер установки пакета используется для развертывания пакетов из проекта Deployment Tutorial в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В таблицу sysssispackages базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb можно установить только пакеты; файлы поддержки, включенные в пакет развертывания, будут развернуты в файловой системе.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  На странице "Развертывание пакетов служб SSIS" выберите параметр **Установить на SQL Server** , установите флажок **Проверить пакеты после установки** и нажмите кнопку **Далее**.  
   
-5.  На странице "Выбор целевого сервера SQL Server" укажите **(локальный)**в поле **Имя сервера** .  
+5.  На странице "Выбор целевого сервера SQL Server" укажите **(локальный)** в поле **Имя сервера** .  
   
 6.  Если экземпляр SQL Server поддерживает проверку подлинности Windows, выберите **Использовать проверку подлинности Windows**; в противном случае выберите **Использовать проверку подлинности SQL Server** и задайте имя пользователя и пароль.  
   

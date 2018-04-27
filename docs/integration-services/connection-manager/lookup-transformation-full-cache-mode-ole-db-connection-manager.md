@@ -1,30 +1,30 @@
 ---
-title: "Преобразование \"Уточняющий запрос\" в режиме полного кэширования — диспетчер подключений OLE DB | Документы Майкрософт"
-ms.custom: 
+title: Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений OLE DB | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a4c0035ede0be79e1a37e144099155be9b30fd9a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений OLE DB
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений OLE DB. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  Чтобы настроить компонент, дважды щелкните источник или предыдущее преобразование.  
   
-5.  Дважды щелкните преобразование "Уточняющий запрос", а затем в окне **Редактор преобразования "Уточняющий запрос"**на странице **Общие** выберите **Полное кэширование**.  
+5.  Дважды щелкните преобразование "Уточняющий запрос", а затем в окне **Редактор преобразования "Уточняющий запрос"** на странице **Общие** выберите **Полное кэширование**.  
   
 6.  В области **Тип соединения** выберите **Диспетчер соединений OLE DB**.  
   

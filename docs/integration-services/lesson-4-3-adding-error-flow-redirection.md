@@ -1,30 +1,30 @@
 ---
-title: "Шаг 3. Добавление перенаправления потока ошибок | Microsoft Docs"
-ms.custom: 
+title: Шаг 3. Добавление перенаправления потока ошибок | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e4e6e431132c3c6e5c8edc698711e7b24b87f6d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Занятие 4-3. Добавление перенаправления потока ошибок
 Как было рассмотрено в предыдущей задаче, преобразование «Поиск ключа валюты» при попытке обработать поврежденный образец неструктурированного файла не может сформировать соответствие. Вместо этого формируется ошибка. Поскольку преобразование использует установки по умолчанию для вывода ошибки, любая возникшая ошибка приводит к неудачному завершению преобразования. При неудачном завершении преобразования выполнение пакета также завершается с ошибкой.  
