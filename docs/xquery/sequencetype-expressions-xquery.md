@@ -1,16 +1,16 @@
 ---
-title: "Выражения SequenceType (XQuery) | Документы Microsoft"
-ms.custom: 
+title: Выражения SequenceType (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0885694aa774a74d694742bf62e32efdcf3a7552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>Выражения SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -321,7 +321,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Полные последовательности, например `(1,2) instance of xs:integer*`, не поддерживаются.  
   
--   Если вы используете один из видов **element()** типа, указывающее имя типа, такие как последовательности `element(ElementName, TypeName)`, типа должны быть дополнены знак вопроса (?). Например, инструкция `element(Title, xs:string?)` указывает, что элемент может иметь значение NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]не поддерживает во время выполнения обнаружения **xsi: nil** свойства с помощью `instance of`.  
+-   Если вы используете один из видов **element()** типа, указывающее имя типа, такие как последовательности `element(ElementName, TypeName)`, типа должны быть дополнены знак вопроса (?). Например, инструкция `element(Title, xs:string?)` указывает, что элемент может иметь значение NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает во время выполнения обнаружения **xsi: nil** свойства с помощью `instance of`.  
   
 -   Если значение `Expression` извлекается из элемента или атрибута, типизированного как объединенный тип, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может идентифицировать только примитивный непроизводный тип, от которого произведен тип значения. Например, если элемент <`e1`> определен как статический тип (xs:integer | xs:string), следующее выражение возвратит False.  
   
@@ -417,6 +417,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>См. также  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)   
- [Система типов &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Система типов &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

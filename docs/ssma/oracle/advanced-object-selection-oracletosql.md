@@ -1,27 +1,28 @@
 ---
-title: "Расширенный выбор объектов (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Расширенный выбор объектов (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: 967e803d7827b987cd6b457b9e6737138fec144d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6c68f7a3442e0f53aa688f9695e62e73d00f22a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Выбор дополнительных объектов (OracleToSQL)
 **Расширенный объект раздела** диалоговое окно позволяет отфильтровать объекты базы данных с помощью строки и подстроки в имени объекта, а затем выберите или отмените выделение этих объектов. SSMA выполняет преобразование и миграцию операций на выбранных объектов.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 **Отображаются только загруженных элементов.**  
 Переключение отображения категорий или элементов. При выборе этой кнопки SSMA показывает все элементы, которые соответствуют критериям фильтра и те, которые были ранее загружены. Если эта кнопка не установлен, SSMA показаны папки категории.  
   
-**Filter**  
+**Фильтр**  
 Введите строку, которую вы хотите использовать для фильтрации элементов. Например, чтобы найти все доступные элементы, которые содержат строку «ID», в имя элемента, введите строку «ID» в **фильтра** поле.  
   
 Если элементы условия фильтра, категории или элементы будут отображаться при вводе строки. Чтобы увидеть совпадающие элементы, рекомендуется нажать кнопку **отображаются только загрузить элементы** кнопки.  

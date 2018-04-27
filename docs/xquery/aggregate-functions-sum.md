@@ -1,16 +1,16 @@
 ---
-title: "Функция SUM (XQuery) | Документы Microsoft"
-ms.custom: 
+title: Функция SUM (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 599080605291b48f30a40c85354ea5bb2f2320c6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 87f8e3859f8a487a56ff9c1874ad98772af210b8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---sum"></a>Агрегатные функции — Сумма
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Последовательность атомарных значений, сумма которых должна быть вычислена.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Все типы атомарных значений, передаваемые **sum()** должны быть подтипами одного базового типа. Базовые типы, которые принимаются, — это три встроенных числовых базовых типа или тип xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Если имеется смесь этих типов или передаются значения других других типов, возникает статическая ошибка.  
   
  Результат **sum()** Получает базовый тип переданных типов, например xs: double в случае использования xdt: untypedAtomic, даже если на входе — пустая последовательность. Если вход статически пуст, результатом будет значение 0 со статическим и динамическим типом xs:integer.  

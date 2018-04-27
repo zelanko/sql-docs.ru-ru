@@ -1,9 +1,9 @@
 ---
-title: 'Краткое руководство: Подключение и отправку запросов SQL Server с помощью SQL Operations Studio (preview) | Документы Microsoft'
-description: Краткого руководства показано, как использовать SQL Operations Studio (preview) для подключения к SQL Server и выполнить запрос
+title: 'Краткое руководство: Подключение и отправку запросов SQL Server с помощью операций SQL Studio (Предварительная версия) | Документы Microsoft'
+description: Краткого руководства показано, как использовать Studio операций SQL (Предварительная версия) для подключения к SQL Server и выполнить запрос
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство: Подключение и запрос с использованием SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Краткого руководства показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server и затем использовать инструкции Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
@@ -30,12 +30,12 @@ ms.lasthandoff: 03/09/2018
 - [Установка [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
 Если нет доступа к SQL Server, необходимо выбрать платформу по следующим ссылкам (Убедитесь, что вы помните, имя входа SQL и пароля!):
-- [Windows - загрузки SQL Server 2017 г Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - загрузка SQL Server 2017 г. для Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Windows — скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS — скачать SQL Server 2017 с Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux — загрузки SQL Server 2017 г Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -достаточно выполнить следующие шаги до *создать и запроса данных*.
 
 
-## <a name="connect-to-a-sql-server"></a>Подключиться к SQL Server
+## <a name="connect-to-a-sql-server"></a>Подключение к SQL Server
 
    
 1. Запуск **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.

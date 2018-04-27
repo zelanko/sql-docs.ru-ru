@@ -1,30 +1,31 @@
 ---
-title: "Установка компонентов SSMA на SQL Server (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Установка компонентов SSMA на SQL Server (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9dc0fbc22cedb1c7aa7d4ac3bd342c6acb91ba88
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
 Помимо установки SSMA, необходимо установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эти компоненты включают пакет расширения SSMA, поддерживающей переноса данных и поставщики Oracle, чтобы включить возможность подключения сервера к серверу.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="prerequisites"></a>предварительные требования  
 Перед установкой SSMA для компонентов сервера Oracle на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь в том, что система соответствует следующим требованиям:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]установлен экземпляр. SSMA не поддерживает SQL Server 2008 Express Edition.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] установлен экземпляр. SSMA не поддерживает SQL Server 2008 Express Edition.  
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
     В зависимости от версии WinZip, у вас есть, можно либо дважды щелкните файл, или щелкните правой кнопкой мыши файл и выберите **извлечь все** или **открыт в WinZip**. Следуйте инструкциям в пользовательском интерфейсе WinZip, чтобы извлечь файлы.  
   
-2.  Скопируйте SSMA для расширения пакета Oracle. *n*. Install.exe, где  *n*  — номер сборки, на компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+2.  Скопируйте SSMA для расширения пакета Oracle. *n*. Install.exe, где *n* — номер сборки, на компьютер, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 3.  Дважды щелкните SSMA для расширения пакета Oracle. *n*. Install.exe.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
     Проверка подлинности Windows будет использовать учетные данные Windows для входа на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверки подлинности, необходимо ввести [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имя входа и пароль.  
   
-11. На следующей странице выберите **установки базы данных программы**  *n* , где  *n*  номер версии, а затем нажмите кнопку **Далее**.  
+11. На следующей странице выберите **установки базы данных программы** *n*, где *n* номер версии, а затем нажмите кнопку **Далее**.  
   
     **Sysdb** база данных создается и определяемые пользователем функции и хранимые процедуры создаются в этой базе данных.  
   
@@ -107,9 +108,9 @@ ms.lasthandoff: 12/21/2017
 ### <a name="sql-server-database-objects"></a>Объекты базы данных SQL Server  
 После установки пакета расширения, вы будете см. в разделе **ssma_oracle.bcp_migration_packages** таблицы, **ssma_oracle.db_storage** таблицы и **ssma_oracle.db_error_list** в таблицу **sysdb** базы данных. Вы также увидите множество хранимых процедур и определяемых пользователем функций в **ssma_oracle** схемы.  
   
-Каждый раз при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] задания агента. Эти задания называются **ssma_oracle данных миграции пакета {GUID}**и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] узел агента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в папку «задания».  
+Каждый раз при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] задания агента. Эти задания называются **ssma_oracle данных миграции пакета {GUID}** и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] узел агента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в папку «задания».  
   
-## <a name="see-also"></a>См. также:  
-[Установка SSMA для клиента Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Установка SSMA для клиента Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

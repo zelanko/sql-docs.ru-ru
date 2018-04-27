@@ -1,30 +1,31 @@
 ---
-title: "Загрузка преобразованных объектов базы данных, в SQL Server (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Загрузка преобразованных объектов базы данных, в SQL Server (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1de8ae1e53dfd76527987a15be62894dcae10120
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c78b59e8150dc210ab0ba35a7c6b26ace854f587
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Загрузка преобразованных объектов базы данных, в SQL Server (OracleToSQL)
 После преобразования схемы Oracle для SQL Server, можно загрузить результирующие объекты базы данных в SQL Server. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать скрипты самостоятельно. Кроме того SSMA позволяет обновлять метаданные целевой с реальное содержимое базы данных SQL Server.  
@@ -115,6 +116,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в процессе миграции должно [переноса данных в SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13).  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

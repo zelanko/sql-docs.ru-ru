@@ -1,6 +1,6 @@
 ---
 title: Установка компонентов SSMA на SQL Server (DB2ToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d246bba231c8a1e42102f73db9f5b9376b402e06
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 44b9f03fd178e01b356ada74ec5a9c5761db7e98
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>Установка компонентов SSMA на SQL Server (DB2ToSQL)
 В этой версии SSMA нет необходимости в качестве отдельной установки на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] пакета расширения SSMA поддерживает перенос данных и поставщики DB2, чтобы включить возможность подключения сервера к серверу.  

@@ -1,25 +1,25 @@
 ---
-title: "Приступая к работе с 2017 г. SQL Server в SUSE Linux Enterprise Server | Документы Microsoft"
-description: "Краткого руководства показано, как установить 2017 г. SQL Server в SUSE Linux Enterprise Server, а затем создать и запросов к базе данных с помощью sqlcmd."
+title: Приступая к работе с 2017 г. SQL Server в SUSE Linux Enterprise Server | Документы Microsoft
+description: Краткого руководства показано, как установить 2017 г. SQL Server в SUSE Linux Enterprise Server, а затем создать и запросов к базе данных с помощью sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: e1690120790be2de70ddd19aa3c1c4893178cb08
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 58fd31b13cb8ed99fb0b7ab62dc38e6e7cdf971c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство: Установка SQL Server и создать базу данных на SUSE Linux Enterprise Server
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2018
 
 Необходимо иметь компьютер SP2 SLES версии 12 с **по крайней мере 2 ГБ** памяти. Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
 
-Чтобы установить SUSE Linux Enterprise Server на компьютере, перейдите к [https://www.suse.com/products/server](https://www.suse.com/products/server). Можно также создать SLES виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image SLES` в вызове `az vm create`.
+Чтобы установить SUSE Linux Enterprise Server на компьютере, перейдите к [ https://www.suse.com/products/server ](https://www.suse.com/products/server). Можно также создать SLES виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image SLES` в вызове `az vm create`.
 
 > [!NOTE]
 > В настоящее время [подсистемы Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве целевого объекта установки.

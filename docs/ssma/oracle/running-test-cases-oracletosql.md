@@ -1,27 +1,28 @@
 ---
-title: "Выполнение тестовых случаев (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Выполнение тестовых случаев (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bff5a571a8ad60e2baa3ea1211d6aff97c01c5ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-oracletosql"></a>Выполнение тестовых случаев (OracleToSQL)
 Когда SSMA тест-инженер запускает тест, он выполняет объекты, выбранные для тестирования и создает отчет о результатах проверки. Если результаты совпадают на обеих платформах, проверка выполнена успешно. Соответствие объектов между Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяется в соответствии с параметрами соответствие схемы для текущего проекта SSMA.  
@@ -49,7 +50,7 @@ SSMA тест-инженер проверяет, если выполнены в�
   
 ||||  
 |-|-|-|  
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |USER_TABLE$ Trg|триггер|Аудит изменений в таблице проверенных триггер.|  
 |USER_TABLE$ AUD|table|Таблица сохранения строки удаляются и перезаписаны.|  
 |USER_TABLE$ AUDID|table|Таблица сохранения новых и измененных строк.|  
@@ -62,14 +63,14 @@ SSMA тест-инженер проверяет, если выполнены в�
   
 ||||  
 |-|-|-|  
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |USER_TABLE$ Trg|триггер|Аудит изменений в таблице проверенных триггер.|  
   
 И следующие объекты создаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb базы данных.  
   
 ||||  
 |-|-|-|  
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |USER_TABLE$ Aud|table|Таблица сохранения строки удаляются и перезаписаны.|  
 |USER_TABLE$ AudID|table|Таблица сохранения новых и измененных строк.|  
 |USER_TABLE|представление|Упрощенное представление изменения таблиц.|  
@@ -84,10 +85,10 @@ SSMA тест-инженер проверяет, если выполнены в�
 Во время завершения инженер-испытатель SSMA очищает вспомогательные объекты, созданные в **инициализации** шаг.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Просмотр отчетов тестовый случай &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Просмотр отчетов тестовый случай &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Выбор и настройка объектов для тестирования &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[Выбор и настройка затронутые объекты &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[Тестирование миграции объектов базы данных &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Выбор и настройка объектов для тестирования &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[Выбор и настройка затронутые объекты &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Тестирование перенесенные объекты базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

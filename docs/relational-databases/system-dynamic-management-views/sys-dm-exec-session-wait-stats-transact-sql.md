@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_session_wait_stats (Transact-SQL) | Документы Microsoft
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -25,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ddca79ef78b42c06488f8c103b655d280418f7a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd87b3a99f965d60c4d02f2149a1fe33cbf9e5b9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Возвращает сведения обо всех случаях ожидания, зафиксированных потоками, которые выполнены для каждого сеанса. Это представление можно использовать для диагностики проблем производительности с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанса и конкретных запросов и пакетов.  Это представление возвращает сеанс ту же информацию, которая суммируется для [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , но предоставляет **session_id** , он также.  
   

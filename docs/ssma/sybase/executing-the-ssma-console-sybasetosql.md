@@ -2,7 +2,7 @@
 title: Выполнение консоли SSMA (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Выполнение консоли SSMA (SybaseToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команд для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -261,7 +261,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="migration-commands"></a>Команды миграции  
 Команды миграции преобразовать схему целевой базы данных в исходной схеме и переноса данных на целевом сервере.  
   
-### <a name="convert-schema"></a>convert-schema  
+### <a name="convert-schema"></a>преобразовать схему  
 Эта команда выполняет преобразование схемы из источника в целевую схему.  
   
 Если подключение к исходной или целевой базе данных не выполняется перед выполнением этой команды или сбой подключения к серверу базы данных источника или целевого объекта во время выполнения команды, формируется сообщение об ошибке и завершает работу консольного приложения.  
@@ -524,7 +524,7 @@ fail-script>" (optional)
 ## <a name="script-generation-commands"></a>Создание команд сценария  
 Создание скрипта команды выполнения двух задач: они помогают сохранить выходные данные в файле скрипта консоли, и они записывают T-SQL output в консоли или на основе параметра указывается файл.  
   
-### <a name="save-as-script"></a>save-as-script  
+### <a name="save-as-script"></a>Сохранить как сценарий  
 Эта команда используется для сохранения скриптов для объектов в файле упоминалось, когда метабазы = target. Это является альтернативой команды синхронизации, в том, что мы получить скрипты и выполнить соответствует в целевой базе данных.  
   
 Эта команда требуется один или несколько узлов метабазы в качестве параметра командной строки.  
@@ -572,7 +572,7 @@ fail-script>" (optional)
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>convert-sql-statement
+### <a name="convert-sql-statement"></a>оператор CONVERT-sql
 Эта команда преобразует инструкции SQL.  
   
 -   `context` Задает имя схемы.  

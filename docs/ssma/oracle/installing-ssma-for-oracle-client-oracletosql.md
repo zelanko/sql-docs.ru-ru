@@ -1,6 +1,6 @@
 ---
 title: Установка SSMA для клиента Oracle (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 90e1f2b745ef0a093fb7a5b2ebf662aa969154f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bfbc8486c74a6bd90832ab86ec3fee7cf236275d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Установка SSMA для клиента Oracle (OracleToSQL)
 SSMA клиента состоит из файлов программы, которые выполняют следующие задачи:  
@@ -54,9 +54,9 @@ SSMA предназначен для работы с Oracle 9 или более 
   
 -   Клиент Oracle 9.0 или более поздней версии, а подключения к базам данных Oracle, которые требуется перенести. Версия клиента Oracle должен быть той же версии, или более поздней версии, чем версия базы данных Oracle.  
   
-    Можно установить клиента Oracle, с носителя продукта Oracle или Oracle веб-сайта. Сведения о подключении см. в разделе [подключение к базе данных Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+    Можно установить клиента Oracle, с носителя продукта Oracle или Oracle веб-сайта. Сведения о подключении см. в разделе [подключение к базе данных Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
--   Доступ к и необходимых разрешений на компьютере, на котором целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базе данных SQL Azure, где можно будет миграция объектов базы данных и данных. Дополнительные сведения см. в разделе [подключение к SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).  
+-   Доступ к и необходимых разрешений на компьютере, на котором целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базе данных SQL Azure, где можно будет миграция объектов базы данных и данных. Дополнительные сведения см. в разделе [подключение к SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).  
   
 -   4 ГБ ОЗУ рекомендуется.  
   
@@ -67,7 +67,7 @@ SSMA можно загрузить из Интернета. Загрузить �
   
 **Чтобы установить клиент SSMA**  
   
-1.  Дважды щелкните SSMA для Oracle  *n* . Install.exe, где  *n*  — номер сборки.  
+1.  Дважды щелкните SSMA для Oracle *n*. Install.exe, где *n* — номер сборки.  
   
 2.  На странице приветствия нажмите кнопку **Далее**.  
   
@@ -84,9 +84,9 @@ SSMA можно загрузить из Интернета. Загрузить �
   
 Расположение установки по умолчанию — C:\Program Files\Microsoft SQL Server Migration Assistant для Oracle.  
   
-Помимо SSMA программные файлы, необходимо также установить SSMA для пакета расширения Oracle на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [Установка компонентов SSMA на SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md).  
+Помимо SSMA программные файлы, необходимо также установить SSMA для пакета расширения Oracle на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [Установка SSMA компонентов на сервере SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[Установка компонентов SSMA на SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Установка компонентов SSMA на SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

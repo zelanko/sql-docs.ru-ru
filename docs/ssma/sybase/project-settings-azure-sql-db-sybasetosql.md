@@ -2,7 +2,7 @@
 title: Параметры (базы данных Azure SQL) проекта (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb155079bc318e9b23944fb2830a64454d3a76de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 741c45fb95faee927129d073b7132b32c8ecc83d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Параметры (базы данных Azure SQL) проекта (SybaseToSQL)
 Параметры проекта базы данных SQL Azure позволяют настраивать суффикс базы данных база данных SQL Azure, добавляется в диалоговом окне соединения, а также позволяют реализовывать механизм пульса в подключении базы данных SQL Azure.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/06/2018
   
 Значение должно быть указано в am: формата ss (например, "4:45 ' или ' 0:50 ').  
   
-**Azure SQL DB Server Suffix**  
+**Суффикс сервера базы данных Azure SQL**  
   
 Задает суффикс сервера базы данных SQL Azure  
   

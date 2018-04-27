@@ -1,16 +1,16 @@
 ---
-title: "Выражения языка XQuery | Документы Microsoft"
-ms.custom: 
+title: Выражения языка XQuery | Документы Microsoft
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - expressions [XQuery]
 - expressions [XQuery], listed
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26450ecc254bf883cff8bfaf865831f797eebdbb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2616bdd59bfc6a0110da2009846b189618f408fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-expressions"></a>Выражения языка XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,43 +36,43 @@ ms.lasthandoff: 02/09/2018
   Разделы, описывающие выражения XQuery.  
   
 
- [Первичные выражения &#40; XQuery &#41;](../xquery/primary-expressions-xquery.md)  
+ [Первичные выражения &#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
  Описывает первичные выражения языка XQuery. В их число входят литералы, ссылки на переменные, выражения контекстных элементов, конструкторы и вызовы функций.  
   
- [Выражения пути &#40; XQuery &#41;](../xquery/path-expressions-xquery.md)  
+ [Выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
  Описывает выражения пути языка XQuery. Выражения пути используются для нахождения в документе узлов, например: элемента, атрибута и текста.  
   
- [Выражения последовательности &#40; XQuery &#41;](../xquery/sequence-expressions-xquery.md)  
+ [Последовательность выражений &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
  Описывает операторы языка XQuery для работы с последовательностями номеров.  
   
- [Арифметические выражения &#40; XQuery &#41;](../xquery/arithmetic-expressions-xquery.md)  
+ [Арифметические выражения &#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
  Описывает использование арифметических выражений в языке XQuery.  
   
- [Выражения сравнения &#40; XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ [Выражения сравнения &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
  Описывает выражения сравнения, поддерживаемые в языке XQuery. Это выражения общего сравнения, сравнения значений, а также узлов и типов узлов.  
   
- [Логические выражения &#40; XQuery &#41;](../xquery/logical-expressions-xquery.md)  
+ [Логические выражения &#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
  Описывает поддержку в языке XQuery логических **и** и **или** операторы.  
   
- [Построение XML &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [Построение XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  Описывает конструкторы языка XQuery, позволяющие строить XML в рамках запроса.  
   
- [Инструкция FLWOR и итерации &#40; XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [Итерация и инструкция FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  Описывает синтаксис цикла FLOWR. FLOWR является сокращением от FOR, LET, WHERE, ORDER BY, RETURN. Функция LET не поддерживается.  
   
- [Упорядоченные и неупорядоченные выражения &#40; XQuery &#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ [Упорядоченные и неупорядоченные выражения &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
  Описывает режим упорядочения для операций языка XQuery. По умолчанию равно режим упорядочения **упорядоченные**.  
   
- [Условные выражения &#40; XQuery &#41;](../xquery/conditional-expressions-xquery.md)  
+ [Условные выражения &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
  Описывает поддержку в языке XQuery условной **if-then-else** инструкции.  
   
- [Выражения с квантором &#40; XQuery &#41;](../xquery/quantified-expressions-xquery.md)  
+ [Количественные выражения &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  Описывает экзистенциальные и универсальные квантификаторы в языке XQuery.  
   
- [Выражения SequenceType &#40; XQuery &#41;](../xquery/sequencetype-expressions-xquery.md)  
+ [Выражения SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
  Описывает синтаксис SequenceType в языке XQuery.  
   
- [Проверка выражений &#40; XQuery &#41;](../xquery/validate-expressions-xquery.md)  
+ [Проверка выражений &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
  **Проверки** выражение не поддерживается.  
   
 ## <a name="see-also"></a>См. также  

@@ -1,6 +1,6 @@
 ---
 title: Сопоставление MySQL и SQL Server символ набор (MySQLToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Сопоставление MySQL и SQL Server символ набор (MySQLToSQL)
 Для символьных типов данных MySQL, выражения и литералы можно указать набор символов (набор символов).  
@@ -92,22 +92,22 @@ ms.lasthandoff: 04/06/2018
     |**Имя кодировки**|**Описание CharSet**|**Тип целевого набора символов (по умолчанию)**|  
     |Big5|Китайская традиционная Big5|NCHAR/NVARCHAR (по умолчанию)|  
     |dec8|Западная DEC европейские|CHAR/VARCHAR (по умолчанию)|  
-    |cp850|Западная DOS европейские|CHAR/VARCHAR (по умолчанию)|  
+    |CP850|Западная DOS европейские|CHAR/VARCHAR (по умолчанию)|  
     |hp8|Западная Европейского HP|CHAR/VARCHAR (по умолчанию)|  
     |koi8r|Русский Relcom КОИ8 R|CHAR/VARCHAR (по умолчанию)|  
     |латиница 1|Европейский Западная CP1252|CHAR/VARCHAR (по умолчанию)|  
     |latin2|ISO 8859-2 Центральноевропейская|CHAR/VARCHAR (по умолчанию)|  
     |swe7|7-разрядных шведский|CHAR/VARCHAR (по умолчанию)|  
-    |ascii|US ASCII|CHAR/VARCHAR (по умолчанию)|  
+    |ASCII|US ASCII|CHAR/VARCHAR (по умолчанию)|  
     |ujis|Японский EUC-JP|NCHAR/NVARCHAR (по умолчанию)|  
     |sjis|Японская Shift-JIS|NCHAR/NVARCHAR (по умолчанию)|  
     |иврит|ISO 8859-8 иврит|CHAR/VARCHAR (по умолчанию)|  
     |tis620|Тайский TIS620|CHAR/VARCHAR (по умолчанию)|  
     |euckr|Корейский EUC KR|NCHAR/NVARCHAR (по умолчанию)|  
     |koi8u|Украинский КОИ8 U|CHAR/VARCHAR (по умолчанию)|  
-    |gb2312|GB2312 Китайский (упрощенный)|NCHAR/NVARCHAR (по умолчанию)|  
+    |GB2312|GB2312 Китайский (упрощенный)|NCHAR/NVARCHAR (по умолчанию)|  
     |греческий|ISO 8859-7 греческая|CHAR/VARCHAR (по умолчанию)|  
-    |cp 1250|Центрально-европейская Windows|CHAR/VARCHAR (по умолчанию)|  
+    |CP 1250|Центрально-европейская Windows|CHAR/VARCHAR (по умолчанию)|  
     |GBK|Китайская упрощенная GBK|NCHAR/NVARCHAR (по умолчанию)|  
     |latin5|ISO 8859-9 турецкая|CHAR/VARCHAR (по умолчанию)|  
     |armscii8|Армянский ARMSCII-8|CHAR/VARCHAR (по умолчанию)|  
@@ -119,9 +119,9 @@ ms.lasthandoff: 04/06/2018
     |MacRoman|Западная Европейского Mac|CHAR/VARCHAR (по умолчанию)|  
     |cp852|Европейский центральный DOS|CHAR/VARCHAR (по умолчанию)|  
     |latin7|ISO 8859-13 балтийская|CHAR/VARCHAR (по умолчанию)|  
-    |cp 1251|Кириллица Windows|CHAR/VARCHAR (по умолчанию)|  
-    |cp 1256|Арабский Windows|CHAR/VARCHAR (по умолчанию)|  
-    |cp 1257|Балтийская Windows|CHAR/VARCHAR (по умолчанию)|  
+    |CP 1251|Кириллица Windows|CHAR/VARCHAR (по умолчанию)|  
+    |CP 1256|Арабский Windows|CHAR/VARCHAR (по умолчанию)|  
+    |CP 1257|Балтийская Windows|CHAR/VARCHAR (по умолчанию)|  
     |BINARY|Двоичный псевдо charset|CHAR/VARCHAR (по умолчанию)|  
     |geostd8|Грузинский GEOSTD8|CHAR/VARCHAR (по умолчанию)|  
     |cp932|SJIS для японского языка Windows|NCHAR/NVARCHAR (по умолчанию)|  

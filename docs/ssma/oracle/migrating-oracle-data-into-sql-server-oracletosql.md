@@ -1,30 +1,31 @@
 ---
-title: "Перенос данных Oracle в SQL Server (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Перенос данных Oracle в SQL Server (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: fee4d190885979fe55c598a542feed89a460e3d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1792b9d84ccbf04876c28dce778d002a5dcf17da
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Перенос данных Oracle в SQL Server (OracleToSQL)
 После успешной синхронизации преобразованные объекты с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно выполнить перенос данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > SSMA для пакета расширения Oracle не установлены ли на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]и если **модуль переноса данных стороне сервера** выбран, то во время миграции данных в целевую базу данных, обнаружена следующая ошибка: "SSMA переноса данных компоненты не найдены на сервере SQL Server, перенос данных на сервере будет невозможно. Проверьте, правильно ли установлен пакет расширений ". Нажмите кнопку **отменить** завершить перенос данных.  
   
-5.  В **подключение к Oracle** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении к базе данных Oracle см. в разделе [подключения к Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
+5.  В **подключение к Oracle** диалоговое окно, введите учетные данные подключения и нажмите кнопку **Connect**. Дополнительные сведения о подключении к базе данных Oracle см. в разделе [подключения к Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
     Для подключения к целевой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], введите учетные данные соединения в **подключение к SQL Server** диалоговое окно и нажмите кнопку **Connect**. Дополнительные сведения о подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], в разделе [подключение к SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
@@ -107,6 +108,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 > При использовании выпуска SQL Express в целевой базе данных допускается только клиентских данных миграцию и миграцию данных сервера не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

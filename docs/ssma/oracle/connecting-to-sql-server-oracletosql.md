@@ -1,6 +1,6 @@
 ---
 title: Подключение к SQL Server (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1b550ddd57803772be53832ba8feb840021c5732
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe6cc43dd2f31bafbc8c8715a1ce926d68dedbd2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>Подключение к SQL Server (OracleToSQL)
 Для переноса баз данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 R2 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 необходимо подключиться к любой из этих целевых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. При подключении SSMA получает метаданные обо всех базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключены, но не хранит пароли.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="establishing-a-sql-server-connection"></a>Установление соединения с SQL Server  
 Перед началом преобразования объектов базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] синтаксис, необходимо установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] место для переноса базы данных Oracle или баз данных.  
   
-При определении свойств соединения, можно также указать базы данных, где будет выполнена миграция объектов и данных. Это сопоставление на уровне схемы Oracle можно настроить после подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [сопоставление схемы Oracle для схемы SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
+При определении свойств соединения, можно также указать базы данных, где будет выполнена миграция объектов и данных. Это сопоставление на уровне схемы Oracle можно настроить после подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [сопоставление схемы Oracle для схемы SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
   
 > [!IMPORTANT]  
 > Прежде чем пытаться подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] запущена и может принимать подключения.  
@@ -117,14 +117,14 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
--   Настройка сопоставления между схемами Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных и схемы, в разделе [Oracle схемы сопоставления схемы SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
+-   Настройка сопоставления между схемами Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных и схемы, в разделе [схемы Oracle сопоставления схемы SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md).  
   
--   Чтобы настроить параметры конфигурации для проектов, в разделе [задание параметров проекта &#40; OracleToSQL &#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
+-   Чтобы настроить параметры конфигурации для проектов, в разделе [задание параметров проекта &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
   
--   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления Oracle и типы данных SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+-   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления Oracle и типы данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   Если необходимо выполнить эти действия, вы можете преобразовать определения объектов базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта. Дополнительные сведения см. в разделе [преобразование схемы Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   Если необходимо выполнить эти действия, вы можете преобразовать определения объектов базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта. Дополнительные сведения см. в разделе [преобразование схемы Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

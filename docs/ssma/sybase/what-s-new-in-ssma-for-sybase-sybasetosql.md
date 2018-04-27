@@ -1,31 +1,31 @@
 ---
-title: "Новые возможности SSMA для SAP ASE (SybaseToSQL) | Документы Microsoft"
-ms.custom: 
+title: Новые возможности SSMA для SAP ASE (SybaseToSQL) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd8bd705a767095e28a55dc22d6b26fcd079baf6
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: cfcb84fd1be2823cf23b47aa4a1d1675a35a989f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности SSMA для SAP ASE (SybaseToSQL)
 В этом разделе перечислены SSMA для SAP ASE (прежнее название — SSMA для СУБД Sybase) изменения в каждом выпуске. 
@@ -86,7 +86,7 @@ V7.1 выпуск SSMA для Access содержит следующие изм�
 - SSMA теперь поддерживает автоматическое обновление, чтобы загрузить последнюю версию SSMA как только он доступен.
 - Теперь может устанавливаться SSMA двоичные файлы доставляются через файлы пакета установщика Windows (.msi).
 
-**Resources**
+**Ресурсы**
 
 [Расширение возможностей SQL Server Migration Assistant преобразования](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
 
@@ -217,4 +217,4 @@ V7.1 выпуск SSMA для Access содержит следующие изм�
 Первый выпуск SSMA для СУБД Sybase был в июле 2006 г.  
   
 ## <a name="see-also"></a>См. также  
-[Начало работы с SSMA для Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+[Приступая к работе с SSMA для СУБД Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

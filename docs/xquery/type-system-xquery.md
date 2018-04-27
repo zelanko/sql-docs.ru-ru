@@ -1,16 +1,16 @@
 ---
-title: "Тип системы (XQuery) | Документы Microsoft"
-ms.custom: 
+title: Тип системы (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>Система типов (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   Сравнение типизированных и строковых значений узла.  
   
--   [Данных функция &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) и [строка функция &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md).  
+-   [Данных функция &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) и [функция string &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Сопоставление типов последовательности, возвращаемой выражением.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Встроенные типы XML-схемы  
  Встроенные типы XML-схемы обозначаются в пространстве имен стандартным префиксом xs. Ниже перечислены некоторые из этих типов **xs: Integer** и **xs: String**. Поддерживаются все встроенные типы данных. Эти типы могут быть использованы при создании коллекции XML-схем.  
   
- При обращении к типизированному XML статические и динамические типы узлов определяются коллекцией XML-схем, связанной со столбцом, к которому происходит обращение. Дополнительные сведения о статических и динамических типах см. в разделе [контекст выражения и вычисление запросов &#40; XQuery &#41; ](../xquery/expression-context-and-query-evaluation-xquery.md). Например, следующий запрос выполняется к типизированному **xml** столбца (`Instructions`). В выражении `instance of` используется для проверки того, что типизированное значение возвращенного атрибута `LotSize` имеет тип данных `xs:decimal`.  
+ При обращении к типизированному XML статические и динамические типы узлов определяются коллекцией XML-схем, связанной со столбцом, к которому происходит обращение. Дополнительные сведения о статических и динамических типах см. в разделе [контекст выражения и вычисление запросов &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Например, следующий запрос выполняется к типизированному **xml** столбца (`Instructions`). В выражении `instance of` используется для проверки того, что типизированное значение возвращенного атрибута `LotSize` имеет тип данных `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -110,9 +110,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  Можно использовать **data()** или **string()** функции для получения значения узла:  
   
--   [Данных функция &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) возвращает типизированное значение узла.  
+-   [Данных функция &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) возвращает типизированное значение узла.  
   
--   [Строка функция &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md) возвращает строковое значение узла.  
+-   [Функция string &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) возвращает строковое значение узла.  
   
  В представленной ниже коллекции XML-схем определяется целочисленный элемент <`root`>:  
   

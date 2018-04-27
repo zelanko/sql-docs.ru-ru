@@ -1,6 +1,6 @@
 ---
 title: Параметры (сопоставление типов) проекта (AccessToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ea7789abd2395615471ecde8934104e85780ae6a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры (сопоставление типов) проекта (AccessToSQL)
 Параметры сопоставления типов проекта позволяют задать сопоставления типов по умолчанию для проекта SSMA. Можно также указать сопоставления типов для отдельных объектов базы данных. Дополнительные сведения см. в разделе [сопоставление исходной и целевой типы данных](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -61,15 +61,15 @@ ms.lasthandoff: 04/06/2018
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**uniqueidentifier**|  
+|**Идентификатор GUID**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**long**|**int**|  
+|**Long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
+|**MEMO**|**nvarchar(max)**|  
 |**MEMO** — для Access 97|**varchar(max)**|  
-|**single**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
-|**текст [\*... \*]** — для Access 97|**varchar[\*]**|  
+|**Один**|**real**|  
+|**текст [\*... \*]**|**nvarchar [\*]**|  
+|**текст [\*... \*]** — для Access 97|**varchar [\*]**|  
   
 **Добавить**  
 Щелкните, чтобы добавить в список сопоставления типа данных.  

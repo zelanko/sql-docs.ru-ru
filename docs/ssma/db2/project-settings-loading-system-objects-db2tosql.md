@@ -1,6 +1,6 @@
 ---
 title: Параметры (Загрузка системных объектов) проекта (DB2ToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0ec81e97380007724ba1cfeb9ee2580ca64edd0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d6fa389cfe6dea25a8974a47a4c77024720da312
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Параметры (Загрузка системных объектов) проекта (DB2ToSQL)
 На странице загрузки системных объектов **параметры проекта** диалоговое окно позволяет указать, какие объекты системы DB2 SSMA преобразует и загружает в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -47,13 +47,13 @@ ms.lasthandoff: 04/06/2018
   
 -   SYS. СТАНДАРТ  
   
--   SYS.UTL_FILE  
+-   SYS. UTL_FILE  
   
 -   SYS.DBMS_LOB  
   
 -   SYS.DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   SYS. DBMS_SESSION  
   
 Если объекты DB2 ссылается на дополнительные системные объекты, следует выбрать этих объектов. Если системные объекты, на которые ссылается объектов базы данных DB2 не выбран, SSMA выдает ошибки преобразования. Если возникнут ошибки преобразования, причиной является отсутствие системных объектов, выберите объекты, отсутствующие в этом диалоговом окне. Затем можно повторить преобразование при необходимости.  
   

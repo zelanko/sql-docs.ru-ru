@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_log_info (Transact-SQL) | Документы Microsoft
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -27,15 +27,15 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c19ffdd3cdee50b12d43b70fbbb0e8f95c150bab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e180bf8257f97bbdab086b485bea0425453462c5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Возвращает [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) сведения журнала транзакций. Обратите внимание, что все файлы журнала транзакций, объединяются в выходной таблице. Каждая строка в выходных данных представляет VLF в журнале транзакций и предоставляет сведения, относящиеся к этой виртуального файла Журнала в журнале.
 
@@ -43,7 +43,8 @@ ms.lasthandoff: 04/16/2018
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## <a name="arguments"></a>Аргументы  
  *database_id* | ЗНАЧЕНИЕ NULL | ПО УМОЛЧАНИЮ  
  Идентификатор базы данных. Аргумент *database_id* имеет тип **int**. Допустимыми входными значениями являются идентификатор базы данных, NULL или по умолчанию. Значение по умолчанию — NULL. Значение NULL по умолчанию значения и эквивалентны в контексте текущей базы данных.
@@ -68,10 +69,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[Регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) записи журнала, созданные [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
 ## <a name="remarks"></a>Замечания
- `sys.dm_db_log_info` Заменяет функцию динамического управления `DBCC LOGINFO` инструкции. 
+`sys.dm_db_log_info` Заменяет функцию динамического управления `DBCC LOGINFO` инструкции.    
  
 ## <a name="permissions"></a>Разрешения  
- Требуется `VIEW DATABASE STATE` разрешение в базе данных.  
+Требуется `VIEW DATABASE STATE` разрешение в базе данных.  
   
 ## <a name="examples"></a>Примеры  
   

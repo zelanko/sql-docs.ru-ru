@@ -1,6 +1,6 @@
 ---
 title: Подключение к базе данных Oracle (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c0c85182da6de1e2cb80cda8c628788651e89ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Подключение к базе данных Oracle (OracleToSQL)
 Для переноса баз данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо подключиться к базе данных Oracle, которые требуется перенести. При подключении SSMA получает метаданные о всех схем Oracle и затем отображается в панели обозревателя метаданных Oracle. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/21/2017
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    Дополнительные сведения см. в разделе [подключения к Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
+    Дополнительные сведения см. в разделе [подключения к Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-oracle"></a>Повторное подключение к базе данных Oracle  
 Подключение к серверу базы данных остается активным, если закрыть проект. При повторном открытии проекта, необходимо переподключить, если требуется активное подключение к базе данных. Можно работать автономно, пока вы хотите обновить метаданные, загрузки объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и перенести данные.  
@@ -132,6 +132,6 @@ ms.lasthandoff: 12/21/2017
   
 -   Следующим шагом в процессе миграции должно [подключение к экземпляру SQL Server](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f).  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

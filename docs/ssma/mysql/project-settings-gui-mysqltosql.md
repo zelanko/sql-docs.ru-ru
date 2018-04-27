@@ -1,6 +1,6 @@
 ---
 title: Параметры (GUI) (MySQLToSQL) проекта | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4c48e3eb9694ece504067ed248b63e5feaabe73
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 253bb8a70d5d424fe69b5b98b95ac2617e104a81
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Параметры проекта (GUI) (MySQLToSQL)
 Параметры проекта графического пользовательского интерфейса позволяют настроить способ отображения данных на **данные** вкладку и, если для включения данных отчетов с отчетами оценки.  

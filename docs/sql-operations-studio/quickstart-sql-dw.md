@@ -1,9 +1,9 @@
 ---
-title: 'Краткое руководство: Подключение и отправку запросов хранилища данных SQL Azure с помощью SQL Operations Studio (preview) | Документы Microsoft'
-description: Краткого руководства показано, как использовать для подключения к базе данных SQL и выполнить запрос SQL Operations Studio (preview)
+title: 'Краткое руководство: Подключение и отправку запросов хранилища данных SQL Azure с помощью операций SQL Studio (Предварительная версия) | Документы Microsoft'
+description: Краткого руководства показано, как использовать для подключения к базе данных SQL и выполнить запрос SQL Studio операций (Предварительная версия)
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d4ed7d25abb2780c719c5b8201ecae54e8e86bf
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5bfa47c53b0810e5ec9002543717fbc4899dfbb5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство: Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения и запроса данных в хранилище данных SQL Azure
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/09/2018
 
    ![Значок нового подключения](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Если ваш сервер не имеет правило брандмауэра, разрешающее SQL Operations Studio для подключения, **создать новое правило брандмауэра** открывается форма. Заполните форму для создания нового правила брандмауэра. Дополнительные сведения см. в разделе [правила брандмауэра](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Если ваш сервер не имеет правило брандмауэра, разрешающее SQL Studio операций для подключения, **создать новое правило брандмауэра** открывается форма. Заполните форму для создания нового правила брандмауэра. Дополнительные сведения см. в разделе [правила брандмауэра](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Новое правило брандмауэра](media/quickstart-sql-dw/firewall.png)  
 

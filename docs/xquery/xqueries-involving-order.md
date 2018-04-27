@@ -1,16 +1,16 @@
 ---
-title: "Запросы XQuery, использующие упорядочивание | Документы Microsoft"
-ms.custom: 
+title: Запросы XQuery, использующие упорядочивание | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - XQuery, sequence
 - ordered expressions [XQuery]
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ade45beb1eed3079937b6d9302500b10adcca162
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cfc417e80b51f9b7ed4103594d2302d441e38d20
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xqueries-involving-order"></a>Запросы XQuery, использующие упорядочивание
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ WHERE ProductModelID=7
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Выражения в фигурных скобках заменяются результатом их оценки. Дополнительные сведения см. в разделе [конструкции XML &#40; XQuery &#41; ](../xquery/xml-construction-xquery.md).  
+-   Выражения в фигурных скобках заменяются результатом их оценки. Дополнительные сведения см. в разделе [конструкции XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
--   **@\***Извлекает все атрибуты второго участка производственного цеха.  
+-   **@\*** Извлекает все атрибуты второго участка производственного цеха.  
   
 -   Итерация FLWOR (FOR ... RETURN) извлекает все дочерние элементы <`step`> второго участка производственного цеха.  
   
@@ -257,6 +257,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>См. также  
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
- [Построение XML &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [Построение XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

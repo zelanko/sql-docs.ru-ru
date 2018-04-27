@@ -1,6 +1,6 @@
 ---
 title: Подключение к MySQL (MySQLToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 888989c8dbbf7715695f0203e80dcdd768a44a2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
 Для переноса баз данных MySQL в SQL Server или SQL Azure, необходимо подключиться к базе данных MySQL, которые требуется перенести. При подключении SSMA получает метаданные о всех схем MySQL и затем отображается в панели обозревателя метаданных MySQL. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  

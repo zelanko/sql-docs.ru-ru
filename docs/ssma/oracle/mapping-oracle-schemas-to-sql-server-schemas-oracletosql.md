@@ -1,27 +1,28 @@
 ---
-title: "Сопоставление схемы Oracle для схемы SQL Server (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Сопоставление схемы Oracle для схемы SQL Server (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e51a3b70f585bebd353a84b9c0274180a0daf870
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Сопоставление схемы Oracle для схемы SQL Server (OracleToSQL)
 В Oracle каждая база данных имеет один или несколько схем. По умолчанию SSMA выполняет миграцию всех объектов в схеме Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с именем схемы. Тем не менее, можно настроить сопоставление между схемами Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] баз данных.  
@@ -65,10 +66,10 @@ ms.lasthandoff: 12/21/2017
   
 1.  На вкладке схемы сопоставления, выберите любую строку и нажмите кнопку **по умолчанию** Чтобы восстановить базу данных по умолчанию и схемы.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
 Если вы хотите проанализировать преобразование объектов Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, вы можете [создать отчет о преобразовании](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). В противном случае вы можете [преобразование определения объектов базы данных Oracle](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта.  
   
-## <a name="see-also"></a>См. также:  
-[Подключение к SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Подключение к SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

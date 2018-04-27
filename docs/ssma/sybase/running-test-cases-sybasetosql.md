@@ -2,7 +2,7 @@
 title: Выполнение тестовых случаев (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 321a4f0dfdadc1209cf480448e72d68cfa4fe7ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>Выполнение тестовых случаев (SybaseToSQL)
 Когда SSMA тест-инженер запускает тест, он выполняет объекты, выбранные для тестирования и создает отчет о результатах проверки. Если результаты совпадают на обеих платформах, проверка выполнена успешно. Соответствие объектов между Sybase и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяется в соответствии с параметрами соответствие схемы для текущего проекта SSMA.  

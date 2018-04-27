@@ -1,16 +1,16 @@
 ---
-title: "Последовательность выражения (XQuery) | Документы Microsoft"
-ms.custom: 
+title: Последовательность выражения (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8bed36d0c784da74731e92404d5849386ec8756d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequence-expressions-xquery"></a>Выражения последовательности (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает операторы XQuery, используемые для конструирования, фильтрации и комбинирования последовательностей элементов. Элемент может быть атомарным значением или узлом.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает операторы XQuery, предназначенные для конструирования, фильтрации и комбинирования последовательностей элементов. Элемент может быть атомарным значением или узлом.  
   
 ## <a name="constructing-sequences"></a>Конструирование последовательностей  
  Оператор «запятая» позволяет сцеплять элементы в единую последовательность.  
@@ -138,7 +138,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Фильтрация последовательностей  
- Можно отфильтровать возвращаемую последовательность по выражению, добавив предикат. Дополнительные сведения см. в разделе [выражения пути &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md). Например, следующий запрос возвращает последовательность, состоящую из трех узловых элементов <`a`>:  
+ Можно отфильтровать возвращаемую последовательность по выражению, добавив предикат. Дополнительные сведения см. в разделе [выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Например, следующий запрос возвращает последовательность, состоящую из трех узловых элементов <`a`>:  
   
 ```  
 declare @x xml  

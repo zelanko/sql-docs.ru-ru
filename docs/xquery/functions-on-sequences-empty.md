@@ -1,16 +1,16 @@
 ---
-title: "пустые функция (XQuery) | Документы Microsoft"
-ms.custom: 
+title: пустые функция (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - empty function
 - fn:empty function
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 433edf397acdb7a49371c80bffb562f7c27bf125
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5e487f679115407c5e15afa8040a1ff21851201f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-sequences---empty"></a>Функции над последовательностями - пустой
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Последовательность элементов. Если последовательность пуста, функция возвращает значение True. В противном случае функция возвращает значение False.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Fn: EXISTS()** функция не поддерживается. В качестве альтернативы **not()** можно использовать функцию.  
   
 ## <a name="examples"></a>Примеры  
@@ -121,6 +121,6 @@ ProductModelID Result
   
 ## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [существует &#40; &#41; Метод &#40; тип данных xml &#41;](../t-sql/xml/exist-method-xml-data-type.md)  
+ [exist (метод) (тип данных xml)](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

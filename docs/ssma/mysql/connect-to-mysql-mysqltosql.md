@@ -1,6 +1,6 @@
 ---
 title: Подключение к MySQL (MySQLToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5ed12698026172f7ef2ef080fd8e68d64cf51c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4b0a3565b466d132f829000d519195d2fedb27dc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
 Используйте **подключение к MySQL** диалоговое окно подключения к базе данных MySQL, которые требуется перенести.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/06/2018
   
 Введите пароль для имени пользователя.  
   
-**SSL**  
+**ПРОТОКОЛ SSL**  
   
 Если требуется безопасное подключение к MySQL пользоваться из Secure Socket Layer (SSL), установив **SSL** флажок.  
   

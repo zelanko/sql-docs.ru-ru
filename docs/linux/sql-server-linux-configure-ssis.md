@@ -1,25 +1,25 @@
 ---
-title: "Настройка служб SSIS в Linux с помощью служб ssis conf | Документы Microsoft"
-description: "В этой статье описывается настройка SQL Server Integration Services (SSIS) для Linux с помощью служебной программы conf служб ssis."
+title: Настройка служб SSIS в Linux с помощью служб ssis conf | Документы Microsoft
+description: В этой статье описывается настройка SQL Server Integration Services (SSIS) для Linux с помощью служебной программы conf служб ssis.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: feaca28a2b59dbae0ebbae8ef86f7723daf0e072
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Настройка служб интеграции SQL Server в Linux с conf служб ssis
 

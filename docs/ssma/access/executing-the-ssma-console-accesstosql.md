@@ -1,6 +1,6 @@
 ---
 title: Выполнение консоли SSMA (AccessToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4400ab959c61b23c3a98c817c03506631a4d61af
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5f754441a32346c616e381f8d7f8929354589dcf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Выполнение консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор команд файла скрипта и параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -47,17 +47,17 @@ ms.lasthandoff: 04/06/2018
   
 -   `project-type` — Это необязательный атрибут.  Следующие параметры доступны для типа проекта.  
   
-    -   sql-server-2005  
+    -   SQL server 2005  
   
-    -   sql-server-2008  
+    -   SQL server 2008  
   
-    -   sql-server-2012  
+    -   SQL server 2012  
   
-    -   sql-server-2014  
+    -   SQL server 2014  
   
-    -   sql-server-2016  
+    -   SQL server 2016  
   
-    -   sql-azure  
+    -   SQL azure  
   
     По умолчанию — «sql server 2008».  
   
@@ -339,7 +339,7 @@ Force нагрузки-/ target-базы данных источника
   
 **Command**  
   
-convert-schema  
+преобразовать схему  
   
 -   Выполняет преобразование схемы из источника в целевую схему.  
   
@@ -671,7 +671,7 @@ convert-schema
   
 **Command**  
   
-save-as-script  
+Сохранить как сценарий  
   
 Используется для сохранения скриптов для объектов в файл, когда упомянутые метабазы = цель, это является альтернативой команды синхронизации, которому мы получения сценариев и выполнение соответствует в целевой базе данных.  
   

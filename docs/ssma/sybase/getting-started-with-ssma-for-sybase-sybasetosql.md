@@ -2,7 +2,7 @@
 title: Начало работы с SSMA для SAP ASE (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34910ce2592f765d5fac0decaadfc48f5f173ed0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2b502bd5cfe2c1a7df2129294b279a2b7b3a407a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Начало работы с SSMA для SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для SAP ASE позволяет быстро преобразовать схемы базы данных SAP адаптивной Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или схемы базы данных SQL Azure, отправьте полученный схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базы данных SQL Azure и переноса данных из SAP ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или база данных Azure SQL.  
@@ -109,7 +109,7 @@ SSMA содержит следующие меню:
 |**Правка**|Содержит команды для поиска и работа с текстом в страницы сведений, например для копирования [!INCLUDE[tsql](../../includes/tsql_md.md)] из области сведений SQL. Также содержит **управление закладки** вариант, где можно просмотреть список существующих закладок. Кнопки в правой части диалогового окна можно использовать для управления закладки.|  
 |**Вид**|Содержит **синхронизировать метаданные обозреватели** команды. Это синхронизирует объектов между Sybase в обозревателе метаданных и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или обозреватель метаданных SQL Azure. Также содержит команды для отображения и скрытия **вывода** и **список ошибок** области и в качестве параметра **макеты** управление макетами.|  
 |**Инструменты**|Содержит команды для создания отчетов, экспорт данных и миграция объектов и данных. Также предоставляет доступ к **глобальные параметры** и **параметры проекта** диалоговым окнам.|  
-|**Tester**|Содержит команды для создания тестовых случаев, просматривать результаты тестов и команды для управления резервным копированием базы данных.|  
+|**Тест-инженер**|Содержит команды для создания тестовых случаев, просматривать результаты тестов и команды для управления резервным копированием базы данных.|  
 |**Справка**|Предоставляет доступ к справке SSMA и **о** диалоговое окно.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Область вывода и «список ошибок»  

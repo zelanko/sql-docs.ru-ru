@@ -1,30 +1,31 @@
 ---
-title: "SQL Server Migration Assistant | Документы Microsoft"
-ms.custom: 
+title: SQL Server Migration Assistant | Документы Microsoft
+ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1003d5250c2d1e2cc9816fa50ea8f11bdd3a8b29
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник миграции SQL Server
 Microsoft SQL Server миграции Assistant (SSMA) — это средство, предназначены для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.  
@@ -50,8 +51,8 @@ SSMA поддержка следующих версий.
 - SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
-- База данных SQL Azure
+- SQL Server 2016
+- Azure SQL Database
 - SQL Server 2017 г. в Windows и Linux (Предварительная версия)
 - ** Хранилище данных azure SQL
 
@@ -75,7 +76,7 @@ SSMA поддержка следующих версий.
   
     -   [Сообщество центра разработчиков SQL Server](http://go.microsoft.com/fwlink/?LinkId=42456) -группы новостей, форумы и другие ресурсы сообщества, которые полезны для разработчиков SQL Server  
   
--   Служба технической поддержки — переход к [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) и выполните поиск «SQL Server Migration Assistant».  Выберите версию, а затем выберите «начало запроса».  Служба технической поддержки входит средство Помощник по миграции SQL Server.  
+-   Служба технической поддержки — переход к [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) и выполните поиск «SQL Server Migration Assistant».  Выберите версию, а затем выберите «начало запроса».  Служба технической поддержки входит средство Помощник по миграции SQL Server.  
   
 -   Поддержка уровня Premier — Если у вас есть контракт Premier можно получить Premier поддержки на [портале Premier Online](https://premier.microsoft.com/).  
   

@@ -1,30 +1,31 @@
 ---
-title: "Начало работы с SSMA для консоли Oracle (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Начало работы с SSMA для консоли Oracle (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8fb5dc2f2bc16f531ffebef7a4e908fe6260b7a3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Начало работы с SSMA для консоли Oracle (OracleToSQL)
 В этом разделе описывается, как запустить и приступить к работе с Oracle консольного приложения. Также перечислены в настоящем документе, соглашения используются в типичного окна вывода консоли SSMA.  
@@ -41,13 +42,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>Процедура использования консоли SSMA  
 После консоль успешно запускается в среде Windows, можно выполнить следующие действия для работы с ней:  
   
-1.  Настройка консоли SSMA через файлы скриптов. Дополнительные сведения об этом разделе см. в разделе [Создание файлов скриптов &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md) .  
+1.  Настройка консоли SSMA через файлы скриптов. Дополнительные сведения об этом разделе см. в разделе [Создание файлов скриптов &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md) .  
   
-2.  [Создание файлов значение переменной &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [Создание файлов значение переменной &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [Создание файлов подключения сервера &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [Создание файлов подключения сервера &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [Выполнение консоли SSMA &#40; OracleToSQL &#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) зависимости от потребностей проекта  
+4.  [Выполнение консоли SSMA &#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) зависимости от потребностей проекта  
   
 Дополнительные функции:  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 Интерпретация цветовой выходные данные в консоли в следующей таблице:  
   
-|Color|Description|  
+|Color|Описание|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Метка даты и времени, сообщение для пользователя|  
@@ -71,6 +72,6 @@ ms.lasthandoff: 12/21/2017
 |Зеленый|Запрос для ввода данных пользователем|  
 |Голубой|Начала, окончания и результат операции|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Установка SSMA для Oracle](http://msdn.microsoft.com/en-us/9211013a-ab24-4c52-9b26-87994b35e502)  
   

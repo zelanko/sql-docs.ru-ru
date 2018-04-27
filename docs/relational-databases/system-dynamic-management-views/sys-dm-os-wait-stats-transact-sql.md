@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Документы Microsoft
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает является наличие потока производителя для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |При синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк, происходит с планами параллельных запросов. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание:** в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET относится только к синхронизации итератора обмена обработчика запросов и создания строк для потребителя потоков. Потоки потребителя в тип ожидания CXCONSUMER отслеживаются отдельно.| 
+|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает является наличие потока производителя для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |При синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк, происходит с планами параллельных запросов. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание:** начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET относится только к синхронизации итератора обмена обработчика запросов и создания строк для потребителя потоков. Потоки потребителя в тип ожидания CXCONSUMER отслеживаются отдельно.| 
 |CXROWSET_SYNC |Имеет место при параллельном просмотре диапазона.| 
 |DAC_INIT |Имеет место при инициализации выделенного административного соединения.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

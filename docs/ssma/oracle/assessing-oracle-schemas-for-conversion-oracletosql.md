@@ -1,6 +1,6 @@
 ---
 title: Оценка схемы Oracle для преобразования (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 72e4156ed3ac58a4870ab5487a3ece2e3adeaadb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30cead1b886fecd524e417b5daee6f76ebc796d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Оценка схемы Oracle для преобразования (OracleToSQL)
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], следует определить быть сложность миграции и о том, сколько времени займет миграции. SSMA можно создать отчет об оценки, который показывает процент объекты, которые будут преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  
@@ -82,13 +82,13 @@ ms.lasthandoff: 12/21/2017
   
     -   Обновите синтаксис Oracle в SSMA. Синтаксис для процедур, функций, триггеров, упакованные функции и процедуры упакованных можно обновить. Чтобы обновить синтаксис, выберите объект на панели обозревателя метаданных Oracle, нажмите кнопку **SQL** вкладку, а затем изменить код SQL. Если покинуть элемент будет предложено сохранить изменения синтаксиса. Можно просмотреть ошибки для объекта на **отчетов** вкладки.  
   
-    -   В Oracle можно изменить объект Oracle для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+    -   В Oracle можно изменить объект Oracle для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
     -   Объект можно исключить из процесса миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозревателя метаданных и обозревателя метаданных Oracle, снимите флажок рядом с элементом, прежде чем загрузить объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенос данных из Oracle.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Преобразование схемы Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[Преобразование схем Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

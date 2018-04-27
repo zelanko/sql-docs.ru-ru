@@ -1,6 +1,6 @@
 ---
 title: Сопоставление MySQL и типов данных SQL Server (MySQLToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee34e34e1b0048fd1cb15744cc215962e5a563e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 67a23e286e6d3a7c125d37e5f5cb68f01751fba0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление MySQL и типов данных SQL Server (MySQLToSQL)
 Типы баз данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или типов базы данных SQL Azure. При преобразовании объектов базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих процедурах.  

@@ -1,6 +1,6 @@
 ---
 title: Параметры (базы данных Azure SQL) проекта (MySQLToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46dfaa1f7b35f87d13fc3a88fb00d6a26a1cf27f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 91e0055b7a345b5746f8f14f3c3684683c443cc1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Параметры (базы данных Azure SQL) проекта (MySQLToSQL)
 Параметры проекта SQL Azure позволяют настраивать суффикс базы данных SQL Azure, добавляется в диалоговом окне соединения, а также позволяют реализовывать механизм пульса в соединении с SQL Azure.  

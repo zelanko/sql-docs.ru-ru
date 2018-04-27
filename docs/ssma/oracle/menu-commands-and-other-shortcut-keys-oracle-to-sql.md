@@ -1,27 +1,28 @@
 ---
-title: "Команды меню и другие сочетания клавиш (Oracle SQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Команды меню и другие сочетания клавиш (Oracle SQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: b6bdfbc11f7e458cb93fbf0af7a159526fe29d7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1fb3f6530305d3cefb7b31b53c2a841ce653755b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Команды меню и другие сочетания клавиш (Oracle SQL)
 В следующих разделах описаны сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окон для SSMA для приложения Oracle.  
@@ -203,6 +204,6 @@ ms.lasthandoff: 12/21/2017
 |Запустите краткие сведения.|CTRL + SHIFT + ПРОБЕЛ|  
 |Перейти к объявлению.|F12|  
   
-## <a name="see-also"></a>См. также:  
-[Сочетания клавиш &#40; Oracle в SQL &#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
+## <a name="see-also"></a>См. также  
+[Сочетания клавиш&#40;Oracle в SQL&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

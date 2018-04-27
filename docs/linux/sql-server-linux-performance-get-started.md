@@ -1,25 +1,25 @@
 ---
-title: "Начало работы с функциями производительности SQL Server для Linux | Документы Microsoft"
-description: "В этой статье содержатся вводные производительности компонентов SQL Server для Linux пользователей, незнакомых с SQL Server. Многие из этих примеров работать на всех платформах, но в контексте данной статьи является Linux."
+title: Начало работы с функциями производительности SQL Server для Linux | Документы Microsoft
+description: В этой статье содержатся вводные производительности компонентов SQL Server для Linux пользователей, незнакомых с SQL Server. Многие из этих примеров работать на всех платформах, но в контексте данной статьи является Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 375f1ef49688f2c85facfab52ffca3322ad53747
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Пошаговое руководство для повышения производительности SQL Server в Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/13/2018
 Если вы являетесь пользователем Linux, новые для SQL Server, следующие задачи описывают некоторые средства производительности. Это не уникальным или уникальным для Linux, а также дает общее представление областей для дальнейшего анализа. В каждом примере ссылка предоставляется документации глубины для этой области.
 
 > [!NOTE]
-> В следующих примерах используется образец базы данных AdventureWorks. Инструкции о том, как получить и установить этот образец базы данных см. в разделе [восстановление базы данных SQL Server из Windows, Linux](sql-server-linux-migrate-restore-database.md).
+> Ниже приводятся примеры базы данных AdventureWorks. Инструкции о том, как получить и установить этот образец базы данных см. в разделе [восстановление базы данных SQL Server из Windows, Linux](sql-server-linux-migrate-restore-database.md).
 
 ## <a name="create-a-columnstore-index"></a>создать индекс columnstore
 Индекс columnstore — это технология хранения и запрашивания больших хранилищ данных в формате данных в один столбец, называемого columnstore.  

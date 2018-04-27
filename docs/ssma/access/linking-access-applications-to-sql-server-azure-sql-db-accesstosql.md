@@ -1,15 +1,16 @@
 ---
-title: "Связывание приложения Access в SQL Server — база данных Azure SQL | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Связывание приложения Access в SQL Server — база данных Azure SQL | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Связывание приложения Access в SQL Server — база данных SQL Azure (AccessToSQL)
 Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблиц SQL Azure. Связывание изменяет базу данных Access, страниц доступа к запросы, формы, отчеты и данные использовать данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базы данных SQL Azure, а не данные в базе данных.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  Щелкните правой кнопкой мыши **таблиц**, а затем выберите **ссылку**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) для доступа резервная копия исходной таблицы доступа и создает связанную таблицу.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для доступа резервная копия исходной таблицы доступа и создает связанную таблицу.  
   
 После связывания таблицы, таблицы в SSMA отображаются со значком небольшой ссылки. В режиме доступа таблицы отображаются со значком «связанный», являющийся шар со стрелкой, указывающей на него.  
   
@@ -134,7 +135,7 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>Новые записи недоступны.  
-**Причина:** при добавлении записи, которая позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблицу SQL Azure с помощью VBA, если поле уникального индекса таблицы имеет значение по умолчанию и не назначить значение к этому полю, новая запись не отображается до повторного открытия таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. При попытке получения значения для новой записи, появляется следующее сообщение об ошибке:  
+**Причина:** при добавлении записи, которая позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблицу SQL Azure с помощью VBA, если поле уникального индекса таблицы имеет значение по умолчанию и не назначить значение к этому полю, новая запись не отображается до повторного открытия таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или S Менное Azure. При попытке получения значения для новой записи, появляется следующее сообщение об ошибке:  
   
 `Run-time error '3167' Record is deleted.`  
   
@@ -162,6 +163,6 @@ Recordset.LastModified
   
 **Решение:** можно определить запрос доступа, который возвращает только те строки, поддерживаемые типы данных.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

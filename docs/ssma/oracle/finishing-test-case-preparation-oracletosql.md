@@ -1,27 +1,28 @@
 ---
-title: "Завершение подготовки тестового случая (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Завершение подготовки тестового случая (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f6bf969705a049e03212500a3112e643fbe7654a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b1ca4a9af16b008a1f971541d07069b39f8f9b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Завершение подготовки тестового случая (OracleToSQL)
 Последней странице мастера отображается описание тестового случая и сведения об объектах, задействованных в тесте. Кроме того на этой странице можно задать теста параметры выполнения.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 -   При выборе **нет**, все тестовые выполнения изменения данных будут сохранены.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>Дополнительные таблицы, в режиме энергосбережения  
-Определяет режим сохранения для вспомогательных таблиц, создаваемых во время выполнения теста. См. в описании вспомогательных таблицах в [выполнение тестовых случаев &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md) раздела.  
+Определяет режим сохранения для вспомогательных таблиц, создаваемых во время выполнения теста. См. в описании вспомогательных таблицах в [выполнение тестовых случаев &#40;OracleToSQL&#41; ](../../ssma/oracle/running-test-cases-oracletosql.md) раздела.  
   
 -   При выборе **всегда сохранять**, для использования в дальнейшем всегда будут храниться данные вспомогательных таблиц.  
   
@@ -62,8 +63,8 @@ ms.lasthandoff: 12/21/2017
   
 Нажмите кнопку **Готово** кнопку, чтобы сохранить тестовый случай, подготовленного в [с помощью репозиториев теста (OracleToSQL)](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
-## <a name="see-also"></a>См. также:  
-[С помощью репозиториев теста &#40; OracleToSQL &#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[Выполнение тестовых случаев &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Тестирование миграции объектов базы данных &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[С помощью репозиториев теста &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[Выполнение тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Тестирование перенесенные объекты базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

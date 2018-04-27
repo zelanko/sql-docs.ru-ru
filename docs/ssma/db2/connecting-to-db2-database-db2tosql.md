@@ -1,6 +1,6 @@
 ---
 title: Подключение к базе данных DB2 (DB2ToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588fe34578ac6018ccefbc08f6ab70a017283353
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6cd697c4e81482db4b23aa7eee34724d44934475
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Подключение к базе данных DB2 (DB2ToSQL)
 Для переноса баз данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо подключиться к базе данных DB2, которые требуется перенести. При подключении SSMA получает метаданные о все схемы DB2 и затем отображается в панели обозревателя метаданных DB2. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  

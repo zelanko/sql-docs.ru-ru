@@ -1,6 +1,6 @@
 ---
 title: Параметры (преобразование) (MySQLToSQL) проекта | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Параметры проекта (преобразование) (MySQLToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис MySQL в синтаксис SQL Server или SQL Azure.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
 |||  
 |-|-|  
 |**Термин**|**Определение**|  
-|**По умолчанию, ограничивающего прямоугольника {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} для пространственных индексов**|Определяет значение по умолчанию для {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} параметра ограничивающего прямоугольника, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Режим оптимистичного**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**По умолчанию, ограничивающего прямоугольника {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} для пространственных индексов**|Определяет значение по умолчанию для {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} параметра ограничивающего прямоугольника, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Режим оптимистичного**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Плотность сетки для пространственных индексов**|Определяет значение по умолчанию для LEVEL_1, LEVEL_2, LEVEL_3 и LEVEL_4 плотности сетки, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Режим оптимистичного**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Полный режим**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию|  
   
 ### <a name="transactions"></a>Transactions  

@@ -1,9 +1,9 @@
 ---
-title: 'Учебник: Редактор SQL Operations Studio (preview) Transact-SQL для создания объектов базы данных | Документы Microsoft'
-description: Этот учебник демонстрирует основные возможности SQL Operations Studio (preview), которые упрощают использование T-SQL.
+title: 'Учебник: Редактор SQL Studio операций (Предварительная версия) Transact-SQL для создания объектов базы данных | Документы Microsoft'
+description: Этот учебник демонстрирует основные возможности Studio операций SQL (Предварительная версия), которые упрощают использование T-SQL.
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Учебник: Использование редактора Transact-SQL для создания объектов базы данных- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Использование фрагментов кода T-SQL для создания хранимых процедур
 
-SQL Operations Studio предоставляет многие встроенные фрагменты кода T-SQL для быстрого создания инструкций.
+Операции SQL Studio предоставляет многие встроенные фрагменты кода T-SQL для быстрого создания инструкций.
 
 
 1. Откройте новый редактор запросов, нажав клавишу **Ctrl + N**.
@@ -117,7 +117,7 @@ SQL Operations Studio предоставляет многие встроенны
 
 ## <a name="use-peek-definition"></a>Использование определения показа 
 
-SQL Operations Studio предоставляет возможность просмотреть определение объектов с помощью функции определения считывания. В этом разделе создает вторую хранимую процедуру и использует определения считывания для Узнайте, какие столбцы в таблице, чтобы быстро создать тело хранимой процедуры.
+Операции SQL Studio предоставляет возможность просмотреть определение объектов с помощью функции определения считывания. В этом разделе создает вторую хранимую процедуру и использует определения считывания для Узнайте, какие столбцы в таблице, чтобы быстро создать тело хранимой процедуры.
 
 1. Откройте новый редактор, нажав клавиши **Ctrl + N**. 
 

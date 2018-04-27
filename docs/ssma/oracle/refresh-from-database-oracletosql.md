@@ -1,27 +1,28 @@
 ---
-title: "Обновление из базы данных (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Обновление из базы данных (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d37a01129f273611a0502c14ea6caa44f8f90ad3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="refresh-from-database-oracletosql"></a>Обновление из базы данных (OracleToSQL)
 **Обновление из базы данных** диалоговое окно позволяет выбрать объекты для обновления из базы данных Oracle. Строки в диалоговом окне отображаются цветовые обозначения, исходя из состояния метаданных:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Если объект является новым в базе данных Oracle, строки розовым цветом.  
   
-Можно указать параметры обновления объекта по умолчанию в **параметры проекта** диалоговое окно. Дополнительные сведения см. в разделе [параметры проекта &#40; Синхронизация &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+Можно указать параметры обновления объекта по умолчанию в **параметры проекта** диалоговое окно. Дополнительные сведения см. в разделе [параметры проекта&#40;синхронизации&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
 Чтобы получить доступ к **обновление из базы данных** диалоговое окно, щелкните правой кнопкой мыши объект в обозревателе метаданных Oracle и нажмите кнопку **обновление из базы данных**.  
   

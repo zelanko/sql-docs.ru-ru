@@ -1,10 +1,10 @@
 ---
-title: Создание фрагментов кода в SQL Operations Studio (preview) | Документы Microsoft
-description: Узнайте, как создавать и использовать фрагменты кода SQL в SQL Operations Studio (preview)
+title: Создание фрагментов кода в Studio операций SQL (Предварительная версия) | Документы Microsoft
+description: Узнайте, как создавать и использовать фрагменты кода SQL в Studio операций SQL (Предварительная версия)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Создание и использование фрагментов кода для быстрого создания скриптов Transact-SQL (T-SQL) в[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Создание и использование фрагментов кода для быстрого создания скриптов Transact-SQL (T-SQL) в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Фрагменты кода в Code [!INCLUDE[name-sos](../includes/name-sos-short.md)] , шаблоны, которые упрощают создание баз данных и объектов базы данных. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]предоставляет несколько фрагментов кода T-SQL для упрощения быстрого создания правильный синтаксис. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] предоставляет несколько фрагментов кода T-SQL для упрощения быстрого создания правильный синтаксис. 
 
 Можно также создать пользовательские фрагменты.
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 1. Выберите **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]наследует его функциональность фрагмента кода из кода Visual Studio, в частности, в этой статье описывается с помощью фрагментов кода SQL. Дополнительные сведения см. в разделе [Создание собственных фрагментов](https://code.visualstudio.com/docs/editor/userdefinedsnippets) в документации по Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует его функциональность фрагмента кода из кода Visual Studio, в частности, в этой статье описывается с помощью фрагментов кода SQL. Дополнительные сведения см. в разделе [Создание собственных фрагментов](https://code.visualstudio.com/docs/editor/userdefinedsnippets) в документации по Visual Studio Code. 
 
    ![Замените поле шаблона](media/code-snippets/select-sql.png)
 

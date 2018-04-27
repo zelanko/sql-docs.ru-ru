@@ -1,27 +1,28 @@
 ---
-title: "Глобальные параметры (протоколирование) (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Глобальные параметры (протоколирование) (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df2e8fd5376ddf37d02380ba1a4f1c516f023e7a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-oracletosql"></a>Глобальные параметры (протоколирование) (OracleToSQL)
 Используйте **глобальные параметры** диалоговое окно «», чтобы указать параметры ведения журнала для SSMA. Как правило нужно изменить эти параметры только при работе с технической поддержки.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 **Уровень сообщений**  
 Следующие параметры доступны в разделе **уровень сообщений**:  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |----------|---------------|  
 |**[все категории]**|Используется для задания уровня ведения журнала для всех следующих параметров.|  
 |**Сборщик**|Метаданные о схеме источника собирает и сохраняет его в проект.|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 |**Неустранимая ошибка**|Запись в журнал сообщения о неустранимых ошибках.|  
 |**Ошибка**|Запись в журнал ошибок и сообщения о неустранимых ошибках.|  
 |**Предупреждение**|Запись в журнал предупреждение, ошибки и сообщения о неустранимых ошибках.|  
-|**Сведения о**|Запись в журнал информационные, предупреждения, ошибки и сообщения о неустранимых ошибках.|  
+|**сведения о**|Запись в журнал информационные, предупреждения, ошибки и сообщения о неустранимых ошибках.|  
 |**Отладка**|Запись всех сообщений, включая сообщения в журнал отладки.|  
   
 **Путь к файлу журнала**  

@@ -1,6 +1,6 @@
 ---
 title: Создание файлов подключения сервера (AccessToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10cdd1a711d23d8934631c30a317aca4ca247a10
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 02a337c32f3dcea132edb7ae60559b7edfd467d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>При создании сервера файлы подключения (AccessToSQL)
 Сведения о сервере может быть указано либо в разделе серверы файла скрипта. Сведения о сервере также можно указать в файле подключения отдельный сервер. Параметр командной строки файла подключения к серверу `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера в файлы подключения скрипта и сервера отсутствует, то считается определение сервера в файле скрипта.  

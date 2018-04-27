@@ -1,7 +1,7 @@
 ---
 title: sys.dm_tran_version_store_space_usage (Transact-SQL) | Документы Microsoft
 ms.custom: ''
-ms.date: 04/30/2017
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -28,14 +28,14 @@ ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f46c84abe0c62c36f76a3bc8d02576d30357e19
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1459dd2b98ed9579bc1939c60c1e74e14157d0b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Возвращает таблицу, отображающую общее пространство в базе данных tempdb, используемые записи хранилище версий для каждой базы данных. **sys.dm_tran_version_store_space_usage** эффективна и не дорогих работать, как он не перемещения по записям хранилища отдельной версии, и возвращает сводную версиями место хранилища используются в базе данных tempdb на базу данных.
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 
 ## <a name="examples"></a>Примеры  
- Следующий запрос может использоваться для определения в базе данных tempdb, занимаемого пространства каждой базы данных в хранилище версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра. 
+Следующий запрос может использоваться для определения в базе данных tempdb, занимаемого пространства каждой базы данных в хранилище версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра. 
   
 ```sql  
 SELECT 

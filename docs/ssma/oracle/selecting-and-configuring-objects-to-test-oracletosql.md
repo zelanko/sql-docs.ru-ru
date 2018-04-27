@@ -1,6 +1,6 @@
 ---
 title: Выбор и настройка объектов для теста (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2186b7c2e52cbba438dd48b32a2f884e3ccf04fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Выбор и настройка объектов для теста (OracleToSQL)
 На этом этапе выберите объекты для тестирования и настроить параметры для сравнения процедуры и функции выходные параметры, а также возвращаемые значения функций.  
   
 ## <a name="selection-of-objects-to-test"></a>Выбор объектов для тестирования  
-В дереве объектов Oracle, находится в левой части окна проверьте объекты, которые вы хотите запустить в процессе тестирования. Просмотреть весь список тестируемых объектов в [тестирование перенесенные объекты базы данных &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) раздела.  
+В дереве объектов Oracle, находится в левой части окна проверьте объекты, которые вы хотите запустить в процессе тестирования. Просмотреть весь список тестируемых объектов в [тестирование перенесенные объекты базы данных &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) раздела.  
   
 Если тест-инженер SSMA не поддерживает объекты, выбранные для тестирования, вы увидите ссылку с меткой **некоторые из выделенных объектов содержат ошибки** в дереве объектов. Щелкните эту ссылку для просмотра причины, почему не удается проверить эти объекты и снимите флажок не тот объект.  
   
@@ -87,8 +87,8 @@ ms.lasthandoff: 12/21/2017
 Значения входных параметров можно указать на **значения вызовите** страницы. **Добавить вызов** кнопка добавляет новый вызов с пустой параметр значения. **Удалите вызовы** кнопка удаляет текущего вызова.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Выбор и настройка затронутые объекты &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Выбор и настройка затронутые объекты &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>См. также:  
-[Тестирование миграции объектов базы данных &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Тестирование перенесенные объекты базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,28 +1,28 @@
 ---
-title: "Новые возможности SSMA для Oracle (OracleToSQL) | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Новые возможности SSMA для Oracle (OracleToSQL) | Документы Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: 39d030541bbfd12503078542f97bfc8cd780af12
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности SSMA для Oracle (OracleToSQL)
 В этом разделе перечислены SSMA для Oracle изменения в каждом выпуске.  
@@ -97,7 +97,7 @@ V7.1 выпуск SSMA для Oracle содержит следующие изм�
 - SSMA теперь поддерживает автоматическое обновление, чтобы загрузить последнюю версию SSMA как только он доступен.
 - Теперь может устанавливаться SSMA двоичные файлы доставляются через файлы пакета установщика Windows (.msi).
 
-**Resources**
+**Ресурсы**
 
 [Расширение возможностей SQL Server Migration Assistant преобразования](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
 

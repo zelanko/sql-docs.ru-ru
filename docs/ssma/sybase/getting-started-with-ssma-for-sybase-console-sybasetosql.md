@@ -2,7 +2,7 @@
 title: Начало работы с SSMA для Sybase консоли (SybaseToSQL) | Документы Microsoft
 ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63e1c4e3ecf3cd5f2537ec54db24be59a4d8ad5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d9ee7bbb1805f6476317386490ca5c3d71865472
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Начало работы с SSMA для Sybase консоли (SybaseToSQL)
 В этом разделе описывается процедура запуска и начало работы с SSMA для Sybase консольного приложения. Здесь также приводятся соглашения используются в типичного окна вывода консоли SSMA.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="ssma-console-output-conventions"></a>Соглашения о выходных данных консоли SSMA  
 После выполнения команды сценария SSMA и параметры, консольная программа отображает результаты и сообщения (сведения, ошибка, т. д.) для пользователя на консоли или при необходимости перенаправляет выходные данные в XML-файл. Каждый тип сообщения в выводе обозначается уникальным цветом. Например текстовое сообщение в белый цвет обозначает команд файла скрипта; в зеленый цвет представляет запрос для ввода данных пользователем и т. д.  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![Вывод консоли Ssma_sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "вывод консоли Ssma_sybase")  
   
 Интерпретация цветовой выходные данные в консоли отображается в следующей таблице:  
   

@@ -1,6 +1,6 @@
 ---
 title: Сопоставление Oracle и типы данных SQL Server (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 14abe4d362eead87d83ab8ea9b9082f8c2c8f566
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление Oracle и типы данных SQL Server (OracleToSQL)
 Типы баз данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы базы данных. При преобразовании объекты базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, необходимо указать способ сопоставления типов данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
-SSMA имеет набор по умолчанию сопоставлений типов данных. Список сопоставлений по умолчанию см. в разделе [параметры проекта &#40; Сопоставление типов &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+SSMA имеет набор по умолчанию сопоставлений типов данных. Список сопоставлений по умолчанию см. в разделе [параметры проекта &#40;сопоставление типов&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Сопоставление наследования типов  
 Можно настроить сопоставления типов на уровне проекта, объект уровне или уровне категории объектов (например, все хранимые процедуры). Параметры наследуются от более высокого уровня, если они не переопределены на более низком уровне. Например, при сопоставлении **smallmoney** для **money** на уровне проекта, все объекты в проекте будет использовать это сопоставление, если не настроить сопоставление на уровне объекта или категории.  
@@ -84,7 +84,7 @@ SSMA имеет набор по умолчанию сопоставлений т
   
     4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
   
-        Некоторые типы требуют длину целевого типа данных. Если это необходимо, введите новую длину данных в **замените** поле, а затем[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Некоторые типы требуют длину целевого типа данных. Если это необходимо, введите новую длину данных в **замените** поле, а затем [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  Чтобы удалить сопоставление типа пользовательских данных, выполните следующее:  
   
@@ -94,9 +94,9 @@ SSMA имеет набор по умолчанию сопоставлений т
   
         Не удается удалить наследуемые сопоставления. Тем не менее наследуемые сопоставления переопределяются пользовательских сопоставлений на отдельный объект или объект категории.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
 Следующим шагом в процессе миграции является либо [Создание отчета оценки](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) или [преобразования объектов базы данных Oracle в синтаксис SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). При создании отчета оценки объектов Oracle автоматически преобразуются во время оценки.  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

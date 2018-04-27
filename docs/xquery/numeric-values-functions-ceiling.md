@@ -1,16 +1,16 @@
 ---
-title: "Функция CEILING (XQuery) | Документы Microsoft"
-ms.custom: 
+title: Функция CEILING (XQuery) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - fn:ceiling function
 - ceiling function [XQuery]
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50d1816ea6adb7e11bbf583f37ca8e8b9176223
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c706be1d79119a28f86a389e82e42416b0b3b552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---ceiling"></a>Числовые значения функции — ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если тип *$arg* является одним из трех базовых числовых типов, **xs: float**, **xs: double**, или **xs: decimal**, тип возвращаемого значения совпадает со значением *$arg* типа.  
   
  Если тип *$arg* — тип, который является производным от одного из числовых типов, тип возвращаемого значения будет иметь базовый числовой тип.  
@@ -109,7 +109,7 @@ ProductModelID Result
 -   **Ceiling()** функция сопоставляет все целочисленные значения типу xs: decimal.  
   
 ## <a name="see-also"></a>См. также  
- [FLOOR, функция &#40; XQuery &#41;](../xquery/numeric-values-functions-floor.md)   
- [Round, функция &#40; XQuery &#41;](../xquery/numeric-values-functions-round.md)  
+ [Функция FLOOR &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [Функция Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Настройка параметров проекта (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e3f796e4681f7eb8a5f3c8b1b00d8ab9f552b13
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, параметры пользовательского интерфейса и данных миграции. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что параметры конфигурации подходят для проекта.  
@@ -46,11 +46,11 @@ SSMA имеет пять наборов параметров проекта.
   
 Он также имеет четыре режима для настройки этих параметров:  
   
--   Default  
+-   По умолчанию  
   
 -   Optimistic  
   
--   Полное  
+-   Полная  
   
 -   Другой  
   
@@ -58,15 +58,15 @@ SSMA имеет пять наборов параметров проекта.
   
 Дополнительные сведения о параметрах и применение параметров в каждом режиме см. в следующих разделах:  
   
--   [Параметры проекта &#40; Преобразование &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
+-   [Параметры проекта &#40;преобразования&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
--   [Параметры проекта &#40; Миграция &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
+-   [Параметры проекта &#40;миграции&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
   
--   [Параметры проекта &#40; Синхронизация &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
+-   [Параметры проекта&#40;синхронизации&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
   
--   [Параметры проекта &#40; GUI &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
+-   [Параметры проекта &#40;графического интерфейса пользователя&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
   
--   [Параметры проекта &#40; Сопоставление типов &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
+-   [Параметры проекта &#40;сопоставление типов&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
   
 ## <a name="setting-project-options"></a>Настройка параметров проекта  
 В SSMA можно настроить параметры по умолчанию для всех проектов. Эти параметры сохраняются в файл конфигурации SSMA и применены к новый созданный проект.  
@@ -99,13 +99,13 @@ SSMA имеет пять наборов параметров проекта.
   
 3.  Нажмите кнопку **ОК** для сохранения настроек.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
--   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления Oracle и типы данных SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
+-   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления Oracle и типы данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   В противном случае можно преобразовывать определения объектов базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта. Дополнительные сведения см. в разделе [преобразование схемы Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   В противном случае можно преобразовывать определения объектов базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определений объекта. Дополнительные сведения см. в разделе [преобразование схемы Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
-## <a name="see-also"></a>См. также:  
-[Сопоставление Oracle и типы данных SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Сопоставление Oracle и типы данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

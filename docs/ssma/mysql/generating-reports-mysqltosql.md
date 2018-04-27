@@ -1,6 +1,6 @@
 ---
 title: Создание отчетов (MySQLToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b452d85718dbdca6ade3c40417fa8b200ea74cdc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 44e368d2839725a99b3c2d38db6c24e1c9114537
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-mysqltosql"></a>Создание отчетов (MySQLToSQL)
 Отчеты определенные действия, выполняемые с помощью команды создаются в консоли SSMA на уровне дерева объектов.  
@@ -41,12 +41,12 @@ ms.lasthandoff: 04/06/2018
     ||||  
     |-|-|-|  
     |**SL. Нет.**|**Command**|**Заголовок отчета**|  
-    |1|Создание оценки отчета|AssessmentReport&lt;n&gt;.XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |1|Создание оценки отчета|AssessmentReport&lt;n&gt;. XML|  
+    |2|преобразовать схему|SchemaConversionReport&lt;n&gt;. XML|  
     |3|Перенос данных|DataMigrationReport&lt;n&gt;. XML|  
-    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|синхронизировать целевой|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|обновление из базы данных|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |4|оператор CONVERT-sql|ConvertSQLReport&lt;n&gt;. XML|  
+    |5|синхронизировать целевой|TargetSynchronizationReport&lt;n&gt;. XML|  
+    |6|обновление из базы данных|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
     > В выходной отчет отличается от отчета оценки. В первом — отчета о производительности во время выполнения команды, во втором случае выполняется отчет в формате XML для программный потребления.  
@@ -58,8 +58,8 @@ ms.lasthandoff: 04/06/2018
     ||||  
     |-|-|-|  
     |**SL. Нет.**|**Команд и параметров**|**Описание выходных данных**|  
-    |1|verbose=”false”|Формирует сводный отчет по действия.|  
-    |2|verbose=”true”|Создает отчет о состоянии сводные и подробные для каждого действия.|  
+    |1|verbose = «false»|Формирует сводный отчет по действия.|  
+    |2|verbose = «true»|Создает отчет о состоянии сводные и подробные для каждого действия.|  
   
     > [!NOTE]  
     > Создание оценки отчета, преобразовать схемы, перенос данных, команды sql инструкцию convert применяются параметры детализации отчета, указанных выше.  
@@ -69,8 +69,8 @@ ms.lasthandoff: 04/06/2018
     ||||  
     |-|-|-|  
     |**SL. Нет.**|**Команд и параметров**|**Описание выходных данных**|  
-    |1|report-errors=”false”|Нет сведений об ошибке / предупреждение / сведения о сообщениях.|  
-    |2|report-errors=”true”|Подробные сведения об ошибке / предупреждение / сведения о сообщениях.|  
+    |1|ошибки отчета = «false»|Нет сведений об ошибке / предупреждение / сведения о сообщениях.|  
+    |2|ошибки отчета = «true»|Подробные сведения об ошибке / предупреждение / сведения о сообщениях.|  
   
     > [!NOTE]  
     > Параметры отчета об ошибках указанных выше применимы для создание оценки отчета, convert схемы, перенос данных, команды sql инструкцию convert.  

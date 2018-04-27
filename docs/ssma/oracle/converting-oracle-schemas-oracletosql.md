@@ -1,6 +1,6 @@
 ---
 title: Преобразование схем Oracle (OracleToSQL) | Документы Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61bea3173bcb085e551c35a3c2c746626f5ba0bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Преобразование схем Oracle (OracleToSQL)
 После подключения к базе данных Oracle, подключен к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и параметры сопоставления данных и набор проектов, можно преобразовать объекты базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов базы данных.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 Во время преобразования SSMA выводит сообщения об ошибках на панели списка ошибок и выходных сообщений в области вывода. Позволяет определить, имеются ли изменения баз данных Oracle или процесс преобразования для получения результатов требуемое преобразование выходные данные и сведения об ошибке.  
   
 ## <a name="setting-conversion-options"></a>Установка параметров преобразования  
-Перед преобразованием объектов, проверьте параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [параметры проекта &#40; Преобразование &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+Перед преобразованием объектов, проверьте параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [параметры проекта &#40;преобразования&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Результаты преобразования  
 В следующей таблице показаны Oracle объекты преобразуются и итоговый [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов:  
@@ -116,13 +116,13 @@ ms.lasthandoff: 12/21/2017
   
 -   Можно изменить исходный код для процедуры на **SQL** вкладки.  
   
--   Можно изменить объект в базе данных Oracle, чтобы удалить или изменить неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+-   Можно изменить объект в базе данных Oracle, чтобы удалить или изменить неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
 -   Объект можно исключить из процесса миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозревателя метаданных и обозревателя метаданных Oracle, снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенос данных из Oracle.  
   
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в процессе миграции должно [загрузит преобразованные объекты в SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
   
-## <a name="see-also"></a>См. также:  
-[Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>См. также  
+[Миграция Oracle баз данных SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
