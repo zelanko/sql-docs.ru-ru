@@ -1,27 +1,28 @@
 ---
-title: "Метод setNClob (int, java.sql.NClob) | Документы Microsoft"
-ms.custom: 
+title: Метод setNClob (int, java.sql.NClob) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28c9241e1fe2e735c66f3826bf7cfd748cfb9a32
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 15ad160b652f32ebd5cd5e7b3d14abc91c0d0948
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>Метод setNClob (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,8 +52,8 @@ public final void setNClob(int parameterIndex,
 ## <a name="remarks"></a>Замечания  
  Этот метод setNClob указывается с помощью метода setNClob в интерфейсе java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>См. также:  
- [Метод setNClob &#40; SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>См. также  
+ [Метод setNClob &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
  [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

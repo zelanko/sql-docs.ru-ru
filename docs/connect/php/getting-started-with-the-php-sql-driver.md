@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c829a111b86430a8deaa71bdbda0c5a6a5d7ead4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/16/2018
 ---
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 * [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Шаг 4. Выполнение устойчивого подключения к SQL с помощью PHP](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

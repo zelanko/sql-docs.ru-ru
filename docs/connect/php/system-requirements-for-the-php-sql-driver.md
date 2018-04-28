@@ -2,7 +2,7 @@
 title: Требования к системе для драйвера Microsoft PHP для SQL Server | Документы Microsoft
 ms.custom: ''
 ms.date: 03/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: ''
+caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f616a439b737e3228321247edab187975790bdde
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 44a18257abc758ee910fb9c4953cbdef02239fbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Требования к системе для драйвера Microsoft PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/28/2018
 |5.5|       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |5.4.32  |5.4.32  |
 
--   Версия файла драйвера должна находиться в каталоге расширения PHP. В разделе [версии драйверов](#driver-versions) сведения о разных файлах драйвера.  Сведения о скачивании драйверов см. в статье [Драйверы Майкрософт для PHP для SQL Server](http://www.microsoft.com/download/details.aspx?id=20098). Сведения о настройке драйвера для PHP см. в разделе [загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   Версия файла драйвера должна находиться в каталоге расширения PHP. В разделе [версии драйверов](#driver-versions) сведения о разных файлах драйвера.  Загрузить драйверы [загрузить драйверы Майкрософт для PHP для SQL Server](download-drivers-php-sql-server.md). Сведения о настройке драйвера для PHP см. в разделе [загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
 -   Требуется веб-сервер. Веб-сервер должен быть настроен на выполнение PHP. Сведения о размещении приложений PHP в службах IIS см. в разделе [учебник на веб-сайта PHP в](http://php.net/manual/fa/install.windows.iis.php).  
 
@@ -126,18 +126,18 @@ ms.lasthandoff: 03/28/2018
 
 |Файл драйвера|Версия PHP|Является потокобезопасным?|Использование с DLL PHP|  
 |---------------|---------------|----------------|---------------------|  
-|32-bit php_sqlsrv_7_nts.dll <br />32-bit php_pdo_sqlsrv_7_nts.dll |7.0|нет |32-разрядное php7.dll|
-|32-bit php_sqlsrv_7_ts.dll  <br />32-bit php_pdo_sqlsrv_7_ts.dll  |7.0|да|32-разрядное php7ts.dll|
-|64-bit php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|нет |64-разрядной php7.dll|  
-|64-bit php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|да|64-разрядной php7ts.dll|
-|32-bit php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|нет |32-разрядное php7.dll|  
-|32-bit php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|да|32-разрядное php7ts.dll|  
-|64-bit php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|нет |64-разрядной php7.dll|  
-|64-bit php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|да|64-разрядной php7ts.dll|   
-|32-bit php_sqlsrv_72_nts.dll<br />32-bit php_pdo_sqlsrv_72_nts.dll|7.2|нет |32-разрядное php7.dll|  
-|32-bit php_sqlsrv_72_ts.dll <br />32-bit php_pdo_sqlsrv_72_ts.dll |7.2|да|32-разрядное php7ts.dll|  
-|64-bit php_sqlsrv_72_nts.dll<br />64-bit php_pdo_sqlsrv_72_nts.dll|7.2|нет |64-разрядной php7.dll|  
-|64-bit php_sqlsrv_72_ts.dll <br />64-bit php_pdo_sqlsrv_72_ts.dll |7.2|да|64-разрядной php7ts.dll|  
+|32-разрядное php_sqlsrv_7_nts.dll <br />32-разрядное php_pdo_sqlsrv_7_nts.dll |7.0|нет |32-разрядное php7.dll|
+|32-разрядное php_sqlsrv_7_ts.dll  <br />32-разрядное php_pdo_sqlsrv_7_ts.dll  |7.0|да|32-разрядное php7ts.dll|
+|64-разрядной php_sqlsrv_7_nts.dll <br />64-разрядной php_pdo_sqlsrv_7_nts.dll |7.0|нет |64-разрядной php7.dll|  
+|64-разрядной php_sqlsrv_7_ts.dll  <br />64-разрядной php_pdo_sqlsrv_7_ts.dll  |7.0|да|64-разрядной php7ts.dll|
+|32-разрядное php_sqlsrv_71_nts.dll<br />32-разрядное php_pdo_sqlsrv_71_nts.dll|7.1|нет |32-разрядное php7.dll|  
+|32-разрядное php_sqlsrv_71_ts.dll <br />32-разрядное php_pdo_sqlsrv_71_ts.dll |7.1|да|32-разрядное php7ts.dll|  
+|64-разрядной php_sqlsrv_71_nts.dll<br />64-разрядной php_pdo_sqlsrv_71_nts.dll|7.1|нет |64-разрядной php7.dll|  
+|64-разрядной php_sqlsrv_71_ts.dll <br />64-разрядной php_pdo_sqlsrv_71_ts.dll |7.1|да|64-разрядной php7ts.dll|   
+|32-разрядное php_sqlsrv_72_nts.dll<br />32-разрядное php_pdo_sqlsrv_72_nts.dll|7.2|нет |32-разрядное php7.dll|  
+|32-разрядное php_sqlsrv_72_ts.dll <br />32-разрядное php_pdo_sqlsrv_72_ts.dll |7.2|да|32-разрядное php7ts.dll|  
+|64-разрядной php_sqlsrv_72_nts.dll<br />64-разрядной php_pdo_sqlsrv_72_nts.dll|7.2|нет |64-разрядной php7.dll|  
+|64-разрядной php_sqlsrv_72_ts.dll <br />64-разрядной php_pdo_sqlsrv_72_ts.dll |7.2|да|64-разрядной php7ts.dll|  
 
 В Linux включены следующие версии драйвера:
 
@@ -156,14 +156,14 @@ ms.lasthandoff: 03/28/2018
 
 |Файл драйвера|Версия PHP|Является потокобезопасным?|Использование с DLL PHP|  
 |---------------|---------------|----------------|---------------------|  
-|32-bit php_sqlsrv_7_nts.dll <br />32-bit php_pdo_sqlsrv_7_nts.dll |7.0|нет |32-разрядное php7.dll|
-|32-bit php_sqlsrv_7_ts.dll  <br />32-bit php_pdo_sqlsrv_7_ts.dll  |7.0|да|32-разрядное php7ts.dll|
-|64-bit php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|нет |64-разрядной php7.dll|  
-|64-bit php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|да|64-разрядной php7ts.dll|
-|32-bit php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|нет |32-разрядное php7.dll|  
-|32-bit php_sqlsrv_71_ts.dll <br />32-bit php_pdo_sqlsrv_71_ts.dll |7.1|да|32-разрядное php7ts.dll|  
-|64-bit php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|нет |64-разрядной php7.dll|  
-|64-bit php_sqlsrv_71_ts.dll <br />64-bit php_pdo_sqlsrv_71_ts.dll |7.1|да|64-разрядной php7ts.dll|   
+|32-разрядное php_sqlsrv_7_nts.dll <br />32-разрядное php_pdo_sqlsrv_7_nts.dll |7.0|нет |32-разрядное php7.dll|
+|32-разрядное php_sqlsrv_7_ts.dll  <br />32-разрядное php_pdo_sqlsrv_7_ts.dll  |7.0|да|32-разрядное php7ts.dll|
+|64-разрядной php_sqlsrv_7_nts.dll <br />64-разрядной php_pdo_sqlsrv_7_nts.dll |7.0|нет |64-разрядной php7.dll|  
+|64-разрядной php_sqlsrv_7_ts.dll  <br />64-разрядной php_pdo_sqlsrv_7_ts.dll  |7.0|да|64-разрядной php7ts.dll|
+|32-разрядное php_sqlsrv_71_nts.dll<br />32-разрядное php_pdo_sqlsrv_71_nts.dll|7.1|нет |32-разрядное php7.dll|  
+|32-разрядное php_sqlsrv_71_ts.dll <br />32-разрядное php_pdo_sqlsrv_71_ts.dll |7.1|да|32-разрядное php7ts.dll|  
+|64-разрядной php_sqlsrv_71_nts.dll<br />64-разрядной php_pdo_sqlsrv_71_nts.dll|7.1|нет |64-разрядной php7.dll|  
+|64-разрядной php_sqlsrv_71_ts.dll <br />64-разрядной php_pdo_sqlsrv_71_ts.dll |7.1|да|64-разрядной php7ts.dll|   
 
 В Linux включены следующие версии драйвера:
 

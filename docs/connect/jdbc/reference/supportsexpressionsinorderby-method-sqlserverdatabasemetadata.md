@@ -1,30 +1,33 @@
 ---
-title: "Метод supportsExpressionsInOrderBy (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод supportsExpressionsInOrderBy (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.supportsExpressionsInOrderBy
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.supportsExpressionsInOrderBy
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e530fd1ad03fbacecf2b73394e9de97f8e92d0c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4556ee903c349b6f8f63167eec63c7503eecc8c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>Метод supportsExpressionsInOrderBy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public boolean supportsExpressionsInOrderBy()
 ## <a name="remarks"></a>Замечания  
  Этот метод supportsExpressionsInOrderBy указывается с помощью метода supportsExpressionsInOrderBy в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

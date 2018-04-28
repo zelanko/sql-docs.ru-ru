@@ -1,28 +1,28 @@
 ---
-title: "Драйвер Microsoft JDBC для SQL Server Support Matrix | Документы Microsoft"
-ms.custom: 
+title: Драйвер Microsoft JDBC для SQL Server Support Matrix | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 84c06f5153d47c82a268a0b5e20e74b4e32d6685
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,8 +38,8 @@ ms.lasthandoff: 03/02/2018
   
 |Имя драйвера|Версия пакета драйверов|Применимые JAR(s)|Конец Основная фаза поддержки|
 |-|-|-|-|  
-|Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 января 2023 гг.|    
-|Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022|    
+|Драйвер Microsoft JDBC 6.4 для SQL Server|6.4.|MSSQL jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 января 2023 гг.|    
+|Microsoft JDBC Driver 6.2 для SQL Server|6.2|MSSQL jdbc-6.2.2.jre8.jar<br> MSSQL jdbc-6.2.2.jre7.jar|30 июня 2022|    
 |Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12 декабря 2019 г.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/02/2018
   
 |Версия драйвера|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL управляемый экземпляр (Extended личной предварительной версии)|  
 |-|-|-|-|-|-|-|-|-|-|
-|6.4|Нет|Да|Да|Да|Да|Да|Да|Да|Да|  
+|6.4.|Нет|Да|Да|Да|Да|Да|Да|Да|Да|  
 |6.2|Да|Да|Да|Да|Да|Да|Да|Да|Нет|
 |6.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
 |6.0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
@@ -88,7 +88,7 @@ ms.lasthandoff: 03/02/2018
   
 |Версия драйвера JDBC|Версия JRE|Версия API JDBC| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (частично)|  
+|6.4.|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (частично)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

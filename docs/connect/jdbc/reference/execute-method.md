@@ -1,30 +1,33 @@
 ---
-title: "Метод Execute () | Документы Microsoft"
-ms.custom: 
+title: Метод Execute () | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.execute ()
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.execute ()
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a1bfe201fca204b6fa16d47e8c808b54952d1cf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e553aee1781829a89161f2d47be1e88497c121b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-method-"></a>Метод execute ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,8 +50,8 @@ public boolean execute()
 ## <a name="remarks"></a>Замечания  
  Этот метод execute указывается с помощью метода execute в интерфейсе java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>См. также:  
- [выполнение метода &#40; SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>См. также  
+ [Метод Execute &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)   
  [Члены SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Класс SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

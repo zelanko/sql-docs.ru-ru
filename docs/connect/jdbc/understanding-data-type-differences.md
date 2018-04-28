@@ -1,27 +1,28 @@
 ---
-title: "Различия типов изучения данных | Документы Microsoft"
-ms.custom: 
+title: Различия типов изучения данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9f24abd0bf39ebe61cf3715371c6c6c3d6f5663
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: cf10944059322a159de43ccee2a7e4d8ed1d8526
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-differences"></a>Общие сведения о различиях типов данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="character-types"></a>Символьные типы  
  Типами данных символьных строк JDBC являются **CHAR**, **VARCHAR**, и **LONGVARCHAR**. Драйвер JDBC обеспечивает поддержку API-интерфейса JDBC 4.0. В JDBC 4.0 типами данных символьных строк JDBC могут также быть **NCHAR**, **NVARCHAR**, и **LONGNVARCHAR**. Эти новые типы символьных строк поддерживают собственные символьные типы Java в формате Юникода и исключают необходимость выполнять какие-либо преобразования из ANSI в Юникод или из Юникода в ANSI.  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Фиксированная длина|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Char** и **nchar** типы данных сопоставляются непосредственно с JDBC **CHAR** и **NCHAR** типов. Они представляют собой типы фиксированной длины с заполнением, предоставляемым сервером, при условии, что для столбца установлено значение SET ANSI_PADDING ON. Заполнение всегда включено для **nchar**, но для **char**, в случае, если на сервере столбцов символьных типов не предусмотрено, заполнение добавляет драйвер JDBC.|  
 |Переменная длина|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Varchar** и **nvarchar** типы непосредственно сопоставляются с JDBC **VARCHAR** и **NVARCHAR** соответственно.|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="binary-string-types"></a>Типы двоичных строк  
  Типами двоичных строк JDBC являются **ДВОИЧНЫХ**, **VARBINARY**, и **LONGVARBINARY**.  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Фиксированная длина|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Двоичных** введите прямо сопоставляется с JDBC **ДВОИЧНЫХ** типа. Это тип фиксированной длины с заполнением, предоставляемым сервером в случае, если для столбца установлено значение SET ANSI_PADDING ON. Если на сервере заполнение для столбцов символьных типов не предусмотрено, то заполнение добавляет драйвер JDBC.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Timestamp** тип — JDBC **ДВОИЧНЫХ** тип с фиксированной длиной 8 байт.|  
 |Переменная длина|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Varbinary** сопоставляется JDBC **VARBINARY** типа.<br /><br /> **Определяемого пользователем типа** введите [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] сопоставляется с JDBC как **VARBINARY** типа.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="exact-numeric-types"></a>Точные числовые типы  
  Точные числовые типы JDBC непосредственно сопоставляются с аналогичными типами SQL Server.  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |BIT|JDBC **бит** тип представляет единственный бит, который может быть 0 или 1. Он сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **бит** типа.|  
 |TINYINT|JDBC **TINYINT** тип представляет один байт. Он сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **tinyint** типа.|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="approximate-numeric-types"></a>Приблизительные числовые типы  
  Приблизительными числовыми типами JDBC являются **РЕАЛЬНЫЕ**, **ДВОЙНЫЕ**, и **FLOAT**.  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |REAL|JDBC **РЕАЛЬНЫЕ** тип имеет семь цифр точности (одинарная точность) и сопоставляется непосредственно с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **реальные** типа.|  
 |DOUBLE|JDBC **ДВОЙНЫЕ** тип имеет 15 цифр точности (двойная точность) и сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **float** типа. JDBC **FLOAT** тип является синонимом **ДВОЙНЫЕ**. Из-за возможной путаницей между **FLOAT** и **ДВОЙНЫЕ**, **ДВОЙНЫЕ** является предпочтительным.|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="custom-type-mapping"></a>Сопоставление пользовательских типов  
  Функция сопоставления пользовательских типов JDBC, использующее интерфейсы данных SQL для JDBC расширенные типы (определяемые пользователем типы, структуры и т. д.). не реализовано в драйвере JDBC.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

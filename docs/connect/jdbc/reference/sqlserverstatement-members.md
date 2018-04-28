@@ -1,27 +1,28 @@
 ---
-title: "Члены SQLServerStatement | Документы Microsoft"
-ms.custom: 
+title: Члены SQLServerStatement | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cdce6c1ac993fc36b861e9ec6d87926e1a7661a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 07071e2e84736ba7014c72e62f054af3829c4458
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverstatement-members"></a>Члены SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,20 +37,20 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Добавляет заданную команду SQL в текущий список команд для данного [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
-|[Отмена](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Отменяет инструкцию SQL, выполняемую в настоящее время в данном [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Отменяет инструкцию SQL, выполняемую в настоящее время в данном [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|Обнуляет текущий список команд SQL для этого [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|Удаляет все предупреждения, имена которых присутствуют в данном [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
 |[Закрыть](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|Это освобождает [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) базы данных и ресурсы JDBC вместо ожидания их автоматического освобождения объекта.|  
-|[выполнение](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|Выполняет заданную инструкцию SQL, которая может возвращать несколько результатов.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|Выполняет заданную инструкцию SQL, которая может возвращать несколько результатов.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|Отправляет пакет команд базе данных для выполнения. В случае успешного выполнения всех команд возвращает массив из количества операций обновления, выполненных той или иной командой.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|Выполняет заданную инструкцию SQL и возвращает один [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)|Выполняет заданную инструкцию SQL, которой может быть инструкция INSERT, UPDATE, MERGE или DELETE, либо инструкцию SQL, не возвращающую значения, например инструкцию SQL DDL.|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/18/2017
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|Получает тип для результирующего набора [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекты, созданные этим [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|Возвращает текущий результат в виде счетчика обновлений.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|Возвращает первое предупреждение, полученных от вызовов в этом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|Указывает, является ли это [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объект был закрыт.|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|Указывает, является ли это [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объект был закрыт.|  
 |[isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md)|Возвращает значение, показывающее, можно ли добавить инструкцию в предоставляемый пользователем пул инструкций.|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)|Указывает, является ли этот объект инструкции оболочкой указанного интерфейса.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|Присваивает имени курсора SQL значение заданной строки. Это значение будет использоваться при дальнейших вызовах метода execute.|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/18/2017
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

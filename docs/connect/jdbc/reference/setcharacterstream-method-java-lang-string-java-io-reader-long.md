@@ -1,27 +1,28 @@
 ---
-title: "Метод setCharacterStream (java.lang.String, java.io.Reader, long) | Документы Microsoft"
-ms.custom: 
+title: Метод setCharacterStream (java.lang.String, java.io.Reader, long) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11788cf04694341635c078ba42d11eb1bf4fc4f8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ef31b2ddfc28ca204a827f9acb0ea21841d401d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>Метод setCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,7 @@ public final void setCharacterStream(java.lang.String parameterName
   
  Объект чтения, содержащего данные Юникода.  
   
- *length*  
+ *длина*  
   
  Объект **длинные** указывает число символов в поток.  
   
@@ -60,8 +61,8 @@ public final void setCharacterStream(java.lang.String parameterName
   
  Если длина потока неизвестна, *длина* параметра может быть задано значение -1, чтобы указать, что драйвер будет принимать потоки независимо от их длины. Для sqljdbc4.jar рекомендуется использовать метод JDBC 4.0 [метод setCharacterStream (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md) Если приложению нужно обновлять столбец из потока, длина которого неизвестна.  
   
-## <a name="see-also"></a>См. также:  
- [Метод setCharacterStream &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>См. также  
+ [Метод setCharacterStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   
  [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

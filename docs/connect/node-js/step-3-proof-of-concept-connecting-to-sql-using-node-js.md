@@ -1,35 +1,36 @@
 ---
-title: "Шаг 3: Эксперимент подключение к SQL с помощью Node.js | Документы Microsoft"
-ms.custom: 
+title: 'Шаг 3: Эксперимент подключение к SQL с помощью Node.js | Документы Microsoft'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Шаг 3: Эксперимент подключение к SQL с помощью Node.js
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Круг_со_стрелкой_загрузки](../../ssdt/media/download.png)[Скачать драйвер Node.js для SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 В этом примере следует рассматривать эксперимента только.  В образце кода упрощен для ясности и не представляет рекомендации рекомендуется корпорацией Майкрософт. Другие примеры, которые используют те же важные функции доступны на сайте Github.
 
-- [https://github.com/tediousjs/tedious/BLOB/master/Examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
+- [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Шаг 1: подключение  
   

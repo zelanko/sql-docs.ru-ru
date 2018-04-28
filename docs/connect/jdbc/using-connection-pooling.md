@@ -1,27 +1,28 @@
 ---
-title: "Использование пулов соединений | Документы Microsoft"
-ms.custom: 
+title: Использование пулов соединений | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b0125330ff44030e354423b105710fc6806f337
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: af73ee2a721ccd8da4a77b7d294460cf1d4da75b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-connection-pooling"></a>Использование пулов соединений
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="remarks"></a>Замечания  
  Далее представлены классы для реализации пулов соединений.  
   
-|Class|Реализации|Description|  
+|Class|Реализации|Описание|  
 |-----------|----------------|-----------------|  
 |COM.Microsoft.SqlServer.JDBC. SQLServerXADataSource|javax.sql.ConnectionPoolDataSource и javax.sql.XADataSource|Мы рекомендуем использовать [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) класса для всех задач сервера Java EE требуется, так как он реализует все интерфейсы пулов JDBC 3.0 и XA.|  
 |COM.Microsoft.SqlServer.JDBC. SQLServerConnectionPoolDataSource|javax.sql.ConnectionPoolDataSource|Этот класс представляет фабрику соединений, которая позволяет серверу приложений Java EE заполнять пул соединений физическими соединениями. Если конфигурация поставщика Java EE подразумевает необходимость класса, реализующего javax.sql.ConnectionPoolDataSource, укажите имя класса, как [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md). Как правило, рекомендуется использовать [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) вместо этого класса, так как он реализует интерфейсы пулов, и интерфейсы XA и проверена в несколько конфигураций сервера Java EE.|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  В текущей версии драйвер JDBC не вызывает хранимую процедуру sp_reset_connection, когда соединение возвращается в пул. Драйверу необходимо, чтобы сервера приложений Java сторонних разработчиков возвращали соединения в исходное состояние.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

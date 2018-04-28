@@ -1,27 +1,28 @@
 ---
-title: "Метод getFunctionColumns (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getFunctionColumns (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88606f2a53f3f276529feb6b780279fdd3c96323
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8e9e3d78c17b4c2fe44ce80b6baf0eb8e4294339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Метод getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *каталог*  
+ *catalog*  
   
  Объект **строка** , содержащее имя каталога. Если это пустая строка, то результат включает функции, доступные без каталога. Если это **null**, имя каталога не используется для поиска.  
   
@@ -68,38 +69,38 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  Каждая строка в результирующем наборе содержит следующие столбцы для описания параметра, описания столбца или возвращаемого типа.  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**Строковые значения**|Имя базы данных, в которой находится указанная функция.|  
-|FUNCTION_SCHEM|**Строковые значения**|Имя@@@ схемы для функции.|  
-|FUNCTION_NAME|**Строковые значения**|Имя функции.|  
-|COLUMN_NAME|**Строковые значения**|Имя параметра или столбца.|  
+|FUNCTION_CAT|**String**|Имя базы данных, в которой находится указанная функция.|  
+|FUNCTION_SCHEM|**String**|Имя@@@ схемы для функции.|  
+|FUNCTION_NAME|**String**|Имя функции.|  
+|COLUMN_NAME|**String**|Имя параметра или столбца.|  
 |COLUMN_TYPE|**короткий**|**Тип столбца. Он может принимать одно из следующих значений:**<br /><br /> functionColumnUnknown (0): неизвестный тип.<br /><br /> functionColumnIn (1): входной параметр.<br /><br /> functionColumnInOut (2): входной/выходной параметр.<br /><br /> functionColumnOut (3): выходной параметр.<br /><br /> functionReturn (4): значение, возвращаемое функцией.<br /><br /> functionColumnResult (5): параметр или столбец представляет собой столбец в результирующем наборе.|  
 |DATA_TYPE|**smallint**|Значение из Java.sql.Types тип данных SQL.|  
-|TYPE_NAME|**Строковые значения**|Имя типа данных.|  
+|TYPE_NAME|**String**|Имя типа данных.|  
 |PRECISION|**int**|Общее количество значащих цифр.|  
 |LENGTH|**int**|Длина данных в байтах.|  
 |SCALE|**короткий**|Количество цифр справа от десятичной запятой.|  
 |RADIX|**короткий**|Основание системы счисления для числовых типов.|  
 |NULLABLE|**короткий**|Указывает, если параметра или возвращаемого значения может содержать **null** значение.<br /><br /> **Он может принимать одно из следующих значений:**<br /><br /> functionNoNulls (0): значение NULL недопустимо.<br /><br /> functionNullable (1): значение NULL допустимо.<br /><br /> functionNullableUnknown (2): неизвестно.|  
-|REMARKS|**Строковые значения**|Примечания по параметру или столбцу.|  
-|COLUMN_DEF|**Строковые значения**|Значение по умолчанию для столбца.<br /><br /> **Примечание:** эта информация доступна с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и является драйвером JDBC.|  
+|REMARKS|**String**|Примечания по параметру или столбцу.|  
+|COLUMN_DEF|**String**|Значение по умолчанию для столбца.<br /><br /> **Примечание:** эта информация доступна с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и является драйвером JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же, как **DATA_TYPE** столбца, за исключением **datetime** и ISO **интервал** типов данных.<br /><br /> **Примечание:** эта информация доступна с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и является драйвером JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO **интервал** Доп. Если значение **SQL_DATA_TYPE** — **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличный от **datetime** и ISO **интервал**, этот столбец равен NULL.<br /><br /> **Примечание:**эта информация доступна с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и является драйвером JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO **интервал** Доп. Если значение **SQL_DATA_TYPE** — **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличный от **datetime** и ISO **интервал**, этот столбец равен NULL.<br /><br /> **Примечание:** эта информация доступна с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и является драйвером JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Максимальная длина значений символьных и двоичных параметров или столбцов. Для остальных типов данных имеет значение равное NULL.|  
 |ORDINAL_POSITION|**int**|Для входных или выходных параметров представляет позицию начинающуюся с 1<br /><br /> Для результирующего набора столбцов представляет позицию столбца в результирующем наборе начинающуюся с 1.<br /><br /> Для возвращаемого значения имеет значение равное 0.|  
-|IS_NULLABLE|**Строковые значения**|Определяет допустимость значений NULL для параметра или столбца.<br /><br /> Может иметь одно из следующих значений.<br /><br /> **Да**: параметр или столбец могут содержать значения NULL.<br /><br /> **НЕ**: параметр или столбец не может содержать значения NULL.<br /><br /> Пустая строка (""): неизвестно.|  
-|SS_TYPE_CATALOG_NAME|**Строковые значения**|Имя каталога, содержащего определяемый пользователем тип.|  
-|SS_TYPE_SCHEMA_NAME|**Строковые значения**|Имя схемы, содержащей определяемый пользователем тип.|  
-|SS_UDT_CATALOG_NAME|**Строковые значения**|Определяемый пользователем тип с полным именем.|  
-|SS_UDT_SCHEMA_NAME|**Строковые значения**|Имя каталога, в котором определено имя коллекции схем XML. Если не удается найти имя каталога, то эта переменная содержит пустую строку.|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**Строковые значения**|Имя схемы, в которой определено имя коллекции схем XML. Если не удается найти имя схемы, значением является пустая строка.|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**Строковые значения**|Имя коллекции схем XML. Если не удается найти имя, значением является пустая строка.|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**Строковые значения**|Имя каталога, содержащего определяемый пользователем тип.|  
-|SS_XML_SCHEMACOLLECTION_NAME|**Строковые значения**|Имя схемы, содержащей определяемый пользователем тип.|  
+|IS_NULLABLE|**String**|Определяет допустимость значений NULL для параметра или столбца.<br /><br /> Может иметь одно из следующих значений.<br /><br /> **Да**: параметр или столбец могут содержать значения NULL.<br /><br /> **НЕ**: параметр или столбец не может содержать значения NULL.<br /><br /> Пустая строка (""): неизвестно.|  
+|SS_TYPE_CATALOG_NAME|**String**|Имя каталога, содержащего определяемый пользователем тип.|  
+|SS_TYPE_SCHEMA_NAME|**String**|Имя схемы, содержащей определяемый пользователем тип.|  
+|SS_UDT_CATALOG_NAME|**String**|Определяемый пользователем тип с полным именем.|  
+|SS_UDT_SCHEMA_NAME|**String**|Имя каталога, в котором определено имя коллекции схем XML. Если не удается найти имя каталога, то эта переменная содержит пустую строку.|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|Имя схемы, в которой определено имя коллекции схем XML. Если не удается найти имя схемы, значением является пустая строка.|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|Имя коллекции схем XML. Если не удается найти имя, значением является пустая строка.|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|Имя каталога, содержащего определяемый пользователем тип.|  
+|SS_XML_SCHEMACOLLECTION_NAME|**String**|Имя схемы, содержащей определяемый пользователем тип.|  
 |SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Тип данных, используемый расширенными хранимыми процедурами.<br /><br /> **Примечание** Дополнительные сведения о типах данных, возвращенных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], в разделе «Типы данных (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

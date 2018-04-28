@@ -2,7 +2,7 @@
 title: Типы данных PHP по умолчанию | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7229fe738950549fb6089ba8481658228397afa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-php-data-types"></a>типы данных PHP по умолчанию;
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,14 +45,14 @@ ms.lasthandoff: 03/28/2018
 |bit|Целочисленный|8-битовых символов<sup>1</sup>|  
 |char;|Строковые значения|8-битовых символов<sup>1</sup>|  
 |date<sup>4</sup>|DateTime|Неприменимо|  
-|datetime<sup>4</sup>|DateTime|Неприменимо|  
+|DateTime<sup>4</sup>|DateTime|Неприменимо|  
 |datetime2<sup>4</sup>|DateTime|Неприменимо|  
 |datetimeoffset<sup>4</sup>|DateTime|Неприменимо|  
 |Decimal|Строковые значения|8-битовых символов<sup>1</sup>|  
 |float|Число с плавающей запятой|8-битовых символов<sup>1</sup>|  
 |geography|Поток|Двоичная<sup>3</sup>|  
 |geometry|Поток|Двоичная<sup>3</sup>|  
-|image<sup>5</sup>|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
+|изображение<sup>5</sup>|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |int|Целочисленный|8-битовых символов<sup>1</sup>|  
 |money|Строковые значения|8-битовых символов<sup>1</sup>|  
 |NCHAR|Строковые значения|8-битовых символов<sup>1</sup>|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/28/2018
 |TIMESTAMP|Строковые значения|8-битовых символов<sup>1</sup>|  
 |tinyint|Целочисленный|8-битовых символов<sup>1</sup>|  
 |определяемый пользователем тип|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|uniqueidentifier|String<sup>9</sup>|8-битовых символов<sup>1</sup>|  
+|uniqueidentifier|Строка<sup>9</sup>|8-битовых символов<sup>1</sup>|  
 |varbinary|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |varbinary(MAX)|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |varchar|Строковые значения|8-битовых символов<sup>1</sup>|  
@@ -104,11 +104,11 @@ ms.lasthandoff: 03/28/2018
   
 |Компонент|Поддержка PHP|  
 |-----------|---------------|  
-|Возвращающий табличное значение параметр|нет|  
+|Возвращающий табличное значение параметр|Нет|  
 |Разреженные столбцы|Частичный|  
 |Сжатие NULL-битов|Да|  
 |Определяемые пользователем типы данных больших значений CLR (UDT)|Да|  
-|Имя субъекта-службы|нет|  
+|Имя субъекта-службы|Нет|  
 |MERGE|Да|  
 |FILESTREAM|Частичный|  
   

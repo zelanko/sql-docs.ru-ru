@@ -1,23 +1,24 @@
 ---
-title: "Azure Active Directory | Документы Microsoft"
+title: Azure Active Directory | Документы Microsoft
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 462b141c365e0140236c78af451c73b110911765
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 Чтобы использовать Azure AD, используйте **проверки подлинности** ключевое слово. Значения, **проверки подлинности** может занять на приведены в следующей таблице.
 
-|Ключевое слово|Значения|Description|
+|Ключевое слово|Значения|Описание|
 |-|-|-|
 |**Проверка подлинности**|Не задан (по умолчанию)|Режим проверки подлинности определяется другие ключевые слова. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
 ||`SqlPassword`|Непосредственно проверку подлинности в экземпляр SQL Server (который может быть экземпляр Azure) с помощью имени пользователя и пароля. Имя пользователя и пароль должен быть передан в строку соединения с помощью **UID** и **PWD** ключевые слова. |
@@ -130,5 +131,5 @@ ms.lasthandoff: 11/18/2017
 
     ?>
 ```
-## <a name="see-also"></a>См. также:  
-[С помощью Azure Active Directory с помощью драйвера ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a>См. также  
+[Использование Azure Active Directory с драйвером ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)

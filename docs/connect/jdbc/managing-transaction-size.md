@@ -1,27 +1,28 @@
 ---
-title: "Управление размером транзакции | Документы Microsoft"
-ms.custom: 
+title: Управление размером транзакции | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a472f146d9c4b746cadc6f29f1a69f3ca12dd2c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ab98635e19d0170b5cb844239a15899f5fa93012
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-transaction-size"></a>Управление размером транзакции
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
  Кроме того, убедитесь, что воспользовались параметром истечения времени блокировки, если в приложении ожидаются проблемы с блокировками и требуется ограничение времени ожидания выхода из них. Это можно сделать с помощью [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md) метод. Установленное по умолчанию время ожидания для блокировки равно -1, это означает, что она заблокирует на неопределенно долгое время в ожидании блокировки. Можно установить время ожидания блокировки равным 30 сек., что вызовет истечение времени ожидания заблокированного соединения через 30 секунд в случае блокировки другим соединением.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

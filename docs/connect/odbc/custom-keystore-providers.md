@@ -1,27 +1,28 @@
 ---
-title: "Поставщики пользовательских ключей | Документы Microsoft"
-ms.custom: 
+title: Поставщики пользовательских ключей | Документы Microsoft
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: "1"
+caps.latest.revision: 1
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: Inactive
-ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-keystore-providers"></a>Поставщики пользовательского хранилища ключей
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -86,7 +87,7 @@ typedef struct CEKeystoreProvider {
 } CEKEYSTOREPROVIDER;
 ```
 
-|Имя поля|Description|
+|Имя поля|Описание|
 |:--|:--|
 |`Name`|Имя поставщика хранилища ключей. Он не должен быть таким же, как любой другой поставщик хранилища ключей, ранее загруженного драйвером или присутствует в этой библиотеке. Нули, расширенный-символ * строки.|
 |`Init`|Функцию инициализации. Если функции инициализации не является обязательным, это поле может иметь значение null.|
@@ -103,7 +104,7 @@ int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
 Именем-заполнителем для функции инициализации, определяемых поставщиком. Драйвер вызывает эту функцию один раз, после поставщика была загружена, но перед первым запрашивает время, необходимое для выполнения расшифровать ECEK или Read()/Write(). Эту функцию можно используйте для выполнения любой инициализации, которые необходимы. 
 
-|Аргумент|Description|
+|Аргумент|Описание|
 |:--|:--|
 |`ctx`|[Вход] Контекст операции.|
 |`onError`|[Вход] Функция отчетов об ошибках.|
@@ -115,7 +116,7 @@ int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len)
 
 Именем-заполнителем для такой функции связи, определенное поставщиком. Драйвер вызывает эту функцию при запросе приложением для чтения данных из (ранее записанных в) поставщика с помощью атрибута соединения SQL_COPT_SS_CEKEYSTOREDATA, что позволяет приложению считывать произвольных данных от поставщика. В разделе [обмена данными с помощью поставщиков хранилища ключей](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) для получения дополнительной информации.
 
-|Аргумент|Description|
+|Аргумент|Описание|
 |:--|:--|
 |`ctx`|[Вход] Контекст операции.|
 |`onError`|[Вход] Функция отчетов об ошибках.|
@@ -128,7 +129,7 @@ int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len)
 ```
 Именем-заполнителем для такой функции связи, определенное поставщиком. Драйвер вызывает эту функцию при запросе приложением для записи данных поставщика, с помощью атрибута соединения SQL_COPT_SS_CEKEYSTOREDATA, написать произвольных данных к поставщику приложения. В разделе [обмена данными с помощью поставщиков хранилища ключей](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) для получения дополнительной информации.
 
-|Аргумент|Description|
+|Аргумент|Описание|
 |:--|:--|
 |`ctx`|[Вход] Контекст операции.|
 |`onError`|[Вход] Функция отчетов об ошибках.|
@@ -141,7 +142,7 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 ```
 Именем-заполнителем для функции дешифрования ECEK определенное поставщиком. Драйвер вызывает эту функцию, чтобы расшифровать ECEK шифруется Главным, связанные с этим поставщиком в ключа CEK.
 
-|Аргумент|Description|
+|Аргумент|Описание|
 |:--|:--|
 |`ctx`|[Вход] Контекст операции.|
 |`onError`|[Вход] Функция отчетов об ошибках.|
@@ -158,7 +159,7 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 ```
 Именем-заполнителем для функции определен поставщик шифрования CEK. Драйвер не вызывайте эту функцию и не предоставлять свои функции через интерфейс ODBC, но она предназначена для обеспечения программный доступ к созданию ECEK средствами управления ключами.
 
-|Аргумент|Description|
+|Аргумент|Описание|
 |:--|:--|
 |`ctx`|[Вход] Контекст операции.|
 |`onError`|[Вход] Функция отчетов об ошибках.|
@@ -189,7 +190,7 @@ void (*Free)();
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
-|Аргумент|Description|
+|Аргумент|Описание|
 |:--|:--|
 |`ctx`|[Вход] Отчет об ошибке на контекст.|
 |`msg`|[Вход] Сообщение об ошибке, в отчет. Символом NULL строку расширенных символов. Чтобы параметризованные сведения должны присутствовать, эта строка может содержать последовательности форматирования вставки формы, принимаемое [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) функции. Расширенные функции может быть указан в этом параметре, как описано ниже.|
@@ -228,7 +229,7 @@ void *dbcCtx;
 void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
-|Поле|Description|
+|Поле|Описание|
 |:--|:--|
 |`envCtx`|Контекст среды.|
 |`dbcCtx`|Контекст соединения.|
@@ -639,6 +640,6 @@ FoundProv:
 
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Использование постоянного шифрования с драйвером ODBC](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

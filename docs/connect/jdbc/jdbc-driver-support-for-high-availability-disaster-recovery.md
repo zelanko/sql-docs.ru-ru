@@ -2,7 +2,7 @@
 title: Драйвер JDBC поддерживает высокий уровень доступности и аварийного восстановления | Документы Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -16,13 +16,13 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 5ad954bb250765d29dd6600ca98e4a01844f1831
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 04/06/2018
   
  Начиная с версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], можно указать прослушиватель группы доступности (высокого уровня доступности, аварийного восстановления) группы доступности (AG) в свойстве соединения. Если [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключено приложение базы данных AlwaysOn, которая выполняет отработку отказа, первоначальное соединение разрывается и приложение должно установить новое соединение для продолжения работы после отработки отказа. Следующие [свойства соединения](../../connect/jdbc/setting-the-connection-properties.md) были добавлены в [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
--   **multiSubnetFailover**  
+-   **MultiSubnetFailover**  
   
--   **applicationIntent**
+-   **ApplicationIntent**
  
 Указать multiSubnetFailover = true, при подключении к прослушивателю группы доступности из группы доступности или экземпляра отказоустойчивого кластера. Обратите внимание, что **multiSubnetFailover** по умолчанию — false. Используйте **applicationIntent** объявить тип рабочей нагрузки приложения. В разделах ниже для получения дополнительных сведений.
  

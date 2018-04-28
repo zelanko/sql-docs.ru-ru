@@ -1,28 +1,28 @@
 ---
-title: "Постоянное шифрование Справочник по API для драйвера JDBC | Документы Microsoft"
-ms.custom: 
+title: Постоянное шифрование Справочник по API для драйвера JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 1/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3ed6ba1720ffff58967b4deaeda04194dcf156a
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 6f5c67ad5add796f151e5b86c7c5ab8b8fc82118
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Постоянное шифрование Справочник по API для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,8 +80,8 @@ ms.lasthandoff: 03/02/2018
   
 |Название|Описание|  
 |----------|-----------------|  
-|открытые byte [] decryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, encryptedColumnEncryptionKey byte [])|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Формат пути к ключу должен быть одним из следующих:**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
-|открытые byte [] encryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, plainTextColumnEncryptionKey byte [])|Шифрует ключ шифрования столбца с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Формат пути к ключу должен быть одним из следующих:**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|открытые byte [] decryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, encryptedColumnEncryptionKey byte [])|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Формат пути к ключу должен быть одним из следующих:**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
+|открытые byte [] encryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, plainTextColumnEncryptionKey byte [])|Шифрует ключ шифрования столбца с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Формат пути к ключу должен быть одним из следующих:**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
 |открытые setName void (строковое имя)|Задает имя поставщика хранилища ключей.|
 |открытые getName String)|Получает имя поставщика хранилища ключей.|
   
@@ -99,13 +99,13 @@ ms.lasthandoff: 03/02/2018
   
 |Название|Описание|  
 |----------|-----------------|  
-|открытые byte [] decryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, encryptedColumnEncryptionKey byte [])|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью указанного столбца ключа IDmaster ключа и с помощью указанного алгоритма. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
-|открытые byte [] encryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, columnEncryptionKey byte [])|Шифрует ключ шифрования столбца с помощью главного ключа указанного столбца и с помощью указанного алгоритма. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|открытые byte [] decryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, encryptedColumnEncryptionKey byte [])|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью указанного столбца ключа IDmaster ключа и с помощью указанного алгоритма. <br />(Переопределяет SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
+|открытые byte [] encryptColumnEncryptionKey (masterKeyPath строка, строка encryptionAlgorithm, columnEncryptionKey byte [])|Шифрует ключ шифрования столбца с помощью главного ключа указанного столбца и с помощью указанного алгоритма. <br />(Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
 |открытые setName void (строковое имя)|Задает имя поставщика хранилища ключей.|
 |открытые getName String)|Получает имя поставщика хранилища ключей.|  
   
   
- **SQLServerKeyVaultAuthenticationCallback Interface**  
+ **Интерфейс SQLServerKeyVaultAuthenticationCallback**  
   
  Этот интерфейс содержит один метод для проверки подлинности хранилища ключей Azure, которая должна быть реализована пользователем.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 03/02/2018
   
 |Название|Описание|  
 |----------|-----------------|  
-|Открытые строки getUniqueIdentifier (int columnIndex)<br/><br/>открытый getUniqueIdentifier строки (строка ColumnLabel состоит из)<br/><br/>   открытый java.sql.Timestamp getDateTime (int columnIndex) <br/><br/> открытый java.sql.Timestamp getDateTime (columnName строка)   <br/><br/> открытый java.sql.Timestamp getDateTime (int columnIndex, календарь cal)   <br/><br/>открытый java.sql.Timestamp getDateTime (строка colName, календарь cal)    <br/><br/>public java.sql.Timestamp getSmallDateTime(int columnIndex)    <br/><br/> public java.sql.Timestamp getSmallDateTime(String columnName)   <br/><br/> открытый java.sql.Timestamp getSmallDateTime (int columnIndex, календарь cal)   <br/><br/> открытый java.sql.Timestamp getSmallDateTime (colName строки, календарь cal)   <br/><br/>  открытый BigDecimal getMoney (int columnIndex)  <br/><br/> открытый BigDecimal getMoney (columnName строка)   <br/><br/> открытый BigDecimal getSmallMoney (int columnIndex)   <br/><br/>  открытый BigDecimal getSmallMoney (columnName строка)  <br/><br/>открытый updateMoney void (columnName строки, BigDecimal x)    <br/><br/>  открытый updateSmallMoney void (columnName строки, BigDecimal x)  <br/><br/>     открытый updateDateTime void (индекс int, java.sql.Timestamp x) <br/><br/> открытый updateSmallDateTime void (индекс int, java.sql.Timestamp x) |Эти методы добавляются для поддержки постоянного шифрования для данных типов money, smallmoney, uniqueidentifier, datetime и smalldatetime. <br/><br/>Обратите внимание, что существующий метод updateTimestamp() используется для обновления столбцов, зашифрованных datetime2. Для зашифрованных datetime и smalldatetime столбцы использовать новые методы updateDateTime() и updateSmallDateTime() соответственно.|
+|Открытые строки getUniqueIdentifier (int columnIndex)<br/><br/>открытый getUniqueIdentifier строки (строка ColumnLabel состоит из)<br/><br/>   открытый java.sql.Timestamp getDateTime (int columnIndex) <br/><br/> открытый java.sql.Timestamp getDateTime (columnName строка)   <br/><br/> открытый java.sql.Timestamp getDateTime (int columnIndex, календарь cal)   <br/><br/>открытый java.sql.Timestamp getDateTime (строка colName, календарь cal)    <br/><br/>открытый java.sql.Timestamp getSmallDateTime (int columnIndex)    <br/><br/> открытый java.sql.Timestamp getSmallDateTime (columnName строка)   <br/><br/> открытый java.sql.Timestamp getSmallDateTime (int columnIndex, календарь cal)   <br/><br/> открытый java.sql.Timestamp getSmallDateTime (colName строки, календарь cal)   <br/><br/>  открытый BigDecimal getMoney (int columnIndex)  <br/><br/> открытый BigDecimal getMoney (columnName строка)   <br/><br/> открытый BigDecimal getSmallMoney (int columnIndex)   <br/><br/>  открытый BigDecimal getSmallMoney (columnName строка)  <br/><br/>открытый updateMoney void (columnName строки, BigDecimal x)    <br/><br/>  открытый updateSmallMoney void (columnName строки, BigDecimal x)  <br/><br/>     открытый updateDateTime void (индекс int, java.sql.Timestamp x) <br/><br/> открытый updateSmallDateTime void (индекс int, java.sql.Timestamp x) |Эти методы добавляются для поддержки постоянного шифрования для данных типов money, smallmoney, uniqueidentifier, datetime и smalldatetime. <br/><br/>Обратите внимание, что существующий метод updateTimestamp() используется для обновления столбцов, зашифрованных datetime2. Для зашифрованных datetime и smalldatetime столбцы использовать новые методы updateDateTime() и updateSmallDateTime() соответственно.|
 |открытые void updateBoolean (int index, логическое x, логическое forceEncrypt)  <br/><br/>  открытые void updateByte (int индекса, байтов x логическое forceEncrypt)  <br/><br/>  открытые void updateShort (int index, короткое x, логическое forceEncrypt)  <br/><br/> открытые void updateInt (индекс int, int x логическое forceEncrypt)   <br/><br/>  открытые void updateLong (индекс int, long x, логическое forceEncrypt)  <br/><br/> открытые void updateFloat (int index, число с плавающей запятой x, логическое forceEncrypt)   <br/><br/> открытые void updateDouble (int index, double x, логическое forceEncrypt)   <br/><br/> открытый updateMoney void (int index, BigDecimal x логическое forceEncrypt)   <br/><br/>  открытый updateMoney void (columnName строка BigDecimal x логическое forceEncrypt)  <br/><br/> открытый updateSmallMoney void (int index, BigDecimal x логическое forceEncrypt)   <br/><br/>  открытый updateSmallMoney void (columnName строка BigDecimal x логическое forceEncrypt)  <br/><br/> открытые void updateBigDecimal (int индекса, BigDecimal x точности целое число со знаком, масштаб целое число, логическое forceEncrypt)   <br/><br/>  открытые void updateString (int columnIndex, stringValue строка, логическое forceEncrypt)  <br/><br/>  открытые void updateNString (int columnIndex, nString строка, логическое forceEncrypt)  <br/><br/>  открытые void updateNString (ColumnLabel состоит из строки, nString строка, логическое forceEncrypt)  <br/><br/> открытые void updateBytes (int index, x[] байтов, boolean forceEncrypt)   <br/><br/>  открытые void updateDate (индекс int, java.sql.Date x логическое forceEncrypt)  <br/><br/> открытые void updateTime (индекс int, java.sql.Time x масштаб целое число, логическое forceEncrypt)   <br/><br/> открытые void updateTimestamp (индекс int, java.sql.Timestamp x масштаб int логическое forceEncrypt)   <br/><br/> открытый updateDateTime void (индекс int, java.sql.Timestamp x масштаб целое число, логическое forceEncrypt)   <br/><br/> открытый updateSmallDateTime void (индекс int, java.sql.Timestamp x масштаб целое число, логическое forceEncrypt)   <br/><br/>  открытый метод updateDateTimeOffset void (индекс int, microsoft.sql.DateTimeOffset x масштаб целое число, логическое forceEncrypt)  <br/><br/> открытый updateUniqueIdentifier void (int индекс, строки x логическое forceEncrypt)    <br/><br/>  открытые void updateObject (int индекса, объект x, int точность, масштаб int, boolean forceEncrypt)  <br/><br/>  открытые void updateObject (int индекса, объект obj, SQLType targetSqlType, int шкалы, логическое forceEncrypt)  <br/><br/> открытые void updateBoolean (columnName строка, логическое x, логическое forceEncrypt)    <br/><br/>  открытые void updateByte (columnName строки, байтов x логическое forceEncrypt)  <br/><br/>  открытые void updateShort (columnName строки, короткое x, логическое forceEncrypt)  <br/><br/> открытые void updateInt (columnName строки, int x логическое forceEncrypt)   <br/><br/>   открытые void updateLong (columnName строки, долго x, логическое forceEncrypt) <br/><br/>  открытые void updateFloat (columnName строку, число с плавающей запятой x, логическое forceEncrypt)  <br/><br/>  открытые void updateDouble (columnName строки, double x, логическое forceEncrypt)  <br/><br/> открытые void updateBigDecimal (columnName строка BigDecimal x логическое forceEncrypt)   <br/><br/>  открытые void updateBigDecimal (columnName строки, BigDecimal x точности целое число со знаком, масштаб целое число, логическое forceEncrypt)  <br/><br/> открытые void updateString (columnName строка, строка x логическое forceEncrypt)   <br/><br/>  открытые void updateBytes (columnName строки, x[] байтов, boolean forceEncrypt)  <br/><br/> открытые void updateDate (columnName строки, java.sql.Date x логическое forceEncrypt)   <br/><br/>  открытые void updateTime (columnName строки, java.sql.Time x масштаб int логическое forceEncrypt)  <br/><br/>  открытые void updateTimestamp (columnName строки, java.sql.Timestamp x масштаб int логическое forceEncrypt)  <br/><br/> открытый updateDateTime void (columnName строки, java.sql.Timestamp x масштаб int логическое forceEncrypt)   <br/><br/>  открытый updateSmallDateTime void (columnName строки, java.sql.Timestamp x масштаб int логическое forceEncrypt)  <br/><br/>  открытый метод updateDateTimeOffset void (columnName строки, microsoft.sql.DateTimeOffset x масштаб int логическое forceEncrypt)  <br/><br/>  открытый updateUniqueIdentifier void (columnName строка, строка x логическое forceEncrypt)<br/><br/>открытые void updateObject (columnName строка, объект x, int точность, масштаб int, boolean forceEncrypt)<br/><br/>открытые void updateObject (columnName строка, объект obj, SQLType targetSqlType, масштаба int, boolean forceEncrypt)|Обновите указанный столбец к значению данного java.<br/><br/>Если логическое forceEncrypt задано значение true, столбец будет устанавливать, только если он зашифрован и постоянное шифрование включено при соединении или на инструкции.<br/><br/>Если логическое forceEncrypt имеет значение false, драйвер не будет устанавливать параметры шифрования.|
 
   

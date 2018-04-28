@@ -1,27 +1,28 @@
 ---
-title: "Трассировка операций драйвера | Документы Microsoft"
-ms.custom: 
+title: Трассировка операций драйвера | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 717c1d05c666efef553a77d11dcd8105a0834832
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ea02f1c06e942933fa7add21888447664e3608f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tracing-driver-operation"></a>Трассировка операций драйвера
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/18/2017
   
  В следующей таблице приводится описание каждого из доступных уровней ведения журнала для открытых категорий ведения журнала.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |SEVERE|Указывает серьезный сбой и имеет самый высокий уровень ведения журнала. В драйвере JDBC этот уровень используется для выдачи ошибок и исключений.|  
 |WARNING|Указывает на возможную проблему.|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/18/2017
   
  В следующей таблице приводится описание каждого из доступных уровней ведения журнала для внутренних категорий ведения журнала.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |SEVERE|Указывает серьезный сбой и имеет самый высокий уровень ведения журнала. В драйвере JDBC этот уровень используется для выдачи ошибок и исключений.|  
 |WARNING|Указывает на возможную проблему.|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="logging-categories"></a>Категории ведения журнала  
  При создании объекта средства ведения журнала, следует указать объекту именованную сущность или категорию, которые нужно получать сведения журнала из. Драйвер JDBC поддерживает следующие открытые категории ведения журнала, определенные в пакете драйвера com.microsoft.sqlserver.jdbc.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |Соединение|Регистрирует сообщения в [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) класса. Приложение может задать уровень ведения журнала FINER.|  
 |.|Регистрирует сообщения в [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) класса. Приложение может задать уровень ведения журнала FINER.|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/18/2017
   
  Начиная с версии 2.0 драйвера Microsoft JDBC, драйвер также обеспечивает пакет com.microsoft.sqlserver.jdbc.internals, который включает поддержку ведения журнала для следующих внутренних категорий ведения журнала.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |AuthenticationJNI|Записывает в журнал сообщения о Windows интеграции проблем проверки подлинности (при **authenticationScheme** свойство соединения явно или неявно присвоено **NativeAuthentication**).<br /><br /> Приложение может задать уровень ведения журнала FINEST и FINE.|  
 |SQLServerConnection|Регистрирует сообщения в [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) класса. Приложение может задать уровень ведения журнала FINE и FINER.|  
@@ -164,7 +165,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Можно задать свойства в `logging.properties` файла с помощью объекта LogManager, который является частью java.util.logging.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диагностика проблем с драйвером JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

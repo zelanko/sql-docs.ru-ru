@@ -3,7 +3,7 @@ title: Определяемые пользователем типы больши
 description: Большие определяемые пользователем типы данных CLR (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4ba8559525b2b0b7a174a7160e7d3daf138f30
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: e3aaddc3ac658c0a7d713933b6594c1c3a27e88f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Сведения, возвращаемые в структуру DBPARAMINFO через **prgParamInfo** выглядит следующим образом:  
   
-|Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|"DBTYPE_UDT"|*n*|неопределенный|неопределенный|сброшен|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~0|неопределенный|неопределенный|набора|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
   
-|Тип параметра|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|Тип параметра|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|не учитывается|не учитывается|Должен быть задан, если параметр передается с помощью DBTYPE_IUNKNOWN.|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|не учитывается|не учитывается|не учитывается|  

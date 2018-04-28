@@ -1,27 +1,28 @@
 ---
-title: "С помощью массового копирования с драйвером JDBC | Документы Microsoft"
-ms.custom: 
+title: С помощью массового копирования с драйвером JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  Примеры кода SQLServerBulkCopy предназначены только для демонстрации синтаксиса использования SQLServerBulkCopy. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL INSERT ... SELECT для копирования данных.  
   
-###  <a name="BKMK_TableSetup"></a>Настройка таблицы  
+###  <a name="BKMK_TableSetup"></a> Настройка таблицы  
  Чтобы создать таблицы, необходимые для правильной работы примеров кода, выполните следующие инструкции Transact-SQL в базе данных SQL Server.  
   
 ```  
@@ -460,7 +461,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>Транзакции и операции массового копирования  
+##  <a name="BKMK_TransactionBulk"></a> Транзакции и операции массового копирования  
  Операции массового копирования могут выполняться как изолированные операции или как часть многошаговой транзакции. В последнем случае вы можете выполнить более одной операции массового копирования в одной транзакции, а также выполнять другие операции с базами данных (такие как вставка, обновление и удаление) с возможностью фиксации или отката всей транзакции.  
   
  По умолчанию операция массового копирования выполняется как изолированная. Операция массового копирования выполняется не как транзакция и без возможности отката. Если при возникновении ошибки необходимо частично или полностью отменить массовое копирование, можно использовать управляемую SQLServerBulkCopy транзакцию или выполнить операцию массового копирования в существующей транзакции.  
@@ -1000,17 +1001,17 @@ public class Program
   
  Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. Но источником данных может быть не только SQL Server, а любой источник данных, если данные могут быть прочитаны с помощью экземпляра ResultSet или реализации ISQLServerBulkRecord.  
   
-|Конструктор|Description|  
+|Конструктор|Описание|  
 |-----------------|-----------------|  
 |SQLServerBulkCopy(Connection)|Инициализирует новый экземпляр класса SQLServerBulkCopy, используя указанный открытый экземпляр SQLServerConnection. Если для объекта Connection включены транзакции, операции копирования будут выполняться в контексте этой транзакции.|  
 |SQLServerBulkCopy (строка URL-адреса подключения)|Инициализирует и открывает новый экземпляр SQLServerConnection, в зависимости от предоставленного URL-адреса подключения. Конструктор использует SQLServerConnection для инициализации нового экземпляра класса SQLServerBulkCopy.|  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |DestinationTableName строки|Имя целевой таблицы на сервере.<br /><br /> Если DestinationTableName не было задано при вызове writeToServer, вызывается исключение SQLServerException.<br /><br /> DestinationTableName состоит трехкомпонентным именем (\<базы данных >.\< Схема-владелец >. \<имя >). При необходимости можно уточнить имя таблицы с помощью указания базы данных и схемы-владельца. Но если имя таблицы содержит символ подчеркивания («_») или другие специальные символы, необходимо заключить имя в скобки. Дополнительные сведения см. в разделе «Идентификаторы» в электронной документации по SQL Server.|  
 |ColumnMappings|Сопоставления столбцов определяют связи между столбцами в источнике данных и столбцами в месте назначения.<br /><br /> Если сопоставления не определены, столбцы сопоставляются неявно по порядковому номеру. При этом исходная и целевая схемы должны совпадать. В противном случае будет вызвано исключение.<br /><br /> Если сопоставления не пусты, необязательно должны быть заданы все столбцы, присутствующие в источнике данных. Несопоставленные столбцы будут проигнорированы.<br /><br /> Обращаться к исходным и целевым столбцам можно по имени или порядковому номеру.|  
   
-|Метод|Description|  
+|Метод|Описание|  
 |------------|-----------------|  
 |Void addColumnMapping ((int sourceColumn, int destinationColumn)|Добавляет новое сопоставление столбцов, используя порядковые номера исходного и целевого столбцов.|  
 |Void addColumnMapping ((int sourceColumn, destinationColumn строка)|Добавляет новое сопоставление столбцов, используя порядковый номер исходного столбца и имя целевого столбца.|  
@@ -1029,13 +1030,13 @@ public class Program
 ### <a name="sqlserverbulkcopyoptions"></a>SQLServerBulkCopyOptions  
  Коллекция параметров, которые управляют поведением методов writeToServer в экземпляре SQLServerBulkCopy.  
   
-|Конструктор|Description|  
+|Конструктор|Описание|  
 |-----------------|-----------------|  
 |SQLServerBulkCopyOptions()|Инициализирует новый экземпляр класса SQLServerBulkCopyOptions, используя значения по умолчанию для всех параметров.|  
   
  Методы get и set существуют для следующих параметров.  
   
-|Параметр|Description|По умолчанию|  
+|Параметр|Описание|По умолчанию|  
 |------------|-----------------|-------------|  
 |Логическое CheckConstraints|Проверка ограничений при вставке данных.|False — ограничения не проверяются.|  
 |Логическое FireTriggers|Если этот параметр указан, сервер выполняет триггеры вставки для строк, вставляемых в базу данных.|False — триггеры не выполняются.|  
@@ -1049,7 +1050,7 @@ public class Program
   
  Методы get и set:  
   
-|Методы|Description|  
+|Методы|Описание|  
 |-------------|-----------------|  
 |Логическое isCheckConstraints()|Указывает, будут ли проверяться при вставке данных или нет ограничений.|  
 |Void setCheckConstraints(Boolean checkConstraints)|Задает ограничения будут проверяться при вставке данных или нет.|  
@@ -1073,7 +1074,7 @@ public class Program
 ### <a name="isqlserverbulkrecord"></a>ISQLServerBulkRecord  
  Интерфейс ISQLServerBulkRecord можно использовать для создания классов, которые считывают данные из любого источника (например, файла), чтобы позволить экземпляру SQLServerBulkCopy выполнить массовую загрузку данных таблицы SQL Server.  
   
-|Методы интерфейса|Description|  
+|Методы интерфейса|Описание|  
 |-----------------------|-----------------|  
 |Задать\<целое число > getColumnOrdinals()|Получение порядковых номеров столбцов, представленных в этой записи данных.|  
 |Строка getColumnName(int column)|Получение имени заданного столбца.|  
@@ -1099,13 +1100,13 @@ public class Program
   
 5.  Символы новой строки используются в качестве признака конца строки и не допускаются в данных.  
   
-|Конструктор|Description|  
+|Конструктор|Описание|  
 |-----------------|-----------------|  
 |SQLServerBulkCSVFileRecord (filetoparse указанными строка, строка кодировки, разделитель строк, логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (строка, строка, String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем и кодировкой. Если firstLineIsColumnNames имеет значение True, первая строка файла будет проанализирована как имена столбцов.  Если кодировка имеет значение NULL, будет использоваться кодировка по умолчанию.|  
 |SQLServerBulkCSVFileRecord (строка filetoparse указанными, строка кодировки логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем-запятой и кодировкой. Если firstLineIsColumnNames имеет значение True, первая строка файла будет проанализирована как имена столбцов.  Если кодировка имеет значение NULL, будет использоваться кодировка по умолчанию.|  
 |SQLServerBulkCSVFileRecord (строка filetoparse указанными, логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем-запятой и кодировкой по умолчанию. Если firstLineIsColumnNames имеет значение True, первая строка файла будет проанализирована как имена столбцов.|  
   
-|Метод|Description|  
+|Метод|Описание|  
 |------------|-----------------|  
 |Void addColumnMetadata (int positionInFile, строка columnName, int jdbcType, int точность, масштаб int)|Добавляет метаданные для указанного столбца в файле.|  
 |Void close()|Освобождает все ресурсы, связанные со средством чтения файла.|  
@@ -1114,7 +1115,7 @@ public class Program
 |Void setTimeWithTimezoneFormat (DateTimeForm atter dateTimeFormatter)|Задает формат для синтаксического анализа данных времени из файла как java.sql.Types.TIME_WITH_TIMEZONE.|  
 |Void setTimeWithTimezoneFormat(String timeFormat)|Задает формат для синтаксического анализа данных времени из файла как java.sql.Types.TIME_WITH_TIMEZONE.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

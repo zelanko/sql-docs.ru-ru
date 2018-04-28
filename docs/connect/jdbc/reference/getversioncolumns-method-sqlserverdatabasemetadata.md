@@ -1,30 +1,33 @@
 ---
-title: "Метод getVersionColumns (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getVersionColumns (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getVersionColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getVersionColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6adf8973efd40728df1604dcef9b4a87736be72c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 916191363743bd204b6841e1713e92cfeaddd46b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Метод getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +44,11 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *каталог*  
+ *catalog*  
   
  Объект **строка** , содержащее имя каталога.  
   
- *схемы*  
+ *schema*  
   
  Объект **строка** , содержащее шаблон имени схемы.  
   
@@ -64,12 +67,12 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
  Метод getVersionColumns возвращает результирующий набор будет содержать следующие сведения:  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
 |SCOPE|**короткий**|Не поддерживается драйвером JDBC.|  
-|COLUMN_NAME|**Строковые значения**|Имя столбца.|  
+|COLUMN_NAME|**String**|Имя столбца.|  
 |DATA_TYPE|**короткий**|Тип данных SQL из java.sql.Types.|  
-|TYPE_NAME|**Строковые значения**|Имя типа данных.|  
+|TYPE_NAME|**String**|Имя типа данных.|  
 |COLUMN_SIZE|**int**|Точность столбца.|  
 |BUFFER_LENGTH|**int**|Длина столбца в байтах.|  
 |DECIMAL_DIGITS|**короткий**|Масштаб столбца.|  
@@ -104,7 +107,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

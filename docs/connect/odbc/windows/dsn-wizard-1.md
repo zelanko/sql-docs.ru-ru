@@ -1,27 +1,28 @@
 ---
-title: "(Драйвер ODBC для SQL Server) первый экран мастера источников данных | Документы Microsoft"
-ms.custom: 
+title: (Драйвер ODBC для SQL Server) первый экран мастера источников данных | Документы Microsoft
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83474fa2c3acef62e015c62abff7ed17445a0389
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3798f482e51653c629760c7bfdf6e26a5b8d31fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-wizard-screen-1"></a>Первый экран мастера источника данных
 
@@ -29,11 +30,11 @@ ms.lasthandoff: 11/18/2017
     
 ## <a name="options"></a>Параметры
 
-### <a name="name"></a>Имя
+### <a name="name"></a>Название
 
 Имя источника данных, используемое приложением ODBC в том случае, если ему необходимо запросить соединение с источником данных. Например, «Персонал». Имя источника данных отображается в диалоговом окне администратора источника данных ODBC.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 Описание источника данных (необязательно). Например, «Дата приема на работу, журнал зарплат и текущий обзор всех сотрудников».
 

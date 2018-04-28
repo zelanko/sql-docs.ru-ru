@@ -1,27 +1,28 @@
 ---
-title: "Основные сведения о управления параллелизмом | Документы Microsoft"
-ms.custom: 
+title: Основные сведения о управления параллелизмом | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9a414c6d5fe2ee18fb83e168fe33fef53a0ac02c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-concurrency-control"></a>Общие сведения об управлении параллелизмом
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="remarks"></a>Замечания  
  Драйвер JDBC поддерживает следующие типы параллелизма.  
   
-|Тип параллелизма|Характеристики|Блокировки строк|Description|  
+|Тип параллелизма|Характеристики|Блокировки строк|Описание|  
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|Только для чтения|Нет|Обновление посредством курсора не разрешается, недопустима блокировка в отношении строк, входящих в результирующий набор.|  
 |CONCUR_UPDATABLE|Оптимистическая, чтение-запись|Нет|База данных считает состязание строк нежелательными, но возможными. Целостность строк проверяется сравнением отметки времени.|  
@@ -45,13 +46,13 @@ ms.lasthandoff: 11/18/2017
 ## <a name="result-sets-that-are-not-updateable"></a>Результирующие наборы не обновляются  
  Обновляемый результирующий набор ― это результирующий набор, в котором строки могут быть вставлены, обновлены и удалены. В следующих случаях [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не удается создать обновляемый курсор. и формирует исключение "Результирующий набор не является обновляемым".  
   
-|Причина|Description|Средство|  
+|Причина|Описание|Средство|  
 |-----------|-----------------|------------|  
 |Инструкция не создается при использовании синтаксиса JDBC 2.0 (или более поздней версии)|В JDBC 2.0 введены новые способы создания инструкций. Если используется синтаксис JDBC 1.0, результирующий набор по умолчанию доступен только для чтения.|Укажите тип результирующего набора и параллелизм при создании инструкции.|  
-|Инструкция создается при помощи TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]создает статический курсор моментального снимка. Курсор отключается от строк базовой таблицы, чтобы защитить курсор от обновления строк другими пользователями.|Используйте TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC или TYPE_FORWARD_ONLY с CONCUR_UPDATABLE, чтобы не создавать статического курсора.|  
+|Инструкция создается при помощи TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] создает статический курсор моментального снимка. Курсор отключается от строк базовой таблицы, чтобы защитить курсор от обновления строк другими пользователями.|Используйте TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC или TYPE_FORWARD_ONLY с CONCUR_UPDATABLE, чтобы не создавать статического курсора.|  
 |Конструкция таблицы исключает курсор KEYSET или DYNAMIC|Базовая таблица не содержит уникальных ключей, чтобы включить [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для уникальной идентификации строки.|Добавьте уникальные ключи к таблице, чтобы обеспечить уникальную идентификацию каждой строки.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление результирующими наборами с помощью драйвера JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

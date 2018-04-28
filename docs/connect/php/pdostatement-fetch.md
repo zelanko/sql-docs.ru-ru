@@ -2,7 +2,7 @@
 title: PDOStatement::fetch | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7326279bc150c25c712ca708dcd137a9e0d805d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 0ca4ca734983e1611453ed1f0c5468f5c0cb2576
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ $*cursor_offset*: символ необязательно (целое число
 ## <a name="return-value"></a>Возвращаемое значение  
 Смешанное значение, которое возвращает строку или значение false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 Курсор автоматически перемещается вперед при вызове fetch. Следующая таблица содержит список возможных $*fetch_style* значения.  
   
 |$*fetch_style*|Описание|  
@@ -70,7 +70,7 @@ $*cursor_offset*: символ необязательно (целое число
 |PDO::FETCH_ORI_PRIOR|Извлекает предыдущую строку.|  
 |PDO::FETCH_ORI_FIRST|Извлекает первую строку.|  
 |PDO::FETCH_ORI_LAST|Извлекает последнюю строку.|  
-|PDO::FETCH_ORI_ABS, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по номеру строки.|  
+|Значение PDO::FETCH_ORI_ABS, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по номеру строки.|  
 |PDO::FETCH_ORI_REL, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по положению относительно текущей позиции.|  
   
 Если значение, указанное для $*cursor_offset* или $*cursor_orientation* приводит к выходу за границу результирующего набора, fetch завершается с ошибкой.  

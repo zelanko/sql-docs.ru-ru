@@ -1,27 +1,28 @@
 ---
-title: "Элементы SQLServerResultSet | Документы Microsoft"
-ms.custom: 
+title: Элементы SQLServerResultSet | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767bc38218c81b81db91e5949bf2431ca4e98e95
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 610ace1ea15f69277cba1e4bd37b365a2c3e1cc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultset-members"></a>Элементы SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="fields"></a>Поля  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Используется для указания [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] чтение и запись типа оптимистичный параллелизм без блокировки строк.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Используется для указания [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] чтение и запись типа оптимистичный параллелизм без блокировки строк.|  
@@ -46,13 +47,13 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Класс, из которого наследуется:|Description|  
+|Класс, из которого наследуется:|Описание|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[Абсолютный](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Перемещает курсор в указанную строку в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Перемещает курсор в после последней строки [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
@@ -68,20 +69,20 @@ ms.lasthandoff: 11/18/2017
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде потока символов ASCII.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)|Получает значение индекса заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта java.math.BigDecimal.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде двоичного потока неинтерпретированных байтов.|  
-|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде больших двоичных объектов объекта на языке программирования Java.|  
-|[getBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **логическое** языке программирования Java.|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **байтов** языке программирования Java.|  
-|[метод getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **байтов** массива в языке программирования Java.|  
+|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде больших двоичных объектов объекта на языке программирования Java.|  
+|[GetBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **логическое** языке программирования Java.|  
+|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **байтов** языке программирования Java.|  
+|[Метод GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **байтов** массива в языке программирования Java.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта java.io.Reader.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект как объект Clob в языке программирования Java.|  
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Извлекает режим параллелизма этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Возвращает имя курсора SQL, используемые этим [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[функция getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта java.sql.Date на языке программирования Java.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Получает значение указанного столбца в виде[класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта.|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **двойные** языке программирования Java.|  
+|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **двойные** языке программирования Java.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Извлекает значение направления выборки для этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Извлекает размер выборки для данного [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **float** языке программирования Java.|  
+|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **float** языке программирования Java.|  
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverresultset.md)|Извлекает значение удержания это [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **int** языке программирования Java.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **длинные** языке программирования Java.|  
@@ -89,23 +90,23 @@ ms.lasthandoff: 11/18/2017
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект как объект модуля чтения.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)объекта в виде **NClob** объекта на языке программирования Java.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект в виде строки на Java языка программирования.|  
-|[функция getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта на языке программирования Java.|  
+|[Функция GetObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта на языке программирования Java.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде ссылки объекта на языке программирования Java.|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|Извлекает номер текущей строки.|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **короткие** языке программирования Java.|  
 |[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|Извлекает [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) , создающего это [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **строка** языке программирования Java.|  
+|[GetString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **строка** языке программирования Java.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **SQLXML** объекта.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта java.sql.Time на языке программирования Java.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта java.sql.Timestamp на языке программирования Java.|  
-|[getType](../../../connect/jdbc/reference/gettype-method-sqlserverresultset.md)|Извлекает тип курсора этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
+|[GetType](../../../connect/jdbc/reference/gettype-method-sqlserverresultset.md)|Извлекает тип курсора этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[getUnicodeStream](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект как поток символов Юникода.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)|Получает значение заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде URL-адрес объекта.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverresultset.md)|Возвращает первое предупреждение, указанное в отчетах вызовов в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)|Вставляет содержимое строки вставки в это [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта и в базу данных.|  
 |[isAfterLast](../../../connect/jdbc/reference/isafterlast-method-sqlserverresultset.md)|Сообщает, является ли курсор после последней строки в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[isBeforeFirst](../../../connect/jdbc/reference/isbeforefirst-method-sqlserverresultset.md)|Сообщает, является ли курсор находится перед первой строкой в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverresultset.md)|Указывает, является ли это [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект был закрыт.|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverresultset.md)|Указывает, является ли это [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект был закрыт.|  
 |[isFirst](../../../connect/jdbc/reference/isfirst-method-sqlserverresultset.md)|Сообщает, является ли курсор в первой строке этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[isLast](../../../connect/jdbc/reference/islast-method-sqlserverresultset.md)|Сообщает, является ли курсор на последнюю строку [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[последний](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Перемещает курсор на последнюю строку в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
@@ -114,10 +115,10 @@ ms.lasthandoff: 11/18/2017
 |[Далее](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Перемещает курсор на одну строку вниз от текущей позиции.|  
 |[предыдущие](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Перемещает курсор к предыдущей строке в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Обновляет текущую строку, записывая последнее значение из базы данных.|  
-|[относительный](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Перемещает курсор на заданное количество строк относительно текущей строки в положительном или отрицательном направлении.|  
-|[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|Возвращает значение, определяющее, была ли удалена строка.|  
+|[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Перемещает курсор на заданное количество строк относительно текущей строки в положительном или отрицательном направлении.|  
+|[RowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|Возвращает значение, определяющее, была ли удалена строка.|  
 |[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)|Возвращает значение, определяющее, была ли сделана вставка в текущую строку.|  
-|[rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|Возвращает значение, определяющее, была ли обновлена текущая строка.|  
+|[RowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|Возвращает значение, определяющее, была ли обновлена текущая строка.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md)|Дает указание относительно направления, в котором строки в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта будет обработан.|  
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|Дает указание относительно числа строк, которые должны быть извлечены из базы данных, при необходимости в дополнительных строках для данного драйвера JDBC [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|Обновляет указанный столбец объектом массив.|  
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/18/2017
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

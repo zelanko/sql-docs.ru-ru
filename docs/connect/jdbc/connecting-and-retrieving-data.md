@@ -1,27 +1,28 @@
 ---
-title: "Соединение и извлечение данных | Документы Microsoft"
-ms.custom: 
+title: Соединение и извлечение данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 856e4ea4fe28bf8884ea498a747d0bb4e9753699
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 243d428d37b88a3c993e93f3ca0caa7c4dd54492
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-and-retrieving-data"></a>Соединение и извлечение данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,12 +38,12 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Пример URL-адреса подключения](../../connect/jdbc/connection-url-sample.md)|Описывает, как использовать URL-адрес подключения для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и затем использовать инструкцию SQL для получения данных.|  
 |[Пример источника данных](../../connect/jdbc/data-source-sample.md)|Описывается порядок использования источника данных для соединения с SQL Server и последующего использования хранимой процедуры для извлечения данных.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример приложений драйвера JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

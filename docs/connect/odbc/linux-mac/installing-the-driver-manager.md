@@ -1,30 +1,30 @@
 ---
-title: "Установка диспетчера драйверов (драйвер ODBC для SQL Server) | Документы Microsoft"
-ms.custom: 
+title: Установка диспетчера драйверов (драйвер ODBC для SQL Server) | Документы Microsoft
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: a396bd0cab8ad6298eec79c48fdf541178194c8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-driver-manager"></a>Установка диспетчера драйверов
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/20/2018
   
 5.  Когда вы готовы к установке, а ваш компьютер имеет доступ к внешнему узлу по протоколу FTP, выполните следующую команду: **./build_dm.sh**.
 
-Если компьютер не может получить доступ к внешнему узлу по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [http://www.unixodbc.org](http://www.unixodbc.org/). Нажмите кнопку **загрузки** ссылку в левой части страницы, чтобы перейти на страницу загрузки. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). UnixODBC-2.3.1 не поддерживается в этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
+Если компьютер не может получить доступ к внешнему узлу по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [ http://www.unixodbc.org ](http://www.unixodbc.org/). Нажмите кнопку **загрузки** ссылку в левой части страницы, чтобы перейти на страницу загрузки. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). UnixODBC-2.3.1 не поддерживается в этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Тип **Да** Чтобы приступить к распаковке файлов. Эта часть процесса может занять до пяти минут.  
 
@@ -66,13 +66,13 @@ ms.lasthandoff: 02/20/2018
 
 Теперь все готово для установки драйвера. Дополнительные сведения см. в разделе [Установка Microsoft ODBC Driver for SQL Server для Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
 
-Установка вручную
+**Установка вручную**
 
 Если скрипту установки не удалось завершить работу, самостоятельно выполните настройку и сборку подходящего диспетчера драйверов.
 
 1.  Удалите все старые установленные версии unixODBC (например, unixODBC 2.2.11). В Red Hat Enterprise Linux 5 или 6, выполните следующую команду: **yum удалить unixODBC**. В SUSE Linux Enterprise **zypper удалить unixODBC**.  
   
-2.  Последовательно выберите пункты [http://www.unixodbc.org](http://www.unixodbc.org/). Нажмите кнопку **загрузки** ссылку в левой части страницы, чтобы перейти на страницу загрузки. Щелкните соответствующую ссылку, чтобы сохранить файл unixODBC-2.3.0.tar.gz на компьютере. UnixODBC-2.3.1 не поддерживается в этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+2.  Последовательно выберите пункты [ http://www.unixodbc.org ](http://www.unixodbc.org/). Нажмите кнопку **загрузки** ссылку в левой части страницы, чтобы перейти на страницу загрузки. Щелкните соответствующую ссылку, чтобы сохранить файл unixODBC-2.3.0.tar.gz на компьютере. UnixODBC-2.3.1 не поддерживается в этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 3.  На компьютере Linux, выполните команду: **tar xvzf unixODBC-2.3.0.tar.gz**.  
   

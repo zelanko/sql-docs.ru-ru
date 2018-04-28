@@ -1,27 +1,28 @@
 ---
-title: "Использование инструкций с драйвером JDBC | Документы Microsoft"
-ms.custom: 
+title: Использование инструкций с драйвером JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1a70518f53772a37ca9ad2354876a1ec57bea255
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Использование инструкций с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование инструкций в SQL](../../connect/jdbc/using-statements-with-sql.md)|Описывает, как использовать инструкции SQL с драйвером JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
 |[Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md)|Описывает использование хранимых процедур с драйвером JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 |[Выполнение пакетных операций](../../connect/jdbc/performing-batch-operations.md)|Описывает использование драйвера JDBC для выполнения пакетных операций.|  
 |[Обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md)|Описывает использование драйвера JDBC для выполнения сложных инструкций, выполняющих несколько заданий и могущих вернуть различные типы данных.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

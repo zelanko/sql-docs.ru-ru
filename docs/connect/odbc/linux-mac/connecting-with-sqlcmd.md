@@ -2,7 +2,7 @@
 title: Соединение с помощью sqlcmd | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,21 +70,21 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k, удалите или замените управляющие символы.  
   
-- **-K***application_intent*  
+- **-K *** application_intent*  
 Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если **-K** не указан, `sqlcmd` не поддерживает возможность подключения к вторичной реплике в группе доступности. Дополнительные сведения см. в разделе [драйвер ODBC для Linux и macOS - высокого уровня доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
-> Параметр**-K** не поддерживается в CTP-версии для SUSE Linux. Тем не менее, можно указать **ApplicationIntent = ReadOnly** ключевое слово в файле источника данных, передаваемый `sqlcmd`. Дополнительные сведения см. в разделе «поддержка имени DSN в `sqlcmd` и `bcp`» в конце этого раздела.  
+> Параметр **-K** не поддерживается в CTP-версии для SUSE Linux. Тем не менее, можно указать **ApplicationIntent = ReadOnly** ключевое слово в файле источника данных, передаваемый `sqlcmd`. Дополнительные сведения см. в разделе «поддержка имени DSN в `sqlcmd` и `bcp`» в конце этого раздела.  
   
 - -l *время ожидания* укажите количество секунд до `sqlcmd` время ожидания входа, при попытке подключиться к серверу.
 
 - -m *уровень_ошибки* элемента управления, какие сообщения об ошибках отправляются в стандартный вывод.  
   
-- **-M***multisubnet_failover*  
+- **-M *** multisubnet_failover*  
 Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** обеспечивает более быстрое обнаружение переход на другой ресурс и подключение к серверу (активного). Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], в разделе [драйвер ODBC для Linux и macOS - высокого уровня доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
-> Параметр**-M** не поддерживается в CTP-версии для SUSE Linux. Тем не менее, можно указать **MultiSubnetFailover = Yes** ключевое слово в файле источника данных, передаваемый `sqlcmd`. Дополнительные сведения см. в разделе «поддержка имени DSN в `sqlcmd` и `bcp`» в конце этого раздела.  
+> Параметр **-M** не поддерживается в CTP-версии для SUSE Linux. Тем не менее, можно указать **MultiSubnetFailover = Yes** ключевое слово в файле источника данных, передаваемый `sqlcmd`. Дополнительные сведения см. в разделе «поддержка имени DSN в `sqlcmd` и `bcp`» в конце этого раздела.  
   
 - -N шифрование для подключения.  
   
@@ -96,7 +96,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -q *commandline_query* выполнение запроса при `sqlcmd` запускается, но не завершает работу после завершения запроса.  
 
-- -Q *commandline_query* выполнение запроса при `sqlcmd` запускает. `sqlcmd`завершает работу после завершения запроса.  
+- -Q *commandline_query* выполнение запроса при `sqlcmd` запускает. `sqlcmd` завершает работу после завершения запроса.  
 
 - -r перенаправляет сообщения об ошибках в stderr.
 
@@ -104,7 +104,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char* укажите знак-разделитель столбцов.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*протокола*:] *сервера*[**, *** порт*]  
 Укажите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] соединиться, или, если -D используется, имя источника данных. Драйвер ODBC для Linux и macOS требует -S. Обратите внимание, что **tcp** является единственным допустимым протоколом.  
   
 - -t *query_timeout* укажите число секунд времени ожидания команды (или инструкции SQL).  
@@ -216,13 +216,13 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **Базы данных =***имя_базы_данных*  
+-   **Базы данных = *** имя_базы_данных*  
   
 -   **Драйвер = драйвер ODBC 11 для SQL Server** или **драйвер = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***server_name_or_IP_address*  
+-   **Server = *** server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   
@@ -232,6 +232,6 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 Существующие сценарии, вызывающие `isql` можно изменить, чтобы использовать `sqlcmd` , определив следующий псевдоним: `alias isql="sqlcmd –D"`.  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Соединение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

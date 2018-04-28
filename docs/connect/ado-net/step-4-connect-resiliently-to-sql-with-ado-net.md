@@ -2,7 +2,7 @@
 title: 'Шаг 4: Выполнение устойчивого подключения к SQL с помощью ADO.NET | Документы Microsoft'
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado-net
@@ -18,13 +18,13 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7ccf61c8c1e440ed8ae9533e61cbbf74d156eb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Шаг 4: Выполнение устойчивого подключения к SQL с помощью ADO.NET
 
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/18/2017
 Пример кода включает:  
   
 - Небольшой класс **TestSqlException**, что свойство с именем **номер**.  
-- `//throw new TestSqlException(4060);`, который вы можете раскомментировать.  
+- `//throw new TestSqlException(4060);` , который вы можете раскомментировать.  
   
 Если раскомментировать инструкции throw и перекомпилировать следующего запуска из **RetryAdo2.exe** выводит нечто похожее на следующее.  
   

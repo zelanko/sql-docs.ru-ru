@@ -1,30 +1,33 @@
 ---
-title: "Метод setHostNameInCertificate (SQLServerDataSource) | Документы Microsoft"
-ms.custom: 
+title: Метод setHostNameInCertificate (SQLServerDataSource) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: setHostNameInCertificate Method (SQLServerDataSource)
-apilocation: setHostNameInCertificate Method (SQLServerDataSource)
+apiname:
+- setHostNameInCertificate Method (SQLServerDataSource)
+apilocation:
+- setHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6809bd1bc1bde04e7080679b54bb2c316048ad4a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 84fe40795339ad4cc858716fbf73417363fb1673
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>Метод setHostNameInCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +51,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
   
  Если свойство hostNameInCertificate имеет значение null или определен, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] использует значение свойства serverName для проверки соответствия [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL-сертификат. Если для свойства hostNameInCertificate задано строковое значение или пустая строка "", драйвер использует это значение для проверки SSL-сертификата сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

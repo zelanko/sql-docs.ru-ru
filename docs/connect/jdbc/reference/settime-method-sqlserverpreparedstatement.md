@@ -1,30 +1,33 @@
 ---
-title: "setTime метод (SQLServerPreparedStatement) | Документы Microsoft"
-ms.custom: 
+title: setTime метод (SQLServerPreparedStatement) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setTime
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setTime
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76d540b51a281f4de1e6f337939c520cf0c64c8a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b60a8d5876a5d1e6c3352dc97a74f3893ed1a971
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime метод (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,12 +40,12 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[setTime (int, java.sql.Time)](../../../connect/jdbc/reference/settime-method-int-java-sql-time.md)|Устанавливает указанный параметр в заданное значение времени.|  
 |[setTime (int, java.sql.Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-int-java-sql-time-java-util-calendar.md)|Устанавливает указанный параметр в заданные значения времени и календаря.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Члены SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Класс SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

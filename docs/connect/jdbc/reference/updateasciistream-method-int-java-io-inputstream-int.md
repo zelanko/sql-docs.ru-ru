@@ -1,30 +1,33 @@
 ---
-title: "Метод updateAsciiStream (java.io.InputStream, int) | Документы Microsoft"
-ms.custom: 
+title: Метод updateAsciiStream (java.io.InputStream, int) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateAsciiStream (int, java.io.InputStream.int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateAsciiStream (int, java.io.InputStream.int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50427107f953ae175bacb595cada567a7fef3496
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 29618551943e7e0cd68dff00ed6c30f04359bfbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>Метод updateAsciiStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public void updateAsciiStream(int index,
   
  Объект, InputStream.  
   
- *length*  
+ *длина*  
   
  **Int** , указывающее длину потока.  
   
@@ -63,10 +66,10 @@ public void updateAsciiStream(int index,
   
  Если длина потока отличается тем, что указывается в *длина* параметра, драйвер JDBC вызовет исключение при обновлении или вставке строки.  
   
- Если длина потока неизвестна, *длина* параметра может быть задано значение -1, чтобы указать, что драйвер будет принимать потоки независимо от их длины. Для sqljdbc4.jar рекомендуется использовать метод JDBC 4.0 [updateAsciiStream метод &#40; int, java.io.InputStream &#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md) Если приложению нужно обновлять столбец из потока, длина которого неизвестна.  
+ Если длина потока неизвестна, *длина* параметра может быть задано значение -1, чтобы указать, что драйвер будет принимать потоки независимо от их длины. Для sqljdbc4.jar рекомендуется использовать метод JDBC 4.0 [метод updateAsciiStream &#40;int, java.io.InputStream&#41; ](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md) Если приложению нужно обновлять столбец из потока, длина которого неизвестна.  
   
-## <a name="see-also"></a>См. также:  
- [Метод updateAsciiStream &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>См. также  
+ [Метод updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

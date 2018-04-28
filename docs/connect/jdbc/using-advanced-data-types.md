@@ -1,27 +1,28 @@
 ---
-title: "Использование расширенных типов данных | Документы Microsoft"
-ms.custom: 
+title: Использование расширенных типов данных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 >  Значения CLOB могут использоваться с [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (или более поздней версии) типы данных больших значений. В частности, типы CLOB могут использоваться с **varchar(max)** и **nvarchar(max)** типы данных типов больших двоичных ОБЪЕКТОВ можно использовать с **varbinary(max)** и **изображения**  типы данных, а типы NCLOB могут использоваться с **ntext** и **nvarchar(max)**.  
   
 ## <a name="large-value-data-types"></a>Типы данных большого объема  
- В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]работа с данными большого размера типов требовала особого подхода. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Представляет описатель max для **varchar**, **nvarchar**, и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 байт. Столбцы таблицы и [!INCLUDE[tsql](../../includes/tsql_md.md)] можно указать переменные **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** типов данных.  
+ В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]работа с данными большого размера типов требовала особого подхода. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Представляет описатель max для **varchar**, **nvarchar**, и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 байт. Столбцы таблицы и [!INCLUDE[tsql](../../includes/tsql_md.md)] можно указать переменные **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** типов данных.  
   
  В большинстве случаев работа с типами данных большого объема предполагает их извлечение из базы данных или добавление в базу данных. В следующих разделах описываются различные способы выполнения этих задач.  
   
@@ -139,7 +140,7 @@ rs.updateRow();
  Дополнительные сведения о типах данных большого объема ищите в разделе «Использование типов данных большого объема» электронной документации по Microsoft SQL Server.  
   
 ## <a name="xml-data-type"></a>Тип данных XML  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]предоставляет **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** тип данных, как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в [!INCLUDE[tsql](../../includes/tsql_md.md)] функций CAST и CONVERT.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] предоставляет **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** тип данных, как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в [!INCLUDE[tsql](../../includes/tsql_md.md)] функций CAST и CONVERT.  
   
  В драйвере JDBC **xml** могут быть сопоставлены типу данных String, массив байтов, поток, объект CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** сопоставляется с типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** тип данных. Дополнительные сведения о том, как на чтение и запись XML-данных из реляционной базы данных с **SQLXML** типом данных Java см [XML-данных с поддержкой](../../connect/jdbc/supporting-xml-data.md).  
   
@@ -151,7 +152,7 @@ rs.updateRow();
   
 -   Доступ к XML как к байтовому массиву с ведущей меткой следования байтов (BOM) при кодировании в UTF-16 для взаимообмена с другими средствами обработками XML и файлами на диске.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]начальные Спецификации требует для XML в кодировке UTF-16. Приложение должно использовать эту метку при указании значений параметров XML в виде байтовых массивов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]всегда выводит XML-значения как UTF-16 без метки следования байтов строки или встроенным объявлением кодировки. Если значения XML извлекаются в формате byte[], BinaryStream или Blob, то для значения ожидается метка следования байтов UTF-16.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] начальные Спецификации требует для XML в кодировке UTF-16. Приложение должно использовать эту метку при указании значений параметров XML в виде байтовых массивов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] всегда выводит XML-значения как UTF-16 без метки следования байтов строки или встроенным объявлением кодировки. Если значения XML извлекаются в формате byte[], BinaryStream или Blob, то для значения ожидается метка следования байтов UTF-16.  
   
  Дополнительные сведения о **xml** тип данных, в разделе «тип данных xml» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
   
@@ -162,7 +163,7 @@ rs.updateRow();
   
  Дополнительные сведения об определенных пользователем типов данных см. в разделе «Использование и изменение экземпляров определяемых пользователем типов» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

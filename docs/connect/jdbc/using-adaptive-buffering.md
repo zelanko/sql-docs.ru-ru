@@ -1,27 +1,28 @@
 ---
-title: "Использование адаптивной буферизации | Документы Microsoft"
-ms.custom: 
+title: Использование адаптивной буферизации | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>Использование адаптивной буферизации
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **Запрос создает очень большой результирующий набор:** приложение может выполнить инструкцию SELECT, возвращающую больше строк, чем может уместиться в памяти приложения. В предыдущих версиях приложение должно было использовать серверный курсор, чтобы избежать OutOfMemoryError. Адаптивная буферизация обеспечивает возможность однопроходного просмотра данных в режиме только для чтения для результирующего набора произвольно большого объема без использования курсора сервера.  
   
--   **Запрос создает очень большие**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**столбцы или**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**значения параметра OUT:**  Приложение может извлечь одно значение (столбец или параметр OUT) слишком большого объема, чтобы поместиться полностью в памяти приложения. Адаптивная буферизация позволяет клиентскому приложению получать значения в виде потока, с помощью методов getCharacterStream, getBinaryStream или getAsciiStream. Приложение извлекает значение из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при чтении из потока.  
+-   **Запрос создает очень большие**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**столбцы или**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**значения параметра OUT:** Приложение может извлечь одно значение (столбец или параметр OUT) слишком большого объема, чтобы поместиться полностью в памяти приложения.         Адаптивная буферизация позволяет клиентскому приложению получать значения в виде потока, с помощью методов getCharacterStream, getBinaryStream или getAsciiStream. Приложение извлекает значение из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при чтении из потока.  
   
 > [!NOTE]  
 >  Благодаря адаптивной буферизации драйвер JDBC помещает в буфер только необходимое количество данных. Драйвер не позволяет любому открытому методу контролировать или ограничивать размер буфера.  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/18/2017
   
 -   Для однопроходных обновляемых результирующих наборов при возвращении блока строк драйвер обычно считывает в память число строк, указанных методом [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) метод [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) объекта, даже когда Адаптивная буферизация включена для соединения. Если вызов [Далее](../../connect/jdbc/reference/next-method-sqlserverresultset.md) метод [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) приводит объект OutOfMemoryError, можно уменьшить число строк, возвращаемых при вызове [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) метод [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) объекта, чтобы задать размеру выборки меньшее число строк, даже задать 1, при необходимости. Можно также запретить драйверу помещать в буфер все строки, вызвав [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) метод [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) объект с «**адаптивной**"перед выполнение инструкции. Так как результирующий набор не является прокручиваемым, если приложение обращается к значению столбца большого объема с помощью одного из get\<типа > методы поток, драйвер отбрасывает значение, как только приложение его считывает, так же, как для последовательного доступа только для чтения результирующие наборы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

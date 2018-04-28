@@ -1,7 +1,7 @@
 ---
 title: Linux и macOS учебника установки драйвера Microsoft SQL Server для PHP | Документы Microsoft
-ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.date: 04/11/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.workload: Inactive
-ms.openlocfilehash: f7c9542294be520b6861262e814b9fda31b06d5d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4ab3f815063a537b25b776b6b98fd26e74b7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux и macOS учебника установки драйвера Microsoft SQL Server для PHP
 Следующие инструкции предполагают чистую среду и показано, как установка 7.x PHP, драйвер Microsoft ODBC, Apache и драйверы Майкрософт для PHP для SQL Server на Ubuntu 16.04 и 17.10, RedHat 7, Debian 8 и 9, Suse 12 и macOS X 10.11 и 10.12. Эти инструкции следует рекомендовать Установка драйверов с помощью нагрузка PECL, но можно также загрузить готовых двоичных файлов с [драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) Github страница проекта и установите их следуйте инструкциям в разделе [ Загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md). Описание загрузки расширения и почему мы не добавляйте расширения файл PHP.ini, разделе [загрузка драйверов](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -35,8 +35,8 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="installing-the-drivers-on-ubuntu-1604-and-1710"></a>Установка драйверов в Ubuntu 16.04 и 17.10
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
+> [!NOTE]
+> Чтобы установить PHP 7.0 или 7.1, замените 7.2 7.0 или 7.1 в следующих командах.
 
 ### <a name="step-1-install-php"></a>Шаг 1. Установить PHP
 ```
@@ -75,8 +75,8 @@ sudo service apache2 restart
 
 ## <a name="installing-the-drivers-on-red-hat-7"></a>Установка драйверов в Red Hat 7
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
+> [!NOTE]
+> Чтобы установить PHP 7.0 или 7.1, замените remi php72 remi php70 или remi-php71 соответственно в следующих командах.
 
 ### <a name="step-1-install-php"></a>Шаг 1. Установить PHP
 
@@ -138,8 +138,8 @@ sudo apachectl restart
 
 ## <a name="installing-the-drivers-on-debian-8-and-9"></a>Установка драйверов в Debian 8 и 9
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
+> [!NOTE]
+> Чтобы установить PHP 7.0 или 7.1, замените 7.2 в следующих командах 7.0 или 7.1.
 
 ### <a name="step-1-install-php"></a>Шаг 1. Установить PHP
 ```
@@ -187,10 +187,9 @@ sudo service apache2 restart
 
 ## <a name="installing-the-drivers-on-suse-12"></a>Установка драйверов при Suse 12
 
-    > [!NOTE]
-    > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
-    > To install PHP 7.1, replace the repository URL below with the following URL:
-      `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> [!NOTE]
+> Чтобы установить PHP 7.0, пропустить следующую команду Добавление репозитория - 7.0 значение по умолчанию PHP на suse 12.
+> Чтобы установить PHP 7.1, замените URL-адрес репозитория ниже следующий URL-адрес: `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>Шаг 1. Установить PHP
 ```
@@ -232,21 +231,21 @@ sudo systemctl restart apache2
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace php72 with php70 or php71 respectively in the following commands.
+> [!NOTE]
+> Чтобы установить PHP 7.0 или 7.1, замените php@7.2 с php@7.0 или php@7.1 соответственно в следующих командах.
 
 ### <a name="step-1-install-php"></a>Шаг 1. Установить PHP
 
 ```
 brew tap
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew install php72 --with-pear --with-httpd24 --with-cgi
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+brew tap homebrew/core
+brew install php@7.2
 ```
+PHP должна появиться в пути — запустить `php -v` чтобы убедиться, что используется правильная версия PHP. Если не является правильной версии PHP не указан в пути к, выполните следующую команду:
+```
+brew link --force --overwrite php@7.2
+```
+
 ### <a name="step-2-install-prerequisites"></a>Шаг 2. Установка необходимых компонентов
 Установка драйвера ODBC для macOS, следуя указаниям [Linux и macOS страница установки](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
@@ -257,13 +256,20 @@ brew install autoconf automake libtool
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Шаг 3. Установить драйверы PHP для Microsoft SQL Server
 ```
-chmod -R ug+w /usr/local/opt/php72/lib/php
-pear config-set php_ini /usr/local/etc/php/7.2/php.ini system
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Шаг 4. Установка Apache и настройка Загрузка драйвера
 ```
+brew install apache2
+```
+Чтобы найти файл конфигурации для установки Apache Apache, выполните 
+```
+apachectl -V | grep SERVER_CONFIG_FILE
+``` 
+и замените путь к `httpd.conf` в следующих командах:
+```
+echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Шаг 5. Перезапустите Apache и протестировать пример сценария

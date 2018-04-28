@@ -1,30 +1,33 @@
 ---
-title: "Метод (SQLServerResultSet) updateByte | Документы Microsoft"
-ms.custom: 
+title: Метод (SQLServerResultSet) updateByte | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateByte
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateByte
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c3e9216441986ac70c0343cab96ea2ce7243ee1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 717bd45eb7fb102eb871ccf99da74a33bdc22699
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte метод (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +36,12 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[updateByte (int, byte)](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|Обновляет указанный столбец с **байтов** значение заданному индексу столбца.|  
 |[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|Обновляет указанный столбец с **байтов** значение заданному имени столбца.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,8 +1,8 @@
 ---
 title: PDOStatement::bindParam | Документы Microsoft
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ $*driver_options*: необязательные параметры драйве�
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение TRUE в случае успеха, в противном случае — значение FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 При привязке к столбцам сервера, имеющим тип varbinary, binary или varbinary(max) пустых данных следует указать двоичную кодировку (PDO::SQLSRV_ENCODING_BINARY) с помощью $*driver_options*. Дополнительные сведения о константах кодирования см. в разделе [константы](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> При привязке выходной параметр типа bigint, если значение может оказаться за пределами диапазона [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), использование PDO::PARAM_INT с PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE может привести к исключению «значение вне допустимого диапазона». Таким образом вместо этого используйте значение по умолчанию PDO::PARAM_STR и укажите размер полученной строке, не более 21. Это максимальное число цифр, включая знак минус любого значения типа bigint. 
+
 ## <a name="example"></a>Пример  
 Этот пример кода показывает, как получить доступ к параметру ввода/вывода.  
   
@@ -125,7 +128,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) для обеспечения точности и точность как PHP имеет ограниченную точность для [чисел с плавающей запятой](http://php.net/manual/en/language.types.float.php).
+> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) для обеспечения точности и точность как PHP имеет ограниченную точность для [чисел с плавающей запятой](http://php.net/manual/en/language.types.float.php).
 
 ## <a name="example"></a>Пример  
 В этом примере кода показано, как привязать десятичное значение в качестве входного параметра.  

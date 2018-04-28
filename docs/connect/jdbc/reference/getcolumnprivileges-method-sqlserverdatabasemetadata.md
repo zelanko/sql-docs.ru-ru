@@ -1,30 +1,33 @@
 ---
-title: "Метод getColumnPrivileges (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getColumnPrivileges (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumnPrivileges
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumnPrivileges
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2d0e071acf8df933f42fb1adea31ad759763096
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6b88af8e4af62f556bd22a3769d587ad214a1273
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Метод getColumnPrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *каталог*  
+ *catalog*  
   
  Объект **строка** , содержащее имя каталога.  
   
- *схемы*  
+ *schema*  
   
  Объект **строка** , содержащее имя схемы.  
   
@@ -69,16 +72,16 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
   
  Метод getColumnPrivileges возвращает результирующий набор будет содержать следующие сведения:  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**Строковые значения**|Имя каталога.|  
-|TABLE_SCHEM|**Строковые значения**|Имя схемы для таблицы.|  
-|TABLE_NAME|**Строковые значения**|Имя таблицы.|  
-|COLUMN_NAME|**Строковые значения**|Имя столбца.|  
-|GRANTOR|**Строковые значения**|Объект, предоставляющий доступ.|  
-|GRANTEE|**Строковые значения**|Объект, получающий доступ.|  
-|PRIVILEGE|**Строковые значения**|Тип предоставляемого доступа.|  
-|IS_GRANTABLE|**Строковые значения**|Указывает, разрешается ли получателю прав предоставлять доступ другим пользователям.|  
+|TABLE_CAT|**String**|Имя каталога.|  
+|TABLE_SCHEM|**String**|Имя схемы для таблицы.|  
+|TABLE_NAME|**String**|Имя таблицы.|  
+|COLUMN_NAME|**String**|Имя столбца.|  
+|GRANTOR|**String**|Объект, предоставляющий доступ.|  
+|GRANTEE|**String**|Объект, получающий доступ.|  
+|PRIVILEGE|**String**|Тип предоставляемого доступа.|  
+|IS_GRANTABLE|**String**|Указывает, разрешается ли получателю прав предоставлять доступ другим пользователям.|  
   
 > [!NOTE]  
 >  Дополнительные сведения о данных, возвращаемых методом getColumnPrivileges см. в разделе «sp_column_privileges (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
@@ -109,7 +112,7 @@ public static void executeGetColumnPrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

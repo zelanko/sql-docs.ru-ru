@@ -1,8 +1,8 @@
 ---
 title: 'Как: извлечение параметров вывода с помощью драйвера SQLSRV | Документы Microsoft'
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e1bd65cb80407049d7fe5518b1f687481aa6515
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 1a2b1f2e0a01456065ffc6af03d4e05a55492b2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -105,7 +105,7 @@ $lastName = "Blythe";
 $salesYTD = 0.0;  
 $params = array(   
                  array($lastName, SQLSRV_PARAM_IN),  
-                 array($salesYTD, SQLSRV_PARAM_OUT)  
+                 array(&$salesYTD, SQLSRV_PARAM_OUT)  
                );  
   
 /* Execute the query. */  
@@ -126,7 +126,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> При привязке выходного параметра в значение типа bigint, если значение может оказаться за пределами диапазона [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), необходимо указать его тип SQL в качестве SQLSRV_SQLTYPE_BIGINT. В противном случае это может привести к исключению «значение вне допустимого диапазона».
+
+## <a name="example"></a>Пример  
+В этом примере кода демонстрируется привязка значения больших bigint в качестве выходного параметра.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_OUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## <a name="see-also"></a>См. также  
 [Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

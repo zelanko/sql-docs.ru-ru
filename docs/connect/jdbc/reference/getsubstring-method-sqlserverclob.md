@@ -1,30 +1,33 @@
 ---
-title: "Метод getSubString (SQLServerClob) | Документы Microsoft"
-ms.custom: 
+title: Метод getSubString (SQLServerClob) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.getSubString
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.getSubString
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7492c21386b833d335cc898d997afdb3e04f3b97
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 57bfbc4553d33005a81ee71864551c1b91b481f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Метод getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public java.lang.String getSubString(long pos,
   
  Первый символ извлекаемой подстроки. Первый символ находится в позиции 1.  
   
- *length*  
+ *длина*  
   
  Количество копируемых последовательных символов.  
   
@@ -59,7 +62,7 @@ public java.lang.String getSubString(long pos,
   
  При попытке получить ноль символов из объекта CLOB со значением NULL или с нулевой длиной возвращается пустая строка. При попытке получить символы любой длины, начиная с позиции, отличной от 1, в объекте CLOB нулевой длины вызывается исключение позиции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Элементы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Класс SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

@@ -3,7 +3,7 @@ title: Отправить данные FILESTREAM - ISequentialStream с при�
 description: Отправить данные FILESTREAM - ISequentialStream, привязанный к ICommandText
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3443fc79379538d3bdd3ad8794477923cd645fd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b793bfcb5fd8024c3fcf229ef6b390c58be059fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправить данные FILESTREAM - ISequentialStream с привязкой к ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом образце используется интерфейс ISequentialStream, связанный с параметром ICommandText, для передачи от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
  Чтобы скомпилировать и запустить этот образец, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  

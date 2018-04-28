@@ -1,27 +1,28 @@
 ---
-title: "Основные сведения о поддержке SSL | Документы Microsoft"
-ms.custom: 
+title: Основные сведения о поддержке SSL | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f65d4d8d094f300c3f0f3b26a6e50e63bcc9de35
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3c0f57006958269d6d52abc22738a4f51ced6d2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-ssl-support"></a>Основные сведения о поддержке SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/18/2017
   
 -   DNS-имя может содержать символы шаблонов. Но [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не поддерживает сопоставление шаблонов. То есть, что abc.com не будет соответствовать *.com, но \*.com будет соответствовать \*. com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [С помощью шифрования SSL](../../connect/jdbc/using-ssl-encryption.md)   
  [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   

@@ -1,27 +1,28 @@
 ---
-title: "Метод getHoldability (SQLServerResultSet) | Документы Microsoft"
-ms.custom: 
+title: Метод getHoldability (SQLServerResultSet) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d413613719a5ea0adc8e323cfd8aaea205219d2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0c15ef2e33c0071f67ee12d571cbd410365f3f89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getholdability-method-sqlserverresultset"></a>Метод getHoldability (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +55,7 @@ public int getHoldability()
   
  При сбросе уровня удержания и getHoldability метод будет вызван на ранее созданном объекте результирующего набора, значение, возвращенное этим методом может отличаться от значения удержания, возвращенного следующие методы: Statement.getResultSetHoldability , Connection.getHoldability или DatabaseMetaData.getResultSetHoldability.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

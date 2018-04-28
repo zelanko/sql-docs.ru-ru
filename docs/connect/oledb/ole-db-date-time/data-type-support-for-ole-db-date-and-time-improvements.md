@@ -3,7 +3,7 @@ title: Поддержка типов данных даты OLE DB и улучш�
 description: Поддержка типов данных для улучшения даты и времени OLE DB
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336665f67245911fa560c8ac54cad77dc9c661c6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08185700242e870ee58c1d0826fc41081e9d89e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Поддержка типов данных даты OLE DB и улучшения времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -183,7 +183,7 @@ enum SQLVARENUM {
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
 |DBTYPE_DBTIME2|**время**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
   
  Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление с **datetime2** , предоставив имя типа в *pwszTypeName*. Если **datetime** указано, *bScale* должно быть 3. Если **smalldatetime** указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
   

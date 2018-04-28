@@ -1,30 +1,33 @@
 ---
-title: "Метод supportsPositionedUpdate (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод supportsPositionedUpdate (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.supportsPositionedUpdate
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.supportsPositionedUpdate
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeae9900db3762198fe4afc049d02799926c366c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 00ac61aa4a0eae9d8c1532a5d4cb82c5b83df474
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportspositionedupdate-method-sqlserverdatabasemetadata"></a>Метод supportsPositionedUpdate (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public boolean supportsPositionedUpdate()
 ## <a name="remarks"></a>Замечания  
  Этот метод supportsPositionedUpdate указывается с помощью метода supportsPositionedUpdate в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

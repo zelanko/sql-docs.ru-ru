@@ -1,28 +1,28 @@
 ---
-title: "Часто задаваемые вопросы (FAQ) для драйвера JDBC | Документы Microsoft"
-ms.custom: 
+title: Часто задаваемые вопросы (FAQ) для драйвера JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e2ca76d6aa4703349ea3232392dee17ace44643
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: b2872e0674a8195b2460c229a1244cc399a936b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Часто задаваемые вопросы (FAQ) для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/02/2018
   
 |JAR|Спецификация JDBC|Версии JDK|  
 |-|-|-|  
-|mssql-jdbc-6.4.0.jre9.jar|JDBC 4.1 и 4.2 4.3 (частично)|JDK 9.0|  
+|MSSQL jdbc-6.4.0.jre9.jar|JDBC 4.1 и 4.2 4.3 (частично)|JDK 9.0|  
 |mssql-jdbc-6.4.0.jre8.jar|JDBC 4.2 и 4.1|JDK 8.0|  
 |mssql-jdbc-6.4.0.jre7.jar|JDBC 4.1|JDK 7.0|  
 
@@ -49,8 +49,8 @@ ms.lasthandoff: 03/02/2018
   
 |JAR|Спецификация JDBC|Версии JDK|  
 |-|-|-|  
-|mssql-jdbc-6.2.1.jre8.jar|JDBC 4.2, 4.1 и 4.0|JDK 8.0|  
-|mssql-jdbc-6.2.1.jre7.jar|JDBC 4.1 и 4.0|JDK 7.0|  
+|MSSQL jdbc-6.2.1.jre8.jar|JDBC 4.2, 4.1 и 4.0|JDK 8.0|  
+|MSSQL jdbc-6.2.1.jre7.jar|JDBC 4.1 и 4.0|JDK 7.0|  
  
  Microsoft JDBC Driver 6.0 и 4.2 для SQL Server поддерживает спецификации JDBC 4.0, 4.1 и 4.2 и включают две библиотеки классов JAR в пакете установки следующим образом:  
   

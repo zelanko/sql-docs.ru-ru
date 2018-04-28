@@ -3,7 +3,7 @@ title: Вызов хранимой процедуры (OLE DB) | Докумен�
 description: Вызов хранимой процедуры (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e89b51abc13d346ef0ed6d0ef77a5cb218157da
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 730a33b3f693acafe73cf6f4998eb60d6bcb10b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures---calling"></a>Хранимые процедуры - вызов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/06/2018
   
  Общий синтаксис для вызова процедуры с помощью escape-последовательности ODBC CALL выглядит следующим образом.  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {[**? =**]**вызов ***имя_процедуры*[**(**[*параметр*] [**,**[*параметр*]]...** )**]}  
   
  Например:  
   

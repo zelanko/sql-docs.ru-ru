@@ -1,27 +1,28 @@
 ---
-title: "Преобразование типов данных понимание | Документы Microsoft"
-ms.custom: 
+title: Преобразование типов данных понимание | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e18bd56e110cccab17488de752ba5ab4c8666fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-conversions"></a>Общие сведения о преобразованиях типов данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **Зависимости от данных (z)**: преобразования из типа Java **строка** типа для базового [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных зависит от следующих условий: драйвер отправляет **строка** значение [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразования, при необходимости. Если свойство sendStringParametersAsUnicode имеет значение true, а базовый [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **изображения**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не выполняет преобразование **nvarchar** для **изображения** и вызывает исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **изображения**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразование **varchar** для **изображение**и не вызывает исключение.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]выполняет преобразования и передает ошибки обратно драйверу JDBC, если возникают проблемы.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразования и передает ошибки обратно драйверу JDBC, если возникают проблемы.  
   
  Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] столбец имеет тип данных **XML**, значение должно быть допустимым **XML**. При вызове методов updateBlob, updateBinaryStream или updateBytes, значение данных должно быть шестнадцатеричным представлением для строки XML-символов. Например:  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **Зависимости от данных (z)**: преобразования из типа Java **строка** типа для базового [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных зависит от следующих условий: драйвер отправляет **строка** значение [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразования, при необходимости. Если свойство подключения sendStringParametersAsUnicode имеет значение true, а базовым [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **изображения**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не выполняет преобразование **nvarchar** для **изображения** и вызовет исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **изображения**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразование **varchar** для **изображение**и не вызывает исключение.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]выполняет ряд заданных преобразований и передает ошибки обратно драйверу JDBC, если возникают проблемы. Преобразование на стороне клиента является исключением и выполняется только в случае использования **даты**, **время**, **timestamp**, **логическое**и  **Строка** значения.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет ряд заданных преобразований и передает ошибки обратно драйверу JDBC, если возникают проблемы. Преобразование на стороне клиента является исключением и выполняется только в случае использования **даты**, **время**, **timestamp**, **логическое**и  **Строка** значения.  
   
  Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] столбец имеет тип данных **XML**, значение должно быть допустимым **XML**. При вызове методов setObject(byte[], SQLXML), setObject(inputStream, SQLXML) или setObject(Blob, SQLXML) значение данных должно быть шестнадцатеричным представлением для строки XML-символов. Например:  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/18/2017
   
  Обратите внимание, что метка следования байтов (BOM) является обязательной, если XML-символы имеют определенную кодировку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

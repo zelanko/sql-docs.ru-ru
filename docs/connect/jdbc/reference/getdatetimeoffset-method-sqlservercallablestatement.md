@@ -1,27 +1,28 @@
 ---
-title: "Метод getDateTimeOffset (SQLServerCallableStatement) | Документы Microsoft"
-ms.custom: 
+title: Метод getDateTimeOffset (SQLServerCallableStatement) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8cc0ebc7e1ecb4371fb02417b78a9ec0fac8a4d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 78ab9321ac85e2c352134a994e721330b3c509c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getdatetimeoffset-method-sqlservercallablestatement"></a>Метод getDateTimeOffset (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[Метод getDateTimeOffset(int)](../../../connect/jdbc/reference/getdatetimeoffset-method-int.md)|Получает значение указанного параметра в виде [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта на Java по заданному индексу параметра языка программирования.|  
 |[getDateTimeOffset(String)](../../../connect/jdbc/reference/getdatetimeoffset-method-string.md)|Получает значение указанного параметра в виде [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта на Java по заданному индексу параметра языка программирования.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

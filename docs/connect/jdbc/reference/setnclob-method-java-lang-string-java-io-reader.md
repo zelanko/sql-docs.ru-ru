@@ -1,27 +1,28 @@
 ---
-title: "Метод setNClob (java.lang.String, java.io.Reader) | Документы Microsoft"
-ms.custom: 
+title: Метод setNClob (java.lang.String, java.io.Reader) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a595679a-89b7-4b18-9ad2-d9cb13af2a28
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5052aa87b787754e1d331bdcc6da4bf36a359a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5285a39308ec7095a0441997000a79dfbf812873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setnclob-method-javalangstring-javaioreader"></a>Метод setNClob (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,8 +54,8 @@ public final void setNClob(java.lang.String parameterName,
   
  Этот метод setNClob указывается с помощью метода setNClob в интерфейсе java.sql.CallableStatement.  
   
-## <a name="see-also"></a>См. также:  
- [Метод setNClob &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>См. также  
+ [Метод setNClob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)   
  [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

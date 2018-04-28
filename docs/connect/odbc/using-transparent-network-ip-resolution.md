@@ -1,27 +1,28 @@
 ---
-title: "С помощью разрешение IP-адресов для прозрачной сети | Документы Microsoft"
-ms.custom: 
+title: С помощью разрешение IP-адресов для прозрачной сети | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0db2d2b8dfc796b8c2dc696d66264745182ab39a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e7249d00dc4f3d71b7c3245e2939be7e541f5b39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-transparent-network-ip-resolution"></a>С помощью прозрачного сетевого разрешение IP-адресов
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -52,12 +53,12 @@ TransparentNetworkIPResolution является существующей MultiSu
 
 `SQL_COPT_SS_TNIR` Атрибута предварительного соединения позволяет приложению управлять программным образом этот параметр:
 
-Атрибут соединения|   Размер или тип|  По умолчанию| Значение| Description
+Атрибут соединения|   Размер или тип|  По умолчанию| Значение| Описание
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER`или`SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Включает или отключает TNIR.
 
 <a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recoveryconnectodbclinux-macodbc-driver-on-linux-support-for-high-availability-disaster-recoverymd"></a>Дополнительные сведения о MultiSubnetFailover см. в разделе [драйвер ODBC для Linux и macOS - высокого уровня доступности и аварийного восстановления](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 * [Драйвер Microsoft ODBC Driver for SQL Server в Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
 * [SQL Server с несколькими подсетями кластеризация (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)

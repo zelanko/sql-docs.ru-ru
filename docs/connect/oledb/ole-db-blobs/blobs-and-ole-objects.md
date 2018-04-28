@@ -3,7 +3,7 @@ title: Большие двоичные объекты и объекты OLE | Д
 description: Большие двоичные объекты и объекты OLE
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-blobs
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2b3e367533e8e3c4ad4fcedbc9c15d49ecd19518
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/06/2018
 -   [Поддержка потоков для выходных параметров BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>См. также  
- [Драйвер OLE DB для SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)        
+ [Драйвер OLE DB для SQL Server программирования](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Использование типов больших значений](../../oledb/features/using-large-value-types.md)  
   
   

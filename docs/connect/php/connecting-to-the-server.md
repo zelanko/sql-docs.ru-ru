@@ -2,7 +2,7 @@
 title: Подключение к серверу | Документы Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: ''
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 818a71b8e0bc60168602e7fc0228c21319d08a21
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: ea18d388225bd8cf217126fd6ebe685ddf12fd2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-the-server"></a>Подключение к серверу
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

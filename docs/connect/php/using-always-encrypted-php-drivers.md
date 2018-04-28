@@ -1,7 +1,7 @@
 ---
 title: Использование постоянного шифрования с помощью драйверов PHP для SQL Server | Документы Microsoft
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Использование постоянного шифрования с помощью драйверов PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients](
   -   Драйвер SQLSRV:
    -   Если пользователю драйвера, чтобы определить типы SQL для зашифрованных столбцов, пользователь должен использовать `sqlsrv_prepare` и `sqlsrv_execute`.
    -   Если `sqlsrv_query` является основной, пользователь отвечает за задание типов SQL для всех параметров. Указанный тип SQL должен включать длину строки для строковых типов и масштаба и точности для десятичного типа.
-  -   PDO_SQLSRV Driver:
+  -   Драйвер PDO_SQLSRV:
    -   Атрибут инструкции `PDO::SQLSRV_ATTR_DIRECT_QUERY` не поддерживается в параметризованном запросе.
    -   Атрибут инструкции `PDO::ATTR_EMULATE_PREPARES` не поддерживается в параметризованном запросе.
    

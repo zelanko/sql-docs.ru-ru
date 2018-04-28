@@ -1,30 +1,33 @@
 ---
-title: "Метод storesUpperCaseIdentifiers | Документы Microsoft"
-ms.custom: 
+title: Метод storesUpperCaseIdentifiers | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.storesUpperCaseIdentifiers
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.storesUpperCaseIdentifiers
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bcd95be94e41891d29b21368d7a2cdc3e388c82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 85447a02e1d9dc5ef73a95181d2e017f4cf09f97
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>Метод storesUpperCaseIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public boolean storesUpperCaseIdentifiers()
 ## <a name="remarks"></a>Замечания  
  Этот метод storesUpperCaseIdentifiers указывается с помощью метода storesUpperCaseIdentifiers в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

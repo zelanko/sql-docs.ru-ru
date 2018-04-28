@@ -5,23 +5,23 @@ author: MightyPen
 ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 03/29/2018
+ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
-Также приводятся ссылки для загрузки модули подключения или *драйверы* , его можно использовать для взаимодействия с [Microsoft SQL Server](../index.md)и с его двойных в облаке [Azure База данных SQL](http://docs.microsoft.com/azure/sql-database/). Драйверы предоставляются для различных языков программирования, в следующих операционных системах:
+Также приводятся ссылки для загрузки модули подключения или *драйверы* , его можно использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md)и с его двойных в облаке [Azure База данных SQL](http://docs.microsoft.com/azure/sql-database/). Драйверы предоставляются для различных языков программирования, в следующих операционных системах:
 
 - Linux (Ubuntu)
 - MacOS
@@ -54,10 +54,10 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Язык | Загрузка драйвера SQL |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core для Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core для MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core для Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Драйвер node.js, инструкции по установке](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP | *Операционная система:*<br /><br />[Драйвер PHP для Windows](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Драйвер PHP Linux или macOS из Github](http://github.com/Microsoft/msphpsql/) |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc инструкции по установке](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Загрузите ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Драйвер Ruby, инструкции по установке](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Страница загрузки Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

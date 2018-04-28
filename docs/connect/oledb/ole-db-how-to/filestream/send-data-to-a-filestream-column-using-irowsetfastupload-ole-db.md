@@ -3,7 +3,7 @@ title: Отправлять данные в столбец FILESTREAM с исп�
 description: Отправлять данные в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 248c218d4d6446653013912695dc67f3c6e57b84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 7fcf8b4a4b7f6f70b4f537b1e018158b1d9e4332
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Этот образец использует интерфейс IRowsetFastUpload, чтобы передать от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
  Чтобы скомпилировать и запустить этот образец, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  

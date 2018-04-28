@@ -1,27 +1,28 @@
 ---
-title: "Метод position (java.sql.NClob, long) | Документы Microsoft"
-ms.custom: 
+title: Метод position (java.sql.NClob, long) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a4007d3e734210f8a60a56884898dfb48c7a970
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 45346eb400d07f3b236601c871897723b8f07bc8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="position-method-javasqlnclob-long"></a>Метод position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ long position(java.sql.NClob searchstr,
   
  NClob объект, который требуется найти.  
   
- *Запуск*  
+ *start*  
   
  Позиция, с которой начнется поиск; отсчитывается от 1.  
   
@@ -54,8 +55,8 @@ long position(java.sql.NClob searchstr,
 ## <a name="remarks"></a>Замечания  
  Этот метод позиция указывается методом в интерфейсе java.sql.NClob позиции.  
   
-## <a name="see-also"></a>См. также:  
- [Поместите метод &#40; SQLServerNClob &#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
+## <a name="see-also"></a>См. также  
+ [Метод Position &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [Методы SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [Элементы SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [Класс SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)  

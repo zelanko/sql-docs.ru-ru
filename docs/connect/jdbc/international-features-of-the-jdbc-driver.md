@@ -1,34 +1,35 @@
 ---
-title: "Функции поддержки различных языков драйвера JDBC | Документы Microsoft"
-ms.custom: 
+title: Функции поддержки различных языков драйвера JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7a9960483a410875f4c91d2b809b27f5c74c7d4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки различных языков драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Функции интернационализации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включают следующее:  
   
--   Поддержка полной локализации на тех же языках, как[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Поддержка полной локализации на тех же языках, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   Поддержка преобразований языка Java для зависящих от языкового стандарта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] данных  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  Большинство программ сопоставителя, написанных для платформ, отличных от Windows, основано на интернет-стандартах DSN, поэтому для международных доменных имен чаще всего используется формат Punycode, хотя DNS-сервер под управлением Windows в частной сети можно в индивидуальном порядке настроить на использование символов UTF-8.  Дополнительные сведения см. в разделе [поддержка символов Юникода](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

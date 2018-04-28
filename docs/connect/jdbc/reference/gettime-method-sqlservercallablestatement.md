@@ -1,30 +1,33 @@
 ---
-title: "Метод getTime (SQLServerCallableStatement) | Документы Microsoft"
-ms.custom: 
+title: Метод getTime (SQLServerCallableStatement) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getTime
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getTime
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5375d28fbe1bf1eee239d621631e97f98a51f308
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 35f9f2345fb2f8972dcc1fcfa58eb7339f257162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>Метод getTime (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,14 +36,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[getTime (int)](../../../connect/jdbc/reference/gettime-method-int.md)|Получает значение указанного параметра в виде объекта java.sql.Time на языке программирования Java по заданному индексу параметра.|  
 |[getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar.md)|Получает значение указанного параметра в виде объекта java.sql.Time на Java по заданному индексу параметра языка программирования с помощью заданного объекта календаря.|  
 |[getTime (java.lang.String)](../../../connect/jdbc/reference/gettime-method-java-lang-string.md)|Получает значение указанного параметра в виде объекта java.sql.Time на языке программирования Java по заданному имени параметра.|  
 |[getTime (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-java-lang-string-java-util-calendar.md)|Получает значение указанного параметра в виде объекта java.sql.Time на Java по заданному имени параметра языка программирования с помощью заданного объекта календаря.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

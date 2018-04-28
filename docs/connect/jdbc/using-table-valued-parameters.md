@@ -1,27 +1,28 @@
 ---
-title: "Использование возвращающих табличные значения параметров | Документы Microsoft"
-ms.custom: 
+title: Использование возвращающих табличные значения параметров | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e68713965ff5c985244e992bed5f3dd0bfb8eef7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ad1e3f097b235509ee19552788965a66b4b890b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-table-valued-parameters"></a>Использование возвращающих табличные значения параметров
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
  Дополнительные сведения о возвращающих табличные значения параметров см. следующие ресурсы.  
   
-|Ресурс|Description|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Возвращающие табличные значения параметров (компонент Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363) в электронной документации по SQL Server|Описывает создание и использование возвращающих табличные значения параметров|  
 |[Определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkId=98364) в электронной документации по SQL Server|Описывает определяемые пользователем табличные типы, которые используются для объявления возвращающих табличные значения параметров|  
@@ -233,7 +234,7 @@ pStmt.execute();
   
  Этот класс представляет метаданные для столбца. Используется в интерфейсе ISQLServerDataRecord для передачи метаданных столбца табличное значение параметра. Доступны следующие методы этого класса:  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |открытый SQLServerMetaData (columnName строки, int sqlType, int точности, масштаба int, логическое useServerDefault, логическое isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal)|Инициализирует новый экземпляр SQLServerMetaData указанное имя столбца, тип sql, точность, масштаб и сервера по умолчанию. Эта форма конструктора поддерживает табличное значение параметров, что позволяет указывать, если столбец уникален в возвращающих табличные значения параметра, порядок сортировки для столбца и порядковый номер столбца сортировки. <br><br>useServerDefault - указывает, если этот столбец следует использовать значение сервера по умолчанию; Значение по умолчанию — false.<br>isUniqueKey - указывает, является ли столбец в табличное значение параметра уникальным; Значение по умолчанию — false.<br>sortOrder - указывает порядок сортировки для столбца; Значение по умолчанию — SQLServerSortOrder.Unspecified.<br>sortOrdinal - указывает порядковый номер столбца сортировки; sortOrdinal начинается с 0; Значение по умолчанию — -1.|
 |открытый SQLServerMetaData (columnName строки, int sqlType)|Инициализирует новый экземпляр SQLServerMetaData, используя имя столбца и тип sql.|  
@@ -256,7 +257,7 @@ pStmt.execute();
   
  Этот класс представляет таблицу данных в памяти для использования с табличное значение параметров. Доступны следующие методы этого класса:  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |Открытые SQLServerDataTable()|Инициализирует новый экземпляр SQLServerDataTable.|  
 |открытые итератора < операция\<целое число со знаком, Object [] >> getIterator()|Извлекает итератор для строк в таблице данных.|  
@@ -270,7 +271,7 @@ pStmt.execute();
   
  Этот класс представляет столбец из таблицы данных в памяти, представленной SQLServerDataTable. Доступны следующие методы этого класса:  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |открытый SQLServerDataColumn (columnName строки, int sqlType)|Инициализирует новый экземпляр SQLServerDataColumn с именем столбца и типом.|  
 |открытый getColumnName() строки|Возвращает имя столбца.|  
@@ -280,7 +281,7 @@ pStmt.execute();
   
  Этот класс представляет интерфейс, который пользователи могут реализовать для потоковой передачи данных для параметров, возвращающих табличные значения. Доступны следующие методы этого интерфейса:  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |открытый SQLServerMetaData getColumnMetaData (int, столбец);|Извлекает метаданные столбца индекса заданного столбца.|  
 |открытые int getColumnCount();|Возвращает общее число столбцов.|  
@@ -291,7 +292,7 @@ pStmt.execute();
   
  Следующие методы были добавлены к этому классу, для поддержки передачи параметров, возвращающих табличные значения.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |открытые окончательного void setStructured (int parameterIndex, tvpName строку, SQLServerDataTable tvpDataTbale)|Заполняет возвращающей табличное значение параметр с таблицей данных. Индекс параметра должно parameterIndex, tvpName — это имя табличное значение параметра, и tvpDataTable объект источника данных таблицы.|  
 |открытые окончательного void setStructured (int parameterIndex, tvpName строку, tvpResultSet результирующий набор)|Возвращающая табличное значение параметра заполняет набор результатов, полученных из другой таблицы. Индекс параметра должно parameterIndex, tvpName — имя табличное значение параметра, и tvpResultSet исходный объект результирующего набора.|  
@@ -301,13 +302,13 @@ pStmt.execute();
   
  Следующие методы были добавлены к этому классу, для поддержки передачи параметров, возвращающих табличные значения.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |открытые окончательного void setStructured (paratemeterName строка, строка tvpName, SQLServerDataTable tvpDataTable)|Заполняет возвращающей табличное значение параметра, передаваемое хранимой процедуры с таблицей данных. Имя параметра должно paratemeterName, tvpName — имя типа возвращающего табличное значение Параметра, и tvpDataTable объект таблицы данных.|  
 |открытые окончательного void setStructured (paratemeterName строка, строка tvpName, tvpResultSet результирующий набор)|Заполняет возвращающей табличное значение параметра, передаваемое хранимой процедуры с набором результатов, полученных из другой таблицы. paratemeterName — это имя параметра, tvpName — имя типа возвращающего табличное значение Параметра и tvpResultSet является исходный объект результирующего набора.|  
 |открытые окончательного void setStructured (paratemeterName строка, строка tvpName, ISQLServerDataRecord tvpDataRecord)|Заполняет возвращающей табличное значение параметра, передаваемое хранимой процедуры с ISQLServerDataRecord объекта. ISQLServerDataRecord используется для потоковой передачи данных и пользователь решает, как его использовать. paratemeterName — это имя параметра, tvpName — имя типа возвращающего табличное значение Параметра и tvpDataRecord — это объект ISQLServerDataRecord.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,27 +1,28 @@
 ---
-title: "Типы курсоров (драйвер SQLSRV) | Документы Microsoft"
-ms.custom: 
+title: Типы курсоров (драйвер SQLSRV) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22307b0c750e0d860711695ff42031b36c31a731
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c95beace96484b53d6786f8df24b55878a1ab8e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Типы курсоров (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/18/2017
   
 Можно создать результирующий набор с Прокручиваемый курсор, который позволяет получить доступ к любой строки в результирующем наборе, в любом порядке. В следующей таблице перечислены значения, которые могут быть переданы в **прокручиваемый** sqlsrv_query или sqlsrv_prepare.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Позволяет перемещать одной строке за раз, начиная с первой строки результирующего набора, пока не будет достигнут конец результирующего набора.<br /><br />Это тип курсора по умолчанию.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) возвращает ошибку для результирующих наборов, созданных с этим типом курсора.<br /><br />**вперед** является сокращенной формой SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Позволяет осуществлять доступ к строкам в любом порядке, но не будет отражать изменения в базе данных.<br /><br />**статические** является сокращенной формой SQLSRV_CURSOR_STATIC.|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
   
 В следующей таблице описаны значения, можно указать в *строки* параметра.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Задает следующую строку. Это значение по умолчанию, если вы не укажете *строки* параметра для прокрутки результирующего набора.|  
 |SQLSRV_SCROLL_PRIOR|Задает строку перед текущей строкой.|  
@@ -230,6 +231,6 @@ if ($row ) {
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   

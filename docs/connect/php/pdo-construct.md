@@ -2,7 +2,7 @@
 title: PDO::__construct | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a1c40e8e31cbba9eb93155c3f81f6dd03452b59
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: d9cf4a81701d1ad4ddaa1491ea877331f933a9e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +51,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ## <a name="exceptions"></a>Исключения  
 PDOException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 Объект соединения можно закрыть, установив для экземпляра значение NULL.  
   
 После подключения PDO::errorCode отображает 01000 вместо 00000.  

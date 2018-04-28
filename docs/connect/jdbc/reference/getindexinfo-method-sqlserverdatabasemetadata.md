@@ -1,30 +1,33 @@
 ---
-title: "Метод getIndexInfo (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getIndexInfo (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Метод getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Объект **строка** , содержащее имя каталога.  
   
- *схемы*  
+ *schema*  
   
  Объект **строка** , содержащее имя схемы.  
   
@@ -74,21 +77,21 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Метод getIndexInfo возвращает результирующий набор будет содержать следующие сведения:  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**Строковые значения**|Имя базы данных, в которой расположена указанная таблица.|  
-|TABLE_SCHEM|**Строковые значения**|Схема таблицы.|  
-|TABLE_NAME|**Строковые значения**|Имя таблицы.|  
+|TABLE_CAT|**String**|Имя базы данных, в которой расположена указанная таблица.|  
+|TABLE_SCHEM|**String**|Схема таблицы.|  
+|TABLE_NAME|**String**|Имя таблицы.|  
 |NON_UNIQUE|**boolean**|Указывает, могут ли значения индекса быть неуникальными.|  
-|INDEX_QUALIFIER|**Строковые значения**|Имя владельца индекса. Принимает значение NULL, если TYPE равен tableIndexStatistic.|  
-|INDEX_NAME|**Строковые значения**|Имя индекса.|  
+|INDEX_QUALIFIER|**String**|Имя владельца индекса. Принимает значение NULL, если TYPE равен tableIndexStatistic.|  
+|INDEX_NAME|**String**|Имя индекса.|  
 |TYPE|**короткий**|Тип индекса. Может иметь одно из следующих значений.<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**короткий**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1.|  
-|COLUMN_NAME|**Строковые значения**|Имя столбца.|  
-|ASC_OR_DESC|**Строковые значения**|Порядок, используемый в параметрах сортировки индекса. Может иметь одно из следующих значений.<br /><br /> A (по возрастанию)<br /><br /> D (по убыванию)<br /><br /> NULL (неприменимо)<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает «A».|  
+|COLUMN_NAME|**String**|Имя столбца.|  
+|ASC_OR_DESC|**String**|Порядок, используемый в параметрах сортировки индекса. Может иметь одно из следующих значений.<br /><br /> A (по возрастанию)<br /><br /> D (по убыванию)<br /><br /> NULL (неприменимо)<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает «A».  |  
 |CARDINALITY|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |PAGES|**int**|Число страниц для хранения индекса или таблицы.|  
-|FILTER_CONDITION|**Строковые значения**|Условие фильтра.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null.|  
+|FILTER_CONDITION|**String**|Условие фильтра.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null.  |  
   
 > [!NOTE]  
 >  Дополнительные сведения о данных, возвращаемых методом getIndexInfo см. в разделе «sp_indexes (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
@@ -119,7 +122,7 @@ public static void executeGetIndexInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

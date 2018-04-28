@@ -1,30 +1,33 @@
 ---
-title: "Метод getColumnTypeName (SQLServerResultSetMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getColumnTypeName (SQLServerResultSetMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getColumnTypeName
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getColumnTypeName
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97b69f64525d8ebefea97dab2490f46c3e71b6b8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: af2724c99dede909ce59aac8bf42938574995cb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>Метод getColumnTypeName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public java.lang.String getColumnTypeName(int column)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *столбец*  
+ *column*  
   
  **Int** , указывающее индекс столбца.  
   
@@ -52,9 +55,9 @@ public java.lang.String getColumnTypeName(int column)
 ## <a name="remarks"></a>Замечания  
  Этот метод getColumnTypeName указывается с помощью метода getColumnTypeName в интерфейсе java.sql.ResultSetMetaData.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Версии 3.0 драйвера JDBC поведение изменилось в столбце TYPE_NAME. В разделе [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) для получения дополнительной информации.  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Версии 3.0 драйвера JDBC поведение изменилось в столбце TYPE_NAME. В разделе [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) для получения дополнительной информации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Класс SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   

@@ -1,23 +1,24 @@
 ---
-title: "Устойчивость простоя подключения"
+title: Устойчивость простоя подключения
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: 6c36086404c8767ea30c85b2ebd77340d11732ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a736fc5dafc3c58401c54ab51d1a11d1753f3479
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idle-connection-resiliency"></a>Устойчивость простоя подключения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 Устойчивость подключений реализуется с помощью два ключевых слова подключения, которые могут быть добавлены в строки подключения: **ConnectRetryCount** и **ConnectRetryInterval**.
 
-|Ключевое слово|Значения|По умолчанию|Description|
+|Ключевое слово|Значения|По умолчанию|Описание|
 |-|-|-|-|
 |**ConnectRetryCount**| Целое число от 0 до 255 (включительно)|1|Максимальное количество попыток восстановить подключение прервано начинал. По умолчанию один попытка восстановить подключение, если нечитаемым. Значение 0 означает попыток без повторного подключения.|
 |**ConnectRetryInterval**| Целое число от 1 до 60 (включительно)|1| Время в секундах между попытками создания потерянного подключения. Приложение будет пытаться переподключить немедленно при обнаружении разорванное соединение, а затем будет ожидать **ConnectRetryInterval** секунд перед повторной попыткой. Это ключевое слово учитывается, если **ConnectRetryCount** равно 0.
@@ -133,5 +134,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 [Устойчивость подключения в драйвере ODBC в Windows](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

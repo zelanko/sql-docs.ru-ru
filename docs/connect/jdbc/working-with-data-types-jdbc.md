@@ -1,27 +1,28 @@
 ---
-title: "Работа с типами данных (JDBC) | Документы Microsoft"
-ms.custom: 
+title: Работа с типами данных (JDBC) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e01edbc1cb5bfebafc5bd5b04b786a5e38818d6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b6047257837dfc4c21122bc9577d2a7bf061c870
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-data-types-jdbc"></a>Работа с типами данных (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,12 +38,12 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Пример базовых типов данных](../../connect/jdbc/basic-data-types-sample.md)|Описывает использование методов считывания результирующих наборов для извлечения базовых [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных значения, а также использование методов обновления результирующего набора для обновления этих величин.|  
 |[Пример типа данных SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Описывает способ хранения XML-данных в реляционной базе данных, как получить XML-данных из базы данных и как выполнить синтаксический анализ XML-данных с **SQLXML** типа данных.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример приложений драйвера JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

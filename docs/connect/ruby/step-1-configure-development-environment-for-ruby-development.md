@@ -1,27 +1,28 @@
 ---
-title: "Шаг 1: Настройка среда разработки для Ruby | Документы Microsoft"
-ms.custom: 
+title: 'Шаг 1: Настройка среда разработки для Ruby | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 30a38b0a73eae053b36ccc8c2f3c30b9c8e21319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Шаг 1: Настройка среда разработки для Ruby
 Необходимо будет настроить среду разработки с необходимых компонентов для разработки приложений с помощью драйвера Ruby для SQL Server.    
@@ -36,8 +37,8 @@ ms.lasthandoff: 11/18/2017
   
 2.  **Установка Ruby**  
 Когда программа установки загружается, выполните следующее:  
-а. Дважды щелкните файл, чтобы запустить программу установки.  
-б. Выберите язык и согласиться с условиями.  
+A. Дважды щелкните файл, чтобы запустить программу установки.  
+Б. Выберите язык и согласиться с условиями.  
 в.  На экране параметров установки установите флажки рядом с обоих исполняемые файлы Ruby, добавить к пути и связывать .rb .rbw файлы и Ruby установки.  
   
 3.  **Загрузить набор Ruby разработки**  
@@ -45,8 +46,8 @@ ms.lasthandoff: 11/18/2017
   
 4.  **Установите набор Ruby разработки**  
 После завершения загрузки выполните следующие действия.  
-а. Дважды щелкните файл. Вы получите запрос where, чтобы извлечь файлы.  
-б. Нажмите кнопку «...» и выберите «C:\DevKit». Возможно, потребуется сначала создать ее, нажав кнопку «Создать папку».  
+A. Дважды щелкните файл. Вы получите запрос where, чтобы извлечь файлы.  
+Б. Нажмите кнопку «...» и выберите «C:\DevKit». Возможно, потребуется сначала создать ее, нажав кнопку «Создать папку».  
 в. Нажмите кнопку «ОК», а затем «извлечь», чтобы извлечь файлы.  
   
 5. **Откройте cmd.exe**  

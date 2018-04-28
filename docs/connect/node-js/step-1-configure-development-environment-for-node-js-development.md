@@ -1,27 +1,28 @@
 ---
-title: "Шаг 1: Настройка среды разработки для разработки приложений Node.js | Документы Microsoft"
-ms.custom: 
+title: 'Шаг 1: Настройка среды разработки для разработки приложений Node.js | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Шаг 1: Настройка среда разработки для Node.js
 Необходимо будет настроить среду разработки с необходимых компонентов для разработки приложений с помощью драйвера Node.js для SQL Server.  Наиболее распространенный метод является использование диспетчера пакетов node (npm-файл) для установки трудоемкой модуля, но вы можете скачать модуль трудоемкой непосредственно в [Github](https://github.com/pekim/tedious) при необходимости.  
@@ -31,8 +32,8 @@ ms.lasthandoff: 11/18/2017
 ## <a name="windows"></a>Windows  
   
 1. **Установка диспетчера пакетов среды выполнения и npm Node.js**  
-а. Последовательно выберите пункты [Node.js](https://nodejs.org/en/download/)  
-б. Щелкните соответствующую ссылку MSI-файл установщика Windows.   
+A. Последовательно выберите пункты [Node.js](https://nodejs.org/en/download/)  
+Б. Щелкните соответствующую ссылку MSI-файл установщика Windows.   
 в. После загрузки, запустите MSI-файл для установки Node.js  
   
 2. **Откройте cmd.exe**  
@@ -83,8 +84,8 @@ ms.lasthandoff: 11/18/2017
 ## <a name="mac"></a>Mac  
   
 1. **Установка диспетчера пакетов среды выполнения и npm Node.js**  
-а. Последовательно выберите пункты [Node.js](https://nodejs.org/en/download/)  
-б. Щелкните соответствующую ссылку установщика Mac OS.  
+A. Последовательно выберите пункты [Node.js](https://nodejs.org/en/download/)  
+Б. Щелкните соответствующую ссылку установщика Mac OS.  
 в. После скачивания выполните dmg для установки Node.js  
   
 2. **Откройте терминалов**  

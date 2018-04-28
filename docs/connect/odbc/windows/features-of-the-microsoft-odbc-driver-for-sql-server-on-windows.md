@@ -1,27 +1,28 @@
 ---
-title: "Функции Microsoft ODBC Driver for SQL Server в Windows | Документы Microsoft"
-ms.custom: 
+title: Функции Microsoft ODBC Driver for SQL Server в Windows | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Функции Microsoft ODBC Driver for SQL Server в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ ODBC Driver 13.1 for SQL Server содержит все функциональн
 Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] поддерживает [Driver-Aware Connection Pooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Дополнительные сведения см. в статье [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)  
-Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] поддерживает [асинхронное выполнение (метод уведомления)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Пример использования см. в разделе [асинхронного выполнения &#40; Метод уведомления &#41; Образец](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] поддерживает [асинхронное выполнение (метод уведомления)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Пример использования см. в разделе [асинхронное выполнение &#40;метод уведомления&#41; пример](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Устойчивость подключений
 Чтобы обеспечить сохранение подключения приложений к Базе данных SQL Microsoft Azure, драйвер ODBC в Windows может восстанавливать неактивные соединения. Дополнительные сведения см. в статье [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
@@ -58,11 +59,11 @@ ODBC Driver 13.1 for SQL Server содержит все функциональн
 
 В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client `-y0` для параметра `sqlcmd.exe` приводит к усечено до 1 МБ, если ширина экрана было равно 0.
   
-Начиная с ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], нет ограничений на объем данных, которые можно получить в одном столбце при `–y0` указано. `sqlcmd.exe`Теперь потоковую передачу столбцов размером до 2 ГБ ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] максимальное значение для типа данных).  
+Начиная с ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], нет ограничений на объем данных, которые можно получить в одном столбце при `–y0` указано. `sqlcmd.exe` Теперь потоковую передачу столбцов размером до 2 ГБ ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] максимальное значение для типа данных).  
   
 Другое отличие состоит в том, что указание оба `-h` и `-y0` теперь приводит к ошибке, сообщение о том, что эти параметры несовместимы. `-h`, который указывает количество строк для печати между заголовками столбцов и не был совместим с `-y0`, было пропущено, хотя заголовки не выводились.
   
 Обратите внимание, что `-y0` может вызвать проблемы с производительностью на сервере и сети, в зависимости от размера возвращаемых данных.
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Драйвер Microsoft ODBC для SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

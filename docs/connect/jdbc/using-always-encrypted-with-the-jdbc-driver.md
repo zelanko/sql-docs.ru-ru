@@ -2,7 +2,7 @@
 title: С помощью постоянного шифрования с драйвером JDBC | Документы Microsoft
 ms.custom: ''
 ms.date: 3/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: ''
+caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 02a0be7375eafcd3ba54dbdf83f3e55e73b13a91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>С помощью постоянного шифрования с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ Microsoft JDBC Driver for SQL Server имеются следующие пост�
 
 | Class | Описание | Имя поставщика |Предварительно зарегистрирован?|
 |:---|:---|:---|:---|
-|**SQLServerColumnEncryptionAzureKeyVaultProvider**| Поставщик для хранилища ключей для хранилища ключей Azure.| AZURE_KEY_VAULT|нет|
+|**SQLServerColumnEncryptionAzureKeyVaultProvider**| Поставщик для хранилища ключей для хранилища ключей Azure.| AZURE_KEY_VAULT|Нет|
 |**SQLServerColumnEncryptionCertificateStoreProvider**| Поставщик для хранилища сертификатов Windows.|MSSQL_CERTIFICATE_STORE|Да
 |**SQLServerColumnEncryptionJavaKeyStoreProvider**| Поставщик для хранилище ключей Java|MSSQL_JAVA_KEYSTORE|Да|
 

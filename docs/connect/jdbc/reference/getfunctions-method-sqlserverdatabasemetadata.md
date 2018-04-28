@@ -1,27 +1,28 @@
 ---
-title: "Метод getFunctions (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getFunctions (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d09162647b6d5a4076bb60b3bf05e1e90eb27dee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7cafae4dcdbe9102da3ef4e27ee20b41b231667e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Метод getFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *каталог*  
+ *catalog*  
   
  Имя каталога в базе данных. Если это пустая строка, то результат включает функции, доступные без каталога. Если это **null**, имя каталога не используется для поиска.  
   
@@ -66,20 +67,20 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  Все описания функции содержат следующие столбцы:  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**Строковые значения**|Имя базы данных, в которой находится указанная функция.|  
-|FUNCTION_SCHEM|**Строковые значения**|Имя схемы, в которой находится указанная функция.|  
-|FUNCTION_NAME|**Строковые значения**|Имя функции.|  
+|FUNCTION_CAT|**String**|Имя базы данных, в которой находится указанная функция.|  
+|FUNCTION_SCHEM|**String**|Имя схемы, в которой находится указанная функция.|  
+|FUNCTION_NAME|**String**|Имя функции.|  
 |NUM_INPUT_PARAMS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
 |NUM_RESULT_SETS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
-|REMARKS|**Строковые значения**|Комментарии к функции.|  
+|REMARKS|**String**|Комментарии к функции.|  
 |FUNCTION_TYPE|**короткий**|Тип функции. Может иметь одно из следующих значений.<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Все описания в возвращенном результирующем наборе упорядочены с помощью FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME и SPECIFIC_NAME.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

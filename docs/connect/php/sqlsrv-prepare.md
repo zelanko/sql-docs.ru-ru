@@ -2,7 +2,7 @@
 title: sqlsrv_prepare | Документы Microsoft
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: ''
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 52d4cbf24fe05ff73d85117ab8c9f10f566683a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,7 +83,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс инструкции. Если не удается создать ресурс инструкции, возвращается значение **false** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 При подготовке инструкции, которая использует переменные в качестве параметров, эти переменные привязываются к инструкции. Это означает, что в случае обновления значений переменных при следующем выполнении инструкции она будет использовать обновленные значения параметров.  
   
 Сочетание **sqlsrv_prepare** и **sqlsrv_execute** разделяет подготовку и выполнение инструкции между двумя вызовами функции и может использоваться для выполнения параметризованных запросов. Эта функция оптимально подходит для многократного выполнения инструкции с различными значениями параметров для каждого выполнения.  

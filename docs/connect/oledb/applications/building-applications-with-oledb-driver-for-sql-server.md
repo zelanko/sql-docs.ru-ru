@@ -3,7 +3,7 @@ title: Построение приложений с помощью драйве�
 description: Создание приложений с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Построение приложений с помощью драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   При разработке приложения, использующего драйвер OLE DB для SQL Server библиотеки, существует ряд проблем, которые следует учитывать. В подразделах этого раздела обсуждаются многие из этих проблем, включая переход от компонентов MDAC драйвер OLE DB для SQL Server, с помощью драйвера OLE DB для SQL Server заголовок файлы библиотеки и общие сведения о различных строках соединения, которые могут использоваться с драйвером OLE DB для S Сервер Менное.  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  Описывает, как различные компоненты доступа к данным можно использовать с разными версиями драйвера OLE DB для SQL Server.  
 
 ## <a name="see-also"></a>См. также  
- [Драйвер OLE DB для SQL Server программирования](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [Драйвер OLE DB для SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Разделы руководства по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

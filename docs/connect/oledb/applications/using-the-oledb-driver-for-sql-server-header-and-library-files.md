@@ -3,7 +3,7 @@ title: С помощью драйвер OLE DB для SQL Server заголов�
 description: С помощью драйвера OLE DB для SQL Server файлы заголовка и библиотеки
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>С помощью драйвер OLE DB для SQL Server заголовка и файлам библиотеки
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Драйвер OLE DB для SQL Server заголовка и файлы библиотек устанавливаются при выборе драйвер OLE DB для SQL Server SDK параметра во время процесса установки. При разработке приложения важно скопировать и установить все требуемые файлы для работы среды разработки. Дополнительные сведения об установке и распространении драйвер OLE DB для SQL Server см. в разделе [установка драйвер OLE DB для SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md).  
   
  Драйвер OLE DB для SQL Server заголовка и файлы библиотек устанавливаются в следующий каталог:  
   
- *% PROGRAM FILES %*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *% PROGRAM FILES %* \Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
   
  Драйвер OLE DB для SQL Server заголовочного файла (msoledbsql.h) можно использовать для добавления драйвер OLE DB для SQL Server функции доступа к данным в пользовательские приложения. Драйвер OLE DB для SQL Server заголовочного файла содержит все определения, атрибуты, свойства и интерфейсы, необходимые для использования преимуществ новых функций представлены в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

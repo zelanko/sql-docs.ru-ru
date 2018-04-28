@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d65fd337b3d3eec851bfa7d3bd43ec108be7286d
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/16/2018
 ---
@@ -48,7 +48,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Возвращаемое значение  
 Ассоциативный массив со следующими ключами:  
   
-|Key|Description|  
+|Key|Описание|  
 |-------|---------------|  
 |CurrentDatabase|База данных, являющаяся целевой в настоящее время.|  
 |SQLServerVersion|Версия SQL Server.|  
@@ -87,7 +87,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  

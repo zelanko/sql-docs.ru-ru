@@ -1,30 +1,33 @@
 ---
-title: "Метод (SQLServerStatement) getResultSet | Документы Microsoft"
-ms.custom: 
+title: Метод (SQLServerStatement) getResultSet | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.getResultSet
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.getResultSet
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 929a14e2-8e98-4c32-89aa-86733c717ec1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bae42eaccbeda6d9196e1e1515c837f0530e740
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e79877ec090ed5e9937026e1c189aebb5aa46297
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getresultset-method-sqlserverstatement"></a>getResultSet метод (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public final java.sql.ResultSet getResultSet()
 ## <a name="remarks"></a>Замечания  
  Этот метод getResultSet указывается с помощью метода getResultSet в интерфейсе java.sql.Statement.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

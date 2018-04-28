@@ -1,28 +1,28 @@
 ---
-title: "Элементы SQLServerConnection | Документы Microsoft"
-ms.custom: 
+title: Элементы SQLServerConnection | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 181df7c774bdf48b87bfb139d4fcaa272ba25a87
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 15e9af6857ca3a7f4c6695835d19e4900dfbf319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverconnection-members"></a>Элементы SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/02/2018
 |Название|Описание|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Удаляет все предупреждения для этого [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Высвобождает базу данных для этой [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта и ресурсы JDBC вместо ожидания их автоматического освобождения.|  
+|[Закрыть](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Высвобождает базу данных для этой [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта и ресурсы JDBC вместо ожидания их автоматического освобождения.|  
 |[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Заставляет отмены-подготовки запросов для любой необработанных отклоненных подготовленных инструкций для выполнения.| 
 |[Фиксация](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|Фиксирует все изменения, внесенные с момента предыдущей операции фиксации или отката постоянными и снимает базе данных все блокировки, удерживаемые в настоящее время это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Создает **java.sql.Blob** объекта без данных.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|Создает **java.sql.SQLXML** объекта без данных.|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|Извлекает текущий режим автоматической фиксации для данного [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|Возвращает текущее имя каталога для данного [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
-|[Метод getClientConnectionID &#40; SQLServerConnection &#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Возвращает идентификатор соединения для последней попытки соединения, вне зависимости от того, была ли она успешной.|  
+|[Метод getClientConnectionID &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Возвращает идентификатор соединения для последней попытки соединения, вне зависимости от того, была ли она успешной.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|Извлекает дополнительные сведения о свойствах данных клиентов, поддерживаемых драйвером JDBC.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Возвращает значение **disableStatementPooling** свойство соединения. Этот параметр определяет, включен пул инструкции или не для этого подключения.|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Возвращает количество ожидающих подготовленной инструкции аннулирующие действия.|
@@ -72,10 +72,10 @@ ms.lasthandoff: 03/02/2018
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|Извлекает текущий уровень изоляции транзакции для данного [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|Возвращает объект карты, связанный с этим [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|Возвращает первое предупреждение, указанное в отчетах вызовов в этом [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|Указывает, является ли это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объект был закрыт.|  
-|[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|Указывает, является ли это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объект находится в режиме только для чтения.|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|Указывает, является ли это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объект был закрыт.|  
+|[IsReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|Указывает, является ли это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объект находится в режиме только для чтения.|  
 |[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|Возвращает пул инструкции включен или не для этого подключения.|  
-|[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|Указывает, является ли это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта не была закрыта и все еще действителен.|  
+|[IsValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|Указывает, является ли это [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта не была закрыта и все еще действителен.|  
 |[nativeSQL](../../../connect/jdbc/reference/nativesql-method-sqlserverconnection.md)|Преобразовывает заданную инструкцию SQL в соответствии с грамматикой SQL сервера базы данных.|  
 |[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|Создает [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) объект для вызова хранимых процедур базы данных.|  
 |[prepareStatement](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)|Создает [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) объект для отправки параметризованных инструкций SQL в базу данных.|  

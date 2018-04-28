@@ -2,7 +2,7 @@
 title: Подключение с помощью программы bcp | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: badff319d1ae969d14fc14fc68d40fdd57b776eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Доступные параметры
 В текущем выпуске доступны следующие синтаксис и параметры:  
 
-[*база_данных***.**]*схема***.***таблица* **in** *файл_данных* | **out** *файл_данных*
+[*базы данных ***.**]* схемы ***.*** Таблица * **в** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу.  
@@ -149,9 +149,9 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -V (80 | 90 | 100)  
 Использует типы данных из более ранней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-- -x  
+- -X  
 При использовании вместе с параметрами format и -f format_file приводит к созданию файла форматирования на основе XML. По умолчанию создается файл форматирования в формате, отличном от XML.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Соединение с помощью **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

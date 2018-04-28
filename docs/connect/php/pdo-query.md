@@ -2,7 +2,7 @@
 title: PDO::Query | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 93485e84b2e65ecbf7ab28ee23d8422e889b4554
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>Исключения  
 PDOException.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 Запрос, выполняемый с PDO::query могут выполнять подготовленной инструкции, в зависимости от настройки PDO::SQLSRV_ATTR_DIRECT_QUERY. Дополнительные сведения см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение PDO::exec; Дополнительные сведения см. в разделе [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
@@ -56,7 +56,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение P
   
 |style|Описание|  
 |---------|---------------|  
-|PDO::FETCH_COLUMN, *num*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
+|Значение PDO::FETCH_COLUMN, *num*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
 |Значение PDO::FETCH_CLASS, "*classname*", массив ( *arglist* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *arglist*.|  
 |Значение PDO::FETCH_CLASS, "*classname*"|Назначает имена столбцов свойствам в существующем классе.|  
   

@@ -1,30 +1,33 @@
 ---
-title: "Метод (SQLServerResultSet) getDouble | Документы Microsoft"
-ms.custom: 
+title: Метод (SQLServerResultSet) getDouble | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getDouble
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getDouble
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 55b5b7d0-448f-4b8a-9ca7-563f674d6b81
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14398507932b840d7a6d5bc0dcc3c87705b2cf85
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bb4e87dde3b249d66d71d0fec5486eb9f156249f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getdouble-method-sqlserverresultset"></a>getDouble метод (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +36,12 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[getDouble (int)](../../../connect/jdbc/reference/getdouble-method-int-sqlserverresultset.md)|Получает значение индекса заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **двойные** языке программирования Java.|  
 |[getDouble (java.lang.String)](../../../connect/jdbc/reference/getdouble-method-java-lang-string-sqlserverresultset.md)|Получает значение имени заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **двойные** языке программирования Java.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

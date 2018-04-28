@@ -3,7 +3,7 @@ title: Поддержка разреженных столбцов в драйв�
 description: Поддержка разреженных столбцов в драйвер OLE DB для SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Поддержка разреженных столбцов в драйвере OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 04/06/2018
  Однако если **queryout** используется для экспорта и можно ссылаться на разреженные столбцы, которые являются членами разреженного столбца задается имя, не удается выполнить импорт напрямую в таблицу такой же структуры. Это потому, что программа BCP использует метаданные, согласованные с **выберите \***  операции для импорта и не может сопоставить **column_set** столбцов элементов с этими метаданными. Для импорта **column_set** столбцы элементов по отдельности, необходимо определить представление на таблице, которая ссылается на нужном **column_set** столбцы, необходимо выполнить операцию импорта, с помощью представления.  
   
 ## <a name="see-also"></a>См. также  
- [Программирование драйвера OLE DB для SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Драйвер OLE DB для SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

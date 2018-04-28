@@ -2,7 +2,7 @@
 title: Задание свойств соединения | Документы Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
-caps.latest.revision: ''
+caps.latest.revision: 154
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1357e62ff2552d2a41c63f010575f00c49b42f93
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 86b8d31f78395a20533c7420ab55c12526bcaf07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-the-connection-properties"></a>Задание свойств соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/28/2018
     datasource.setDatabaseName(value)  
     ```  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 В именах свойств не учитывается регистр символов. Дублирующиеся имена свойств разрешаются в следующем порядке:  
   
 1.  аргументы API (например, имя пользователя и пароль);
@@ -92,8 +92,8 @@ ms.lasthandoff: 03/28/2018
 | serverSpn<br />Строковые значения<br />null | Начиная с версии Microsoft JDBC Driver 4.2 для SQL Server это необязательное свойство можно использовать для указания имени субъекта-службы (SPN) соединения Java Kerberos.  Он используется в сочетании с **authenticationScheme**.<br /><br /> Чтобы указать имя участника-службы, он может быть в форме: «MSSQLSvc/fqdn:port@REALM» где fqdn — это полное доменное имя, port — Номер порта и REALM — это область Kerberos SQL Server в верхнем регистре.<br /><br /> Примечание: @REALM является обязательным, если область по умолчанию клиента (как указано в конфигурации Kerberos) совпадает с областью Kerberos для SQL Server.<br /><br /> Дополнительные сведения об использовании **serverSpn** с Java Kerberos в разделе [с помощью встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). |
 | statementPooling...<br />cacheSize<br />int<br />0 | *statementPoolingCacheSize*<br />Определяет размер кэша для пулы инструкций. 0 означает отсутствие кэширования. |
 | socketTimeout<br />int<br />0 | Количество миллисекунд ожидания истекло время ожидания для сокета для чтения, или принять. Значение по умолчанию — 0, что означает бесконечное время ожидания. |
-| sslProtocol<br />Строковые значения<br />TLS | Добавлено в версии 6.4.0. Это значение используется для указания ключевого слова протокола TLS. Возможными значениями являются: **TLS**, **TLSv1**, **TLSv1.1**, и **TLSv1.2**. Дополнительные сведения см. в разделе [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol). |
-| transparentNetwork...<br />IPResolution<br /><br />boolean<br />[«true» &#124; «false»]<br /><br />true | *transparentNetworkIPResolution*<br />Начиная с Microsoft JDBC Driver 6.0 для SQL Server, это свойство, transparentNetworkIPResolution, обеспечивает более быстрое обнаружение и подключение к серверу (активного). Возможные значения: true и false с true как значение по умолчанию.<br /><br /> До появления Microsoft JDBC Driver 6.0 для SQL Server, приложение было задайте строку подключения, чтобы включить «multiSubnetFailover = true» для указания, что он был при подключении к группе доступности AlwaysOn. Без указания ключевого слова подключения multiSubnetFailover в значение true, приложение может столкнуться с истечения времени ожидания при подключении к группе доступности. Начиная с Microsoft JDBC Driver 6.0 для SQL Server, приложение не нужно задавать multiSubnetFailover в значение true, больше. <br /><br />**Примечание:** при transparentNetworkIPResolution = true, первая попытка соединением 500 мс, как время ожидания. Все последующие попытки использовать одну и ту же логику времени ожидания, что свойство multiSubnetFailover. |
+| sslProtocol<br />Строковые значения<br />ПРОТОКОЛ TLS | Добавлено в версии 6.4.0. Это значение используется для указания ключевого слова протокола TLS. Возможными значениями являются: **TLS**, **TLSv1**, **TLSv1.1**, и **TLSv1.2**. Дополнительные сведения см. в разделе [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol). |
+| transparentNetwork...<br />IPResolution<br /><br />boolean<br />[«true» &#124; «false»]<br /><br />true | *TransparentNetworkIPResolution*<br />Начиная с Microsoft JDBC Driver 6.0 для SQL Server, это свойство, transparentNetworkIPResolution, обеспечивает более быстрое обнаружение и подключение к серверу (активного). Возможные значения: true и false с true как значение по умолчанию.<br /><br /> До появления Microsoft JDBC Driver 6.0 для SQL Server, приложение было задайте строку подключения, чтобы включить «multiSubnetFailover = true» для указания, что он был при подключении к группе доступности AlwaysOn. Без указания ключевого слова подключения multiSubnetFailover в значение true, приложение может столкнуться с истечения времени ожидания при подключении к группе доступности. Начиная с Microsoft JDBC Driver 6.0 для SQL Server, приложение не нужно задавать multiSubnetFailover в значение true, больше. <br /><br />**Примечание:** при transparentNetworkIPResolution = true, первая попытка соединением 500 мс, как время ожидания. Все последующие попытки использовать одну и ту же логику времени ожидания, что свойство multiSubnetFailover. |
 | trustManagerClass<br />Строковые значения<br />null | Имя пользовательского javax.net.ssl.TrustManager полного имени класса. |
 | trustManager...<br />ConstructorArg<br />Строковые значения<br />null | *trustManagerConstructorArg*<br />Необязательный аргумент, передаваемый в конструктор TrustManager. Если указан trustManagerClass и запрашивается зашифрованное соединение, пользовательские TrustManager используется вместо системы по умолчанию TrustManager на основе хранилища ключей виртуальной машины Java. |
 | trustServerCertificate<br /><br />boolean<br />[«true» &#124; «false»]<br /><br />false | Задайте значение «true», чтобы указать, что [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не проверяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL-сертификат.<br /><br /> Если «true», [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL-сертификат автоматически считается доверенным, когда на уровне связи применяется шифрование SSL.<br /><br /> Если «false», [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] проверяет SSL-сертификата сервера. При сбое проверки сертификата сервера, драйвер выдает ошибку и завершает соединение. Значение по умолчанию — «false». Убедитесь, что значение, передаваемое **serverName** точно соответствует общее имя (CN) или DNS-имя в альтернативное имя субъекта в сертификате сервера для SSL-соединения для успешного выполнения. Дополнительные сведения см. в разделе [основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).<br /><br /> **Примечание:** это свойство используется в сочетании с **шифрования**/**проверки подлинности** свойства. Это свойство влияет только на проверку SSL-сертификата сервера только в том случае, если соединение использует шифрование SSL. |

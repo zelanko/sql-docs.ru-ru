@@ -1,30 +1,33 @@
 ---
-title: "Метод getBestRowIdentifier (SQLServerDatabaseMetaData) | Документы Microsoft"
-ms.custom: 
+title: Метод getBestRowIdentifier (SQLServerDatabaseMetaData) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getBestRowIdentifier
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getBestRowIdentifier
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f29cfff05ed331f2e5741c01d28f3e90afdf88ce
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a015cdf8b6b94f7abad12e3443e9f0635e63e2df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Метод getBestRowIdentifier (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,11 +46,11 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *каталог*  
+ *catalog*  
   
  Объект **строка** , содержащее имя каталога.  
   
- *схемы*  
+ *schema*  
   
  Объект **строка** , содержащее имя схемы.  
   
@@ -65,7 +68,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession (2)  
   
- *допускающие значения NULL*  
+ *Допускающие значения NULL*  
   
  **значение true,** включаются столбцы, допускающие значение NULL. В противном случае — **false**.  
   
@@ -80,7 +83,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  Метод getBestRowIdentifier возвращает результирующий набор будет содержать следующие сведения:  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
 |SCOPE|short|Область возвращаемых результатов. Может иметь одно из следующих значений.<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|Строковые значения|Имя столбца.|  
@@ -117,7 +120,7 @@ public static void executeGetBestRowIdentifier(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

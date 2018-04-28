@@ -1,27 +1,28 @@
 ---
-title: "Шаг 1: Настройка среды разработки Python pymssql | Документы Microsoft"
-ms.custom: 
+title: 'Шаг 1: Настройка среды разработки Python pymssql | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Шаг 1: Настройка среды разработки для pymssql разработки Python
 Необходимо будет настроить среду разработки с необходимых компонентов для разработки приложений с помощью драйвера Python для SQL Server.    
@@ -31,8 +32,8 @@ ms.lasthandoff: 11/18/2017
 ## <a name="windows"></a>Windows  
   
 1. **Установка среды выполнения Python и pip диспетчера пакетов**  
-а. Последовательно выберите пункты [python.org](https://www.python.org/downloads/)  
-б. Щелкните соответствующую ссылку MSI-файл установщика Windows.   
+A. Последовательно выберите пункты [python.org](https://www.python.org/downloads/)  
+Б. Щелкните соответствующую ссылку MSI-файл установщика Windows.   
 в. Один раз загруженный выполнения MSI-файл для установки среды выполнения Python  
   
 2. **Загрузка модуля pymssql** из [здесь](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -68,8 +69,8 @@ ms.lasthandoff: 11/18/2017
 ## <a name="mac"></a>Mac  
   
 1. **Установка среды выполнения Python и pip диспетчера пакетов**  
-а. Последовательно выберите пункты [python.org](https://www.python.org/downloads/)  
-б. Щелкните соответствующую ссылку pkg Mac установщика.   
+A. Последовательно выберите пункты [python.org](https://www.python.org/downloads/)  
+Б. Щелкните соответствующую ссылку pkg Mac установщика.   
 в. Один раз загруженный выполнения pkg для установки среды выполнения Python  
   
 2.  **Откройте терминалов**  

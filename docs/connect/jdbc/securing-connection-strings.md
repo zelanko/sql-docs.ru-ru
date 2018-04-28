@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a91ed021b749a0f23c08b1b4d01ef4d60d073814
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/16/2018
 ---
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  Если сведения о строках соединения берутся из внешнего источника, такого как пользователь, вводящий свой идентификатор и пароль, необходимо проверить любые введенные сведения из этого источника, чтобы гарантировать, что у них формат правильный и не содержит дополнительных параметров, действующих на соединение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

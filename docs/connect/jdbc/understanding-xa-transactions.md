@@ -1,27 +1,28 @@
 ---
-title: "Основные сведения о транзакциях XA | Документы Microsoft"
-ms.custom: 
+title: Основные сведения о транзакциях XA | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1388ca846b426e4b544f991855942abab16e3507
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="remarks"></a>Замечания  
  Далее представлены классы для реализации распределенных транзакций.  
   
-|Class|Реализации|Description|  
+|Class|Реализации|Описание|  
 |-----------|----------------|-----------------|  
 |com.microsoft.sqlserver.jdbc.SQLServerXADataSource|javax.sql.XADataSource|Фабрика класса для распределенных соединений.|  
 |com.microsoft.sqlserver.jdbc.SQLServerXAResource|javax.transaction.xa.XAResource|Адаптер ресурсов для диспетчера транзакций.|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  Настройте ведение журнала, как показано в примере кода в следующем разделе. Найдите в выходном файле журнала фразу «Версия XA DLL на сервере:...».  
   
-###  <a name="BKMK_ServerSide"></a>Настройка параметров времени ожидания сервера для автоматического отката неподготовленных транзакций  
+###  <a name="BKMK_ServerSide"></a> Настройка параметров времени ожидания сервера для автоматического отката неподготовленных транзакций  
   
 > [!WARNING]  
 >  Этот серверный параметр обновился с Microsoft JDBC Driver 4.2 (и более поздней версии) для SQL Server. Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о настройке времени ожидания на стороне клиента см. в разделе [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
@@ -338,7 +339,7 @@ class XidImpl implements Xid {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   

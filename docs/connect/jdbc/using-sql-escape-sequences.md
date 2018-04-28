@@ -1,27 +1,28 @@
 ---
-title: "С помощью Escape-последовательностей SQL | Документы Microsoft"
-ms.custom: 
+title: С помощью Escape-последовательностей SQL | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edf033fd91ecdd9ddd5ad33ce9a19e32f58b8bba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -93,7 +94,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  где `literal-type` является одним из следующих:  
   
-|Тип литерала|Description|Формат значения|  
+|Тип литерала|Описание|Формат значения|  
 |------------------|-----------------|------------------|  
 |d|Дата|гггг-мм-дд|  
 |t|Time|чч:мм:сс [1]|  
@@ -167,7 +168,7 @@ LIMIT <rows> [OFFSET <row offset>]
   
  Escape-синтаксис состоит из двух частей: \< *строк*> является обязательным и указывает количество возвращаемых строк. СМЕЩЕНИЕ и \< *смещение строки*> являются необязательными и укажите число строк необходимо пропустить перед началом возврата строк. Драйвер JDBC поддерживает только обязательную часть, преобразуя запрос для использования TOP вместо LIMIT. SQL Server не поддерживает предложение LIMIT. **Драйвер JDBC не поддерживает необязательный \<смещение строки > и драйвер вызовет исключение, если он используется**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

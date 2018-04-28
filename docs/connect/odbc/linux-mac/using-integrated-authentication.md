@@ -2,7 +2,7 @@
 title: С помощью встроенной проверки подлинности | Документы Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edc89fa38ae3b4554f44290cf36073d6c6a0625b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -89,7 +89,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   Сервер приложений выполняет аутентификацию в качестве другой базы данных и подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]выполняет проверку подлинности как пользователь базы данных в другую базу данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] выполняет проверку подлинности как пользователь базы данных в другую базу данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 После настройки встроенной проверки подлинности учетные данные передаются связанному серверу.  
   
@@ -101,17 +101,17 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Будет ошибкой использовать `-T` с `-U` или `-P` параметр.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Поддерживаемый синтаксис для имени участника-службы, зарегистрированные с[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Поддерживаемый синтаксис для имени участника-службы, зарегистрированные с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 Синтаксис имен участников-служб в строку подключения или атрибуты соединения выглядит следующим образом:  
 
 |Синтаксис|Описание|  
 |----------|---------------|  
-|MSSQLSvc/*fqdn*:*port*|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP. *port* — номер порта TCP. *fqdn* — полное доменное имя.|  
+|MSSQLSvc/*fqdn*:*port*|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP. *port* — номер TCP-порта. *fqdn* — полное доменное имя.|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Проверка подлинности Linux или macOS компьютера в Active Directory
 
-Чтобы настроить Kerberos, введите данные в `krb5.conf` файла. `krb5.conf`в `/etc/` , но может ссылаться на другой файл, например с помощью синтаксиса `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Ниже приведен пример `krb5.conf` файла:  
+Чтобы настроить Kerberos, введите данные в `krb5.conf` файла. `krb5.conf` в `/etc/` , но может ссылаться на другой файл, например с помощью синтаксиса `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Ниже приведен пример `krb5.conf` файла:  
   
 ```  
 [libdefaults]  
@@ -134,7 +134,7 @@ forwardable = yes
 
 Дополнительные сведения о проверке подлинности Linux и macOS компьютеров с помощью Active Directory см. в разделе [проверки подлинности клиентов Linux с помощью Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) и [советы и рекомендации по интеграции OS X с помощью Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Дополнительные сведения о настройке Kerberos см. в разделе [документация Kerberos MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes.md)

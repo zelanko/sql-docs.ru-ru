@@ -2,7 +2,7 @@
 title: Параметры соединения | Документы Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9e8d87f7c1da0574264744459070a04b9b959e2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 9a8047220d7f09f9a3dea6e750886c13138bdf58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-options"></a>Параметры соединения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/28/2018
 |Проверка подлинности|Одна из следующих строк:<br /><br />«SqlPassword»<br /><br />«ActiveDirectoryPassword»|Указывает режим проверки подлинности.|Не задано.|  
 |CharacterSet<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|Строковые значения|Задает кодировку, используемую для отправки данных на сервер.<br /><br />Возможными значениями являются SQLSRV_ENC_CHAR и UTF-8. Дополнительные сведения см. в статье [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption<br /><br />(поддерживается только в Windows)|**Включить** или **отключено**|Указывает, включена ли функция постоянного шифрования, или нет. |Выключено|  
-|ConnectionPooling|1 или **true** для включения организации пулов соединений.<br /><br />0 или **false** для отключения организации пулов соединений.|Указывает, назначено ли соединение из пула соединений (1 или **true**) или нет (0 или **false**).<sup> 1</sup>|**true** (1)|  
+|ConnectionPooling|1 или **true** для включения организации пулов соединений.<br /><br />0 или **false** для отключения организации пулов соединений.|Указывает, назначено ли соединение из пула соединений (1 или **true**) или нет (0 или **false**).<sup> 1</sup>|**значение true,** (1)|  
 |ConnectRetryCount|Целое число от 0 до 255 (включительно)|Максимальное количество попыток восстановить подключение прервано начинал. По умолчанию один попытка восстановить подключение, если нечитаемым. Значение 0 означает попыток без повторного подключения.|1|  
 |ConnectRetryInterval|Целое число от 1 до 60 (включительно)|Время в секундах между попытками создания потерянного подключения. Приложение будет пытаться переподключить немедленно при обнаружении разорванное соединение и затем будет ожидать ConnectRetryInterval секунд перед повторной попыткой. Это ключевое слово учитывается, если ConnectRetryCount равен 0.|1|  
 |база данных|Строковые значения|Указывает имя базы данных, используемое для устанавливаемого соединения<sup>2</sup>.|База данных по умолчанию для используемого имени входа.|  
@@ -47,9 +47,9 @@ ms.lasthandoff: 03/28/2018
 |Failover_Partner|Строковые значения|Указывает сервер и экземпляр зеркала базы данных (если они включены и настроены), используемые при недоступности сервера-источника.<br /><br />На использование Failover_Partner с MultiSubnetFailover налагаются определенные ограничения. Дополнительные сведения см. в разделе [поддержку высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Значение не задано.|  
 |LoginTimeout|Целое число (драйвер SQLSRV)<br /><br />Строка (драйвер PDO_SQLSRV)|Указывает количество секунд ожидания перед неудачным завершением соединения.|Время ожидания отсутствует.|  
 |MultipleActiveResultSets|1 или **true** для использования множественных активных результирующих наборов.<br /><br />0 или **false** для отключения множественных активных результирующих наборов.|Отключает или явным образом включает поддержку множественных активных результирующих наборов (MARS).<br /><br />Дополнительные сведения см. в разделе [как: отключение множественных активных результирующих наборов &#40;MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|true (1)|  
-|MultiSubnetFailover|Строковые значения|Всегда указывайте **multiSubnetFailover = yes** при подключении к прослушивателю группы доступности из [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] группы доступности или [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] экземпляра отказоустойчивого кластера. **multiSubnetFailover = yes** настраивает [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] для обеспечения более быстрое обнаружение и подключение к серверу (активного). Возможными значениями являются Yes и No.<br /><br />Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], в разделе [поддержку высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|нет|  
+|MultiSubnetFailover|Строковые значения|Всегда указывайте **multiSubnetFailover = yes** при подключении к прослушивателю группы доступности из [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] группы доступности или [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] экземпляра отказоустойчивого кластера. **multiSubnetFailover = yes** настраивает [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] для обеспечения более быстрое обнаружение и подключение к серверу (активного). Возможными значениями являются Yes и No.<br /><br />Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], в разделе [поддержку высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Нет|  
 |PWD<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|Строковые значения|Указывает пароль, связанный с Идентификатором пользователя, который будет использоваться при подключении с проверкой подлинности SQL Server<sup>4</sup>.|Значение не задано.|  
-|QuotedId|1 или **true** для использования правил SQL-92.<br /><br />0 или **false** для использования устаревших правил.|Указывает, следует ли использовать правила SQL-92 для нестандартных идентификаторов (1 или **true**) или использовать устаревшие правила Transact-SQL (0 или **false**).|**true** (1)|  
+|QuotedId|1 или **true** для использования правил SQL-92.<br /><br />0 или **false** для использования устаревших правил.|Указывает, следует ли использовать правила SQL-92 для нестандартных идентификаторов (1 или **true**) или использовать устаревшие правила Transact-SQL (0 или **false**).|**значение true,** (1)|  
 |ReturnDatesAsStrings<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|1 или **true** для возврата типов даты и времени в виде строк.<br /><br />0 или **false** для возврата типов даты и времени в виде типов **DateTime** PHP.|Извлекает типы даты и времени (datetime, date, time, datetime2 и datetimeoffset) в виде строк или типов PHP. При использовании драйвера PDO_SQLSRV даты возвращается в виде строк. Драйвер PDO_SQLSRV не содержит **datetime** типа.<br /><br />Дополнительные сведения см. в статье [Практическое руководство. Получение типа даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  
 |Прокручиваемые курсоры|Строковые значения|"Буферизовано" означает, что требуется клиентский (буферизированный) курсор, который позволяет кэшировать весь результирующий набор в памяти. Дополнительные сведения см. в разделе [типы курсоров &#40;драйвер SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|Курсор последовательного доступа|  
 |Server<br /><br />(не поддерживается в драйвере SQLSRV)|Строковые значения|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для соединения.<br /><br />Вы также можете указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], в разделе [поддержку высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server является обязательным ключевым словом (хотя оно не обязательно должно стоять на первом месте в строке подключения). Если имя сервера не передается в ключевое слово, будет предпринята попытка подключения к локальному экземпляру.<br /><br />Значением, передаваемым в ключевое слово Server, может быть имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или IP-адрес экземпляра. При необходимости можно указать номер порта (например, `sqlsrv:server=(local),1033`).<br /><br />Начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , можно также указать экземпляр LocalDB с `server=(localdb)\instancename`. Дополнительные сведения см. в разделе [поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  

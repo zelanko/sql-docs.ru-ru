@@ -1,27 +1,28 @@
 ---
-title: "Устранение неполадок с подключением | Документы Microsoft"
-ms.custom: 
+title: Устранение неполадок с подключением | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b213cb9d2a3527b967afef5dc28aa11d82fd0f9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-connectivity"></a>Устранение неполадок подключения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 -   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], или сервер или номер порта указан неверно. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с TCP/IP прослушивает указанный порт на указанном сервере. При этом может быть вызвано исключение, схожее с «Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]установлен, но не был установлен сетевой протокол для TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager для [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] и более поздних версий.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] установлен, но не был установлен сетевой протокол для TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager для [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] и более поздних версий.  
   
     -   TCP/IP установлен в качестве [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] протокола, но он не прослушивает порт, указанный в URL-АДРЕСЕ соединения JDBC. По умолчанию используется порт 1433, но [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно настроить при установке продукта прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о URL-адреса подключения JDBC см. в разделе [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md).  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
   
 -   При использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверки подлинности, драйвер JDBC требует, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверки подлинности, который не используется по умолчанию. Убедитесь, что этот параметр включен, при установке или настройке вашего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диагностика проблем с драйвером JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

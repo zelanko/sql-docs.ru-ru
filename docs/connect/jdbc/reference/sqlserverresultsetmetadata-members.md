@@ -1,27 +1,28 @@
 ---
-title: "Элементы SQLServerResultSetMetaData | Документы Microsoft"
-ms.custom: 
+title: Элементы SQLServerResultSetMetaData | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df2f0fbfe57b258bf0ad314377f0d11925ac03b9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f59c3d4b46395b931cd2ad68400c9c9b707b4d14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>Элементы SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls, columnNullable, columnNullableUnknown|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|Возвращает имя каталога для таблицы, содержащей указанный столбец.|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Возвращает полное имя класса Java, экземпляры которого создаются в том случае, если [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) метод [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) класс называется для извлечения значения из столбца.|  
@@ -56,12 +57,12 @@ ms.lasthandoff: 11/18/2017
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverresultsetmetadata.md)|Возвращает число цифр справа от десятичной запятой для указанного столбца.|  
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|Возвращает имя схемы для таблицы, содержащей указанный столбец.|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|Возвращает имя таблицы для указанного столбца.|  
-|[isAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Указывает, производится ли автоматическая нумерация указанного столбца, что делает его доступным только для чтения.|  
+|[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Указывает, производится ли автоматическая нумерация указанного столбца, что делает его доступным только для чтения.|  
 |[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Указывает, учитывается ли регистр символов для столбца.|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|Указывает, содержит ли указанный столбец значения денежных сумм.|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|Указывает, будет ли запись в указанный столбец наверняка успешной.|  
-|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Указывает допустимость значений NULL для указанного столбца.|  
-|[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|Указывает, является ли указанный столбец наверняка недоступным для чтения.|  
+|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Указывает допустимость значений NULL для указанного столбца.|  
+|[IsReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|Указывает, является ли указанный столбец наверняка недоступным для чтения.|  
 |[isSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|Указывает, может ли указанный столбец использоваться в предложении SQL WHERE.|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverresultsetmetadata.md)|Указывает, являются ли значения в указанном столбце числами со знаком.|  
 |[isSparseColumnSet](../../../connect/jdbc/reference/issparsecolumnset-method-sqlserverresultsetmetadata.md)|Указывает, является ли столбец из результирующего набора набором разреженных столбцов.|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/18/2017
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Класс SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

@@ -1,32 +1,33 @@
 ---
-title: "Основные сведения о типах данных драйвера JDBC | Документы Microsoft"
-ms.custom: 
+title: Основные сведения о типах данных драйвера JDBC | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9599a6e71ee0fbf171ba9c8619cafac8332cc5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8aedc06687d574be4392157d667fde74325be431
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Основные сведения о типах данных драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]поддерживает использование типов базовых и расширенных данных JDBC внутри приложения Java, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] качестве своей базы данных.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование типов базовых и расширенных данных JDBC внутри приложения Java, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] качестве своей базы данных.  
   
  Система типов JDBC является посредником преобразование между [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы данных и типы языка Java и объекты. Типы JDBC моделируются на основе типов SQL-92 и SQL-99. Драйвер JDBC соответствует требованиям JDBC и разработан для обеспечения правильного баланса между предсказуемостью и гибкостью.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование базовых типов данных](../../connect/jdbc/using-basic-data-types.md)|Описывает базовые типы данных JDBC. Включает примеры работы с типами данных при помощи результирующих наборов, параметризованных запросов и хранимых процедур.|  
 |[Настройка способа отправки значений java.sql.Time на сервер](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)|Описывает создание дат драйвером JDBC.|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/18/2017
 |[Поддержка XML-данных](../../connect/jdbc/supporting-xml-data.md)|Описывает интерфейс SQLXML. Также описывает, как для чтения и записи XML-данных из реляционной базы данных с **SQLXML** типа данных.|  
 |[Оболочки и интерфейсы](../../connect/jdbc/wrappers-and-interfaces.md)|Описываются интерфейсы, имеющие [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] методы и константы, которые позволяют серверу приложений создать прокси-класса, а также обсуждается поддержка интерфейса java.sql.Wrapper.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
