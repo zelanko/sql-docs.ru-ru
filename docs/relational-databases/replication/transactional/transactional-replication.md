@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d6753d2ea8943cc00123dfd7f56328fc5fbe998
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df3d126c25ab02e5d6be4f9f73347500b3607c4
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="transactional-replication"></a>репликация транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,6 @@ ms.lasthandoff: 04/16/2018
 -   Издатель и подписчик являются базами данных, отличными от баз данных[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (например, Oracle).  
   
  По умолчанию для подписчиков все подписки на публикацию транзакций доступны только для чтения, так как все изменения нельзя применить на издателе. Однако репликация транзакций позволяет выполнять обновления на подписчике.  
-  
- **В этом разделе**  
-  
- [Как работает репликация транзакций](#HowWorks)  
-  
- [Исходная база данных](#Dataset)  
-  
- [агент моментальных снимков](#SnapshotAgent)  
-  
- [Агент чтения журнала.](#LogReaderAgent)  
-  
- [Агент распространителя](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Как работает репликация транзакций  
  Репликация транзакций реализуется агентом моментальных снимков, агентом чтения журналов и агентом распространителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Агент моментальных снимков готовит файлы моментальных снимков, содержащие схему, данные публикуемых таблиц и объекты базы данных, хранит файлы в папке моментальных снимков и записывает задания синхронизации в базу данных распространителя на распространителе.  
