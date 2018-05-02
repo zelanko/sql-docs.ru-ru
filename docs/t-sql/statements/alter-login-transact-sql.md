@@ -1,16 +1,16 @@
 ---
-title: "ALTER LOGIN (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
-ms.date: 05/01/2017
-ms.prod: sql-non-specified
+title: ALTER LOGIN (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 
+caps.latest.revision: 68
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1a1bbef130ca5b5fef4255121a8d602c9dc47d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +84,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Database  
+-- Syntax for Azure SQL Database and Azure SQL Data Warehouse 
   
 ALTER LOGIN login_name   
   {   
@@ -104,7 +105,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER LOGIN login_name   
     {   
@@ -141,7 +142,7 @@ ALTER LOGIN login_name
  Для поддержания подключений к базе данных SQL в активном состоянии требуется повторная авторизация (выполняемая ядром СУБД) по крайней мере каждые 10 часов. Ядро СУБД пытается выполнить повторную авторизацию с использованием первоначального пароля. Пользователю не нужно вводить никаких данных. В целях повышения производительности при сбросе пароля в базе данных SQL повторная проверка подлинности подключения не проводится, даже если подключение сбрасывается из-за создания пула подключений. В локальном развертывании SQL Server поведение иное. Если пароль изменился с момента первоначальной авторизации подключения, подключение должно быть завершено и должно быть установлено новое подключение с использованием нового пароля. Пользователь с разрешением KILL DATABASE CONNECTION может явным образом завершить подключение к базе данных SQL с помощью команды KILL. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).  
   
  PASSWORD **=***hashed_password*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа.  
   
@@ -150,7 +151,7 @@ ALTER LOGIN login_name
   
  HASHED  
    
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что пароль, введенный после аргумента PASSWORD, уже хэширован. Если этот параметр не выбран, то пароль хэшируется перед сохранением в базе данных. Этот параметр следует использовать только для синхронизации имен входа между двумя серверами. Не используйте параметр HASHED для плановой смены паролей.  
   
@@ -158,18 +159,18 @@ ALTER LOGIN login_name
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Текущий пароль имени входа, которому будет присвоен новый пароль. В паролях учитывается регистр символов.  
   
  MUST_CHANGE  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и Parallel Data Warehouse.  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если данный параметр включен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребует ввести новый пароль при первом использовании измененного имени входа.  
   
  DEFAULT_DATABASE **=***database*  
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает базу данных по умолчанию, назначенную имени входа.  
   
  DEFAULT_LANGUAGE **=***language*  
  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает язык по умолчанию, присвоенный имени входа. Языком по умолчанию для всех имен входа базы данных SQL является английский, и его нельзя изменить. Языком по умолчанию для имени входа `sa` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux является английский, но его можно изменить.  
   
@@ -177,37 +178,37 @@ ALTER LOGIN login_name
  Указывает новое имя для имени входа, которое необходимо переименовать. Если оно является именем входа Windows, то идентификатор безопасности участника Windows, соответствующий новому имени, должен совпадать с идентификатором безопасности, относящимся к имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может содержать обратную косую черту (\\).  
   
  CHECK_EXPIRATION = { ON | **OFF** }  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и Parallel Data Warehouse.  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, должна ли политика истечения срока действия паролей принудительно применяться к этому имени входа. Значение по умолчанию — OFF.  
   
  CHECK_POLICY **=** { **ON** | OFF }  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и Parallel Data Warehouse.  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что политики паролей Windows компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны принудительно применяться к этому имени входа. Значение по умолчанию — ON.  
   
  CREDENTIAL = *credential_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя учетных данных для сопоставления с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Учетные данные уже должны существовать на сервере. Дополнительные сведения см. в статье [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md). Учетные данные не могут быть сопоставлены с именем входа sa.  
   
  NO CREDENTIAL  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Удаляет любые существующие сопоставления имени входа с учетными данными сервера. Дополнительные сведения см. в статье [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и Parallel Data Warehouse.  
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что заблокированное имя входа должно быть разблокировано.  
   
  ADD CREDENTIAL  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Добавляет к имени входа учетные данные поставщика расширенного управления ключами. Дополнительные сведения см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Удаляет из имени входа учетные данные поставщика расширенного управления ключами. Дополнительные сведения см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
@@ -293,7 +294,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  В следующем примере имя входа `Mary5` сопоставляется с учетными данными `EKMProvider1`.  
   
  
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql  
 ALTER LOGIN Mary5  
@@ -322,7 +323,7 @@ GO
 ### <a name="g-changing-the-password-of-a-login-using-hashed"></a>Ж. Изменение пароля для имени входа с помощью параметра HASHED  
  В следующем примере пароль имени входа `TestUser` изменяется на заранее хэшированное значение.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql  
 ALTER LOGIN TestUser WITH   
@@ -334,11 +335,11 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
 

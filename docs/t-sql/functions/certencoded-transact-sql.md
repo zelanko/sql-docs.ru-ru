@@ -1,16 +1,16 @@
 ---
-title: "CERTENCODED (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CERTENCODED (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTENCODED
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 635720f8ed9c3d2aa48d2f5cbf03438171b1fe78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f6068562cf6694acc99c1e303dbd4ff10ff583ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает открытую часть сертификата в двоичном формате. Эта функция принимает идентификатор сертификата и возвращает закодированный сертификат. Двоичный результат можно передавать в инструкции **CREATE CERTIFICATE … WITH BINARY**, чтобы создать сертификат.
+Эта функция возвращает открытую часть сертификата в двоичном формате. Эта функция принимает в качестве аргумента идентификатор сертификата и возвращает закодированный сертификат. Для создания нового сертификата следует передать двоичный результат в **CREATE CERTIFICATE … WITH BINARY**.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>Аргументы  
 *cert_id*  
-Это идентификатор **certificate_id** сертификата. Его можно получить из sys.certificates или через вызов функции [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md). Аргумент *cert_id* имеет тип **int**.
+Идентификатор **certificate_id** сертификата. Это значение можно найти в sys.certificates. Его также возвращает функция [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* имеет тип данных **int**.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **varbinary**
@@ -58,23 +58,23 @@ CERTENCODED ( cert_id )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="simple-example"></a>Простой пример  
-В приведенном ниже примере создается сертификат с именем `Shipping04`, а затем функция **CERTENCODED** используется для возврата сертификата в двоичной кодировке.
+В этом примере создается сертификат с именем `Shipping04`, а затем функция **CERTENCODED** используется для возврата сертификата в двоичной кодировке. В этом примере устанавливается дата окончания срока действия сертификата 31 октября 2040 г.
   
 ```sql
-CREATE DATABASE TEST1;  
-GO  
-USE TEST1  
-CREATE CERTIFICATE Shipping04   
-ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
-WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20161031';  
-GO  
-SELECT CERTENCODED(CERT_ID('Shipping04'));  
+CREATE DATABASE TEST1;
+GO
+USE TEST1
+CREATE CERTIFICATE Shipping04
+ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
+WITH SUBJECT = 'Sammamish Shipping Records',
+EXPIRY_DATE = '20401031';
+GO
+SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
 ### <a name="b-copying-a-certificate-to-another-database"></a>Б. Копирует сертификат в другую базу данных.  
-В следующем, более сложном примере создается две базы данных: `SOURCE_DB` и `TARGET_DB`. Необходимо создать сертификат в `SOURCE_DB`, скопировать его в `TARGET_DB` и показать, что данные, зашифрованные в `SOURCE_DB`, можно расшифровать в `TARGET_DB` с помощью копии сертификата.
+В этом более сложном примере создаются две базы данных: `SOURCE_DB` и `TARGET_DB`. Затем в `SOURCE_DB` создается сертификат, который копируется в `TARGET_DB`. В заключение демонстрируется, что данные, зашифрованные в `SOURCE_DB`, могут быть расшифрованы в `TARGET_DB` с использованием этого сертификата.
   
 Чтобы создать среду для примера, создайте базы данных `SOURCE_DB` и `TARGET_DB`, а также главный ключ в каждой из них. Затем создайте сертификат в `SOURCE_DB`.
   
@@ -101,7 +101,7 @@ CREATE CERTIFICATE SOURCE_CERT WITH SUBJECT = 'SOURCE_CERTIFICATE';
 GO  
 ```  
   
-Теперь извлеките двоичное описание сертификата.
+Далее извлеките двоичное описание сертификата.
   
 ```sql
 DECLARE @CERTENC VARBINARY(MAX);  
@@ -114,7 +114,7 @@ SELECT @CERTPVK AS EncryptedBinaryCertificate;
 GO  
 ```  
   
-Создайте дубликат сертификата в базе данных `TARGET_DB`. Следующий код необходимо изменить, включив в него два двоичных значения, полученные на предыдущем шаге.
+После этого создайте дубликат сертификата в базе данных `TARGET_DB`. Измените следующий код, включив в него два двоичных значения, полученных на предыдущем шаге: @CERTENC и @CERTPVK. Не заключайте эти значения в кавычки.
   
 ```sql
 -- Create the duplicate certificate in the TARGET_DB database  
@@ -133,7 +133,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-Следующий код, выполняемый как единый пакет, показывает, что зашифрованные в `SOURCE_DB` данные можно расшифровать в `TARGET_DB`.
+Этот код выполняется как единый пакет и показывает, что зашифрованные в `SOURCE_DB` данные можно расшифровать в `TARGET_DB`.
   
 ```sql
 USE SOURCE_DB;  

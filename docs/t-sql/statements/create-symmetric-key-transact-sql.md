@@ -1,16 +1,16 @@
 ---
-title: "CREATE SYMMETRIC KEY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE SYMMETRIC KEY
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f5604a0c32049d274610a600ebf1a2174c40d088
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 1bd64184c79c7a9f240450323dada3d4d413daf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ CREATE SYMMETRIC KEY key_name
  IDENTITY_VALUE **='***identity_phrase***'**  
  Указывает идентифицирующую фразу, из которой будет формироваться идентификатор GUID для маркировки данных, зашифрованных с помощью временного ключа.  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME **='***key_name_in_provider***'**  
  Указывает имя, на которое ссылается поставщик расширенного управления ключами.  
   
 > [!NOTE]  
@@ -205,7 +205,7 @@ GO
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   

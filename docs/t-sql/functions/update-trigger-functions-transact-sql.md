@@ -1,16 +1,16 @@
 ---
-title: "UPDATE() (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: UPDATE() (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b91d175788e3f67e8a4e4cc1484e9648072c4cef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="update---trigger-functions-transact-sql"></a>UPDATE - функции триггера (Transact-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>Функции триггера — UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает логическое значение, указывающее на попытку применить функцию INSERT или UPDATE к указанному столбцу таблицы или представлению. UPDATE() используется в любом месте внутри тела триггера [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT или UPDATE, чтобы проверить необходимость выполнения определенных действий.  
@@ -54,23 +54,23 @@ UPDATE ( column )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *столбец*  
- Это имя столбца для проверки на действие INSERT или UPDATE. Так как имя столбца указано в предложении триггера ON, не ставьте имя таблицы перед именем столбца. Столбец может быть любым [тип данных](../../t-sql/data-types/data-types-transact-sql.md) поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако вычисляемые столбцы не могут использоваться в данном контексте.  
+ *column*  
+ Это имя столбца для проверки на действие INSERT или UPDATE. Так как имя столбца указано в предложении триггера ON, не ставьте имя таблицы перед именем столбца. Столбец может иметь любой [тип данных](../../t-sql/data-types/data-types-transact-sql.md), поддерживаемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако вычисляемые столбцы не могут использоваться в данном контексте.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Логическое значение  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция UPDATE() возвращает TRUE независимо от того, была ли попытка применить операторы INSERT или UPDATE удачной.  
   
- Чтобы проверить действие INSERT или UPDATE для нескольких столбцов, задать отдельное обновление (*столбца*) первое предложение. Несколько столбцов также могут быть проверены на действие INSERT или UPDATE при помощи COLUMNS_UPDATED. В результате возвращается битовый шаблон, который указывает на то, какие столбцы были вставлены или обновлены.  
+ Чтобы проверить действие операторов INSERT или UPDATE для нескольких столбцов, укажите отдельно предложение UPDATE(*column*), следующее за первым предложением. Несколько столбцов также могут быть проверены на действие INSERT или UPDATE при помощи COLUMNS_UPDATED. В результате возвращается битовый шаблон, который указывает на то, какие столбцы были вставлены или обновлены.  
   
  IF UPDATE возвращает значение TRUE по действиям оператора INSERT, так как столбцы содержат либо явные вставленные значения, либо неявные вставленные значения (NULL).  
   
 > [!NOTE]  
->  IF UPDATE (*столбцы*n) предложение действует так же, как если, если... ELSE или WHILE и могут использовать BEGIN... КОНЕЧНЫЙ блок. Дополнительные сведения см. в разделе [языка управления потоком &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+>  Функции предложения IF UPDATE(*colum*n) аналогичны предложениям IF, IF...ELSE или WHILE и могут использовать блок BEGIN...END. Дополнительные сведения см. в разделе [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md).  
   
- ОБНОВЛЕНИЕ (*столбца*) может использоваться в любом месте внутри тела [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера.  
+ UPDATE(*column*) может применяться в любой части текста триггера [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример создает триггер, который выдает сообщение клиенту при попытке обновить столбец `StateProvinceID` или `PostalCode` в таблице `Address`.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Функция COLUMNS_UPDATED &#40; Transact-SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+ [COLUMNS_UPDATED (Transact-SQL)](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

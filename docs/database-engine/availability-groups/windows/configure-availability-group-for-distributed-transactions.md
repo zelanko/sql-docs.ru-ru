@@ -1,15 +1,16 @@
 ---
-title: "Настройка группы доступности для распределенных транзакций | Документы Майкрософт"
-ms.custom: 
+title: Настройка группы доступности для распределенных транзакций | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [database mirroring]
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
-ms.assetid: 
-caps.latest.revision: "33"
+ms.assetid: ''
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b6812a199583fee5cff0ce90c0a0e7f72f9b7645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/18/2018
 
 * Все экземпляры [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], участвующие в распределенной транзакции, должны иметь версию [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] или более позднюю.
 
-* Группы доступности должны быть запущены на Windows Server 2016 или Windows Server 2012 R2. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+* Группы доступности должны быть запущены на Windows Server 2016 или Windows Server 2012 R2. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Создание группы доступности для распределенных транзакций
 

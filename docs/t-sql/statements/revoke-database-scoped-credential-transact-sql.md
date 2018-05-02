@@ -1,16 +1,16 @@
 ---
-title: "REVOKE, отмена учетных данных уровня базы данных (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: REVOKE, отмена учетных данных уровня базы данных (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - REVOKE DATABASE SCOPED CREDENTIAL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - REVOKE statements, database scoped credentials
 - revoking permissions [SQL Server], database scoped credentials
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-caps.latest.revision: 
+caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 074fe713de6116e2ba07ee9c5fedf7e34789cf4b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 538d3ec0a0ff403bb0647b9b4a1fb6c57307ea23
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE, отмена учетных данных уровня базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  Указывает разрешение, которое можно отменить для учетных данных на уровне базы данных. Перечислены ниже.  
   
  ON CERTIFICATE **::***credential_name*  
- Учетные данные на уровне базы данных, для которых отменяется разрешение. Необходим квалификатор области «::».  
+ Учетные данные на уровне базы данных, для которых отменяется разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  
  Задает участника, у которого отменяется разрешение. Это может быть:  
@@ -78,9 +79,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
  CASCADE  
  Указывает, что отозванное разрешение отзывается также у других участников, которым оно было предоставлено этим участником.  
@@ -103,11 +104,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Учетные данные для базы данных — это защищаемый объект уровня базы данных, содержащийся в базе данных, являющейся родительским элементом в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть отменены для учетных данных для базы данных.  
   
 |Разрешения на учетные данные для базы данных|Содержится в разрешении на учетные данные для базы данных|Содержится в разрешении базы данных|  
@@ -125,8 +126,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
  [GRANT, предоставление разрешений на учетные данные для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [DENY, запрет разрешений на учетные данные для базы данных (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

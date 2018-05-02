@@ -1,31 +1,32 @@
 ---
-title: "Подключение клиента AlwaysOn (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Подключение клиента AlwaysOn (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31fe7088d4c57d84e68f42628b3c87c18662c8ce
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d5f44455e4c50ca45e3a8b8dd6516e49def4ebea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Подключение клиента AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +54,9 @@ ms.lasthandoff: 01/18/2018
 |ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1) с улучшением подключения**|Да|Да|Да|Да|Да|  
 |Драйвер Microsoft JDBC 4.0 для SQL Server|Да|Да|Да|Да|Да|  
   
- * Скачайте исправление для улучшения подключения для ADO .NET с платформой .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+ * Скачайте исправление подключения для ADO.NET с платформой .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
- ** Скачайте исправление для улучшения подключения для ADO .NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1): [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+ ** Скачайте исправление подключения для ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1): [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
   
 > [!IMPORTANT]  
 >  Для подключения к прослушивателю группы доступности клиент должен использовать строку подключения TCP.  

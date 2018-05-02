@@ -1,16 +1,16 @@
 ---
-title: "ALTER FULLTEXT INDEX (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER FULLTEXT INDEX (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 04/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 
+caps.latest.revision: 95
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 022cec421b1827c525d18d04d42bdd648936d147
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 327f527ad470d36dac37bb044fe77149794c1650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ALTER FULLTEXT INDEX ON table_name
  Для столбцов, имеющих типы, отличные от BLOB и XML, которые содержат текстовые данные на нескольких языках, или в случаях, когда язык текста в столбце неизвестен, используйте нейтральный (0x0) языковой ресурс. Для документов, хранящихся в столбцах типов XML или BLOB, во время индексирования будет использоваться внутренняя языковая кодировка документа. Например: в XML-столбцах атрибут xml:lang в XML-документе будет идентифицировать язык. Во время запроса значение, ранее указанное для аргумента *language_term*, становится используемым по умолчанию языком в полнотекстовых индексах, если аргумент *language_term* не указан как часть полнотекстового запроса.  
   
  STATISTICAL_SEMANTICS  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Создает дополнительные индексы ключевых фраз и подобия документов, которые являются частью статистического семантического индексирования. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -148,14 +148,14 @@ ALTER FULLTEXT INDEX ON table_name
 >  Дополнительные сведения о взаимодействии между отслеживанием изменений и предложением WITH NO POPULATION см. в подразделе "Примечания" далее в этом разделе.  
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Включает или отключает статистическое семантическое индексирование для указанных столбцов. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
  START {FULL|INCREMENTAL|UPDATE} POPULATION  
  Предписывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начать заполнение полнотекстового индекса *table_name*. Если заполнение полнотекстового индекса уже выполняется, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает предупреждение и не начинает нового заполнения.  
   
- ПОЛНОЕ  
+ FULL  
  Указывает, что каждая строка таблицы должна быть извлечена для полнотекстового индексирования, даже если строки уже были индексированы.  
   
  INCREMENTAL  
@@ -186,7 +186,7 @@ ALTER FULLTEXT INDEX ON table_name
  Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Изменяет список свойств поиска, связанный с индексом, если он есть.  
   
@@ -314,7 +314,7 @@ GO
   
 ### <a name="b-associating-a-property-list-with-a-full-text-index"></a>Б. Связывание списка свойств с полнотекстовым индексом  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  В следующем примере производится связывание списка свойств `DocumentPropertyList` с полнотекстовым индексом таблицы `Production.Document`. Эта инструкция ALTER FULLTEXT INDEX начинает полное заполнение — поведением по умолчанию для предложения SET SEARCH PROPERTY LIST.  
   
@@ -331,7 +331,7 @@ GO
   
 ### <a name="c-removing-a-search-property-list"></a>В. Удаление списка свойств поиска  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  В следующем примере производится удаление списка свойств `DocumentPropertyList` из полнотекстового индекса для таблицы `Production.Document`. В этом примере не требуется срочно удалять свойства из индекса, поэтому указан параметр WITH NO POPULATION. Однако поиск с использованием свойств выполняется дольше, чем поиск с полнотекстовым индексом.  
   

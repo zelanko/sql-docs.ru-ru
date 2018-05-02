@@ -1,16 +1,16 @@
 ---
-title: "TYPE_NAME (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: TYPE_NAME (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TYPE_NAME_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efd210bc036ed301f426e81feb6c783984f9fb4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4c080a7c88d977651e9a3447f05f4e05558631f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +53,7 @@ TYPE_NAME ( type_id )
  *type_id*  
  Идентификатор типа, который будет использован. Аргумент *type_id* имеет тип **int** и может ссылаться на тип в любой схеме, на доступ к которой у участника имеется разрешение.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **sysname**  
   
 ## <a name="exceptions"></a>Исключения  
@@ -63,7 +64,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  Функция TYPE_NAME возвращает значение NULL, если аргумент *type_id* недопустим или у вызывающего объекта недостаточно разрешений для создания ссылки на этот тип.  
   
- Функция TYPE_NAME используется и для системных, и для пользовательских типов данных. Этот тип может содержаться в любой схеме, но неполное имя типа возвращается всегда. Это значит, что у имени отсутствует префикс *schema***.** .  
+ Функция TYPE_NAME используется и для системных, и для пользовательских типов данных. Этот тип может содержаться в любой схеме, но неполное имя типа возвращается всегда. Это значит, что у имени отсутствует префикс *schema***.**.  
   
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в статьях [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md).  
   

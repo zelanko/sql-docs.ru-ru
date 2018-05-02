@@ -1,30 +1,31 @@
 ---
-title: "Системы шифрования c технологиями постоянного шифрования | Документация Майкрософт"
-ms.custom: 
+title: Системы шифрования c технологиями постоянного шифрования | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6767e36da99208b872eb5872185e541e4fa902e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 578cbf195244f561fd65a14d40482103a59a72ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,9 +44,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="data-encryption-algorithm"></a>Алгоритм шифрования данных  
  Для шифрования данных в базе данных в технологии постоянного шифрования данных используется алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** .  
   
- Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** является производным от спецификации на сайте [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** является производным от проекта спецификации, расположенного по адресу [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
   
- Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание метода применения блочного шифра в документе [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
+ Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание режима CBC можно найти по адресу [ http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf ](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
   
@@ -136,7 +137,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- Например:  
+ Пример:  
   
 -   После шифрования 4-байтовое значение открытого текста типа **int** станет длинным двоичным значением размером 65 байт.  
   
@@ -149,7 +150,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**bigint**|65|  
 |**binary**|Возможны разные варианты. Рассчитывается по формуле выше.|  
 |**bit**|65|  
-|**char;**|Возможны разные варианты. Рассчитывается по формуле выше.|  
+|**char**|Возможны разные варианты. Рассчитывается по формуле выше.|  
 |**date**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  

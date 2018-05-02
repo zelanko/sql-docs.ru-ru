@@ -1,16 +1,16 @@
 ---
-title: "+ (объединение строк) (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: + (объединение строк) (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - concatenation
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6cc04023e38faa5bce7964fab7aa0b65533a46c6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4e57cb9c9f71f90297265c1171ee105e51e678b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (объединение строк) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +52,7 @@ expression + expression
  *expression*  
  Любое действительное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных в категории символьных и двоичных данных, за исключением типов данных **image**, **ntext** и **text**. Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения.  
   
- При сцеплении двоичных строк с любыми символами между двоичными строками необходимо использовать явное преобразование в символьные данные. В приведенном ниже примере показано, когда с двоичным объединением необходимо использовать функцию `CONVERT` или `CAST`, а когда они могут не применяться.  
+ При сцеплении двоичных строк с любыми символами между двоичными строками необходимо использовать явное преобразование в символьные данные. В следующем примере показано, когда `CONVERT` или `CAST` должны использоваться с двоичной конкатенацией и когда `CONVERT` или `CAST` не нужно использовать.  
   
 ```  
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  

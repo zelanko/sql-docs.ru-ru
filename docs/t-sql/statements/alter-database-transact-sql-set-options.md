@@ -1,17 +1,17 @@
 ---
-title: "Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт"
-description: "Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure"
-ms.custom: 
+title: Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт
+description: Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure
+ms.custom: ''
 ms.date: 12/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 
+caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5432a43a2e9207666cc88da722425006454cdd0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -990,7 +990,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 > [!IMPORTANT]  
 >  В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_PADDING всегда будет иметь значение ON, а все приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Рекомендуется всегда задавать для параметра ANSI_PADDING значение ON. При создании или управлении индексами, основанными на вычисляемых столбцах или индексированных представлениях, параметр ANSI_PADDING должен быть установлен в ON.  
   
- Столбцы с типами данных **char(*n*)** и **binary(*n*)**, которые допускают значения NULL, дополняются до длины столбца, если параметру ANSI_PADDING установлено значение ON, но конечные пробелы и нули отбрасываются, если параметру ANSI_PADDING установлено значение OFF. Столбцы с типами **char(*n*)** и **binary(*n*)**, которые не допускают значений NULL, всегда дополняются до длины столбца.  
+ Столбцы с типами данных **char(*n*)** и **binary(*n*)**, которые допускают значения NULL, дополняются до длины столбца, если параметру ANSI_PADDING присвоено значение ON, но конечные пробелы и нули отбрасываются, если параметру ANSI_PADDING присвоено значение OFF. Столбцы с типами **char(*n*)** и **binary(*n*)**, которые не допускают значений NULL, всегда дополняются до длины столбца.  
   
  Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют настройки уровня базы данных по умолчанию для ANSI_PADDING. По умолчанию клиенты ODBC и OLE DB при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр ANSI_PADDING инструкции SET на уровне соединения с состоянием ON для сеанса. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   

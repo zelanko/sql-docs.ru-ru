@@ -1,16 +1,16 @@
 ---
-title: "DENY, запрет разрешений на сборки (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DENY, запрет разрешений на сборки (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - DENY statement, assemblies
 - denying permissions [SQL Server], assemblies
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed5de889401fb6c0c952541242dd1656e79875e8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4f34ac9e6d48640e5c81a8fd257e20cb461e5180
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>Запрещение (DENY) разрешений на сборки (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  Указывает разрешение на сборку, которое запрещается. Перечислены ниже.  
   
  ON ASSEMBLY **::***assembly_name*  
- Указывает сборку, на которую запрещается разрешение. Необходим квалификатор области «::».  
+ Указывает сборку, на которую запрещается разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  
- Задает участника, для которого запрещается разрешение, — Это может быть:  
+ Задает участника, для которого запрещается разрешение. Это может быть:  
   
 -   пользователь базы данных;  
   
@@ -71,9 +71,9 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
@@ -93,9 +93,9 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
 ## <a name="remarks"></a>Remarks  
  Сборка — это защищаемый объект уровня базы данных, который содержится в базе данных, являющейся его родителем в иерархии разрешений. Ряд основных разрешений на сборку, которые могут быть запрещены, перечислены ниже, вместе с более общими разрешениями, которые их подразумевают.  
@@ -113,12 +113,12 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 ## <a name="see-also"></a>См. также:  
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
- [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,28 +1,28 @@
 ---
-title: "Устранение неполадок в работе SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт"
+title: Устранение неполадок в работе SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: ac1235a122a37593eea61a7c7cfd918e46143eb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
 
@@ -143,6 +143,8 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Значение параметра: **0 (False)**
 
+4.  Если не удается очистить все сертификаты, которые не являются самозаверяющими, на шаге 2. Присвойте значение 2 параметру реестра на шаге 3.
+
 ## <a name="http-request-error"></a>Ошибка HTTP-запроса
 
 ### <a name="symptoms"></a>Симптомы
@@ -201,7 +203,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 Сообщений об ошибках в отчете о выполнении пакета недостаточно для устранения неполадок.
 
 ### <a name="solution"></a>Решение
-Дополнительные журналы выполнения можно найти в папке `TasksRootFolder`, настроенной в файле `WorkerSettings.config`. По умолчанию это папка `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. Здесь *[учетная_запись]* — это учетная запись, с которой выполняется служба рабочей роли Scale Out (по умолчанию `SSISScaleOutWorker140`).
+Дополнительные журналы выполнения можно найти в папке `TasksRootFolder`, настроенной в файле `WorkerSettings.config`. По умолчанию это папка `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. Здесь *[учетная_запись]*  — это учетная запись, с которой выполняется служба рабочей роли Scale Out (по умолчанию `SSISScaleOutWorker140`).
 
 Чтобы найти журнал выполнения пакета с идентификатором *[ИД_выполнения]*, выполните приведенную ниже команду Transact-SQL и получите *[ИД_задачи]*. Затем найдите вложенную папку с именем *[ИД_задачи]* в папке `TasksRootFolder`.
 

@@ -1,16 +1,16 @@
 ---
-title: "GROUPING_ID (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: GROUPING_ID (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUPING_ID_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 048ce847992563943a7ff358dcda6ebe249a7310
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aad0f86356e05f41dfe55aa0c4347d08d7e7785d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>В. Использование функции GROUPING_ID () с операторами ROLLUP и CUBE для обозначения уровней группирования  
  В следующих примерах приведен код, который показывает, как использовать функцию `GROUPING()` для вычисления столбца `Bit Vector(base-2)`. Функция `GROUPING_ID()` служит для вычисления соответствующего столбца `Integer Equivalent`. Порядок столбцов в функции `GROUPING_ID()` противоположен порядку столбцов, для объединения которых применяется функция `GROUPING()`.  
   
- В этих примерах функция `GROUPING_ID()` используется для создания значения, обозначающего уровень группирования, в каждой строке столбца `Grouping Level`. Уровни группирования не всегда представляют собой последовательный список целых чисел, который начинается с 1 (0, 1, 2, ..., *n*).  
+ В этих примерах функция `GROUPING_ID()` используется для создания значения, обозначающего уровень группирования, в каждой строке столбца `Grouping Level`. Уровни группирования не всегда представляют собой последовательный список целых чисел, который начинается с 1 (0, 1, 2,...*n*).  
   
 > [!NOTE]  
 >  Функции GROUPING и GROUPING_ID могут использоваться в предложении HAVING для фильтрации результирующего набора.  

@@ -1,16 +1,16 @@
 ---
-title: "DENY, запрет разрешений на конечную точку (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DENY, запрет разрешений на конечную точку (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - denying permissions [SQL Server], endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93f438a2d3d546c6cb15672b5b617b4e35cee9a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6a58aac2456cf34536138670e40b2fe5d4559aef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY, запрет разрешений на конечную точку (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ GO
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

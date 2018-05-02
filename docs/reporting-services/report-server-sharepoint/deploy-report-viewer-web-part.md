@@ -1,25 +1,25 @@
 ---
-title: "Развертывание веб-части \"Средство просмотра отчетов\" служб SQL Server Reporting Services на сайте SharePoint | Документы Майкрософт"
-ms.custom: 
+title: Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint | Документы Майкрософт
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
@@ -33,7 +33,11 @@ ms.lasthandoff: 01/09/2018
 
 ## <a name="requirements"></a>Требования
 
-**Поддерживаемые версии SharePoint Server:**  
+> [!IMPORTANT]
+> На данный момент установка этой веб-части невозможна, если у вас уже настроены службы Reporting Services в режиме интеграции с SharePoint.
+>
+
+**Поддерживаемые версии SharePoint Server:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +152,26 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 * русский (ru);
 * китайский (упрощенное письмо — zh-HANS и zh-CHS);
 * китайский (традиционное письмо — zh-HANT и zh-CHT).
+
+## <a name="troubleshoot"></a>Диагностика
+
+* Ошибка при удалении служб SSRS в том случае, если настроен режим интеграции с SharePoint:
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService нельзя привести к [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Тип A происходит из "Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" в контексте "Default" в расположении "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll". Тип B происходит из "Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" в контексте "Default" в расположении "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll".
+    
+    Решение.
+    1. Удаление веб-части средства просмотра отчетов
+    2. Удаление служб SSRS
+    3. Переустановка веб-части средства просмотра отчетов
+
+* Ошибка при попытке обновить SharePoint в том случае, если настроен режим интеграции с SharePoint:
+
+    Не удалось загрузить файл или сборку "Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" или одну из ее зависимостей. Система не может найти указанный файл. 00000000-0000-0000-0000-000000000000
+    
+    Решение.
+    1. Удаление веб-части средства просмотра отчетов
+    2. Удаление служб SSRS
+    3. Переустановка веб-части средства просмотра отчетов
 
 ## <a name="next-steps"></a>Следующие шаги
 

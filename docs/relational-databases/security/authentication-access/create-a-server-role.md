@@ -1,16 +1,16 @@
 ---
-title: "Создание роли сервера | Документация Майкрософт"
-ms.custom: 
+title: Создание роли сервера | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -19,27 +19,29 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca312c8c2d5d83b7e8fb233f9d9dfac3c37fcaab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8e74d591eff94f3a4f4fb9b58944573d976e4342
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-server-role"></a>Создание роли сервера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)] В этом разделе описывается создание роли сервера в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+  В этом разделе описывается создание новой роли сервера в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание новой роли сервера с помощью:**  
   
@@ -52,9 +54,9 @@ ms.lasthandoff: 11/21/2017
 ###  <a name="Restrictions"></a> Ограничения  
  Ролям сервера нельзя предоставить разрешение на защищаемые объекты уровня базы данных. Сведения о создании ролей базы данных см. в статье [CREATE ROLE (Transact-SQL)](../../../t-sql/statements/create-role-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 -   Требует разрешения CREATE SERVER ROLE или членства в предопределенной роли сервера.  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Щелкните правой кнопкой мыши папку **Роли сервера** и выберите **Создать роль сервера…**  
   
-4.  В диалоговом окне **Новая роль сервера —***server_role_name* на странице **Общие** введите имя новой роли сервера в поле **Имя роли сервера** .  
+4.  В диалоговом окне **Новая роль сервера —***server_role_name* на странице **Общие** введите имя новой роли сервера в поле **Имя роли сервера**.  
   
 5.  В поле **Владелец** введите имя участника на уровне сервера, которому будет принадлежать новая роль. Также можно нажать кнопку с многоточием **(...)** , чтобы открыть диалоговое окно **Выбор имени входа или роли сервера** .  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-create-a-new-server-role"></a>Создание новой роли сервера  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

@@ -1,16 +1,16 @@
 ---
-title: "Типы char и varchar (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: Типы char и varchar (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>Типы char и varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 Эти типы данных имеют фиксированную или переменную длину.  
   
 ## <a name="arguments"></a>Аргументы  
-**char** [ ( *n* ) ] Строковые данные фиксированной длины не в Юникоде. Аргумент *n* определяет длину строки и должен иметь значение от 1 до 8000. Размер при хранении составляет *n* байт. Синонимом по стандарту ISO для типа **char** является **character**.
+**char** [ ( *n* ) ] Строковые данные фиксированной длины не в Юникоде. *n* определяет длину строки и должно иметь значение от 1 до 8000. Размер при хранении составляет *n* байт. Синонимом по стандарту ISO для типа **char** является **character**.
   
-**varchar** [ ( *n* | **max** ) ] Строковые данные переменной длины не в Юникоде. Аргумент *n* определяет длину строки и может иметь значение от 1 до 8000. Значение **max** указывает, что максимальный размер при хранении составляет 2^31-1 байт (2 ГБ). Размер хранения — это фактическая длина введенных данных плюс 2 байта. Синонимами по стандарту ISO для типа **varchar** являются типы **charvarying** или **charactervarying**.
+**varchar** [ ( *n* | **max** ) ] Строковые данные переменной длины не в Юникоде. *n* определяет длину строки и может иметь значение от 1 до 8000. Значение **max** указывает, что максимальный размер при хранении составляет 2^31-1 байт (2 ГБ). Размер хранения — это фактическая длина введенных данных плюс 2 байта. Синонимами по стандарту ISO для типа **varchar** являются типы **charvarying** или **charactervarying**.
   
 ## <a name="remarks"></a>Remarks  
-Если значение *n* при определении данных или в инструкции объявления переменной не указано, то длина по умолчанию равна 1. Если значение *n* не указано при использовании функций CAST и CONVERT, длина по умолчанию равна 30.
+Если значение *n* в определении данных или в инструкции объявления переменной не указано, то длина по умолчанию равна 1. Если значение *n* не указано при использовании функций CAST и CONVERT, длина по умолчанию равна 30.
   
 Объектам, в которых используются типы данных **char** и **varchar**, назначаются параметры сортировки базы данных по умолчанию, если только иные параметры сортировки не назначены с использованием предложения COLLATE. Параметры сортировки контролируют кодовую страницу, используемую для хранения символьных данных.
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Отображение значения по умолчанию n при использовании в объявлении переменной.  
-В приведенном ниже примере показано, что значение по умолчанию *n* равно 1 для типов данных `char` и `varchar`, если они используются в объявлении переменной.
+В приведенном ниже примере показано, что значение по умолчанию *n* равно 1 для типов данных `char` и `varchar`, если они используются в объявлении переменной.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +93,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>Б. Отображение значения по умолчанию n при использовании функций CAST и CONVERT с типом данных varchar.  
-В приведенном ниже примере показано, что значение по умолчанию *n* равно 30, если типы данных `char` или `varchar` используются с функциями `CAST` и `CONVERT`.
+В приведенном ниже примере показано, что значение по умолчанию *n* равно 30, если типы данных `char` или `varchar` используются с функциями `CAST` и `CONVERT`.
   
 ```sql
 DECLARE @myVariable AS varchar(40);  

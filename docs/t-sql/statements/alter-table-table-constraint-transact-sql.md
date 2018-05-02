@@ -1,16 +1,16 @@
 ---
-title: "table_constraint (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: table_constraint (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 464ce13d973f975fe36a73f94ec9b12cd0eb1bf3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7b3c40933f9d2e84ebc4db3aede6c8aa2a26e912
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,12 +92,12 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  Описание выражения WITH FILLFACTOR = *fillfactor* как единственного параметра индекса, применимого к ограничениям PRIMARY KEY или UNIQUE, сохранено для обеспечения обратной совместимости, но в будущих выпусках это выражение документировано не будет. Другие параметры индекса можно указать в предложении [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) инструкции ALTER TABLE.  
   
- ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup*| **"**default**"** }  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup*| **"** default **"** }  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент **"**default**"** или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
+ Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент **"** default **"** или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
   
- В данном контексте слово "default" не является ключевым словом; это идентификатор файловой группы по умолчанию, который должен быть ограничен специальными символами, как в выражениях ON **"**default**"** или ON **[**default**]**. Если указано значение **"**default**"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию.  
+ В данном контексте слово "default" не является ключевым словом; это идентификатор файловой группы по умолчанию, который должен быть ограничен специальными символами, как в выражениях ON **"** default **"** или ON **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию.  
   
  FOREIGN KEY REFERENCES  
  Ограничение, обеспечивающее ссылочную целостность данных в столбце. Ограничения FOREIGN KEY требуют, чтобы любое значение в столбце обязательно существовало в указанном столбце ссылочной таблицы.  
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/21/2017
  Если же указано NO ACTION, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] инициирует ошибку и откатывает операцию обновления строки таблицы **Vendor**, если на нее ссылается хотя бы одна строка из таблицы **ProductVendor**.  
   
  NOT FOR REPLICATION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Может быть определено для ограничений FOREIGN KEY и CHECK. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/21/2017
  *logical_expression*  
  Логическое выражение, используемое в ограничении CHECK и возвращающее значения TRUE или FALSE. Аргумент *logical_expression*, используемый в ограничениях CHECK, не может содержать ссылок на другие таблицы, но может ссылаться на другие столбцы той же таблицы в той же строке. Выражение не может ссылаться на псевдоним типа данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При добавлении новых ограничений FOREIGN KEY или CHECK все существующие данные проверяются на соответствие ограничениям, если не указан параметр WITH NOCHECK. В том случае, если обнаруживаются нарушения, выполнение ALTER TABLE завершается с ошибкой. При добавлении к существующему столбцу ограничений PRIMARY KEY или UNIQUE все данные в столбце должны быть уникальны. Если будут обнаружены повторяющиеся значения, ALTER TABLE завершится неудачно. При добавлении ограничения PRIMARY KEY или UNIQUE наличие параметра WITH NOCHECK не имеет значения.  
   
  Каждое ограничение PRIMARY KEY и UNIQUE создает индекс. Число ограничений UNIQUE и PRIMARY KEY не может вызвать превышение предельного количества индексов в таблице (999 некластеризованных и 1 кластеризованный). Ограничения внешнего ключа не вызывают автоматического создания индекса. Однако столбцы внешних ключей часто используются в критериях соединения запросов посредством сопоставления столбца или столбцов из ограничения внешнего ключа одной таблицы со столбцом или столбцами первичного или уникального ключей в другой таблице. Индекс по столбцам таблицы внешнего ключа позволяет компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] быстро находить связанные данные в таблице внешних ключей.  

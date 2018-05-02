@@ -1,33 +1,34 @@
 ---
-title: "Настройка предупреждения базы данных SQL Server (Windows) | Документы Майкрософт"
-ms.custom: 
+title: Настройка предупреждения базы данных SQL Server (Windows) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 447c615f57a71a321a85315cb9de40df5fca8cfc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 56dcfcc43dfdaf333990ce3f6e95d5aa9bede260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Настройка предупреждения базы данных SQL Server (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Вы можете использовать системный монитор для создания предупреждения, которое будет выводиться, когда счетчик системного монитора достигает порогового значения. В ответ на оповещение системный монитор может запустить то или иное приложение — скажем, приложение, решающее связанную с оповещением проблему. Например, можно создать предупреждение, которое будет выводиться, когда число взаимоблокировок превысит заданное значение. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Вы можете использовать системный монитор для создания предупреждения, которое будет выводиться, когда счетчик системного монитора достигает порогового значения. В ответ на оповещение системный монитор может запустить то или иное приложение — скажем, приложение, решающее связанную с оповещением проблему. Например, можно создать предупреждение, которое будет выводиться, когда число взаимоблокировок превысит заданное значение. 
   
  Оповещения можно также определять c помощью среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Предупреждения](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   

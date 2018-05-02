@@ -1,16 +1,16 @@
 ---
-title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER AVAILABILITY GROUP (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 01/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 
+caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebe662a8164db991c105ebf676b6a51e1f6cdcc5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -264,7 +264,7 @@ ALTER AVAILABILITY GROUP group_name
  *сетевое_имя_FCI*  
  Это сетевое имя, используемое для доступа к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте его, если экземпляр сервера является участником — партнером по обеспечению отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выполнение SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) на экземпляре сервера FCI возвращает всю его строку '*FCI_network_name*[\\*instance_name*]' (то есть полное имя реплики).  
   
- *имя_экземпляра*  
+ *instance_name*  
  Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенного на *system_name* или *FCI_network_name* с поддержкой AlwaysOn. Для экземпляра сервера по умолчанию указывать параметр *имя_экземпляра* не обязательно. В именах экземпляров не учитывается регистр символов. На экземпляре изолированного сервера это имя значения совпадает со значением, возвращаемым при выполнении инструкции SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
   
  \  
@@ -277,7 +277,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL обязательно требуется в предложении ADD REPLICA ON и является необязательным в предложении MODIFY REPLICA ON.  Дополнительные сведения см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Задает URL-адрес для конечной точки или URL-адрес маршрутизации, доступный только для чтения. Параметры URL-адреса:  
   
  *system-address*  
@@ -360,7 +360,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес, используемый для маршрутизации запросов на соединение с намерением чтения к этой реплике доступности. Этот URL-адрес прослушивается компонентом ядра СУБД SQL Server. Обычно экземпляр по умолчанию компонента ядра СУБД SQL Server прослушивает TCP-порт 1433.  
   
  Номер порта для именованного экземпляра вы можете получить, запросив столбцы **port** и **type_desc** динамического административного представления [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). Экземпляр сервера использует прослушиватель Transact-SQL (**type_desc='TSQL'**).  
@@ -481,12 +481,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  Указывает имя группы доступности, составляющей половину распределенной группы доступности.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес пути для прослушивателя, связанного с группой доступности.  
   
  Требуется предложение LISTENER.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
   
  *system-address*  

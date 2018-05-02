@@ -1,16 +1,16 @@
 ---
-title: "DBCC CHECKALLOC (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DBCC CHECKALLOC (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d4c23442a4857d2c4a6f4c4ea75042cb63e3dadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ DBCC CHECKALLOC
 |5|Возникла неизвестная ошибка, которая привела к прекращению выполнения команды DBCC.|  
   
 ## <a name="error-reporting"></a>Отчет об ошибках  
-При каждом обнаружении командой DBCC CHECKALLOC ошибки повреждения данных в каталоге LOG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается файл мини-дампа (SQLDUMP*nnnn*.txt). Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об использовании компонентов и отчетов об ошибках, этот файл автоматически отправляется в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+При каждом обнаружении командой DBCC CHECKALLOC ошибки повреждения данных в папке LOG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается мини-файл дампа (SQLDUMP*nnnn*.txt). Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об использовании компонентов и отчетов об ошибках, этот файл автоматически отправляется в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Файл дампа содержит результаты выполнения команды DBCC CHECKALLOC и дополнительные диагностические сведения. Доступ к этому файлу ограничен списками управления доступом на уровне пользователей. Доступ ограничен учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и членами роли sysadmin. По умолчанию роль sysadmin содержит всех членов группы Windows BUILTIN\Administrators и группы локальных администраторов. В случае ошибки процесса сбора данных команда DBCC не завершается ошибкой.
   
 ## <a name="resolving-errors"></a>Разрешение ошибок  

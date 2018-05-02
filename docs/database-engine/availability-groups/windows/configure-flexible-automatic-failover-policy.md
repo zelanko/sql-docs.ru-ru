@@ -1,32 +1,32 @@
 ---
-title: "Настройка гибкой политики отработки отказа для автоматического перехода на другой ресурс | Документы Майкрософт"
-ms.custom: 
+title: Настройка гибкой политики отработки отказа для автоматического перехода на другой ресурс | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b1a512a3b4d22582c717afc3f77853d9f32281b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Настройка гибкой политики отработки отказа для автоматического перехода на другой ресурс
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/23/2018
   
          Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-    -   Чтобы настроить пороговое значение ожидания проверки работоспособности, используйте параметр HEALTH_CHECK_TIMEOUT = *n* , где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд)  
+    -   Чтобы настроить пороговое значение ожидания проверки работоспособности, используйте параметр HEALTH_CHECK_TIMEOUT = *n*, где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд)  
   
          Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] изменяет пороговое значение времени ожидания проверки работоспособности существующей группы доступности `AG1`на значение 60 000 миллисекунд (одна минута).  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 02/23/2018
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Чтобы установить пороговое значение времени ожидания для проверки работоспособности, используйте параметр **HealthCheckTimeout***n*, где *n* является целым числом от 15 000 миллисекунд (15 секунд) до 4 294 967 295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд).  
+    -   Чтобы установить пороговое значение времени ожидания для проверки работоспособности, используйте параметр **HealthCheckTimeout***n*, где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд).  
   
          Например, следующая команда изменяет пороговое значение времени ожидания проверки работоспособности существующей группы доступности `AG1`на значение 120 000 миллисекунд (две минуты).  
   

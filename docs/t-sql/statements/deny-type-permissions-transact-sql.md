@@ -1,16 +1,16 @@
 ---
-title: "DENY, запрет разрешений на тип (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DENY, запрет разрешений на тип (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - type permissions [SQL Server]
 - denying permissions [SQL Server], types
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 369d9bbce84881936d8c77f52807121cbb763b18
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1d4f7c463b082baf13c6cf120f65b8c3ff4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY, запрет разрешений на тип (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  Задает тип, для которого запрещается разрешение. Квалификатор области (**::**) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (**.**).  
   
  TO \<database_principal>  
- Задает участника, для которого запрещается разрешение, —  
+ Задает участника, для которого запрещается разрешение.  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
@@ -134,8 +134,8 @@ GO
  [GRANT, предоставление разрешений на тип (Transact-SQL)](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
  [REVOKE, отмена разрешений на тип (Transact-SQL)](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Защищаемые объекты](../../relational-databases/security/securables.md)  
   
   

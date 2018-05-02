@@ -1,16 +1,16 @@
 ---
-title: "DELETE (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DELETE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DELETE
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a30704357c724c3a7e5ecc78569aecdd62687e8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +111,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Псевдоним, заданный в предложении FROM *table_source* и представляющий таблицу или представление, строки которых будут удалены.  
   
  *server_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Имя сервера (с использованием имени связанного сервера или функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) в качестве имени сервера), на котором расположена таблица или представление. Если указано *server_name*, необходимо указать *database_name* и *schema_name*.  
   
@@ -128,7 +129,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Представление, на которое ссылается аргумент *table_or_view_name*, должно быть обновляемым и ссылаться только на одну базовую таблицу в предложении FROM определения представления. Дополнительные сведения об обновляемых представлениях см. в разделе [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Функция [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) в зависимости от возможностей поставщика.  
   
@@ -226,7 +227,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 |Категория|Используемые элементы синтаксиса|  
 |--------------|------------------------------|  
-|[Основной синтаксис](#BasicSyntax)|Delete|  
+|[Основной синтаксис](#BasicSyntax)|DELETE|  
 |[Ограничение удаляемых строк](#LimitRows)|WHERE • FROM • курсор •|  
 |[Удаление строк из удаленной таблицы](#RemoteTables)|Связанный сервер • OPENQUERY, функция набора строк • OPENDATASOURCE, функция набора строк|  
 |[Сбор результатов для инструкции DELETE](#CaptureResults)|OUTPUT, предложение|  
@@ -320,7 +321,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>Д. Ограничение числа удаляемых строк с помощью ключевого слова TOP  
- Если с инструкцией DELETE применяется предложение TOP (*n*), то операция удаления производится над *n* случайно выбранных строк. Следующий пример удаляет `20` случайных строк из таблицы `PurchaseOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], имеющих дату ранее 1 июля 2006 г.  
+ Если с инструкцией DELETE применяется предложение TOP (*n*), то операция удаления производится над *n* случайно выбранными строками. Следующий пример удаляет `20` случайных строк из таблицы `PurchaseOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], имеющих дату ранее 1 июля 2006 г.  
   
 ```  
 DELETE TOP (20)   
@@ -343,7 +344,7 @@ GO
 ###  <a name="RemoteTables"></a> Удаление строк из удаленной таблицы  
  В примерах в этом разделе описаны способы удаления строк из удаленной таблицы с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md). Удаленная таблица существует на другом сервере или экземпляре SQL Server.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>Е. Удаление данных из удаленной таблицы с помощью связанного сервера  
  В следующем примере будет удалена строка из удаленной таблицы. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object*.  

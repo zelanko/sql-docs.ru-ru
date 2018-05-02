@@ -1,16 +1,16 @@
 ---
-title: "HAS_PERMS_BY_NAME (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HAS_PERMS_BY_NAME
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b796f4f9ca3631f329b0261a39953e58964b58bb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4189de226a768914621be0a99d6d2a5b757c7236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] аргумент sub-securable_class является допустимым, только если аргумент securable_class имеет значение **OBJECT**. Если аргумент securable_class задан равным **OBJECT**, то аргумент sub-securable_class должен быть задан равным **COLUMN**.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
  Возвращает значение NULL, если запрос завершается неудачей.  
@@ -187,7 +187,7 @@ SELECT name AS column_name,
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   

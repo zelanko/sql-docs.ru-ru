@@ -26,11 +26,13 @@
 ## [Заметки о SQL Server 2012](sql-server-2012-release-notes.md)
 ## [Заметки о SQL Server 2008 R2 с пакетом обновления 2 (SP2)](sql-server-2008-r2-sp2-release-notes.md)
 
+# [SQL Server в Linux](../linux/sql-server-linux-overview.md)
 # [службы Analysis Services](../analysis-services/analysis-services.md)
 # [Ядро СУБД](../database-engine/sql-server-database-engine-overview.md)
 # [Службы Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Отказоустойчивые кластеры](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-# [Установка](../sql-server/install/planning-a-sql-server-installation.md)
+# [Установка (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
+# [Установка (Linux)](../linux/sql-server-linux-setup.md)
 # [Службы интеграции](../integration-services/sql-server-integration-services.md)
 # [Службы Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
@@ -38,6 +40,7 @@
 # [Помощник по миграции данных](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Учебные материалы по SQL Server](tutorials-for-sql-server-2016.md)
+# [Средства SQL Server](../tools/overview-sql-tools.md)
 
 # Ресурсы
 

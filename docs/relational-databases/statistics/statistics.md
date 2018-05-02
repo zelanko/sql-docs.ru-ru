@@ -1,16 +1,16 @@
 ---
-title: "Статистика | Документация Майкрософт"
-ms.custom: 
+title: Статистика | Документация Майкрософт
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: statistics
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-statistics
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
@@ -26,19 +26,21 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 
+caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aadb78f147f67afba5434490364ec60577518501
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statistics"></a>Статистика
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Оптимизатор запросов использует статистику для создания планов запросов, которые повышают производительность запросов. Для большинства запросов оптимизатор уже создает необходимую статистику, которая позволяет сформировать высококачественный план запроса. Но в некоторых случаях для достижения наилучших результатов нужно создать дополнительные статистические данные или изменить структуру запроса. В этом разделе обсуждаются основные статистические понятия и предоставляются рекомендации по эффективному использованию статистики для оптимизации запросов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Оптимизатор запросов использует статистику для создания планов запросов, которые повышают производительность запросов. Для большинства запросов оптимизатор уже создает необходимую статистику, которая позволяет сформировать высококачественный план запроса. Но в некоторых случаях для достижения наилучших результатов нужно создать дополнительные статистические данные или изменить структуру запроса. В этом разделе обсуждаются основные статистические понятия и предоставляются рекомендации по эффективному использованию статистики для оптимизации запросов.  
   
 ##  <a name="DefinitionQOStatistics"></a> Компоненты и основные понятия  
 ### <a name="statistics"></a>Статистика  
@@ -117,7 +119,7 @@ ORDER BY s.name;
     * Если на момент оценки статистических данных кратность в таблице не превышала 500, обновление выполняется для каждых 500 модификаций.
     * Если на момент оценки статистических данных кратность в таблице превышала 500, обновление выполняется для каждых 500 + 20 % модификаций.
 
-* Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из 1000, умноженный на текущее значение кратности в таблице. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!IMPORTANT]
 > Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) ниже 130 применяется [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице.
@@ -159,7 +161,7 @@ ORDER BY s.name;
 * Статистики, созданные по внутренним таблицам.  
 * Статистики, созданные с пространственными индексами или XML-индексами.  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
 ## <a name="CreateStatistics"></a> Условия создания статистики  
  Оптимизатор запросов самостоятельно создает статистику следующим образом:  

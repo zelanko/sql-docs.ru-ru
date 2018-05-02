@@ -1,16 +1,16 @@
 ---
-title: "CHAR (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CHAR (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 46b448a5d464cf0de9f9bf70373103da10f46b4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Преобразует код ASCII **int** в символ.
+Эта функция преобразует код ASCII **int** в значение символа.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +56,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *integer_expression*  
-Целое число от 0 до 255. Значение `NULL` возвращается в случае, если целочисленное выражение находится вне этой области значений.
+Целое число от 0 до 255. `CHAR` возвращает значение `NULL` для целочисленных выражений, выходящих за пределы этого диапазона.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-Функция `CHAR` может использоваться для вставки управляющих символов в символьные строки. В следующей таблице показаны некоторые часто используемые управляющие символы.
+Функция `CHAR` может использоваться для вставки управляющих символов в символьные строки. В этой таблице показаны некоторые часто используемые управляющие символы.
   
 |Управляющий символ|Значение|  
 |---|---|
@@ -72,7 +73,7 @@ CHAR ( integer_expression )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. Использование ASCII и CHAR для отображения значений ASCII из строки  
-В следующем примере отображается значение ASCII и символ для каждого символа в строке `New Moon`.
+В этом примере отображается значение ASCII и символ для каждого символа в строке `New Moon`.
   
 ```sql
 SET TEXTSIZE 0;  
@@ -113,7 +114,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>Б. Использование функции CHAR для вставки управляющего символа  
-В следующем примере используется выражение `CHAR(13)`, чтобы отображать имя и адрес электронной почты в отдельных строках, когда результаты возвращаются в виде текста. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+В этом примере используется выражение `CHAR(13)`, чтобы отображать имя и адрес электронной почты сотрудника в отдельных строках, когда результаты запроса возвращаются в виде текста. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -135,7 +136,7 @@ ken0@adventure-works.com
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>В. Использование ASCII и CHAR для отображения значений ASCII из строки  
-В приведенном ниже примере принимается кодировка ASCII и возвращается значение символа для 6 номеров символов ASCII.
+В этом примере используется набор символов ASCII. В нем возвращается значение символа для шести разных числовых значений символов ASCII.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +153,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>Г. Использование функции CHAR для вставки управляющего символа  
-В приведенном ниже примере используется `CHAR(13)` для получения сведений о базах данных в отдельных строках, когда результаты возвращаются в виде текста.
+В этом примере используется `CHAR(13)` для получения сведений из файла sys.databases в отдельных строках, когда результаты запроса возвращаются в виде текста.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

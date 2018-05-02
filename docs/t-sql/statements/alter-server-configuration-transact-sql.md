@@ -2,7 +2,7 @@
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4489934ad1bb21c79cbb0ece01e7d061fd794c2a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ SET <optionspec>
  Включает связывание потоков оборудования с процессорами.  
   
  CPU = { AUTO | \<CPU_range_spec> }  
- Распределяет рабочие потоки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на каждый ЦП в заданном диапазоне. Для процессоров вне заданного диапазона не будут назначены потоки.  
+ Распределяет рабочие потоки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на каждый ЦП в заданном диапазоне. Для процессоров вне заданного диапазона не назначены потоки.  
   
  AUTO  
  Указывает, что для потока не назначен ЦП. Разрешено свободное перемещение потоков операционной системой между процессорами в зависимости от рабочей нагрузки сервера. Это значение по умолчанию, которое рекомендуется использовать.  
@@ -137,7 +137,7 @@ SET <optionspec>
   
  **\<diagnostic_log> ::=**  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  DIAGNOSTICS LOG  
  Запускает или останавливает запись в журнал диагностических данных, полученных с помощью хранимой процедуры sp_server_diagnostics, а также задает такие параметры конфигурации журналов SQLDIAG, как количество переключений файлов журнала, размер файлов журнала и расположение файлов. Дополнительные сведения см. в статье [Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
@@ -159,7 +159,7 @@ SET <optionspec>
   
  **\<failover_cluster_property> ::=**  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  FAILOVER CLUSTER PROPERTY  
  Изменяет свойства закрытого ресурса отказоустойчивого кластера SQL Server.  
@@ -190,7 +190,7 @@ SQLDUMPEREDUMPFLAGS
   
  **\<hadr_cluster_context> ::=**  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
  Переключает контекст кластера HADR экземпляра сервера (WSFC) до указанного кластера WSFC. *Контекст кластера HADR* определяет кластер Windows Server Failover Clustering (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
@@ -201,8 +201,8 @@ SQLDUMPEREDUMPFLAGS
   
  Для определения целевого кластера укажите одно из следующих значений:  
   
- *windows_cluster*  
- Объект имени (CNO) WSFC-кластера. Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
+ *кластер_windows*  
+ Объект имени WSFC-кластера (CNO). Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
   
  LOCAL  
  Локальный кластер WSFC.  
@@ -211,10 +211,10 @@ SQLDUMPEREDUMPFLAGS
   
  **\<buffer_pool_extension>::=**  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула с помощью энергонезависимого хранилища, например твердотельных накопителей (SSD), для сохранения чистых страниц данных в пуле. Дополнительные сведения об этой возможности см. в разделе [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула поддерживается не во всех выпусках SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула с помощью энергонезависимого хранилища, например твердотельных накопителей (SSD), для сохранения чистых страниц, данных в пуле. Дополнительные сведения об этой возможности см. в разделе [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула поддерживается не во всех выпусках SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
  Определяет путь к каталогу и имя файла кэша расширения буферного пула. Файл должен иметь расширение BPE. Необходимо отключить BUFFER POOL EXTENSION, чтобы изменить FILENAME.  
@@ -232,7 +232,7 @@ SQLDUMPEREDUMPFLAGS
   
  **\<soft_numa>**  
 
-**Область применения**: начиная с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
  Включает автоматическое секционирование для разбиения крупных аппаратных узлов NUMA на более мелкие узлы NUMA. При изменении текущего значения потребуется перезапустить ядро СУБД.  
@@ -270,7 +270,7 @@ SQLDUMPEREDUMPFLAGS
 |[Настройка параметров журнала диагностики](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Установка свойств отказоустойчивого кластера](#Failover)|HealthCheckTimeout|  
 |[Изменение контекста кластера для реплики доступности](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Установка расширения буферного пула](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Установка расширения буферного пула](#BufferPoolExtension)|РАСШИРЕНИЕ БУФЕРНОГО ПУЛА|  
   
 ###  <a name="Affinity"></a> Установка соответствия процессов  
  В примерах этого раздела показано соответствие процессов центральным процессорам (ЦП) и узлам NUMA. Сервер в этих примерах состоит из 256 процессоров, организованных в четыре группы по 16 узлов NUMA в каждой. Потоки не назначаются какому-либо узлу NUMA или ЦП.  
@@ -319,9 +319,9 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Настройка параметров журнала диагностики  
+###  <a name="Diagnostic"></a> Setting diagnostic log options  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  В примерах этого раздела показана установка значений параметра журнала диагностики.  
   
@@ -357,7 +357,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 ###  <a name="Failover"></a> Установка свойств отказоустойчивого кластера  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  В следующем примере показана установка свойств ресурса отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -380,7 +380,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="BufferPoolExtension"></a> A. Установка параметра расширения буферного пула  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  В следующем примере выполняется включение параметра расширения буферного пула и задается имя и размер файла.  
   

@@ -1,8 +1,8 @@
 ---
 title: BULK INSERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/04/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: ''
+caps.latest.revision: 153
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7569b89a9ceffd99e15d11a5ef06c880411a479
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: d6ac507a908d77618aa4171bc222e60cbd051ed0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -125,9 +125,12 @@ BULK INSERT
 > [!NOTE]  
 >  Параметр MAXERRORS не влияет на проверку ограничений.  
   
- CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  Указывает кодовую страницу данных в файле данных. Аргумент CODEPAGE имеет смысл только в том случае, если данные содержат столбцы типа **char**, **varchar** или **text** с символьными значениями, коды которых больше **127** или меньше **32**.  
-  
+
+> [!IMPORTANT]
+> Параметр CODEPAGE не поддерживается в Linux.
+
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует указывать имя параметров сортировки для каждого столбца в [файле форматирования](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   

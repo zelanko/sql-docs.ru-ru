@@ -1,32 +1,32 @@
 ---
-title: "FILESTREAM (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: FILESTREAM (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e0a757bb7582d3bc9690d804ab34d47aeaedf03
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 54cc9bd8f9c209fa07fcbb920dcd22abd5c3dbb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ FILESTREAM не включается автоматически при уста�
 Язык [!INCLUDE[tsql](../../includes/tsql-md.md)]позволяет вставлять, обновлять и удалять данные FILESTREAM:  
 
 - Операция вставки позволяет выполнить предварительное заполнение поля FILESTREAM значением NULL, пустым значением или встроенными данными относительно небольшого размера. Однако при работе с большими объемами данных большей эффективности потока можно добиться при помощи файла, использующего интерфейсы Win32.  
-- При обновлении поля FILESTREAM происходит изменение базовых данных BLOB в файловой системе. Если в поле FILESTREAM содержится значение NULL, данные BLOB, связанные с этим полем, удаляются. Обновление фрагмента данных на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , реализованное в виде конструкции UPDATE**.**Write(), использовать для частичного обновления данных нельзя. 
+- При обновлении поля FILESTREAM происходит изменение базовых данных BLOB в файловой системе. Если в поле FILESTREAM содержится значение NULL, данные BLOB, связанные с этим полем, удаляются. Обновление фрагмента данных на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , реализованное в виде конструкции UPDATE **.** Write(), использовать для частичного обновления данных нельзя. 
 - При удалении строки или удалении или усечении таблицы, содержащей данные FILESTREAM, удаляются базовые данные BLOB в файловой системе.
 
 ### <a name="file-system-streaming-access"></a>Потоковый доступ к файловой системе
@@ -170,3 +170,7 @@ FILESTREAM не включается автоматически при уста�
 ## <a name="related-content"></a>См. также
 
 [Совместимость FILESTREAM с другими компонентами SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
+<br>[Динамические административные представления Filestream и FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Представления каталога Filestream и FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Системные хранимые процедуры Filestream и FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+

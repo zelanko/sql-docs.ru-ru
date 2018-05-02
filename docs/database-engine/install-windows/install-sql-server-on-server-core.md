@@ -1,27 +1,27 @@
 ---
-title: "Установка SQL Server 2016 в Server Core | Документы Майкрософт"
-ms.custom: 
+title: Установка SQL Server 2016 в Server Core | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7de58227a8da5f90921b1e973a63949f71a25b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ac142899ecabd2e3d322be70de5f0ff14fd8913c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/09/2018
 
 Можно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.   
   
-Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)]см. в разделе [Server Core для Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)] см. в разделе [Server Core для Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
  Список текущих поддерживаемых операционных систем см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -47,18 +47,18 @@ ms.lasthandoff: 02/09/2018
   
 |Компонент|Поддерживается|Дополнительные сведения|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Службы|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Репликация|Да||  
+|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Да||  
+|Репликация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Да||  
 |Полнотекстовый поиск|Да||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Да||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|нет||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|нет||  
 |Средства связи клиентских средств|Да||  
-|Сервер служб Integration Services|Да|Дополнительные сведения о новом сервере служб Integration Services и его компонентах см. в [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
+|Сервер служб Integration Services|Да||  
 |Обратная совместимость клиентских средств|нет||  
 |Пакет SDK клиентских средств|нет||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Электронная документация|нет||  
+|Электронная документация по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |нет||  
 |Основные средства управления|Только удаленные|Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на сервере, отличном от Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)], установленным в Server Core.|  
 |Полные средства управления|Только удаленные|Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на сервере, отличном от Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)], установленным в Server Core.|  
 |Контроллер распределенного воспроизведения|нет||  
@@ -73,9 +73,9 @@ ms.lasthandoff: 02/09/2018
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуски|Все 64-разрядные версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] *|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|Все языки|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] язык в языке ОС-локали (сочетание)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для JPN (японский) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для GER (немецкий) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для CHS (китайский — Китай) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ARA (арабский (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для THA (тайский) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для TRK (турецкий) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для pt-PT (португальский, Португалия) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ENG (английский) Windows|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выпуски|Все 64-разрядные версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , язык|Все языки|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , язык в языке ОС-локали (сочетание)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для JPN (японский) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для GER (немецкий) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для CHS (китайский — Китай) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ARA (арабский (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для THA (тайский) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для TRK (турецкий) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для pt-PT (португальский, Португалия) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ENG (английский) Windows|  
 |Выпуск Windows|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>UPGRADE 
@@ -330,7 +330,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  
 1.  Нажмите CTRL+SHIFT+ESC, чтобы отобразить диспетчер задач.  
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
-3.  В диалоговом окне **Создание новой задачи** введите **cmd **в поле** Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем**.  
+3.  В диалоговом окне **Создание новой задачи** введите **cmd**в поле**Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем**.  
   
 ## <a name="see-also"></a>См. также раздел  
  [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   

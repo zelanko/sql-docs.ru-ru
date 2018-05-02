@@ -1,16 +1,16 @@
 ---
-title: "DROP INDEX (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DROP INDEX (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 
+caps.latest.revision: 99
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 042a2baab09ef96e1f89b71359e50ce6c933ea8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +121,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 ## <a name="arguments"></a>Аргументы  
  *IF EXISTS*  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Условное удаление индекса только в том случае, если он уже существует.  
   
@@ -148,7 +149,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  MAXDOP = *max_degree_of_parallelism*  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (уровни производительности P2 и P3).  
   
- Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+ Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]  
 >  Параметр MAXDOP нельзя использовать для пространственных или XML-индексов.  
@@ -185,8 +186,8 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] поддерживает "default" в качестве имени файловой группы.  
+ MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] поддерживает "default" в качестве имени файловой группы.  
   
  Определяет размещение, куда будут перемещаться строки данных, находящиеся на конечном уровне кластеризованного индекса. Данные перемещаются в новое расположение со структурой типа куча. В качестве нового расположения можно указать файловую группу или схему секционирования, но они должны уже существовать. Параметр MOVE TO недопустим для индексированных представлений и некластеризованных индексов. Если ни схема секционирования, ни файловая группа не указаны, результирующая таблица помещается в схему секционирования или файловую группу, которая определена для кластеризованного индекса.  
   
@@ -200,18 +201,18 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  Имя столбца в схеме не обязательно должно соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы.  
   
  *filegroup_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает файловую группу, в которую будет помещена результирующая таблица. Если размещение не указано и таблица не секционирована, тогда результирующая таблица включается в ту файловую группу, где размещен существующий кластеризованный индекс. Файловая группа должна существовать.  
   
- **"**default**"**  
+ **"** default **"**  
  Указывает размещение по умолчанию для результирующей таблицы.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"**default**"** или MOVE TO **[**default**]**. Если указывается параметр **"**default**"**, то параметр QUOTED_IDENTIFIER для текущего сеанса должен иметь значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]**. Если указывается параметр **"** default **"**, то параметр QUOTED_IDENTIFIER для текущего сеанса должен иметь значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Определяет папку, в которую будет перемещаться таблица FILESTREAM, находящаяся на конечном уровне кластеризованного индекса. Данные перемещаются в новое расположение со структурой типа куча. В качестве нового расположения можно указать файловую группу или схему секционирования, но они должны уже существовать. Параметр FILESTREAM ON недопустим для индексированных представлений или некластеризованных индексов. Если не указана схема секционирования, то данные будут размещены в той же схеме секционирования или файловой группе, которая была определена для кластеризованного индекса.  
   
@@ -223,11 +224,11 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *filestream_filegroup_name*  
  Указывает файловую группу FILESTREAM для данных FILESTREAM. Если расположение не указано, а таблица не секционирована, данные включаются в файловую группу FILESTREAM по умолчанию.  
   
- **"**default**"**  
+ **"** default **"**  
  Указывает расположение по умолчанию для данных FILESTREAM.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"**default**"** или MOVE TO **[**default**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  При удалении некластеризованного индекса его определение удаляется из метаданных, а страницы данных сбалансированного дерева индекса удаляются из файлов базы данных. При удалении кластеризованного индекса определение индекса удаляется из метаданных, а строки данных, которые хранились на конечном уровне кластеризованного индекса, сохраняются в результирующей неупорядоченной таблице — куче. Все пространство, ранее занимаемое индексом, освобождается. Оно может быть впоследствии использовано любым объектом базы данных.  
@@ -236,7 +237,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Если удален кластеризованный индекс индексированного представления, то все некластеризованные индексы и автоматически создаваемые статистики в этом представлении автоматически удаляются. Статистики, созданные вручную, не удаляются.  
   
- Синтаксис *table_or_view_name***.***index_name* сохраняется для обратной совместимости. Пространственный или XML-индекс нельзя удалить с использованием синтаксиса обратной совместимости.  
+ Синтаксис *table_or_view_name ***.*** index_name* сохраняется для обратной совместимости. Пространственный или XML-индекс нельзя удалить с использованием синтаксиса обратной совместимости.  
   
  Если удаляемый индекс содержит 128 и более экстентов, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает действительное освобождение страниц и связанных с ними блокировок до фиксации транзакции.  
   
@@ -266,7 +267,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 При удалении кластеризованного индекса в режиме не в сети удаляются только верхние уровни кластеризованных индексов, следовательно, операция выполняется довольно быстро. При удалении кластеризованного индекса в режиме ONLINE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестраивает кучу два раза: один для первого шага, один для второго. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>XML-индексы  
- При удалении XML-индекса нельзя указывать параметры. Кроме того, нельзя использовать синтаксис *table_or_view_name***.***index_name*. При удалении первичного XML-индекса все связанные вторичные XML-индексы удаляются автоматически. Дополнительные сведения см в разделе [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ При удалении XML-индекса нельзя указывать параметры. Кроме того, нельзя использовать синтаксис *table_or_view_name ***.*** index_name*. При удалении первичного XML-индекса все связанные вторичные XML-индексы удаляются автоматически. Дополнительные сведения см в разделе [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Пространственные индексы  
  Пространственные индексы поддерживаются только для таблиц. При удалении пространственного индекса нельзя указывать любые параметры или использовать **.***index_name*. Правильный синтаксис:  
@@ -313,7 +314,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>Г. Удаление кластеризованного индекса в режиме в сети и перемещение таблицы в другую файловую группу  
  В следующем примере кластеризованный индекс удаляется в режиме в сети и результирующая таблица (куча) перемещается в файловую группу `NewGroup` с использованием предложения `MOVE TO` . Представления каталога `sys.indexes`, `sys.tables`и `sys.filegroups` запрашиваются для проверки размещения индекса и таблицы в файловых группах до и после перемещения. (Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно использовать синтаксис DROP INDEX IF EXISTS.)  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -386,7 +387,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>Ж. Удаление кластеризованного индекса для таблицы FILESTREAM  
  В следующем примере кластеризованный индекс удаляется в режиме в сети и результирующая таблица (куча) вместе с данными FILESTREAM перемещается в схему секционирования `MyPartitionScheme` с использованием предложений `MOVE TO` и `FILESTREAM ON`.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   

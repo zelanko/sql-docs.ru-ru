@@ -1,16 +1,16 @@
 ---
-title: "CERTPRIVATEKEY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CERTPRIVATEKEY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPRIVATEKEY
@@ -20,26 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df513e6ce63ff49e31ad05e5a4dca0372de69c83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1a08058fbc27aa8f8996ca8d3b15e98cb20d4e59
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает закрытый ключ сертификата в двоичном формате. Эта функция принимает три аргумента.
+Эта функция возвращает закрытый ключ сертификата в двоичном формате. Эта функция принимает три аргумента.
 -   Идентификатор сертификата.  
--   Пароль шифрования, который используется для шифрования возвращаемых функцией битов закрытого ключа, чтобы ключи не передавались пользователям в виде открытого текста.  
--   Необязательный пароль для дешифрования. Если пароль дешифрования указан, то он используется для расшифровки закрытого ключа сертификата, в противном случае используется главный ключ базы данных.  
+-   Пароль, используемый для шифрования битов закрытого ключа, возвращаемых этой функцией. При таком подходе ключи не предоставляются пользователям в виде открытого текста.  
+-   Необязательный пароль расшифровки. Указанный пароль расшифровки используется для расшифровки закрытого ключа этого сертификата. В противном случае используется главный ключ базы данных.  
   
-Только пользователи с доступом к закрытому ключу сертификата смогут использовать эту функцию. Эта функция возвращает закрытый ключ в формате ПВК.
+Эту функцию могут использовать только пользователи с доступом к закрытому ключу сертификата. Эта функция возвращает закрытый ключ в формате ПВК.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>Аргументы  
 *certificate_ID*  
-Это идентификатор **certificate_id** сертификата. Его можно получить из sys.certificates или через вызов функции [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md). Аргумент *cert_id* имеет тип **int**.
+Идентификатор **certificate_id** сертификата. Это значение можно получить из sys.certificates или через вызов функции [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* имеет тип данных **int**.
   
 *encryption_password*  
 Пароль, используемый для шифрования возвращаемого двоичного значения.
@@ -81,12 +81,12 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Use 5tr0ng P^55Words'
 GO  
 CREATE CERTIFICATE Shipping04   
 WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20141031';  
+EXPIRY_DATE = '20401031';  
 GO  
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из статьи [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md).
+Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из статьи [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md).
   
 ## <a name="see-also"></a>См. также раздел
 [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

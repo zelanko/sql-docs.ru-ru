@@ -1,16 +1,16 @@
 ---
-title: "ALTER VIEW (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER VIEW (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f20a6326f33f0cd41116d3a3c20dcdfad163eea2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS select_statement
  Если этот аргумент указан, выполняется шифрование элементов представления [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md), содержащего текст инструкции ALTER VIEW. Предложение WITH ENCRYPTION предотвращает публикацию представления при репликации SQL Server.  
   
  SCHEMABINDING  
- Привязывает представление к схеме базовой таблицы или таблиц. Если аргумент SCHEMABINDING указан, изменить базовые таблицы таким образом, чтобы это повлияло на определение представления, нельзя. Для удаления зависимостей из таблицы, которую требуется изменить, вначале нужно изменить или удалить само представление. При использовании аргумента SCHEMABINDING инструкция *select_statement* должна включать двухкомпонентные (*schema***.***object*) имена таблиц, представлений или пользовательских функций, упоминаемых в предложении. Все указанные в инструкции объекты должны находиться в одной базе данных.  
+ Привязывает представление к схеме базовой таблицы или таблиц. Если аргумент SCHEMABINDING указан, изменить базовые таблицы таким образом, чтобы это повлияло на определение представления, нельзя. Для удаления зависимостей из таблицы, которую требуется изменить, вначале нужно изменить или удалить само представление. При использовании аргумента SCHEMABINDING инструкция *select_statement* должна включать двухкомпонентные (*schema ***.*** object*) имена таблиц, представлений или пользовательских функций, упоминаемых в предложении. Все указанные в инструкции объекты должны находиться в одной базе данных.  
   
  Представления или таблицы, входящие в представление, созданное при помощи предложения SCHEMABINDING, не могут быть удалены, пока это представление не будет удалено или изменено так, что больше не будет привязано к схеме. В противном случае компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку. Кроме того, выполнение инструкций ALTER TABLE для таблиц, входящих в представления, связанные со схемами, завершается неудачей, если эти инструкции влияют на определение представления.  
   

@@ -3,15 +3,16 @@
 
 # [Руководства по SQL Server](sql-server-guides.md)
 ## Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn
-## [Проектирование индекса](sql-server-index-design-guide.md)
+## [Архитектура и проектирование индексов](sql-server-index-design-guide.md)
 ## [Архитектура управления памятью](memory-management-architecture-guide.md)
 ### [Чтение страниц](reading-pages.md)  
 ### [Запись страниц](writing-pages.md)
 ## [Архитектура страниц и экстентов](pages-and-extents-architecture-guide.md)
 ## [Руководство по оптимизации и проверке после миграции](post-migration-validation-and-optimization-guide.md)
+## [Производительность](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [Архитектура обработчика запросов](query-processing-architecture-guide.md)
 ## [Архитектура задач и потоков](thread-and-task-architecture-guide.md)
-## [Архитектура и администрирование журнала транзакций](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Руководство по архитектуре журналов транзакций и управлению ими](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Руководство по блокировке и управлению версиями строк транзакций](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Архивация и восстановление](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [Joins](../relational-databases/performance/joins.md)
 # [Секции](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [Производительность](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Управление на основе политик](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Репликация](../relational-databases/replication/sql-server-replication.md)

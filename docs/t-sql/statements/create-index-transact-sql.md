@@ -1,16 +1,16 @@
 ---
-title: "CREATE INDEX (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE INDEX (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -56,16 +56,17 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 
+caps.latest.revision: 223
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 431a26ae4bc8a7a00afcff70f65128e8108b500d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -261,7 +262,7 @@ CLUSTERED
   
  Допускаются данные всех типов, за исключением **text**, **ntext**и **image**. Индекс должен создаваться или перестраиваться в режиме "вне сети" (ONLINE = OFF), если любой из заданных неключевых столбцов имеет тип данных **varchar(max)**, **nvarchar(max)** или **varbinary(max)**.  
   
- Вычисляемые столбцы, являющиеся детерминированными и точными или неточными, могут быть включенными столбцами. Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**и **xml**, могут быть включены в неключевые столбцы, если типы данных вычисляемого столбца допускаются в качестве столбца для включения. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+ Вычисляемые столбцы, являющиеся детерминированными и точными или неточными, могут быть включенными столбцами. Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml**, могут быть включены в неключевые столбцы, если типы данных вычисляемого столбца допускаются в качестве столбца для включения. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
  Сведения о создании XML-индекса см. в разделе [CREATE XML INDEX (Transact-SQL)](../../t-sql/statements/create-xml-index-transact-sql.md).  
   
@@ -299,12 +300,12 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Создает заданный индекс в указанной файловой группе. Если местоположение не указано и таблица или представление не секционированы, индекс использует ту же файловую группу, что и базовая таблица или базовое представление. Файловая группа должна существовать.  
   
- ON **"**default**"**  
+ ON **"** default **"**  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
  Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
- Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"**default**"** или ON **[**default**]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -338,7 +339,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], объект может быть таблицей, хранящейся в кластеризованном индексе.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживает формат трехкомпонентного имени *database_name***.**[*schema_name*]**.***object_name*, если *database_name* — это текущая база данных или *database_name*  — это tempdb и *object_name* начинается с символа "#".  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживает формат трехкомпонентного имени *database_name***.**[* schema_name *]**.***object_name*, если *database_name* — это текущая база данных или *database_name* — это tempdb и *object_name* начинается с символа "#".  
   
  **\<relational_index_option>::=**  
   
@@ -359,7 +360,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Для обратной совместимости синтаксиса аргумент WITH PAD_INDEX эквивалентен аргументу WITH PAD_INDEX = ON.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=***коэффициент_заполнения*  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Определяет величину в процентах, показывающую, насколько компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять конечный уровень каждой страницы индекса во время его создания или перестроения. Значение *fillfactor* должно быть целым числом от 1 до 100. Если параметр *fillfactor* равен 100, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает индексы с полностью заполненными страницами конечного уровня.  

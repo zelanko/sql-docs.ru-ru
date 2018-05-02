@@ -1,16 +1,16 @@
 ---
-title: "CREATE USER (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE USER (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 
+caps.latest.revision: 111
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cc1b66f561ce413016e154bc329384566a8384b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8118ef2f47ce2dcdf52b3a90791d907d35169077
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -221,7 +222,7 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 >  Аргумент *DEFAULT_LANGUAGE* используется только для пользователя автономной базы данных.  
   
 SID = *sid*  
- **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применимо только для пользователей с паролями (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) в автономной базе данных. Указывает идентификатор SID нового пользователя базы данных. Если этот параметр не выбран, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает идентификатор SID автоматически. Используйте параметр идентификатора SID для создания пользователей в нескольких базах данных с одинаковыми идентификаторами SID. Это удобно при создании пользователей в нескольких базах данных для подготовки обработки отказа AlwaysOn. Чтобы определить идентификатор SID пользователя, выполните запрос sys.database_principals.  
   
@@ -236,7 +237,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]
 ## <a name="remarks"></a>Remarks  
  Если предложение FOR LOGIN не указано, новый пользователь базы данных будет сопоставлен с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеющим такое же имя.  
   
- Схемой по умолчанию будет первая схема, которую найдет сервер, после того, как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
+ Схемой по умолчанию будет первая схема, которую найдет сервер, после того как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
   
  Если пользователь имеет схему по умолчанию, будет использоваться эта схема. Если у пользователя нет схемы по умолчанию, но он является членом группы, которая имеет схему по умолчанию, используется схема по умолчанию группы. Если пользователь не имеет схемы по умолчанию и является членом нескольких групп, схемой по умолчанию для этого пользователя будет схема по умолчанию группы Windows с минимальным значением principal_id и явно заданной схемой по умолчанию. (Невозможно явно выбрать одну из доступных схем по умолчанию как предпочтительную.) Если для пользователя нельзя определить схему по умолчанию, будет использоваться схема **dbo**.  
   
@@ -358,7 +359,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>В. Создание пользователя базы данных из сертификата  
  В следующем примере в базе данных создается пользователь `JinghaoLiu` из сертификата `CarnationProduction50`.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -397,7 +398,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>Д. Создание пользователя автономной базы данных с паролем  
  В следующем примере создается пользователь автономной базы данных с паролем. Этот пример можно выполнить только в автономной базе данных.  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот пример работает в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], если удаляется DEFAULT_LANGUAGE.  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот пример работает в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], если удаляется DEFAULT_LANGUAGE.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -412,7 +413,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>Е. Создание пользователя автономной базы данных для имени входа домена  
  В следующем примере создается пользователь автономной базы данных для имени входа Fritz в домене Contoso. Этот пример можно выполнить только в автономной базе данных.  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -424,7 +425,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>Ж. Создание пользователя автономной базы данных с конкретным идентификатором SID  
  В следующем примере создается пользователь автономной базы данных с проверкой подлинности SQL Server, имя пользователя — CarmenW. Этот пример можно выполнить только в автономной базе данных.  
   
-**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -456,7 +457,7 @@ WITH
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER (Transact-SQL)](../../t-sql/statements/alter-user-transact-sql.md)   
  [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
  [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   

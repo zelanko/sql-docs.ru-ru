@@ -2,7 +2,7 @@
 title: Пример. Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: xml
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc4ba3242b22ac168b1469d1bd3870218839ea7b
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 34786573aa50fc70ff6e6d0b3c2f3fe4d5cca668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Пример: запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен состоит из **схемы * n*** где ***n*** должно быть целым числом.  
+>  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен определяется как **Schema*n***, где ***n*** является целым числом.  
   
  Задавая параметр `XMLSCHEMA` , можно произвести запрос XSD-схемы документа.  
   

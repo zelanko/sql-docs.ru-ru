@@ -1,16 +1,16 @@
 ---
-title: "CREATE FUNCTION (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE FUNCTION (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FUNCTION
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 
+caps.latest.revision: 162
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 072d8fabf26e99137e29f6d1eb42556a6f6ad225
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -368,7 +368,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Определяет тип данных таблицы для функции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
+ *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Определяет тип данных таблицы для функции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([в некоторых регионах доступна предварительная версия](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
@@ -394,7 +394,7 @@ RETURNS return_data_type
  Указывает, что функция будет иметь один или несколько из следующих параметров.  
   
  ENCRYPTION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] преобразует исходный текст инструкции CREATE FUNCTION в скрытый формат. Выходные данные запутывания не видны непосредственно ни в одном представлении каталога. Пользователи, не имеющие доступа к системным таблицам или файлам баз данных, не смогут получить скрытый текст. Однако этот текст будет доступен привилегированным пользователям, которые либо смогут обращаться к системным таблицам через [порт DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md), либо будут иметь непосредственный доступ к файлам баз данных. Кроме того, пользователи, имеющие право на подключение отладчика к серверному процессу, могут получить исходный текст процедуры из памяти во время выполнения. Дополнительные сведения о доступе к метаданным системы см. в статье [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -599,7 +599,7 @@ RETURNS return_data_type
   
 -   **SystemDataAccess** = false  
   
- Дополнительные сведения см. в разделе [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+ Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### <a name="calling-extended-stored-procedures-from-functions"></a>Вызов расширенной хранимой процедуры из функций  
  Расширенные хранимые процедуры, если они вызываются из тела функции, не могут возвращать клиенту результирующие наборы. Все API ODS, которые возвращают результирующие наборы клиенту, вернут FAIL. Расширенная хранимая процедура может подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но она не должна пытаться присоединиться к той же транзакции, что и функция, из которой вызвана расширенная хранимая процедура.  
@@ -779,7 +779,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>Г. Создание функции CLR  
  В следующем примере создается функция CLR `len_s`. Перед ее созданием сборка `SurrogateStringFunction.dll` регистрируется в локальной базе данных.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

@@ -1,23 +1,24 @@
 ---
-title: "Установка локализованных версий SQL Server Management Studio (SSMS) | Документация Майкрософт"
-description: "Установка локализованных версий SQL Server Management Studio (SSMS)"
-ms.custom: 
+title: Установка локализованных версий SQL Server Management Studio (SSMS) | Документация Майкрософт
+description: Установка локализованных версий SQL Server Management Studio (SSMS)
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae38d56a3faee88fa688a0b027482713ac07b59
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: 336b26d502d6cb40ab7c3be5de35d52f3d019b8a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Установка локализованных версий SQL Server Management Studio (SSMS) 
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/11/2017
 2. Теперь настройте языковой стандарт системы для использования языкового пакета, установленного на предыдущем шаге. Для этого выберите только что установленный язык и щелкните параметр **По умолчанию**. 
 3. После изменения языка операционной системы, [установите версию SSMS на том же языке](download-sql-server-management-studio-ssms.md#available-languages). Во время первой установки нового языка SSMS используйте полный пакет. Пакет обновления можно использовать для последующих установок.
 4. Для каждого языка, который вы хотите установить и который не соответствует языку первой установленной версии SSMS, установите соответствующий языковой пакет оболочки Visual Studio 2015 (изолированной):
-   - Перейдите на страницу [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (может потребоваться войти и выполнить процесс *регистрации для подключения*).
+   - Перейдите в раздел [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (возможно, потребуется войти и *зарегистрироваться в Connect*).
    - Скачайте нужный языковой пакет оболочки Visual Studio 2015 (изолированный) и установите его.
 
    > [!IMPORTANT]

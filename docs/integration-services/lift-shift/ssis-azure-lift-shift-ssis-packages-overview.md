@@ -1,6 +1,6 @@
 ---
 title: Перенос рабочих нагрузок SQL Server Integration Services в облако | Документы Майкрософт
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 Пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure.
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/03/2018
 
 При подготовке экземпляра базы данных SQL для размещения базы данных SSISDB также устанавливаются пакет дополнительных компонентов Azure для служб SSIS и распространяемый компонент Access. Эти компоненты обеспечивают подключение к различным источникам данных **Azure**, файлам **Excel и Access**, а также источникам данных, поддерживаемым встроенными компонентами.
 
-В настоящее время установка или использование **компонентов сторонних поставщиков** для служб SSIS (включая сторонние компоненты от корпорации Майкрософт, например компоненты Oracle и Teradata от Attunity и компоненты SAP BI) не поддерживается.
+Также можно установить дополнительные компоненты. Дополнительные сведения см. в разделе [Выборочная установка среды выполнения интеграции Azure-SSIS](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
 
 ## <a name="deploy-and-run-packages"></a>Развертывание и запуск пакетов
 Для проектов, развертываемых в базе данных SSISDB в Azure, необходимо использовать **модель развертывания проектов**, а не модель развертывания пакетов.

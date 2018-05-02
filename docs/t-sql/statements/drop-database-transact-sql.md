@@ -1,20 +1,22 @@
 ---
-title: "Удаление базы данных (Transact-SQL) | Документы Microsoft"
-ms.custom: 
+title: DROP DATABASE (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], deleting
 - removing databases
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e963031c1d9f27293a2f0786e7f0ce19183f038
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 89495565b3e7e42199c23aef1d5d2c2c22e29f0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,33 +59,33 @@ DROP DATABASE database_name [;]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ЕСЛИ СУЩЕСТВУЕТ*  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Условно удаляется база данных только в том случае, если он уже существует.  
+ Условное удаление базы данных только в том случае, если она уже существует.  
   
  *database_name*  
- Задает имя удаляемой базы данных. Чтобы отобразить список баз данных, используйте [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления каталога.  
+ Задает имя удаляемой базы данных. Для просмотра списка баз данных используйте представление каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- *имя_моментального_снимка_базы_данных*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ *database_snapshot_name*  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Задает имя удаляемого моментального снимка базы данных.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- База данных может быть удалена независимо от ее состояния: вне сети, только для чтения, подозрительная и так далее. Для отображения текущего состояния базы данных, используйте **sys.databases** представления каталога.  
+ База данных может быть удалена независимо от ее состояния: вне сети, только для чтения, подозрительная и так далее. Для просмотра текущего состояния базы данных используйте представление каталога **sys.databases**.  
   
  Удаленная база данных может быть повторно создана только с помощью восстановления из резервной копии. Резервное копирование моментальных снимков базы данных произвести невозможно, поэтому они не могут быть восстановлены.  
   
- При удалении базы данных [базы данных master](../../relational-databases/databases/master-database.md) должна подвергаться резервному копированию.  
+ При удалении базы данных необходимо выполнить резервное копирование базы данных [master](../../relational-databases/databases/master-database.md).  
   
- При удалении базы данных удаляется из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удаляет физический диск файлы, используемые базой данных. Если база данных или один из ее файлов во время удаления находится в режиме вне сети, файлы с диска не удаляются. Эти файлы можно удалить вручную при помощи обозревателя Windows. Чтобы удалить базу данных с текущего сервера без удаления файлов из файловой системы, используйте [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ При удалении база данных удаляется из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Также с физического диска удаляются файлы, используемые базой данных. Если база данных или один из ее файлов во время удаления находится в режиме вне сети, файлы с диска не удаляются. Эти файлы можно удалить вручную при помощи обозревателя Windows. Для удаления базы данных с текущего сервера без удаления файлов из файловой системы используйте процедуру [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 > [!WARNING]  
->  При удалении базы данных, имеющий FILE_SNAPSHOT резервные копии, связанные с ним выполняется успешно, однако сделать резервные копии, ссылающиеся на эти файлы базы данных не будут удалены файлы базы данных, в которых имеются связанные моментальные снимки. Файл будет усечено, но не будут физически удалены для хранения резервных копий FILE_SNAPSHOT без изменений. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+>  Удаление файла базы данных, имеющего связанные с ним резервные копии FILE_SNAPSHOT, выполнится успешно, однако файлы базы данных, с которыми связаны моментальные снимки, не будут удалены во избежание объявления недействительными резервных копий, ссылающихся на файл базы данных. Файл усекается, но физически не удаляется, чтобы сохранить резервные копии FILE_SNAPSHOT без изменений. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- При удалении моментального снимка базы данных он удаляется из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а его физические разреженные файлы удаляются из файловой системы NTFS. Сведения об использовании разреженных файлов моментальных снимков баз данных см. в разделе [моментальные снимки базы данных &#40; SQL Server &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). Удаление моментального снимка базы данных очищает кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных». Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.  
+ При удалении моментального снимка базы данных он удаляется из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а его физические разреженные файлы удаляются из файловой системы NTFS. Сведения об использовании разреженных файлов для моментальных снимков баз данных см. в разделе [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md). Удаление моментального снимка базы данных очищает кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.  
   
 ## <a name="interoperability"></a>Совместимость  
   
@@ -93,16 +96,19 @@ DROP DATABASE database_name [;]
   
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
- [Системные базы данных](../../relational-databases/databases/system-databases.md) не может быть удален.  
+ [Системные базы данных](../../relational-databases/databases/system-databases.md) удалить невозможно.  
   
  Инструкция DROP DATABASE должна выполняться в режиме автоматической фиксации и не разрешена в явной или неявной транзакции. Режим автоматической фиксации — это режим управления транзакцией по умолчанию.  
   
- Удалить базу данных, которая используется в текущий момент времени, невозможно. Такая база данных может использоваться каким-либо пользователем для чтения или записи данных. Для отключения пользователей от базы данных используйте инструкцию ALTER DATABASE для перевода базы данных в режим SINGLE_USER.  
+ Удалить базу данных, которая используется в текущий момент времени, невозможно. Такая база данных может использоваться каким-либо пользователем для чтения или записи данных. Одним из способов отключить пользователей от базы данных является использование инструкции ALTER DATABASE для перевода базы данных в режим SINGLE_USER. 
+ 
+ >[!Warning] 
+ > Такой подход не гарантирует отсутствие сбоев, поскольку первое последовательное подключение, устанавливаемое любым потоком, получит поток SINGLE_USER, в результате чего подключение завершится сбоем. SQL Server не реализует встроенный механизм удаления баз данных под нагрузкой.
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Любые моментальные снимки базы данных должны быть удалены перед удалением базы данных.  
   
- Удаление Включение базы данных для базы данных Stretch не приводит к удалению удаленных данных. Если вы хотите удалить удаленных данных, необходимо удалить вручную.  
+ При удалении базы данных, настроенной в качестве базы Stretch Database, не удаляются удаленные данные. В таком случае удаленные данные следует удалять вручную.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
  Для удаления базы данных необходимо соединение с базой данных master.
@@ -114,16 +120,16 @@ DROP DATABASE database_name [;]
   
  Инструкция DROP DATABASE должна быть единственной инструкцией в пакете SQL, и ее можно удалить только одновременно с базой данных.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Требуется **УПРАВЛЕНИЯ** разрешения в базе данных или **ALTER ANY DATABASE** разрешения или членства в **db_owner** предопределенной роли базы данных.  
+ Требуется разрешение **CONTROL** в базе данных, разрешение **ALTER ANY DATABASE** или членство в предопределенной роли базы данных **db_owner**.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- Только входа субъекта серверного уровня (созданное процессом подготовки) или члены **dbmanager** роли базы данных можно удалить базу данных.  
+ Удалить базу данных могут только пользователи с именем входа субъекта серверного уровня (созданного процессом подготовки) или члены роли **dbmanager** базы данных.  
   
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Требуется **УПРАВЛЕНИЯ** разрешения в базе данных или **ALTER ANY DATABASE** разрешения или членства в **db_owner** предопределенной роли базы данных.  
+ Требуется разрешение **CONTROL** в базе данных, разрешение **ALTER ANY DATABASE** или членство в предопределенной роли базы данных **db_owner**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -136,7 +142,7 @@ DROP DATABASE Sales;
   
 ### <a name="b-dropping-multiple-databases"></a>Б. Удаление нескольких баз данных  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  В следующем примере удаляется каждая из перечисленных баз данных.  
   
@@ -146,9 +152,9 @@ DROP DATABASE Sales, NewSales;
   
 ### <a name="c-dropping-a-database-snapshot"></a>В. Удаление моментального снимка базы данных  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- В следующем примере удаляется моментальный снимок базы данных с именем `sales_snapshot0600`, не затрагивая базы данных-источника.  
+ В следующем примере из базы данных удаляется моментальный снимок с именем `sales_snapshot0600` без влияния на базу данных-источник.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

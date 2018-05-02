@@ -2,7 +2,7 @@
 title: Включение параметра "Блокировка страниц в памяти" (Windows) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad766a982b180e6fad72ec0ca3314648be81315f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac244ae7479f48e08d035ab67d904a74528a00e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Включение параметра «Блокировка страниц в памяти» (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске.  
   
 > [!NOTE]  
 >  Блокировка страниц в памяти может повысить производительность, если требуется подкачка памяти на диск.  
@@ -50,9 +51,9 @@ ms.lasthandoff: 01/18/2018
   
 6.  В диалоговом окне **Параметр локальной безопасности — блокировка страниц в памяти** щелкните **Добавить пользователя или группу**.  
   
-7.  В диалоговом окне **Выбор: пользователи, учетные записи служб или группы** добавьте учетную запись, обладающую правами доступа для запуска sqlservr.exe.  
+7.  В диалоговом окне **Выбор пользователей, учетных записей служб или групп** выберите учетную запись службы SQL Server.  
   
-8.  Чтобы этот параметр вступил в силу, перезагрузите службу ядра СУБД SQL Server.
+8.  Чтобы этот параметр вступил в силу, перезапустите службу SQL Server.
   
 ## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

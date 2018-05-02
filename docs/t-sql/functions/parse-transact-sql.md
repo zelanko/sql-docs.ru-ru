@@ -1,8 +1,8 @@
 ---
-title: Синтаксический анализ (Transact-SQL) | Документы Microsoft
+title: PARSE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e172a7d68edc212ce4803103dc1f975e4bf89db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 81ec31e19e4e9a2bd440c004656cd137c414d360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="arguments"></a>Аргументы  
  *string_value*  
- **nvarchar**(4000) значение, представляющее форматированное значение для преобразования в указанный тип данных.  
+ Значение **nvarchar**(4000), представляющее форматированное значение для преобразования в указанный тип данных.  
   
- *string_value* должно быть допустимым представлением требуемого типа данных, то инструкция PARSE выдаст ошибку.  
+ Значение *string_value* должно быть допустимым представлением требуемого типа данных, в противном случае инструкция PARSE выдаст ошибку.  
   
- *Тип данных*  
+ *data_type*  
  Литеральное значение, представляющее тип данных, запрошенный в качестве для результата.  
   
- *язык и региональные параметры*  
- Необязательная строка, идентифицирующая культуру, в котором *string_value* форматируется.  
+ *culture*  
+ Дополнительная строка, идентифицирующая культуру, в которой форматируется *string_value*.  
   
- Если *языка и региональных параметров* аргумент не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. *язык и региональные параметры* принимает любой язык и региональные параметры, поддерживаемые платформой .NET Framework; это не ограничивается языками, поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если *языка и региональных параметров* аргумент не является допустимым, инструкция PARSE выдаст ошибку.  
+ Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. Значение *culture* принимает любую культуру, поддерживаемую .NET Framework; его применение не ограничивается языками, явно поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то PARSE выдаст ошибку.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает результат выражения, переведенный в требуемый тип данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значения NULL, передаваемые в качестве аргументов для PARSE, рассматриваются двумя способами:  
   
 1.  Если передается константа NULL, возникает ошибка. Значение NULL не может быть преобразовано в другой тип данных с учетом культуры.  
@@ -71,32 +71,32 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Используйте инструкцию PARSE только для преобразования данных из строкового типа в типы даты или времени и числовой тип. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT. Следует учитывать, что разбор строкового значения приводит к некоторой потере производительности.  
   
- Синтаксический анализ зависит от наличия из .NET Framework Common Language Runtime (CLR).  
+ Для выполнения инструкции PARSE требуется среда CLR платформы .NET Framework.  
   
  Данная функция не будет работать удаленно, поскольку возможность ее работы зависит от наличия среды CLR. Удаленный вызов функции, требующей наличия среды CLR, приведет к ошибке на удаленном сервере.  
   
  **Дополнительные сведения о параметре data_type**  
   
- Значения для *data_type* параметра зависят от типов, приведенных в следующей таблице, включая стили. Представленные сведения о стилях позволяют определить, какие типы шаблонов разрешены. Дополнительные сведения о стилях см. в документации платформы .NET Framework для **System.Globalization.NumberStyles** и **параметра DateTimeStyles** перечисления.  
+ Значения параметра *data_type* ограничиваются списком типов, приведенным в следующей таблице, включая стили. Представленные сведения о стилях позволяют определить, какие типы шаблонов разрешены. Дополнительные сведения о стилях см. в документации по платформе .NET Framework для перечислений **System.Globalization.NumberStyles** и **DateTimeStyles**.  
   
 |Категория|Тип|Тип .NET Framework|Используемые стили|  
 |--------------|----------|-------------------------|-----------------|  
 |Числовой|bigint|Int64|NumberStyles.Number|  
-|Числовой|int|Int32|NumberStyles.Number|  
-|Числовой|smallint|Int16|NumberStyles.Number|  
-|Числовой|tinyint|Byte|NumberStyles.Number|  
-|Числовой|decimal|Decimal|NumberStyles.Number|  
-|Числовой|numeric|Decimal|NumberStyles.Number|  
-|Числовой|float|Double|NumberStyles.Float|  
-|Числовой|real|Один|NumberStyles.Float|  
-|Числовой|smallmoney|Decimal|NumberStyles.Currency|  
+|Числовой|ssNoversion|Int32|NumberStyles.Number|  
+|Числовой|SMALLINT|Int16|NumberStyles.Number|  
+|Числовой|TINYINT|Byte|NumberStyles.Number|  
+|Числовой|Decimal|Decimal|NumberStyles.Number|  
+|Числовой|NUMERIC|Decimal|NumberStyles.Number|  
+|Числовой|FLOAT|Double|NumberStyles.Float|  
+|Числовой|REAL|Один|NumberStyles.Float|  
+|Числовой|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |Числовой|money|Decimal|NumberStyles.Currency|  
-|Дата и время|date|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces & #124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|Дата|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **Дополнительные сведения о параметре культуры**  
   
@@ -105,10 +105,10 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Полное имя|Псевдоним|LCID|Конкретная культура|  
 |---------------|-----------|----------|----------------------|  
 |us_english|Английский|1033|ru-RU|  
-|Deutsch|Немецкий|1031|de-DE|  
+|Deutsch|German|1031|de-DE|  
 |Français|Французский|1036|fr-FR|  
 |日本語|Японский|1041|ja-JP|  
-|Dansk|Датский|1030|da-DK|  
+|Dansk|Danish|1030|da-DK|  
 |Español|Испанский|3082|es-ES|  
 |Italiano|Итальянский|1040|it-IT|  
 |Nederlands|Нидерландский|1043|nl-NL|  
@@ -116,14 +116,14 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Португальский|2070|pt-PT|  
 |Suomi|Финский|1035|fi|  
 |Svenska|Шведский|1053|sv-SE|  
-|čeština|Чешский|1029|Cs-CZ|  
+|čeština|Czech|1029|Cs-CZ|  
 |magyar|Венгерский|1038|Hu-HU|  
 |polski|Польский|1045|Pl-PL|  
 |română|Румынский|1048|Ro-RO|  
 |hrvatski|Хорватский|1050|hr-HR|  
 |slovenčina|Словацкий|1051|Sk-SK|  
 |slovenski|Словенский|1060|Sl-SI|  
-|ελληνικά|Греческий|1032|El-GR|  
+|ελληνικά|Greek|1032|El-GR|  
 |български|Болгарский|1026|bg-BG|  
 |русский|Русский|1049|Ru-RU|  
 |Türkçe|Турецкий|1055|Tr-TR|  
@@ -131,7 +131,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Эстонский|1061|Et-EE|  
 |latviešu|Латышский|1062|lv-LV|  
 |lietuvių|Литовский|1063|lt-LT|  
-|Português (Brasil)|Португальский (Бразилия)|1046|pt-BR|  
+|Português (Brasil)|Бразильский|1046|pt-BR|  
 |繁體中文|Китайский (традиционный)|1028|zh-TW|  
 |한국어|Корейский|1042|Ko-KR|  
 |简体中文|Китайский (упрощенный)|2052|zh-CN|  

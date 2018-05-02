@@ -1,16 +1,16 @@
 ---
-title: "Настройка резервного копирования в репликах доступности (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Настройка резервного копирования в репликах доступности (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backup priority
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51e23d647bd96cdb540223af2ef18cd6ba996c2c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c3896ba5a3c823481e610bbe7f17a92c16f58b3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Настройка резервного копирования в репликах доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описывается настройка резервной копии вторичной реплики для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  В этом разделе описывается настройка резервной копии вторичной реплики для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
@@ -139,7 +139,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  При необходимости настройте приоритет каждой реплики доступности, которую необходимо добавить или изменить. Этот приоритет используется экземпляром сервера, на котором размещается первичная реплика, при принятии решения о том, какая реплика должна обработать запрос автоматического резервного копирования для базы данных в группе доступности (выбирается реплика с максимальным приоритетом). Значением приоритета может быть любое целое число от 0 до 100 включительно. Приоритет 0 указывает, что реплика не должна считаться кандидатом на обработку запросов резервного копирования.  Значение по умолчанию — 50.  
   
-     При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityReplica** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityReplica** . В любом случае укажите параметр **BackupPriority***n*, где *n* представляет собой значение от 0 до 100.  
+     При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityReplica** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityReplica** . В любом случае укажите параметр **BackupPriority***n*, где *n* представляет собой значение от 0 до 100.  
   
      Например, следующая команда присваивает приоритету резервного копирования реплики доступности `MyReplica` значение **60**.  
   

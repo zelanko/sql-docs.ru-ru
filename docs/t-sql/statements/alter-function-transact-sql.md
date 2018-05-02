@@ -1,16 +1,16 @@
 ---
-title: "ALTER FUNCTION (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ALTER FUNCTION (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b1008715d9cfd3e48945d0651f454253bc4e4bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 13b02ea1e24744ee6f5fb6748405be8f6a92fd2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -264,13 +265,13 @@ RETURNS return_data_type
   
  Во встроенных функциях с табличным значением возвращаемое значение TABLE определяется при использовании единственной инструкции SELECT. Встроенные функции не имеют соответствующих возвращаемых переменных.  
   
- В функциях с табличным значением из нескольких инструкций переменной **@***return_variable* является переменная TABLE, используемая для сохранения данных и накопления строк, которые будут возвращены в качестве значения функции. Аргумент **@***return_variable* может быть указан только для функций [!INCLUDE[tsql](../../includes/tsql-md.md)], но не для функций CLR.  
+ В функциях с табличным значением из нескольких инструкций переменной **@***return_variable* является переменная TABLE, используемая для сохранения данных и накопления строк, которые будут возвращены в качестве значения функции.Аргумент  **@***return_variable* может быть указан только для функций [!INCLUDE[tsql](../../includes/tsql-md.md)], но не для функций CLR.  
   
  *select-stmt*  
  Единственная инструкция SELECT, которая определяет возвращаемое значение встроенной функции, возвращающей табличное значение.  
   
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает метод сборки, привязываемый к функции. Имя *assembly_name* должно соответствовать существующей сборке в текущей базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которой включена видимость. Аргумент *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как класс в сборке. Если класс имеет квалифицированное имя пространства имен, которое использует точку (**.**) для разделения частей пространства имен, имя класса разделено скобками (**[]**) или кавычками (**""**). Имя *method_name* должно быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как статистический метод в указанном классе.  
   
@@ -280,10 +281,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
  Определяет тип данных таблицы для функции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц.  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([в некоторых регионах доступна предварительная версия](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([в некоторых регионах доступна предварительная версия](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Определяет табличные типы данных для функции CLR. Объявление таблицы включает только имена столбцов и типы данных.  
   
@@ -306,7 +307,7 @@ RETURNS return_data_type
  Указывает, что функция будет иметь один или несколько следующих аргументов:  
   
  ENCRYPTION  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает на то, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] шифрует столбцы представления каталога, содержащие текст инструкции ALTER FUNCTION. Использование параметра ENCRYPTION препятствует публикации данной функции при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметр ENCRYPTION для функций CLR указывать нельзя.  
   

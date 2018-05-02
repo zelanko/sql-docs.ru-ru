@@ -1,16 +1,16 @@
 ---
-title: "time (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: time (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 6/7/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81a0b19c21ac231e49dd6c6dad23de7beaaa6b35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |*fractional seconds scale*|Задает число знаков для долей секунды.<br /><br /> Может быть целым числом от 0 до 7. Для Informatica может быть целым числом от 0 до 3.<br /><br /> Длина дробной части по умолчанию равна 7 (100 нс).|  
 |Формат строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|чч:мм:сс[.ннннннн] для Informatica)<br /><br /> Дополнительные сведения см. в подразделе «Обратная совместимость для клиентов низкого уровня» следующего раздела.|  
 |Диапазон|От 00:00:00.0000000 до 23:59:59.9999999 (от 00:00:00.000 до 23:59:59.999 для Informatica)|  
-|Диапазоны элементов|Обозначение чч состоит из двух цифр, представляющих час, и принимает значения от 0 до 23.<br /><br /> Обозначение мм состоит из двух цифр, представляющих минуты, и принимает значения от 0 до 59.<br /><br /> Обозначение сс состоит из двух цифр, представляющих секунды, и принимает значения от 0 до 59.<br /><br /> Обозначение n\* может содержать от нуля до семи цифр, представляющих доли секунды, и принимает значения от 0 до 9999999. Для Informatica обозначение n\* может содержать от нуля до трех цифр и принимает значения от 0 до 999.|  
+|Диапазоны элементов|Обозначение чч состоит из двух цифр, представляющих час, и принимает значения от 0 до 23.<br /><br /> Обозначение мм состоит из двух цифр, представляющих минуты, и принимает значения от 0 до 59.<br /><br /> Обозначение сс состоит из двух цифр, представляющих секунды, и принимает значения от 0 до 59.<br /><br /> Обозначение n\* может содержать от нуля до семи цифр, представляющих доли секунды, и принимает значения от 0 до 9999999. Для Informatica обозначение n\* может содержать от нуля до трех цифр и принимает значения от 0 до 999.|  
 |Длина в символах|От 8 позиций (чч:мм:сс) до 16 позиций (чч:мм:сс.ннннннн). Для Informatica максимальная длина равна 12 (чч:мм:сс.ннн).|  
 |Точность, масштаб<br /><br /> (только пользовательский масштаб)|См. таблицу ниже.|  
 |Объем памяти|5 байт, по умолчанию используется фиксированная точность 100 нс. В Informatica размер по умолчанию — 4 байта; по умолчанию используется фиксированная точность 1 мс.|  

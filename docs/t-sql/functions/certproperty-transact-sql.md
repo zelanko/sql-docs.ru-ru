@@ -1,16 +1,16 @@
 ---
-title: "CERTPROPERTY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CERTPROPERTY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Аргументы  
 *Cert_ID*  
-Идентификатор сертификата. Аргумент *Cert_ID* имеет тип int.
+Значение идентификатора сертификата, имеющее тип данных int.
   
 *Expiry_Date*  
-Дата истечения срока действия сертификата.
+Дата окончания действия сертификата.
   
 *Start_Date*  
 Дата вступления сертификата в силу.
   
 *Issuer_Name*  
-Имя выдавшего сертификат.
+Имя издателя сертификата.
   
 *Cert_Serial_Number*  
 Серийный номер сертификата.
   
 *Тема*  
-Предмет сертификата.
+Субъект сертификата.
   
  *SID*  
 Идентификатор защиты (SID) сертификата. А также это SID любого имени входа или пользователя, сопоставленного этому сертификату.
@@ -78,16 +78,16 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 ## <a name="return-types"></a>Типы возвращаемых данных
 Задание свойства должно заключаться в одинарные кавычки.
   
-Возвращаемый тип зависит от свойства, указанного при вызове функции. Все возвращаемые значения упаковываются в возвращаемый тип **sql_variant**.
+Тип возвращаемого значения зависит от свойства, указанного при вызове функции. Тип возвращаемого значения **sql_variant** создает оболочку для всех возвращаемых значений.
 -   *Expiry_Date* и *Start_Date* возвращают значения типа **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *Subject* и *String_SID* возвращают значения типа **nvarchar**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* и *Subject* возвращают значения типа **nvarchar**.  
 -   *SID* возвращает значение типа **varbinary**.  
   
 ## <a name="remarks"></a>Remarks  
-Сведения о сертификатах можно увидеть в представлении каталога [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
+См. сведения о сертификате в представлении каталога [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Разрешения  
-Требуется ряд разрешений на сертификат, кроме того у участника не должно быть запрещено разрешение VIEW DEFINITION на этот сертификат.
+Требуются соответствующие разрешения на сертификат, кроме того, у участника не должно быть запрещено разрешение VIEW на этот сертификат. Дополнительные сведения о разрешениях сертификата см. в разделах [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) и [GRANT CERTIFICATE PERMISSIONS (Transact-SQL)](../../t-sql/statements/grant-certificate-permissions-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
 В следующем примере возвращается предмет сертификата.
@@ -96,7 +96,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

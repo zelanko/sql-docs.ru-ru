@@ -1,30 +1,30 @@
 ---
-title: "Занятие 2. Подключение к другому компьютеру | Документация Майкрософт"
-ms.custom: 
+title: Занятие 2. Подключение к другому компьютеру | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 465d8d500030e49b7b3e462d6da3be256d82ca3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/09/2018
 В целях повышения безопасности в таких системах, как Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]и Windows 7, включен брандмауэр Windows. При подключении к этому экземпляру из другого компьютера необходимо открыть порт соединения в брандмауэре. Экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , запускаемый по умолчанию, прослушивает порт 1433, поэтому нет необходимости настраивать фиксированный порт. Однако именованные экземпляры, включая [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , принимают соединения через динамически назначаемые порты. Прежде чем появится возможность открыть порт в брандмауэре, необходимо предварительно настроить компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] для прослушивания конкретного порта, известного как постоянный порт или статический порт; в противном случае компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] может прослушивать другой порт после каждого запуска. Дополнительные сведения о брандмауэрах, настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на ядро СУБД, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
-> Присваиванием номеров портов управляет Комитет по цифровым адресам в Интернете, а списки этих номеров находятся по адресу [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Портам должны назначаться номера от 49152 до 65535.  
+> Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Портам должны назначаться номера от 49152 до 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Настройка SQL Server для подключения через определенный порт  
   

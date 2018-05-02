@@ -2,7 +2,7 @@
 title: Установка SQL Server с общей папкой SMB в качестве хранилища | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install-windows
@@ -17,11 +17,11 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b1f88c6df9ea20d8fb0b2b27dbd5e40d6c6dfa7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 72e79b62371ea42f8954c88eeecc9a779bab6487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
 
@@ -92,13 +92,13 @@ ms.lasthandoff: 04/10/2018
 |Операционная система|Версия протокола SMB2|Преимущества для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)|2.0|Повышенная производительность по сравнению с предыдущими версиями SMB.<br /><br /> Устойчивость, которая помогает восстанавливать данные при временных проблемах в работе сети.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1), включая Server Core|2.1|Поддержка больших MTU, что позволяет передавать большой объем данных, например при резервном копировании и восстановлении SQL. Эту возможность должен включить пользователь. Дополнительные сведения о включении этой возможности см. в разделе [новые возможности SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Значительные улучшения производительности, в частности для рабочих нагрузок SQL OLTP. Эти улучшения производительности требуют применения исправления. Дополнительные сведения об исправлении см. в разделе [это](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1), включая Server Core|2.1|Поддержка больших MTU, что позволяет передавать большой объем данных, например при резервном копировании и восстановлении SQL. Эту возможность должен включить пользователь. Дополнительные сведения о включении этой функции см. в разделе [Новые возможности SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Значительные улучшения производительности, в частности для рабочих нагрузок SQL OLTP. Эти улучшения производительности требуют применения исправления. Дополнительные сведения об этом исправлении см. в [этом разделе](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], включая Server Core|3.0|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов.<br /><br /> Поддержка сетевых интерфейсов с возможностями RDMA.<br /><br /> Дополнительные сведения об этих возможностях и протоколе SMB см. в разделе [Общие сведения о протоколе SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, включая Server Core|3.2|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов с помощью SMB Multichannel.<br /><br /> Поддержка сетевых интерфейсов с возможностями с помощью SMB Direct.<br /><br /> Дополнительные сведения об этих возможностях и протоколе SMB см. в разделе [Общие сведения о протоколе SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.<br /><br /> Оптимизировано для небольших произвольных операций ввода-вывода чтения и записи, обычных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Максимальный размер пакета (MTU) включен по умолчанию, что значительно повышает производительность в больших последовательных передачах, таких как хранилище данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или резервное копирование и восстановление базы данных.|  
   
 ## <a name="security-considerations"></a>Вопросы безопасности  
   
--   Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетная запись агента службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь разрешения «Полный доступ» и разрешения NTFS для общих папок SMB. При использовании файлового сервера SMB в качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать учетную запись домена или системы. Дополнительные сведения об общей папки и разрешения NTFS см. в разделе [общего ресурса и разрешения NTFS на файловом сервере](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
+-   Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетная запись агента службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь разрешения «Полный доступ» и разрешения NTFS для общих папок SMB. При использовании файлового сервера SMB в качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать учетную запись домена или системы. Дополнительные сведения о разрешениях для общей папки и NTFS см. в разделе [Разрешения для общей папки и NTFS на файловом сервере](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  Полный доступ для общих папок и разрешения NTFS для общих папок SMB должны действовать только для учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователей Windows, которым назначена роль администратора сервера.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="known-issues"></a>Известные проблемы  
   
--   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Проблема описана в [данной статьи БАЗЫ знаний](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
+-   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Эта проблема описывается в [этой статье базы знаний](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
   
 -   Если общая папка SMB используется в качестве хранилища для кластеризованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то по умолчанию журнал диагностики отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть записан в общий файловый ресурс, так как у библиотеки ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет разрешения на чтение и запись в общий файловый ресурс. Чтобы устранить эту проблему, попробуйте один из следующих методов.  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 04/10/2018
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

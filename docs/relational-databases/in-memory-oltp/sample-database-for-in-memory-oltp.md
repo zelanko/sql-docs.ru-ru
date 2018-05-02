@@ -1,28 +1,29 @@
 ---
-title: "Пример базы данных для выполняющейся в памяти OLTP | Документация Майкрософт"
-ms.custom: 
+title: Пример базы данных для выполняющейся в памяти OLTP | Документация Майкрософт
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 85285889b4bd41bdca10091217254a4079202dba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,9 +54,9 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по оборудованию для выполняющейся в памяти OLTP см. в следующей записи блога:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по выбору оборудования для выполняющейся в памяти OLTP см. в следующей записи блога: [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
   
 1.  Скачайте файлы AdventureWorks2016CTP3.bak и SQLServer2016CTP3Samples.zip со страницы по адресу [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) в папку на компьютере, например c:\temp.  
@@ -318,7 +319,7 @@ ms.lasthandoff: 02/12/2018
   
  Действия по установке  
   
-1.  Скачайте 64-разрядный установочный пакет RML Utilities со страницы по адресу [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)и запустите его.  
+1.  Скачайте и запустите установочный пакет x64 RML Utilities со следующей страницы: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Если появится диалоговое окно, в котором будет указано, что некоторые файлы используются, нажмите кнопку «Продолжить»  
   
@@ -469,10 +470,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|MEMORYCLERK_XTP|По умолчанию|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
  Клерки памяти по умолчанию содержат структуры памяти во всей системе и являются относительно небольшими. Клерк памяти, предназначенный для пользовательской базы данных (в данном случае это база данных с идентификатором 5), составляет примерно 900 МБ.  
   
@@ -518,10 +519,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|MEMORYCLERK_XTP|По умолчанию|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
  Как видите, SQL Server использует чуть меньше 8 ГБ под оптимизированные для памяти таблицы и индексы из образца базы данных.  
   
@@ -564,10 +565,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|MEMORYCLERK_XTP|По умолчанию|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
  Это ожидаемо: память будет освобождаться при выполнении транзакционной рабочей нагрузки.  
   
@@ -583,10 +584,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|MEMORYCLERK_XTP|По умолчанию|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
+|MEMORYCLERK_XTP|По умолчанию|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Использование диска оптимизированными для памяти таблицами  
  Общий размер на диске файлов контрольных точек базы данных в данное время можно узнать, выполнив следующий запрос:  

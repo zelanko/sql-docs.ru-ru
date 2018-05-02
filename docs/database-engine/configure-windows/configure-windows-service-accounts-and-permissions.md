@@ -1,8 +1,8 @@
 ---
 title: Настройка учетных записей службы Windows и разрешений | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -58,11 +58,11 @@ author: MikeRayMSFT
 ms.author: MikeRay
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 20fe8b9065d6026e81e398c063eec0240eb51635
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.lasthandoff: 03/28/2018
   
 -   **Модуль записи SQL** — служит для резервного копирования и восстановления приложений для работы в составе платформы служб теневого копирования томов (VSS).
   
--   **Контроллер распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — обеспечивает согласование воспроизведения трассировки по нескольким клиентским компьютерам распределенного воспроизведения.  
+-   **Контроллер распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  — обеспечивает согласование воспроизведения трассировки по нескольким клиентским компьютерам распределенного воспроизведения.  
   
--   **Клиент распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — один или несколько клиентских компьютеров распределенного воспроизведения, работающих вместе с контроллером распределенного воспроизведения для имитации параллельных рабочих нагрузок на экземпляре [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+-   **Клиент распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  — один или несколько клиентских компьютеров распределенного воспроизведения, работающих вместе с контроллером распределенного воспроизведения для имитации параллельных рабочих нагрузок на экземпляре [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 -   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]** — доверенная служба, в которой находятся внешние исполняемые файлы, предоставляемые корпорацией Майкрософт, такие как среда выполнения R, установленная как часть служб [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Вспомогательные процессы могут запускаться при работе панели запуска, однако они регулируются ресурсами в зависимости от конфигурации отдельного экземпляра. Служба панели запуска выполняется с использованием собственной учетной записи, и каждому вспомогательному процессу для конкретной зарегистрированной среды выполнения присваивается учетная запись пользователя панели запуска. Вспомогательные процессы создаются и удаляются по запросу во время выполнения.
 
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/28/2018
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
@@ -149,7 +149,8 @@ ms.lasthandoff: 03/28/2018
 |Ядро PolyBase  |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
 |Служба перемещения данных PolyBase |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
   
- * Если требуются ресурсы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать управляемую учетную запись службы (MSA), которой предоставлены следующие необходимые разрешения.  
+ * Если требуются ресурсы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать управляемую учетную запись службы (MSA), которой предоставлены следующие необходимые разрешения.   
+ **При установке на контроллере домена виртуальная учетная запись не поддерживается как учетная запись службы.
   
  **Экземпляр отказоустойчивого кластера SQL Server**
   
@@ -295,7 +296,7 @@ ms.lasthandoff: 03/28/2018
   
 |Служба[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Разрешения, предоставляемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$**имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$** имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$***имя_компьютера***$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***имя_компьютера***$***PowerPivot*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Настройка квот памяти для процесса** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\\ReportServer$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
@@ -413,15 +414,15 @@ ms.lasthandoff: 03/28/2018
 ||Только администратор|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<имя_экземпляра_SQL>*|Полный доступ|  
 ||Администраторы, система|\tools\binn\schemas\sqlserver\2004\07\showplan|Полный доступ|  
 ||Пользователи|\tools\binn\schemas\sqlserver\2004\07\showplan|Чтение и выполнение|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Удостоверение пула приложений диспетчера отчетов, учетная запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , все|*\<папка установки>*\Reporting Services\ReportManager, *\<папка установки>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Чтение|  
-||Удостоверение пула приложений диспетчера отчетов|*\<установка>*\Reporting Services\ReportManager\Pages\\*.\*|Чтение|  
-||\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\ReportServer|Чтение|  
-||\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\ReportServer\global.asax|Полное|  
-||Все|*\<установка>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||СЕТЕВАЯ СЛУЖБА|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|Полное|  
-||Все|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Удостоверение пула приложений диспетчера отчетов, учетная запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , все|*\<папка установки>* \Reporting Services\ReportManager, *\<папка установки>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<папка установки>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<папка установки>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Чтение|  
+||Удостоверение пула приложений диспетчера отчетов|*\<установка>* \Reporting Services\ReportManager\Pages\\*.\*|Чтение|  
+||\<Учетная запись веб-службы сервера отчетов>|*\<установка>* \Reporting Services\ReportServer|Чтение|  
+||\<Учетная запись веб-службы сервера отчетов>|*\<установка>* \Reporting Services\ReportServer\global.asax|Полное|  
+||Все|*\<установка>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||СЕТЕВАЯ СЛУЖБА|*\<установка>* \Reporting Services\ReportServer\ReportService.asmx|Полное|  
+||Все|*\<установка>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
+||Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Все|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> Управление чтением|  
 ||Пользователь служб терминала|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
 ||Опытные пользователи|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
@@ -476,7 +477,7 @@ ms.lasthandoff: 03/28/2018
   
 ###  <a name="WMI"></a> WMI  
 
-Инструментарий управления Windows (WMI) должен иметь возможность подключиться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для этого компонент**предоставляет удостоверение безопасности службы поставщика WMI (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
+Инструментарий управления Windows (WMI) должен иметь возможность подключиться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для этого компонент**предоставляет удостоверение безопасности службы поставщика WMI (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
   
  Поставщику SQL WMI необходимы следующие разрешения:  
   

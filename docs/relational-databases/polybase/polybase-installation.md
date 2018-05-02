@@ -1,16 +1,16 @@
 ---
-title: "Установка PolyBase | Документация Майкрософт"
-ms.custom: 
+title: Установка PolyBase | Документация Майкрософт
+ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fbb861dda4b837bc3f3003edf357c89efaa4eb88
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="polybase-installation"></a>Установка PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,23 @@ ms.lasthandoff: 02/24/2018
   
 ## <a name="prerequisites"></a>предварительные требования  
   
--   64-разрядный выпуск ознакомительной версии SQL Server;  
+- 64-разрядный выпуск ознакомительной версии SQL Server;  
   
--   Microsoft .NET Framework 4.5.  
+- Microsoft .NET Framework 4.5.  
+
+- Среда выполнения Oracle Java SE (JRE). Поддерживаются версии 7 (начиная с 7.51) и 8 (будут работать либо [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html), либо [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать; Среды JRE9 и JRE10 не поддерживаются.
+    
+- минимальный объем памяти: 4 ГБ;  
   
--   Oracle Java SE RunTime Environment (JRE) 7.51или 8 (64 бит) (подойдет [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать; JRE 9 или более поздняя версия не подходят без сервера SQL Server 2017, накопительный пакет обновлений 4, или более поздней версии. Установите JRE 8, PolyBase, а затем выполните обновление до JRE 9. 
+- минимальное свободное место на жестком диске: 2 ГБ.  
   
--   минимальный объем памяти: 4 ГБ;  
-  
--   минимальное свободное место на жестком диске: 2 ГБ.  
-  
--   Для корректной работы Polybase должен быть включен протокол TCP/IP. TCP/IP включен по умолчанию во всех выпусках SQL Server, кроме Developer и Express. Для корректной работы Polybase в выпусках Developer и Express нужно включить подключение по TCP/IP. См. раздел [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) (Включение и отключение сетевого протокола сервера).
+- Для корректной работы Polybase должен быть включен протокол TCP/IP. TCP/IP включен по умолчанию во всех выпусках SQL Server, кроме Developer и Express. Для корректной работы Polybase в выпусках Developer и Express нужно включить подключение по TCP/IP. См. раздел [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) (Включение и отключение сетевого протокола сервера).
+
+- Внешний источник данных, в качестве которого может выступать либо хранилище BLOB-объектов Azure, либо кластер Hadoop. Сведения о поддерживаемых версиях Hadoop см. в разделе [Настройка PolyBase](#supported).  
+
+
+> [!NOTE]
+>   При использовании функции включения вычислений в Hadoop необходимо будет убедиться, что целевой кластер Hadoop содержит базовые компоненты HDFS, Yarn и MapReduce с включенным сервером JobHistory. PolyBase отправляет запрос на включение через MapReduce и запрашивает сведения о состоянии c сервера JobHistory. Без любого из этих компонентов запрос завершится ошибкой. 
   
  **Примечания**  
   

@@ -1,16 +1,16 @@
 ---
-title: "CREATE AVAILABILITY GROUP (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE AVAILABILITY GROUP (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 
+caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 37cb1d34ffa7db4aec6a8ef4457321b4d4601d31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +175,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** не выполняет проверку работоспособности на уровне базы данных.  
   
- DB_FAILOVER  **=** { ON | OFF }  
+ DB_FAILOVER **=** { ON | OFF }  
  Задает реакцию в случае, когда база данных в первичной реплике находится в автономном режиме. Если задано значение ON, любое состояние базы данных в группе доступности, отличное от ONLINE, инициирует автоматический переход на другой ресурс. Если этот параметр имеет значение OFF, для запуска автоматического перехода на другой ресурс учитывается только работоспособность экземпляра.  
   
   Дополнительные сведения об этом параметре см. в разделе [Параметр определения уровня работоспособности баз данных](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
@@ -225,7 +225,7 @@ CREATE AVAILABILITY GROUP group_name
  *сетевое_имя_FCI*  
  Это сетевое имя, используемое для доступа к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте его, если экземпляр сервера является участником — партнером по обеспечению отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выполнение SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) на экземпляре сервера FCI возвращает всю его строку '*FCI_network_name*[\\*instance_name*]' (то есть полное имя реплики).  
   
- *имя_экземпляра*  
+ *instance_name*  
  Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенного на *system_name* или *FCI_network_name* с включенной службой HADR. Для экземпляра сервера по умолчанию указывать параметр *имя_экземпляра* не обязательно. В именах экземпляров не учитывается регистр символов. На экземпляре изолированного сервера это имя значения совпадает со значением, возвращаемым при выполнении инструкции SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
   
  \  
@@ -233,12 +233,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Дополнительные сведения о предварительных требованиях для узлов WSFC и экземпляров серверов см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
  Указывает путь URL для [конечной точки зеркального отображения базы данных](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором размещается реплика доступности, заданная в текущем предложении REPLICA ON.  
   
  Предложение ENDPOINT_URL является обязательным. Дополнительные сведения см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Задает URL-адрес для конечной точки или URL-адрес маршрутизации, доступный только для чтения. Параметры URL-адреса:  
   
  *system-address*  
@@ -256,7 +256,7 @@ CREATE AVAILABILITY GROUP group_name
  ASYNCHRONOUS_COMMIT  
  Указывает, что первичная реплика фиксирует транзакции без ожидания записи журнала на данной вторичной реплике (режим доступности синхронной фиксации). Вы можете указать ASYNCHRONOUS_COMMIT не более чем для пяти реплик доступности, включая первичную реплику.  
 
- CONFIGURATION_ONLY Указывает, что первичная реплика синхронно фиксирует метаданные конфигурации группы доступности в базе данных master этой реплики. Реплика не будет содержать данные пользователя. Этот параметр:
+ CONFIGURATION_ONLY указывает, что первичная реплика синхронно фиксирует метаданные конфигурации группы доступности в базе данных master этой реплики. Реплика не будет содержать данные пользователя. Этот параметр:
 
 - Может размещаться в любом выпуске SQL Server, включая экспресс-выпуск.
 - Требует, чтобы конечная точка зеркального отображения данных реплики CONFIGURATION_ONLY имела тип `WITNESS`.
@@ -321,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес, используемый для маршрутизации запросов на соединение с намерением чтения к этой реплике доступности. Этот URL-адрес прослушивается компонентом ядра СУБД SQL Server. Обычно экземпляр по умолчанию компонента ядра СУБД SQL Server прослушивает TCP-порт 1433.  
   
  Номер порта для именованного экземпляра вы можете получить, запросив столбцы **port** и **type_desc** динамического административного представления [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). Экземпляр сервера использует прослушиватель Transact-SQL (**type_desc='TSQL'**).  
@@ -345,7 +345,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Разрешаются все соединения с базами данных в первичной реплике. Это поведение по умолчанию.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Задает список экземпляров сервера (с разделителями-запятыми), на которых будут размещаться реплики доступности для этой группы доступности, удовлетворяющие следующим требованиям при работе во вторичной роли.  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Задает список экземпляров сервера (с разделителями-запятыми), на которых будут размещаться реплики доступности для этой группы доступности, удовлетворяющие следующим требованиям при работе во вторичной роли:  
   
 -   Настроены для разрешения всех соединений или соединений только для чтения (см. выше аргумент ALLOW_CONNECTIONS параметра SECONDARY_ROLE).  
   
@@ -377,12 +377,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> Указывает имя группы доступности, составляющей половину распределенной группы доступности.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес пути для прослушивателя, связанного с группой доступности.  
   
  Требуется предложение LISTENER.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
   
  *system-address*  

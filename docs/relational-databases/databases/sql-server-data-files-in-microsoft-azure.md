@@ -1,30 +1,31 @@
 ---
-title: "Файлы данных SQL Server в Microsoft Azure | Microsoft Docs"
-ms.custom: 
+title: Файлы данных SQL Server в Microsoft Azure | Microsoft Docs
+ms.custom: ''
 ms.date: 10/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a66db6640daa6df0ffb3b285f9f92e8b1a340711
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
   
  Файлы данных SQL Server в Microsoft Azure включают встроенную поддержку файлов баз данных SQL Server, которые хранятся в виде больших двоичных объектов Microsoft Azure. Этот компонент позволяет создать базу данных на сервере SQL Server, работающем локально или на виртуальной машине в Microsoft Azure, с назначенным местом хранения для данных в хранилище BLOB-объектов Microsoft Azure. Это усовершенствование значительно упрощает перемещение баз данных между компьютерами с помощью операций отсоединения и присоединения. Кроме того, данный компонент предоставляет альтернативное расположение для хранения файлов резервных копий баз данных, позволяя выполнять восстановление из службы хранилища Microsoft Azure и в нее. Поэтому он обеспечивает возможность реализации нескольких гибридных решений, предоставляя ряд преимуществ для виртуализации данных, перемещения данных, безопасности и доступности, а также достижения снижения затрат и обслуживания для высокого уровня доступности и эластичного масштабирования.
  
@@ -132,7 +133,7 @@ ON
  Начиная с SQL Server 2014, добавлен новый объект SQL Server для использования с компонентом SQL Server Data Files в службе хранилища Azure. Новый объект SQL Server вызывается как [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) и может использоваться системным монитором для отслеживания действий, выполняемых при работе SQL Server со службой хранилища Microsoft Azure.  
   
 ### <a name="sql-server-management-studio-support"></a>Поддержка среды SQL Server Management Studio  
- Среда SQL Server Management Studio позволяет использовать этот компонент с помощью нескольких диалоговых окон. Например, можно ввести URL-адрес контейнера хранилища, например > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :
+ Среда SQL Server Management Studio позволяет использовать этот компонент с помощью нескольких диалоговых окон. Можно ввести URL-адрес контейнера хранилища, например https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
  в поле **Путь** в нескольких разных диалоговых окнах ( **Создание базы данных**, **Присоединение базы данных**и **Восстановление базы данных**). Дополнительные сведения см. в разделе [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   

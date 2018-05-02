@@ -1,16 +1,16 @@
 ---
-title: "EXECUTE AS (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: EXECUTE AS (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXECUTE AS
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b89c78d286feaace6ec6bb2c85e854cb0ddbb5e0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a86213e0bb3cde0ef673c3366250a474ea2473eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="arguments"></a>Аргументы  
  Имя_для_входа  
- **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, что контекст выполнения олицетворения — это имя входа. Область олицетворения — это уровень сервера.  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/21/2017
  Дополнительные сведения о переключении к предыдущему контексту см. в разделе [REVERT &(Transact-SQL)](../../t-sql/statements/revert-transact-sql.md).  
   
  COOKIE INTO **@***varbinary_variable*  
- Указывает, что контекст выполнения можно переключить к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение **@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Передает файл cookie для **@***varbinary_variable*. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
+ Указывает, что контекст выполнения можно переключить к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение **@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] передает файл cookie для **@***varbinary_variable*. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
   
  **@** *varbinary_variable* — это **varbinary(8000)**.  
   

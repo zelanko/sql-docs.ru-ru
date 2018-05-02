@@ -1,6 +1,6 @@
 ---
 title: Документация по SQL Server | Документы Майкрософт
-ms.date: 02/28/2018
+ms.date: 04/26/2018
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
@@ -24,44 +24,65 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06ccc15f14599c1d9861af90d6a56d65b71e3e0e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b09bbe3776db2e3dd4835ccc9d8951b71efe6207
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные в этой документации сведения будут полезны при установке, настройке и использованию SQL Server. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
+::: moniker range=">= sql-analysis-services-2017 || >= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные в этой документации сведения будут полезны при установке, настройке и использовании SQL Server в Windows и Linux. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
+::: moniker-end
 
-::: moniker range="=sql-server-2017"
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные здесь сведения будут полезны при установке, настройке и использовании SQL Server в Windows. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
+::: moniker-end
+
+::: moniker range="= sqlallproducts-allversions"
+|новые возможности  | Заметки о выпуске  |
+|---------|---------|
+|[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
+|[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+::: moniker-end
+::: moniker range="= sql-analysis-services-2017 || = sql-server-linux-2017 || = sql-server-2017"
 |новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 ::: moniker-end
-::: moniker range="=sql-server-2016"
+::: moniker range="=sql-server-2016 || =sqlallproducts-allversions"
 |новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="=sql-server-2014"
 ![info_tip](../sql-server/media/info-tip.png) Скоро все содержимое SQL Server 2014 будет объединено на сайте документации.  Сейчас можно прочитать следующее.
 - [Электронная документация по SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
 - [Новые возможности SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [Предыдущие версии](https://docs.microsoft.com/en-us/previous-versions/sql/)
+
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+**Оцените SQL Server!**
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
+::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **Оцените SQL Server!**
-    + [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
-    + [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-    + [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-    + [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Установить SQL Server в Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Установить SQL Server в Linux](../linux/sql-server-linux-setup.md)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+::: moniker-end
 
-::: moniker range=">=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range=">= sql-analysis-services-2016 || >= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>Технологии SQL Server
 
 |||
@@ -76,11 +97,22 @@ SQL Server является центральной частью платформ
 |![Службы Master Data Services](../sql-server/media/master-data-services.png)|**[Службы Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для управления основными данными. Решение, построенное на основе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , позволяет обеспечить правильность информации, используемой для построения отчетов и выполнения анализа. С помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно создать центральный репозиторий основных данных и поддерживать запись этих данных по мере их изменения, защищенную и доступную для аудита.|
 ::: moniker-end
 
+::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
 ## <a name="migrate-and-move-data"></a>Миграция и перемещение данных
 
 - [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Помощник по переносу данных Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Перенос базы данных SQL Server в Базу данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Помощник по переносу данных Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595)
+::: moniker-end
+
+::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+## <a name="migrate-and-move-data"></a>Миграция и перемещение данных
+
+- [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+- [Перенос данных в SQL Server в Linux](../linux/sql-server-linux-migrate-overview.md)
+- [Перенос базы данных SQL Server в Базу данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Помощник по переносу данных Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595)
+::: moniker-end
 
 ## <a name="update-your-version-of-sql-server"></a>Обновление версии SQL Server
 

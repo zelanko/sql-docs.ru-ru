@@ -18,17 +18,18 @@ ms.devlang: azurecli, powershell
 ms.topic: article
 ms.date: 03/15/2018
 ms.author: aliceku
-ms.openlocfilehash: 9d1fee3a22bfa930f70a8c6e2585f60acaf5f419
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: eed635cc4b58c5ec975f0b77f8e3b69f87fd65ff
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault (предварительная версия) с помощью PowerShell и CLI
+# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell и CLI
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Это практическое руководство показывает, как использовать ключ из Azure Key Vault для прозрачного шифрования данных (TDE) (в предварительной версии) в хранилище данных или базе данных SQL. Дополнительные сведения о TDE с поддержкой создания собственных ключей (BYOK) (в предварительной версии) см. в статье о [прозрачном шифровании данных с поддержкой BYOK в Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
+В этом практическом руководстве рассматриваются способы использования ключа из Azure Key Vault для прозрачного шифрования данных (TDE) в базе данных или хранилище данных SQL. Дополнительные сведения о TDE с поддержкой подхода BYOK см. в статье [о прозрачном шифровании данных с поддержкой BYOK в Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
 ## <a name="prerequisites-for-powershell"></a>Необходимые условия для использования PowerShell
 

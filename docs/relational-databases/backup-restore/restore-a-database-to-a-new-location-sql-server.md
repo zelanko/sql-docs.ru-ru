@@ -1,16 +1,16 @@
 ---
-title: "Восстановление базы данных в новое место (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Восстановление базы данных в новое место (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 
+caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: fbe4821e83b274ab3a8fae04b0ea50c450183d25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Восстановление базы данных в новое место (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описано, как восстановить базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в новую папку и при необходимости переименовать ее в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью SQL Server Management Studio (SSMS) или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эта процедура позволяет переместить базу данных по новому пути каталога или создать копию базы данных на том же или другом экземпляре сервера.  
+  В этом разделе описано, как восстановить базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в новую папку и при необходимости переименовать ее в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью SQL Server Management Studio (SSMS) или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эта процедура позволяет переместить базу данных по новому пути каталога или создать копию базы данных на том же или другом экземпляре сервера.  
     
 ##  <a name="BeforeYouBegin"></a> Перед началом работы  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 02/23/2018
   
     >**ПРИМЕЧАНИЕ.** При восстановлении базы данных на другом экземпляре сервера можно указать исходное имя базы данных вместо нового.  
   
-     *устройство_резервного_копирования* [ **,**...*n* ]  
+     *backup_device* [ **,**...*n* ]  
      Указывает список с разделителями-запятыми от 1 до 64 устройств резервного копирования, используемых для восстановления базы данных из резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.  
   
      { DISK | TAPE } **=***имя_физического_устройства_резервного_копирования*  
@@ -162,7 +162,7 @@ ms.lasthandoff: 02/23/2018
   
      Дополнительные сведения см. в подразделе "Указание резервного набора данных" раздела [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **'***логическое_имя_файла_в_резервной_копии***'** TO **'***имя_файла_в_операционной_системе***'** [ **,**...*n* ]  
+     MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Показывает, что файл данных или журнала, указанный параметром *логическое_имя_файла_в_резервной_копии* , следует восстановить из копии в месте, указанном параметром *имя_файла_в_операционной_системе*. Укажите инструкцию MOVE для каждого логического файла, который надо восстановить из резервного набора данных в новом месте.  
   
     |Параметр|Description|  

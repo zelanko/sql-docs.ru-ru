@@ -1,30 +1,31 @@
 ---
-title: "Службы Reporting Services с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт"
-ms.custom: 
+title: Службы Reporting Services с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69d5529f2e8b563072f0662c4256a163b39756c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.  
   
- Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в статье [Часто задаваемые вопросы по AlwaysOn для SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
   
  **В этом разделе:**  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ReportServerTempDB  
   
- В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
   
 > [!NOTE]  
 >  Серверы отчетов, работающие в режиме интеграции с SharePoint, используют процесс синхронизации между базами данных приложения служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и базами данных содержимого SharePoint. Важно поддерживать работу баз данных сервера отчетов и баз данных содержимого вместе. Следует рассмотреть возможность включения этих баз данных в одну группу доступности, чтобы отработка отказа и восстановление для них выполнялось одновременно. Рассмотрим следующий сценарий.  

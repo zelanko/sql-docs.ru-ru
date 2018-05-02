@@ -1,16 +1,16 @@
 ---
-title: "DENY, отказ в разрешениях на доступ к списку свойств поиска (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DENY, отказ в разрешениях на доступ к списку свойств поиска (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - denying permissions [SQL Server], search property lists
 - search property lists [SQL Server], permissions
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c48a5b2b82fd052d6a854eb8b0496b0c730644a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a106bab7c20106853b548a8cabce28875287e96f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Разрешение на список свойств поиска DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -56,7 +57,7 @@ ON SEARCH PROPERTY LIST **::***search_property_list_name*
  Указывает список свойств поиска, для которого запрещается разрешение. Требуется квалификатор области (задается через знак ::).  
   
 *database_principal*  
- Задает участника, для которого запрещается разрешение, — Участник может быть одним из следующих:  
+ Задает участника, для которого запрещается разрешение. Участник может быть одним из следующих:  
   
 -   пользователь базы данных;  
 -   роль базы данных;  
@@ -64,8 +65,8 @@ ON SEARCH PROPERTY LIST **::***search_property_list_name*
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
--   пользователь базы данных, сопоставленный асимметричному ключу;  
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
 CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
@@ -79,8 +80,8 @@ CASCADE
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
--   пользователь базы данных, сопоставленный асимметричному ключу;  
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -100,7 +101,7 @@ CASCADE
   
 ## <a name="see-also"></a>См. также:  
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
@@ -108,7 +109,7 @@ CASCADE
  [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT, предоставление разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE, отмена разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   

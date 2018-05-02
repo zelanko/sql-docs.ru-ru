@@ -1,36 +1,38 @@
 ---
-title: "Поддержка высокого уровня доступности в SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт"
+title: Поддержка высокого уровня доступности в SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
 В SSIS Scale Out высокий уровень доступности на стороне рабочей роли Scale Out обеспечивается за счет выполнения пакетов с использованием нескольких рабочих ролей Scale Out.
 
-Высокий уровень доступности на стороне мастера Scale Out достигается за счет применения функций [AlwaysOn для каталога служб SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) и отказоустойчивой кластеризации Windows. Несколько экземпляров мастера Scale Out размещаются в отказоустойчивом кластере Windows. Если служба мастера Scale Out или SSISDB на основном узле отключены, служба или SSISDB на вторичном узле продолжают принимать запросы пользователей и взаимодействовать с рабочими ролями Scale Out. 
+Высокий уровень доступности на стороне мастера Scale Out достигается за счет применения функций [AlwaysOn для каталога служб SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) и отказоустойчивого кластера Windows. В этом решении несколько экземпляров мастера Scale Out размещаются в отказоустойчивом кластере Windows. Если служба мастера Scale Out или SSISDB на основном узле отключены, служба или SSISDB на вторичном узле продолжают принимать запросы пользователей и взаимодействовать с рабочими ролями Scale Out.
 
-Чтобы настроить высокий уровень доступности на стороне мастера Scale Out, выполните указанные ниже действия.
+Кроме того, высокий уровень доступности на стороне мастера Scale Out Master может быть достигнут с использованием экземпляра отказоустойчивого кластера SQL Server. См. раздел [Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server](scale-out-failover-cluster-instance.md).
+
+Чтобы настроить высокий уровень доступности на стороне мастера Scale Out с использованием функций AlwaysOn для каталога служб SSIS, выполните указанные ниже действия:
 
 ## <a name="1-prerequisites"></a>1. предварительные требования
 Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.

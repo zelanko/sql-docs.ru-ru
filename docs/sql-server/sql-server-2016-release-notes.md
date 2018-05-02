@@ -1,8 +1,8 @@
 ---
 title: Заметки о выпуске SQL Server 2016 | Документация Майкрософт
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -18,24 +18,29 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cd775d23caae5f4f833b95e9a4bc7c1a257612
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016, включая пакеты обновления. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
-> [![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
->
-> [Маленький значок виртуальной машины Azure![](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
->
-> [![Скачать SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
+- [Маленький значок виртуальной машины Azure![](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
+- [![Скачать SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 с пакетом обновления 2 (SP2)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 с пакетом обновления 2 (SP2) включает все накопительные обновления, выпущенные после версии 2016 с пакетом обновления 1 (SP1), вплоть до накопительного пакета обновления 8 включительно. 
+
+- [![Центр загрузки Майкрософт](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Скачать SQL Server 2016 с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- Полный список обновлений см. в разделе [Сведения о выпуске SQL Server 2016 с пакетом обновления 2 (SP2)](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) В SQL Server 2016 с пакетом обновления 1 (SP1) входят все исправления вплоть до накопительного пакета обновления 3 для SQL Server 2016 RTM, включая обновление для системы безопасности MS16-136. Этот выпуск содержит все исправления из накопительных пакетов обновления для SQL Server 2016 до накопительного пакета обновления 3 включительно, а также обновление для системы безопасности MS16-136, выпущенное 8 ноября 2016 г. 
+![info_tip](../sql-server/media/info-tip.png) В SQL Server 2016 с пакетом обновления 1 (SP1) входят все накопительные пакеты обновления вплоть до накопительного пакета обновления 3 для SQL Server 2016 RTM, включая обновление для системы безопасности MS16-136. Этот выпуск содержит все исправления из накопительных пакетов обновления для SQL Server 2016 до накопительного пакета обновления 3 включительно, а также обновление для системы безопасности MS16-136, выпущенное 8 ноября 2016 г.
 
 В выпусках Standard, Web, Express и Local DB продукта SQL Server с пакетом обновления 1 (SP1) доступны следующие функции (если не указано иное):
 - Always Encrypted
@@ -159,24 +164,22 @@ ms.lasthandoff: 04/18/2018
 -   Используйте вариант **Выбрать справку в сети или локальную справку** и настройте справку для "Я хочу использовать справку в сети".    
     
 -   Используйте вариант **Установить содержимое из сети** и загрузите содержимое SQL Server 2014.    
-    
+
  **Справка F1.** При нажатии клавиши F1 в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в браузере открывается веб-версия статьи справки F1. Проблема связана со справкой на основе браузера даже в том случае, если настроена или установлена локальная справка. 
-     
-**Обновление содержимого:**    
-В SQL Server Management Studio и Visual Studio окно справки может перестать отвечать на запросы во время добавления документации. Чтобы устранить эту проблему, выполните указанные ниже действия. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](https://msdn.microsoft.com/library/mt654096.aspx).    
+
+**Обновление содержимого**. В SQL Server Management Studio и Visual Studio окно справки может перестать отвечать на запросы во время добавления документации. Чтобы устранить эту проблему, выполните указанные ниже действия. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](https://msdn.microsoft.com/library/mt654096.aspx).    
     
-* Откройте файл %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings в Блокноте и измените дату в приведенном ниже коде на какую-либо дату в будущем.    
-    
-     
-```    
-     Cache LastRefreshed="12/31/2017 00:00:00"    
-``` 
+* Откройте файл %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings в Блокноте и измените дату в приведенном ниже коде на какую-либо дату в будущем.
 
-## <a name="additional-information"></a>Дополнительные сведения
-+ [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [Ссылки и сведения для всех поддерживаемых версий в Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)
+     Последнее обновление кэша: "12/31/2017 00:00:00".    
+```
 
+## Additional Information
++ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")

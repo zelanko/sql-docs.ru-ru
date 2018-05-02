@@ -1,30 +1,31 @@
 ---
-title: "Планирование выполнения пакета служб SSIS в Azure | Документы Майкрософт"
-ms.date: 01/16/2018
+title: Планирование выполнения пакета служб SSIS в Azure | Документы Майкрософт
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Планирование выполнения пакета служб SSIS в Azure
 Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
 -   [Агент SQL Server](#agent)
 -   [Задания обработки эластичных баз данных SQL](#elastic)
--   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#sproc)
+-   [Операция выполнения пакета служб SSIS для фабрики данных Azure](#activities)
+-   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#activities)
 
 ## <a name="agent"></a> Планирование пакета с помощью агента SQL Server
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Планирование пакета с использованием операции хранимой процедуры SQL Server для фабрики данных Azure
+## <a name="activities"></a> Планирование пакета с использованием фабрики данных Azure
 
-Сведения о планировании пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure см. в следующих статьях:
+Сведения о планировании пакета служб SSIS с помощью операций фабрики данных Azure см. в следующих статьях:
 
--   для фабрики данных версии 2: [Вызов пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity);
+-   Для фабрики данных версии 2: [Выполнение пакета служб SSIS с помощью операции SSIS в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   для фабрики данных версии 1: [Вызов пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
+-   Для фабрики данных версии 2: [Выполнение пакета служб SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Для фабрики данных версии 1: [Выполнение пакета служб SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).

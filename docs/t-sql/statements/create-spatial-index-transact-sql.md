@@ -1,16 +1,16 @@
 ---
-title: "CREATE SPATIAL INDEX (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE SPATIAL INDEX (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 05e551350da60132741be91d1a9bc22cc0dd7748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ BOUNDING_BOX = ( {
   
  Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
- Слово «default» в этом контексте не является ключевым. Это идентификатор файловой группы, используемой по умолчанию, который должен быть ограничен, как например в выражении ON "default" или ON [default]. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Слово "default" в этом контексте не является ключевым. Это идентификатор файловой группы, используемой по умолчанию, который должен быть ограничен, как например в выражении ON "default" или ON [default]. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **\<object>::=**  
   
@@ -365,7 +365,7 @@ GRIDS
 > Если указана недопустимая плотность, возвращается ошибка.  
   
 CELLS_PER_OBJECT =*n*  
-Задает количество ячеек тесселяции на объект, которое может использоваться процессом тесселяции для одного пространственного объекта в индексе. Аргумент *n* может иметь любое целочисленное значение от 1 до 8192 включительно. Если передано неверное число или число превышает максимальное число ячеек для указанной тесселяции, то возникает ошибка.  
+Задает количество ячеек тесселяции на объект, которое может использоваться процессом тесселяции для одного пространственного объекта в индексе. Аргумент *n* может иметь любое целочисленное значение от 1 до 8192 включительно. Если передано неверное число или число превышает максимальное число ячеек для указанной тесселяции, то возникает ошибка.  
   
  Параметр CELLS_PER_OBJECT имеет следующие значения по умолчанию:  
   

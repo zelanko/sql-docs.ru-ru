@@ -1,16 +1,16 @@
 ---
-title: "GRANT, предоставление разрешений для сборки (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: GRANT, предоставление разрешений для сборки (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - assemblies [CLR integration], permissions
 - GRANT statement, assemblies
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d163245f90ce50defdea4b7a075ef9d0fb9b5afd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4023bde67cde0b3663e4c3fdea881160f415ca65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>Разрешения для сборки GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  Указывает разрешение, которое может быть предоставлено для сборки. Перечислены ниже.  
   
  ON ASSEMBLY **::***assembly_name*  
- Указывает сборку, для которой предоставляется разрешение. Необходим квалификатор области «::».  
+ Указывает сборку, для которой предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  
  Участник, которому предоставляется разрешение. Это может быть:  
@@ -62,8 +62,8 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
--   пользователь базы данных, сопоставленный асимметричному ключу;  
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
 GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
@@ -77,8 +77,8 @@ AS *granting_principal*
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
--   пользователь базы данных, сопоставленный асимметричному ключу;  
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
 ## <a name="remarks"></a>Remarks  
  Сборка — это защищаемый объект уровня базы данных, который содержится в базе данных, являющейся его родителем в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с более общими разрешениями, куда они входят по импликации), которые могут быть выданы для сборки.  
@@ -98,14 +98,14 @@ AS *granting_principal*
   
 |AS *granting_principal*|Необходимо дополнительное разрешение|  
 |------------------------------|------------------------------------|  
-|Пользователь базы данных|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
-|Пользователь базы данных, сопоставленный имени входа Windows|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
-|Пользователь базы данных, сопоставленный группе Windows|Членство в группе Windows, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
-|Пользователь базы данных, сопоставленный сертификату|Членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
-|Пользователь базы данных, сопоставленный асимметричному ключу|Членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
+|пользователь базы данных;|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
+|пользователь базы данных, сопоставленный с именем входа Windows;|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
+|пользователь базы данных, сопоставленный с группой Windows;|Членство в группе Windows, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
+|пользователь базы данных, сопоставленный с сертификатом;|Членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
+|пользователь базы данных, сопоставленный с асимметричным ключом;|Членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
 |Пользователь базы данных, не сопоставленный ни с одним участником на уровне сервера|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных **db_securityadmin**, членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли сервера **sysadmin**.|  
-|Роль базы данных|Разрешение ALTER на роль, членство в предопределенной роли базы данных **db_securityadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли сервера **sysadmin**.|  
-|Роль приложения|Разрешение ALTER на роль, членство в предопределенной роли базы данных **db_securityadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли сервера **sysadmin**.|  
+|роль базы данных;|Разрешение ALTER на роль, членство в предопределенной роли базы данных **db_securityadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли сервера **sysadmin**.|  
+|роль приложения;|Разрешение ALTER на роль, членство в предопределенной роли базы данных **db_securityadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли сервера **sysadmin**.|  
   
  Владельцы объектов могут предоставлять разрешения на объекты, которыми они владеют. Участники, имеющие разрешение CONTROL на защищаемый объект, могут предоставлять разрешение на этот защищаемый объект.  
   
@@ -113,11 +113,11 @@ AS *granting_principal*
   
 ## <a name="see-also"></a>См. также:  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

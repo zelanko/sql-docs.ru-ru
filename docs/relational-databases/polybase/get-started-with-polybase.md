@@ -1,16 +1,16 @@
 ---
-title: "Приступая к работе с PolyBase | Документация Майкрософт"
-ms.custom: 
+title: Приступая к работе с PolyBase | Документация Майкрософт
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>Приступая к работе с PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   вы узнаете, как управлять объектами PolyBase в SQL Server Management Studio (SSMS);  
   
--   у вас будут примеры запросов, в которых используются объекты PolyBase.  
-  
-## <a name="prerequisites"></a>предварительные требования  
- Экземпляр [SQL Server (64-разрядная версия)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) со следующим:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) подойдет.) Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать;   
-  
--   Минимальный объем памяти: 4 ГБ.  
-  
--   Минимальное свободное место на жестком диске: 2 ГБ.    
-
--   Должно присутствовать подключение по протоколу TCP/IP. (См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) В выпусках SQL Server Developer и Express подключение TCP/IP по умолчанию отключено. Это не мешает установить PolyBase, но это средство не будет полностью запускаться, пока вы не включите протокол TCP/IP. Для работы PolyBase необходимо вручную включить TCP/IP. 
-  
- 
- Внешним источником данных может быть один из следующих объектов:  
-  
--   Кластер Hadoop. Поддерживаемые версии см. в разделе [Настройка PolyBase](#supported).  
-
--   хранилище BLOB-объектов Azure.
-
-> [!NOTE]
->   При использовании функции включения вычислений в Hadoop необходимо будет убедиться, что целевой кластер Hadoop содержит базовые компоненты HDFS, Yarn и MapReduce с включенным сервером JobHistory. PolyBase отправляет запрос на включение через MapReduce и запрашивает сведения о состоянии c сервера JobHistory. Без любого из этих компонентов запрос завершится ошибкой. 
+-   у вас будут примеры запросов, в которых используются объекты PolyBase.    
 
 ## <a name="install-polybase"></a>Установка PolyBase  
- Если вы не установили PolyBase, см. раздел [установки PolyBase](../../relational-databases/polybase/polybase-installation.md).  
+Если вы не установили PolyBase, см. раздел [Установка PolyBase](../../relational-databases/polybase/polybase-installation.md). Необходимые условия описываются в статье, посвященной установке.
   
 ### <a name="how-to-confirm-installation"></a>Подтверждение установки  
  Чтобы после установки убедиться, что технология PolyBase успешно установлена, выполните приведенную ниже команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  

@@ -1,16 +1,16 @@
 ---
-title: "@@FETCH_STATUS (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: '@@FETCH_STATUS (Transact-SQL) | Документы Майкрософт'
+ms.custom: ''
 ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@FETCH_STATUS'
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9bc4027eb6be9d79599cb06f7935bd2d052bb2a2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c377058e568aef6162ecadb46bee2c2b289a6f4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 |–9|Курсор не выполняет операцию выборки.|  
   
 ## <a name="remarks"></a>Remarks  
- Так как функция @@FETCH_STATUS является глобальной для всех курсоров в подключении, используйте ее с осторожностью. После выполнения инструкции FETCH следует произвести тест с помощью функции @@FETCH_STATUS, прежде чем любая другая инструкция FETCH будет выполнена применительно к другому курсору. Значение функции @@FETCH_STATUS не определено до проведения какой-либо выборки в подключении.  
+ Поскольку @@FETCH_STATUS является глобальным для всех курсоров в соединении, используйте @@FETCH_STATUS тщательно. После выполнения инструкции FETCH следует произвести тест с помощью функции @@FETCH_STATUS, прежде чем любая другая инструкция FETCH будет выполнена применительно к другому курсору. Значение функции @@FETCH_STATUS не определено до проведения какой-либо выборки в подключении.  
   
  Например, пользователь выполняет инструкцию FETCH из одного курсора, а затем вызывает хранимую процедуру, которая открывает и обрабатывает результаты из другого курсора. Когда управление возвращается от вызванной хранимой процедуры, функция @@FETCH_STATUS отражает результаты последней инструкции FETCH, выполненной в хранимой процедуре, а не результаты инструкции FETCH, выполненной прежде, чем была вызвана хранимая процедура.  
   

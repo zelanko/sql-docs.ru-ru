@@ -1,16 +1,16 @@
 ---
-title: "Запросы PolyBase | Документация Майкрософт"
-ms.custom: 
+title: Запросы PolyBase | Документация Майкрософт
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  В этой статье приведены примеры запросов, в которых применяется компонент [PolyBase](../../relational-databases/polybase/polybase-guide.md) SQL Server 2016. Прежде чем использовать эти запросы, следует ознакомиться с инструкциями T-SQL, необходимыми для настройки PolyBase. (Дополнительные сведения см. в статье [Объекты T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).)
+  В этой статье приведены примеры запросов, в которых применяется компонент [PolyBase](../../relational-databases/polybase/polybase-guide.md) SQL Server (начиная с версии 2016). Прежде чем использовать эти запросы, следует ознакомиться с инструкциями T-SQL, необходимыми для настройки PolyBase. (Дополнительные сведения см. в статье [Объекты T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).)
   
 ## <a name="queries"></a>Запросы  
  Отправить запрос к внешним таблицам можно с помощью инструкций Transact-SQL или средств бизнес-аналитики.
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Вы можете экспортировать данные из SQL Server в службу хранилища Azure или Hadoop. 
 
-В первую очередь включите функцию экспорта, задав для аргумента `sp_configure` параметра allow polybase export значение 1. Затем создайте внешнюю таблицу, которая указывает на целевой каталог. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. 
+В первую очередь включите функцию экспорта, задав для аргумента `sp_configure` параметра allow polybase export значение 1. Затем создайте внешнюю таблицу, которая указывает на целевой каталог. Если целевой каталог не существует, инструкция CREATE EXTERNAL TABLE создает его. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. 
 
-При выполнении инструкции INSERT INTO создается целевой каталог (если он не существует), а результаты выполнения инструкции SELECT экспортируются в указанное расположение в заданном формате файла. Внешние файлы получают имена вида *ИДзапроса_дата_время_ИД.формат*, где *ИД* — это нарастающий идентификатор, а *формат* — это формат экспортированных данных. Например, имя одного из файлов может выглядеть так: QID776_20160130_182739_0.orc.
+Результаты инструкции SELECT экспортируются в указанное расположение в заданном формате. Внешние файлы получают имена вида *ИДзапроса_дата_время_ИД.формат*, где *ИД* — это нарастающий идентификатор, а *формат* — это формат экспортированных данных. Например, имя одного из файлов может выглядеть так: QID776_20160130_182739_0.orc.
+
 
 > [!NOTE]
 > При экспорте данных в Hadoop или хранилище BLOB-объектов Azure с помощью PolyBase передаются только данные без имен столбцов (метаданных), как определено в команде CREATE EXTERNAL TABLE.

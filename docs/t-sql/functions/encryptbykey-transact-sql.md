@@ -1,16 +1,16 @@
 ---
-title: "ENCRYPTBYKEY (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: ENCRYPTBYKEY (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYKEY_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0267020c4100794593731c0f0651b35ea30395
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c648c37fc0f8446b4b3f4908a5d633b5f803cd54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,10 +72,12 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  @authenticator  
  Переменная, содержащая данные, на основе которых формируется структура проверки подлинности.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
  Возвращает значение NULL, если ключ не открыт, не существует или является устаревшим ключом RC4, а база данных не находится на уровне совместимости 110 или выше.  
+ 
+ Возвращает NULL, если *cleartext* имеет значение NULL.
   
 ## <a name="remarks"></a>Remarks  
  Функция EncryptByKey использует симметричный ключ. Этот ключ должен быть открыт. Если симметричный ключ уже открыт в текущем сеансе, не нужно открывать его снова в контексте запроса.  
@@ -151,7 +153,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [DECRYPTBYKEY (Transact-SQL)](../../t-sql/functions/decryptbykey-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
+ [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   

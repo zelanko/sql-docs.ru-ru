@@ -1,16 +1,16 @@
 ---
-title: "DBCC CHECKFILEGROUP (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: DBCC CHECKFILEGROUP (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cd26ee5bce3329d9685beffc2627ace43663c804
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Проверяет распределение и структурную целостность всех таблиц и индексированных представлений в указанной файловой группе текущей базы данных.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Проверяет распределение и структурную целостность всех таблиц и индексированных представлений в указанной файловой группе текущей базы данных.
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
@@ -100,7 +101,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  **Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 с пакетом обновления 2 (SP2) до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Если значение MAXDOP равно нулю, то сервер выбирает максимальную степень параллелизма.  
@@ -121,7 +122,7 @@ DBCC CHECKFILEGROUP
 >  При выполнении инструкции DBCC CHECKFILEGROUP в базе данных tempdb не выполняется никакой проверки выделенных ресурсов, а для выполнения проверки таблиц необходимо получить совмещаемую блокировку таблицы. Это обусловлено тем, что по соображениям, связанным с производительностью, моментальные снимки базы данных недоступны для базы данных tempdb. Это означает, что нельзя достичь требуемой согласованности транзакций.  
   
 ## <a name="checking-objects-in-parallel"></a>Проверка объектов в параллельном режиме  
-По умолчанию инструкция DBCC CHECKFILEGROUP выполняет параллельную проверку объектов. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается так же, как и в параллельных запросах. Чтобы ограничить максимальное число процессоров, доступных для проверки DBCC, используйте процедуру [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+По умолчанию инструкция DBCC CHECKFILEGROUP выполняет параллельную проверку объектов. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается так же, как и в параллельных запросах. Чтобы ограничить максимальное число процессоров, доступных для проверки DBCC, используйте процедуру [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 Параллельную проверку можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>Некластеризованные индексы для отдельных файловых групп  
@@ -147,7 +148,7 @@ DBCC CHECKFILEGROUP
 |5|Возникла неизвестная ошибка, которая привела к прекращению выполнения команды DBCC.|  
   
 ## <a name="error-reporting"></a>Отчет об ошибках  
-При каждом обнаружении ошибки повреждения данных командой DBCC CHECKFILEGROUP в каталоге LOG  *создается файл мини-дампа (SQLDUMPnnnn*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt). Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об использовании компонентов и отчетов об ошибках, этот файл автоматически отправляется в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+При каждом обнаружении командой DBCC CHECKFILEGROUP ошибки повреждения данных в папке LOG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается мини-файл дампа (SQLDUMP*nnn*.txt). Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об использовании компонентов и отчетов об ошибках, этот файл автоматически отправляется в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Файл дампа содержит результаты выполнения команды DBCC CHECKFILEGROUP и дополнительные диагностические сведения. Доступ к этому файлу ограничен списками управления доступом на уровне пользователей. Доступ ограничен учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и членами роли **sysadmin**. По умолчанию роль **sysadmin** содержит всех членов группы Windows BUILTIN\Administrators и группы локальных администраторов. В случае ошибки процесса сбора данных команда DBCC не завершается ошибкой.
   
 ## <a name="resolving-errors"></a>Разрешение ошибок  

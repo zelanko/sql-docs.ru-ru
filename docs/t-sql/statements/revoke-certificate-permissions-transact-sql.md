@@ -1,16 +1,16 @@
 ---
-title: "REVOKE, отмена разрешений на сертификат (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: REVOKE, отмена разрешений на сертификат (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - permissions [SQL Server], certificates
 - REVOKE statement, certificates
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2901626ba62de943fcf0f8d6772448e32d9924d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b1854a2c3a02fd90e179e8879bf3c3d2616d3f17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE, отмена разрешений на сертификат (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  Обозначает разрешение, которое может быть отменено для сертификата. Перечислены ниже.  
   
  ON CERTIFICATE **::***certificate_name*  
- Указывает сертификат, для которого отменяется разрешение. Необходим квалификатор области «::».  
+ Указывает сертификат, для которого отменяется разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  
  Задает участника, у которого отменяется разрешение. Это может быть:  
@@ -76,9 +76,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
  CASCADE  
  Указывает, что отозванное разрешение отзывается также у других участников, которым оно было предоставлено этим участником.  
@@ -101,11 +101,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   пользователь базы данных, сопоставленный с сертификатом;  
   
--   пользователь базы данных, сопоставленный асимметричному ключу;  
+-   пользователь базы данных, сопоставленный с асимметричным ключом;  
   
--   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
+-   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Сертификат является защищаемым объектом уровня базы данных, содержащимся в базе данных, являющейся его родительским элементом в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть отменены для сертификата.  
   
 |Разрешение сертификата|Содержится в разрешении сертификата|Содержится в разрешении базы данных|  
@@ -121,11 +121,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="see-also"></a>См. также:  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,34 +1,37 @@
 ---
-title: "Создание атрибута ссылки (службы Master Data Services) | Документы Майкрософт"
-ms.custom: 
+title: Создание атрибута ссылки (службы Master Data Services) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6458bdf2ad8d973c106868ca1b9debcbc8027fa6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: bbf869654a2fda17af1aab36cb60aefdc37be396
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Создание атрибута ссылки (службы Master Data Services)
-  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, например http://www.contoso.com.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, такую как http://www.contoso.com.  
   
 > [!NOTE]  
 >  Когда пользователи вводят значение для атрибута ссылки, строка должна начинаться с **http://** . В противном случае будет выведено сообщение об ошибке.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 03/05/2018
 ## <a name="attribute-information"></a>Сведения об атрибутах  
  Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|столбцом|Description|  
+|Столбец|Description|  
 |------------|-----------------|  
 |Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете "Сохранить", появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Имя|Имя атрибута.|  

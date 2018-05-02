@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a> Ограничение числа строк, обрабатываемых инструкциями DELETE, INSERT и UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Ограничение числа удаляемых строк с помощью ключевого слова TOP  
- Когда TOP (*n*) DELETE применяется предложение, то операция удаления производится над произвольной выборкой из *n* строк. Таким образом, инструкция DELETE выбирает любое (*n*) число строк, которые соответствуют критериям, определенным в предложении WHERE. Следующий пример удаляет `20` строк из таблицы `PurchaseOrderDetail`, имеющих дату ранее 1 июля 2002 г.  
+ Если с инструкцией DELETE применяется предложение TOP (*n*), то операция удаления производится с произвольной выборкой из *n* строк. Таким образом, инструкция DELETE выбирает любое число (*n*) строк, которые удовлетворяют условию, указанному в предложении WHERE. Следующий пример удаляет `20` строк из таблицы `PurchaseOrderDetail`, имеющих дату ранее 1 июля 2002 г.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>В. Ограничение числа обновляемых строк с помощью ключевого слова TOP  
- В следующем примере предложение TOP используется для обновления строк в таблице. Когда TOP (*n*) в инструкции UPDATE указано предложение, операция обновления выполняется для произвольного подмножества строк. Таким образом, инструкция UPDATE выбирает любое (*n*) число строк, которые соответствуют критериям, определенным в предложении WHERE. В следующем примере 10 случайно выбранных заказчиков переназначаются от одного менеджера по продажам к другому.  
+ В следующем примере предложение TOP используется для обновления строк в таблице. Если предложение TOP (*n*) используется с инструкцией UPDATE, то операция обновления выполняется для произвольного подмножества строк. Таким образом, инструкция UPDATE выбирает любое число (*n*) строк, которые удовлетворяют условию, указанному в предложении WHERE. В следующем примере 10 случайно выбранных заказчиков переназначаются от одного менеджера по продажам к другому.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,7 +343,7 @@ FROM DimEmployee ORDER BY LastName;
   
  Результат: возвращаются 33 строки, так как 31-й строке соответствуют 3 сотрудника с именем Brown.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

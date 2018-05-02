@@ -2,7 +2,7 @@
 title: Создание и конструирование геометрических экземпляров и отправка запросов к ним | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: spatial
@@ -21,11 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fac630d1dd38409a6ba9d4877d803a9f064a992
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ec6b4bda3af062ad8c28e069d3a5e308a1ac2a32
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,9 +40,9 @@ ms.lasthandoff: 04/10/2018
   
 -   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество существующего стандарта GML 3.1, который определен в следующей схеме: [ http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd ](http://go.microsoft.com/fwlink/?LinkId=230959).  
+ Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество существующего стандарта GML 3.1, определенного по следующей схеме: [http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959).  
   
 ##  <a name="creating"></a> Создание или построение нового экземпляра геометрического объекта  
   

@@ -1,16 +1,16 @@
 ---
-title: "Устранение неполадок с PolyBase| Документация Майкрософт"
-ms.custom: 
+title: Устранение неполадок с PolyBase| Документация Майкрософт
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
@@ -18,27 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7f75c81eb0b2cdcf8fdc68ba5ac1a21ba62481eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-troubleshooting"></a>Устранение неполадок c PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описаны методы по устранению неполадок с PolyBase.  
+  В этом разделе описаны методы по устранению неполадок с PolyBase.  
   
 ## <a name="catalog-views"></a>Представления каталога  
  Ниже приведены представления каталога,с помощью которых можно управлять операциями PolyBase.  
   
 |||  
 |-|-|  
-|Просмотр|Description|  
+|Представление|Description|  
 |[sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Определяет внешние таблицы|  
 |[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Определяет источники внешних таблиц|  
 |[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Определяет форматы внешних файлов|  
@@ -243,7 +243,7 @@ ms.lasthandoff: 02/12/2018
 
 ## <a name="error-messages-and-possible-solutions"></a>Сообщения об ошибках и возможные решения
 
-Сведения об устранении ошибок во внешних таблицах см. в записи блога Муршеда Замана (Murshed Zaman) [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Ошибки установки PolyBase и возможные решения").
+Сведения об устранении ошибок с внешними таблицами см. в блоге Муршеда Замана (Murshed Zaman) [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Ошибки установки PolyBase и возможные решения").
 
 ## <a name="see-also"></a>См. также раздел
 [Устранение неполадок с подключением PolyBase к Kerberos](polybase-troubleshoot-connectivity.md)

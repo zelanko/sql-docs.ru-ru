@@ -1,16 +1,16 @@
 ---
-title: "CREATE EVENT SESSION (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: CREATE EVENT SESSION (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EVENT SESSION
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b5d8b3267ca7021d3d713a33bf66a77d664790c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ON SERVER
   
 -   *event_name* — объект события.  
   
- События отображаются в представлении sys.dm_xe_objects со значением object_type, равным «event».  
+ События отображаются в представлении sys.dm_xe_objects со значением object_type, равным "event".  
   
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  Позволяет установить настраиваемые атрибуты для события. Настраиваемые атрибуты отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *event_name*.  
@@ -139,7 +139,7 @@ ON SERVER
   
 -   *action_name* — объект действия.  
   
- Действия отображаются в представлении sys.dm_xe_objects со значением object_type, равным «action».  
+ Действия отображаются в представлении sys.dm_xe_objects со значением object_type, равным "action".  
   
  WHERE \<predicate_expression> задает выражение предиката, используемое для определения необходимости обработки события. Если \<predicate_expression> имеет значение true, то обработка события продолжается действиями и целями сеанса. Если \<predicate_expression> имеет значение false, то событие удаляется сеансом прежде, чем оно будет обработано действиями и целями для сеанса. Выражения предиката ограничены 3000 символами, что является пределом для строковых аргументов. 
   
@@ -180,10 +180,10 @@ ON SERVER
 -   *target_name* представляет собой целевой объект. Целевые объекты отображаются в представлении sys.dm_xe_objects со значением object_type, равным «target».  
   
  SET { *target_parameter_name*= \<value> [, ...*n*] }  
- Задает параметр цели. Параметры цели отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *target_name*.  
+ Задает параметр целевого объекта. Параметры цели отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *target_name*.  
   
 > [!IMPORTANT]  
->  Если используется цель «Кольцевой буфер», рекомендуется установить параметр цели max_memory в значение 2048 килобайт (КБ), чтобы избежать возможного усечения выходных XML-данных. Дополнительные сведения об использовании разных типов целевых объектов см. в статье [Цели расширенных событий SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+>  Если используется цель "Кольцевой буфер", рекомендуется установить параметр цели max_memory в значение 2048 килобайт (КБ), чтобы избежать возможного усечения выходных XML-данных. Дополнительные сведения об использовании разных типов целевых объектов см. в статье [Цели расширенных событий SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
  WITH ( \<event_session_options> [ ,...*n*] ) Задает параметры, используемые с сеансом событий.  
   

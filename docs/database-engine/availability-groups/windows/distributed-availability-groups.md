@@ -2,7 +2,7 @@
 title: Распределенные группы доступности (SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/12/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ae16c285a4ff77e0f7753f6bc9a0323aed7f37f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > Аббревиатура "DAG" не является официальным сокращением для *распределенной группы доступности*, поскольку уже используется для обозначения функции группы доступности базы данных Exchange. Эта функция Exchange никак не связана с группами доступности SQL Server или распределенными группами доступности.
@@ -55,6 +56,9 @@ ms.lasthandoff: 01/18/2018
 
 > [!NOTE]
 > Распределенные группы доступности в SQL Server 2016 поддерживают отработку отказа только с переходом из одной группы доступности в другую с использованием параметра FORCE_FAILOVER_ALLOW_DATA_LOSS.
+
+> [!NOTE]
+> При использовании репликации транзакций с распределенными группами доступности нельзя настроить реплику пересылки в качестве издателя.
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Требования версии и выпуска SQL Server к распределенным группам доступности
 

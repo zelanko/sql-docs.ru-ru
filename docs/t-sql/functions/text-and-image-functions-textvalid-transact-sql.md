@@ -1,16 +1,16 @@
 ---
-title: "TEXTVALID (Transact-SQL) | Документы Майкрософт"
-ms.custom: 
+title: TEXTVALID (Transact-SQL) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d64916b441c65dc00e0e387e08c2967124721514
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5ab9180b4699314a2fe8dce24779b5742665a826
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *text_ptr*  
  Текстовый указатель, который подлежит проверке.  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
@@ -73,8 +73,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Функция или инструкция|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*%pattern%**'***,** *expression***)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
-|DATALENGTH**(***expression***)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|PATINDEX **(**'*%pattern%**'***,** *expression***)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
+|DATALENGTH **(***expression***)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
 |SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
   
 ## <a name="examples"></a>Примеры  

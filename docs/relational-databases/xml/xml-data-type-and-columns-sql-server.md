@@ -1,32 +1,32 @@
 ---
-title: "Столбцы и типы XML-данных (SQL Server) | Документация Майкрософт"
-ms.custom: 
+title: Столбцы и типы XML-данных (SQL Server) | Документация Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4fa1ea2ba7eb9742d4596a1ce403a42038d2d842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Столбцы и типы XML-данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-В этом разделе описаны преимущества и ограничения типа данных **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также сведения, помогающие выбрать способ хранения XML-данных.  
+  В этом разделе описаны преимущества и ограничения типа данных **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также сведения, помогающие выбрать способ хранения XML-данных.  
   
 ## <a name="relational-or-xml-data-model"></a>Модель данных: реляционная или XML  
  Если данные хорошо структурированы и известна их схема, то для их хранения наверняка лучше всего подойдет реляционная модель. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает все необходимые для этого средства и функции. С другой стороны, если данные структурированы частично, не структурированы или если их структура неизвестна, следует подумать о моделировании таких данных.  
@@ -67,9 +67,9 @@ ms.lasthandoff: 02/12/2018
   
 -   Естественное хранение в виде типа **xml**  
   
-     Данные при этом хранятся во внутреннем представлении, которое обеспечивает неизменность XML-содержимого данных. Это внутреннее представление включает в себя сведения об иерархии контейнеров, порядке документов и значений элементов и атрибутов. Точнее говоря, при этом обеспечивается неизменность InfoSet-содержимого XML-данных. Сведения о спецификации InfoSet можно найти по адресу: [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). InfoSet-содержимое не всегда идентично текстовым XML-данным, потому что следующая информация при этом не сохраняется: несущественные пробелы, порядок атрибутов, префиксы пространств имен и XML-декларация.  
+     Данные при этом хранятся во внутреннем представлении, которое обеспечивает неизменность XML-содержимого данных. Это внутреннее представление включает в себя сведения об иерархии контейнеров, порядке документов и значений элементов и атрибутов. Точнее говоря, при этом обеспечивается неизменность InfoSet-содержимого XML-данных. Дополнительные сведения об информационном наборе см. в разделе [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). InfoSet-содержимое не всегда идентично текстовым XML-данным, потому что следующая информация при этом не сохраняется: несущественные пробелы, порядок атрибутов, префиксы пространств имен и XML-декларация.  
   
-     Для типизированного (то есть связанного с **XML** -схемой) типа данных **xml** модуль проверки после обработки схемы (PSVI) добавляет в информационный набор данные о типах и кодирует их во внутреннее представление. Это значительно ускоряет синтаксический анализ. Дополнительные сведения см. в спецификациях XML-схем, разработанных консорциумом W3C XML. Найти их можно по адресам [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) и [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Для типизированного (то есть связанного с **XML** -схемой) типа данных **xml** модуль проверки после обработки схемы (PSVI) добавляет в информационный набор данные о типах и кодирует их во внутреннее представление. Это значительно ускоряет синтаксический анализ. Дополнительные сведения см. в спецификациях XML-схемы W3C на страницах [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) и [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Сопоставление XML-данных и данных, хранящихся в реляционном формате  
   
