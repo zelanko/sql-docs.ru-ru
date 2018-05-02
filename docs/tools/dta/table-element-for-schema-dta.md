@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2fa7311680006fa5fc6ce51058dce05e6ed1f675
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-element-for-schema-dta"></a>Элемент Table описания схемы (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает таблицу для настройки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Указывает таблицу для настройки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,24 +42,24 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
-|**NumberOfRows**|Необязательно. Целое число, позволяющее имитировать таблицы различных размеров.|  
+|**NumberOfRows**|Необязательный параметр. Целое число, позволяющее имитировать таблицы различных размеров.|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  
-|**Применяемость**|Необязательно. Перечисляет необходимое число таблиц для рабочей нагрузки.|  
+|**Наличие**|Необязательный параметр. Перечисляет необходимое число таблиц для рабочей нагрузки.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент schema описания базы данных &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
-|**Дочерние элементы**|[Элемент Name описания таблицы &#40; DTA &#41;](../../tools/dta/name-element-for-table-dta.md)|  
+|**Родительский элемент**|[Элемент Schema описания базы данных (DTA)](../../tools/dta/schema-element-for-database-dta.md)|  
+|**Дочерние элементы**|[Элемент Name описания таблицы (DTA)](../../tools/dta/name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Если элемент **Table** не указан, помощник по настройке ядра СУБД считает все таблицы в указанной базе данных доступными для настройки.  

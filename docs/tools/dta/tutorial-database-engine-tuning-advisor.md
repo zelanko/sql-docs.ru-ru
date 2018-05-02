@@ -1,47 +1,49 @@
 ---
-title: "Учебник: Компонент Database Engine, помощник по настройке | Документы Microsoft"
-ms.custom: 
+title: Учебник. Помощник по настройке ядра СУБД | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0c6068064e47e571f143070bfd853c6df4e913d4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Учебник. помощник по настройке ядра СУБД
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Добро пожаловать в учебник по настройке ядра СУБД. Помощник по настройке ядра СУБД выявляет, каким образом запросы обрабатываются в указанных пользователем базах данных, а затем выдает рекомендации по повышению скорости обработки запросов путем изменения структур базы данных, таких как индексы, индексированные представления и секции.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Представляем вашему вниманию учебник по помощнику по настройке ядра СУБД. Помощник по настройке ядра СУБД выявляет, каким образом запросы обрабатываются в указанных пользователем базах данных, а затем выдает рекомендации по повышению скорости обработки запросов путем изменения структур базы данных, таких как индексы, индексированные представления и секции.  
   
 Помощник по настройке ядра СУБД предоставляет два пользовательских интерфейса: графический интерфейс пользователя (GUI) и программу командной строки **dta** . Графический пользовательский интерфейс позволяет быстро просматривать результаты сеансов настройки, а программа **dta** облегчает внедрение функциональных возможностей помощника по настройке ядра СУБД в скрипты для автоматической настройки. Кроме того, помощник по настройке ядра СУБД может принимать входные данные на языке XML, что обеспечивает расширенный контроль процесса настройки.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
 В этом учебнике рассматривается навигация в графическом пользовательском интерфейсе помощника по настройке ядра СУБД, а также выполнение некоторых базовых задач с использованием GUI и программы **dta** . Учебник содержит следующие занятия:  
   
-[Урок 1: Основы перемещения в помощнике по настройке ядра СУБД](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[Урок 1. Основы перемещения в помощнике по настройке ядра СУБД](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 На этом занятии рассматривается графический интерфейс нового помощника по настройке ядра СУБД, а также установка параметров отображения и разметки.  
   
-[Занятие 2: С помощью помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Занятие 2. Применение помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 На этом занятии рассматривается выполнение базовых задач настройки графического интерфейса помощника по настройке ядра СУБД.  
   
-[Занятие 3: С помощью программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Урок 3. Использование служебной программы dta для командной строки](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 На этом занятии рассматриваются запуск программы командной строки **dta** и выполнение ряда простейших команд по настройке.  
   
 ## <a name="requirements"></a>Требования  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
 -   [dta Utility](../../tools/dta/dta-utility.md) — справочный материал по программе командной строки и дополнительному XML-файлу, который вы можете использовать для управления ее работой.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Урок 1: Основы перемещения в помощнике по настройке ядра СУБД](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[Урок 1. Основы работы с помощником по настройке ядра СУБД](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

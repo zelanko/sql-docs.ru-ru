@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0e7517d17dea7e452e282debd0c9a2c63a92f93b
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="filegroup-element-for-index-dta"></a>Элемент Filegroup описания индекса (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Определяет группу файлов, на котором должны быть созданы для указанной пользователем конфигурации индекс.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Определяет группу файлов, по которой будет создан индекс в пользовательской конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Применяемость**|Необязательно. Может использоваться один раз для каждого элемента **Index** . Этот элемент нельзя использовать, если для элемента **PartitionScheme** определены элементы **PartitionColumn** и **Index** .|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента **Index** . Этот элемент нельзя использовать, если для элемента **PartitionScheme** определены элементы **PartitionColumn** и **Index** .|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент index &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
+|**Родительский элемент**|[Элемент Index (DTA)](../../tools/dta/index-element-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

@@ -1,5 +1,5 @@
 ---
-title: Просмотр отчетов настройки | Документы Microsoft
+title: Просмотр отчетов по настройке | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-3---viewing-tuning-reports"></a>Занятие 1-3 - Просмотр отчетов настройки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В предыдущей практической на этом занятии вы просмотрели [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипты, создающие или удаляющие объекты базы данных в рекомендациях по настройке ядра СУБД, которые были созданы в результате сеанс настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+# <a name="lesson-1-3---viewing-tuning-reports"></a>Урок 1–3. Просмотр отчетов по настройке
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В предыдущей практической работе этого учебника были рассмотрены сценарии [!INCLUDE[tsql](../../includes/tsql-md.md)], которые создают или сбрасывают объекты базы данных в рекомендациях помощника по настройке ядра СУБД, созданные в сеансе настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 Хотя очень полезно рассмотреть скрипты, которые можно использовать для применения результатов настройки, помощник по настройке ядра СУБД также предоставляет много полезных отчетов. Эти отчеты содержат сведения о существующих структурах физического проектирования в настраиваемой базе данных, а также о рекомендуемых структурах. Отчеты настройки можно просмотреть, перейдя на вкладку **Отчеты** , как описано в следующей практической работе. В этой практической работе используются сеансы настройки MySession и EvaluateMySession, которые были созданы упражнениях разделов [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) и [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md).  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 Изучена вкладка **Отчеты** графического интерфейса помощника по настройке ядра СУБД для сеанса настройки MySession. Выполните эти шаги, чтобы ознакомиться с отчетами, созданными для сеанса настройки EvaluateMySession. Дважды щелкните сеанс **EvaluateMySession** на панели **Монитор сеансов** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 3: С помощью программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Занятие 3. Использование программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   

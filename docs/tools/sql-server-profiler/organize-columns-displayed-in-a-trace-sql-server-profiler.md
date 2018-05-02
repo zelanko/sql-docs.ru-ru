@@ -1,34 +1,35 @@
 ---
-title: "Упорядочить столбцы, отображаемые в трассировке (приложение SQL Server Profiler) | Документы Microsoft"
-ms.custom: 
+title: Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>упорядочить столбцы, отображаемые в трассировке (приложение SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Столбцы данных трассировки можно сгруппировать, нажав кнопку **систематизировать столбцы** в таблице трассировки или **свойства файла трассировки** диалоговое окно, или при определении трассировки. Группировка столбцов данных упрощает анализ результатов трассировки в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Дополнительные сведения см. в статье [Просмотр и анализ трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Столбцы данных трассировки можно сгруппировать, нажав кнопку **Систематизировать столбцы** в таблице трассировки или в диалоговом окне **Свойства трассировочного файла** или при определении трассировки. Группировка столбцов данных упрощает анализ результатов трассировки в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Дополнительные сведения см. в статье [Просмотр и анализ трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  Окно**Систематизация столбцов** позволяет просто сгруппировать события трассировки или сгруппировать и посчитать количество их количество по выбранным столбцам данных.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/17/2018
   
 5.  В диалоговом окне **Систематизация столбцов** выберите столбцы, которые требуется отображать в группе, и щелкните **Вверх** , чтобы переместить их в список **Группы**. Переместив все нужные столбцы в список **Группы**, можно изменить их порядок кнопками **Вверх** и **Вниз** .  
   
-     Если переместить имена столбцов в список **Группы** , то сначала будут отображаться значения первого столбца данных из списка **Группы** , затем **Группы** второго столбца и т. д.   
+     Если переместить имена столбцов в список **Группы** , то сначала будут отображаться значения первого столбца данных из списка **Группы** , затем второго столбца и т. д **.**  
   
 6.  Нажмите кнопку **OК** в диалоговом окне **Систематизировать столбцы** , затем нажмите кнопку **ОК** в диалоговом окне **Свойства таблицы трассировки** или **Свойства файла трассировки** .  
   
@@ -89,8 +90,8 @@ ms.lasthandoff: 01/17/2018
 7.  Чтобы вернуться к обычному отображению данных трассировки, снимите флажок **Суммирование** в меню **Вид** . Чтобы восстановить суммирование, заново установите флажок **Суммирование** в меню **Вид** . Кроме того, можно установить флажок **Группировка** в меню **Вид** , чтобы отображать сгруппированные события трассировки, не сворачивая их.  
   
 ## <a name="see-also"></a>См. также:  
- [Создать трассировку &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Открыть таблицу трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [Создание трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Открытие таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Открыть файл трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

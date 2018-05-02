@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d7feb4a5dc420b10bfb8db5b41d425645534080b
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-server-dta"></a>Элемент Name описания сервера (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит имя сервера, где расположены базы данных, которую необходимо настроить.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Содержит имя сервера, на котором расположены базы данных, подлежащие настройке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/17/2018
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
+|**Родительский элемент**|[Элемент Server (DTA)](../../tools/dta/server-element-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  
- Пример использования этого элемента **Name** см. в статье [Server Element &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
+ Пример использования этого элемента **Name** см. в статье [Элемент Server (DTA)](../../tools/dta/server-element-dta.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

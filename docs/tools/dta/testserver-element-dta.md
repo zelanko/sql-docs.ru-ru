@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 70efce8b1aede11f3892b6c20c06fa6d1c143a43
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="testserver-element-dta"></a>Элемент TestServer (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает, какой тестовый сервер нужно использовать при настройке рабочего сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Указывает, какой тестовый сервер нужно использовать при настройке рабочего сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,17 +43,17 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Применяемость**|Необязательно. Может использоваться один раз для каждого элемента **TuningOptions** .|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Родительский элемент**|[Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

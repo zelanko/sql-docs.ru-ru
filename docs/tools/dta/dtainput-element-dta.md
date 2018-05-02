@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2ac4b1252abed4d02100e3891cdc2a22e4c3854e
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtainput-element-dta"></a>Элемент DTAInput (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит определение входных XML-данных для ядра СУБД.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Содержит определение входных XML-данных для помощника по настройке ядра СУБД.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристики|Описание|  
+|Характеристики|Description|  
 |---------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -53,10 +53,10 @@ ms.lasthandoff: 01/17/2018
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент DTAXML &#40; DTA &#41;](../../tools/dta/dtaxml-element-dta.md)|  
-|**Дочерние элементы**|[Элемент Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Элемент Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Элемент конфигурации &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
+|**Родительский элемент**|[Элемент DTAXML (DTA)](../../tools/dta/dtaxml-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Server (DTA)](../../tools/dta/server-element-dta.md)<br /><br /> [Элемент Workload (DTA)](../../tools/dta/workload-element-dta.md)<br /><br /> [Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Элемент Configuration (DTA)](../../tools/dta/configuration-element-dta.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот элемент является корневым в иерархии входной схемы помощника по настройке ядра СУБД. С помощью входных аргументов помощника по настройке ядра СУБД можно задавать серверы с подлежащими настройке базами данных, рабочие нагрузки, параметры настройки или пользовательскую конфигурацию.  
   
 ## <a name="example"></a>Пример  

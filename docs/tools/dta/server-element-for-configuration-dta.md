@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4df65dc3db8f8c23aa0fd012ee834020839d1ce9
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-element-for-configuration-dta"></a>Элемент Server описания конфигурации (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит сведения идентификации сервера, где будет помощник по настройке ядра СУБД должен произвести оценку гипотетической конфигурации (заданные **конфигурации** элемент).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Содержит сведения идентификации сервера, на котором помощник по настройке ядра СУБД должен произвести оценку гипотетической конфигурации (заданной элементом **Configuration**).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 01/17/2018
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент конфигурации &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
-|**Дочерние элементы**|[Элемент Name описания сервера &#40; DTA &#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Элемент Database описания конфигурации &#40; DTA &#41;](../../tools/dta/database-element-for-configuration-dta.md)|  
+|**Родительский элемент**|[Элемент Configuration (DTA)](../../tools/dta/configuration-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Name описания сервера (DTA)](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Элемент Database описания конфигурации (DTA)](../../tools/dta/database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Вы можете указать только один элемент **Server** для элемента **Configuration** . Этот элемент с именем **ServerTypecomplexType** определен в [схеме XML помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100). Не следует путать данный элемент **Server** с дочерним элементом элемента **DTAInput** . Дополнительные сведения см. в разделе [Элемент Server (DTA)](../../tools/dta/server-element-dta.md).  

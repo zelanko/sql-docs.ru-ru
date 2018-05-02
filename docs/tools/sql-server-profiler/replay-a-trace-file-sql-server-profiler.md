@@ -1,33 +1,34 @@
 ---
-title: "Воспроизведение файла трассировки (приложение SQL Server Profiler) | Документы Microsoft"
-ms.custom: 
+title: Воспроизведение файла трассировки (приложение SQL Server Profiler) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4f3f19c69cae22987767cd7b65ca8dc9718faa4e
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>воспроизвести файл трассировки (приложение SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Воспроизведением называется возможность открывать сохраненную трассировку и воспроизвести ее заново. Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] содержит в себе многопоточный модуль воспроизведения, который имитирует соединения пользователей и проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Воспроизведение хорошо помогает при диагностике ошибок приложений и процессов. Отыскав и исправив ошибку, запустите трассировку, обнаружившую эту ошибку, в отношении исправленной версии приложения или процесса. а затем, после воспроизведения исходной трассировки, сравнить результаты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Воспроизведением называется возможность открывать сохраненную трассировку и снова ее воспроизводить. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] содержит в себе многопоточный модуль воспроизведения, который имитирует соединения пользователей и проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Воспроизведение хорошо помогает при диагностике ошибок приложений и процессов. Отыскав и исправив ошибку, запустите трассировку, обнаружившую эту ошибку, в отношении исправленной версии приложения или процесса. а затем, после воспроизведения исходной трассировки, сравнить результаты.  
   
  Чтобы воспроизведение было возможным, необходимо помимо классов событий, отобранных для отслеживания, фиксировать и специальные классы событий. Эти события фиксируются по умолчанию при использовании шаблона трассировки **TSQL_Replay** . Дополнительные сведения см. в разделе [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/17/2018
   
 5.  Выберите либо **Воспроизвести события в порядке трассировки**, либо **Воспроизвести события, используя несколько потоков**. В нижеследующей таблице объясняются различия между этими параметрами.  
   
-    |Параметр|Описание|  
+    |Параметр|Description|  
     |------------|-----------------|  
     |**Воспроизвести события в порядке трассировки**|Воспроизводит события в том порядке, в котором они были записаны. Выбор этого параметра включает возможность отладки.|  
     |**Воспроизвести события, используя несколько потоков**|В этом варианте используются несколько потоков для воспроизведения каждого события независимо от последовательности. Выбор этого параметра способствует оптимальной производительности.|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Воспроизведение трассировок](../../tools/sql-server-profiler/replay-traces.md)   
- [Откройте файл трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Открытие файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

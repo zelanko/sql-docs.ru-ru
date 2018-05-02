@@ -1,34 +1,35 @@
 ---
-title: "Параметр предварительной обработки (средство администрирования распределенного воспроизведения) | Документы Microsoft"
-ms.custom: 
+title: Параметр предварительной обработки (средство администрирования распределенного воспроизведения) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d1096da9b2acf50e7f495c6948a9c7f9e20acacb
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Распределенного воспроизведения средство администрирования **DReplay.exe**, это средство командной строки, можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Средство администрирования программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**DReplay.exe**) представляет собой программу командной строки, которая служит для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
   
  Параметр **preprocess** запускает предварительную обработку. На этом этапе контроллер подготавливает для воспроизведения на целевом сервере входные данные трассировки.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования см. в разделе [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -84,7 +85,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- В этом примере запускается этап предварительной подготовки и указывается измененный файл конфигурации предварительной обработки. В отличие от предыдущего примера параметр **-c** используется для указания измененного файла конфигурации, сохраненного в другом расположении. Например:  
+ В этом примере запускается этап предварительной подготовки и указывается измененный файл конфигурации предварительной обработки. В отличие от предыдущего примера параметр **-c** используется для указания измененного файла конфигурации, сохраненного в другом расположении. Пример:  
   
 ```  
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  

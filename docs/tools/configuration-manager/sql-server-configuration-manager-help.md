@@ -1,28 +1,28 @@
 ---
-title: "Справка по SQL Server Configuration Manager | Документы Microsoft"
-ms.custom: 
+title: Справка диспетчера конфигурации SQL Server | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0730840b194e6ae4d172dcf822f78a86aa6f9c33
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/03/2018
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/03/2018
  В этом разделе содержатся разделы справки F1 диалоговых окон в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager не удается настроить версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более раннюю, чем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] С помощью диспетчера конфигурации нельзя настроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеющий версию, предшествующую [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="services"></a>Службы  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляет службами, относящимися к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Большинство этих задач могут быть выполнены при помощи диалогового окна «Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows», но необходимо отметить, что диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет дополнительные операции с управляемыми им службами, такие как применение правильных разрешений при изменении учетной записи службы. Использование обычного диалогового окна служб Windows для настройки любых служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может привести к неправильной работе службы.  
@@ -79,15 +79,15 @@ ms.lasthandoff: 02/03/2018
 -   В меню **Пуск** укажите **Все программы**, **Microsoft SQL Server** (версия), **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
   
- **Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью Configuration Manager[!INCLUDE[win8](../../includes/win8-md.md)]**  
+ **Запуск диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[win8](../../includes/win8-md.md)]**  
   
- Так как диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является оснасткой консоли управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не отдельной программой, при работе в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диспетчер конфигурации [!INCLUDE[win8](../../includes/win8-md.md)]не отображается как приложение. Чтобы открыть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager в **поиска** чудо-кнопки **приложения**, тип **SQLServerManager12.msc** (для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) или  **SQLServerManager11.msc** (для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), а затем нажмите клавишу **ввод**.  
+ Так как диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является оснасткой консоли управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не отдельной программой, при работе в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диспетчер конфигурации [!INCLUDE[win8](../../includes/win8-md.md)]не отображается как приложение. Чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нажмите чудо-кнопку **Поиск**, выберите **Приложения**, введите **SQLServerManager12.msc** (для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) или **SQLServerManager11.msc** (для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и нажмите клавишу **ВВОД**.  
   
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы SQL Server](../../tools/configuration-manager/sql-server-services.md)   
  [Сетевая конфигурация SQL Server](../../tools/configuration-manager/sql-server-network-configuration.md)   
- [Конфигурация SQL Native Client 11.0](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
+ [Конфигурация SQL Native Client 11.0](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

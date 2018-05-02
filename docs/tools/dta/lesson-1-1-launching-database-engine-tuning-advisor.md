@@ -1,34 +1,36 @@
 ---
-title: "Запуск базы данных настройке ядра СУБД | Документы Microsoft"
-ms.custom: 
+title: Запуск помощника по настройке ядра СУБД | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 545a7f2e9758bb5221bbaec9c35516cef66596ab
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Урок 1-1-Запуск помощника по настройке ядра СУБД
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Чтобы начать, откройте помощник по настройке ядра СУБД графический пользовательский интерфейс (GUI). При первом использовании помощника по настройке ядра СУБД для инициализации этого приложения его должен запустить член, имеющий предопределенную роль сервера **sysadmin** . После инициализации помощника по настройке ядра СУБД его могут использовать члены предопределенной роли базы данных **db_owner** для настройки тех баз данных, которыми они владеют. Дополнительные сведения об инициализации помощника по настройке ядра СУБД см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+# <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Урок 1–1. Запуск помощника по настройке ядра СУБД
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для начала работы откройте графический интерфейс пользователя (GUI) помощника по настройке ядра СУБД. При первом использовании помощника по настройке ядра СУБД для инициализации этого приложения его должен запустить член, имеющий предопределенную роль сервера **sysadmin** . После инициализации помощника по настройке ядра СУБД его могут использовать члены предопределенной роли базы данных **db_owner** для настройки тех баз данных, которыми они владеют. Дополнительные сведения об инициализации помощника по настройке ядра СУБД см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ### <a name="open-the-database-engine-tuning-advisor-gui"></a>Откройте графический пользовательский интерфейс помощника по настройке ядра СУБД.  
   
@@ -50,10 +52,10 @@ ms.lasthandoff: 01/17/2018
 -   Правая панель содержит вкладки **Общие** и **Параметры настройки** . Здесь можно определить сеанс настройки ядра СУБД. На вкладке **Общие** введите имя сеанса, определите используемый файл рабочей нагрузки или таблицу и выберите базу данных и таблицы, которые требуется настроить в данном сеансе. Рабочая нагрузка представляет собой набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемый в одной или нескольких базах данных, которые необходимо настроить. В помощнике по настройке ядра СУБД в качестве входной рабочей нагрузки при настройке базы данных используются файлы и таблицы трассировки, скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] и XML-файлы. На вкладке **Параметры настройки** можно выбрать структуры физической структуры базы данных (индексы или индексированные представления) и стратегию разделения на секции, которую должен проанализировать помощник по настройке ядра СУБД. На этой вкладке также указывается максимальное время, которое помощник по настройке ядра СУБД может затратить на настройку рабочей нагрузки. По умолчанию помощник по настройке ядра СУБД будет настраивать рабочую нагрузку в течение 1 часа.  
   
 > [!NOTE]  
-> Помощник по настройке ядра СУБД может занять XML-файлы как входные, когда [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипт будет импортирован из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора запросов. Дополнительные сведения см. в разделе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Запуск и использование помощника по настройке ядра СУБД [, в котором рассматривается запуск помощника по настройке ядра СУБД из редактора запросов среды](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+> Помощник по настройке ядра СУБД может принимать на входе XML-файлы, если скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] импортируется из редактора запросов среды [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. в разделе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Запуск и использование помощника по настройке ядра СУБД [, в котором рассматривается запуск помощника по настройке ядра СУБД из редактора запросов среды](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Настройка параметров средств и макета](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
+[Настройка параметров и вида средств](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  
   
   
   

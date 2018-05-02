@@ -1,34 +1,35 @@
 ---
-title: "Параметр воспроизведения (средство администрирования распределенного воспроизведения) | Документы Microsoft"
-ms.custom: 
+title: Параметр воспроизведения (средство администрирования распределенного воспроизведения) | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: cf93f19d25faf48efa3195d7d34348354eae5969
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Параметр воспроизведения (средство администрирования распределенного воспроизведения)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Распределенного воспроизведения средство администрирования **DReplay.exe**, это средство командной строки, можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описываются параметр командной строки **replay** и соответствующий синтаксис.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Средство администрирования программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**DReplay.exe**) представляет собой программу командной строки, которая служит для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описываются параметр командной строки **replay** и соответствующий синтаксис.  
   
  Параметр **replay** инициирует стадию воспроизведения события, на которой контроллер отправляет данные воспроизведения указанным клиентам, запускает распределенное воспроизведение и синхронизирует клиенты. При необходимости каждый клиент, участвующий в воспроизведении, может записывать последовательность воспроизведения и сохранять получившиеся файлы трассировки в локальном кэше.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования см. в разделе [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +46,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Если параметр **-m** не задан, то используется локальный компьютер.  
   
- **-d** *controller_working_dir*  
+ **-d** *рабочий_каталог_контроллера*  
  Указывает каталог на контроллере, где будет сохранен промежуточный файл. Параметр **-d** является обязательным.  
   
  К нему предъявляются следующие требования.  
@@ -63,7 +64,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Если параметр **-o** не задан, результирующий файл трассировки не создается. В конце воспроизведения консоль возвращает сводные данные, но остальная статистика воспроизведения недоступна.  
   
- **-s** *target_server*  
+ **-s** *целевой_сервер*  
  Указывает целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором требуется воспроизвести распределенную рабочую нагрузку. Этот параметр необходимо задать в формате **имя_сервера[\имя_экземпляра]**.  
   
  Недопустимо использовать в качестве целевого сервера «`localhost`» или «`.`».  
@@ -72,18 +73,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  Если используется параметр **-s** , элемент `<Server>` в секции `<ReplayOptions>` файла конфигурации воспроизведения будет игнорироваться.  
   
- **-w** *clients*  
+ **-w** *клиенты*  
  Требуемым параметром является список с разделителями-запятыми (без пробелов), содержащий имена компьютеров клиентов, которые должны участвовать в распределенном воспроизведении. IP-адреса недопустимы. Помните, что клиенты должны быть уже зарегистрированы на контроллере.  
   
 > [!NOTE]  
 >  Каждый клиент регистрируется на контроллере, который указывается в файле конфигурации клиента при запуске службы клиента.  
   
- **-c** *config_file*  
+ **-c** *файл_конфигурации*  
  Полный путь к файлу конфигурации воспроизведения; используется для указания расположения, если оно отличается от расположения по умолчанию.  
   
  Параметр **-c** не является обязательным, если будут использоваться значения по умолчанию файла конфигурации воспроизведения `DReplay.exe.replay.config`.  
   
- **-f** *status_interval*  
+ **-f** *интервал_состояния*  
  Указывает частоту (в секундах) отображения состояния.  
   
  Если параметр **-f** не задан, интервал по умолчанию составляет 30 секунд.  
@@ -162,7 +163,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
 ## <a name="see-also"></a>См. также:  
  [Воспроизведение данные трассировки](../../tools/distributed-replay/replay-trace-data.md)   
- [Просмотреть результаты воспроизведения](../../tools/distributed-replay/review-the-replay-results.md)   
+ [Просмотр результатов воспроизведения](../../tools/distributed-replay/review-the-replay-results.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)   
  [Форум о распределенном воспроизведении SQL Server](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

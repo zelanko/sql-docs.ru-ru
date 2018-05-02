@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9bb4027f057fdfcd3c6aa4802708bfe39361ecff
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-column-dta"></a>Элемент Name описания столбца (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает имя для столбца индекса в пользовательской конфигурации.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задает имя для столбца индекса в пользовательской конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент COLUMN описания индекса &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)|  
+|**Родительский элемент**|[Элемент Column описания индекса (DTA)](../../tools/dta/column-element-for-index-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

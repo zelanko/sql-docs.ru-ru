@@ -1,30 +1,31 @@
 ---
-title: "Подготовка входных данных трассировки | Документы Microsoft"
-ms.custom: 
+title: Подготовка входных данных трассировки | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>Подготовка входных данных трассировки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Прежде чем начать распределенное воспроизведение с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент распределенного воспроизведения, необходимо подготовить входные данные трассировки, инициировать стадию предварительной подготовки с помощью средства администрирования распределенного воспроизведения. На стадии предварительной обработки контроллер распределенного воспроизведения обрабатывает данные трассировки и формирует промежуточный файл:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Прежде чем начинать распределенное воспроизведение с помощью функции распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо подготовить входные данные трассировки, а для этого инициировать стадию предварительной подготовки с помощью средства администрирования распределенного воспроизведения. На стадии предварительной обработки контроллер распределенного воспроизведения обрабатывает данные трассировки и формирует промежуточный файл:  
   
  ![Стадия предварительной обработки распределенного воспроизведения](../../tools/distributed-replay/media/preprocess.gif "стадия предварительной обработки распределенного воспроизведения")  
   
@@ -65,8 +66,8 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="see-also"></a>См. также:  
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

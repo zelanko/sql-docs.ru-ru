@@ -1,29 +1,29 @@
 ---
-title: "Свойства TCP/IP (вкладка IP адресов) | Документы Microsoft"
-ms.custom: 
+title: Свойства TCP/IP (вкладка IP адресов) | Документы Microsoft
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/03/2018
 ---
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/03/2018
  **Активен**  
  Указывает на то, что IP-адрес активен на компьютере. Недоступно для параметра **Все IP**.  
   
- **Включено**  
+ **Enabled**  
  Если для свойства **Прослушивать все** в диалоговом окне **Свойства TCP/IP (вкладка "Протокол")** установлено значение **Нет**, это свойство указывает на то, что SQL Server прослушивает IP-адрес. Если для свойства **Прослушивать все** в диалоговом окне **Свойства TCP/IP (вкладка "Протокол")** установлено значение **Да**, это свойство не учитывается. Недоступно для параметра **Все IP**.  
   
  **IP-адрес**  
@@ -67,9 +67,9 @@ ms.lasthandoff: 02/03/2018
 ## <a name="additional-topics-in-books-online"></a>Дополнительные разделы электронной документации  
  Изучите статьи MSDN **Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)** и **Настройка компонента Database Engine на прослушивание нескольких портов TCP**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Создание допустимой строки соединения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Создание допустимой строки подключения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Служба обозревателя SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

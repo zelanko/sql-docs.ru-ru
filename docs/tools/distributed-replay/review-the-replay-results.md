@@ -1,30 +1,31 @@
 ---
-title: "Просмотреть результаты воспроизведения | Документы Microsoft"
-ms.custom: 
+title: Просмотреть результаты воспроизведения | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>просмотреть результаты воспроизведения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]После [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент распределенного воспроизведения завершает распределенное воспроизведение, действие воспроизведения на каждом клиенте могут быть перехвачены и сохраняется в результирующих файлах трассировки на каждом клиенте. Чтобы записать это действие, необходимо использовать параметр **-o** , когда запускается средство администрирования с параметром **replay** . Дополнительные сведения о параметре replay см. в статье [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Когда компонент распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершает распределенное воспроизведение, действие воспроизведения может быть записано в результирующий файл трассировки на каждом клиенте. Чтобы записать это действие, необходимо использовать параметр **-o** , когда запускается средство администрирования с параметром **replay** . Дополнительные сведения о параметре replay см. в статье [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  Расположение хранения результирующих файлов трассировки указывается XML-элементом `<ResultDirectory>` в файле конфигурации клиента `DReplayClient.xml`, находящемся на каждом клиенте. Файлы трассировки в результирующем каталоге клиента перезаписываются при каждом воспроизведении.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="column-descriptions-for-result-trace"></a>Описания столбцов для результирующей трассировки  
  В следующей таблице описаны столбцы в результирующих данных трассировки.  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Имя класса событий.|1|  
 |EventSequence|**bigint**|Для ошибок поставщика, внутренних ошибок и предупреждений это последовательность записи событий, соответствующая ошибке или предупреждению.<br /><br /> Для всех прочих классов событий это последовательность события в исходных данных трассировки.|2|  
@@ -82,10 +83,10 @@ ms.lasthandoff: 01/17/2018
 |ReplayHostName|**nvarchar**|Имя компьютера, на котором работает клиент во время воспроизведения.|16|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, создавшего соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время записи.|17|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

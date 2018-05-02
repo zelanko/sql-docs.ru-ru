@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 32f1958fcf5b69d9a3b8ef7b3fdf63f67216d9d0
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-element-dta"></a>Элемент Server (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит сведения идентификации сервера, на котором расположены базы данных необходимо настроить.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Содержит сведения идентификации сервера, на котором находятся настраиваемые базы данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 01/17/2018
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент DTAInput &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**Дочерние элементы**|[Элемент Name описания сервера &#40; DTA &#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Элемент Database описания сервера &#40; DTA &#41;](../../tools/dta/database-element-for-server-dta.md)|  
+|**Родительский элемент**|[Элемент DTAInput (DTA)](../../tools/dta/dtainput-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Name описания сервера (DTA)](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Элемент Database описания сервера (DTA)](../../tools/dta/database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Вы можете указать только один элемент **Server** для элемента **DTAInput** . Этот элемент с именем **ServerDetailsTypecomplexType** определен в схеме XML DTA. Не следует путать данный элемент **Server** с дочерним элементом элемента **Configuration** . Дополнительные сведения см. в разделе [Элемент Server описания конфигурации (DTA)](../../tools/dta/server-element-for-configuration-dta.md).  

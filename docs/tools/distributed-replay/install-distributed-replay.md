@@ -1,30 +1,31 @@
 ---
-title: "Установка распределенного воспроизведения | Документы Microsoft"
-ms.custom: 
+title: Установка распределенного воспроизведения | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Распределенное воспроизведение можно установить одним из трех способов:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Распределенное воспроизведение можно установить одним из трех способов:  
   
 -   [Установка распределенного воспроизведения из мастера установки](#bkmk_wizard)  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/17/2018
   
      \- OR -  
   
-     \<Совместное использование папка компонента > \Tools\\(предоставленный пользователем альтернативный общий каталог компонента)  
+     \<Общий каталог компонента>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента)  
   
 -   64-разрядные системы:  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/17/2018
   
      \- OR -  
   
-     \<Совместное использование каталога компонентов (x86) > \Tools\\(предоставленный пользователем альтернативный общий (x86) каталог компонента)  
+     \<Общий каталог компонента (х86)>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента (x86))  
   
 #### <a name="to-install-distributed-replay-features"></a>Установка компонентов распределенного воспроизведения  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/17/2018
   
     1.  На 32-разрядных компьютерах путь установки по умолчанию — **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  На 64-разрядных компьютерах путь установки по умолчанию — **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  На 64-разрядных компьютерах путь установки по умолчанию — **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. По завершении нажмите кнопку **Далее**.  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 01/17/2018
   
  При разработке скриптов установки из командной строки можно использовать параметры, приведенные в следующей таблице.  
   
-|Параметр|Описание|Поддерживаемые значения|  
+|Параметр|Description|Поддерживаемые значения|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Необязательно**|Учетная запись службы контроллера распределенного воспроизведения.|Проверяет учетную запись и пароль|  
 |/CTLRSVCPASSWORD<br /><br /> **Необязательно**|Пароль учетной записи службы контроллера распределенного воспроизведения.|Проверяет учетную запись и пароль|  
@@ -220,11 +221,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Необходимо указать оба пароля в командной строке, так как их нельзя задать в файле конфигурации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

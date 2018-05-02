@@ -1,15 +1,16 @@
 ---
-title: "Приложение SQL Server Profiler | Документы Microsoft"
-ms.custom: 
+title: Приложение SQL Server Profiler | Документы Microsoft
+ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -27,19 +28,19 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] — это интерфейс для создания и управления трассировки и анализа и воспроизведения результатов трассировок. События сохраняются в файле трассировки, который затем может быть проанализирован или использован для воспроизведения определенных последовательностей шагов для выявления возникших проблем.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] представляет собой интерфейс для создания трассировок и управления ими, а также для анализа и воспроизведения результатов трассировок. События сохраняются в файле трассировки, который затем может быть проанализирован или использован для воспроизведения определенных последовательностей шагов для выявления возникших проблем.  
   
 >**ВАЖНО!**  
 > Мы объявляем об устаревании в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для [!INCLUDE[ssDE](../../includes/ssde-md.md)] захвата трассировки и воспроизведения трассировки. Эти функции пока **доступны** в SQL Server 2016, но будут удалены в более поздней версии.
@@ -51,19 +52,19 @@ ms.lasthandoff: 01/17/2018
 
  ## <a name="where-is-the-profiler"></a>Где находится профилировщик?
  
- В SSMS профилировщик можно запустить несколькими способами. [Ниже приведен раздел со списком способов для запуска профилировщика.](start-sql-server-profiler.md)
+ В SSMS профилировщик можно запустить несколькими способами. [В этом разделе описано, как запустить профилировщик.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Захват и воспроизведение данных трассировки 
 В следующей таблице показаны компоненты, с помощью которых мы рекомендуем выполнять захват и воспроизведение данных трассировки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .
   
 ||||  
 |-|-|-|  
-|**Функция\целевая рабочая нагрузка**|**Реляционный механизм**|**службы Analysis Services**;|  
-|**Захват трассировки**|Графический пользовательский интерфейс[расширенных событий](../../relational-databases/extended-events/extended-events.md) в среде SQL Server Management Studio|Приложение SQL Server Profiler|  
+|**Компонент\целевая рабочая нагрузка**|**Реляционный механизм**|**службы Analysis Services**|  
+|**Запись трассировки**|Графический пользовательский интерфейс[расширенных событий](../../relational-databases/extended-events/extended-events.md) в среде SQL Server Management Studio|Приложение SQL Server Profiler|  
 |**Воспроизведение трассировки**|[Распределенное воспроизведение](../distributed-replay/sql-server-distributed-replay.md)|Приложение SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>Приложение SQL Server Profiler  
- Приложение Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] — это графический пользовательский интерфейс для трассировки SQL, с помощью которого можно наблюдать за экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или службами Analysis Services. Приложение позволяет собирать и сохранять данные о каждом событии в файле или в таблице для последующего анализа. Например, с помощью приложения можно следить за производственной средой, чтобы определить, какие хранимые процедуры снижают производительность из-за того, что выполняются слишком медленно. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]используется для действий, таких как:  
+ Приложение Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] — это графический пользовательский интерфейс для трассировки SQL, с помощью которого можно наблюдать за экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или службами Analysis Services. Приложение позволяет собирать и сохранять данные о каждом событии в файле или в таблице для последующего анализа. Например, с помощью приложения можно следить за производственной средой, чтобы определить, какие хранимые процедуры снижают производительность из-за того, что выполняются слишком медленно. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для таких действий, как:  
   
 -   пошаговое выполнение проблемных запросов для поиска источника проблемы;  
   
@@ -116,9 +117,9 @@ ms.lasthandoff: 01/17/2018
   
 -   **Аудит выхода из системы**  
   
--   **Lock: Acquired**  
+-   **Lock:Acquired**  
   
--   **Блокировка: выпуска**  
+-   **Lock:Released**  
   
  **EventCategory**  
  Категория событий определяет способы группировки событий в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Например, все классы событий блокировок группируются в категории событий **Блокировки** . Однако категории событий существуют только в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Этот термин не отображает способ группировки событий ядра.  
@@ -129,12 +130,12 @@ ms.lasthandoff: 01/17/2018
  **Шаблон**  
  Шаблон определяет конфигурацию трассировки по умолчанию. А именно, он включает классы событий, которые нужно контролировать в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Например, можно создать шаблон, указывающий используемые события, столбцы данных и фильтры. Шаблоны не выполняются, а сохраняются в файлах с расширением TDF. После сохранения шаблон управляет захватом данных, если запускается трассировка, основанная на этом шаблоне.  
   
- **Трассировки**  
+ **Trace**  
  Трассировка захватывает данные на основании выбранных классов событий, столбцов данных и фильтров. Например, можно создать трассировку для контроля ошибок исключений. Для этого выберите класс событий **Exception** и столбцы данных **Error**, **State**и **Severity** . Необходимо собирать данные этих трех столбцов, чтобы результаты трассировки содержали значимые данные. Теперь можно запустить трассировку, настроенную таким образом, и собирать данные обо всех событиях класса **Exception** на данном сервере. Данные трассировки можно сохранить или немедленно проанализировать. Трассировки можно воспроизводить впоследствии, хотя некоторые события, например класса **Исключение** , воспроизвести нельзя. Можно также сохранить трассировку как шаблон для построения аналогичных трассировок в будущем.  
   
  В SQL Server предусмотрено два способа трассировки экземпляра SQL Server: с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системных хранимых процедур.  
   
- **Фильтр**  
+ **Filter**  
  При создании трассировки или шаблона можно определить критерии для фильтрации данных, собираемых событием. Чтобы трассировки не становились слишком большими, можно устанавливать фильтры, чтобы собирать только подмножества данных о событиях. Например, в трассировке можно указать определенные имена пользователей Microsoft Windows, тем самым уменьшив объем выходных данных.  
   
  Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий.  
@@ -184,7 +185,7 @@ ms.lasthandoff: 01/17/2018
 |Содержит описание процесса экспорта шаблона трассировки.|[Экспорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |Содержит описание процесса импорта шаблона трассировки.|[Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |Содержит описание процесса извлечения скрипта из трассировки.|[Извлечение скрипта из трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Содержит описание процесса согласования трассировки с данными журнала производительности Windows.|[Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Содержит описание процесса согласования трассировки с данными журнала производительности Windows.|[Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |Содержит описание процесса упорядочения столбцов, отображаемых в трассировке.|[Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Содержит описание процесса запуска приложения SQL Server Profiler.|[Запуск приложения SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Содержит описание процесса сохранения трассировок и шаблонов трассировок.|[Сохранение трассировок и шаблонов трассировок](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
@@ -198,11 +199,11 @@ ms.lasthandoff: 01/17/2018
 |Позволяет получить список контекстной справки по разделам приложения SQL Server Profiler.|[Справка F1 приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |Позволяет получить список системных хранимых процедур, используемых [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для контроля производительности и активности.|[Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:  
- [Категория событий locks](../../relational-databases/event-classes/locks-event-category.md)   
+## <a name="see-also"></a>См. также раздел  
+ [Категория событий Locks](../../relational-databases/event-classes/locks-event-category.md)   
  [Категория событий Sessions](../../relational-databases/event-classes/sessions-event-category.md)   
  [Категория событий Stored Procedures](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [Категория событий TSQL](../../relational-databases/event-classes/tsql-event-category.md)   
- [Производительность сервера и мониторинг активности](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Мониторинг производительности и действий сервера](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

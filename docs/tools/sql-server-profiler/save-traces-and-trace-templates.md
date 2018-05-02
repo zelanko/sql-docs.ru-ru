@@ -1,15 +1,16 @@
 ---
-title: "Сохранение трассировок и шаблонов трассировок | Документы Microsoft"
-ms.custom: 
+title: Сохранение трассировок и шаблонов трассировок | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - saving traces
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 77aa4dc8d36f7d46cf7685c1d371516044bc6427
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-traces-and-trace-templates"></a>Сохранение трассировок и шаблонов трассировок
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Важно различать сохранение файлов трассировки от сохранения шаблонов трассировок. Сохранение файла трассировки предполагает сохранение собранных данных о событиях в указанном месте. Сохранение шаблона трассировки связано с сохранением определения трассировки (например указанных столбцов данных, классов событий или фильтров).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сохранение файлов трассировки нужно отличать от сохранения шаблонов трассировок. Сохранение файла трассировки предполагает сохранение собранных данных о событиях в указанном месте. Сохранение шаблона трассировки связано с сохранением определения трассировки (например указанных столбцов данных, классов событий или фильтров).  
   
 ## <a name="saving-traces"></a>сохранение трассировок  
  Сохраняйте собранные данные о событиях в файле или таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если позднее нужно будет проанализировать или воспроизвести их. Используйте файл трассировки для решения следующих задач.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/17/2018
  Определение шаблона трассировки включает классы событий, столбцы данных, фильтры и все прочие свойства (кроме перехватываемых данных событий), которые используются для создания трассировки. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет стандартные системные шаблоны для общих задач трассировки и для конкретных задач, таких как создание нагрузки, которую помощник по настройке ядра СУБД может использовать для настройки физической структуры базы данных. Кроме того, можно создавать и сохранять пользовательские шаблоны.  
   
 ### <a name="importing-and-exporting-templates"></a>Импорт и экспорт шаблонов  
- Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] позволяет импортировать и экспортировать шаблоны с одного сервера на другой. При экспорте шаблона копия существующего шаблона записывается в указанный каталог. При импорте создается копия указанного шаблона. Во время просмотра этих шаблонов в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]их можно отличить от системных шаблонов по слову «(user)», предшествующему имени шаблона. Переписать или непосредственно изменить предопределенный системный шаблон нельзя.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] позволяет импортировать и экспортировать шаблоны с одного сервера на другой. При экспорте шаблона копия существующего шаблона записывается в указанный каталог. При импорте создается копия указанного шаблона. Во время просмотра этих шаблонов в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]их можно отличить от системных шаблонов по слову «(user)», предшествующему имени шаблона. Переписать или непосредственно изменить предопределенный системный шаблон нельзя.  
   
 ### <a name="analyzing-performance-with-templates"></a>Анализ производительности при помощи шаблонов  
  Если часто инициируется мониторинг [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то нужно использовать для анализа производительности шаблоны. При этом каждый раз регистрируются одни и те же данные о событиях, и используется одно и то же определение трассировки для мониторинга тех же событий. Определять классы событий и столбцы данных при каждом создании трассировки не нужно. Кроме того, шаблон можно предоставить другому пользователю для мониторинга специфических событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, поставщик услуг поддержки может предоставить шаблон своему заказчику. Используя этот шаблон, заказчик может собрать необходимые данные о событиях и отправить их поставщику услуг поддержки для выполнения анализа.  
@@ -68,11 +69,11 @@ ms.lasthandoff: 01/17/2018
  [Хранимая процедура sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Сохранение результатов трассировки в таблицу &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Создание шаблона трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Создание шаблона на основе выполняемой трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
- [Создать шаблон на основе файла трассировки или таблицы трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
- [Экспорт шаблона трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+ [Сохранение результатов трассировки в таблицу (приложение SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Создание шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Извлечение шаблона из выполняемой трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
+ [Извлечение шаблона из файла трассировки или таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
+ [Экспорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

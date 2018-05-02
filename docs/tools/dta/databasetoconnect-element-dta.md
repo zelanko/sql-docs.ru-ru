@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1e57133b7158ba1fae461f2d058f9cd8065226c8
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="databasetoconnect-element-dta"></a>Элемент DatabaseToConnect (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Задает первую базу данных, к которой подключается помощник по настройке ядра СУБД при настройке рабочей нагрузки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задает первую базу данных, к которой подключается помощник по настройке ядра СУБД при настройке рабочей нагрузки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,17 +42,17 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Применяемость**|Необязательно. Может использоваться один раз для каждого элемента **TuningOptions** .|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Родительский элемент**|[Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|None|  
   
 ## <a name="remarks"></a>Remarks  

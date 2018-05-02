@@ -1,15 +1,16 @@
 ---
-title: "Приложение SQL Profiler | Документы Microsoft"
-ms.custom: 
+title: Приложение SQL Profiler | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Приложение SQL Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Профилировщик** служебная программа запускает [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] средства. Дополнительные аргументы, перечисленные ниже в этом разделе, позволяют управлять способом запуска приложения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Служебная программа **profiler** запускает средство [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Дополнительные аргументы, перечисленные ниже в этом разделе, позволяют управлять способом запуска приложения.  
   
 > [!NOTE]  
 >  Служебная программа **profiler** не предназначена для написания скриптов трассировки. Дополнительные сведения см. в разделе [Start SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -87,7 +88,7 @@ profiler
  Указывает таблицу трассировки для загрузки при запуске профайлера. Необходимо задать базу данных, пользователя или схему, а также таблицу.  
   
  **/T"** *template_name* **"**  
- Указывает шаблон, загружаемый для настройки трассировки. Имя шаблона должно быть заключено в кавычки. Имя шаблона должно находиться либо в системном каталоге шаблонов, либо в пользовательском каталоге шаблонов. В случае существования двух шаблонов с одним именем в обоих каталогах будет загружен шаблон, находящийся в системном каталоге. Если шаблон с указанным именем не существует, то будет загружен стандартный шаблон. Примечание. Расширение файла для шаблона (TDF) в аргументе *template_name*указывать не нужно. Например:  
+ Указывает шаблон, загружаемый для настройки трассировки. Имя шаблона должно быть заключено в кавычки. Имя шаблона должно находиться либо в системном каталоге шаблонов, либо в пользовательском каталоге шаблонов. В случае существования двух шаблонов с одним именем в обоих каталогах будет загружен шаблон, находящийся в системном каталоге. Если шаблон с указанным именем не существует, то будет загружен стандартный шаблон. Примечание. Расширение файла для шаблона (TDF) в аргументе *template_name*указывать не нужно. Пример:  
   
 ```  
 /T "standard"  
@@ -123,7 +124,7 @@ profiler
  **/Z**  *file_size*  
  Определяет размер файла трассировки в мегабайтах (МБ). Размер по умолчанию составляет 5 МБ. Если включена операция переключения, все файлы продолжения будут ограничены значением, указанным в этом аргументе.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для запуска трассировки с использованием определенного шаблона укажите параметры **/S** и **/T** . Например, чтобы запустить трассировку с использованием шаблона Standard на экземпляре MyServer\MyInstance, введите в командной строке:  
   
 ```  
@@ -131,6 +132,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по программе командной строки ( компонент Database Engine)](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Справочник по программе командной строки (Database Engine)](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

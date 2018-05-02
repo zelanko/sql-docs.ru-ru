@@ -1,15 +1,16 @@
 ---
-title: "Изменение шаблонов трассировки | Документы Microsoft"
-ms.custom: 
+title: Изменение шаблонов трассировки | Документы Microsoft
+ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - modifying trace templates
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5809ba42694110cc26cc7d9f14db9048cfa2420f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-trace-templates"></a>Изменение шаблонов трассировки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно изменить шаблоны, сохраняемые в файле на локальном компьютере, на котором [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] запущена. Можно также изменить шаблоны, производные от этих файлов. При изменении существующих шаблонов выполняется редактирование таких свойств шаблонов, как классы событий и столбцы данных в том же порядке, в котором эти свойства были установлены первоначально, на вкладке **Выбор событий** диалогового окна **Свойства трассировки** . Классы событий и столбцы данных можно добавлять и удалять, а фильтры изменять. После изменения шаблона создается пользовательский шаблон и исходный системный шаблон остается без изменений. Дополнительные сведения см. в разделе [Сохранение трассировок и шаблонов трассировок](../../tools/sql-server-profiler/save-traces-and-trace-templates.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Можно изменить шаблоны, сохраняемые в файле на локальном компьютере, на котором выполняется [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Можно также изменить шаблоны, производные от этих файлов. При изменении существующих шаблонов выполняется редактирование таких свойств шаблонов, как классы событий и столбцы данных в том же порядке, в котором эти свойства были установлены первоначально, на вкладке **Выбор событий** диалогового окна **Свойства трассировки** . Классы событий и столбцы данных можно добавлять и удалять, а фильтры изменять. После изменения шаблона создается пользовательский шаблон и исходный системный шаблон остается без изменений. Дополнительные сведения см. в разделе [Сохранение трассировок и шаблонов трассировок](../../tools/sql-server-profiler/save-traces-and-trace-templates.md).  
   
  Может потребоваться производный шаблон от существующего файла трассировки, если пользователь не помнит (или не сохранил) исходный шаблон, использованный при создании трассировки, или если нужно выполнить ту же трассировку в последующий день. При работе с существующими трассировками можно просматривать свойства, но нельзя изменять их. Чтобы изменить свойства, необходимо остановить или приостановить трассировку. Дополнительные сведения см. в разделах [Создать шаблон на основе файла трассировки или таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md) и [Создать шаблон на основе выполняемой трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md).  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/17/2018
   
 2.  В диалоговом окне **Свойства шаблона трассировки** на вкладке **Общие** можно изменить тип сервера и имя шаблона или выбрать использование шаблона по умолчанию для типа сервера.  
   
-3.  На **Выбор событий** используйте сетку для добавления или удаления событий и столбцов данных из файла трассировки следующим образом.  
+3.  На вкладке **Выбор событий** используйте сетку для добавления или удаления событий и столбцов данных в файле трассировки следующим образом.  
   
     -   Чтобы добавить событие, разверните соответствующую категорию событий в столбце **События** и выберите имя события.  
   
@@ -48,12 +49,12 @@ ms.lasthandoff: 01/17/2018
   
     -   Чтобы добавить фильтры, щелкните имя столбца данных и определите критерии фильтра в диалоговом окне **Изменение фильтра** . Также можно щелкнуть имя столбца данных правой кнопкой мыши и выбрать пункт **Изменить фильтр столбца** , чтобы открыть диалоговое окно **Изменение фильтра** . Нажмите кнопку **ОК** , чтобы добавить фильтр.  
   
-4.  Нажмите кнопку **Сохранить**, или нажмите кнопку **Сохранить как** для сохранения шаблона трассировки под другим именем.  
+4.  Нажмите кнопку **Сохранить** или кнопку **Сохранить как** для сохранения шаблона трассировки под другим именем.  
   
 ## <a name="next-steps"></a>Следующие шаги  
 [Запуск трассировки](../../tools/sql-server-profiler/start-a-trace.md)  
 [Создание трассировки](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Изменение существующей трассировки с помощью Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
-[Указать столбцы событий и данных трассировки с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[Указание столбцов событий и данных для файла трассировки с помощью SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+[SP трассировки setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

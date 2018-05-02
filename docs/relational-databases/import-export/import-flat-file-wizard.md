@@ -1,7 +1,7 @@
 ---
 title: Импорт неструктурированных файлов в SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: alayu
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 874f49dd654ad1f52079a3d9ba2fbfb1c5497e58
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Мастер импорта неструктурированных файлов в SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,11 +94,6 @@ PROSE анализирует шаблоны данных во входном ф�
 На этой странице показан результат импорта. Если на ней есть зеленая галочка, импорт завершен успешно. В противном случае проверьте конфигурацию и входной файл на наличие ошибок.
 
 ![Страница "Результаты"](media/import-flat-file-wizard/importffresults.png)
-
-## <a name="reporting-import-flat-file-failures"></a>Сообщение о сбоях импорта неструктурированных файлов
-Если вы сталкиваетесь с ошибками, отправьте сообщение электронной почты по адресу sqltoolsprosesupport@microsoft.com
-
-Дополнительные сведения см. в [этих инструкциях](reporting-import-flat-file-failures.md).
 
 ## <a name="learn-more"></a>Дополнительные сведения
 

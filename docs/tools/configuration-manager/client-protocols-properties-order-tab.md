@@ -1,34 +1,34 @@
 ---
-title: "(Вкладка «порядок») свойства клиентских протоколов | Документы Microsoft"
-ms.custom: 
+title: (Вкладка «порядок») свойства клиентских протоколов | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>Свойства клиентских протоколов (вкладка «Порядок»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Используйте **порядок** на странице **свойства клиентских протоколов** диалогового окна для просмотра и включения клиентских протоколов.  
+Используйте страницу **Порядок** диалогового окна **Свойства протокола клиента** для просмотра и включения клиентских протоколов.  
   
  Щелкните протокол, а затем выберите команду **Включить** или **Выключить** для перемещения выбранного протокола в список **Отключенные протоколы** или **Включенные протоколы** .  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 > [!NOTE]  
 >  Если протокол определен через префикс или как часть строки соединения, то попытка подключения будет происходить только через определенный протокол.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

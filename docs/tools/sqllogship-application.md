@@ -22,14 +22,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship** приложение выполняет резервной копии, копирования или операции восстановления и связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приложение **sqllogship** выполняет операции резервного копирования, обычного копирования и восстановления, а также связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
   
- ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") синтаксических обозначениях см. в разделе [Справка программы командной строки &#40; компонент Database Engine &#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") синтаксических обозначениях см. в разделе [Справка программы командной строки &#40;СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +60,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Определяет уровень сообщений, добавляемых в журнал доставки журналов. *level* может быть одним из следующих целочисленных значений:  
   
-|level|Описание|  
+|level|Description|  
 |-----------|-----------------|  
 |0|Не выводить сообщения трассировки и отладки.|  
 |1|Выводить сообщения обработки ошибок.|  
@@ -69,10 +69,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Выводить все сообщения отладки и трассировки.|  
   
  **–logintimeout** *timeout_value*  
- Определяет период времени, достаточного для попытки подключения к экземпляру сервера. Значение по умолчанию — 15 секунд. *timeout_value* — **int ***.*  
+ Определяет период времени, достаточного для попытки подключения к экземпляру сервера. Значение по умолчанию составляет 15 секунд. *timeout_value* — **int***.*  
   
  **-querytimeout** *timeout_value*  
- Определяет период времени, достаточного для запуска определенной операции. Значение по умолчанию — до бесконечности. *timeout_value* — **int ***.*  
+ Определяет период времени, достаточного для запуска определенной операции. Значение по умолчанию — до бесконечности. *timeout_value* — **int***.*  
   
 ## <a name="remarks"></a>Remarks  
  Рекомендуется по возможности применять для выполнения резервирования, копирования и восстановления соответствующие задания. Их запуск производится через вызов хранимой процедуры [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
@@ -93,13 +93,13 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Чтобы выяснить пути к каталогам резервной копии и копии, необходимо запустить хранимую процедуру **sp_help_log_shipping_secondary_database** или просмотреть таблицу **log_shipping_secondary** в базе данных **msdb**. Пути к каталогам резервной копии и назначения находятся в столбцах **backup_source_directory** и **backup_destination_directory** соответственно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сведения о доставке журналов (SQL Server)](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
- [log_shipping_secondary &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_help_log_shipping_primary_database &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [sp_help_log_shipping_secondary_database &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
+ [log_shipping_primary_databases (Transact-SQL)](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
+ [log_shipping_secondary (Transact-SQL)](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
+ [sp_cleanup_log_shipping_history (Transact-SQL)](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_help_log_shipping_primary_database (Transact-SQL)](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
+ [sp_help_log_shipping_secondary_database (Transact-SQL)](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [sp_start_job (Transact-SQL)](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

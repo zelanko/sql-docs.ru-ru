@@ -1,15 +1,16 @@
 ---
-title: "Запустите приложение SQL Server Profiler | Документы Microsoft"
-ms.custom: 
+title: Запустите приложение SQL Server Profiler | Документы Microsoft
+ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -19,29 +20,29 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7b875fa70017ce162ca50aa7d6d0235627d2f5f8
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-sql-server-profiler"></a>Выполнение приложения SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно запустить [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] несколькими различными способами, позволяющими получать трассировки выходные данные в различных сценариях. Можно запустить [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из Windows 10 **запустить** меню из **средства** меню в [!INCLUDE[ssDE](../../includes/ssde-md.md)] по настройке ядра СУБД и из нескольких мест в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно запустить несколькими способами, позволяющими получать данные трассировки в различных ситуациях. Можно запустить приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из меню **Пуск** Windows 10, из меню **Сервис** в помощнике по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и из нескольких расположений в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-При первом запуске [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] и выберите **новую трассировку** из **файл** меню, приложение отображает **соединение с сервером** диалоговое окно «», где можно указать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр для подключения.  
-## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Запуск приложения SQL Server Profiler из меню Пуск Windows 10  
+При первом запуске [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] и выборе в меню **Файл** пункта **Создать трассировку** приложение отображает диалоговое окно **Соединение с сервером**, где можно указать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения.  
+## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Запуск приложения SQL Server Profiler из меню "Пуск" Windows 10  
 -  Щелкните Windows **запустить** или нажмите клавишу Windows ключа и начните вводить «SQL Server Profiler 17». Когда **SQL Server Profiler 17** плитки, щелкните ее.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>Запуск SQL Server Profiler в помощнике по настройке ядра СУБД  
 -  В меню [!INCLUDE[ssDE](../../includes/ssde-md.md)] Сервис **помощника по настройке компонента** выберите **SQL Server Profiler**.  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Запуск приложения SQL Server Profiler в SQL Server Management Studio  
- Можно запустить [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из нескольких мест в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Когда [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] запускается, он загружается контекст соединения, шаблон трассировки и фильтрация контекста точки запуска. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]запускает каждый сеанс профайлера SQL Server в отдельном экземпляре, а профилировщик продолжается при завершении работы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Можно запустить [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из нескольких мест в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При запуске приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] загружается контекст подключения, шаблон трассировки и выполняется фильтрация контекста точки запуска. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] запускает каждый сеанс профайлера SQL Server в отдельном экземпляре, а профилировщик продолжается при завершении работы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Запуск приложения SQL Server Profiler из меню «Инструменты»  
 -  В меню среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Инструменты** выберите **SQL Server Profiler**.  
 
@@ -52,13 +53,13 @@ ms.lasthandoff: 01/17/2018
   >  Контекстом соединения является редактор соединения, шаблон трассировки — TSQL_SP, а применяемый фильтр SPID = окно запроса SPID.  
     
 ### <a name="to-start-sql-server-profiler-from-activity-monitor"></a>Запуск приложения SQL Server Profiler из монитора активности  
-- В мониторе активности щелкните **процессов** панели, щелкните правой кнопкой мыши процесс, который вы хотите профилировать, а затем нажмите кнопку **трассировка процесса в приложении SQL Server Profiler**.  
+- В мониторе активности щелкните панель **Процессы**, щелкните правой кнопкой процесс, который хотите профилировать, а затем выберите пункт **Трассировка процесса в приложении SQL Server Profiler**.  
 
     > [!NOTE]  
     >  Когда выбран процесс, контекстом соединения является соединение обозревателя объектов при открытии монитора активности. Шаблон трассировки — это шаблон по умолчанию в зависимости от типа сервера, а идентификатор SPID равен идентификатору SPID для выбранного процесса.  
     
 ## <a name="net-framework-security"></a>Безопасность .NET Framework  
-- В режиме проверки подлинности Windows учетная запись пользователя, которое будет выполняться [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] должен иметь разрешение на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- В режиме проверки подлинности Windows учетная запись пользователя, от имени которой запускается приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], должна иметь разрешение на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 - Для выполнения трассировки в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]пользователь должен также иметь разрешение ALTER TRACE.  
 
 ## <a name="next-steps"></a>Следующие шаги  

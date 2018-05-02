@@ -1,30 +1,31 @@
 ---
-title: "Воспроизведение данных трассировки | Документы Microsoft"
-ms.custom: 
+title: Воспроизведение данных трассировки | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1b63690aadee587a51f910cfc43915a04aa39bf4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-trace-data"></a>Воспроизведение данные трассировки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно запустить распределенное воспроизведение с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент распределенного воспроизведения после подготовки входных данных трассировки. Дополнительные сведения см. в статье [Подготовка входных данных трассировки](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] После подготовки входных данных трассировки можно запустить распределенное воспроизведение с помощью средства распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подготовка входных данных трассировки](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
   
  Параметр **replay** инструмента администрирования используется для инициирования этапа воспроизведения событий при распределенном воспроизведении. Этот этап состоит из двух частей: передача данных трассировки и запуски и синхронизация распределенного воспроизведения.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/17/2018
   
 ### <a name="to-replay-the-trace"></a>Воспроизведение трассировки  
   
-1.  **(Необязательно.) Измените параметры конфигурации воспроизведения.**Чтобы изменить параметры конфигурации воспроизведения, такие как режим последовательного выполнения и различные значения масштабирования, необходимо изменить элемент `<ReplayOptions>` XML-файла конфигурации воспроизведения `DReplay.exe.replay.config`. Также можно изменить элемент `<OutputOptions>` , задав параметры вывода, например следует ли записывать число строк. При изменении файла конфигурации воспроизведения рекомендуется изменить его копию, а не оригинал. Чтобы изменить параметры, выполните следующие действия.  
+1.  **(Необязательно.) Измените параметры конфигурации воспроизведения.** Чтобы изменить параметры конфигурации воспроизведения, такие как режим последовательного выполнения и различные значения масштабирования, необходимо изменить элемент `<ReplayOptions>` XML-файла конфигурации воспроизведения `DReplay.exe.replay.config`. Также можно изменить элемент `<OutputOptions>` , задав параметры вывода, например следует ли записывать число строк. При изменении файла конфигурации воспроизведения рекомендуется изменить его копию, а не оригинал. Чтобы изменить параметры, выполните следующие действия.  
   
     1.  Скопируйте файл конфигурации воспроизведения по умолчанию `DReplay.exe.replay.config`и переименуйте копию. Файл конфигурации воспроизведения по умолчанию расположен в папке установки средства администрирования.  
   
@@ -72,8 +73,8 @@ ms.lasthandoff: 01/17/2018
 3.  По завершении распределенного воспроизведения средство администрирования возвращает сводные данные о результатах. Если задан параметр **-o** , то действие воспроизведения сохраняется в результирующих файлах трассировки на каждом клиенте. Дополнительные сведения о файлах результатов трассировки см. в статье [Просмотр результатов воспроизведения](../../tools/distributed-replay/review-the-replay-results.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

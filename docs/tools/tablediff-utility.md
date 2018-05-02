@@ -1,15 +1,16 @@
 ---
-title: "Программа tablediff | Документы Microsoft"
-ms.custom: 
+title: Программа tablediff | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: tabledif
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - comparing data
@@ -20,19 +21,21 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd5ad1c414a290478277a1ffc1136299c26aecf3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff** служебной программы используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения неполадок в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Служебная программа **tablediff** используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения несоответствия данных в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
   
 -   Построчное сравнение исходной таблицы в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выступающем в качестве издателя репликации, и целевой таблицы в одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выступающих в качестве подписчиков репликации.  
   
@@ -84,8 +87,8 @@ tablediff
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_исходного_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *имя_исходного_сервера*[**\\***имя_экземпляра*]  
+ Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_исходного_сервера***\\*** имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *база_данных_источник*  
  Имя базы данных-источника.  
@@ -108,8 +111,8 @@ tablediff
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_целевого_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *имя_целевого_сервера*[**\\***имя_экземпляра*]  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_целевого_сервера***\\*** имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *база_данных_подписки*  
  Имя целевой базы данных.  
@@ -170,7 +173,7 @@ tablediff
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Успешно|  
 |**1**|Критическая ошибка|  
@@ -227,7 +230,7 @@ tablediff
   
  Чтобы использовать параметр **-o** или **-f** , необходимо иметь разрешения на запись в указанный каталог файлов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сравнение реплицируемых таблиц на предмет различий (программирование репликации)](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

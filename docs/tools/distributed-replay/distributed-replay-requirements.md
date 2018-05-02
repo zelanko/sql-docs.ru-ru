@@ -1,30 +1,31 @@
 ---
-title: "Требования к воспроизведению распределенных | Документы Microsoft"
-ms.custom: 
+title: Требования к воспроизведению распределенных | Документы Microsoft
+ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: ondemand
 ms.openlocfilehash: 3267939b053be638ae40ab33e0e7e02776bf918c
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Перед использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распределенного воспроизведения компонента, необходимо обеспечить выполнение требований, описанных в этом разделе.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Для использования компонента распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо обеспечить выполнение требований, указанных в этой статье.  
   
 ## <a name="input-trace-requirements"></a>Требования к входным данным трассировки  
  Для успешного воспроизведения данных трассировки они должны соответствовать требованиям к версии и формату и содержать необходимые события и столбцы.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/18/2018
 ### <a name="input-trace-versions"></a>Версии входных данных трассировки  
  Распределенное воспроизведение поддерживает входные данные трассировки, собранные в следующих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Накопительное обновление 1 и более поздней версии. В разделе - [совокупное 2017 г. SQL Server обновляет](http://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Накопительное обновление 1 и более поздней версии. В разделе - [совокупное 2017 г. SQL Server обновляет](http://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -163,7 +164,7 @@ ms.lasthandoff: 01/18/2018
   
  В результате воспроизведения событий, связанных с отсутствующими или неверными именами входа, будут возникать ошибки воспроизведения, но сама операция воспроизведения будет продолжена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Безопасность распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-security.md)   
  [Установка распределенного воспроизведения — обзор](../../tools/distributed-replay/install-distributed-replay-overview.md)  

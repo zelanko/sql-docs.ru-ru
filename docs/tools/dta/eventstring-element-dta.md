@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>Элемент EventString (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает [!INCLUDE[tsql](../../includes/tsql-md.md)] непосредственно во входном файле XML рабочей нагрузки из скрипта.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задает сценарий рабочей нагрузки [!INCLUDE[tsql](../../includes/tsql-md.md)] непосредственно во входном XML-файле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,13 +44,13 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|Необязательно. Задает весовой коэффициент запроса (коэффициент важности) для указанного события. Для указания весового коэффициента используется тип данных **float** . Например, **Weight**="100.01". Минимальное значение, которое можно задать для коэффициента **Weight** , равно 0.|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/17/2018
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
+|**Родительский элемент**|[Элемент Workload (DTA)](../../tools/dta/workload-element-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Элемент Workload (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Позволяет задать рабочую нагрузку для сеанса настройки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задает рабочую нагрузку для использования в сеансе настройки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -54,9 +54,9 @@ ms.lasthandoff: 01/17/2018
 |Связь|Элементы|  
 |------------------|--------------|  
 |**Родительский элемент**|[Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**Дочерние элементы**|[Элемент файла &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Элемент Database описания рабочей нагрузки &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Элемент EventString &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**Дочерние элементы**|[Элемент File (DTA)](../../tools/dta/file-element-dta.md)<br /><br /> [Элемент Database для рабочей нагрузки (DTA)](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Элемент EventString (DTA)](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Рабочая нагрузка представляет собой набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемый в одной или нескольких базах данных, которые необходимо настроить. Помощник по настройке ядра СУБД может использовать в качестве рабочей нагрузки скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , файлы трассировки и таблицы трассировки.  
   
  Если заданы две рабочие нагрузки (одна во входном файле XML-данных, другая в командной строке с помощью средства **dta** ), для настройки будет использоваться последняя. Параметры настройки, заданные в командной строке, имеют приоритет над параметрами, заданными во входном XML-файле. Единственное исключение имеет место в том случае, когда пользовательская конфигурация вводится во входном XML-файле в режиме оценки. Например, если конфигурация вводится посредством элемента **Configuration** входного XML-файла и, кроме того, в качестве одного из параметров настройки задан элемент **EvaluateConfiguration** , параметры настройки из входного XML-файла получат приоритет над любыми параметрами настройки, введенными в командной строке.  

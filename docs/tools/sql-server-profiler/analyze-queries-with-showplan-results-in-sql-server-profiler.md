@@ -1,34 +1,35 @@
 ---
-title: "Анализ запросов с помощью результатов инструкции SHOWPLAN в SQL Server Profiler | Документы Microsoft"
-ms.custom: 
+title: Анализ запросов с помощью результатов инструкции SHOWPLAN в приложении SQL Server Profiler | Документы Майкрософт
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - events [SQL Server], Showplan
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Анализ запросов с помощью результатов инструкции SHOWPLAN в приложении SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Классы событий инструкции Showplan можно добавить в определение трассировки, вызывающая [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] соберет и отобразит в трассировке сведения о плане запроса. Кроме того, события Showplan можно извлечь из других событий, собранных в трассировке, и сохранить в отдельном XML-файле.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В определение трассировки можно могут быть добавлены классы событий инструкции Showplan, после чего приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] соберет и отобразит в трассировке сведения о плане запроса. Кроме того, события Showplan можно извлечь из других событий, собранных в трассировке, и сохранить в отдельном XML-файле.  
   
  События инструкции Showplan можно извлечь из трассировки следующими способами.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="showplan-events"></a>События инструкции Showplan  
  События трассировки инструкции Showplan перечислены и описаны в следующей таблице.  
   
-|Имя события|Описание|  
+|Имя события|Description|  
 |----------------|-----------------|  
 |**Performance statistics**|Отображает сведения о первом кэшировании скомпилированной инструкции Showplan, данные о ее повторной компиляции и удалении из кэша планов. Столбец **TextData** содержит инструкцию Showplan в формате XML. Дополнительные сведения см. в статье [Класс событий Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Выводит план запроса со всеми подробностями процесса компиляции для выполненной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например, здесь можно отобразить оценку затрат и списки столбцов. Дополнительные сведения см. в статье [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md).|  

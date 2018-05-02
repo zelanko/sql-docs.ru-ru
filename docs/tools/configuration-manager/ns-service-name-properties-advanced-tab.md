@@ -20,12 +20,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 73501245691b58e973fe7e268ef8b7cf4459e025
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/10/2018
 ---
-# <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;имя службы&gt; свойства (вкладка «Дополнительно»)
+# <a name="nsltservice-namegt-properties-advanced-tab"></a>Свойства NS$&lt;имя_службы&gt; (вкладка "Дополнительно")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [!INCLUDE[ssNS](../../includes/ssns-md.md)] реализован как служба с именем в формате **NS$ *** < заданное_пользователем_имя >*. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями. На этой вкладке может не быть никаких свойств.  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] реализуется как служба, имеющая имя в формате **NS$***<заданное_пользователем_имя>*. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями. На этой вкладке может не быть никаких свойств.  
   
   

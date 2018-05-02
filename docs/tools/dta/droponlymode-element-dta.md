@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>Элемент DropOnlyMode (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает, что помощник по настройке ядра СУБД должен учитывать только возможность удаления существующих индексов, индексированных представлений или секций во время сеанса настройки. При задании этого параметра настройки никакие новые структуры физического проектирования не рассматриваются.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Указывает, что помощник по настройке ядра СУБД должен в ходе сеанса настройки учитывать только возможность удаления существующих индексов, индексированных представлений или секций. При задании этого параметра настройки никакие новые структуры физического проектирования не рассматриваются.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/17/2018
   
  **Периодичность**: необязательно. Может использоваться только один раз для каждого элемента **TuningOptions** . Не может использоваться, если в элементе **TuningOptions** указаны следующие элементы:  
   
--   [Элемент FeatureSet &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
+-   [Элемент FeatureSet (DTA)](../../tools/dta/featureset-element-dta.md)  
   
--   [Секционирование элемент &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [Элемент Partitioning (DTA)](../../tools/dta/partitioning-element-dta.md)  
   
 -   [Элемент KeepExisting (DTA)](../../tools/dta/keepexisting-element-dta.md) имеет значение **ВСЕ**  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/17/2018
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

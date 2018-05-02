@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: affac3964b25761341c5ac39e3987a107636fae1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="recommendation-element-dta"></a>Элемент Recommendation (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит сведения о гипотетических индексах, являющихся частью пользовательской конфигурации.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Содержит данные о гипотетических индексах, являющихся частью пользовательской конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,20 +46,20 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Применяемость**|Необязательно. Может использоваться один раз для каждого элемента **Table** .|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента **Table** .|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TABLE описания схемы &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Родительский элемент**|[Элемент Table описания схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Дочерние элементы**|[Элемент Create (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> Элемент**Drop** . Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот элемент с именем **RecommendationTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Он используется для задания индексов в гипотетической конфигурации. Не путайте этот элемент **Рекомендация** с другими типами, которые могут использоваться для настройки секционирования (**RecommendationPType**) или представлений (**RecommendationViewType**). Дополнительные сведения об этих и других типах элементов **Recommendation** см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Пример  

@@ -1,5 +1,5 @@
 ---
-title: Настройки по умолчанию отображения трассировки (приложение SQL Server Profiler) | Документы Microsoft
+title: Задание параметров отображения трассировки по умолчанию (приложение SQL Server Profiler) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>установить параметры по умолчанию для отображения трассировки (приложение SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В этом разделе описывает способ задания инструментальных параметров, которые определяют типы шрифт, размер и начертание, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для отображения трассировок в окне трассировки. Также можно указывать отображение приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] всех дат и времени с региональными настройками из операционной системы.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается способ задания инструментальных параметров, которые определяют типы, размер и начертание шрифтов, используемых приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для отображения трассировок в окне трассировки. Также можно указывать отображение приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] всех дат и времени с региональными настройками из операционной системы.  
   
 ### <a name="to-set-trace-display-defaults"></a>Установка параметров по умолчанию для отображения трассировки  
   

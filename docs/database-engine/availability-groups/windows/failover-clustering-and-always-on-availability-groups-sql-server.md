@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20cd2f3d0b8a034a1f7f1d689f106216b161ec38
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b7cccf79efb654ddb9c49a6ed43751f00654908
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +60,6 @@ ms.lasthandoff: 04/16/2018
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это подразделы кластера WSFC. При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который обеспечил размещение реплики доступности в исходном кластере WSFC.  
   
  Дополнительные сведения о запуске [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в узлах отказоустойчивого кластера Windows Server (WSFC) и кворуме WSFC см. в разделе [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
-  
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Миграция между кластерами групп доступности AlwaysOn для обновления ОС  
- Начиная с версии [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает миграцию групп доступности между кластерами для развертывания в новый кластер отказоустойчивой кластеризации Windows Server (WSFC). При выполнении миграции между кластерами одна или несколько групп доступности переносятся в новый, целевой кластер WSFC с минимальным временем простоя. Процесс миграции между кластерами позволяет выполнять соглашения об уровне обслуживания при переходе на версию кластера [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (или более поздней версии) должен быть установлен в целевом кластере WSFC, где также должна быть включена поддержка AlwaysOn. Для успешной миграции между кластерами необходимо тщательно спланировать и подготовить целевой кластер WSFC.  
-  
- Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](http://msdn.microsoft.com/library/jj873730.aspx).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Экземпляры отказоустойчивого кластера (FCI) и группы доступности  
  Можно настроить второй уровень отказоустойчивости на уровне экземпляра сервера путем реализации отказоустойчивой кластеризации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] совместно с кластером WSFC. Реплика доступности может размещаться либо с помощью отдельного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или экземпляра FCI. Только партнер FCI может размещать реплику для данной группы доступности. Во время работы реплики доступности на экземплярах отказоустойчивого кластера (FCI) список возможных владельцев для группы доступности будет содержать только активный узел FCI.  
