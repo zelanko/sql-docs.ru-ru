@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) пользователя и параметры рабочей области | Документы Microsoft
-description: Как изменить SQL Operations Studio (preview) пользователя и параметры рабочей области.
+title: Операции SQL Studio пользователя (Предварительная версия) и параметры рабочей области | Документы Microsoft
+description: Как изменить Studio операций SQL (Предварительная версия) пользователя и параметры рабочей области.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>Пользователь и параметры рабочей области
 
 Его можно легко настроить [!INCLUDE[name-sos](../includes/name-sos-short.md)] по выбору параметров. Почти каждая часть [!INCLUDE[name-sos](../includes/name-sos-short.md)]в редактор, пользовательский интерфейс и поведение функциональной имеет параметры можно изменить.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]предоставляет две различные области для параметров:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] предоставляет две различные области для параметров:
 
 * **Пользователь** эти параметры применяются глобально ко всем экземплярам [!INCLUDE[name-sos](../includes/name-sos-short.md)] его открыть.
 * **Рабочая область** параметры рабочей области Параметры, относящиеся к папке на компьютере и доступны, только когда открыт папку на боковой панели обозревателя. Параметры, определенные в этой области переопределения области пользователя.
@@ -48,14 +48,14 @@ ms.lasthandoff: 01/17/2018
 В зависимости от используемой платформы файла параметров пользователя находится здесь:
 
 * **Windows** `%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 Файл параметров рабочей области находится в разделе `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` в папке проекта.
 
 ## <a name="hot-exit"></a>Горячий выхода
 
-SQL Operations Studio запоминает несохраненные изменения в файлы при выходе по умолчанию. Это то же, что функция горячей выхода в Visual Studio Code.
+Операции SQL Studio запоминает несохраненные изменения в файлы при выходе по умолчанию. Это то же, что функция горячей выхода в Visual Studio Code.
 
 По умолчанию горячей выхода — off. Включить активную выход путем редактирования `files.hotExit` параметр. Дополнительные сведения см. в разделе [горячей выхода (в документации по Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
