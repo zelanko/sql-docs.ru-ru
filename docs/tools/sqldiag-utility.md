@@ -2,7 +2,7 @@
 title: Программа SQLdiag | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqldiag
@@ -37,14 +37,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 1ffe7e5295013d49615c068d6705cce649ffd771
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqldiag-utility"></a>SQLdiag, программа
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Программа **SQLdiag** — это универсальная диагностическая программа для сбора сведений, которая может выполняться как консольное приложение или как служба. Программа **SQLdiag** позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. Программа**SQLdiag** предназначена для ускорения и упрощения сбора диагностических сведений, необходимых для службы поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Программа **SQLdiag** — это универсальная диагностическая программа для сбора сведений, которая может выполняться как консольное приложение или как служба. Программа **SQLdiag** позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. Программа**SQLdiag** предназначена для ускорения и упрощения сбора диагностических сведений, необходимых для службы поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 > [!NOTE]  
 >  Вследствие изменений в программе приложения или скрипты, зависящие от аргументов ее командной строки или особенностей работы, в будущих выпусках могут работать неправильно.  

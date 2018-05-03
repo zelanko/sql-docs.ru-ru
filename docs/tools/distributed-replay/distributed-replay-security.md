@@ -2,7 +2,7 @@
 title: Distributed Replay Security | Документы Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 1e127b3aaf9af2c37ee25339a46d81c9119982bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="distributed-replay-security"></a>Безопасность распределенного воспроизведения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Перед установкой и использованием программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо ознакомиться с важной информацией о безопасности в этом разделе. В этом разделе описываются шаги настройки мер безопасности после установки, необходимые перед началом использования распределенного воспроизведения. В этом разделе также описываются важные соображения по защите данных и важные шаги удаления.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Перед установкой и использованием программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо ознакомиться с важной информацией о безопасности в этом разделе. В этом разделе описываются шаги настройки мер безопасности после установки, необходимые перед началом использования распределенного воспроизведения. В этом разделе также описываются важные соображения по защите данных и важные шаги удаления.  
   
 ## <a name="user-and-service-accounts"></a>Учетные записи пользователей и служб  
  В следующей таблице приведены описания учетных записей, применяемых для распределенного воспроизведения. После установки распределенного воспроизведения необходимо назначить субъектов безопасности для запуска учетных записей контроллера и службы клиента распределенного воспроизведения. Таким образом, рекомендуется настроить соответствующие учетные записи пользователей домена перед установкой компонентов распределенного воспроизведения.  

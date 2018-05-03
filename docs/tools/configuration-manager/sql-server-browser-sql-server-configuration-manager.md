@@ -2,7 +2,7 @@
 title: Браузер SQL Server (диспетчер конфигурации SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7c85930f7ceb25a441dd650d23855bbbb2576d8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 12df30bf8e410323f57eb2bfc4e35132fe3b8e56
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>Браузер SQL Server (диспетчер конфигурации SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Это служба, поддерживающая браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
+  Это служба, поддерживающая браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
   
  Описание службы " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" и механизма ее работы см. в разделе [Служба браузера SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
   

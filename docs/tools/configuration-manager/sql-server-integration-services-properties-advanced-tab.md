@@ -2,7 +2,7 @@
 title: Свойства служб SQL Server Integration Services (вкладка "Дополнительно") | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d1be85ce15f470263882ee769a145c502c3dc10
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 29858e379a2f4d7a91be1ddfbb6769b552b1424c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>Свойства служб SQL Server Integration Services (вкладка «Дополнительно»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] реализована как служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями. На этой вкладке может не быть никаких свойств.  
+  Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] реализована как служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями. На этой вкладке может не быть никаких свойств.  
   
   

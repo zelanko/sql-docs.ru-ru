@@ -2,7 +2,7 @@
 title: Фильтрация трассировок с помощью приложения SQL Server Profiler | Документы Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac087c079ca461875d148a9c9bedcab77fe7852b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 13dcd642f65cc2896efdd160151985e486216cde
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Фильтрация трассировок с помощью приложения SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Можно определить фильтры на столбцах данных для событий трассировки в программе [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] таким образом, чтобы происходил перехват только тех сведений, которые относятся к событиям, представляющим интерес. Фильтры трассировки позволяют уменьшить воздействие трассировки на производительность системы, поскольку способствуют сокращению числа событий, перехватываемых в трассировке. Кроме того, фильтрация упрощает чтение выходных данных трассировки за счет того, что приходится просматривать меньше событий.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Можно определить фильтры на столбцах данных для событий трассировки в программе [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] таким образом, чтобы происходил перехват только тех сведений, которые относятся к событиям, представляющим интерес. Фильтры трассировки позволяют уменьшить воздействие трассировки на производительность системы, поскольку способствуют сокращению числа событий, перехватываемых в трассировке. Кроме того, фильтрация упрощает чтение выходных данных трассировки за счет того, что приходится просматривать меньше событий.  
   
  **Фильтрация трассировок с помощью приложения SQL Server Profiler**  
   

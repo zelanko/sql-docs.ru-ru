@@ -2,7 +2,7 @@
 title: Задание параметров отображения трассировки по умолчанию (приложение SQL Server Profiler) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: a2290e35a0900d980fcb6a04320d5582ff1f3e2c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>установить параметры по умолчанию для отображения трассировки (приложение SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается способ задания инструментальных параметров, которые определяют типы, размер и начертание шрифтов, используемых приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для отображения трассировок в окне трассировки. Также можно указывать отображение приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] всех дат и времени с региональными настройками из операционной системы.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Данный раздел описывает способ задания инструментальных параметров, которые определяют типы, размер и начертание шрифтов, используемых приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для отображения трассировок в окне трассировки. Также можно указывать отображение приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] всех дат и времени с региональными настройками из операционной системы.  
   
 ### <a name="to-set-trace-display-defaults"></a>Установка параметров по умолчанию для отображения трассировки  
   

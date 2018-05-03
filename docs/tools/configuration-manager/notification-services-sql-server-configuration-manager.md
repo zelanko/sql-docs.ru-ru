@@ -2,7 +2,7 @@
 title: Службы Notification Services (диспетчер конфигурации SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b05b54ffc39e8b15f2ea60c01bf868de55279777
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 4a9fd668a45030123592e18c31526d6c75ff9429
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>Службы Notification Services (диспетчер конфигурации SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Это служба, которая поддерживает службы [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
+  Это служба, которая поддерживает службы [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Чтобы просмотреть свойства службы, щелкните правой кнопкой мыши в области сведений, а затем выберите пункт **Свойства**.  
   
  Сведения о службах [!INCLUDE[ssNS](../../includes/ssns-md.md)]см. в электронной документации.  
   

@@ -2,7 +2,7 @@
 title: Урок 1. Основы работы с помощником по настройке ядра СУБД | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce3acbca50968e72a1890f554c239d30e3632445
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: b721a2711bcbf699be99b7dae0733bf7743bedbb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Помощник по настройке ядра СУБД предоставляет графический интерфейс пользователя для просмотра сеансов настройки и создания отчетов с рекомендациями по настройке. На этом занятии объясняется, как запустить данный инструмент и выполнить настройку его вида. После завершения занятия пользователь будет иметь представление о различных способах запуска этого инструмента, а также узнает, как настраивать его вид для оптимизации выполнения регулярных задач по настройке.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Помощник по настройке ядра СУБД предоставляет графический интерфейс пользователя для просмотра сеансов настройки и создания отчетов с рекомендациями по настройке. На этом занятии объясняется, как запустить данный инструмент и выполнить настройку его вида. После завершения занятия пользователь будет иметь представление о различных способах запуска этого инструмента, а также узнает, как настраивать его вид для оптимизации выполнения регулярных задач по настройке.  
   
 Это занятие содержит следующие разделы:  
   

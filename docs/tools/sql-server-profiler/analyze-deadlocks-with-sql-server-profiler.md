@@ -2,7 +2,7 @@
 title: Анализ взаимоблокировок в приложении SQL Server Profiler | Документы Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -27,14 +27,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2fc7e2adc786982611e58ca4083c575902e5aca3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7b4d3aa4c583a32fc84570900e79624380b97748
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Анализ взаимоблокировок в приложении SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  
   
  Для трассировки событий взаимоблокировки добавьте в трассировку класс событий **Deadlock graph** . Этот класс событий заполняет столбец данных **TextData** в трассировке с данными XML о процессе и объектах, которые участвуют во взаимоблокировке. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может извлечь XML-документ в XML-файл взаимоблокировки (с расширением XDL), который в дальнейшем становится доступным для просмотра в среде SQL Server Management Studio. Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно настроить на извлечение событий **Deadlock graph** в единый файл, содержащий все события класса **Deadlock graph** , или в отдельные файлы. Это извлечение можно выполнить одним из следующих способов.  
   

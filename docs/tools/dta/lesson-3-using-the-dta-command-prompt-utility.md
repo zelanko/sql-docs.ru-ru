@@ -2,7 +2,7 @@
 title: 'Занятие 3: С помощью программы командной строки dta | Документы Microsoft'
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676d70c67a0be45b3362632c038d60e90448e90c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: b333aee9876af4bd3432184cdf6e5061ab0ddec7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Занятие 3. Использование программы командной строки dta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
   
 Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается вместе со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и находится по следующему адресу: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   

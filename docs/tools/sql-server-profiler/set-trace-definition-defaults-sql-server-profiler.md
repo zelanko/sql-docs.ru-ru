@@ -2,7 +2,7 @@
 title: Задание определения трассировки по умолчанию (приложение SQL Server Profiler) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d2f8cc04f6024f106f396a6674f88fbac9a41a7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 34248db94811e6c0f7483b48ab26ebab2e9abe11
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>установить определения трассировки по умолчанию (приложение SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Определение трассировки по умолчанию — это шаблон трассировки по умолчанию, используемый для каждого поставщика или сервера. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбирать шаблоны трассировки по умолчанию.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Определение трассировки по умолчанию — это шаблон трассировки по умолчанию, используемый для каждого поставщика или сервера. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбирать шаблоны трассировки по умолчанию.  
   
 ### <a name="to-set-trace-definition-defaults"></a>Установка определения трассировки по умолчанию  
   

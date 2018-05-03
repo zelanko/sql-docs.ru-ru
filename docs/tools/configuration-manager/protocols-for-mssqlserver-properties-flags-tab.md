@@ -2,7 +2,7 @@
 title: Протоколы для свойств MSSQLSERVER (вкладка "Флаги") | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -20,15 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eeca5f9ce24cd9ff24663a05344bd8543b1141b7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: b8c595a4df28b222632a9d4c0561c806acb48a04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо перезапустить **ForceEncryption** .  
+  Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо перезапустить **ForceEncryption** .  
   
  Для шифрования соединений необходимо обеспечить сертификат для компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если сертификат не установлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует сертификат с собственной подписью при запуске экземпляра. Самозаверяющий сертификат можно использовать вместо сертификата, предоставленного доверенным центром сертификации, однако он не обеспечивает проверку подлинности и нет гарантии, что он не будет аннулирован.  
   

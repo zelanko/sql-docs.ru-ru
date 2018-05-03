@@ -2,7 +2,7 @@
 title: Свойства TCP/IP (вкладка IP адресов) | Документы Microsoft
 ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: ef4d05834601df38670a7a7fa3d8c6fea70b5421
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Чтобы настроить параметры протокола TCP/IP для определенного IP-адреса, используйте диалоговое окно **Свойства TCP/IP (вкладка "IP-адреса")** . Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
+  Чтобы настроить параметры протокола TCP/IP для определенного IP-адреса, используйте диалоговое окно **Свойства TCP/IP (вкладка "IP-адреса")** . Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
   
  Изменения вступят в силу после перезапуска SQL Server. Сведения о запуске и остановке службы обозревателя SQL см. в разделе [Запуск и остановка службы обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
