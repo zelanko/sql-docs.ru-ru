@@ -37,11 +37,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb75008ddad294be1a1f4aa465770d85d7ddb7e2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b2680a26ee49ba5fe156e660815aa29f6f855ad3
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>Предложение SELECT ...INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,7 +235,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>Е. Создание новой таблицы в качестве копии другой таблицы и ее загрузка в указанную файловую группу
 В следующем примере показано создание новой таблицы в качестве копии другой таблицы и ее загрузка в указанную файловую группу, отличную от файловой группы по умолчанию для пользователя.
 
- **Применимо к:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
