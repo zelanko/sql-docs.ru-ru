@@ -1,0 +1,50 @@
+---
+title: Таблица технологии ADO | Документы Microsoft
+ms.custom: ''
+ms.date: 01/19/2017
+ms.reviewer: ''
+ms.suite: sql
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: drivers
+ms.service: ''
+ms.component: ado
+ms.technology: drivers
+ms.topic: conceptual
+helpviewer_keywords:
+- ADO, technologies
+ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
+caps.latest.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bfd51ec21eba67edaeb173a72115d0f5f4606d3e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/03/2018
+---
+# <a name="products-and-technologies-table"></a>Продукты и технологии таблицы
+В следующей таблице перечислены продукты Майкрософт, инструменты и технологии, описанные в руководстве по программированию ADO. Ниже приведены ссылки, во всех возможных случаях на соответствующие разделы руководства.
+
+|Продукт или технологию Майкрософт|Ссылки|
+|-------------------------------------|----------------|
+|Access/Jet|[Работа с наборами записей](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [Основные принципы ADOX](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Поставщик Microsoft OLE DB для Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Интерфейсы службы Active Directory (ADSI)|[Поставщик Microsoft OLE DB для службы Microsoft Active Directory](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|COM, DCOM|[Обязательные условия для использования документации по объектам ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)<br /><br /> [Отметка бизнес-объектов как безопасных для скриптов](../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)<br /><br /> [Регистрация бизнес-объектов в клиенте для использования с DCOM](../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)<br /><br /> [Настройка формата маршалинга потока DCOM](../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)<br /><br /> [Разрешение запуска библиотеки DLL в DCOM](../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)<br /><br /> [Запуск бизнес-объектов в службах компонентов](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
+|FrontPage|[Поставщик Microsoft OLE DB для публикации в Интернете](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
+|служба индексирования|[Поставщик Microsoft OLE DB для службы индексирования Microsoft](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
+|Internet Explorer|[Коды ошибок Internet Explorer](../../ado/guide/appendixes/internet-explorer-error-codes.md)|
+|Службы Internet Information Services (IIS)|[Записи и потоки](../../ado/guide/data/records-and-streams.md)<br /><br /> [Потоки и сохраняемость](../../ado/guide/data/streams-and-persistence.md)<br /><br /> [Потоки команд](../../ado/guide/data/command-streams.md)<br /><br /> [Использование ADO для публикации в Интернете](../../ado/guide/data/using-ado-for-internet-publishing.md)<br /><br /> [Решения для удаленного доступа к данным](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Сценарий RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Настройка виртуальных серверов в IIS](../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [Защита приложений RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [«Ошибка сервера Интернет: доступ запрещен»](../../ado/guide/remote-data-service/internet-server-error-access-denied.md)<br /><br /> [Поставщик Microsoft OLE DB для публикации в Интернете](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Коды ошибок служб Internet Information Services](../../ado/guide/appendixes/internet-information-services-error-codes.md)|
+|Язык JScript|[Обработка ошибок в других языках](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Программирование объектов ADO с использованием JScript](../../ado/guide/appendixes/jscript-ado-programming.md)<br /><br /> [Примеры кода ADO в Microsoft JScript](../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)|
+|интерфейс ODBC|[Использование RDS с регулированием количества запросов подключений ODBC](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Поставщик Microsoft OLE DB для ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
+|OLE DB|[Поставщики OLE DB](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [Приложение А. Поставщики](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [Ошибки поставщика](../../ado/guide/data/provider-errors.md)|
+|Oracle;|[Поставщик Microsoft OLE DB для Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
+|SQL Server|[Управление транзакциями](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [Вызов хранимой процедуры с использованием команды](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [Текущая запись и размер набора записей](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [Курсоры последовательного доступа](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [Потоки команд](../../ado/guide/data/command-streams.md)<br /><br /> [Извлечение результирующих наборов в потоки](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [Запуск сценария SQL адресной книги](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [Обеспечение достаточного места в TempDB](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [Минимизация использования места в файле журнала](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Поставщик Microsoft OLE DB для SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|Сервер транзакций|[Запуск бизнес-объектов в службах компонентов](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
+|VBScript|[Обработка ошибок в других языках](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Visual Basic для приложений функций](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Потоки команд](../../ado/guide/data/command-streams.md)<br /><br /> [Решения для удаленного доступа к данным](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Сценарий RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Учебник по RDS (VBScript)](../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)<br /><br /> [Программирование объектов ADO с использованием VBScript](../../ado/guide/appendixes/vbscript-ado-programming.md)<br /><br /> [Примеры кода ADO в Microsoft Visual Basic Scripting Edition](../../ado/reference/ado-api/ado-code-examples-vbscript.md)|
+|Visual Basic|[ошибки](../../ado/guide/data/errors-ado.md)<br /><br /> [Ошибки ADO](../../ado/guide/data/ado-errors.md)<br /><br /> [Создание экземпляра события ADO по языку](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Visual Basic для приложений функций](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Учебник по RDS](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [Использование объектов ADO с Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [Примеры кода ADO в Visual Basic](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|
+|Visual C++|[Обработка ошибок в других языках](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Создание экземпляра события ADO по языку](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Использование объектов ADO с Microsoft Visual C++](../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)<br /><br /> [Примеры кода ADO в Microsoft Visual C++](../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)|
+|Visual Studio|[Приложение Г. Образцы объектов ADO](../../ado/guide/appendixes/appendix-d-ado-samples.md)|
+|Windows 2000|[Требования к системе для приложения адресной книги](../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)<br /><br /> [Предоставление прав гостя для компьютера веб-сервера](../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)<br /><br /> [Регистрация пользовательского бизнес-объекта](../../ado/guide/remote-data-service/registering-a-custom-business-object.md)<br /><br /> [Защита приложений RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> [Настройка RDS в Windows 2000](../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)|
+|XML|[Сохранение записей в формате XML](../../ado/guide/data/persisting-records-in-xml-format.md)<br /><br /> [Записи и потоки](../../ado/guide/data/records-and-streams.md)<br /><br /> [Потоки команд](../../ado/guide/data/command-streams.md)<br /><br /> [Извлечение результирующих наборов в потоки](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
