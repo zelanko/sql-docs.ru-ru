@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c53f5c6c240404975318764716a1b6a333064536
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fee382cd27de7bbe1435b4c509dc38a5c068423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lead-mdx"></a>Lead (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +47,14 @@ Member_Expression.Lead( Index )
  *Index*  
  Допустимое числовое выражение, указывающее число позиций элементов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Позиции элементов на уровне определяются естественным порядком иерархии атрибутов. Нумерация позиций начинается с нуля.  
   
  Если заданная позиция равна нулю (0), **привести** функция возвращает указанный элемент.  
   
  Если заданная позиция отрицательна, **привести** функция возвращает предыдущий элемент.  
   
- `Lead(1)`эквивалентно [NextMember](../mdx/nextmember-mdx.md) функции. `Lead(-1)`эквивалентно [PrevMember](../mdx/prevmember-mdx.md) функции.  
+ `Lead(1)` эквивалентно [NextMember](../mdx/nextmember-mdx.md) функции. `Lead(-1)` эквивалентно [PrevMember](../mdx/prevmember-mdx.md) функции.  
   
  **Привести** функция подобна [запаздывания](../mdx/lag-mdx.md) за тем исключением, которое **запаздывания** функция выглядит в направлении, противоположном направлению **привести** функции. Таким образом, вызов `Lead(n)` эквивалентен вызову `Lag(-n)`.  
   
@@ -76,7 +75,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

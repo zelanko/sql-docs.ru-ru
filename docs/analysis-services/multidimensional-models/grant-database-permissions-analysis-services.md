@@ -1,34 +1,23 @@
 ---
-title: "Предоставление разрешений базы данных (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Предоставление разрешений базы данных (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], full control
-- full control permissions [Analysis Services]
-ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e3b51e9b5a0571be3050b89c80e376d2510eee7a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Предоставление разрешений базы данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Если вы подходите к администрированию базы данных службы Analysis Services с квалификацией в смежных базах данных, первое, что вам необходимо понять, с точки зрения доступа к данным, это то, что база данных не является первичным защищаемым объектом службы Analysis Services.  
+  Если вы подходите к администрированию базы данных службы Analysis Services с квалификацией в смежных базах данных, первое, что вам необходимо понять, с точки зрения доступа к данным, это то, что база данных не является первичным защищаемым объектом службы Analysis Services.  
   
  Первичной структурой запроса в службе Analysis Services является куб (или табличная модель), с пользовательскими разрешениями, установленными на эти отдельные объекты. В отличие от родственного ядра СУБД, в котором имена для входа и разрешения пользователя (часто **db_datareader**) установлены на саму базу данных, база данных службы Analysis Services в большинстве случаев является контейнером для основных объектов запроса в модели данных. Если вашей ближайшей целью является активация доступа к данным для куба или табличной модели, вы можете сейчас пропустить разрешения базы данных и перейти прямо к изучению данной статьи: [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -86,6 +75,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Предоставление разрешений доступа &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Предоставление разрешений доступа & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

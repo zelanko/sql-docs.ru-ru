@@ -1,31 +1,23 @@
 ---
-title: "Настройка Analysis Services и ограниченного делегирования Kerberos (KCD) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка Analysis Services и ограниченного делегирования Kerberos (KCD) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 644ac2ac09f331bf60be08ac7aacecd16734ba0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Настройка служб Analysis Services и ограниченного делегирования Kerberos (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Ограниченное делегирование Kerberos (KCD) — это протокол проверки подлинности, который можно настроить с проверкой подлинности Windows для делегирования клиентских учетных данных от службы к службе в вашей среде. Для проверки подлинности Kerberos требуется дополнительная инфраструктура, например контроллер домена, и дополнительная настройка среды. KCD является обязательным в некоторых сценариях, включающих данные [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с SharePoint 2016. В SharePoint 2016 службы Excel перемещены за пределы фермы SharePoint на отдельный новый сервер **Office Online Server**. Так как Office Online Server является отдельным, существует возросшая потребность в способе делегирования клиентских учетных данных в типичных сценариях двух прыжков.  
+  Ограниченное делегирование Kerberos (KCD) — это протокол проверки подлинности, который можно настроить с проверкой подлинности Windows для делегирования клиентских учетных данных от службы к службе в вашей среде. Для проверки подлинности Kerberos требуется дополнительная инфраструктура, например контроллер домена, и дополнительная настройка среды. KCD является обязательным в некоторых сценариях, включающих данные [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с SharePoint 2016. В SharePoint 2016 службы Excel перемещены за пределы фермы SharePoint на отдельный новый сервер **Office Online Server**. Так как Office Online Server является отдельным, существует возросшая потребность в способе делегирования клиентских учетных данных в типичных сценариях двух прыжков.  
   
 ## <a name="overview"></a>Обзор  
  Ограниченное делегирование Kerberos позволяет учетной записи олицетворять другую учетную запись для предоставления доступа к ресурсам. Олицетворяющая учетная запись будет учетной записью службы, назначенной веб-приложению, или учетной записью компьютера веб-сервера, а олицетворяемая учетная запись будет учетной записью пользователя, которому требуется доступ к ресурсам. KCD работает на уровне службы, чтобы олицетворяющая учетная запись могла предоставлять доступ к выбранным службам на сервере, в то время как доступ к другим службам на этом сервере или к службам на других серверах запрещен.  

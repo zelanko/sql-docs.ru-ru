@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +27,18 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 47d16a95d65a6a155c906f81ba324bac684704af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f01b4ac920c98ebe180ee6b5f54e6601af1f8748
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Использование схем XSD с заметками в запросах (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Для получения данных из базы данных путем указания запроса XPath в шаблоне к схеме XSD можно задавать запросы к аннотированным схемам.  
   
-  **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к XML-представлению, определенному схемой с заметками. Аннотированной схемы, по которой запрос XPath должно быть выполнено определяется с помощью **схемы сопоставления** атрибут  **\<sql:xpath-запрос >** элемента.  
+ **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к XML-представлению, определенному схемой с заметками. Аннотированной схемы, по которой запрос XPath должно быть выполнено определяется с помощью **схемы сопоставления** атрибут  **\<sql:xpath-запрос >** элемента.  
   
  Шаблоны являются допустимыми XML-документами, которые содержат один или несколько запросов. Запросы FOR XML и XPath возвращают фрагмент документа. Шаблоны выполняют функцию контейнеров для фрагментов документов. Таким образом, они обеспечивают возможность указания единственного элемента верхнего уровня.  
   

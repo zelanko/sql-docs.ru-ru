@@ -1,31 +1,23 @@
 ---
-title: "Создать источник данных отчета | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создать источник данных отчета | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 598c2f0520d8fa9ae1215373b4ac29bd040d7d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8809ed83ecc9432830011502d6da3fd9fe9a40d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-report-data-source"></a>Создание источника данных отчета
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Для подключения Power View к многомерной модели необходимо создать определение общего источника данных отчета (файл с расширением RSDS) в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
+  Для подключения Power View к многомерной модели необходимо создать определение общего источника данных отчета (файл с расширением RSDS) в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
   
  Для создания соединения RSDS должны быть установлены службы SQL Server 2012 Reporting Services (или более поздних версий) и надстройка служб Reporting Services для SharePoint 2010 или SharePoint 2013.  
   

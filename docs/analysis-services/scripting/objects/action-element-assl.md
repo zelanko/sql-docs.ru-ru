@@ -27,15 +27,15 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 80a0bdc56107980b9865015f07abd8b213d1021c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0db52a153915fb07032daae1634025620d7bf4a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="action-element-assl"></a>Элемент Action (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит сведения о действии, доступном в [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит сведения о действии, доступном в элементе [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) или элементе [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,9 +52,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|См. в следующей таблице.|  
+|Тип данных и длина|См. таблицу ниже.|  
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
@@ -70,13 +70,13 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Действия](../../../analysis-services/scripting/collections/actions-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Action>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент CUBE &#40; ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Элемент perspective &#40; ASSL &#41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
- [Тип данных PerspectiveAction &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент CUBE & #40; ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Элемент perspective & #40; ASSL & #41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
+ [Тип данных PerspectiveAction & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

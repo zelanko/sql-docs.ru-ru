@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 274c56e96093da4e71614d1e32a4b2e3300d07cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a44e58c4054166bd08ee08e475e2a4ce89e30c00
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="endsession-element-xmla"></a>Элемент EndSession (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Использует заголовок SOAP в сообщении SOAP-запроса для завершения существующего сеанса в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Использует SOAP-заголовок в сообщении SOAP-запроса для завершения существующего сеанса в экземпляре служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis  
   
@@ -61,32 +61,32 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|None|  
+|Дочерние элементы|Нет|  
   
 ## <a name="attributes"></a>Атрибуты  
   
-|attribute|Description|  
+|Attribute|Описание|  
 |---------------|-----------------|  
 |SessionId|Необходимый атрибут типа **String** , идентифицирующий завершаемый сеанс. Для определения сеанса службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используют идентификатор GUID.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **EndSession** входит элемент заголовка SOAP-запроса, отправленного в существующий, явно запущенный сеанс в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Если элемент заголовка **EndSession** отправлен, но содержит идентификатор недействительного сеанса, возвращается ошибка SOAP, указывающая, что сеанс не найден.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент BeginSession &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [Элемент Session &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)   
- [Управление &#40; соединений и сеансов XML для Аналитики &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Заголовки &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент BeginSession & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
+ [Элемент Session & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)   
+ [Управление & #40; соединений и сеансов XML для Аналитики & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [Заголовки & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

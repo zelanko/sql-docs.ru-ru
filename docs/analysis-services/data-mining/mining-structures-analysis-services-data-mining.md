@@ -1,16 +1,16 @@
 ---
-title: "Структуры интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
+title: Структуры интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining structures [Analysis Services], about mining structures
@@ -23,20 +23,19 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 
+caps.latest.revision: 77
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1e181f249e2facbece935425c0d74f497fb8190a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Структура интеллектуального анализа данных определяет данные, на основе которых строятся модели интеллектуального анализа данных: она задает представление источника данных, количество и тип столбцов, а также необязательное секционирование на обучающий и проверочный наборы. Одна структура интеллектуального анализа может поддерживать несколько моделей интеллектуального анализа данных, совместно использующих один домен. На следующей диаграмме показана связь структуры интеллектуального анализа данных с источником данных и моделями интеллектуального анализа данных, основанных на этой структуре.  
+  Структура интеллектуального анализа данных определяет данные, на основе которых строятся модели интеллектуального анализа данных: она задает представление источника данных, количество и тип столбцов, а также необязательное секционирование на обучающий и проверочный наборы. Одна структура интеллектуального анализа может поддерживать несколько моделей интеллектуального анализа данных, совместно использующих один домен. На следующей диаграмме показана связь структуры интеллектуального анализа данных с источником данных и моделями интеллектуального анализа данных, основанных на этой структуре.  
   
  ![Обработка данных: источник моделируемой структуры](../../analysis-services/data-mining/media/dmcon-modelarch.gif "обработка данных: источник моделируемой структуры")  
   
@@ -129,6 +128,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

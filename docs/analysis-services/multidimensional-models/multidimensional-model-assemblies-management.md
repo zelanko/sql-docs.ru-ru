@@ -1,38 +1,19 @@
 ---
-title: "Управление сборками многомерной модели | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Управление сборками многомерной модели | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], assemblies
-- calling user-defined functions
-- user impersonation [Analysis Services]
-- impersonation [Analysis Services]
-- Data Mining Extensions [Analysis Services], assemblies
-- MDX [Analysis Services], assemblies
-- user-defined functions [Analysis Services]
-- Analysis Services objects, assemblies
-- assemblies [Analysis Services]
-- application domains [Analysis Services]
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 89678cac9febb3adbed049e859876d646b3ddf82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Управление сборками многомерной модели
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +72,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Для сборок разрешение на выполнение передается со свойством **PermissionSet** в объекте **Assembly** . Разрешения, получаемые управляемым кодом, обусловлены действующей политикой безопасности. В среде, неразмещаемой в службах[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , уже есть три уровня действующей политики: предприятие, компьютер и пользователь. Действительный список разрешений, получаемых кодом, определяется на основании пересечения разрешений, полученных указанными тремя уровнями.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют размещенной в себе среде CLR уровень политики безопасности на уровне узла; данная политика представляет собой дополнительный уровень политики, расположенный ниже трех уже действующих уровней политики. Данная политика задается для каждого домена приложений, создаваемого службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют размещенной в себе среде CLR уровень политики безопасности на уровне сервера; данная политика представляет собой дополнительный уровень политики, расположенный ниже трех уже действующих уровней политики. Данная политика задается для каждого домена приложений, создаваемого службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Политика на уровне узла служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] является сочетанием фиксированной политики служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для системных сборок и пользовательской политики для пользовательских сборок. В основе пользовательской части политики сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] лежит указание владельцем сборки одного из трех сегментов разрешений для каждой сборки:  
   

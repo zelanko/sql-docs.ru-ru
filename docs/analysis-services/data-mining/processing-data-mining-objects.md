@@ -1,16 +1,16 @@
 ---
-title: "Обработка объектов интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
+title: Обработка объектов интеллектуального анализа данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e4726de9acf90a805ff15791d6ab8d76fa20adc6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ed4395c27c488b8c97e1127c990b862c5e180e97
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-data-mining-objects"></a>Обработка объектов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-До обработки объект интеллектуального анализа данных представляет собой просто пустой контейнер. *Обработка* модели интеллектуального анализа данных также называется *обучением*.  
+  До обработки объект интеллектуального анализа данных представляет собой просто пустой контейнер. *Обработка* модели интеллектуального анализа данных также называется *обучением*.  
   
  **Обработка структур интеллектуального анализа данных.** Структура интеллектуального анализа данных получает данные из внешнего источника, определенного в привязках столбцов и метаданных использования, и считывает данные. Эти данные считываются полностью и затем подвергаются анализу, чтобы получить различную статистику. Службы Analysis Services сохраняют в локальном кэше компактное представление данных, которое удобно для анализа, проводимого алгоритмами интеллектуального анализа данных. После обработки моделей этот кэш можно сохранить или удалить. По умолчанию кэш сохраняется. Дополнительные сведения см. в разделе [Обработка структуры интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-structure.md).  
   

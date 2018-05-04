@@ -1,39 +1,19 @@
 ---
-title: "Обработка ошибок и предупреждений (XMLA) | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- inline errors [XMLA]
-- SOAP faults [XML for Analysis]
-- XML for Analysis, errors
-- faults [XML for Analysis]
-- messages [XML for Analysis]
-- XMLA, errors
-- warnings [XML for Analysis]
-- inline warnings [XMLA]
-ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 
-author: Minewiskan
+title: Обработка ошибок и предупреждений (XMLA) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e5aa002079080e8c4e3fc4816539fda866e8293b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: de925e6bb83f7219ec1bd453f47d63a3fb3624a1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Обработка ошибок и предупреждений (XMLA)
   Обработка ошибок является обязательным, если XML для аналитики (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) вызов метода не выполняется, успешно выполняется, но приводит к возникновению ошибки или предупреждения, или выполняется успешно, но возвращает результаты которые содержат ошибки.  
@@ -45,7 +25,7 @@ ms.lasthandoff: 02/15/2018
 |Ошибки в результате при успешном вызове метода|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает встроенный **ошибка** или **предупреждение** элемента для ошибки или предупреждения соответственно в предназначенный [ячейки](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) или [строки](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md) элемент результаты вызова метода.<br /><br /> Дополнительные сведения см. в разделе разделе [обработка встроенных ошибок и предупреждений](#handling_inline_errors_and_warnings).|  
   
 ##  <a name="handling_soap_faults"></a> Обработка сбоев SOAP  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Возвращает ошибку SOAP, при возникновении следующих ситуаций:  
+ Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают сбой SOAP при возникновении следующих ситуаций.  
   
 -   Сообщение SOAP, содержащее метод XMLA, имеет неправильный формат, или экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не может провести проверку его правильности.  
   
@@ -60,11 +40,11 @@ ms.lasthandoff: 02/15/2018
   
 |Имя столбца|Тип|Описание|Значение NULL разрешено<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Код возврата, указывающий успешное или неудачное выполнение метода. Шестнадцатеричное значение необходимо преобразовать в **UnsignedInt** значение.|нет|  
+|**ErrorCode**|**UnsignedInt**|Код возврата, указывающий успешное или неудачное выполнение метода. Шестнадцатеричное значение необходимо преобразовать в **UnsignedInt** значение.|Нет|  
 |**WarningCode**|**UnsignedInt**|Код возврата, указывающий состояние предупреждения. Шестнадцатеричное значение необходимо преобразовать в **UnsignedInt** значение.|Да|  
 |**Description**|**String**|Текст ошибки или предупреждения и описание, возвращаемые компонентом, сформировавшим ошибку.|Да|  
 |**Source**|**String**|Имя компонента, сформировавшего ошибку или предупреждение.|Да|  
-|**HelpFile**|**String**|Путь или URL-адрес к файлу или разделу справки, в котором описывается ошибка или предупреждение.|Да|  
+|**Файл справки**|**String**|Путь или URL-адрес к файлу или разделу справки, в котором описывается ошибка или предупреждение.|Да|  
   
  <sup>1</sup> указывает ли данные является обязательным и должен быть возвращен, или ли данных является необязательным и допустима пустая строка, если столбец не применяется.  
   
@@ -99,7 +79,7 @@ HelpFile="" />
   
  **Сообщений** свойству предшествует все остальные свойства, содержащиеся в **корневой** элемент и может содержать один или несколько **сообщение** элементов. В свою очередь, каждый **сообщение** может содержать один элемент **ошибка** или **предупреждение** элемент, описывающий ошибки или предупреждения, соответственно, которая произошла для Указанная команда.  
   
- Дополнительные сведения об ошибках и предупреждениях, содержащихся в **сообщений** свойство, в разделе [Messages, элемент &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
+ Дополнительные сведения об ошибках и предупреждениях, содержащихся в **сообщения** свойство, в разделе [элемент Messages &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
   
 ### <a name="handling-errors-during-serialization"></a>Обработка ошибок во время сериализации  
  Если ошибка возникает после [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр уже начал сериализацию выходных данных успешно выполненной команды, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращает [исключение](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md) элемент в другом пространстве точке ошибки. Затем экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] закрывает все открытые элементы с тем, чтобы XML-документ, отправляемый клиенту, был допустимым. Экземпляр возвращает также **сообщений** элемента, содержащего описание ошибки.  

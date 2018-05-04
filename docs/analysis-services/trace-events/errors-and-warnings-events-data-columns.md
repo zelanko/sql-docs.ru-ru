@@ -18,15 +18,15 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7c3e94c56f836301b853902751c2fb4085e2df7e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e6e01c84e97f0acb2ffc54e647b9309c076483bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Столбцы данных событий ошибок и предупреждений
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «Аудит безопасности» имеет следующие классы событий:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Категория событий «Аудит безопасности» имеет следующие классы событий.  
   
 -   Класс ошибки  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |SessionType|8|8|Содержит тип сущности, которая вызвала ошибку.|  
 |Severity|22|1|Содержит уровень серьезности исключения, связанного с событием ошибки. Возможны следующие значения.<br /><br /> 0 = успешное завершение<br /><br /> 1 = информационное сообщение<br /><br /> 2 = предупреждение<br /><br /> 3 = ошибка|  
-|Успешно |23|1|Указывает на успешность или сбой события ошибки. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
+|Успешно|23|1|Указывает на успешность или сбой события ошибки. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
 |Ошибка|24|1|Содержит номер любой ошибки, связанной с событием ошибки.|  
 |ConnectionID|25|1|Содержит уникальный идентификатор соединения, связанный с событием ошибки.|  
 |DatabaseName|28|8|Содержит имя экземпляра служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на котором возникла ошибка.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |TextData|42|9|Содержит текстовые данные, связанные с событием ошибки.|  
 |ServerName|43|8|Содержит имя сервера, на котором запущен экземпляр служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на котором возникла ошибка.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Категория событий «Аудит безопасности»](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

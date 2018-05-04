@@ -1,30 +1,23 @@
 ---
-title: "Командлет Merge-Partition | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Командлет Merge-Partition | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 897104785c82686879a83811d070c3e1ce8391ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e5ca667b3172de982ea98a6d13c1fe6f810377b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-partition-cmdlet"></a>Командлет Merge-Partition
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Выполняет слияние данных из одного или нескольких исходных секций в целевую секцию, а затем удаляет исходные секции.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Выполняет слияние данных из одной или нескольких исходных секций в целевую секцию, а затем удаляет исходные секции.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -34,7 +27,7 @@ ms.lasthandoff: 01/08/2018
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Merge-Partition выполняет слияние данных из одной или нескольких исходных секций в целевую секцию, а затем удаляет исходные секции. Можно выполнять слияние секций только в том случае, если они удовлетворяют всем перечисленным далее условиям.  
   
 -   Секции находятся в одной и той же группе мер.  
@@ -112,7 +105,7 @@ ms.lasthandoff: 01/08/2018
 |Принимать символы-шаблоны?|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- Этот параметр используется для передачи имени пользователя и пароля, если используется HTTP-соединение с экземпляром служб Analysis Service, настроенным на доступ по протоколу HTTP. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services на службы IIS &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) для HTTP-соединений.  
+ Этот параметр используется для передачи имени пользователя и пароля, если используется HTTP-соединение с экземпляром служб Analysis Service, настроенным на доступ по протоколу HTTP. Дополнительные сведения см. в разделе [Настройка доступа по протоколу HTTP к службам Analysis Services в службах Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) для HTTP-соединений.  
   
  Если этот параметр задан, указанные имя пользователя и пароль будут использоваться для подключения к заданному экземпляру сервера анализа данных. Если учетные данные не указаны, для пользователя, запустившего это средство, будет использоваться учетная запись Windows по умолчанию.  
   
@@ -146,7 +139,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |Входные данные|System.String|  
-|Выходные данные|None|  
+|Выходные данные|Нет|  
   
 ## <a name="example-1"></a>Пример 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> $Source=”Total_Orders_2001”, “Total_Orders_2002”, “Total_Orders_2003”` `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\sales orders\partitions> Merge-Partition –Name “Total_Orders_2004” –SourcePartitions:$Source –database “AWTEST” –cube “Adventure Works” –MeasureGroup “Sales Orders”`  

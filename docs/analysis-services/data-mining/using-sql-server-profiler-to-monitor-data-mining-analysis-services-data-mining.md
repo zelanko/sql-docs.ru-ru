@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
@@ -18,15 +18,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ed8d92643804b0b73c6d73d304d1cdedfe53b39e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: de16f0ef3d55f366bd908a84305c8fdcb6611d32
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Наблюдение за интеллектуальным анализом данных с помощью приложения SQL Server Profiler (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При наличии необходимых разрешений можно использовать для наблюдения за интеллектуальным анализом данных, которые выдаются как запросы, отправленные экземпляру служб SQL Server Analysis Services SQL Server Profiler. В это понятие включается обработка моделей и структур, запросы прогнозов и содержимого, а также создание новых моделей и структур.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  При наличии необходимых разрешений приложение SQL Server Profiler можно использовать для наблюдения за интеллектуальным анализом данных, в процессе которого выполняются запросы к экземпляру служб SQL Server Analysis Services. В это понятие включается обработка моделей и структур, запросы прогнозов и содержимого, а также создание новых моделей и структур.  
   
  Приложение SQL Server Profiler использует **трассировку** для наблюдения за запросами от нескольких клиентов, в том числе среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], среды SQL Server Management Studio, веб-служб и надстройки интеллектуального анализа данных для Excel, поскольку при всех обращениях к службам SQL Server Analysis Services используется один экземпляр. Для каждого отслеживаемого экземпляра служб SQL Server Analysis Services необходима отдельная трассировка. Общие сведения о трассировках и об использовании приложения SQL Server Profiler см. в разделе [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="using-traces-to-monitor-data-mining"></a>Наблюдение за интеллектуальным анализом данных с помощью трассировок  
  При захвате данных в трассировке можно указать место их сохранения: в файле или в таблице на экземпляре SQL Server. Независимо от применяемого метода сохранения данных приложение SQL Server Profiler позволяет просматривать трассировку и фильтровать ее по событиям. В следующей таблице приведены некоторые из событий и подклассов в трассировке, создаваемой службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию, которые представляют интерес для интеллектуального анализа данных.  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|Описание|  
 |----------------|-------------------|-----------------|  
 |**Начало запроса**<br /><br /> **Окончание запроса**|**0 — MDXQuery**|Содержит текст всех вызовов хранимых процедур служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Начало запроса**<br /><br /> **Окончание запроса**|**1 — DMXQuery**|Содержит текст и результаты инструкций расширений интеллектуального анализа данных (DMX).|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
  Просмотр инструкций команд в журнале трассировки дает также возможность ознакомиться с синтаксисом сложных инструкций, передаваемых клиентом серверу служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , включая вызовы системных хранимых процедур. Эти сведения могут оказаться полезными при отладке или в качестве источника шаблонов для создания новых прогнозирующих запросов и моделей. С несколькими примерами вызовов хранимых процедур, которые могут быть получены через трассировку, можно ознакомиться в разделе [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   

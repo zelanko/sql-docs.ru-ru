@@ -1,41 +1,26 @@
 ---
-title: "Программирование объектов AMO расширенных объектов OLAP | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 
-author: Minewiskan
+title: Программирование объектов AMO расширенных объектов OLAP | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c07ee6b4289c015b0c42a1bc9981bec29cd49483
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Программирование расширенных объектов AMO OLAP
   В этом разделе рассказывается о программировании объектов AMO объектов OLAP с расширенными возможностями. Этот раздел состоит из следующих подразделов.  
   
 -   [Объекты Action](#Action)  
   
--   [Kpi Objects](#KPI)  
+-   [Объекты KPI](#KPI)  
   
 -   [Объекты перспективы](#Persp)  
   
@@ -43,7 +28,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Объекты Translation](#Transl)  
   
-##  <a name="Action">Объекты Action</a>  
+##  <a name="Action"></a> Объекты Action  
  Классы действий позволяют создавать активные ответные действия во время просмотра определенных областей куба. Объекты действий можно определять при помощи объектов AMO, но они используются из клиентского приложения, просматривающего данные. Действия могут быть разных типов, поэтому их создание должно осуществляться в соответствии с их типом. Действия могут представлять собой следующее.  
   
 -   Действия детализации, которые возвращают набор строк, представляющих основополагающие данные выделенных ячеек куба, в которых происходит действие.  
@@ -64,7 +49,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  Добавьте действие в коллекцию кубов и обновите куб. Действие не является обновляемым объектом.  
   
- Для проверки действия требуется другая прикладная программа. Проверить действие можно в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Во-первых, необходимо установить [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] примеры см. в разделе [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Для проверки действия требуется другая прикладная программа. Проверить действие можно в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Во-первых, необходимо установить [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] примеры см. в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  В следующем образце кода выполняется репликация трех разных действий из образца Adventure Works Analysis Services Project. Действия можно различать, поскольку имена действий, введенных при помощи следующего образца, начинаются с «My».  
   
@@ -350,7 +335,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp">Объекты перспективы</a>  
+##  <a name="Persp"></a> Объекты перспективы  
  Объекты <xref:Microsoft.AnalysisServices.Perspective> можно определять при помощи объектов AMO, но для их использования служит клиентское приложение, предназначенное для просмотра данных.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.Perspective> необходимо выполнить следующие действия.  
@@ -413,7 +398,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC">Объекты ProactiveCaching</a>  
+##  <a name="PC"></a> Объекты ProactiveCaching  
  Объекты <xref:Microsoft.AnalysisServices.ProactiveCaching> можно определять при помощи объектов AMO.  
   
  Для создания объекта <xref:Microsoft.AnalysisServices.ProactiveCaching> необходимо выполнить следующие действия.  
@@ -470,7 +455,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl">Объекты Translation</a>  
+##  <a name="Transl"></a> Объекты Translation  
  Объекты переводов можно определять при помощи объектов AMO, но для их использования служит клиентское приложение, применяемое для просмотра данных. Объекты переводов просты в программировании. Переводы заголовков объектов обеспечиваются парами «Локаль языка» и «Переведенный заголовок». Для любого заголовка можно разрешить несколько переводов. Переводы можно предусмотреть для большинства объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], например измерений, атрибутов, иерархий, кубов, групп мер, мер и др.  
   
  Следующий образец кода обеспечивает перевод на испанский язык имени атрибута «Название продукта».  
@@ -493,9 +478,9 @@ static public void CreateTranslations(Database db)
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Классы OLAP объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Обработка многомерной модели &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [Логическая архитектура & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты базы данных & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Установка образцов данных и проектов для служб Analysis Services многомерное моделирование учебник](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

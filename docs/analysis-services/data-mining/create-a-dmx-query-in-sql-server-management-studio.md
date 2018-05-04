@@ -1,39 +1,23 @@
 ---
-title: "Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- templates [Analysis Services], queries
-- SQL Server Management Studio [Analysis Services], DMX queries
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- prediction queries [DMX]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 939d21c596a3f023afaae6931ba1c53efe0ab85b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Создание DMX-запроса в среде SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, упрощающих создание прогнозирующих запросов, запросов содержимого и запросов определения данных к моделям интеллектуального анализа данных и структурам интеллектуального анализа данных.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет набор возможностей, которые помогают создавать прогнозирующие запросы, запросы к содержимому и запросов определения данных к моделям интеллектуального анализа данных и структур интеллектуального анализа данных.  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]доступен графический построитель прогнозирующих запросов, упрощающий написание прогнозирующих запросов и сопоставление наборов данных с моделью.  
   
@@ -57,7 +41,7 @@ ms.lasthandoff: 02/15/2018
  Также можно создавать пользовательские шаблоны для часто используемых запросов или команд.  
   
 ## <a name="xmla-query-templates"></a>Шаблоны XMLA-запросов  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также предоставляют шаблоны для XMLA-запросов.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]также предоставляет шаблоны для XMLA-запросов.  
   
  Типы запросов, выполняемые с помощью XML для аналитики и расширений интеллектуального анализа данных, в некоторой степени перекрываются. Например, запросы к содержимому модели можно создавать с помощью расширений интеллектуального анализа данных или с помощью набора строк схемы интеллектуального анализа данных, однако иногда наборы строк схемы содержат данные, которые недоступны DMX-запросам содержимого.  
   
@@ -93,6 +77,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a2dd0264d572e190278d5cad42e4874554312f72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8a1f7afd2875f14e676fb9d2d2b74aefc84739a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-element-assl"></a>Элемент Language (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит идентификатор языка родительского элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит идентификатор языка родительского элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Целочисленный|  
 |Значение по умолчанию|None|  
-|Количество элементов|См. в следующей таблице.|  
+|Количество элементов|См. таблицу ниже.|  
   
 |Предок или родитель|Количество элементов|  
 |------------------------|-----------------|  
@@ -68,12 +68,12 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Куб](../../../analysis-services/scripting/objects/cube-element-assl.md), [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md), [измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [перевода](../../../analysis-services/scripting/objects/translation-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Язык** содержит идентификатор языка по умолчанию, используемый родительским элементом, или идентификатор языка для **перевода** элемента. Язык должен быть определен с помощью кодов идентификатора локали (LCID). Например, LCID 1033 используется для обозначения американского английского языка.  
   
  Элементы, соответствующие родителям элемента **язык** в объектную модель Analysis Management объекты AMO являются <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningStructure>и <xref:Microsoft.AnalysisServices.Translation>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

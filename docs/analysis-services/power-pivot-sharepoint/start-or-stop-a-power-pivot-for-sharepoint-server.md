@@ -1,30 +1,23 @@
 ---
-title: "Запуск или остановка службы PowerPivot для SharePoint Server | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Запуск или остановка службы PowerPivot для SharePoint Server | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: "8"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c581135e13811e82535fa7735f1116f413d6752
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Запуск и остановка службы PowerPivot для SharePoint Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба и [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляр работают совместно на одном локальном сервере приложений для поддержки согласованной запросов и обработки данных в ферме SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и экземпляр службы [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] работают совместно на одном и том же локальном сервере приложений, обеспечивая поддержку согласованной обработки запросов и данных на ферме SharePoint.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -59,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="effects"></a> Последствия остановки сервера службы PowerPivot  
  В следующей таблице описываются последствия остановки системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и служб Analysis Services на сервере SharePoint.  
   
-|Воздействие на аргумент|Description|  
+|Воздействие на аргумент|Описание|  
 |---------------|-----------------|  
 |Существующие запросы|Запросы, выполняемые на сервере Analysis Services, будут немедленно остановлены. Пользователь получит сообщение об ошибке «Данные не обнаружены» или «Соединение с источником данных отсутствует».|  
 |Существующие задания обновления данных, обрабатываемые в данные момент|Задания, выполняемые на текущем сервере Analysis Services, будут немедленно остановлены. Обновление данных завершится с ошибкой, и в журнале обновления данных появится запись об ошибке.<br /><br /> Перед остановкой службы можно просмотреть состояние текущих заданий, используя страницу проверки состояния задания в центре администрирования SharePoint.<br /><br /> Даже если известно, какие задания выполняются в данный момент, невозможно посмотреть саму очередь, чтобы узнать, какие другие задания будут вскоре запущены.|  
@@ -67,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |Новые запросы на данные или обновление данных|Если на ферме только один сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и он останавливается, новые запросы для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не будут обрабатываться и при попытке запросить данные будет выдаваться ошибка "Данные не найдены".<br /><br /> Если есть дополнительные серверы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, запрос будет передан на один из доступных серверов.|  
 |Данные об использовании|Когда службы остановлены, данные об использовании не собираются.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

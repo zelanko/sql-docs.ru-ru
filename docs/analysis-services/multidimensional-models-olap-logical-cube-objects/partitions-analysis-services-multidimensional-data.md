@@ -1,46 +1,23 @@
 ---
-title: "Секции (службы Analysis Services — многомерные данные) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- incremental updates [Analysis Services]
-- data sources [Analysis Services], partitions
-- data storage [Analysis Services]
-- aggregations [Analysis Services], partitions
-- OLAP objects [Analysis Services], partitions
-- storing data [Analysis Services], partitions
-- partitions [Analysis Services], about partitions
-- cubes [Analysis Services], partitions
-- partitions [Analysis Services]
-- remote partitions [Analysis Services]
-- measure groups [Analysis Services], partitions
-ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 
-author: Minewiskan
+title: Секции (службы Analysis Services — многомерные данные) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e88ef15309c52942c24f663f3242ec3aba1afb81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Секции (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Секция — это контейнер для части данных группы мер. В запросах многомерных выражений секции не различаются; все запросы отражают полное содержимое группы мер независимо от того, сколько секций определено для этой группы мер. Содержимое данных секции определяется путем связывания запроса с секцией, а также с помощью выражения выделения среза.  
+  Секция — это контейнер для части данных группы мер. В запросах многомерных выражений секции не различаются; все запросы отражают полное содержимое группы мер независимо от того, сколько секций определено для этой группы мер. Содержимое данных секции определяется путем связывания запроса с секцией, а также с помощью выражения выделения среза.  
   
  Простой объект <xref:Microsoft.AnalysisServices.Partition> состоит из основной информации, определения среза, статистической схемы и других компонентов. Основная информация включает имя секции, режим хранения, режим обработки и др. Определение среза представляет собой многомерное выражение, определяющее кортеж или набор. На определение среза распространяются такие же ограничения, как и на функцию многомерного выражения StrToSet. Наряду с параметром CONSTRAINED в определении среза могут использоваться имена измерений, иерархий, уровней и членов, ключи, уникальные имена или другие именованные объекты в кубе, но не могут использоваться функции многомерных выражений. Статистическая схема представляет собой коллекцию определений статистической обработки, которая может совместно использоваться в нескольких секциях. Значение по умолчанию берется из статистической схемы родительского куба.  
   
@@ -50,7 +27,7 @@ ms.lasthandoff: 02/15/2018
   
  Секции не являются видимыми для пользователей куба. Однако администраторы могут настраивать, добавлять или сбрасывать секции. Каждая секция хранится в отдельном наборе файлов. Статистические данные каждой секции могут храниться на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], на котором определена секция, на другом экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или в источнике данных, который используется для предоставления данных для секций. Секции позволяют осуществлять распределение данных источника и данных агрегатов куба между несколькими жесткими дисками и между несколькими серверами. Для куба со средним или крупным размером секции могут значительно увеличить производительность запросов, производительность нагрузки и простоту обслуживания куба.  
   
- Режим хранилища каждой секции можно настраивать независимо от других секций в группе мер. Секции могут храниться с помощью любого сочетания параметров расположения данных источников, режима хранилища, упреждающего кэширования и статистической схемы. Параметры для OLAP реального времени и предупреждающее кэширование позволяют сбалансировать скорость запроса и задержку во время разработки секции. Параметры хранилища могут применяться к соответствующим измерениям и к фактам в группе мер. Эта гибкость позволяет разрабатывать стратегии хранилищ кубов, соответствующие потребностям. Дополнительные сведения см. в разделе [режимы хранения секции и обработка](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md) и [упреждающее кэширование &#40; Секций &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ Режим хранилища каждой секции можно настраивать независимо от других секций в группе мер. Секции могут храниться с помощью любого сочетания параметров расположения данных источников, режима хранилища, упреждающего кэширования и статистической схемы. Параметры для OLAP реального времени и предупреждающее кэширование позволяют сбалансировать скорость запроса и задержку во время разработки секции. Параметры хранилища могут применяться к соответствующим измерениям и к фактам в группе мер. Эта гибкость позволяет разрабатывать стратегии хранилищ кубов, соответствующие потребностям. Дополнительные сведения см. в разделе [режимы хранения секции и обработка](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md) и [упреждающее кэширование &#40;секций&#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="partition-structure"></a>Структура секции  
  Структура секции должна соответствовать структуре ее группы мер; это означает, что меры, которые определяют группу мер, также должны быть определены в секциях, вместе со всеми связанными измерениями. По этой причине при создании секции она автоматически наследует набор мер и соответствующих измерений, определенный для группы мер.  
@@ -68,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 -   В вертикально секционированной группе мер группа мер основана на одной таблице, поэтому каждая секция основана на системном запросе к источнику, который фильтрует данные для этой секции. Например, если одна таблица содержит данные за несколько месяцев, то группу мер можно секционировать по месяцам, применяя предложение WHERE языка Transact SQL, возвращающее данные за отдельный месяц для каждой секции.  
   
- Каждая секция имеет настройки хранения, которые определяют, что данные и статистики для секций хранятся на локальных экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], или в удаленной секции, использующей другой экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Настройки хранения также могут задавать режим хранения и возможность использования упреждающего кэширования для управления задержками в секциях. Дополнительные сведения см. в разделе [режимы хранения секции и обработка](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [упреждающее кэширование &#40; Секций &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), и [удаленных секций](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
+ Каждая секция имеет настройки хранения, которые определяют, что данные и статистики для секций хранятся на локальных экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], или в удаленной секции, использующей другой экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Настройки хранения также могут задавать режим хранения и возможность использования упреждающего кэширования для управления задержками в секциях. Дополнительные сведения см. в разделе [режимы хранения секции и обработка](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [упреждающее кэширование &#40;секций&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), и [удаленных секций](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
   
 ## <a name="incremental-updates"></a>Добавочные обновления  
  При создании и управлении секциями в многосекционных группах мер необходимо принимать специальные меры предосторожности для обеспечения точности данных куба. Несмотря на то, что эти меры предосторожности обычно не применяются к односекционным группам мер, они применяются к ним при добавочном обновлении секций. При добавочном обновлении секции создается новая временная секция со структурой, идентичной структуре секции источника. Производится обработка и последующее слияние этой временной секции с секцией источника. Поэтому необходимо убедиться, что обрабатывающий запрос, заполняющий временную секцию, не дублирует какие-либо данные, уже представленные в существующей секции.  

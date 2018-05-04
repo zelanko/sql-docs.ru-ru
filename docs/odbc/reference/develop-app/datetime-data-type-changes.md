@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data type [ODBC]
 - datetime data types [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1fefa994f1902411e18419d8595a314f29ad0f58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-changes"></a>Изменение типов данных даты и времени
 В ODBC 3. *x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены из SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка 91, 92 и 93) соответственно. Соответствующие идентификаторы типа C измененных с SQL_C_DATE, SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
  Эти изменения влияют на **SQLDescribeCol**, **SQLDescribeParam**, и **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, и **SQLGetData**; и **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, и **SQLSpecialColumns**.  
   
- В следующей таблице показано, как ODBC 3*.x* диспетчера драйверов выполняет сопоставление типов даты, времени и отметок времени C данных введенные в *TargetType* аргументы **SQLBindCol**и **SQLGetData** или в *ValueType* аргумент **SQLBindParameter**.  
+ В следующей таблице показано, как ODBC 3 *.x* диспетчера драйверов выполняет сопоставление типов даты, времени и отметок времени C данных введенные в *TargetType* аргументы **SQLBindCol**и **SQLGetData** или в *ValueType* аргумент **SQLBindParameter**.  
   
 |Тип данных<br /><br /> Введенный код|2.*x* приложению<br /><br /> 2.*x* драйвера|2.*x* приложению<br /><br /> 3.*x* драйвера|3.*x* приложению<br /><br /> 2.*x* драйвера|3.*x* приложению<br /><br /> 3.*x* драйвера|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
  [2] в результате использования этого ODBC 3. *x* приложения, работа с ODBC 3. *x* драйвер может использовать коды даты, времени или timestamp, возвращенные в результирующих наборов, которые возвращаются функциями каталога.  
   
- В следующей таблице показано, как ODBC 3*.x* диспетчера драйверов выполняет сопоставление типов даты, времени и отметок времени SQL данных введенные в *ParameterType* аргумент **SQLBindParameter**  или в *DataType* аргумент **SQLGetTypeInfo**.  
+ В следующей таблице показано, как ODBC 3 *.x* диспетчера драйверов выполняет сопоставление типов даты, времени и отметок времени SQL данных введенные в *ParameterType* аргумент **SQLBindParameter**  или в *DataType* аргумент **SQLGetTypeInfo**.  
   
 |Тип данных<br /><br /> Введенный код|2.*x* приложению<br /><br /> 2.*x* драйвера|2.*x* приложению<br /><br /> 3.*x* драйвера|3.*x* приложению<br /><br /> 2.*x* драйвера|3.*x* приложению<br /><br /> 3.*x* драйвера|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  

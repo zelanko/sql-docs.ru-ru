@@ -1,31 +1,30 @@
 ---
-title: "Прогнозирующие запросы (интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
+title: Прогнозирующие запросы (интеллектуальный анализ данных) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5546a168891818e61620b6fc80c7a0cd6100fcc8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Прогнозирующие запросы (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Целью стандартного проекта интеллектуального анализа данных является создание прогнозов с помощью моделей интеллектуального анализа данных. Например, пользователю может потребоваться спрогнозировать возможное время простоя определенного кластера серверов либо сформировать оценку, показывающую вероятность отклика покупателей из разных сегментов на рекламную кампанию. Чтобы выполнить все это, следует создать прогнозирующий запрос.  
+  Целью стандартного проекта интеллектуального анализа данных является создание прогнозов с помощью моделей интеллектуального анализа данных. Например, пользователю может потребоваться спрогнозировать возможное время простоя определенного кластера серверов либо сформировать оценку, показывающую вероятность отклика покупателей из разных сегментов на рекламную кампанию. Чтобы выполнить все это, следует создать прогнозирующий запрос.  
   
  С точки зрения практики в SQL Server поддерживаются разные типы прогнозирующих запросов, в зависимости от типа входных данных запроса.  
   
@@ -155,7 +154,7 @@ FROM
  Если данный поставщик не может обрабатывать иерархические наборы строк, то результаты можно перевести в плоский формат, добавив в прогнозирующий запрос ключевое слово FLATTEN. Дополнительные сведения и примеры плоских наборов строк см. в разделе [SELECT (расширения интеллектуального анализа данных)](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Содержимого запросов &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Запросы определений данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Содержимого запросов & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Запросы определений данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

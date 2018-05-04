@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cc8dfbd3309d19fb54bc1246cd7430863268686c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-element-xmla"></a>Элемент root (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит результат, возвращаемый методом [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метода или команду XML для аналитики (XMLA) выполняется с помощью [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит результат, возвращаемый методом [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метода или команду XML для аналитики (XMLA) выполняется с помощью [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|См. в следующей таблице.|  
+|Тип данных и длина|См. таблицу ниже.|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-N: обязательный элемент, который может встречаться несколько раз.|  
   
@@ -74,10 +74,10 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[результаты](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [возврата](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Корневой** элемент содержит данные, возвращаемые в любом [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) элемент, возвращаемый один **Discover** вызова метода, или в [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) элемент, возвращаемый в отдельной команде XMLA, выполненной при единственном **Execute** вызова метода.  
   
 ## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

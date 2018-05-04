@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ac893cc0b06cfa4f5f0925e94672b8da5de885e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b94c86179075ba709d9e0cf337be20f8565c00e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relationshiptype-element-assl"></a>Элемент RelationshipType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает, является ли связей элементов для [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) можно изменить.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Указывает, является ли связей элементов для [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) можно изменить.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|*Гибкие*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,10 +63,10 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Жесткая*|Связи элементов между атрибутом и связанным атрибутом не могут быть изменены.|  
 |*Гибкие*|Связи элементов между атрибутом и связанным атрибутом могут быть изменены.|  
@@ -75,8 +75,8 @@ ms.lasthandoff: 01/08/2018
   
  Перечисление, соответствующее разрешенным значениям для **RelationshipType** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.RelationshipType>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

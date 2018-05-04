@@ -23,20 +23,20 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 497396bf0679afbabbebe9936ba6c5f443942bec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d64b63f6aae163e6703f7f2a7074f3c1e543adb6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>Набор строк DMSCHEMA_MINING_SERVICE_PARAMETERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает параметры для алгоритмов на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает параметры для алгоритмов на сервере.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DMSCHEMA_MINING_SERVICE_PARAMETERS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Имя алгоритма.|  
 |**ИМЯ_ПАРАМЕТРА**|**DBTYPE_WSTR**|Имя параметра.|  
@@ -54,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**ИМЯ_ПАРАМЕТРА**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**ИМЯ_ПАРАМЕТРА**|**DBTYPE_WSTR**|Необязательно.|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

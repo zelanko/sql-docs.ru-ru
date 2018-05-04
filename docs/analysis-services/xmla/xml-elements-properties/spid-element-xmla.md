@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b79ade1f52a35082992d9ebaa48ed06dada16ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8a029d4b62472ea943f53d1fec86ee008743c8b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spid-element-xmla"></a>Элемент SPID (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет активный идентификатор серверного процесса (SPID), на котором выполняется родительский [отменить](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет активный идентификатор серверного процесса (SPID), на котором выполняется родительский [отменить](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Целочисленный|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -65,13 +65,13 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Отмена](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **SPID** элемент представляет процесс сервера идентификатор (SPID) для конкретного сеанса в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Элемент CancelAssociated &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)   
- [Элемент ConnectionID &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)   
- [Элемент SessionID &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент CancelAssociated & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)   
+ [Элемент ConnectionID & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)   
+ [Элемент SessionID & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

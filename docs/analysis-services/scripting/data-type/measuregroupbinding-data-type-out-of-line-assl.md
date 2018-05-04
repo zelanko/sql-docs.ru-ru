@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5511e21456f1ba879a153c5eaf2b696618396446
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0758271125e406a5bced7b0cfe5c6357126a034e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>Тип данных MeasureGroupBinding (внешний) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий привязку к группе мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет примитивный тип данных, который представляет привязку к группе мер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|None|  
@@ -63,13 +63,13 @@ ms.lasthandoff: 01/08/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Измерения](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [меры](../../../analysis-services/scripting/collections/measures-element-assl.md), [секций](../../../analysis-services/scripting/collections/partitions-element-assl.md), [источника](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
-|Производные элементы|В разделе [привязки](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
+|Дочерние элементы|[Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [Measures](../../../analysis-services/scripting/collections/measures-element-assl.md), [Partitions](../../../analysis-services/scripting/collections/partitions-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
+|Производные элементы|См. раздел [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Дополнительные сведения см в разделе внешние привязки, [&#40; источники данных и привязки Многомерные службы SSAS &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+## <a name="remarks"></a>Замечания  
+ Дополнительные сведения см в разделе внешние привязки, [& #40; источники данных и привязки Многомерные службы SSAS & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Службы Analysis Services сценариев типы данных XML в & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

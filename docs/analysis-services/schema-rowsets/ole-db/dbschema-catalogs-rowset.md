@@ -23,20 +23,20 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 493ffd66eb4bcddd0e4aaef7c79c4c771520be92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fe0b9bd6fa59114d95720b4c0b5b631ea88c2748
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacatalogs-rowset"></a>Набор строк DBSCHEMA_CATALOGS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет физические атрибуты, связанные с каталогами, доступными из системы управления базой данных (СУБД).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет физические атрибуты, связанные с каталогами, доступными из системы управления базами данных (СУБД).  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DBSCHEMA_CATALOGS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|255|Имя каталога. Не может иметь значение null.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Понятное описание таблицы.|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 |-----------------|--------------------|-----------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

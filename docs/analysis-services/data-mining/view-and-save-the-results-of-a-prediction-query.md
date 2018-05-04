@@ -1,36 +1,35 @@
 ---
-title: "Просмотр и сохранение результатов прогнозирующего запроса | Документы Microsoft"
-ms.custom: 
+title: Просмотр и сохранение результатов прогнозирующего запроса | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - viewing prediction query results
 - displaying prediction query results
 - Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a96b6825f5b7b5d83981f6c0ec73e8020169b2b7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8d0d16a2a5717514aa7d8faff1a1611bd74ef7a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>Просмотр и сохранение результатов прогнозирующего запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-После создания запроса в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью построителя прогнозирующих запросов, можно выполнить этот запрос и просмотреть результат, переключившись в представление результатов запроса.  
+  После создания запроса в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью построителя прогнозирующих запросов, можно выполнить этот запрос и просмотреть результат, переключившись в представление результатов запроса.  
   
  Можно сохранить результаты прогнозирующего запроса в таблице в любом источнике данных, определенном в проекте служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Можно либо создать новую таблицу, либо сохранить результаты запроса в существующую таблицу. При сохранении результатов в существующую таблицу можно выбрать перезапись данных, хранящихся в таблице в текущий момент, в противном случае результаты будут добавлены к существующим данным в таблице.  
   

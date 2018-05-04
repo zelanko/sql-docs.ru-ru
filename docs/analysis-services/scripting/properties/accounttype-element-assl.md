@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5225a1f9ee45754c60c46f8cc9c3fea3d2af0ec1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8755c1d99da654a89b6d4f636ad4a816f10577f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accounttype-element-assl"></a>Элемент AccountType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит имя типа учетной записи, определенные в [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит имя типа учетной записи, определенные в [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|None|  
@@ -63,23 +63,23 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Учетная запись](../../../analysis-services/scripting/objects/account-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|*Доход*|Счет является счетом доходов.|  
-|*О расходах*|Счет является счетом расходов.|  
+|*Доходы*|Счет является счетом доходов.|  
+|*Расход*|Счет является счетом расходов.|  
 |*Поток*|Счет является кассовым счетом.|  
 |*Баланс*|Счет является балансовым счетом.|  
-|*Активов*|Счет является счетом актива.|  
-|*Ответственности*|Счет является счетом обязательств.|  
+|*Актив*|Счет является счетом актива.|  
+|*Обязательство*|Счет является счетом обязательств.|  
 |*Статистические*|Счет является статистическим счетом.|  
   
  Перечисление, соответствующее разрешенным значениям для **AccountType** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.AccountTypes>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Учетные записи элемента &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

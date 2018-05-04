@@ -1,36 +1,23 @@
 ---
-title: "Работа с функцией RollupChildren (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Работа с функцией RollupChildren (многомерные Выражения) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], RollupChildren function
-- RollupChildren function
-- custom member properties [MDX]
-- IIf function
-ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7316f209c3653dd81eb6d2052428d0e6306b4c0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Управление данными MDX - функция RollupChildren
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Функция [RollupChildren](../../../mdx/rollupchildren-mdx.md) многомерных выражений вычисляет свертку потомков некоторого элемента, применяя различные унарные операторы к каждому потомку, и возвращает результат этой свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
+  Функция [RollupChildren](../../../mdx/rollupchildren-mdx.md) многомерных выражений вычисляет свертку потомков некоторого элемента, применяя различные унарные операторы к каждому потомку, и возвращает результат этой свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
   
 ## <a name="rollupchildren-function-examples"></a>Примеры функции RollupChildren  
  Применение функции **RollupChildren** в инструкциях многомерных выражений объяснить просто, однако действие этой функции на запросы многомерных выражений может быть разнообразным.  
@@ -80,6 +67,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  Инструкция многомерных выражений анализирует унарный оператор дочернего элемента. Если унарный оператор применяется для вычитания (как в случае элементов с внутренними и внешними возвратами), то функция **IIf** заменяет унарный оператор тильду (~). В противном случае функция **IIf** использует унарный оператор дочернего элемента. Наконец вычисленное значение суммы свертки умножается на коэффициент 1,1 для получения значения прогнозируемых валовых внутренних и внешних продаж.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Обработка данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Обработка данных & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

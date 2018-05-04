@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2440e8e9456121c0da6d57f6498933c6eb6d53cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1cf80edd8221632cfe56c4b3c9f3b681fc1d2b1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namecolumn-element-assl"></a>Элемент NameColumn (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет столбец, предоставляющий имя родительского элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Идентифицирует столбец, предоставляющий имя родительского элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
-|Значение по умолчанию|См. в следующей таблице.|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Значение по умолчанию|См. таблицу ниже.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 |Предок или родитель|Значение по умолчанию|  
 |------------------------|-------------------|  
@@ -68,14 +68,14 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
- Если [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md) коллекцию **DimensionAttribute** содержит один [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) элемент, представляющий ключевой столбец со строковым типом данных, то **DataItem** значения, используются значения по умолчанию для **NameColumn** элемента.  
+## <a name="remarks"></a>Замечания  
+ Если коллекция [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md) элемента **DimensionAttribute** содержит один элемент [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) , представляющий ключевой столбец со строковым типом данных, используются такие же значения **DataItem** , как и значения по умолчанию для элемента **NameColumn** .  
   
- Дополнительные сведения о **DataItem** типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) и свойства **DataItem** введите см. в разделе [DataItem, тип данных &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+ Дополнительные сведения о **DataItem** типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) и свойства **DataItem** введите см. в разделе [DataItem, тип данных & #40; ASSL & #41; ](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
   
  Элементы, соответствующие родителям элемента **NameColumn** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.DimensionAttribute> и <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

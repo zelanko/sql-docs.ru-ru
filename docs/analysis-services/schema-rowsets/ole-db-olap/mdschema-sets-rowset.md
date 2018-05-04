@@ -23,20 +23,20 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 84104e80456129f8afcd1f3457e440cbbb38e220
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает любые наборы, определенные в данный момент в базе данных, включая наборы с областью сеанса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает любые наборы, определенные на текущий момент в базе данных, в том числе наборы с областью сеанса.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_SETS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Имя базы данных.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Не поддерживается.|  
@@ -57,15 +57,15 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SET_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**ОБЛАСТЬ ДЕЙСТВИЯ**|**DBTYPE_I4**|Необязательный параметр.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**CUBE_SOURCE**|**DBTYPE_UI2**|Необязательный параметр.<br /><br /> Примечание: Только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SET_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**ОБЛАСТЬ ДЕЙСТВИЯ**|**DBTYPE_I4**|Необязательно.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CUBE_SOURCE**|**DBTYPE_UI2**|Необязательно.<br /><br /> Примечание: Только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

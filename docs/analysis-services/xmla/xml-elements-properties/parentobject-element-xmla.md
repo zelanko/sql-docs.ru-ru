@@ -29,15 +29,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c52bc6fd7d4ae414f0c20c7921186115e17d1cea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 025c74f675e8718e31971fafcc0a15fdc8cfe7af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parentobject-element-xmla"></a>Элемент ParentObject (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит идентификатор родительского объекта, для которого создаются объекты, определенные в родительском [создать](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит идентификатор родительского объекта, для которого создаются объекты, определенные в родительском [создать](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Создание](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |Дочерние элементы|Обязательные элементы языка ASSL. Указывается перечислением элементов ID объекта и его предков (исключая **сервера** объекта.) Например, следующая **ParentObject** определяет секцию:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Порядок следования идентификаторов неважен.  
   
 ## <a name="example"></a>Пример  
@@ -193,7 +193,7 @@ ms.lasthandoff: 01/08/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

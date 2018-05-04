@@ -1,38 +1,19 @@
 ---
-title: "Программирование объектов AMO дополнительных классов и методов | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- assemblies [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- programming [AMO]
-- Analysis Management Objects, backup and restore
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 
-author: Minewiskan
+title: Программирование объектов AMO дополнительных классов и методов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8972d0659180558689302c77994f0c14f931593d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Программирование дополнительных классов и методов объектов AMO
   Этот раздел состоит из следующих подразделов.  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Класс CaptureLog и атрибут CaptureXML](#CL)  
   
-##  <a name="Assembly">Класс сборки</a>  
+##  <a name="Assembly"></a> Класс сборки  
  Сборки позволяют пользователю расширять функциональные возможности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] путем добавления новых хранимых процедур или функций многомерных выражений (MDX). Дополнительные сведения см. в разделе [AMO другие классы и методы](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  Добавление и удаление сборок является простой операцией, и ее можно выполнить в режиме в сети. Чтобы добавить сборку в базу данных, пользователь должен быть либо администратором базы данных, либо администратором сервера (чтобы иметь возможность добавить сборку к объекту сервера).  
@@ -106,7 +87,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Trace-класс</a>  
+##  <a name="TRC"></a> Trace-класс  
  Для наблюдения за работой сервера необходимы два вида трассировок: трассировки сеансов и трассировки сервера. Трассировка сервера позволяет узнать ход выполнения текущей задачи на сервере (трассировки сеанса); трассировки также могут показать общую активность сервера в целом, при этом соединение с сервером даже не требуется (трассировки сервера).  
   
  При трассировке текущих действий (трассировки сеанса) сервер отправляет текущему приложению уведомления о происходящих на нем событиях, вызванных этим приложением. В текущем приложении события захватываются с помощью обработчиков событий. Сначала объекту <xref:Microsoft.AnalysisServices.SessionTrace> назначаются процедуры обработки событий, а затем запускается трассировка сеанса.  
@@ -287,8 +268,8 @@ static public string TestCaptureLog(Server svr)
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Объекты AMO другие классы и методы](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
- [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Обработка многомерной модели &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [Логическая архитектура & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты базы данных & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

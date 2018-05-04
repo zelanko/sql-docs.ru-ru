@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot Usage Data Collection | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot Usage Data Collection | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 331b90f3bca4f9a50e545e8dec3e6896c8fefa6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Сбор данных об использовании PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Сбор данных об использовании — это функция SharePoint на уровне фермы. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint использует и дополняет эту систему для создания отчетов на информационной панели управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , которые показывают, как используются данные и службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Для создания данных об использовании, которые будут отображаться на информационной панели управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , администратор фермы должен включить ведение журнала использования.  
+  Сбор данных об использовании — это функция SharePoint на уровне фермы. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint использует и дополняет эту систему для создания отчетов на информационной панели управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , которые показывают, как используются данные и службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Для создания данных об использовании, которые будут отображаться на информационной панели управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , администратор фермы должен включить ведение журнала использования.  
   
  Сведения о работе с данными об использовании на панели мониторинга управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] см. в разделе [Информационная панель управления PowerPivot и данные об использовании](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   

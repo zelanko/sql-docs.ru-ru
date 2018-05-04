@@ -1,30 +1,29 @@
 ---
-title: "Службы Analysis Services документации для разработчиков | Документы Microsoft"
-ms.custom: 
+title: Службы Analysis Services документации для разработчиков | Документы Microsoft
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2333702ea265e0bb5eee6333ae08885be61c986f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Документация для разработчика служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,14 +72,14 @@ ms.lasthandoff: 02/23/2018
 
 [Наборы строк схемы служб Analysis](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md) описывает наборы строк схемы, которые предоставляют сведения о состоянии сервера, операциях сервера и объекты базы данных.
 
-[XML для аналитики &#40; XML для Аналитики &#41; Справочник по](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) XMLA описаны основные понятия, которые помогут вам понять, как влияют XML для Аналитики для пользовательского решения. Также описывается уровень совместимости со спецификацией XMLA 1.1.
+[XML для аналитики &#40;XMLA&#41; ссылки](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) XMLA описаны основные понятия, которые помогут вам понять, как влияют XML для Аналитики для пользовательского решения. Также описывается уровень совместимости со спецификацией XMLA 1.1.
 
-[Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) Описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.
+[Язык сценариев служб Analysis Services &#40;языка ASSL для XMLA&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.
 
-[Скрипты языка &#40; табличной модели TMSL &#41; Справочник по](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL является JSON-представление табличных моделей на уровне совместимости 1200 и выше. Определения объектов строятся на табличных метаданных конструкций, таких как таблицы, столбца и связи, а не многомерные метаданные, которые могут быть знакомы, если вы не знакомы с моделирования данных служб Analysis Services в табличном режиме.
+[Языке скриптов табличных моделей &#40;TMSL&#41; ссылки](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL является JSON-представление табличных моделей на уровне совместимости 1200 и выше. Определения объектов строятся на табличных метаданных конструкций, таких как таблицы, столбца и связи, а не многомерные метаданные, которые могут быть знакомы, если вы не знакомы с моделирования данных служб Analysis Services в табличном режиме.
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) документы командлеты, используемые для административных функций, а также общего назначения **Invoke-ASCmd** командлет, который принимает любой скрипт или запрос в качестве входных данных.
 
 ## <a name="see-also"></a>См. также
 [Технический справочник по ](../analysis-services/powershell/technical-reference-ssas.md) 
- [запроса и справочник по языку выражений &#40; Службы Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+ [запросов и справочник по языку выражений &#40;служб Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

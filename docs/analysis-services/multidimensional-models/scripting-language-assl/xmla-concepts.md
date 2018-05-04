@@ -1,34 +1,23 @@
 ---
 title: Основные понятия XMLA | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- XMLA, concepts
-ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
-caps.latest.revision: 10
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31764ea957feff56c50357f8058ba710e6c1c658
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 429d1bc09714d15cfb8fbd851c72e01dd8ba198b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xmla-concepts"></a>Основные понятия XML для аналитики
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]XML для аналитики (XMLA) открытый стандарт поддерживает данных доступ к источникам данных, которые находятся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XML для Аналитики 1.1.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Открытый стандарт XML для аналитики (XMLA) поддерживает доступ к данным в источниках данных, находящихся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XML для Аналитики 1.1.  
   
  XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP, который специально предназначен для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, находящемся в Интернете. XML для Аналитики также избавляет от необходимости развертывать клиентский компонент, который предоставляет модель объектов компонентов (COM) или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] интерфейсы платформы .NET Framework. Протокол XMLA оптимизирован для работы с Интернетом, особенно если обмен данными с сервером требует больших затрат времени и ресурсов, а в связи с применением поддерживающих состояние соединений с источниками данных количество соединений пользователя с сервером может стать ограниченным.  
   

@@ -1,16 +1,16 @@
 ---
-title: "Меры в отчете перекрестной проверки | Документы Microsoft"
-ms.custom: 
+title: Меры в отчете перекрестной проверки | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
 - cross-validation [data mining]
@@ -18,24 +18,23 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3628cb0d9c7f142634b521f6b4cf03dd6f626ebf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Меры в отчете перекрестной проверки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В процессе перекрестной проверки службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] разбивают данные в структуре интеллектуального анализа данных на несколько перекрестных разделов, после чего выполняется итерационное тестирование структур и всех соответствующих моделей интеллектуального анализа данных. На основании такого анализа для структуры и каждой модели выводится набор стандартных точных мер.  
+  В процессе перекрестной проверки службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] разбивают данные в структуре интеллектуального анализа данных на несколько перекрестных разделов, после чего выполняется итерационное тестирование структур и всех соответствующих моделей интеллектуального анализа данных. На основании такого анализа для структуры и каждой модели выводится набор стандартных точных мер.  
   
  Отчет содержит общие сведения о количестве сверток в данных, сумму данных в каждой свертке и набор общих показателей, описывающих распределение данных. Сравнивая общие показатели, созданные для каждого разреза, можно оценить надежность структуры или модели.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также отображают набор подробных мер для модели интеллектуального анализа данных. Такие меры зависят от типа модели и типа анализируемого атрибута, например дискретный или непрерывный.  
+ Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также отображают набор подробных мер для модели интеллектуального анализа данных. Такие меры зависят от типа модели и типа анализируемого атрибута, например дискретный или непрерывный.  
   
  В данном разделе предоставляется список мер, которые содержатся в отчете **Перекрестная проверка** , и разъяснения к ним. Дополнительные сведения о том, как вычисляется каждая мера, см. в разделе [Формулы перекрестной проверки](../../analysis-services/data-mining/cross-validation-formulas.md).  
   
@@ -62,6 +61,6 @@ ms.lasthandoff: 02/15/2018
 ||**Стандартное отклонение**.<br />                      Среднее отклонение от среднего арифметического для конкретной меры, с учетом всех секций модели.<br /><br /> Для перекрестной проверки более высокое значение этой оценки предполагает существенные различия между свертками.|  
   
 ## <a name="see-also"></a>См. также  
- [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

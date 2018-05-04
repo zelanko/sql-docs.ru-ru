@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 767641d72af98aa02cfa4c1008c0dd31d8c53ca2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5316406047fe6c237c2c326adb77f2c89321534a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>Тип данных PerspectiveCalculation (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий связь между вычислением и [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет примитивный тип данных, представляющий связь между вычислением и элементом [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|None|  
@@ -60,13 +60,13 @@ ms.lasthandoff: 01/08/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|None|  
-|Дочерние элементы|[Заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md), [типа](../../../analysis-services/scripting/properties/type-element-perspectivecalculation-assl.md)|  
-|Производные элементы|[Вычисление](../../../analysis-services/scripting/objects/calculation-element-assl.md) ([вычисления](../../../analysis-services/scripting/collections/calculations-element-assl.md) коллекцию [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
+|Дочерние элементы|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Type](../../../analysis-services/scripting/properties/type-element-perspectivecalculation-assl.md)|  
+|Производные элементы|[Calculation](../../../analysis-services/scripting/objects/calculation-element-assl.md) (коллекция[Calculations](../../../analysis-services/scripting/collections/calculations-element-assl.md) элементов [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
-## <a name="see-also"></a>См. также:  
- [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Службы Analysis Services сценариев типы данных XML в & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

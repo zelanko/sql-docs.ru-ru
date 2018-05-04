@@ -1,36 +1,23 @@
 ---
-title: "Применение фильтра к модели интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/19/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Применение фильтра к модели интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- model filter [data mining]
-- filters [data mining]
-- filtering input rows [Analysis Services]
-- filtering data [Analysis Services]
-ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 57fedca20966d9ad7520b51ee850738e1e51b0e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a0becff140d0630b85f66345b9f7ac8a7db2730d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Применение фильтра к модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Если структура интеллектуального анализа данных содержит вложенную таблицу, можно применить фильтр к таблице вариантов, вложенной таблице или к обеим таблицам.  
+  Если структура интеллектуального анализа данных содержит вложенную таблицу, можно применить фильтр к таблице вариантов, вложенной таблице или к обеим таблицам.  
   
  Следующая процедура демонстрирует создание обоих видов фильтров: фильтров вариантов и фильтров строк вложенной таблицы.  
   
@@ -113,7 +100,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Щелкните поле **Значение** и введите значение.  
   
-     Например, в поле **Столбец структуры интеллектуального анализа данных** выберите значение **Model**. В поле **Оператор**выберите **<>**и введите значение **Water Bottle**. Это условие приведет к созданию следующего критерия фильтра:  
+     Например, в поле **Столбец структуры интеллектуального анализа данных** выберите значение **Model**. В поле **Оператор**выберите **<>** и введите значение **Water Bottle**. Это условие приведет к созданию следующего критерия фильтра:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -132,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Если какая-либо часть критерия фильтра изменена вручную, то сетка становится недоступной и работать с выражением фильтра в дальнейшем можно только в режиме изменения текста. Чтобы снова перейти в режим изменения с помощью сетки, необходимо очистить критерий фильтра и начать сначала.  
   
 ## <a name="see-also"></a>См. также  
- [Фильтры для моделей интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Фильтры для моделей интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

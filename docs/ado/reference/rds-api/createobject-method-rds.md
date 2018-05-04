@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 355c56509e8c06b0d687e5d6164cf0e7c4abe93c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b06643a652cf2642c14dc6125d8972d76658897c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (RDS)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервер пакеты и выполняет маршалинг данные заглушки стороне сервера для взаимодействия с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в работе компонента без прокси-серверы используются, и предоставляется только указатель на объект.  

@@ -1,42 +1,23 @@
 ---
-title: "Объекты ASSL и характеристики объектов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- reference exceptions [Analysis Services Scripting Language]
-- ASSL, objects
-- inheritance [Analysis Services Scripting Language]
-- localized names [Analysis Services Scripting Language]
-- objects [Analysis Services Scripting Language]
-- names [Analysis Services Scripting Language]
-- Analysis Services Scripting Language, objects
-- expansion [Analysis Services Scripting Language]
-ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: 
-author: Minewiskan
+title: Объекты ASSL и характеристики объектов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51c9b6140396cfc5080e3aee21cd8e708c05eb69
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 17b88ba72205f2364a65f2d6cc88fe19b820985e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Объекты ASSL и характеристики объектов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-В языке ASSL объекты следуют специальным рекомендациям в отношении групп объектов, наследования, именования, расширения и обработки.  
+  В языке ASSL объекты следуют специальным рекомендациям в отношении групп объектов, наследования, именования, расширения и обработки.  
   
 ## <a name="object-groups"></a>Группы объектов  
  Все [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекты имеют XML-представление. Объекты разделены на две группы.  
@@ -107,6 +88,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="object-processing"></a>Обработка объектов  
  ASSL есть элементы, доступные только для чтения и свойства (например, **LastProcessed**), которые можно считывать из [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, но которые пропускаются при подаче на экземпляр командных скриптов. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не учитывают измененные значения для элементов, которые доступны только для чтения, не выдавая при этом предупреждений или сообщений об ошибке.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] также игнорирует несоответствующие свойства без возникновения ошибок проверки. Например, допустим, что элемент Х должен присутствовать, только если элемент Y имеет определенное значение. Экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не учитывает элемент X вместо проверки правильности этого элемента по значению элемента Y.  
+ Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] также пропускают несоответствующие свойства, не формируя при этом ошибок проверки правильности. Например, допустим, что элемент Х должен присутствовать, только если элемент Y имеет определенное значение. Экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не учитывает элемент X вместо проверки правильности этого элемента по значению элемента Y.  
   
   

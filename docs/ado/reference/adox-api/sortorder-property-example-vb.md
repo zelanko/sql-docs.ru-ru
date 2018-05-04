@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dfd5e5dc612813bd97722a3ce9f7ca49c5044bd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 63e9dde8ff2e26b3a9167e4da71279a9177b2213
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
 В этом примере демонстрируется [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) , добавленную [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекцию [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет возрастания индекса в столбце страны в **сотрудников** таблицы, затем отображает записи. Затем код добавляет убывания индекса в столбце страны в **сотрудников** таблицы и отображает записи еще раз. Показано различие между сортировкой по возрастанию и убыванию индексов.  

@@ -1,40 +1,23 @@
 ---
-title: "Ключевые показатели эффективности (KPI) в многомерных моделях | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Ключевые показатели эффективности (KPI) в многомерных моделях | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f7c49068db1ee60a6b417b7ef2bc4348693fc500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Ключевые показатели эффективности в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру успешности бизнеса.  
+  Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру успешности бизнеса.  
   
  В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ключевой показатель эффективности представляет собой коллекцию вычислений, связанных с группой мер куба и используемых для оценки успешности бизнеса. Обычно такие вычисления являются сочетанием многомерных выражений или вычисляемых элементов. В состав ключевых показателей эффективности также входят метаданные, определяющие способ отражения клиентскими приложениями результатов вычислений ключевого показателя эффективности.  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="parent-kpis"></a>Родительские ключевые показатели эффективности  
  Организация может отслеживать различные бизнес-метрики на различных уровнях. Например, для оценки успешности коммерческой деятельности в рамках всей компании можно использовать только два или три ключевых показателя, но эти общие показатели могут иметь в своей основе три или четыре других ключевых показателя эффективности, отслеживаемых подразделениями организации. Кроме того, подразделения организации для вычисления одного и того же ключевого показателя эффективности могут пользоваться другими статистическими данными, а результаты использовать для выведения ключевого показателя, общего для всей организации.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяют определить связь типа "родители-потомки", существующую между ключевыми показателями. Такая связь позволяет использовать результаты дочернего ключевого показателя эффективности для вычисления результатов родительского. Также клиентские приложения могут использовать данную связь для правильного отображения родительских и дочерних ключевых показателей эффективности.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]позволяет определить связь родитель потомок между ключевые показатели эффективности. Такая связь позволяет использовать результаты дочернего ключевого показателя эффективности для вычисления результатов родительского. Также клиентские приложения могут использовать данную связь для правильного отображения родительских и дочерних ключевых показателей эффективности.  
   
 ## <a name="weights"></a>Веса  
  Веса также можно присваивать дочерним ключевым показателям эффективности. Вес позволяет службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пропорционально регулировать результаты дочернего показателя во время вычисления значения родительского.  

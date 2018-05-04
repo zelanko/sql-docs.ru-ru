@@ -1,35 +1,35 @@
 ---
-title: "Создание команды (TMSL) | Документы Microsoft"
-ms.custom: 
+title: Создание команды (TMSL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 98af912235d950e787a925ce751fc1df5d1fa6bf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 09e7b9665aa2b441a4863ae96f6c2f9a135393eb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-command-tmsl"></a>Создание команды (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Создает указанный объект и все дочерние объекты, которые указаны. Если объект уже существует, команда вызывает ошибку.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Создает указанный объект и все дочерние объекты, которые указаны. Если объект уже существует, команда вызывает ошибку.  
   
 ## <a name="request"></a>Запрос  
  Структура запроса различается в зависимости от объекта. Объект, который является родительским должна включать все его дочерние элементы, несмотря на то, что полный объект определения одноуровневые элементы и родительские элементы не являются обязательными.  
   
- [Объект базы данных &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Добавить базу данных на сервере.  
+ [Объект базы данных &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) добавить базу данных на сервере.  
   
 ```  
 {   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Объект источника данных &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [Источники данных объекта &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Объект Tables &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Добавление столбцов в таблицу.  
+ [Объект Tables &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Добавление столбцов в таблицу.  
   
 ```  
 {   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [Объект секций &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Добавить секцию таблицы на родительский объект.  
+ [Объект секции &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) добавить секцию таблицы на родительский объект.  
   
 ```  
 {  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Объект роли &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) Минимально добавить роль в базе данных, но без членство или фильтры.  
+ [Объект роли &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) минимально добавить роль в базе данных, но без членство или фильтры.  
   
 ```  
 {  
@@ -170,7 +170,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Использование (конечные точки)  
- Этот элемент команды используется в инструкции [выполнить метод &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова через конечную точку XML для Аналитики, предоставляемых одним из следующих способов:  
+ Этот элемент команды используется в инструкции [выполнить метод &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова через конечную точку XML для Аналитики, предоставляемых одним из следующих способов:  
   
 -   Как окно XMLA в SQL Server Management Studio (SSMS)  
   
@@ -180,9 +180,9 @@ ms.lasthandoff: 01/08/2018
   
  Готовый сценарий для этой команды можно создать в среде SSMS.  Например, можно щелкнуть правой кнопкой мыши существующую базу данных > **сценарий** > **скрипта базы данных в качестве** > **создать в**.  
   
- [ \[MS-SSAS-T\]: Менное сервера служб Analysis Services табличной (SQL Server технические Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) документ содержит раздел 3.1.5.2.2, в котором описывается структура команд JSON табличных метаданных и объектов. В настоящее время этот документ охватывает команды и возможности, которые еще не реализована в сценарии TMSL. См. в разделе ([языке скриптов табличных моделей &#40; TMSL &#41; Ссылки](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) для дополнительной информации о том, что поддерживается.  
+ [ \[MS-SSAS-T\]: Менное сервера служб Analysis Services табличной (SQL Server технические Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) документ содержит раздел 3.1.5.2.2, в котором описывается структура команд JSON табличных метаданных и объектов. В настоящее время этот документ охватывает команды и возможности, которые еще не реализована в сценарии TMSL. См. в разделе ([языке скриптов табличных моделей &#40;TMSL&#41; ссылки](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) для дополнительной информации о том, что поддерживается.  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 704906a3b42557feace9c75ce5f2702be553ff08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d06884e5b317d66a0c6a2c4cff54562fc6650c8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrictions-element-xmla"></a>Элемент Restrictions (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит столбцы ограничений и данные, используемые [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит столбцы ограничений и данные, используемые [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Обнаружение](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Дочерние элементы|[RestrictionList](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Ограничения** элемент представляет столбцы ограничений и данные, используемые для ограничения сведений, получаемых методом **Discover** метод.  
   
 ## <a name="example"></a>Пример  
@@ -85,6 +85,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

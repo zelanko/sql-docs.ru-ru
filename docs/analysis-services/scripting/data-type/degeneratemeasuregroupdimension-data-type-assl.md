@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de05e60a72b203ee5dd5be24c55508df96b44210
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 05f8f8a2e647a410847f204270bb6bc4768ed0fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>Тип данных DegenerateMeasureGroupDimension (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет производный тип данных, представляющий связь между вырожденным измерением (то есть измерением фактов) и группы мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет производный тип данных, представляющий связь между вырожденным измерением (то есть измерением фактов) и группой мер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|[RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|  
 |Производные типы данных|None|  
@@ -61,12 +61,12 @@ ms.lasthandoff: 01/08/2018
 |Дочерние элементы|None|  
 |Производные элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Дополнительные сведения об измерениях фактов см. в разделе [связей измерений](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>.  
   
-## <a name="see-also"></a>См. также:  
- [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Службы Analysis Services сценариев типы данных XML в & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

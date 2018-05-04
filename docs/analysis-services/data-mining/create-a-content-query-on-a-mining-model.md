@@ -1,32 +1,23 @@
 ---
 title: Создание запроса содержимого модели интеллектуального анализа данных | Документы Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77cca4b8462befde098dc522067b44131a009fc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e1a41f83a2fb2f4f12c781adbd04a00f706f3e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Создание запроса содержимого к модели интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Запрос содержимого модели интеллектуального анализа данных программным образом с помощью объектов AMO или XML/A, но проще создавать запросы с помощью расширений интеллектуального анализа данных. Также можно создавать запросы к наборам строк схемы интеллектуального анализа данных, устанавливая соединение с экземпляром [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и создавая запрос с помощью динамических административных представлений, предоставляемых службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Запрашивать содержимое модели интеллектуального анализа данных можно программным способом с помощью объектов AMO или XML/A, но легче создать запрос, используя расширения интеллектуального анализа данных. Также можно создавать запросы к наборам строк схемы интеллектуального анализа данных, устанавливая соединение с экземпляром [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и создавая запрос с помощью динамических административных представлений, предоставляемых службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  В следующих процедурах показаны создание запросов к модели интеллектуального анализа данных с помощью расширений интеллектуального анализа данных и способ запроса к наборам строк схемы интеллектуального анализа данных.  
   
@@ -50,9 +41,9 @@ ms.lasthandoff: 01/08/2018
   
      Можно не вводить имя, а выбрать модель интеллектуального анализа данных в **обозревателе объектов** и перетащить его в шаблон.  
   
-6.  В строке `SELECT`  *\<список выбора, список выражений, \* >* , введите имена столбцов в наборе строк схемы содержимого модели интеллектуального анализа данных.  
+6.  В строке `SELECT` *\<список выбора, список выражений, \* >*, введите имена столбцов в наборе строк схемы содержимого модели интеллектуального анализа данных.  
   
-     Чтобы просмотреть список столбцов, которые можно возвратить в запросах содержимого модели интеллектуального анализа данных, см. раздел [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+     Чтобы просмотреть список столбцов, которые можно возвратить в запросах содержимого модели интеллектуального анализа данных, см. раздел [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 7.  При желании можно ввести условие в предложении шаблона WHERE, чтобы ограничить число возвращаемых строк.  
   
@@ -83,8 +74,8 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  Чтобы просмотреть список всех наборов строк схемы, которые можно запросить в текущем экземпляре, используется следующий запрос: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Список наборов строк схемы, относящихся к интеллектуальному анализу данных, см. в разделе [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
-## <a name="see-also"></a>См. также:  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Содержимое модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Наборы строк схемы интеллектуального анализа данных](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

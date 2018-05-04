@@ -1,33 +1,32 @@
 ---
-title: "Создание и управление секциями в базе данных рабочей области | Документы Microsoft"
-ms.custom: 
+title: Создание и управление секциями в базе данных рабочей области | Документы Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc056913fefe9b6847c0aad96957290a3e00d560
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 416181764e71d923a55b6a6dbd0b1448dc619476
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>Создание и управление секциями в базе данных рабочей области 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе демонстрируют создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна **Диспетчер секций** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. В этом разделе задачи описывают создание и управление секциями в базе данных рабочей области модели с помощью **диспетчер секций** в диалоговое окно[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  После завершения развертывания модели в другом экземпляре служб Analysis Services администраторы базы данных могут создавать секции и управлять ими в (развернутой) модели с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   

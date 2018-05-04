@@ -23,20 +23,20 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62ee9e17d9f53d981e5e44918ec690c9abceddbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bbdc0a38b1c29176d68469966e008911fecf3291
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS, набор строк
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перечисляет измерения группы мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Перечисляет измерения группы мер.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **MDSCHEMA_MEASUREGROUP_DIMENSIONS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Имя каталога, которому принадлежит группа мер. Имеет значение**NULL** , если поставщик не поддерживает каталоги.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Не поддерживается.|  
@@ -57,14 +57,14 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|Битовая карта с одним из следующих допустимых значений (необязательно).<br /><br /> 1 Отображается<br /><br /> 2 Не отображается<br /><br /> Значение по умолчанию для ограничения — 1.|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

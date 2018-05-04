@@ -1,36 +1,23 @@
 ---
-title: "Определение данных источника (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Определение данных источника (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- names [Analysis Services], data source views
-- name matching criteria [Analysis Services]
-- Data Source View Wizard
-- data source views [Analysis Services], creating
-ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e245a82dc88c039d723522afd6f504ccbb94cbf9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Определение представления источников данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В представлении источников данных содержится логическая модель схемы, используемой объектами многомерной базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а именно кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
+  В представлении источников данных содержится логическая модель схемы, используемой объектами многомерной базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а именно кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
   
 -   Содержит метаданные, представляющие выбранные объекты из одного или нескольких базовых источников данных, или метаданные, которые будут использоваться для формирования базового реляционного хранилища данных, если при формировании схемы используется нисходящий подход.  
   
@@ -139,13 +126,13 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Определение логических первичных ключей в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Определение именованных вычислений в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Определение именованных запросов в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Замена таблицы или именованного запроса в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Работа с диаграммами в конструкторе представлений источников данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Просмотр данных в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [Удалить представление источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [Определение логических первичных ключей в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Определение именованных вычислений в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Определение именованных запросов в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Замена таблицы или именованного запроса в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Работа с диаграммами в конструкторе представлений источников данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Просмотр данных в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Удаление представления источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Обновление схемы в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

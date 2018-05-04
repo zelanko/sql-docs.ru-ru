@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2c8ff1f7343017b3c7870f963fe2006699f88e9d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dc8b2cf387c9a094a0615b6e7a7ef7e2f4da381b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  Допустимое многомерное выражение, возвращающее иерархию.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Текущим называется элемент, над которым выполняется операция на данном шаге итерации по набору элементов иерархии. **CurrentMember** функция возвращает этот элемент.  
   
 > [!IMPORTANT]  
@@ -88,7 +87,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Изменяется текущий элемент иерархии, используемой по оси в запросе. Таким образом можно также изменить текущий элемент других иерархий того же измерения, которые не используются на оси; Такое поведение называется «автоматическим существованием» и Дополнительные сведения можно найти в [основные понятия многомерных Выражений &#40; Службы Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Например, приведенный ниже запрос показывает, как текущий элемент иерархии «Календарный год» измерения «Дата» изменяется вместе с текущим элементом иерархии «Календарь», когда последняя отображается по оси строк:  
+ Изменяется текущий элемент иерархии, используемой по оси в запросе. Таким образом можно также изменить текущий элемент других иерархий того же измерения, которые не используются на оси; Такое поведение называется «автоматическим существованием» и Дополнительные сведения можно найти в [основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Например, приведенный ниже запрос показывает, как текущий элемент иерархии «Календарный год» измерения «Дата» изменяется вместе с текущим элементом иерархии «Календарь», когда последняя отображается по оси строк:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -130,7 +129,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

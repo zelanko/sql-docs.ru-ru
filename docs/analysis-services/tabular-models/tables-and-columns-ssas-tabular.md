@@ -1,31 +1,30 @@
 ---
-title: "Таблицы и столбцы | Документы Microsoft"
-ms.custom: 
+title: Таблицы и столбцы | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 19f955231a5a68cc52ae9c867d0ea64f9c3daddf
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: b2e0343a01974610ad09a3868bea5a1a20a75bd6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-and-columns"></a>Таблицы и столбцы 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-После добавления в модель таблиц и данных с помощью мастера импорта таблиц можно начать работу с таблицами — добавление новых столбцов данных, создание связей между таблицами, определение вычислений для расширения данных, фильтрацию и сортировку данных в таблицах для упрощения просмотра.  
+  После добавления в модель таблиц и данных с помощью мастера импорта таблиц можно начать работу с таблицами — добавление новых столбцов данных, создание связей между таблицами, определение вычислений для расширения данных, фильтрацию и сортировку данных в таблицах для упрощения просмотра.  
   
  Разделы данной темы:  
   

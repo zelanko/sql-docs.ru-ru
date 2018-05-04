@@ -23,15 +23,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79b6cd2e494f35ac87c3483cb0929721eee13e82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverdatasources-rowset"></a>Набор строк DISCOVER_DATASOURCES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает список XML для аналитики (XMLA) источников данных поставщика, доступных на сервере или веб-службы. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Возвращает список источников данных поставщика XML для аналитики, которые доступны на сервере или в веб-службе. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
   
  При вызове метода [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с **DISCOVER_DATASOURCES** значения перечисления в [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент, **Discover** метод возвращает **DISCOVER_DATASOURCES** набора строк.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  Набор строк **DISCOVER_DATASOURCES** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Ограничение|Description|  
+|Имя столбца|Индикатор типа|Ограничение|Описание|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**Источнику данных**|**DBTYPE_WSTR**|Да|Имя источника данных, такое как **Adventure Works**.|  
 |**DataSourceDescription**|**DBTYPE_WSTR**||Описание источника данных, введенное издателем.<br /><br /> Может возвращать значение **NULL**.|  
@@ -65,9 +65,9 @@ ms.lasthandoff: 01/08/2018
 |Аргумент|Значение|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
-|ADOMDNAME|DataSources|  
+|ADOMDNAME|Коллекция DataSources|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

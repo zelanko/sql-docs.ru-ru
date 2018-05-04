@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9cc86c77bc1f0b33a394cb7151bc29e2fd36ed4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ae6bd946da1ecff32e0c008b86662a51c7e7d9ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationfunction-element-assl"></a>Элемент AggregationFunction (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит статистическую функцию, используемую для типа учетной записи.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит статистическую функцию, используемую для типа счета.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|*Sum*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,13 +63,13 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Учетная запись](../../../analysis-services/scripting/objects/account-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из следующих строк.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Sum*|Статистическая обработка этой меры выполняется с помощью функции **Sum** .|  
-|*Счетчик*|Статистическая обработка этой меры выполняется с помощью функции **Count** .|  
+|*Count*|Статистическая обработка этой меры выполняется с помощью функции **Count** .|  
 |*Min*|Статистическая обработка этой меры выполняется с помощью функции **Min** .|  
 |*Max*|Статистическая обработка этой меры выполняется с помощью функции **Max** .|  
 |*DistinctCount*|Статистическая обработка этой меры выполняется с помощью функции **DistinctCount** .|  
@@ -82,8 +82,8 @@ ms.lasthandoff: 01/08/2018
   
  Перечисление, соответствующее разрешенным значениям для **AggregationFunction** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Учетные записи элемента &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

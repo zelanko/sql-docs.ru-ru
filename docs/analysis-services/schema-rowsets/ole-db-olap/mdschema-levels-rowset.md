@@ -23,20 +23,20 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7eb78b431b77dadfe216db5e30e77e9d5722b2a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 72db28d3ed7197a47f976cf39b9b7f2d2797a7b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemalevels-rowset"></a>Набор строк MDSCHEMA_LEVELS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает каждый уровень в иерархии.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает каждый уровень в конкретной иерархии.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_LEVELS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Имя каталога, которому принадлежит этот уровень. Имеет значение**NULL** , если поставщик не поддерживает каталоги.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Имя схемы, которой принадлежит этот уровень. **Значение NULL** Если поставщик не поддерживает схемы.|  
@@ -71,18 +71,18 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**LEVEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**LEVEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
 |**LEVEL_ORIGIN**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию действует на **MD_USER_DEFINED** и **MD_SYSTEM_ENABLED**|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих значений:<br /><br /> 1 Отображается<br /><br /> 2 Не отображается|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

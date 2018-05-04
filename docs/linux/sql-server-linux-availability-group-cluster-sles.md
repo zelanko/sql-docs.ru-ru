@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a32854d6619cc053d9dc9cfc28a9f17cba479f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка SLES кластера для группы доступности SQL Server
 
@@ -189,16 +188,31 @@ ms.lasthandoff: 04/26/2018
 
 После добавления всех узлов, проверьте, если вам потребуется изменить нет кворума policy в параметрах глобального кластера. Это особенно важно для кластеров с двумя узлами. Дополнительные сведения см. в разделе раздела 4.1.2, параметр нет кворума policy. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Значение свойства кластера start сбой является Неустранимая false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Набор кластеров свойства кластера интервал повторной проверки-
 
-`Start-failure-is-fatal` Указывает ли сбой запуска ресурса на узле предотвращает последующие попытки запуска на этом узле. Если задано значение `false`, кластер решает, следует ли попробуйте запустить на том же узле, еще раз на основании ресурса текущего счетчика и миграции Порог сбоя. Таким образом после перехода на другой ресурс, Pacemaker повторных попыток запуска доступности группы ресурсов прежней основной после экземпляра SQL Server. Pacemaker берет на себя при понижении роли реплики во вторичные и автоматически подключится к группе доступности. Кроме того Если `start-failure-is-fatal` равно `false`, кластер возвращается к настроенным failcount ограничения, настроенные с пороговым значением миграции. Убедитесь, что по умолчанию для порога миграции обновляется соответствующим образом.
+`cluster-recheck-interval` Указывает интервал опроса, по которому проверяется кластера изменения в параметры ресурсов, ограничений или другие параметры кластера. Если реплика отключается, кластера пытается перезапустить реплики с интервалом, ограничивается `failure-timeout` значение и `cluster-recheck-interval` значение. Например если `failure-timeout` составляет 60 секунд и `cluster-recheck-interval` задается 120 секунд, предпринимается попытка перезагрузки с интервалом, больше 60 секунд, но менее 120 секунд. Рекомендуется задать время ожидания сбоя 60s и кластера-повторной проверки interval, значение которого больше, чем 60 секунд. Задавать интервал для повторной проверки кластера на малое значение не рекомендуется.
 
-Чтобы обновить значение свойства false выполнять:
+Чтобы обновить значение свойства `2 minutes` запуска:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-Если свойство имеет значение по умолчанию `true`, если первая попытка запустить ресурс, вмешательство пользователя не требуется после автоматической отработки отказа для очистки количество сбоев ресурсов и сброса конфигурации с помощью: `sudo crm resource cleanup <resourceName>` команды.
+
+> [!IMPORTANT] 
+> При наличии группы доступности, под управлением кластера Pacemaker Обратите внимание, что все распределения, использующих последние доступные Pacemaker пакета 1.1.18-11.el7 внести изменение поведения для начала сбой является Неустранимая кластера, параметр, если его имеет значение false. Это изменение затрагивает рабочий процесс отработки отказа. Если первичная реплика сбоя, ожидается кластера отработки отказа для одной из доступных вторичных реплик. Вместо этого пользователи заметят кластер отслеживает попытке запуска сбоя первичной реплики. Если этой основной никогда не переходит в оперативный режим (из-за постоянного сбоя), кластера никогда не переключается на другой доступной вторичной реплике. Из-за этого изменения, ранее рекомендуемые конфигурации для задания начала сбой является Неустранимая больше не является допустимым, и параметр должен вернуть значение по умолчанию `true`. Кроме того, должен быть обновлен для включения ресурсов AG `failover-timeout` свойство. 
+>
+>Чтобы обновить значение свойства `true` запуска:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Обновить существующие свойство ресурса группы Доступности `failure-timeout` для `60s` запуска (Замените `ag1` на имя вашей группы доступности): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Дополнительные сведения о Pacemaker свойства кластера см. в разделе [Настройка ресурсов кластера](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
@@ -239,22 +253,23 @@ sudo crm configure property stonith-enabled=true
 1. В командной строке crm выполните следующую команду для настройки свойств ресурса.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

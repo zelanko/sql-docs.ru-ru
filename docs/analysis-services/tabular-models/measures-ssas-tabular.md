@@ -1,30 +1,30 @@
 ---
-title: "Меры | Документы Microsoft"
-ms.custom: 
+title: Меры | Документы Microsoft
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 231b9296f5cd6b2a46037f540716c9bdb7a68fc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures"></a>меры
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличных моделях мера представляет собой вычисление, созданное с помощью формулы DAX для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  В табличных моделях мера представляет собой вычисление, созданное при помощи формулы DAX, специально созданной для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
   
 ##  <a name="bkmk_understanding"></a> Преимущества  
  Меры могут быть основаны на стандартных агрегатных функциях, например AVERAGE, COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). В дополнение к формуле каждая мера имеет свойства, определенные типом данных меры, например «Имя», «Сведения о таблице», «Формат» и «Десятичные разряды».  
@@ -76,9 +76,9 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> Свойства мер  
  Каждая мера имеет определяющие ее свойства. Свойства меры вместе со связанными свойствами столбца можно изменить в окне «Свойства». Меры имеют следующие свойства:  
   
-|Свойство|Параметр по умолчанию|Description|  
+|property|Параметр по умолчанию|Описание|  
 |--------------|---------------------|-----------------|  
-|**Описание**|Пусто|Описание меры. Описание не появится с мерой в клиенте отчетов.|  
+|**Description**|Пусто|Описание меры. Описание не появится с мерой в клиенте отчетов.|  
 |**Формат**|Автоматически определяется по типу данных столбца, на который есть ссылка в выражении формулы.|Формат меры. Например, валюта или процент.|  
 |**Формула**|Формула, введенная в строке формул при создании меры.|Формула меры.|  
 |**Имя меры**|Если используется автосуммирование, имя меры предшествует имени столбца и отделено двоеточием. Если введена пользовательская формула, введите имя и двоеточие, затем введите формулу.|Имя меры, как показано в списке полей клиента отчетов.|  
@@ -90,11 +90,11 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание мер и управление ими](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Содержит описание порядка создания мер и управления мерами с помощью сетки мер в конструкторе моделей.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ключевые показатели эффективности](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Создание и управление ими ключевые показатели эффективности](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [Вычисляемые столбцы](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

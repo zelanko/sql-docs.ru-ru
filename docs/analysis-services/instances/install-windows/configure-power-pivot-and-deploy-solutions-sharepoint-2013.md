@@ -1,32 +1,23 @@
 ---
-title: "Настройка Power Pivot и развертывание решений (SharePoint 2013) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology:
-- power-view
-ms.tgt_pltfrm: 
+title: Настройка Power Pivot и развертывание решений (SharePoint 2013) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c0977d23490b9d721b96361e36ef006807e128bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013** , чтобы выполнить следующее.  
+  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   
@@ -62,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
     2.  **Сервер базы данных**. Вы можете использовать ядро СУБД SQL Server, которое поддерживается для фермы SharePoint.  
   
-    3.  **Парольная фраза.**Введите парольную фразу. При создании новой фермы SharePoint парольная фраза будет использоваться при каждом добавлении нового сервера или приложения в ферму SharePoint. Если ферма уже существует, введите парольную фразу, которая позволяет добавить приложение службы в ферму.  
+    3.  **Парольная фраза.** Введите парольную фразу. При создании новой фермы SharePoint парольная фраза будет использоваться при каждом добавлении нового сервера или приложения в ферму SharePoint. Если ферма уже существует, введите парольную фразу, которая позволяет добавить приложение службы в ферму.  
   
     4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для служб Excel**: введите имя сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. При развертывании в конфигурации с одиночным сервером последний совпадает с сервером базы данных. `[ServerName]\powerpivot`  
   
@@ -134,7 +125,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  Нажмите кнопку **ОК**.  
   
- Дополнительные сведения об устранении неполадок обновления данных см. на странице [Устранение неполадок обновления данных Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Дополнительные сведения об устранении неполадок обновления данных см. в разделе [Устранение неполадок обновления данных Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Дополнительные сведения о средстве настройки см. в разделе [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

@@ -1,33 +1,32 @@
 ---
-title: "Набор строк DISCOVER_TRACES | Документы Microsoft"
-ms.custom: 
+title: Набор строк DISCOVER_TRACES | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b32ae25f17cded9f395b7d48e6ae0f9db4dde7b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovertraces-rowset"></a>Набор строк DISCOVER_TRACES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Содержит сведения о трассировках, которые в настоящее время активны на сервере.  
+  Содержит сведения о трассировках, которые в настоящее время активны на сервере.  
   
  **Область применения:** табличные модели, многомерные модели  
   
@@ -36,7 +35,7 @@ ms.lasthandoff: 02/15/2018
   
 |Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
-|**TraceID**|**DBTYPE_WSTR**|Идентификатор трассировки.|  
+|**Числовое обозначение TraceID**|**DBTYPE_WSTR**|Идентификатор трассировки.|  
 |**Имя трассировки**|**DBTYPE_WSTR**|Имя трассировки.|  
 |**LogFileName**|**DBTYPE_WSTR**|Имя файла журнала трассировки.|  
 |**LogFileSize**|**DBTYPE_I4**|Размер файла журнала трассировки.|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 02/15/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**TraceId**|**DBTYPE_I4**|Необязательно.|  
+|**Числовое обозначение TraceId**|**DBTYPE_I4**|Необязательно.|  
 |**Тип**|WSTR|Необязательно.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Использование ADOMD.NET для возврата набора строк  

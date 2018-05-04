@@ -27,15 +27,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7aa94520c72183f4aaf619d252ce7c99f35f2c96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 67c53bb07cfb9144869ce759af25b42b12478107
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="targettype-element-assl"></a>Элемент TargetType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип элемента, определенного в [целевой](../../../analysis-services/scripting/properties/target-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет тип элемента, определенного в [целевой](../../../analysis-services/scripting/properties/target-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|None|  
@@ -63,15 +63,15 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Cube*|Целью действия является куб.|  
 |*Ячейки*|Целью действия является вложенный куб.|  
 |*Набор*|Целью действия является набор.|  
-|*Hierarchy*|Целью действия является иерархия.|  
+|*Иерархия*|Целью действия является иерархия.|  
 |*Level*|Целью действия является уровень.|  
 |*DimensionMembers*|Целью действия является элементы измерения.|  
 |*HierarchyMembers*|Целью действия является элементы иерархии.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
  Элемент, соответствующий родителю параметра **TargetType** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

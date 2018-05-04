@@ -1,31 +1,23 @@
 ---
-title: "Автоматическая проверка существования | Документы Microsoft"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Автоматическая проверка существования | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 655041c87d4cf9009692025f9396a94dd41a2cf1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c179d0824eed23e49a3a1934d60403f049c37e76
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="autoexists"></a>Автоматическая проверка существования
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Концепция *автоматической проверки существования* ограничивает пространство куба теми ячейками, которые фактически существуют в кубе, в противоположность тем ячейкам, которые могут существовать в результате создания всех возможных комбинаций элементов иерархии атрибута, принадлежащих одной иерархии. Это происходит потому, что элементы одной иерархии атрибута не могут существовать в одном измерении с элементами другой иерархии атрибута. Если в инструкции SELECT используются две или более иерархии атрибута одного измерения, службы Analysis Services оценивают эти атрибуты, чтобы убедиться, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов.  
+  Концепция *автоматической проверки существования* ограничивает пространство куба теми ячейками, которые фактически существуют в кубе, в противоположность тем ячейкам, которые могут существовать в результате создания всех возможных комбинаций элементов иерархии атрибута, принадлежащих одной иерархии. Это происходит потому, что элементы одной иерархии атрибута не могут существовать в одном измерении с элементами другой иерархии атрибута. Если в инструкции SELECT используются две или более иерархии атрибута одного измерения, службы Analysis Services оценивают эти атрибуты, чтобы убедиться, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов.  
   
  Например, предположим, что идет работа с атрибутами измерения «Geography». Если существует выражение, возвращающее все элементы атрибута «City», и другое выражение, ограничивающее элементы атрибута «Country» всеми странами Европы, то элементы атрибута «City» будут ограничены только городами, расположенным в странах Европы. Такое поведение определяется характеристиками автоматической проверки существования службы Analysis Services. Автоматическая проверка существования применима только к атрибутам, находящимся в одном измерении, потому что пытается предотвратить включение записей измерения, не включенных в одно выражение с атрибутом, в другое выражение с атрибутом. Автоматическую проверку существования можно также воспринимать как результат пересечения различных выражений с атрибутом по строкам измерения.  
   
@@ -69,7 +61,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Обратите внимание, что 0 используется для обозначения оси столбцов, это сокращение для оси(0), являющейся осью столбцов.  
   
- В предыдущем запросе возвращаются только ячейки для элементов каждой иерархии атрибута в запросе, которые существуют друг с другом. Предыдущий запрос можно записать, используя новую версию функции — [* (Crossjoin) (многомерные выражения)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
+ В предыдущем запросе возвращаются только ячейки для элементов каждой иерархии атрибута в запросе, которые существуют друг с другом. Предыдущий запрос можно записать, используя новую версию \* функции — [* (Crossjoin) (многомерные выражения)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -315,15 +307,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$ 8 568 958,27**|**$ 139 393,27**|**1,63 %**|  
 |**HL Mountain Frame**|**$ 3 365 069,27**|**$ 174,11**|**0,01 %**|  
   
- Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра.  
+ Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра.  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Пространство куба](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Работа с членами, кортежей и наборов &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Работа с членами, кортежей и наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Визуальные и невизуальные итоги](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Многомерные выражения &#40; Многомерные Выражения &#41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Многомерные выражения & #40; Многомерные Выражения & #41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

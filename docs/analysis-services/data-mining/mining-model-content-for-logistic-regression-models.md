@@ -1,35 +1,34 @@
 ---
-title: "Модель интеллектуального анализа данных для моделей логистической регрессии | Документы Microsoft"
-ms.custom: 
+title: Модель интеллектуального анализа данных для моделей логистической регрессии | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f42fec52f018d2fde3286bf6cfbf57f399557cd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+  В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Основные сведения о структуре модели логистической регрессии  
  Модель логистической регрессии создается алгоритмом нейронной сети (Майкрософт) с параметрами, которые исключают из модели скрытый узел. Таким образом, общая структура модели логистической регрессии почти идентична структуре нейронной сети: каждая модель имеет один родительский узел, представляющий модель и ее метаданные, а также специальный узел граничной статистики (NODE_TYPE = 24), который содержит описательную статистику о входных атрибутах, используемых в модели.  
@@ -192,7 +191,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Содержимое модели интеллектуального анализа данных для модели нейронной сети & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов модели логистической регрессии](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Технический справочник по алгоритму логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   

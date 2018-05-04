@@ -23,20 +23,20 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 43ec669b0b72775645f12ff51d0e4ede962b7700
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7243eae7198e9ae22df7fc661f005b51eb8db02e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemaproperties-rowset"></a>Набор строк MDSCHEMA_PROPERTIES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает свойства элементов в пределах базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает свойства элементов в базе данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_PROPERTIES** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Имя базы данных.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Имя схемы, которой принадлежит это свойство. **Значение NULL** Если поставщик не поддерживает схемы.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1.  Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**PROPERTY_VISIBILITY**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 Отображается<br /><br /> 2 Не отображается|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

@@ -1,36 +1,23 @@
 ---
-title: "Добавить вложенную таблицу к структуре интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Добавить вложенную таблицу к структуре интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tables [Analysis Services], nested
-- nested tables
-- mining structures [Analysis Services], nested tables
-- adding nested tables
-ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5495f39dfd44c27326592f2efe34e66f4392440
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 351b45ba30b58373101fdd3afd85964cb39889ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>добавить вложенную таблицу в структуру интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Используйте конструктор интеллектуального анализа данных, чтобы добавить к структуре вложенную таблицу, предварительно созданную мастером интеллектуального анализа данных.  
+  Используйте конструктор интеллектуального анализа данных, чтобы добавить к структуре вложенную таблицу, предварительно созданную мастером интеллектуального анализа данных.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Добавление вложенной таблицы в структуру интеллектуального анализа данных  
   

@@ -23,15 +23,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0be0cb9885cf48911a31ba4181a235eae032094b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2a1d5135a421ab691e9801f652aca47108a64af7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverenumerators-rowset"></a>Набор строк DISCOVER_ENUMERATORS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает список имен, типов данных и значений перечисления, поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика для конкретного источника данных. Поставщик XMLA публикует все распознаваемые им константы перечисления.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Возвращает список имен, типов данных и значений перечисления, поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика для конкретного источника данных. Поставщик XMLA публикует все распознаваемые им константы перечисления.  
   
  При вызове метода [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с **DISCOVER_ENUMERATORS** значения перечисления в [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент, **Discover** метод возвращает **DISCOVER_ENUMERATORS** набора строк схемы.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
  **DISCOVER_ENUMERATORS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**Имя_перечисления**|**DBTYPE_WSTR**||Имя перечислителя, который содержит набор значений.|  
 |**EnumDescription**|**DBTYPE_WSTR**||Локализованное описание перечислителя. Может быть **NULL**.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 |-----------------|--------------------|-----------------------|  
 |**Имя_перечисления**|**DBTYPE_WSTR**||  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

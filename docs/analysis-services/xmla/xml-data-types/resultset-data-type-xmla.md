@@ -29,15 +29,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6fd063f8a32fbd65ef806d624a7f82d9b154f3e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 428d96d2f664a08ce6dc6160cd2fa86cf5e6e202
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resultset-data-type-xmla"></a>Тип данных Resultset (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет абстрактный примитивный тип данных, представляющий данные, возвращенные из [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет абстрактный примитивный тип данных, представляющий данные, возвращенные из [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis:resultset  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md), [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md), [набора строк](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|  
@@ -66,10 +66,10 @@ ms.lasthandoff: 01/08/2018
 |Дочерние элементы|[Исключение](../../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md), [сообщения](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)|  
 |Производные элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Тип данных **Resultset** представляет собой описывающий сам себя результирующий набор XML, который может включать и схему, и данные, в зависимости от типа возвращаемых данных.  
   
-## <a name="see-also"></a>См. также:  
- [Типы данных XML &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+## <a name="see-also"></a>См. также  
+ [Типы данных XML &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

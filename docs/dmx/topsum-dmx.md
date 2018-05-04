@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c3f3a81f804673fa0f9586a224d881b284719ebf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5d0d11002b837410274b85dbb3d0920a5ccd59b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topsum-dmx"></a>TopSum (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Таблица выражения >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **TopSum** функция возвращает верхние строки в порядке убывания их ранга на основе вычисленного значения \<ранжирования выражения > аргумент для каждой строки таким образом, что сумма \<ранжирования выражения > значения составляет не менее больше суммы, который задается параметром \<сумма > аргумент. **TopSum** возвращает возможные наименьшее количество элементов, соответствующих указанному значению суммы.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,9 +111,9 @@ NATURAL PREDICTION JOIN
   
  **Примечание** этот пример приведен только для иллюстрации применения функции **TopSum**. В зависимости от размера набора данных выполнение данного запроса может занять значительное время.  
   
-## <a name="see-also"></a>См. также:  
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)   
- [TopPercent &#40; расширений интеллектуального анализа данных &#41;](../dmx/toppercent-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [TopPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/toppercent-dmx.md)  
   
   

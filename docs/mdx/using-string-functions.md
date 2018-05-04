@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf114f9b706497512f10e3629e871ba64ecaaee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-string-functions"></a>Использование строковых функций
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -112,13 +111,13 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  **StrToMember** и **StrToSet** функции следует использовать с осторожностью. Их использование в определениях вычислений может привести к снижению производительности запросов.  
   
-## <a name="see-also"></a>См. также:  
- [Создать &#40; Многомерные Выражения &#41;](../mdx/generate-mdx.md)   
- [Имя &#40; Многомерные Выражения &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; Многомерные Выражения &#41;](../mdx/uniquename-mdx.md)   
- [Функции &#40; Синтаксис многомерных Выражений &#41;](../mdx/functions-mdx-syntax.md)   
- [С помощью хранимых процедур &#40; Многомерные Выражения &#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40; Многомерные Выражения &#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40; Многомерные Выражения &#41;](../mdx/strtoset-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Создание &#40;многомерных Выражений&#41;](../mdx/generate-mdx.md)   
+ [Имя &#40;многомерных Выражений&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;многомерных Выражений&#41;](../mdx/uniquename-mdx.md)   
+ [Функции &#40;синтаксис многомерных Выражений&#41;](../mdx/functions-mdx-syntax.md)   
+ [С помощью хранимых процедур &#40;многомерных Выражений&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;многомерных Выражений&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;многомерных Выражений&#41;](../mdx/strtoset-mdx.md)  
   
   

@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 152ccc8fa7194676d65bdf03239969b7a8201c86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ade62bf6417d50ca47a9fc00ded49634ff34936f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customrollup-element-xmla"></a>Элемент CustomRollup (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит формулу пользовательской свертки для элемента атрибута, представленного родительским [атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит формулу пользовательской свертки для элемента атрибута, представленного родительским [атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,27 +52,27 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|String|  
+|Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
+|Родительские элементы|[Атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент **CustomRollup** содержит многомерное выражение, которое определяет поведение свертки элемента атрибута, определенного родительским элементом **Attribute** .  
   
- Дополнительные сведения о Многомерных выражениях см. в разделе [выражения &#40; Многомерные Выражения &#41; ](../../../mdx/expressions-mdx.md).  
+ Дополнительные сведения о Многомерных выражениях см. в разделе [выражения & #40; Многомерные Выражения & #41; ](../../../mdx/expressions-mdx.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Вставить элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Обновить элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Вставить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Обновить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

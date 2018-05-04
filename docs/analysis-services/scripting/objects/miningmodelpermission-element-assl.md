@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f4792a244335a1cd6f325e7c09637426e5331ee0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 98fe11a0d557739517f672d95bf24e77417f255d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="miningmodelpermission-element-assl"></a>Элемент MiningModelPermission (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет разрешения членов [роли](../../../analysis-services/scripting/objects/role-element-assl.md) имеют для отдельных [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет разрешения членов [роли](../../../analysis-services/scripting/objects/role-element-assl.md) имеют для отдельных [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|[Разрешение](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
 |Значение по умолчанию|None|  
@@ -65,18 +65,18 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[MiningModelPermissions](../../../analysis-services/scripting/collections/miningmodelpermissions-element-assl.md)|  
 |Дочерние элементы|[AllowBrowsing](../../../analysis-services/scripting/properties/allowbrowsing-element-assl.md), [AllowDrillThrough](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно включить детализацию в структурах интеллектуального анализа данных, добавив **AllowDrillthrough** право [MiningStructurePermissions](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md) коллекции. Если **AllowDrillthrough** включен в структуре интеллектуального анализа данных и модели интеллектуального анализа данных, любой член роли, имеющей [элемент AllowDrillThrough &#40; ASSL &#41; ](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) для модели разрешения запросов к модели интеллектуального анализа данных и возвращать столбцы структуры, которые не были включены в модель, используя следующий синтаксис:  
+## <a name="remarks"></a>Замечания  
+ В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно включить детализацию в структурах интеллектуального анализа данных, добавив **AllowDrillthrough** право [MiningStructurePermissions](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md) коллекции. Если **AllowDrillthrough** включен в структуре интеллектуального анализа данных и модели интеллектуального анализа данных, любой член роли, имеющей [элемент AllowDrillThrough &#40;ASSL&#41; ](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) можно запрашивать разрешения на модель модели интеллектуального анализа данных и возвращать столбцы структуры, которые не были включены в модель, используя следующий синтаксис:  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- Поэтому, чтобы защитить конфиденциальные или персональные данные, разрешение **AllowDrillthrough** для модели интеллектуального анализа данных следует предоставлять только при необходимости. Дополнительные сведения см. в разделе [AllowDrillThrough, элемент &#40; ASSL &#41; ](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md).  
+ Поэтому, чтобы защитить конфиденциальные или персональные данные, разрешение **AllowDrillthrough** для модели интеллектуального анализа данных следует предоставлять только при необходимости. Дополнительные сведения см. в разделе [элемент AllowDrillThrough &#40;ASSL&#41;](../../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md).  
   
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.MiningModelPermission>.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

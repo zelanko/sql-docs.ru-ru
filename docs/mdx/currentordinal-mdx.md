@@ -20,12 +20,11 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f3ce47ba796d9b4e81588baaa7c21cba2f5a4aa7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2588ae7f6e6e2037960e4c5ca1a865244d6851cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При итерации по набору, такие как с [Filter (многомерные Выражения)](../mdx/filter-mdx.md) или [Generate (многомерные Выражения)](../mdx/generate-mdx.md) функции, **CurrentOrdinal** функция возвращает номер итерации.  
   
 ## <a name="examples"></a>Примеры  
@@ -93,7 +92,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

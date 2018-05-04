@@ -1,43 +1,23 @@
 ---
-title: "Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса Майкрософт упрощенного | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса Майкрософт упрощенного | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- discrimination [Analysis Services]
-- naive bayes model [Analysis Services]
-- Bayesian classifiers
-- mining model content, viewing
-- predictive modeling [Analysis Services]
-- Naive Bayes Viewer [Analysis Services]
-- data mining [Analysis Services], predictive modeling
-- Microsoft Naive Bayes Viewer
-- histograms [Analysis Services]
-- mining models [Analysis Services], predictive modeling
-- dependencies [Analysis Services]
-ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77b9857488d3574338f7eaee0815082ea3ac690c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1e501269dfea1c72416236f750f451122b36dc40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Средство просмотра упрощенного алгоритма Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены по упрощенным алгоритмам Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, хорошо адаптирующийся к задачам прогнозирующего моделирования. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
+  Средство просмотра упрощенного алгоритма Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены по упрощенным алгоритмам Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, хорошо адаптирующийся к задачам прогнозирующего моделирования. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
   
  Ввиду того что одной из главных задач упрощенной модели Байеса является предоставление способа быстрого просмотра данных в наборе, средство просмотра упрощенных алгоритмов Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) содержит несколько методов отображения взаимодействия между прогнозируемыми и входными атрибутами.  
   

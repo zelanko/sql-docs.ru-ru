@@ -24,12 +24,11 @@ caps.latest.revision: 108
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bc5ed5d56541436e80eeafdccb1b1cdfe3ec6c9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 03167b2b5544b4800cde32bed572f51bc82bd077
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +182,7 @@ sp_addarticle [ @publication = ] 'publication'
  Предложение ограничения (WHERE), которое задает горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause* — **ntext**, значение по умолчанию NULL. Дополнительные сведения см. в статье [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md).  
   
  [  **@schema_option =**] *schema_option*  
- Битовая маска параметра формирования схемы для данной статьи. *schema_option* — **binary(8)**и может быть [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) над одним или несколькими из следующих значений:  
+ Битовая маска параметра формирования схемы для данной статьи. *schema_option* — **binary(8)** и может быть [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) над одним или несколькими из следующих значений:  
   
 > [!NOTE]  
 >  Если этот аргумент равен NULL, система автоматически создает допустимый параметр создания схемы на основе других свойств статьи. **Параметры схемы по умолчанию** таблицы, указанной в заметках для метода показывает значение, которое выбирается в зависимости от сочетание типа статьи и типа репликации.  

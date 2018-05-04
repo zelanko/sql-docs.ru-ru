@@ -1,34 +1,23 @@
 ---
-title: "Предоставление разрешений на обработку (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Предоставление разрешений на обработку (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], process
-- process permissions [Analysis Services]
-ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b2cde8f68861eb47766b13cf95fb51a4fd2a6969
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Предоставление разрешений доступа (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В качестве администратора вы можете создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, которые используются для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  
+  В качестве администратора вы можете создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, которые используются для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  
   
  Разрешения предоставляются через роли, которые связывают объекты с разрешениями и учетными записями пользователи или группы Windows. Помните о том, что разрешения являются аддитивными. Если одна роль предоставляет разрешение на обработку куба, в то время как вторая роль предоставляет этому же пользователю разрешение на обработку измерения, разрешения от двух разных ролей соединяются для предоставления пользователю разрешения как на обработку куба, как и на обработку определенного измерения в рамках этой базы данных.  
   
@@ -99,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
  [Обработка базы данных, таблицы или секции (службы Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Предоставление разрешений базы данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Предоставление разрешений на чтение описания метаданным объекта &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Предоставление разрешений базы данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Предоставление разрешений на чтение описания метаданным объекта & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -1,31 +1,30 @@
 ---
-title: "MergePartitions, команда (TMSL) | Документы Microsoft"
-ms.custom: 
+title: MergePartitions, команда (TMSL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 510baf2b4fdbebf7a6e4b33022ba15ced4b18ef3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>MergePartitions, команда (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Выполняет слияние данных из одного или нескольких исходных секций в целевую секцию, а затем удаляет исходной секции. SQL-запрос целевой секции не будет обновляться в ходе операции слияния. Чтобы убедиться, что последующая обработка секции получает все данные, следует изменить запрос, чтобы он выбирает все данные в объединенной секции.  
+  Выполняет слияние данных из одного или нескольких исходных секций в целевую секцию, а затем удаляет исходной секции. SQL-запрос целевой секции не будет обновляться в ходе операции слияния. Чтобы убедиться, что последующая обработка секции получает все данные, следует изменить запрос, чтобы он выбирает все данные в объединенной секции.  
   
 ## <a name="request"></a>Запрос  
  Необходимо указать базу данных, таблицы и исходной и целевой секциях. Объединять можно только секции из одной таблицы.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 02/23/2018
  Возвращает пустой результирующий после успешного завершения команды. В противном случае возвращается исключение XML для Аналитики.  
   
 ## <a name="usage-endpoints"></a>Использование (конечные точки)  
- Этот элемент команды используется в инструкции [выполнить метод &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова через конечную точку XML для Аналитики, предоставляемых одним из следующих способов:  
+ Этот элемент команды используется в инструкции [выполнить метод &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова через конечную точку XML для Аналитики, предоставляемых одним из следующих способов:  
   
 -   Как окно XMLA в SQL Server Management Studio (SSMS)  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 02/23/2018
   
  Готовый сценарий для этой команды можно создать в среде SSMS.  Например, можно щелкнуть **сценарий** в диалоговом окне Управление секциями.  
   
- [ \[MS-SSAS-T\]: Менное сервера служб Analysis Services табличной (SQL Server технические Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) документ содержит раздел 3.1.5.2.2, в котором описывается структура команд JSON табличных метаданных и объектов. В настоящее время этот документ охватывает команды и возможности, которые еще не реализована в сценарии TMSL. См. в разделе [языке скриптов табличных моделей &#40; TMSL &#41; Справочник по](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) для дополнительной информации о том, что поддерживается  
+ [ \[MS-SSAS-T\]: Менное сервера служб Analysis Services табличной (SQL Server технические Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) документ содержит раздел 3.1.5.2.2, в котором описывается структура команд JSON табличных метаданных и объектов. В настоящее время этот документ охватывает команды и возможности, которые еще не реализована в сценарии TMSL. См. в разделе [языке скриптов табличных моделей &#40;TMSL&#41; ссылки](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) для дополнительной информации о том, что поддерживается  
 
 ## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   

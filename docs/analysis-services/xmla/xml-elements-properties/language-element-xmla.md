@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 11984905bb11448216e56476f07ef2e04bf6c64c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 04a72dad6abb8cb36ac6585937957a7b61d217dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-element-xmla"></a>Элемент Language (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит идентификатор языка (LCID) для родительского [перевода](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит идентификатор языка (LCID) для родительского [перевода](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Целочисленный|  
 |Значение по умолчанию|None|  
@@ -65,13 +65,13 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Перевод](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Язык** элемент указывает код языка, используемый родительским **перевода** элемента, который требуется назначить **имя** родителя **перевода** элемент для элемента атрибута для указанного языка, во время **вставить** или **обновление** команды.  
   
-## <a name="see-also"></a>См. также:  
- [Вставить элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Элемент Name &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
- [Обновить элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Вставить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Элемент Name &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
+ [Обновить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

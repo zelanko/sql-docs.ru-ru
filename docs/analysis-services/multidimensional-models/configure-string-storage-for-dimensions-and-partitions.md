@@ -1,31 +1,23 @@
 ---
-title: "Настройка хранилища строк для измерений и секций | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка хранилища строк для измерений и секций | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9585c5a2535148cc7e1984c3d911794a4dbe0bdc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Настройка хранилища строк для измерений и секций
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Можно изменить конфигурацию хранилища строк, чтобы оно обеспечивало хранение очень больших строк в атрибутах измерений или секциях, превышающих предельный размер файла в 4 ГБ для хранилищ строк. Если измерения или секции содержат хранилища строк такого размера, можно обойти ограничение размера файла, изменив свойство **StringStoresCompatibilityLevel** на уровне измерения или секции для локальных, а также связанных объектов (локальных или удаленных).  
+  Можно изменить конфигурацию хранилища строк, чтобы оно обеспечивало хранение очень больших строк в атрибутах измерений или секциях, превышающих предельный размер файла в 4 ГБ для хранилищ строк. Если измерения или секции содержат хранилища строк такого размера, можно обойти ограничение размера файла, изменив свойство **StringStoresCompatibilityLevel** на уровне измерения или секции для локальных, а также связанных объектов (локальных или удаленных).  
   
  Обратите внимание, что можно увеличить хранилище строк только на тех объектах, которые требуют дополнительной емкости. В большинстве многомерных моделях строковые данные связаны с измерениями. Однако разделы, содержащие меры числа различных объектов на основе строк, также могут выиграть от этого параметра. Поскольку этот параметр для строк, числовые данные не затрагиваются.  
   
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Средства и способы обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Параметры обработки и параметры &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Параметры обработки и параметры & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Обработка и режимы хранения секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Хранение измерений](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

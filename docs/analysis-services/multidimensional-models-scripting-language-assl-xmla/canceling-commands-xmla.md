@@ -1,41 +1,19 @@
 ---
-title: "Отмена команд (XMLA) | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- connections [XML for Analysis]
-- associated connections [XML for Analysis]
-- XML for Analysis, canceling
-- associated sessions [XML for Analysis]
-- canceling connections
-- canceling commands
-- canceling sessions
-- SPID
-- XMLA, canceling
-- server process IDs [XML for Analysis]
-- sessions [XML for Analysis]
-ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: 
-author: Minewiskan
+title: Отмена команд (XMLA) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d69c53f0f34ba19e822b45f618fe1f799ef69ad6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="canceling-commands-xmla"></a>Отмена команд (XMLA)
   В зависимости от того, какие административные разрешения пользователя, выполняющего команду [отменить](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) команды в формате XML для аналитики (XMLA) может отменить команду на сеанс, сеанс, соединение, серверный процесс или связанного с ним сеанса или соединение.  
@@ -69,7 +47,7 @@ ms.lasthandoff: 02/15/2018
  Можно задать [CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md) значение true для отмены соединения, сеансы и команды, связанные с подключением, сеанса или идентификатором SPID, указанным в **отменить** команды.  
   
 ## <a name="see-also"></a>См. также  
- [Обнаружение метод &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
+ [Метод Discover &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

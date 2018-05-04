@@ -1,34 +1,23 @@
 ---
-title: "Создание вычислений ячеек с областью действия запроса (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание вычислений ячеек с областью действия запроса (многомерные Выражения) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- WITH keyword
-- query-scoped cell calculations [MDX]
-ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 72d0b1bceafcf65ce32dfd746e4498301cbc0afb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Вычисления многомерных Выражений ячейки - вычислений ячеек с областью действия запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Ключевое слово **WITH** в многомерном выражении описывает вычисляемые ячейки в контексте запроса. Синтаксис ключевого слова **WITH** имеет следующий вид:  
+  Ключевое слово **WITH** в многомерном выражении описывает вычисляемые ячейки в контексте запроса. Синтаксис ключевого слова **WITH** имеет следующий вид:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -61,6 +50,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  С другой стороны, многомерное выражение обрабатывает формулу вычисления всякий раз, когда в кубе выполняется запрос многомерных выражений, работающий с ячейками, входящими в определение вычисляемых ячеек. Такая обработка выполняется независимо от области при создании определения.  
   
 ## <a name="see-also"></a>См. также  
- [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

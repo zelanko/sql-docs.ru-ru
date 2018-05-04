@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8e86dcb2428468e7f187638efa03252489974a08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4109e8241babdb49a53a233360092308b11c616b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +44,13 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Счетчик*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если числовое выражение указано, эта функция сортирует кортежи заданного набора по значениям числового выражения, вычисленного над набором, в порядке возрастания. **BottomCount** затем функция возвращает заданное количество кортежей с наименьшими значениями.  
   
 > [!IMPORTANT]  
@@ -74,7 +73,7 @@ WHERE
     [Measures].[Reseller Order Quantity]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

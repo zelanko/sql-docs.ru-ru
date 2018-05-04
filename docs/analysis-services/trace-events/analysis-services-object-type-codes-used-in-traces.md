@@ -1,31 +1,30 @@
 ---
-title: "Коды типов, используемые для трассировки объектов служб Analysis Services | Документы Microsoft"
-ms.custom: 
+title: Коды типов, используемые для трассировки объектов служб Analysis Services | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 78a0ca43a89f728a9db0f7adfcf1e3c7de139d10
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Коды типов объектов служб Analysis Services, используемые для трассировки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-На этой странице перечислены типы всех объектов (шестизначное число) модели данных служб Analysis Services. Эти коды отображаются в журналах трассировки и используются для определения типа объекта, связанного с определенной блокировкой. Например, время ожидания блокировки в базе данных будет указывать на тип объекта 100002, который является типом объекта базы данных.  
+  На этой странице перечислены типы всех объектов (шестизначное число) модели данных служб Analysis Services. Эти коды отображаются в журналах трассировки и используются для определения типа объекта, связанного с определенной блокировкой. Например, время ожидания блокировки в базе данных будет указывать на тип объекта 100002, который является типом объекта базы данных.  
   
 > [!NOTE]  
 >  Ниже перечислено большее число кодов, чем в действительности будет отображаться в журнале трассировки. Ниже представлен полный список кодов типов для каждого объекта, но только те объекты, которые будут заблокированы, будут представлять код типа объекта в журнале трассировки.  

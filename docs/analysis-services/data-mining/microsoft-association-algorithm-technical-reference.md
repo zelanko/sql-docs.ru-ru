@@ -1,16 +1,16 @@
 ---
-title: "Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документы Microsoft"
-ms.custom: 
+title: Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0348ee5904b860b3e2c62b650eef5c6005880d36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
+  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
   
  Оба алгоритма (алгоритм деревьев принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] и алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) можно использовать для анализа взаимосвязей, но правила, обнаруженные каждым из алгоритмов, могут отличаться. В модели дерева принятия решений разбиение на узлы, ведущие к определенным правилам, проводится в соответствии с полученной информацией. В модели взаимосвязей правила основаны на достоверности. Поэтому в модели взаимосвязей сильное правило, или правило с высокой достоверностью, не обязательно будет интересным, поскольку оно может не предоставлять никакой новой информации.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 02/15/2018
  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на работу, производительность и точность итоговой модели интеллектуального анализа данных.  
   
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
- Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также изменить параметры программным образом с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [MiningModels, элемент &#40; ASSL &#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
+ Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также изменить параметры программным образом с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
   
 > [!NOTE]  
 >  Изменить параметры существующей модели с помощью инструкций на языке расширений интеллектуального анализа данных нельзя. Нужно задать параметры в инструкциях DMX CREATE MODEL или ALTER STRUCTURE… ADD MODEL при создании модели.  
@@ -171,6 +170,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

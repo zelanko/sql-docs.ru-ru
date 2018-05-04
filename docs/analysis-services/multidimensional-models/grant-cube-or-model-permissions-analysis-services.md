@@ -1,37 +1,23 @@
 ---
 title: Предоставление разрешений кубу или модели (службы Analysis Services) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cubes
-- cubes [Analysis Services], security
-- read/write permissions
-- permissions [Analysis Services], cubes
-ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e15e73da6c4c4a064a6730873dd866b87d5727d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 75b810d559b167e3f6db6ff6bdd22b41e397f6a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Предоставление разрешений кубу или модели (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Куба или табличной модели является основным объектом запроса в модели данных служб Analysis Services. При подключении к многомерным или табличным данным из Excel для просмотра данных ad hoc, пользователи обычно начинают с выбора определенного куба или табличной модели в качестве структуры данных Сводного объекта отчета. Данная тема объясняет, как предоставить необходимые разрешения для доступа к кубу или табличным данным.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Куб или табличная модель являются основным объектом запроса в модели данных службы Analysis Service.   При подключении к многомерным или табличным данным из Excel для просмотра данных ad hoc, пользователи обычно начинают с выбора определенного куба или табличной модели в качестве структуры данных Сводного объекта отчета. Данная тема объясняет, как предоставить необходимые разрешения для доступа к кубу или табличным данным.  
   
  По умолчанию, никто, кроме Администратора Сервера или Администратора Базы данных не имеет разрешения давать запросы кубу в базе данных. Доступ к кубу без прав администратора требует членство в роли, созданной для базы данных, содержащей куб. Членство поддерживается для пользователя Windows или для учетных записей групп, определенных либо в службе Active Directory, либо на локальном компьютере.    Перед тем как начать, определите, какие учетные записи будут назначены как членские в ролях, которые вы собираетесь создать.  
   
@@ -106,9 +92,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-step"></a>Следующий шаг  
  Мы можете детализировать разрешения куба для ограничения доступа к ячейке или данным измерения. Дополнительные сведения см. в разделах [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) и [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Предоставление разрешений на &#40; структур интеллектуального анализа данных и моделей Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Предоставление разрешений на структуры интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Предоставление разрешений на объект источника данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

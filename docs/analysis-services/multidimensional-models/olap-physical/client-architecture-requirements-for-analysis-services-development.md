@@ -1,36 +1,19 @@
 ---
-title: "Разработка служб требования к архитектуре клиента для анализа | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- local mining models [Analysis Services]
-- Analysis Services, architecture
-- providers [Analysis Services]
-- data pumps [Analysis Services]
-- client architecture [Analysis Services]
-- local cubes [Analysis Services]
-ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 
-author: Minewiskan
+title: Разработка служб требования к архитектуре клиента для анализа | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63ba4a3a70f7fe763c33e05c30f186efa809d19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Требования к архитектуре клиента для разработки служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 |Языки платформы .NET|ADO MD.NET|  
 |Любой язык с поддержкой SOAP|XML для аналитики|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] содержит веб-архитектурой с полностью масштабируемым промежуточным уровнем для развертывания в больших и малых организациях. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляют широкий спектр средств поддержки среднего уровня для веб-служб. Приложения ASP поддерживаются в OLE DB для OLAP и ADO MD, приложения ASP.NET поддерживаются ADOMD.NET. Средний уровень, проиллюстрированный на приведенном ниже рисунке, масштабируется для одновременной поддержки большого количества пользователей.  
+ Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] отличаются веб-архитектурой с полностью масштабируемым средним уровнем для развертывания как в больших, так и в малых организациях. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляют широкий спектр средств поддержки среднего уровня для веб-служб. Приложения ASP поддерживаются в OLE DB для OLAP и ADO MD, приложения ASP.NET поддерживаются ADOMD.NET. Средний уровень, проиллюстрированный на приведенном ниже рисунке, масштабируется для одновременной поддержки большого количества пользователей.  
   
  ![Логическая диаграмма архитектуры среднего уровня](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "Логическая диаграмма архитектуры среднего уровня")  
   
@@ -62,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Службы Analysis Services в табличном режиме или режиме интеграции с SharePoint.  
  В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], сервер может быть запущен в режиме подсистемы vertipaq аналитики в памяти xVelocity для табличных баз данных, а также для [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] книг, которые были опубликованы на сайте SharePoint.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — единственные клиентские среды, которые поддерживаются для создания и выполнения запросов в памяти баз данных, использующих SharePoint или Табличный режим соответственно. Встроенный [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] база данных, создаваемая с помощью Excel и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства содержится в книге Excel и сохраняется как часть Excel XLSX-файл.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — единственные клиентские среды, которые поддерживаются при создании размещенных в памяти баз данных, использующих режим SharePoint или табличный режим соответственно. Встроенный [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] база данных, создаваемая с помощью Excel и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства содержится в книге Excel и сохраняется как часть Excel XLSX-файл.  
   
  Однако в книге [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] могут использоваться данные, которые хранятся в традиционном кубе, если данные куба импортированы в книгу. Кроме того, можно импортировать данные из другой книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], если она была опубликована на сайте SharePoint.  
   

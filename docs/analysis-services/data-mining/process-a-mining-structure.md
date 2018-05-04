@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
@@ -18,15 +18,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0b57ba89ce1244a794c48e26c962acc8ed6419b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d47f0b304e96231af7db50861ac7d2612567986c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-a-mining-structure"></a>обработать структуру интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Прежде чем можно просматривать или работы с моделями интеллектуального анализа данных, связанные со структурой интеллектуального анализа данных, необходимо развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта и обработать структуру интеллектуального анализа данных и моделей интеллектуального анализа данных. Также при внесении изменений в структуру интеллектуального анализа данных или модель интеллектуального анализа данных будет выдано приглашение к их повторному развертыванию и обработке. При обработке структуры на вкладке **Структура интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] обрабатываются все связанные с ней модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Перед тем как получить возможность просмотра или работы с моделями интеллектуального анализа данных, связанными со структурой интеллектуального анализа данных, необходимо развернуть проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обработать структуру интеллектуального анализа данных, а также модель интеллектуального анализа данных. Также при внесении изменений в структуру интеллектуального анализа данных или модель интеллектуального анализа данных будет выдано приглашение к их повторному развертыванию и обработке. При обработке структуры на вкладке **Структура интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] обрабатываются все связанные с ней модели.  
   
  Обработка структуры интеллектуального анализа данных производится с помощью следующих средств.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  Нажмите кнопку **закрыть** в **Обработка структуры интеллектуального анализа данных — \<структуры >** диалоговое окно.  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также  
+ [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

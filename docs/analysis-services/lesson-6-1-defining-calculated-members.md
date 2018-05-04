@@ -1,29 +1,28 @@
 ---
-title: "Определение вычисляемых элементов | Документы Microsoft"
-ms.custom: 
+title: Определение вычисляемых элементов | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ca85c5105a56b180cd819dbf35a55ec5238b73ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Урок 6-1-Определение вычисляемых элементов
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +96,7 @@ ms.lasthandoff: 02/15/2018
   
 12. На панели инструментов вкладки **Вычисления** нажмите кнопку **Представление формы**, убедитесь в том, что в области **Организатор скриптов** выбран показатель **[Итоговая сумма продаж]** , и нажмите кнопку **Создать вычисляемый элемент**.  
   
-13. Измените имя нового вычисляемого элемента на **[Общая стоимость продукции]**и создайте следующее выражение в поле **Выражения** :  
+13. Измените имя нового вычисляемого элемента на **[Общая стоимость продукции]** и создайте следующее выражение в поле **Выражения** :  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -177,7 +176,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  На панели инструментов вкладки **Вычисления** нажмите кнопку **Представление формы**.  
   
-2.  На панели **Организатор скриптов** выберите показатель **[Итоговый коэффициент валовой прибыли]**и нажмите кнопку **Создать вычисляемый элемент** на панели инструментов вкладки **Вычисления** .  
+2.  На панели **Организатор скриптов** выберите показатель **[Итоговый коэффициент валовой прибыли]** и нажмите кнопку **Создать вычисляемый элемент** на панели инструментов вкладки **Вычисления** .  
   
     Выбор последнего вычисляемого элемента на панели **Организатор скриптов** перед нажатием кнопки **Создать вычисляемый элемент** гарантирует, что новый вычисляемый элемент будет добавлен в конец скрипта. Скрипты выполняются в том порядке, в котором они отображаются на панели **Организатор скриптов** .  
   

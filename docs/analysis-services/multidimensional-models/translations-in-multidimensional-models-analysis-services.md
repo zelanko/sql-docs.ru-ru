@@ -1,32 +1,23 @@
 ---
 title: Переводы в многомерных моделях (службы Analysis Services) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
-ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cc30acc4714029cd91a4c35028835ae99d561140
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Переводы в многомерных моделях (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно определить переводы в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , воспользовавшись соответствующим конструктором для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов, которые будут преобразованы. При определении перевода создается объект **Translation** , связанный с соответствующим объектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обладающий указанными явными символьными значениями (на выбранном языке) для свойств связанного объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Можно определить переводы в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , воспользовавшись соответствующим конструктором для объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который нужно перевести. При определении перевода создается объект **Translation** , связанный с соответствующим объектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обладающий указанными явными символьными значениями (на выбранном языке) для свойств связанного объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>Элементы многоязычной модели данных.  
  Модели данных, используемой в многоязычном решении, нужны не только переведенные метки (имена полей и описания). Также модели необходимо предоставить значения данных, которые выводятся в различных скриптах. Для создания многоязычного решения необходимы отдельные атрибуты, привязанные к столбцам во внешней базе данных, возвращающие данные.  
@@ -102,7 +93,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  На странице свойств базы данных задайте в свойстве **Language** код языка, указанный для перевода. При необходимости задайте значение свойства **Collation** , если значение по умолчанию больше не имеет смысла.  
   
-4.  Постройте и разверните базу данных.  
+4.  Соберите и разверните базу данных.  
   
 ## <a name="deleting-translation-objects"></a>Удаление объектов перевода  
  Можно щелкнуть правой кнопкой мыши объект перевода в измерении или в конструкторе кубов, чтобы окончательно удалить его. Нельзя восстановить или повторно использовать удаленный объект, поэтому следует проверить список удаляемых объектов перед продолжением.  
@@ -125,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Для всех остальных заданных идентификаторов языков службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] получают первичный язык по указанному идентификатору и возвращают идентификатор того языка, который Windows предлагает в качестве наилучшего совпадения с первичным. Язык по умолчанию используется, если для перевода не удается найти наиболее подходящий язык, а также, если указанный идентификатор языка наилучшим образом соответствует первичному языку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Языки и параметры сортировки &#40; Службы Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [Языки и параметры сортировки &#40;служб Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

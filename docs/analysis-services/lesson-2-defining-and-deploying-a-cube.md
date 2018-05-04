@@ -1,29 +1,28 @@
 ---
-title: "Занятие 2: Определение и развертывание куба | Документы Microsoft"
-ms.custom: 
+title: 'Занятие 2: Определение и развертывание куба | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8ccb4cd8fc3b9c71b2edec58b57172c4ecb60515
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a13ddd54caafc8b9c842f7d36e3186ef2f59d29f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Занятие 2. Определение и развертывание куба
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,10 +59,10 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование & #40; Учебник по Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Кубы в многомерных моделях](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[Настройка свойств проекта служб Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+[Настройка свойств проекта служб Analysis Services & #40; SSDT & #41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
 [Построение проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
 [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

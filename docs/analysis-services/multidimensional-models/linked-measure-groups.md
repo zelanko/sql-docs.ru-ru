@@ -1,37 +1,23 @@
 ---
-title: "Связанные группы мер | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Связанные группы мер | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- linked measure groups [Analysis Services]
-- referencing measure groups
-- Linked Measure Group Wizard
-- measure groups [Analysis Services], linked
-- linked dimensions [Analysis Services]
-ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b46eaa063b2a0c00c25c7442a8bdc3758e4e91e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
+  Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
   
  Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере планируется отменить в будущих версиях (см. раздел [Нерекомендуемые функции служб Analysis Services в SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
   

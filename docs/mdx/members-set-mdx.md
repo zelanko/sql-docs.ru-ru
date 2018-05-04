@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f643eeb5d864b37e9d18e82178ec1cf0eb179584
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-set-mdx"></a>Members (набор) (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,8 +51,8 @@ Level_Expression.Members
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
-## <a name="remarks"></a>Remarks  
- Если указано выражение иерархии, **Members (Set)** функция возвращает набор всех элементов указанной иерархии, не включая вычисляемые элементы. Чтобы получить набор всех элементов, вычисляемых или в противном случае в иерархии, используйте [AllMembers &#40; Многомерные Выражения &#41; ](../mdx/allmembers-mdx.md) функции  
+## <a name="remarks"></a>Замечания  
+ Если указано выражение иерархии, **Members (Set)** функция возвращает набор всех элементов указанной иерархии, не включая вычисляемые элементы. Чтобы получить набор всех элементов, вычисляемых или в противном случае в иерархии, используйте [AllMembers &#40;многомерных Выражений&#41; ](../mdx/allmembers-mdx.md) функции  
   
  Если выражение уровня указано, **Members (Set)** функция возвращает набор всех элементов указанного уровня.  
   
@@ -83,8 +82,8 @@ WHERE
    {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

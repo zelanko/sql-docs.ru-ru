@@ -1,6 +1,6 @@
 ---
 title: Обратная совместимость служб аналитики SQL Server 2017 г. | Документы Microsoft
-ms.date: 07/11/2017
+ms.date: 04/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: ''
@@ -23,13 +23,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f066956748da5390afa7ea0df1e66099838f00bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб Analysis (SQL 2017 г.)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -48,6 +47,9 @@ ms.lasthandoff: 04/16/2018
 |Multidimensional|Удаленные связанные группы мер|
 |Табличный|Моделей на уровне совместимости 1100 и 1103|
 |Табличный|Свойства табличной модели объекта: Column.IsDefaultImage Column.TableDetailPosition Column.IsDefaultLabel,|
+|Средства|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Средства|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
+|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> -Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />-Чтение трассировки: Microsoft.SqlServer.xevent.Linq.<br />— воспроизведение трассировки: отсутствует.|  
 
 
 ## <a name="discontinued-features"></a>Неподдерживаемые функции
@@ -63,9 +65,7 @@ ms.lasthandoff: 04/16/2018
 |Multidimensional|Удаленные связанные группы мер|  
 |Multidimensional|Многомерная обратная запись|  
 |Multidimensional|Связанные измерения|
-|Средства|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Средства|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
-|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> -Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />-Чтение трассировки: Microsoft.SqlServer.xevent.Linq.<br />— воспроизведение трассировки: отсутствует.|  
+
 
 ## <a name="breaking-changes"></a>Критические изменения
 Объект *критическое изменение* вызывает функцию, модели данных, код приложения или сценария к прекращению работы после обновления до текущего выпуска.

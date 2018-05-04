@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot проверки подлинности и авторизации | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot проверки подлинности и авторизации | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 710db3b55eb8e3bd1e885dfd71e2bde15360092c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Проверка подлинности и авторизация PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Развертывание [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, работающее в пределах фермы SharePoint 2010, использует подсистему проверки подлинности и модель авторизации, предоставляемые серверами SharePoint. Инфраструктура безопасности SharePoint распространяется на содержимое и операции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , поскольку все содержимое [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]хранится в базах данных содержимого SharePoint, а все операции, связанные с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], выполняются общими службами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Перед запросом книги, содержащей данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , пользователь должен пройти проверку подлинности с помощью удостоверения пользователя SharePoint, которое основано на учетных данных пользователя Windows. Разрешения на просмотр книги определяют, возможно ли выполнение запроса.  
+  Развертывание [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, работающее в пределах фермы SharePoint 2010, использует подсистему проверки подлинности и модель авторизации, предоставляемые серверами SharePoint. Инфраструктура безопасности SharePoint распространяется на содержимое и операции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , поскольку все содержимое [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]хранится в базах данных содержимого SharePoint, а все операции, связанные с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], выполняются общими службами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Перед запросом книги, содержащей данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , пользователь должен пройти проверку подлинности с помощью удостоверения пользователя SharePoint, которое основано на учетных данных пользователя Windows. Разрешения на просмотр книги определяют, возможно ли выполнение запроса.  
   
  Поскольку интеграция со службами Excel необходима для анализа данных в режиме самообслуживания, для понимания принципов безопасности сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] необходимо знание основ безопасности служб Excel. Когда пользователь запрашивает сводную таблицу, имеющую подключение к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel перенаправляют запрос подключения к данным на сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме для загрузки данных. Такое взаимодействие между серверами требует понимания принципов настройки параметров безопасности для обоих серверов.  
   

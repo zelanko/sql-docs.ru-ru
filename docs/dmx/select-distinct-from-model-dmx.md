@@ -26,12 +26,11 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1b3840bebc367e1733b38a74a4bbb8ef04233cd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;модель &gt; (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
+ Необязательно. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список связанных идентификаторов столбцов (производных от модели) или выражений.  
@@ -60,12 +59,12 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательный параметр. Выражение, возвращающее скалярное значение.  
+ Необязательно. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **SELECT DISTINCT FROM** инструкции работает только с одним столбцом или же с набором связанных столбцов. С набором несвязанных столбцов это предложение не работает.  
   
- **SELECT DISTINCT FROM** инструкция позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Пример:  
+ **SELECT DISTINCT FROM** инструкция позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Например:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -89,7 +88,7 @@ FROM [TM Decision Tree]
   
  Пример результатов:  
   
-|Gender|  
+|Пол|  
 |------------|  
 ||  
 |Ж|  
@@ -151,9 +150,9 @@ FROM [TM Decision Tree]
 > [!NOTE]  
 >  Минимальное значение минимального сегмента и максимальное значение максимального сегмента представляют собой самое высокое и самое низкое наблюдаемое значение. Предполагается, что все значения, остающиеся за пределами этого наблюдаемого диапазона, принадлежат минимальному и максимальному сегментам.  
   
-## <a name="see-also"></a>См. также:  
- [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../dmx/select-dmx.md)   
+## <a name="see-also"></a>См. также  
+ [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

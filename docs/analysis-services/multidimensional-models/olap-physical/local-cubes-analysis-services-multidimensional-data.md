@@ -1,34 +1,23 @@
 ---
 title: Локальные кубы (службы Analysis Services — многомерные данные) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], local
-ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5e7e55fb95d852714be54ccfb01547ddb6064694
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Локальные кубы (службы Analysis Services — многомерные данные)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Для создания, обновления или удаления локальных кубов, вы должны написать и выполнить скрипт ASSL или программу AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Для создания, обновления или удаления локальных кубов разработайте и выполните скрипт ASSL или программу AMO.  
   
  Локальные кубы и локальные модели интеллектуального анализа данных позволяют выполнять анализ на клиентской рабочей станции даже когда она не подключена к сети. Например, клиентское приложение может вызывать поставщик OLE DB для OLAP 9.0 (MSOLAP.3), который загружает локальный механизм куба и выполняет запросы к локальным кубам, как показано на приведенной ниже иллюстрации:  
   
@@ -46,10 +35,10 @@ ms.lasthandoff: 01/08/2018
   
 |Источник данных для локального куба|Метод создания|  
 |------------------------------------|---------------------|  
-|Серверный куб|Можно использовать инструкцию CREATE GLOBAL CUBE или [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] скрипт языка сценариев (ASSL) для создания и наполнения куба из серверного куба. Дополнительные сведения см. в разделе [инструкция CREATE глобального КУБА &#40; Многомерные Выражения &#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) или [служб Analysis Services, язык сценариев &#40; ASSL для XMLA &#41; ](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Серверный куб|Можно использовать инструкцию CREATE GLOBAL CUBE или [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] скрипт языка сценариев (ASSL) для создания и наполнения куба из серверного куба. Дополнительные сведения см. в разделе [инструкция CREATE глобального КУБА &#40;многомерных Выражений&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) или [язык сценариев служб Analysis Services &#40;языка ASSL для XMLA&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
 |Реляционный источник данных|Для создания и наполнения куба из реляционной базы данных OLE DB используется скрипт ASSL. Для создания локального куба с помощью скрипта ASSL можно просто соединиться с локальным файлом куба (*.CUB) и выполнить скрипт ASSL, аналогичный сценарию ASSL, выполняемому на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для создания серверного куба. Дополнительные сведения см. в разделе [Справочник по языку ASSL](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
   
- С помощью инструкции REFRESH CUBE можно перестроить локальный куб и обновить его данные. Дополнительные сведения см. в разделе [инструкцию обновления КУБА &#40; Многомерные Выражения &#41; ](../../../mdx/mdx-data-definition-refresh-cube.md).  
+ С помощью инструкции REFRESH CUBE можно перестроить локальный куб и обновить его данные. Дополнительные сведения см. в разделе [инструкцию обновления КУБА &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>Локальные кубы, созданные на основе серверных кубов  
  При создании локальных кубов на основе серверных кубов необходимо учитывать следующие замечания:  
@@ -77,13 +66,13 @@ ms.lasthandoff: 01/08/2018
 -   В локальном кубе оказываются только те вычисляемые элементы, именованные наборы и назначения, которые основаны на мерах и измерениях, добавленных в локальный куб. Недопустимые вычисляемые элементы, именованные наборы и назначения будут автоматически исключаться.  
   
 ### <a name="security"></a>безопасность  
- Порядок пользователь может создать локальный куб из серверного куба пользователю должны быть предоставлены **детализация и локальный куб** разрешения на серверном кубе. Дополнительные сведения см. в разделе [предоставить куба или модели разрешения &#40; Службы Analysis Services &#41; ](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Порядок пользователь может создать локальный куб из серверного куба пользователю должны быть предоставлены **детализация и локальный куб** разрешения на серверном кубе. Дополнительные сведения см. в разделе [предоставление разрешений кубу или модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Локальные кубы не защищены с помощью ролей, как серверные. Выполнять запросы к ним может любой пользователь, обладающий доступом уровня файла к локальному файлу куба. Можно использовать **пароль шифрования** свойство соединения на файл локального куба, чтобы установить пароль на файл локального куба. При использовании пароля в локальном файле куба для запросов к этому файлу в будущем этот пароль нужно будет вводить для всех соединений с локальным файлом куба.  
   
-## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ инструкцию глобального КУБА &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
- [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Инструкцию обновления КУБА &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкция CREATE GLOBAL CUBE &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
+ [Развертывание с помощью функций анализа служб языка сценариев &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Инструкцию обновления КУБА &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

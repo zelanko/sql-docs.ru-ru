@@ -1,37 +1,23 @@
 ---
-title: "Обратная запись в куб (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Обратная запись в куб (многомерные Выражения) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- writeback [Analysis Services], cubes
-- cubes [Analysis Services], modifying
-- modifying cubes
-- UPDATE CUBE statement
-- cubes [Analysis Services], writeback
-ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f658740766736a83dd374cf647523ea9f8e2bfe4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8e390718230c64cea5a7fd44011e1508410dc586
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Изменение данных многомерных Выражений — обратная запись в куб
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Для обновления куба используется инструкция [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
+  Для обновления куба используется инструкция [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
   
 ## <a name="update-cube-statement-syntax"></a>Синтаксис инструкции UPDATE CUBE  
  Синтаксис инструкции UPDATE CUBE приведен далее.  
@@ -124,6 +110,6 @@ USE_EQUAL_ALLOCATION
 -   Изменение степени гранулярности измерения, которое содержится в обратной записи.  
   
 ## <a name="see-also"></a>См. также  
- [Изменение данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Изменение данных & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

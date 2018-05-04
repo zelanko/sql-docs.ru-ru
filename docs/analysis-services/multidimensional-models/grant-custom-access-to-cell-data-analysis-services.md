@@ -1,39 +1,23 @@
 ---
 title: Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.celldata.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cell data
-- permissions [Analysis Services], cells
-- read contingent permissions
-- read permissions
-- cells [Analysis Services]
-- custom cell data access [Analysis Services]
-ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10cb80b39117fcd5ec10bb773672e8b984846566
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Настройки безопасности ячеек используется для разрешения или запрета доступа с целью распределения данных в кубе. Следующая иллюстрация демонстрирует комбинацию разрешенных и запрещенных мер в Сводной Таблице при подключении в качестве пользователя, роль которого предоставляет доступ только к определенным мерам. В этом примере используемой роли доступны только меры **Объем продаж торгового посредника** и **Совокупная стоимость продуктов торгового посредника** . Все остальные меры безоговорочно запрещены (шаги, используемые для достижения данного результата, приведены ниже в следующем разделе, Предоставление доступа к специальным мерам).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Настройка безопасности ячеек используется для предоставления доступа или отказа в доступе с целью распределения данных в кубе. Следующая иллюстрация демонстрирует комбинацию разрешенных и запрещенных мер в Сводной Таблице при подключении в качестве пользователя, роль которого предоставляет доступ только к определенным мерам. В этом примере используемой роли доступны только меры **Объем продаж торгового посредника** и **Совокупная стоимость продуктов торгового посредника** . Все остальные меры безоговорочно запрещены (шаги, используемые для достижения данного результата, приведены ниже в следующем разделе, Предоставление доступа к специальным мерам).  
   
  ![Сводная таблица показывает доступные и запрещенные ячейки](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "Сводная таблица показывает доступные и запрещенные ячейки")  
   
@@ -102,12 +86,12 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="set-readwrite-permissions-on-a-cell"></a>Установка разрешений Чтение/Запись в ячейке  
  Разрешения Чтение/запись в ячейке используются для разрешения обратной записи только в том случае, если элементы имеют разрешения чтение/запись на самом кубе. Разрешения, предоставляемые на уровне ячеек, не могут превосходить прав, предоставленных на уровне куба. Дополнительные сведения см. в разделе [Set Partition Writeback](../../analysis-services/multidimensional-models/set-partition-writeback.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конструктор многомерных выражений (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [Базовый скрипт многомерных выражений (многомерные выражения)](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Предоставление разрешений доступа &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Предоставьте разрешения на измерение &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [Базовый скрипт многомерных Выражений & #40; Многомерные Выражения & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Предоставление разрешений на обработку &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [Предоставление разрешений на измерение &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [Предоставление настраиваемого доступа к измерению данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставьте куба или модели разрешения & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

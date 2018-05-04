@@ -1,31 +1,23 @@
 ---
-title: "Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbf52055cb77be6a740fc5186c69d55c352d5cc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 55727f3452d2bf406ab78fa7982a0c65e48f6052
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-MSOLAP.5 относится к поставщику OLE DB служб Analysis Services для SQL Server 2012. Этот поставщик должен быть доверенным для служб Excel перед запросом на подключение, который обеспечивает доступность данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервере.  
+  MSOLAP.5 относится к поставщику OLE DB служб Analysis Services для SQL Server 2012. Этот поставщик должен быть доверенным для служб Excel перед запросом на подключение, который обеспечивает доступность данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервере.  
   
  Если компонент [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint настроен с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , MSOLAP.5 может уже использоваться в качестве доверенного поставщика, так как это средство содержит действие, удовлетворяющее упомянутому требованию. Но если используется PowerShell или центр администрирования, или если доверенный поставщик не включен в средство настройки, поставщик может отсутствовать. В таком случае его нужно добавить на этом этапе как часть настройки фермы для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

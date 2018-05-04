@@ -1,38 +1,19 @@
 ---
-title: "Выполнение пакетных операций (XMLA) | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- multiple projects
-- XML for Analysis, batches
-- parallel batch execution [XMLA]
-- transactional batches
-- serial batch execution [XMLA]
-- XMLA, batches
-- batches [XML for Analysis]
-- nontransactional batches
-ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 
-author: Minewiskan
+title: Выполнение пакетных операций (XMLA) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Выполнение пакетных операций (XMLA)
   Можно использовать [пакета](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) в XML для аналитики (XMLA) для выполнения нескольких команд XML для Аналитики с помощью одного XMLA команда [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) метод. Можно выполнять несколько команд, содержащихся в **пакета** команду, либо как одна транзакция или в отдельные транзакции для каждой команды, последовательно или параллельно. Можно также указать ожидания привязок и другие свойства в **пакета** для обработки нескольких [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
  При сбое любой команды в пакете транзакций [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] откат всех команд **пакета** команда, выполняемая перед командой, сбой и **пакета** сразу же завершается. Все команды в **пакета** команду, которая еще не были выполнены не выполняются. После **пакета** завершения команды **пакета** команда сообщает обо всех ошибках, произошедших для ошибки.  
   
- **Nontransactional**  
+ **Нетранзакционное**  
  Если **транзакции** атрибута задано значение false, **пакета** команда выполняет каждую команду, содержащуюся **пакета** в отдельной транзакции —  *нетранзакционное* пакета. При сбое любой команды в нетранзакционный пакет **пакета** команда продолжает выполнение команд после команды, которой не удалось. После **пакета** команда пытается выполнить все команды, **пакета** содержит команды, **пакета** команды о возникших ошибках.  
   
  Все результаты, возвращаемые командами, содержащихся в **пакета** команды возвращаются в том же порядке, в котором эти команды расположены в **пакета** команды. Результаты, возвращенные **пакета** зависимости от того, следует ли **пакета** команда нетранзакционных или транзакций.  
@@ -128,8 +109,8 @@ ms.lasthandoff: 02/15/2018
     >  Объект **процесс** команда не может содержать **привязки**, **DataSource**, **DataSourceView**, или **ErrorConfiguration**  свойства, если **процесс** команды, содержащиеся в **пакета** команды. Если необходимо указать эти свойства для **процесс** команды, введите необходимые сведения в соответствующих свойствах **пакета** команду, которая содержит **процесс** команды.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Batch &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Элемент Process &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
+ [Элемент Batch & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Обработать элемент &#40;XML для Аналитики&#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 622d8267bdbb9725ac3bc4e170f336ce34dd0ecc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6e28bfee38daba21b8ba195adb8654a1e5aabb88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sources-element-xmla"></a>Элемент Sources (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию [источника](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) для родительского [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит коллекцию [источника](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) для родительского [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Дочерние элементы|[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="example"></a>Пример  
  В следующем примере все четыре секции группы мер `Internet Sales` объединяются в целевой секции `Internet_Sales_2004` . В следующем примере используется куб Adventure Works DW образца базы данных [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/08/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

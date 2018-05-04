@@ -1,31 +1,23 @@
 ---
-title: "Базы данных проверка согласованности (DBCC) для служб Analysis Services | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Базы данных проверка согласованности (DBCC) для служб Analysis Services | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4a25919df6cb26609e008b6910ae6fb67bafba84
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Проверки согласованности базы данных (DBCC) для служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-DBCC обеспечивает проверку базы данных по требованию для многомерных и табличных баз данных в экземпляре служб Analysis Services. Команду DBCC можно выполнить в окне запроса многомерных выражений или XMLA в SQL Server Management Studio (SSMS). Отслеживать выходные данные DBCC можно в сеансах SQL Server Profiler или xEvent в среде SSMS.  
+  DBCC обеспечивает проверку базы данных по требованию для многомерных и табличных баз данных в экземпляре служб Analysis Services. Команду DBCC можно выполнить в окне запроса многомерных выражений или XMLA в SQL Server Management Studio (SSMS). Отслеживать выходные данные DBCC можно в сеансах SQL Server Profiler или xEvent в среде SSMS.  
 Команда принимает определение объекта и возвращает пустой результирующий набор или подробные сведения об ошибке, если объект поврежден.   Прочитав эту статью, вы узнаете, как выполнить команду, интерпретировать результаты и решить возникшие проблемы.  
   
  Для табличных баз данных проверки согласованности с помощью DBCC эквивалентны встроенной проверке, которая выполняется автоматически при каждой перезагрузке, синхронизации и восстановлении базы данных.  Напротив, проверки согласованности для многомерных баз данных происходят только при запуске средства DBCC по требованию.  
@@ -173,7 +165,7 @@ Execution complete
   
 4.  В SQL Server Profiler действия DBCC можно идентифицировать по событиям **Command** , имеющим подкласс событий DBCC:  
   
-     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
+     ![службы SSAS dbcc профилировщик eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas dbcc профилировщик eventsubclass")  
   
      Код события 32 указывает на выполнение команды DBCC.  
   

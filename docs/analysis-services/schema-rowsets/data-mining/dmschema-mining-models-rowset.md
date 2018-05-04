@@ -23,22 +23,22 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 07f3e7e80b36f2739bf5d4df23404e5ab396ec72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Набор строк DMSCHEMA_MINING_MODELS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перечисляет модели интеллектуального анализа данных в текущем каталоге. **DMSCHEMA_MINING_MODELS** набор строк содержит сведения, такие как имена модели, дату обработки и алгоритм интеллектуального анализа данных, связанный с каждой моделью интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Перечисляет модели интеллектуального анализа данных в текущем каталоге. **DMSCHEMA_MINING_MODELS** набор строк содержит сведения, такие как имена модели, дату обработки и алгоритм интеллектуального анализа данных, связанный с каждой моделью интеллектуального анализа данных.  
   
- , и делает это по-другому. **DMSCHEMA_MINING_MODELS** набора строк схемы очень похож на [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
+ . **DMSCHEMA_MINING_MODELS** набора строк схемы очень похож на [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_MODELS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|Имя каталога. Заполняется именем базы данных, элементом которой является модель.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|Неполное имя схемы. Этот столбец не поддерживается [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит **NULL**.|  
@@ -66,17 +66,17 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательный параметр.|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Необязательно.|  
+|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательно.|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Необязательно.|  
   
  Примеры запросов этот набор строк. в разделе [запрос, параметры, используемые для создания модели интеллектуального анализа данных](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

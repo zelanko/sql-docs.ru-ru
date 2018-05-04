@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: efa6bf989976b36b61f08b192b475f0e4f12dbaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fcfbfbb53c853737d16815ccd20d0b4c31ad996b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpis-element-assl"></a>Элемент Kpis (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию ключевых показателей эффективности ([ключевого показателя эффективности](../../../analysis-services/scripting/objects/kpi-element-assl.md) элементы) связанный с родительским элементом.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит коллекцию ключевых показателей эффективности (элементов[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) ), связанных с родительским элементом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,28 +53,28 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Куб](../../../analysis-services/scripting/objects/cube-element-assl.md), [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md)|  
-|Дочерние элементы|См. в следующей таблице.|  
+|Родительские элементы|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md)|  
+|Дочерние элементы|См. таблицу ниже.|  
   
 |Предок или родитель|Дочерний элемент|  
 |------------------------|-------------------|  
 |[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|[Ключевой показатель эффективности](../../../analysis-services/scripting/objects/kpi-element-assl.md)|  
-|[Перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[Ключевой показатель эффективности](../../../analysis-services/scripting/objects/kpi-element-assl.md) типа [PerspectiveKpi](../../../analysis-services/scripting/data-type/perspectivekpi-data-type-assl.md)|  
+|[Перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) с типом данных [PerspectiveKpi](../../../analysis-services/scripting/data-type/perspectivekpi-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.KpiCollection>.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекции &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Коллекции & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

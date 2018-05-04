@@ -1,42 +1,23 @@
 ---
-title: "Алгоритмы интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Алгоритмы интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- segmentation algorithms [Analysis Services]
-- clustering [Data Mining]
-- learning algorithms
-- data mining [Analysis Services], models
-- algorithms [data mining]
-- mining models [Analysis Services], algorithms
-- inductive learning
-- mining models [Analysis Services], creating
-- data mining [Analysis Services], algorithms
-- machine learning algorithms [Analysis Services]
-ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 43652986e789837299feacf5387cd8b6e6d57a8b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a85e6a07b22f0577b23a0e8bd679050dbe00038a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В интеллектуальном анализе данных (или машинном обучении) *алгоритм* — это набор эвристики и вычислений, который создает на основе данных модель. Чтобы создать модель, алгоритм сначала анализирует предоставленные данные, осуществляя поиск определенных закономерностей и тенденций. Алгоритм применяет результаты этого анализа ко множеству итераций, чтобы подобрать оптимальные параметры для создания модели интеллектуального анализа данных. Затем эти параметры применяются ко всему набору данных, чтобы выявить пригодные к использованию закономерности и получить подробную статистику.  
+  В интеллектуальном анализе данных (или машинном обучении) *алгоритм* — это набор эвристики и вычислений, который создает на основе данных модель. Чтобы создать модель, алгоритм сначала анализирует предоставленные данные, осуществляя поиск определенных закономерностей и тенденций. Алгоритм применяет результаты этого анализа ко множеству итераций, чтобы подобрать оптимальные параметры для создания модели интеллектуального анализа данных. Затем эти параметры применяются ко всему набору данных, чтобы выявить пригодные к использованию закономерности и получить подробную статистику.  
   
  Модель интеллектуального анализа данных, создаваемая алгоритмом из предоставленных данных, может иметь различные формы, включая следующие.  
   
@@ -91,7 +72,7 @@ ms.lasthandoff: 02/15/2018
 |**Технический справочник**|Содержит технические данные о реализации алгоритма со ссылками на соответствующую литературу при необходимости. Содержит список параметров, с помощью которых можно управлять работой алгоритма и изменять результаты в модели. Описывает требования к данным и содержит советы по повышению производительности, когда это возможно.|  
 ||[Технический справочник по алгоритму взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму дерева принятия решений Майкрософт](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник Майкрософт упрощенный алгоритм Байеса](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |**Содержимое модели**|Описывает, каким образом данные структурируются для каждого типа модели и объясняет, как интерпретировать данные, хранящиеся в каждом из узлов.|  
-||[Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Содержимое модели интеллектуального анализа данных для модели линейной регрессии &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Содержимое модели интеллектуального анализа данных для моделей кластеризации последовательностей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[Содержимое модели интеллектуального анализа данных для моделей взаимосвязей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Содержимое модели интеллектуального анализа данных для модели линейной регрессии & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Содержимое модели интеллектуального анализа данных для моделей кластеризации последовательностей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**Запросы интеллектуального анализа данных**|Содержит примеры запросов, которые могут быть использованы с моделями каждого типа. Содержит описание запросов содержимого, позволяющих получить подробные сведения о закономерностях в модели, а также прогнозирующих запросов, позволяющих строить прогнозы на основе этих закономерностей.|  
 ||[Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [Примеры запросов модели логистической регрессии](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Примеры запросов к упрощенной модели Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
@@ -103,7 +84,7 @@ ms.lasthandoff: 02/15/2018
 |Создание пользовательского подключаемого алгоритма|[Подключаемые алгоритмы](../../analysis-services/data-mining/plugin-algorithms.md)|  
 |Исследование модели с помощью средства просмотра конкретного алгоритма|[Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Просмотр содержимого модели с помощью общего формата таблицы|[Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|Сведения о настройке данных и использовании алгоритмов для создания моделей|[Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
+|Сведения о настройке данных и использовании алгоритмов для создания моделей|[Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)<br /><br /> [Модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)  

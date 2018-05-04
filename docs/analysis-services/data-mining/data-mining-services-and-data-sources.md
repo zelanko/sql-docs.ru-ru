@@ -1,31 +1,23 @@
 ---
-title: "Службы интеллектуального анализа данных и источники данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Службы интеллектуального анализа данных и источники данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ad48f9f2f3a769dad964fb47cae33618f3b4ecb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  В этом разделе представлены необходимые сведения по соединению с экземпляром служб SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания, обработки и развертывания моделей интеллектуального анализа данных и выполнения запросов к ним.  
   
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
  Можно также установить свойства, позволяющие тонко настраивать сервер и управлять безопасностью использования клиента. Дополнительные сведения см. в статье [Feature Properties](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о поддержке подключаемых алгоритмов модулей в выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Дополнительные сведения о поддержке подключаемых алгоритмов выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Программный доступ к объектам интеллектуального анализа данных  
  Можно использовать следующие модели объектов для создания соединения с базой данных служб Analysis Services и работы с объектами интеллектуального анализа данных.  
@@ -131,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Физическая архитектура (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Физическая архитектура &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Физическая архитектура & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Управление решениями интеллектуального анализа данных и объектов](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

@@ -1,38 +1,23 @@
 ---
-title: "Настройка структуры и моделей интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Настройка структуры и моделей интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- attributes [data mining]
-- mining models [Analysis Services], properties
-- algorithms [data mining]
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-- mining models [Analysis Services], about data mining models
-ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73e16c614ae792fe38fdc7b083323aa7c1e595ee
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8bcb37ac27e0cff9526ee5a0af7cd38b5d5a0e22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-После выбора алгоритма в соответствии с задачами организации, можно выполнить индивидуальную настройку модели, что может повысить эффективность результатов. Настройка выполняется следующими способами.  
+  После выбора алгоритма в соответствии с задачами организации, можно выполнить индивидуальную настройку модели, что может повысить эффективность результатов. Настройка выполняется следующими способами.  
   
 -   Использование в модели других столбцов данных либо изменение режима использования, типа содержимого или метода дискретизации для столбцов.  
   
@@ -108,7 +93,7 @@ ms.lasthandoff: 02/15/2018
 |CLUSTER_SEED|[Технический справочник по алгоритму кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Технический справочник по алгоритму кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Технический справочник по алгоритму дерева принятия решений Майкрософт](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Технический справочник по алгоритму дерева принятия решений Майкрософт](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Моделирование флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Технический справочник по алгоритму дерева принятия решений Майкрософт](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Моделирование флаги & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Технический справочник по алгоритму временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Технический справочник по алгоритму нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Технический справочник по алгоритму временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
@@ -140,7 +125,7 @@ ms.lasthandoff: 02/15/2018
 |STOPPING_TOLERANCE|[Технический справочник по алгоритму кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Физическая архитектура &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Физическая архитектура & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   

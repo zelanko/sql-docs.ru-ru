@@ -1,43 +1,23 @@
 ---
 title: Предоставление настраиваемого доступа к данным измерений (службы Analysis Services) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6a10ec3bab74c2bd5c540b1816d77c2dcbd104c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Предоставление настраиваемого доступа к данным измерений (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После включения доступа на чтение к кубу, можно задать дополнительные разрешения, которые явно разрешить или запретить доступ к элементам измерений (включая меры, содержащиеся в измерении мер, содержащих все меры, используемые в кубе). Например, для нескольких категорий торговых посредников может понадобиться задать разрешения, чтобы исключить данные для определенного бизнес-типа. На следующей иллюстрации показан эффект до и после отклонения доступа к бизнес-типу "Хранилище" в измерении "Торговый посредник".  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  После включения доступа на чтение для куба можно задать дополнительные разрешения, которые явно разрешают или отклоняют доступ к элементам измерений (включая меры, содержащиеся в разделе "Измерение мер" со всеми мерами, использующимися в кубе). Например, для нескольких категорий торговых посредников может понадобиться задать разрешения, чтобы исключить данные для определенного бизнес-типа. На следующей иллюстрации показан эффект до и после отклонения доступа к бизнес-типу "Хранилище" в измерении "Торговый посредник".  
   
  ![Сводные таблицы с и без элементов измерения](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "сводные таблицы с и без элементов измерения")  
   
@@ -97,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  Можно изменить конструктор многомерных выражений для записи многомерного выражения. Дополнительные сведения см. в разделе [Конструктор многомерных выражений (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f). На вкладке **Дополнительно** доступны следующие параметры.  
   
- **Attribute**  
+ **Атрибут**  
  Выберите атрибут, безопасность которого необходимо настроить.  
   
  **Разрешенный набор элементов**  
@@ -106,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  Создание AllowedSet окажет влияние, если атрибут участвует в многоуровневой иерархии. Предположим, роль разрешает доступ к штату Вашингтон (рассмотрим сценарий, где роль предоставляет разрешения отделу продаж в штате Вашингтон компании). Пользователи, подключающиеся через эту роль, увидят только элементы в цепи запросов с предками (США) или потомками (Сиэтл и Редмонд), включающие штат Вашингтон. Поскольку другие штаты не разрешены явно, эффект будет такой, как если бы они были отклонены.  
   
 > [!NOTE]  
->  При определении пустого набора элементов атрибута ({}) ни один из элементов атрибута не будет видим для роли базы данных. Отсутствие допустимого набора не трактуется как пустой набор.  
+>  При определении пустого набора ({}) элементов атрибута нет элементов атрибута будет отображаться на роль базы данных. Отсутствие допустимого набора не трактуется как пустой набор.  
   
  **Запрещенный набор элементов**  
  Свойство DeniedSet можно разрешить в набор без элементов, с некоторыми или со всеми элементами атрибута (по умолчанию). Если отклоненный набор содержит только определенный набор элементов атрибутов, доступ к роли базы данных отклоняется только для этих конкретных элементов, а также для потомков, если атрибут находится в многоуровневой иерархии. Рассмотрим пример отдела продаж в штате Вашингтон. Если Вашингтон находится в DeniedSet, пользователи, подключающиеся через эту роль, увидят все остальные штаты, за исключением Вашингтона и атрибутов его потомков.  
@@ -134,10 +114,10 @@ ms.lasthandoff: 01/08/2018
  **Проверить**  
  Щелкните, чтобы проверить синтаксис многомерных выражений, заданный на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление настраиваемого доступа к ячейке данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Предоставление разрешений на &#40; структур интеллектуального анализа данных и моделей Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Предоставление разрешений на структуры интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Предоставление разрешений на объект источника данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

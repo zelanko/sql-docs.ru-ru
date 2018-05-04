@@ -27,15 +27,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 061c954fdf8a6e19375edd385e70bd994222aa4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 76176ec63e9e888579ffc31b0176ea3c493e42e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculation-element-assl"></a>Элемент Calculation (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Связывает вычисление с [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Связывает вычисление с [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|[PerspectiveCalculation](../../../analysis-services/scripting/data-type/perspectivecalculation-data-type-assl.md)|  
 |Значение по умолчанию|None|  
@@ -62,10 +62,10 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Вычисления](../../../analysis-services/scripting/collections/calculations-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующие элементы в модели объектов AMO — это <xref:Microsoft.AnalysisServices.CalculationType> и <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

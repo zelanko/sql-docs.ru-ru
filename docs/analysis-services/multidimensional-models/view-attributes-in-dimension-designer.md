@@ -1,36 +1,23 @@
 ---
-title: "Просмотр атрибутов в дереве, списке или сетке в конструкторе измерений | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Просмотр атрибутов в дереве, списке или сетке в конструкторе измерений | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Attribute pane formats [Analysis Services]
-- attributes [Analysis Services], Dimension Builder Attribute Pane
-- formats [Analysis Services], Attribute pane
-- modifying Attribute pane format
-ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ab0bd75d302d9436f9c875172d8847607f4dc44
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 99f2672a0a45e50a8ba3e6570ae3bda7a4ecd5ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Просмотр атрибутов в конструкторе измерений
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В данной процедуре описывается изменение способа отображения атрибутов в конструкторе измерений.  
+  В данной процедуре описывается изменение способа отображения атрибутов в конструкторе измерений.  
   
 ### <a name="to-change-the-format-of-the-attributes-pane-in-dimension-designer"></a>Изменение формата панели «Атрибуты» в построителе измерений  
   

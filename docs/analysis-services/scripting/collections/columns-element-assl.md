@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 50df01ee77621b52f256ad14b55bc0ec9621d942
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-element-assl"></a>Элемент Columns (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию столбцов, связанных с родительским элементом.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит коллекцию столбцов, связанных с родительским элементом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,11 +58,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|См. в следующей таблице.|  
+|Количество элементов|См. таблицу ниже.|  
   
 |Предок или родитель|Количество элементов|  
 |------------------------|-----------------|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md) типа [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [событий](../../../analysis-services/scripting/objects/event-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|  
-|Дочерние элементы|См. в следующей таблице.|  
+|Дочерние элементы|См. таблицу ниже.|  
   
 |Предок или родитель|Дочерние элементы|  
 |------------------------|--------------------|  
@@ -83,14 +83,14 @@ ms.lasthandoff: 01/08/2018
 |[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md)|  
 |[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для элементов **DrillThroughAction** коллекция **Columns** обозначает столбцы, которые содержат данные, возвращаемые при выполнении этого действия.  
   
  Для элементов **TableMiningStructureColumn** коллекция **Columns** допускает применение только одного уровня рекурсии. Иными словами, любой элемент **TableMiningStructureColumn** , включенный в эту коллекцию, не может содержать какие-либо элементы **TableMiningStructureColumn** в его коллекции **Columns** .  
   
  Некоторыми из соответствующих элементов в модели объектов AMO являются <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> и <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекции &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Коллекции & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

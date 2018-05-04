@@ -1,35 +1,23 @@
 ---
-title: "Создание и управление локальной секции (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание и управление локальной секции (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- local partitions [Analysis Services]
-- partitions [Analysis Services], local
-- partitions [Analysis Services], creating
-ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 114f093cfe6531a0a2fc52b874730f1e4105f1d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
+  Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
   
  Секции могут создаваться во время разработки модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или при развертывании решения с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или XMLA-скрипта. Рекомендуется выбрать и использовать только один подход. При использовании разных средств может возникнуть ситуация, когда изменения, внесенные в развернутую базу данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , будут перезаписаны последующим развертыванием решения из [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
@@ -129,8 +117,8 @@ ms.lasthandoff: 02/15/2018
  В качестве последнего действия обычно необходимо удалить секцию по умолчанию, которая была основана на самой таблице (если она еще есть), иначе секции, основанные на запросах, будут перекрываться с запросом, основанным на полной таблице.  
   
 ## <a name="see-also"></a>См. также  
- [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секций & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Слияние секций в службы Analysis Services &#40; Службы SSAS — многомерные &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Слияние секций в службы Analysis Services & #40; Службы SSAS — многомерные & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

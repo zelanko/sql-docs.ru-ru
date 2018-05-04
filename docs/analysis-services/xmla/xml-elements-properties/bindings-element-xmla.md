@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 400517a4e4fcf09816542cbf47e7e2128ad0da49
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3e1a647fd3b0ece1058187f73224933f5b44ab65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bindings-element-xmla"></a>Элемент Bindings (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию [привязки](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) для родительского [пакета](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) или [процесс](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит коллекцию элементов [Binding](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) для родительского элемента [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) или [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -67,9 +67,9 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md), [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)|  
 |Дочерние элементы|[Привязки](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

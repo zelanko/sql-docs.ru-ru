@@ -29,15 +29,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d40497916d4ec482fae217dfbddac4a12bd011d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 18e6190fabc53df42e7ebd1d7284dfd3f987fbfe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-element-xmla"></a>Value, элемент (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит необходимое значение параметра [атрибута](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элемента, который требуется добавить, [вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) команды, или [ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) элемент будет обновлен [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) команды.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит необходимое значение параметра [атрибута](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элемента, который требуется добавить, [вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) команды, или [ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) элемент будет обновлен [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Любой|  
 |Значение по умолчанию|None|  
@@ -65,8 +65,8 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md), [ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
- Для **атрибута** элементов, **значение** элемент содержит нужное значение, которое должен содержать элемент после **вставить** команда фиксируется. Дополнительные сведения о вставке элементов см. в разделе [Вставка, обновление и удаление элементов &#40; XML для Аналитики &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+## <a name="remarks"></a>Замечания  
+ Для **атрибута** элементов, **значение** элемент содержит нужное значение, которое должен содержать элемент после **вставить** команда фиксируется. Дополнительные сведения о вставке элементов см. в разделе [Вставка, обновление и удаление членов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
  Для **ячейки** элементов, **значение** элемент содержит нужное значение, которое должна содержать ячейка после **UpdateCells** команда фиксируется. Фактическое значение, хранящееся в таблице обратной записи для этой ячейки, представляет собой разность исходного значения ячейки и ее нужного значения.  
   
@@ -74,10 +74,10 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения об обновлении ячеек см. в разделе [Обновление ячеек (XML для аналитики)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
-## <a name="see-also"></a>См. также:  
- [Элемент CellOrdinal &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)   
- [Вставить элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Элемент UpdateCells &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент CellOrdinal &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)   
+ [Вставить элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Элемент UpdateCells & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

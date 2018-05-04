@@ -7,18 +7,18 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ec764a5cb5a6ce011d47f7f185cc05c906fe41d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>Установка SQL Server 2017 г машинного самообучения, Server (изолированный) в Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Программа установки SQL Server включает в себя возможность установить машинного обучения сервера, работающего вне SQL Server. Эта возможность может быть полезным, если необходимо разрабатывать высокопроизводительные машины обучения, решений, которые можно использовать удаленных контекстов вычислений, попеременно переключение на локальном сервере и на удаленной машине обучения Server на кластере Spark или на другой экземпляр SQL Server экземпляр.
   
-В этой статье описывается, как использовать программу установки SQL Server для установки автономной версии **сервера SQL Server 2017 г машины обучения**. При наличии Enterprise Edition или Software Assurance, установка сервера автономного машинного обучения является бесплатной.
+В этой статье описывается, как использовать программу установки SQL Server для установки автономной версии **сервера SQL Server 2017 г машины обучения**. 
 
 ## <a name="bkmk_prereqs"> </a> Контрольный список действий перед установкой
 

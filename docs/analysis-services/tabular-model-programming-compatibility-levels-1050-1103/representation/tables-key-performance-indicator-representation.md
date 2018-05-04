@@ -1,33 +1,32 @@
 ---
-title: "Ключ представление показателя эффективности (табличное) | Документы Microsoft"
-ms.custom: 
+title: Ключ представление показателя эффективности (табличное) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6248cb38e229c59a1fb8722ac6226485bd0da8bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Таблицы - представление ключевого показателя эффективности
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения  
+  KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения  
   
 ## <a name="key-performance-indicator-representation"></a>Представление ключевого показателя эффективности  
  В табличных объектных моделях ключевой показатель эффективности –kpi- является мерой с дополнительными сведениями для графического отображения в клиентском приложении. Ключевой показатель эффективности обычно содержит данные о заданной цели, состояние меры по сравнению с целью и сведения, сообщающие клиентскому средству о том, каким образом следует графически представить состояние.  

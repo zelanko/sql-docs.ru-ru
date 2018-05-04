@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 64bd2da0a5e2ef508feaa00279f57b4604066d1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9d8665824238b95729866de8aaf6484cc089326a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="password-element-xmla"></a>Элемент Password (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет пароль, который будет использоваться родительской [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) или [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команду для шифрования или расшифрования файла резервной копии.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет пароль, который будет использоваться родительской [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) или [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команду для шифрования или расшифрования файла резервной копии.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|String|  
+|Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -65,15 +65,15 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Резервное копирование](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [восстановления](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если при выполнении команды **Backup** не был включен элемент **Password** или он содержит пустую строку, то файл резервной копии не будет зашифрован.  
   
  Если при выполнении команды **Restore** не был включен элемент **Password** или он содержит пустую строку, то при попытке восстановления зашифрованного файла резервной копии возникнет ошибка.  
   
- Если при выполнении команды **Location** или **Backup** был включен элемент **Restore** , то для обычного и удаленного файлов резервной копии будет использован один и тот же элемент **Password** . Дополнительные сведения об удаленных файлах резервных копий см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40; XML для Аналитики &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Если при выполнении команды **Location** или **Backup** был включен элемент **Restore** , то для обычного и удаленного файлов резервной копии будет использован один и тот же элемент **Password** . Дополнительные сведения об удаленных файлах резервных копий см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>См. также:  
- [Элемент Location &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент Location &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

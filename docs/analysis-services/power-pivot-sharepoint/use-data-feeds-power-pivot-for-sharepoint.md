@@ -1,35 +1,27 @@
 ---
-title: "Использование веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Использование веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8f0b6c60d3f68d7a643264d3e850b7ce6cd56c22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Использование веб-каналов данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Канал данных — это один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. При использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  
+  Канал данных — это один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. При использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  
   
  Использование веб-канала данных зависит от того, используются встроенные функции экспорта в приложениях, поддерживающих веб-каналы данных Atom, или настраиваемые службы данных. Приложения, которые могут публиковать и считывать XML-данные Atom, позволяют передавать данные таким образом, чтобы пользователю не нужно было работать с каналами данных и службами. С точки зрения пользователя данные просто перемещаются между приложениями.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Microsoft SharePoint 2010 предоставляют каналы данных, которые могут использоваться в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги. Сведения в данном разделе можно использовать для изучения доступа к веб-каналам данных из уже имеющихся отчетов и списков.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Microsoft SharePoint 2010 предоставляют веб-каналы данных, которые могут быть использованы в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Сведения в данном разделе можно использовать для изучения доступа к веб-каналам данных из уже имеющихся отчетов и списков.  
   
  Этот раздел состоит из следующих подразделов.  
   

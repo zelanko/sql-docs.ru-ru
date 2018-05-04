@@ -1,32 +1,23 @@
 ---
-title: "Обновление книг и запланированное обновление данных (SharePoint 2013) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/02/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
+title: Обновление книг и запланированное обновление данных (SharePoint 2013) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a57393f1ef889711eb0b61e0a4cbaf635fadeaf0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Обновление книг и запланированное обновление данных (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-В этом разделе описывается, как работать с книгами, созданными в предыдущих средах [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Также вы узнаете, как обновлять книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы использовать преимущества новых функций, представленных в этом выпуске. Дополнительные сведения о новых возможностях см. в статье [Новые возможности PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  В этом разделе описывается, как работать с книгами, созданными в предыдущих средах [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Также вы узнаете, как обновлять книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы использовать преимущества новых функций, представленных в этом выпуске. Дополнительные сведения о новых возможностях см. в статье [Новые возможности PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Невозможно выполнить откат обновления для книг, автоматически обновленных на сервере. После обновления книги она остается обновленной. Для использования предыдущей версии можно повторно опубликовать предыдущую книгу в SharePoint, восстановить предыдущую версию или повторно использовать книгу. Дополнительные сведения о восстановлении и повторном использовании документа в SharePoint см. в разделе [Планирование защиты содержимого с использованием корзин и управления версиями](http://go.microsoft.com/fwlink/?LinkId=238669).  
@@ -170,6 +161,6 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  [Перенос Power Pivot в SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Обновление Power Pivot для SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Новые возможности в службах Analysis Services](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [Обновление представления данных, журнал &#40; Power Pivot для SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [Просмотр журнала обновления данных &#40;Power Pivot для SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

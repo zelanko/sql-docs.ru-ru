@@ -1,38 +1,37 @@
 ---
-title: "Объект источника данных (TMSL) | Документы Microsoft"
-ms.custom: 
+title: Объект источника данных (TMSL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2c68188cef82e36c931b299cbd9c68cf18b659de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasources-object-tmsl"></a>Объект источника данных (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Определяет соединение с источником данных, используемых в модели, либо при импорте, чтобы добавлять данные к модели, в запросы к серверу через режим DirectQuery.  В режиме DirectQuery модель может иметь только один **DataSource** объекта.  
+  Определяет соединение с источником данных, используемых в модели, либо при импорте, чтобы добавлять данные к модели, в запросы к серверу через режим DirectQuery.  В режиме DirectQuery модель может иметь только один **DataSource** объекта.  
   
  Если вы создаете, заменив, или изменение сам объект источника данных, любой источник данных, на которые ссылается сценарий (например, в сценарий секционирования) должен быть существующим **DataSource** объектов в модели.  
   
 ## <a name="object-definition"></a>Определение объекта  
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Источник данных** объекты также имеют следующие свойства.  
   
- type  
+ Тип  
  Тип источника данных. В настоящее единственным допустимым значением является поставщиком (1) - обычная строка подключения.  
   
  connectionString  
@@ -75,7 +74,7 @@ ms.lasthandoff: 02/23/2018
  Необязательная строка, определяющая имя управляемого поставщика данных используется для подключения к реляционной базе данных, если не указано в строке подключения.  
   
 ## <a name="usage"></a>Использование  
- **Источник данных** объекты используются в [Alter команда &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Создать команду &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace команда &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Удалить команду &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Обновить команды &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), и [MergePartitions команда &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **Источник данных** объекты используются в [Alter, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [создать команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [команду CreateOrReplace &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [удалить команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [команда "Обновить" &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), и [MergePartitions, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  Объект **DataSource** объект свойства модели, но также может быть указан как свойства объекта базы данных, учитывая однозначное сопоставление между моделью и базы данных.  Секции, основанные на запросах SQL также указать **DataSource**, только с сокращенный набор свойств.  
   
@@ -94,7 +93,7 @@ ms.lasthandoff: 02/23/2018
 ]  
 ```  
   
-## <a name="full-syntax"></a>Полное описание синтаксиса  
+## <a name="full-syntax"></a>Полный синтаксис  
  Ниже приведено представление схемы объекта источника данных модели.  
   
 ```  
@@ -189,6 +188,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Настройка HTTP-доступа к службам Analysis Services в службах IIS &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Настройка HTTP-доступа к службам Analysis Services в службах IIS & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

@@ -1,39 +1,23 @@
 ---
-title: "Общие сведения о порядке этапов и порядке вычисления (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Общие сведения о порядке этапов и порядке вычисления (многомерные Выражения) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- evaluation order [MDX]
-- calculation order [MDX]
-- SOLVE_ORDER property
-- queries [MDX], solve orders
-- solve orders [MDX]
-- pass orders [MDX]
-- expressions [MDX], solve orders
-ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 522c76ebc4f76e382f12490872e2e8ba54e5fe94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Манипулирование данными MDX - основные сведения о проходе порядок вычисления и порядке разрешения
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-В ходе вычисления куба в скрипте многомерных выражений вычисление происходит за несколько шагов, в зависимости от того, для какой цели используются те или иные вычислительные функции. Каждый из этих шагов называется этапом вычисления.  
+  В ходе вычисления куба в скрипте многомерных выражений вычисление происходит за несколько шагов, в зависимости от того, для какой цели используются те или иные вычислительные функции. Каждый из этих шагов называется этапом вычисления.  
   
  Этап вычисления можно идентифицировать по его порядковому номеру — номеру этапа вычислений. Количество этапов, необходимых для полного вычисления всех ячеек куба, называется глубиной вычисления куба.  
   
@@ -220,9 +204,9 @@ FROM [Adventure Works]
  Работать с порядками вычисления весьма сложно, особенно в кубах с большим количеством измерений, содержащих вычисляемые элементы, пользовательские формулы сверток и вычисляемые ячейки. При выполнении службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] запроса многомерных выражений [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] принимает во внимание порядок вычисления всех элементов, рассчитываемых на данном этапе, включая измерения куба, указанные в запросе.  
   
 ## <a name="see-also"></a>См. также  
- [CalculationCurrentPass &#40; Многомерные Выражения &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue &#40; Многомерные Выражения &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER, инструкция #40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Обработка данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass & #40; Многомерные Выражения & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue & #40; Многомерные Выражения & #41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Обработка данных & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

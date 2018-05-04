@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 880b8a12da960269ff559653880ebf62d01947ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Qtd( [ Member_Expression ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если выражение элемента не указано, по умолчанию используется текущий элемент первой иерархии с уровнем типа *кварталы* в первом измерении типа *время* в группе мер.  
   
- **Qtd** функция — это функция ярлык для [PeriodsToDate &#40; Многомерные Выражения &#41; ](../mdx/periodstodate-mdx.md) функция, выражение уровня аргумента задано значение *квартал*. Таким образом, выражение `Qtd(Member_Expression)` равнозначно выражению `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
+ **Qtd** функция — это функция ярлык для [PeriodsToDate &#40;многомерных Выражений&#41; ](../mdx/periodstodate-mdx.md) функция, выражение уровня аргумента задано значение *квартал*. Таким образом, выражение `Qtd(Member_Expression)` равнозначно выражению `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращается сумма `Measures.[Order Quantity]` член, суммарный за первые два месяца третьего квартала 2003 г, содержащихся в `Date` измерения, от **Adventure Works** куба.  
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,34 +1,23 @@
 ---
 title: Ключевое слово EXISTING (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-f1_keywords:
-- EXISTING
-helpviewer_keywords:
-- Existing keyword
-ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c3a9ebbb73e8bf2b305a7ab2730439ffd0d53f8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 888c3039c98b36b15f28f6cfac21506547f3940c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query---existing-keyword"></a>Запрос многомерных Выражений - ключевое слово EXISTING
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Вызывает заданный набор должен вычисляться в текущем контексте.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +30,7 @@ Existing Set_Expression
  *Set_Expression*  
  Допустимое многомерное выражение набора.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  По умолчанию наборы вычисляются в контексте куба, который содержит их элементы. Ключевое слово **Existing** указывает на то, что заданный набор должен вычисляться в текущем контексте.  
   
 ## <a name="example"></a>Пример  
@@ -82,14 +71,14 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Count (наборы) (многомерные выражения)](../../../mdx/count-set-mdx.md)   
- [AddCalculatedMembers &#40; Многомерные Выражения &#41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [Статистическая функция &#40; Многомерные Выражения &#41;](../../../mdx/aggregate-mdx.md)   
- [Фильтр &#40; Многомерные Выражения &#41;](../../../mdx/filter-mdx.md)   
- [Свойства &#40; Многомерные Выражения &#41;](../../../mdx/properties-mdx.md)   
- [DrilldownLevel &#40; Многомерные Выражения &#41;](../../../mdx/drilldownlevel-mdx.md)   
- [Hierarchize &#40; Многомерные Выражения &#41;](../../../mdx/hierarchize-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Число & #40; Выбрать & #41; & #40; Многомерные Выражения & #41;](../../../mdx/count-set-mdx.md)   
+ [AddCalculatedMembers & #40; Многомерные Выражения & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [Статистическая функция & #40; Многомерные Выражения & #41;](../../../mdx/aggregate-mdx.md)   
+ [Фильтр & #40; Многомерные Выражения & #41;](../../../mdx/filter-mdx.md)   
+ [Свойства & #40; Многомерные Выражения & #41;](../../../mdx/properties-mdx.md)   
+ [DrilldownLevel & #40; Многомерные Выражения & #41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Hierarchize & #40; Многомерные Выражения & #41;](../../../mdx/hierarchize-mdx.md)   
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

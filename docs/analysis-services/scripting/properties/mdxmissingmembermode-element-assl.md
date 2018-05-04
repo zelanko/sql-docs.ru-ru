@@ -25,15 +25,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02ede17b0011ed3eceecf35feaa93fc42c55da3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2452957134b0c1118695e5a34565ca6053010eb8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>Элемент MdxMissingMemberMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет, как отсутствующие элементы обрабатываются для инструкций многомерных выражений (MDX).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет, как обрабатываются пропущенные элементы для инструкций многомерных выражений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,32 +48,32 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*По умолчанию*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Значение по умолчанию|*Default*|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительский элемент|[Dimension](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
+|Родительский элемент|[Измерения](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Игнорировать*|Отсутствующие элементы пропускаются.|  
 |*Ошибка*|При обнаружении отсутствующих элементов возникает ошибка.|  
-|*По умолчанию*|Отсутствующие элементы пропускаются.|  
+|*Default*|Отсутствующие элементы пропускаются.|  
   
  Элемент, соответствующий родителю параметра **MdxMissingMemberMode** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Dimension>.  
   
-## <a name="see-also"></a>См. также:  
- [Многомерные выражения &#40; Многомерные Выражения &#41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Многомерные выражения & #40; Многомерные Выражения & #41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

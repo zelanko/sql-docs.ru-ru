@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +37,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c02932c224c95c0977347e0d770b7e11453608cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Примеры массовой загрузки XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -391,7 +389,7 @@ End Function
 </xsd:schema>  
 ```  
   
- Схема задает  **\<порядок >** элемент с  **\<продукта >** дочерний элемент.  **\<Порядок >** элемент сопоставляется с таблицей Ord и  **\<продукта >** элемент сопоставляется таблице Product в базе данных. Определенная на  **\<продукта >** элемент определяет связь m: n, представленной в таблице OrderDetail. (в заказ может входить множество продуктов, а продукт может входить во множество заказов).  
+ Схема задает  **\<порядок >** элемент с  **\<продукта >** дочерний элемент. **\<Порядок >** элемент сопоставляется с таблицей Ord и  **\<продукта >** элемент сопоставляется таблице Product в базе данных. Определенная на  **\<продукта >** элемент определяет связь m: n, представленной в таблице OrderDetail. (в заказ может входить множество продуктов, а продукт может входить во множество заказов).  
   
  При массовой загрузке XML-документа с этой схемой записи добавляются к таблицам Ord, Product и OrderDetail.  
   

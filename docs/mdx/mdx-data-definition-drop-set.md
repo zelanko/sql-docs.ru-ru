@@ -29,12 +29,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 72c0c0816e250f135790604c2c832b87d74c0be2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e98ab15f5370eab52f4dc467bf13e7d52c62c979
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-set"></a>Определения данных многомерных Выражений — DROP SET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,10 +59,10 @@ DROP [SESSION] SET
  *Set_Name*  
  Допустимое строковое выражение, представляющая имя именованного набора для удаления.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Дополнительные сведения об именованных наборах см. в разделе [Построение именованных наборов в многомерных выражениях](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
-## <a name="see-also"></a>См. также:  
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

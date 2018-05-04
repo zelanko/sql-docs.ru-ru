@@ -23,20 +23,20 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: caf9cc5b0c178c70889be608d4622b4469f798c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Набор строк DBSCHEMA_PROVIDER_TYPES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет данные (базовые) типы, поддерживаемые поставщиком данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Показывает (базовые) типы данных, поддерживаемые поставщиком данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DBSCHEMA_PROVIDER_TYPES** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**TYPE_NAME**|**DBTYPE_WSTR**|Имя типа данных, связанного с поставщиком.|  
 |**ТИП ДАННЫХ**|**DBTYPE_UI2**|Индикатор типа данных.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 |**ТИП ДАННЫХ**|**DBTYPE_UI2**|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

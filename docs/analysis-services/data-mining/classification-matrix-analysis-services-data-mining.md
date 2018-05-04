@@ -1,39 +1,23 @@
 ---
-title: "Матрица классификации (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Матрица классификации (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], validating
-- validating data mining models
-- viewing mining accuracy
-- displaying mining accuracy
-- confusion matrix [data mining]
-- classification matrix [Analysis Services]
-- accuracy testing [data mining]
-ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c2d3eeb8eb8a50988e163b32300cb456fea7516b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*Матрица классификации* сортирует все варианты из модели по категориям, определяя, соответствовало ли прогнозируемое значение действительному. Затем все варианты в каждой категории пересчитываются, и полученные количества выводятся в виде матрицы. Матрица классификации — это стандартный инструмент для оценки статистических моделей, иногда ее называют *матрицей противоречий*.  
+  *Матрица классификации* сортирует все варианты из модели по категориям, определяя, соответствовало ли прогнозируемое значение действительному. Затем все варианты в каждой категории пересчитываются, и полученные количества выводятся в виде матрицы. Матрица классификации — это стандартный инструмент для оценки статистических моделей, иногда ее называют *матрицей противоречий*.  
   
  Диаграмма, созданная с выбранным параметром **Матрица классификации** , сравнивает действительное значение с прогнозируемым для каждого заданного прогнозируемого варианта. Строки в матрице представляют прогнозируемые значения для модели, а в столбцах представлены действительные значения. В анализе используются категории *ложный положительный результат*, *истинный положительный результат*, *ложный отрицательный результат*и *истинный отрицательный результат*  
   
@@ -85,12 +69,12 @@ ms.lasthandoff: 02/15/2018
   
 |Разделы|Ссылки|  
 |------------|-----------|  
-|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по интеллектуальному анализу данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов &#40; Учебник по интеллектуальному анализу данных &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Объясняет типы соответствующих диаграмм.|[Диаграмма точности прогнозов &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Описывает использование перекрестной проверки для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по интеллектуальному анализу данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов & #40; Учебник по интеллектуальному анализу данных & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Объясняет типы соответствующих диаграмм.|[Диаграмма точности прогнозов & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Описывает использование перекрестной проверки для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Тестирование и проверка задачи и инструкции по & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

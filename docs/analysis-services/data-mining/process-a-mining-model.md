@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
@@ -18,15 +18,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ed7f670a46c49cc31b576b68ae1b2c7a5edd46d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-a-mining-model"></a>обработать модель интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]На вкладке «модели интеллектуального анализа данных» конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], можно либо обработать конкретную модель, связанными со структурой интеллектуального анализа данных, или обработать все модели, связанные с этой структурой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  На вкладке «Модели интеллектуального анализа данных» конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно либо обработать конкретную модель, которая связана со структурой интеллектуального анализа данных, либо обработать все модели, связанные с этой структурой.  
   
  Обработка модели интеллектуального анализа данных производится с помощью следующих инструментов.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
  Были обработаны структура интеллектуального анализа данных и все связанные с ней модели интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также  
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

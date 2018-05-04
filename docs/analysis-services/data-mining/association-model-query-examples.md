@@ -1,37 +1,23 @@
 ---
-title: "Примеры запросов к модели взаимосвязей | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Примеры запросов к модели взаимосвязей | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- itemsets [Analysis Services]
-- association algorithms [Analysis Services]
-- rules [Data Mining]
-- association rules
-- content queries [DMX]
-ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 965faf24b55fb206746076d5773c158fa20375de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-model-query-examples"></a>Примеры запросов моделей взаимосвязей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Создаваемый запрос к модели интеллектуального анализа данных может быть запросом содержимого. Такой запрос предоставляет подробные сведения о правилах и наборах элементов, обнаруженных в процессе анализа. Можно также создавать прогнозирующие запросы. Они используют взаимосвязи, обнаруженные в данных, для создания прогнозов. Прогнозы для моделей взаимосвязей обычно основаны на правилах, и их можно использовать для рекомендаций, в то время как запросы к содержимому обычно исследуют связи между наборами элементов. Можно также получать метаданные, описывающие модель.  
+  Создаваемый запрос к модели интеллектуального анализа данных может быть запросом содержимого. Такой запрос предоставляет подробные сведения о правилах и наборах элементов, обнаруженных в процессе анализа. Можно также создавать прогнозирующие запросы. Они используют взаимосвязи, обнаруженные в данных, для создания прогнозов. Прогнозы для моделей взаимосвязей обычно основаны на правилах, и их можно использовать для рекомендаций, в то время как запросы к содержимому обычно исследуют связи между наборами элементов. Можно также получать метаданные, описывающие модель.  
   
  Этот раздел посвящен созданию указанных запросов для моделей, основанных на алгоритме правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -232,19 +218,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |прогнозирующую функцию|Использование|  
-|[IsDescendant &#40; расширений интеллектуального анализа данных &#41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли один узел дочерним для другого узла в диаграмме нейронной сети.|  
-|[IsInNode &#40; расширений интеллектуального анализа данных &#41;](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
-|[PredictAdjustedProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
-|[PredictAssociation &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictassociation-dmx.md)|Прогнозирует вхождение в ассоциативном наборе данных.|  
-|[PredictHistogram &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу значений, связанную с текущим прогнозируемым значением.|  
-|[PredictNodeId &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
-|[PredictProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
-|[PredictSupport &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
-|[PredictVariance &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию для прогнозируемого значения.|  
+|[IsDescendant & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли один узел дочерним для другого узла в диаграмме нейронной сети.|  
+|[IsInNode & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
+|[PredictAdjustedProbability & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
+|[PredictAssociation & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictassociation-dmx.md)|Прогнозирует вхождение в ассоциативном наборе данных.|  
+|[PredictHistogram & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу значений, связанную с текущим прогнозируемым значением.|  
+|[PredictNodeId & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
+|[PredictProbability & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
+|[PredictSupport & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
+|[PredictVariance & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию для прогнозируемого значения.|  
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Технический справочник по алгоритму взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

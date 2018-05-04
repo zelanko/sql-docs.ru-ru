@@ -1,31 +1,30 @@
 ---
-title: "Олицетворение в табличных моделях служб Analysis Services | Документы Microsoft"
-ms.custom: 
+title: Олицетворение в табличных моделях служб Analysis Services | Документы Microsoft
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 20728b8ff7ecc4a4124f5fc292366d565781186f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonation"></a>Олицетворение 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-В этой статье дает разработчику табличных моделей представление о том, как учетные данные для входа используются службами Analysis Services при подключении к источнику данных для импорта и обработки данных (Обновить).  
+  В этой статье дает разработчику табличных моделей представление о том, как учетные данные для входа используются службами Analysis Services при подключении к источнику данных для импорта и обработки данных (Обновить).  
 
 ##  <a name="bkmk_conf_imp_info"></a> Настройка олицетворения  
  Где и в каком контексте модель существует определяет, как настроить сведения об олицетворении. При создании нового проекта модели, олицетворения при подключении к источнику данных для импорта данных настраивается в SQL Server Data Tools (SSDT). После развертывания модели можно настроить олицетворения в свойстве строки соединения модели базы данных с помощью SQL Server Management Studio (SSMS). Для табличных моделей в службах Analysis Services Azure можно использовать SSMS или **просмотреть в виде: сценарий** режим в конструкторе на основе браузера для редактирования файла Model.bim в формате JSON.

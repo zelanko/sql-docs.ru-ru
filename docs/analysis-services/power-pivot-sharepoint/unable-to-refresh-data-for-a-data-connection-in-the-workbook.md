@@ -1,31 +1,23 @@
 ---
-title: "Не удалось обновить данные для подключения к данным в книге | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: Не удалось обновить данные для подключения к данным в книге | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Не удалось обновить данные для подключения к данным в книге
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Применительно к книгам Excel, содержащим данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel возвращают эту ошибку, если при передаче запроса на соединение серверу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запрос завершается ошибкой.  
+  Применительно к книгам Excel, содержащим данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel возвращают эту ошибку, если при передаче запроса на соединение серверу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запрос завершается ошибкой.  
   
 ## <a name="details"></a>Сведения  
   
@@ -67,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
  Чтобы решить эту проблему, присоедините компьютер к домену, в котором находится сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , или установите контроллер домена на локальный компьютер. Второе решение, установка контроллера домена, потребует создания локальных учетных записей домена для всех служб и пользователей. Для создаваемых учетных записей потребуется настроить учетные записи служб и разрешения SharePoint.  
   
- Установка контроллера домена на компьютер рекомендуется в случае, если стоит задача использовать [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint вне сети (автономно). Подробные инструкции по порядку использования [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в режиме "вне сети" см. в записи блога "Taking your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server off the network" (Отключение сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] от сети) на сайте [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Установка контроллера домена на компьютер рекомендуется в случае, если стоит задача использовать [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint вне сети (автономно). Подробные инструкции по использованию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] вне сети, см. в записи блога «занимает вашей [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] сервер из сети» на [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Сценарий 4: сервер работает нестабильно**  
   

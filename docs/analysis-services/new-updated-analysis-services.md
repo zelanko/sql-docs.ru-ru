@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
-ms.component: ssas
-ms.date: 02/03/2018
-ms.openlocfilehash: 44fd26e0c450cf032f2a663b2cff7ea35dac012a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: analysis-services
+ms.date: 04/28/2018
+ms.openlocfilehash: 1d76f2a9f60e5bb69b2586a9b9fee10210c87c81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Новые и недавно обновленные: службы Analysis Services для SQL Server
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
+- *Диапазон обновлений дат:* &nbsp; **2018-02-03** &nbsp; - в - &nbsp; **2018-04-28**
 - *Предметной области:* &nbsp; **служб Analysis Services для SQL Server**.
 
 
@@ -41,7 +43,24 @@ ms.lasthandoff: 04/26/2018
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-***Сейчас новые статьи отсутствуют.***
+1. [Источники данных поддерживается в SQL Server Analysis Services табличной модели 1400](tabular-models/data-sources-supported-ssas-tabular-1400.md)
+2. [Табличное моделирование (с уровнем совместимости 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+3. [Создание разделов](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+4. [Создание ролей](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+5. [Анализ в Excel](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+6. [Развертывание](tutorial-tabular-1400/as-lesson-13-deploy.md)
+7. [Создание нового проекта табличной модели](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+8. [Получение данных](tutorial-tabular-1400/as-lesson-2-Get-data.md)
+9. [Пометить как таблицу дат](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+10. [Создание связей](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+11. [Создание вычисляемых столбцов](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+12. [Создание меры](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+13. [Создание ключевых показателей эффективности](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+14. [Создание перспектив](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+15. [Создание иерархий](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+16. [Дополнительный урок. Строки детализации](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+17. [Дополнительный урок. Динамическая безопасность](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+18. [Дополнительный урок. Неоднородные иерархии](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
 
 
@@ -85,40 +104,36 @@ ms.lasthandoff: 04/26/2018
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметные области, *содержащие* новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (1+3):&nbsp; **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (0+1):&nbsp; **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новые + обновленные (0+1):&nbsp; **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (0+1):&nbsp; **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (12+1): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (6+2):&nbsp; **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (15+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (2+9):&nbsp; **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (1+0):&nbsp; **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (1+1):&nbsp; **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новые + обновленные(1+1):&nbsp; **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1):&nbsp; **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (1+2):&nbsp; **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+2):&nbsp; **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новый + обновленные (11 + 6): &nbsp; &nbsp; **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новый + обновленные (18 + 0): &nbsp; &nbsp; **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (218 + 14): **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новый + обновленные (14 + 0): &nbsp; &nbsp; **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
+- [Новый + обновленные (3 + 2): &nbsp; &nbsp; **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
+- [Новый + обновленные (3 + 3): &nbsp; &nbsp; **Linux для SQL** документы](../linux/new-updated-linux.md)
+- [Новый + обновленные (7 + 10): &nbsp; &nbsp; **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
+- [Новый + обновленные (0 + 2): &nbsp; &nbsp; **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
+- [Новый + обновленные (1 + 3): &nbsp; &nbsp; **операций SQL Studio** документы](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новый + обновленные (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новый + обновленные (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
+- [Новый + обновленные (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
+- [Новый + обновленные (0 + 2): &nbsp; &nbsp; **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+- [Новый + обновленные (1 + 1): &nbsp; &nbsp; **средства для SQL** документы](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметные области, *не* содержащие новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
-- [Новый + обновленные (0 + 0): **объектов данных ActiveX (ADO) для SQL** документы](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (0 + 0): **Analytics Platform System для SQL** документы](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Новый + обновленные (0 + 0): **Data Quality Services для SQL** документы](../data-quality-services/new-updated-data-quality-services.md)
 - [Новый + обновленные (0 + 0): **расширений интеллектуального анализа (DMX) для SQL** документы](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новый + обновленные (0 + 0): **многомерных выражений (MDX) для SQL** документы](../mdx/new-updated-mdx.md)
 - [Новый + обновленные (0 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
+- [Новый + обновленные (0 + 0): **PowerShell для SQL** документы](../powershell/new-updated-powershell.md)
 - [Новый + обновленные (0 + 0): **образцы для SQL** документы](../samples/new-updated-samples.md)
 - [Новый + обновленные (0 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новый + обновленные (0 + 0): **XQuery для SQL** документы](../xquery/new-updated-xquery.md)
-
 

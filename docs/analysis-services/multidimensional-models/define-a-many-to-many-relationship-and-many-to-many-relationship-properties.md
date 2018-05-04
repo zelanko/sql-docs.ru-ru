@@ -1,32 +1,23 @@
 ---
 title: Определить многие ко многим "и" многие ко многим свойства | Документы Microsoft
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- many-to-many relationships [Analysis Services]
-ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5377557da99938446a0746e0183e2adcf321dab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f0a8ee2b6ee9bb7d53234b6b21974978543bc4c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей "многие ко многим" и свойств связей "многие ко многим"
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе объясняется многие ко многим измерений в службах Analysis Services, включая способы их использования и способы их создания.  
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей «многие ко многим» и свойств связей «многие ко многим»
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  В этом разделе рассматривается измерения «многие ко многим» в службах Analysis Services, включая случаи их использования и способы создания.  
   
 ## <a name="introduction"></a>Введение  
  Службы Analysis Services поддерживают измерения «многие ко многим», позволяя проводить более сложный анализ, чем тот, что может быть описан в классической схеме звезды. В классической схеме звезды все измерения имеют связь «один ко многим» с таблицей фактов. Каждый факт соединяется с одним элементом измерения, а один элемент измерения связан с несколькими фактами.  
@@ -189,10 +180,10 @@ ms.lasthandoff: 01/08/2018
   
  [Руководство. Пример измерения "многие ко многим" для служб SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>См. также:  
- [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+## <a name="see-also"></a>См. также  
+ [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Установка образцов данных и проектов для служб Analysis Services многомерное моделирование учебник](../../analysis-services/install-sample-data-and-projects.md)   
- [Развертывание проектов служб Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Развертывание проектов служб Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [Перспективы в многомерных моделях](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

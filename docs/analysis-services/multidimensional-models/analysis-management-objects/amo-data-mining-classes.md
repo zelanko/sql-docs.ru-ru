@@ -1,33 +1,19 @@
 ---
-title: "Классы интеллектуального анализа данных объектов AMO | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 
-author: Minewiskan
+title: Классы интеллектуального анализа данных объектов AMO | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ac98a1bb199a01cff155157031535722c262ed59
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-data-mining-classes"></a>Классы интеллектуального анализа данных объектов AMO
   Классы интеллектуального анализа данных позволяют создавать, изменять, удалять и обрабатывать объекты интеллектуального анализа данных. Среди действий при работе с объектами интеллектуального анализа данных — создание структур интеллектуального анализа данных, создание моделей интеллектуального анализа и их обработка.  
@@ -46,7 +32,7 @@ ms.lasthandoff: 02/15/2018
   
  ![Классы AMO для интеллектуального анализа данных](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "классы объектов AMO для интеллектуального анализа данных")  
   
-##  <a name="MiningStructure">Объекты MiningStructure</a>  
+##  <a name="MiningStructure"></a> Объекты MiningStructure  
  Структура интеллектуального анализа данных является контейнером для моделей интеллектуального анализа данных. Структура определяет все возможные столбцы, которые могут использоваться в модели интеллектуального анализа данных. В каждой модели интеллектуального анализа данных определяются собственные столбцы из набора столбцов, определенных в структуре.  
   
  Простой объект <xref:Microsoft.AnalysisServices.MiningStructure> состоит из следующих компонентов: базовые сведения, представление источника данных, один или несколько объектов <<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, от нуля или более объектов <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> и объект <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -98,7 +84,7 @@ ms.lasthandoff: 02/15/2018
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, его следует удалить из коллекции родительского объекта <xref:Microsoft.AnalysisServices.MiningStructure>, а сам родительский объект <xref:Microsoft.AnalysisServices.MiningStructure> необходимо обновить до сервера при помощи метода Update.  
   
-##  <a name="MiningModel">Объекты MiningModel</a>  
+##  <a name="MiningModel"></a> Объекты MiningModel  
  <xref:Microsoft.AnalysisServices.MiningModel> — это объект, позволяющий выбирать для использования столбцы из структуры, алгоритмы, а также дополнительные определенные параметры для настройки модели. Например, может потребоваться определить несколько моделей интеллектуального анализа в одной структуре интеллектуального анализа, которые будут использовать одинаковые алгоритмы, но при этом в одной модели необходимо пропустить некоторые столбцы из структуры интеллектуального анализа, использовать их в качестве входных данных в другой модели, а также использовать их в качестве входных данных и прогноза в третьей. Это полезно в случае, если в одной модели интеллектуального анализа требуется рассматривать столбцы как непрерывные, а в другой — как дискретизированные.  
   
  Простой объект <xref:Microsoft.AnalysisServices.MiningModel> состоит из базовых сведений, определений алгоритма и столбцов.  
@@ -120,7 +106,7 @@ ms.lasthandoff: 02/15/2018
  [Основные классы объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Программирование объектов интеллектуального анализа данных AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Логическая архитектура & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты базы данных & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

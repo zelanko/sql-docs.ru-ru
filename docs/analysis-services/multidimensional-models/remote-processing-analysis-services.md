@@ -1,31 +1,23 @@
 ---
-title: "Удаленной обработки (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Удаленной обработки (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e59011361e6dad623fa5f5cab71d262eb5eb8338
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
+  Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
   
@@ -38,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 -   Устраните все ошибки локальной обработки перед попыткой проведения удаленной обработки. Проверьте, чтобы при получении локального запроса на обработку данные успешно извлекались из внешнего реляционного источника данных. Инструкции по настройке учетных данных для получения данных см. в разделе [Задание параметров олицетворения (службы SSAS — многомерные)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Удаленная обработка по запросу  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] принимает запросы на обработку от учетных записей пользователей или приложений с правами администратора [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если вы являетесь администратором, проверьте возможность подключения к удаленному экземпляру и обработайте базу данных вручную через удаленное соединение.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]принимает запросы на обработку от учетных записей пользователя или приложения, имеющие [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] разрешения администратора. Если вы являетесь администратором, проверьте возможность подключения к удаленному экземпляру и обработайте базу данных вручную через удаленное соединение.  
   
 1.  На компьютере, который будет использоваться для планирования обработки, запустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключитесь к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -100,8 +92,8 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
  [Компоненты агента SQL Server](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [Планирование задач администрирования служб SSAS с помощью агента SQL Server](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Пакетная обработка &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Пакетная обработка & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Обработка объектов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Обработка объектов & #40; XML для Аналитики & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

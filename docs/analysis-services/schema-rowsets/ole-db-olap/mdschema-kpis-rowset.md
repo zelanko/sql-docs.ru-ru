@@ -23,20 +23,20 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 68c927acad41794a61892d638fe3423dacb3948d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemakpis-rowset"></a>Набор строк MDSCHEMA_KPIS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает ключевые показатели эффективности (KPI) в базе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает ключевые показатели эффективности в базе данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_KPIS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|База данных-источник.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|Не поддерживается.|  
@@ -65,13 +65,13 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**KPI_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**KPI_NAME**|**DBTYPE_WSTR**|Необязательно.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Значение по умолчанию для ограничения **1**. Битовая карта с одним из следующих допустимых значений:<br /><br /> **1** КУБА<br /><br /> **2** ИЗМЕРЕНИЯ|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

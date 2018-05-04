@@ -24,12 +24,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 877f35988bceb86425b4517eb331ce526b9168f8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 792f2d89dc1f0cecc7aba0b001266b2308a14c9f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;структуры&gt;. ВАРИАНТЫ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
+ Необязательно. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список выражений с разделителями-запятыми.  
@@ -69,9 +68,9 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательный параметр. Выражение, возвращающее скалярное значение.  
+ Необязательно. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если детализация включена как для модели, так и для структуры, то любой член роли, обладающей разрешениями на структуру или модель интеллектуального анализа данных, может возвращать столбцы структуры, которые не были включены в модель. Это делается с помощью следующего синтаксиса:  
   
 ```  
@@ -104,10 +103,10 @@ WHERE IsTestCase();
   
  Чтобы вернуть обучающие варианты, подставьте функцию `IsTrainingCase()`.  
   
-## <a name="see-also"></a>См. также:  
- [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../dmx/select-dmx.md)   
+## <a name="see-also"></a>См. также  
+ [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

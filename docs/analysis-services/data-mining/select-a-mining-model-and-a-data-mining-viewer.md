@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
@@ -18,15 +18,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6cd2af96ff8c9b2f9ed07cff8407ab4c0730bcad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Выбор модели интеллектуального анализа данных и средства просмотра интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Модель интеллектуального анализа данных можно изучать с помощью одного из средств просмотра на **средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных. Можно легко переключаться между моделями и менять используемое средство просмотра.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Модель интеллектуального анализа данных можно изучать с помощью одного из средств просмотра на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора моделей интеллектуального анализа данных. Можно легко переключаться между моделями и менять используемое средство просмотра.  
   
 -   Раскрывающийся список **Модель интеллектуального анализа данных** на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит все модели интеллектуального анализа, находящиеся в текущей структуре интеллектуального анализа.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  Выбранная модель интеллектуального анализа данных откроется в средстве просмотра, связанном с типом данной модели.  
   
-## <a name="see-also"></a>См. также:  
- [Задачи и инструкции по средству просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также  
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

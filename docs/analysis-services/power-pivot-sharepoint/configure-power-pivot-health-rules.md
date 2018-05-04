@@ -1,27 +1,19 @@
 ---
-title: "Настройка правил исправности PowerPivot | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка правил исправности PowerPivot | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 854eb1c57531b2aa620e668f78e2eb32f75d0192
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Настройка правил определения работоспособности PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +25,7 @@ ms.lasthandoff: 02/15/2018
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint &#2013;124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
   
  **Примечание** . Параметры правил определения работоспособности настраиваются независимо для экземпляра служб SQL Server Analysis Services и приложения службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Инструкции данного раздела позволяют настроить правила определения исправности для каждой службы. В развертывании SharePoint 2013 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] использует только приложение службы. Поэтому [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливает разные наборы правил определения исправности для разных версий SharePoint. См. столбец "Версия" в разделе [Справочник по правилам для определения работоспособности (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md). Также для отображения списка установленных правил можно выполнить следующую команду Windows PowerShell.  
   

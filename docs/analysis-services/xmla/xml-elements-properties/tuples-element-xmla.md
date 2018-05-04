@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05b1a2e375b7a563699243c586b866ab77fe47ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4eed093e987af9cb58497caa317f796aa4fcf8a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tuples-element-xmla"></a>Элемент Tuples (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит набор [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) объектов для [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит набор [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) объектов для [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,20 +54,20 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Родительские элементы|[Оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Дочерние элементы|[Кортеж](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Когда клиентское приложение устанавливает для свойства **AxisFormat** значение *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент **Axis** содержит элемент **Tuples**, представляющий набор кортежей на этой оси. Каждый кортеж представлен с помощью элемента **Tuple**, содержащего элементы [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) из каждой иерархии оси.  
   
 ## <a name="example"></a>Пример  
@@ -119,6 +119,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

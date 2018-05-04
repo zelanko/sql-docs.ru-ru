@@ -1,40 +1,23 @@
 ---
-title: "Атрибуты в иерархиях родителей потомков | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Атрибуты в иерархиях родителей потомков | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data members [Analysis Services]
-- nonleaf members
-- MembersWithDataCaption property
-- members [Analysis Services]
-- members [Analysis Services], data
-- leaf members
-- parent-child dimensions [Analysis Services]
-- MembersWithData property
-ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f40a257055bb1609f686d84f820073d6ac07aa6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d982bcd932e9b29ff2e834cc09eea3d1c5a6da0c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parent-child-dimension-attributes"></a>Родительские атрибуты измерения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
+  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
   
  Тем не менее в иерархии вида «родители-потомки» некоторые неконечные элементы вместе со статистическими выражениями над дочерними элементами также могут содержать данные из основных источников данных. Для таких неконечных элементов в иерархии вида «родители-потомки» создаются специальные, формируемые системой дочерние элементы, содержащие данные из основной таблицы фактов. Такие элементы называются *элементами данных*, они непосредственно связаны с неконечным элементом дерева, который не зависит от суммарного значения, вычисленного для его потомков.  
   

@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0d513dc324fe6f1efc857a03bf231d06481c10c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 95adf11f3582f58a9d8ba76072d3d99bdaaf1bb9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="error-element-xmla"></a>Элемент Error (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит сведения об ошибке, возвращенные экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит сведения об ошибке, возвращенные экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,38 +67,38 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Сообщение](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|  
-|Дочерние элементы|См. в следующей таблице.|  
+|Дочерние элементы|См. таблицу ниже.|  
   
 |Предок|Дочерние элементы|  
 |--------------|--------------------|  
 |[Сообщение](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|None|  
-|[Ячейка](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [строки](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[Описание](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [источника](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
+|[Cell](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [row](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[Description](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>Атрибуты  
   
-|attribute|Description|  
+|Attribute|Описание|  
 |---------------|-----------------|  
 |ErrorCode|Требуется **UnsignedInt** атрибут (только если **сообщение** является родительским элементом.) Содержит числовой код возврата ошибки.|  
 |Severity|Необязательный **строка** атрибут (только если **сообщение** является родительским элементом.) Содержит серьезность ошибки.|  
-|Description|Необязательный **строка** атрибут (только если **сообщение** является родительским элементом.) Содержит описательный текст ошибки.|  
+|Описание|Необязательный **строка** атрибут (только если **сообщение** является родительским элементом.) Содержит описательный текст ошибки.|  
 |Source|Необязательный **строка** атрибут (только если **сообщение** является родительским элементом.) Содержит имя компонента, который сформировал ошибку.|  
 |HelpFile|Необязательный **строка** атрибут (только если **сообщение** является родительским элементом.) Содержит путь или URL-адрес к файлу или разделу справки, в котором описывается ошибка.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="see-also"></a>См. также:  
- [Элемент warning &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Элемент warning & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

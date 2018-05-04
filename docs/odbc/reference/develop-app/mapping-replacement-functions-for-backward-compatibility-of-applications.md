@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -25,15 +25,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0283ca10e19e1a75e5a3d497c33ab57866b3b27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Сопоставление замены функций для обеспечения обратной совместимости приложений
-ODBC 3*.x* приложения при работе с ODBC 3*.x* диспетчера драйверов будет работать для ODBC 2. *x* при условии, что используются не новые возможности драйвера. Оба дублирование функциональные возможности и изменения поведения тем не менее, влиять на который ODBC 3. *x* приложение работает на ODBC 2. *x* драйвера. При работе с ODBC 2. *x* драйвера, диспетчер драйверов сопоставляет следующие ODBC 3. *x* функций, которые произвели замену одного или нескольких ODBC 2. *x* функции, в соответствующие ODBC 2. *x* функции.  
+ODBC 3 *.x* приложения при работе с ODBC 3 *.x* диспетчера драйверов будет работать для ODBC 2. *x* при условии, что используются не новые возможности драйвера. Оба дублирование функциональные возможности и изменения поведения тем не менее, влиять на который ODBC 3. *x* приложение работает на ODBC 2. *x* драйвера. При работе с ODBC 2. *x* драйвера, диспетчер драйверов сопоставляет следующие ODBC 3. *x* функций, которые произвели замену одного или нескольких ODBC 2. *x* функции, в соответствующие ODBC 2. *x* функции.  
   
 |ODBC 3. *x* функции|ODBC 2. *x* функции|  
 |-------------------------|-------------------------|  
@@ -108,7 +107,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      Диспетчер драйверов возвращает ошибку SQL_ERROR с SQLSTATE HY091 (недопустимый идентификатор поля дескриптора). Применить другим правилам этого раздела.  
   
-2.  Диспетчер драйверов сопоставляет SQL_COLUMN_COUNT, SQL_COLUMN_NAME или SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME или SQL_DESC_NULLABLE, соответственно. (ODBC 2*.x* драйвер должен поддерживать только SQL_COLUMN_COUNT, SQL_COLUMN_NAME и SQL_COLUMN_NULLABLE, не SQL_DESC_COUNT, SQL_DESC_NAME и SQL_DESC_NULLABLE.) Вызов SQLColAttribute сопоставлено:  
+2.  Диспетчер драйверов сопоставляет SQL_COLUMN_COUNT, SQL_COLUMN_NAME или SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME или SQL_DESC_NULLABLE, соответственно. (ODBC 2 *.x* драйвер должен поддерживать только SQL_COLUMN_COUNT, SQL_COLUMN_NAME и SQL_COLUMN_NULLABLE, не SQL_DESC_COUNT, SQL_DESC_NAME и SQL_DESC_NULLABLE.) Вызов SQLColAttribute сопоставлено:  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -240,7 +239,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      Обратите внимание, что *BufferLength* и *StringLengthPtr* игнорируются.  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- Когда ODBC 3. *x* приложения, работа с ODBC 2*.x* драйвер вызывает **SQLGetData** с *ColumnNumber* аргумент равен 0, а ODBC 3*.x* диспетчера драйверов сопоставляется это вызов **SQLGetStmtOption** с *параметр* SQL_GET_BOOKMARK значение атрибута.  
+ Когда ODBC 3. *x* приложения, работа с ODBC 2 *.x* драйвер вызывает **SQLGetData** с *ColumnNumber* аргумент равен 0, а ODBC 3 *.x* диспетчера драйверов сопоставляется это вызов **SQLGetStmtOption** с *параметр* SQL_GET_BOOKMARK значение атрибута.  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  Диспетчер драйверов сопоставляет этот параметр, чтобы **SQLGetStmtOption**. В следующем вызове **SQLGetStmtAttr**:  
@@ -410,15 +409,15 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>Обработка ошибок  
  В ODBC 3. *x*, вызов **SQLFetch** или **SQLFetchScroll** заполняет SQL_DESC_ARRAY_STATUS_PTR в IRD, а в поле SQL_DIAG_ROW_NUMBER данной записи диагностики содержит номер строки в наборе строк, относящиеся к элементам данной записи. С помощью этого приложения можно сопоставить сообщение об ошибке с позиции строки.  
   
- ODBC 2. *x* драйвера будут недоступны для поддержки этой функции. Однако он предоставляет определение границ ошибка с кодом SQLSTATE 01S01 (ошибка в строке). ODBC 3. *x* приложение, использующее **SQLFetch** или **SQLFetchScroll** при переходит в ODBC 2. *x* драйвер должен быть этот факт. Обратите внимание, что такое приложение будет невозможно вызвать **SQLGetDiagField** фактически все равно получить SQL_DIAG_ROW_NUMBER поля. ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер будет вызывать **SQLGetDiagField** только с *DiagIdentifier* аргумент SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE или SQL_DIAG_ SQLSTATE. ODBC 3*.x* диспетчера драйверов поддерживается структура диагностических данных, при работе с ODBC 2. *x* драйвер, но ODBC 2. *x* драйвер возвращает только эти четыре поля.  
+ ODBC 2. *x* драйвера будут недоступны для поддержки этой функции. Однако он предоставляет определение границ ошибка с кодом SQLSTATE 01S01 (ошибка в строке). ODBC 3. *x* приложение, использующее **SQLFetch** или **SQLFetchScroll** при переходит в ODBC 2. *x* драйвер должен быть этот факт. Обратите внимание, что такое приложение будет невозможно вызвать **SQLGetDiagField** фактически все равно получить SQL_DIAG_ROW_NUMBER поля. ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер будет вызывать **SQLGetDiagField** только с *DiagIdentifier* аргумент SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE или SQL_DIAG_ SQLSTATE. ODBC 3 *.x* диспетчера драйверов поддерживается структура диагностических данных, при работе с ODBC 2. *x* драйвер, но ODBC 2. *x* драйвер возвращает только эти четыре поля.  
   
- Когда ODBC 2. *x* при работе с ODBC 2. *x* драйвера, если операция может вызвать несколько ошибок, возвращаемых диспетчером драйверов, различные ошибки могут быть возвращены ODBC 3*.x* диспетчера драйверов, чем ODBC 2. *x* диспетчера драйверов.  
+ Когда ODBC 2. *x* при работе с ODBC 2. *x* драйвера, если операция может вызвать несколько ошибок, возвращаемых диспетчером драйверов, различные ошибки могут быть возвращены ODBC 3 *.x* диспетчера драйверов, чем ODBC 2. *x* диспетчера драйверов.  
   
 ## <a name="mappings-for-bookmark-operations"></a>Сопоставления для операций закладки  
- ODBC 3*.x* диспетчера драйверов осуществляет следующие сопоставления при ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер выполняет операции закладки.  
+ ODBC 3 *.x* диспетчера драйверов осуществляет следующие сопоставления при ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер выполняет операции закладки.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Когда ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер вызывает **SQLBindCol** для привязки к столбцу 0 с *fCType* равно SQL_C_VARBOOKMARK ODBC 3*.x* проверяет диспетчера драйверов ли *BufferLength* аргумента меньше 4 или больше 4 и если да, возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера). Если *BufferLength* аргумент равен 4, диспетчер драйверов вызывает **SQLBindCol** в драйвере после замены *fCType* с SQL_C_BOOKMARK.  
+ Когда ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер вызывает **SQLBindCol** для привязки к столбцу 0 с *fCType* равно SQL_C_VARBOOKMARK ODBC 3 *.x* проверяет диспетчера драйверов ли *BufferLength* аргумента меньше 4 или больше 4 и если да, возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера). Если *BufferLength* аргумент равен 4, диспетчер драйверов вызывает **SQLBindCol** в драйвере после замены *fCType* с SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Когда ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер вызывает **SQLColAttribute** с *ColumnNumber* возвращает аргумента задано значение 0, диспетчер драйверов *FieldIdentifier* значения перечисленные в следующей таблице.  

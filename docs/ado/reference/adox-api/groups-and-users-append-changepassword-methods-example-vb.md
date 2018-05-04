@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2c233eea6416050a350a1349d1e037facfb183d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2377bd40226859ad5573a1587bac72699eac0bf0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic)
 В этом примере демонстрируется [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) метод [группы](../../../ado/reference/adox-api/groups-collection-adox.md), а также [Append](../../../ado/reference/adox-api/append-method-adox-users.md) метод [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) путем добавления новых [Группы](../../../ado/reference/adox-api/group-object-adox.md) и новый [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в системе. Новый **группы** добавляется к **группы** коллекции нового **пользователя**. Следовательно, новый **пользователя** добавляется **группы**. Кроме того [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) метод используется для указания **пользователя** пароль.  

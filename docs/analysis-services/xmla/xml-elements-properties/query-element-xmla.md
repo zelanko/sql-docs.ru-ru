@@ -29,15 +29,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 230141d3a6fd5d3b2e02c1dce8e397d3f9bdce3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: eb9a015347bf0edccedecd59fe1d66785a1c613f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-element-xmla"></a>Элемент Query (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит запрос в [запросы](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) коллекции, используемой [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) команды во время оптимизации с учетом использования.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит запрос в [запросы](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) коллекции, используемой [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) команды во время оптимизации с учетом использования.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|String|  
+|Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Запросы](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
- В команде **DesignAggregations** поддержка оптимизации с учетом использования обеспечивается включением элементов **Query** в коллекцию **Queries** данной команды. Каждый элемент **Query** представляет собой целевой запрос, с помощью которого при проектировании можно определить агрегаты, охватывающие наиболее часто используемые запросы. Можно определить целевые запросы самостоятельно, или воспользуйтесь сведениями, хранящимися на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в журнале запросов для получения сведений о наиболее часто используемые запросы.  
+## <a name="remarks"></a>Замечания  
+ В команде **DesignAggregations** поддержка оптимизации с учетом использования обеспечивается включением элементов **Query** в коллекцию **Queries** данной команды. Каждый элемент **Query** представляет собой целевой запрос, с помощью которого при проектировании можно определить агрегаты, охватывающие наиболее часто используемые запросы. Можно определить целевые запросы самостоятельно, либо при помощи данных, сохраненных экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в журнале запросов, получить сведения о наиболее часто используемых запросах.  
   
  При итеративном проектировании агрегатов, достаточно передачи целевых запросов в первом **DesignAggregations** команда, поскольку [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр сохраняет целевые запросы и использует их при выполнении последующих  **DesignAggregations** команд. После передачи целевых запросов в первой команде **DesignAggregations** многократной обработки, любые последующие команды **DesignAggregations** , в свойстве **Queries** которых содержатся поисковые запросы, приведут к формированию ошибки.  
   
@@ -83,12 +83,12 @@ ms.lasthandoff: 01/08/2018
  Так, например, строка «011» относится к запросу, в котором задействовано измерение с тремя атрибутами, причем в запрос включены только второй и третий атрибут.  
   
 > [!NOTE]  
->  Некоторые атрибуты не рассматриваются в наборе данных. Дополнительные сведения об исключенных атрибутах см. в разделе [свойства (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  Некоторые атрибуты не рассматриваются в наборе данных. Дополнительные сведения об исключенных атрибутах см. в разделе [Properties (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
   
  Каждое измерение в группе мер, включающее статистическую схему, представлено значением *Dataset* в элементе **Query** . Порядок значений *Dataset* должен соответствовать порядку измерений, включенных в группу мер.  
   
 ## <a name="see-also"></a>См. также:  
- [Проектирование агрегатов &#40; XML для Аналитики &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Проектирование агрегатов & #40; XML для Аналитики & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

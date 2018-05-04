@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e42b5a7e010031d6c22dfd28c7a1a5f89dbd6474
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a0f51ea13b1576c6b489beb5fd66aafde38a70dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexnulls-property-example-vb"></a>Пример свойства IndexNulls (Visual Basic)
 В этом примере демонстрируется [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя (из список с именем List1). Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Новая запись добавляется в **сотрудников** таблицы, с **Null** значение индексированного поля. Вывод этой новой записи зависит от настройки **IndexNulls** свойство.  

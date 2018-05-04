@@ -1,31 +1,23 @@
 ---
-title: "Настройка учетных записей служб Power Pivot | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка учетных записей служб Power Pivot | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c4e46bb4981da0f4c68e9f6ce1d00b0b02d4908c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Настройка учетных записей служб Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Установка [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]включает две службы, поддерживающие операции сервера. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** — это службы Windows, обеспечивающие обработку данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержку запросов на сервере приложений. Учетная запись входа для этих служб всегда указывается во время настройки SQL Server при установке служб Analysis Services в режиме интеграции SharePoint.  
+  Установка [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]включает две службы, поддерживающие операции сервера. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** — это службы Windows, обеспечивающие обработку данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержку запросов на сервере приложений. Учетная запись входа для этих служб всегда указывается во время настройки SQL Server при установке служб Analysis Services в режиме интеграции SharePoint.  
   
  Для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которая является общей веб-службой, работающей под идентификатором пула приложений на ферме SharePoint, необходимо указать вторую учетную запись. Эта учетная запись указывается, когда вы настраиваете установку [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или PowerShell.  
   

@@ -1,41 +1,23 @@
 ---
-title: "Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- SSAS, data access interfaces
-- objects [Analysis Services], data access interfaces
-- Analysis Services data access interfaces
-- data retrieval [Analysis Services]
-- retrieving data
-- metadata [Analysis Services]
-- data access interfaces [Analysis Services]
-- manipulating objects [Analysis Services]
-- Analysis Services data access interfaces, about data access interfaces
-ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 01e59cc12667dd5ecba52649c056800b51d186fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
+  Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -76,11 +58,11 @@ ms.lasthandoff: 02/15/2018
   
  [Запрос многомерных данных с помощью многомерных выражений](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные понятия о сценариях многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Программные интерфейсы  
  При разработке пользовательского приложения, использующего многомерные данные, скорее всего, будет использоваться один из следующих способов доступа к данным.  
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
- [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Развертывание с помощью функций анализа служб языка сценариев &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Доступ к данным табличной модели](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

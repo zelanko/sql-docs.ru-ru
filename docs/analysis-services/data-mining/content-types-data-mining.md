@@ -1,47 +1,23 @@
 ---
-title: "(Интеллектуальный анализ данных) типы содержимого | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: (Интеллектуальный анализ данных) типы содержимого | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], content types
-- KEY SEQUENCE column
-- content types [data mining]
-- attributes [data mining]
-- DISCRETIZED column
-- CONTINUOUS column
-- CYCLICAL column
-- ORDERED column
-- discretized columns [data mining]
-- discrete columns [Analysis Services]
-- DISCRETE column
-- KEY column
-- KEY TIME column
-- continuous columns
-- coding [Data Mining]
-ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 96e31d399527ffa81cd1a9d47bcb117ac7cfa170
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-types-data-mining"></a>Типы содержимого (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных, так и логический тип содержимого для столбца, используемого в модели.  
+  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных, так и логический тип содержимого для столбца, используемого в модели.  
   
  *Тип данных* определяет обработку данных алгоритмами в этих столбцах при создании моделей интеллектуального анализа данных. Определение типа данных столбца дает алгоритму сведения о типе данных в столбцах и о способах обработки данных. Каждый тип данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает один или несколько типов содержимого для интеллектуального анализа данных.  
   
@@ -119,9 +95,9 @@ ms.lasthandoff: 02/15/2018
  Выше были описаны типы содержимого, широко применяемые во всех моделях, но, кроме них, для данных некоторых типов могут использоваться классифицированные столбцы, позволяющие определять типы содержимого. Дополнительные сведения о классификационных столбцах см. в разделе [Классифицированные столбцы (интеллектуальный анализ данных)](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Содержимого типы &#40; расширений интеллектуального анализа данных &#41;](../../dmx/content-types-dmx.md)   
- [Типы данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Типы данных &#40; расширений интеллектуального анализа данных &#41;](../../dmx/data-types-dmx.md)   
+ [Содержимого типы & #40; расширений интеллектуального анализа данных & #41;](../../dmx/content-types-dmx.md)   
+ [Типы данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Типы данных & #40; расширений интеллектуального анализа данных & #41;](../../dmx/data-types-dmx.md)   
  [Изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)  
   

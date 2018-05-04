@@ -1,41 +1,23 @@
 ---
-title: "Методы дискретизации (интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Методы дискретизации (интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- content types [data mining]
-- discretization [Analysis Services]
-- columns [data mining], discretization
-- THRESHOLDS method
-- CLUSTERS method
-- DiscretizationBuckets property
-- AUTOMATIC method
-- EQUAL_AREAS method
-- coding [Data Mining]
-ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1acf124467d3a6c5cdeb35a1d617e0dbc9d34d63
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 20a6d7fcef0bd82f44f49d01bb717ef15cdc2c53
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discretization-methods-data-mining"></a>Методы дискретизации (Интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Некоторые алгоритмы, используемые для создания моделей интеллектуального анализа данных в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , для своей работы требуют наличия специальных типов содержимого. Например, упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] не может использовать непрерывные столбцы на входе и прогнозировать непрерывные значения. Кроме того, некоторые столбцы могут содержать так много значений, что алгоритм будет не в состоянии легко выявить содержательные закономерности в данных, из которых создается модель.  
+  Некоторые алгоритмы, используемые для создания моделей интеллектуального анализа данных в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , для своей работы требуют наличия специальных типов содержимого. Например, упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] не может использовать непрерывные столбцы на входе и прогнозировать непрерывные значения. Кроме того, некоторые столбцы могут содержать так много значений, что алгоритм будет не в состоянии легко выявить содержательные закономерности в данных, из которых создается модель.  
   
  В таких случаях можно дискретизировать данные в столбцах, чтобы воспользоваться алгоритмами для выработки модели интеллектуального анализа данных. *Дискретизация* — это процесс разделения значений на сегменты, результатом которого является ограниченное число допустимых состояний. С самими сегментами обращаются как с упорядоченными дискретными значениями. Можно дискретизировать как численные, так и строковые столбцы.  
   
@@ -55,7 +37,7 @@ ms.lasthandoff: 02/15/2018
 |**CLUSTERS**|Алгоритм разделяет данные на группы путем создания выборки обучающих данных, инициализации по ряду случайных точек и дальнейшего запуска несколько итераций алгоритма кластеризации (Майкрософт) с помощью метода кластеризации с максимизацией ожидания (EM). Метод **CLUSTERS** полезен, так как он работает с любой кривой распределения. Однако он требует большего времени на обработку, чем другие методы дискретизации.<br /><br /> Этот метод можно использовать только для числовых столбцов.|  
 |**EQUAL_AREAS**|Алгоритм делит данные на группы, содержащие равное число значений. Этот метод лучше всего использовать для кривых нормального распределения, но он не работает, если распределение содержит большое число значений, встречающихся в узкой группе непрерывных данных. Например, если половина элементов имеет значение цены 0, то половина данных окажется в одной точке кривой. При таком распределении, этот метод разрушит данные в попытке установить равномерную дискретизацию по нескольким областям. Это вызовет неточное представление данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 -   Метод **EQUAL_AREAS** позволяет выполнять дискретизацию строк.  
   
@@ -64,11 +46,11 @@ ms.lasthandoff: 02/15/2018
   
   
 ## <a name="see-also"></a>См. также  
- [Содержимого типы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Содержимого типы &#40; расширений интеллектуального анализа данных &#41;](../../dmx/content-types-dmx.md)   
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Содержимого типы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Содержимого типы & #40; расширений интеллектуального анализа данных & #41;](../../dmx/content-types-dmx.md)   
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Типы данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Типы данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Распределения столбцов (интеллектуальный анализ данных)](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   

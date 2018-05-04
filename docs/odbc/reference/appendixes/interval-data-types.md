@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -32,12 +32,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d332950fa3c1f5f9e81dfb3a60009380440d6fb5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-data-types"></a>Типы данных интервала
 Интервал определяется как разница между двумя значениями даты и времени. Интервалы времени выражаются в одном из двух способов. Один является *год месяц* интервала, который выражает интервалы в лет и целое число месяцев. Другой подход — *дневное время* интервала, который выражает интервалы в днях, минуты и секунды. Эти два типа интервалов отличаются друг от друга и не может одновременно, так как месяцев может иметь различное количество дней.  

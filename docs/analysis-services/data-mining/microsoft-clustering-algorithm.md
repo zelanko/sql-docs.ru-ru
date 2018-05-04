@@ -1,16 +1,16 @@
 ---
-title: "Алгоритм кластеризации (Майкрософт) | Документы Microsoft"
-ms.custom: 
+title: Алгоритм кластеризации (Майкрософт) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 
+caps.latest.revision: 62
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5a20950cac81f26b0e7cbe92e8073a9f07a429cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Алгоритм кластеризации (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом *сегментации* или *кластеризации* , который выполняет итерацию вариантов в наборе данных, чтобы сгруппировать их в кластеры, содержащие подобные характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
+  Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом *сегментации* или *кластеризации* , который выполняет итерацию вариантов в наборе данных, чтобы сгруппировать их в кластеры, содержащие подобные характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
   
  Модели кластеризации определяют связи в наборе данных, который невозможно логически получить с помощью случайного наблюдения. Например, можно логически догадаться, что люди, добирающиеся на работу на велосипеде, не обязательно живут далеко от работы. Алгоритм может найти другие не очевидные характеристики велосипедистов. На следующей диаграмме кластер А соответствует людям, добирающимся до работы на машине, а кластер Б — людям, добирающимся до работы на велосипеде.  
   
@@ -89,9 +88,9 @@ ms.lasthandoff: 02/15/2018
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [Содержимое модели интеллектуального анализа данных для кластеризации моделей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Содержимое модели интеллектуального анализа данных для кластеризации моделей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "Добавления стандартного действия | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Добавления стандартного действия | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e19398c0e1507273abf218b4a49255bd8ce910dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-standard-action"></a>Добавления стандартного действия
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Действия добавляются в базу данных в представлении «Действия» конструктора кубов. Доступ к этому представлению можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания действия оно становится доступным пользователям после повторной обработки соответствующего куба. Дополнительные сведения см. в статье [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
+  Действия добавляются в базу данных в представлении «Действия» конструктора кубов. Доступ к этому представлению можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания действия оно становится доступным пользователям после повторной обработки соответствующего куба. Дополнительные сведения см. в статье [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 ### <a name="to-create-an-action"></a>Создание действия  
   
@@ -79,7 +71,7 @@ ms.lasthandoff: 02/15/2018
         > [!NOTE]  
         >  Частные действия не возвращаются на сервер, если клиентское приложение явным образом не ограничит набор строк схемы возвращением лишь тех действий, которые соответствуют указанному в поле **Приложение**имени.  
   
-    -   При использовании URL-адреса в поле **Содержимое действия**заключите веб-адрес в кавычки, например "http://www.adventure-works.com".  
+    -   В **содержимое действия**, если вы используете тип URL-адрес, заключайте веб-адрес в кавычки, например, «http://www.adventure-works.com».  
   
     -   В поле **Описание**введите описание действия.  
   

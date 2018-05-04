@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1deed9a02aaaf3883ac8a3a40ec4ca7280d959fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a548f38f27133df5d2fc65146d3f311320541141
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-element-xmla"></a>Элемент Attributes (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию [атрибута](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элементов, используемых в родительской [вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) или [обновление](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) команду, либо в родительском [где](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит коллекцию элементов [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) , используемых в родительской команде [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) или [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) либо в родительском элементе [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,22 +54,22 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)|  
-|Дочерние элементы|[Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
+|Дочерние элементы|[Атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

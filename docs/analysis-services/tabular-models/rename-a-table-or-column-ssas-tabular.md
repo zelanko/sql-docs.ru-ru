@@ -1,33 +1,32 @@
 ---
-title: "Переименование таблицы или столбца | Документы Microsoft"
-ms.custom: 
+title: Переименование таблицы или столбца | Документы Microsoft
+ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c99456397e4d5443f969010307a848a663f40d8b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-a-table-or-column"></a>Переименование таблицы или столбца 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Имя таблицы можно изменить во время импорта, указав **Понятное имя** на странице **Выбор таблиц и представлений** **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
+  Имя таблицы можно изменить во время импорта, указав **Понятное имя** на странице **Выбор таблиц и представлений** **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
   
  После добавления данных в модель имя (или название) таблицы появляется на вкладке таблицы в нижней части конструктора моделей. Имя таблицы можно заменить более подходящим. После добавления данных в модель можно также переименовать столбец. Переименование столбца может оказаться полезным в том случае, если данные были импортированы из нескольких источников и необходимо сделать так, чтобы столбцы в разных таблицах имели легко различимые имена.  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 02/23/2018
   
 -   Управляющие символы  
   
--   Следующие символы (недопустимые в именах объектов служб Analysis Services): .,;':/\\*|?&%$!+=()[]{}<>  
+-   Следующие символы (недопустимые в именах объектов служб Analysis Services):., ': / \\*|? & % $! [] () +={}<>  
   
 -   Зарезервированные ключевые слова служб Analysis Services, включая функциональные имена и операторы многомерных выражений (MDX) и выражений интеллектуального анализа (DMX).  
   

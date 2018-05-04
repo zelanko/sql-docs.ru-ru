@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83a958417136ca921714653492ffe118b1ff027c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1a7c7e1bddadf3373a2b8fa35fd9ac931f46a6c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentstoragemode-element-assl"></a>Элемент CurrentStorageMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет текущий режим хранения для родительского элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет текущий режим хранения для родительского элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|*ROLAP*|  
@@ -61,12 +61,12 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[Измерение](../../../analysis-services/scripting/objects/dimension-element-assl.md), [секции](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент **CurrentStorageMode** определяет режим хранения, который используется в настоящее время для упреждающего кэширования и применим ко всем атрибутам родительского элемента.  
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*MOLAP*|Родительский элемент использует многомерное хранилище OLAP (MOLAP).|  
 |*ROLAP*|Родительский элемент использует реляционное хранилище OLAP (ROLAP).|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  Перечисление, соответствующее разрешенным значениям **CurrentStorageMode** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.StorageMode>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

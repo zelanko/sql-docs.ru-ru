@@ -1,50 +1,23 @@
 ---
-title: "Типы измерений | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- quantitative dimensions [Analysis Services]
-- BillOfMaterials dimension [Analysis Services]
-- geography dimensions
-- utility dimensions [Analysis Services]
-- channel dimensions
-- dimensions [Analysis Services], types
-- products dimensions [Analysis Services]
-- account dimensions [Analysis Services]
-- organization dimensions
-- currency dimensions [Analysis Services]
-- rates dimensions
-- promotion dimensions
-- scenario dimensions [Analysis Services]
-- customers dimensions [Analysis Services]
-- Type property
-ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 
-author: Minewiskan
+title: Типы измерений | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c36b8c16acb2521c2472b1f4398cb68ea89952d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimension-properties---types"></a>Свойства измерения базы данных - типы
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-**Тип** предоставляет сведения о содержимом измерения серверу и клиентским приложениям. В некоторых случаях **тип** параметр содержит рекомендации для клиентских приложений и является необязательным. В других случаях таких как **учетные записи** или **время** измерений, **тип** параметры свойств для измерения и его атрибутов определяет конкретные режимы, серверные и могут быть востребованы для реализации определенных режимов куба. Например **тип** свойство измерения можно присвоить значение **учетные записи** для указания для клиентских приложений, что в стандартном измерении содержатся атрибуты счетов. Дополнительные сведения о времени, счетов и измерение валюты см. в разделе [Создание измерения типа Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [создания учетной записи Finance измерением типа родители потомки](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [создать валюты Тип измерения](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+  **Тип** предоставляет сведения о содержимом измерения серверу и клиентским приложениям. В некоторых случаях **тип** параметр содержит рекомендации для клиентских приложений и является необязательным. В других случаях таких как **учетные записи** или **время** измерений, **тип** параметры свойств для измерения и его атрибутов определяет конкретные режимы, серверные и могут быть востребованы для реализации определенных режимов куба. Например **тип** свойство измерения можно присвоить значение **учетные записи** для указания для клиентских приложений, что в стандартном измерении содержатся атрибуты счетов. Дополнительные сведения о времени, счетов и измерение валюты см. в разделе [Создание измерения типа Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [создания учетной записи Finance измерением типа родители потомки](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [создать валюты Тип измерения](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  Значение по умолчанию для типа измерения — **регулярного**, что не дает представления о содержимом измерения. Это значение по умолчанию для всех измерений при первоначальном определении измерения, если не указать **время** при определении измерения с помощью мастера измерений. Необходимо также оставить **регулярного** как тип измерения, если мастер измерений не включает соответствующих типов для типа измерения.  
   
@@ -71,6 +44,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Создать измерение с помощью существующей таблицы](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Измерения &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Измерения & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

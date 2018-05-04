@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d1ca8915889fbc7edb9e31c2e0adbb2154980f5f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Набор строк DMSCHEMA_MINING_MODEL_CONTENT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Позволяет клиентскому приложению просматривать содержимое модели интеллектуального анализа данных. Клиентские приложения для перемещений по содержимому модели интеллектуального анализа данных могут применять специальные ограничения операций дерева, описанные в конце этого раздела.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Разрешает клиентскому приложению просматривать содержимое модели интеллектуального анализа данных. Клиентские приложения для перемещений по содержимому модели интеллектуального анализа данных могут применять специальные ограничения операций дерева, описанные в конце этого раздела.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_MODEL_CONTENT** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||Имя каталога. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] помещает в него имя базы данных, членом которой является модель.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||Имя каталога. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Помещает в него имя базы данных, членом которой является модель.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Неполное имя схемы. Этот столбец не поддерживается [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит **VT_NULL**.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||Имя модели, с которой связано содержимое, описанное в этой строке.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Имена атрибутов, соответствующих этому узлу.|  
@@ -65,16 +65,16 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**NODE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**NODE_TYPE**|**DBTYPE_I4**|Необязательный параметр.|  
-|**NODE_GUID**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**NODE_CAPTION**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**TREE_OPERATION**|**DBTYPE_UI4**|Необязательный параметр. Ниже приведены дополнительные примечания.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**NODE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**NODE_TYPE**|**DBTYPE_I4**|Необязательно.|  
+|**NODE_GUID**|**DBTYPE_WSTR**|Необязательно.|  
+|**NODE_CAPTION**|**DBTYPE_WSTR**|Необязательно.|  
+|**TREE_OPERATION**|**DBTYPE_UI4**|Необязательно. Ниже приведены дополнительные примечания.|  
   
  Ограничения, **TREE_OPERATION**, не находится на любого столбца из **DMSCHEMA_MINING_MODEL_CONTENT** строк; оно указывает оператор дерева. Потребитель может указать **NODE_UNIQUE_NAME** ограниченного использования программ и оператор дерева (**ПРЕДКОВ**, **ДОЧЕРНИХ**, **одноуровневых ЭЛЕМЕНТОВ**,  **Родительский**, **потомков**, **SELF**) для получения требуемого набора элементов. **SELF** оператор включает строку для самого узла в списке возвращенных строк. В следующей таблице описаны константы, составляющие определение битовой карты для **TREE_OPERATION** ограниченного использования программ. Они могут быть объединены с помощью логического **или** оператор.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/08/2018
 |**DMTREEOP_SELF**|**0x00000008**|  
 |**DMTREEOP_DESCENDANTS**|**0x00000010**|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

@@ -22,31 +22,30 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 91ef03b9b43dba3e76d921abf3a32fdbb456f49b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: da070d23c0a01886cc63632ccd269502d1dc33a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Инструкции многомерных выражений для манипулирования данными (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В многомерных выражениях инструкции манипулирования данными используются для извлечения данных многомерных объектов и для операций с этими данными. В следующей таблице перечислены инструкции для манипулирования данными многомерных выражений.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Инструкции CALL &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-call.md)|Выполняет хранимую процедуру, которая возвращает значение void в текущей области или (по желанию) в указанном кубе.|  
-|[Инструкция CLEAR CALCULATIONS &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Удаляет все вычисления из куба и возвращает куб к этапу вычисления 0.|  
-|[Инструкция DRILLTHROUGH &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Извлекает наборы строк, которые использовались для создания заданной ячейки куба.|  
-|[Инструкция SELECT &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-select.md)|Извлекает данные из заданного куба.|  
-|[Инструкция UPDATE CUBE &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-update-cube.md)|Обновляет значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках.|  
+|[Инструкции CALL &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-call.md)|Выполняет хранимую процедуру, которая возвращает значение void в текущей области или (по желанию) в указанном кубе.|  
+|[Инструкция CLEAR CALCULATIONS &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Удаляет все вычисления из куба и возвращает куб к этапу вычисления 0.|  
+|[Инструкция DRILLTHROUGH &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Извлекает наборы строк, которые использовались для создания заданной ячейки куба.|  
+|[Инструкция SELECT & #40; Многомерные Выражения & #41;](../mdx/mdx-data-manipulation-select.md)|Извлекает данные из заданного куба.|  
+|[Инструкция UPDATE CUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-update-cube.md)|Обновляет значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках.|  
   
-## <a name="see-also"></a>См. также:  
- [Справка по инструкциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Инструкции сценариев многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справка по инструкциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Инструкции сценариев многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "Технический справочник по алгоритму кластеризации (Майкрософт) | Документы Microsoft"
-ms.custom: 
+title: Технический справочник по алгоритму кластеризации (Майкрософт) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -25,24 +25,23 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 16d3dae2010f43a15cf11d83891bdf30b5b5b518
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Этот раздел посвящен алгоритму кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в том числе параметрам, с помощью которых можно управлять поведением моделей кластеризации. В разделе также содержатся советы по ускорению создания и обработки моделей кластеризации.  
+  Этот раздел посвящен алгоритму кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в том числе параметрам, с помощью которых можно управлять поведением моделей кластеризации. В разделе также содержатся советы по ускорению создания и обработки моделей кластеризации.  
   
  Дополнительные сведения об использовании моделей кластеризации см. в следующих разделах.  
   
--   [Содержимое модели интеллектуального анализа данных для кластеризации моделей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Содержимое модели интеллектуального анализа данных для кластеризации моделей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -188,6 +187,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
  [Алгоритм кластеризации Майкрософт](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для кластеризации моделей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для кластеризации моделей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

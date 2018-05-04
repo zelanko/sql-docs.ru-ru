@@ -1,30 +1,30 @@
 ---
-title: "Подключиться к существующему серверу служб Analysis Services табличной и базы данных | Документы Microsoft"
-ms.custom: 
+title: Подключиться к существующему серверу служб Analysis Services табличной и базы данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 05b577c5ea50c6c9749221ad9d2f352b970ba62d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>Подключиться к существующему серверу служб Analysis Services табличной и базы данных
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В SQL Server 2016 объекты управления Analysis Services (AMO) содержит несколько пространств имен, которые могут использоваться для настройки соединения с сервером. В этой статье объясняется, как установить подключение к серверу, через пространство имен Microsoft.AnalysisServices.Tabular для моделей и баз данных, созданных на 1200 или высоким уровнем совместимости. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В SQL Server 2016 объекты управления Analysis Services (AMO) содержит несколько пространств имен, которые могут использоваться для настройки соединения с сервером. В этой статье объясняется, как установить подключение к серверу, через пространство имен Microsoft.AnalysisServices.Tabular для моделей и баз данных, созданных на 1200 или высоким уровнем совместимости. 
 
 Чтобы подключиться к серверу служб Analysis Services, коде создается экземпляр объекта сервера и затем вызовите метод Connect для его. После подключения объекта сервера отражают параметры текущего экземпляра служб Analysis Services. 
 

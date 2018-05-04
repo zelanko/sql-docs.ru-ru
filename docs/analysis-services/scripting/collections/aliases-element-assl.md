@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0e3a5c5cabfdc4396257d72aac9ff08e3d0ba43
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 513a838352bf033e00af6f7365b60a8885cf6807
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-element-assl"></a>Элемент Aliases (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию элементов [псевдоним](../../../analysis-services/scripting/properties/alias-element-assl.md) элементы, связанные с [учетной записи](../../../analysis-services/scripting/objects/account-element-assl.md) элемент  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит коллекцию элементов [псевдоним](../../../analysis-services/scripting/properties/alias-element-assl.md) элементы, связанные с [учетной записи](../../../analysis-services/scripting/objects/account-element-assl.md) элемент  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|нет (коллекция)|  
 |Значение по умолчанию|нет (коллекция)|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -65,12 +65,12 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Учетная запись](../../../analysis-services/scripting/objects/account-element-assl.md)|  
 |Дочерние элементы|[Псевдоним](../../../analysis-services/scripting/properties/alias-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент, соответствующий родительский **псевдонимы** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Account>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Элемент Database &#40; ASSL &#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
- [Коллекции &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Учетные записи элемента &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Элемент Database &#40;ASSL&#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
+ [Коллекции & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

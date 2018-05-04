@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7a235a3f40b99300ed4be9ec15fad457272b340
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 05abc616723af83071f77ccdf6f9b0966223e508
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterule-property-example-vb"></a>Пример свойства DeleteRule (Visual Basic)
 В этом примере демонстрируется [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) свойство [ключ](../../../ado/reference/adox-api/key-object-adox.md) объекта. Код добавляет новый [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и затем определяет новый первичный ключ, параметр **DeleteRule** для **adRICascade**.  

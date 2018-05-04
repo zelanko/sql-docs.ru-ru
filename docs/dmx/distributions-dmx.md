@@ -23,12 +23,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4bc79c9a1c641f625a6a0dae11c17aba4188b5e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c1cef419c1c53426f403a8758df396f622ed2ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributions-dmx"></a>Распределения (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,19 +45,19 @@ ms.lasthandoff: 01/08/2018
  **УНИВЕРСАЛЬНЫЙ**  
  На основе значений столбца непрерывных данных может быть сформирована плоская кривая, на которой все значения являются равновероятными.  
   
- Дополнительные сведения о [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов интеллектуального анализа данных в разделе [алгоритмов интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Алгоритмы интеллектуального анализа данных третьих поставщиков могут также иметь возможность работы с другими типами распределений. Чтобы определить, какие типы распределения алгоритм поддерживает, используйте **SUPPORTED_DISTRIBUTION_FLAGS** набора строк схемы.  
+ Дополнительные сведения о [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов интеллектуального анализа данных в разделе [алгоритмов интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Алгоритмы интеллектуального анализа данных третьих поставщиков могут также иметь возможность работы с другими типами распределений. Чтобы определить, какие типы распределения алгоритм поддерживает, используйте **SUPPORTED_DISTRIBUTION_FLAGS** набора строк схемы.  
   
- Дополнительные сведения о типах распределения см. в разделе [распределения столбцов &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
+ Дополнительные сведения о типах распределения см. в разделе [распределения столбцов &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>См. также:  
- [Содержимого типы &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/content-types-data-mining.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../dmx/data-mining-extensions-dmx-reference.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Элементы синтаксиса](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Синтаксические обозначения](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>См. также  
+ [Содержимого типы & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; элементы синтаксиса](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; синтаксические обозначения](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
   

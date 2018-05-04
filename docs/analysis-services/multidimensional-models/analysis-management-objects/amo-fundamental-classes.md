@@ -1,38 +1,19 @@
 ---
-title: "Основные классы объектов AMO | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data sources [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-- AMO, data sources
-- Analysis Management Objects, data sources
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 
-author: Minewiskan
+title: Основные классы объектов AMO | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ffa7973757ce41a3975bcbb70170679109527e42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-fundamental-classes"></a>Основные классы объектов AMO
   Основу работы с объектами AMO составляют основные классы. Они формируют среду для всех остальных объектов, которые будут использованы в приложении. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>.  
@@ -73,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Database> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="DSandDSV">Объекты DataSource и DataSourceView</a>  
+##  <a name="DSandDSV"></a> Объекты DataSource и DataSourceView  
  Управление источниками данных обеспечивает объект <xref:Microsoft.AnalysisServices.DataSourceCollection> из класса базы данных. Экземпляр объекта <xref:Microsoft.AnalysisServices.DataSource> можно создать методом Add объекта <xref:Microsoft.AnalysisServices.DataSourceCollection>. Экземпляр объекта <xref:Microsoft.AnalysisServices.DataSource> можно удалить методом Remove объекта <xref:Microsoft.AnalysisServices.DataSourceCollection>.  
   
  Управление объектами <xref:Microsoft.AnalysisServices.DataSourceView> производится из объекта <xref:Microsoft.AnalysisServices.DataSourceViewCollection> класса базы данных.  

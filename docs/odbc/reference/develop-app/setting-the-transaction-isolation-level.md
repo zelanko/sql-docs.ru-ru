@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - isolation levels [ODBC]
 - transaction isolation [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 96fff370bcde4b6cc63c7b9af97c3eced3061d85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f075b63c809d882ef1fc579cc1f9da162affec56
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Установка уровня изоляции транзакции
 Чтобы задать уровень изоляции транзакции, приложение использует атрибут SQL_ATTR_TXN_ISOLATION соединения. Если источник данных не поддерживает запрошенный уровень изоляции, драйверу или источнику данных можно установить более высокий уровень. Чтобы определить, какой уровень изоляции транзакции уровни источник данных поддерживает и является уровень изоляции по умолчанию, приложение вызывает **SQLGetInfo** с параметрами SQL_TXN_ISOLATION_OPTION и SQL_DEFAULT_TXN_ISOLATION соответственно.  

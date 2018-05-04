@@ -24,12 +24,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6b114c4ebdb2a8e143e7ab30cb7619b93bf5b48a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dde934f923aa200c516132303835c6e6ac0d567
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comment-mdx"></a>Комментарий (многомерные Выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/08/2018
  *Comment_Text*  
  Строка, содержащая текст комментария.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Сервер не обрабатывает текст между символами комментария / * и \*/. Комментарии можно вставлять отдельной строкой либо вставлять в инструкцию многомерных выражений. Многострочные комментарии должны обозначаться символами /\* и \*/.  
   
  Длина комментариев не ограничена. Можно создавать вложенные комментарии. Например, `/* Test /*Comment*/ Text*/` — вложенный комментарий.  
@@ -68,9 +67,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../mdx/comment-mdx-double-slash.md)   
- [--&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../mdx/comment-mdx-operator-reference.md)   
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [&#40;Комментарий&#41; &#40;многомерных Выражений&#41;](../mdx/comment-mdx-double-slash.md)   
+ [--& #40; Комментарий & #41; & #40; Многомерные Выражения & #41;](../mdx/comment-mdx-operator-reference.md)   
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

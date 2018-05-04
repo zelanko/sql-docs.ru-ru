@@ -1,36 +1,23 @@
 ---
-title: "Определяет элемент по умолчанию | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Определяет элемент по умолчанию | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- default members
-- attributes [Analysis Services], default members
-- members [Analysis Services], default
-- DefaultMember property
-ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a457e54c1653cfc996de2040a09e8b22578307f0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 875aa329b79215fc8075d418d168e38ba09a71d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---define-a-default-member"></a>Атрибут свойства - определение элемента по умолчанию
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Элемент по умолчанию иерархии атрибута предназначен для вычисления выражений в том случае, если иерархия атрибутов не включена в запрос. Этот элемент не обрабатывается, если запрос содержит иерархию атрибута или пользовательскую иерархию, в которых присутствует атрибут, являющийся источником иерархии атрибута. В этом случае используется элемент, указанный в запросе.  
+  Элемент по умолчанию иерархии атрибута предназначен для вычисления выражений в том случае, если иерархия атрибутов не включена в запрос. Этот элемент не обрабатывается, если запрос содержит иерархию атрибута или пользовательскую иерархию, в которых присутствует атрибут, являющийся источником иерархии атрибута. В этом случае используется элемент, указанный в запросе.  
   
  Элемент по умолчанию для иерархии атрибута задается указанием элемента атрибута в качестве значения свойства **DefaultMember** для иерархии атрибута. Это свойство можно задать в конструкторе измерений на вкладке «Структура измерения» или в скрипте вычисления куба на вкладке «Вычисления» в конструкторе кубов среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также задать свойство **DefaultMember** для роли безопасности (переопределив элемент по умолчанию, заданный для измерения) на вкладке "Данные измерения" при определении безопасности измерения. Во избежание проблем разрешения имен следует определить элемент по умолчанию в скрипте многомерных выражений куба в следующих ситуациях: если куб ссылается на измерение базы данных более одного раза, если имя измерения в кубе отличается от имени измерения в базе данных и если в разных кубах должны быть различные элементы по умолчанию.  
   
@@ -51,6 +38,6 @@ ms.lasthandoff: 02/15/2018
  Когда уровни в иерархии вычисляются естественным образом, можно определить элемент по умолчанию для любого атрибута в иерархии, вне зависимости от других атрибутов в этой иерархии. Например, в иерархии «Страна» — «Район» — «Город» можно определить элемент по умолчанию для «Город», например [Город].[Мурманск], не определяя элемент по умолчанию для «Область» или для «Страна».  
   
 ## <a name="see-also"></a>См. также  
- [Настроить &#40; Все &#41; Уровне для иерархий атрибутов](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Настроить & #40; Все & #41; Уровне для иерархий атрибутов](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

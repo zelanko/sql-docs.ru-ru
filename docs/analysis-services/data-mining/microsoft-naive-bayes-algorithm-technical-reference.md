@@ -1,16 +1,16 @@
 ---
-title: "Технический справочник Майкрософт упрощенный алгоритм Байеса | Документы Microsoft"
-ms.custom: 
+title: Технический справочник Майкрософт упрощенный алгоритм Байеса | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - MAXIMUM_OUTPUT_ATTRIBUTES parameter
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c1214d384c637561c6a155f0dbbbe451c7826ab5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом классификации, предоставляемым службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
+  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом классификации, предоставляемым службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Реализация упрощенного алгоритма Байеса (Майкрософт)  
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Алгоритм учитывает все пары значений входного атрибута и выходного атрибута.  
@@ -108,6 +107,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
  [Алгоритма Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для моделей упрощенного алгоритма Байеса & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

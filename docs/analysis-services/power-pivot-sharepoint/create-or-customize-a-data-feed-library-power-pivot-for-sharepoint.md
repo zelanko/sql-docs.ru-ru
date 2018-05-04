@@ -1,34 +1,23 @@
 ---
-title: "Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-helpviewer_keywords:
-- data feed library
-- data feeds [Analysis Services with SharePoint]
-ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4ff044886256d7e174299c20a36735de61419275
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
+  *Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
   
 -   Создавать и изменять *сервисные документы данных*, используемые для указания HTTP-соединения с определенным каналом.  
   

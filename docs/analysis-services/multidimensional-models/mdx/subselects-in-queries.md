@@ -1,31 +1,23 @@
 ---
-title: "Подзапросы выборки в запросах | Документы Microsoft"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Подзапросы выборки в запросах | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 66511a7fb1306f5168bb3476a58017c16e9762ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
+  Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
   
 ## <a name="subselects-by-example"></a>Подзапросы выборки в примерах  
  Начнем с примера того, как подзапросы выборки могут помочь сформировать результаты, которые нам требуется отобразить. Предположим, требуется сформировать таблицу, отражающую динамику продаж за несколько лет по 10 самым популярным продуктам.  
@@ -356,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Предложение HAVING нельзя использовать в предложении оси, вместо него следует применять выражение функции [Filter (многомерные выражения)](../../../mdx/filter-mdx.md).  
   
--   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
+-   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
   
   

@@ -27,15 +27,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8d536d67738872ba070217d934a1b47be7857398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foldingparameters-element-assl"></a>Элемент FoldingParameters (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает параметры, используемые [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера при выполнении перекрестной проверки моделей интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Задает параметры, используемые сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] при перекрестной проверке моделей интеллектуального анализа данных.  
   
 > [!NOTE]  
 >  Эти параметры предназначены только для внутреннего использования. Эти сведения предоставлены только в информационных целях.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |*FoldIndex*|Целое число, указывающее начальную позицию секции, используемой для перекрестной проверки.|  
 |*FoldCount*|Целое число, указывающее количество секций в модели после перекрестной проверки.|  
@@ -71,14 +71,14 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |Дочерние элементы|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эти свойства предназначены только для внутреннего использования, и они не поддерживаются в инструкциях DDL.  
   
  Дополнительные сведения об использовании перекрестной проверки в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], в разделе [меры в отчете перекрестной проверки](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
- Дополнительные сведения о выполнении перекрестной проверки с помощью [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] хранимых процедур [данных интеллектуального анализа данных хранимые процедуры &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41; ](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ Дополнительные сведения о выполнении перекрестной проверки с помощью [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] хранимых процедур [данных интеллектуального анализа данных хранимые процедуры &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

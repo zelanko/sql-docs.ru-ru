@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35d6f0bc472aa83c726b8307bb687c77e6b810b4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1bb7ca92695ba8fa148d5d3eeac5de86d375bd2e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner и SetObjectOwner примере методы (VC ++)
 В этом примере демонстрируется [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) методы. В этом коде предполагается существование группы учета (см. [группы и добавление пользователей, пример методы ChangePassword (VC ++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) чтобы узнать, как добавить эту группу в систему). Владелец таблицы Categories присваивается учета.  

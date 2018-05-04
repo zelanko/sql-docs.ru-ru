@@ -1,35 +1,34 @@
 ---
-title: "Примеры запросов модели линейной регрессии | Документы Microsoft"
-ms.custom: 
+title: Примеры запросов модели линейной регрессии | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7240ee128416e11fe7ab8780da68ecef180bd107
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>Примеры запросов модели линейной регрессии
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого предоставит дополнительные сведения о формуле регрессии, а прогнозирующий запрос определит, подходит ли к модели новая точка данных. Запрос также позволяет получить метаданные, описывающие модель.  
+  К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого предоставит дополнительные сведения о формуле регрессии, а прогнозирующий запрос определит, подходит ли к модели новая точка данных. Запрос также позволяет получить метаданные, описывающие модель.  
   
  В этом разделе описывается процесс создания запросов к моделям, основанным на алгоритме линейной регрессии (Майкрософт).  
   
@@ -197,13 +196,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |прогнозирующую функцию|Использование|  
-|[IsDescendant &#40; расширений интеллектуального анализа данных &#41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли узел дочерним для другого узла модели.|  
-|[IsInNode &#40; расширений интеллектуального анализа данных &#41;](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
-|[PredictHistogram &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predicthistogram-dmx.md)|Возвращает прогнозируемое значение или набор значений для указанного столбца.|  
-|[PredictNodeId &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
-|[PredictStdev &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictstdev-dmx.md)|Возвращает стандартное отклонение для прогнозируемого значения.|  
-|[PredictSupport &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
-|[PredictVariance &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию указанного столбца.|  
+|[IsDescendant & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли узел дочерним для другого узла модели.|  
+|[IsInNode & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
+|[PredictHistogram & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predicthistogram-dmx.md)|Возвращает прогнозируемое значение или набор значений для указанного столбца.|  
+|[PredictNodeId & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
+|[PredictStdev & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictstdev-dmx.md)|Возвращает стандартное отклонение для прогнозируемого значения.|  
+|[PredictSupport & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
+|[PredictVariance & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию указанного столбца.|  
   
  Список общих функций для всех алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)] см. в статье [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Дополнительные сведения об использовании этих функций см. в разделе [Справочник по расширениям интеллектуального анализа данных](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -211,6 +210,6 @@ NATURAL PREDICTION JOIN
  [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Содержимое модели интеллектуального анализа данных для модели линейной регрессии &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели линейной регрессии & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

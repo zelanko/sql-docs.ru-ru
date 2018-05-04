@@ -1,16 +1,16 @@
 ---
-title: "Алгоритм взаимосвязей Майкрософт | Документы Microsoft"
-ms.custom: 
+title: Алгоритм взаимосвязей Майкрософт | Документы Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
 - itemsets [Analysis Services]
@@ -32,20 +32,19 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9bd5e517f1d914d925f94d74dc806a9513d81b2f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Алгоритм взаимосвязей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] часто используется для механизмов выработки рекомендаций. Механизм рекомендаций рекомендует продукты пользователям на основе элементов, которые они уже купили или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины.   
+  Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] часто используется для механизмов выработки рекомендаций. Механизм рекомендаций рекомендует продукты пользователям на основе элементов, которые они уже купили или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины.   
   
  Модели взаимосвязей построены на наборах данных, содержащих идентификаторы для отдельных вариантов и элементов этих вариантов. Группа элементов в варианте называется *набор элементов*. Модель взаимосвязей состоит из рядов наборов элементов и правил, описывающих, как эти элементы группируются в вариантах. Правила, определяемые алгоритмом, могут использоваться для прогнозирования вероятных будущих покупок покупателей на основе элементов, уже имеющихся в корзине покупателя. На следующей диаграмме представлен ряд правил в наборе элементов.  
   
@@ -104,9 +103,9 @@ ms.lasthandoff: 02/15/2018
 -   Поддерживается создание измерений интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
   

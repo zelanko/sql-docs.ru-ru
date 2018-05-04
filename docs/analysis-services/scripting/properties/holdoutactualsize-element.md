@@ -23,15 +23,15 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02c225e85ee594abb21c7d96eb68f05a8ef2b435
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26c00fcfa56e09c1ef26a0ebc4713040bb9807ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="holdoutactualsize-element"></a>Элемент HoldoutActualSize
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Отображает фактический размер, после обработки контрольной секции, содержащей проверочный набор элемента [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента. Остающиеся варианты в наборе данных используются для обучения. Это свойство доступно только для чтения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Отображает фактический размер, после обработки контрольной секции, содержащей проверочный набор элемента [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента. Остающиеся варианты в наборе данных используются для обучения. Это свойство предназначено только для чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Целочисленное значение только для чтения.|  
 |Значение по умолчанию|Неприменимо|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение для **HoldoutActualSize** зависит от источника данных и значения для [HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md), [HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md), и [HoldoutSeed](../../../analysis-services/scripting/properties/holdoutseed-element.md). Поэтому значение **HoldoutActualSize** недоступно до после [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] выполняет обработку структуры интеллектуального анализа данных.  
   
  Элемент, соответствующий родителю параметра **HoldoutActualSize** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningStructure>.  
@@ -67,8 +67,8 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не поддерживалось использование контрольных секций в структуре интеллектуального анализа данных. Таким образом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] инструкций языка сценариев (ASSL), которые содержат один из параметров контрольных **HoldoutMaxCases**, **HoldoutMaxPercent**, **HoldoutSeed**, или **HoldoutActualSize**, не может использоваться в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Если использовать один из этих контрольных параметров в инструкции ASSL в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], то служба [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] возвратит ошибку.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+## <a name="see-also"></a>См. также  
+ [Свойства &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [Элемент HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)   
  [Элемент HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [Элемент HoldoutSeed](../../../analysis-services/scripting/properties/holdoutseed-element.md)  

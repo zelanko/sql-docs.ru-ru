@@ -1,32 +1,23 @@
 ---
 title: Создание запроса интеллектуального анализа данных с помощью XMLA | Документы Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa60ad8ee91839e04c424c5fe2d23723e495bbd4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8732b3f366d5805f6321b4e07fe0de1dbc73fb42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Создание запроса интеллектуального анализа данных с помощью XMLA
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создавать разнообразные запросы к объектам интеллектуального анализа данных с помощью объектов AMO, расширений интеллектуального анализа данных или XML/A.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  С помощью объектов AMO, инструкций DMX и языка XML/A можно создавать разнообразные запросы к объектам интеллектуального анализа данных.  
   
  Язык XML необходим для связи между службами Analysis Services и всеми клиентами. Поэтому, хотя обычно гораздо проще создавать запросы к содержимому с помощью расширений интеллектуального анализа данных, запросы можно также создавать либо с помощью инструкций DISCOVER и COMMAND языка XML/A, либо с использованием клиента, поддерживающего протокол SOAP, либо создав запрос XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -104,8 +95,8 @@ ms.lasthandoff: 01/08/2018
   
      На панели результатов выводится определение схемы и значения для заданной модели.  
   
-## <a name="see-also"></a>См. также:  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Содержимое модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Наборы строк схемы интеллектуального анализа данных](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

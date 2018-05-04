@@ -1,34 +1,25 @@
 ---
 title: Определение свойств атрибутов куба | Документы Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], defining
-ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b87146458e6aee0cac066078f1d0dfb302f186d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1abf88d192413d70049da4dc9840d5f15bd8d9f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-cube-attribute-properties"></a>Определение свойств атрибутов куба
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Свойства атрибутов куба позволяют указать уникальные настройки для атрибутов измерений в кубе на основании того же измерения базы данных. В следующей таблице приводится описание свойств атрибутов куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Свойства атрибутов куба позволяют указать уникальные настройки для атрибутов измерений в кубе на основании того же измерения базы данных. В следующей таблице приводится описание свойств атрибутов куба.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**AggregationUsage**|Определяет, каким образом мастер статистических схем будет создавать агрегаты для атрибута. Значение по умолчанию — **Default**. Это свойство может иметь следующие значения:<br /><br /> **Default**:<br />                    Мастер статистических схем применяет роль по умолчанию на основании типа атрибута (Full для ключей, Unrestricted для остальных).<br /><br /> **None**:<br />                    Ни один агрегат для куба не должен включать этот атрибут.<br /><br /> **Unrestricted**:<br />                    На мастер статистических схем не налагается никаких ограничений.<br /><br /> **Full**:<br />                    Каждый агрегат для куба должен включать этот атрибут.|  
 |**AttributeHierarchyEnabled**|Указывает, включена ли иерархия атрибута в этом измерении куба. Это позволяет отключать иерархии атрибута в определенных кубах или ролях измерения. Эта установка не имеет действия, если отключена базовая иерархия атрибута. Значение по умолчанию — **True**.|  
@@ -36,7 +27,7 @@ ms.lasthandoff: 01/08/2018
 |**AttributeHierarchyVisible**|Указывает, видима ли иерархия атрибута в этом измерении куба. Это позволяет иерархии атрибутов быть видимой в определенных кубах или ролях измерения. Эта установка не имеет действия, если основная иерархия атрибутов не видима. Значение по умолчанию — **True**.|  
 |**AttributeID**|Содержит уникальный идентификатор атрибута.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение свойств измерения куба](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
  [Определение свойств иерархии куба](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   

@@ -1,35 +1,23 @@
 ---
-title: "Определение логических связей в представлении источника данных (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Определение логических связей в представлении источника данных (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- adding relationships
-- relationships [Analysis Services], data source views
-- data source views [Analysis Services], relationships
-ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1513a26fad3452bf71097ffac46be60a30c978af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Определение логических связей в представлении источника данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Мастер представлений источников данных и конструктор представлений источников данных автоматически определяют связи между таблицами, добавленными к представлению источника данных (DSV), основываясь на базовых связях базы данных или на указанном критерии совпадения имен.  
+  Мастер представлений источников данных и конструктор представлений источников данных автоматически определяют связи между таблицами, добавленными к представлению источника данных (DSV), основываясь на базовых связях базы данных или на указанном критерии совпадения имен.  
   
  При работе с данными из нескольких источников может потребоваться вручную определить логические связи в представлении источника данных (DSV) дополнительно к связям, определенным автоматически. Связи необходимы службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для идентификации таблиц фактов и измерений, для построения запросов на получение данных и метаданных из базовых источников данных и для использования преимуществ расширенных функций бизнес-аналитики.  
   

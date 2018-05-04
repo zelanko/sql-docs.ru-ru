@@ -1,34 +1,23 @@
 ---
 title: Настройка свойств источника данных (многомерные службы SSAS) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
-ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2dde88aed74f71bda5dc4178ae558dd6aa953eee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Задание свойств источника данных (многомерные службы SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], объект источника данных определяет соединение с внешним хранилищем данных или реляционной базы данных, который предоставляет данные для многомерной модели. Свойства источника данных определяют строку соединения, интервал времени ожидания, максимальное число соединений и уровень изоляции транзакций.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Объект источника данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задает соединение с внешним хранилищем данных или реляционной базой данных, предоставляющей данные для многомерной модели. Свойства источника данных определяют строку соединения, интервал времени ожидания, максимальное число соединений и уровень изоляции транзакций.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Настройка свойств источника данных в SQL Server Data Tools  
   
@@ -56,8 +45,8 @@ ms.lasthandoff: 01/08/2018
 |**Управляемый поставщик**|Отображает имя управляемого поставщика, такого как System.Data.SqlClient или System.Data.OracleClient, если источник данных использует управляемый поставщик.<br /><br /> Если источник данных не использует управляемый поставщик, то это свойство отображает пустую строку.<br /><br /> Это свойство доступно только для чтения в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Чтобы изменить используемый для соединения поставщик, измените строку подключения.|  
 |**Сведения об олицетворении**|Задает идентификатор Windows, под которым запускаются службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при соединении с источником данных, использующим проверку подлинности Windows. Параметры включают использование стандартного набора учетных данных Windows, учетную запись службы, идентификатор текущего пользователя или наследуемого параметра, который может потребоваться, если модель содержит несколько объектов источника данных. Дополнительные сведения см. в разделе [Задание параметров олицетворения (многомерная база данных SSAS)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).<br /><br /> В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]список допустимых значений содержит следующие:<br /><br /> **ImpersonateAccount** (использовать конкретное имя пользователя Windows и пароль для подключения к источнику данных).<br /><br /> **ImpersonateServiceAccount** (использовать идентификатор безопасности учетной записи службы для подключения к источнику данных). Это значение по умолчанию.<br /><br /> **ImpersonateCurrentUser** (использовать идентификатор безопасности текущего пользователя для подключения к источнику данных). Этот параметр допустим только для запросов интеллектуального анализа данных, которые получают данные из внешнего хранилища или базы данных. Его нельзя выбрать для подключения к данным, используемым для обработки, загрузки или обратной записи в многомерной базе данных.<br /><br /> **Наследовать** или **по умолчанию** (используются параметры олицетворения базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которая содержит этот объект источника данных). Свойства базы данных включают параметры олицетворения.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источники данных в многомерных моделях](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Создать источник данных & #40; Многомерные службы SSAS & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

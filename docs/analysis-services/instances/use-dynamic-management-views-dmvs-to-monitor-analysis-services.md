@@ -1,30 +1,23 @@
 ---
-title: "Используйте динамические административные представления (DMV) для мониторинга служб Analysis Services | Документы Microsoft"
-ms.custom: 
-ms.date: 12/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Используйте динамические административные представления (DMV) для мониторинга служб Analysis Services | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
-caps.latest.revision: "16"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 07565f6092a8f4e642234038c05a0f83024ce6a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ee7347ae48a73a7c24caf3b2fbf188a9ebb827fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Использование динамических административных представлений для мониторинга служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services динамического управления представлений (DMV) — это структуры запросов, которые предоставляют сведения об операциях локального сервера и исправности сервера. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Динамические административные представления служб Analysis Services — это структуры запросов, которые предоставляют сведения о локальных операциях сервера и его состоянии. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
   
  В большинстве запросов к динамическим административным представлениям используется инструкция **SELECT** и схема **$System** с набором строк схемы XML/A.  
   
@@ -34,12 +27,12 @@ SELECT * FROM $System.<schemaRowset>
   
  Запросы к динамическим административным представлениям возвращают сведения о состоянии сервера, который является текущим на момент выполнения запроса. Для наблюдения за операциями в режиме реального времени воспользуйтесь трассировкой. Дополнительные сведения см. в статье [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
-##  <a name="bkmk_ben"></a>Преимущества запросы с помощью динамического административного Представления  
+##  <a name="bkmk_ben"></a> Преимущества запросы с помощью динамического административного Представления  
  Запросы к динамическим административным представлениям возвращают сведения об операциях и использовании ресурсов, недоступные через другие средства.  
   
  Запросы к динамическим административным представлениям являются альтернативой запуску команд XML/A. Для большинства администраторов написание запроса к динамическому административному представлению проще, поскольку синтаксис этих запросов основан на SQL. Кроме того, результирующий набор возвращается в табличном формате, который легче читать и копировать.  
   
-##  <a name="bkmk_ex"></a>Примеры и сценарии  
+##  <a name="bkmk_ex"></a> Примеры и сценарии  
  Запрос к динамическому административному представлению позволяет ответить на вопросы об активных сеансах и соединениях и о том, какие объекты потребляют больше всего ресурсов ЦП или памяти в определенное время. В этом разделе приведены примеры сценариев, в которых обычно используются запросы к динамическим административным представлениям. Дополнительные сведения об использовании запросов к динамическим административным представлениям для мониторинга экземпляра сервера см. в [Руководстве по использованию служб Analysis Services SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) .  
   
  `Select * from $System.discover_object_activity` /** Этот запрос сообщает о деятельности объекта с момента последнего запуска службы. Примеры запросов к этому динамическому административному представлению см. в разделе [Создание объекта System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
@@ -50,7 +43,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** Этот запрос возвращает моментальный снимок блокировок, которые используются в определенный момент времени.  
   
-##  <a name="bkmk_syn"></a>Синтаксис запроса  
+##  <a name="bkmk_syn"></a> Синтаксис запроса  
  Обработчик запросов к динамическим административным представлениям в обработчике интеллектуального анализа данных. Синтаксис запросов к динамическим административным представлениям основан на инструкции [SELECT (расширения интеллектуального анализа данных)](../../dmx/select-dmx.md).  
   
  Несмотря на то, что синтаксис запросов к динамическим административным представлениям основывается на инструкции SQL SELECT, он не поддерживает полный синтаксис инструкции SELECT. В частности, операторы JOIN, GROUP BY, LIKE, CAST и CONVERT не поддерживаются.  
@@ -75,14 +68,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>Средства и разрешения  
+##  <a name="bkmk_tools"></a> Средства и разрешения  
  Для выполнения запроса к динамическому административному представлению на экземпляре служб Analysis Services нужно обладать правами системного администратора.  
   
  Можно использовать любое клиентское приложение, поддерживающее многомерные или DMX-запросы, включая среду SQL Server Management Studio, отчет служб Reporting Services или панель мониторинга PerformancePoint.  
   
  Для выполнения запроса к динамическому административному представлению из среды Management Studio подключитесь к нужному экземпляру и нажмите кнопку **Создать запрос**. Можно выполнить запрос из окна создания многомерных или DMX-запросов.  
   
-##  <a name="bkmk_ref"></a>Справочник по DMV  
+##  <a name="bkmk_ref"></a> Справочник по DMV  
  Не у всех наборов строк схемы есть интерфейс динамических административных представлений. Чтобы получить список всех наборов строк схемы, к которым можно выполнять запросы с помощью динамических административных представлений, выполните следующий запрос.  
   
 ```  
@@ -110,14 +103,14 @@ ORDER BY TABLE_NAME ASC
 |[Набор строк DISCOVER_ENUMERATORS](../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Возвращает метаданные о перечислителях, поддерживаемых для конкретных источников данных.|  
 |[Набор строк DISCOVER_INSTANCES](../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Возвращает сведения об указанном экземпляре.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
 |[Набор строк DISCOVER_JOBS](../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|Возвращает сведения о текущих заданиях.|  
-|[Набор строк DISCOVER_KEYWORDS (XMLA)](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Возвращает список зарезервированных ключевых слов.|  
+|[Набор строк DISCOVER_KEYWORDS & #40; XML для Аналитики & #41;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Возвращает список зарезервированных ключевых слов.|  
 |[Набор строк DISCOVER_LITERALS](../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|Возвращает список литералов, включая типы данных и значения, поддерживаемые XML для аналитики.|  
 |[Набор строк DISCOVER_LOCKS](../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|Возвращает моментальный снимок блокировок, используемых в указанное время.|  
 |[Набор строк DISCOVER_MEMORYGRANT](../../analysis-services/schema-rowsets/xml/discover-memorygrant-rowset.md)|Возвращает сведения о памяти, выделенной службами Analysis Services при запуске.|  
 |[Набор строк DISCOVER_MEMORYUSAGE](../../analysis-services/schema-rowsets/xml/discover-memoryusage-rowset.md)|Показывает использование памяти определенными объектами.|  
 |[Набор строк DISCOVER_OBJECT_ACTIVITY](../../analysis-services/schema-rowsets/xml/discover-object-activity-rowset.md)|Сообщает об активности объекта с момента последнего запуска службы.|  
 |[Набор строк DISCOVER_OBJECT_MEMORY_USAGE](../../analysis-services/schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Сообщает об использовании памяти объектом.|  
-|[Набор рядов DISCOVER_PARTITION_DIMENSION_STAT](../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Предоставляет сведения об атрибутах в измерении.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
+|[Набор рядов Discover_partition_dimension_stat](../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Предоставляет сведения об атрибутах в измерении.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
 |[Набор строк DISCOVER_PARTITION_STAT](../../analysis-services/schema-rowsets/xml/discover-partition-stat-rowset.md)|Предоставляет сведения о секциях в измерении, таблице или группе мер.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
 |[Набор строк DISCOVER_PERFORMANCE_COUNTERS](../../analysis-services/schema-rowsets/xml/discover-performance-counters-rowset.md)|Список столбцов, используемых счетчиком производительности.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
 |[Набор строк DISCOVER_PROPERTIES](../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)|Возвращает сведения о свойствах, поддерживаемых XML для аналитики для указанного источника данных.|  
@@ -154,10 +147,10 @@ ORDER BY TABLE_NAME ASC
 |[Набор строк MDSCHEMA_MEASURES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Возвращает список мер в текущем соединении.|  
 |[Набор строк MDSCHEMA_MEMBERS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Возвращает список всех элементов в текущем соединении по базе данных, кубу и измерению.|  
 |[Набор строк MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Возвращает полное имя каждого свойства, включая тип свойства, тип данных и другие метаданные.|  
-|[MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Возвращает список наборов, определенных в текущем соединении.|  
+|[MDSCHEMA_SETS, набор строк](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Возвращает список наборов, определенных в текущем соединении.|  
   
-## <a name="see-also"></a>См. также раздел   
- [Новый System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
+## <a name="see-also"></a>См. также:   
+ [Создание объекта System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Новая функция SYSTEMRESTRICTEDSCHEMA для ограниченных наборов строк и динамических административных представлений](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

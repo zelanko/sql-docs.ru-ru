@@ -1,39 +1,23 @@
 ---
-title: "Средства запросов интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Средства запросов интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- DMX [Analysis Services], prediction queries
-- prediction queries [DMX]
-- predictions [Analysis Services]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 23aba314c819afa8eac6f62f2db70012967f842a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-query-tools"></a>Средства запросов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Все запросы интеллектуального анализа данных используют язык расширений интеллектуального анализа данных (DMX). DMX-запросы используются для создания всех видов задач машинного обучения, в том числе для классификации, анализа рисков, формирования рекомендаций и линейной регрессии. Можно также написать DMX-запросы для извлечения данных о закономерностях и получения статистики, сформированной при обработке модели.  
+  Все запросы интеллектуального анализа данных используют язык расширений интеллектуального анализа данных (DMX). DMX-запросы используются для создания всех видов задач машинного обучения, в том числе для классификации, анализа рисков, формирования рекомендаций и линейной регрессии. Можно также написать DMX-запросы для извлечения данных о закономерностях и получения статистики, сформированной при обработке модели.  
   
  Можно написать собственные расширения интеллектуального анализа данных или построить базовые расширения с помощью средства, такого как **построитель прогнозирующих запросов** , а затем изменить их. В средах [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предусмотрены средства, позволяющие строить прогнозирующие запросы расширений интеллектуального анализа данных. В этом разделе содержатся сведения о создании и выполнения запросов интеллектуального анализа данных с помощью этих средств.  
   
@@ -56,7 +40,7 @@ ms.lasthandoff: 02/15/2018
  Редактор запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также позволяет создавать и выполнять запросы расширений интеллектуального анализа данных. Вы можете подключиться к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и выбрать базу данных, столбцы структуры интеллектуального анализа данных и модель интеллектуального анализа данных. **Обозреватель метаданных** содержит список прогнозирующих функций, который можно просмотреть.  
   
 ##  <a name="bkmk_Templates"></a> Шаблоны расширений интеллектуального анализа данных  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрены интерактивные шаблоны DMX-запросов, которые могут быть использованы при создании. Если список шаблонов не отображается, щелкните **Вид** на панели инструментов и выберите команду **Обозреватель шаблонов**. Чтобы просмотреть все шаблоны служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в том числе шаблоны для DMX, MDX и XMLA, щелкните значок куба.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предусмотрены интерактивные шаблоны запросов расширений интеллектуального анализа данных, которые можно использовать для создания запросов расширений интеллектуального анализа данных. Если список шаблонов не отображается, щелкните **Вид** на панели инструментов и выберите команду **Обозреватель шаблонов**. Чтобы просмотреть все шаблоны служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в том числе шаблоны для DMX, MDX и XMLA, щелкните значок куба.  
   
  Чтобы построить запрос с помощью шаблона, шаблон можно перетащить в открытое окно запроса либо дважды щелкнуть его для открытия нового соединения и новой панели запросов.  
   
@@ -83,7 +67,7 @@ ms.lasthandoff: 02/15/2018
 -   Чтобы получить **содержимое модели** и **метаданные модели**, например число кластеров, атрибутов, использованных в деревьях принятия решений, даты последней обработки модели и параметров алгоритма, заданные при создании модели, можно воспользоваться методом [Discover (XMLA)](../../analysis-services/xmla/xml-elements-methods-discover.md), а также указать один из наборов строк схемы интеллектуального анализа данных в заголовке элемента [RequestType (XMLA)](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Чтобы сузить область действия запроса, введите такие критерии, как ограничения, внутри элемента [RestrictionList (XMLA)](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Основные сведения об инструкции расширений интеллектуального анализа данных Select](../../dmx/understanding-the-dmx-select-statement.md)   
  [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

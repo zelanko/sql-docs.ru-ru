@@ -1,31 +1,30 @@
 ---
-title: "DAX в табличных моделях | Документы Microsoft"
-ms.custom: 
+title: DAX в табличных моделях | Документы Microsoft
+ms.custom: ''
 ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 8c31bfe43eaf706362aac967ecfb5afa785b34ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dax-in-tabular-models"></a>DAX в табличных моделях 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Выражения анализа данных (DAX) — это язык формул, используемый для создания пользовательских вычислений в Analysis Services, Power BI Desktop и Power Pivot в Excel. К формулам DAX относятся функции, операторы и значения, позволяющие проводить расширенные вычисления над данными в таблицах и столбцах.  
+  Выражения анализа данных (DAX) — это язык формул, используемый для создания пользовательских вычислений в Analysis Services, Power BI Desktop и Power Pivot в Excel. К формулам DAX относятся функции, операторы и значения, позволяющие проводить расширенные вычисления над данными в таблицах и столбцах.  
   
  DAX используется в Analysis Services, Power BI Desktop и Power Pivot в Excel, этот раздел относится больше на проектах табличной модели служб Analysis Services, разрабатываемых в SQL Server Data Tools (SSDT).  
   
@@ -400,7 +399,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Вычисляемые столбцы](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Ключевые показатели эффективности](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Поддерживаемые источники данных](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

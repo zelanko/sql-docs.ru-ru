@@ -1,31 +1,23 @@
 ---
-title: "Не удалось загрузить файл или сборку данных Майкрософт | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
-caps.latest.revision: 
-author: Minewiskan
+title: Не удалось загрузить файл или сборку данных Майкрософт | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0daa7111e93a81c367fda433cc7b530a4c90e8f4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1de8cd48bcce0b2c66a555358fc7c73182999f0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Не удалось загрузить файл или сборку данных Майкрософт
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В средах SharePoint 2010 с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint эта ошибка возникает при попытке выполнить экспорт веб-канала данных, когда в системе отсутствует требуемая версия службы Microsoft ADO.NET Data Services.  
+  В средах SharePoint 2010 с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint эта ошибка возникает при попытке выполнить экспорт веб-канала данных, когда в системе отсутствует требуемая версия службы Microsoft ADO.NET Data Services.  
   
 ## <a name="details"></a>Сведения  
   
@@ -43,7 +35,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="user-action"></a>Действие пользователя  
   
-1.  Откройте документацию по требованиям к аппаратному и программному обеспечению для SharePoint 2010, [Определение требований к оборудованию и программному обеспечению (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  Перейдите в документации требования к оборудованию и программному обеспечению для SharePoint 2010, [определить оборудованию и программному обеспечению (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
   
 2.  Найдите в разделе **Установить необходимые программы**ссылку на ADO.NET Data Services 3.5, соответствующую используемой операционной системе.  
   

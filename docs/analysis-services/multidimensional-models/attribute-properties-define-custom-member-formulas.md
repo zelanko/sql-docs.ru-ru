@@ -1,36 +1,23 @@
 ---
-title: "Определение нестандартных формул элементов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Определение нестандартных формул элементов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- members [Analysis Services], custom
-- custom rollup formulas [Analysis Services]
-- MDX [Analysis Services], custom rollup formulas
-- custom member formulas [Analysis Services]
-ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a81bd6be288a17ca22d82a63f8a7e8952b506772
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8c1654b15b79871e4e45c583f6c068e05490d288
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Атрибут свойства - Определение нестандартных формул элементов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Нестандартные формулы элемента — это многомерные выражения, предоставляющие значения для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
+  Нестандартные формулы элемента — это многомерные выражения, предоставляющие значения для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
   
  Нестандартные формулы элементов определяют значения ячеек, которые связаны с элементами, и заменяют агрегатные функции мер. Нестандартные формулы элементов записаны в многомерных выражениях. Каждая нестандартная формула элемента применяется к одному элементу. Нестандартные формулы элементов хранятся в таблице измерения или в другой таблице, имеющей связь по внешнему ключу с таблицей измерения.  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 41d5ff72346e95985b19812f194d266e8d5db165
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fb02f59ec89c8c3c54c13973251ebdd78cfa32f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-set-mdx"></a>Count (набор) (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Set_Expression.Count
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Count (набор)** функции включает или исключает пустые ячейки в зависимости от синтаксиса, который применяется. Если используется стандартный синтаксис, пустые ячейки могут для включения или исключения с помощью **EXCLUDEEMPTY** или **INCLUDEEMPTY** флаги, соответственно. Если используется альтернативный синтаксис, то функция всегда включает пустые ячейки.  
   
  Чтобы исключить пустые ячейки при подсчете элементов множества, используется стандартный синтаксис и необязательный **EXCLUDEEMPTY** флаг.  
@@ -104,17 +103,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Число &#40; измерения &#41; &#40; Многомерные Выражения &#41;](../mdx/count-dimension-mdx.md)   
- [Число &#40; Уровни иерархии &#41; &#40; Многомерные Выражения &#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Число &#40; Кортеж &#41; &#40; Многомерные Выражения &#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40; Многомерные Выражения &#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40; Многомерные Выражения &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40; Многомерные Выражения &#41;](../mdx/hierarchize-mdx.md)   
- [Свойства &#40; Многомерные Выражения &#41;](../mdx/properties-mdx.md)   
- [Статистическая функция &#40; Многомерные Выражения &#41;](../mdx/aggregate-mdx.md)   
- [Фильтр &#40; Многомерные Выражения &#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40; Многомерные Выражения &#41;](../mdx/prevmember-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Число &#40;измерения&#41; &#40;многомерных Выражений&#41;](../mdx/count-dimension-mdx.md)   
+ [Число &#40;уровней иерархии&#41; &#40;многомерных Выражений&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Число &#40;кортежа&#41; &#40;многомерных Выражений&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel & #40; Многомерные Выражения & #41;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers & #40; Многомерные Выражения & #41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize & #40; Многомерные Выражения & #41;](../mdx/hierarchize-mdx.md)   
+ [Свойства & #40; Многомерные Выражения & #41;](../mdx/properties-mdx.md)   
+ [Статистическая функция & #40; Многомерные Выражения & #41;](../mdx/aggregate-mdx.md)   
+ [Фильтр & #40; Многомерные Выражения & #41;](../mdx/filter-mdx.md)   
+ [PrevMember &#40;многомерных Выражений&#41;](../mdx/prevmember-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

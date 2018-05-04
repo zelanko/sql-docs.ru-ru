@@ -1,31 +1,23 @@
 ---
-title: "Настройка служб Analysis Services для ограниченного делегирования Kerberos | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка служб Analysis Services для ограниченного делегирования Kerberos | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 277372a74d58ece125c4d7e7b8a2b59a447031ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Во время настройки служб Analysis Services для проверки подлинности Kerberos, скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: олицетворения пользовательского удостоверения с помощью служб Analysis Services для доступа к данным или делегирования пользовательского удостоверения с помощью служб Analysis Services в службу более низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
+  Во время настройки служб Analysis Services для проверки подлинности Kerberos, скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: олицетворения пользовательского удостоверения с помощью служб Analysis Services для доступа к данным или делегирования пользовательского удостоверения с помощью служб Analysis Services в службу более низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
@@ -123,6 +115,6 @@ ms.lasthandoff: 02/23/2018
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Подключитесь к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Регистрация имени участника-службы для экземпляра служб Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [Свойства строки соединения &#40; Службы Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Свойства строки соединения & #40; Службы Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

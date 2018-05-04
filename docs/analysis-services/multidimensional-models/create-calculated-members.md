@@ -1,36 +1,23 @@
 ---
-title: "Создание вычисляемых элементов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание вычисляемых элементов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- calculated members [Analysis Services]
-- custom measures [Analysis Services]
-- members [Analysis Services], calculated
-- calculations [Analysis Services], calculated members
-ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e819f86b102dd979f529a4eb3ffd9cc12966482b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-calculated-members"></a>Создание вычисляемых элементов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Можно создать пользовательские меры или элементы измерения, называемые вычисляемыми элементами, с помощью комбинации данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент со значением «Евро», конвертирующий доллары в евро с помощью умножения меры доллара на коэффициент конвертации. Затем можно в отдельной строке или столбце отобразить значение в евро для конечных пользователей.  
+  Можно создать пользовательские меры или элементы измерения, называемые вычисляемыми элементами, с помощью комбинации данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент со значением «Евро», конвертирующий доллары в евро с помощью умножения меры доллара на коэффициент конвертации. Затем можно в отдельной строке или столбце отобразить значение в евро для конечных пользователей.  
   
  Определения вычисляемых элементов хранятся, но их значения существуют только в памяти. В предыдущем примере значение для пользователей отображается в марках, но это значение не хранится как данные куба.  
   

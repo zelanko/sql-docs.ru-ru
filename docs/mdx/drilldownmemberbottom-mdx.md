@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aa91524e15441d2e11945dcda798d86aa16b0945
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b740a78a8d8cd425587e568db4a7cae521ad78e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,13 +47,13 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Счетчик*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
- *Hierarchy*  
+ *Иерархия*  
  Допустимое многомерное выражение, возвращающее иерархию.  
   
  *Рекурсивные*  
@@ -63,7 +62,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  Ключевое слово, позволяющее включать вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если числовое выражение указано, **DrilldownMemberBottom** функция сортирует в порядке возрастания, потомки каждого элемента в первом наборе согласно значению числового выражения, вычисленного над набором дочерних элементов. Если числовое выражение не указано, функция сортирует потомков каждого элемента в первом наборе в порядке возрастания согласно значениям ячеек, представленных набором дочерних элементов, как определено контекстом запроса. Это поведение аналогично функциям многомерных выражений BottomCount и Tail, которые возвращают набор элементов в естественном порядке без какой-либо сортировки.  
   
  После сортировки **DrilldownMemberBottom** функция возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанные в *Count,* с наименьшее значение и содержащихся в обоих наборах.  
@@ -74,9 +73,9 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  **DrilldownMemberBottom** функция подобна [DrilldownMember](../mdx/drilldownmember-mdx.md) работать, но вместо включения всех потомков каждого элемента первого набора, которые также представлять во втором наборе, **DrilldownMemberBottom** функция возвращает набор самых нижних потомков для каждого элемента.  
   
- Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
+ Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

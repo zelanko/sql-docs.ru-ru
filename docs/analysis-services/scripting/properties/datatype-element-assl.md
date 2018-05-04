@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e1e88cef7b608bef7995849a170d8ce6ec8e70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9a45fa75f92d38ab707e31c792cd7e388e1fab2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatype-element-assl"></a>Элемент DataType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип данных связанного элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет тип данных связанного элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,14 +63,14 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md), [мер](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значения для **DataType** определены в **System.Data.OleDb.OleDbType** перечисления. Тем не менее, допустимы только значения перечисления в следующей таблице в **DataType** элемента.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*BigInt*|64-разрядное целое число со знаком. Этот тип данных соответствует **Int64** в тип данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework и DBTYPE_I8 типу данных в OLE DB.|  
-|*Bool*|Значение типа Boolean. Этот тип данных соответствует **логическое** тип данных в платформе .NET Framework и типу данных DBTYPE_BOOL в OLE DB.|  
-|*Валюта*|Значение валюты в диапазоне от -2<sup>63</sup> (или -922,337,203,685,477.5808) до 2<sup>63</sup>-1 (или + 922,337,203,685,477.5807) с точностью до одной десятитысячной денежной единицы. Этот тип данных соответствует **десятичное** тип данных в платформе .NET Framework и типу данных DBTYPE_CY в OLE DB.|  
+|*bool*|Значение типа Boolean. Этот тип данных соответствует **логическое** тип данных в платформе .NET Framework и типу данных DBTYPE_BOOL в OLE DB.|  
+|*Измерение валют*|Значение валюты в диапазоне от -2<sup>63</sup> (или -922,337,203,685,477.5808) до 2<sup>63</sup>-1 (или + 922,337,203,685,477.5807) с точностью до одной десятитысячной денежной единицы. Этот тип данных соответствует **десятичное** тип данных в платформе .NET Framework и типу данных DBTYPE_CY в OLE DB.|  
 |*Дата*|Данные о дате, сохраненные в виде числа с плавающей запятой двойной точности. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Этот тип данных соответствует **DateTime** тип данных в платформе .NET Framework и типу данных DBTYPE_DATE в OLE DB.|  
 |*Double*|Число с плавающей запятой двойной точности в диапазоне от -1,79E +308 до 1,79E +308. Этот тип данных соответствует **двойные** тип данных в платформе .NET Framework и типу данных DBTYPE_R8 в OLE DB.|  
 |*Целочисленный*|32-разрядное целое число со знаком. Этот тип данных соответствует **Int32** тип данных в платформе .NET Framework и типу данных DBTYPE_I4 в OLE DB.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 |*Тип данных WChar*|Поток символов в кодировке Юникод, заканчивающийся символом NULL. Этот тип данных соответствует **строка** тип данных в платформе .NET Framework и типу данных DBTYPE_WSTR в OLE DB.|  
 |*Унаследованные*|Тип данных **DataItem** содержащихся в [источника](../../../analysis-services/scripting/properties/source-element-measure-assl.md) элемент **мер** элемента.<br /><br /> Примечание: Применимо только к **мер** элементов.|  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

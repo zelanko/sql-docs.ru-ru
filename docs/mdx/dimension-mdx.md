@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0da55878251f8235b9e262e38356a0eacc19d3a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b15f8b2772e468976ed21720e7a3b214cf64651c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimension-mdx"></a>Dimension (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -84,11 +83,11 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Число &#40; Уровни иерархии &#41; &#40; Многомерные Выражения &#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Число &#40; Выбрать &#41; &#40; Многомерные Выражения &#41;](../mdx/count-set-mdx.md)   
- [Уровни &#40; Многомерные Выражения &#41;](../mdx/levels-mdx.md)   
- [Члены &#40; Выбрать &#41; &#40; Многомерные Выражения &#41;](../mdx/members-set-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Число &#40;уровней иерархии&#41; &#40;многомерных Выражений&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Число & #40; Выбрать & #41; & #40; Многомерные Выражения & #41;](../mdx/count-set-mdx.md)   
+ [Уровни &#40;многомерных Выражений&#41;](../mdx/levels-mdx.md)   
+ [Члены &#40;задать&#41; &#40;многомерных Выражений&#41;](../mdx/members-set-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

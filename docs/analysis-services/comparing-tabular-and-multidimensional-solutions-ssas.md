@@ -1,27 +1,26 @@
 ---
-title: "Сравнение табличных и многомерных решений (службы SSAS) | Документы Microsoft"
-ms.custom: 
+title: Сравнение табличных и многомерных решений (службы SSAS) | Документы Microsoft
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4f7e75c9a5f31d37b32bade54dd9bd108de21e9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Сравнение табличных и многомерных решений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,23 +58,23 @@ ms.lasthandoff: 02/23/2018
 |||| 
 |-|-|-|
 ||Multidimensional|Табличный|
-|Действия|Да|нет|
-|Aggregations|Да|нет|
-|Вычисляемый столбец|нет|Да|  
+|Действия|Да|Нет|
+|Aggregations|Да|Нет|
+|Вычисляемый столбец|Нет|Да|  
 |Вычисляемые меры|Да|Да| 
-|Вычисляемые таблицы|нет|Да<sup>1</sup>|  
-|Пользовательские сборки|Да|нет|
-|Пользовательские свертки|Да|нет| 
-|элемент по умолчанию;|Да|нет|  
+|Вычисляемые таблицы|Нет|Да<sup>1</sup>|  
+|Пользовательские сборки|Да|Нет|
+|Пользовательские свертки|Да|Нет| 
+|элемент по умолчанию;|Да|Нет|  
 |Отображение папок|Да|Да<sup>1</sup>|  
 |Количество различных|Да|Да (посредством DAX)|
 |Детализация|Да|Да (зависит от клиентского приложения)|
 |Иерархии|Да|Да|
 |Ключевые показатели эффективности|Да|Да| 
 |Связанные объекты|Да|Да (связанные таблицы)|
-|Выражения M|нет|Да<sup>1</sup>|
+|Выражения M|Нет|Да<sup>1</sup>|
 |Связи «многие ко многим»|Да|Нет (но [двунаправленные кросс-фильтры,](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) с уровнем совместимости 1200 и выше)| 
-|Именованные наборы|Да|нет| 
+|Именованные наборы|Да|Нет| 
 |Неоднородные иерархии|Да|Да<sup>1</sup>|  
 |Иерархии типа «родители-потомки»|Да|Да (посредством DAX)|
 |Секции|Да|Да| 
@@ -85,7 +84,7 @@ ms.lasthandoff: 02/23/2018
 |Полуаддитивные меры|Да|Да| 
 |Переводы|[Да](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Да| 
 |Пользовательские иерархии|Да|Да|
-|Обратная запись|Да|нет| 
+|Обратная запись|Да|Нет| 
   
  <sup>1</sup> разделе [уровень совместимости для табличных моделей в службах Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) сведения о функциональных различий между уровнями совместимости.  
   
@@ -151,9 +150,9 @@ ms.lasthandoff: 02/23/2018
   
 -   Многомерный шаблон баз данных можно использовать измерения и безопасность на уровне ячейки, с помощью разрешений на основе ролей.  
 
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] защищаются на уровне файлов с использованием разрешений SharePoint.  
+-   Книги[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] защищаются на уровне файлов с использованием разрешений SharePoint.  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] могут быть восстановлены на сервер в табличном режиме. После восстановления файла он отсоединяется от SharePoint, что позволяет использовать все функции табличного моделирования, включая безопасность на уровне строк.  
+ Книги[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] могут быть восстановлены на сервер в табличном режиме. После восстановления файла он отсоединяется от SharePoint, что позволяет использовать все функции табличного моделирования, включая безопасность на уровне строк.  
   
 ##  <a name="bkmk_designer"></a> Средства проектирования  
  Пользователи, задачей которых является построение аналитических моделей, могут обладать весьма разными навыками моделирования данных и техническим опытом. Если в конкретном решении имеет значение уровень владения тем или иным инструментом или опыт пользователя, сравните следующие направления подготовки в создании моделей.  

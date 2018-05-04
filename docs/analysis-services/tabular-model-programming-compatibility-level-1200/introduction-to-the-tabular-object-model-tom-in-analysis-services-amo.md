@@ -1,36 +1,35 @@
 ---
-title: "Общие сведения о табличной объектной модели (TOM) в Analysis Services AMO | Документы Microsoft"
-ms.custom: 
+title: Общие сведения о табличной объектной модели (TOM) в Analysis Services AMO | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: f4ebceaa484330b33e6f431e0cc130dd538dcc72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Общие сведения о табличной объектной модели (TOM) в службах Analysis Services объектов AMO
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
+  Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
   
 TOM предоставляет собственный табличных метаданных, таких как **модель**, **таблиц**, **столбцы**, и **связи** объектов.  Высокоуровневое представление дерева модели объектов, представленных ниже показано, как связаны элементы компонента.  
   
  Так как том является расширением объектов AMO, все классы, представляющие новые табличные объекты, представленные в SQL Server 2016 реализуются в новую сборку Microsoft.AnalysisServices.Tabular.dll. Классы общего назначения, объектов AMO были перемещены на Microsoft.AnalysisServices.Core сборку. Код будет необходимо ссылки на обе сборки.
-В разделе [установить, распространения и ссылаться на табличные модели объекта &#40; Microsoft.AnalysisServices.Tabular &#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) подробные сведения.  
+В разделе [установить, распространения и ссылаться на табличные модели объекта &#40;Microsoft.AnalysisServices.Tabular&#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) подробные сведения.  
   
  В настоящее время API-Интерфейс доступен только для управляемого кода на платформе .NET framework. Чтобы просмотреть полный список программных средств, включая поддержку языка скриптов и запросов, в разделе [табличной модели программирования для 1200 уровень совместимости](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md).  
   

@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e6e3755c3f043a446301092ff948e31910547cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b990707ad5df6379651ac698b14c309d5bef5610
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designaggregations-element-xmla"></a>Элемент DesignAggregations (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Создает агрегаты для статистической схемы в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Создает агрегаты для статистической схемы в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -69,12 +69,12 @@ ms.lasthandoff: 01/08/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|Дочерние элементы|[Материализовать](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md), [объекта](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [оптимизации](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md), [запросы](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md), [действия](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md), [хранения](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md), [Времени](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
+|Дочерние элементы|[Материализовать](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md), [объекта](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [оптимизации](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md), [запросы](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md), [действия](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md), [хранения](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md) , [Времени](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Команда **DesignAggregations** используется для создания определений агрегатов, хранимых в статистической схеме. Затем статистическая схема может использоваться при материализации агрегатов для секции и повторно применяться в других секциях.  
   
-## <a name="see-also"></a>См. также:  
- [Команды &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>См. также  
+ [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

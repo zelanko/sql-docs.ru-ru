@@ -1,27 +1,26 @@
 ---
-title: "Для Office надстройки интеллектуального анализа данных SQL Server | Документы Microsoft"
-ms.custom: 
+title: Для Office надстройки интеллектуального анализа данных SQL Server | Документы Microsoft
+ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea4c810eb5c3dfca0588efc02407cf5a5729f68e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 582aafff3c10b5ec20ef791106074f7511577bd4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Надстройки интеллектуального анализа данных SQL Server для Office
 
@@ -81,10 +80,10 @@ ms.lasthandoff: 01/08/2018
   
 -   Business Intelligence  
   
--   Standard  
+-   Standard Edition  
   
  В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
- Дополнительные сведения об установке см. на этой странице Центра загрузки: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Дополнительные сведения об установке см. в центре загрузки этой странице: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

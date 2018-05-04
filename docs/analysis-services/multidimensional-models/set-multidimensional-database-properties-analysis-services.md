@@ -1,32 +1,23 @@
 ---
 title: Задание свойств многомерной базы данных (службы Analysis Services) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- properties [Analysis Services], databases
-ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
-caps.latest.revision: 24
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a564077dba3035d725d838d9242b528ad7021b7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Задание свойств многомерной базы данных (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Существует ряд [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] свойства, которые можно настроить в базы данных [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] конструктор баз данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Предусмотрен целый ряд свойств базы данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые можно настроить в конструкторе базы данных служб среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  В этом конструкторе можно выполнить следующие типы задач.  
   
@@ -50,8 +41,8 @@ ms.lasthandoff: 01/08/2018
 |Язык|При развертывании проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] база данных унаследует свойство Language сервера, если не указать другое значение.|  
 |MasterDataSource ID|Используется удаленными секциями. Дополнительные сведения см. в разделе [Remote Partitions](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
-## <a name="see-also"></a>См. также:  
- [Диалоговое окно "Свойства базы данных" (службы SSAS — многомерные)](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
- [Настройка свойств проекта служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+## <a name="see-also"></a>См. также  
+ [Окно свойств базы данных & #40; Службы SSAS — многомерные & #41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
+ [Настройка свойств проекта служб Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -23,23 +23,23 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 71c95b5f3f1f2f8475659bf75c3f146e1cfdcdb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>Набор строк DMSCHEMA_MINING_SERVICES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит описание каждого алгоритма интеллектуального анализа данных, поддерживаемыми поставщиком.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит описание всех алгоритмов интеллектуального анализа данных, поддерживаемых поставщиком.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_SERVICES** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Имя алгоритма. Столбцы относятся к конкретным поставщикам.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Этот столбец содержит битовую карту, описывающую службу интеллектуального анализа данных. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] помещает в него одно из следующих значений:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Этот столбец содержит битовую карту, описывающую службу интеллектуального анализа данных. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Помещает в него одно из следующих значений:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|Локализуемое отображаемое имя алгоритма.|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|Идентификатор GUID алгоритма.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Понятное описание алгоритма.|  
@@ -70,8 +70,8 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательный параметр.|  
+|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательно.|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

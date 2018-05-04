@@ -1,31 +1,23 @@
 ---
-title: "Запросы определения данных (интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Запросы определения данных (интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 286d7cbe5d6dbb2fb0b05b937fbd1a304f89aa1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8db4090f4d8970cd06a8daee7382903a160898c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-definition-queries-data-mining"></a>Запросы, определяющие данные (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-При интеллектуальном анализе данных категория *запрос определения данных* означает инструкции расширения интеллектуального анализа данных или команды XMLA, которые выполняют следующие действия.  
+  При интеллектуальном анализе данных категория *запрос определения данных* означает инструкции расширения интеллектуального анализа данных или команды XMLA, которые выполняют следующие действия.  
   
 -   Создание, изменение или обработка объектов интеллектуального анализа данных, например моделей.  
   
@@ -66,14 +58,14 @@ ms.lasthandoff: 02/15/2018
   
 -   Определение набора данных, который будет использоваться при обучении модели интеллектуального анализа с помощью инструкции [INSERT INTO (DMX)](../../dmx/insert-into-dmx.md) в сочетании с запросом источника данных, например OPENROWSET.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает шаблоны запроса, которые могут помочь в создании определений запросов данных. Дополнительные сведения см. в статье [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает шаблоны запроса, которые могут помочь в создании определений запросов данных. Дополнительные сведения см. в статье [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
  Шаблоны, предоставляемые для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чаще всего содержат только общее определение синтаксиса, которое необходимо будет адаптировать путем ввода либо в окне **Запрос** , либо в диалоговом окне ввода параметров.  
   
  Пример ввода параметров с помощью этого интерфейса см. в разделе [Создание одноэлементного прогнозирующего запроса из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ###  <a name="bkmk_Scripts"></a> Создание сценариев инструкций определений данных  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обеспечивают работу с несколькими языками для написания скриптов и программирования, которые служат для создания или изменения объектов интеллектуального анализа данных, а также для определения источников данных.  Хотя расширения интеллектуального анализа данных направлены на ускорение обработки заданий интеллектуального анализа данных, для работы с объектами сценариев или в пользовательском режиме можно также воспользоваться XMLA и AMO.  
+ Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обеспечивают работу с несколькими языками для написания скриптов и программирования, которые служат для создания или изменения объектов интеллектуального анализа данных, а также для определения источников данных.  Хотя расширения интеллектуального анализа данных направлены на ускорение обработки заданий интеллектуального анализа данных, для работы с объектами сценариев или в пользовательском режиме можно также воспользоваться XMLA и AMO.  
   
  Надстройка интеллектуального анализа данных для Excel также содержит множество шаблонов запросов и **Расширенный редактор запросов**, который поможет написать сложные инструкции для расширений интеллектуального анализа данных. Запросы можно составить в интерактивном режиме, после чего переключиться в представление SQL для захвата инструкций расширений интеллектуального анализа данных.  
   
@@ -91,11 +83,11 @@ ms.lasthandoff: 02/15/2018
 |Работа с шаблонами для DMX-запросов.|[Использовать шаблоны служб Analysis Services в SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Построитель прогнозирующих запросов может использоваться для создания любых запросов.|[Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML для аналитики &#40; XML для Аналитики &#41; Ссылка](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Разработка с использованием объектов AMO &#40; Объекты AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [ЭКСПОРТИРОВАТЬ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/export-dmx.md)<br /><br /> [ИМПОРТИРОВАТЬ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/import-dmx.md)|  
+|Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML для аналитики & #40; XML для Аналитики & #41; Ссылка](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Разработка с использованием объектов AMO & #40; Объекты AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [ЭКСПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/export-dmx.md)<br /><br /> [ИМПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/import-dmx.md)|  
 |Подробнее об OPENROWSET и других способах запроса внешних данных.|[&#60;запрос источника данных&#62;](../../dmx/source-data-query.md).|  
   
 ## <a name="see-also"></a>См. также:  
- [Мастер интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [Мастер интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

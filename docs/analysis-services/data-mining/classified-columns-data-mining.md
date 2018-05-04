@@ -1,41 +1,23 @@
 ---
-title: "Классифицированных столбцов (интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Классифицированных столбцов (интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- content types [data mining]
-- STDEV column
-- VARIANCE column
-- PROBABLILITY column
-- PROBABILITY_STDEV column
-- columns [data mining], classified
-- classified columns [data mining]
-- PROBABILITY_VARIANCE column
-- SUPPORT column
-ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02792608fce3f2cca0c1bf78e5215b1a0b607a1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9fcd5aac5f5384f62b4fe4cd53f480ac70f69a63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classified-columns-data-mining"></a>Классифицированные столбцы (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-При определении классифицированного столбца создается связь между текущим столбцом и другим столбцом в структуре интеллектуального анализа данных. Данные в столбце структуры интеллектуального анализа, обозначенном как классифицированный столбец, содержат сведения о разбивке по категориям, описывающие значения в другом столбце структуры интеллектуального анализа данных.  
+  При определении классифицированного столбца создается связь между текущим столбцом и другим столбцом в структуре интеллектуального анализа данных. Данные в столбце структуры интеллектуального анализа, обозначенном как классифицированный столбец, содержат сведения о разбивке по категориям, описывающие значения в другом столбце структуры интеллектуального анализа данных.  
   
  Например, предположим, что есть два столбца с числовыми данными. Первый столбец, [Yearly Purchases], содержит все покупки каждого заказчика в течение определенного года, а второй столбец, [Standard Deviations], содержит стандартные отклонения для этих значений. В этом случае можно обозначить столбец [Yearly Purchases] в качестве классифицированного, чтобы модель позволяла использовать эту связь в анализе.  
   
@@ -66,8 +48,8 @@ ms.lasthandoff: 02/15/2018
  Значение в столбце является весом, коэффициентом репликации объекта, связанного значения.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимого типы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Содержимого типы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
  [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Типы данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Типы данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

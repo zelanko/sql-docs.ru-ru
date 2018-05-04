@@ -1,31 +1,23 @@
 ---
-title: "Настройка или восстановление Power Pivot для SharePoint 2013 | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка или восстановление Power Pivot для SharePoint 2013 | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0986792fb9c8e7d6300e85d9a700e75cac783aeb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 120acf653855cf9626afd8ad8194d298e4731b9d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Настройка или восстановление Power Pivot для SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Для настройки или восстановления установленного экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте инструмент настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+  Для настройки или восстановления установленного экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте инструмент настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -156,7 +148,7 @@ ms.lasthandoff: 02/15/2018
 ||Парольная фраза|Вводимые пользователем данные|Для шифрования данных используется главный ключ. По умолчанию для формирования ключа используется та же парольная фраза, с помощью которой выполняется подготовка новых серверов в ферме. Парольную фразу по умолчанию можно заменить на уникальную парольную фразу.|  
 |**Создание учетной записи автоматического обновления для DataRefresh**|Идентификатор целевого приложения|По умолчанию (при необходимости)|Создайте целевое приложение для хранения учетных данных, используемых для автоматического обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Идентификатор приложения может быть описательным текстом.|  
 ||Понятное имя для целевого приложения|По умолчанию (при необходимости)||  
-||Автоматические имя пользователя и пароль учетной записи|По умолчанию (при необходимости)|Введите данные учетной записи пользователя Windows, которые используются целевым приложением и для автоматического обновления данных. Дополнительные сведения см. в разделе [Настройка обновления данных служб Excel Services с помощью учетной записи службы автоматического обновления в SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/hh525344(office.15).aspx).|  
+||Автоматические имя пользователя и пароль учетной записи|По умолчанию (при необходимости)|Введите данные учетной записи пользователя Windows, которые используются целевым приложением и для автоматического обновления данных. Дополнительные сведения см. в разделе [обновления данных Настройка служб Excel с помощью учетной записи автоматической службы в SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/hh525344(office.15).aspx).|  
 ||URL-адрес сайта|По умолчанию (при необходимости)|Введите URL-адрес сайта семейства сайтов, сопоставленного с целевым приложением. Для сопоставления с дополнительными семействами веб-сайтов воспользуйтесь центром администрирования SharePoint.|  
 |**Создать приложение службы для служб Excel**|Имя приложения службы|По умолчанию (при необходимости)|Введите имя приложения службы. На сервере баз данных фермы SharePoint будет создана база данных приложения службы с тем же именем.|  
 |**Настройте серверы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Имя приложения службы|По умолчанию (при необходимости)|Имя приложения службы, введенное на предыдущей странице.|  
@@ -210,7 +202,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Power Pivot справки](https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f) (https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f).  
   
--   [Запуск PowerPivot в Excel 2013](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
+-   [Запуск Power Pivot в надстройке Excel 2013](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>Добавление серверов службы Analysis Services в режиме интеграции с SharePoint  
  В дальнейшем, если потребуются дополнительные возможности по хранению и обработке данных, в ферму можно будет добавить дополнительные серверы для работы служб Analysis Services в режиме интеграции с SharePoint. Для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 новые серверы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливаются в режиме интеграции с SharePoint, а затем настраиваются службы Excel. Дополнительные сведения см. в подразделе "Действия после установки одиночного сервера" раздела [Установка служб Analysis Services в режиме PowerPivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
@@ -222,6 +214,6 @@ ms.lasthandoff: 02/15/2018
  [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Обновление книг и запланированное обновление данных &#40; SharePoint 2013 &#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [Обновление книг и запланированное обновление данных & #40; SharePoint 2013 & #41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

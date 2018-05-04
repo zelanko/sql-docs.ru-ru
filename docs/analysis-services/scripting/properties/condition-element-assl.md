@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a4b91dcedde39e7d02c6d0263cf37de0fa7b3e62
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 67d2de50186ceefa9e1412ddf71c886b40a62e11
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="condition-element-assl"></a>Элемент Condition (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит выражение многомерных выражений (MDX), которое определяет, является ли [действия](../../../analysis-services/scripting/objects/action-element-assl.md) родительского элемента применяется к цели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит выражение многомерных выражений (MDX), которое определяет, является ли [действия](../../../analysis-services/scripting/objects/action-element-assl.md) родительского элемента применяется к цели.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|String|  
+|Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,12 +63,12 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент **Condition** содержит многомерное выражение, результатом которого является логическое значение. Если выражение возвращает **True**, то **действия** применяется к цели, указанной в [целевой](../../../analysis-services/scripting/properties/target-element-assl.md) элемента. В противном случае действие **Action** не применяется.  
   
  Элемент, соответствующий родителю параметра **условие** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Action>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

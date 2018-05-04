@@ -1,16 +1,16 @@
 ---
-title: "Диаграмма роста прибыли (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
+title: Диаграмма роста прибыли (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 852352be5b6648e4877a4d44ff4a9cbc1566e2fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В диаграмме роста прибыли отображается теоретический прирост прибыли, связанный с использованием модели интеллектуального анализа данных. Предположим, что модель прогнозирует, с какими клиентами компании следует связаться в определенном бизнес-сценарии. В этом случае следует добавить в диаграмму роста прибыли данные о стоимости проведения кампании целевой рассылки. И тогда в готовой диаграмме вы увидите сравнение прибыли при правильном выборе целевых клиентов и при обращении к клиентам случайным образом.  
+  В диаграмме роста прибыли отображается теоретический прирост прибыли, связанный с использованием модели интеллектуального анализа данных. Предположим, что модель прогнозирует, с какими клиентами компании следует связаться в определенном бизнес-сценарии. В этом случае следует добавить в диаграмму роста прибыли данные о стоимости проведения кампании целевой рассылки. И тогда в готовой диаграмме вы увидите сравнение прибыли при правильном выборе целевых клиентов и при обращении к клиентам случайным образом.  
   
 ## <a name="build-a-profit-chart"></a>Создание диаграммы роста прибыли  
  Диаграмма роста прибыли аналогична диаграмме точности прогнозов. Начните с создания диаграммы точности прогнозов, а затем добавьте сведения об издержках и прибыли.  
@@ -98,13 +97,13 @@ ms.lasthandoff: 02/15/2018
   
 |Разделы|Ссылки|  
 |------------|-----------|  
-|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по интеллектуальному анализу данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов &#40; Учебник по интеллектуальному анализу данных &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Объясняет типы соответствующих диаграмм.|[Диаграмма точности прогнозов &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Матрица классификации &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Описывает перекрестную проверку для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Объясняет, как создать диаграмму точности прогнозов для модели целевой рассылки.|[Учебник по интеллектуальному анализу данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Проверка точности при помощи диаграммы точности прогнозов & #40; Учебник по интеллектуальному анализу данных & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Объясняет типы соответствующих диаграмм.|[Диаграмма точности прогнозов & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Матрица классификации & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Описывает перекрестную проверку для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Тестирование и проверка задачи и инструкции по & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Проверка точности при помощи диаграммы точности прогнозов &#40; Учебник по интеллектуальному анализу данных &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
+ [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Проверка точности при помощи диаграммы точности прогнозов & #40; Учебник по интеллектуальному анализу данных & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   
