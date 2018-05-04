@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 184061f0637aa5f4f17921623c02886fde1c58e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 432a53228022c2f332758252520f980c3faa5436
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +106,7 @@ srcdata
 ## <a name="returns"></a>Возвращает  
  Порядковый номер описываемого столбца. Первый столбец имеет номер 1. При возникновении ошибки возвращается 0.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **srv_describe** должна быть вызвана по одному разу для каждого столбца данной строки перед первым вызовом функции **srv_sendrow**. Столбцы в строке могут быть описаны в любом порядке.  
   
  Для изменения местонахождения и длины исходных данных в строках столбцов до передачи полного результирующего набора можно использовать функции **srv_setcoldata** и **srv_setcollen**, соответственно.  
@@ -120,7 +118,7 @@ srcdata
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [srv_sendrow (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9c7e727908bbd2265cab05b9d1aa2f55cc7b9ebd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d0fac8599311e3896b0b1f46b255a72524990409
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="item-tuple-mdx"></a>Item (кортеж) (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +57,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  Допустимое числовое выражение, указывающее кортеж по его позиции в возвращаемом наборе.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Элемент** функция возвращает кортеж из указанного набора. Существует три способа вызвать **элемент** функции:  
   
 -   Если одно строковое выражение указано, **элемент** функция возвращает заданный кортеж. Пример: "([2005].Q3, [Store05])".  
@@ -91,7 +90,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

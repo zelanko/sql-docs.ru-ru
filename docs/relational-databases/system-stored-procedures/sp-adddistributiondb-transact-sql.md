@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributiondb (Transact-SQL) | Документы Microsoft
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad675b3330585ff791c72bf1c4faafd4502bf04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,9 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @createmode= ] createmode ]  
-    [ , [ @from_scripting = ] from_scripting ]  
+    [ , [ @from_scripting = ] from_scripting ] 
+    [ , [ @deletebatchsize_xact = ] deletebatchsize_xact ] 
+    [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -110,6 +111,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ 
+ [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
+ Указывает размер пакета для использования во время очистки просроченных операций MSRepl_Transactions таблиц. *deletebatchsize_xact* — **int**, значение по умолчанию 5000. Этот параметр, появившийся в SQL Server 2017 г., следуют версий в SQL Server 2012 SP4 и SQL Server 2016 SP2.  
+
+ [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
+ Указывает размер пакета для использования во время очистки просроченных команд из таблицы MSRepl_Commands. *deletebatchsize_cmd* — **int**, значение по умолчанию 2000. Этот параметр, появившийся в SQL Server 2017 г., следуют версий в SQL Server 2012 SP4 и SQL Server 2016 SP2. 
+ 
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

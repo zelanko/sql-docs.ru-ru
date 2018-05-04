@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - duplicated functions [ODBC]
 - compatibility [ODBC], duplicated functions
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e834e0733e3f388658cf41e3a620b17f843e0c14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 55faa01b16331870c4539e290e218838e4d9e381
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="duplicated-features"></a>Повторяющийся функции
 Следующие 2 ODBC. *x* повторяются функции ODBC 3. *x* функции. В результате ODBC 2. *x* функции являются устаревшими в ODBC 3. *x*. ODBC 3. *x* функции называются замены функции.  
@@ -58,4 +57,4 @@ ms.lasthandoff: 04/16/2018
  [1] функция **SQLExtendedFetch** повторяющихся функции; **SQLFetchScroll** предоставляет те же функциональные возможности в ODBC 3. *x*. Тем не менее, диспетчер драйверов не соответствует **SQLExtendedFetch** для **SQLFetchScroll** при переходе от ODBC 3. *x* драйвера. Дополнительные сведения см. в разделе [диспетчера драйверов назначение](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости. Сопоставляет диспетчера драйверов **SQLFetchScroll** для **SQLExtendedFetch** при переходе от ODBC 2. *x* драйвера.  
   
 > [!NOTE]  
->  Функция **SQLBindParam** является особым случаем. **SQLBindParam** повторяющихся функциональность. Это не ODBC 2*.x* функции, но функция, которая присутствует в стандартах Open Group и ISO. Функциональные возможности, предоставляемые этой функцией полностью включена в группу по **SQLBindParameter**. В результате диспетчера драйверов сопоставляет вызов **SQLBindParam** для **SQLBindParameter** при базового драйвера ODBC 3. *x* драйвера. Однако когда базового драйвера имеет ODBC 2*.x* драйвера, диспетчер драйверов не выполнять сопоставление.
+>  Функция **SQLBindParam** является особым случаем. **SQLBindParam** повторяющихся функциональность. Это не ODBC 2 *.x* функции, но функция, которая присутствует в стандартах Open Group и ISO. Функциональные возможности, предоставляемые этой функцией полностью включена в группу по **SQLBindParameter**. В результате диспетчера драйверов сопоставляет вызов **SQLBindParam** для **SQLBindParameter** при базового драйвера ODBC 3. *x* драйвера. Однако когда базового драйвера имеет ODBC 2 *.x* драйвера, диспетчер драйверов не выполнять сопоставление.

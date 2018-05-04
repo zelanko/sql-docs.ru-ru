@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1feb6b6071958b6bbf73bcb2b50d785dffc1a87e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4812174e3a736a05475ceaf901bc86bf7949436d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +94,7 @@ destlen
 ## <a name="returns"></a>Возвращает  
  Длина преобразованных данных в байтах, если преобразование типов было проведено успешно. Если функция **srv_convert** получает запрос на преобразование, которое не поддерживается, то вызывает обработчик ошибок, если он был задан разработчиком, устанавливает глобальный номер ошибки и возвращает значение –1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **srv_willconvert** определяет, допустимо ли данное преобразование.  
   
  Преобразование в приблизительные числовые типы данных SRVFLT4 и SRVFLT8 может привести к некоторой потере точности. Преобразование из приблизительных числовых типов данных SRVFLT4 и SRVFLT8 в типы SRVCHAR и SRVTEXT также может привести к некоторой потере точности.  
@@ -120,7 +118,7 @@ destlen
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [srv_setutype (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   

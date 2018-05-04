@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9b24f49594003f453f3258c431881bd0ddda0f70
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>(Деление) (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,25 +40,25 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Делимое*  
+ *делимое*  
  Допустимое выражение расширений интеллектуального анализа данных, возвращающее числовое значение.  
   
- *Делитель*  
+ *делитель*  
  Допустимое выражение расширений интеллектуального анализа данных, возвращающее числовое значение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение с типом данных параметра, имеющего более высокий приоритет.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение, возвращаемое оператором, представляет собой частное от деления первого выражения на второе.  
   
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если делитель возвращает значение NULL, оператор выдает ошибку. Если как делитель, так и делимое возвращают значения NULL, оператор возвращает значение NULL.  
   
-## <a name="see-also"></a>См. также:  
- [Арифметические операторы &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-arithmetic.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Операторы &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-dmx.md)   
- [Деление &#40; Выражение служб SSIS &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40; деления &#41; &#40; Transact-SQL &#41;](../t-sql/language-elements/divide-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Арифметические операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-arithmetic.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)   
+ [Разделите &#40;выражение служб SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;Разделите&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

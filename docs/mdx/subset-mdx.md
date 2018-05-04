@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f461f979c9d064305b0004fb906673e97f2ab5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 78298188ba089dde1c9aae9f833c673817f16820
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subset-mdx"></a>Subset (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,10 +47,10 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Запуск*  
  Допустимое числовое выражение, указывающее позицию первого возвращаемого кортежа.  
   
- *Счетчик*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Из указанного набора **подмножества** функция возвращает подмножество, которое содержит заданное количество кортежей, начиная с указанной начальной позиции. Индекс начинается с 0, то есть 0 соответствует первому кортежу в заданном наборе, 1 — второму и т. д.  
   
  Если *число* не указан, функция возвращает все кортежи из *запустить* до конца набора.  
@@ -72,7 +71,7 @@ SELECT Subset
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

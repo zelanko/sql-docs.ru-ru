@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fedc7d179a3c40c0859b8b1bed4a9c77f1e8c565
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94244e5c8b64c834e3097271ac5b4df7b319810a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-parameters-odbc"></a>Привязка параметров ODBC
 Каждый параметр в инструкции SQL должен быть связан, или *привязаны,* переменной в приложении перед выполнением инструкции. Если приложение связывает параметр переменной, он описывает этой переменной — адрес, тип данных C и т. д — к драйверу. Он также описывает сам параметр — SQL данных типа, точность и т. д. Драйвер сохраняет эти сведения в структуре, он поддерживает для этого оператора и использует сведения для извлечения значения из переменной при выполнении инструкции.  

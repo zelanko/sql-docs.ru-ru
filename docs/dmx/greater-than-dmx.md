@@ -1,5 +1,5 @@
 ---
-title: '&gt;(Больше) (DMX) | Документы Microsoft'
+title: '&gt; (Больше) (DMX) | Документы Microsoft'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -21,14 +21,13 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 58c959cb74a2a6b402cdfba2b80a1dca82d56a0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4184641970fc24e8ae1e9dbd87b915c86375f0ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-dmx"></a>&gt;(Больше) (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
+# <a name="gt-greater-than-dmx"></a>&gt; (Больше) (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Выполняет операцию сравнения, определяющую, является ли одно значение меньшим или равным другому значению расширений интеллектуального анализа данных.  
@@ -47,9 +46,9 @@ DMX_Expression > DMX_Expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Логические значение, равное TRUE в случае, если оба аргумента не равны NULL, и значение первого аргумента больше значения второго аргумента. Логическое значение равно FALSE в случае, если оба аргумента не равны NULL, и значение первого аргумента равняется или меньше значения второго аргумента. Логическое значение равно NULL, если один или оба аргумента имеют значение NULL.  
   
-## <a name="see-also"></a>См. также:  
- [Операторы сравнения &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-comparison.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Операторы &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Операторы сравнения &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-comparison.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)  
   
   

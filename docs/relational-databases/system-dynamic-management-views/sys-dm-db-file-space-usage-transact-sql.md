@@ -26,13 +26,12 @@ caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aeab15ee29bcc56e0814d4976bcb2e5239f818ff
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: feee77f5f8abf73fe364f13c18df63d5e8c35f36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 |user_object_reserved_page_count|**bigint**|Общее количество страниц, выделенных из однородных экстентов для пользовательских объектов в базе данных. Неиспользуемые страницы из распределенного экстента включаются в счет.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Можно использовать столбец total_pages в [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) каталога представлению для возврата счетчика зарезервированных страниц каждой единицы размещения в объекте пользователя. Однако учтите, что столбец total_pages включает IAM-страницы.|  
 |internal_object_reserved_page_count|**bigint**|Общее количество страниц в однородном экстенте, размещенных для внутренних объектов в файле. Неиспользуемые страницы из распределенного экстента включаются в счет.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Не существует представления каталога или объекта DMO, возвращающего счетчик страниц каждого внутреннего объекта.|  
 |mixed_extent_page_count|**bigint**|Общее количество размещенных и освобожденных страниц в размещенном смешанном экстенте. Смешанный экстент содержит страницы, размещенные для различных объектов. Этот счетчик включает все IAM-страницы в файле.|
-|modified_extent_page_count|**bigint**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Общее число страниц, измененных в размещенных экстентах файла с момента последнего полного резервного копирования. Число измененных страниц можно использовать для отслеживания объем разностных изменений в базе данных с момента последнего полного резервного копирования, чтобы определить необходимость разностной резервной копии.|
+|modified_extent_page_count|**bigint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br />Общее число страниц, измененных в размещенных экстентах файла с момента последнего полного резервного копирования. Число измененных страниц можно использовать для отслеживания объем разностных изменений в базе данных с момента последнего полного резервного копирования, чтобы определить необходимость разностной резервной копии.|
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
 |distribution_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
   

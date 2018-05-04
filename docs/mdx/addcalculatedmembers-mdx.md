@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c2482dc235ec5665b464764decdc6f25da074e5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 277489f47a80cbaeda8b9ccd1f2d4ab386b44b22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  По умолчанию в языке многомерных выражений вычисляемые элементы исключаются при вычислении функций набора. **AddCalculatedMembers** функция просматривает выражение набора, указанного в *Set_Expression,* и включает вычисляемые одноуровневые элементы, содержащиеся в области данного выражения набора.  
   
 > [!NOTE]  
@@ -73,7 +72,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

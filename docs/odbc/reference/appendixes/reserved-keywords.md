@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb908b1fe38e0bd193a17ac66c753d4057fed4a7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f62e74939ab7be81696f90b39af85239332a88c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords"></a>Зарезервированные слова
 Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Тем не менее чтобы обеспечить совместимость с драйверами, поддерживающими базовую грамматику SQL, приложения не следует использовать эти ключевые слова. #**Определить** значение SQL_ODBC_KEYWORDS содержит список разделенных запятыми из этих ключевых слов.  

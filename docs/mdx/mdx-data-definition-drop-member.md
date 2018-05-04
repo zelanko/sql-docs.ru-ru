@@ -29,12 +29,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d4881eb548f1d5ccc034522e7446856ccad08d24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a49ce890fb3a98e26f67f1b1e648decd4372c7ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-member"></a>Определение данных MDX - удаления ЭЛЕМЕНТА
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,8 +57,8 @@ DROP MEMBER
  *Member_Identifier*  
  Допустимое строковое выражение, представляющее имя или ключ элемента.  
   
-## <a name="see-also"></a>См. также:  
- [CREATE MEMBER, инструкция #40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-member.md)   
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../mdx/mdx-data-definition-create-member.md)   
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

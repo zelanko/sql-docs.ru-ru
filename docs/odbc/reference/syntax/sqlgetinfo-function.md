@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo, функция
 **Соответствия**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  Все вызовы **SQLGetInfo** требуется открытое соединение, за исключением случаев *свойство* — SQL_ODBC_VER, который возвращает версии диспетчера драйверов.  
   
 ## <a name="information-types"></a>Типы данных  
- В этом разделе перечислены сведения типы, поддерживаемые **SQLGetInfo**. Сведения о типах категорически группируются и в алфавитном порядке. Типы данных, которые были добавлены или переименования для ODBC 3*.x* также перечислены.  
+ В этом разделе перечислены сведения типы, поддерживаемые **SQLGetInfo**. Сведения о типах категорически группируются и в алфавитном порядке. Типы данных, которые были добавлены или переименования для ODBC 3 *.x* также перечислены.  
   
 ## <a name="driver-information"></a>Сведения о драйвере  
  Следующие значения для *свойство* аргумент возвращать сведения о драйвере ODBC, например, число активных инструкций, имя источника данных и уровня соответствия стандартам интерфейса:  
@@ -277,7 +276,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>Добавлены сведения о типах для ODBC 3.x  
- Следующие значения для *свойство* аргумент были добавлены для ODBC 3*.x*:  
+ Следующие значения для *свойство* аргумент были добавлены для ODBC 3 *.x*:  
   
 |||  
 |-|-|  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>Типы информации, переименованы для ODBC 3.x  
- Следующие значения для *свойство* аргумент были переименованы для ODBC 3*.x*.  
+ Следующие значения для *свойство* аргумент были переименованы для ODBC 3 *.x*.  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -344,7 +343,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Типы информации, рекомендуется использовать в ODBC 3.x  
- Следующие значения для *свойство* аргумент являются устаревшими в ODBC 3*.x*. ODBC 3*.x* драйверы должны по-прежнему поддерживает эти типы сведений для обратной совместимости с ODBC 2*.x* приложений. (Дополнительные сведения об этих типах см. в разделе [SQLGetInfo поддержки](../../../odbc/reference/appendixes/sqlgetinfo-support.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.)  
+ Следующие значения для *свойство* аргумент являются устаревшими в ODBC 3 *.x*. ODBC 3 *.x* драйверы должны по-прежнему поддерживает эти типы сведений для обратной совместимости с ODBC 2 *.x* приложений. (Дополнительные сведения об этих типах см. в разделе [SQLGetInfo поддержки](../../../odbc/reference/appendixes/sqlgetinfo-support.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.)  
   
 |||  
 |-|-|  
@@ -732,7 +731,7 @@ SQLRETURN SQLGetInfo(
  Символ строка с именем текущей базы данных используется, если источник данных определяет именованный объект, называется «database».  
   
 > [!NOTE]  
->  В ODBC 3*.x*, возвращаемое значение для данного *свойство* могут быть возвращены, вызвав **SQLGetConnectAttr** с *атрибута* Аргумент SQL_ATTR_CURRENT_CATALOG.  
+>  В ODBC 3 *.x*, возвращаемое значение для данного *свойство* могут быть возвращены, вызвав **SQLGetConnectAttr** с *атрибута* Аргумент SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  Битовая маска SQLUINTEGER, перечисление литералами даты и времени SQL-92, поддерживаемые источником данных. Обратите внимание, что они являются литералами даты и времени, перечисленные в спецификации SQL-92 являются отдельными из datetime литерала escape предложений, определенном ODBC. Дополнительные сведения о предложениях литерала escape ODBC datetime см. в разделе [даты, времени и отметок времени литералы](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_ACOS SQL_FN_NUM_ASIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_ATAN SQL_FN_NUM_ATAN2 SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_COT-SQL_ SQL_FN_NUM_DEGREES (ODBC 2.0) SQL_FN_NUM_LOG10 SQL_FN_NUM_LOG (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_FLOOR FN_NUM_EXP (ODBC 1.0) SQL_FN_ SQL_FN_NUM_RAND (ODBC 1.0) В SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC 2.0) (ODBC 2.0) (ODBC 1.0) SQL_FN_NUM_MOD SQL_FN_NUM_RADIANS (ODBC 2.0) SQL_FN_NUM_TRUNCATE NUM_ROUND (ODBC 2.0) (ODBC 1.0) SQL_FN_NUM_SIGN SQL_FN_NUM_SIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_SQRT SQL_FN_NUM_TAN (ODBC 1.0) (ODBC 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- Значение SQLUINTEGER, которое указывает уровень ODBC 3*.x* интерфейс, соответствующий драйвер.  
+ Значение SQLUINTEGER, которое указывает уровень ODBC 3 *.x* интерфейс, соответствующий драйвер.  
   
  SQL_OIC_CORE: Минимальный уровень, все драйверы ODBC, должно соответствовать. Этот уровень включает базовый интерфейс элементы, такие как подключения функции, функции для подготовки и выполнения инструкции SQL, функции метаданных базовый результирующий набор, каталога основные функции и т. д.  
   

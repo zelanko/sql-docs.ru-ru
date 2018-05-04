@@ -22,17 +22,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 28b75d9b7bb728eb5794892917a3075095adde15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Зарезервированные ключевые слова (синтаксис многомерных выражений)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] резервируют определенные ключевые слова для эксклюзивного использования. Список зарезервированных ключевых слов см. в разделе [зарезервированные слова многомерных Выражений](../mdx/mdx-reserved-words.md).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] резервируют определенные ключевые слова для эксклюзивного использования. Список зарезервированных ключевых слов см. в разделе [зарезервированные слова многомерных Выражений](../mdx/mdx-reserved-words.md).  
   
  Для зарезервированных ключевых слов есть правила:   
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Следуйте соглашению об именовании, которое избегает употребления зарезервированных ключевых слов. Если имя объекта будет выглядеть как зарезервированное слово, можно удалить согласные или гласные из этого имени.  
   
-## <a name="see-also"></a>См. также:  
- [Элементы синтаксиса многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Синтаксис элементов &#40;многомерных Выражений&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

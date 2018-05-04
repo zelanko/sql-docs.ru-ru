@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 359facef0aecb21eabfd931970d41b3ea3f5d9c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72caeafe09b823f2f00be6a93048d659de452994
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-interval-structure"></a>Структура интервала C
 Каждый из типов данных C интервал перечисленные в [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) раздел использует ту же структуру для хранения данных интервала. Когда **SQLFetch**, **SQLFetchScroll**, или **SQLGetData** является именем, драйвер возвращает данные в структуру SQL_INTERVAL_STRUCT, используется значение, указанное в параметре приложение для типов данных C (в вызове **SQLBindCol**, **SQLGetData**, или **SQLBindParameter**) интерпретировать содержимое SQL_INTERVAL_STRUCT и заполняет *interval_type* поля структуры с *перечисления* значение, соответствующее типу C. Обратите внимание, что драйверы не читают *interval_type* поле, чтобы определить тип интервала; они извлекают значения поля дескриптора SQL_DESC_CONCISE_TYPE. При использовании структуры данных параметра, драйвер использует значение, указанное для приложения в поле SQL_DESC_CONCISE_TYPE в APD интерпретировать содержимое SQL_INTERVAL_STRUCT, даже если приложение устанавливает значение  *interval_type* поле другое значение.  

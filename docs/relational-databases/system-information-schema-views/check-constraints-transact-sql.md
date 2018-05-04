@@ -25,13 +25,12 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e509e7f550b7c9dc53c4f95e9a8aa767360bed6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 186e0dffb769eb36354601c35c04a89a67fb9a3b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checkconstraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 04/16/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar (**128**)**|Квалификатор ограничения.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (**128**)**|Имя схемы, которой принадлежит ограничение.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Квалификатор ограничения.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, которой принадлежит ограничение.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Имя ограничения.|  
-|**CHECK_CLAUSE**|**nvarchar (**4000**)**|Фактический текст инструкции определения [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|Фактический текст инструкции определения [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>См. также  
  [Системные представления &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
 - precision [ODBC], numeric data types
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56b6c9d61c811517ccc089f424622967c81cd123
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67b017d17566fd19d6d4938bf8ef72d49b7c7bc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Переопределение по умолчанию точность и масштаб для числовых типов данных
 Если поле SQL_DESC_TYPE в Отменить равно SQL_C_NUMERIC, с помощью вызова **SQLBindCol** или **SQLSetDescField**, поле SQL_DESC_SCALE в Отменить имеет значение 0, и задано поле SQL_DESC_PRECISION с точностью по умолчанию, определяемым драйвером. Это также имеет значение true, если поле SQL_DESC_TYPE в APD равно SQL_C_NUMERIC, с помощью вызова **SQLBindParameter** или **SQLSetDescField**. Это верно для входных данных, ввода вывода или выходных параметров.  
