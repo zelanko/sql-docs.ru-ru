@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
 - ODBC drivers [ODBC], backward compatibility
@@ -25,23 +25,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9a713564688e97c4b9b649880e989598a58179f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61809072272ae91c32d4780971735c29c53fe977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>Написание ODBC 3.x приложений
 Когда ODBC 2. *x* обновить приложение ODBC 3. *x*, должны быть написаны таким образом, что она работает с обоих ODBC 2. *x* и 3. *x* драйверы. Приложение должно учитываться код условия, чтобы воспользоваться всеми преимуществами ODBC 3. *x* функции.  
   
- Атрибут SQL_ATTR_ODBC_VERSION окружения должно быть присвоено SQL_OV_ODBC2. Это позволит гарантировать, что драйвер ведет себя как ODBC 2*.x* драйвера с учетом изменений, описанных в разделе [изменения поведения](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ Атрибут SQL_ATTR_ODBC_VERSION окружения должно быть присвоено SQL_OV_ODBC2. Это позволит гарантировать, что драйвер ведет себя как ODBC 2 *.x* драйвера с учетом изменений, описанных в разделе [изменения поведения](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Если приложение будет использовать все функции, описанные в разделе [новые возможности](../../../odbc/reference/develop-app/new-features.md), условного кода следует использовать, чтобы определить, является ли драйвер ODBC 3. *x* или ODBC 2*.x* драйвера. Приложение использует **SQLGetDiagField** и **SQLGetDiagRec** для получения ODBC 3. *x* SQLSTATE во время выполнения в следующих фрагментах кода условной обработки ошибок. Следует учитывать следующие моменты, касающиеся новых функциональных возможностей.  
+ Если приложение будет использовать все функции, описанные в разделе [новые возможности](../../../odbc/reference/develop-app/new-features.md), условного кода следует использовать, чтобы определить, является ли драйвер ODBC 3. *x* или ODBC 2 *.x* драйвера. Приложение использует **SQLGetDiagField** и **SQLGetDiagRec** для получения ODBC 3. *x* SQLSTATE во время выполнения в следующих фрагментах кода условной обработки ошибок. Следует учитывать следующие моменты, касающиеся новых функциональных возможностей.  
   
 -   Приложение повлияло изменение в поведении размер набора строк следует соблюдать осторожность и не вызвать **SQLFetch** Если размер массива больше 1. Эти приложения следует заменить вызовы **SQLExtendedFetch** с вызовами **SQLSetStmtAttr** установить атрибут инструкции SQL_ATTR_ARRAY_STATUS_PTR и **SQLFetchScroll**, после чего они имеют общий код, который работает с обоих ODBC 3. *x* и ODBC 2. *x* драйверы. Поскольку **SQLSetStmtAttr** с SQL_ATTR_ROW_ARRAY_SIZE будут сопоставлены **SQLSetStmtAttr** с SQL_ROWSET_SIZE для ODBC 2. *x* драйверы, приложения можно просто установить SQL_ATTR_ROW_ARRAY_SIZE функционирование многострочные выборки.  
   
--   Большинство приложений, обновления, изменения в кодах SQLSTATE фактически не затрагиваются. Для приложений, которые изменяются они механические поиска и замены в большинстве случаев использования таблицы преобразования ошибки в разделе «Сопоставление SQLSTATE» для преобразования ODBC 3. *x* коды ошибок ODBC 2*.x* коды. Поскольку ODBC 3*.x* сопоставления выполнит диспетчера драйверов ODBC 2. *x* SQLSTATE для ODBC 3. *x* SQLSTATE эти авторы приложений должны только проверка для ODBC 3. *x* SQLSTATE и не беспокойтесь о включении ODBC 2. *x* SQLSTATE условного кода.  
+-   Большинство приложений, обновления, изменения в кодах SQLSTATE фактически не затрагиваются. Для приложений, которые изменяются они механические поиска и замены в большинстве случаев использования таблицы преобразования ошибки в разделе «Сопоставление SQLSTATE» для преобразования ODBC 3. *x* коды ошибок ODBC 2 *.x* коды. Поскольку ODBC 3 *.x* сопоставления выполнит диспетчера драйверов ODBC 2. *x* SQLSTATE для ODBC 3. *x* SQLSTATE эти авторы приложений должны только проверка для ODBC 3. *x* SQLSTATE и не беспокойтесь о включении ODBC 2. *x* SQLSTATE условного кода.  
   
 -   Если приложение использует большое даты, времени и типы данных timestamp, приложение может объявить себя быть ODBC 2. *x* приложения и используйте его существующий код вместо использования кондиционирования кода.  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Замените все вызовы **SQLTransact** с вызовами **SQLEndTran**. Если правых допустимый дескриптор в **SQLTransact** вызывается дескриптор среды *HandleType* аргумента, установленным в значение sql_handle_env, следует использовать в **SQLEndTran** вызвать с соответствующий *обработки* аргумент. Если правых допустимый дескриптор в вашей **SQLTransact** вызывается дескриптор соединения *HandleType* аргумента, установленным в значение sql_handle_dbc, следует использовать в **SQLEndTran** вызвать с соответствующий *обработки* аргумент.  
   
--   Замените все вызовы **SQLColAttributes** с вызовами **SQLColAttribute**. Если *FieldIdentifier* аргумент SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE или SQL_COLUMN_LENGTH, не изменяйте ничего, кроме имя функции. Если нет, замените *FieldIdentifier* из SQL_COLUMN_XXXX для SQL_DESC_XXXX. Если *FieldIdentifier* является SQL_DESC_CONCISE_TYPE и тип данных типом данных datetime, измените соответствующий ODBC 3*.x* тип данных.  
+-   Замените все вызовы **SQLColAttributes** с вызовами **SQLColAttribute**. Если *FieldIdentifier* аргумент SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE или SQL_COLUMN_LENGTH, не изменяйте ничего, кроме имя функции. Если нет, замените *FieldIdentifier* из SQL_COLUMN_XXXX для SQL_DESC_XXXX. Если *FieldIdentifier* является SQL_DESC_CONCISE_TYPE и тип данных типом данных datetime, измените соответствующий ODBC 3 *.x* тип данных.  
   
 -   При использовании блочных курсоров и Прокручиваемые курсоры, приложение выполняет следующие задачи.  
   

@@ -1,17 +1,18 @@
 ---
-title: "Языки и параметры сортировки (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
+title: Языки и параметры сортировки (службы Analysis Services) | Документы Microsoft
+ms.custom: ''
 ms.date: 04/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: "Тестирование служб Analysis Services"
+keywords:
+- Тестирование служб Analysis Services
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -21,16 +22,15 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
-ms.translationtype: MT
+ms.openlocfilehash: 825005324c0c9317f64f7dfdbc8f224416b3e639
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Языки и параметры сортировки (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -185,7 +185,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>См. также  
  [Сценарии глобализации для служб Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Глобализация советы и лучшие методики &#40; Службы Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Глобализация советы и лучшие методики & #40; Службы Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

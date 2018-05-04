@@ -1,35 +1,34 @@
 ---
-title: "Примеры запросов к модели нейронной сети | Документы Microsoft"
-ms.custom: 
+title: Примеры запросов к модели нейронной сети | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b900cf7799baf78234127d52ab064e31f3699f86
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="neural-network-model-query-examples"></a>Примеры запросов к модели нейронной сети
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого для модели нейронной сети может вернуть метаданные модели — в частности, число скрытых слоев. Или же прогнозирующий запрос может дать сведения для классификации на основе входа и, по желанию, предоставить значения вероятности для каждой классификации.  
+  К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого для модели нейронной сети может вернуть метаданные модели — в частности, число скрытых слоев. Или же прогнозирующий запрос может дать сведения для классификации на основе входа и, по желанию, предоставить значения вероятности для каждой классификации.  
   
  Этот раздел посвящен созданию запросов для моделей, основанных на алгоритме нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -218,20 +217,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |прогнозирующую функцию|Использование|  
-|[IsDescendant &#40; расширений интеллектуального анализа данных &#41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли один узел дочерним для другого узла в диаграмме нейронной сети.|  
-|[PredictAdjustedProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
-|[PredictHistogram &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу значений, связанную с текущим прогнозируемым значением.|  
+|[IsDescendant & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли один узел дочерним для другого узла в диаграмме нейронной сети.|  
+|[PredictAdjustedProbability & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
+|[PredictHistogram & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу значений, связанную с текущим прогнозируемым значением.|  
 |[PredictVariance (расширения интеллектуального анализа данных)](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию для прогнозируемого значения.|  
-|[PredictProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
-|[PredictStdev &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictstdev-dmx.md)|Возвращает стандартное отклонение для прогнозируемого значения.|  
-|[PredictSupport &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictsupport-dmx.md)|Для моделей нейронной сети и логистической регрессии возвращает единственное значение, представляющее собой размер обучающего набора для всей модели.|  
+|[PredictProbability & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
+|[PredictStdev & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictstdev-dmx.md)|Возвращает стандартное отклонение для прогнозируемого значения.|  
+|[PredictSupport & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictsupport-dmx.md)|Для моделей нейронной сети и логистической регрессии возвращает единственное значение, представляющее собой размер обучающего набора для всей модели.|  
   
  Список общих функций для всех алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)] см. в статье [Справочник по алгоритмам (службы Analysis Services — интеллектуальный анализ данных)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Синтаксис отдельных функций см. в статье [Справочник по функциям расширений интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Технический справочник по алгоритму нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Занятие 5: Создание нейронной сети и модели логистической регрессии &#40; учебник по интеллектуальному анализу данных — средний &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [Содержимое модели интеллектуального анализа данных для модели нейронной сети & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Занятие 5: Создание нейронной сети и модели логистической регрессии & #40; учебник по интеллектуальному анализу данных — средний & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

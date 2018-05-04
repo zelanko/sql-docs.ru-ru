@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>С помощью драйвер OLE DB для SQL Server заголовка и файлам библиотеки
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  Драйвер OLE DB для SQL Server заголовочного файла (msoledbsql.h) можно использовать для добавления драйвер OLE DB для SQL Server функции доступа к данным в пользовательские приложения. Драйвер OLE DB для SQL Server заголовочного файла содержит все определения, атрибуты, свойства и интерфейсы, необходимые для использования преимуществ новых функций представлены в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Помимо драйвер OLE DB для SQL Server файла заголовка, имеется также файл библиотеки msoledbsql.lib, являющийся библиотекой экспорта для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функциональные возможности программы массового копирования (BCP).  
+ Помимо драйвер OLE DB для SQL Server файла заголовка, имеется также файл библиотеки msoledbsql.lib, являющийся библиотекой экспорта для [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) функциональные возможности.  
   
  Драйвер OLE DB для SQL Server заголовочного файла обладает обратной совместимостью с sqloledb.h файл заголовка, используемый с Microsoft данных Access Components (MDAC), но не содержит идентификаторов CLSID для SQLOLEDB (поставщик OLE DB для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включенный с компонентами MDAC) или символы для Возможности работы с XML (который не поддерживается драйвером OLE DB для SQL Server).    
   

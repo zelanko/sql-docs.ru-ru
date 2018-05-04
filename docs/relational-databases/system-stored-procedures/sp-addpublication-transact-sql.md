@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +180,7 @@ sp_addpublication [ @publication = ] 'publication'
  Указывает местоположение альтернативной папки для моментального снимка. *alternate_snapshot_folder* — **nvarchar(255)** значение по умолчанию NULL.  
   
  [  **@pre_snapshot_script=** ] **"***pre_snapshot_script***"**  
- Задает указатель **.sql** расположение файла. *pre_snapshot_script* — **nvarchar(255),**значение по умолчанию NULL. Если моментальный снимок применяется на подписчике, то агент распространителя запускает предварительный скрипт моментального снимка до выполнения скриптов реплицируемых объектов. Скрипт выполняется в контексте безопасности, использованном для агента распространителя при подключении к базе данных подписки.  
+ Задает указатель **.sql** расположение файла. *pre_snapshot_script* — **nvarchar(255),** значение по умолчанию NULL. Если моментальный снимок применяется на подписчике, то агент распространителя запускает предварительный скрипт моментального снимка до выполнения скриптов реплицируемых объектов. Скрипт выполняется в контексте безопасности, использованном для агента распространителя при подключении к базе данных подписки.  
   
  [  **@post_snapshot_script=** ] **"***post_snapshot_script***"**  
  Задает указатель **.sql** расположение файла. *post_snapshot_script* — **nvarchar(255)**, значение по умолчанию NULL. Агент распространителя запускает заключительный скрипт после применения скриптов и данных всех реплицируемых объектов во время первоначальной синхронизации. Скрипт выполняется в контексте безопасности, использованном для агента распространителя при подключении к базе данных подписки.  

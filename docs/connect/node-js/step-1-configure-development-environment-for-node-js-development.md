@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6369e90d0709db855a922079afc7b60d7551264a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Шаг 1: Настройка среда разработки для Node.js
 Необходимо будет настроить среду разработки с необходимых компонентов для разработки приложений с помощью драйвера Node.js для SQL Server.  Наиболее распространенный метод является использование диспетчера пакетов node (npm-файл) для установки трудоемкой модуля, но вы можете скачать модуль трудоемкой непосредственно в [Github](https://github.com/pekim/tedious) при необходимости.  

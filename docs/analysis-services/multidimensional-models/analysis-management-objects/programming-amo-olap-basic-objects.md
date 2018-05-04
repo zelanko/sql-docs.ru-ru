@@ -1,34 +1,19 @@
 ---
-title: "Программирование основных объектов AMO OLAP | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 
-author: Minewiskan
+title: Программирование основных объектов AMO OLAP | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Программирование основных объектов AMO OLAP
   Процесс создания сложных объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] является простым и понятным, но требует внимания к деталям. В этом разделе подробно описывается программирование базовых объектов OLAP. Этот раздел состоит из следующих подразделов.  
@@ -168,7 +153,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>Обработка измерения  
  Процесс обработки измерения сводится к использованию метода Process объекта <xref:Microsoft.AnalysisServices.Dimension>.  
   
- Обработка измерения может затронуть все кубы, использующие это измерение. Дополнительные сведения о параметрах обработки см. в разделе [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Обработка измерения может затронуть все кубы, использующие это измерение. Дополнительные сведения о параметрах обработки см. в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  В следующем коде выполняется добавочное обновление во всех измерениях указанной базы данных:  
   
@@ -255,7 +240,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>Обработка куба  
  Процесс обработки куба сводится к использованию метода Process объекта <xref:Microsoft.AnalysisServices.Cube>. При обработке куба обрабатываются все группы мер в этом кубе, а также все секции в группах мер. В кубе единственными объектами, которые можно обработать, являются секции; группы мер с точки зрения обработки представляют собой всего лишь контейнеры секций. Выбранный для куба тип обработки распространяется и на его секции. Обработка куба и группы мер по существу сводится к обработке измерений и секций.  
   
- Дополнительные сведения о параметрах обработки см. в разделе [обработки объектов &#40; XML для Аналитики &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), и [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки см. в разделе [обработки объектов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), и [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  В следующем коде выполняется полная обработка всех кубов в указанной базе данных:  
   
@@ -265,7 +250,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG">Объекты MeasureGroup</a>  
+##  <a name="MG"></a> Объекты MeasureGroup  
  В целях администрирования или обработки группы мер программируется объект <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>Создание, удаление и поиск группы мер  
@@ -422,7 +407,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>Обработка группы мер  
  Процесс обработки группы мер сводится к использованию метода Process объекта <xref:Microsoft.AnalysisServices.MeasureGroup>. При отработке группы мер будут также обработаны и все секции, принадлежащие к ней. Внутри группы мер ее обработка сводится к обработке измерений и секций. См. раздел [Обработка секции](#ProcPart) в этом документе.  
   
- Дополнительные сведения о параметрах обработки см. в разделе [обработки объектов &#40; XML для Аналитики &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), и [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки см. в разделе [обработки объектов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), и [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  В следующем коде выполняется полная обработка всех групп мер указанного куба.  
   
@@ -434,7 +419,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part">Объекты partition</a>  
+##  <a name="Part"></a> Объекты partition  
  Объект <xref:Microsoft.AnalysisServices.Partition> программируется для администрирования и обработки секции.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>Создание, удаление и поиск секции  
@@ -488,7 +473,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Обработка секции  
  Процесс обработки секции сводится к использованию метода Process объекта <xref:Microsoft.AnalysisServices.Partition>.  
   
- Дополнительные сведения о параметрах обработки см. в разделе [обработки объектов &#40; XML для Аналитики &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) и [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки см. в разделе [обработки объектов &#40;XMLA&#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) и [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  В следующем образце кода выполняется полная обработка во всех секциях указанной группы мер.  
   
@@ -533,7 +518,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD">Объекты Aggregation</a>  
+##  <a name="AD"></a> Объекты Aggregation  
  Объект <xref:Microsoft.AnalysisServices.Aggregation> программируется в целях разработки проекта агрегата и применения его к одной или нескольким секциям.  
   
 ### <a name="creating-and-dropping-aggregations"></a>Создание и удаление агрегатов  
@@ -573,9 +558,9 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Классы OLAP объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Обработка многомерной модели &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [Логическая архитектура & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты базы данных & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Установка образцов данных и проектов для служб Analysis Services многомерное моделирование учебник](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

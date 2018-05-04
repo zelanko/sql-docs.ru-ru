@@ -1,30 +1,32 @@
 ---
-title: "Метод setObject (java.lang.String, java.lang.Object, int, int) | Документы Microsoft"
-ms.custom: 
+title: Метод setObject (java.lang.String, java.lang.Object, int, int) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerCallableStatement.setObject (java.lang.String, java.lang.Object, int, int)
-apilocation: sqljdbc.jar
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerCallableStatement.setObject (java.lang.String, java.lang.Object, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 16f5f09a-51b5-423a-b52d-8c2eaa04e9ff
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 56e45c5b631a01f704877248f1bd1023bd6bfd96
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: ef2b65711f29dc0d283e3ec408c712e7c8cf2a6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>Метод setObject (java.lang.String, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +48,7 @@ public void setObject(java.lang.String sCol,
   
  Объект **строка** , содержащее имя параметра.  
   
- **  
+ *o*  
   
  **Объекта** значение.  
   
@@ -68,8 +70,8 @@ public void setObject(java.lang.String sCol,
   
  Дополнительные сведения см. в разделе [как настройка java.sql.Time отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>См. также:  
- [Метод setObject &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>См. также  
+ [Метод setObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8756ded720e9884596a7a7aaab6fdd6e2271ef7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c181399d5f512f4aa1f803c95f7cc5ff32e201b9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-element-xmla"></a>Элемент Parameters (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию [параметр](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) элементы, используемые методом [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит коллекцию элементов [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) , используемых методом [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
   
  **Пространство имен:**`urn:schemas-microsoft-com:xml-analysis`  
   
@@ -56,25 +56,25 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[Выполнение](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|Родительские элементы|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Дочерние элементы|[Параметр](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для некоторых команд (XML для аналитики), таких как [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) , могут потребоваться дополнительные данные. Элемент **Parameters** обеспечивает механизм предоставления дополнительных данных, включая сведения о фрагментах, для команд XMLA.  
   
  Если в команде XML для аналитики элемент **Parameters** не используется, то при вызове метода **Execute** его можно опустить.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

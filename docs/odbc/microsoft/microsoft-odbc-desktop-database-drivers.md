@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - Jet-based ODBC drivers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c21c46ca8c9171ad33894f2f63c53a5009fe06c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Драйверы Microsoft ODBC для настольных баз данных
 ODBC — это API, использует язык SQL (Structured Query) в качестве языка базы данных access. Можно получить доступ к разнообразных систем управления базами данных (СУБД) с тем же кодом источника ODBC, которые непосредственно встроены в исходном коде приложения. Драйверы базы данных Microsoft ODBC рабочий стол пользователя приложения с поддержкой ODBC можно открыть запрос и обновления с помощью системной базы данных через интерфейс ODBC.  

@@ -1,29 +1,28 @@
 ---
-title: "Занятие 8: Определение действий | Документы Microsoft"
-ms.custom: 
+title: 'Занятие 8: Определение действий | Документы Microsoft'
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0a7c280b5473873c51345cc203dccbae6b5c198c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-defining-actions"></a>Занятие 8. Определение действий
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 > [!NOTE]  
 > Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](http://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
   
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживают типы операций, описанные в таблице ниже.  
+Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживают типы операций, описанные в следующей таблице.  
   
 |||  
 |-|-|  
@@ -63,7 +62,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Действия &#40; Analysis Services — многомерные данные &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[Действия & #40; Analysis Services — многомерные данные & #41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [Действия в многомерных моделях](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

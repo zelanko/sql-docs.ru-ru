@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9e3f0c96d3b0921a7843e83d2b174ace160caf66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**job_count**|**int**|Возвращенное количество заданий.|  
   
-> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **базы данных msdb** .   **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
+> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **базы данных msdb** . **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
 ## <a name="remarks"></a>Замечания  
  Параметры **sp_help_jobschedule** может использоваться только в определенных сочетаниях. Если *schedule_id* указано, ни *job_id* , ни *job_name* можно указать. В противном случае *job_id* или *job_name* параметры могут использоваться с *schedule_name*.  

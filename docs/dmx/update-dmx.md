@@ -25,12 +25,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d8c6c6d2779088fd10a3f4e3f63b52df110a898a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c8b479dc74fe63a9eff4245be64a9eef5429101c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-dmx"></a>UPDATE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ SET NODE_CAPTION='new caption'
  Строка, содержащая новое имя для **NODE_CAPTION** столбца.  
   
  *Условное выражение*  
- Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
+ Необязательно. Условие ограничения значений, возвращаемых из списка столбцов.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере **обновление** инструкция изменяет имя по умолчанию `Cluster 1`, для кластера `001` на более описательное имя `Likely Customers`.  
@@ -65,9 +64,9 @@ SET NODE_CAPTION= 'Likely Customers'
 WHERE NODE_UNIQUE_NAME = '001'  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

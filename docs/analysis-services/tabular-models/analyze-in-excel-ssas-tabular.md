@@ -1,31 +1,30 @@
 ---
-title: "Анализ в Excel | Документы Microsoft"
-ms.custom: 
+title: Анализ в Excel | Документы Microsoft
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd537debaa43c89c2d09295f12598a9bfe9927b3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4fce6025b4dab2fd284677b728595feb3e6aaacc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
+  Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
   
  В этой статье предполагается, что вы уже знакомы с Microsoft Excel, сводными таблицами и диаграммами. Дополнительные сведения об использовании Excel см. в справке по Excel.  
   

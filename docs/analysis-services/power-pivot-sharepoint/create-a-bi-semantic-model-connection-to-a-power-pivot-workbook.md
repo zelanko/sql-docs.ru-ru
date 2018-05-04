@@ -1,31 +1,23 @@
 ---
-title: "Создание соединения семантической модели бизнес-Аналитики в книге PowerPivot | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание соединения семантической модели бизнес-Аналитики в книге PowerPivot | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: abf47bc1e00a810eb82dfc2e34a95a60d05e84c4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 18123ce53ecc6858443819e46ebb5de8b83e5d1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Сведения, приведенные в этом разделе, помогут настроить подключение семантической модели бизнес-аналитики с перенаправлением на книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в той же ферме.  
+  Сведения, приведенные в этом разделе, помогут настроить подключение семантической модели бизнес-аналитики с перенаправлением на книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в той же ферме.  
   
  После создания соединения семантической модели бизнес-аналитики и настройки разрешений SharePoint это соединение можно использовать в качестве источника данных для отчетов Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

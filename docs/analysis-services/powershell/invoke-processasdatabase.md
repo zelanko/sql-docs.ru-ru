@@ -1,30 +1,23 @@
 ---
-title: "Вызов ProcessASDatabase | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Вызов ProcessASDatabase | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08d7ab5ef918b64fb7570ce5a407c23718fc6f03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Проводит **процесс** операции на указанный **базы данных** с определенным **ProcessType** или **RefreshType** в зависимости от базовый тип метаданных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Выполняет операцию **Process** для указанной базы данных **Database** с определенным типом **ProcessType** или **RefreshType** , в зависимости от базового типа метаданных.  
   
  Для баз данных с многомерными метаданными используйте **ProcessType** (сюда относятся табличные базы данных с уровнем совместимости 1050, 1100 и 1103).  
   
@@ -38,7 +31,7 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ProcessASDatabase [-DatabaseName] <string> [-ProcessType] <ProcessType> {ProcessFull | ProcessAdd |     ProcessUpdate | ProcessIndexes | ProcessData | ProcessDefault | ProcessClear | ProcessStructure |     ProcessClearStructureOnly | ProcessScriptCache | ProcessRecalc | ProcessDefrag} [-Server <string>] [-Credential     <pscredential>] [-WhatIf] [-Confirm]  [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет **Invoke-ProcessASDatabase** обрабатывает базу данных до указанного вами уровня. Например, для табличных баз данных с уровнем совместимости 1200 присвоение значения **Full** параметру **RefreshType** приведет к замене существующих данных на новые.  
   
  Тип обработки (многомерный) или тип обновления (табличный) является обязательным и указывается до или после параметров базы данных и сервера:  

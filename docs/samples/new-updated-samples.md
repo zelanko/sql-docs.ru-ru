@@ -1,20 +1,22 @@
 ---
 title: Обновлено - образцы для SQL Server docs | Документы Microsoft
-description: Отображение фрагментов обновленное содержимое недавно измененные в документацию, образцы для Microsoft SQL Server.
+description: Отображение фрагментов обновленное содержимое для последних измененных в документации, образец для Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: samples
-ms.date: 02/03/2018
-ms.openlocfilehash: 2e6cf28a11ecad76cb6362941d8cc6d38a225471
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: f425839b2a93a487e35e6d63546c6cbf92afd15d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-samples-for-sql-server"></a>Новые и недавно обновленные: образцы для SQL Server
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
+- *Диапазон обновлений дат:* &nbsp; **2018-02-03** &nbsp; - в - &nbsp; **2018-04-28**
 - *Предметной области:* &nbsp; **образцы для SQL Server**.
 
 
@@ -41,7 +43,16 @@ ms.lasthandoff: 04/26/2018
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-***Сейчас новые статьи отсутствуют.***
+1. [Образцы SQL](sql-samples-where-are.md)
+2. [Каталог базы данных WideWorldImportersDW](wide-world-importers-dw-database-catalog.md)
+3. [WideWorldImportersDW Установка и настройка](wide-world-importers-dw-install-configure.md)
+4. [Использование WideWorldImportersDW компонентов SQL Server и возможности](wide-world-importers-dw-use-of-sql-server-features.md)
+5. [Создание данных WideWorldImporters](wide-world-importers-generate-data.md)
+6. [Каталог базы данных WideWorldImporters](wide-world-importers-oltp-database-catalog.md)
+7. [Установка и настройка](wide-world-importers-oltp-install-configure.md)
+8. [Использование компонентов SQL Server и возможности](wide-world-importers-oltp-use-of-sql-server-features.md)
+9. [Рабочий процесс WideWorldImportersDW ETL](wide-world-importers-perform-etl.md)
+10. [Компания Wide World Importers образцов баз данных для Microsoft SQL](wide-world-importers-what-is.md)
 
 
 
@@ -85,40 +96,36 @@ ms.lasthandoff: 04/26/2018
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметные области, *содержащие* новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (1+3):&nbsp; **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (0+1):&nbsp; **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новые + обновленные (0+1):&nbsp; **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (0+1):&nbsp; **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (12+1): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (6+2):&nbsp; **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (15+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (2+9):&nbsp; **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (1+0):&nbsp; **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (1+1):&nbsp; **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новые + обновленные(1+1):&nbsp; **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1):&nbsp; **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (1+2):&nbsp; **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+2):&nbsp; **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новый + обновленные (11 + 6): &nbsp; &nbsp; **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новый + обновленные (18 + 0): &nbsp; &nbsp; **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (218 + 14): **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новый + обновленные (14 + 0): &nbsp; &nbsp; **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
+- [Новый + обновленные (3 + 2): &nbsp; &nbsp; **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
+- [Новый + обновленные (3 + 3): &nbsp; &nbsp; **Linux для SQL** документы](../linux/new-updated-linux.md)
+- [Новый + обновленные (7 + 10): &nbsp; &nbsp; **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
+- [Новый + обновленные (0 + 2): &nbsp; &nbsp; **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
+- [Новый + обновленные (1 + 3): &nbsp; &nbsp; **операций SQL Studio** документы](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новый + обновленные (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новый + обновленные (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
+- [Новый + обновленные (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
+- [Новый + обновленные (0 + 2): &nbsp; &nbsp; **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+- [Новый + обновленные (1 + 1): &nbsp; &nbsp; **средства для SQL** документы](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметные области, *не* содержащие новые или недавно обновленные статьи
 
-
-- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
-- [Новый + обновленные (0 + 0): **объектов данных ActiveX (ADO) для SQL** документы](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (0 + 0): **Analytics Platform System для SQL** документы](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Новый + обновленные (0 + 0): **Data Quality Services для SQL** документы](../data-quality-services/new-updated-data-quality-services.md)
 - [Новый + обновленные (0 + 0): **расширений интеллектуального анализа (DMX) для SQL** документы](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новый + обновленные (0 + 0): **многомерных выражений (MDX) для SQL** документы](../mdx/new-updated-mdx.md)
 - [Новый + обновленные (0 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
+- [Новый + обновленные (0 + 0): **PowerShell для SQL** документы](../powershell/new-updated-powershell.md)
 - [Новый + обновленные (0 + 0): **образцы для SQL** документы](../samples/new-updated-samples.md)
 - [Новый + обновленные (0 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новый + обновленные (0 + 0): **XQuery для SQL** документы](../xquery/new-updated-xquery.md)
-
 

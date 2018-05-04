@@ -1,30 +1,30 @@
 ---
-title: "Указать столбец для использования в качестве Регрессора в модели | Документы Microsoft"
-ms.custom: 
+title: Указать столбец для использования в качестве Регрессора в модели | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3f97137b00c611c1be5671f52d8e23cefb8c7c55
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8baa8e637d7c98d1c184837601dc466b2063f54d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Модель линейной регрессии представляет значение прогнозируемого атрибута как результат формулы, которая объединяет входов таким образом, что они данные как можно ближе к предполагаемой линии регрессии. Этот алгоритм принимает только числовые значения и автоматически обнаруживает входные данные, которые обеспечивают наиболее близкое соответствие.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Модель линейной регрессии представляет значение прогнозируемого атрибута как результат формулы, в которой входные данные комбинируются таким образом, чтобы они как можно ближе соответствовали предполагаемой линии регрессии. Этот алгоритм принимает только числовые значения и автоматически обнаруживает входные данные, которые обеспечивают наиболее близкое соответствие.  
   
  Однако можно указать, что столбец включается в качестве регрессора добавлением в модель параметра FORCE_REGRESSOR и указанием использования регрессоров. Это может понадобиться, когда атрибут имеет значение даже в том случае, если эффект слишком мал и не может быть обнаружен моделью либо когда необходимо обеспечить включение атрибута в формулу.  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 01/08/2018
   
      В средстве просмотра модель представляется единственным узлом, содержащим формулу регрессии. Можно просмотреть формулу в окне **Обозначения интеллектуального анализа данных**или получить коэффициенты для формулы с помощью запросов.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели линейной регрессии & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

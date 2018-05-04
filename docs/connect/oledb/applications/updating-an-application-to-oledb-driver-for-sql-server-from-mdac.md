@@ -22,12 +22,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4b3f50c791d7cc53d3fa3161aaf8293abbd8b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Обновление приложения для драйвера OLE DB для SQL Server с компонентами MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +58,6 @@ ms.lasthandoff: 04/16/2018
 -   Драйвер OLE DB для SQL Server не содержит интеграция XML. Драйвер OLE DB для SQL Server поддерживает SELECT... БОЛЕЕ XML, но не поддерживает другие функциональные возможности XML. Тем не менее, поддерживает ли драйвер OLE DB для SQL Server **xml** появился тип данных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   Драйвер OLE DB для SQL Server поддерживает настройку клиентские сетевые библиотеки, используя только атрибуты строки соединения. Если требуется провести более сложную настройку сетевых библиотек, необходимо использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-
--   Драйвер OLE DB для SQL Server несовместим с odbcbcp.dll. Приложения должны быть перестроены компоновать msoledbsql.lib, чтобы использовать драйвер OLE DB для SQL Server.    
 
 -   Подключения MDAC поддерживает логическое значение (**true**) для **Trusted_Connection** ключевое слово. Драйвер OLE DB для строки подключения SQL Server необходимо использовать **Да** или **не**.  
 

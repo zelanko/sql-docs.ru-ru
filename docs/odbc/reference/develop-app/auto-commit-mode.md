@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
 - auto-commit mode [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 046b9a0ec140404418b7b868f2061cbabf7b0d3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4236a5545c435c1652eb07b32ddad9ddf14e2181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-commit-mode"></a>Режим автоматической фиксации
 *В режиме автоматической фиксации* каждой операции базы данных является транзакцией, которая фиксируется при выполнении. Этот режим подходит для многих реальных транзакций, состоящих из одной инструкции SQL. Нет необходимости разделять или указать завершения этих транзакций. В базах данных без поддержки транзакций режим автоматической фиксации имеет единственный поддерживаемый режим. В таких базах данных инструкции фиксируются, когда они выполняются, и нет возможности отката; они таким образом всегда находятся в режиме автоматической фиксации.  

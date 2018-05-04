@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d9a5156a3de623b34976fbc0422bb82f67692c1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table---sql-command"></a>Создание таблицы - команда SQL
 Создает таблицу, имеющий указанные поля.  
@@ -127,7 +126,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  В таблице может быть несколько возможных кандидатур индексов.  
   
  ВНЕШНИЙ ключ *eExpression4*ТЕГА *TagName4*[NODUP]  
- Создает внешний индекс (первичному) и устанавливает связь с родительской таблицей. *eExpression4* указывает выражение внешнего индекс ключа, и *TagName4* указывает имя индекса для внешнего ключа тега, создается*.* Имена тегов индекс может содержать до 10 символов. Включить NODUP создать индекс внешних кандидатов.  
+ Создает внешний индекс (первичному) и устанавливает связь с родительской таблицей. *eExpression4* указывает выражение внешнего индекс ключа, и *TagName4* указывает имя индекса для внешнего ключа тега, создается *.* Имена тегов индекс может содержать до 10 символов. Включить NODUP создать индекс внешних кандидатов.  
   
  Можно создать несколько внешних индексов для таблицы, но внешний Индексные выражения необходимо указать разные поля в таблице.  
   

@@ -25,12 +25,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: eea37242444142b217e7a792465553cfc316321d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b54210e4e548e5545420a7180e90f172575c6b09
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;модели&gt;. DIMENSION_CONTENT (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
+ Необязательно. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список связанных идентификаторов столбцов с разделителями-запятыми, полученных на основе набора строк схемы содержимого.  
@@ -57,12 +56,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  Идентификатор модели.  
   
  *Условное выражение*  
- Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
+ Необязательно. Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательный параметр. Выражение, возвращающее скалярное значение.  
+ Необязательно. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Поставщики алгоритмов определяют, какое содержимое возвращается и как его организовать. Например, поставщик может ограничить количество узлов, описываемых в содержимом измерения.  
   
  Следующая таблица перечисляет столбцы, которые можно запросить для содержимого измерения, и функцию, которую каждый столбец выполняет как измерение интеллектуального анализа данных.  
@@ -85,20 +84,20 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В примере выбираются все столбцы из содержимого модели `[TM Decision Tree]`, которая подходит для использования в качестве измерения.  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 SELECT *   
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../dmx/select-dmx.md)   
+## <a name="see-also"></a>См. также  
+ [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

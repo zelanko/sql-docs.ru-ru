@@ -1,31 +1,30 @@
 ---
-title: "Связи | Документы Microsoft"
-ms.custom: 
+title: Связи | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: fc17e841337f539fc31405f5679738abc73d43ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relationships"></a>Связи 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  
+  В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  
   
  При использовании мастера импорта таблиц для импорта из одного и того же источника данных связи, существующие в таблицах (в источнике данных), которые выбраны для импорта, будут повторно созданы в модели. Можно просмотреть связи, которые были автоматически обнаружены и созданы повторно, с помощью конструктора моделей в представлении диаграммы либо с помощью диалогового окна «Управление связями». Можно также вручную создавать новые связи между таблицами при помощи конструктора моделей в представлении диаграмм или при помощи диалоговых окон «Создание связи» или «Управление связями».  
   

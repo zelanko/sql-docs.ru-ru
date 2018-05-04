@@ -1,30 +1,23 @@
 ---
-title: "Командлет RESTORE-ASDatabase | Документы Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Командлет RESTORE-ASDatabase | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9730e74afa160e952723894a6b4ad1d72c762f28
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Командлет Restore-ASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Восстанавливает файл резервной копии (ABF) многомерной или табличной базы данных экземпляра служб Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Восстанавливает многомерную или табличную базу данных из файла резервной копии служб Analysis Services (ABF-файла) в экземпляре служб Analysis Services.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -32,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="syntax"></a>Синтаксис  
  `Restore-ASDatabase [-RestoreFile] <string> [-Name] <string> [-AllowOverwrite <SwitchParameter>] Locations <Microsoft.AnalysisServices.RestoreLocation[]>] [-Security <Microsoft.AnalysisServices.RestoreSecurity>] [-Password <System.SecureString>] [-StorageLocation <System.string>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Дает возможность системному администратору служб Analysis Services восстанавливать многомерную или табличную базу данных из файла резервной копии (ABF-файла) на экземпляре локального или удаленного сервера. Если восстанавливаемый файл был зашифрован, используйте параметр –FilePassword, чтобы указать пароль, который будет использоваться для расшифровки файла.  
   
  Этот командлет поддерживает параметр –Credential, который можно использовать, если экземпляр служб Analysis Services настроен для доступа по протоколу HTTP. Параметр –Credential принимает объект PSCredential, который содержит идентификатор пользователя Windows. Службы IIS будут олицетворять этого пользователя при подключении к службам Analysis Services. Чтобы восстановить файл, необходимо обладать разрешениями системного администратора на этом экземпляре служб Analysis Services.  

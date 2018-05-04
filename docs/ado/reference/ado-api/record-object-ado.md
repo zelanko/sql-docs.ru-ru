@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 13a2c7e684488b10368d30c27253ca2c746b63a0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ddde21c97f3f748ea92a0de3b918f7941f9f9af4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-object-ado"></a>Объект записи (ADO)
 Представляет строку из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или поставщик данных или объект, возвращенный поставщиком частично структурированными данными, таких как файл или каталог.  

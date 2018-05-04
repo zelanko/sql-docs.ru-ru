@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c62b78264a5dbd715cc79e1f07515350d8c6cd3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38dc5fb0ed2286b3077e6198bc978808063b5d2f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-of-parameter-values"></a>Массивы значений параметров
 Часто бывает полезна для приложений, для передачи массивов параметров. Например, при использовании массивов параметров и параметризованную **вставить** инструкции, приложение можно вставить несколько строк за один раз. Существует несколько преимуществ использования массивов. Во-первых сокращает сетевой трафик, поскольку данные для многих инструкций отправляются в одном пакете (если источник данных поддерживает массивы параметров в собственном коде). Во-вторых некоторые источники данных можно выполнять инструкции SQL, использование массивов быстрее, чем выполнение одинаковое число отдельных инструкций SQL. Наконец, когда данные хранятся в виде массива, как это часто бывает в случае данные экрана, приложение можно привязать все строки в определенном столбце с помощью одного вызова **SQLBindParameter** и обновлять их, выполнив одну инструкцию.  

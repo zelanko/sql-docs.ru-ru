@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4ca9192b53e2fa1e6b8eaeb66b4cddd923dd7631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Аргументы  
  [ @table_name=] '*table_name*"  
- Таблица, используемая для возврата сведений о каталоге. *имя_таблицы* — **nvarchar (**384**)**, не имеет значения по умолчанию. Поиск совпадений по шаблону поддерживается.  
+ Таблица, используемая для возврата сведений о каталоге. *имя_таблицы* — **nvarchar (** 384 **)**, не имеет значения по умолчанию. Поиск совпадений по шаблону поддерживается.  
   
  [ @table_owner=] '*table_owner*"  
- Владелец таблицы, используемой для возврата сведений о каталоге. *TABLE_OWNER*— **nvarchar (**384**)**, значение по умолчанию NULL. Поиск совпадений по шаблону поддерживается. Если владелец не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
+ Владелец таблицы, используемой для возврата сведений о каталоге. *TABLE_OWNER*— **nvarchar (** 384 **)**, значение по умолчанию NULL. Поиск совпадений по шаблону поддерживается. Если владелец не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
  Если текущий пользователь является владельцем таблицы с указанным именем, возвращаются столбцы этой таблицы. Если *владельца* не указан и текущий пользователь не является владельцем таблицы с указанным *имя*, эта процедура ищет таблицу с указанным *table_name* владельцем Владелец базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   

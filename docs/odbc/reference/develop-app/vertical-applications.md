@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], vertical applications
 - vertical applications [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c53a7541757bb1f9dc6c9c21cf2fd56461ffa1c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c89d0080f4cc29296d9e6dcd43911ee920af6683
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vertical-applications"></a>Вертикальные приложения
 Вертикальные приложения обычно выполняются от одного СУБД, четко определенную задачу. Например приложение для регистрации заказов отслеживает заказы в компании. Что общих у этих типов приложений, что схемы базы данных обычно создаются разработчиком приложения и, хотя приложение может работать с количеством различных DBMS, она работает с одной СУБД для одного клиента.  

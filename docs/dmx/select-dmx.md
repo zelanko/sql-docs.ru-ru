@@ -30,12 +30,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c22aff659dc4de5bd5a16cf927aaf391fa856af4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-dmx"></a>SELECT (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ SELECT FLATTENED <select list> FROM ...
  Можно упорядочить результаты запроса с помощью выражения, а затем вернуть подмножество результатов с помощью сочетания **ORDER BY** и **ВЕРХНЕЙ** предложения. Это может быть полезно в сценариях вроде целевых рассылок, где результаты нужно отправлять только наиболее вероятным получателям. Можно упорядочить результаты целевой рассылки по вероятности прогнозирующего запроса и затем вернуть только верхней \<n > результатов.  
   
 ## <a name="select-list"></a>Список выбора  
-  *\<Список выбора >* могут включать ссылки на скалярные столбцы, прогнозирующие функции и выражения. Доступные параметры зависят от алгоритма и следующих вопросов:  
+ *\<Список выбора >* могут включать ссылки на скалярные столбцы, прогнозирующие функции и выражения. Доступные параметры зависят от алгоритма и следующих вопросов:  
   
 -   запрос выполняется к структуре интеллектуального анализа данных или к модели интеллектуального анализа данных;  
   
@@ -113,9 +112,9 @@ WHERE < condition expression >
 ## <a name="predictions"></a>Прогнозы  
  Существуют два типа синтаксиса, используемого для создания прогнозов:  
   
--   [SELECT FROM &#60; модели &#62; ПРОГНОЗИРУЕМОЕ соединение &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60;модель&#62; PREDICTION JOIN &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM &#60; модели &#62; &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM &#60;модель&#62; &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-dmx.md)  
   
  Первый тип предсказания позволяет создавать составные прогнозы в реальном времени или в пакетном режиме.  
   
@@ -132,26 +131,26 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>Синтаксис предложений  
  Из-за сложности обзора с **ВЫБЕРИТЕ** предложением описаны инструкции, подробного описания элементов синтаксиса и аргументов. Дополнительные сведения о каждом из предложений см. в следующих разделах:  
   
- [SELECT DISTINCT FROM &#60; модели &#62; &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM &#60;модель &#62; &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60; модели &#62;. СОДЕРЖИМОЕ &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM &#60;модель&#62;. СОДЕРЖИМОГО &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60; модели &#62;. ВАРИАНТЫ &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60;модель&#62;. СЛУЧАИ &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60; модели &#62;. SAMPLE_CASES &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60;модель&#62;. SAMPLE_CASES &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60; модели &#62;. DIMENSION_CONTENT &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM &#60;модель&#62;. DIMENSION_CONTENT &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60; модели &#62; ПРОГНОЗИРУЕМОЕ соединение &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60;модель&#62; PREDICTION JOIN &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM &#60; модели &#62; &#40; расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM &#60;модель&#62; &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM &#60; структура &#62;. ВАРИАНТЫ](../dmx/select-from-structure-cases.md)  
+ [SELECT FROM &#60;структуры&#62;. ВАРИАНТЫ](../dmx/select-from-structure-cases.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)  
+ [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Структура плана совпадала с пакетом, переданным из приложения *batch_tex*t должно быть предоставлено в том же формате, символ к символу, в котором он передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются. Дополнительные сведения см. в разделе «Примечания».  
   
- [*schema_name*.] *object_name* указывает имя [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимая процедура, скалярная функция, функция из нескольких инструкций табличное или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML, который содержит *statement_text*. Если *имя_схемы* не указан, *schema_name* используется схема текущего пользователя. Если указано значение NULL и @type = «SQL», значение @module_or_batch присвоено значение @stmt. Если @type = "ШАБЛОНА**"**, @module_or_batch должен иметь значение NULL.  
+ [*schema_name*.] *object_name* указывает имя [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимая процедура, скалярная функция, функция из нескольких инструкций табличное или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML, который содержит *statement_text*. Если *имя_схемы* не указан, *schema_name* используется схема текущего пользователя. Если указано значение NULL и @type = «SQL», значение @module_or_batch присвоено значение @stmt. Если @type = "ШАБЛОНА **"**, @module_or_batch должен иметь значение NULL.  
   
  [ @params =] {N' *@parameter_name data_type* [,*.. .n* ]' | NULL}  
  Указывает определения всех параметров, внедренных в *statement_text*. @params применяется, только если одно из следующих установлено значение true:  
@@ -123,7 +122,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Если @type = 'SQL' и @module_or_batch имеет значение NULL, параметр @module_or_batch получает значение @stmt. Это означает, что значение для *statement_text* должны быть предоставлены в формате, символ к символу, в котором он передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются.  
   
- Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совпадает со значением *statement_text* для *batch_text* и  *@parameter_name data_type* [,*.. .n* ], или Если @type = **"**ОБЪЕКТА", с текстом соответствующего запроса внутри аргумента *object_name*, не учитываются следующие элементы строки:  
+ Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совпадает со значением *statement_text* для *batch_text* и  *@parameter_name data_type* [,*.. .n* ], или Если @type = **"** ОБЪЕКТА", с текстом соответствующего запроса внутри аргумента *object_name*, не учитываются следующие элементы строки:  
   
 -   Пробельные символы (знаки табуляции, пробелы, возвраты каретки и переводы строки) внутри строки.  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d61d5b674c5adb36c75e7af44edb0955ae0bbba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  Описание статьи. *Описание* — **nvarchar(255)**, значение по умолчанию NULL.  
   
  [  **@column_tracking=** ] **"***column_tracking***"**  
- Параметр отслеживания на уровне столбца. *column_tracking* — **nvarchar(10)**, значение по умолчанию FALSE. **значение true,**включается отслеживание столбцов. **false** выключает отслеживание столбцов и оставляет обнаружение конфликтов на уровне строк. Если таблица уже опубликована в других публикациях слиянием, необходимо использовать для параметра отслеживания столбца то же значение, что и для существующих статей, основанных на данной таблице. Этот параметр применим только для статей таблиц.  
+ Параметр отслеживания на уровне столбца. *column_tracking* — **nvarchar(10)**, значение по умолчанию FALSE. **значение true,** включается отслеживание столбцов. **false** выключает отслеживание столбцов и оставляет обнаружение конфликтов на уровне строк. Если таблица уже опубликована в других публикациях слиянием, необходимо использовать для параметра отслеживания столбца то же значение, что и для существующих статей, основанных на данной таблице. Этот параметр применим только для статей таблиц.  
   
 > [!NOTE]  
 >  Если для обнаружения конфликтов применяется трассировка на уровне строк (по умолчанию), базовая таблица может содержать не более 1 024 столбцов, однако столбцы из статьи должны быть отфильтрованы, чтобы было опубликовано не более 246 столбцов. Если применяется трассировка на уровне столбцов, базовая таблица может содержать не более 246 столбцов.  
@@ -132,7 +131,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  Скрипты создания не запускаются на подписчиках [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
  [  **@schema_option=** ] *schema_option*  
- Битовая карта параметра создания схемы для данной статьи. *schema_option* — **binary(8)**и может быть [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) над одним или несколькими из следующих значений.  
+ Битовая карта параметра создания схемы для данной статьи. *schema_option* — **binary(8)** и может быть [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) над одним или несколькими из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

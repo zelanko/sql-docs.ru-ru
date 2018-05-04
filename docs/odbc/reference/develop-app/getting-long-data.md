@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - fetches [ODBC], long data
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff0a11691216d03edc80d5be16c18f428664e7b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e681bac1af7f778d0e8c813129a344af6c21dd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-long-data"></a>Получение данных Long
 Определение СУБД *длинных данных* как любой символьных или двоичных данных через определенный размер, например 255 символов. Эти данные могут быть достаточно мал для хранения в один буфер, таких как часть описания несколько тысяч символов. Однако возможно, слишком длинное для хранения в памяти, например, длинные текстовые документы или растровые изображения. Поскольку такие данные не могут храниться в одиночный буфер, он извлекается из драйвера в части с **SQLGetData** после получило данные из строки.  

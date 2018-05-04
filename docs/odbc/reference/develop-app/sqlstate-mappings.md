@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>Сопоставления SQLSTATE
 В этом разделе рассматриваются значениях SQLSTATE для ODBC 2. *x* и ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE. в разделе [коды ошибок ODBC приложение A:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  Когда ODBC 2. *x* обновить приложение ODBC 3. *x* приложения, приложение должно измениться ожидать ODBC 3. *x* SQLSTATE, а не ODBC 2. *x* SQLSTATE. В следующей таблице перечислены функции ODBC 3. *x* SQLSTATE, каждый ODBC 2. *x* сопоставляется SQLSTATE.  
   
- Если SQL_OV_ODBC2 имеет значение атрибута среды SQL_ATTR_ODBC_VERSION, драйвер отправляет ODBC 2. *x* SQLSTATE, а не ODBC 3. *x* SQLSTATE при **SQLGetDiagField** или **SQLGetDiagRec** вызывается. Можно определить конкретного сопоставления, отмечая ODBC 2*.x* SQLSTATE в столбец 1 следующей таблицы, которая соответствует ODBC 3. *x* SQLSTATE в столбце 2.  
+ Если SQL_OV_ODBC2 имеет значение атрибута среды SQL_ATTR_ODBC_VERSION, драйвер отправляет ODBC 2. *x* SQLSTATE, а не ODBC 3. *x* SQLSTATE при **SQLGetDiagField** или **SQLGetDiagRec** вызывается. Можно определить конкретного сопоставления, отмечая ODBC 2 *.x* SQLSTATE в столбец 1 следующей таблицы, которая соответствует ODBC 3. *x* SQLSTATE в столбце 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Комментарии|  
 |-------------------------|-------------------------|--------------|  

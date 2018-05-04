@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b647c31febd5ef06b8cb2e6f808e296518f98af6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если выражение элемента не указано, по умолчанию используется текущий элемент первой иерархии с уровнем типа *лет* в первом измерении типа *время* в группе мер.  
   
  **Ytd** функция — это функция ярлык для [PeriodsToDate](../mdx/periodstodate-mdx.md) функция которых равно свойство Type атрибута иерархии, на котором основан уровень *лет*. Таким образом, вызов `Ytd(Member_Expression)` эквивалентен вызову `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Обратите внимание, что эта функция не будет работать, если свойство Type имеет значение *FiscalYears*.  
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **С начала года** часто используется в сочетании с без указания параметров, это значит, что [CurrentMember &#40; Многомерные Выражения &#41; ](../mdx/currentmember-mdx.md) функция отображения совокупный итог с начала года в отчете, как показано в следующем запросе:  
+ **С начала года** часто используется в сочетании с без указания параметров, это значит, что [CurrentMember &#40;многомерных Выражений&#41; ](../mdx/currentmember-mdx.md) функции отображения совокупный итог с начала года в отчете, как показано в Следующий запрос:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -79,7 +78,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

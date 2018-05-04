@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7276608bf6d50410cd157fe82ec96d006639d5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5529333ef2e81b8fee7d78765e0fb528ecb02577
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="head-mdx"></a>Head (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Счетчик*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Head** функция возвращает заданное количество кортежей из начала указанного набора. Порядок элементов сохраняется. Значение Count по умолчанию равно 1. Если заданное количество кортежей меньше 1, **Head** функция возвращает пустой набор. Если заданное число кортежей превышает количество кортежей в наборе, то функция возвращает исходный набор.  
   
 ## <a name="example"></a>Пример  
@@ -68,11 +67,11 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Резервная копия заключительного &#40; Многомерные Выражения &#41;](../mdx/tail-mdx.md)   
- [Элемент &#40; Кортеж &#41; &#40; Многомерные Выражения &#41;](../mdx/item-tuple-mdx.md)   
- [Элемент &#40; Элемент &#41; &#40; Многомерные Выражения &#41;](../mdx/item-member-mdx.md)   
- [Ранг &#40; Многомерные Выражения &#41;](../mdx/rank-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Резервная копия заключительного &#40;многомерных Выражений&#41;](../mdx/tail-mdx.md)   
+ [Элемент &#40;кортежа&#41; &#40;многомерных Выражений&#41;](../mdx/item-tuple-mdx.md)   
+ [Элемент &#40;член&#41; &#40;многомерных Выражений&#41;](../mdx/item-member-mdx.md)   
+ [Ранг &#40;многомерных Выражений&#41;](../mdx/rank-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "Перемещение объектов интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
+title: Перемещение объектов интеллектуального анализа данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9d542908c4690e1f5fdf756ce5d3e030f914b3f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moving-data-mining-objects"></a>Перемещение объектов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
+  Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
   
  В данном разделе описывается использование средств и языков скриптов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]для перемещения объектов интеллектуального анализа данных.  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  Дополнительные сведения о развертывании решений служб Analysis Services см. в разделе [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
 ### <a name="scripting"></a>Создание скриптов  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько языков, с помощью которых можно создавать скрипты для работы с объектами.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предоставляет несколько языков, которые можно использовать для объектов сценария.  
   
 -   **XML для аналитики**: можно создать скрипт для работы с объектами с помощью XMLA, щелкнув правой кнопкой мыши соответствующие объекты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для выполнения скрипта откройте его в окне **Запрос XMLA** на целевом сервере.  
   
@@ -80,9 +79,9 @@ ms.lasthandoff: 02/15/2018
 ### <a name="exporting-and-importing"></a>Импорт и экспорт  
  Экспорт и последующий импорт моделей и структур интеллектуального анализа данных с помощью инструкций DMX — лучший способ перемещения или создания резервных копий отдельных реляционных объектов интеллектуального анализа данных. Дополнительные сведения о синтаксисе расширения интеллектуального анализа данных для этих операций см. в следующих разделах:  
   
--   [ЭКСПОРТИРОВАТЬ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/export-dmx.md)  
+-   [ЭКСПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/export-dmx.md)  
   
--   [ИМПОРТИРОВАТЬ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/import-dmx.md)  
+-   [ИМПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/import-dmx.md)  
   
  Если указывается параметр INCLUDE DEPENDENCIES, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также экспортируют определения всех соответствующих представлений источников данных, а при импорте модели или структуры они повторно создают представление источника данных на целевом сервере. После завершения импорта модели убедитесь, что в объекте установлены все необходимые разрешения интеллектуального анализа.  
   

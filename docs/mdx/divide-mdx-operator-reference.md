@@ -23,12 +23,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5cc93d1be3e91fc42fdd5e0d579321106c9375b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1af119ab8f082b8d18672a047276c8f6731df3cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide---mdx-operator-reference"></a>Разделите - Справочник по операторам многомерных Выражений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,16 +42,16 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Делимое*  
+ *делимое*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
- *Делитель*  
+ *делитель*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение с типом данных параметра, имеющего более высокий приоритет.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Фактическое значение, возвращаемое **/ (деление)** оператор представляет собой частное от деления первого выражения на второе выражение.  
   
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если *делитель* имеет значение null, возникает ошибка. Если оба *делитель* и *делимое* оценить значение null, оператор возвращает значение null.  
@@ -113,8 +112,8 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>См. также:  
- [IIf &#40; Многомерные Выражения &#41;](../mdx/iif-mdx.md)   
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [IIf &#40;многомерных Выражений&#41;](../mdx/iif-mdx.md)   
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 213fa7b4c8a46966fa7054c6c20fbf79c5896d74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="was-a-result-set-created"></a>Была результирующий набор, созданный?
 В большинстве случаев разработчики приложений знать, будет ли создавать результирующий набор инструкций, который выполняет свое приложение. Это происходит, если приложение использует жестко запрограммированных инструкциях SQL, написанной программистом. Он ситуация обычно возникает, когда приложение инструкций SQL во время выполнения: программист может легко включить код, который помечает ли **ВЫБЕРИТЕ** инструкции или **вставить** , инструкция такую же структуру. В некоторых ситуаций программист не знает, возможно ли инструкция будет создать результирующий набор. Это значение true, если приложение позволяет пользователю вводить и выполнять инструкции SQL. Он также имеет значение true, если приложение создает инструкцию во время выполнения для выполнения процедуры.  

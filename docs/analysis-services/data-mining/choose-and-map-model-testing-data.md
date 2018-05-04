@@ -1,36 +1,23 @@
 ---
-title: "Выбрать и сопоставить данные проверки модели | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Выбрать и сопоставить данные проверки модели | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], mining accuracy charts
-- Mining Accuracy Chart [Analysis Services], column mappings
-- input column mapping [Analysis Services]
-- mapping input columns [Analysis Services]
-ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d74352fcb3564eda40257430ff442f622fcec89e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>Выбрать и сопоставить данные проверки модели
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Чтобы создать диаграмму точности прогнозов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо выбрать данные, которые будут использоваться для проверки модели, и сопоставить эти данные с моделью.  
+  Чтобы создать диаграмму точности прогнозов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо выбрать данные, которые будут использоваться для проверки модели, и сопоставить эти данные с моделью.  
   
  По умолчанию в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будут использоваться проверочные данные модели интеллектуального анализа данных, если при создании структуры интеллектуального анализа данных был создан набор контрольных данных. Создание набора контрольных данных — самый простой способ проверки моделей на основе одной структуры интеллектуального анализа данных, поскольку имена столбцов и типы данных всегда будут совпадать с моделью и можно быть достаточно уверенным в том, что распределение данных будет аналогичным. Кроме того, конструктор автоматически создает связи между входом и столбцами модели.  
   
@@ -127,6 +114,6 @@ ms.lasthandoff: 02/15/2018
      Новые сопоставления столбцов отображаются в диалоговом окне **Укажите сопоставление столбцов** . Удалить сопоставление можно, выбрав линию между столбцами и нажав клавишу DELETE. Можно создать новое соединение, выбрав столбец в таблице **Структура интеллектуального анализа данных** и перетащив его в соответствующий столбец таблицы **Выбор входных таблиц** .  
   
 ## <a name="see-also"></a>См. также  
- [Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Тестирование и проверка задачи и инструкции по & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

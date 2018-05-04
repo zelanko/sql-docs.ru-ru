@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Типы данных (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
  Для использования типов данных API расширенных хранимых процедур необходимо включить в программу файл заголовка Srv.h.  
   
-|Тип данных|Тип данных SQL Server|Описание|  
+|Тип данных|Тип данных SQL Server|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|Данные типа **binary** с длиной от 0 до 8000 байт.|  
 |SRVBIGCHAR|**char**|Данные типа **character** с длиной от 0 до 8000 байт.|  
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 |SRVDECIMALN|**decimal null**|Данные типа **decimal**, значения NULL допускаются.|  
 |SRVFLT4|**real**|Тип данных **real** длиной 4 байта.|  
 |SRVFLT8|**float**|Тип данных **float** длиной 8 байт.|  
-|SRVFLTN|**real** &#124; **число с плавающей запятой значение null**|Данные типа **real** или **float**, значения NULL допускаются.|  
+|SRVFLTN|**real** &#124; **float null**|Данные типа **real** или **float**, значения NULL допускаются.|  
 |SRVIMAGE|**image**|Тип данных **image**.|  
 |SRVINT1|**tinyint**|Тип данных **tinyint** длиной 1 байт.|  
 |SRVINT2|**smallint**|Тип данных **smallint** длиной 2 байта.|  
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Данные типа **tinyint**, **smallint** или **int**, значения NULL допускаются.|  
 |SRVMONEY4|**smallmoney**|Тип данных **smallmoney** длиной 4 байта.|  
 |SRVMONEY|**money**|Тип данных **money** длиной 8 байтов.|  
-|SRVMONEYN|**деньги** &#124; **smallmoney null**|Данные типа **smallmoney** или **money**, значения NULL допускаются.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Данные типа **smallmoney** или **money**, значения NULL допускаются.|  
 |SRVNCHAR|**nchar**|Тип данных **character** (Юникод).|  
 |SRVNTEXT|**ntext**|Тип данных **text** (Юникод).|  
 |SRVNUMERIC|**numeric**|Тип данных **numeric**.|  

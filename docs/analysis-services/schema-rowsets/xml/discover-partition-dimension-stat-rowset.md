@@ -1,33 +1,32 @@
 ---
-title: "Набор рядов Discover_partition_dimension_stat | Документы Microsoft"
-ms.custom: 
+title: Набор рядов Discover_partition_dimension_stat | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 14ec5f539005bd736406b82f0c8eac1f49a41259
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>Набор рядов DISCOVER_PARTITION_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Возвращает статистику по измерению, связанному с секцией  
+  Возвращает статистику по измерению, связанному с секцией  
   
  **Область применения:** табличные модели, многомерные модели  
   
@@ -36,7 +35,7 @@ ms.lasthandoff: 02/15/2018
   
 |Имя столбца|Индикатор типа|Ограничение|Описание|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Обязательно|Имя базы данных.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
+|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Обязательно|Имя базы данных.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Обязательно|Имя куба или табличной модели.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Обязательно|Имя группы мер.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**|Обязательно|Имя секции.<br /><br /> Этот столбец является обязательным в списке ограничений.|  

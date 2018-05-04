@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9e741b37b167fcb4568fd38fe069224e669cda0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +41,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *вложенный запрос*  
+ *subquery*  
  Инструкция SELECT вида SELECT * FROM \<имя столбца > [ГДЕ \<список предикатов >].  
   
 ## <a name="result-type"></a>Тип результата  
  Возвращает **true** Если результирующего набора, возвращаемого вложенным запросом содержит по крайней мере одну строку; в противном случае возвращает **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Перед ключевым словом EXISTS можно использовать ключевое слово NOT, например `WHERE NOT EXISTS (<subquery>)`.  
   
  Список столбцов, добавленный к аргументу подзапроса EXISTS, не имеет значения: функция проверяет только существование строки, отвечающей условиям.  
@@ -69,8 +68,8 @@ WHERE [[Model] = 'Patch kit'
   
  Другой способ просмотреть те же данные, возвращаемые этим запросом — открыть модель в средстве просмотра взаимосвязей, щелкните правой кнопкой набор элементов **Patch kit = Existing**выберите **детализация** , а затем установите **только варианты модели**.  
   
-## <a name="see-also"></a>См. также:  
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Синтаксис фильтра модели и примеры &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Модели, синтаксис и примеры фильтров &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

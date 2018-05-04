@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6e835905fb1d51d4918c3d382ad6268925d469e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26f2d5f1f3b14dc073176c2e317586fcb26d7a39
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arithmetic-operators"></a>Арифметические операторы
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +33,10 @@ ms.lasthandoff: 01/08/2018
   
  Многомерные выражения поддерживают арифметические операции, перечисленные в следующей таблице.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[+ (сложение)](../mdx/add-mdx.md)|складывает два числа.|  
-|[/ (Деление)](../mdx/divide-mdx-operator-reference.md)|Делит одно число на другое.|  
+|[/ (деление)](../mdx/divide-mdx-operator-reference.md)|Делит одно число на другое.|  
 |[* (умножение)](../mdx/multiply-mdx.md)|Перемножает два числа.|  
 |[- (вычитание)](../mdx/subtract-mdx.md)|Выполняет вычитание двух чисел.|  
 |^ (возведение в степень)|Возводит одно число в степень, указанную другим числом.|  
@@ -54,8 +53,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Выражения внутри скобок выполняются прежде всех других операторов.  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Операторы &#40; Синтаксис многомерных Выражений &#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Операторы &#40;синтаксис многомерных Выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

@@ -33,12 +33,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e84207fc0354c7599feb823f0b54b27fdc164619
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0286e36fb53ee35fdcc61af8c37c6915d7a8f906
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-cell-calculation"></a>Определения данных многомерных Выражений — DROP CELL CALCULATION
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,8 +58,8 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  *CellCalc_Name*  
  Допустимое строковое выражение, возвращающее имя вычисления ячейки, которое необходимо удалить.  
   
-## <a name="see-also"></a>См. также:  
- [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ & #40; Многомерные Выражения & #41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

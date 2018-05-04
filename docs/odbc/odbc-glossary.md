@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eee22f6b4845abb0cc9a3afb68b7dc89c87a2c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-glossary"></a>Глоссарий ODBC
 ## <a name="a"></a>Объект  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="b"></a>B  
  **Изменение в поведении**  
- Изменения в некоторые функции ODBC 3*.x* поведение ODBC 2. *x* поведение, или наоборот. Причиной изменения атрибута SQL_ATTR_ODBC_VERSION среды.  
+ Изменения в некоторые функции ODBC 3 *.x* поведение ODBC 2. *x* поведение, или наоборот. Причиной изменения атрибута SQL_ATTR_ODBC_VERSION среды.  
   
  **большой двоичный объект (BLOB)**  
  Двоичные данные через определенное количество байтов, например 255. Обычно гораздо больше времени. Обычно такие данные отправляются и извлечения из источника данных в частях. Также называется *длинных данных*.  

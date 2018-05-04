@@ -1,33 +1,19 @@
 ---
-title: "Классы OLAP объектов AMO | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 
-author: Minewiskan
+title: Классы OLAP объектов AMO | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f4544efdf6a569bcb89f7c8236b69bf0d7916912
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-olap-classes"></a>Классы OLAP объектов AMO
   Классы OLAP объектов AMO позволяют создавать, изменять, удалять и обрабатывать кубы, измерения и связанные с ними объекты, например ключевые показатели эффективности, действия и упреждающее кэширование.  
@@ -82,24 +68,24 @@ ms.lasthandoff: 02/15/2018
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Cube> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups">Объекты MeasureGroup</a>  
+###  <a name="MeasureGroups"></a> Объекты MeasureGroup  
  Группа мер создается путем ее добавления в коллекцию групп мер куба и обновления объекта <xref:Microsoft.AnalysisServices.MeasureGroup> на сервере методом Update. Удалить объект <xref:Microsoft.AnalysisServices.MeasureGroup> можно при помощи собственного метода Drop.  
   
  После создания объект <xref:Microsoft.AnalysisServices.MeasureGroup> может быть обработан. Обработка объекта <xref:Microsoft.AnalysisServices.MeasureGroup> производится либо собственным методом обработки, либо методом обработки родительского объекта во время обработки этого родительского объекта.  
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.MeasureGroup> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition">Объекты partition</a>  
+###  <a name="Partition"></a> Объекты partition  
  Объект <xref:Microsoft.AnalysisServices.Partition> создается путем его добавления в коллекцию секций родительской группы мер и обновления объекта <xref:Microsoft.AnalysisServices.Partition> на сервере методом Update. Удалить объект <xref:Microsoft.AnalysisServices.Partition> можно методом Drop.  
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Partition> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign">Объекты AggregationDesign</a>  
+###  <a name="AggregationDesign"></a> Объекты AggregationDesign  
  Создание статистических схем производится методом AggregationDesign объекта <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.AggregationDesign> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation">Объекты Aggregation</a>  
+###  <a name="Aggregation"></a> Объекты Aggregation  
  Объект <xref:Microsoft.AnalysisServices.Aggregation> создается путем его добавления в коллекцию статистических схем родительской группы мер и ее обновления на сервере методом Update. Удаление агрегата из объекта <xref:Microsoft.AnalysisServices.AggregationCollection> производится методом Remove или RemoveAt.  
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Aggregation> из пространства имен <xref:Microsoft.AnalysisServices>.  
@@ -119,7 +105,7 @@ ms.lasthandoff: 02/15/2018
   
  Объекты AMO задают определения для этих улучшений, однако фактический результат зависит от обозревателя клиента, который их реализует.  
   
-###  <a name="Action">Объекты Action</a>  
+###  <a name="Action"></a> Объекты Action  
  Объект <xref:Microsoft.AnalysisServices.Action> создается путем его добавления в коллекцию действий куба и обновления объекта <xref:Microsoft.AnalysisServices.Cube> на сервере методом Update. Методу Update куба может быть передан параметр UpdateOptions.ExpandFull, который обновляет на сервере все изменившиеся объекты куба в рамках текущей операции обновления.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.Action>, его необходимо удалить из коллекции и обновить родительский куб.  
@@ -137,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Kpi> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective">Объекты перспективы</a>  
+###  <a name="Perspective"></a> Объекты перспективы  
  Объект <xref:Microsoft.AnalysisServices.Perspective> создается путем его добавления в коллекцию перспектив куба и обновления объекта <xref:Microsoft.AnalysisServices.Cube> на сервере методом Update. Методу Update куба может быть передан параметр UpdateOptions.ExpandFull, который обновляет на сервере все изменившиеся объекты куба в рамках текущей операции обновления.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.Perspective>, его необходимо удалить из коллекции и обновить родительский куб.  
@@ -146,14 +132,14 @@ ms.lasthandoff: 02/15/2018
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Perspective> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation">Объекты Translation</a>  
+###  <a name="Translation"></a> Объекты Translation  
  Объект <xref:Microsoft.AnalysisServices.Translation> создается путем его добавления в коллекцию переводов и обновления ближайшего основного родительского объекта на сервере методом Update. Методу Update ближайшего родительского объекта может быть передан параметр UpdateOptions.ExpandFull, который обновляет на сервере все изменившиеся дочерние объекты в рамках текущей операции обновления.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.Translation>, его необходимо удалить из коллекции и обновить ближайший родительский объект.  
   
  Дополнительные сведения о доступных методах и свойствах см. в описании класса <xref:Microsoft.AnalysisServices.Translation> из пространства имен <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching">Объекты ProactiveCaching</a>  
+###  <a name="ProactiveCaching"></a> Объекты ProactiveCaching  
  Объект <xref:Microsoft.AnalysisServices.ProactiveCaching> создается путем его добавления в коллекцию объектов упреждающего кэширования измерения или секции и обновления объекта измерения или секции на сервере методом Update.  
   
  Чтобы удалить объект <xref:Microsoft.AnalysisServices.ProactiveCaching>, его необходимо удалить из коллекции и обновить родительский объект.  
@@ -167,7 +153,7 @@ ms.lasthandoff: 02/15/2018
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Программирование основных объектов AMO OLAP](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)   
  [Программирование объектов AMO расширенных объектов OLAP](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)   
- [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Логическая архитектура & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты базы данных & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

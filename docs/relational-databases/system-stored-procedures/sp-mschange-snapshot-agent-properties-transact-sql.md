@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3219fc1832d781e3156ec4a2284c3a8e861db67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 864b6d3fdaddf900d416685499571ccd6d9dd198
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +127,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **int**, не имеет значения по умолчанию. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** указывает проверку подлинности Windows. Значение **0** должен быть указан для отличного[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **"***publisher_login***"**  
- Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* равно NULL, а издатель*_ ** security_mode* — **1**, учетная запись Windows, указанная в *job_login* будет используется при соединении с издателем.  
+ Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* равно NULL, а издатель *_ ** security_mode* — **1**, учетная запись Windows, указанная в *job_login* будет используется при соединении с издателем.  
   
  [ **@publisher_password**=] **"***publisher_password***"**  
  Пароль, используемый при соединении с издателем. *publisher_password* — **nvarchar(524)**, не имеет значения по умолчанию.  

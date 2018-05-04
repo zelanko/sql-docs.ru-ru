@@ -1,31 +1,30 @@
 ---
-title: "Соединиться с базой данных табличной модели | Документы Microsoft"
-ms.custom: 
+title: Соединиться с базой данных табличной модели | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 06265dfa0b66cc5cd1cc24a8bd6fd74675fb72d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-tabular-model-database"></a>Соединиться с базой данных табличной модели  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-После создания табличной модели и развертывания ее на сервере служб Analysis Services в табличном режиме необходимо задать разрешения, которые сделают ее доступной для клиентских приложений. В этой статье описываются способы разрешения и подключение к базе данных из клиентских приложений.  
+  После создания табличной модели и развертывания ее на сервере служб Analysis Services в табличном режиме необходимо задать разрешения, которые сделают ее доступной для клиентских приложений. В этой статье описываются способы разрешения и подключение к базе данных из клиентских приложений.  
   
 > [!NOTE]  
 >  По умолчанию удаленные подключения к службам Analysis Services недоступны до настройки брандмауэра. Убедитесь, что был открыт соответствующий порт, если настраивается именованный экземпляр для клиентских подключений или экземпляр по умолчанию. Дополнительные сведения см. в статье [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  

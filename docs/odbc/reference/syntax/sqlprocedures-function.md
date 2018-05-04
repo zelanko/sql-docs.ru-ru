@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLProcedures
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: daec499cca74ef63978b3eede0216e192435bdaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprocedures-function"></a>Функция SQLProcedures
 **Соответствия**  
@@ -121,9 +120,9 @@ SQLRETURN SQLProcedures(
 > [!NOTE]  
 >  **SQLProcedures** не может возвратить все процедуры. Приложения могут использовать любой допустимый процедуры, независимо от того, он возвращается в виде **SQLProcedures**.  
   
- Следующие столбцы были переименованы для ODBC 3*.x*. Имя столбца изменения не влияют на обратной совместимости так, как привязать приложений, номер столбца.  
+ Следующие столбцы были переименованы для ODBC 3 *.x*. Имя столбца изменения не влияют на обратной совместимости так, как привязать приложений, номер столбца.  
   
-|Столбец ODBC 2.0|ODBC 3*.x* столбца|  
+|Столбец ODBC 2.0|ODBC 3 *.x* столбца|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
 |ПРОЦЕДУРА _OWNER|ПРОЦЕДУРА _SCHEM|  

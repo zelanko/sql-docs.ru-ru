@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51324f00da71597a8a2dd37d8f0077c4b3bc8b55
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0d4c7392b58f3277317e3bf9b8077239510bb0c3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Сжимает входное выражение с использованием алгоритма GZIP. Результатом сжатия является массив байтов типа **varbinary(max)**.
+Эта функция сжимает входное выражение с использованием алгоритма GZIP. Она возвращает массив байтов типа **varbinary(max)**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,35 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Аргументы  
 *expression*  
-Выражение типа **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)** или **binary(***n***)**. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
+Объект
+
+* **binary(***n***)**
+* **char(***n***)**
+* **nchar(***n***)**
+* **nvarchar(max)**
+* **nvarchar(***n***)**
+* **varbinary(max)**
+* **varbinary(***n***)**
+* **varchar(max)**
+
+или диспетчер конфигурации служб
+
+* **varchar(***n***)**
+
+. Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-Возвращает сжатое содержимое входного выражения, которое имеет тип данных **varbinary(max)**.
+**varbinary(max)**, представляющие сжатое содержимое входного выражения.
   
 ## <a name="remarks"></a>Remarks  
 Сжатые данные невозможно индексировать.
   
-Функция COMPRESS сжимает данные, предоставленные во входном выражении, и должна вызываться для каждого раздела сжимаемых данных. Сведения об автоматическом сжатии хранимых данных на уровне строк или страниц см. в статье [Сжатие данных](../../relational-databases/data-compression/data-compression.md).
+Функция `COMPRESS` сжимает данные, предоставленные во входном выражении. Ее необходимо вызывать для каждого раздела сжимаемых данных. Дополнительные сведения об автоматическом сжатии хранимых данных на уровне строк или страниц см. в статье [Сжатие данных](../../relational-databases/data-compression/data-compression.md).
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-compress-data-during-the-table-insert"></a>A. Сжатие данных во время вставки в таблицу  
-В приведенном ниже примере показано, как сжать данные, вставляемые в таблицу.
+В этом примере показано, как сжать данные, вставляемые в таблицу.
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -69,7 +84,7 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 ```  
   
 ### <a name="b-archive-compressed-version-of-deleted-rows"></a>Б. Архивация сжатой версии удаленных строк  
-Приведенная ниже инструкция удаляет старые записи игроков из таблицы `player` и сохраняет их в таблице `inactivePlayer` в сжатой форме для экономии места.
+Приведенная ниже инструкция сначала удаляет старые записи игроков из таблицы `player`. Затем для экономии места она сохраняет их в сжатом виде в таблице `inactivePlayer`.
   
 ```sql
 DELETE player  

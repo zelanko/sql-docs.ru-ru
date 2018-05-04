@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeEnv
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 802dfd5b5f95a615cca743299b264dd93afe4798
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2b7a037fee8f70704eb33c8eb4be5c1c5293270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeenv-function"></a>Функция SQLFreeEnv
 **Соответствия**  
  Появился в версии: Полное соответствие стандартам 1.0 ODBC: рекомендуется к использованию  
   
  **Сводка**  
- В ODBC 3*.x*, функция ODBC 2.0 **SQLFreeEnv** будет заменен **SQLFreeHandle**. Дополнительные сведения см. в разделе [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ В ODBC 3 *.x*, функция ODBC 2.0 **SQLFreeEnv** будет заменен **SQLFreeHandle**. Дополнительные сведения см. в разделе [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о том, что диспетчер драйверов преобразует эту функцию для при ODBC 2*.x* при работе с ODBC 3*.x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о том, что диспетчер драйверов преобразует эту функцию для при ODBC 2 *.x* при работе с ODBC 3 *.x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

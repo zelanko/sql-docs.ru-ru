@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>Хранимая процедура sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Включает структуру плана, заданные *plan_guide_name*. После включения структуры плана с ней может быть сопоставлен совпадающий запрос. По умолчанию структура плана включается во время создания.  
   
  ENABLE ALL  
- Включает все структуры планов в текущей базе данных. **N'***plan_guide_name***"**не может быть задан при ВКЛЮЧИТЬ ALL.  
+ Включает все структуры планов в текущей базе данных. **N'***plan_guide_name***"** не может быть задан при ВКЛЮЧИТЬ ALL.  
   
 ## <a name="remarks"></a>Замечания  
  Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке.  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Структуры плана доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Тем не менее, можно выполнить **sp_control_plan_guide** с параметром DROP или DROP ALL в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения **sp_control_plan_guide** на структуру плана типа OBJECT (созданного с помощью  **@type = "**ОБЪЕКТА**"** ) требуется разрешение ALTER на объект, ссылка на структуру плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
+ Для выполнения **sp_control_plan_guide** на структуру плана типа OBJECT (созданного с помощью  **@type = "** ОБЪЕКТА **"** ) требуется разрешение ALTER на объект, ссылка на структуру плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
   
 ## <a name="examples"></a>Примеры  
   

@@ -1,40 +1,23 @@
 ---
-title: "Включение обратной записи в измерение | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Включение обратной записи в измерение | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying dimensions
-- writeback [Analysis Services], setting up
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], writeback
-- dimensions [Analysis Services], writeback
-- writeback [Analysis Services]
-- dimensions [Analysis Services], modifying
-- manual dimension structure modifications
-ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69390faf39311c3b7072e06aff2b64fcafd9a62c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9e4805188feee3ca6de3ae31b2bd6a89be62b38b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>Мастер бизнес-Аналитики — включить обратную запись в измерение
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Добавьте расширение обратной записи в куб или измерение, чтобы пользователи могли вручную изменять структуру и элементы измерения. Обновления измерений, доступных для записи, записываются прямо в таблицу измерения. Это расширение изменяет настройку свойства **WriteEnabled** для измерения.  
+  Добавьте расширение обратной записи в куб или измерение, чтобы пользователи могли вручную изменять структуру и элементы измерения. Обновления измерений, доступных для записи, записываются прямо в таблицу измерения. Это расширение изменяет настройку свойства **WriteEnabled** для измерения.  
   
  Чтобы добавить обратную запись в измерение, используйте мастер бизнес-аналитики и выберите параметр **Включить обратную запись в измерение** на странице **Выбор расширения** . После этого мастер отобразит шаги, позволяющие выбрать измерение, к которому необходимо применить обратную запись, и установить этот параметр для выбранного измерения.  
   
@@ -47,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="setting-dimension-writeback-capability"></a>Установка возможности обратной записи в измерение  
  На второй странице мастера — **Включение обратной записи в измерение** — непосредственно задается параметр **Включить обратную запись в измерение** . При выборе этого параметра свойство **WriteEnabled** измерения автоматически устанавливается равным **True**. При снятии этого флажка это свойство автоматически устанавливается равным **False**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  при создании нового элемента необходимо включить в измерение каждый атрибут. Нельзя вставить элемент, не указав значение ключевого атрибута измерения. Следовательно, на создание элементов оказывают влияние любые ограничения (такие как ключевые значения, отличные от NULL), установленные в таблице измерений; Необходимо также учитывать столбцы, дополнительно задаваемые такими свойствами измерения, как **CustomRollupColumn**, **CustomRollupPropertiesColumn** или **UnaryOperatorColumn** .  
   
 > [!WARNING]  

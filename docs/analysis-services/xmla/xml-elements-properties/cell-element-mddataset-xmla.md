@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 560ed0b86a29cffaa3b9a0969b2ae5f8783e26b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Элемент Cell (MDDataSet) (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -69,11 +69,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Атрибуты  
   
-|attribute|Description|  
+|Attribute|Описание|  
 |---------------|-----------------|  
 |CellOrdinal|Требуется **unsignedInt** атрибута. Порядковый номер ячейки в многомерном наборе данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В родительском объекте **корневой** элемент, **осей** следуют элемент **CellData** элемент, набор **ячейки** элементов, содержащих значения свойств для каждой ячейки, возвращенной в многомерном наборе данных. **Ячейки** элемент содержит **CellOrdinal** атрибут, который указывает отсчитываемый от нуля порядковый номер ячейки в многомерном наборе данных и один элемент для каждого значения свойства ячейки связанное с ячейкой. Каждое значение свойства ячейки в **ячейки** элемент определяется отдельным элементом XML. Значение свойства ячейки имеет данные, содержащиеся в XML-элемента и имя свойства ячейки, как определено в **CellInfo** элемент родительского корневого элемента, соответствует имени XML-элемента.  
   
  Ниже представлен синтаксис записи значения свойства ячейки.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/08/2018
 ||К2|18052|15332.02|38396.75|5915|  
 ||К3|18370|**15672.83**|**39394.05**|**6014**|  
 ||К4|21436|**18094.5**|**45201.84**|**7015**|  
-|Орегон|К1|19287|**16081.07**|**40170.29**|**6184**|  
+|Oregon|К1|19287|**16081.07**|**40170.29**|**6184**|  
 ||К2|15079|12678.96|31772.88|4799|  
 ||К3|16940|14273.78|35880.46|5432|  
 ||К4|16353|13738.68|34453.44|5196|  
@@ -145,8 +145,8 @@ ms.lasthandoff: 01/08/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Тип данных MDDataSet &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Тип данных MDDataSet & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

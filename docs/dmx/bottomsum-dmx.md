@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6fa897bdaf0ebccf356603eaf0bfd3b4dafa1de6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 585d0d4c5065be9849ce8642f12b87c950cd7501
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Таблица выражения >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **BottomSum** функция возвращает нижние строки в порядке возрастания их ранга. Ранг основывается на вычисляемом значении из \<ранжирования выражения > аргумент для каждой строки таким образом, что сумма \<ранжирования выражения > значения составляет не менее больше суммы, который задается параметром \<сумма > аргумент. **BottomSum** возвращает возможные наименьшее количество элементов, соответствующих указанному значению суммы.  
   
 ## <a name="examples"></a>Примеры  
@@ -111,9 +110,9 @@ NATURAL PREDICTION JOIN
   
  **Примечание** этот пример приведен только для иллюстрации применения BottomSum. В зависимости от размера набора данных выполнение данного запроса может занять значительное время.  
   
-## <a name="see-also"></a>См. также:  
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40; расширений интеллектуального анализа данных &#41;](../dmx/bottompercent-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/bottompercent-dmx.md)  
   
   

@@ -23,12 +23,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 018b08ba8c45393e77101cf56d098c1dd176ce9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7cb864de089645a137676d7d8607e988e084939e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---scope"></a>Скрипты многомерных Выражений: область действия
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +86,7 @@ Limited_Set ::=
  *single_tuple*  
  Один кортеж.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Инструкция SCOPE определяет вложенный куб, на который будет распространяться действие одной или нескольких инструкций многомерных выражений. Если инструкция многомерных выражений не ограничена инструкцией SCOPE, то неявной областью инструкции является весь куб.  
   
 > [!NOTE]  
@@ -128,7 +127,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Инструкции сценариев многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции сценариев многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

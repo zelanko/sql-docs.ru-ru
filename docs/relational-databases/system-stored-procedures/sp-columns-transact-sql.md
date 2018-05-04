@@ -24,13 +24,12 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddfd5a7dd04bcacb2544b6fb38a2cd1bedd6e284
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ sp_columns [ @table_name = ] object
  Если текущий пользователь является владельцем объекта с указанным именем, то возвращаются столбцы этого объекта. Если *владельца* не указан и текущий пользователь не является владельцем объекта с указанным *объекта*, **sp_columns** ищет объект с указанным  *Объект* принадлежат владельцу базы данных. Если таковой существует, возвращаются столбцы этого объекта.  
   
  [  **@table_qualifier*** =**] *квалификатор*  
- Имя квалификатора объекта. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена объектов (*квалификатор***.*** владелец***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых продуктах он представляет имя сервера в среде базы данных объекта.  
+ Имя квалификатора объекта. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена объектов (*квалификатор ***.*** владелец ***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых продуктах он представляет имя сервера в среде базы данных объекта.  
   
  [  **@column_name=**] *столбца*  
  Является отдельным столбцом и используется в том случае, когда нужен только один столбец информации каталога. *столбец* — **nvarchar(384)**, значение по умолчанию NULL. Если *столбца* — не указано, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *столбца* представляет имя столбца, как указано в **syscolumns** таблицы. Поиск совпадений по шаблону поддерживается. Для максимальной совместимости клиент шлюза должен использовать только стандартное согласование SQL-92 (символы-шаблоны % и _).  

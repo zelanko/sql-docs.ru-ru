@@ -22,17 +22,16 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 697f1da527f797a203a8536c80894ba8bffe5dec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 617cd92b6728aa19fbb6599f71fab5374a331857
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdevp-mdx"></a>StdevP (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Возвращает среднеквадратичное отклонение совокупности для числового выражения, вычисляемого на наборе по формуле смещенной совокупности (делением  *n* ).  
+  Возвращает среднеквадратичное отклонение совокупности для числового выражения, вычисляемого на наборе по формуле смещенной совокупности (делением *n*).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +47,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **StdevP** функция использует смещенной совокупности формул при [Stdev](../mdx/stdev-mdx.md) функции используется формула несмещенной совокупности.  
   
 ## <a name="example"></a>Пример  
@@ -65,7 +64,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,14 +16,14 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: azurecli, powershell
 ms.topic: article
-ms.date: 03/15/2018
+ms.date: 04/24/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: eed635cc4b58c5ec975f0b77f8e3b69f87fd65ff
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b86f427c1efe7ef36eef3be7944bd1ecd3ec8ed1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell и CLI
 
@@ -39,6 +39,9 @@ ms.lasthandoff: 04/18/2018
 - Созданные Azure Key Vault и ключ для TDE.
    - [Инструкции по использованию PowerShell для Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [Инструкции по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - Хранилище ключей, используемое для прозрачного шифрования данных, должно поддерживать следующее свойство:
+   - [обратимое удаление](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete).
+   - [Как использовать обратимое удаление в Key Vault с помощью PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
 - Ключ, используемый для прозрачного шифрования данных, должен иметь следующие характеристики:
    - быть бессрочным;
    - не быть отключенным;
@@ -202,35 +205,38 @@ ms.lasthandoff: 04/18/2018
 - Созданные Azure Key Vault и ключ для TDE.
    - [Управление Key Vault с помощью CLI 2.0](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
    - [Инструкции по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - Хранилище ключей, используемое для прозрачного шифрования данных, должно поддерживать следующее свойство:
+   - [обратимое удаление](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete).
+   - [Как использовать обратимое удаление в Key Vault с помощью интерфейса командной строки](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
 - Ключ, используемый для прозрачного шифрования данных, должен иметь следующие характеристики:
    - быть бессрочным;
    - не быть отключенным;
    - иметь возможность выполнять операции *получения*, *упаковки ключа*, *распаковки ключа*.
    
 ## <a name="step-1-create-a-server-and-assign-an-azure-ad-identity-to-your-server"></a>Шаг 1. Создание сервера и назначение ему удостоверения Azure Active Directory
-      ```cli
+      cli
       # create server (with identity) and database
       az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
       az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
-      ```
+      
 
  
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Шаг 2. Предоставление серверу разрешений на доступ к хранилищу Key Vault
-      ```cli
+      cli
       # create key vault, key and grant permission
       az keyvault create -n "VaultName" -g "ResourceGroupName" 
       az keyvault key create -n myKey -p software --vault-name "VaultName" 
       az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
-      ```
+      
 
  
 ## <a name="step-3-add-the-key-vault-key-to-the-server-and-set-the-tde-protector"></a>Шаг 3. Добавление ключа из хранилища Key Vault на сервер и настройка средства защиты TDE
   
-     ```cli
+     cli
      # add server key and update encryption protector
       az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
       az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
-      ```
+      
   
   > [!Note]
 > Общая длина имени хранилища ключей и имени ключа не может превышать 94 символов.
@@ -241,20 +247,19 @@ ms.lasthandoff: 04/18/2018
 >
   
 ## <a name="step-4-turn-on-tde"></a>Шаг 4. Включение TDE 
-      ```cli
+      cli
       # enable encryption
       az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
-      ```
+      
 
 Теперь для базы данных или хранилища данных включено прозрачное шифрование данных с помощью ключа шифрования в хранилище Key Vault.
 
 ## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>Шаг 5. Проверка состояния и активности шифрования
 
-     ```cli
+     cli
       # get encryption scan progress
       az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 
       # get whether encryption is on or off
       az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 
-      ```

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 260c62d849f1b771b6d9fc40245fd1b0bfd2c5ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-long-data"></a>Отправка данных Long
 Определение СУБД *длинных данных* как любой символьных или двоичных данных через определенный размер, например 254 символов. Не может быть невозможно сохранить весь элемент больших объемов данных в памяти, например когда этот элемент представляет собой длинный текст документа или точечный рисунок. Поскольку такие данные не могут храниться в одиночный буфер, источник данных отправляет его драйвер в частях с **SQLPutData** при выполнении инструкции. Параметры, для которых данные передаются во время выполнения, называются *параметров данных времени выполнения*.  

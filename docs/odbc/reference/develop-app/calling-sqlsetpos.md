@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], calling
@@ -23,15 +23,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eac0128a7919f58acc58bce793f9f765fb0d1e07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c34e1e5f9c4dae5f2a39cadd6b9afbdc03403b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-sqlsetpos"></a>Вызов SQLSetPos
-В ODBC 2. *x*, указатель на массив состояния строк был аргумента **SQLExtendedFetch**. Массив состояния строк позднее был обновлен с помощью вызова **SQLSetPos**. Некоторые драйверы полагались на тот факт, что этот массив не меняется между **SQLExtendedFetch** и **SQLSetPos**. В ODBC 3. *x*, указатель на массив состояний поле дескриптора, поэтому приложения можно легко изменить его для указания в другой массив. Это может вызвать проблемы при ODBC 3. *x* при работе с ODBC 2. *x* драйвер, но вызывает **SQLSetStmtAttr** присвоить указатель состояния массива и вызывает **SQLFetchScroll** для выборки данных. Диспетчер драйверов сопоставляет ее как последовательность вызовов **SQLExtendedFetch**. В следующем коде ошибка обычно должно порождаться при диспетчера драйверов сопоставляет второй **SQLSetStmtAttr** вызывать при работе с ODBC 2*.x* драйвера:  
+В ODBC 2. *x*, указатель на массив состояния строк был аргумента **SQLExtendedFetch**. Массив состояния строк позднее был обновлен с помощью вызова **SQLSetPos**. Некоторые драйверы полагались на тот факт, что этот массив не меняется между **SQLExtendedFetch** и **SQLSetPos**. В ODBC 3. *x*, указатель на массив состояний поле дескриптора, поэтому приложения можно легко изменить его для указания в другой массив. Это может вызвать проблемы при ODBC 3. *x* при работе с ODBC 2. *x* драйвер, но вызывает **SQLSetStmtAttr** присвоить указатель состояния массива и вызывает **SQLFetchScroll** для выборки данных. Диспетчер драйверов сопоставляет ее как последовательность вызовов **SQLExtendedFetch**. В следующем коде ошибка обычно должно порождаться при диспетчера драйверов сопоставляет второй **SQLSetStmtAttr** вызывать при работе с ODBC 2 *.x* драйвера:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -40,7 +39,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- Ошибка возникнет, если бы изменить указатель строки состояния в ODBC 2. *x* между вызовами **SQLExtendedFetch**. Вместо этого диспетчер драйверов выполняет следующие шаги при работе с ODBC 2*.x* драйвера:  
+ Ошибка возникнет, если бы изменить указатель строки состояния в ODBC 2. *x* между вызовами **SQLExtendedFetch**. Вместо этого диспетчер драйверов выполняет следующие шаги при работе с ODBC 2 *.x* драйвера:  
   
 1.  Инициализирует внутренний флаг диспетчера драйверов *fSetPosError* значение TRUE.  
   

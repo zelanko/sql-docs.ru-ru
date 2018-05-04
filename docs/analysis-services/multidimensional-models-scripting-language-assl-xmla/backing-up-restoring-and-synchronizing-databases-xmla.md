@@ -1,35 +1,19 @@
 ---
-title: "Резервное копирование, восстановление и синхронизация баз данных (XMLA) | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restoring databases [XML for Analysis]
-- backing up databases [XML for Analysis]
-- database backups [XML for Analysis]
-- synchronization [XML for Analysis]
-- database restores [XML for Analysis]
-ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 
-author: Minewiskan
+title: Резервное копирование, восстановление и синхронизация баз данных (XMLA) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6a7b9d3c850052cf1d6a4548764482a287bf671c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Резервное копирование, восстановление и синхронизация баз данных (XMLA)
   В XML для аналитики есть три команды для резервного копирования, восстановления и синхронизации баз данных.  
@@ -69,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из файла резервной копии.|  
+|*skipMembership*|Включает определения безопасности, но исключает сведения о членстве из файла резервной копии.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в файл резервной копии.|  
 |*IgnoreSecurity*|Исключает определения безопасности из файла резервной копии.|  
   
@@ -99,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из базы данных.|  
+|*skipMembership*|Включает определения безопасности, но исключает сведения о членстве из базы данных.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в базу данных.|  
 |*IgnoreSecurity*|Исключает определения безопасности из базы данных.|  
   
@@ -137,7 +121,7 @@ ms.lasthandoff: 02/15/2018
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из целевой базы данных.|  
+|*skipMembership*|Включает определения безопасности, но исключает сведения о членстве из целевой базы данных.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в целевую базу данных.|  
 |*IgnoreSecurity*|Исключает определения безопасности из целевой базы данных.|  
   
@@ -154,9 +138,9 @@ ms.lasthandoff: 02/15/2018
  Можно использовать **расположение** элемент в команде Synchronize для синхронизации объектов ROLAP. Для каждого **расположение** элемент, используемый для перемещения источника данных, **DataSourceType** свойства должны задаваться явным образом *локальной*. . Также необходимо задать **ConnectionString** свойство **расположение** элемент к строке подключения новое расположение. Во время синхронизации **Synchronize** команда заменит строку подключения для источника данных, определенного **DataSourceID** свойство **расположение** элемент со значением **ConnectionString** свойство **расположение** элемента.  
   
 ## <a name="see-also"></a>См. также  
- [Резервный элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Восстановить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Синхронизировать элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Резервный элемент & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Восстановить элемент & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Синхронизировать элемент & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

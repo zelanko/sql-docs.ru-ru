@@ -22,12 +22,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 086ac8bb714bca7c182a59040d64badf89f261d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7db63f58a76c2ad24e52693a58c4ed9e9b23479
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Тип результата  
  Таблица.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **BottomPercent** функция возвращает нижние строки в порядке возрастания их ранга. Ранг основывается на вычисляемом значении из \<ранжирования выражения > аргумент для каждой строки таким образом, что сумма \<ранжирования выражения > значения по меньшей мере заданному проценту, заданному по \<% > аргумент. **BottomPercent** возвращает возможные наименьшее количество элементов, соответствующих указанному значению процента.  
   
 ## <a name="examples"></a>Примеры  
@@ -124,10 +123,10 @@ NATURAL PREDICTION JOIN
  **Примечание** этот пример приведен только для иллюстрации применения BottomPercent. В зависимости от размера набора данных выполнение данного запроса может занять значительное время.  
   
 > [!WARNING]  
->  Функции многомерных выражений для TOPPERCENT и BOTTOMPERCENT могут давать непредвиденные результаты, если значения, используемые для вычисления процентов, содержат отрицательные числа. Это не влияет на функции расширений интеллектуального анализа данных. Дополнительные сведения см. в разделе [BottomPercent &#40; Многомерные Выражения &#41; ](../mdx/bottompercent-mdx.md).  
+>  Функции многомерных выражений для TOPPERCENT и BOTTOMPERCENT могут давать непредвиденные результаты, если значения, используемые для вычисления процентов, содержат отрицательные числа. Это не влияет на функции расширений интеллектуального анализа данных. Дополнительные сведения см. в разделе [BottomPercent &#40;многомерных Выражений&#41;](../mdx/bottompercent-mdx.md).  
   
-## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)  
   
   

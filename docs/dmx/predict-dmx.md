@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<ссылка на скалярный столбец >  
   
- или диспетчер конфигурации служб  
+ либо  
   
  \<ссылка на столбец таблицы >  
   
@@ -57,7 +56,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  Параметры INCLUSIVE, EXCLUSIVE, INPUT_ONLY и INCLUDE_STATISTICS применяются только к ссылкам на столбцы таблицы, а EXCLUDE_NULL и INCLUDE_NULL — только к ссылкам на скалярные столбцы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Имеются следующие параметры: EXCLUDE_NULL (по умолчанию), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (по умолчанию), INPUT_ONLY и INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Параметр INCLUDE_NODE_ID в качестве результата возвращает столбец $NODEID. NODE_ID является узлом содержимого, на котором прогнозирование осуществляется для определенного объекта. Этот параметр является необязательным при использовании прогноза на основе столбцов таблицы.  
   
-  *n*  Параметр применяется к столбцам таблицы. В зависимости от типа прогноза данный параметр задает количество возвращаемых строк. Если базовые столбцы являются последовательностью, то вызывается **PredictSequence** функции. Если базовые столбцы являются временных рядов, он вызывает метод **PredictTimeSeries** функции. Для ассоциативных типов прогнозирования вызывается **PredictAssociation** функции.  
+ *n* параметр применяется к столбцам таблицы. В зависимости от типа прогноза данный параметр задает количество возвращаемых строк. Если базовые столбцы являются последовательностью, то вызывается **PredictSequence** функции. Если базовые столбцы являются временных рядов, он вызывает метод **PredictTimeSeries** функции. Для ассоциативных типов прогнозирования вызывается **PredictAssociation** функции.  
   
  **Predict** функция поддерживает полиморфизм.  
   
@@ -100,9 +99,9 @@ FROM     [Association]
 |Ремонтный комплект|2113|0.142012232004839|0.132389356196586|  
 |Камера шины для велосипеда Mountain|1992|0.133879965051415|0.125304947722259|  
   
-## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

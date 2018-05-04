@@ -8,10 +8,9 @@ ms.service: ''
 ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 71405d2a4f8d766cd3af34ac53feb9992946610a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 4cf7525599256dce04617bd63e5de0239deabb7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Работа с проектами SSMA (SybaseToSQL)
 Для переноса баз данных Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, сначала создайте SSMA проект. Проект является файл, содержащий метаданные о ASE баз данных, которые необходимо выполнить перенос [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, метаданные о целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, который получит перенесенные объекты и данные, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или сведения о соединении SQL Azure и параметры проекта.  

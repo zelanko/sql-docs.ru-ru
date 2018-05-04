@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
 - connecting to data source [ODBC], selecting data source
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ea84e234291056901c9d759e9aa206301a24641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Выбор данных источника или драйвер
 Источник данных или драйвер, используемых приложением иногда жестко закодирована в приложении. Например, пользовательское приложение, созданное отделом Системам для передачи данных из одного источника данных в другой будет содержать имена этих источников данных, приложение просто не будет работать с другими источниками данных. Другой пример — вертикальная приложения, например, что используется для ввода заказа. Такое приложение всегда использует же источник данных, с предварительно определенной схемой известные приложением.  

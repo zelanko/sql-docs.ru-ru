@@ -1,31 +1,32 @@
 ---
-title: "Элемент ServerMode | Документы Microsoft"
-ms.custom: 
+title: Элемент ServerMode | Документы Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c0d0def053cf923474f8d8d3cd066a87bdc31833
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: af2c8d12e2861993474a093b2385f393924f2f67
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servermode-element"></a>Элемент ServerMode
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]**ServerMode** элемент server указывает режим работы сервера в.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Серверный элемент **ServerMode** указывает режим работы сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|(нет)|  
@@ -53,16 +54,16 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Сервер работает в одном из следующих режимов.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Многомерные*|Режим многомерных выражений и интеллектуального анализа данных.|  
 |*Табличные*|Табличный режим|  
 |*SharePoint*|Режим интеграции с SharePoint|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

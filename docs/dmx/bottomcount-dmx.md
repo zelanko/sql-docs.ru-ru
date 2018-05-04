@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a910facd4ae35c6ac4a0591f2b57bd5e6caf5efa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Таблица выражения >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение, которое предоставляется свойством \<ранжирования выражение > аргумент определяет порядок возрастания ранга строк, полученных из \<таблицы выражение > аргумента и количество нижних строк, которые указаны в \<count > возвращается аргумент.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,11 +111,11 @@ NATURAL PREDICTION JOIN
   
  **Примечание** этот пример приведен только для иллюстрации применения BottomCount. В зависимости от размера набора данных выполнение данного запроса может занять значительное время.  
   
-## <a name="see-also"></a>См. также:  
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40; расширений интеллектуального анализа данных &#41;](../dmx/bottompercent-dmx.md)   
- [BottomSum &#40; расширений интеллектуального анализа данных &#41;](../dmx/bottomsum-dmx.md)   
- [TopCount &#40; расширений интеллектуального анализа данных &#41;](../dmx/topcount-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/bottompercent-dmx.md)   
+ [BottomSum &#40;расширений интеллектуального анализа данных&#41;](../dmx/bottomsum-dmx.md)   
+ [TopCount &#40;расширений интеллектуального анализа данных&#41;](../dmx/topcount-dmx.md)  
   
   

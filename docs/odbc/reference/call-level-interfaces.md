@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
 - CLI [ODBC], using CLI
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5df7ff90e8b290f6fb55f1c62b59eee10d83cd8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-level-interfaces"></a>Интерфейсы уровня вызова
 Последний способ отправки инструкций SQL в СУБД — через интерфейс уровня вызова (CLI). Интерфейс уровня вызова предоставляет библиотеку функций СУБД, которые могут быть вызваны приложением. Таким образом вместо того чтобы без затруднений SQL с другим языком программирования, интерфейс уровня вызова аналогична стандартных библиотек, которые большинство программистов привыкшим использования, таких как строки, ввода-вывода или математических библиотек в примечании C., СУБД, которые поддерживают embedded SQL уже имеется интерфейс уровня вызова, вызовы, для которого создаются средством предварительной компиляции. Тем не менее эти вызовы являются недокументированные возможности и могут быть изменены без предварительного уведомления.  

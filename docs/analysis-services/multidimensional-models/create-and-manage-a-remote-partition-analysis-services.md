@@ -1,34 +1,23 @@
 ---
-title: "Создание и управление удаленной секции (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание и управление удаленной секции (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb19c147010f0492122e88b21bd12efb43c05376
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Создание удаленной секции и управление ей (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-При секционировании группы мер можно указать в качестве хранилища секции базу данных-получатель на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  При секционировании группы мер можно указать в качестве хранилища секции базу данных-получатель на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Удаленные секции куба (база данных master) хранятся в выделенной базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (база данных-получатель).  
   
@@ -131,7 +120,7 @@ ms.lasthandoff: 02/15/2018
 5.  На главном сервере в обозревателе решений щелкните правой кнопкой мыши имя куба, выберите команду **Обработать** и проведите полную обработку куба.  
   
 ## <a name="administering-remote-partitions"></a>Администрирование удаленных секций  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают как параллельную, так и последовательную обработку удаленных секций. База данных master, где определены секции, координирует транзакции между всеми экземплярами, которые принимают участие в обработке секций куба. При обработке создаются отчеты, а затем отправляются на все экземпляры, которые обрабатывают секцию.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]поддерживает параллельных и последовательных обработку удаленных секций. База данных master, где определены секции, координирует транзакции между всеми экземплярами, которые принимают участие в обработке секций куба. При обработке создаются отчеты, а затем отправляются на все экземпляры, которые обрабатывают секцию.  
   
  Куб, содержащий удаленные секции, можно администрировать вместе с его секциями на одном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Однако метаданные для удаленной секции можно просматривать и обновлять только на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на котором секция и родительский куб были определены. Удаленную секцию нельзя просматривать и обновлять на удаленном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -139,6 +128,6 @@ ms.lasthandoff: 02/15/2018
 >  Хотя базы данных, выделенные для хранения удаленных секций, не отображаются в наборе строк схемы, приложения, которые используют объекты АМО, могут обнаруживать выделенные базы данных с помощью команды «Discover» из XML для аналитики. Команды CREATE или DELETE передаются непосредственно в выделенную базу данных с помощью ТСР или НТТР-клиента, но сервер возвращает предупреждение о том, что это действие может повредить управляемую базу данных.  
   
 ## <a name="see-also"></a>См. также  
- [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Секций & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

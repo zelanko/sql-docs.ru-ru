@@ -1,31 +1,23 @@
 ---
-title: "Секции в многомерных моделях | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Секции в многомерных моделях | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af280f01614ae565406a269df348a5913dc1eeb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>Секции в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]физическое хранение фактических данных, загруженных в группу мер, обеспечивает *секция* . Для каждой группы мер автоматически создается одна секция, но существует стандартная практика создания дополнительных секций для дальнейшего сегментирования данных, что обеспечивает более эффективную обработку и более быстрое выполнение запросов.  
+  В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]физическое хранение фактических данных, загруженных в группу мер, обеспечивает *секция* . Для каждой группы мер автоматически создается одна секция, но существует стандартная практика создания дополнительных секций для дальнейшего сегментирования данных, что обеспечивает более эффективную обработку и более быстрое выполнение запросов.  
   
  Обработка более эффективна, поскольку секции могут обрабатываться параллельно на одном или нескольких серверах. Запросы выполняются быстрее, поскольку для каждой секции можно настроить режимы хранения и оптимизации агрегатов, что приводит к ускоренному получению ответов. Например, хранилище MOLAP для секций с новыми данными обычно работает быстрее, чем ROLAP. Также, если выполнено секционирование по дате, секции, содержащие новые данные, могут иметь больше оптимизаций, чем секции со старыми данными, обращение к которым происходит реже. Следует отметить, что применение разных режимов хранения и агрегирования в секциях негативно отразится на будущих операциях слияния. Перед оптимизацией отдельных секций учитывайте возможность слияния в своей стратегии управлениями секциями.  
   
@@ -53,11 +45,11 @@ ms.lasthandoff: 02/15/2018
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[Создание и управление локальной секции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|Содержит сведения о секционировании данных с помощью фильтров и различных таблиц фактов без дубликации данных.|  
-|[Настройка хранилища секций &#40; Службы Analysis Services — многомерные &#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|Содержит описание настройки хранилища для секций.|  
-|[Изменение и удаление секций &#40; Analysis Services — многомерные &#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|Содержит описание способа просмотра и редактирования секций.|  
-|[Слияние секций в службы Analysis Services &#40; Службы SSAS — многомерные &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|Содержит сведения о слиянии секций, имеющих различные таблицы фактов или срезы данных без дубликации данных.|  
+|[Создание и управление локальной секции & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|Содержит сведения о секционировании данных с помощью фильтров и различных таблиц фактов без дубликации данных.|  
+|[Настройка хранилища секций & #40; Службы Analysis Services — многомерные & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|Содержит описание настройки хранилища для секций.|  
+|[Изменение и удаление секций & #40; Analysis Services — многомерные & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|Содержит описание способа просмотра и редактирования секций.|  
+|[Слияние секций в службы Analysis Services & #40; Службы SSAS — многомерные & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|Содержит сведения о слиянии секций, имеющих различные таблицы фактов или срезы данных без дубликации данных.|  
 |[Настройка обратной записи секции](../../analysis-services/multidimensional-models/set-partition-writeback.md)|Предоставляет инструкции по разрешению записи в секции.|  
-|[Создание и управление удаленной секцией &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|Содержит описание способа создания и управления удаленной секцией.|  
+|[Создание и управление удаленной секцией & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|Содержит описание способа создания и управления удаленной секцией.|  
   
   

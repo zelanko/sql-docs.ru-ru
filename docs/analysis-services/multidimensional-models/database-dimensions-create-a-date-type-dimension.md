@@ -1,38 +1,23 @@
 ---
-title: "Создание измерения типа Date | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание измерения типа Date | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- adding time intelligence
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- time intelligence [Analysis Services]
-ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2e42e3d8a3a3f33840d1004119b84fbe4a247888
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Измерения базы данных — Создание измерения типа Date
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерение времени является типом измерения, атрибуты которого отражают временные периоды, например годы, семестры, кварталы, месяцы и дни. Периоды в измерении времени обеспечивают временные уровни гранулярности для анализа и создания отчетов. Атрибуты организуются в иерархии, при этом гранулярность измерения времени преимущественно определяется требованиями, предъявляемыми коммерческой деятельностью и отчетностью к данным с предысторией. Например, в приложениях бизнес-аналитики большая часть финансовых данных и данных о продажах использует помесячную или поквартальную гранулярность.  
+  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерение времени является типом измерения, атрибуты которого отражают временные периоды, например годы, семестры, кварталы, месяцы и дни. Периоды в измерении времени обеспечивают временные уровни гранулярности для анализа и создания отчетов. Атрибуты организуются в иерархии, при этом гранулярность измерения времени преимущественно определяется требованиями, предъявляемыми коммерческой деятельностью и отчетностью к данным с предысторией. Например, в приложениях бизнес-аналитики большая часть финансовых данных и данных о продажах использует помесячную или поквартальную гранулярность.  
   
  Обычно в состав кубов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] входит измерение времени, представленное в той или иной форме. Куб может включать в себя более одного измерения времени или несколько иерархий из одного и того же измерения времени в зависимости от гранулярности данных и требований со стороны отчетности. Однако не во всех кубах требуется измерение времени. В некоторых OLAP-приложениях, например учете затрат по видам деятельности, измерение времени не требуется, потому что в измерении по видам деятельности учет затрат основывается на виде деятельности, а не на времени.  
   

@@ -1,30 +1,23 @@
 ---
-title: "Командлет Invoke-ProcessCube | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Командлет Invoke-ProcessCube | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5564256b3953c9173f433201506204d7ca24677e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 02be0d6d491bf05e13b534c76b19a3eadb1074b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processcube-cmdlet"></a>Командлет Invoke-ProcessCube
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Обрабатывает куб с использованием переменной конкретного типа обработки.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Обрабатывает куб с использованием переменной конкретного типа обработки.  
   
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -34,7 +27,7 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ProcessCube –DatabaseCube <Microsoft.AnalysisServices.Cube> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Invoke-ProcessCube обрабатывает куб до указанного вами уровня. Например, ProcessFull перезаписывает существующие данные полностью новыми данными. При обработке куба необходимо указать тип обработки. Дополнительные сведения см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 ## <a name="parameters"></a>Параметры  
@@ -91,8 +84,8 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Входные данные|None|  
-|Выходные данные|None|  
+|Входные данные|Нет|  
+|Выходные данные|Нет|  
   
 ## <a name="example-1"></a>Пример 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works > Get-Item .| Invoke-ProcessCube–ProcessType:ProcessDefault`  

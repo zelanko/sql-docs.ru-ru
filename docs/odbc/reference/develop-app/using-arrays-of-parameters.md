@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fe2d85bd347477c0acc775a4f071968d6d8b15d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-arrays-of-parameters"></a>Использование массивов параметров
 Использование массивов параметров, приложение вызывает **SQLSetStmtAttr** с *атрибута* аргумент SQL_ATTR_PARAMSET_SIZE, чтобы указать число наборов параметров. Он вызывает **SQLSetStmtAttr** с *атрибута* аргумент SQL_ATTR_PARAMS_PROCESSED_PTR, чтобы указать адрес переменной, в котором драйвер может возвращать число наборов параметров обработки Задает, включая ошибки. Он вызывает **SQLSetStmtAttr** с *атрибута* аргумент SQL_ATTR_PARAM_STATUS_PTR, чтобы она указывала на массив, в котором для возвращения сведений о состоянии для каждой строки значений параметров. Драйвер хранит эти адреса в структуре, которую он поддерживает для инструкции.  

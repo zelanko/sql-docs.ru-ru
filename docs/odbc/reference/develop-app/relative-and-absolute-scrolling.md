@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - absolute scrolling [ODBC]
 - relative scrolling [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 96487021b9f791a3c6cd08b222c829178f67a4a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>Относительных и абсолютных прокрутки
 Большинство параметров прокрутки в **SQLFetchScroll** курсор относительно текущей позиции или абсолютной позиции. **SQLFetchScroll** поддерживает выборку следующего, предыдущего, первого и последнего набора строк, как хорошо, как относительной (набора строк, *n* строк от начала текущего набора строк) и абсолютной (fetch начального набора строк в строке *n*). Если *n* имеет отрицательное значение при абсолютной выборке, то строки отсчитываются с конца результирующего набора. Таким образом абсолютная выборка строки -1 означает, что для выборки строк, который начинается с последней строки в результирующем наборе.  

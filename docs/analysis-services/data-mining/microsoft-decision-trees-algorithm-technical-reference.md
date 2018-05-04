@@ -1,16 +1,16 @@
 ---
-title: "Технический справочник по алгоритму дерева принятия решений Майкрософт | Документы Microsoft"
-ms.custom: 
+title: Технический справочник по алгоритму дерева принятия решений Майкрософт | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: df4ea21c0fb5ace30fb2bf0ef605b0dd3dbef85d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Технический справочник по алгоритму дерева принятия решений (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой гибридный алгоритм, объединяющий различные методы для создания дерева и поддерживающий несколько аналитических задач, в том числе регрессию, классификацию и взаимосвязи. Алгоритм дерева принятия решений (Майкрософт) поддерживает моделирование как дискретных, так и непрерывных атрибутов.  
+  Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой гибридный алгоритм, объединяющий различные методы для создания дерева и поддерживающий несколько аналитических задач, в том числе регрессию, классификацию и взаимосвязи. Алгоритм дерева принятия решений (Майкрософт) поддерживает моделирование как дискретных, так и непрерывных атрибутов.  
   
  В данном разделе описывается реализация алгоритма и настройка его поведения для различных задач. Приводятся также ссылки на дополнительную информацию о запросах к модели дерева принятия решений.  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 02/15/2018
  Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на производительность и точность получающейся в результате модели интеллектуального анализа данных. Можно также изменять способ обработки данных, устанавливая на столбцах модели интеллектуального анализа данных или структуры интеллектуального анализа данных флаги модели.  
   
 > [!NOTE]  
->  Алгоритм дерева принятия решений (Майкрософт) доступен во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако некоторые дополнительные параметры для настройки работы этого алгоритма доступны только в специальных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Алгоритм дерева принятия решений (Майкрософт) доступен во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако некоторые дополнительные параметры для настройки работы этого алгоритма доступны только в специальных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
  В следующей таблице описаны параметры, которые можно использовать с алгоритмом временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -211,6 +210,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>См. также  
  [Алгоритм дерева принятия решений (Майкрософт)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для модели дерева принятия решений &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели дерева принятия решений & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a032b71e3c2ec400bb402300573df5f6bc4a70ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **ClusterDistance** функция возвращает расстояние входного варианта кластеру, который с наибольшей вероятностью для входного варианта.  
   
  В случае кластеризации методом К-средних любой вариант может принадлежать только к одному кластеру с весом членства, равным 1,0, и расстоянием от кластера, всегда равным 0. Однако при использовании метода К-средних предполагается, что каждый кластер имеет центроид. Значение центроида можно получить, выполнив запрос или просмотрев вложенную таблицу NODE_DISTRIBUTION в содержимом модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
@@ -63,13 +62,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Связанные прогнозирующие функции  
  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] имеют следующие дополнительные функции для запросов к моделям кластеризации.  
   
--   Используйте [кластера &#40; расширений интеллектуального анализа данных &#41;](../dmx/cluster-dmx.md) функция, возвращающая наиболее вероятного кластера.  
+-   Используйте [кластера &#40;расширений интеллектуального анализа данных&#41; ](../dmx/cluster-dmx.md) функция, возвращающая наиболее вероятного кластера.  
   
--   Используйте [ClusterProbability &#40; расширений интеллектуального анализа данных &#41;](../dmx/clusterprobability-dmx.md) функцию для получения вероятность принадлежности варианта определенному кластеру. Это значение является обратным для расстояния от кластера.  
+-   Используйте [ClusterProbability &#40;расширений интеллектуального анализа данных&#41; ](../dmx/clusterprobability-dmx.md) функцию для получения вероятность принадлежности варианта определенному кластеру. Это значение является обратным для расстояния от кластера.  
   
--   Используйте [PredictHistogram &#40; расширений интеллектуального анализа данных &#41;](../dmx/predicthistogram-dmx.md) функции для возврата гистограммы вероятности того, существует входной вариант в каждом кластере модели.  
+-   Используйте [PredictHistogram &#40;расширений интеллектуального анализа данных&#41; ](../dmx/predicthistogram-dmx.md) функции для возврата гистограммы вероятности того, существует входной вариант в каждом кластере модели.  
   
--   Используйте [PredictCaseLikelihood &#40; расширений интеллектуального анализа данных &#41;](../dmx/predictcaselikelihood-dmx.md) функция, возвращающая является мера от 0 до 1, указывает вероятность входной вариант существует, учитывая модель, полученное алгоритмом.  
+-   Используйте [PredictCaseLikelihood &#40;расширений интеллектуального анализа данных&#41; ](../dmx/predictcaselikelihood-dmx.md) функция, возвращающая является мера от 0 до 1, указывает вероятность входной вариант существует, учитывая модель, полученное алгоритмом.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Пример 1: Получение расстояния до наиболее вероятного кластера  
  В следующем примере возвращается расстояние от указанного варианта до кластера, к которому вариант принадлежит с наибольшей вероятностью.  
@@ -138,10 +137,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>См. также:  
- [Кластер &#40; расширений интеллектуального анализа данных &#41;](../dmx/cluster-dmx.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Содержимое модели интеллектуального анализа данных для кластеризации моделей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Кластер &#40;расширений интеллектуального анализа данных&#41;](../dmx/cluster-dmx.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Содержимое модели интеллектуального анализа данных для кластеризации моделей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

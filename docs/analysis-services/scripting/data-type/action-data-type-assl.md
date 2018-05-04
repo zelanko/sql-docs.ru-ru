@@ -25,15 +25,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0f42a42254c97d5f4c9f2aa4a3977e650108b1e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2ee550ef5d566c3d762155e8a08e8df8298488fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="action-data-type-assl"></a>Тип данных Action (язык ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет абстрактный примитивный тип данных, представляющий действие в [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет абстрактный примитивный тип данных, представляющий действие в элементе [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) или элементе [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
@@ -71,15 +71,15 @@ ms.lasthandoff: 01/08/2018
 |Дочерние элементы|[Заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [приложения](../../../analysis-services/scripting/properties/application-element-assl.md), [заголовок](../../../analysis-services/scripting/properties/caption-element-assl.md), [CaptionIsMdx](../../../analysis-services/scripting/properties/captionismdx-element-assl.md), [условие](../../../analysis-services/scripting/properties/condition-element-assl.md), [описание ](../../../analysis-services/scripting/properties/description-element-assl.md), [Идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [вызов](../../../analysis-services/scripting/properties/invocation-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md), [целевой](../../../analysis-services/scripting/properties/target-element-assl.md), [TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md), [Переводы](../../../analysis-services/scripting/collections/translations-element-assl.md), [типа](../../../analysis-services/scripting/properties/type-element-action-assl.md)|  
 |Производные элементы|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Action>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент CUBE &#40; ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Элемент perspective &#40; ASSL &#41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
- [Тип данных PerspectiveAction &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент CUBE & #40; ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Элемент perspective & #40; ASSL & #41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
+ [Тип данных PerspectiveAction & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
+ [Службы Analysis Services сценариев типы данных XML в & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

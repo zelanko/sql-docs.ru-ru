@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: da971bb3ed38fd5099722d423221e68b9bb17173
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d280b73cf38bae055530b216538d3eb83ca07151
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroup-element-assl"></a>Элемент MeasureGroup (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет набор мер на одном уровне гранулярности.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет набор мер на одном уровне гранулярности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|См. в следующей таблице.|  
+|Тип данных и длина|См. таблицу ниже.|  
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/08/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[MeasureGroups](../../../analysis-services/scripting/collections/measuregroups-element-assl.md)|  
-|Дочерние элементы|См. в следующей таблице.|  
+|Дочерние элементы|См. таблицу ниже.|  
   
 |Предок или родитель|Дочерние элементы|  
 |------------------------|--------------------|  
@@ -105,7 +105,7 @@ ms.lasthandoff: 01/08/2018
 |[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|None|  
 |[Перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md)|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Все меры в группе мер должны происходить из одной таблицы. Группа мер может определить привязки по умолчанию, которые могут быть изменены для каждой секции.  
   
  Элемент **MeasureGroup** определяет сведения, общие для групп мер обычных и виртуальных кубов. Сведения, специфические для каждого типа, определяются отдельными подтипами.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/08/2018
   
  Соответствующие элементы в модели объектов AMO — это <xref:Microsoft.AnalysisServices.MeasureGroup> и <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

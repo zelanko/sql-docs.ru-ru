@@ -26,13 +26,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6d384e280defcef14dd93b64ae47b604ecc6466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в предложении SELECT* (только на уровне объектов).|  
 |is_all_columns_found|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = все зависимости столбца для объекта удалось обнаружить.<br /><br /> 0 = зависимости столбца для объекта не удалось обнаружить.|
 |is_insert_all|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в инструкции INSERT без списка столбцов (только на уровне объектов).|  
-|is_incomplete|**бит**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец имеет ошибки привязки и не была завершена.|
+|is_incomplete|**бит**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 1 = объект или столбец имеет ошибки привязки и не была завершена.|
   
 ## <a name="exceptions"></a>Исключения  
  Возвращает пустой результирующий набор, если выполняется любое из следующих условий.  

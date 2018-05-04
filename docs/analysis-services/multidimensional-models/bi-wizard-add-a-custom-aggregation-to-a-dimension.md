@@ -1,37 +1,23 @@
 ---
-title: "Добавление нестандартного статистического выражения к измерению | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Добавление нестандартного статистического выражения к измерению | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], custom aggregations
-- aggregations [Analysis Services], custom
-- unary operators
-- custom aggregations [Analysis Services]
-ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9188ba67de899aa9bb63f1593da9e67c140a4cc2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 16d5edb7a4b9a29483a8b6aa572073f363bdf975
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление нестандартного статистического выражения к измерению
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Добавление нестандартного статистического выражения к кубу или измерению для статистических вычислений, связанных с элементом измерения, производится по умолчанию другим унарным оператором. Эта функция задает в таблице измерения столбец унарных операторов, который определяет сдвиг элементов в иерархии родители-потомки. Унарный оператор действует в качестве родительского атрибута в иерархии родители-потомки.  
+  Добавление нестандартного статистического выражения к кубу или измерению для статистических вычислений, связанных с элементом измерения, производится по умолчанию другим унарным оператором. Эта функция задает в таблице измерения столбец унарных операторов, который определяет сдвиг элементов в иерархии родители-потомки. Унарный оператор действует в качестве родительского атрибута в иерархии родители-потомки.  
   
 > [!NOTE]  
 >  Нестандартное статистическое выражение доступно только для измерений, основанных на существующих источниках данных. Для измерений, созданных без использования источника данных, необходимо запустить мастер формирования схем, чтобы создать представление источника данных перед тем, как добавить нестандартное статистическое выражение.  

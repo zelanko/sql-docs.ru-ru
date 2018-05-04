@@ -1,36 +1,35 @@
 ---
-title: "Алгоритм кластеризации последовательностей (Microsoft) | Документы Microsoft"
-ms.custom: 
+title: Алгоритм кластеризации последовательностей (Microsoft) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 95f9737ae3ce74d319cc636e7ffacc4cf1e0825b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Алгоритм кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это уникальный алгоритм сочетающий в себе анализ последовательностей и кластеризацию. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
+  Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это уникальный алгоритм сочетающий в себе анализ последовательностей и кластеризацию. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
   
 -   Сведения о посещениях и схемах щелчков, которые создаются, когда пользователи переходят по веб-сайту или просматривают его.  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 02/15/2018
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму кластеризации последовательностей (Microsoft)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Примеры запросов модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [Просмотр модели в средство просмотра кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  

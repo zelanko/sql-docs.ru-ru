@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efbb8829890dda1895237dde5bb65b5a4b3ab40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   Схема **dbo** в текущей базе данных.  
   
  [  **@qualifier =** ] **"***квалификатор***"**  
- Имя квалификатора процедуры. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц в форме (*квалификатор***.*** схемы***.*** имя*. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *квалификатор* представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
+ Имя квалификатора процедуры. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц в форме (*квалификатор ***.*** схемы ***.*** имя*. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *квалификатор* представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
   
  [  **@fUsePattern =** ] **"***шаблонов***"**  
  Определяет, должны ли символы подчеркивания (_), процента (%) и квадратных скобок ([ ]) рассматриваться как подстановочные. *Шаблонов* — **бит**, значение по умолчанию 1.  

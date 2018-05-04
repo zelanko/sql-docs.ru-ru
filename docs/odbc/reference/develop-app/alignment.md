@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ede36175f606b28c742e72bb005cf5fa7563bfc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment"></a>Выравнивание
 Проблемы выравнивания в приложении ODBC обычно не отличаются от они находятся в другом приложении. То есть большинство приложений ODBC имеют несколько или проблем с выравниванием. Штрафов за не выравнивание адреса зависит от оборудования и операционной системы и может быть как значительные как небольшое уменьшение производительности или как фатальной ошибкой во время выполнения. Таким образом приложения ODBC и переносимого приложения ODBC в частности, следует внимательно выравнивание данных должным образом.  

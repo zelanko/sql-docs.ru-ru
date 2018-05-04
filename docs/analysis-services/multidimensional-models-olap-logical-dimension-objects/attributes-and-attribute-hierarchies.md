@@ -1,48 +1,26 @@
 ---
-title: "Атрибуты и иерархии атрибутов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- regular attributes [Analysis Services]
-- parent attributes [Analysis Services]
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], about attributes
-- account attributes [Analysis Services]
-- dimensions [Analysis Services], attributes
-- key attributes [Analysis Services]
-- OLAP objects [Analysis Services], attributes
-- attributes [Analysis Services], relationships
-- attributes [Analysis Services]
-- relationships [Analysis Services], attributes
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 
-author: Minewiskan
+title: Атрибуты и иерархии атрибутов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 009b5857470b106cb5c68301537dceb438ec4406
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Атрибуты и иерархии атрибутов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Измерения — это коллекции атрибутов, которые в представлении источника данных привязаны к одному или нескольким столбцам таблицы или представления.  
+  Измерения — это коллекции атрибутов, которые в представлении источника данных привязаны к одному или нескольким столбцам таблицы или представления.  
   
 ## <a name="key-attribute"></a>Ключевой атрибут  
- Каждое измерение содержит ключевой атрибут. Каждый атрибут привязан к одному или нескольким столбцам в таблице измерения. Ключевой атрибут — это атрибут в измерении, который определяет столбцы в основной таблице измерения, используемые в связях внешнего ключа с таблицей фактов. Как правило, ключевой атрибут представляет первичный ключ столбца или столбцов в таблице измерения. Можно определить логический первичный ключ таблицы в представлении источника данных, не имеющей физического первичного ключа в базовом источнике данных. **Для получения дополнительной информации**, в разделе [определение логических первичных ключей в представлении источника данных &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). При определении ключевых атрибутов мастер кубов и мастер измерений используют первичные ключевые столбцы таблицы измерения в представлении источника данных. Если таблица измерения не имеет определенного логического или физического первичного ключа, то мастера не смогут правильно определить ключевые атрибуты для измерения.  
+ Каждое измерение содержит ключевой атрибут. Каждый атрибут привязан к одному или нескольким столбцам в таблице измерения. Ключевой атрибут — это атрибут в измерении, который определяет столбцы в основной таблице измерения, используемые в связях внешнего ключа с таблицей фактов. Как правило, ключевой атрибут представляет первичный ключ столбца или столбцов в таблице измерения. Можно определить логический первичный ключ таблицы в представлении источника данных, не имеющей физического первичного ключа в базовом источнике данных. **Для получения дополнительной информации**, в разделе [определение логических первичных ключей в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). При определении ключевых атрибутов мастер кубов и мастер измерений используют первичные ключевые столбцы таблицы измерения в представлении источника данных. Если таблица измерения не имеет определенного логического или физического первичного ключа, то мастера не смогут правильно определить ключевые атрибуты для измерения.  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>Привязка атрибута к столбцам таблиц и представлений в представлении источника данных  
  Атрибут привязан к одному или нескольким столбцам таблицы или представления в представлении источника данных. Атрибут всегда привязан к одному или нескольким ключевым столбцам, которые определяют содержащиеся в нем элементы. По умолчанию это единственный столбец, к которому привязан атрибут. Для некоторых целей атрибут также может быть связан с одним или несколькими дополнительными столбцами. Например, атрибута **NameColumn** свойство определяет имя, отображаемое для пользователя, для каждого элемента атрибута — это свойство атрибута могут быть привязаны к отдельным столбцом измерения через представление источника данных, или может быть привязан к вычисляемый столбец в представлении источника данных. Дополнительные сведения см. в разделе [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  

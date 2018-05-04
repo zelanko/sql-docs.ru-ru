@@ -23,20 +23,20 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7d06d5e417b97b42791acb3dc16c939a347e2ba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>Набор строк DMSCHEMA_MINING_STRUCTURES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перечисляет сведения о структурах интеллектуального анализа данных в текущем каталоге.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Перечисляет информацию о структурах интеллектуального анализа данных в текущем каталоге.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DMSCHEMA_MINING_STRUCTURES** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||Имя каталога.|  
 |**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Неполное имя схемы. Значение**NULL** , если схемы не поддерживаются поставщиком.|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**STRUCTURE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
+|**STRUCTURE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

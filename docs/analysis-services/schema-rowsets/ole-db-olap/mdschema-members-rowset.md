@@ -23,20 +23,20 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a199a80277c56825dad9d5ac00909244b57844d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Набор строк MDSCHEMA_MEMBERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает элементы в базе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает элементы в базе данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_MEMBERS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Имя базы данных, которой принадлежит элемент.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Имя схемы, которой принадлежит элемент.|  
@@ -70,21 +70,21 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|Необязательный параметр.|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|Необязательный параметр.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|Необязательно.|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Необязательно.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|Необязательно.|  
 |**TREE_OP**|**DBTYPE_I4**|Применяется только к единственному элементу (необязательно):<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) возвращает всех предков.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) возвращает только непосредственные дочерние элементы.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) возвращает элементы на том же уровне.<br /><br /> **MDTREEOP_PARENT** (**0x04**) возвращает только непосредственного родителя.<br /><br /> **MDTREEOP_SELF** (**0x08**) возвращает себя в списке возвращенных строк.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) возвращает всех потомков.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

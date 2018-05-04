@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetConnectOption
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91cf0a45d148a2a14c35626f8ca720c5d57279cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 079ab02fdc7ff44012c5c2a13a0fd369577ace0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectoption-function"></a>Функция SQLGetConnectOption
 **Соответствия**  
  Появился в версии: Полное соответствие стандартам 1.0 ODBC: рекомендуется к использованию  
   
  **Сводка**  
- В ODBC 3*.x*, ODBC 2*.x* функция **SQLGetConnectOption** будет заменен **SQLGetConnectAttr**. Дополнительные сведения см. в разделе [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md).  
+ В ODBC 3 *.x*, ODBC 2 *.x* функция **SQLGetConnectOption** будет заменен **SQLGetConnectAttr**. Дополнительные сведения см. в разделе [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о том, что диспетчер драйверов преобразует эту функцию для при ODBC 2*.x* при работе с ODBC 3*.x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о том, что диспетчер драйверов преобразует эту функцию для при ODBC 2 *.x* при работе с ODBC 3 *.x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
   
 > [!NOTE]  
 >  Атрибут SQL_ASYNC_DBC_FUNCTION_ENABLE появились в ODBC 3.8 не поддерживается в **SQLGetConnectOption**. Приложения, использующие асинхронной операции на дескрипторе соединений необходимо использовать **SQLGetConnectAttr**.  

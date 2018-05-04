@@ -25,12 +25,11 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba13be54b517541ee0e14ac291d871aa8654561f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>Хранимая процедура sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Список с разделителями (точки с запятыми), содержащий имена файлов, которые надлежит прикрепить к сообщению. Файлы в списке должны указываться как абсолютные пути. Список вложений относится к типу **nvarchar(max)**. По умолчанию компонент Database Mail ограничивает размер файлов вложений до 1 МБ на файл.  
   
  [  **@query=** ] **"***запроса***"**  
- Запрос, подлежащий выполнению. Результаты запроса могут прикрепляться в виде файла или включаться в текст сообщения электронной почты. Запрос имеет тип **nvarchar(max)**и может содержать любые допустимые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции. Обратите внимание, что запрос выполняется в отдельном сеансе, так что локальные переменные в скрипте, вызываемом **sp_send_dbmail** недоступны для запроса.  
+ Запрос, подлежащий выполнению. Результаты запроса могут прикрепляться в виде файла или включаться в текст сообщения электронной почты. Запрос имеет тип **nvarchar(max)** и может содержать любые допустимые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции. Обратите внимание, что запрос выполняется в отдельном сеансе, так что локальные переменные в скрипте, вызываемом **sp_send_dbmail** недоступны для запроса.  
   
  [  **@execute_query_database=** ] **"***execute_query_database***"**  
  Контекст базы данных, в котором хранимая процедура запускает запрос. Параметр имеет тип **sysname**, значение по умолчанию текущей базы данных. Этот параметр применяется, только если **@query** указано.  

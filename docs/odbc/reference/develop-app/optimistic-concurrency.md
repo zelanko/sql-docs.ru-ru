@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 756775900c04ff501095f95fda95fa4f184e8833
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 01076f3f9167af8b67153abf9f3458a63bed1bf3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>Оптимистический параллелизм
 *Оптимистический параллелизм* наследует его имя от оптимистичный допущения, редко возникает конфликтов между транзакциями; конфликта имен говорят, что когда другая транзакция обновляет или удаляет строку данных доступной для чтения в промежутке Текущая транзакция и время он обновляется или удаляется. Это противоположность *пессимистичный параллелизм* или блокировки, в котором разработчик приложения считается, что такие конфликты распространены.  

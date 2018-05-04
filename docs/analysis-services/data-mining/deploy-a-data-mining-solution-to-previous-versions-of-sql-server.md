@@ -1,39 +1,23 @@
 ---
-title: "Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server | Документы Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- backward compatibility [Analysis Services]
-- holdout [data mining]
-- deploy [Analysis Services]
-- time series [Analysis Services]
-- deploying [Analysis Services - data mining]
-- synchronization [Analysis Services]
-- deployment [Analysis Services]
-ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f082d488439f1331c009352bc7d691b7703f0e32
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1065afdc558defa467c440f8a767078ace97d5cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В этом разделе описаны известные проблемы совместимости, которые могут возникнуть во время развертывания модели или структуры интеллектуального анализа данных, созданной в экземпляре служб [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , в базе данных со службами SQL Server 2005 Analysis Services, а также при развертывании моделей, созданных в SQL Server 2005, на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  В этом разделе описаны известные проблемы совместимости, которые могут возникнуть во время развертывания модели или структуры интеллектуального анализа данных, созданной в экземпляре служб [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , в базе данных со службами SQL Server 2005 Analysis Services, а также при развертывании моделей, созданных в SQL Server 2005, на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Развертывание на экземпляре служб SQL Server 2000 Analysis Services не поддерживается.  
   

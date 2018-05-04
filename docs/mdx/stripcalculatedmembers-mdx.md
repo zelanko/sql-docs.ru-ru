@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 643dca97d4d3e4675b07a7b8f9c06a5a78401dd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 267f45132476eafe7e7da87fa18c06bb57003d2b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **StripCalculatedMembers** функция удаляет вычисляемые элементы из набора. Вычисляемые элементы можно добавить в набор с помощью [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции, которая возвращает вычисляемые элементы, определенные на сервере или вычисляемые элементы, которые были добавлены в самом запросе с помощью конструкции WITH MEMBER.  
   
 ## <a name="example"></a>Пример  
@@ -91,7 +90,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

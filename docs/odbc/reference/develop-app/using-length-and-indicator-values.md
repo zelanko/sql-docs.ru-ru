@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - length/indicator buffers [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c3a817aa541d397a46ae75d09ed09ccbb550842
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aa4cb7310d579fb787a3e08da8e309d4e5c6e4d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-length-and-indicator-values"></a>С помощью длины и значения индикатора
 Буфер длины/индикатора используется для передачи байт данных в буфере данных или специальные индикатор, например SQL_NULL_DATA, который указывает, что данные имеют значение NULL. В зависимости от того, в котором используется функция буфер длины/индикатора определяется как SQLINTEGER или SQLSMALLINT. Таким образом для ее описания требуется один аргумент. Если буфер данных nondeferred входного буфера, этот аргумент содержит байтовая длина данных или значение индикатора. Часто называется *StrLen_or_Ind* или же именем. Например, следующий код вызывает **SQLPutData** для передачи буфера full данных; байт (*ValueLen*) передается непосредственно, так как буфер данных (*ValuePtr*) — Входной буфер.  

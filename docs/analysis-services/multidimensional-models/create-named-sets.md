@@ -1,35 +1,23 @@
 ---
-title: "Для создания именованных наборов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Для создания именованных наборов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- calculations [Analysis Services], named sets
-- named sets [Analysis Services]
-- members [Analysis Services], named sets
-ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ef4ed9ac6f34555cada6dabbb33f20ef01f8626d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 52248437e6de4039fd0b2d7d3cc7bec42686a312
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-named-sets"></a>Создание именованных наборов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Именованный набор — это набор элементов измерения или выражение набора, которые создаются для многократного использования, например в запросах на языке многомерных выражений. Для создания именованных наборов может использоваться сочетание данных куба, арифметических операторов, чисел и функций. Например, можно создать именованный набор с именем Top Ten Factories, содержащий десять элементов измерения Factories с наибольшими значениями показателя Production. Затем набор Top Ten Factories можно использовать в запросах конечных пользователей. Например, конечный пользователь помещает набор Top Ten Factories на одну ось, а измерение меры, включая Production, — на другую ось. Дополнительные сведения см. в разделах [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [Построение именованных наборов в многомерных выражениях](../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
+  Именованный набор — это набор элементов измерения или выражение набора, которые создаются для многократного использования, например в запросах на языке многомерных выражений. Для создания именованных наборов может использоваться сочетание данных куба, арифметических операторов, чисел и функций. Например, можно создать именованный набор с именем Top Ten Factories, содержащий десять элементов измерения Factories с наибольшими значениями показателя Production. Затем набор Top Ten Factories можно использовать в запросах конечных пользователей. Например, конечный пользователь помещает набор Top Ten Factories на одну ось, а измерение меры, включая Production, — на другую ось. Дополнительные сведения см. в разделах [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [Построение именованных наборов в многомерных выражениях](../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Чтобы создать именованный набор, можно воспользоваться командой **Создать именованный набор** на вкладке **Вычисления** конструктора кубов. Эта команда может быть вызвана из меню **Куб** на панели инструментов вкладки **Вычисления** . Эта команда отображает форму для задания следующих параметров именованного набора.  
   
@@ -50,9 +38,9 @@ ms.lasthandoff: 02/15/2018
  Можно скопировать или перетащить компоненты куба с вкладки **Метаданные** панели **Средства вычисления** в поле **Выражение** панели **Редактор форм именованных наборов** . Можно скопировать или перетащить функции с вкладки **Функции** панели **Средства вычисления** в поле **Выражение** панели **Редактор форм именованных наборов** .  
   
 > [!IMPORTANT]  
->  При создании выражения набора с явным указанием имен для элементов набора следует заключить список элементов в фигурные скобки ({}).  
+>  При создании выражения набора с явным указанием имен элементов в наборе заключить список элементов в фигурные скобки ({}).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

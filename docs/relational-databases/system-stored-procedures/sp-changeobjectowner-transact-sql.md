@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5426d05f577016a2a93f131a7eaca85abe6e4f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@objname =** ] **"***объекта***"**  
- Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *Объект* — **nvarchar(776)**, не имеет значения по умолчанию. *Объект* может быть заполнен именем владельца существующего объекта в форме *existing_owner***.*** Объект* Если схема и ее владелец имеют то же имя.  
+ Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *Объект* — **nvarchar(776)**, не имеет значения по умолчанию. *Объект* может быть заполнен именем владельца существующего объекта в форме *existing_owner ***.*** Объект* Если схема и ее владелец имеют то же имя.  
   
  [  **@newowner=**] **"*** владельца* **"**  
  Имя учетной записи безопасности, которая станет новым владельцем объекта. *владелец* — **sysname**, не имеет значения по умолчанию. *владелец* должен быть допустимым пользователем базы данных, роль сервера [!INCLUDE[msCoName](../../includes/msconame-md.md)] входа Windows или группы Windows, имеющей доступ к текущей базе данных. Если владелец является пользователем Windows или членом группы Windows, для которой нет соответствующего участника уровня базы данных, пользователь базы данных будет создан.  

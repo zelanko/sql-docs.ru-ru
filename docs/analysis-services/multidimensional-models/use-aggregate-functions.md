@@ -1,32 +1,23 @@
 ---
 title: Использование агрегатных функций | Документы Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f882fb21fddd829be4cdc13793c4ca8b7f3cd02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-aggregate-functions"></a>Использование агрегатных функций
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — **Sum**. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — **Sum**. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  
   
  В службах Analysis Services каждая созданная мера поддерживается функцией агрегирования, определяющей операцию меры. Предопределенные типы агрегирования включают **Sum**, **Min**, **Max**, **Count**, **Distinct Count**и некоторые другие более специализированные функции. Кроме того, если необходимы агрегаты на основании сложных или пользовательских формул, можно создавать вычисления многомерных выражений вместо готовых функций агрегирования. Например, для определения меры для процентного значения следует использовать многомерное выражение с вычисляемой мерой. См. статью [Инструкция CREATE MEMBER (многомерные выражения)](../../mdx/mdx-data-definition-create-member.md).  
   
@@ -35,7 +26,7 @@ ms.lasthandoff: 01/08/2018
  Можно назначить или изменить метод агрегирования в любом определения куба через [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]или с помощью многомерных выражений. Дополнительные инструкции см. в статье [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) или [Aggregate (многомерные выражения)](../../mdx/aggregate-mdx.md).  
   
 ##  <a name="AggFunction"></a> Агрегатные функции  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] есть функции для агрегирования мер по измерениям, содержащимся в группах мер. *Аддитивность* агрегата определяет, как осуществляется статистическое вычисление меры по всем измерениям в кубе. Статистические функции подразделяются на три уровня аддитивности.  
+ В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] есть функции для агрегирования мер по измерениям, содержащимся в группах мер. *Аддитивность* агрегата определяет, как осуществляется статистическое вычисление меры по всем измерениям в кубе. Статистические функции подразделяются на три уровня аддитивности.  
   
  Аддитивная  
  Аддитивная мера, также называемая полностью аддитивной мерой, может быть статистически вычислена вдоль всех измерений в кубе, которые включены в группу мер, содержащую меру, без ограничений.  
@@ -73,8 +64,8 @@ ms.lasthandoff: 01/08/2018
  Мера числа различных объектов, которая подсчитывает элементы, основана на внешнем ключевом столбце в таблице фактов. (Т. е. свойство меры **Исходный столбец** определяет этот столбец.) Этот столбец соединяет столбец таблицы измерения, который определяет элементы, подсчитываемые мерой числа различных объектов.  
   
 ## <a name="see-also"></a>См. также:  
- [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Меры и группы мер](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../../mdx/mdx-function-reference-mdx.md)   
  [Определение полуаддитивного режима](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

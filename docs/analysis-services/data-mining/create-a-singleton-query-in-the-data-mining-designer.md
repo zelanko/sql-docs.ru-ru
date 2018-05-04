@@ -1,34 +1,23 @@
 ---
-title: "Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- singleton queries [Analysis Services]
-- Mining Model Prediction [Analysis Services], singleton queries
-ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 88119afa32933b6c35d8e404de13bc1c5acfefb1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 56be277d752c3be83f83b7d657a633d80a9688d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Одноэлементный запрос используется при необходимости создать прогноз для одного объекта. Дополнительные сведения об одноэлементных запросах см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
+  Одноэлементный запрос используется при необходимости создать прогноз для одного объекта. Дополнительные сведения об одноэлементных запросах см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
   
  На вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных можно создавать много различных типов запросов. Запросы можно создавать с помощью конструктора, либо путем ввода инструкций расширения интеллектуального анализа данных (DMX-инструкций). Кроме того, можно начать работу с конструктором, а затем изменить созданный в нем запрос путем изменения DMX-инструкций или путем добавления предложений WHERE или ORDER BY.  
   
@@ -87,6 +76,6 @@ AS [t]
      Откроется новый экран, в котором отобразится результат запроса. Чтобы просмотреть созданную DMX-инструкцию, щелкните **SQL**.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Прогнозирующие запросы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

@@ -1,41 +1,23 @@
 ---
-title: "Перспективы в многомерных моделях | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Перспективы в многомерных моделях | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- default members
-- hiding objects from perspective
-- renaming perspectives
-- attributes [Analysis Services], default members
-- removing perspectives
-- perspectives [Analysis Services]
-- names [Analysis Services], perspectives
-- cubes [Analysis Services], perspectives
-- deleting perspectives
-ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 94508cf2bb7347d3b8cef15ce5c743f33c04a018
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e5e8a1748e54ea08b124b1db1b6048fce456b2f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Перспективы в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Перспектива представляет собой подмножество куба, созданное для отдельного приложения или группы пользователей. Перспективой по умолчанию является собственно куб. Перспектива открыта для клиента в виде куба. Когда пользователь просматривает перспективу, она отображается в виде другого куба. Изменения, выполненные с данными куба при обратной записи в перспективу, выполняются в исходном кубе. Дополнительные сведения о представлениях см. в разделах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [Перспективы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+  Перспектива представляет собой подмножество куба, созданное для отдельного приложения или группы пользователей. Перспективой по умолчанию является собственно куб. Перспектива открыта для клиента в виде куба. Когда пользователь просматривает перспективу, она отображается в виде другого куба. Изменения, выполненные с данными куба при обратной записи в перспективу, выполняются в исходном кубе. Дополнительные сведения о представлениях см. в разделах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [Перспективы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
   
  Используйте вкладку **Перспективы** в конструкторе кубов для создания или измерения перспектив в кубе. Первый столбец на вкладке **Перспективы** — столбец **Объекты куба** , в котором перечислены объекты куба. Это соответствует перспективе куба по умолчанию, то есть собственно кубу.  
   

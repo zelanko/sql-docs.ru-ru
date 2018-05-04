@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2a25f2cfa7ce0afdd1455cecd1ad8c8befce53e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка RHEL кластера для группы доступности SQL Server
 
@@ -127,18 +126,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Отключение STONITH — только для целей тестирования. Если вы планируете использовать Pacemaker в рабочей среде, следует планировать реализацию STONITH в зависимости от среды и хранить включена. RHEL не предоставляет разграничения агентов для облачных сред (включая Azure) или Hyper-V. Следовательно поставщика кластера не обеспечивает поддержку для запуска рабочих кластерах в этих средах. Мы работаем над решением для пропуска, будут доступны в будущих выпусках.
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Значение свойства кластера start сбой является Неустранимая false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Набор кластеров свойства кластера интервал повторной проверки-
 
-`start-failure-is-fatal` Указывает ли сбой запуска ресурса на узле предотвращает последующие попытки запуска на этом узле. Если задано значение `false`, кластер решает, следует ли попробуйте запустить на том же узле, еще раз на основании ресурса текущего счетчика и миграции Порог сбоя. После перехода на другой ресурс, Pacemaker повторных попыток запуска доступности группы ресурсов прежней основной после экземпляра SQL Server. Pacemaker можно понизить уровень вторичную реплику, и автоматически подключится к группе доступности. 
+`cluster-recheck-interval` Указывает интервал опроса, по которому проверяется кластера изменения в параметры ресурсов, ограничений или другие параметры кластера. Если реплика отключается, кластера пытается перезапустить реплики с интервалом, ограничивается `failure-timeout` значение и `cluster-recheck-interval` значение. Например если `failure-timeout` составляет 60 секунд и `cluster-recheck-interval` задается 120 секунд, предпринимается попытка перезагрузки с интервалом, больше 60 секунд, но менее 120 секунд. Рекомендуется задать время ожидания сбоя 60s и кластера-повторной проверки interval, значение которого больше, чем 60 секунд. Задавать интервал для повторной проверки кластера на малое значение не рекомендуется.
 
-Чтобы обновить значение свойства `false` запуска:
+Чтобы обновить значение свойства `2 minutes` запуска:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->После автоматического перехода на другой ресурс при `start-failure-is-fatal = true` попытается запустить ресурс диспетчера ресурсов. В случае неудачи при первой попытке вручную запустить `pcs resource cleanup <resourceName>` для очистки количество сбоев ресурсов и сбросить конфигурацию.
+> [!IMPORTANT] 
+> Все распределения (включая RHEL 7.3 и 7.4), использующих последние доступные Pacemaker пакета 1.1.18-11.el7 приводит изменение поведения для параметра start сбой является Неустранимая кластера в случае имеет значение false. Это изменение затрагивает рабочий процесс отработки отказа. Если первичная реплика сбоя, ожидается кластера отработки отказа для одной из доступных вторичных реплик. Вместо этого пользователи заметят кластер отслеживает попытке запуска сбоя первичной реплики. Если этой основной никогда не переходит в оперативный режим (из-за постоянного сбоя), кластера никогда не переключается на другой доступной вторичной реплике. Из-за этого изменения, ранее рекомендуемые конфигурации для задания начала сбой является Неустранимая больше не является допустимым, и параметр должен вернуть значение по умолчанию `true`. Кроме того, должен быть обновлен для включения ресурсов AG `failover-timeout` свойство. 
+
+Чтобы обновить значение свойства `true` запуска:
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+Чтобы обновить `ag1` свойства ресурса `failure-timeout` для `60s` запуска:
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 Сведения о свойствах Pacemaker кластера см. в разделе [Pacemaker кластеры свойства](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
@@ -151,8 +163,8 @@ sudo pcs property set start-failure-is-fatal=false
 Чтобы создать ресурс группы доступности, используйте `pcs resource create` команды и задать свойства ресурса. Следующая команда создает `ocf:mssql:ag` ведущий и ведомый типа ресурса для группы доступности с именем `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

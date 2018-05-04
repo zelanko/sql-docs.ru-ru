@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05769a0a060de4a78bdcf425e20d004ef9ae9099
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@lang =** ] **"***языка***"**  
  Язык данного сообщения. *Язык* — **sysname** значение по умолчанию NULL. Поскольку на одном сервере можно установить несколько языков *языка* указывает язык, на котором написано каждое сообщение. Когда *языка* — этот параметр опущен, язык является языком по умолчанию для данного сеанса.  
   
- [  **@with_log =** ] { **"**TRUE**"** | **'FALSE'** }  
+ [  **@with_log =** ] { **"** TRUE **"** | **'FALSE'** }  
  Необходимо ли записывать данное сообщение в журнал приложений Windows. **@with_log** — **varchar(5)** значение по умолчанию FALSE. Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Только члены **sysadmin** этот параметр можно использовать для роли сервера.  
   
 > [!NOTE]  

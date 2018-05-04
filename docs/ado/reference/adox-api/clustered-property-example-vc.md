@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4190a747f371c5d5517d794a26011f651b9db92e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 754ebc4b9f983125922a65ffe20d10c3f8dc876e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustered-property-example-vc"></a>Пример свойство Clustered (VC ++)
 В этом примере демонстрируется [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство [индекса](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому этот пример возвращает **False** для **Clustered** свойств всех индексов в *Northwind* База данных.  

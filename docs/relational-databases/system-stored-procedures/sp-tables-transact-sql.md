@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79367f55de35eb285803a08646677eb3b624e16e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,9 +63,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущий пользователь является владельцем таблицы с указанным именем, возвращаются ее столбцы. Если пользователь не указан, а текущий пользователь не является владельцем таблицы с заданным именем, процедура ищет таблицу с заданным именем, которая принадлежит владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
  [  **@table_qualifier=** ] **"***квалификатор***"**  
- Имя квалификатора таблицы. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор***.*** владелец***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+ Имя квалификатора таблицы. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор ***.*** владелец ***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
- [ **,** [  **@table_type=** ] **«"***тип***"**, **"**типа**"»** ]  
+ [ **,** [  **@table_type=** ] **«"***тип***"**, **"** типа **"»** ]  
  Список значений, разделенных запятой, в котором представлены сведения обо всех таблицах с указанными табличными типами. К ним относятся **таблицы**, **SYSTEMTABLE**, и **ПРЕДСТАВЛЕНИЕ**. *Тип* — **varchar(100)**, значение по умолчанию NULL.  
   
 > [!NOTE]  

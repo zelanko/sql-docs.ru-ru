@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a980d3f10b95af3f75945ad945bd5afd78ed5edf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dcffea5ac03b79a6eb861cdf5a05b864e4a6e534
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considering-database-features-to-use"></a>При рассмотрении возможности базы данных для использования
 Выяснив базовый уровень совместимости, необходимо учитывать функции базы данных, используемых приложением. Например какие инструкции SQL приложение выполнит? Будет ли приложение использовать Прокручиваемые курсоры? Транзакции? Процедуры? Длинные данные? Идей, о возможностях может поддерживаться не все СУБД, см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), и [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) описаний функций и [ Приложение в. грамматику SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Функции, необходимые для приложения может решить некоторые СУБД из списка целевой СУБД. Они также показывают, что приложение может легко ориентироваться большинства СУБД.  

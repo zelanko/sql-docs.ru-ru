@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ad14958f2dc3967fe8bc041c8144f932b99ec5a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aa4d602f1ea0e74b51cca8960b76243a471b176c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trace-dll"></a>Библиотека трассировки
 Библиотеки DLL, которая выполняет трассировку является одним из основных компонентов ODBC. Трассировки DLL в настоящее время предоставляется в качестве образца библиотеки DLL в компоненте ODBC пакета SDK Windows, а также было ранее включено Microsoft данных Access Components (MDAC) SDK. Таким образом записи реестра, интерфейса и образец кода для трассировки DLL доступны. Эта библиотека DLL может быть заменен библиотекой DLL, созданные пользователем с ODBC или стороннего поставщика трассировки. Пользовательские трассировку DLL следует присвоить имя, отличное от исходной трассировки образец библиотеки DLL. DLL-библиотеки трассировки должны быть установлены в системном каталоге, или будет невозможно загрузить. Строки подключения не передаются Библиотека трассировки диспетчером драйверов.  

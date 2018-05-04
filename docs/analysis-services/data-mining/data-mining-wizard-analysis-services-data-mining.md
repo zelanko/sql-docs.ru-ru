@@ -1,36 +1,23 @@
 ---
-title: "Мастер интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Мастер интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- OLAP [Analysis Services], mining models
-- Data Mining Wizard
-- relational mining models [Analysis Services]
-ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 653b13b0fa697c1882f164cbdc09210b4ef87f82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Мастер интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается каждый раз, когда к проекту интеллектуального анализа данных добавляется новая структура интеллектуального анализа данных. Мастер помогает выбрать источник данных и создать представление источника данных, которое определяет данные, используемые для анализа, а также создать начальную модель.  
+  Мастер интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается каждый раз, когда к проекту интеллектуального анализа данных добавляется новая структура интеллектуального анализа данных. Мастер помогает выбрать источник данных и создать представление источника данных, которое определяет данные, используемые для анализа, а также создать начальную модель.  
   
  На последнем этапе работы мастера можно разделить данные на обучающий и проверочный наборы и включить такие функции, как детализация.  
   
@@ -77,7 +64,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="choosing-an-algorithm"></a>Выбор алгоритма  
  Теперь необходимо решить, какой алгоритм использовать для обработки данных. Это решение может быть сложным. Каждый алгоритм в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеет свои характеристики и дает свои результаты, поэтому можно поэкспериментировать и попробовать разные модели, прежде чем решить, какая из них лучше всего подходит для конкретных данных и задач бизнеса. Задачи, для которых лучше всего подходит каждый алгоритм, см. в разделе  
   
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  В любом случае можно создавать разные модели с разными алгоритмами или менять параметры алгоритмов для создания разных моделей. Вы не ограничены в выборе алгоритма, и рекомендуется создать несколько моделей с одними и теми же данными.  
   
@@ -111,15 +98,15 @@ ms.lasthandoff: 02/15/2018
 ## <a name="related-content"></a>См. также  
  Узнать больше о решениях, которые необходимо принять при создании модели интеллектуального анализа данных, можно по следующим ссылкам:  
   
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Содержимого типы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Содержимого типы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Типы данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Типы данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Выбор компонентов &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Выбор компонентов & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Отсутствующие значения &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [Отсутствующие значения & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [Детализация моделей интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   

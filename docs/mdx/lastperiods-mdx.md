@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a3a9f0940796ecbc8138447fa8dd4ba59febbe96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c4d2f7fdb3d91341dcd4849bf1a47bafcacc4dc4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если указанное число периодов положительно, **LastPeriods** функция возвращает набор элементов, которые начинаются с элемента, отстающего *индекс* -1 от указанного выражения элемента и заканчивается указанным элементом. Число элементов, возвращаемых функцией равно *индекса*.  
   
  Если число периодов отрицательно, **LastPeriods** функция возвращает набор, начинающийся с указанного элемента и заканчивающийся элементом (- *индекс* - 1) из заданного элемента. Число элементов, возвращаемых функцией равно абсолютное значение *индекса*.  
@@ -79,7 +78,7 @@ SELECT LastPeriods
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

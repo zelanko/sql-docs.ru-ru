@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0aaed3a9ef5f4ae81cad3407cdecb0c18b753b6d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 22db3f197d51a55c094ffad6a6c821da250efa89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-dlls"></a>Преобразование библиотеки DLL
 Приложения и источника данных часто хранятся в различных наборов символов. ODBC предоставляет общий механизм, который позволяет драйверу преобразовать данные из одной кодировки в другую. Он состоит из библиотеки DLL, которая реализует функции преобразования **трансляции SQLDriverToDataSource** и **SQLDataSourceToDriver**, которые вызываются драйвером для преобразования всех данных, передаваемых между источника данных и драйвер. Эта библиотека DLL могут быть записаны разработчиком приложения, разработчик драйвера или третьей стороны.  

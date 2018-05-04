@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a936895822b842d2d08672c4c05bd8c1a416064c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bd4cad291b909a0ed2b86d56f2df489b6de8e6f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union---mdx-operator-reference"></a>UNION - Справочник по операторам многомерных Выражений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +48,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Набор, содержащий элементы обоих заданных наборов.  
   
-## <a name="remarks"></a>Remarks  
- **+ (Объединения)** оператор функционально эквивалентен [Union &#40; Многомерные Выражения &#41; ](../mdx/union-mdx.md) функции.  
+## <a name="remarks"></a>Замечания  
+ **+ (Объединения)** оператор функционально эквивалентен [объединения &#40;многомерных Выражений&#41; ](../mdx/union-mdx.md) функции.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере демонстрируется использование этого оператора.  
@@ -67,7 +66,7 @@ WHERE
     ([Measures].[Gross Profit Margin])  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

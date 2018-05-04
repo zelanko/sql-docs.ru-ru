@@ -1,34 +1,23 @@
 ---
-title: "Создание областью действия сеанса с именем наборами (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание областью действия сеанса с именем наборами (многомерные Выражения) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- CREATE SET statement
-- session-scoped named sets [MDX]
-ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 372990a1016616c72768cd51cb8c6eedb2008a58
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 62d93ac4065f33422f194db49425fa6e8f9ddcba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Именованные наборы - Создание областью действия сеанса многомерных Выражений именованных наборов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](../../../mdx/mdx-data-definition-create-set.md). Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
+  Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](../../../mdx/mdx-data-definition-create-set.md). Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
   
  Синтаксис ключевого слова WITH достаточно прост.  
   
@@ -60,6 +49,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание областью действия запроса именованных наборов &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Создание областью действия запроса именованных наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

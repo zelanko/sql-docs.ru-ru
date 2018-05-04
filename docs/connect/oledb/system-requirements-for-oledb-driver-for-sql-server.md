@@ -21,12 +21,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 346e5d331e9d96f23d1dd0ff2b93722b145bf3d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Требования к системе для драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,16 +72,16 @@ ms.lasthandoff: 04/16/2018
 
 |Тип данных|собственный клиент SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Драйвер OLE DB для SQL Server|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> Драйвер OLE DB для приложений SQL Server OLE DB со свойством DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|Определяемый пользователем тип CLR (\<= 8 КБ)|определяемый пользователем тип|Udt|Udt|Varbinary|  
+|Определяемый пользователем тип CLR (\<= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Текст|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8 КБ)|определяемый пользователем тип|varbinary|varbinary|image|  
-|date|date|varchar|varchar|Varchar|  
-|datetime2|datetime2|varchar|varchar|Varchar|  
-|datetimeoffset|datetimeoffset|varchar|varchar|Varchar|  
-|time|time|varchar|varchar|Varchar|  
+|CLR UDT (> 8 КБ)|varbinary|определяемый пользователем тип|определяемый пользователем тип|image|  
+|date|varchar|date|date|Varchar|  
+|datetime2|varchar|datetime2|datetime2|Varchar|  
+|datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
+|time|varchar|time|time|Varchar|  
 
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для SQL Server](../oledb/oledb-driver-for-sql-server.md)   

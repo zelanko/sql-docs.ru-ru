@@ -1,30 +1,30 @@
 ---
-title: "Объект секции (TMSL) | Документы Microsoft"
-ms.custom: 
+title: Объект секции (TMSL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bc820929603cadb400bd19f3afa4d04a6222fb89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-object-tmsl"></a>Объект секции (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет секции или логическая сегментация набора строк таблицы. Раздел состоит из SQL-запрос, используется для импорта данных для образца данных в среде моделирования или в виде запроса данных полный доступ через выполнения запросов через DirectQuery.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет секции или логическая сегментация набора строк таблицы. Раздел состоит из SQL-запрос, используется для импорта данных для образца данных в среде моделирования или в виде запроса данных полный доступ через выполнения запросов через DirectQuery.  
   
  Свойства секции определяют источники данных для таблицы.  В иерархии объекта родительского объекта секции является объектом таблицы.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**Импорт**|Указывает запрос, который запросы создаются к подсистема аналитики в памяти, хранение импортированных данных.|  
 |**DirectQuery**|Проходят через выполнения запроса внешней реляционной базой данных. Режим DirectQuery использует секций для предоставления данных образца, используемых во время разработки модели. При развертывании на рабочем сервере, необходимо переключиться обратно в представление полного набора данных. Помните, что режим DirectQuery требует один раздел на таблицы и один источник данных на модель.|  
-|**по умолчанию**|Установите, чтобы переключить выше вверх по дереву объектов на уровне модели или базы данных. Если выбрано по умолчанию, режим запроса будет import или DirectQuery.|  
+|**default**|Установите, чтобы переключить выше вверх по дереву объектов на уровне модели или базы данных. Если выбрано по умолчанию, режим запроса будет import или DirectQuery.|  
   
  источник  
  Определяет местоположение данных запроса. Допустимые значения: **запросов, вычисляемых**, или **нет**. Это значение обязательно.  
@@ -55,14 +55,14 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |**Нет**|Используется для режим импорта, где данные загружаются и хранятся в памяти.|  
-|**запрос**|Для режима DirectQuery, это SQL-запрос, выполняемый для реляционной базы данных, указанной в модели **DataSource**. В разделе [DataSources объект &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
-|**вычисляемый**|Вычисляемые таблицы получают данные из выражения, указанного при создании таблицы. Это выражение считается Источник секции, созданные для вычисляемой таблицы.|  
+|**Запрос**|Для режима DirectQuery, это SQL-запрос, выполняемый для реляционной базы данных, указанной в модели **DataSource**. В разделе [объектов источников данных &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**Вычисляемый**|Вычисляемые таблицы получают данные из выражения, указанного при создании таблицы. Это выражение считается Источник секции, созданные для вычисляемой таблицы.|  
   
  DataView  
  Для секций DirectQuery является свойством дополнительных dataView указывает ли запрос, получающий данные образец или полного набора данных. Допустимые значения: **полного**, **пример**, или **по умолчанию** (наследуется). Как уже отмечалось, образцы используются только во время моделирования и тестирования данных. В разделе [Добавление демонстрационных данных в модель DirectQuery в режиме конструктора](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) для получения дополнительной информации.  
   
 ## <a name="usage"></a>Использование  
- Объекты секции используются в [Alter команда &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Создать команду &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace команда &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Удалить команду &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Обновить команды &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), и [MergePartitions команда &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ Объекты секции используются в [Alter, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [создать команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [команду CreateOrReplace &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Удалить команду &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [команда "Обновить" &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), и [MergePartitions, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  При создании, замена или изменение объект partition укажите все свойства чтения и записи определения объекта. Пропуск свойства чтения и записи, считается удаления. Свойства чтения и записи включают имя, описание, режим и источник.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 01/08/2018
 ]  
 ```  
   
-## <a name="full-syntax"></a>Полное описание синтаксиса  
+## <a name="full-syntax"></a>Полный синтаксис  
  Ниже приведено представление схемы объекта секции.  
   
 ```  
@@ -242,7 +242,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

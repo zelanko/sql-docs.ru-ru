@@ -1,36 +1,23 @@
 ---
-title: "Создание измерения типа Currency | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание измерения типа Currency | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], currency
-- currency [Analysis Services]
-- converting currency
-- currency dimensions [Analysis Services]
-ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2cb2fb0b8fc1785eb0e58a5ea0d609a6d3c1bd0c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 32a1047475192b68c30e4ff8b7185c3572c2cc56
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>Измерения базы данных — Создание измерения типа Currency
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерение типа валюты является измерением, атрибуты которого представляют собой список валют для целей финансовой отчетности.  
+  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерение типа валюты является измерением, атрибуты которого представляют собой список валют для целей финансовой отчетности.  
   
  Измерение валюты позволяет добавлять возможности конвертации валюты в куб в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить в куб конвертацию валюты, воспользуйтесь мастером бизнес-аналитики для определения команды скрипта многомерного выражения, которая конвертирует меры валюты в значения, соответствующие локали клиентского приложения. Для создания скрипта многомерных выражений мастеру бизнес-аналитики необходимы следующие данные:  
   

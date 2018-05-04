@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1bd4d07e87af049ac59bc63faf119e84872bbc45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-handles"></a>Дескрипторы инструкций
 Объект *инструкции* проще всего воспринимать как инструкция SQL, таких как **ВЫБЕРИТЕ \* сотрудника из**. Однако оператор является не просто инструкцией SQL, оно содержит все сведения, связанные с этой инструкции SQL, таких как все результирующие наборы, созданного с помощью инструкции и параметров, используемых при выполнении инструкции. Оператор даже не нужно иметь инструкции SQL, определяемые приложением. Например, при каталога функции например **SQLTables** выполняется в операторе, он выполняет существующую инструкцию SQL, который возвращает список имен таблиц.  

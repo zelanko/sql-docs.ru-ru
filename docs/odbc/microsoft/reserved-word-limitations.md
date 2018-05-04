@@ -1,7 +1,7 @@
 ---
 title: Зарезервированные слова ограничения | Документы Microsoft
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac61a7aa818ef3593fddc630d5027fbf7e4aa211
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>Ограничения зарезервированное слово
-Не используйте зарезервированные слова, перечисленные в грамматику SQL в приложении С *справочнике программиста ODBC* (или краткая форма эти зарезервированные слова) как идентификаторы (то есть имена таблиц или столбцов), если не заключить слово назад кавычки (').
+# <a name="reserved-keyword-limitations"></a>Ограничения зарезервированное ключевое слово
+
+Избегайте использования ODBC зарезервированные ключевые слова в качестве идентификаторов в таблицы SQL или связанные объекты. Если возникает так, где необходимо использовать в качестве идентификатора зарезервированное ключевое слово, идентификатор необходимо заключить в пару *backticks* ('). Другое имя для *обратный апостроф* — *Обратная кавычка*.
+
+Зарезервированное ключевое слово ограничение также применяется к любой сокращенный зарезервированных ключевых слов.
+
+Список зарезервированных ключевых слов ODBC можно найти в:
+
+- [Зарезервированные ключевые слова ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+
+- В *руководство по программированию ODBC*, в разделе [грамматику SQL приложение C:](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+

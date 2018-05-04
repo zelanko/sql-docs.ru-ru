@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09933a65f19ca025c8a681b068bf31c6fe0e9d7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a3fd8d22cd601fc26b53af35a4d101ffcaea3e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Таблица выражения >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Параметры для **PredictAssociation** функции включают EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (по умолчанию), INPUT_ONLY, INCLUDE_STATISTICS и INCLUDE_NODE_ID.  
   
 > [!NOTE]  
@@ -57,13 +56,13 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
   
  Возвращает только INCLUDE_STATISTICS **$Probability** и **$AdjustedProbability**.  
   
- Если задан числовой параметр  *n*  указано, **PredictAssociation** функция возвращает top n наиболее подходящих значений, на основе вероятности:  
+ Если задан числовой параметр *n* указано, **PredictAssociation** функция возвращает top n наиболее подходящих значений, на основе вероятности:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- При включении **$AdjustedProbability**, инструкция возвращает верхние  *n*  значения в зависимости от **$AdjustedProbability**.  
+ При включении **$AdjustedProbability**, инструкция возвращает верхние *n* значения в зависимости от **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется **PredictAssociation** функция, возвращающая четыре продуктов в Adventure Works базы данных, которые, скорее всего, будут проданы совместно.  
@@ -90,9 +89,9 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

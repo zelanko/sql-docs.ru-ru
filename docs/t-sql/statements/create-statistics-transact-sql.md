@@ -34,11 +34,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8316cf6275d8025213f56831604841fb1377fd1b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74c5a8618dd48ec388f2b4affe9aeb6b8e789bd7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -183,7 +183,7 @@ CREATE STATISTICS statistics_name
  Чтобы вновь включить обновление статистики, удалите статистику с помощью инструкции [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md), а затем выполните инструкцию CREATE STATISTICS без параметра NORECOMPUTE.  
   
 > [!WARNING]  
->  Использование этого параметра может привести к созданию неоптимальных планов запросов. Рекомендуется ограничить использование этого параметра, причем использовать его надлежит только опытным системным администраторам.  
+> Использование этого параметра может привести к созданию неоптимальных планов запросов. Рекомендуется ограничить использование этого параметра, причем использовать его надлежит только опытным системным администраторам.  
   
  Дополнительные сведения о параметре AUTO_STATISTICS_UPDATE см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения об отключении и повторном включении обновления статистики см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
   
@@ -203,7 +203,7 @@ CREATE STATISTICS statistics_name
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU3).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 3 (CU3)).  
   
  Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции со статистикой. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   

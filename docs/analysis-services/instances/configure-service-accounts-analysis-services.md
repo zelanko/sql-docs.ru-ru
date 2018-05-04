@@ -1,36 +1,23 @@
 ---
-title: "Настройка учетных записей служб (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Настройка учетных записей служб (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b2a6f76cc85c4e595f05d372b6318a862534408a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Настройка учетных записей служб (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Подготовка учетной записи для большого спектра продуктов описана в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), который содержит полные сведения об учетной записи службы для всех служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  
+  Подготовка учетной записи для большого спектра продуктов описана в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), который содержит полные сведения об учетной записи службы для всех служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  
   
  Данная тема предоставляет дополнительную информацию для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая дополнительные разрешения, необходимые для табличной и кластерной установки. Она также охватывает разрешения, необходимые для поддержки операций сервера. Например, вы можете настроить выполнение операций и запросов обработки под учетной записью службы - в этом случае вам необходимо предоставить дополнительные разрешения , чтобы это заработало.  
   
@@ -132,7 +119,7 @@ ms.lasthandoff: 02/15/2018
 3.  Последовательно выберите **Проводник Windows** | **Program Files** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** , чтобы убедиться, что для папки на шаге 2 были заданы свойства безопасности.  
   
 > [!NOTE]  
->  Никогда не удаляйте и не изменяйте идентификатор безопасности службы. Сведения о восстановлении идентификатора безопасности по службе, который был непреднамеренно удален, см. по адресу: [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201).  
+>  Никогда не удаляйте и не изменяйте идентификатор безопасности службы. Чтобы восстановить SID каждой службы, который был случайно удален, в разделе [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201).  
   
  **Дополнительная информация об идентификаторах безопасности по службе**  
   
@@ -143,7 +130,7 @@ ms.lasthandoff: 02/15/2018
  Так как идентификатор безопасности службы является неизменным, файловая система ACLs, созданная в процессе установки службы, может неограниченно использоваться, несмотря на то, как часто вы меняете учетную запись службы. В качестве дополнительной меры безопасности списки управления доступом, которые задают разрешения через идентификаторы безопасности, гарантируют, что исполняемые файлы и папки данных будут доступны только одному экземпляру службы, даже если под этой же учетной записью выполняются другие службы.  
   
 ##  <a name="bkmk_tasks"></a> Предоставление дополнительных разрешения службе Analysis Services для определенных операций сервера  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют одни задачи в контексте безопасности учетной записи службы (или входа), используемой для запуска служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], и другие задачи в контексте безопасности пользователя, который запрашивает выполнение задания.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]выполняют одни задачи в контексте безопасности учетной записи службы (или учетной записи входа), используемой для запуска [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и выполняет другие задачи в контексте безопасности пользователя, который запрашивает выполнение задания.  
   
  В следующей таблице приведено описание дополнительных разрешений, необходимых для выполнения задач, исполняемых в качестве учетной записи службы.  
   

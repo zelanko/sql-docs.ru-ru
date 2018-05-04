@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2e26f0b4adb6872fed90fcab1a84b2ff83c90a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2ea1b5a95a79e8142eb9ee2d2ccadcbc6ac03949
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cellinfo-element-xmla"></a>Элемент CellInfo (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет метаданные ячейки, содержащиеся в родительском [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Представляет метаданные ячейки, содержащиеся в родительском [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Дочерние элементы|Одно или несколько определений свойств ячейки|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **CellInfo** элемент содержит коллекцию свойств ячейки для ячеек, включенных в многомерный набор данных, возвращаемый **корневой** элемента с помощью **MDDataSet**тип данных. Каждое свойство ячейки в **CellInfo** отдельным элементом XML, каждый из которых определяется элемент **имя** атрибута и **тип** атрибута. **Имя** свойства ячейки соответствует атрибуту имя OLE DB для OLAP свойства ячейки, представленного элементом XML и **тип** атрибут представляет тип данных XML, ячейки свойство. Имя XML-элемента используется для идентификации значения свойства ячейки у ячеек, содержащихся в **CellData** элемент **корневой** элемента.  
   
  Следующий синтаксис описывает определение свойства ячейки:  
@@ -94,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

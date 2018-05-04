@@ -1,16 +1,16 @@
 ---
-title: "Технический справочник по алгоритму логистической регрессии Майкрософт | Документы Microsoft"
-ms.custom: 
+title: Технический справочник по алгоритму логистической регрессии Майкрософт | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -21,20 +21,19 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d63f72106c56ac9b8589fb61fbe77f33fb0cb501
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>техническом справочнике по алгоритму логистической регрессии (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой вариант алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в котором параметр *HIDDEN_NODE_RATIO* равен 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
+  Алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой вариант алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в котором параметр *HIDDEN_NODE_RATIO* равен 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Реализация алгоритма логистической регрессии (Майкрософт)  
  Предположим, что прогнозируемый столбец содержит только два состояния, но все же необходимо провести регрессионный анализ, сопоставляя входные столбцы с вероятностью того, что прогнозируемый столбец будет содержать конкретное состояние. На следующей диаграмме показаны результаты, которые будут получены, если состояниям прогнозируемого столбца присвоить значения 1 и 0, рассчитать вероятность того, что столбец будет содержать конкретное состояние, и рассчитать линейную регрессию по отношению к входной переменной.  
@@ -162,7 +161,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>См. также  
  [Алгоритм логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей логистической регрессии &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Содержимое модели интеллектуального анализа данных для моделей логистической регрессии & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

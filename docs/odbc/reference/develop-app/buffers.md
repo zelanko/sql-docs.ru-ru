@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input buffers [ODBC]
 - length/indicator buffers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0d63aa103ac71aa89d245f6b8e4770b2c4943f2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffers"></a>Буферы
 Буфер является любая память приложения, используемый для передачи данных между приложением и драйвер. Например, буферы приложения может быть связан с, или *связаны с* результирующего набора столбцов с **SQLBindCol**. Каждая строка выбирается, данные возвращаются для каждого столбца в буфер. *Входные буферы* используются для передачи данных из приложения для драйвера. *Выходные буферы* используются для возврата данных с помощью драйвера в приложение.  

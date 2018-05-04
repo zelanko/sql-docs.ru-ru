@@ -1,37 +1,23 @@
 ---
-title: "Конструктор интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Конструктор интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], modifying
-- data mining editor [Analysis Services]
-- Data Mining Designer
-- data mining [Analysis Services], modifying
-ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4f14ec670668253fa9e37db9647d5ef511150816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-designer"></a>конструктор интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Конструктор интеллектуального анализа данных — это основная среда для работы с моделями интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
+  Конструктор интеллектуального анализа данных — это основная среда для работы с моделями интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
   
 -   Изменение структуры и модели интеллектуального анализа, ранее созданных при помощи мастера интеллектуального анализа данных.  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="mining-structure-tab"></a>Вкладка «Структура интеллектуального анализа данных»  
  Добавление столбцов и изменение свойств существующей структуры интеллектуального анализа данных производится на вкладке **Структура интеллектуального анализа** . В следующих заданиях и подразделах приведены более подробные сведения о работе со структурами интеллектуального анализа.  
   
- [Структуры интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
  [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
@@ -57,7 +43,7 @@ ms.lasthandoff: 02/15/2018
   
  Дополнительные сведения о работе с моделями интеллектуального анализа данных см. в следующих разделах.  
   
- [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
  [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
@@ -75,9 +61,9 @@ ms.lasthandoff: 02/15/2018
   
  Дополнительные сведения о тестировании и проверке моделей интеллектуального анализа данных см. в следующих разделах.  
   
- [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Тестирование и проверка задачи и инструкции по & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Вкладка «Прогноз модели интеллектуального анализа данных»  
  Вкладка **Прогноз модели интеллектуального анализа данных** содержит построитель прогнозирующих запросов, который применяется для создания запроса прогнозов расширений интеллектуального анализа данных. Вкладка содержит средства, которые позволяют указать модели интеллектуального анализа и входные таблицы, сопоставить столбцы модели интеллектуального анализа столбцам во входных таблицах, добавить функции в запрос и указать условие для каждого столбца.  

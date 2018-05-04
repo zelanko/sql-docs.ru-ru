@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 868d88651994ea31e118569a02236edde712ccad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>Хранимая процедура sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +62,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Тип данных, зависящий от СУБД.|  
 |DATA_TYPE|**smallint**|Код типа ODBC, с которым сопоставляются все столбцы данного типа.|  
 |PRECISION|**int**|Максимальная точность типа данных в источнике данных. Для типов данных, к которым понятие точности не применимо, возвращается значение NULL. Значение, возвращаемое для столбца PRECISION, имеет десятичную форму.|  
-|LITERAL_PREFIX|**varchar (**32**)**|Символ или символы, используемые перед константой. Например, знак кавычки (**"**) для символьных типов и 0 x для двоичного файла.|  
-|LITERAL_SUFFIX|**varchar (**32**)**|Символ или символы, используемые после константы. Например, знак кавычки (**"**) для символьных типов и без кавычек для двоичного файла.|  
-|CREATE_PARAMS|**varchar (**32**)**|Описание параметров создания типа данных. Например **десятичное** — «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
+|LITERAL_PREFIX|**varchar (** 32 **)**|Символ или символы, используемые перед константой. Например, знак кавычки (**"**) для символьных типов и 0 x для двоичного файла.|  
+|LITERAL_SUFFIX|**varchar (** 32 **)**|Символ или символы, используемые после константы. Например, знак кавычки (**"**) для символьных типов и без кавычек для двоичного файла.|  
+|CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например **десятичное** — «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
 |SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  

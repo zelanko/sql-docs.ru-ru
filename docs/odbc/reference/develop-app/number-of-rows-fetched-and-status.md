@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - number of rows fetched [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d4925e42b7039564096be578b02df8f8fcd036c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e699cc8c0272a1221b0148a8d7b2c65da9e3e6c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Число строк, загружаемых и состояние
 Если задан атрибут инструкции SQL_ATTR_ROWS_FETCHED_PTR, он указывает буфера, который возвращает число строк, возвращаемых при вызове **SQLFetch** или **SQLFetchScroll**и строк с ошибками. (Это число представляет собой число всех строк, которые не имеют состояния SQL_ROW_NO_ROWS). После вызова **SQLBulkOperations** или **SQLSetPos**, буфер содержит число строк, измененных в ходе массовой операции, выполняемой функцией. Если атрибут инструкции значения SQL_ATTR_ROW_STATUS_PTR **SQLFetch** или **SQLFetchScroll** возвращает *массив состояния строк,* предоставляющее состояние каждого Возвращенная строка. Оба буферов, который указывает эти поля выделенных приложением и заполняется драйвером. Приложению необходимо убедиться, что эти указатели останутся действительными до закрытия курсора.  

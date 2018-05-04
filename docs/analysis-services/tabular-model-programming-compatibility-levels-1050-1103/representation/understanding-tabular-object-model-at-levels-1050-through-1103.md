@@ -1,54 +1,53 @@
 ---
-title: "Основные сведения о табличной объектной модели на уровнях 1050 через 1103 | Документы Microsoft"
-ms.custom: 
+title: Основные сведения о табличной объектной модели на уровнях 1050 через 1103 | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f51832fadb754f29a0f8cd9c95a6cbc9ce183dc
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
-ms.translationtype: MT
+ms.openlocfilehash: 3c9ecabf04acecb2825cf62288ae26bddcc81e67
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Основные сведения о табличной объектной модели на уровнях 1050 через 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 
-  Табличная модель — это логическое представление таблиц, связей, иерархий, перспектив, мер и ключевых показателей эффективности. В этом разделе представлены сведения о внутренней реализации с помощью объектов AMO. В разделе [разработку с помощью объектов AMO &#40; Объекты AMO &#41; ](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) при использовании еще не пользовались объектами AMO.  
+  Табличная модель — это логическое представление таблиц, связей, иерархий, перспектив, мер и ключевых показателей эффективности. В этом разделе представлены сведения о внутренней реализации с помощью объектов AMO. В разделе [разработку с помощью объектов AMO &#40;AMO&#41; ](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) Если вы не использовали объекты AMO, прежде чем.  
   
  Здесь реализован подход «сверху вниз», все соответствующие объекты из табличной модели логически сопоставляются с объектами AMO, а по рабочему процессу и всем необходимым взаимодействиям даются пояснения. Образец исходного кода для создания табличной модели с помощью объектов AMO, объектов AMO для табличных образец доступен на Codeplex. Важное примечание об образце кода. Он приведен только для объяснения описываемых здесь логических концепций и не должен использоваться в рабочей среде. Образец предоставляется без поддержки или гарантий.  
   
 ## <a name="database-representation"></a>Представление базы данных  
  База данных представляет объект-контейнер для табличной модели. Все объекты из табличной модели содержатся в базе данных. С точки зрения объектов AMO представление базы данных сопоставлено «один к одному» с объектом `xref:Microsoft.AnalysisServices.Database` и никакие другие основные объекты AMO не требуются. Важно отметить, что это не значит, что все объекты, содержащиеся в базе данных объектов AMO, можно использовать при моделировании.  
   
- В разделе [базы данных представление &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/database-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление базы данных.  
+ В разделе [представление базы данных&#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/database-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление базы данных.  
   
 ## <a name="connection-representation"></a>Представление соединения  
  Соединение устанавливает связь между данными, которые включаются в решение табличной модели, и самой моделью. С точки зрения объектов AMO соединение сопоставлено «один к одному» с объектом `xref:Microsoft.AnalysisServices.DataSource` и никакие другие основные объекты AMO не требуются. Важно отметить, что это не значит, что все объекты, содержащиеся в источнике данных объектов AMO, можно использовать при моделировании.  
   
- В разделе [представление соединения &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md) подробные пояснения о том, как создать и управлять представлением источника данных.  
+ В разделе [представление соединения &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md) подробные пояснения о том, как создать и управлять представлением источника данных.  
   
 ## <a name="table-representation"></a>Представление таблицы  
  Таблицы являются объектами базы данных, которые содержат все имеющиеся в базе данных данные. С точки зрения объектов AMO таблица имеет сопоставление со связью типа «один ко многим». Таблица представляется с помощью следующих объектов AMO: `xref:Microsoft.AnalysisServices.DataSourceView`, `xref:Microsoft.AnalysisServices.Dimension`, `xref:Microsoft.AnalysisServices.Cube`, `xref:Microsoft.AnalysisServices.CubeDimension`, `xref:Microsoft.AnalysisServices.MeasureGroup` и `xref:Microsoft.AnalysisServices.Partition` являются основными обязательными объектами. Однако важно отметить, что это не значит, что все объекты, содержащиеся в ранее упомянутых объектах AMO могут быть использованы при моделировании.  
   
- В разделе [таблицы представление &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представления таблицы.  
+ В разделе [представление таблиц &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представления таблицы.  
   
 ### <a name="calculated-column-representation"></a>Представление вычисляемого столбца  
  Вычисляемые столбцы представляют собой вычисляемые выражения, которые создают в таблице столбец, где вычисляется и сохраняется новое значение для каждой из строк таблицы. С точки зрения объектов AMO вычисляемый столбец имеет связь «один ко многим». Вычисляемый столбец представляется с помощью следующих объектов AMO: `xref:Microsoft.AnalysisServices.Dimension` и `xref:Microsoft.AnalysisServices.MeasureGroup` являются основными обязательными объектами. Важно отметить, что это не значит, что все объекты, содержащиеся в ранее упомянутых объектах AMO, могут быть использованы при моделировании.  
   
- В разделе [вычисляемый столбец представление &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md) подробные пояснения о том, как создать и управлять ею представление вычисляемого столбца.  
+ В разделе [представление вычисляемого столбца &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md) подробные пояснения о том, как создать и управлять ею представление вычисляемого столбца.  
   
 ### <a name="calculated-measure-representation"></a>Представление вычисляемой меры  
  Вычисляемые меры представляют собой хранимые выражения, которые вычисляются по запросу после развертывания модели. С точки зрения объектов AMO вычисляемая мера имеет связь типа «один ко многим». Вычисляемый столбец представляется с помощью следующих объектов AMO: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` и `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` являются основными обязательными объектами. Важно отметить, что это не значит, что все объекты, содержащиеся в ранее упомянутых объектах AMO, могут быть использованы при моделировании.  
@@ -56,12 +55,12 @@ ms.lasthandoff: 01/12/2018
 > [!NOTE]  
 >  Объекты `xref:Microsoft.AnalysisServices.Measure` не имеют связи с вычисляемыми мерами из табличных моделей и не поддерживаются в них.  
   
- В разделе [вычисляемых мер представление &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md) подробные пояснения о том, как создать и управлять ею представление вычисляемой меры.  
+ В разделе [представление вычисляемой меры &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md) подробные пояснения о том, как создать и управлять ею представление вычисляемой меры.  
   
 ### <a name="hierarchy-representation"></a>Представление иерархии  
  Иерархии представляют собой механизм для обеспечения дополнительной детализации обобщением и углублением для конечного пользователя. С точки зрения объектов AMO представление иерархии имеет связь типа «один к одному» с объектом `xref:Microsoft.AnalysisServices.Hierarchy` и никакие другие основные объекты AMO не требуются. Важно отметить, что это не значит, что все объекты, содержащиеся в базе данных объектов AMO, можно использовать при табличном моделировании.  
   
- В разделе [представление иерархии &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) подробные пояснения о том, как создать и управлять ею представление иерархии.  
+ В разделе [представление иерархии &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) подробные пояснения о том, как создать и управлять ею представление иерархии.  
   
 ### <a name="key-performance-indicator-kpi--representation"></a>Представление ключевого показателя эффективности (KPI)  
  KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения. С точки зрения объектов AMO представление ключевого показателя эффективности имеет связь «один ко многим». Ключевой показатель Эффективности представляется с помощью следующих объектов AMO: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` и `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` являются основными обязательными объектами.  Важно отметить, что это не значит, что все объекты, содержащиеся в ранее упомянутых объектах AMO, могут быть использованы при моделировании.  
@@ -69,12 +68,12 @@ ms.lasthandoff: 01/12/2018
 > [!NOTE]  
 >  Важным отличием также является отсутствие связи объектов `xref:Microsoft.AnalysisServices.Kpi` с KPI в табличных моделях. Кроме того, они не поддерживаются в табличных моделях.  
   
- В разделе [ключа представление показателя эффективности &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md) подробные пояснения о том, как создать и управлять ею представление ключевого показателя Эффективности.  
+ В разделе [представление показателя производительности ключ &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md) подробные пояснения о том, как создать и управлять ею представление ключевого показателя Эффективности.  
   
 ### <a name="partition-representation"></a>Представление секции  
  В оперативных целях таблица может быть разделена на разные подмножества строк, в сочетании друг с другом, образуют таблицу. Каждое из этих подмножеств является секцией таблицы. С точки зрения объектов AMO представление секции имеет связь типа «один к одному» с объектом `xref:Microsoft.AnalysisServices.Partition` и никакие другие основные объекты AMO не требуются. Важно отметить, что это не значит, что все объекты, содержащиеся в базе данных объектов AMO, можно использовать при моделировании.  
   
- В разделе [секции представление &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md) подробные пояснения о том, как создать и управлять ею представление секции.  
+ В разделе [представление секции &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md) подробные пояснения о том, как создать и управлять ею представление секции.  
   
 ## <a name="relationship-representation"></a>Представление связи  
  Связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах.  
@@ -83,12 +82,12 @@ ms.lasthandoff: 01/12/2018
   
  С точки зрения объектов AMO все неактивные связи имеют связь типа «один к одному» с объектом `xref:Microsoft.AnalysisServices.Relationship` и никакие другие основные объекты AMO не требуются. Для активной связи существуют другие требования, а сопоставление с объектом `xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension` также необходимо. Важно отметить, что это не значит, что все объекты, содержащиеся в связи объектов AMO или объекте referenceMeasureGroupDimension, могут быть использованы при моделировании.  
   
- В разделе [представление связи &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление связи.  
+ В разделе [представление связи &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление связи.  
   
 ## <a name="perspective-representation"></a>Представление перспективы  
  Перспектива — это механизм для упрощения или фокусировки модели. С точки зрения объектов AMO представление связи имеет сопоставление типа «один к одному» с объектом `xref:Microsoft.AnalysisServices.Perspective` и никакие другие основные объекты AMO не требуются. Важно отметить, что это не значит, что все объекты, содержащиеся в объекте перспективы AMO можно использовать при табличном моделировании.  
   
- В разделе [представление перспективы &#40; Табличные &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление перспективы.  
+ В разделе [представление перспективы &#40;табличный&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление перспективы.  
   
 > [!WARNING]  
 >  Перспективы не являются механизмом безопасности; к объектам вне перспективы пользователь все равно может получить доступ посредством других интерфейсов.  

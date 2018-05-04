@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 13e83f71155ed71c29f51b14109ca055badf1721
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-element-xmla"></a>Элемент Member (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет отдельный элемент родительского элемента [элементы](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) или [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Представляет собой отдельный элемент родительского элемента [Members](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) или [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -85,14 +85,14 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Атрибуты  
   
-|attribute|Description|  
+|Attribute|Описание|  
 |---------------|-----------------|  
 |Иерархия|Обязательный атрибут типа **String** (только для родительских элементов **Tuple** ). Имя иерархии, которой принадлежат члены, представленные элементом **Member** .|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент **Member** содержит сведения, необходимые для определения и отображения элементов в рамках заданной иерархии. Для родительских элементов **Members** иерархия уже задана атрибутом **Hierarchy** родительского элемента. Для родительских элементов **Tuple** иерархия задается при помощи атрибута **Hierarchy** элемента **Member** .  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

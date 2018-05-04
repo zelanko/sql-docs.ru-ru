@@ -1,31 +1,30 @@
 ---
-title: "Добавление столбцов в таблицу | Документы Microsoft"
-ms.custom: 
+title: Добавление столбцов в таблицу | Документы Microsoft
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 7f45d62d071760238ceb9b864a2c3b5fb9d0afbf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-table"></a>Добавление столбцов в таблицу
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-В этой статье описывается добавление столбцов в существующую таблицу.  
+  В этой статье описывается добавление столбцов в существующую таблицу.  
   
 ## <a name="add-columns-from-the-datasource"></a>Добавить столбцы из источника данных  
  Если производится импорт данных из таблицы источника данных с помощью мастера импорта таблиц, то в модели создается новая таблица, которая включает все столбцы исходной таблицы или, если пользователь выбирает фильтрацию некоторых столбцов с помощью функции «Просмотр и фильтрация», только эти столбцы и выбранные с помощью фильтра данные. Можно также создать SQL-запрос, который будет возвращать только столбцы, предназначенные для импорта. Позже может выясниться, что в исходной таблице есть дополнительные столбцы, которые нужно добавить в таблицу модели, или потребуется добавить вычисляемый столбец со значениями формул DAX.  

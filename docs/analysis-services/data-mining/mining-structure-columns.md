@@ -1,36 +1,35 @@
 ---
-title: "Столбцы структуры интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
+title: Столбцы структуры интеллектуального анализа данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
 - mining structures [Analysis Services], columns
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 37372901fd070f61564333b86803bcdf833929a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-structure-columns"></a>Столбцы структуры интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Пользователь должен определить столбцы в структуре интеллектуального анализа во время ее создания, выбрав столбцы внешних данных и указав, как данные должны быть использованы для моделирования. Таким образом, столбцы структуры интеллектуального анализа данных — это не просто копии данных из источника данных. Они определяют, как данные из этого источника будут использованы в модели интеллектуального анализа данных. Можно определить свойства, которые определяют, каким образом дискретизируются данные, или свойства, описывающие способ распределения значений данных.  
+  Пользователь должен определить столбцы в структуре интеллектуального анализа во время ее создания, выбрав столбцы внешних данных и указав, как данные должны быть использованы для моделирования. Таким образом, столбцы структуры интеллектуального анализа данных — это не просто копии данных из источника данных. Они определяют, как данные из этого источника будут использованы в модели интеллектуального анализа данных. Можно определить свойства, которые определяют, каким образом дискретизируются данные, или свойства, описывающие способ распределения значений данных.  
   
  Столбцы структуры интеллектуального анализа являются гибкими и расширяемыми, поскольку каждый алгоритм, который применяется для привязки модели интеллектуального анализа данных, может использовать различные столбцы этой структуры для интерпретации данных. Вместо одного набора данных для каждой модели можно использовать одну структуру интеллектуального анализа и столбцы для настройки данных под каждую модель.  
   

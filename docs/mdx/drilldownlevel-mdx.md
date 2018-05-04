@@ -1,15 +1,15 @@
 ---
-title: "DrilldownLevel (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
+title: DrilldownLevel (многомерные Выражения) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DRILLDOWNLEVEL
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - DrilldownLevel function
 ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: da071ef3ba43af94caf81e1016cb84a2bffc082f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 15c1a16a63610adbb41372f19cae800a0704ca99
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Необязательно.) Флажок, указывающий, следует ли включать вычисленные элементы и должны ли они существовать на уровне детализации углублением.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **DrilldownLevel** функция возвращает набор дочерних элементов в иерархическом порядке, в зависимости от членов, включенных в указанном наборе. Порядок следования исходных элементов указанного набора сохраняется, однако все дочерние элементы, входящие в результирующий набор функции, следуют непосредственно за своим родительским элементом.  
   
  При наличии многоуровневой иерархической структуры данных можно явно выбрать уровень детализации углублением. Существует два взаимоисключающих способа указать уровень. Первый способ заключается в задании **level_expression** аргумента, используя Многомерное выражение, которое возвращает уровень, альтернативный подход заключается в указании **индекс** аргумента, используя числовое выражение, задающее уровень по номеру.  
@@ -66,7 +65,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Если ни выражение уровня, ни значение индекса не указаны, функция создает набор в иерархическом порядке, извлекая потомков только тех элементов, которые находятся на самом низком уровне первого измерения, на которое ссылается указанный набор.  
   
- Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
+ Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
   
 ## <a name="examples"></a>Примеры  
  Вы можете ознакомиться со следующими примерами в окне запроса MDX в SSMS, используя куб Adventure Works.  
@@ -130,7 +129,7 @@ FROM [Adventure Works]
   
  Если вы только снимете флажок и перезапустите запрос, то получите те же результаты, кроме вычисленного элемента, [West Coast].  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

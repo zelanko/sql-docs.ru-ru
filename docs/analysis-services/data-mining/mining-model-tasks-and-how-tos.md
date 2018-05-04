@@ -1,34 +1,33 @@
 ---
-title: "Интеллектуального анализа данных, задачи и инструкции моделей | Документы Microsoft"
-ms.custom: 
+title: Интеллектуального анализа данных, задачи и инструкции моделей | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: 
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 61a15e06649aa3d90e808968443a931ca52fb203
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Задачи и инструкции по модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Используйте вкладку **Модели интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
+  Используйте вкладку **Модели интеллектуального анализа данных** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Изменить дискретизацию столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Просмотр или изменение модели флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Просмотр или изменение модели флаги & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Укажите столбец для использования в качестве Регрессора в модели](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   

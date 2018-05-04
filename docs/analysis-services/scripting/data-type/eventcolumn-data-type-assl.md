@@ -27,15 +27,15 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cb58ea2676265b5dcd5b67819b70020c365ec7ed
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b21fbd7ca3d87398e9a7fef22aa51a8955978434
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eventcolumn-data-type-assl"></a>Тип данных EventColumn (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет примитивный тип данных, представляющий столбец с данными, которые будут захвачены для [событий](../../../analysis-services/scripting/objects/event-element-assl.md) как часть [трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет примитивный тип данных, представляющий столбец с данными, которые захватываются для элемента [Event](../../../analysis-services/scripting/objects/event-element-assl.md) в качестве части элемента [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|None|  
@@ -61,8 +61,8 @@ ms.lasthandoff: 01/08/2018
 |Дочерние элементы|[ColumnID](../../../analysis-services/scripting/properties/columnid-element-eventcolumn-assl.md)|  
 |Производные элементы|[Столбец](../../../analysis-services/scripting/objects/column-element-assl.md) ([столбцы](../../../analysis-services/scripting/collections/columns-element-assl.md) коллекцию [трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md))|  
   
-## <a name="see-also"></a>См. также:  
- [Элемент Events &#40; ASSL &#41;](../../../analysis-services/scripting/collections/events-element-assl.md)   
- [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент Events &#40;ASSL&#41;](../../../analysis-services/scripting/collections/events-element-assl.md)   
+ [Службы Analysis Services сценариев типы данных XML в & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
