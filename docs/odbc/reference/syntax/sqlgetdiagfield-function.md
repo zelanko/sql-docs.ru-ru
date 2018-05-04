@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Функция SQLGetDiagField
 **Соответствия**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  Драйверы можно определить заголовок драйвера и поля записей в структуре диагностических данных.  
   
- ODBC 3*.x* приложения, работа с ODBC 2*.x* драйвер будет вызывать **SQLGetDiagField** только с *DiagIdentifier* Аргумент SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME или SQL_DIAG_SQLSTATE. Все диагностические поля вернет значение SQL_ERROR.  
+ ODBC 3 *.x* приложения, работа с ODBC 2 *.x* драйвер будет вызывать **SQLGetDiagField** только с *DiagIdentifier* Аргумент SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME или SQL_DIAG_SQLSTATE. Все диагностические поля вернет значение SQL_ERROR.  
   
 ## <a name="header-fields"></a>Поля заголовка  
  Поля заголовка, перечисленные в следующей таблице может быть включено в *DiagIdentifier* аргумент.  
@@ -240,7 +239,7 @@ n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOM
 -   Для всех записей, которые относятся к определенной строки записи сортируются по значению в поле SQL_DIAG_ROW_NUMBER. Перечислены все ошибки и предупреждения из первой строки, затронутой и затем все ошибки и предупреждения следующей строки затронутых и т. д.  
   
 > [!NOTE]  
->  ODBC 3*.x* диспетчер драйверов не упорядочивает записи состояния в очереди диагностики при SQLSTATE 01S01 (ошибка в строке) возвращается ODBC 2*.x* драйвера или если SQLSTATE 01S01 (ошибка в строке), возвращенный ODBC 3*.x* драйвера при **SQLExtendedFetch** вызывается или **SQLSetPos** будет вызван на курсор, расположенных с **SQLExtendedFetch** .  
+>  ODBC 3 *.x* диспетчер драйверов не упорядочивает записи состояния в очереди диагностики при SQLSTATE 01S01 (ошибка в строке) возвращается ODBC 2 *.x* драйвера или если SQLSTATE 01S01 (ошибка в строке), возвращенный ODBC 3 *.x* драйвера при **SQLExtendedFetch** вызывается или **SQLSetPos** будет вызван на курсор, расположенных с **SQLExtendedFetch** .  
   
  В каждой строке, а также тех записей, которые не соответствуют в строку или для которого неизвестен номер строки или для всех этих записей с номером строки, равное SQL_NO_ROW_NUMBER первая запись в списке, определяется с помощью набора правила сортировки. После первой записи не определен порядок записей, влияющих на строки. Приложение нельзя предполагать, что ошибки предшествовать предупреждения после первой записи. Приложения следует проверить структуры завершения диагностических данных для получения полной информации о неудачного вызова функции.  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f00b06d0a4a64f1c699267020e20f2ca1d74b220
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 255e59c3c9da81dfcc8dba13be46fc902e7a81b2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Сопоставление SQLSetConnectOption
-Когда ODBC 2. *x* приложение вызывает **SQLSetConnectOption** через ODBC 3*.x* драйвера, вызов  
+Когда ODBC 2. *x* приложение вызывает **SQLSetConnectOption** через ODBC 3 *.x* драйвера, вызов  
   
 ```  
 SQLSetConnectOption(hdbc, fOption, vParam)  
@@ -58,11 +57,11 @@ SQLSetConnectOption(hdbc, fOption, vParam)
   
  Поскольку диспетчер драйверов не знает, определяемым драйвером соединения атрибут, который должен быть строка или 32-разрядное целое значение, он должен передать в допустимое значение для *BufferLength* аргумент **SQLSetConnectAttr**. Если драйвер определяет специальную семантику для определенных драйвером подключения атрибуты и должен быть вызван с помощью **SQLSetConnectOption**, он должен поддерживать **SQLSetConnectOption**.  
   
- Если ODBC 2. *x* приложение вызывает **SQLSetConnectOption** задание параметра инструкции драйвера в ODBC 3*.x* драйвер и параметр был определен в ODBC 2. *x* версии драйвера, новая константа манифеста должен быть определен для параметра в ODBC 3*.x* драйвера. При использовании старых константы манифеста в вызове **SQLSetConnectOption**, диспетчер драйверов вызывает **SQLSetConnectAttr** с **StringLength** аргумент присвоено значение 0.  
+ Если ODBC 2. *x* приложение вызывает **SQLSetConnectOption** задание параметра инструкции драйвера в ODBC 3 *.x* драйвер и параметр был определен в ODBC 2. *x* версии драйвера, новая константа манифеста должен быть определен для параметра в ODBC 3 *.x* драйвера. При использовании старых константы манифеста в вызове **SQLSetConnectOption**, диспетчер драйверов вызывает **SQLSetConnectAttr** с **StringLength** аргумент присвоено значение 0.  
   
- Для ODBC 3*.x* драйвера, диспетчер драйверов больше не проверяет *fOption* — между SQL_CONN_OPT_MIN и SQL_CONN_OPT_MAX или больше, чем SQL_CONNECT_OPT_DRVR_START.  
+ Для ODBC 3 *.x* драйвера, диспетчер драйверов больше не проверяет *fOption* — между SQL_CONN_OPT_MIN и SQL_CONN_OPT_MAX или больше, чем SQL_CONNECT_OPT_DRVR_START.  
   
 ## <a name="setting-statement-options-on-the-connection-level"></a>Установка параметров инструкции на уровне соединения  
  В ODBC 2. *x*, приложение может вызвать **SQLSetConnectOption** задание параметра инструкции. После этого драйвер устанавливает параметр инструкции по умолчанию для инструкций позже, выделенных для этого подключения. Драйвер определяется ли драйвер задает параметр инструкции для любой существующей операторы, связанные с заданным подключением.  
   
- Эта возможность рекомендуется к использованию в ODBC 3*.x*. ODBC 3*.x* драйверы должен поддерживать только параметр ODBC 2. *x* атрибуты инструкции на уровне соединения, если для работы с ODBC 2. *x* приложений, которые. ODBC 3*.x* приложения никогда не следует устанавливать атрибуты инструкции на уровне соединения. ODBC 3*.x* на уровне соединения, за исключением SQL_ATTR_METADATA_ID и атрибуту SQL_ATTR_ASYNC_ENABLE атрибуты, которые атрибуты соединения и атрибуты инструкции и может быть невозможно задать атрибуты инструкции Задайте на уровне соединения или на уровне инструкции.
+ Эта возможность рекомендуется к использованию в ODBC 3 *.x*. ODBC 3 *.x* драйверы должен поддерживать только параметр ODBC 2. *x* атрибуты инструкции на уровне соединения, если для работы с ODBC 2. *x* приложений, которые. ODBC 3 *.x* приложения никогда не следует устанавливать атрибуты инструкции на уровне соединения. ODBC 3 *.x* на уровне соединения, за исключением SQL_ATTR_METADATA_ID и атрибуту SQL_ATTR_ASYNC_ENABLE атрибуты, которые атрибуты соединения и атрибуты инструкции и может быть невозможно задать атрибуты инструкции Задайте на уровне соединения или на уровне инструкции.

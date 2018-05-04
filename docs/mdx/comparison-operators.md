@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e99997bd3d87dbe949c8658ac7f866c648959430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5a2ba472fe36b0b7a1415793c97f3b577adcb0e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-operators"></a>Операторы сравнения
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  В многомерных выражениях поддерживаются операторы сравнения, перечисленные в следующей таблице.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[= (равно)](../mdx/equal-to-mdx.md)|Для аргументов, отличных от NULL, возвращает значение TRUE, если левый аргумент равен правому; в противном случае возвращает значение FALSE.<br /><br /> Если один или оба аргумента принимают значение NULL, оператор возвращает значение NULL, если не указан тип сравнения `0=null`, в этом случае возвращается TRUE.|  
 |[<> (не равно)](../mdx/not-equal-to-mdx.md)|Для аргументов, отличных от NULL, возвращает значение TRUE, если левый аргумент не равен правому; в противном случае возвращает значение FALSE.<br /><br /> Если один или оба аргумента принимают значение NULL, оператор возвращает значение NULL.|  
@@ -47,8 +46,8 @@ ms.lasthandoff: 01/08/2018
 |[< (меньше)](../mdx/less-than-mdx.md)|Для аргументов, отличных от NULL, возвращает значение TRUE, если левый аргумент меньше правого; в противном случае возвращает значение FALSE.<br /><br /> Если один или оба аргумента принимают значение NULL, оператор возвращает значение NULL.|  
 |[<= (меньше или равно)](../mdx/less-than-or-equal-to-mdx.md)|Для аргументов, отличных от NULL, возвращает значение TRUE, если левый аргумент меньше или равен правому; в противном случае возвращает значение FALSE.<br /><br /> Если один или оба аргумента принимают значение NULL, оператор возвращает значение NULL.|  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Операторы &#40; Синтаксис многомерных Выражений &#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Операторы &#40;синтаксис многомерных Выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

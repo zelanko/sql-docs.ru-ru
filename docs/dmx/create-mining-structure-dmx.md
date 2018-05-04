@@ -25,12 +25,11 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -78,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  По умолчанию: REPEATABLE(0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Пользователь определяет структуру интеллектуального анализа данных, указывая список столбцов, при необходимости задавая иерархические связи между столбцами, а также при необходимости выполняя секционирование структуры интеллектуального анализа данных на обучающий и проверочный наборы данных.  
   
  Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Для создания временных структур и моделей, необходимо сначала установить AllowSessionMiningModels, свойство базы данных. Дополнительные сведения см. в статье [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -123,7 +122,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Для столбца можно определить несколько значений флагов модели. Однако каждому столбцу может соответствовать только один тип содержимого и тип данных.  
   
 ### <a name="column-relationships"></a>Связи столбцов  
- К любому определению столбца можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующих \<связи столбцов > предложения.  
+ К любому определению столбца можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает использование следующих \<связи столбцов > предложения.  
   
  **СВЯЗАННЫЕ С**  
  Показывает иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  
@@ -194,9 +193,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

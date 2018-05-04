@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fed486ce6ec5ad2a2b0edf1f470734ae40e8c2e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dmx"></a>Cluster (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,11 +48,11 @@ Cluster()
   
  **Кластера** функция возвращает скалярное значение имени кластера. Тем не менее, при использовании этой функции в качестве аргумента другой функции с ней необходимо обращаться как \<ссылка на столбец кластера >.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Кластер** также может использоваться как `<`ссылка на столбец кластера`>` для **PredictHistogram** функции.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется одноэлементный запрос с [PredictHistogram &#40; расширений интеллектуального анализа данных &#41;](../dmx/predicthistogram-dmx.md) и кластера функциями, возвращающими удаленность отдельного элемента от каждого кластера модели интеллектуального анализа данных TM Clustering и вероятность существования отдельного элемента в каждом кластере.  
+ В следующем примере используется одноэлементный запрос с [PredictHistogram &#40;расширений интеллектуального анализа данных&#41; ](../dmx/predicthistogram-dmx.md) и кластера функциями, возвращающими удаленность отдельного элемента от каждого кластера модели интеллектуального анализа данных TM Clustering и вероятность существования отдельного элемента в каждом кластере.  
   
 ```  
 SELECT  
@@ -68,10 +67,10 @@ FROM
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [ClusterProbability &#40; расширений интеллектуального анализа данных &#41;](../dmx/clusterprobability-dmx.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [ClusterProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/clusterprobability-dmx.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
+ [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

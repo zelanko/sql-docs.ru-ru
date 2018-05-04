@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82e2bd742d4736e75e5bfa3d6437304a32b289ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ad4f411d986d2c7678f199bf638f4202b56e67ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="why-was-odbc-created"></a>Причины создания ODBC?
 Исторически компании используется один СУБД. Все базы данных access была выполнена через клиентскую часть этой системы или приложения, написанные для работы исключительно с этой системой. Тем не менее увеличился использования компьютеров и дополнительные компьютерного оборудования и программного обеспечения стали доступны, для получения различных СУБД запущен компаний. Были много причин: купил была дешевые, каков был быстрым, люди, какие они уже знали, какая была последней на рынке, что лучше всего работает для одного приложения. Другие причины были реорганизации и слияния, где отделов, которые ранее имели один СУБД получил несколько.  

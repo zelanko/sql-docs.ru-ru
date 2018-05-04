@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
 - data sources [ODBC], ODBC data source administrator
@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 222bbc143fee7aa89d8414a05510fa01a35873cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-data-sources"></a>Управление источниками данных
 После установки драйвера ODBC из программы установки драйвера для него можно определить один или несколько источников данных. Имя источника данных (DSN) необходимо предоставить уникальное описание данных. например *заработной платы* или *расчеты*. Пользовательских и системных источников данных, определенных для все установленные драйверы, перечислены в **DSN пользователя** или **системный DSN** вкладках **администратор источников данных ODBC**диалоговое окно. Файловые источники данных в заданном каталоге, перечислены в **файловый DSN** вкладке; каталог, который будет отображаться вводится в **папка** поле **файловый DSN** вкладку.  

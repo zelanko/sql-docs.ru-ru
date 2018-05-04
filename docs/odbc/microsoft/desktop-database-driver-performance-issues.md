@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], performance
 - desktop database drivers [ODBC], performance
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d13ef42e9658a24de65947fcb9aa85ffb854181
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 760cec404f274d77d5382a3d164898c95545894e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Проблемы производительности драйвера для настольных баз данных
 Чтобы обеспечить совместимость с существующими приложениями ANSI, типы данных SQL_WCHAR, SQL_WVARCHAR и SQL_WLONGVARCHAR предоставляется как SQL_CHAR, SQL_VARCHAR и SQL_LONGVARCHAR Microsoft Access 4.0 или более источников данных. Источники данных не возвращают CHAR РАСШИРЕННЫХ типов данных, но данные по-прежнему должны отправляться Jet в форме широкий Char. Важно понимать, что преобразование будет выполнено при передаче SQL_C_CHAR параметра или результата привязанного столбца с типом данных SQL_CHAR в приложении ANSI.  

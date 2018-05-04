@@ -20,12 +20,11 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 796494ac0d73b6dfaf955da58ed79b8b51b54638
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-functions"></a>Функции кортежей
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  Функции кортежей, подобно функциям элементов и функциям наборов, важны для согласования многомерных структур, обнаруженных в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- В многомерных Выражениях существуют три функции кортежей [текущий &#40; Многомерные Выражения &#41; ](../mdx/current-mdx.md), [Элемент &#40; Кортеж &#41; &#40; Многомерные Выражения &#41; ](../mdx/item-tuple-mdx.md) и [StrToTuple &#40; Многомерные Выражения &#41; ](../mdx/strtotuple-mdx.md). Следующий пример запроса демонстрирует использование каждой из них:  
+ В многомерных Выражениях существуют три функции кортежей [текущей &#40;многомерных Выражений&#41;](../mdx/current-mdx.md), [элемент &#40;кортежа&#41; &#40;многомерных Выражений&#41; ](../mdx/item-tuple-mdx.md) и [StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). Следующий пример запроса демонстрирует использование каждой из них:  
   
  `WITH`  
   
@@ -58,8 +57,8 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также:  
- [Функции &#40; Синтаксис многомерных Выражений &#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>См. также  
+ [Функции &#40;синтаксис многомерных Выражений&#41;](../mdx/functions-mdx-syntax.md)   
  [С помощью функции-члены](../mdx/using-member-functions.md)   
  [Использование функций наборов](../mdx/using-set-functions.md)  
   

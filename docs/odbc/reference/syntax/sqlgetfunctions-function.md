@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions, функция
 **Соответствия**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [Вход] Дескриптор соединения.  
   
  *Идентификатор FunctionId*  
- [Вход] Объект **#define** значение, определяющее функции ODBC интерес; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** используется ODBC 3*.x* приложения для определения поддержки ODBC 3*.x* и более ранних функции. **SQL_API_ALL_FUNCTIONS** используется ODBC 2*.x* приложения для определения поддержки ODBC 2*.x* и более ранних функции.  
+ [Вход] Объект **#define** значение, определяющее функции ODBC интерес; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** используется ODBC 3 *.x* приложения для определения поддержки ODBC 3 *.x* и более ранних функции. **SQL_API_ALL_FUNCTIONS** используется ODBC 2 *.x* приложения для определения поддержки ODBC 2 *.x* и более ранних функции.  
   
  Список **#define** значения, которые определяют функции ODBC см. в таблицах в «Комментарии».  
   
  *SupportedPtr*  
  [Выход]  Если *FunctionId* определяет одну функцию ODBC, *SupportedPtr* точек должен быть единственным SQLUSMALLINT значение SQL_TRUE Если указанная функция поддерживается драйвером и SQL_FALSE, если это не так поддерживается.  
   
- Если *FunctionId* — SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* указывает на массив SQLSMALLINT с количеством элементов, равным SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Этот массив обрабатываются диспетчером драйверов как 4000 разрядную битовую карту, который может использоваться для определения, является ли ODBC 3*.x* или более ранней функция поддерживается. Макрос SQL_FUNC_EXISTS вызывается для определения функции поддержки. (В разделе «Комментарии».) ODBC 3*.x* приложение может вызвать **SQLGetFunctions** с SQL_API_ODBC3_ALL_FUNCTIONS для ODBC 3*.x* или ODBC 2*.x* драйвер.  
+ Если *FunctionId* — SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* указывает на массив SQLSMALLINT с количеством элементов, равным SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Этот массив обрабатываются диспетчером драйверов как 4000 разрядную битовую карту, который может использоваться для определения, является ли ODBC 3 *.x* или более ранней функция поддерживается. Макрос SQL_FUNC_EXISTS вызывается для определения функции поддержки. (В разделе «Комментарии».) ODBC 3 *.x* приложение может вызвать **SQLGetFunctions** с SQL_API_ODBC3_ALL_FUNCTIONS для ODBC 3 *.x* или ODBC 2 *.x* драйвер.  
   
- Если *FunctionId* — SQL_API_ALL_FUNCTIONS, *SupportedPtr* указывает на массив SQLUSMALLINT 100 элементов. Массив индексируется по **#define** значений, используемых в *FunctionId* для идентификации каждой функции ODBC; некоторые элементы массива используется и зарезервировано для будущего использования. Элемент представляет собой SQL_TRUE, если он определяет ODBC 2*.x* или более ранней функции, поддерживаемые драйвером. Если он идентифицирует функция ODBC не поддерживается драйвером или не может определить функции ODBC не SQL_FALSE.  
+ Если *FunctionId* — SQL_API_ALL_FUNCTIONS, *SupportedPtr* указывает на массив SQLUSMALLINT 100 элементов. Массив индексируется по **#define** значений, используемых в *FunctionId* для идентификации каждой функции ODBC; некоторые элементы массива используется и зарезервировано для будущего использования. Элемент представляет собой SQL_TRUE, если он определяет ODBC 2 *.x* или более ранней функции, поддерживаемые драйвером. Если он идентифицирует функция ODBC не поддерживается драйвером или не может определить функции ODBC не SQL_FALSE.  
   
  Массивы, возвращаемые в **SupportedPtr* использовать индексацию с нуля.  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] при работе с ODBC 2*.x* драйвера, **SQLBulkOperations** будет возвращаться как поддерживается только значение true, если оба из следующих действий: ODBC 2*.x* драйвер поддерживает  **SQLSetPos**, и тип данных SQL_POS_OPERATIONS возвращает бит SQL_POS_ADD как набор.  
+ [1] при работе с ODBC 2 *.x* драйвера, **SQLBulkOperations** будет возвращаться как поддерживается только значение true, если оба из следующих действий: ODBC 2 *.x* драйвер поддерживает  **SQLSetPos**, и тип данных SQL_POS_OPERATIONS возвращает бит SQL_POS_ADD как набор.  
   
  Ниже приведен список допустимых значений для *FunctionId* для функций, представленных в ODBC 3.8 или более поздней версии:  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle** будет возвращаться как поддерживается, только если драйвер поддерживает оба **SQLCancel** и **SQLCancelHandle**. Если **SQLCancel** поддерживается, но **SQLCancelHandle** — нет, приложение по-прежнему может вызвать **SQLCancelHandle** для дескриптора инструкции, потому что он будет сопоставлен  **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>Макрос SQL_FUNC_EXISTS  
- SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) макрос используется для определения поддержки ODBC 3*.x* или более ранней функций после **SQLGetFunctions**  был вызван с *FunctionId* аргумент SQL_API_ODBC3_ALL_FUNCTIONS. Приложение вызывает SQL_FUNC_EXISTS с *SupportedPtr* аргументу присвоено *SupportedPtr* переданный *SQLGetFunctions*и с  *Идентификатор FunctionID* аргументу присвоено **#define** для функции. SQL_FUNC_EXISTS в противном случае возвращает SQL_TRUE, если поддерживается функция and SQL_FALSE.  
+ SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) макрос используется для определения поддержки ODBC 3 *.x* или более ранней функций после **SQLGetFunctions**  был вызван с *FunctionId* аргумент SQL_API_ODBC3_ALL_FUNCTIONS. Приложение вызывает SQL_FUNC_EXISTS с *SupportedPtr* аргументу присвоено *SupportedPtr* переданный *SQLGetFunctions*и с  *Идентификатор FunctionID* аргументу присвоено **#define** для функции. SQL_FUNC_EXISTS в противном случае возвращает SQL_TRUE, если поддерживается функция and SQL_FALSE.  
   
 > [!NOTE]  
->  При работе с ODBC 2*.x* драйвера ODBC 3*.x* диспетчера драйверов вернет SQL_TRUE для **SQLAllocHandle** и **SQLFreeHandle**из-за **SQLAllocHandle** сопоставляется **SQLAllocEnv**, **SQLAllocConnect**, или **SQLAllocStmt**, и Поскольку **SQLFreeHandle** сопоставляется **SQLFreeEnv**, **SQLFreeConnect**, или **SQLFreeStmt**. **SQLAllocHandle** или **SQLFreeHandle** с *HandleType* аргумент SQL_HANDLE_DESC не поддерживается, однако несмотря на то, что SQL_TRUE возвращается для функций, так как нет ODBC 2*.x* функции для сопоставления в этом случае.  
+>  При работе с ODBC 2 *.x* драйвера ODBC 3 *.x* диспетчера драйверов вернет SQL_TRUE для **SQLAllocHandle** и **SQLFreeHandle**из-за **SQLAllocHandle** сопоставляется **SQLAllocEnv**, **SQLAllocConnect**, или **SQLAllocStmt**, и Поскольку **SQLFreeHandle** сопоставляется **SQLFreeEnv**, **SQLFreeConnect**, или **SQLFreeStmt**. **SQLAllocHandle** или **SQLFreeHandle** с *HandleType* аргумент SQL_HANDLE_DESC не поддерживается, однако несмотря на то, что SQL_TRUE возвращается для функций, так как нет ODBC 2 *.x* функции для сопоставления в этом случае.  
   
 ## <a name="code-example"></a>Пример кода  
  В следующих трех примерах показано, как приложение использует **SQLGetFunctions** , чтобы определить, поддерживает ли драйвер **SQLTables**, **SQLColumns**, и  **SQLStatistics**. Если драйвер не поддерживает эти функции, приложение отключает от драйвера. В первом примере вызывается **SQLGetFunctions** один раз для каждой функции.  

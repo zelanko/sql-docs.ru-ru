@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8c9a23a96e24e454419b5ebf5c05663f188a8766
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6f0ceb660009214e341c423261620d749e3ed1c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эта функция прежде всего предназначена для использования в измерении времени, но может быть использована и для других измерений.  
   
 -   Если выражение уровня указано, **OpeningPeriod** функция использует иерархию, содержащую заданный уровень и возвращает первый элемент среди потомков элемента по умолчанию на заданном уровне.  
@@ -93,9 +92,9 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [TopCount &#40; Многомерные Выражения &#41;](../mdx/topcount-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)   
- [FirstSibling &#40; Многомерные Выражения &#41;](../mdx/firstsibling-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [TopCount &#40;многомерных Выражений&#41;](../mdx/topcount-mdx.md)   
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [FirstSibling &#40;многомерных Выражений&#41;](../mdx/firstsibling-mdx.md)  
   
   

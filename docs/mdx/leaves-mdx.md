@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8038145cf8587c6c0d5a86461302fd7075bcee9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9ac580c71d1c82876a41953d6f8b5411dc7dd55
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="leaves-mdx"></a>Leaves (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Leaves( [ Dimension_expression ] )
  *Аргумент Dimension_Expression*  
  Допустимое многомерное выражение, возвращающее измерение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Конечные элементы являются кортежами, которые образуются при перекрестном соединении самых нижних уровней всех иерархий атрибутов. Вычисляемые элементы исключаются.  
   
 -   Если имя измерения указано, **оставляет** функция возвращает набор, содержащий конечные элементы ключевого атрибута для заданного измерения.  
@@ -60,7 +59,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  Если не все атрибуты имеют одинаковую гранулярность в группе мер в текущей области действия, функция возвращает ошибку.  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

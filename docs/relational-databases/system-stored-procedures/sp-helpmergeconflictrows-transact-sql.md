@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например если **MSmerge_conflict_Customers** таблица имеет конфликтующие строки для **WA** и **ЦС** публикаций, передав имя публикации **ЦС**  извлекает конфликты, которые относятся к **ЦС** публикации.  
   
  [  **@conflict_table=**] **"***conflict_table***"**  
- Имя таблицы конфликтов. *conflict_table* — **sysname**, не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицам конфликтов присваиваются имена форматов с помощью **MSmerge_conflict_*публикации*_*статье *** с одной таблицей для каждой публикации статья.  
+ Имя таблицы конфликтов. *conflict_table* — **sysname**, не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицам конфликтов присваиваются имена форматов с помощью **MSmerge_conflict_* публикации *_* статье *** с одной таблицей для каждой публикации статья.  
   
  [  **@publisher=**] **"***издатель***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  

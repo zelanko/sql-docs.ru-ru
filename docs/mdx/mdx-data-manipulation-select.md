@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fc495e44fd9c2bc49ba54afbb17cc48a5a855ac6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>Управление данными MDX - Выбор
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -124,16 +123,16 @@ FROM
  *MemberProperty_Name*  
  Допустимая строка, представляющая свойство элемента.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В выражении `<SELECT slicer axis clause>` должны содержаться элементы измерений и иерархий, отличающиеся от указанных в заданных выражениях `<SELECT query axis clause>`.  
   
  Если в заданных выражениях `<SELECT query axis clause>` и значении `<SELECT slicer axis clause>` атрибут куба пропущен, то к оси среза неявно добавляется элемент атрибута по умолчанию.  
   
  Параметр NON VISUAL в инструкции подзапроса выборки позволяет отфильтровать элементы во время хранения верных итогов вместо отфильтрованных. Это позволяет выполнить запрос для первых десяти продаж (люди/продукты/регионы) и получить истинный итог продаж для всех запрашиваемых элементов, а не общий итог для первых десяти возвращаемых. Дополнительные сведения см. в примерах ниже.  
   
- Вычисляемые элементы могут быть включены в \<предложение осей запроса SELECT > каждый раз, когда было открыто соединение с помощью параметра строки подключения *вложенные запросы = 1*; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра. Пример приведен для вычисляемых элементов в подзапросах выборки.  
+ Вычисляемые элементы могут быть включены в \<предложение осей запроса SELECT > каждый раз, когда было открыто соединение с помощью параметра строки подключения *вложенные запросы = 1*; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра. Пример приведен для вычисляемых элементов в подзапросах выборки.  
   
-## <a name="autoexists"></a>автоматическая проверка существования  
+## <a name="autoexists"></a>Автоматическая проверка существования  
  Если два или более атрибута измерения используются в инструкции SELECT, службы Analysis Services оценивают эти атрибуты, чтобы обеспечить, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов. Например, предположим, что идет работа с атрибутами измерения «Geography». Если существует выражение, возвращающее все элементы атрибута «Город», и другое выражение, ограничивающее элементы атрибута «Страна» всеми странами Европы, то элементы атрибута «Город» будут ограничены только городами, расположенным в странах Европы. Эта характеристика служб Analysis Services называется автоматической проверкой существования и применима только к атрибутам, находящимся в одном измерении. Автоматическая проверка существования применима только к атрибутам, находящимся в одном измерении, потому что пытается предотвратить включение записей измерения, не включенных в одно выражение с атрибутом, в другое выражение с атрибутом. Автоматическую проверку существования можно также воспринимать как результат пересечения различных выражений с атрибутом по записям измерения. См. следующий пример:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -354,7 +353,7 @@ FROM
 |**Mountain-100**|**$ 8 568 958,27**|**$ 139 393,27**|**1,63 %**|  
 |**HL Mountain Frame**|**$ 3 365 069,27**|**$ 174,11**|**0,01 %**|  
   
- Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра.  
+ Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается сумма `Measures.[Order Quantity]` член, суммарный за первые восемь месяцев календарного 2003, содержащихся в `Date` измерения, от **Adventure Works** куба.  
@@ -443,8 +442,8 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||Все продукты|Accessories|Clothing|  
-|Все торговые посредники|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
+||All Products|Accessories|Clothing|  
+|All Resellers|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
   
@@ -477,10 +476,10 @@ WHERE
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
 |$ 80 450 596,98|$79,980,114.38|$470,482.60|0.58%|  
   
-## <a name="see-also"></a>См. также:  
- [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Инструкции для манипулирования данными многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Ограничение запроса с &#40; запросов и осей среза Многомерные Выражения &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+## <a name="see-also"></a>См. также  
+ [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Инструкции языка манипулирования данными &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Ограничение запроса с & #40; запросов и осей среза Многомерные Выражения & #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Имя создаваемого связанного сервера. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
  [  **@srvproduct=** ] **"***product_name***"**  
- Введите название продукта для источника данных OLE DB, который добавляется в качестве связанного сервера. *product_name* — **nvarchar (**128**)**, значение по умолчанию NULL. Если **SQL Server**, *provider_name*, *источник_данных*, *расположение*, *provider_string*, и *каталога* не должны быть указаны.  
+ Введите название продукта для источника данных OLE DB, который добавляется в качестве связанного сервера. *product_name* — **nvarchar (** 128 **)**, значение по умолчанию NULL. Если **SQL Server**, *provider_name*, *источник_данных*, *расположение*, *provider_string*, и *каталога* не должны быть указаны.  
   
  [  **@provider=** ] **"***provider_name***"**  
- Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий этому источнику данных. *provider_name* должно быть уникальным для указанного поставщика OLE DB, который установлен на данном компьютере. *provider_name* — **nvarchar (**128**)**, значение по умолчанию NULL; тем не менее, если *provider_name* — этот параметр опущен, используется значение SQLNCLI. (При использовании SQLNCLI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать последнюю версию поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Предполагается, что поставщик OLE DB будет зарегистрирован в реестре с указанным идентификатором PROGID.  
+ Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий этому источнику данных. *provider_name* должно быть уникальным для указанного поставщика OLE DB, который установлен на данном компьютере. *provider_name* — **nvarchar (** 128 **)**, значение по умолчанию NULL; тем не менее, если *provider_name* — этот параметр опущен, используется значение SQLNCLI. (При использовании SQLNCLI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать последнюю версию поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Предполагается, что поставщик OLE DB будет зарегистрирован в реестре с указанным идентификатором PROGID.  
   
  [  **@datasrc=** ] **"***источник_данных***"**  
- Имя источника данных, как оно интерпретируется поставщиком OLE DB. *источник_данных* — **nvarchar (**4000**)**. *источник_данных* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB.  
+ Имя источника данных, как оно интерпретируется поставщиком OLE DB. *источник_данных* — **nvarchar (** 4000 **)**. *источник_данных* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB.  
   
  [  **@location=** ] **"***расположение***"**  
- Введите местонахождение базы данных, понятное поставщику OLE DB. *расположение* — **nvarchar (**4000**)**, значение по умолчанию NULL. *расположение* передается как свойство DBPROP_INIT_LOCATION для инициализации поставщика OLE DB.  
+ Введите местонахождение базы данных, понятное поставщику OLE DB. *расположение* — **nvarchar (** 4000 **)**, значение по умолчанию NULL. *расположение* передается как свойство DBPROP_INIT_LOCATION для инициализации поставщика OLE DB.  
   
  [  **@provstr=** ] **"***provider_string***"**  
- Строка подключения для конкретного поставщика OLE DB, указывающая уникальный источник данных. *provider_string* — **nvarchar (**4000**)**, значение по умолчанию NULL. *provstr* передаваемый IDataInitialize или задается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB.  
+ Строка подключения для конкретного поставщика OLE DB, указывающая уникальный источник данных. *provider_string* — **nvarchar (** 4000 **)**, значение по умолчанию NULL. *provstr* передаваемый IDataInitialize или задается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB.  
   
  При создании связанного сервера для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента экземпляра можно указать с помощью ключевого слова SERVER как сервер =*servername*\\*instancename*для указания определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* — имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает, и *instancename* имя конкретного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к которой будет подключен пользователь.  
   

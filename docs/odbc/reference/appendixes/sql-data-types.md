@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
 Каждой СУБД определяет собственные типы SQL. Каждый ODBC-драйвер предоставляет только те типы данных SQL, который определяет связанный СУБД. Сведения о сопоставление драйвер СУБД SQL типах идентификаторы типа SQL, определенных для ODBC и драйвером сопоставление типов СУБД SQL свои собственные идентификаторы типа специфические для драйвера SQL возвращается путем вызова **SQLGetTypeInfo**. Драйвер возвращает типы данных SQL, при описании типы данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
@@ -92,7 +91,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|ИНТЕРВАЛ МИНУТУ (*p*) в СЕКУН
   
  [5] в зависимости от реализации, может быть точность SQL_FLOAT 24 и 53: Если это 24 SQL_FLOAT тип данных является таким же, как SQL_REAL; Если это 53, тип данных SQL_FLOAT совпадает SQL_DOUBLE.  
   
- [6] в ODBC 3*.x*, типы данных даты, времени и отметок времени SQL: SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, соответственно; в ODBC 2. *x*, типы данных, SQL_DATE, SQL_TIME и SQL_TIMESTAMP.  
+ [6] в ODBC 3 *.x*, типы данных даты, времени и отметок времени SQL: SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, соответственно; в ODBC 2. *x*, типы данных, SQL_DATE, SQL_TIME и SQL_TIMESTAMP.  
   
  [7] Дополнительные сведения о типах данных SQL интервал см. в разделе [типы данных интервала](../../../odbc/reference/appendixes/interval-data-types.md) подраздел, далее в этом приложении.  
   

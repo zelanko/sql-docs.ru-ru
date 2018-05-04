@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
 - interoperability [ODBC], writing interoperable applications
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a0b70251acdfebbe05bb0900af8be7ea25b6fa6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7623f9e2674564a13061d144f599f974a3020a95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-interoperable-application"></a>Создание приложений с возможностью взаимодействия
 Каждый раз, когда приложение использует один и тот же код с более чем один драйвер, этот код должен быть с возможностью взаимодействия между драйверы. В большинстве случаев это непростая задача. Например код для получения строк курсора однонаправленные одинаково для всех драйверов. В некоторых случаях это может быть более сложным. Например код для создания идентификаторов для использования в инструкциях SQL необходимо учитывать регистр идентификатора, заключения в кавычки и соглашения об именовании одного, двух частей и трех частей.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d0a9065248139fe3d2e369062301b76b4839955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurrency-control"></a>Управление параллелизмом
 *Параллелизм* является возможность использовать те же данные одновременно две операции и транзакции изоляции обычно появилась снижению степени параллелизма. Это так, как уровень изоляции транзакции обычно реализуется блокировки строк, и как дополнительные строки будут заблокированы, меньшее количество транзакций может быть выполнено без ее блокировки временно в заблокированной строке. Хотя снижению степени параллелизма признается обычно является компромиссом для более высоких уровней изоляции транзакций, необходимых для поддержания целостности базы данных, он может стать проблемой в интерактивных приложений с высокой чтение и запись действия, которое использовать курсоры.  

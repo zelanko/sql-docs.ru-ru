@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0c92f72b54b5b3d420e2e4cbdbfe616f9e6f090f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@name =** ] **"***аргумент object_statement***"**  
- Имя объекта в текущей базе данных или инструкция, у которых есть разрешение на создание отчетов. *Аргумент object_statement* — **nvarchar(776)**, значение по умолчанию NULL, при котором возвращаются все разрешения на объекты и инструкции. Если значение представляет объект (таблицы, представление, хранимая процедура или расширенная хранимая процедура), в текущей базе данных этот объект должен быть допустимым. Имя объекта может включать квалификатор владельца в форме *владельца***.*** Объект*.  
+ Имя объекта в текущей базе данных или инструкция, у которых есть разрешение на создание отчетов. *Аргумент object_statement* — **nvarchar(776)**, значение по умолчанию NULL, при котором возвращаются все разрешения на объекты и инструкции. Если значение представляет объект (таблицы, представление, хранимая процедура или расширенная хранимая процедура), в текущей базе данных этот объект должен быть допустимым. Имя объекта может включать квалификатор владельца в форме *владельца ***.*** Объект*.  
   
  Если *аргумент object_statement* является оператором, он может быть инструкции CREATE.  
   

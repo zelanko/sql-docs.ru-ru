@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27d719a9ab41bfa7594231462ea5c6318d95247d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Приложение б. таблицы перехода состояний ODBC
 В таблицах в этом приложении показано, как функции ODBC вызывают переходы среды, подключения, инструкции и дескриптора состояний. Состояние среды, подключения, инструкции и дескриптора обычно указывает, когда можно вызывать функции, использующие соответствующий тип дескриптора (среды, соединения, оператор или дескриптор). Состояния среды, подключения, инструкции и дескриптора перекрываться примерно, как показано на следующем рисунке. Например точное совпадение подключение состояния C5 и C6 и инструкция подтверждает, что S1 через S12 является данных зависит от источника, с момента начала транзакции в различные моменты времени в разных источниках данных и зависит от состояния дескриптор D1i (неявно выделить дескриптор) на состоянии инструкции, с которой связан дескриптор при этом состояние D1e (явно выделить дескриптор) — независимо от состояния любого оператора. Описание каждого состояния см. в разделе [среда переходит](../../../odbc/reference/appendixes/environment-transitions.md), [переходы подключения](../../../odbc/reference/appendixes/connection-transitions.md), [переходы инструкции](../../../odbc/reference/appendixes/statement-transitions.md), и [переходы дескриптора ](../../../odbc/reference/appendixes/descriptor-transitions.md)далее в этом приложении.  

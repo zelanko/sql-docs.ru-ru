@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f1a53821f6a8e0354b992b8110d300e96633b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -873,7 +872,7 @@ public class Program
   
 5.  Выберите **написать запрос, указывающий данные для передачи** и **Далее**.  Введите ваш **инструкции SQL** ВЫБЕРИТЕ ProductID, Name, ProductNumber FROM Production.Product и **Далее**  
   
-6.  Проверьте конфигурацию: как разделитель строк можно оставить {CR}{LF}, а как разделитель столбцов — запятую {,}.  Выберите **изменить сопоставления**... и убедитесь, что данные **типа** является правильным для каждого столбца (например, целое число для ProductID и строка Юникода для остальных).  
+6.  Проверьте конфигурацию: разделитель строк {CR} {LF} и разделитель столбцов как запятую можно оставить {,}.  Выберите **изменить сопоставления**... и убедитесь, что данные **типа** является правильным для каждого столбца (например, целое число для ProductID и строка Юникода для остальных).  
   
 7.  Перейдите к **Готово** и выполните экспорт.  
   

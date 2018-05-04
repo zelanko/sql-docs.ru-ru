@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4679437d3c520d8e53fbbe79725e8efd340c42a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_OAMethod objecttoken , methodname
  *имя_метода*  
  Имя вызываемого метода OLE-объекта.  
   
- *returnValue***выходных данных**   
+ *returnValue***выходных данных**  
  Возвращаемое значение метода OLE-объекта. Если значение указано, оно должно быть локальной переменной соответствующего типа данных.  
   
  Если метод возвращает одиночное значение, либо указать локальную переменную для *returnvalue*, возвращающий метод возвращаемое значение в локальной переменной или не указывайте *returnvalue*, который возвращает метод возвращаемое значение клиенту в виде одного столбца и одной строки результирующего набора.  

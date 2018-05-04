@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a17e8cf51ac2c2a8bac98315b85f53421d7c3c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d533d6e5e0d62219f144b325b97142039e4eb5bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +45,11 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Эта функция возвращает непустые кортежи из первого заданного кортежа, полученные с учетом кортежей второго набора. **NonEmpty** функция отслеживает вычисления и сохраняет повторяющиеся кортежи. Если второй набор не предоставлен, выражение рассматривается в контексте текущих координат элементов иерархий атрибута и мер в кубе.  
   
 > [!NOTE]  
->  Используйте эту функцию, а не устаревшие [NonEmptyCrossjoin &#40; Многомерные Выражения &#41; ](../mdx/nonemptycrossjoin-mdx.md) функции.  
+>  Используйте эту функцию, а не устаревшие [NonEmptyCrossjoin &#40;многомерных Выражений&#41; ](../mdx/nonemptycrossjoin-mdx.md) функции.  
   
 > [!IMPORTANT]  
 >  Непустота — характеристика ячеек, на которые ссылаются кортежи, а не самих кортежей.  
@@ -98,11 +97,11 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также:  
- [DefaultMember &#40; Многомерные Выражения &#41;](../mdx/defaultmember-mdx.md)   
- [Фильтр &#40; Многомерные Выражения &#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40; Многомерные Выражения &#41;](../mdx/isempty-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40; Многомерные Выражения &#41;](../mdx/nonemptycrossjoin-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [DefaultMember &#40;многомерных Выражений&#41;](../mdx/defaultmember-mdx.md)   
+ [Фильтр & #40; Многомерные Выражения & #41;](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;многомерных Выражений&#41;](../mdx/isempty-mdx.md)   
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;многомерных Выражений&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

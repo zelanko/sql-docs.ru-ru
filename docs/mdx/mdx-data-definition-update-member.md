@@ -1,15 +1,15 @@
 ---
-title: "Инструкция UPDATE MEMBER (многомерные Выражения) | Документы Microsoft"
-ms.custom: 
+title: Инструкция UPDATE MEMBER (многомерные Выражения) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_MEMBER
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - calculated members [MDX]
 - UPDATE MEMBER statement
 ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e126f34be1f1cecd1a793b71ff4b64069c1802c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5591eeaaa2afd346e8038426f72e9b0c21520c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---update-member"></a>Определение данных MDX - UPDATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  Допустимое скалярное выражение, содержащее значение свойства вычисляемого элемента.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Инструкция UPDATE MEMBER обновляет существующие вычисляемые элементы, сохраняя относительную очередность элемента по отношению к другим вычислениям. Поэтому использовать инструкцию UPDATE MEMBER для изменения элемента SOLVEORDER нельзя.  
   
  Инструкцию UPDATE MEMBER нельзя указать в скрипте многомерных выражений для куба.  
@@ -83,9 +82,9 @@ UPDATE MEMBER Cube_Name.Member_Name
 |DISPLAY_FOLDER|Значение строки, указывающее путь к папке отображения, в которой элемент будет отображаться клиентским приложением. Разделитель уровней вложенности папок определяется клиентским приложением. Для средств и клиентов, входящих в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], обратная косая черта (\\) в качестве разделителя уровней. Чтобы указать для определенного элемента несколько папок отображения, используйте точку с запятой (;) для разделения папок.|  
 |ASSOCIATED_MEASURE_GROUP|Имя группы мер, с которой связан элемент.|  
   
-## <a name="see-also"></a>См. также:  
- [Инструкция DROP MEMBER &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREATE MEMBER, инструкция #40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-member.md)   
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкция DROP MEMBER &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../mdx/mdx-data-definition-create-member.md)   
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
