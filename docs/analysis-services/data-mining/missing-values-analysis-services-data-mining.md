@@ -1,16 +1,16 @@
 ---
-title: "Отсутствующие значения (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
+title: Отсутствующие значения (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: afc031617c0d4e5f0c93e011b2a1a40432227290
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Отсутствующие значения (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Правильная обработка  *отсутствующих значений* является важной частью эффективного моделирования. В этом разделе объясняется, что такое отсутствующие значения, и описываются функции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для работы с отсутствующими значениями при построении структур и моделей интеллектуального анализа данных.  
+  Правильная обработка  *отсутствующих значений* является важной частью эффективного моделирования. В этом разделе объясняется, что такое отсутствующие значения, и описываются функции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для работы с отсутствующими значениями при построении структур и моделей интеллектуального анализа данных.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Определение отсутствующих значений в интеллектуальном анализе данных  
  Отсутствующее значение может указывать на различные обстоятельства. Возможно, поле неприменимо, не произошло событие или данные не были доступными. Может быть, человек, заполнявший данные, не знал правильного значения или не заботился о заполнении этого поля.  
@@ -115,13 +114,13 @@ ms.lasthandoff: 02/15/2018
   
 |Задания|Ссылки|  
 |-----------|-----------|  
-|Добавление флагов к отдельным столбцам модели для управления обработкой отсутствующих значений|[Просмотр или изменение модели флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Добавление флагов к отдельным столбцам модели для управления обработкой отсутствующих значений|[Просмотр или изменение модели флаги & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Установка свойств модели интеллектуального анализа данных для управления обработкой отсутствующих значений|[Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Задание флагов модели в расширениях интеллектуального анализа данных|[Флаги моделирования &#40; расширений интеллектуального анализа данных &#41;](../../dmx/modeling-flags-dmx.md)|  
+|Задание флагов модели в расширениях интеллектуального анализа данных|[Флаги моделирования & #40; расширений интеллектуального анализа данных & #41;](../../dmx/modeling-flags-dmx.md)|  
 |Изменение способа обработки структурой интеллектуального анализа данных отсутствующих значений|[Изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Моделирование флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Моделирование флаги & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

@@ -1,41 +1,42 @@
 ---
-title: "Команды (XMLA) | Документы Microsoft"
-ms.custom: 
+title: Команды (XMLA) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3ffde9e4cc1500ee0637225dc76153f3d81b463f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ea5be05775550aa74316f81caff3641caa383683
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---commands"></a>Элементы XML - команды
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе справки содержит XML для аналитики (XMLA) элементов, которые могут использоваться в **команда** во время выполнения **Execute** вызова метода.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  В этом разделе справки содержит XML для аналитики (XMLA) элементов, которые могут использоваться в **команда** во время выполнения **Execute** вызова метода.  
   
 |Элемент|Description|  
 |-------------|-----------------|  
-|[Элемент Alter (XML для аналитики)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) для изменения объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Элемент BACKUP](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Создает резервную копию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.|  
-|[Элемент Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Выполняет один или несколько XML для аналитики (XMLA) команды как пакетная операция последовательно или параллельно на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Элемент ALTER (XML для Аналитики)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Содержит элементы языка ASSL, используемые методом [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) для изменения объектов в экземпляре служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Элемент BACKUP](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Создает резервный файл базы данных служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
+|[Элемент Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Выполняет в экземпляре служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]одну или несколько команд XML для аналитики (XMLA) в пакетной операции, последовательно или параллельно.|  
 |[Элемент BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Начинает транзакцию в текущем сеансе с экземпляром служб Analysis Services.|  
 |[Элемент Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Отменяет команду, выполняющуюся в настоящий момент в экземпляре служб Analysis Services.|  
 |[Элемент ClearCache](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|Очищает кэш памяти для указанного объекта в экземпляре служб Analysis Services.|  

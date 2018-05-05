@@ -1,32 +1,23 @@
 ---
 title: Определяемые пользователем свойства элементов (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- custom member properties [MDX]
-ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 08576f10739533850f04a9e64fa052bf7c6bfeec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 26139ee397c9dbaca27eb3ef8236c3e242b98890
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>Свойства элементов MDX - определенных пользователем свойств элементов
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Свойства элемента, определяемого пользователем можно добавить к конкретному именованному уровню измерения в виде связей атрибутов. Определяемые пользователем свойства элементов нельзя добавлять к уровню иерархии **(All)** или в саму иерархию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяемые пользователем свойства элементов можно добавить к конкретному именованному уровню измерения в виде связей атрибутов. Определяемые пользователем свойства элементов нельзя добавлять к уровню иерархии **(All)** или в саму иерархию.  
   
 ## <a name="creating-user-defined-member-properties"></a>Создание определяемых пользователем  свойств элементов  
  Определяемые пользователем свойства элементов можно добавлять в серверные измерения или кубы при помощи пользовательского интерфейса или программно.  
@@ -73,7 +64,7 @@ FROM [Adventure Works]
  Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Использование свойств элементов (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Свойства &#40; Многомерные Выражения &#41;](../../../mdx/properties-mdx.md)  
+ [С помощью свойства элементов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Свойства & #40; Многомерные Выражения & #41;](../../../mdx/properties-mdx.md)  
   
   

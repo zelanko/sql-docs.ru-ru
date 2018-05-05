@@ -1,40 +1,19 @@
 ---
-title: "Обработка объектов (XMLA) | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- objects [XML for Analysis]
-- XML for Analysis, objects
-- XMLA, partitions
-- partitions [Analysis Services], XML for Analysis
-- XML for Analysis, partitions
-- writeback [Analysis Services], XML for Analysis
-- out-of-line bindings
-- processing objects [XML for Analysis]
-- XMLA, objects
-ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 
-author: Minewiskan
+title: Обработка объектов (XMLA) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 58150b6b74fd3a58fb09f44818b724214a64b8b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-objects-xmla"></a>Обработка объектов (XMLA)
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], обработка — это шаг или последовательность шагов, которые преобразуют данные в сведения для бизнес-анализа. Характеристики обработки меняются в зависимости от типа объекта, но обработка всегда является составной частью процесса преобразования данных в сведения.  
@@ -75,14 +54,14 @@ ms.lasthandoff: 02/15/2018
 |*ProcessClearStructureOnly*|Структура интеллектуального анализа данных|  
 |*ProcessScriptCache*|Cube|  
   
- Дополнительные сведения об обработке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения об обработке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов, в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="specifying-objects-to-be-processed"></a>Указание объектов для обработки  
  [Объекта](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) свойство **процесс** команда содержит идентификатор объекта для обработки. Только один объект может быть указано в **процесс** команды, но обработка объекта обрабатываются также все дочерние объекты. Например, при обработке группы мер в кубе обрабатываются все секции для этой группы мер, а при обработке базы данных обрабатываются все объекты, включая кубы, измерения и структуры интеллектуального анализа данных, содержащиеся в базе данных.  
   
  Если задать **ProcessAffectedObjects** атрибут **процесс** команды значение true, все связанные также обрабатываются объекты, вовлеченные в обработку указанного объекта. Например, если измерение выполняется добавочное обновление с помощью *ProcessUpdate* параметр в обработки **процесс** любого раздела, агрегаты которых становятся недействительными из-за членов команды, Добавление или удаление также обрабатываются службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Если **ProcessAffectedObjects** задано значение true. В этом случае одна **процесс** команда может обрабатывать несколько объектов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра, но [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяет, какие объекты, кроме одного объекта, указанного в **процесс** команда также должны быть обработаны.  
   
- Тем не менее, может обрабатывать несколько объектов, таких как измерения, в то же время с помощью нескольких **процесс** команд в **пакета** команды. Пакетные операции предоставления точнее управлять последовательной или параллельной обработкой объектов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр, чем при использовании **ProcessAffectedObjects** атрибута, а также позволяют подстраивать подход к обработке для большего размера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Дополнительные сведения о выполнении пакетных операций см. в разделе [выполнение пакетных операций &#40; XML для Аналитики &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ Тем не менее, может обрабатывать несколько объектов, таких как измерения, в то же время с помощью нескольких **процесс** команд в **пакета** команды. Пакетные операции предоставления точнее управлять последовательной или параллельной обработкой объектов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр, чем при использовании **ProcessAffectedObjects** атрибута, а также позволяют подстраивать подход к обработке для большего размера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Дополнительные сведения о выполнении пакетных операций см. в разделе [выполнение пакетных операций &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
 ## <a name="specifying-out-of-line-bindings"></a>Указание внешних привязок  
  Если **процесс** команда не содержится в **пакета** команду, можно дополнительно указать out-привязок в [привязки](../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md), [источникданных](../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md), и [DataSourceView](../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md) свойства **процесс** для объектов для обработки. Out-привязок — это ссылки на источники данных, представления источников данных и другие объекты, в которых привязка существует только во время выполнения **процесс** команда, и которые переопределяют любые существующие привязки, связанные с обрабатываемых объектов. Если внешние привязки не указаны, используются привязки, связанные в данный момент с обрабатываемыми объектами.  
@@ -93,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
 -   Используя задачу потока данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для предоставления данных при обработке измерения, модели интеллектуального анализа данных или секции.  
   
- Внешние привязки описаны как часть языка сценариев служб Analysis Services (языка ASSL). Дополнительные сведения о привязках вне строки в языке ASSL см. в разделе [&#40; источники данных и привязки Многомерные службы SSAS &#41; ](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Внешние привязки описаны как часть языка сценариев служб Analysis Services (языка ASSL). Дополнительные сведения о привязках вне строки в языке ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ### <a name="incrementally-updating-partitions"></a>Добавочное обновление секций  
  Для добавочного обновления уже обработанной секции обычно требуется внешняя привязка, так как привязка, указанная для этой секции, ссылается на данные таблицы фактов, которые уже были статистически обработаны в рамках данной секции. При выполнении добавочного обновления уже обработанной секции с помощью **процесс** команды [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняет следующие действия:  
@@ -104,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 -   Объединяют временную секцию с существующей выделенной секцией.  
   
- Дополнительные сведения о слиянии секций с помощью XML для аналитики (XMLA) см. в разделе [слияние секций &#40; XML для Аналитики &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
+ Дополнительные сведения о слиянии секций с помощью XML для аналитики (XMLA) см. в разделе [слияние секций &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Обработка ошибок  
  [ErrorConfiguration](../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md) свойство **процесс** команда позволяет задать способ обработки ошибок, возникших во время обработки объекта. Например, при обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обнаруживают повторяющиеся значение в ключевом столбце ключевого атрибута. Поскольку ключи атрибутов должны быть уникальны, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] удаляют повторяющиеся записи. На основе [KeyDuplicate](../../analysis-services/scripting/properties/keyduplicate-element-assl.md) свойство **ErrorConfiguration**, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может:  

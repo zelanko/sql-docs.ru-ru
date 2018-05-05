@@ -23,20 +23,20 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad15c20b68b3ccc69dee5b39c839f9f8dd0b2fab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Набор строк DBSCHEMA_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения обо всех столбцах, удовлетворяющих указанному критерию ограничения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Предоставляет сведения обо всех столбцах, удовлетворяющих указанному критерию ограничения.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DBSCHEMA_COLUMNS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**ЗНАЧЕНИЯМ TABLE_CATALOG**|**DBTYPE_WSTR**||Имя базы данных.|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||Не поддерживается.|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_NAME**|**DBTYPE_WSTR**|Необязательно|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|Необязательно|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

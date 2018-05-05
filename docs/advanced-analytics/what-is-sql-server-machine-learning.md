@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Новые возможности служб SQL Server машины обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/27/2018
 Существует два варианта использования возможности обучения в SQL Server: 
 
 + [**Обучение машины службы (в базе данных) для SQL Server** ](r/sql-server-r-services.md) действует в пределах экземпляра компонента database engine, где Вычислительное ядро полностью интегрирован с компонентом database engine. В большинстве установок являются этот параметр.
-+ [**Обучение компьютера сервера SQL Server (автономный)** ](r/r-server-standalone.md) установка не SQL. Несмотря на то, что программа установки SQL Server используется для установки сервера, полностью отсоединяется от SQL Server. Функционально он эквивалентен отличные от SQL [машины обучения Windows Microsoft Server для](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**Обучение компьютера сервера SQL Server (автономный)** ](r/r-server-standalone.md) — машины обучения сервера для Windows, работает независимо от СУБД. Несмотря на то, что программа установки SQL Server используется для установки сервера, компонент не привязанных к экземпляру. Функционально он эквивалентен отличные от SQL-Server [машины обучения Windows Microsoft Server для](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## <a name="r-and-python-packages"></a>Пакеты R и Python
 

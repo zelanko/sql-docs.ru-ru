@@ -1,37 +1,19 @@
 ---
-title: "Программирование фундаментальных объектов AMO | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- server objects [AMO]
-- programming [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 
-author: Minewiskan
+title: Программирование фундаментальных объектов AMO | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2bc8a2cf279f204d76e96657bfb25c0ebfe14329
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>Программирование фундаментальных объектов AMO
   Фундаментальные объекты, как правило, являются простыми и понятными. Чаще всего пользователь создает эти объекты и их экземпляры, а затем, когда они больше не нужны, отключается от них. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>. Единственным сложным объектом среди фундаментальных объектов AMO является <xref:Microsoft.AnalysisServices.DataSourceView>, которому необходимы подробные данные для построения абстрактной модели, которая является представлением источника данных.  
@@ -196,7 +178,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource">Объекты источника данных</a>  
+##  <a name="DataSource"></a> Объекты источника данных  
  Объект <xref:Microsoft.AnalysisServices.DataSource> связывает службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и базу данных, в которой находятся данные. Схема, которая представляет базовую модель для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], определяется объектом <xref:Microsoft.AnalysisServices.DataSourceView>. Объект <xref:Microsoft.AnalysisServices.DataSource> можно рассматривать как строку соединения с базой данных, в которой расположены данные.  
   
  Следующий образец кода демонстрирует создание объекта <xref:Microsoft.AnalysisServices.DataSource>. Этот образец проверяет, что объект <xref:Microsoft.AnalysisServices.Server> имеет соединение, а сервер и база данных существуют. Если объект <xref:Microsoft.AnalysisServices.DataSource> существует, то он будет удален и создан повторно. Создается объект <xref:Microsoft.AnalysisServices.DataSource> с теми же именем и внутренним идентификатором. В этом образце проверка строки подключения не выполняется, что позволяет проверить это.  
@@ -219,7 +201,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV">Объекты DataSourceView</a>  
+##  <a name="DSV"></a> Объекты DataSourceView  
  Объект <xref:Microsoft.AnalysisServices.DataSourceView> отвечает за хранение модели схемы для служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Чтобы объект <xref:Microsoft.AnalysisServices.DataSourceView> мог хранить схему, сначала ее необходимо создать. Схемы создаются через объекты DataSet из пространства имен System.Data.  
   
  Следующий образец кода показывает создание части схемы, включенной в образец проекта служб Analysis Services на основе AdventureWorks. Образец создает определения схемы для таблиц, вычисляемых столбцов, простых и составных связей. Схемы являются материализованными наборами данных.  
@@ -563,7 +545,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Основные классы объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [Логическая архитектура &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Логическая архитектура & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты базы данных & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

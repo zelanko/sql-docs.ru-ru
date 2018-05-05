@@ -27,15 +27,15 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4ad5b9bec7d1b40b9d283fc678f36edfc5068ab8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6789b60061d59009913f95c54fe395346a552d7f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="endofdata-element-assl"></a>Элемент EndOfData (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает конец данных, полученных от [PushedDataSource](../../../analysis-services/scripting/data-type/pusheddatasource-data-type-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Указывает конец данных, полученных от [PushedDataSource](../../../analysis-services/scripting/data-type/pusheddatasource-data-type-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Логическое значение|  
+|Тип данных и длина|Boolean|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который может появляться только один раз.|  
   
@@ -63,10 +63,10 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[PushedDataSource](../../../analysis-services/scripting/data-type/pusheddatasource-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Последний пакет данных от **PushedDataSource** необходимо задать **EndOfData** элемент **True**.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

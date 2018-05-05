@@ -29,15 +29,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9eb4f523fb783e9ded2e1a1d9d9c26e220331c5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 54f4160d5f92ce9f17a56d7d123acd9ad7e60d9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="emptyresult-data-type-xmla"></a>Тип данных EmptyResult (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет производный тип данных, представляющий [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который не возвращает данные из [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет производный тип данных, представляющий [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который не возвращает данные из [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
   
  **Пространство имен** urn:schemas-microsoft-com:xml-analysis:empty  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|[Результирующий набор](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |Производные типы данных|None|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |Дочерние элементы|None|  
 |Производные элементы|[корень](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В некоторых командах XML для аналитики (XMLA) возврат результата не предусмотрен или невозможен из-за ошибки. Команды XMLA, не возвращающие результатов, возвращают тип данных **EmptyResult** из пространства имен элемента **root** .  
   
 ## <a name="example"></a>Пример  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 </return>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Типы данных XML &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+## <a name="see-also"></a>См. также  
+ [Типы данных XML &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

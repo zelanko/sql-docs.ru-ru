@@ -20,20 +20,20 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a932cfa872e0cceed0b132f486349716ba4210b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e71d6bcc4a22e95ecb4283946c9ec9c26dd42d93
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverdbconnections-rowset"></a>Набор строк DISCOVER_DB_CONNECTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет ресурс действия сведения об использовании и открытым в данный момент соединения с сервера в базе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Предоставляет сведения об использовании и действиях по открытым в настоящий момент соединениям сервера с базой данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_DB_CONNECTIONS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**CONNECTION_CATALOG_NAME**|**DBTYPE_WSTR**||Имя базы данных, с которой установлено текущее соединение.|  
 |**CONNECTION_ID**|**DBTYPE_I4**||Уникальное число, определяющее соединение.|  
@@ -56,13 +56,13 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|CONNECTION_ID|DBTYPE_I4|Необязательный параметр.|  
-|CONNECTION_IN_USE|DBTYPE_I4|Необязательный параметр.|  
-|CONNECTION_SERVER_NAME|DBTYPE_WSTR|Необязательный параметр.|  
+|CONNECTION_ID|DBTYPE_I4|Необязательно.|  
+|CONNECTION_IN_USE|DBTYPE_I4|Необязательно.|  
+|CONNECTION_SERVER_NAME|DBTYPE_WSTR|Необязательно.|  
 |CONNECTION_CATALOG_NAME|DBTYPE_WSTR|Обязательный.|  
-|CONNECTION_SPID|DBTYPE_I4|Необязательный параметр.|  
+|CONNECTION_SPID|DBTYPE_I4|Необязательно.|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

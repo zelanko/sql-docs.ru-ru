@@ -1,33 +1,32 @@
 ---
-title: "Набор строк DISCOVER_CSDL_METADATA | Документы Microsoft"
-ms.custom: 
+title: Набор строк DISCOVER_CSDL_METADATA | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1976cc4b56e30a6ba8e578fd663259aca36b51ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Набор строк DISCOVER_CSDL_METADATA
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Возвращает сведения о модели данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (табличной или многомерной), предоставляя определение модели в формате CSDLBI (язык CSDL с заметками бизнес-аналитики). CSDLBI основан на языке CSDL, схеме XML, используемой платформой Entity Data Framework, необходимой для обеспечения коммуникации между сервером [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентом [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Заметки бизнес-аналитики (BI) предоставляют дополнительные метаданные о табличных моделях и их объектах. Дополнительные сведения о табличных моделях данных см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+  Возвращает сведения о модели данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (табличной или многомерной), предоставляя определение модели в формате CSDLBI (язык CSDL с заметками бизнес-аналитики). CSDLBI основан на языке CSDL, схеме XML, используемой платформой Entity Data Framework, необходимой для обеспечения коммуникации между сервером [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентом [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Заметки бизнес-аналитики (BI) предоставляют дополнительные метаданные о табличных моделях и их объектах. Дополнительные сведения о табличных моделях данных см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Контекст безопасности команды влияет на возвращаемый набор строк. Для получения определения CSDL с сервера необходимы разрешения на чтение в экземпляре служб Analysis Services.  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 02/15/2018
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Да|Задает имя базы данных, для которой запрошено описание CSDLBI. Если отсутствует, используется текущая база данных.<br /><br /> Это ограничение необходимо для всех типов моделей.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|Да|Задает идентификатор перспективы, определенной в модели, заданной с помощью CATALOG_NAME.<br /><br /> Необязательное ограничение. Все типы моделей.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|Да|Задает имя перспективы, определенной в модели, заданной с помощью CATALOG_NAME.<br /><br /> Это ограничение необходимо, когда табличная модель содержит перспективы или в многомерное решение входит несколько кубов или перспектив.|  
-|**МЕТАДАННЫЕ**|**DBTYPE_WSTR**|нет|Строка, содержащая XML-определение источника данных и его свойств в соответствии со CSDLBI-схемой.|  
+|**МЕТАДАННЫЕ**|**DBTYPE_WSTR**|Нет|Строка, содержащая XML-определение источника данных и его свойств в соответствии со CSDLBI-схемой.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|Да|Идентификатор строки.<br /><br /> Это ограничение необязательно для многомерных баз данных. Если доступно несколько кубов и ограничение не указано, то возвращается куб по умолчанию.|  
   
 ## <a name="remarks"></a>Замечания  
@@ -131,6 +130,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также:  
  [Службы Analysis Services наборы строк схемы](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [Заметки языка CSDL для бизнес-аналитики &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Заметки языка CSDL для бизнес-аналитики & #40; CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

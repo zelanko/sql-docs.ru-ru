@@ -1,39 +1,23 @@
 ---
-title: "Просмотр модели в средство просмотра временных рядов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Просмотр модели в средство просмотра временных рядов | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], continuous columns
-- mining model content, viewing
-- Microsoft Time Series Viewer
-- charts [Analysis Services]
-- Time Series Viewer [Analysis Services]
-- continuous columns
-- regression algorithms [Analysis Services]
-ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ed8d8dcafcc906eb445fd832f023b7d0b100c318
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В средстве просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
+  В средстве просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
   
 -   Алгоритм ARTxp, оптимизированный для краткосрочного прогнозирования.  
   

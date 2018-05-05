@@ -1,35 +1,23 @@
 ---
-title: "Обновление схемы в представлении источника данных (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Обновление схемы в представлении источника данных (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services], schema updates
-- refreshing data source views
-- data source views [Analysis Services], refreshing
-ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9d3cf2ef0c5368664d52ecc9ff0c21a8edfa6061
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Обновление схемы в представлении источника данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-После определения представления источников данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  
+  После определения представления источников данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  
   
  Для обновления представления источников данных так, чтобы он соответствовал внешнему источнику данных, можно обновить представление источника данных в среде Business Intelligence Development Studio (BIDS). Обновление представления источников данных приводит к выявлению изменений относительно внешнего источника данных, на котором основывается представление, и созданию списка добавлений или удалений во внешнем источнике данных. После этого можно применить набор изменений к представлению источников данных, который снова выровняет представление относительно базового источника данных. Обратите внимание, что для последующего обновления кубов и измерений в проекте, использующем представление источника данных, могут потребоваться дополнительные усилия.  
   

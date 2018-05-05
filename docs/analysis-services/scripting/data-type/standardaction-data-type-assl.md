@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ed7b9f423a7318f46008a6058870cacc1623d868
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 037414a59f9fa828f67da2a6706d0c4acfa4db6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standardaction-data-type-assl"></a>Тип данных StandardAction (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет производный тип данных, представляющий любой [действия](../../../analysis-services/scripting/objects/action-element-assl.md) элементом, кроме [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) элемент или [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет производный тип данных, представляющий любой элемент [Action](../../../analysis-services/scripting/objects/action-element-assl.md) , отличный от элемента [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) или [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Базовые типы данных|[Действие](../../../analysis-services/scripting/data-type/action-data-type-assl.md)|  
 |Производные типы данных|None|  
@@ -62,10 +62,10 @@ ms.lasthandoff: 01/08/2018
 |Дочерние элементы|[Выражение](../../../analysis-services/scripting/properties/expression-element-assl.md)|  
 |Производные элементы|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md) ([действия](../../../analysis-services/scripting/collections/actions-element-assl.md) коллекцию [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.StandardAction>.  
   
-## <a name="see-also"></a>См. также:  
- [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Службы Analysis Services сценариев типы данных XML в & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

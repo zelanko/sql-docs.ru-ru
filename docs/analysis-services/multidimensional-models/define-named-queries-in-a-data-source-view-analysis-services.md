@@ -1,35 +1,23 @@
 ---
-title: "Определение именованных запросов в представлении источника данных (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Определение именованных запросов в представлении источника данных (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- named queries [Analysis Services], creating
-- modifying named queries
-- data source views [Analysis Services], named queries
-ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5ea1c777a0e7d03b5b85148e1158d1f428bd4f38
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Определение именованных запросов в представлении источника данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
+  Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
   
  Именованный запрос позволяет расширять реляционную схему таблиц, существующих в представлении источника данных, не изменяя базового источника данных. Например, ряд именованных запросов можно использовать для разбиения сложной таблицы измерения на меньшие, более простые таблицы измерений для использований в измерениях баз данных. Именованный запрос может быть использован для соединения нескольких таблиц баз данных из одного или более источников данных в одну таблицу представления источников данных.  
   
@@ -69,6 +57,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Определение именованных вычислений в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

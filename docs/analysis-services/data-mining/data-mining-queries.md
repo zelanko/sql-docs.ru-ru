@@ -1,37 +1,23 @@
 ---
-title: "Запросы интеллектуального анализа данных | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Запросы интеллектуального анализа данных | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>Запросы интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Запросы интеллектуального анализа Возможные действия:  
+  Запросы интеллектуального анализа Возможные действия:  
   
 -   Применить модели к новым данным, чтобы сделать один или несколько прогнозов. Входные значения можно предоставить в качестве параметров или в одном пакете.  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_Understand"></a> Общие сведения о запросах интеллектуального анализа данных  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает запросы следующих типов:  
   
--   [Прогнозирующие запросы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      запросы, которые делают выводы на основе имеющихся в модели шаблонов и входных данных;  
   
@@ -68,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
      запросы, возвращающие метаданные, статистические данные и другие сведения о самой модели;  
   
--   [Запросы детализации &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Запросы детализации & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      запросы, которые могут получать базовые данные варианта для модели или даже данные из структуры, которая в модели не использовалась;  
   
@@ -149,13 +135,13 @@ ms.lasthandoff: 02/15/2018
 ## <a name="in-this-section"></a>В этом разделе  
  В этом разделе подробно представлены все типы запросов интеллектуального анализа данных, а также ссылки на детальные примеры создания запросов к моделям интеллектуального анализа данных.  
   
- [Прогнозирующие запросы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Запросы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Запросы определений данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Запросы определений данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -174,7 +160,7 @@ ms.lasthandoff: 02/15/2018
 |Использование компонентов интеллектуального анализа данных из служб Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

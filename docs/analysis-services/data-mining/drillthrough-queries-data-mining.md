@@ -1,37 +1,25 @@
 ---
-title: "Запросы детализации (интеллектуальный анализ данных) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Запросы детализации (интеллектуальный анализ данных) | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- AllowDrillThrough property
-- drillthrough [Analysis Services]
-- drillthrough [DMX]
-ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 804497bfe94c6d6d93f63d9b8a2242246122c034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>Запросы детализации (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*Запрос детализации* позволяет извлекать сведения из базовых вариантов или данных структуры, отсылая запрос в модель интеллектуального анализа данных. Детализация применяется в том случае, если нужно просмотреть варианты, использованные для обучения модели, в отличие от вариантов, которые используются для ее проверки, либо чтобы просмотреть дополнительных сведения из данных варианта.  
+  *Запрос детализации* позволяет извлекать сведения из базовых вариантов или данных структуры, отсылая запрос в модель интеллектуального анализа данных. Детализация применяется в том случае, если нужно просмотреть варианты, использованные для обучения модели, в отличие от вариантов, которые используются для ее проверки, либо чтобы просмотреть дополнительных сведения из данных варианта.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусматривает два различных варианта детализации.  
+ Интеллектуальный анализ данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусматривает два различных варианта детализации.  
   
 -   Детализация до **вариантов модели**  
   
@@ -102,8 +90,8 @@ ms.lasthandoff: 02/15/2018
 |----------|----------|  
 |Процедуры, описывающие использование детализации в конструкторе интеллектуального анализа данных|[Детализация данных вариантов из модели интеллектуального анализа данных](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |Изменение существующей модели интеллектуального анализа данных для разрешения детализации|[Включить детализацию для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|Включение детализации для структуры интеллектуального анализа данных с помощью предложения DMX WITH DRILLTHROUGH|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/create-mining-structure-dmx.md)|  
-|Сведения о присвоении разрешений, относящихся к детализации структур и моделей интеллектуального анализа данных|[Предоставление разрешений на &#40; структур интеллектуального анализа данных и моделей Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Включение детализации для структуры интеллектуального анализа данных с помощью предложения DMX WITH DRILLTHROUGH|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/create-mining-structure-dmx.md)|  
+|Сведения о присвоении разрешений, относящихся к детализации структур и моделей интеллектуального анализа данных|[Предоставление разрешений на & #40; структур интеллектуального анализа данных и моделей Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>См. также раздел  
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)   

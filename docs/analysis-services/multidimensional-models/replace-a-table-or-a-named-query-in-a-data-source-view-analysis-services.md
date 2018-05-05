@@ -1,37 +1,23 @@
 ---
-title: "Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- replacing tables
-- data source views [Analysis Services], tables
-- named queries [Analysis Services], replacing tables
-- tables [Analysis Services], data source views
-- partitions [Analysis Services], named queries
-ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c8d82321d439301915c4c0b50234293f628dc94d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6cf977f8018aa2208f0af65501be972ef5a0f423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В конструкторе представлений источников данных можно заменить таблицу, представление или именованный запрос в представлении источника данных на другую таблицу или представление из того же или из другого источника данных или на именованный запрос, определенный в представлении источника данных. При замене таблицы все другие объекты в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со ссылками на эту таблицу продолжают ссылаться на таблицу, так как идентификатор объекта для таблицы в представлении источника данных не изменился. Любые связи по-прежнему остаются действительными (на основе соответствия имен и типа столбцов). Если таблица удаляется, а затем добавляется, то ссылки и связи также удаляются, поэтому их необходимо создавать повторно.  
+  В конструкторе представлений источников данных можно заменить таблицу, представление или именованный запрос в представлении источника данных на другую таблицу или представление из того же или из другого источника данных или на именованный запрос, определенный в представлении источника данных. При замене таблицы все другие объекты в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со ссылками на эту таблицу продолжают ссылаться на таблицу, так как идентификатор объекта для таблицы в представлении источника данных не изменился. Любые связи по-прежнему остаются действительными (на основе соответствия имен и типа столбцов). Если таблица удаляется, а затем добавляется, то ссылки и связи также удаляются, поэтому их необходимо создавать повторно.  
   
  Чтобы заменить таблицу другой таблицей, необходимо активное соединение с источником данных в конструкторе представлений источников данных в режиме проектирования.  
   

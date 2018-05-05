@@ -1,27 +1,26 @@
 ---
-title: "Какой новые возможности служб Analysis Services | Документы Microsoft"
-ms.custom: 
+title: Какой новые возможности служб Analysis Services | Документы Microsoft
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 
+caps.latest.revision: 97
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 75d2f8519d66ca80b90477711fd5b41dbc1f5100
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Какой новые возможности служб Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +88,7 @@ SQL Server 2016 Analysis Services включает множество усове
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Параллельная обработка нескольких секций таблицы в табличных моделях    
  Этот выпуск содержит новую функцию параллельной обработки для таблиц с двумя или более секциями, повышающую производительность обработки. Эта функция не имеет параметров конфигурации. Дополнительные сведения о настройке секций и обработке таблиц см. в разделе [секций табличной модели](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Добавление учетных записей компьютеров в качестве администраторов в SSMS    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для настройки учетных записей компьютеров в качестве членов группы "Администраторы" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В диалоговом окне **Выбор пользователей или групп** укажите значение в поле **Расположения** для домена компьютеров, а затем добавьте тип объекта **Компьютеры** . Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ Теперь администраторы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для настройки учетных записей компьютеров в качестве членов группы "Администраторы" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В диалоговом окне **Выбор пользователей или групп** укажите значение в поле **Расположения** для домена компьютеров, а затем добавьте тип объекта **Компьютеры** . Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC для служб Analysis Services    
  Средство проверки согласованности базы данных (DBCC) выполняется на внутреннем уровне для обнаружения потенциальных проблем повреждения данных при загрузке базы данных. Однако его, помимо прочего, можно запустить по требованию при подозрениях на проблемы в данных или модели. DBCC выполняет разные проверки в зависимости от типа модели — табличная или многомерная. Дополнительные сведения см. в разделе [Средство проверки согласованности базы данных (DBCC) для табличных и многомерных баз данных Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).    
  ### <a name="extended-events-updates"></a>Обновления расширенных событий    

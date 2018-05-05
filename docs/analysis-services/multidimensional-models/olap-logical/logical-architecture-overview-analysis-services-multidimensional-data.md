@@ -1,36 +1,23 @@
 ---
-title: "Обзор логической архитектуры (службы Analysis Services — многомерные данные) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], examples
-- cubes [Analysis Services], about cubes
-ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 
-author: Minewiskan
+title: Обзор логической архитектуры (службы Analysis Services — многомерные данные) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4b4231e51818145a731c698848566d64562ba097
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Обзор логической архитектуры (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Службы Analysis Services работают в режиме развертывания сервера, который определяет архитектуру памяти и среду выполнения, используемую моделями Analysis Services различных типов. Режим сервера определяется во время установки. **Многомерный и интеллектуальный анализ данных режим** поддерживает традиционные OLAP и интеллектуального анализа данных. **Табличный режим** поддерживает табличные модели. **Режим интеграции с SharePoint** ссылается на экземпляр служб Analysis Services, который был установлен как [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, используемый для загрузки и запросов к Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей данных в книге.  
+  Службы Analysis Services работают в режиме развертывания сервера, который определяет архитектуру памяти и среду выполнения, используемую моделями Analysis Services различных типов. Режим сервера определяется во время установки. **Многомерный и интеллектуальный анализ данных режим** поддерживает традиционные OLAP и интеллектуального анализа данных. **Табличный режим** поддерживает табличные модели. **Режим интеграции с SharePoint** ссылается на экземпляр служб Analysis Services, который был установлен как [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, используемый для загрузки и запросов к Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей данных в книге.  
   
  В этом разделе рассматривается основная архитектура служб Analysis Services, применяемая в режиме многомерных данных и интеллектуального анализа данных. Дополнительные сведения о других режимах см. в разделе [табличных моделей ](../../../analysis-services/tabular-models/tabular-models-ssas.md) и [сравнение табличных и многомерных решений ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -128,7 +115,7 @@ ms.lasthandoff: 02/23/2018
   
  В предыдущей таблице каждая строка содержит те же значения для **RouteKey**, **SourceKey**, и **TimeKey** столбцов, указывающее на то, что эти строки привести к той же ячейке куба.  
   
- Показанный здесь пример представляет очень простой куб, в том смысле, что это куб с единственной группой мер, а все таблицы измерений соединены с таблицей фактов по схеме «звезда». Другая схема — это схема «снежинка», в которой одна или несколько таблиц измерений присоединяются к другой таблице измерения, а не напрямую к таблице фактов. **См. также:**[измерения &#40; Analysis Services — многомерные данные &#41; ](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ Показанный здесь пример представляет очень простой куб, в том смысле, что это куб с единственной группой мер, а все таблицы измерений соединены с таблицей фактов по схеме «звезда». Другая схема — это схема «снежинка», в которой одна или несколько таблиц измерений присоединяются к другой таблице измерения, а не напрямую к таблице фактов. **См. также:**[измерения &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  В приведенном здесь примере содержится только одна таблица фактов. Когда в кубе есть несколько таблиц фактов, меры каждой из них организуются в группы мер, причем группа мер связана с соответствующим набором измерений согласно заданным связям измерений. Эти связи определяются указанием участвующих таблиц в представлении источника данных и гранулярности связи. **См. также:**[связей измерений](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

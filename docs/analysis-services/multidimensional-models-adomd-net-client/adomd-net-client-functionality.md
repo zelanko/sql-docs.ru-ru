@@ -1,32 +1,19 @@
 ---
-title: "Функциональные возможности клиента ADOMD.NET | Документы Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- functionality [ADOMD.NET]
-- ADOMD.NET, functionality
-ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: 
-author: Minewiskan
+title: Функциональные возможности клиента ADOMD.NET | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c754b19a1cce0e3fb68a852c2cfdb3fb98617a65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adomdnet-client-functionality"></a>Функциональные возможности клиента ADOMD.NET
   Как и другие поставщики данных платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ADOMD.NET выступает в качестве моста между приложением и источником данных. Однако ADOMD.NET отличается от остальных поставщиком данных платформы .NET Framework тем, что он работает с аналитическими данными. Для этого компонент ADOMD.NET обладает функциями, которые в значительной степени отличаются от функций других поставщиков данных платформы .NET Framework. ADOMD.NET позволяет получать не только данные, но и метаданные, а также изменять структуру источника аналитических данных.  
@@ -44,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  **Изменение структуры аналитических данных**  
  Компонент ADOMD.NET также может быть использован для физического изменения структуры хранилища аналитических данных. Хотя обычно это делается с помощью модели объектов AMO, компонент ADOMD.NET позволяет отправлять команды на языке сценариев служб Analysis Services (язык ASSL) для создания, изменения и удаления объектов на сервере.  
   
- Дополнительные сведения: [выполнение команд для аналитических источника данных](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md), [разработку с помощью объектов AMO &#40; Объекты AMO &#41; ](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Служб analysis Services, язык сценариев &#40; ASSL для XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ Дополнительные сведения: [выполнение команд для аналитических источника данных](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md), [разработку с помощью объектов AMO &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [сценариев служб Analysis Язык &#40;ASSL XML для Аналитики.&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  Извлечение метаданных, извлечение данных и изменение структуры данных происходит в определенной точке рабочего процесса обычного приложения ADOMD.NET.  
   
