@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTables
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca0e5379079c735b7dd0f5b6770818e5f930f51d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-function"></a>Функция SQLTables
 **Соответствия**  
@@ -129,7 +128,7 @@ SQLRETURN SQLTables(
   
  В противном случае приложения должен уметь обрабатывать ситуацию, где пользователь выбирает таблицу, для которой **ВЫБЕРИТЕ** не предоставлены права.  
   
- *SchemaName* и *TableName* аргументы поддерживает шаблоны из поиска. *CatalogName* аргумент принимает шаблонов поиска, если атрибут среды SQL_ODBC_VERSION SQL_OV_ODBC3; он не поддерживает шаблоны поиска, если SQL_OV_ODBC2 имеет значение. Если задано значение SQL_OV_ODBC3, ODBC 3*.x* требуется драйвер, подстановочные знаки в *CatalogName* экранировать аргумент интерпретируется буквально. Дополнительные сведения о шаблонах допустимые поиска см. в разделе [значения аргументов шаблона](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ *SchemaName* и *TableName* аргументы поддерживает шаблоны из поиска. *CatalogName* аргумент принимает шаблонов поиска, если атрибут среды SQL_ODBC_VERSION SQL_OV_ODBC3; он не поддерживает шаблоны поиска, если SQL_OV_ODBC2 имеет значение. Если задано значение SQL_OV_ODBC3, ODBC 3 *.x* требуется драйвер, подстановочные знаки в *CatalogName* экранировать аргумент интерпретируется буквально. Дополнительные сведения о шаблонах допустимые поиска см. в разделе [значения аргументов шаблона](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
 >  Дополнительные сведения о общего использования, аргументы и возвращаемые данные функций каталога ODBC см. в разделе [функций каталога](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -148,9 +147,9 @@ SQLRETURN SQLTables(
   
  Чтобы определить фактический длин столбцов TABLE_CAT, по значениям TABLE_SCHEM и имя_таблицы, приложение может вызвать **SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN и SQL_MAX_TABLE_NAME_LEN сведения типы.  
   
- Следующие столбцы были переименованы для ODBC 3*.x*. Имя столбца изменения не влияют на обратной совместимости так, как привязать приложений, номер столбца.  
+ Следующие столбцы были переименованы для ODBC 3 *.x*. Имя столбца изменения не влияют на обратной совместимости так, как привязать приложений, номер столбца.  
   
-|Столбец ODBC 2.0|ODBC 3*.x* столбца|  
+|Столбец ODBC 2.0|ODBC 3 *.x* столбца|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

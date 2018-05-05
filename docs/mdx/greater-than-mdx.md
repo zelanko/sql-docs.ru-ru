@@ -1,5 +1,5 @@
 ---
-title: '&gt;(Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft'
+title: '&gt; (Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f60f464114d9ff0c2bf51257d03ec9e0952a7a7f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0706b604d1a1aa7be55ab856e6f3cfec53ea9e8a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;(Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ)
+# <a name="gt-greater-than-mdx"></a>&gt; (Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Выполняет операцию сравнения, в которой определяется, превышает ли значение одного многомерного выражения значение другого многомерного выражения.  
@@ -76,7 +75,7 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

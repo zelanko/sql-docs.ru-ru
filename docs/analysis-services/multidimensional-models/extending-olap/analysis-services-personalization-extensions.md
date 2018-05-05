@@ -1,34 +1,23 @@
 ---
 title: Службы Analysis Services модулей персонализации | Документы Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Модули персонализации служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации являются основой лежат в основе архитектуры подключаемых модулей. С помощью архитектуры подключаемых модулей можно динамически разрабатывать новые объекты кубов и функциональность и легко обмениваться ими с другими разработчиками. Таким образом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации предоставляют функциональность, позволяет добиться следующего:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модули персонализации являются основой лежат в основе архитектуры подключаемых модулей. С помощью архитектуры подключаемых модулей можно динамически разрабатывать новые объекты кубов и функциональность и легко обмениваться ими с другими разработчиками. Таким образом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации предоставляют функциональность, позволяет добиться следующего:  
   
 -   **Динамическое проектирование и разработка** сразу же после создания и развертывания [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации, пользователи имеют доступ к объектам и функциональности в начале следующего сеанса пользователя.  
   
@@ -40,7 +29,7 @@ ms.lasthandoff: 01/08/2018
   
  Модули персонализации служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] имеют множество возможных применений. Например, компания продает товар за различные виды валют. Можно создать вычисляемый элемент, возвращающий общую цифру продаж в местной валюте пользователя, который просматривает куб. Этот элемент создается как модуль персонализации. Затем этот вычисляемый элемент можно сделать общим для группы пользователей. Как только элемент сделан общим, пользователи немедленно получают доступ к вычисляемому элементу, как только подключатся к серверу. Они получат доступ к элементу, даже если интерфейс, которым они пользуются, отличен от использованного при создании вычисляемого элемента.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]модули персонализации служб — это простое и элегантное изменение существующей архитектуры управляемых сборок и предоставляются на протяжении [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> объектов модели, синтаксис многомерных выражений (MDX) и наборы строк схемы.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модули персонализации служб — это простое и элегантное изменение существующей архитектуры управляемых сборок и предоставляются на протяжении [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> объектов модели, синтаксис многомерных выражений (MDX) и наборы строк схемы.  
   
 ## <a name="logical-architecture"></a>Логическая архитектура  
  Архитектура модулей персонализации служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] основана на архитектуре управляемых сборок и следующих четырех основных элементах.  
@@ -123,19 +112,19 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>Класс AdomdCommand  
  Класс <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> теперь поддерживает следующие команды многомерных выражений:  
   
--   [Инструкция CREATE MEMBER (многомерные выражения)](../../../mdx/mdx-data-definition-create-member.md)  
+-   [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [Инструкция UPDATE MEMBER &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [Инструкция UPDATE MEMBER &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [Инструкция DROP MEMBER &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [Инструкция DROP MEMBER &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [Инструкция CREATE SET (многомерные выражения)](../../../mdx/mdx-data-definition-create-set.md)  
+-   [СОЗДАТЬ инструкцию SET & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [Инструкция DROP SET &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [Инструкция DROP SET &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [СОЗДАТЬ KPI, инструкция &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [Инструкция CREATE KPI &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [Инструкции DROP KPI &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [Инструкции DROP KPI &#40;многомерных Выражений&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>Расширения и усовершенствования многомерных выражений  
  Команда CREATE MEMBER улучшена добавлением **заголовок** свойства **display_folder** свойство и **associated_measure_group** свойство.  

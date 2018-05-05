@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f31b3056612f2cc6ece4ef0d8aeb52d61ffb3296
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Извлечение параметров вывода с помощью SQLGetData
 Перед ODBC 3.8 приложения только удалось получить выходные параметры запроса с привязанного выходного буфера. Однако трудно выделять очень большой буфер, если размер значения параметра очень большой (например, крупное изображение). ODBC 3.8 вводит новый способ получить выходные параметры в части. Теперь можно вызвать приложение **SQLGetData** с небольшим буфером несколько раз, чтобы получить значения параметра большого объема. Это похоже на извлечение больших столбцов данных.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee25cf1b7b4df806c3ea999205d14117aac3c038
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>Функция SQLExtendedFetch
 **Соответствия**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch** Извлекает указанный набор строк данных из результирующего набора и возвращает данные для всех связанных столбцов. Наборы строк можно указать в абсолютные или относительные позиции или по закладке.  
   
 > [!NOTE]  
->  В ODBC 3*.x*, **SQLExtendedFetch** будет заменен **SQLFetchScroll**. ODBC 3*.x* приложения не должны вызывать метод **SQLExtendedFetch**; вместо этого следует вызывать **SQLFetchScroll**. Сопоставляет диспетчера драйверов **SQLFetchScroll** для **SQLExtendedFetch** при работе с ODBC 2*.x* драйвера. ODBC 3*.x* драйверы должны поддерживать **SQLExtendedFetch** для работы с ODBC 2*.x* приложений, которые вызывают его. Дополнительные сведения см. в разделе «Комментарии» и [блочных курсоров, Прокручиваемые курсоры и обратной совместимости](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  В ODBC 3 *.x*, **SQLExtendedFetch** будет заменен **SQLFetchScroll**. ODBC 3 *.x* приложения не должны вызывать метод **SQLExtendedFetch**; вместо этого следует вызывать **SQLFetchScroll**. Сопоставляет диспетчера драйверов **SQLFetchScroll** для **SQLExtendedFetch** при работе с ODBC 2 *.x* драйвера. ODBC 3 *.x* драйверы должны поддерживать **SQLExtendedFetch** для работы с ODBC 2 *.x* приложений, которые вызывают его. Дополнительные сведения см. в разделе «Комментарии» и [блочных курсоров, Прокручиваемые курсоры и обратной совместимости](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -129,9 +128,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   Вызовы **SQLExtendedFetch** невозможно комбинировать с вызовами **SQLFetch** или **SQLFetchScroll**и если **SQLBulkOperations** вызывается Перед вызовом любой функции выборки **SQLExtendedFetch** не может быть вызван, пока курсор закрыт и открыт повторно. То есть **SQLExtendedFetch** может вызываться только в состоянии инструкции S7. Дополнительные сведения см. в разделе [переходы инструкции](../../../odbc/reference/appendixes/statement-transitions.md) в приложении B: ODBC состояния перехода таблицах.  
   
- Если приложение вызывает **SQLFetchScroll** при использовании ODBC 2*.x* драйвера, диспетчер драйверов сопоставляет этот вызов **SQLExtendedFetch**. Дополнительные сведения см. в разделе «SQLFetchScroll и ODBC 2*.x* драйверы» в [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ Если приложение вызывает **SQLFetchScroll** при использовании ODBC 2 *.x* драйвера, диспетчер драйверов сопоставляет этот вызов **SQLExtendedFetch**. Дополнительные сведения см. в разделе «SQLFetchScroll и ODBC 2 *.x* драйверы» в [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
- В ODBC 2*.x*, **SQLExtendedFetch** был вызван извлекать несколько строк и **SQLFetch** был вызван для получения одной строки. В ODBC 3*.x*, с другой стороны, **SQLFetch** можно вызвать, чтобы извлекать несколько строк.  
+ В ODBC 2 *.x*, **SQLExtendedFetch** был вызван извлекать несколько строк и **SQLFetch** был вызван для получения одной строки. В ODBC 3 *.x*, с другой стороны, **SQLFetch** можно вызвать, чтобы извлекать несколько строк.  
   
 ## <a name="related-functions"></a>Связанные функции  
   

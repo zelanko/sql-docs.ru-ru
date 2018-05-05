@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
@@ -21,15 +21,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9eb141c5754bf6cd7d5dd52324d784ee2a87b6ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Обратной совместимости и соответствия стандартам
-Обратная совместимость — это способность новых компонентов ODBC для работы с старых компонентов ODBC. В следующих разделах рассматривается влияние этих компонентов, изменяется в ODBC 3*.x*. Сведения, содержащиеся в них, в основном адреса запись ODBC 3*.x* приложения и обрабатываются как назад проблемы совместимости драйверов ODBC. Дополнительные инструкции о том, как обратной совместимости проблемы, влияющие на запись ODBC 3*.x* драйвера, в разделе [приложение G: драйвер рекомендации для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Обратная совместимость — это способность новых компонентов ODBC для работы с старых компонентов ODBC. В следующих разделах рассматривается влияние этих компонентов, изменяется в ODBC 3 *.x*. Сведения, содержащиеся в них, в основном адреса запись ODBC 3 *.x* приложения и обрабатываются как назад проблемы совместимости драйверов ODBC. Дополнительные инструкции о том, как обратной совместимости проблемы, влияющие на запись ODBC 3 *.x* драйвера, в разделе [приложение G: драйвер рекомендации для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Этот раздел содержит следующие подразделы.  
   

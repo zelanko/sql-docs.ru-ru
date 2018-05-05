@@ -1,11 +1,9 @@
 ---
 title: ADO перечисляемые константы | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c77a194ee2eb17779774d92b5452509d86c0fb29
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 151b4e88b3f094cd44ac7078e5d16e0b0730a9e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-enumerated-constants"></a>ADO перечисляемые константы
 Чтобы упростить отладку, перечислений ADO списка значение для каждой константы. Тем не менее это значение исключительно рекомендации и может меняться от одного выпуска ADO в другой. Код только должны зависеть от имени, а не фактического значения, каждый перечислимой константы.  

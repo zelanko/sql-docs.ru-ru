@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -22,12 +22,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08f5738d39c862184d989ed8581e488adb5da1c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>Типы данных C
 Типы данных ODBC C указывают тип данных C буферов, используемых для хранения данных в приложении.  
@@ -140,7 +139,7 @@ struct tagSQLGUID {
   
  [c] в ODBC 2. *x*, типы данных даты, времени и отметок времени C: SQL_C_DATE, SQL_C_TIME и SQL_C_TIMESTAMP.  
   
- [d] ODBC 3*.x* приложения должны использовать SQL_C_VARBOOKMARK не SQL_C_BOOKMARK. Когда ODBC 3*.x* приложение работает с ODBC 2. *x* драйвера ODBC 3*.x* диспетчера драйверов сопоставит SQL_C_VARBOOKMARK SQL_C_BOOKMARK.  
+ [d] ODBC 3 *.x* приложения должны использовать SQL_C_VARBOOKMARK не SQL_C_BOOKMARK. Когда ODBC 3 *.x* приложение работает с ODBC 2. *x* драйвера ODBC 3 *.x* диспетчера драйверов сопоставит SQL_C_VARBOOKMARK SQL_C_BOOKMARK.  
   
  число [e] значение, хранящееся в *val* структуры SQL_NUMERIC_STRUCT масштабированный целого числа, в режиме прямым порядком следования байтов (крайнего левого байта выполняется младший байт). Например число 10.001 основание 10, с масштабом 4, масштабируется до целого числа 100010. Поскольку это 186AA в шестнадцатеричном формате, значение в SQL_NUMERIC_STRUCT бы «AA 86 01 00 00... 00", с количеством байт, определяется SQL_MAX_NUMERIC_LEN **#define**.  
   
@@ -152,9 +151,9 @@ struct tagSQLGUID {
   
  [h] _int64 не может быть передан в некоторых компиляторах.  
   
- [i] _SQL_C_BOOKMARK рекомендуется к использованию в ODBC 3*.x*.  
+ [i] _SQL_C_BOOKMARK рекомендуется к использованию в ODBC 3 *.x*.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT были заменены в ODBC знаковых и беззнаковых типов: SQL_C_SSHORT и SQL_C_USHORT, SQL_C_SLONG и SQL_C_ULONG и SQL_C_STINYINT и SQL_C_UTINYINT. ODBC 3*.x* драйвер, который должен работать с ODBC 2. *x* приложения должны поддерживать SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT, так как при их вызове диспетчера драйверов передает их с помощью драйвера.  
+ [j] _SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT были заменены в ODBC знаковых и беззнаковых типов: SQL_C_SSHORT и SQL_C_USHORT, SQL_C_SLONG и SQL_C_ULONG и SQL_C_STINYINT и SQL_C_UTINYINT. ODBC 3 *.x* драйвер, который должен работать с ODBC 2. *x* приложения должны поддерживать SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT, так как при их вызове диспетчера драйверов передает их с помощью драйвера.  
   
  [k] SQL_C_GUID можно преобразовать только для SQL_CHAR или SQL_WCHAR.  
   

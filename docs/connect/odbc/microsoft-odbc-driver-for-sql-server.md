@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f7d037b0080b754e8a0ba65efc22a92ce43873b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвера ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC имеет доступ к данным основной собственный API для приложений, написанных на языках C и C++ для SQL Server. Имеется драйвер ODBC для большинства источников данных. Другие языки, использующие ODBC включают COBOL, Perl, PHP и Python. ODBC широко используется в сценариях интеграции данных.
 
@@ -33,15 +32,15 @@ ODBC имеет доступ к данным основной собственн
 
 ## <a name="code-example-in-c"></a>Пример кода в C++
 
-У нас есть малого ZIP-файл, содержащий исходный код программы на языке C++, который использует технологию ODBC:
+В следующем примере C++ показано, как использовать API ODBC для подключения и доступа к базе данных:
 
 - [Пример кода C++, с использованием ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Загрузить
 
-- ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвера ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвера ODBC](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>Документация  
+## <a name="documentation"></a>Документация
 
 ### <a name="features"></a>Функции
 

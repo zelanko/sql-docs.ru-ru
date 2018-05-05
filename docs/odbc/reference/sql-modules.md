@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL modules [ODBC]
 - sending SQL statements to DBMS [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a345d64e7ed9353513ce67c71f5442d317df701f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b6e600d9b759f884e8c0ce7393380b8c4f7da5cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-modules"></a>SQL модули
 Второй способ для отправки инструкций SQL в СУБД выполняется с помощью модулей. Коротко говоря модуля состоит из нескольких процедур, которые вызываются из узла, язык программирования. Каждая процедура содержит одну инструкцию SQL и данные передаются в и из процедуры через параметры.  

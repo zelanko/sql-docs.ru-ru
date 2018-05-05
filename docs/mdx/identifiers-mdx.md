@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9b45b45da18ea7c9047609ffb47bc5a698e43a21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79d7b9ce37017f9744dc3e2684457fbba5a4b13a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-mdx"></a>Идентификаторы (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
     -   Символ подчеркивания (_).  
   
-3.  В качестве идентификатора не может выступать зарезервированное ключевое слово многомерных выражений. Зарезервированные слова в многомерных выражениях не зависят от регистра. Дополнительные сведения см. в разделе [зарезервированные ключевые слова &#40; Синтаксис многомерных Выражений &#41; ](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  В качестве идентификатора не может выступать зарезервированное ключевое слово многомерных выражений. Зарезервированные слова в многомерных выражениях не зависят от регистра. Дополнительные сведения см. в разделе [зарезервированные ключевые слова &#40;синтаксис многомерных Выражений&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Внутри идентификаторов запрещается использовать символы пробела или специальные символы.  
   
@@ -140,9 +139,9 @@ ms.lasthandoff: 01/08/2018
   
  Помимо этого, в предыдущем примере выделен идентификатор Measures, чтобы продемонстрировать разделение нескольких идентификаторов.  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Элементы синтаксиса многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Синтаксис элементов &#40;многомерных Выражений&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

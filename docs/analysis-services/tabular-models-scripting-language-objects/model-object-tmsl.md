@@ -1,30 +1,30 @@
 ---
-title: "Объект модели (TMSL) | Документы Microsoft"
-ms.custom: 
+title: Объект модели (TMSL) | Документы Microsoft
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6690d9407edb3002a1924440f85b379da6c18260
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-object-tmsl"></a>Объект модели (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет табличной модели. Имеется одна модель на базу данных и только одну базу данных, которые могут быть указаны в командам. Объект базы данных является родительским объектом.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет табличной модели. Имеется одна модель на базу данных и только одну базу данных, которые могут быть указаны в командам. Объект базы данных является родительским объектом.  
   
  Определения модели слишком велики для воспроизведения полный синтаксис в один раздел. По этой причине частичного выделения основных частей синтаксиса находятся ниже со ссылками на дочерние объекты.  
   
@@ -53,13 +53,13 @@ ms.lasthandoff: 01/08/2018
  Последовательность параметров сортировки. В разделе [сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) для получения дополнительной информации.  
   
  таблицы  
- Полная коллекция таблиц в модели, включая секции, столбцы, меры, ключевые показатели эффективности и заметки. В разделе [таблиц объект &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) подробные сведения.  
+ Полная коллекция таблиц в модели, включая секции, столбцы, меры, ключевые показатели эффективности и заметки. В разделе [объект Tables &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) подробные сведения.  
   
  связи  
- Определяет связь между каждой парой таблиц, включая свойства, настройки безопасности и направление фильтрации. В разделе [объект отношения &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) подробные сведения.  
+ Определяет связь между каждой парой таблиц, включая свойства, настройки безопасности и направление фильтрации. В разделе [связи объекта &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) подробные сведения.  
   
  Источники данных  
- Одно или несколько подключений к внешним базам данных, предоставляющего данные для модели или для передачи с помощью запросов. В разделе [DataSources объект &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) подробные сведения.  
+ Одно или несколько подключений к внешним базам данных, предоставляющего данные для модели или для передачи с помощью запросов. В разделе [объектов источников данных &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) подробные сведения.  
   
  роли  
  Объекты, которые связать разрешений на базу данных, учетные записи и при необходимости фильтры безопасности в DAX для пользовательское управление доступом.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
  При создании, замена или изменение объекта модели укажите все свойства чтения и записи определения объекта. Пропуск свойства чтения и записи, считается удаления.  
   
 ## <a name="partial-syntax"></a>Частичное синтаксис  
- Так как это определение объектов велико, перечислены только первого уровня свойства. В разделе [определений объектов в табличной модели язык сценариев &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) список дочерних объектов.  
+ Так как это определение объектов велико, перечислены только первого уровня свойства. В разделе [определений объектов в языке скриптов табличных моделей &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) список дочерних объектов.  
   
 ```  
     "model": {  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

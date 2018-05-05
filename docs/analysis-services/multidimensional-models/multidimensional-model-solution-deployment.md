@@ -1,35 +1,23 @@
 ---
-title: "Развертывание решений многомерных моделей | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Развертывание решений многомерных моделей | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services deployments, planning
-- deploying [Analysis Services]
-- deploying [Analysis Services], planning
-ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fb17843b2c01de1a99bff2d37b22eaa07783c8a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4b8f66bcf6715040ab572f0884c12b343a3dc6b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Развертывание решений многомерных моделей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-После завершения разработки проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Ниже эти методы перечислены в порядке приоритетности: автоматизация объектов AMO, XML для аналитики, мастер развертывания, программа развертывания, мастер синхронизации, резервное копирование и восстановление.  
+  После завершения разработки проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Ниже эти методы перечислены в порядке приоритетности: автоматизация объектов AMO, XML для аналитики, мастер развертывания, программа развертывания, мастер синхронизации, резервное копирование и восстановление.  
   
  Этот раздел включает следующие подразделы:  
   
@@ -43,7 +31,7 @@ ms.lasthandoff: 02/15/2018
   
 |Метод|Description|Ссылка|  
 |------------|-----------------|----------|  
-|**Автоматизация объектов управления аналитикой (объектов AMO)**|Объекты AMO предоставляют программный интерфейс с полным набором команд для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая команды, которые можно использовать для развертывания решения. Автоматизация объектов AMO как один из подходов к развертыванию решения представляет собой наиболее гибкий метод, для реализации которого, однако, требуются определенные трудозатраты в части программирования.  Ключевое преимущество использования объектов AMO заключается в возможности использования агента SQL Server Agent вместе с AMO-приложением для запуска развертывания по заданному расписанию.|[Разработка с использованием объектов AMO &#40; Объекты AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**Автоматизация объектов управления аналитикой (объектов AMO)**|Объекты AMO предоставляют программный интерфейс с полным набором команд для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая команды, которые можно использовать для развертывания решения. Автоматизация объектов AMO как один из подходов к развертыванию решения представляет собой наиболее гибкий метод, для реализации которого, однако, требуются определенные трудозатраты в части программирования.  Ключевое преимущество использования объектов AMO заключается в возможности использования агента SQL Server Agent вместе с AMO-приложением для запуска развертывания по заданному расписанию.|[Разработка с использованием объектов AMO & #40; Объекты AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XML для аналитики**|Используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания скрипта XMLA метаданных существующей базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем запустите этот скрипт на другом сервере для воссоздания исходной базы данных. Скрипты XMLA легко формируются в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , для чего сначала нужно задать процесс развертывания, затем кодифицировать его и сохранить в скрипте XMLA. После сохранения в виде файла скрипт XMLA можно легко запустить в соответствии с расписанием или внедрить скрипт в приложение, подключающееся непосредственно к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> На основе заранее заданных настроек можно выполнять и скрипты XMLA, используя с этой целью агент SQL Server, но при этом пользователь не может использовать скрипты XMLA с той же гибкостью, что и объекты AMO. Объекты AMO обеспечивают большую функциональность, предоставляя доступ к полному спектру административных команд.|[Развертывание решений модели с использованием XML для Аналитики](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Мастер развертывания**|Используйте мастер развертывания и выходные файлы XML для аналитики, созданные проектом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , для развертывания метаданных проекта на целевом сервере. При помощи мастера развертывания можно выполнять развертывание непосредственно из файла служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , создаваемого выходным каталогом по конструкции проекта.<br /><br /> Основное преимущество использования мастера развертывания [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — это удобство. По аналогии с тем, что можно сохранить скрипт XMLA для последующего использования в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], можно сохранять и скрипты мастера развертывания. Мастер развертывания можно запускать как интерактивно, так и из командной строки при помощи программы развертывания.|[Развертывание решений модели с помощью мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Программа развертывания**|Программа развертывания позволяет запустить подсистему развертывания служб Analysis Services из командной строки.|[Развертывание решений модели с использованием программы развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
@@ -58,10 +46,10 @@ ms.lasthandoff: 02/15/2018
 |Какое оборудование и программные ресурсы требуются для этого решения?|[Требования и вопросы, связанные с развертыванием служб Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Как вы будете развертывать дополнительные объекты, выходящие за рамки проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , такие как пакеты, отчеты и схемы реляционных баз данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ?||  
 |Как загружать и обновлять данные в развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?<br /><br /> Как вы будете обновлять метаданные (например, вычисления) в развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Методы развертывания](#bkmk_meth) в этом разделе.|  
-|Нужно ли предоставлять пользователям доступ к данным служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] через Интернет?|[Настройка HTTP-доступа к службам Analysis Services в службах IIS &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|Нужно ли предоставлять пользователям доступ к данным служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] через Интернет?|[Настройка HTTP-доступа к службам Analysis Services в службах IIS & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Нужно ли предоставлять запросам возможность непрерывного доступа к данным служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Требования и вопросы, связанные с развертыванием служб Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Нужно ли развертывать объекты в распределенной среде при помощи связанных объектов или удаленных секций?|[Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Создание удаленной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) и [Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
-|Как вы будете обеспечивать безопасность данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Авторизацию доступа к объектам и операции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Как вы будете обеспечивать безопасность данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Авторизацию доступа к объектам и операции & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Связанные задачи  
  [Требования и вопросы, связанные с развертыванием служб Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)  

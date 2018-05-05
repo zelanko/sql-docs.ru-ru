@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6144552c3fabed866a5f85e2293f177a2e8b41f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 827c353e7ee45643b483ed92ddc82bb5678ddab0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-equal-to-dmx"></a>= (Равно) (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +46,9 @@ DMX_Expression = DMX_Expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение логического типа равно TRUE в случае, если оба параметра не равны NULL и значение первого параметра равно значению второго. Значение логического типа равно FALSE в случае, если оба параметра не равны NULL и значение первого параметра не равно значению второго. Логическое значение равно NULL, если один или оба аргумента имеют значение NULL.  
   
-## <a name="see-also"></a>См. также:  
- [Операторы сравнения &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-comparison.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Операторы &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Операторы сравнения &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-comparison.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)  
   
   

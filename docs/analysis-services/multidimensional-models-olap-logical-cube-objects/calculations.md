@@ -1,39 +1,23 @@
 ---
-title: "Вычисления | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- calculations [Analysis Services]
-- OLAP objects [Analysis Services], calculations
-- MDX [Analysis Services], calculations
-- calculations [Analysis Services], about calculations
-- cubes [Analysis Services], calculations
-ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 
-author: Minewiskan
+title: Вычисления | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dd006ee1a6896e4b9bdd6264d16a8406786f8d39
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c71a931814e28a28ccfffd810deff15d7f126f6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculations"></a>вычисления
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Вычисление представляет собой выражение многомерных выражений (MDX) или сценарий, используемый для определения вычисляемого элемента, именованного набора или оценивающего назначения в кубе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют добавлять объекты, определенные не данными куба, а выражениями, которые могут ссылаться на прочие части куба, другие кубы, или даже данные вне базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют расширить возможности куба, увеличивая гибкость и производительность приложений бизнес-аналитики. Дополнительные сведения о сценариях для вычислений см. в разделе [введение в сценарии многомерных Выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см. в разделе [SQL Server 2005 производительности руководства по Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+  Вычисление представляет собой выражение многомерных выражений (MDX) или сценарий, используемый для определения вычисляемого элемента, именованного набора или оценивающего назначения в кубе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют добавлять объекты, определенные не данными куба, а выражениями, которые могут ссылаться на прочие части куба, другие кубы, или даже данные вне базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют расширить возможности куба, увеличивая гибкость и производительность приложений бизнес-аналитики. Дополнительные сведения о сценариях для вычислений см. в разделе [введение в сценарии многомерных Выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см. в разделе [SQL Server 2005 производительности руководства по Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Вычисляемые элементы  
  Вычисляемый элемент представляет собой элемент, значение которого вычисляется в процессе выполнения при помощи многомерного выражения, которое задается во время определения вычисляемого элемента. Вычисляемый элемент доступен для приложений бизнес-аналитики, равно как и любой другой. Вычисляемые элементы не увеличивают размер куба, потому что в кубе хранятся только определения; значения вычисляются в памяти, когда возникает необходимость ответить на запрос.  

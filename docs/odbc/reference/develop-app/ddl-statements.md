@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], DDL statements
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61605252563150f4bb957eda14a95c5745650656
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 28a8beb7646ea9542b940d5106cf4177dbf2430e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ddl-statements"></a>Инструкции DDL
 Инструкции определения языка DDL данных невероятно зависят от СУБД. Инструкции для наиболее распространенных операций определения данных определяет ODBC SQL: Создание и удаление таблиц, индексов и представления; Изменение таблиц; Предоставление и Отмена прав. Все другие инструкции DDL, зависящее от источника данных. Таким образом взаимодействующие приложения не может выполнять некоторые операции определения данных. Как правило это не проблема, из-за таких операций, как правило, очень конкретных СУБД и наилучшим образом влево, чтобы программное обеспечение администрирования собственную базу данных, поставляемых с большинством СУБД или программы установки поставлялась с драйвером.  

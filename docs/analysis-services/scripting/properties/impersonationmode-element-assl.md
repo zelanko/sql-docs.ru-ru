@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f034a30c00b915fcea6956c2a6ffcf311358f940
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6f72d72456146da3e32850788d625745d9fe9dcd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonationmode-element-assl"></a>Элемент ImpersonationMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит значение, указывающее метод олицетворения для элементов, которые являются производными от [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) тип данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит значение, указывающее метод олицетворения для элементов, которые являются производными от [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) тип данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*По умолчанию*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Значение по умолчанию|*Default*|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,12 +63,12 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
 |Значение|Description|  
 |-----------|-----------------|  
-|*По умолчанию*|В родительском объекте используется метод олицетворения, наиболее подходящий для контекста, в котором применяется олицетворение.|  
+|*Default*|В родительском объекте используется метод олицетворения, наиболее подходящий для контекста, в котором применяется олицетворение.|  
 |*ImpersonateAccount*|В родительском объекте используются учетные данные учетной записи пользователя, которая указана в родительском элементе.|  
 |*ImpersonateAnonymous*|В родительском объекте используются учетные данные анонимного пользователя.|  
 |*ImpersonateCurrentUser*|В родительском объекте используются учетные данные текущего пользователя.|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/08/2018
   
  Перечисление, соответствующее разрешенным значениям для **ImpersonationMode** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ImpersonationLevel>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

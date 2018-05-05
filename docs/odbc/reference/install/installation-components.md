@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 - ODBC [ODBC], component installation
@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1e8d3c6f5362cef672c5aa02b7547fa86040b4aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cdd589947eb1936b817cd866058bd3785ee41d7f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-components"></a>Компоненты установки
 > [!NOTE]  
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  ![Связь между компонентами установки](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]  
->  Файл Odbc.inf, который использовался в ODBC 2. *x* компонент не используется для описания файлов, необходимых для каждого ODBC в ODBC 3*.x*. Драйверы, поставляемые ODBC 3*.x* компоненты не нужно создать файл Odbc.inf. Удаление **SQLInstallDriver** и **SQLInstallODBC**и об устаревании **SQLInstallTranslator**, к просмотру Odbc.inf ненужные. Сведений о драйвере, используемой в разделы ключевое слово Driver Odbc.inf теперь предоставляется в *lpszDriver* аргумент в **SQLInstallDriverEx**. Транслятор сведения, содержавшиеся в [переводчик ODBC] и разделах спецификации переводчик Odbc.inf теперь предоставляется в *lpszTranslator* аргумент **SQLInstallTranslatorEx**. Эти изменения разрешите установщику ODBC можно более переносить на другие платформы.  
+>  Файл Odbc.inf, который использовался в ODBC 2. *x* компонент не используется для описания файлов, необходимых для каждого ODBC в ODBC 3 *.x*. Драйверы, поставляемые ODBC 3 *.x* компоненты не нужно создать файл Odbc.inf. Удаление **SQLInstallDriver** и **SQLInstallODBC**и об устаревании **SQLInstallTranslator**, к просмотру Odbc.inf ненужные. Сведений о драйвере, используемой в разделы ключевое слово Driver Odbc.inf теперь предоставляется в *lpszDriver* аргумент в **SQLInstallDriverEx**. Транслятор сведения, содержавшиеся в [переводчик ODBC] и разделах спецификации переводчик Odbc.inf теперь предоставляется в *lpszTranslator* аргумент **SQLInstallTranslatorEx**. Эти изменения разрешите установщику ODBC можно более переносить на другие платформы.  
   
  Дополнительные сведения об этих компонентах см. в следующих разделах, в конце этого раздела.  
   

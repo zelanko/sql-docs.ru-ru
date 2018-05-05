@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - libraries [ADO]
@@ -20,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 986367a4ad578c893cb7f9b13fc1272c038f6ae9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9f5bd59675d24810ddef02a790cb3464ede168ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries"></a>Ссылающееся на библиотеки ADO
 Последнюю версию ADO упаковывается в виде *msado15.dll*. Последние версии ADO MD и ADOX упаковываются в виде *msadom.dll* и *msadox.dll*соответственно. Эти библиотеки устанавливаются по умолчанию в *$installDir*, где *$installDir* означает путь к каталогу, в котором установлена библиотека ADO на вашем компьютере. Чтобы использовать ADO библиотеки в приложении, вы должны явно ссылаться на их в проекте приложения.  

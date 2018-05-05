@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 223cf530d4015988db64a7522aaead3c49e0f87f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Файл Schema.ini (драйвера текстового файла)
 При использовании драйвера текстового формата текстового файла определяется с помощью файла сведений схемы. Файл сведений схемы всегда с именем Schema.ini и всегда остается в том же каталоге, в качестве источника текстовых данных. Файл сведений схемы предоставляет IISAM сведениями об общий формат файла, имя столбца и сведения о типе данных и несколько других характеристик данных. Файл Schema.ini всегда является обязательным для доступа к данным фиксированной длины. Файл Schema.ini следует использовать, если текст таблица содержит даты и времени, денежных единиц или десятичные данные или в любое время, что требуется больший контроль над обработки данных в таблице.  

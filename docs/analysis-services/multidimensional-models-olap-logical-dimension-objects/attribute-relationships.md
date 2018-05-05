@@ -1,47 +1,23 @@
 ---
-title: "Связи атрибутов | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- member properties [Analysis Services], attribute relationships
-- security [Analysis Services], properties
-- PROPERTIES keyword
-- storage [Analysis Services], attribute relationships
-- natural hierarchies [Analysis Services]
-- dimensions [Analysis Services], member properties
-- queries [MDX], attribute relationships
-- user-defined hierarchies [Analysis Services]
-- attributes [Analysis Services], relationships
-- member properties [Analysis Services]
-- members [Analysis Services], attribute relationships
-- storing data [Analysis Services], attribute relationships
-- relationships [Analysis Services], attributes
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 
-author: Minewiskan
+title: Связи атрибутов | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e687d64d3ba36bee4cffab7e81d401081b57eaa2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 903f66edbe7c296c4f4c02526e87944d5738e0ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships"></a>можно изменить расположение фигур на вкладке
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], атрибуты измерения всегда связаны прямо или косвенно с ключевым атрибутом. Когда измерение определяется по схеме «звезда», где все атрибуты измерения наследуются из одной реляционной таблицы, то связи между ключевыми и не ключевыми атрибутами определяются автоматически. Когда измерение определяется по схеме «снежинка», где атрибуты измерения наследуются от разных реляционных таблиц, связи атрибутов автоматически определяются следующим образом:  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], атрибуты измерения всегда связаны прямо или косвенно с ключевым атрибутом. Когда измерение определяется по схеме «звезда», где все атрибуты измерения наследуются из одной реляционной таблицы, то связи между ключевыми и не ключевыми атрибутами определяются автоматически. Когда измерение определяется по схеме «снежинка», где атрибуты измерения наследуются от разных реляционных таблиц, связи атрибутов автоматически определяются следующим образом:  
   
 -   Между ключевым атрибутом и каждым не ключевым атрибутом, привязанным к столбцу главной таблицы измерения.  
   
@@ -69,9 +45,9 @@ ms.lasthandoff: 02/15/2018
   
 -   Город  
   
--   Страна  
+-   Country  
   
--   Регион  
+-   Region  
   
  Соответствующее измерение служб Analysis Services содержит семь атрибутов:  
   
@@ -99,7 +75,7 @@ ms.lasthandoff: 02/15/2018
  При создании атрибута главное проверить, чтобы атрибут, на который ссылается связь, имел не более одного значения для каждого элемента атрибута, к которому он принадлежит. Например, если определить связь между атрибутами City и State, каждый город будет принадлежать одному штату.  
   
 ## <a name="attribute-relationship-queries"></a>Запросы связи атрибутов  
- Можно использовать запросы многомерных Выражений для извлечения данных из связи атрибутов в форме свойств элементов с **свойства** ключевое слово многомерных выражений **ВЫБЕРИТЕ** инструкции. Дополнительные сведения об использовании многомерных Выражений для получения свойств элементов см. в разделе [свойства элементов с помощью &#40; Многомерные Выражения &#41; ](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ Можно использовать запросы многомерных Выражений для извлечения данных из связи атрибутов в форме свойств элементов с **свойства** ключевое слово многомерных выражений **ВЫБЕРИТЕ** инструкции. Дополнительные сведения об использовании многомерных Выражений для получения свойств элементов см. в разделе [с помощью свойства элементов &#40;многомерных Выражений&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

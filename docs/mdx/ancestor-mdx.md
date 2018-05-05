@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f5271c7e096ef7a6b09efc7cc818b31ccd1ec699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestor-mdx"></a>Ancestor (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +51,14 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
- *Расстояние*  
+ *расстояние*  
  Допустимое числовое выражение, указывающее расстояние от заданного элемента.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  С **предка** функции, задать функцию с Многомерным выражением элемента, а затем задать Многомерное выражение уровня, являющегося предком элемента, или числовое выражение, представляющее число уровней над данным элементом. С этой информацией **предков** функция возвращает предка элемента на этом уровне.  
   
 > [!NOTE]  
->  Чтобы вернуть набор, содержащий элемент-предок, а не просто элемент-предок, используйте [предков &#40; Многомерные Выражения &#41; ](../mdx/ancestors-mdx.md) функции.  
+>  Чтобы вернуть набор, содержащий элемент-предок, а не просто элемент-предок, используйте [предков &#40;многомерных Выражений&#41; ](../mdx/ancestors-mdx.md) функции.  
   
  Если выражение уровня указано, **предка** функция возвращает предок заданного элемента на заданном уровне. Если заданный элемент не входит в ту же иерархию, что и заданный уровень, функция вернет ошибку.  
   
@@ -112,7 +111,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
