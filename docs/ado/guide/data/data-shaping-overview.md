@@ -1,11 +1,9 @@
 ---
 title: Общие сведения о формирования данных | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d9ee09d74ca1907f293dab73189b172db73de0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-overview"></a>Общие сведения о формирования данных
 *Формирование данных* означает создание иерархических отношений между двух или более логическими объектами в запросе. Иерархию можно просмотреть в родительско дочерних отношений между записи одного [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и одну или несколько записей (также известный как главе) другого **набора записей**. Связи «родители потомки» родительского **записей** содержит дочерний **записей**. Пример иерархические связи — customers и orders. Для каждого клиента в базе данных может быть ноль или более заказов. Иерархические связи могут быть рекурсивными, это означает, что по внукам записи могут быть вложены в дочерней записи. В принципе иерархические записи могут быть вложенными в любой глубины. На практике ADO ограничивает рекурсии максимум 512 **записей**s.  

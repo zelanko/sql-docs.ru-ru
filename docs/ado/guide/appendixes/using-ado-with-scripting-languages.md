@@ -1,11 +1,9 @@
 ---
 title: Использование ADO с языками сценариев | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование ADO с языки сценариев
 В среде скриптов ADO позволяет предоставлять данные посредством скриптов на стороне сервера. В этом случае ADO базового поставщика OLE DB, он использует, и другие компоненты, необходимые для ссылки на хранилище данных установлены на сервере под управлением служб Internet Information Services (IIS). С помощью Active Server Pages (ASP), ADO — это компонент, на которые ссылается скрипт, который можно создать HTML, например. Это содержимое HTML могут передаваться через протокол HTTP для веб-браузер клиента. С помощью скриптов, веб-страницы могут отправлять действия обратно серверных скриптов, позволяя обновить, проходят через или просматривать определенные данные.  

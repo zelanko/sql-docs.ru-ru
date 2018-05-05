@@ -1,11 +1,9 @@
 ---
 title: Распознавание и разрешение конфликтов | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Обнаружение и разрешение конфликтов
 Если вы имеете дело с набором записей в режиме интерпретации, есть гораздо меньше вероятность проблем с параллелизмом, возникает. С другой стороны, если приложение использует пакетного режима обновления, может существовать хорошее вероятность того, что один пользователь изменит записи перед сохранением изменений, внесенных другим пользователем, редактирования и ту же запись. В этом случае требуется приложение для правильной обработки конфликтов. Он может быть нежелательным, последнего пользователя для отправки обновления на сервер «побеждает.» Или вы можете позволить последнему пользователю, чтобы решить, какие обновления следует приоритет, предоставив ему возможность выбора из двух конфликтующие значения.  

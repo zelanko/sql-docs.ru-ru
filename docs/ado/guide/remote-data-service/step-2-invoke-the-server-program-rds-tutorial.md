@@ -1,11 +1,9 @@
 ---
 title: 'Шаг 2: Вызвать программу Server (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a060c77739c8a70fa63b1dce6b909429e4d7a8e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5e093828f0f1591800a7f8cc7e2b6958e8807c81
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2: Вызвать программу Server (служб удаленных рабочих СТОЛОВ учебник)
 При вызове метода на клиенте *прокси-сервера*, самой программы на сервере выполняется метод. На этом шаге будет выполнить запрос на сервере.  

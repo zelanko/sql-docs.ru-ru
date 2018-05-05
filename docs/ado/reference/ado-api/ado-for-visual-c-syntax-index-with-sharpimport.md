@@ -1,11 +1,9 @@
 ---
 title: 'ADO для индекса в Visual C++ синтаксис с #import | Документы Microsoft'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d878875f2e7f9002e00acef81fafaa89153b933
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для индекса в Visual C++ синтаксис с #import
 Этот индекс лучше перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++ и **#import** директивы.  

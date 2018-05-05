@@ -1,11 +1,9 @@
 ---
 title: Дополнительные сведения о сохраняемости набора записей | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4a5c0d8bda0d3d881dfcb1dfd99706b28e5fb733
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="more-about-recordset-persistence"></a>Дополнительные сведения о сохраняемости набора записей
 Объект набора записей ADO поддерживает хранение содержимого **записей** объекту в файле с помощью его [Сохранить](../../../ado/reference/ado-api/save-method.md) метод. Постоянно хранимых файл может существовать на локальном диске сервера, или как URL-адрес, на веб-сайта. С помощью более поздней версии, можно восстановить файл [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод **набора записей** объекта или [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект.  

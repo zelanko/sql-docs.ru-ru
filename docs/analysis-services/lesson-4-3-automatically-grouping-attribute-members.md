@@ -1,29 +1,27 @@
 ---
-title: "Автоматическое группирование элементов атрибута | Документы Microsoft"
-ms.custom: 
+title: Автоматическое группирование элементов атрибута | Документы Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b97f1c25cc46c0518c8dbf2e924d9ab99da32cd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Занятие 4-3 - автоматическое группирование элементов атрибута
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +31,10 @@ ms.lasthandoff: 02/15/2018
 Свойство **DiscretizationMethod** определяет, создают ли службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирования, а также определяет тип выполняемого группирования. По умолчанию в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирование не выполняется. При включении автоматического группирования можно настроить параметры служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] таким образом, чтобы выполнялся автоматический выбор оптимального метода группирования, основанного на структуре данного атрибута, либо выбрать один из алгоритмов группирования в следующем списке:  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.  
+В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений с помощью метода кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
+В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений, используя метод кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
   
 После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 02/15/2018
 [Скрытие и отключение иерархий атрибутов](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Группирование элементов атрибутов &#40; дискретизации &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Группирование элементов атрибутов & #40; дискретизации & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

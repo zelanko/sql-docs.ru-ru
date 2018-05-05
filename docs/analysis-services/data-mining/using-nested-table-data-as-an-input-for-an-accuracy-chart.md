@@ -1,36 +1,34 @@
 ---
-title: "Использования данных вложенной таблицы в качестве входных данных для диаграммы точности | Документы Microsoft"
-ms.custom: 
+title: Использования данных вложенной таблицы в качестве входных данных для диаграммы точности | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
 - Mining Accuracy Chart [Analysis Services], input tables
 - nested tables
 - adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2602a79fd7a9beeffb6057428c71dec7a14f0e0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 32220402e68a25d790c7f26455561a1e391290ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Использование данных вложенной таблицы в качестве входных для диаграммы точности
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Если при проверке точности модели интеллектуального анализа данных на внешних данных модель интеллектуального анализа содержит вложенные таблицы, то внешние данные также должны содержать таблицу вариантов и связанную с ней вложенную таблицу.  
+  Если при проверке точности модели интеллектуального анализа данных на внешних данных модель интеллектуального анализа содержит вложенные таблицы, то внешние данные также должны содержать таблицу вариантов и связанную с ней вложенную таблицу.  
   
  В этом разделе описана работа с вложенными таблицами, используемыми для проверки моделей, сопоставление вложенных таблиц и таблиц вариантов в режиме и во внешних данных, а также применение фильтра к вложенной таблице.  
   

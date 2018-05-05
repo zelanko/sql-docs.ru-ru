@@ -1,11 +1,9 @@
 ---
 title: Пример (VBScript) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eef469d0a4dd98c1f600516f72bb220f98632bbb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 575ecde16c4779c099d9b7565fe3ac5bba859b84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-example-vbscript"></a>Пример (VBScript)
 В этом примере используется строка запроса многомерных Выражений для получения данных OLAP и записывает результирующем наборе ячеек табличную структуру HTML, с помощью функции сформировать столбец измерения несколько наборов ячеек.  

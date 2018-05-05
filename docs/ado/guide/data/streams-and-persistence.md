@@ -1,11 +1,9 @@
 ---
 title: Потоки и сохраняемость | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f252af47194986372c5fb7e098ca451d5aabe81b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: eb0302de0cc9ac87c55ae0e6c8d44557b517d79d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="streams-and-persistence"></a>Потоки и сохраняемости
 [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Сохранить](../../../ado/reference/ado-api/save-method.md) метод хранилища, или *сохраняется*, **записей** в файле и [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md)восстановление метод **записей** из этого файла.  

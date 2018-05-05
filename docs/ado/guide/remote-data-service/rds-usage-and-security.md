@@ -1,11 +1,9 @@
 ---
 title: Использование служб удаленных рабочих СТОЛОВ и безопасность | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0641b18cc77a0f7e913014ac6669f82d85a68b77
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-usage-and-security"></a>Использование служб удаленных рабочих СТОЛОВ и безопасности
 Используйте сведения в этом разделе, для настройки сервера и быстро использовать служб удаленных рабочих СТОЛОВ. Этот раздел включает шаги конкретной конфигурации, которые могут потребоваться при реализации служб удаленных рабочих СТОЛОВ, описываются некоторые ключевые связи между служб удаленных рабочих СТОЛОВ и другими технологиями, и помогает идентифицировать решения проблем, которые могут возникнуть при настройке Решение для служб удаленных рабочих СТОЛОВ.  

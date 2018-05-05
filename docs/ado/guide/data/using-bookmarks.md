@@ -1,11 +1,9 @@
 ---
 title: С помощью закладок | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2d4036cbe8205a4dd25c5a1f97ec490b20afa20
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 46ea739c431005f8409b2c2680f15e55b077c086
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bookmarks"></a>С помощью закладок
 Часто полезно для возврата непосредственно на определенную запись после перемещаться **записей** без необходимости прокрутки всех записей и сравнения значений. Например, при попытке выполнить поиск записи с помощью **найти** поиска, но метод не возвращает записи, вы автоматически оказываетесь на любом конце **записей**. Если поставщик поддерживает их, чтобы отметить место перед использованием может использоваться закладки **найти** метод, поэтому можно вернуться к папке. Закладка представляет **Variant** введите значение, которое однозначно определяет запись в **записей** объекта.  

@@ -1,11 +1,9 @@
 ---
 title: Поставщики OLE DB (ADO) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b077e7f0e7ff9a4ac46bab298586cb738850112e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fa8bcda85b1b149da9dcc66bed92e044de800f66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-providers-ado"></a>Поставщики OLE DB (ADO)
 OLE DB определяет набор COM-интерфейсы для предоставления приложениям стандартизированный доступ к данным, которые хранятся в различных источниках. Такой подход позволяет источнику данных для совместного использования данных через интерфейсы, поддерживающие объем функциональность СУБД, подходящие для источника данных. Разработчиками предусмотрено высокой производительности архитектуры OLE DB основан на его использование модель гибкую, основанных на компонентах служб. Вместо того, назначенные количество промежуточных слоев между приложением и данных, OLE DB требуется только в том случае, как многие компоненты, так как необходимые для выполнения конкретной задачи.  
