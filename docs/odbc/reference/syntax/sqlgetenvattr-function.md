@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 010a47003b044a400abaaaef5cd7ffd3c80d94d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>Функция SQLGetEnvAttr
 **Соответствия**  
@@ -92,10 +91,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>Комментарии  
  Список атрибутов см. в разделе [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Нет никаких атрибутов драйвера среды. Если *атрибута* определяет атрибут, который возвращает строку, *ValuePtr* должен быть указателем на буфер, в который возвращается строка. Максимальная длина строки, включая байт конечное значение null, будет *BufferLength* байт.  
   
- **SQLGetEnvAttr** можно вызвать в любое время между выделении и освобождении дескриптора среды. Все атрибуты среды успешно установлены приложением для среды сохраняется до **SQLFreeHandle** будет вызван на *EnvironmentHandle* с *HandleType*установленным в значение sql_handle_env. Более одного дескриптора среды может находиться одновременно в ODBC 3*.x*. Атрибут среды в одной среде не влияет на выделил другую среду.  
+ **SQLGetEnvAttr** можно вызвать в любое время между выделении и освобождении дескриптора среды. Все атрибуты среды успешно установлены приложением для среды сохраняется до **SQLFreeHandle** будет вызван на *EnvironmentHandle* с *HandleType*установленным в значение sql_handle_env. Более одного дескриптора среды может находиться одновременно в ODBC 3 *.x*. Атрибут среды в одной среде не влияет на выделил другую среду.  
   
 > [!NOTE]  
->  Атрибут среды SQL_ATTR_OUTPUT_NTS поддерживается стандартам приложениями. Когда **SQLGetEnvAttr** вызывается ODBC 3*.x* диспетчера драйверов всегда возвращает SQL_TRUE для этого атрибута. SQL_ATTR_OUTPUT_NTS можно присвоить значение SQL_TRUE только путем вызова **SQLSetEnvAttr**.  
+>  Атрибут среды SQL_ATTR_OUTPUT_NTS поддерживается стандартам приложениями. Когда **SQLGetEnvAttr** вызывается ODBC 3 *.x* диспетчера драйверов всегда возвращает SQL_TRUE для этого атрибута. SQL_ATTR_OUTPUT_NTS можно присвоить значение SQL_TRUE только путем вызова **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Связанные функции  
   

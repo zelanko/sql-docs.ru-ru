@@ -29,15 +29,15 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f3e568fb190940822a6c6ef5cb65cf6b9476f4b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4b94f50dbd6b1dc2d91a47dd93a62f744513890b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-element-xmla"></a>Элемент Create (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом **Execute** метод для создания объектов в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом **Execute** метод для создания объектов в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -68,13 +68,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Атрибуты  
   
-|attribute|Description|  
+|Attribute|Описание|  
 |---------------|-----------------|  
 |AllowOverwrite|Необязательный атрибут типа **Boolean** . Если задано значение True, объекты, определенные в **ObjectDefinition** элемент можно заменять существующие объекты в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Если этот атрибут пропущен или имеет значение False, то при наличии существующего объекта возникает ошибка.|  
 |Область действия|Необязательный атрибут типа **Enum** . Определяет срок жизни объектов, определенных в элементе **ObjectDefinition** . Если этот атрибут опускается, объекты, определенные в **ObjectDefinition** , сохраняются в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Доступен следующий параметр:<br /><br /> *Сеанс*: объекты, определенные в **ObjectDefinition** элемент существует только в течение XML для аналитики (XMLA) сеанса.<br />                  Обратите внимание, что при использовании *сеанса* параметр **ObjectDefinition** элемент может содержать только [измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md), [куба](../../../analysis-services/scripting/objects/cube-element-assl.md), или [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) элементы языка ASSL.|  
   
-## <a name="remarks"></a>Remarks  
- Каждая операция **Create** создает для родительского объекта, указанного в элементе **ParentObject** , один главный объект. Если родительский элемент пропущен, предполагается, что им является целевой экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Если родитель главного объекта не является целевым экземпляром, возникает ошибка.  
+## <a name="remarks"></a>Замечания  
+ Каждая операция **Create** создает для родительского объекта, указанного в элементе **ParentObject** , один главный объект. Если родительский элемент пропущен, предполагается, что им является целевой экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Если родитель главного объекта не является целевым экземпляром, возникает ошибка.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается пустая база данных с именем **тестовую базу данных** на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Команды &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>См. также  
+ [Команды & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

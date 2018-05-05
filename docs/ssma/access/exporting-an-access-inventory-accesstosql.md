@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -29,12 +28,11 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d3968104ed7e9dec525afa3bd3e0cd7b8dcbb96
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 32029fcc4e3af80cf0c3600468b6209e1241dc94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Экспорт инвентаризацию доступа (AccessToSQL)
 Если у вас есть несколько баз данных Access, и вы не уверены, какие из них для переноса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], вы можете экспортировать данные инвентаризации всех баз данных Access в проекте. Можно просмотреть и запросов к метаданным инвентаризации, чтобы определить, какие базы данных и объекты внутри них для переноса. Это инвентаризации позволяет быстро найти ответы на вопросы, например следующие:  

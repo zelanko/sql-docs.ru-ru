@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35cf1ad4a7181ef39b04e355092f98ff1adda230
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c03c8932e8948fde5c0c116d5517f66dda4f407a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ]  **"*** входа* **"** имя группы Windows, имя входа Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа для сопоставления с новой базы данных пользователь. Имена групп Windows и имена входа Windows должны быть дополнены именем домена Windows в виде *домена*\\*входа *, например **LONDON\Joeb**. Указанное имя входа не может быть уже сопоставлено с пользователем в базе данных. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
+ [  **@loginame =** ]  **"*** входа* **"** имя группы Windows, имя входа Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа для сопоставления с новой базы данных пользователь. Имена групп Windows и имена входа Windows должны быть дополнены именем домена Windows в виде *домена*\\* входа *, например **LONDON\Joeb**. Указанное имя входа не может быть уже сопоставлено с пользователем в базе данных. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@name_in_db=**] **"***name_in_db***"** [ **ВЫВОДА**]  
  Имя нового пользователя базы данных. *name_in_db* является ВЫХОДНОЙ переменной с типом данных **sysname**и значение по умолчанию NULL. Если не указан, *входа* используется. Если указано как переменная OUTPUT со значением NULL, **@name_in_db** равно *входа*. *name_in_db* не должен существовать в текущей базе данных.  

@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05731087009d1f1ab444c7f740889ee441bb99a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 777d035c3b37f3e8f8eb5e329fe6d19152cced6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ WHERE where_condition
   
  Поставщик WMI для событий сервера использует восходящий алгоритм «первый подходящий» для создания наиболее узкой области для базового уведомления EVENT NOTIFICATION. Алгоритм пытается минимизировать внутреннюю активность на сервере и сетевой трафик между экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и процессом на узле WMI. Поставщик исследует *event_type* указано в предложении FROM и условия в предложении WHERE и пытается зарегистрировать базовым уведомлением о СОБЫТИЯХ в наиболее узкой области. Если поставщику не удается выполнить регистрацию в наиболее узкой области, он пытается выполнить ее в областях более высокого уровня, пока регистрация не пройдет успешно. Если достигнут самый высокий уровень (уровень сервера), а регистрация завершается сбоем, возвращается сообщение об ошибке.  
   
- Например если имя базы данных =**"**AdventureWorks**"**указано в предложении WHERE, поставщик пытается зарегистрировать уведомление о событии в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных. Если [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] база данных существует, а вызывающий клиент имеет необходимые разрешения для создания уведомления о событии в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], регистрация проходит успешно. В противном случае выполняется попытка зарегистрировать уведомление о событии на уровне сервера. Регистрация выполняется успешно, если клиент WMI имеет необходимые разрешения. Однако в этом сценарии события не возвращаются клиенту, пока не будет создана база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Например если имя базы данных =**"** AdventureWorks **"** указано в предложении WHERE, поставщик пытается зарегистрировать уведомление о событии в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных. Если [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] база данных существует, а вызывающий клиент имеет необходимые разрешения для создания уведомления о событии в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], регистрация проходит успешно. В противном случае выполняется попытка зарегистрировать уведомление о событии на уровне сервера. Регистрация выполняется успешно, если клиент WMI имеет необходимые разрешения. Однако в этом сценарии события не возвращаются клиенту, пока не будет создана база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  *Where_condition* могут действовать как фильтр для дополнительного ограничения запроса для конкретной базы данных, схемы или объекта. Например, рассмотрим следующий WQL-запрос.  
   

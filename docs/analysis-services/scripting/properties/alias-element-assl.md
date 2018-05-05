@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ead0aae5b918d3803eeefcfd92005f0354a45bd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 83b37bf4be8f9b59dba886db11862b895c34fd72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alias-element-assl"></a>Элемент Alias (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет псевдоним для [учетной записи](../../../analysis-services/scripting/objects/account-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет псевдоним для [учетной записи](../../../analysis-services/scripting/objects/account-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|String|  
+|Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
@@ -61,12 +61,12 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Псевдонимы](../../../analysis-services/scripting/collections/aliases-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение элемента **Alias** используется в качестве альтернативного имени для учетной записи, определенной родительским элементом **Account** , и помогает идентифицировать сочетание типа счета и агрегата в пользовательском интерфейсе.  
   
  Элемент, соответствующий родителю параметра **псевдонимы** коллекции в объектной модели Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Account>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

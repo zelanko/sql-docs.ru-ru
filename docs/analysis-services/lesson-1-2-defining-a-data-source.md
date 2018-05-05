@@ -1,29 +1,28 @@
 ---
-title: "Определение источника данных | Документы Microsoft"
-ms.custom: 
+title: Определение источника данных | Документы Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dfeaa3291327ab2ee848acf30db017a60c4b3258
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Занятие 1-2-Определение источника данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  На странице **Выбор метода определения соединения** можно определить источник данных на основе нового соединения, существующего соединения или предварительно определенного объекта источника данных. В этом учебнике будет определен источник данных на основе нового соединения. Убедитесь в том, что выбран параметр **Создать источник данных, основанный на существующем или на новом соединении** , а затем нажмите кнопку **Создать**.  
   
-4.  В диалоговом окне **Диспетчер соединений** определяются свойства соединения для источника данных. Убедитесь в том, что в списке **Поставщик** выбран **Собственный поставщик данных OLE DB\Собственный клиент SQL Server 11.0**.  
+4.  В диалоговом окне **Диспетчер соединений** определяются свойства соединения для источника данных. Убедитесь в том, что в списке **Поставщик** выбран **Собственный поставщик данных OLE DB\Собственный клиент SQL Server 11.0** .  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также поддерживают других поставщиков, которые доступны в списке **Поставщик** .  
   

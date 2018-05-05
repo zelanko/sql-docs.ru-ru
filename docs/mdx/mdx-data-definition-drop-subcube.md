@@ -29,12 +29,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: de5bf7aa07600c15372f70b0a868637e12c704d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 38fdbfc320929708625ba6e5bd0f9a0062778202
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>Определения данных многомерных Выражений — DROP SUBCUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,8 +51,8 @@ DROP SUBCUBE Subcube_Name
  *Subcube_Name*  
  Допустимая строка выражения, представляющая имя вложенного куба.  
   
-## <a name="see-also"></a>См. также:  
- [Инструкции сценариев многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [CREATE SUBCUBE, инструкция #40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-subcube.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции сценариев многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Инструкция CREATE SUBCUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-subcube.md)  
   
   

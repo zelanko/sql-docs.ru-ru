@@ -28,17 +28,16 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a6ed1613fdb2d0b6f77cbbf0724bfdf74d5249cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Определение данных MDX - СОЗДАНИЯ глобального КУБА
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно. Дополнительные сведения о локальных кубах см. в разделе [локальных кубов &#40; Analysis Services — многомерные данные &#41; ](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно. Дополнительные сведения о локальных кубах см. в разделе [локальных кубов &#40;службы Analysis Services — многомерные данные&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -133,7 +132,7 @@ FROM source_cube_name (<param list>)
  \<Тип уровня >  
  Спецификация, допустимая только для определения производного измерения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Локальный куб является definedin условия мер и измерений, которые его определяют. Существует два типа измерений.  
   
 -   Измерения источника — это измерения, которые были частью одного из исходных кубов.  
@@ -216,8 +215,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [СОЗДАТЬ инструкцию КУБА СЕАНСА &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Инструкция CREATE SESSION CUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

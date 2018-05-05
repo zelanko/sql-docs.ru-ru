@@ -27,15 +27,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f44a22f63f7fd038f28442829e8cdce50331a26a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2e41a0639e11aea9eafd166664d927a31951eb74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>Элемент AllMemberAggregationUsage (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Элементы управления как конструктор статистических схем в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] статистических схем.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Элементы управления как конструктор статистических схем в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] статистических схем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*По умолчанию*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Значение по умолчанию|*Default*|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,22 +63,22 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Полный*|Каждый агрегат для куба должен включать элемент «Все».|  
 |*None*|Никакой агрегат для куба не должен включать элемент «Все».|  
 |*Без ограничений*|На конструктор статистических схем не налагаются никакие ограничения.|  
-|*По умолчанию*|Эквивалентно *Unrestricted*.|  
+|*Default*|Эквивалентно *Unrestricted*.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент, соответствующий родителю параметра **AllMemberAggregationUsage** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент CUBE &#40; ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Элемент измерения &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент CUBE & #40; ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Элемент измерения & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,19 +27,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72fa649a1c894109557c58f79b1590466020c156
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Преобразование данных из SQL в типы данных C
 Если приложение вызывает **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**, драйвер получает данные из источника данных. Если необходимо, оно преобразует данные из типа данных, в котором драйвер выборки его тип данных, указанный в *TargetType* аргумент в **SQLBindCol** или **SQLGetData.** Наконец, данные сохраняются в расположении, указанном *TargetValuePtr* аргумент в **SQLBindCol** или **SQLGetData** (и поле SQL_DESC_DATA_PTR Отменить).  
   
  Следующая таблица показывает поддерживаемые преобразования типов ODBC SQL типы данных в типы данных ODBC C. Указывает, заполненный круг преобразования по умолчанию для типа данных SQL (тип данных C, в котором данные будет преобразован при значение *TargetType* — SQL_C_DEFAULT). Полый круг указывает поддерживаемые преобразования.  
   
- Для ODBC 3*.x* приложения, работа с ODBC 2. *x* драйвера, преобразование из данных типы не поддерживаются.  
+ Для ODBC 3 *.x* приложения, работа с ODBC 2. *x* драйвера, преобразование из данных типы не поддерживаются.  
   
  Формат преобразованных данных не влияют параметры Windows® страны.  
   

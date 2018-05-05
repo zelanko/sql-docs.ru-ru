@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8564128db3f9eaa06e7eb5bfe93880c74c5b3b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 63b5fb01cac2fe886bce15ded807b8e655d98056
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,12 +53,12 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  (Необязательно.) Флажок, указывающий, следует ли включать вычисленные элементы и должны ли они существовать на уровне детализации углублением.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **ToggleDrillState** функция переключает состояние детализации каждого элемента второго набора, присутствующего в первом наборе. Первый набор может содержать кортежи любой размерности, однако второй набор должен содержать элементы одного измерения. **ToggleDrillState** функция представляет собой сочетание **DrillupMember** и **DrilldownMember** функции. Если член *m*, второго набора присутствует в первом наборе, и этот элемент детализирован углублением (т. е. имеет потомка), затем `DrillupMember(Set_Expression1, {m})` применяется к кортежу первого набора или. Если данный *m* свернут (т. е. нет потомка элемента *m* , который следует сразу за *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` применяется к первому набору.  
   
  Если необязательный **РЕКУРСИВНЫЕ** флаг используется, детализация углублением и обобщением применяются рекурсивно. Дополнительные сведения о флаге рекурсии см. в разделе [DrillupMember](../mdx/drillupmember-mdx.md) и [DrilldownMember](../mdx/drilldownmember-mdx.md) функции.  
   
- Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
+ Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
   
  В разделе [журнала базы данных: задать функции многомерных Выражений: функция ToggleDrillState(), где есть](http://go.microsoft.com/fwlink/?LinkId=517759) сценарии и примеры, включающие эту функцию.  
   
@@ -77,7 +76,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

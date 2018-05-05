@@ -1,31 +1,23 @@
 ---
-title: "Запросы (интеллектуальный анализ данных) содержимого | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Запросы (интеллектуальный анализ данных) содержимого | Документы Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 057134e35d748c49a535fb32070484d7d228c5d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-queries-data-mining"></a>Запросы содержимого (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Запрос содержимого позволяет извлечь сведения о внутренней статистике и структуре модели интеллектуального анализа данных. Иногда запрос содержимого может предоставить информацию, которую не удается получить с помощью средства просмотра. Результаты запроса содержимого можно также использовать для извлечения информации программным образом с целью ее последующего использования.  
+  Запрос содержимого позволяет извлечь сведения о внутренней статистике и структуре модели интеллектуального анализа данных. Иногда запрос содержимого может предоставить информацию, которую не удается получить с помощью средства просмотра. Результаты запроса содержимого можно также использовать для извлечения информации программным образом с целью ее последующего использования.  
   
  В данном разделе предоставлены общие сведения о том, какого рода сведения могут быть получены в ответ на запрос к содержимому, а также об общем синтаксисе расширений интеллектуального анализа данных для запросов к содержимому.  
   

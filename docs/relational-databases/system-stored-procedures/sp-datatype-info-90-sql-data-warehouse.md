@@ -19,13 +19,12 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cca052fb77b2f6bc2db691f884043079197d439
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a633d790503357edef72b8c26b85515dd043c556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -60,9 +59,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Тип данных, зависящий от СУБД.|  
 |DATA_TYPE|**smallint**|Код типа ODBC, с которым сопоставляются все столбцы данного типа.|  
 |PRECISION|**int**|Максимальная точность типа данных в источнике данных. Для типов данных, к которым понятие точности не применимо, возвращается значение NULL. Значение, возвращаемое для столбца PRECISION, имеет десятичную форму.|  
-|LITERAL_PREFIX|**varchar (**32**)**|Символ или символы, используемые перед константой. Например, знак кавычки (**"**) для символьных типов и 0 x для двоичного файла.|  
-|LITERAL_SUFFIX|**varchar (**32**)**|Символ или символы, используемые после константы. Например, знак кавычки (**"**) для символьных типов и без кавычек для двоичного файла.|  
-|CREATE_PARAMS|**varchar (**32**)**|Описание параметров создания типа данных. Например **десятичное** — «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
+|LITERAL_PREFIX|**varchar (** 32 **)**|Символ или символы, используемые перед константой. Например, знак кавычки (**"**) для символьных типов и 0 x для двоичного файла.|  
+|LITERAL_SUFFIX|**varchar (** 32 **)**|Символ или символы, используемые после константы. Например, знак кавычки (**"**) для символьных типов и без кавычек для двоичного файла.|  
+|CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например **десятичное** — «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
 |SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  

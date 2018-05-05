@@ -28,12 +28,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e27b11836c0619c1415718cce3e38029ac8359d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Управление данными MDX - UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Допустимое числовое многомерное выражение, возвращающее десятичное значение от 0 до 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Можно обновить значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках. Ячейка, указанная кортежным выражением, может представлять любую ячейку многомерного пространства (другими словами, ячейка необязательно должна быть конечной). Тем не менее, ячейки должны быть собраны с [сумма](../mdx/sum-mdx.md) агрегатной функции и не должны содержать вычисляемый элемент в кортеж, который используется для идентификации ячейки.  
   
  Может быть полезным подумать об **UPDATE CUBE** инструкцию как подпрограмму, которая автоматически создаст серию отдельных операций обратной записи в конечные и неконечные ячейки, сводимые в указанную сумму.  
@@ -86,7 +85,7 @@ UPDATE [ CUBE ] Cube_Name
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**каждой конечной ячейке, которая участвует в обновлении ячейки изменяется в соответствии со следующего выражения.  
+ **USE_EQUAL_INCREMENT:** каждой конечной ячейке, которая участвует в обновлении ячейки изменяется в соответствии со следующего выражения.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -126,8 +125,8 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  Если обновленные ячейки не пересекаются, свойство строки подключения **Update Isolation Level** может быть использовано для повышения производительности инструкции UPDATE CUBE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Инструкции для манипулирования данными многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Инструкции языка манипулирования данными &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

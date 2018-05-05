@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ab57383e7702b981566b67a6c1b21f3e9f767de
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3a0f319b92afac55101bfe3bca9766a53a91744d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="length-of-the-product-cycle"></a>Длина цикла продукта
 Последний вопрос о взаимодействии — время. Разработки приложения с возможностью взаимодействия обычно занимает больше времени, чем разработка noninteroperable один. Обусловлено тем, что приложение должно проверьте возможности СУБД, выполнять те же задачи по-разному для разных СУБД, обойти функциональных возможностей, поддерживаемых некоторые СУБД, но не другие и т. д.  

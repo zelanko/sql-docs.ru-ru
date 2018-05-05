@@ -11,22 +11,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9fb1a94d88f83ebc861843c8ea998cb45cefc73a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c44d3278a61f8df573c909a48507624c563df64b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Общие сведения о драйверы Майкрософт для PHP для SQL Server
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвера PHP для SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Представляет собой расширение PHP, который предоставляет доступ к данным для SQL Server 2005 и более поздних версиях, включая базы данных SQL Azure. Данное расширение предоставляет процедурный интерфейс с помощью драйвера SQLSRV и объектно ориентированный интерфейс, с помощью драйвера PDO_SQLSRV для доступа к данным во всех версиях SQL Server, включая Express, начиная с SQL Server 2005. Поддержка версии 3.1 и более поздних версий драйверы начинается с SQL Server 2008. API [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддерживает проверку подлинности Windows, транзакции, привязку параметров, потоковую передачу, доступ к метаданным и обработку ошибок.  
   
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 |Раздел|Описание|  
 |---------|---------------|  
-| ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвера PHP для SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access) | Ссылки для скачивания исходного кода и драйверов Microsoft PHP Driver for SQL Server. |
+| ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[выполнять загрузку драйверов для PHP для SQL Server](download-drivers-php-sql-server.md) | Ссылки для загрузки драйверы Майкрософт для PHP для SQL Server. |
 |[Заметки о выпуске для драйверов Майкрософт для PHP для SQL Server](../../connect/php/release-notes-for-the-php-sql-driver.md)|Список возможностей, которые были добавлены в версии 4.0, 3.2, 3.1, 3.0 и 2.0.|  
 |[Ресурсы поддержки драйверы Майкрософт для PHP для SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Содержит ссылки на ресурсы, которые могут оказаться полезными при разработке приложений, использующих [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)|Содержит информацию, которая может оказаться полезной при запуске примеров кода, приведенных в этой документации.|  

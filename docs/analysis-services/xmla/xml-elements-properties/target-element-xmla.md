@@ -29,15 +29,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2e0a9b638bb916d317c3b380c2e9ea447af73075
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5a9e903dd377d391622a6d5383eddfefa633beb1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="target-element-xmla"></a>Элемент Target (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет целевой секции для слияния во время [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Представляет целевой секции для слияния во время [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Дочерние элементы|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Целевой** элемент является ссылкой на объект для одной секции, в которой содержимое исходных секций, определяемое [источников](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) родителя **MergePartitions** элемент, объединяемые.  
   
 ## <a name="example"></a>Пример  
@@ -100,8 +100,8 @@ ms.lasthandoff: 01/08/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Исходный элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент Source &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

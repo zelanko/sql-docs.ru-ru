@@ -30,15 +30,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 937abfbd3ba8d06ee4d25f97c47471a04435cfba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e6f3917de2c175b2514c84a6ac35c1f34edeebaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-element-xmla"></a>Элемент Properties (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит XML для аналитики (XMLA) свойства, используемые [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) и [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) методы.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Содержит XML для аналитики (XMLA) свойства, используемые [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) и [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) методы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Обнаружение](../../../analysis-services/xmla/xml-elements-methods-discover.md), [выполнение](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Дочерние элементы|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Свойства** элемент представляет свойства XMLA, используемые для управления разными аспектами **Discover** и **Execute** методов, например определением сведений, необходимых для подключиться к источнику данных, указанием формата результирующего набора или локали, в которой форматируются данные.  
   
  Доступные свойства и их значения можно получить, используя метод **Discover** с типом запроса DISCOVER_PROPERTIES.  
@@ -92,6 +92,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

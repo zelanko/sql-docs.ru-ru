@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  Идентификатор для обновляемой подписки на категорию политики. *policy_category_subscription_id* — **int**и является обязательным.  
   
- [  **@target_type=** ] **"**target_type**"**  
+ [  **@target_type=** ] **"** target_type **"**  
  Целевой тип подписки на категорию. *target_type* — **sysname**, значение по умолчанию NULL.  
   
  При указании *target_type*, значение должно быть присвоено «DATABASE».  
   
- [  **@target_object=** ] **"**target_object**"**  
+ [  **@target_object=** ] **"** target_object **"**  
  — Это имя базы данных, которая будет создана подписка на категорию политики. *target_object* — **sysname**, значение по умолчанию NULL.  
   
- [  **@policy_category=** ] **"**policy_category**"**  
+ [  **@policy_category=** ] **"** policy_category **"**  
  Имя категории политики, на которую подписывается база данных. *policy_category* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

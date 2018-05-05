@@ -28,12 +28,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 37649d37d1cef67eb50caf8f3768beba19545988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bb32f3319e4e184637c3b816f10ca563d6c76d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>Определение данных MDX - обновления КУБА
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ REFRESH CUBECube_Name
  *Cube_Name*  
  Допустимое строковое выражение, представляющее имя куба.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для клиентских приложений, подключенных к экземпляру [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], эта инструкция вызывает кэшированные в клиентское приложение для синхронизации с сервером. Хотя обычно такие обновления производятся автоматически, отрезок времени до следующего обновления зависит от параметров строки соединения клиента. Инструкция REFRESH CUBE обновляет данные немедленно.  
   
  Для клиентских приложений, подключенных к локальному кубу, инструкция REFRESH CUBE перестраивает файл локального куба.  
@@ -59,7 +58,7 @@ REFRESH CUBECube_Name
 > [!IMPORTANT]  
 >  Именованные наборы, хранящиеся на сервере, не обновляются.  
   
-## <a name="see-also"></a>См. также:  
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

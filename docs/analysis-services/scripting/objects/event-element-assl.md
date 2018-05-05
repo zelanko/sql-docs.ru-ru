@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31131575d34d11c7292f86e10d39e39eb71631f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6e28a6b847a1d66228230eccc38cc243cd3e6433
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-element-assl"></a>Элемент Event (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет **событий** фиксируемое как часть [трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет **событий** фиксируемое как часть [трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -64,11 +64,11 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[События](../../../analysis-services/scripting/collections/events-element-assl.md)|  
 |Дочерние элементы|[Столбцы](../../../analysis-services/scripting/collections/columns-element-assl.md), [EventID](../../../analysis-services/scripting/properties/eventid-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.TraceEvent>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент Trace &#40; ASSL &#41;](../../../analysis-services/scripting/objects/trace-element-assl.md)   
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Элемент Trace &#40;ASSL&#41;](../../../analysis-services/scripting/objects/trace-element-assl.md)   
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

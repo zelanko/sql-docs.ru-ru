@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescRec
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67110cfb1f6130153ced12525a2bd7f475b8e63a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, функция
 **Соответствия**  
@@ -107,7 +106,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Ошибка управления памятью|Не удалось обработать вызов функции, поскольку базовые объекты памяти будет недоступен, возможно из-за нехватки памяти.|  
 |HY016|Не удается изменить дескриптор строки реализации|*DescriptorHandle* аргумент был связан с IRD.|  
 |HY021|Неправильные сведения о дескрипторе|*Типа* поля или любого другого поля, связанные с этим полем SQL_DESC_TYPE в дескрипторе, не был допустимым или согласованной.<br /><br /> Сведения о дескрипторе проверяется в ходе проверки согласованности не согласован. (См. «Проверка целостности» далее в этом разделе).|  
-|HY090|Недопустимая длина строки или буфера|(DM) был драйвер ODBC 2*.x* драйвера, дескриптор был Отменить *ColumnNumber* аргумент было задано значение 0 и значения, указанного в аргументе *BufferLength* был не равно 4.|  
+|HY090|Недопустимая длина строки или буфера|(DM) был драйвер ODBC 2 *.x* драйвера, дескриптор был Отменить *ColumnNumber* аргумент было задано значение 0 и значения, указанного в аргументе *BufferLength* был не равно 4.|  
 |HY117|Соединение будет приостановлена из-за неизвестной транзакции состояния. Только отключиться и разрешены функции, доступные только для чтения.|(DM) Дополнительные сведения о состоянии приостановки см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Время ожидания соединения истекло|Время ожидания соединения истекло раньше, чем ответил на запрос источника данных. Время ожидания задается с помощью **SQLSetConnectAttr**, sql_attr_connection_timeout не учитывается.|  
 |IM001|Драйвер не поддерживает эту функцию|Драйвер (DM), связанные с *DescriptorHandle* не поддерживает функцию.|  

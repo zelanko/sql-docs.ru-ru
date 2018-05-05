@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9d36c0308ae7afb12541a0f33f4d2b417dfb15e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cd203d13a38dc892ff0aa98a55814bfa8bfd5b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Идентификаторы типа данных и дескрипторов
 Типы данных перечислены в [типов данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) и [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) разделы данного приложения — это типы данных «быстрый»: каждый идентификатор ссылается на один тип данных. Нет однозначного соответствия между идентификатор и тип данных. Дескрипторы, однако сделать не в всегда использовать одно значение для идентификации типов данных. В некоторых случаях они используют тип данных «verbose» и дополнительный код типа. Для всех типов данных, за исключением типов данных даты и времени и интервала идентификатор типа verbose совпадает со значением идентификатора четкими типа, и значение SQL_DESC_DATETIME_INTERVAL_CODE равно 0. Для типов данных даты и времени и интервал тем не менее, типом verbose (SQL_DATETIME или SQL_INTERVAL) хранится в SQL_DESC_TYPE четкими тип хранится в SQL_DESC_CONCISE_TYPE и дополнительный код для каждого типа четкими хранится в SQL_DESC_DATETIME_INTERVAL_CODE. Настройка одного из этих полей влияет на остальные. Дополнительные сведения об этих полях см. в разделе [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) описание функции.  

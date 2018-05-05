@@ -20,12 +20,11 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5ec2de044a69f0613edeabc3a9a433b5aca11ba2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2f00db6e9abf09d6ed4d02036fff11b23f9d7c42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ KPIStatus(KPI_Name)
  *KPI_Name*  
  Допустимое строковое выражение, указывающее имя ключевого показателя эффективности.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение состояния обычно нормализовано в диапазоне от -1 до 1.  
   
 ## <a name="example"></a>Пример  
@@ -65,7 +64,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

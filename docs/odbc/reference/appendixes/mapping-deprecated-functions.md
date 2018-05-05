@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
 - backward compatibility [ODBC], mapping deprecated functions
@@ -24,21 +24,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-deprecated-functions"></a>Сопоставление устаревания функций.
-В этом разделе описывается, как устаревшие функции ODBC 3 для сопоставления*.x* диспетчера драйверов для обеспечения обратной совместимости ODBC 3*.x* драйверы, которые используются с ODBC 2. *x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC 2. *x* функции в следующем списке сопоставляется с соответствующей ODBC 3*.x* работать при вызове в ODBC 3*.x* драйвера ODBC 3*.x*драйвер не должен реализовывать ODBC 2. *x* функции.  
+В этом разделе описывается, как устаревшие функции ODBC 3 для сопоставления *.x* диспетчера драйверов для обеспечения обратной совместимости ODBC 3 *.x* драйверы, которые используются с ODBC 2. *x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC 2. *x* функции в следующем списке сопоставляется с соответствующей ODBC 3 *.x* работать при вызове в ODBC 3 *.x* драйвера ODBC 3 *.x*драйвер не должен реализовывать ODBC 2. *x* функции.  
   
- Сопоставление в списке активируется, когда драйвер ODBC 3*.x* драйвер и драйвер не поддерживает функции, который сопоставляется.  
+ Сопоставление в списке активируется, когда драйвер ODBC 3 *.x* драйвер и драйвер не поддерживает функции, который сопоставляется.  
   
- В следующей таблице перечислены все повторяющиеся функциональность, которая была введена в ODBC 3*.x*.  
+ В следующей таблице перечислены все повторяющиеся функциональность, которая была введена в ODBC 3 *.x*.  
   
-|ODBC 2. *x* функции|ODBC 3*.x* функции|  
+|ODBC 2. *x* функции|ODBC 3 *.x* функции|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] несмотря на то что эта функция не существует в ODBC 2*.x*, он находится в стандартах Open Group и ISO.  
+ [1] несмотря на то что эта функция не существует в ODBC 2 *.x*, он находится в стандартах Open Group и ISO.  
   
  [2] это функцию ODBC 1.0.  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cb61eefec8d262d2955e3383c2e0a24b8380be2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8b428d2d6ca2f19102514876d9bcea22fb029f0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rank-mdx"></a>Rank (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если числовое выражение указано, **ранг** функция определяет ранг заданного кортежа, оценивая указанное числовое выражение над кортежем. Если числовое выражение указано, **ранг** функция тот же ранг присваивает всем кортежам с повторяющимися значениями в наборе. Присваивание одинакового ранга кортежам с повторяющимися значениями изменяет ранги последующих кортежей набора. Например, пусть набор состоит из кортежей `{(a,b), (e,f), (c,d)}`. Значение кортежа `(a,b)` совпадает со значением `(c,d)`. Если кортеж `(a,b)` имеет ранг 1, тогда и `(a,b)`, и `(c,d)` будут иметь ранг 1. Однако кортеж `(e,f)` будет иметь ранг 3. В этом наборе не может быть кортежей с рангом 2.  
   
  Если числовое выражение не указано, **ранг** функция возвращает порядковый номер указанного кортежа.  
@@ -94,8 +93,8 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Порядок &#40; Многомерные Выражения &#41;](../mdx/order-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Порядок &#40;многомерных Выражений&#41;](../mdx/order-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

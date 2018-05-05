@@ -1,30 +1,23 @@
 ---
-title: "Командлет Invoke-Policyevaluation | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Командлет Invoke-Policyevaluation | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f36ab9dbb5054c4014e03718a99fc28033e4d9ba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 78fe0596f30c99b772279a8ab13c0c31b39e5fae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processpartition-cmdlet"></a>Командлет Invoke-PolicyEvaluation
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Обработка секции с использованием переменной конкретного типа обработки.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Обрабатывает секцию с использованием переменной конкретного типа обработки.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -34,7 +27,7 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ProcessPartition –DatabasePartition <Microsoft.AnalysisServices.Partition> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Invoke-ProcessParition обрабатывает определенную секцию базы данных служб Analysis Services для заданного куба и группы мер. Значение ProcessType определяет область операции. При обработке секции необходимо указать тип обработки. Дополнительные сведения см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 ## <a name="parameters"></a>Параметры  
@@ -113,8 +106,8 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Входные данные|None|  
-|Выходные данные|None|  
+|Входные данные|Нет|  
+|Выходные данные|Нет|  
   
 ## <a name="example-1"></a>Пример 1  
  `PS SQL SERVER:\sqlas\locahost\default\Databases\AWTEST\Cubes\Adventure Works\MeasureGroups\Sales Orders\Partitions\Total_Orders_2004 > Get-Item .| Invoke-ProcessPartition –ProcessType:ProcessDefault`  

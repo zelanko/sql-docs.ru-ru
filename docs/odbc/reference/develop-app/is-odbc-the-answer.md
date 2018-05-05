@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fffe02b0e000750792bc71654bbc59becf0f087
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c92ffbcdf0dc09ddb72916ebb1207775a7157d7d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-odbc-the-answer"></a>Представляет собой ответ ODBC?
 Прежде чем исследовать вопрос взаимодействия, рассмотрим следующий вопрос: приложение должно использовать ODBC вообще? Это может показаться странным вопрос в руководстве для ODBC, но это, на самом деле правильный запрос. ODBC не предназначалась для полной замены базы данных в собственном API-интерфейсов, а также была разработана для предоставления доступа к базе данных во всех случаях. Он был разработан для обеспечения общий интерфейс для баз данных и предназначена для освобождения разработчики приложений от необходимости изучения и поддерживать ссылки на несколько баз данных.  

@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f4f3454f14371a7d75cf04f18ba69f11bce6d71f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb904bdb6dfa483e2a5299b746ff48d6fce30da2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Счетчик*  
+ *Count*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
  *Level_Expression*  
@@ -58,14 +57,14 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  Ключевое слово для добавления вычисляемых элементов в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если числовое выражение указано, **DrilldownLevelTop** функция сортирует в порядке убывания потомки каждого элемента в заданном наборе согласно значению числового выражения, вычисленного над набором дочерних элементов. Если числовое выражение не указано, функция сортирует в порядке убывания потомки каждого элемента в заданном наборе согласно значениям ячеек, представленных набором элементов-потомков, как определено контекстом запроса.  
   
  После сортировки **DrilldownLevelTop** функция возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанные в *Count,* с наибольшим значением.  
   
  **DrilldownLevelTop** функция подобна [DrilldownLevel](../mdx/drilldownlevel-mdx.md) функции, но вместо включения всех потомков каждого элемента на заданном уровне **DrilldownLevelTop** функция возвращает заданное количество дочерних элементов.  
   
- Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
+ Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются три верхних потомка уровня категории продуктов согласно мере по умолчанию. В примере куба Adventure Works три верхних потомка для Accessories являются Bike Racks, Bike Stands и Bottles and Cages. В Management Studio в окне запроса MDX можно перейти в раздел Продукты | Категории продуктов | Элементы | Все продукты | Аксессуары, чтобы просмотреть весь список. Вы можете увеличить аргумент счетчика, чтобы вернуть больше элементов.  
@@ -96,8 +95,8 @@ DRILLDOWNLEVELTOP(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [DrilldownLevel &#40; Многомерные Выражения &#41;](../mdx/drilldownlevel-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [DrilldownLevel & #40; Многомерные Выражения & #41;](../mdx/drilldownlevel-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

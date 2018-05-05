@@ -1,38 +1,19 @@
 ---
-title: "Резервное копирование и восстановление баз данных служб Analysis Services | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Резервное копирование и восстановление баз данных служб Analysis Services | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.Restore.f1
-- sql13.asvs.ssmsimbi.Backup.f1
-helpviewer_keywords:
-- backing up databases [Analysis Services]
-- encryption [Analysis Services]
-- databases [Analysis Services], restoring
-- cryptography [Analysis Services]
-- databases [Analysis Services], backing up
-- restoring databases [Analysis Services]
-- recovery [Analysis Services]
-ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d744fbed12ab9231e044d879db2e168ab23fa22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Создание и восстановление резервных копий баз данных служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +55,7 @@ ms.lasthandoff: 02/15/2018
  Администратор может создать резервную копию базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в одном файле резервной копии служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ABF) независимо от размера базы данных. Пошаговые инструкции см. в разделах [Резервное копирование базы данных служб Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) и [Автоматизация резервного копирования базы данных служб Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], используемый для загрузки и запросов к моделям данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среде SharePoint, загружает свои модели из баз данных содержимого SharePoint. Эти базы данных содержимого являются реляционными и работают на базе ядра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Стратегии резервного копирования и восстановления служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для моделей данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] как таковой не существует. Если для содержимого SharePoint есть план аварийного восстановления, то этот план охватывает модели данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , хранящиеся в базах данных содержимого.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], используемый для загрузки и запросов к [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] моделей данных в среде SharePoint, загружает свои модели из баз данных содержимого SharePoint. Эти базы данных содержимого являются реляционными и работают на базе ядра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Стратегии резервного копирования и восстановления служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для моделей данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] как таковой не существует. Если для содержимого SharePoint есть план аварийного восстановления, то этот план охватывает модели данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , хранящиеся в базах данных содержимого.  
   
  **Удаленные секции**  
   

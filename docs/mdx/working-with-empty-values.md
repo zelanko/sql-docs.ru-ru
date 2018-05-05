@@ -21,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 92920642feb9d517067b41206e3cdb7c15f8302b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>Пустые значения
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +125,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- Дополнительные сведения см. в разделе [NonEmpty &#40; Многомерные Выражения &#41; ](../mdx/nonempty-mdx.md).  
+ Дополнительные сведения см. в разделе [NonEmpty &#40;многомерных Выражений&#41;](../mdx/nonempty-mdx.md).  
   
 ## <a name="empty-values-and-comparison-operators"></a>Пустые значения и операторы сравнения  
  Когда в данных содержатся пустые значения, логические операторы и операторы сравнения могут потенциально возвращать третий результат EMPTY вместо значений TRUE и FALSE. Эта тройственная логика является источником многих проблем в приложениях. В таблицах ниже содержатся сведения о результатах сравнений пустых значений.  
@@ -135,17 +134,17 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |и|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**ЗНАЧЕНИЕ TRUE**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**ПУСТОЙ**|FALSE|EMPTY|FALSE|  
-|**ЗНАЧЕНИЕ FALSE**|FALSE|FALSE|FALSE|  
+|**FALSE**|FALSE|FALSE|FALSE|  
   
  В следующей таблице показаны результаты выполнения оператора OR над двумя логическими операндами.  
   
 |или|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**ЗНАЧЕНИЕ TRUE**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**ПУСТОЙ**|TRUE|TRUE|  
-|**ЗНАЧЕНИЕ FALSE**|TRUE|FALSE|  
+|**FALSE**|TRUE|FALSE|  
   
  В следующей таблице показаны результаты отрицания (перемены знака) логического операнда оператором NOT.  
   
@@ -155,9 +154,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)   
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Выражения &#40; Многомерные Выражения &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)  
   
   

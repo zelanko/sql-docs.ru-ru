@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 387e6fe29fb01be462350c0d79d63e450e9b1125
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2da3d588459c11a3f2ea9a3bcdbf59d5ba3f9060
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keynotfound-element-assl"></a>Элемент KeyNotFound (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает, каким образом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] при обнаружении ошибки ссылочной целостности.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Указывает, каким образом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] при обнаружении ошибки ссылочной целостности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|*Сообщить и продолжить*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Ошибки, связанные с нарушением ссылочной целостности, возникают, если значению внешнего ключа в зависимой таблице не соответствует ни одно значение первичного ключа в родительской таблице. Эта ошибка возникает при обработке службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] измерения, в котором таблица фактов ссылается на значение внешнего ключа, не существующее в таблице измерения для этого измерения, или если в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] обрабатывается секция, притом, что главная таблица измерения для измерения, которое входит в состав этой секции, ссылается на значение ключа, отсутствующее в другой связанной с ней таблице измерения. (В случае измерений с иерархиями типа «родители-потомоки» и родительскими атрибутами это может также происходить, если таблица главного измерения для измерения, которое включено в секцию, ссылается на значение ключа, не существующее в той же таблице измерения.)  
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
@@ -72,11 +72,11 @@ ms.lasthandoff: 01/08/2018
 |-----------|-----------------|  
 |*Пропустить ошибку*|При обработке эту ошибку следует пропускать и продолжать выполнение.|  
 |*Сообщить и продолжить*|При обработке следует создать отчет об этой ошибке и продолжать выполнение.|  
-|*Сообщить и остановить выполнение*|При обработке следует создать отчет об этой ошибке и прервать выполнение.|  
+|*Сообщить и остановиться*|При обработке следует создать отчет об этой ошибке и прервать выполнение.|  
   
  Перечисление, соответствующее разрешенным значениям для **KeyNotFound** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

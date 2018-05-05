@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Определения данных многомерных Выражений — ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -132,11 +131,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Допустимое строковое выражение, обозначающее имя или ключ элемента.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Замечания  
  Если предложение WITH DESCENDANTS не используется, потомки удаляемого элемента становятся потомками его родителя. Если предложение WITH DESCENDANTS указывается, вместе с элементом удаляются все потомки и соответствующие строки в таблице измерения.  
   
 > [!NOTE]  
->  Сведения об удалении вычисляемых элементов, именованных наборов, действий и вычислений ячеек см. в разделе [инструкция DROP MEMBER &#40; Многомерные Выражения &#41; ](../mdx/mdx-data-definition-drop-member.md), [DROP инструкции SET &#40; Многомерные Выражения &#41; ](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION, инструкция &#40; Многомерные Выражения &#41; ](../mdx/mdx-data-definition-drop-action.md), и [DROP инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Сведения об удалении вычисляемых элементов, именованных наборов, действий и вычислений ячеек см. в разделе [инструкция DROP MEMBER &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-member.md), [инструкция DROP SET &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-set.md), [ACTION, инструкция DROP &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-action.md), и [ВЫЧИСЛЕНИЯ инструкции DROP ЯЧЕЙКИ &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Обновление элемента измерения по умолчанию  
  Это предложение обновляет элемент по умолчанию куба и применяется в скриптах вычисления многомерных выражений для определения элемента по умолчанию. Элемент по умолчанию может быть указан в измерении базы данных, измерении куба или для имени входа пользователя. Элемент по умолчанию можно менять во время сеанса.  
@@ -148,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Допустимое многомерное выражение, возвращающее один элемент.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Замечания  
  Заданное многомерное выражение может быть статическим или динамическим.  
   
 ## <a name="moving-a-dimension-member"></a>Перемещение элемента измерения  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  Допустимое скалярное многомерное выражение, определяющее значение свойства вычисляемого элемента.  
   
 ## <a name="creating-a-cell-calculation"></a>Создание вычисления ячейки  
- Дополнительные сведения о создании вычисления ячейки при помощи инструкции ALTER CUBE см. в разделе [инструкции DROP для ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Дополнительные сведения о создании вычисления ячейки при помощи инструкции ALTER CUBE см. в разделе [инструкции DROP для ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>См. также:  
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

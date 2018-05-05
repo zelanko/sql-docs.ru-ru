@@ -22,12 +22,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3816be8be6945e21d3e6863292d4ed718a2352a2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a9dddd834662871afa7fa08bb27ed9d4249628e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or-mdx"></a>OR (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, которое возвращает **true** Если один или оба аргумента принимают значение **true**; в противном случае **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Или** оператор рассматривает оба аргумента как логические значения (значение 0, как **false**; в противном случае **true**), прежде чем оператор выполнит логическое сложение. В следующей таблице показано, как **или** оператор выполнит логическое сложение.  
   
 |*Expression1*|*Expression2*|Возвращаемое значение|  
@@ -79,7 +78,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

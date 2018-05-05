@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - ODBC data source administrator [ODBC], connection pooling options
@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6a7c21b511f88b8f26d8cc4bdbff40c37c096dcb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7fe5e63542ab05690656ca772c8cad1aea8d98a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Задание параметров пула соединений ODBC
 Организация пулов соединений позволяет приложению использовать соединение из пула подключений, которые не нужно повторно при каждом обращении. Можно использовать **организация пулов соединений** вкладке **администратор источников данных ODBC** диалоговое окно «» для включения и отключения наблюдения за производительностью. Дважды щелкните имя драйвера, чтобы задать время ожидания соединения.  

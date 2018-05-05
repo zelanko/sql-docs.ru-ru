@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dfa962e11cc0beaa830e4f5e21144d52822b8b70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 71d074a7f63333ed504b5e0832cb190d885bbf0c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-element-xmla"></a>Элемент File (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет файл для использования в родительском [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) или [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команду, либо в родительском [расположение](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет файл для использования в родительском [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) или [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команду, либо в родительском [расположение](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,9 +52,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|String|  
+|Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -65,17 +65,17 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Резервное копирование](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [расположение](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md), [восстановления](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Файл** элемент содержит UNC-имя файла и его родительский элемент определяет использование **файл** элемента.  
   
  Для **резервного копирования** команд, **файл** определяет имя файла резервной копии, созданные **резервного копирования** команды. Если путь не указан как часть имени файла, путь, указанный в **BackupDir** свойство конфигурации для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используется. Если указанный файл уже существует, возникает ошибка, если не **AllowOverwrite** родителя **резервного копирования** набор команд **True**.  
   
  Для **восстановить** команд, **файл** определяет имя файла резервной копии, которую требуется восстановить **восстановить** команды.  
   
- Для **расположение** элементов, **файл** элемент описывает удаленный файл резервной копии для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, который содержит удаленные секции. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40; XML для Аналитики &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Для **расположение** элементов, **файл** элемент описывает удаленный файл резервной копии для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, который содержит удаленные секции. Дополнительные сведения о резервном копировании и восстановлении удаленных секций см. в разделе [резервное копирование, восстановление и синхронизация баз данных & #40; XML для Аналитики & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Элемент AllowOverwrite &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Элемент AllowOverwrite & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,33 +1,32 @@
 ---
-title: "Представление соединения (табличное) | Документы Microsoft"
-ms.custom: 
+title: Представление соединения (табличное) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1c18b7fe3369329553de66b226dec73c8e330f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b7f8de1f4fcf00f532afcdf0e219b7558efdaefb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-representation-tabular"></a>Представление соединения (табличное)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Объект соединения определяет источник данных, который заполняет табличную модель.  
+  Объект соединения определяет источник данных, который заполняет табличную модель.  
   
 ## <a name="connection-representation"></a>Представление соединения  
  Спецификация для объекта соединения соответствует правилам поставщиков OLE DB.  

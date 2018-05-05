@@ -1,32 +1,23 @@
 ---
 title: Настройка свойств группы мер | Документы Microsoft
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- properties [Analysis Services], measure groups
-ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5bb9a3be83529e2e195b1f6eaf375932949f253d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-measure-group-properties"></a>Настройка свойств группы мер
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Группы мер имеют свойства, которые позволяют определить функционирование групп мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Группы мер имеют свойства, которые позволяют определить функционирование групп мер.  
   
 ## <a name="measure-group-properties"></a>Свойства группы мер  
  Свойства группы мер определяют характеристики всей группы мер и устанавливают характеристики по умолчанию для определенных свойств мер в группе мер.  
@@ -35,13 +26,13 @@ ms.lasthandoff: 01/08/2018
 |--------------|----------------|  
 |**AggregationPrefix**|Применяется к режиму хранения ROLAP. Назначает общий префикс для индексированных представлений в SQL Server, используемых для хранения агрегатов для разделов, связанных с этой группой мер.|  
 |**DataAggregation**|Это свойство зарезервировано для будущего использования и в настоящее время не оказывает никакого влияния. Поэтому не рекомендуется изменять этот параметр.|  
-|**Описание**|Это свойство можно использовать для документирования группы мер.|  
+|**Description**|Это свойство можно использовать для документирования группы мер.|  
 |**ErrorConfiguration**|Настраиваемые параметры обработки ошибок для обработки повторяющихся ключей, неизвестных ключей, ключей NULL, предельного количества ошибок, действий при обнаружении ошибки и файла журнала ошибок. См раздел [Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Предполагаемое количество строк в таблице фактов.|  
 |**EstimatedSize**|Предполагаемый размер группы мер в байтах.|  
 |**Идентификатор**|Идентификатор объекта.|  
 |**IgnoreUnrelatedDimensions**|Определяет, будут ли несвязанные измерения принудительно перемещаться на верхний уровень, если элементы измерений, не связанных с группой мер, включаются в запрос. Значение по умолчанию — **True**.|  
-|**Название**|Имя меры. Это свойство доступно только для чтения.|  
+|**Название**|Имя меры. Это свойство предназначено только для чтения.|  
 |**ProactiveCaching**|Настраиваемые параметры обработки ошибок для обработки повторяющихся ключей, неизвестных ключей, ключей NULL, предельного количества ошибок, действий при обнаружении ошибки и файла журнала ошибок.|  
 |**ProcessingMode**|Показывает, следует ли производить индексирование и статистическую обработку во время обработки или после нее. Режимы — Regular и LazyAggregations. LazyAggregations можно использовать для выполнения статистической обработки в качестве фоновой задачи.|  
 |**ProcessingPriority**|Определяет приоритет обработки куба во время фоновых операций, например отложенных статистических вычислений или индексирования. Значение по умолчанию — **0**.|  

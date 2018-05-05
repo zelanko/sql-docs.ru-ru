@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - cursors [ODBC], block
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca7e0ea939c925d935a969469f1e14810ccdd387
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efabeedbc0c8dcd44581e4d83e518bf44ceecfa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-status-array"></a>Массив состояния строк
 В дополнение к данным **SQLFetch** и **SQLFetchScroll** может возвращать массив, который предоставляет состояние каждой строки в наборе строк. Этот массив указывается через атрибут значения SQL_ATTR_ROW_STATUS_PTR инструкции. Этот массив выделяется для приложения и должен иметь столько элементов, как указано в атрибуте SQL_ATTR_ROW_ARRAY_SIZE инструкции. Значения в массиве, задаваемыми **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, и **SQLSetPos.** Значения описаны состояния строки и изменилось ли состояния с момента последней загрузки.  

@@ -29,12 +29,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 13d2ee822aaa50c58f64446dc3c21bf89a0ab824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd8e7776899331a089fb12157a072e4ade673655
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-action"></a>Определение данных MDX - действия удаления
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,8 +55,8 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Имя_действия*  
  Допустимое строковое выражение, возвращающее имя действия, которое необходимо удалить.  
   
-## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ оператор действия &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-action.md)   
- [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкция CREATE ACTION &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-action.md)   
+ [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

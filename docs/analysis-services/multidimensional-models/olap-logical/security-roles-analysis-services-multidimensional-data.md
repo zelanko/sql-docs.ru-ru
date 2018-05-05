@@ -1,43 +1,23 @@
 ---
-title: "Роли безопасности (службы Analysis Services — многомерные данные) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], roles
-- Analysis Services objects, roles
-- security [Analysis Services], roles
-- roles [Analysis Services], about roles
-- server roles [Analysis Services]
-- database roles [Analysis Services]
-- roles [Analysis Services]
-- storing data [Analysis Services], roles
-- access rights [Analysis Services], roles
-ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 
-author: Minewiskan
+title: Роли безопасности (службы Analysis Services — многомерные данные) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9dfdaaf55bb4bf5eb71f15177985f0240ff95065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Роли безопасности (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Роли используются в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для управления безопасностью [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов и данных. По сути роли связывают идентификаторы безопасности (SID) для Microsoft Windows пользователей и групп, имеющих определенные права доступа и разрешения, определенные для объектов, управляемых с помощью экземпляра [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Два типа ролей приведены в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  Роли используются в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для управления безопасностью [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов и данных. По сути роли связывают идентификаторы безопасности (SID) для Microsoft Windows пользователей и групп, имеющих определенные права доступа и разрешения, определенные для объектов, управляемых с помощью экземпляра [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Два типа ролей приведены в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   Роль сервера — фиксированная роль, предоставляющая права администратора для доступа к экземпляру служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -93,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 |Administer<br /><br /> Примечание: Только в разрешениях базы данных|{**true**, **false**}<br /><br /> Default=**false**|Указывает, могут ли члены выполнять административные функции по отношению к базе данных.<br /><br /> Значение**true** предоставляет членам роли разрешение для доступа ко всем объектам в базе данных.<br /><br /> Член роли может иметь разрешение на администрирование применительно к какой-то конкретной базе данных, но не к другим.|  
   
 ## <a name="see-also"></a>См. также  
- [Разрешения и права доступа &#40; Analysis Services — многомерные данные &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
- [Авторизацию доступа к объектам и операции &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [Разрешения и права доступа & #40; Analysis Services — многомерные данные & #41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
+ [Авторизацию доступа к объектам и операции & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 535cf75969963c8b94992fa267034bf4f73c9735
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3b47f7bdedcd87b5dc90de314e4d03dc883b9928
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationdesign-element-assl"></a>Элемент AggregationDesign (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет набор определений агрегатов, которые могут совместно использоваться в нескольких секциях в базе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет набор определений агрегатов, которые можно совместно использовать в разных секциях в базе данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -70,13 +70,13 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[AggregationDesigns](../../../analysis-services/scripting/collections/aggregationdesigns-element-assl.md)|  
 |Дочерние элементы|[Агрегаты](../../../analysis-services/scripting/collections/aggregations-element-assl.md), [заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [описание](../../../analysis-services/scripting/properties/description-element-assl.md), [измерения](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedPerformanceGain](../../../analysis-services/scripting/properties/estimatedperformancegain-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
-## <a name="see-also"></a>См. также:  
- [Элемент partition &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Элемент Aggregation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Элемент aggregations &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Секции элемент &#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Элемент Aggregation & #40; ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Элемент aggregations &#40;ASSL&#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

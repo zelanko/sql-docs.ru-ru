@@ -1,31 +1,23 @@
 ---
-title: "После установки конфигурации (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining - "setup-install"
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 
-author: Minewiskan
+title: После установки конфигурации (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6993aa4cea9c21b41e71048497cf524335b72366
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Настройка после установки (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+  После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  Впоследствии потребуется дополнительная работа, когда появятся базы данных, готовые к развертыванию. А именно, требуется настроить членство в роли базы данных, чтобы предоставить пользователю доступ к данным, разработать стратегию резервного копирования и восстановления баз данных, а также решить, нужна ли запланированная рабочая нагрузка по обработке для обновления данных через регулярные промежутки времени. Дополнительные сведения о развертывании базы данных и администрирования можно найти по следующим ссылкам: [многомерных баз данных модели ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) и [базам данных табличных моделей](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   

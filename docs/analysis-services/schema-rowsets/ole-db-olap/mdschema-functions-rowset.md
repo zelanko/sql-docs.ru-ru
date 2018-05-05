@@ -23,20 +23,20 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c26528fd259dbb950d29b36271cd60be6bb05b5a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>Набор строк MDSCHEMA_FUNCTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает функции, доступные клиентским приложениям, подключенным к базе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Описывает функции, доступные клиентским приложениям, подключенным к базе данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_FUNCTIONS** набор строк содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Description|  
+|Имя столбца|Индикатор типа|Описание|  
 |-----------------|--------------------|-----------------|  
 |**ИМЯ ФУНКЦИИ**|**DBTYPE_WSTR**|Имя функции.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Описание функции.|  
@@ -58,12 +58,12 @@ ms.lasthandoff: 01/08/2018
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**LIBRARY_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**INTERFACE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**ИМЯ ФУНКЦИИ**|**DBTYPE_WSTR**|Необязательный параметр.|  
-|**ИСТОЧНИК**|**DBTYPE_I4**|Необязательный параметр.|  
+|**LIBRARY_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**INTERFACE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**ИМЯ ФУНКЦИИ**|**DBTYPE_WSTR**|Необязательно.|  
+|**ИСТОЧНИК**|**DBTYPE_I4**|Необязательно.|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

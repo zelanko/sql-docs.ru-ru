@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField и SQLSetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  Библиотека курсоров выполняет вызовы **SQLSetDescRec** для столбца закладки.  
   
- При работе с ODBC 2. *x* драйвер, библиотеку курсоров возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера) при **SQLSetDescField** или **SQLSetDescRec** вызывается для установки SQL_DESC_OCTET_ Поля ДЛИНЫ записи закладки Отменить значение не равно 4. При работе с ODBC 3*.x* драйверов, библиотеку курсоров обеспечивает буфера быть любого размера.  
+ При работе с ODBC 2. *x* драйвер, библиотеку курсоров возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера) при **SQLSetDescField** или **SQLSetDescRec** вызывается для установки SQL_DESC_OCTET_ Поля ДЛИНЫ записи закладки Отменить значение не равно 4. При работе с ODBC 3 *.x* драйверов, библиотеку курсоров обеспечивает буфера быть любого размера.  
   
  Библиотека курсоров выполняет **SQLSetDescField** при вызове для возврата значения поля SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR. Эти поля могут быть возвращены для любой строки, не только строки закладки.  
   

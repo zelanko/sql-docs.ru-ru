@@ -1,49 +1,23 @@
 ---
-title: "Куб ячейки (службы Analysis Services — многомерные данные) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storing data [Analysis Services], cells
-- hierarchies [Analysis Services], cells
-- OLAP objects [Analysis Services], cells
-- data members [Analysis Services]
-- cubes [Analysis Services], cells
-- empty cells [Analysis Services]
-- nonleaf members
-- cubes [Analysis Services], examples
-- storage [Analysis Services], cells
-- nonleaf cells
-- calculated cells [Analysis Services]
-- dimensions [Analysis Services], cells
-- cells [Analysis Services]
-- leaf members
-- leaf cells
-ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: 
-author: Minewiskan
+title: Куб ячейки (службы Analysis Services — многомерные данные) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6542727b42e98fa73f2e485f0bf88426c442df2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 077e0631a6b2557525a436d3fd4448ccda23b82d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Ячейки куба (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Куб состоит из ячеек, организованных по группам мер и по измерениям. Ячейка представляет собой уникальное логическое пересечение элементов — по одному из каждого измерения в кубе. Например, куб, описываемый следующей диаграммой, содержит одну группу мер с двумя мерами, организованными вдоль трех измерений, названных «Источник», «Маршрут» и «Время».  
+  Куб состоит из ячеек, организованных по группам мер и по измерениям. Ячейка представляет собой уникальное логическое пересечение элементов — по одному из каждого измерения в кубе. Например, куб, описываемый следующей диаграммой, содержит одну группу мер с двумя мерами, организованными вдоль трех измерений, названных «Источник», «Маршрут» и «Время».  
   
  ![Диаграмма куба, определяющая одну ячейку](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "Диаграмма куба, определяющая одну ячейку")  
   
@@ -85,13 +59,13 @@ ms.lasthandoff: 02/15/2018
   
  ![Диаграмма куба, определяющая пустые ячейки](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro7.gif "Диаграмма куба, определяющая пустые ячейки")  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], пустая ячейка представляет ячейку с особыми свойствами. Поскольку пустые ячейки могут искажать результаты перекрестных соединений, подсчетов и т. п., многие функции многомерных выражений обеспечивают возможность пропуска пустых ячеек для целей вычислений. Дополнительные сведения см. в разделе [многомерных выражений &#40; Многомерные Выражения &#41; Справочник по](../../mdx/multidimensional-expressions-mdx-reference.md), и [ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], пустая ячейка представляет ячейку с особыми свойствами. Поскольку пустые ячейки могут искажать результаты перекрестных соединений, подсчетов и т. п., многие функции многомерных выражений обеспечивают возможность пропуска пустых ячеек для целей вычислений. Дополнительные сведения см. в разделе [многомерных выражений &#40;многомерных Выражений&#41; ссылки](../../mdx/multidimensional-expressions-mdx-reference.md), и [основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>безопасность  
- Доступ к данным ячеек в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется на уровне ролей и может точно управляться с помощью многомерных выражений. Дополнительные сведения см. в разделе [предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md), и [предоставление настраиваемого доступа к ячейке данных &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
+ Доступ к данным ячеек в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется на уровне ролей и может точно управляться с помощью многомерных выражений. Дополнительные сведения см. в разделе [предоставление настраиваемого доступа к данным измерения &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md), и [предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Хранилище куба &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Хранилище куба &#40;службы Analysis Services — многомерные данные&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

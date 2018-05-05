@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0332ecba1226855d841ba9f8619e660cb72e91af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3ca0d66f6b5a4df2e0d4f4fa79d9eb882159c431
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +78,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
   
  [  **@working_directory=**] **"***working_directory***"**  
- Имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)**и значения по умолчанию папке ReplData для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например «C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData». Имя должно быть задано в формате UNC.  
+ Имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** и значения по умолчанию папке ReplData для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например «C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData». Имя должно быть задано в формате UNC.  
   
  [  **@trusted=**] **"***доверенных***"**  
- Этот параметр устарел и поддерживается только для обеспечения обратной совместимости. *доверенный* — **nvarchar(5)**и может только **false** приведет к ошибке.  
+ Этот параметр устарел и поддерживается только для обеспечения обратной совместимости. *доверенный* — **nvarchar(5)** и может только **false** приведет к ошибке.  
   
  [  **@encrypted_password=**] *encrypted_password*  
  Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  

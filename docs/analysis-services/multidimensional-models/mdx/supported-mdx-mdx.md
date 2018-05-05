@@ -1,61 +1,50 @@
 ---
-title: "Поддерживается многомерных Выражений (MDX) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Поддерживается многомерных Выражений (MDX) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- MDX [Analysis Services], statements
-- MDX [Analysis Services], functions
-ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1c4f6573ce8f72c0fa907f58a1f4264709809f11
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6e31aa1a7b211c166bf7aeee3a96d51ea4e0cb33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-mdx-mdx"></a>Поддержка многомерных выражений (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-В скриптах многомерных выражений поддерживаются следующие инструкции и функции:  
+  В скриптах многомерных выражений поддерживаются следующие инструкции и функции:  
   
- [&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../../../mdx/comment-mdx-double-slash.md)  
+ [& #40; Комментарий & #41; & #40; Многомерные Выражения & #41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [--&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../../../mdx/comment-mdx-operator-reference.md)  
+ [--& #40; Комментарий & #41; & #40; Многомерные Выражения & #41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [Комментарий &#40; Многомерные Выражения &#41;](../../../mdx/comment-mdx.md)  
+ [Комментарий & #40; Многомерные Выражения & #41;](../../../mdx/comment-mdx.md)  
   
- [Инструкция ALTER CUBE &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [Инструкция ALTER CUBE & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  В сценариях многомерных выражений поддерживается только изменение элемента по умолчанию.  
   
- [ВЫЧИСЛИТЬ оператор &#40; Многомерные Выражения &#41;](../../../mdx/mdx-scripting-calculate.md)  
+ [ВЫЧИСЛИТЬ оператор & #40; Многомерные Выражения & #41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [Инструкция CASE &#40; Многомерные Выражения &#41;](../../../mdx/case-statement-mdx.md)  
+ [Инструкция CASE & #40; Многомерные Выражения & #41;](../../../mdx/case-statement-mdx.md)  
   
- [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [CREATE MEMBER, инструкция #40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [СОЗДАТЬ инструкцию SET &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-set.md)  
+ [СОЗДАТЬ инструкцию SET & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [Ключевое слово EXISTING &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [Ключевое слово EXISTING & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [Инструкция FREEZE &#40; Многомерные Выражения &#41;](../../../mdx/mdx-scripting-freeze.md)  
+ [Инструкция FREEZE & #40; Многомерные Выражения & #41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [Если оператор &#40; Многомерные Выражения &#41;](../../../mdx/mdx-scripting-if.md)  
+ [Если оператор & #40; Многомерные Выражения & #41;](../../../mdx/mdx-scripting-if.md)  
   
  [Это (многомерное выражение)](../../../mdx/this-mdx.md)  
   
@@ -65,6 +54,6 @@ ms.lasthandoff: 02/15/2018
  [Инструкция SCOPE (многомерные выражения)](../../../mdx/mdx-scripting-scope.md)  
   
 ## <a name="see-also"></a>См. также  
- [Базовый скрипт многомерных Выражений &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+ [Базовый скрипт многомерных Выражений & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

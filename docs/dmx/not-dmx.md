@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c242a6767e60b04249d69d340806d0cf78a374e2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e2ffe861c7076c9e85adf65a81b131d505dda7c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="not-dmx"></a>NOT (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ NOT Expression1
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение возвращает значение FALSE, если аргумент возвращает значение TRUE, и TRUE в противном случае.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Аргумент логическим значением (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое отрицание. Если *Expression1* имеет значение TRUE, оператор возвращает FALSE. Если *Expression1* имеет значение FALSE, оператор возвращает TRUE. В следующей таблице иллюстрируется выполнение логического умножения (конъюнкции).  
   
 |Если Expression1 равно|Возвращается значение|  
@@ -56,9 +55,9 @@ NOT Expression1
 |TRUE|FALSE|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Логические операторы &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-logical.md)   
- [Операторы &#40; расширений интеллектуального анализа данных &#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>См. также  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Логические операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-logical.md)   
+ [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)  
   
   

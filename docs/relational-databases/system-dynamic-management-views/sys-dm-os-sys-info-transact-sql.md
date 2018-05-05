@@ -28,13 +28,12 @@ caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a6b6cb757e2944df8a0e50e6e63a1f58cedda11
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 82efa511456eb0340ba2bb717ff9d15acbfbd8f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -83,9 +82,9 @@ ms.lasthandoff: 04/26/2018
 |**sql_memory_model**|**int**|**Применяется к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает модель памяти, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />1 = модель обычной памяти<br />2 = блокировка страниц в памяти<br /> 3 = больших страниц в памяти|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Применяется к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает модель памяти, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />**ОБЫЧНАЯ**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует модель обычной памяти для выделения памяти. Это объем памяти sql по умолчанию модели при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы не имеет блокировка страниц в памяти привилегии во время запуска.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется блокировка страниц в памяти для выделения памяти. Это диспетчер памяти sql по умолчанию для учетной записи службы SQL Server необходима блокировка страниц в памяти во время запуска SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью больших страниц в памяти для выделения памяти. SQL Server использует распределителя больших страниц для выделения памяти только в выпуске Enterprise edition, когда учетная запись службы SQL Server необходима блокировка страниц в памяти во время запуска сервера и при включении 834 флаг трассировки.|
 |**pdw_node_id**|**int**|**Применяется к:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
-|**socket_count** |**int** | **Применяется к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество сокетов процессоров, доступных в системе. |  
-|**cores_per_socket** |**int** | **Применяется к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает число процессоров на сокетов, доступных в системе. |  
-|**numa_node_count** |**int** | **Применяется к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество узлов numa, доступных в системе. Этот столбец содержит физической архитектуры NUMA, а также программная архитектура numa-узлов. |  
+|**socket_count** |**int** | **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество сокетов процессоров, доступных в системе. |  
+|**cores_per_socket** |**int** | **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает число процессоров на сокетов, доступных в системе. |  
+|**numa_node_count** |**int** | **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество узлов numa, доступных в системе. Этот столбец содержит физической архитектуры NUMA, а также программная архитектура numa-узлов. |  
   
 ## <a name="permissions"></a>Разрешения
 

@@ -1,31 +1,23 @@
 ---
-title: "Создание надежного расположения для сайтов PowerPivot в центре администрирования | Документы Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Создание надежного расположения для сайтов PowerPivot в центре администрирования | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3dabb6a62434ce2956a0c11a62f3b383104df698
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Создание надежного расположения для сайтов PowerPivot в центре администрирования
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может понадобиться создание надежных расположений для сайтов, в которых содержатся книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , что позволит применить параметры, наиболее подходящие для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , во время сохранения параметров по умолчанию для всех остальных расположений фермы.  
+  Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может понадобиться создание надежных расположений для сайтов, в которых содержатся книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , что позволит применить параметры, наиболее подходящие для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , во время сохранения параметров по умолчанию для всех остальных расположений фермы.  
   
   
 ## <a name="prerequisites"></a>предварительные требования  

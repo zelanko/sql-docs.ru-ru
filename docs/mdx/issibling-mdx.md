@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8a318fd05502dfc9051c51542dcf864fe914d915
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 35603f7c6b9b9a96d49eb485ecadc759d519723f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="issibling-mdx"></a>IsSibling (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ IsSibling(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **IsSibling** возврата функцией **true** Если первый указанный элемент является родственником второй заданный элемент. В противном случае функция возвращает **false**.  
   
 ## <a name="example"></a>Пример  
@@ -64,7 +63,7 @@ IsSibling(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

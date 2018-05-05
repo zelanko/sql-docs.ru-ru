@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ba90a54159f126e49148de8a8425e74d02e148d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb9f4ec6fbc2e6aecff8d78ff562f35f9a546405
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability-of-sql-statements"></a>Взаимодействие инструкций SQL
 Как и остальные приложения инструкции SQL могут быть с возможностью взаимодействия или СУБД. И как остальной части приложения, должны быть Выбор инструкций SQL, как с возможностью взаимодействия зависит от типа приложения. Пользовательские приложения обычно не использования инструкций SQL, с возможностью взаимодействия, поскольку обычно предназначены для использования возможности одним или возможно двумя СУБД. Универсальные приложения использовать с возможностью взаимодействия инструкции SQL, поскольку они предназначены для работы с различными СУБД. И вертикальные приложения обычно где-то между ними, уровень функциональности, где это требуется, но в противном случае использование взаимодействия инструкций SQL.  

@@ -1,34 +1,23 @@
 ---
-title: "Определение свойства среза секции (службы Analysis Services) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Определение свойства среза секции (службы Analysis Services) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], data slices
-- data slices [Analysis Services]
-ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92a61b6d5d860ae94fdc3d38212fed45ed2363bc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0267418bdc992468d9730407e5094b968cb6023b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Определение свойства среза секции (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Срез данных является важной функцией оптимизации, которая помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  
+  Срез данных является важной функцией оптимизации, которая помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  
   
  С помощью свойства Slice можно задать срез данных после создания секции, но до ее обработки. На вкладке "Секции" разверните группу мер, щелкните правой кнопкой мыши секцию и выберите **Свойства**.  
   
@@ -53,6 +42,6 @@ ms.lasthandoff: 02/15/2018
 >  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем вы можете использовать программу командной строки ascmd или элемент [Задача "Выполнение DDL службами Analysis Services"](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) в службах Integration Services для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление локальной секции &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [Создание и управление локальной секции & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

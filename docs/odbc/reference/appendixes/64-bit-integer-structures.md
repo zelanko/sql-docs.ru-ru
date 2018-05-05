@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], 64-bit integer structures
 - data types [ODBC], C data types
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8760b771b4ef44f2728c0947504c46a3f7d28910
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a0f228bcaa8ec51491e2dad169e9e4cee88481f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="64-bit-integer-structures"></a>64-разрядное целое число структур
 Тип C для SQL_C_SBIGINT и SQL_C_UBIGINT идентификаторы типа данных в компиляторах Microsoft C — _int64. При использовании компилятора, отличного от компилятора Microsoft® C тип C может отличаться. Если компилятор поддерживает 64-битовых целых чисел в собственном коде, драйвера или приложения следует определить ODBCINT64 как тип собственного 64-разрядное целое число. Если компилятор не поддерживает 64-разрядных целых чисел, приложения или драйвера можно определить следующие структуры, чтобы обеспечить доступ к этим данным:  

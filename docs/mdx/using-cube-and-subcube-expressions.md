@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cb1766ed1c16901bec84f735ecc2357939a65a11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 24ed878f0d0370076516e861cd38c30676b39257
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Выражения куба и вложенного куба
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -84,11 +83,11 @@ ms.lasthandoff: 01/08/2018
   
  Идентификатор вложенного куба представлен как *Subcube_Name*. в описаниях инструкций многомерных выражений в форме Бэкуса-Наура.  
   
-## <a name="see-also"></a>См. также:  
- [Базовый запрос многомерных Выражений &#40; Многомерные Выражения &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [Построение вложенных кубов в многомерных Выражений &#40; Многомерные Выражения &#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [CREATE SUBCUBE, инструкция #40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Выражения &#40; Многомерные Выражения &#41;](../mdx/expressions-mdx.md)   
- [Инструкция SCOPE &#40; Многомерные Выражения &#41;](../mdx/mdx-scripting-scope.md)  
+## <a name="see-also"></a>См. также  
+ [Базовый запрос многомерных Выражений & #40; Многомерные Выражения & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [Построение вложенных кубов в многомерных Выражениях &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
+ [Инструкция CREATE SUBCUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)   
+ [Инструкция SCOPE & #40; Многомерные Выражения & #41;](../mdx/mdx-scripting-scope.md)  
   
   

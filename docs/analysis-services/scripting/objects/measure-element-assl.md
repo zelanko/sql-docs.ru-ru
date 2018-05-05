@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a6d06c77f5f0c5ce91ec6805f9c289c19a2db576
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 21296ea1c331fa30d3d826fd9f8ca786ad85c176
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measure-element-assl"></a>Элемент Measure (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет меру.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет меру.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,9 +72,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|См. в следующей таблице.|  
+|Тип данных и длина|См. таблицу ниже.|  
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
@@ -90,14 +90,14 @@ ms.lasthandoff: 01/08/2018
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Меры](../../../analysis-services/scripting/collections/measures-element-assl.md)|  
-|Дочерние элементы|См. в следующей таблице.|  
+|Дочерние элементы|См. таблицу ниже.|  
   
 |Предок или родитель|Дочерние элементы|  
 |------------------------|--------------------|  
-|[Группа мер](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|[AggregateFunction](../../../analysis-services/scripting/properties/aggregatefunction-element-assl.md), [заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [BackColor](../../../analysis-services/scripting/properties/backcolor-element-assl.md), [DataType](../../../analysis-services/scripting/properties/datatype-element-assl.md), [описание](../../../analysis-services/scripting/properties/description-element-assl.md), [ DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md), [FontFlags](../../../analysis-services/scripting/properties/fontflags-element-assl.md), [FontName](../../../analysis-services/scripting/properties/fontname-element-assl.md), [FontSize](../../../analysis-services/scripting/properties/fontsize-element-assl.md), [ForeColor](../../../analysis-services/scripting/properties/forecolor-element-assl.md), [ FormatString](../../../analysis-services/scripting/properties/formatstring-element-assl.md), [идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [MeasureExpression](../../../analysis-services/scripting/properties/measureexpression-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md), [источника](../../../analysis-services/scripting/properties/source-element-measure-assl.md), [ Переводы](../../../analysis-services/scripting/collections/translations-element-assl.md), [видимыми](../../../analysis-services/scripting/properties/visible-element-assl.md)|  
+|[Группа мер](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|[AggregateFunction](../../../analysis-services/scripting/properties/aggregatefunction-element-assl.md), [Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [BackColor](../../../analysis-services/scripting/properties/backcolor-element-assl.md), [DataType](../../../analysis-services/scripting/properties/datatype-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md), [FontFlags](../../../analysis-services/scripting/properties/fontflags-element-assl.md), [FontName](../../../analysis-services/scripting/properties/fontname-element-assl.md), [FontSize](../../../analysis-services/scripting/properties/fontsize-element-assl.md), [ForeColor](../../../analysis-services/scripting/properties/forecolor-element-assl.md), [FormatString](../../../analysis-services/scripting/properties/formatstring-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [MeasureExpression](../../../analysis-services/scripting/properties/measureexpression-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-measure-assl.md), [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md), [Visible](../../../analysis-services/scripting/properties/visible-element-assl.md)|  
 |Все остальные|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для меры могут быть предоставлены подробности привязки. Эти подробности затем действуют в качестве значений по умолчанию для секций.  
   
  В более крупных кубах могут существовать сотни мер и иерархий. Свойство **DisplayFolder** определяет внешний вид для пользователя на клиенте. Возможен любой из следующих вариантов значения свойства **DisplayFolder** .  
@@ -112,7 +112,7 @@ ms.lasthandoff: 01/08/2018
   
  Соответствующие элементы в модели объектов AMO — это <xref:Microsoft.AnalysisServices.Measure> и <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
-## <a name="see-also"></a>См. также:  
- [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

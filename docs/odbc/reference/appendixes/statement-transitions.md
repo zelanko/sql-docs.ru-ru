@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>Инструкция переходов
 Инструкции ODBC имеют следующие состояния.  
@@ -330,7 +329,7 @@ ms.lasthandoff: 04/16/2018
   
  [1] в этой строке показаны переходы при *параметр* был SQL_CLOSE.  
   
- [2] в этой строке показаны переходы при *параметр* SQL_UNBIND или SQL_RESET_PARAMS. Если *параметр* аргумент не SQL_DROP и базового драйвера ODBC 3*.x* драйвера, диспетчер драйверов сопоставляется это вызов **SQLFreeHandle** с  *HandleType* присвоено значение SQL_HANDLE_STMT. Дополнительные сведения см. в таблице перехода для [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] в этой строке показаны переходы при *параметр* SQL_UNBIND или SQL_RESET_PARAMS. Если *параметр* аргумент не SQL_DROP и базового драйвера ODBC 3 *.x* драйвера, диспетчер драйверов сопоставляется это вызов **SQLFreeHandle** с  *HandleType* присвоено значение SQL_HANDLE_STMT. Дополнительные сведения см. в таблице перехода для [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

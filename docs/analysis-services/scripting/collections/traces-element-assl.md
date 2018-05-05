@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62ab54a42de332507921156b5da5955f5be4bbc9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0c33fc1188399987e46a9c739fcc5a031807b6ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="traces-element-assl"></a>Элемент Traces (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию элементов [трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md) элементы, связанные с [сервера](../../../analysis-services/scripting/objects/server-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Содержит коллекцию элементов [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) , связанных с элементом [Server](../../../analysis-services/scripting/objects/server-element-assl.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
 |Дочерние элементы|[Трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.TraceCollection>.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекции &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Коллекции & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

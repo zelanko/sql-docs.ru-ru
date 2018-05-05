@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fec32179658d115a7dec17fa61a39a060a8ea700
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2a558ef95b18dc06ec59e9e0810ce3228d9ecb80
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="forcerebuildinterval-element-assl"></a>Элемент ForceRebuildInterval (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет количество времени, запуск, если новый образ многомерного OLAP (MOLAP) становится доступной, после которого начинается безусловно Создание образа MOLAP.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Определяет время (начиная с момента, когда становится доступным новый образ многомерного OLAP (MOLAP)), через которое безусловно начинается операция создания образа MOLAP.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Продолжительность XML|  
 |Значение по умолчанию|Infinite|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,10 +63,10 @@ ms.lasthandoff: 01/08/2018
 |Родительский элемент|[ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Элемент, соответствующий родителю параметра **ForceRebuildInterval** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
-## <a name="see-also"></a>См. также:  
- [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>См. также  
+ [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

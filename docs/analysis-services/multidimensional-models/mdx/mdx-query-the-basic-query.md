@@ -1,37 +1,23 @@
 ---
-title: "Базовый запрос многомерных Выражений (MDX) | Документы Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Базовый запрос многомерных Выражений (MDX) | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], SELECT statement
-- queries [MDX], about queries
-- cellsets [MDX]
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 188c1069047c050df50d81d2208e978b39a05706
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>Запрос многомерных Выражений — базовый запрос
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Базовый запрос многомерных выражений — это инструкция SELECT, наиболее частый запрос в многомерных выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  
+  Базовый запрос многомерных выражений — это инструкция SELECT, наиболее частый запрос в многомерных выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  
   
 ## <a name="specifying-a-result-set"></a>Указание результирующего набора  
  В многомерном выражении инструкция SELECT указывает результирующий набор, содержащий подмножество многомерных данных, возвращаемое из куба. Чтобы указать результирующий набор, запрос многомерных выражений должен содержать следующие данные.  
@@ -116,7 +102,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Дополнительные примеры см. в разделах [Определение содержимого оси запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) и [Определение содержимого оси среза (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Инструкция SELECT &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Инструкция SELECT & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 82ec76e1cf3159b20c2eae8812a8f4418591bbc9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 05beb0cd39e57df5c67a1d9a536c2e4702a9e4db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ordinal-mdx"></a>Ordinal (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Level_Expression.Ordinal
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Порядковый номер** функция часто используется в сочетании с **IIF** и **CurrentMember** функции по условию отображать различные значения на разных уровнях иерархии, на основании порядковый номер каждой из ячеек в результатах запроса. Например, можно использовать **порядковый номер** функции для вычисления на определенных уровнях и отображение значения по умолчанию «N/a» на других уровнях.  
   
 ## <a name="example"></a>Пример  
@@ -57,7 +56,7 @@ SELECT Measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ba00bb578f116a3004b7457144e331a8d37d1f20
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 3b8391b9cd1463669b527c0f9f194e195ffa31b9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="legal-notice-mysqltosql"></a>Юридическая информация (MySQLToSql)
 Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  

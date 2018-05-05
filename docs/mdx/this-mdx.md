@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7065d192cf9b02f827753b8e0b50191d6daf30b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c0af257ba1a413385e3c25e6226cbbfba107c442
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-mdx"></a>This (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 This   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Это** функцию можно использовать вместо любого выражения вложенного куба для предоставления к текущему вложенному кубу в текущей области в скрипте вычисления многомерного Выражения. **Это** необходимо использовать функцию в левой части назначения.  
   
 ## <a name="examples"></a>Примеры  
@@ -87,8 +86,8 @@ This
   
  `End Scope;`  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
  [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

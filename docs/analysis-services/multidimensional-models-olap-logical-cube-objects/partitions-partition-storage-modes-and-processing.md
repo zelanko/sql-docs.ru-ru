@@ -1,44 +1,23 @@
 ---
-title: "Секции, режим хранения и обработки | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: Секции, режим хранения и обработки | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Секции — обработка и режимы хранения секции
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Режим хранения секции определяет производительность выполнения запросов и обработки, требования к хранилищу и месту хранения секции, а также ее родительскую группу мер и куб. Кроме того, режим хранения влияет на выбор обработки.  
+  Режим хранения секции определяет производительность выполнения запросов и обработки, требования к хранилищу и месту хранения секции, а также ее родительскую группу мер и куб. Кроме того, режим хранения влияет на выбор обработки.  
   
  Секция может использовать один из трех основных режимов хранения:  
   
@@ -53,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="molap"></a>MOLAP  
  В режиме хранения MOLAP агрегаты секции и копия исходных данных при ее обработке сохраняются в многомерной структуре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В целях повышения производительности запросов структура MOLAP значительно оптимизирована. Местом хранения может быть либо компьютер, на котором определена секция, либо любой другой компьютер, на котором запущены службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Учитывая тот факт, что многомерные структуры содержат копию исходных данных, запрос может быть выполнен без обращения к секции исходных данных. При использовании статистической обработки время выполнения запроса может значительно возрасти. Данные в структуре секции MOLAP соответствуют последней обработке секции.  
   
- Так как исходные данные изменяются, для включения этих изменений и обеспечения доступа к ним пользователей объекты в хранилище MOLAP должны периодически обрабатываться. Обработка полностью или частично обновляет данные в структуре MOLAP. Время между обработками представляет собой период задержки, в течение которого объекты OLAP могут не соответствовать исходным данным. Можно полностью или частично обновить объекты в хранилище MOLAP, не переводя секцию или куб в режим вне сети. Однако в некоторых случаях это может оказаться необходимым при обработке определенных структурных изменений объектов OLAP. Можно свести к минимуму время простоя, требуемое для обновления хранилища MOLAP, с помощью обновления и обработки кубов на промежуточном сервере, а также использования синхронизации баз данных для копирования обработанных объектов на производственный сервер. Также для сокращения задержки и максимизации доступности можно использовать упреждающее кэширование, сохраняя при этом высокую производительность хранилища MOLAP. Дополнительные сведения см. в разделе [упреждающее кэширование &#40; Секций &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Синхронизации баз данных Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), и [обработка многомерной модели &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Так как исходные данные изменяются, для включения этих изменений и обеспечения доступа к ним пользователей объекты в хранилище MOLAP должны периодически обрабатываться. Обработка полностью или частично обновляет данные в структуре MOLAP. Время между обработками представляет собой период задержки, в течение которого объекты OLAP могут не соответствовать исходным данным. Можно полностью или частично обновить объекты в хранилище MOLAP, не переводя секцию или куб в режим вне сети. Однако в некоторых случаях это может оказаться необходимым при обработке определенных структурных изменений объектов OLAP. Можно свести к минимуму время простоя, требуемое для обновления хранилища MOLAP, с помощью обновления и обработки кубов на промежуточном сервере, а также использования синхронизации баз данных для копирования обработанных объектов на производственный сервер. Также для сокращения задержки и максимизации доступности можно использовать упреждающее кэширование, сохраняя при этом высокую производительность хранилища MOLAP. Дополнительные сведения см. в разделе [упреждающее кэширование &#40;секций&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [синхронизации баз данных Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), и [обработка многомерной модели &#40; Службы Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="rolap"></a>ROLAP  
  В режиме хранения ROLAP агрегаты секции хранятся в индексированных представлениях реляционной базы данных, которая определена в источнике данных секции. В отличие от режима MOLAP, в режиме хранения ROLAP копия исходных данных в папках данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не хранится. Напротив, если получить результаты из кэша запросов невозможно, для ответов на запросы выполняется доступ к индексированным представлениям в источнике данных. Как правило, в режиме ROLAP запрос выполняется дольше, чем в режимах хранения MOLAP или HOLAP. И время обработки в режиме ROLAP обычно тоже больше. Однако режим ROLAP дает пользователям возможность просматривать данные в режиме реального времени и сохранять пространство хранилища при работе с большими наборами данных, которые запрашиваются редко, например архивные данные.  
@@ -93,8 +72,8 @@ ms.lasthandoff: 02/15/2018
  Секции с режимом хранения HOLAP меньше аналогичных секций MOLAP, потому что в них не содержится источник данных, а для запросов со сводными данными они имеют меньшее время отклика, чем в секциях ROLAP. Режим хранения HOLAP, как правило, подходит для секций в кубах, требующих малого времени ответа на запросы сводных данных из большого количества исходных данных. Однако если пользователи создают запросы к данным конечного уровня, например вычисление средних значений, более предпочтительно использовать режим MOLAP.  
   
 ## <a name="see-also"></a>См. также  
- [Упреждающее кэширование &#40; Секций &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [Упреждающее кэширование & #40; Секций & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Синхронизация баз данных Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Секций & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

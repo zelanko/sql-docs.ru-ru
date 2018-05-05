@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 070ef059855d4c95b4225676ab67eddcd9c16ad1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cf751838a5be301f93eb753bd3dfe43595140f29
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)
 ODBC позволяет асинхронное выполнение операций инструкции и соединения. Это поток приложения можно вызывать функции ODBC в асинхронном режиме, или функция может вернуть, прежде чем операция будет завершена, позволяя потока приложения для выполнения других задач. В Windows 7 SDK, для асинхронного инструкции или операций соединения приложения определить, что асинхронная операция была завершения с помощью метода опроса. Дополнительные сведения см. в разделе [асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Начиная с Windows 8 SDK, можно определить, что асинхронная операция завершена с помощью метода уведомления.  

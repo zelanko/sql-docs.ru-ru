@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 19736a8afa6339c46c9976e57e1ae24a6cc25fba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21a93aac42dcbbf29d3e5a4a3bb2d4ab2196380c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
  **sp_update_jobschedule** предоставляется только для обратной совместимости.  
   
 > [!IMPORTANT]  
->  Дополнительные сведения о синтаксисе, используемом в более ранних версиях Microsoft SQL Server см. в разделе Transact-SQL Referencefor Microsoft SQL Server 2000*.*  
+>  Дополнительные сведения о синтаксисе, используемом в более ранних версиях Microsoft SQL Server см. в разделе Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
   
 ## <a name="remarks"></a>Замечания  
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы обновить расписание, используйте **sp_update_schedule**.  

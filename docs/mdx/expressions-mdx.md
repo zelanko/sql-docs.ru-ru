@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a158bbcdd77e4a7e1e026db793b46e306d8c6fbe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>Выражения (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  Скалярная функция в языке многомерных выражений возвращает единственное значение в контексте вычислений. Это отличие важно для понимания того, как в языке многомерных выражений разрешаются скалярные функции, поскольку большинство выражений, инструкций и скриптов многомерных выражений вычисляется не по одному элементу данных, а итерационно по группе звеньев данных — ячеек или элементов. Однако при вычислении скалярной функции функция обычно анализирует одно звено данных.  
   
  Идентификаторы объектов  
- Язык многомерных выражений является объектно-ориентированным благодаря природе многомерных данных. Идентификаторы объектов в нем рассматриваются как простые выражения. Дополнительные сведения об идентификаторах см. в разделе [идентификаторы &#40; Многомерные Выражения &#41; ](../mdx/identifiers-mdx.md).  
+ Язык многомерных выражений является объектно-ориентированным благодаря природе многомерных данных. Идентификаторы объектов в нем рассматриваются как простые выражения. Дополнительные сведения об идентификаторах см. в разделе [идентификаторы &#40;многомерных Выражений&#41;](../mdx/identifiers-mdx.md).  
   
  Сложные выражения строятся из сочетания данных конструкций, соединенных операторами.  
   
@@ -87,9 +86,9 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование выражений куба и вложенного куба](../mdx/using-cube-and-subcube-expressions.md)|Выражения куба и вложенного куба.|  
 |[Использование выражений измерений](../mdx/using-dimension-expressions.md)|Выражения измерений.|  
@@ -99,8 +98,8 @@ WHERE [Product].[Category].[Bikes]
 |[Использование скалярных выражений](../mdx/using-scalar-expressions.md)|Скалярные выражения.|  
 |[Работа с пустыми значениями](../mdx/working-with-empty-values.md)|Пустые значения и способы их обработки.|  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

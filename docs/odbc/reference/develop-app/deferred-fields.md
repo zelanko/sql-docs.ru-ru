@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 47e9d94d3a3f6e39864d27fee1c82f8e69f24b37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f46136c5dd8058e19aec6d7550f86c9cb1fd675c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deferred-fields"></a>Отложенных полей
 Значения *отложенных полей* не используются, когда они заданы, но драйвер сохраняет адреса переменных для отложенного эффекта. Для дескриптора параметра приложения, драйвер использует содержимое переменных во время вызова **SQLExecDirect** или **SQLExecute**. Для дескриптор строк приложения драйвер использует содержимое переменных во время выборки.  

@@ -22,12 +22,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b24e57d8f682e21a6d561a4e3a426da85f5ceb17
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: be11ebe09b2aeff73264708c83d820eeaffd009e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В области действия заданного уровня **PeriodsToDate** функция возвращает набор периодов на том же уровне, что и указанный элемент, начиная с первого периода и заканчивая указанным элементом.  
   
 -   Если уровень указан, текущий элемент иерархии определяется *иерархии*. **CurrentMember**, где *иерархии*является иерархией указанного уровня.  
@@ -98,8 +97,8 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [TopCount &#40; Многомерные Выражения &#41;](../mdx/topcount-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [TopCount &#40;многомерных Выражений&#41;](../mdx/topcount-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

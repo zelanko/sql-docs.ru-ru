@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 427a72ebdf63df7bb8d3d1ef93f306c9167782d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>Функция SQLInstallDriverEx
 **Соответствия**  
@@ -106,9 +105,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Комментарии  
  *LpszDriver* аргумент является список атрибутов в форме пар «ключевое слово значение». Каждая пара заканчивается нулевым байтом, и завершается нулевым байтом весь список. (То есть две пустые байты отмечающий конец списка.) Этот список имеет следующий формат:  
   
- *драйвер desc* **\\**0Driver**=***имя файла драйвера DLL***\\**0 [установки **= ***имя файла DLL установки***\\**0]  
+ *драйвер desc* **\\** 0Driver**=***имя файла драйвера DLL***\\** 0 [установки **= ***имя файла DLL установки***\\** 0]  
   
- [*драйвер attr ключевое_слово1***=***value1 ***\\**0] [*драйвер attr ключевое_слово2***=*** value2 ***\\**0]... **\\**0  
+ [*драйвер attr ключевое_слово1***=*** value1 ***\\** 0] [* драйвер attr ключевое_слово2***=*** value2 ***\\** 0]... **\\** 0  
   
  где \0 является нулевым байтом и *драйвер attr keywordn* является любое ключевое слово атрибута драйвера. Ключевые слова должны располагаться в указанном порядке. Например предположим, что драйвер для файлов форматированный текст имеет отдельный драйвер и установки библиотеки DLL и можно использовать файлы с расширениями txt и CSV. *LpszDriver* аргумент для этого драйвера может выглядеть следующим образом:  
   

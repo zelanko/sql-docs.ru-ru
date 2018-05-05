@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 656ea9623b7dea8296bc10221c916fe7afdd0568
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e5f6f3e46a86d8db07d2ce13a84007f2c36af267
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mode-element-xmla"></a>Элемент Mode (XML для аналитики)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет режим, который будет использоваться в родительском [блокировки](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) элемент при создании блокировки на указанный объект.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Определяет режим, который будет использоваться в родительском [блокировки](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) элемент при создании блокировки на указанный объект.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|None|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |Родительские элементы|[Блокировка](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [разблокировки](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Родительский **блокировки** элемент использует **режим** элемент для определения типа создаваемой блокировки на объект. Значением этого элемента может быть только одна из строк в следующей таблице.  
   
 |Значение|Description|  
@@ -74,8 +74,8 @@ ms.lasthandoff: 01/08/2018
 |*CommitExclusive*|На указанный объект устанавливается монопольная блокировка. Другие совмещаемые или монопольные блокировки не могут быть созданы для того же объекта.<br /><br /> Монопольная блокировка исключает возможность фиксации транзакций, содержащих операции чтения или записи для указанного объекта, до снятия монопольной блокировки.|  
   
 ## <a name="see-also"></a>См. также:  
- [Элемент ID &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)   
- [Элемент Object &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
- [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Элемент ID & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)   
+ [Элемент Object & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
+ [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

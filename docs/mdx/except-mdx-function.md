@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 36e19418f982542318da340664182526c2b00070
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 061b4226e0fe884f04d203e2fca575fe7b4574b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="except-mdx-function"></a>EXCEPT, функция (многомерные Выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если **все** будет указано, функция сохраняет повторяющиеся значения, обнаруженные в первом наборе; повторяющиеся значения из второго набора удаляются. Функция возвращает элементы в порядке их следования в первом наборе.  
   
 ## <a name="examples"></a>Примеры  
@@ -70,8 +69,8 @@ WHERE
    ([Measures].[Order Quantity])  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [-&#40; За исключением &#41; &#40; Многомерные Выражения &#41;](../mdx/except-mdx-operator.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [- &#40;За исключением&#41; &#40;многомерных Выражений&#41;](../mdx/except-mdx-operator.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

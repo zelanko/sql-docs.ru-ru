@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c017d5b0e510147b668eeab458841ebcbf15de00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 217350ed772c731d8a23e1a859e8dc95f02220a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +52,11 @@ sp_linkedservers
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Имя связанного сервера.|  
-|**SRV_PROVIDERNAME**|**nvarchar (**128**)**|Сетевое имя поставщика OLE DB, который управляет доступом к указанному связанному серверу.|  
-|**SRV_PRODUCT**|**nvarchar (**128**)**|Имя продукта связанного сервера.|  
-|**SRV_DATASOURCE**|**nvarchar (**4000**)**|Свойство источника данных OLE DB, соответствующее указанному связанному серверу.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (**4000**)**|Свойство строки поставщика OLE DB, соответствующее указанному связанному серверу.|  
-|**SRV_LOCATION**|**nvarchar (**4000**)**|Свойство местонахождения OLE DB, соответствующее указанному связанному серверу.|  
+|**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Сетевое имя поставщика OLE DB, который управляет доступом к указанному связанному серверу.|  
+|**SRV_PRODUCT**|**nvarchar (** 128 **)**|Имя продукта связанного сервера.|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Свойство источника данных OLE DB, соответствующее указанному связанному серверу.|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Свойство строки поставщика OLE DB, соответствующее указанному связанному серверу.|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Свойство местонахождения OLE DB, соответствующее указанному связанному серверу.|  
 |**SRV_CAT ВАЖНЫ**|**sysname**|Свойство каталога OLE DB, соответствующее указанному связанному серверу.|  
   
 ## <a name="permissions"></a>Разрешения  

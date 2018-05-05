@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a46aa0480b83727aeb0a9882745ff9221b992c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>Скрипты многомерных Выражений: Если
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,8 +45,8 @@ IF expression THEN assignment END IF
  *Назначение*  
  Многомерное выражение, присваивающее значение вложенному кубу или вычисляемому свойству.  
   
-## <a name="remarks"></a>Remarks  
- Используйте инструкцию IF для потока управления, который в отличие от [IIf &#40; Многомерные Выражения &#41; ](../mdx/iif-mdx.md) функции и [инструкции CASE &#40; Многомерные Выражения &#41; ](../mdx/case-statement-mdx.md) , может использоваться только для возвращения значений или объектов.  
+## <a name="remarks"></a>Замечания  
+ Используйте инструкцию IF для потока управления, который в отличие от [IIf &#40;многомерных Выражений&#41; ](../mdx/iif-mdx.md) функции и [инструкции CASE &#40;многомерных Выражений&#41; ](../mdx/case-statement-mdx.md) , может использоваться только для возвращения значений или объектов.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере область ограничена уровнем «Страна» иерархии «География заказчика» в измерении «Заказчики». Если текущая мера — это «Сумма продаж через Интернет», то сумме продаж через Интернет присваивается значение 10.  
@@ -58,7 +57,7 @@ IF expression THEN assignment END IF
   
  `END SCOPE`;  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

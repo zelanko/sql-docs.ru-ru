@@ -1,33 +1,32 @@
 ---
-title: "Создание вычисляемого столбца | Документы Microsoft"
-ms.custom: 
+title: Создание вычисляемого столбца | Документы Microsoft
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.as.daxref.CreataCalculatedColumn.f1
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05dfa5538feefad32e4208966fd3f9b359b1869e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 0c65bd6bd047a676c87bacb9197e11d3205eeaef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-calculated-column"></a>Создание вычисляемого столбца
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Вычисляемые столбцы позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Значения для каждой из строк вычисляемого столбца вычисляются и распространяются после создания допустимой формулы и нажатия клавиши ВВОД. После этого можно добавлять вычисляемый столбец в аналитическое приложение или приложение для создания отчетов, как и любой другой столбец данных. В этой статье описывается создание нового вычисляемого столбца с помощью строки формул DAX в конструкторе моделей.  
+  Вычисляемые столбцы позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Значения для каждой из строк вычисляемого столбца вычисляются и распространяются после создания допустимой формулы и нажатия клавиши ВВОД. После этого можно добавлять вычисляемый столбец в аналитическое приложение или приложение для создания отчетов, как и любой другой столбец данных. В этой статье описывается создание нового вычисляемого столбца с помощью строки формул DAX в конструкторе моделей.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Создание вычисляемого столбца  
   

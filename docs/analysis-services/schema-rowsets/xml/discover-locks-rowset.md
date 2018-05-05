@@ -20,20 +20,20 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d93f7d578defe5aa10aaa8e1a5f7ac94c3cc05ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverlocks-rowset"></a>Набор строк DISCOVER_LOCKS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения о текущих установленных блокировках на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Предоставляет сведения о текущих установленных блокировках на сервере.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_LOCKS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Длина|Description|  
+|Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |**LOCK_CREATION_TIME**|**DBTYPE_DBTIMESTAMP**||Время на сервере в формате UTC в момент запроса блокировки.|  
 |**LOCK_GRANT_TIME**|**DBTYPE_DBTIMESTAMP**||Время на сервере в формате UTC в момент предоставления блокировки на ресурс.|  
@@ -52,17 +52,17 @@ ms.lasthandoff: 01/08/2018
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
 |SPID|DBTYPE_I4|Необязательный параметр.|  
-|LOCK_TRANSACTION_ID|DBTYPE_GUID|Необязательный параметр.|  
-|LOCK_OBJECT_ID|DBTYPE_WSTR|Необязательный параметр.|  
-|LOCK_STATUS|DBTYPE_I4|Необязательный параметр.|  
-|LOCK_TYPE|DBTYPE_I4|Необязательный параметр.|  
-|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Необязательный параметр.|  
+|LOCK_TRANSACTION_ID|DBTYPE_GUID|Необязательно.|  
+|LOCK_OBJECT_ID|DBTYPE_WSTR|Необязательно.|  
+|LOCK_STATUS|DBTYPE_I4|Необязательно.|  
+|LOCK_TYPE|DBTYPE_I4|Необязательно.|  
+|LOCK_MIN_TOTAL_MS|DBTYPE_I8|Необязательно.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="lock-types"></a>Типы блокировок  
   
-|Имя блокировки|Значение|Description|  
+|Имя блокировки|Значение|Описание|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Блокировка отсутствует.|  
 |LOCK_SESSION_LOCK|0x0000001|Неактивный сеанс; нарушения в работе под действием других блокировок не возникают.|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |LOCK_COMMIT_INPROGRESS|0x0000040|Происходит фиксация.|  
 |LOCK_INVALID|0x0000080|Недействительная блокировка.|  
   
-## <a name="see-also"></a>См. также:  
- [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+## <a name="see-also"></a>См. также  
+ [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

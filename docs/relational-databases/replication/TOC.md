@@ -293,3 +293,6 @@
 ## [Настройка репликации транзакций](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Настройка репликации слиянием](tutorial-replicating-data-with-mobile-clients.md)  
 
+# Средства устранения неполадок
+## [Ошибки в репликации транзакций](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

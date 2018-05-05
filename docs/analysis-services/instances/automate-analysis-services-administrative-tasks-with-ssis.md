@@ -1,36 +1,25 @@
 ---
-title: "Автоматизация административных задач служб Analysis Services с помощью служб SSIS | Документы Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Автоматизация административных задач служб Analysis Services с помощью служб SSIS | Документы Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- Execute DDL Task [Analysis Services]
-- Analysis Services Processing task
-ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 98a501bc6b4231a8dbc1a3cabb99edbaab9e25d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Автоматизация административных задач служб Analysis Services с помощью служб SSIS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет автоматизировать выполнение скриптов DDL, куба и обработку задач и задач запросов интеллектуального анализа данных модели интеллектуального анализа данных. Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предназначены для выполнения операций очистки данных во время выполнения задач обработки данных и для объединения данных из различных источников данных. При работе с кубами и моделями интеллектуального анализа данных службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут преобразовывать нечисловые данные в числовые и могут гарантировать, что значения типа данных содержатся в ожидаемых пределах, тем самым создавая достоверные данные, которыми производится заполнение таблиц фактов и измерений.  
+ Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предназначены для выполнения операций очистки данных во время выполнения задач обработки данных и для объединения данных из различных источников данных. При работе с кубами и моделями интеллектуального анализа данных службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут преобразовывать нечисловые данные в числовые и могут гарантировать, что значения типа данных содержатся в ожидаемых пределах, тем самым создавая достоверные данные, которыми производится заполнение таблиц фактов и измерений.  
   
 ## <a name="integration-services-tasks"></a>Задачи служб Integration Services  
  Любая задача или задание служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] состоит из элементов двух основных типов: элементов потока управления и элементов потока данных. Элементы потока управления определяют логическое упорядочивание выполнения задания путем применения ограничений очередностью. Элементы потока данных относятся к соединению между выходом компонента и входом следующего компонента, а также к любому преобразованию данных, которое может применяться к переходным данным. В отношении решений об отправке данных различным компонентам ограничения очередностью содержат логику, указывающую, какой компонент получает выход. Задачи служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , наиболее важные для служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , включают задачу выполнения DDL, задачу обработки средствами Analysis Services и задачу запроса интеллектуального анализа данных. Для каждой из этих задач может использоваться задача отправки почты для отправки администратору сообщения электронной почты, содержащего результаты выполнения задачи.  

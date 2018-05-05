@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ebfef6e411c6360212251460a9d8fc51e20d9173
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-mdx"></a>Properties (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,8 +47,8 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_name*  
  Допустимое строковое выражение, обозначающее имя свойства элемента.  
   
-## <a name="remarks"></a>Remarks  
- **Свойства** функция возвращает значение указанного элемента для указанного свойства элемента. Свойство элемента может быть любой внутренние свойства элементов, таких как **имя**, **идентификатор**, **ключ**, или **заголовок**, или он может быть свойством определяемого пользователем элемента. Дополнительные сведения см. в разделе [внутренние свойства элементов &#40; Многомерные Выражения &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) и [определенных пользователем свойств элементов &#40; Многомерные Выражения &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+## <a name="remarks"></a>Замечания  
+ **Свойства** функция возвращает значение указанного элемента для указанного свойства элемента. Свойство элемента может быть любой внутренние свойства элементов, таких как **имя**, **идентификатор**, **ключ**, или **заголовок**, или он может быть свойством определяемого пользователем элемента. Дополнительные сведения см. в разделе [внутренние свойства элементов &#40;многомерных Выражений&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) и [определяемые пользователем свойства элементов &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
  По умолчанию значение приводится к строке. Если **ТИПИЗИРОВАННОГО** указан, возвращаемое значение является типобезопасным.  
   
@@ -118,8 +117,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [С помощью свойства элементов &#40; Многомерные Выражения &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [С помощью свойства элементов & #40; Многомерные Выражения & #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

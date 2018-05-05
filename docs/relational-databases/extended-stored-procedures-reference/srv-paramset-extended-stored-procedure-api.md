@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f41db279ec8c4087dbc086b8aca7ad79f5fe68d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ len
  Указывает фактическую длину данных, которые должны быть возвращены. Если тип данных параметра имеет постоянную длину и не допускает значений NULL (например, *srvbit* или *srvint1*), параметр *len* не учитывается.  
   
 ## <a name="returns"></a>Возвращает  
- SUCCEED, если значение параметра было успешно установлено; в противном случае — FAIL. FAIL возвращается при отсутствии текущей удаленной хранимой процедуры, при наличии не *n*й удаленной хранимой процедуры, если параметр не является возвратным, а также при *len* аргумент не является Юридические.  
+ SUCCEED, если значение параметра было успешно установлено; в противном случае — FAIL. Значение FAIL возвращается, если удаленной хранимой процедуры сейчас не существует, если у нее нет параметра с номером *n*, если параметр не является возвращаемым или если аргумент *len* недопустимый.  
   
  Если *len* имеет значение 0, то возвращается NULL. Единственным способом возвратить значение NULL клиенту является задание параметру *len* значения 0.  
   
@@ -94,7 +92,7 @@ len
 |IG = значение будет пропущено||  
 |valid = любой допустимый указатель на данные||  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Параметры содержат данные, передаваемые между клиентами и приложением с удаленной хранимой процедурой. Клиент может указать некоторые параметры в качестве возвращаемых. Эти возвращаемые параметры могут содержать значения, которые серверное приложение служб Open Data Services данных передает клиенту. Использование возвращаемых параметров аналогично передаче параметров по ссылке.  
   
  Возвращаемое значение невозможно задать параметру, который не был запущен как возвращаемый параметр. Определить, как был вызван параметр, можно с помощью функции **srv_paramstatus**.  
@@ -106,7 +104,7 @@ len
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [srv_paramsetoutput (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

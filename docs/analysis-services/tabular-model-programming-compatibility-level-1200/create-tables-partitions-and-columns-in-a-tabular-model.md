@@ -1,30 +1,30 @@
 ---
-title: "Создание таблицы, столбцы и секции в табличной модели | Документы Microsoft"
-ms.custom: 
+title: Создание таблицы, столбцы и секции в табличной модели | Документы Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a067a7852a575a5449d3482721311f057beba122
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Создание таблицы, столбцы и секции в табличной модели
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличной модели таблицы состоит из строк и столбцов. Строки сортируются в секции для поддержки обновления добавочных данных. Табличное решение может поддерживать несколько типов таблиц, в зависимости от того, где данные поступают из:  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В табличной модели таблицы состоит из строк и столбцов. Строки сортируются в секции для поддержки обновления добавочных данных. Табличное решение может поддерживать несколько типов таблиц, в зависимости от того, где данные поступают из:  
 
 * Обычных таблиц источника данных из источника реляционных данных через поставщик данных. 
 

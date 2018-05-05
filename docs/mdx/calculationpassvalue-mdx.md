@@ -22,12 +22,11 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd5ed7f5ef6eb60b37c5066f7535d34913572871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bac34c96e9acaeeb480b12cd3acded7e08225093
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,19 +62,19 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  Если указан этот флаг, все значения, кроме тех, которые загружаются подсистемой хранилища, равны NULL. В противном случае рассчитывается статистическое значение без применения каких-либо вычислений.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если числовое выражение указано, функция возвращает его числовое значение на заданном этапе вычисления посредством вычисления многомерного выражения, при необходимости изменяя его в соответствии с флагом доступа и модификатором флага доступа.  
   
- Если строковое выражение указано, функция возвращает строковое значение, оценивая указанного строкового выражения MDX в указанном этапе вычисления и при необходимости была изменена с флагом доступа и модификатором флага доступа*.*  
+ Если строковое выражение указано, функция возвращает строковое значение, оценивая указанного строкового выражения MDX в указанном этапе вычисления и при необходимости была изменена с флагом доступа и модификатором флага доступа *.*  
   
  Автоматическое разрешение рекурсии в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], эта функция имеет практически не используется.  
   
 > [!NOTE]  
 >  Только администраторы могут использовать **CalculationPassValue** функции в скрипте многомерных Выражений. Возникнет ошибка, если скрипт многомерных выражений, содержащий данную функцию, выполняется в контексте роли, не имеющей прав администратора.  
   
-## <a name="see-also"></a>См. также:  
- [CalculationCurrentPass &#40; Многомерные Выражения &#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40; Многомерные Выражения &#41;](../mdx/iif-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [CalculationCurrentPass & #40; Многомерные Выражения & #41;](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf &#40;многомерных Выражений&#41;](../mdx/iif-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

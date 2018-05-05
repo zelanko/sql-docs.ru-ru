@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be780023002dba4422a6523f57866661fde593b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8463905b55d4cde00fa3025607c5dafa0f0c20bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interface-conformance-levels"></a>Уровни согласованности интерфейса
 Выравнивание предназначено для уведомления приложения, какие функции доступны на него с помощью драйвера. Схема распределения, основаны на функциях не достаточно достижения этой цели. В ODBC 3. *x*, драйверы классифицируются в зависимости от возможностей, они имеют. Поддержка функции можно включить поддержка функции; Оно также может включать поле дескриптора, атрибут инструкции, значение «Y» поддержка типа данных, возвращенных **SQLGetInfo**, и т. д.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
  Существует три уровня соответствия интерфейс ODBC: ядер, уровень 1 и уровень 2.  
   
 > [!NOTE]  
->  Эти уровни соответствия имеют различные требования, чем уровни соответствия ODBC API с тем же именем в ODBC 2*.x*. В частности, все функции содержится в разрешении ODBC 2*.x* интерфейса API ODBC уровня 1 теперь являются частью уровень соответствия основной интерфейс. В результате многие драйверы ODBC могут сообщать соответствия интерфейс уровня ядра.  
+>  Эти уровни соответствия имеют различные требования, чем уровни соответствия ODBC API с тем же именем в ODBC 2 *.x*. В частности, все функции содержится в разрешении ODBC 2 *.x* интерфейса API ODBC уровня 1 теперь являются частью уровень соответствия основной интерфейс. В результате многие драйверы ODBC могут сообщать соответствия интерфейс уровня ядра.  
   
  Этот раздел содержит следующие подразделы.  
   

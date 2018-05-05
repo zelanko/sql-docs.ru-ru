@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>Использование выражений измерений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Как правило, выражения измерений и иерархий используются при передаче параметров в функции многомерных выражений для получения элементов, наборов или кортежей из иерархии.  
   
- Выражения измерений могут быть только простыми выражениями, так как являются идентификаторами объектов. В разделе [выражения &#40; Многомерные Выражения &#41; ](../mdx/expressions-mdx.md) объяснение простых и сложных выражений.  
+ Выражения измерений могут быть только простыми выражениями, так как являются идентификаторами объектов. В разделе [выражений &#40;многомерных Выражений&#41; ](../mdx/expressions-mdx.md) объяснение простых и сложных выражений.  
   
 ## <a name="dimension-expressions"></a>Выражения измерений  
  Выражение измерения содержит идентификатор измерения или функцию измерения.  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Идентификатор иерархии представлен как *Dimension_Name**.* *Hierarchy_Name* в форме БЭКУСА-Наура, используемой для описания инструкций многомерных Выражений.  
+ Идентификатор иерархии представлен как *Dimension_Name **.** Hierarchy_Name* в форме БЭКУСА-Наура, используемой для описания инструкций многомерных Выражений.  
   
-## <a name="see-also"></a>См. также:  
- [Выражения &#40; Многомерные Выражения &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)  
   
   
