@@ -44,6 +44,7 @@
 #### [Подписчики](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
 ### [службы Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
 ### [Компонент Service Broker](service-broker-with-always-on-availability-groups-sql-server.md)  
+## [Значения времени ожидания проверки работоспособности, аренды и кластера](availability-group-lease-healthcheck-timeout.md)
 ## [Прослушиватели, клиенты и отработка отказа](listeners-client-connectivity-application-failover.md)  
 ## [Имена входа и задания](logins-and-jobs-for-availability-group-databases.md)  
 ## [Возможные сбои во время сеансов между репликами](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  
