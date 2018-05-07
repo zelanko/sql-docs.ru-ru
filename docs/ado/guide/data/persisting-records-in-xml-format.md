@@ -1,11 +1,9 @@
 ---
 title: Сохранение записей в формате XML | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea27e9718ca2fd2814e950e0242625e8c78bb72d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 582e0a0fb3b757f9f9257ebaa199c819068cb2e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Сохранение записей в формате XML
 Формату ADTG **записей** сохраняемости в формате XML реализуется с помощью поставщика сохраняемости Microsoft OLE DB. Этот поставщик создает однопроходный, только для чтения строк из сохраненных XML-файл или поток, содержащий данные схемы ADO. Аналогичным образом, может потребоваться ADO **записей**, создают XML-документ и сохранить его в файл или любой объект, реализующий COM **IStream** интерфейса. (На самом деле он просто еще один пример объекта, который поддерживает **IStream**.) 2.5 и более поздних версиях ADO использует для синтаксического анализа Microsoft XML (MSXML) для загрузки XML в **записей**; поэтому msxml.dll не требуется.  

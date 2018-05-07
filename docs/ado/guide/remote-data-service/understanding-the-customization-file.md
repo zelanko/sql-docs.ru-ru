@@ -1,11 +1,9 @@
 ---
 title: Основные сведения о файле настройки | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>Основные сведения о настройке файла
 Заголовок каждого раздела в файле настройки состоит из квадратных скобок (**[]**) содержащего типа и параметров. Типы четыре раздела обозначаются строковых литералов **подключения**, **sql**, **userlist**, или **журналы**. Параметр является символьная строка, значение по умолчанию, пользовательским идентификатором или ничего.  
@@ -61,7 +58,7 @@ identifier
   
  Определенный раздел используется в следующих случаях:  
   
--   Объект **подключения** раздел используется, если ключевое слово строки подключения значение часть клиента «**источник данных = *** значение*», соответствует **подключения** идентификатор раздела*.*  
+-   Объект **подключения** раздел используется, если ключевое слово строки подключения значение часть клиента «**источник данных = *** значение*», соответствует **подключения** идентификатор раздела *.*  
   
 -   **Sql** раздел используется, если строку команды клиента содержит строку, которая соответствует **sql** идентификатор секции.  
   

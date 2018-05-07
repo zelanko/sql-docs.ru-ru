@@ -1,31 +1,31 @@
 ---
-title: "Поставщик Microsoft OLE DB для ODBC | Документы Microsoft"
-ms.prod: sql-non-specified
+title: Поставщик Microsoft OLE DB для ODBC | Документы Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC Обзор
 Программисту ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы одно данных каждый источник предоставляет интерфейс OLE DB, чтобы вызвать ADO непосредственно в источник данных. Несмотря на то, что все чаще других поставщиков базы данных реализует интерфейсы OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем DBMS в настоящее время доступны через ODBC.
@@ -71,7 +71,7 @@ MSDASQL
 
  Поставщик не поддерживает параметры конкретного соединения помимо параметрами, определенными ADO. Однако поставщик передает параметры соединения не ADO диспетчер драйверов ODBC.
 
- Поскольку можно опустить **поставщика** параметр, вы можете таким образом составить строки соединения ADO, идентичный строку соединения для источника данных ODBC. Использовать одинаковые имена параметров (**ДРАЙВЕРА =**, **базы данных =**, **DSN =**и так далее), значения и синтаксис, что вы бы при создании строки подключения ODBC. Можно подключиться с или без имени источника данных (DSN) или FileDSN.
+ Поскольку можно опустить **поставщика** параметр, вы можете таким образом составить строки соединения ADO, идентичный строку соединения для источника данных ODBC. Использовать одинаковые имена параметров (**ДРАЙВЕРА =**, **базы данных =**, **DSN =** и так далее), значения и синтаксис, что вы бы при создании строки подключения ODBC. Можно подключиться с или без имени источника данных (DSN) или FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Синтаксис с DSN или FileDSN:
 
@@ -87,14 +87,14 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
  Если вы используете **DSN** или **FileDSN**, он должен быть определен через администратор источников данных ODBC в панели управления Windows. В Microsoft Windows 2000 администратор ODBC находится в разделе Администрирование. В более ранних версиях Windows, называется значок администратора ODBC **32-разрядная версия ODBC** или просто **ODBC**.
 
  В качестве альтернативы для параметра **DSN**, можно указать драйвер ODBC (**ДРАЙВЕР =**), такие как «SQL Server»; имя сервера (**SERVER =**); и имя базы данных (**Базы данных =**).
 
  Можно также указать имя учетной записи пользователя (**UID =**) и пароль для учетной записи пользователя (**PWD =**) в параметры, относящиеся к ODBC или в стандарте определяемых ADO *пользователя* и *пароль* параметров.
 
- Несмотря на то что **DSN** определение уже содержит имя базы данных, можно указать ** *базы данных* параметр в дополнение к **DSN** для подключения с другой базой данных. Рекомендуется всегда включать ** *базы данных* параметр при использовании **DSN**. Это обеспечит подключение к правильной базе данных, если другой пользователь изменил параметр по умолчанию базы данных с момента последней проверки **DSN** определения.
+ Несмотря на то что **DSN** определение уже содержит имя базы данных, можно указать *a* *базы данных* параметр в дополнение к **DSN** для подключения с другой базой данных. Рекомендуется всегда включать ** *базы данных* параметр при использовании **DSN**. Это обеспечит подключение к правильной базе данных, если другой пользователь изменил параметр по умолчанию базы данных с момента последней проверки **DSN** определения.
 
 ## <a name="provider-specific-connection-properties"></a>Свойства подключения для конкретного поставщика
  Поставщик OLE DB для ODBC добавляет несколько параметров для [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию **подключения** объекта. Ниже перечислены эти свойства с именем соответствующего свойства OLE DB в круглые скобки.
@@ -185,8 +185,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|только для чтения|только для чтения|только для чтения|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
+|[Закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
+|[cacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|только для чтения|только для чтения|только для чтения|только для чтения|
@@ -211,19 +211,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Да|Да|Да|Да|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Да|Да|Да|Да|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Да|Да|Да|Да|
-|[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|нет|Нет|Да|Да|
+|[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Нет|Нет|Да|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|Да|Да|Да|
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Да|Да|Да|Да|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|Да|Да|Да|
+|[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|Да|Да|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|Да|Да|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|нет|Да|Да|Да|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Нет|Да|Да|Да|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|Да|Да|Да|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|нет|Да|Да|Да|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Нет|Да|Да|Да|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Да|Да|Да|Да|
 |[Открытие](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|Да|Да|Да|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Да|Да|Да|Да|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|нет|Нет|Да|Да|
+|[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Да|Да|Да|Да|
+|[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Нет|Нет|Да|Да|
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|Да|Да|Да|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Да|Да|Да|Да|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Да|Да|Да|Да|
@@ -274,7 +274,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Обновление нескольких таблицы|DBPROP_MULTITABLEUPDATE|
 |Порядок сортировки значений NULL|DBPROP_NULLCOLLATION|
 |Поведение сцепление со значением NULL|DBPROP_CONCATNULLBEHAVIOR|
-|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES|
+|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES, УСТАНОВИТЬ|
 |OLE DB версии|DBPROP_PROVIDEROLEDBVER|
 |Поддержка объекта OLE|DBPROP_OLEOBJECTS|
 |Поддержка открытых наборов строк|DBPROP_OPENROWSETSUPPORT|

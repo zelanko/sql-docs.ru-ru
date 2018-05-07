@@ -2,19 +2,18 @@
 title: Библиотеки подключения для баз данных SQL Microsoft | Документы Microsoft
 description: Предоставляет ссылки для загрузки модулей, которые обеспечивают подключение к Microsoft SQL Server и базы данных SQL Azure из различных языков программирования клиента.
 author: MightyPen
-ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 50aed9edb4c5ab07985e467fc63a3854cef9bb88
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 40f20ba8dd8db388d0cae1173030497beac331c4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: b0b0e9906c39de7875edc183e36fd5257afbe303
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +61,7 @@ sp_executesql [ @stmt = ] statement
   
  Каждый параметр, включенный в аргумент @stmt, должен иметь соответствующую запись в списке определений параметров @params и в списке значений параметров.  
   
- [ @params=] N'@*parameter_name ** data_type* [,...] *n* ] "  
+ [ @params=] N'@*parameter_name ** data_type* [,... *n* ] "  
  Строка, содержащая определения всех параметров, внедренных в @stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, означающий определения дополнительных параметров. Каждый параметр, указанный в @stmtmust определяться в @params. Если инструкция или пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в аргументе @stmt не содержат параметров, @params может отсутствовать. Этот аргумент по умолчанию принимает значение NULL.  
   
  [ @param1=] '*значение1*"  

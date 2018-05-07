@@ -1,11 +1,9 @@
 ---
 title: Операция параметризованных команд | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Операция параметризованных команд
 При работе с большой дочерним **записей**, особенно по сравнению с размером родительского **записей**, но требуется доступ только несколько дочерних разделов, может оказаться более эффективно использовать параметризованные команды.  
@@ -42,7 +39,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Родительскую и дочернюю таблицы имеют имя столбца в общие cust_id*.* *Команда дочерних* имеет «?» заполнитель, на который ссылается в предложении RELATE (т. е «... ПАРАМЕТР 0").  
+ Родительскую и дочернюю таблицы имеют имя столбца в общие cust_id *.* *Команда дочерних* имеет «?» заполнитель, на который ссылается в предложении RELATE (т. е «... ПАРАМЕТР 0").  
   
 > [!NOTE]
 >  ПАРАМЕТР предложение относится исключительно к синтаксис команды фигуры. Он не связан с либо ADO [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта или [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции.  

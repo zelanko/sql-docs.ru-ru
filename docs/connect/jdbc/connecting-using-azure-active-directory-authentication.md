@@ -6,20 +6,17 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ee49e767d8d0b92b1c8a6548b8870822460fa6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ---
@@ -221,9 +218,9 @@ You have successfully logged on as: <your user name>
     7. Нажмите кнопку «Создать» в нижней.
     9. Хотя по-прежнему на портале Azure на вкладке «Параметры», приложения и откройте вкладку «Свойства».
     10. Найти значение «Идентификатор приложения» (также НАЗЫВАЕМОГО идентификатор клиента) и скопируйте его, потребуется позднее при настройке приложения (например, 1846943b-ad04-4808-aa13-4702d908b5c1). См. в следующем моментальном снимке.
-    11. Найти значение «URL-адрес идентификатор приложения» и скопируйте его, это URL-адрес службы маркеров безопасности.
-    12. В разделе «Ключи» создайте ключ, заполнив поля «имя», выбрав длительность ключа и сохранения конфигурации (оставьте пустым поле значения). После сохранения, значение поля должно иметь заполняется автоматически, скопируйте сформированное значение. Это секрет клиента.
-
+    11. В разделе «Ключи» создайте ключ, заполнив поля «имя», выбрав длительность ключа и сохранения конфигурации (оставьте пустым поле значения). После сохранения, значение поля должно иметь заполняется автоматически, скопируйте сформированное значение. Это секрет клиента.
+    12. На левой панели нажмите кнопку Azure Active Directory. В группе «приложение», регистрации найдите вкладку «Конечные точки». Скопируйте URL-адрес в разделе «OATH 2.0 конечная точка МАРКЕРА», это URL-адрес службы маркеров безопасности.
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Войдите на сервер SQL Azure пользовательской базы данных как администратора Azure Active Directory и пользователь автономной базы данных с помощью резервов команды T-SQL, для основного приложения. В разделе [подключение к базе данных SQL или SQL данные хранилища с использованием Azure Active Directory проверки подлинности](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Дополнительные сведения о создании администратора Azure Active Directory и пользователь автономной базы данных.
 
@@ -254,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

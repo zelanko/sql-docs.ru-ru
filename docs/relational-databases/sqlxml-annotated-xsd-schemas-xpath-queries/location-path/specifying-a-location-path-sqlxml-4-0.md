@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Указание пути доступа (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
      Проверка узла задает тип узла, выбранного на шаге доступа. Каждая ось (**дочерних**, **родительского**, **атрибута**, и **self**) имеет основной тип узла. Для **атрибута** является основным типом узла оси,  **\<атрибут >**. Для **родительского**, **дочерних**, и **self** является основным типом узла оси,  **\<элемент >**.  
   
-     Например, если в пути доступа задано **child::Customer**,  **\<клиента >** выбраны дочерние элементы узла контекста. Поскольку **дочерних** ось имеет  **\<элемент >** как основной тип узла, проверки узла клиента, имеет значение TRUE, если клиент является  **\<элемент >**узла.  
+     Например, если в пути доступа задано **child::Customer**,  **\<клиента >** выбраны дочерние элементы узла контекста. Поскольку **дочерних** ось имеет  **\<элемент >** как основной тип узла, проверки узла клиента, имеет значение TRUE, если клиент является  **\<элемент >** узла.  
   
 -   **Предикаты выбора (ноль или более)**  
   

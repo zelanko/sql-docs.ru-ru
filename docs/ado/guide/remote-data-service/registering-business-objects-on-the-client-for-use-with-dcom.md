@@ -1,11 +1,9 @@
 ---
 title: Регистрация бизнес-объектов на стороне клиента для использования в DCOM | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9f797023e5a6893dd6370ddf9245c066435227c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3c92544630110443b3db9092738978a3608e57db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Регистрация бизнес-объектов на стороне клиента для использования в DCOM
 Настраиваемые бизнес-объекты должны убедиться, что на стороне клиента можно сопоставить их имя программы (ProgId) с кодом CLSID, который может использоваться через DCOM. По этой причине идентификатор ProgID объекта DCOM должно быть в реестре клиентского и сопоставить с Идентификатором класса серверных бизнес-объекта. Для других поддерживаемых протоколов (HTTP, HTTPS и в процессе) это не требуется.  

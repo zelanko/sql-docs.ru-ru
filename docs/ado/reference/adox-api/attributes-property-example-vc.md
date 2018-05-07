@@ -1,11 +1,9 @@
 ---
 title: Атрибуты примера свойства (VC ++) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfb2d50d571095e12e2923858197fe4f6b14ace5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 29d31a09c384784b067a7b8c2bfaa4bee2162bdc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-property-example-vc"></a>Пример свойства атрибутов (VC ++)
 В этом примере демонстрируется [атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md). Значения этого свойства **adColNullable** позволяет пользователю задать значение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) [поле](../../../ado/reference/ado-api/field-object.md) на пустую строку. В этом случае пользователь может различать записи, когда данные не известен и записи, где данные не применяется.  

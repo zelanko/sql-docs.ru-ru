@@ -1,11 +1,9 @@
 ---
 title: Сценарий публикации в Интернете | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a56198a0168e3a1653a3e7df9031cd495a1de4b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a596bd0aa66f79bc45e7e6a51fe1251b42bd1f58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-publishing-scenario"></a>Сценарий публикации в Интернете
 Данный пример кода демонстрирует, как использовать ADO с поставщиком данных Microsoft OLE DB для публикаций в Интернете. В этом сценарии вы создадите приложение Visual Basic, который использует **записей**, **запись**, и **поток** опубликованных объектов для отображения содержимого ресурсы с Публикации в Интернете поставщика.  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -40,13 +38,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 563a79b68a39a886d70234f2e9f6eaae118d11ca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="before-block"></a>\<Прежде чем > блока  
-  **\<Перед >** можно опустить блок для операции вставки. Если необязательный **схемы сопоставления** атрибут не указан,  **\<ElementName >** , указанный в диаграмме обновления, соответствует таблице базы данных и дочерние элементы или атрибуты сопоставляются со столбцы в таблице.  
+ **\<Перед >** можно опустить блок для операции вставки. Если необязательный **схемы сопоставления** атрибут не указан,  **\<ElementName >** , указанный в диаграмме обновления, соответствует таблице базы данных и дочерние элементы или атрибуты сопоставляются со столбцы в таблице.  
   
 ## <a name="after-block"></a>\<После > блока  
  Можно указать одну или несколько записей в  **\<после >** блока.  
