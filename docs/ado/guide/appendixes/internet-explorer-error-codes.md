@@ -1,11 +1,9 @@
 ---
 title: Коды ошибок Internet Explorer | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3865a413a0530e5d21b358b953adce5e5cc4c5f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 085303cd68087d882ff8c843b2dd5d12ebe37b96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Коды ошибок Internet Explorer для удаленный канал передачи данных
 В следующей таблице перечислены коды ошибок Microsoft® Internet Explorer, связаны с использованием удаленной службы данных. Положительное десятичное трансляции низкий два байта, показаны отрицательное десятичное преобразование кода ошибки переполнения и шестнадцатеричных значений.

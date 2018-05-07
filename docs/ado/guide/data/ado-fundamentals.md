@@ -1,11 +1,9 @@
 ---
 title: Принципы работы ADO | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +15,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 54e829ed3c28702144c64c49a9bd425e6488e5d7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: da11650be6a1188933909fc49a1c06c8b4d61fb4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-fundamentals"></a>Принципы работы ADO
 ADO предоставляет разработчикам мощные, логические объектную модель для программного доступа к, изменение и обновление данных из разнообразных источников данных, через интерфейсы OLE DB системы. Наиболее распространенное использование ADO является запрос таблицы или таблиц в реляционной базе данных, получения и отображения результатов в приложении и возможно позволяют внести и сохранить изменения в данных. Ниже приведены другие задачи:  

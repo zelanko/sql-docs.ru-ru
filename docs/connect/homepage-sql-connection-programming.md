@@ -1,24 +1,24 @@
 ---
-title: "Домашняя страница для программирования клиента SQL | Документы Microsoft"
-description: "Страница концентратора с заметками ссылки на файлы для загрузки и документации для различных сочетаний языков и операционных систем, для подключения к SQL Server, или к базе данных SQL Azure."
+title: Домашняя страница для программирования клиента SQL | Документы Microsoft
+description: Страница концентратора с заметками ссылки на файлы для загрузки и документации для различных сочетаний языков и операционных систем, для подключения к SQL Server, или к базе данных SQL Azure.
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
-ms.topic: article
+ms.custom: ''
+ms.technology:
+- drivers
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 234ce07b25a0d120e72d8972b8e7b05f32c88201
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Домашняя страница для программирования для Microsoft SQL Server клиента
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/29/2017
 - Отображает области и дочерние области иерархических документации для определенных языков уместно.
 
 
-#### <a name="azure-sql-database"></a>База данных SQL Azure
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 На любом данном языке код, который подключается к SQL Server почти такой же код для подключения к базе данных SQL Azure.
 
@@ -56,9 +56,9 @@ ms.lasthandoff: 11/29/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![Логотип C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework платформы .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Эмблема Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js логотип][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP big плюс][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![Логотип PHP][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Логотип Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Произносится эмблемы][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![Эмблема C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![Entity Framework ORM платформы .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Эмблема Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Эмблема node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP big плюс][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Эмблема PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Эмблема Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Произносится эмблемы][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +107,7 @@ EF имеет прямой или косвенной связи со следу�
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), или [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Усовершенствования языка синтаксиса, такие как  **=>**  оператором в C#.
+- Усовершенствования языка синтаксиса, такие как **=>** оператором в C#.
 - Удобных программ, создающих исходный код для классов, которые сопоставляются с таблицами в базе данных SQL. Например [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
@@ -201,7 +201,7 @@ Node.js можно подключаться к серверу SQL Server с Wind
 ODBC содержимое этого раздела посвящена доступ к SQL Server или база данных SQL Azure из C++. В следующей таблице перечислены приблизительный контур в основной документации по ODBC.
 
 
-| Область | Дочерних областей | Description |
+| Область | Дочерних областей | Описание |
 | :--- | :------ | :---------- |
 | [ODBC для C++](./odbc/index.md) | Корень нашей документации. |
 | [Linux Mac](./odbc/linux-mac/index.md) | &nbsp; | Сведения об использовании ODBC в операционных системах Linux и MacOS. |
@@ -254,7 +254,7 @@ Python можно использовать для взаимодействия �
 
 #### <a name="documentation"></a>Документация
 
-| Область | Description |
+| Область | Описание |
 | :--- | :---------- |
 | [Python в SQL Server](./python/index.md) | Корень нашей документации. |
 | [драйвер pymssql](./python/pymssql/index.md) | Корпорация Майкрософт не поддерживать или проверить pymssql драйвер.<br /><br />Драйвер pymssql подключения — это простой интерфейс к базам данных SQL для использования в программах Python. Pymssql строится поверх FreeTDS для предоставления интерфейса Python DB-API (PEP 249) для Microsoft SQL Server. |

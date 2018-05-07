@@ -1,11 +1,9 @@
 ---
 title: DateCreated и DateModified примере свойства (VC ++) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9bea2f6635c32495cecbfcdadd24708b797f998
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a841fd18a072480380f775102660054d8866346b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated и DateModified примере свойства (VC ++)
 В этом примере демонстрируется [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства путем добавления нового [столбца](../../../ado/reference/adox-api/column-object-adox.md) к существующему [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и с помощью Создание нового **таблицы**. Процедура DateOutput является обязательным для выполнения этого примера.  

@@ -1,0 +1,1 @@
+Приложение SQL Server Profiler

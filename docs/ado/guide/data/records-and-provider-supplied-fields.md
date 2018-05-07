@@ -1,11 +1,9 @@
 ---
 title: Записи и поля поставщик предоставил | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fbde4c56512a93113e583f906d812e93f8b9e921
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>Записи и поля поставщик предоставил
 При [запись](../../../ado/reference/ado-api/record-object-ado.md) объект открыт, его источник может быть текущей строки открытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютный URL-адрес или относительный URL-адрес в сочетании с открытым [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта .  

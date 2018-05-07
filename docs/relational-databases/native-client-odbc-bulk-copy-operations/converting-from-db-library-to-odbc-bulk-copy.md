@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bc8072a1bd0f0e3a097a01696c9d034e0acb33c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 04/16/2018
   
      В DB-Library *varlen* значение -1 указывает, что предоставлены данные переменной длины, а в ODBC *cbData* означает, что предоставлены только значения NULL. Изменить DB-Library *varlen* -1 в значение SQL_VARLEN_DATA, а также любые *varlen* спецификации от 0 до SQL_NULL_DATA.  
   
--   DB-Library  **bcp_colfmt *** file_collen* и ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * уже же проблема **bcp_bind *** varlen*и *cbData* описанных выше параметров. Изменить DB-Library *file_collen* -1 в значение SQL_VARLEN_DATA, а также любые *file_collen* спецификации от 0 до SQL_NULL_DATA.  
+-   DB-Library  **bcp_colfmt *** file_collen* и ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * уже же проблема **bcp_bind *** varlen*и *cbData* описанных выше параметров. Изменить DB-Library *file_collen* -1 в значение SQL_VARLEN_DATA, а также любые *file_collen* спецификации от 0 до SQL_NULL_DATA.  
   
 -   *IValue* параметр ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) функция является указателем на void. В DB-Library *iValue* имело тип integer. Приведение значений для ODBC *iValue* на тип void *.  
   

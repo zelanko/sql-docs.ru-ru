@@ -1,11 +1,9 @@
 ---
 title: 'HelloData: Простой ADO приложения | Документы Microsoft'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7516198dba64e9567b39abecfe31948d38e846e1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Простой ADO приложения
 Это простое приложение пошаговое выполнение каждой из четырех основных операций ADO: начало, проверки, изменение и обновление данных. Эти операции выполняются в образце базы данных Northwind, входящий в состав Microsoft® SQL Server. Чтобы сосредоточиться на основ ADO и снизить перегруженность кода, обработка ошибок в примере сводится к минимуму.  

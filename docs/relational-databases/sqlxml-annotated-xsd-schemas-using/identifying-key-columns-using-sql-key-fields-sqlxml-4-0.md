@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,9 +50,9 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Создание правильной вложенности, когда \<SQL: Relationship > не предоставляет достаточно сведений  
  В этом примере показано, когда **SQL: Key-поля** должен быть указан.  
   
- Рассмотрим следующую схему. Схема задает иерархию между  **\<порядок >** и  **\<клиента >** элементов, в который  **\<порядок >**элемент является родительским и  **\<клиента >** элемент является дочерним.  
+ Рассмотрим следующую схему. Схема задает иерархию между  **\<порядок >** и  **\<клиента >** элементов, в который  **\<порядок >** элемент является родительским и  **\<клиента >** элемент является дочерним.  
   
-  **\<SQL: Relationship >** тег используется для указания родительско дочернего отношения. Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Информация, содержащаяся в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Таким образом, без **SQL: Key-поля** заметки, создается иерархия является неточной.  
+ **\<SQL: Relationship >** тег используется для указания родительско дочернего отношения. Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Информация, содержащаяся в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Таким образом, без **SQL: Key-поля** заметки, создается иерархия является неточной.  
   
  С **SQL: Key-поля** указано на  **\<порядок >**, заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы отображаются под его родительский объект.  
   

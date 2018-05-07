@@ -1,11 +1,9 @@
 ---
 title: Обработка событий ADO | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e03bf8916836cf271aa77546d71c60049b39235e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8c8c1bf091c6c41b8700679cce7b696da89e9eff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-ado-events"></a>Обработка событий ADO
 Модель события ADO поддерживает некоторые синхронные и асинхронные ADO-операции, которые выдавать *события*, или уведомлений, перед началом операции или после его завершения. Событие — вызов подпрограмму обработчика событий, который определяется в приложении.  

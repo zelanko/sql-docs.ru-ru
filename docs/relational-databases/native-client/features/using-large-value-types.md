@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac75426f9d3f965d85ba9005b95726b71299b33c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,11 +69,11 @@ ms.lasthandoff: 04/16/2018
   
  При подготовке отчета максимальный размер столбца, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сообщит поставщика OLE DB для собственного клиента:  
   
--   Заданный максимальный размер, который, например: 2000 для **varchar (**2000**)** столбец, или  
+-   Заданный максимальный размер, который, например: 2000 для **varchar (** 2000 **)** столбец, или  
   
 -   Значение «unlimited» которого в случае использования **varchar(max)** столбца равен ~ 0. Это значение устанавливается для свойства метаданных DBCOLUMN_COLUMNSIZE.  
   
- Стандартные правила преобразования применяются к **varchar(max)** столбца, это значит, что любое преобразование, которое является допустимым для **varchar (**2000**)** также будет допустимым для столбца **varchar(max)** столбца. То же самое справедливо для **nvarchar(max)** и **varbinary(max)** столбцов.  
+ Стандартные правила преобразования применяются к **varchar(max)** столбца, это значит, что любое преобразование, которое является допустимым для **varchar (** 2000 **)** также будет допустимым для столбца **varchar(max)** столбца. То же самое справедливо для **nvarchar(max)** и **varbinary(max)** столбцов.  
   
  При получении типов больших значений наиболее эффективным подходом является привязка как типа DBTYPE_IUNKNOWN и задание для свойства DBPROP_ACCESSORDER набора строк значения DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Это вызовет передачу значения в потоке напрямую из сети без промежуточной буферизации, как показано в следующем примере:  
   
@@ -708,7 +706,7 @@ _ExitProcessResultSet:
   
 -   Значение «unlimited» которого в случае использования **varchar(max)** столбца равно 0.  
   
- Стандартные правила преобразования применяются к **varchar(max)** столбца, это значит, что любое преобразование, которое является допустимым для **varchar (**2000**)** столбца также допустимо для **varchar(max)** столбца. То же самое справедливо для **nvarchar(max)** и **varbinary(max)** столбцов.  
+ Стандартные правила преобразования применяются к **varchar(max)** столбца, это значит, что любое преобразование, которое является допустимым для **varchar (** 2000 **)** столбца также допустимо для **varchar(max)** столбца. То же самое справедливо для **nvarchar(max)** и **varbinary(max)** столбцов.  
   
  Ниже приведен список функций ODBC API, которые были улучшены для работы с типами больших значений:  
   

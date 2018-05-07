@@ -1,11 +1,9 @@
 ---
 title: Оптимизация примера свойства (Visual Basic) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f51f4b06cc81464a90c30cfe42737cc971d23a2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 881d332c6f7e1ac0f74a54dcacc7e9e7e3382006
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-property-example-vb"></a>Оптимизация примера свойства (Visual Basic)
 В этом примере демонстрируется [поле](../../../ado/reference/ado-api/field-object.md) этого динамического объекта **оптимизировать** свойство. ***Zip*** поле ***авторов*** в таблицу ***Pubs*** базы данных не проиндексированы. Установка [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойства **True** на ***zip*** поле авторизует ADO при построении индекса, повышает производительность [найти](../../../ado/reference/ado-api/find-method-ado.md)метод.  
